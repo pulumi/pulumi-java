@@ -72,22 +72,22 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
     	      this.regexMatchTuples = defaults.regexMatchTuples;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegexMatchTuples(@Nullable Input<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples) {
+        public Builder regexMatchTuples(@Nullable Input<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples) {
             this.regexMatchTuples = regexMatchTuples;
             return this;
         }
 
-        public Builder setRegexMatchTuples(@Nullable List<RegexMatchSetRegexMatchTupleGetArgs> regexMatchTuples) {
+        public Builder regexMatchTuples(@Nullable List<RegexMatchSetRegexMatchTupleGetArgs> regexMatchTuples) {
             this.regexMatchTuples = Input.ofNullable(regexMatchTuples);
             return this;
         }

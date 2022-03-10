@@ -76,32 +76,32 @@ public final class CapacityProviderAutoScalingGroupProviderArgs extends io.pulum
     	      this.managedTerminationProtection = defaults.managedTerminationProtection;
         }
 
-        public Builder setAutoScalingGroupArn(Input<String> autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(Input<String> autoScalingGroupArn) {
             this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
             return this;
         }
 
-        public Builder setAutoScalingGroupArn(String autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(String autoScalingGroupArn) {
             this.autoScalingGroupArn = Input.of(Objects.requireNonNull(autoScalingGroupArn));
             return this;
         }
 
-        public Builder setManagedScaling(@Nullable Input<CapacityProviderManagedScalingArgs> managedScaling) {
+        public Builder managedScaling(@Nullable Input<CapacityProviderManagedScalingArgs> managedScaling) {
             this.managedScaling = managedScaling;
             return this;
         }
 
-        public Builder setManagedScaling(@Nullable CapacityProviderManagedScalingArgs managedScaling) {
+        public Builder managedScaling(@Nullable CapacityProviderManagedScalingArgs managedScaling) {
             this.managedScaling = Input.ofNullable(managedScaling);
             return this;
         }
 
-        public Builder setManagedTerminationProtection(@Nullable Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection) {
+        public Builder managedTerminationProtection(@Nullable Input<CapacityProviderAutoScalingGroupProviderManagedTerminationProtection> managedTerminationProtection) {
             this.managedTerminationProtection = managedTerminationProtection;
             return this;
         }
 
-        public Builder setManagedTerminationProtection(@Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
+        public Builder managedTerminationProtection(@Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
             this.managedTerminationProtection = Input.ofNullable(managedTerminationProtection);
             return this;
         }

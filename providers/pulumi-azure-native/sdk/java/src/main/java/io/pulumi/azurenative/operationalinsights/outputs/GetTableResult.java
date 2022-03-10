@@ -265,72 +265,72 @@ public final class GetTableResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArchiveRetentionInDays(Integer archiveRetentionInDays) {
+        public Builder archiveRetentionInDays(Integer archiveRetentionInDays) {
             this.archiveRetentionInDays = Objects.requireNonNull(archiveRetentionInDays);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastPlanModifiedDate(String lastPlanModifiedDate) {
+        public Builder lastPlanModifiedDate(String lastPlanModifiedDate) {
             this.lastPlanModifiedDate = Objects.requireNonNull(lastPlanModifiedDate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(@Nullable String plan) {
+        public Builder plan(@Nullable String plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRestoredLogs(@Nullable RestoredLogsResponse restoredLogs) {
+        public Builder restoredLogs(@Nullable RestoredLogsResponse restoredLogs) {
             this.restoredLogs = restoredLogs;
             return this;
         }
 
-        public Builder setResultStatistics(@Nullable ResultStatisticsResponse resultStatistics) {
+        public Builder resultStatistics(@Nullable ResultStatisticsResponse resultStatistics) {
             this.resultStatistics = resultStatistics;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setSchema(@Nullable SchemaResponse schema) {
+        public Builder schema(@Nullable SchemaResponse schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSearchResults(@Nullable SearchResultsResponse searchResults) {
+        public Builder searchResults(@Nullable SearchResultsResponse searchResults) {
             this.searchResults = searchResults;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTotalRetentionInDays(@Nullable Integer totalRetentionInDays) {
+        public Builder totalRetentionInDays(@Nullable Integer totalRetentionInDays) {
             this.totalRetentionInDays = totalRetentionInDays;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

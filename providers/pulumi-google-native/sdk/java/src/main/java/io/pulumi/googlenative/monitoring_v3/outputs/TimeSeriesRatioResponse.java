@@ -81,17 +81,17 @@ public final class TimeSeriesRatioResponse {
     	      this.totalServiceFilter = defaults.totalServiceFilter;
         }
 
-        public Builder setBadServiceFilter(String badServiceFilter) {
+        public Builder badServiceFilter(String badServiceFilter) {
             this.badServiceFilter = Objects.requireNonNull(badServiceFilter);
             return this;
         }
 
-        public Builder setGoodServiceFilter(String goodServiceFilter) {
+        public Builder goodServiceFilter(String goodServiceFilter) {
             this.goodServiceFilter = Objects.requireNonNull(goodServiceFilter);
             return this;
         }
 
-        public Builder setTotalServiceFilter(String totalServiceFilter) {
+        public Builder totalServiceFilter(String totalServiceFilter) {
             this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
             return this;
         }

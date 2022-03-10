@@ -72,22 +72,22 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
     	      this.result = defaults.result;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setResult(@Nullable Input<String> result) {
+        public Builder result(@Nullable Input<String> result) {
             this.result = result;
             return this;
         }
 
-        public Builder setResult(@Nullable String result) {
+        public Builder result(@Nullable String result) {
             this.result = Input.ofNullable(result);
             return this;
         }

@@ -49,7 +49,7 @@ public final class UserPoolAccountRecoverySetting {
     	      this.recoveryMechanisms = defaults.recoveryMechanisms;
         }
 
-        public Builder setRecoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
+        public Builder recoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
             this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms);
             return this;
         }

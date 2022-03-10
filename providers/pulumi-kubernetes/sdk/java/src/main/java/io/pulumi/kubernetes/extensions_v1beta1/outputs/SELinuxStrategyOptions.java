@@ -68,12 +68,12 @@ public final class SELinuxStrategyOptions {
     	      this.seLinuxOptions = defaults.seLinuxOptions;
         }
 
-        public Builder setRule(String rule) {
+        public Builder rule(String rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }

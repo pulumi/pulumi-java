@@ -63,22 +63,22 @@ public final class NetworkInsightsAccessScopePathStatementRequestArgs extends io
     	      this.resourceStatement = defaults.resourceStatement;
         }
 
-        public Builder setPacketHeaderStatement(@Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement) {
+        public Builder packetHeaderStatement(@Nullable Input<NetworkInsightsAccessScopePacketHeaderStatementRequestArgs> packetHeaderStatement) {
             this.packetHeaderStatement = packetHeaderStatement;
             return this;
         }
 
-        public Builder setPacketHeaderStatement(@Nullable NetworkInsightsAccessScopePacketHeaderStatementRequestArgs packetHeaderStatement) {
+        public Builder packetHeaderStatement(@Nullable NetworkInsightsAccessScopePacketHeaderStatementRequestArgs packetHeaderStatement) {
             this.packetHeaderStatement = Input.ofNullable(packetHeaderStatement);
             return this;
         }
 
-        public Builder setResourceStatement(@Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
+        public Builder resourceStatement(@Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
         }
 
-        public Builder setResourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
+        public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
             this.resourceStatement = Input.ofNullable(resourceStatement);
             return this;
         }

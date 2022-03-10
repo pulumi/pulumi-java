@@ -57,7 +57,7 @@ public final class ConfigurationProfileResourcePropertiesResponse extends io.pul
     	      this.notifications = defaults.notifications;
         }
 
-        public Builder setNotifications(@Nullable NotificationSettingsResponse notifications) {
+        public Builder notifications(@Nullable NotificationSettingsResponse notifications) {
             this.notifications = notifications;
             return this;
         }

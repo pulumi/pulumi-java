@@ -101,27 +101,27 @@ public final class GetConnectionResult {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthParameters(@Nullable AuthParametersProperties authParameters) {
+        public Builder authParameters(@Nullable AuthParametersProperties authParameters) {
             this.authParameters = authParameters;
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable ConnectionAuthorizationType authorizationType) {
+        public Builder authorizationType(@Nullable ConnectionAuthorizationType authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }

@@ -102,42 +102,42 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
     	      this.running = defaults.running;
         }
 
-        public Builder setAvailable(@Nullable Input<Integer> available) {
+        public Builder available(@Nullable Input<Integer> available) {
             this.available = available;
             return this;
         }
 
-        public Builder setAvailable(@Nullable Integer available) {
+        public Builder available(@Nullable Integer available) {
             this.available = Input.ofNullable(available);
             return this;
         }
 
-        public Builder setDesiredInstances(Input<Integer> desiredInstances) {
+        public Builder desiredInstances(Input<Integer> desiredInstances) {
             this.desiredInstances = Objects.requireNonNull(desiredInstances);
             return this;
         }
 
-        public Builder setDesiredInstances(Integer desiredInstances) {
+        public Builder desiredInstances(Integer desiredInstances) {
             this.desiredInstances = Input.of(Objects.requireNonNull(desiredInstances));
             return this;
         }
 
-        public Builder setInUse(@Nullable Input<Integer> inUse) {
+        public Builder inUse(@Nullable Input<Integer> inUse) {
             this.inUse = inUse;
             return this;
         }
 
-        public Builder setInUse(@Nullable Integer inUse) {
+        public Builder inUse(@Nullable Integer inUse) {
             this.inUse = Input.ofNullable(inUse);
             return this;
         }
 
-        public Builder setRunning(@Nullable Input<Integer> running) {
+        public Builder running(@Nullable Input<Integer> running) {
             this.running = running;
             return this;
         }
 
-        public Builder setRunning(@Nullable Integer running) {
+        public Builder running(@Nullable Integer running) {
             this.running = Input.ofNullable(running);
             return this;
         }

@@ -118,52 +118,52 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.staticMemberName = defaults.staticMemberName;
         }
 
-        public Builder setNetworkGroupName(Input<String> networkGroupName) {
+        public Builder networkGroupName(Input<String> networkGroupName) {
             this.networkGroupName = Objects.requireNonNull(networkGroupName);
             return this;
         }
 
-        public Builder setNetworkGroupName(String networkGroupName) {
+        public Builder networkGroupName(String networkGroupName) {
             this.networkGroupName = Input.of(Objects.requireNonNull(networkGroupName));
             return this;
         }
 
-        public Builder setNetworkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Input<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setStaticMemberName(@Nullable Input<String> staticMemberName) {
+        public Builder staticMemberName(@Nullable Input<String> staticMemberName) {
             this.staticMemberName = staticMemberName;
             return this;
         }
 
-        public Builder setStaticMemberName(@Nullable String staticMemberName) {
+        public Builder staticMemberName(@Nullable String staticMemberName) {
             this.staticMemberName = Input.ofNullable(staticMemberName);
             return this;
         }

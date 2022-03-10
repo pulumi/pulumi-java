@@ -62,12 +62,12 @@ public final class GetMuteConfigArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setMuteConfigId(String muteConfigId) {
+        public Builder muteConfigId(String muteConfigId) {
             this.muteConfigId = Objects.requireNonNull(muteConfigId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

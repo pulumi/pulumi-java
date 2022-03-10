@@ -83,17 +83,17 @@ public final class GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecific
     	      this.version = defaults.version;
         }
 
-        public Builder setLaunchTemplateId(@Nullable String launchTemplateId) {
+        public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
-        public Builder setLaunchTemplateName(@Nullable String launchTemplateName) {
+        public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

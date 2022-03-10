@@ -69,22 +69,22 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
     	      this.end = defaults.end;
         }
 
-        public Builder setBegin(Input<String> begin) {
+        public Builder begin(Input<String> begin) {
             this.begin = Objects.requireNonNull(begin);
             return this;
         }
 
-        public Builder setBegin(String begin) {
+        public Builder begin(String begin) {
             this.begin = Input.of(Objects.requireNonNull(begin));
             return this;
         }
 
-        public Builder setEnd(Input<String> end) {
+        public Builder end(Input<String> end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Input.of(Objects.requireNonNull(end));
             return this;
         }

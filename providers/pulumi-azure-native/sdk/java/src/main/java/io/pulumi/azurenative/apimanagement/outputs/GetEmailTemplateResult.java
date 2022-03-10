@@ -182,47 +182,47 @@ public final class GetEmailTemplateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsDefault(Boolean isDefault) {
+        public Builder isDefault(Boolean isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters) {
+        public Builder parameters(@Nullable List<EmailTemplateParametersContractPropertiesResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -62,22 +62,22 @@ public final class DistributionLegacyS3OriginArgs extends io.pulumi.resources.Re
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder setDNSName(Input<String> dNSName) {
+        public Builder dNSName(Input<String> dNSName) {
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
 
-        public Builder setDNSName(String dNSName) {
+        public Builder dNSName(String dNSName) {
             this.dNSName = Input.of(Objects.requireNonNull(dNSName));
             return this;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable Input<String> originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable Input<String> originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable String originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = Input.ofNullable(originAccessIdentity);
             return this;
         }

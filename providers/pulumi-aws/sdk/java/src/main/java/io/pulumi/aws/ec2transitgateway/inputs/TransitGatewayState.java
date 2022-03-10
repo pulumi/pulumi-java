@@ -248,132 +248,132 @@ public final class TransitGatewayState extends io.pulumi.resources.ResourceArgs 
     	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
         }
 
-        public Builder setAmazonSideAsn(@Nullable Input<Integer> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Input<Integer> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
-        public Builder setAmazonSideAsn(@Nullable Integer amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Integer amazonSideAsn) {
             this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAssociationDefaultRouteTableId(@Nullable Input<String> associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(@Nullable Input<String> associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = associationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setAssociationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = Input.ofNullable(associationDefaultRouteTableId);
             return this;
         }
 
-        public Builder setAutoAcceptSharedAttachments(@Nullable Input<String> autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(@Nullable Input<String> autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
 
-        public Builder setAutoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = Input.ofNullable(autoAcceptSharedAttachments);
             return this;
         }
 
-        public Builder setDefaultRouteTableAssociation(@Nullable Input<String> defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(@Nullable Input<String> defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
 
-        public Builder setDefaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = Input.ofNullable(defaultRouteTableAssociation);
             return this;
         }
 
-        public Builder setDefaultRouteTablePropagation(@Nullable Input<String> defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(@Nullable Input<String> defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
 
-        public Builder setDefaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = Input.ofNullable(defaultRouteTablePropagation);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable Input<String> dnsSupport) {
+        public Builder dnsSupport(@Nullable Input<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable String dnsSupport) {
+        public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = Input.ofNullable(dnsSupport);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPropagationDefaultRouteTableId(@Nullable Input<String> propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(@Nullable Input<String> propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setPropagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = Input.ofNullable(propagationDefaultRouteTableId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpnEcmpSupport(@Nullable Input<String> vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(@Nullable Input<String> vpnEcmpSupport) {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }
 
-        public Builder setVpnEcmpSupport(@Nullable String vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
             this.vpnEcmpSupport = Input.ofNullable(vpnEcmpSupport);
             return this;
         }

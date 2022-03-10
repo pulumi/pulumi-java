@@ -136,62 +136,62 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setApiCachingBehavior(@Nullable Input<String> apiCachingBehavior) {
+        public Builder apiCachingBehavior(@Nullable Input<String> apiCachingBehavior) {
             this.apiCachingBehavior = apiCachingBehavior;
             return this;
         }
 
-        public Builder setApiCachingBehavior(@Nullable String apiCachingBehavior) {
+        public Builder apiCachingBehavior(@Nullable String apiCachingBehavior) {
             this.apiCachingBehavior = Input.ofNullable(apiCachingBehavior);
             return this;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setAtRestEncryptionEnabled(@Nullable Input<Boolean> atRestEncryptionEnabled) {
+        public Builder atRestEncryptionEnabled(@Nullable Input<Boolean> atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = atRestEncryptionEnabled;
             return this;
         }
 
-        public Builder setAtRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
+        public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
             this.atRestEncryptionEnabled = Input.ofNullable(atRestEncryptionEnabled);
             return this;
         }
 
-        public Builder setTransitEncryptionEnabled(@Nullable Input<Boolean> transitEncryptionEnabled) {
+        public Builder transitEncryptionEnabled(@Nullable Input<Boolean> transitEncryptionEnabled) {
             this.transitEncryptionEnabled = transitEncryptionEnabled;
             return this;
         }
 
-        public Builder setTransitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
+        public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
             this.transitEncryptionEnabled = Input.ofNullable(transitEncryptionEnabled);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Input<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

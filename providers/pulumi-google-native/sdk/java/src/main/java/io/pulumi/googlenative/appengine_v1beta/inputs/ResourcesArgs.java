@@ -125,52 +125,52 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setCpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Input<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
 
-        public Builder setDiskGb(@Nullable Input<Double> diskGb) {
+        public Builder diskGb(@Nullable Input<Double> diskGb) {
             this.diskGb = diskGb;
             return this;
         }
 
-        public Builder setDiskGb(@Nullable Double diskGb) {
+        public Builder diskGb(@Nullable Double diskGb) {
             this.diskGb = Input.ofNullable(diskGb);
             return this;
         }
 
-        public Builder setKmsKeyReference(@Nullable Input<String> kmsKeyReference) {
+        public Builder kmsKeyReference(@Nullable Input<String> kmsKeyReference) {
             this.kmsKeyReference = kmsKeyReference;
             return this;
         }
 
-        public Builder setKmsKeyReference(@Nullable String kmsKeyReference) {
+        public Builder kmsKeyReference(@Nullable String kmsKeyReference) {
             this.kmsKeyReference = Input.ofNullable(kmsKeyReference);
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Input<Double> memoryGb) {
+        public Builder memoryGb(@Nullable Input<Double> memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = Input.ofNullable(memoryGb);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

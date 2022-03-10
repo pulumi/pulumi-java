@@ -88,32 +88,32 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     	      this.convertDotsInJsonKeysToUnderscores = defaults.convertDotsInJsonKeysToUnderscores;
         }
 
-        public Builder setCaseInsensitive(@Nullable Input<Boolean> caseInsensitive) {
+        public Builder caseInsensitive(@Nullable Input<Boolean> caseInsensitive) {
             this.caseInsensitive = caseInsensitive;
             return this;
         }
 
-        public Builder setCaseInsensitive(@Nullable Boolean caseInsensitive) {
+        public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
             this.caseInsensitive = Input.ofNullable(caseInsensitive);
             return this;
         }
 
-        public Builder setColumnToJsonKeyMappings(@Nullable Input<Map<String,String>> columnToJsonKeyMappings) {
+        public Builder columnToJsonKeyMappings(@Nullable Input<Map<String,String>> columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
 
-        public Builder setColumnToJsonKeyMappings(@Nullable Map<String,String> columnToJsonKeyMappings) {
+        public Builder columnToJsonKeyMappings(@Nullable Map<String,String> columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = Input.ofNullable(columnToJsonKeyMappings);
             return this;
         }
 
-        public Builder setConvertDotsInJsonKeysToUnderscores(@Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores) {
+        public Builder convertDotsInJsonKeysToUnderscores(@Nullable Input<Boolean> convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }
 
-        public Builder setConvertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = Input.ofNullable(convertDotsInJsonKeysToUnderscores);
             return this;
         }

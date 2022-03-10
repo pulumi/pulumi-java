@@ -51,7 +51,7 @@ public final class GetBucketPolicyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }

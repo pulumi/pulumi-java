@@ -49,12 +49,12 @@ public final class InterconnectAttachmentPrivateInterconnectInfoArgs extends io.
     	      this.tag8021q = defaults.tag8021q;
         }
 
-        public Builder setTag8021q(@Nullable Input<Integer> tag8021q) {
+        public Builder tag8021q(@Nullable Input<Integer> tag8021q) {
             this.tag8021q = tag8021q;
             return this;
         }
 
-        public Builder setTag8021q(@Nullable Integer tag8021q) {
+        public Builder tag8021q(@Nullable Integer tag8021q) {
             this.tag8021q = Input.ofNullable(tag8021q);
             return this;
         }

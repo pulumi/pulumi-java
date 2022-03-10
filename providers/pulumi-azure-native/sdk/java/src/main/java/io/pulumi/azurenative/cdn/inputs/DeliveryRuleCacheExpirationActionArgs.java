@@ -75,22 +75,22 @@ public final class DeliveryRuleCacheExpirationActionArgs extends io.pulumi.resou
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(Input<CacheExpirationActionParametersArgs> parameters) {
+        public Builder parameters(Input<CacheExpirationActionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(CacheExpirationActionParametersArgs parameters) {
+        public Builder parameters(CacheExpirationActionParametersArgs parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }

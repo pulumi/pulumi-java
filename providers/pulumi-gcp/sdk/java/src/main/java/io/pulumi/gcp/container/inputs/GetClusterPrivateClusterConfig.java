@@ -123,37 +123,37 @@ public final class GetClusterPrivateClusterConfig extends io.pulumi.resources.In
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder setEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setEnablePrivateNodes(Boolean enablePrivateNodes) {
+        public Builder enablePrivateNodes(Boolean enablePrivateNodes) {
             this.enablePrivateNodes = Objects.requireNonNull(enablePrivateNodes);
             return this;
         }
 
-        public Builder setMasterGlobalAccessConfigs(List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs) {
+        public Builder masterGlobalAccessConfigs(List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs) {
             this.masterGlobalAccessConfigs = Objects.requireNonNull(masterGlobalAccessConfigs);
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setPrivateEndpoint(String privateEndpoint) {
+        public Builder privateEndpoint(String privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
 
-        public Builder setPublicEndpoint(String publicEndpoint) {
+        public Builder publicEndpoint(String publicEndpoint) {
             this.publicEndpoint = Objects.requireNonNull(publicEndpoint);
             return this;
         }

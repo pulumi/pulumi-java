@@ -48,7 +48,7 @@ public final class TestTimingResponse {
     	      this.testProcessDuration = defaults.testProcessDuration;
         }
 
-        public Builder setTestProcessDuration(DurationResponse testProcessDuration) {
+        public Builder testProcessDuration(DurationResponse testProcessDuration) {
             this.testProcessDuration = Objects.requireNonNull(testProcessDuration);
             return this;
         }

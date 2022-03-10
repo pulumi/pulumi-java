@@ -137,62 +137,62 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
     	      this.target = defaults.target;
         }
 
-        public Builder setCmkArn(@Nullable Input<String> cmkArn) {
+        public Builder cmkArn(@Nullable Input<String> cmkArn) {
             this.cmkArn = cmkArn;
             return this;
         }
 
-        public Builder setCmkArn(@Nullable String cmkArn) {
+        public Builder cmkArn(@Nullable String cmkArn) {
             this.cmkArn = Input.ofNullable(cmkArn);
             return this;
         }
 
-        public Builder setCopyTags(@Nullable Input<Boolean> copyTags) {
+        public Builder copyTags(@Nullable Input<Boolean> copyTags) {
             this.copyTags = copyTags;
             return this;
         }
 
-        public Builder setCopyTags(@Nullable Boolean copyTags) {
+        public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = Input.ofNullable(copyTags);
             return this;
         }
 
-        public Builder setDeprecateRule(@Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule) {
+        public Builder deprecateRule(@Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule) {
             this.deprecateRule = deprecateRule;
             return this;
         }
 
-        public Builder setDeprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs deprecateRule) {
+        public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs deprecateRule) {
             this.deprecateRule = Input.ofNullable(deprecateRule);
             return this;
         }
 
-        public Builder setEncrypted(Input<Boolean> encrypted) {
+        public Builder encrypted(Input<Boolean> encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Input.of(Objects.requireNonNull(encrypted));
             return this;
         }
 
-        public Builder setRetainRule(@Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule) {
+        public Builder retainRule(@Nullable Input<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule) {
             this.retainRule = retainRule;
             return this;
         }
 
-        public Builder setRetainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs retainRule) {
+        public Builder retainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs retainRule) {
             this.retainRule = Input.ofNullable(retainRule);
             return this;
         }
 
-        public Builder setTarget(Input<String> target) {
+        public Builder target(Input<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

@@ -53,7 +53,7 @@ public final class ChannelLogConfiguration extends io.pulumi.resources.InvokeArg
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }

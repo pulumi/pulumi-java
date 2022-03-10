@@ -49,7 +49,7 @@ public final class FilterResponse {
     	      this.eventType = defaults.eventType;
         }
 
-        public Builder setEventType(List<String> eventType) {
+        public Builder eventType(List<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }

@@ -138,62 +138,62 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setAddress1(Input<String> address1) {
+        public Builder address1(Input<String> address1) {
             this.address1 = Objects.requireNonNull(address1);
             return this;
         }
 
-        public Builder setAddress1(String address1) {
+        public Builder address1(String address1) {
             this.address1 = Input.of(Objects.requireNonNull(address1));
             return this;
         }
 
-        public Builder setAddress2(@Nullable Input<String> address2) {
+        public Builder address2(@Nullable Input<String> address2) {
             this.address2 = address2;
             return this;
         }
 
-        public Builder setAddress2(@Nullable String address2) {
+        public Builder address2(@Nullable String address2) {
             this.address2 = Input.ofNullable(address2);
             return this;
         }
 
-        public Builder setCity(Input<String> city) {
+        public Builder city(Input<String> city) {
             this.city = Objects.requireNonNull(city);
             return this;
         }
 
-        public Builder setCity(String city) {
+        public Builder city(String city) {
             this.city = Input.of(Objects.requireNonNull(city));
             return this;
         }
 
-        public Builder setCountry(Input<String> country) {
+        public Builder country(Input<String> country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
 
-        public Builder setCountry(String country) {
+        public Builder country(String country) {
             this.country = Input.of(Objects.requireNonNull(country));
             return this;
         }
 
-        public Builder setPostalCode(Input<String> postalCode) {
+        public Builder postalCode(Input<String> postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
 
-        public Builder setPostalCode(String postalCode) {
+        public Builder postalCode(String postalCode) {
             this.postalCode = Input.of(Objects.requireNonNull(postalCode));
             return this;
         }
 
-        public Builder setState(Input<String> state) {
+        public Builder state(Input<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }

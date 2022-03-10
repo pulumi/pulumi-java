@@ -122,52 +122,52 @@ public final class ClassifierState extends io.pulumi.resources.ResourceArgs {
     	      this.xmlClassifier = defaults.xmlClassifier;
         }
 
-        public Builder setCsvClassifier(@Nullable Input<ClassifierCsvClassifierGetArgs> csvClassifier) {
+        public Builder csvClassifier(@Nullable Input<ClassifierCsvClassifierGetArgs> csvClassifier) {
             this.csvClassifier = csvClassifier;
             return this;
         }
 
-        public Builder setCsvClassifier(@Nullable ClassifierCsvClassifierGetArgs csvClassifier) {
+        public Builder csvClassifier(@Nullable ClassifierCsvClassifierGetArgs csvClassifier) {
             this.csvClassifier = Input.ofNullable(csvClassifier);
             return this;
         }
 
-        public Builder setGrokClassifier(@Nullable Input<ClassifierGrokClassifierGetArgs> grokClassifier) {
+        public Builder grokClassifier(@Nullable Input<ClassifierGrokClassifierGetArgs> grokClassifier) {
             this.grokClassifier = grokClassifier;
             return this;
         }
 
-        public Builder setGrokClassifier(@Nullable ClassifierGrokClassifierGetArgs grokClassifier) {
+        public Builder grokClassifier(@Nullable ClassifierGrokClassifierGetArgs grokClassifier) {
             this.grokClassifier = Input.ofNullable(grokClassifier);
             return this;
         }
 
-        public Builder setJsonClassifier(@Nullable Input<ClassifierJsonClassifierGetArgs> jsonClassifier) {
+        public Builder jsonClassifier(@Nullable Input<ClassifierJsonClassifierGetArgs> jsonClassifier) {
             this.jsonClassifier = jsonClassifier;
             return this;
         }
 
-        public Builder setJsonClassifier(@Nullable ClassifierJsonClassifierGetArgs jsonClassifier) {
+        public Builder jsonClassifier(@Nullable ClassifierJsonClassifierGetArgs jsonClassifier) {
             this.jsonClassifier = Input.ofNullable(jsonClassifier);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setXmlClassifier(@Nullable Input<ClassifierXmlClassifierGetArgs> xmlClassifier) {
+        public Builder xmlClassifier(@Nullable Input<ClassifierXmlClassifierGetArgs> xmlClassifier) {
             this.xmlClassifier = xmlClassifier;
             return this;
         }
 
-        public Builder setXmlClassifier(@Nullable ClassifierXmlClassifierGetArgs xmlClassifier) {
+        public Builder xmlClassifier(@Nullable ClassifierXmlClassifierGetArgs xmlClassifier) {
             this.xmlClassifier = Input.ofNullable(xmlClassifier);
             return this;
         }

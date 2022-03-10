@@ -98,22 +98,22 @@ public final class DiscoveredResponse {
     	      this.cpe = defaults.cpe;
         }
 
-        public Builder setAnalysisStatus(String analysisStatus) {
+        public Builder analysisStatus(String analysisStatus) {
             this.analysisStatus = Objects.requireNonNull(analysisStatus);
             return this;
         }
 
-        public Builder setAnalysisStatusError(StatusResponse analysisStatusError) {
+        public Builder analysisStatusError(StatusResponse analysisStatusError) {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
             return this;
         }
 
-        public Builder setContinuousAnalysis(String continuousAnalysis) {
+        public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }
 
-        public Builder setCpe(String cpe) {
+        public Builder cpe(String cpe) {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
         }

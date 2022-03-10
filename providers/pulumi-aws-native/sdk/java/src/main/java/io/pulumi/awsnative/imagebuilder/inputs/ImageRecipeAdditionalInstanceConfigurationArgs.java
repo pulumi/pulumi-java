@@ -75,22 +75,22 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
     	      this.userDataOverride = defaults.userDataOverride;
         }
 
-        public Builder setSystemsManagerAgent(@Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent) {
+        public Builder systemsManagerAgent(@Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent) {
             this.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
 
-        public Builder setSystemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
+        public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
             this.systemsManagerAgent = Input.ofNullable(systemsManagerAgent);
             return this;
         }
 
-        public Builder setUserDataOverride(@Nullable Input<String> userDataOverride) {
+        public Builder userDataOverride(@Nullable Input<String> userDataOverride) {
             this.userDataOverride = userDataOverride;
             return this;
         }
 
-        public Builder setUserDataOverride(@Nullable String userDataOverride) {
+        public Builder userDataOverride(@Nullable String userDataOverride) {
             this.userDataOverride = Input.ofNullable(userDataOverride);
             return this;
         }

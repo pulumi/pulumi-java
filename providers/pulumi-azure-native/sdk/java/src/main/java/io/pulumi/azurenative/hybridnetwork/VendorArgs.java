@@ -53,12 +53,12 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setVendorName(@Nullable Input<String> vendorName) {
+        public Builder vendorName(@Nullable Input<String> vendorName) {
             this.vendorName = vendorName;
             return this;
         }
 
-        public Builder setVendorName(@Nullable String vendorName) {
+        public Builder vendorName(@Nullable String vendorName) {
             this.vendorName = Input.ofNullable(vendorName);
             return this;
         }

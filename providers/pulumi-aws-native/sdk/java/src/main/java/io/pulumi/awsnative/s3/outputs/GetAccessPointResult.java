@@ -110,27 +110,27 @@ public final class GetAccessPointResult {
     	      this.policyStatus = defaults.policyStatus;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setNetworkOrigin(@Nullable AccessPointNetworkOrigin networkOrigin) {
+        public Builder networkOrigin(@Nullable AccessPointNetworkOrigin networkOrigin) {
             this.networkOrigin = networkOrigin;
             return this;
         }
 
-        public Builder setPolicy(@Nullable Object policy) {
+        public Builder policy(@Nullable Object policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicyStatus(@Nullable PolicyStatusProperties policyStatus) {
+        public Builder policyStatus(@Nullable PolicyStatusProperties policyStatus) {
             this.policyStatus = policyStatus;
             return this;
         }

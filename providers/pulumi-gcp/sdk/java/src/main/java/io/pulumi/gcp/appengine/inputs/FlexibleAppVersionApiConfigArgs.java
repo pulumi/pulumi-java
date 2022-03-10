@@ -123,52 +123,52 @@ public final class FlexibleAppVersionApiConfigArgs extends io.pulumi.resources.R
     	      this.url = defaults.url;
         }
 
-        public Builder setAuthFailAction(@Nullable Input<String> authFailAction) {
+        public Builder authFailAction(@Nullable Input<String> authFailAction) {
             this.authFailAction = authFailAction;
             return this;
         }
 
-        public Builder setAuthFailAction(@Nullable String authFailAction) {
+        public Builder authFailAction(@Nullable String authFailAction) {
             this.authFailAction = Input.ofNullable(authFailAction);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<String> login) {
+        public Builder login(@Nullable Input<String> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable String login) {
+        public Builder login(@Nullable String login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setScript(Input<String> script) {
+        public Builder script(Input<String> script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Input.of(Objects.requireNonNull(script));
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable Input<String> securityLevel) {
+        public Builder securityLevel(@Nullable Input<String> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable String securityLevel) {
+        public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = Input.ofNullable(securityLevel);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

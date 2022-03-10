@@ -94,37 +94,37 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable String availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setInstancePlatform(@Nullable String instancePlatform) {
+        public Builder instancePlatform(@Nullable String instancePlatform) {
             this.instancePlatform = instancePlatform;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setWeight(@Nullable Double weight) {
+        public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
         }

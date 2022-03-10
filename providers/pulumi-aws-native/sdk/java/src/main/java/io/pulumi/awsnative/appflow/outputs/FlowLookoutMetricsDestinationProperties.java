@@ -42,7 +42,7 @@ public final class FlowLookoutMetricsDestinationProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = object;
             return this;
         }

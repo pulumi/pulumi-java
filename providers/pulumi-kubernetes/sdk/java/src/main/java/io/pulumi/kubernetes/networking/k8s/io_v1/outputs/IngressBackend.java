@@ -68,12 +68,12 @@ public final class IngressBackend {
     	      this.service = defaults.service;
         }
 
-        public Builder setResource(@Nullable TypedLocalObjectReference resource) {
+        public Builder resource(@Nullable TypedLocalObjectReference resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setService(@Nullable IngressServiceBackend service) {
+        public Builder service(@Nullable IngressServiceBackend service) {
             this.service = service;
             return this;
         }

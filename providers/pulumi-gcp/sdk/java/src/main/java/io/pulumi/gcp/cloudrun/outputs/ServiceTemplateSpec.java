@@ -171,32 +171,32 @@ public final class ServiceTemplateSpec {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setContainerConcurrency(@Nullable Integer containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<ServiceTemplateSpecContainer> containers) {
+        public Builder containers(@Nullable List<ServiceTemplateSpecContainer> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setServingState(@Nullable String servingState) {
+        public Builder servingState(@Nullable String servingState) {
             this.servingState = servingState;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<ServiceTemplateSpecVolume> volumes) {
+        public Builder volumes(@Nullable List<ServiceTemplateSpecVolume> volumes) {
             this.volumes = volumes;
             return this;
         }

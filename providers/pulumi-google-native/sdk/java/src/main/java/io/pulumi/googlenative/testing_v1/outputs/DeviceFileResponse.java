@@ -66,12 +66,12 @@ public final class DeviceFileResponse {
     	      this.regularFile = defaults.regularFile;
         }
 
-        public Builder setObbFile(ObbFileResponse obbFile) {
+        public Builder obbFile(ObbFileResponse obbFile) {
             this.obbFile = Objects.requireNonNull(obbFile);
             return this;
         }
 
-        public Builder setRegularFile(RegularFileResponse regularFile) {
+        public Builder regularFile(RegularFileResponse regularFile) {
             this.regularFile = Objects.requireNonNull(regularFile);
             return this;
         }

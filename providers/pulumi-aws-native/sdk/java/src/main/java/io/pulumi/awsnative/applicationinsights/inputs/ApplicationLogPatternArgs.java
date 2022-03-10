@@ -90,32 +90,32 @@ public final class ApplicationLogPatternArgs extends io.pulumi.resources.Resourc
     	      this.rank = defaults.rank;
         }
 
-        public Builder setPattern(Input<String> pattern) {
+        public Builder pattern(Input<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Input.of(Objects.requireNonNull(pattern));
             return this;
         }
 
-        public Builder setPatternName(Input<String> patternName) {
+        public Builder patternName(Input<String> patternName) {
             this.patternName = Objects.requireNonNull(patternName);
             return this;
         }
 
-        public Builder setPatternName(String patternName) {
+        public Builder patternName(String patternName) {
             this.patternName = Input.of(Objects.requireNonNull(patternName));
             return this;
         }
 
-        public Builder setRank(Input<Integer> rank) {
+        public Builder rank(Input<Integer> rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
 
-        public Builder setRank(Integer rank) {
+        public Builder rank(Integer rank) {
             this.rank = Input.of(Objects.requireNonNull(rank));
             return this;
         }

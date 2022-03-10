@@ -84,17 +84,17 @@ public final class GetTransitGatewayMulticastDomainAssociationArgs extends io.pu
     	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }

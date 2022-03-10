@@ -153,37 +153,37 @@ public final class WranglingDataFlowResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentLocale(@Nullable String documentLocale) {
+        public Builder documentLocale(@Nullable String documentLocale) {
             this.documentLocale = documentLocale;
             return this;
         }
 
-        public Builder setFolder(@Nullable DataFlowResponseFolder folder) {
+        public Builder folder(@Nullable DataFlowResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setSources(@Nullable List<PowerQuerySourceResponse> sources) {
+        public Builder sources(@Nullable List<PowerQuerySourceResponse> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

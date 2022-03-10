@@ -114,27 +114,27 @@ public final class GetReservationResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setIgnoreIdleSlots(Boolean ignoreIdleSlots) {
+        public Builder ignoreIdleSlots(Boolean ignoreIdleSlots) {
             this.ignoreIdleSlots = Objects.requireNonNull(ignoreIdleSlots);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSlotCapacity(String slotCapacity) {
+        public Builder slotCapacity(String slotCapacity) {
             this.slotCapacity = Objects.requireNonNull(slotCapacity);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

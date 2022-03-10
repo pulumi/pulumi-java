@@ -114,27 +114,27 @@ public final class ErrorResponse {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setDetails(Map<String,String> details) {
+        public Builder details(Map<String,String> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setErrorTime(String errorTime) {
+        public Builder errorTime(String errorTime) {
             this.errorTime = Objects.requireNonNull(errorTime);
             return this;
         }
 
-        public Builder setErrorUuid(String errorUuid) {
+        public Builder errorUuid(String errorUuid) {
             this.errorUuid = Objects.requireNonNull(errorUuid);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }

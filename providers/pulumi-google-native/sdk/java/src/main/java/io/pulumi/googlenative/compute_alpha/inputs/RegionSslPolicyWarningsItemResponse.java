@@ -86,17 +86,17 @@ public final class RegionSslPolicyWarningsItemResponse extends io.pulumi.resourc
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setData(List<RegionSslPolicyWarningsItemDataItemResponse> data) {
+        public Builder data(List<RegionSslPolicyWarningsItemDataItemResponse> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

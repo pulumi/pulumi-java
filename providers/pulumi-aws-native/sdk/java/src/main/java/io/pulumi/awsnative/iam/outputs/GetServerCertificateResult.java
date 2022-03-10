@@ -69,17 +69,17 @@ public final class GetServerCertificateResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServerCertificateTag> tags) {
+        public Builder tags(@Nullable List<ServerCertificateTag> tags) {
             this.tags = tags;
             return this;
         }

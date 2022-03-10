@@ -98,22 +98,22 @@ public final class GetEntryGroupResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataCatalogTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse dataCatalogTimestamps) {
+        public Builder dataCatalogTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse dataCatalogTimestamps) {
             this.dataCatalogTimestamps = Objects.requireNonNull(dataCatalogTimestamps);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

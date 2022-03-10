@@ -121,27 +121,27 @@ public final class JobStagesResponse extends io.pulumi.resources.InvokeArgs {
     	      this.stageTime = defaults.stageTime;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setJobStageDetails(Object jobStageDetails) {
+        public Builder jobStageDetails(Object jobStageDetails) {
             this.jobStageDetails = Objects.requireNonNull(jobStageDetails);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
-        public Builder setStageStatus(String stageStatus) {
+        public Builder stageStatus(String stageStatus) {
             this.stageStatus = Objects.requireNonNull(stageStatus);
             return this;
         }
 
-        public Builder setStageTime(String stageTime) {
+        public Builder stageTime(String stageTime) {
             this.stageTime = Objects.requireNonNull(stageTime);
             return this;
         }

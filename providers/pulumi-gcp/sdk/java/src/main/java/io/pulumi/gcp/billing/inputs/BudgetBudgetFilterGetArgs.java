@@ -159,62 +159,62 @@ public final class BudgetBudgetFilterGetArgs extends io.pulumi.resources.Resourc
     	      this.subaccounts = defaults.subaccounts;
         }
 
-        public Builder setCreditTypes(@Nullable Input<List<String>> creditTypes) {
+        public Builder creditTypes(@Nullable Input<List<String>> creditTypes) {
             this.creditTypes = creditTypes;
             return this;
         }
 
-        public Builder setCreditTypes(@Nullable List<String> creditTypes) {
+        public Builder creditTypes(@Nullable List<String> creditTypes) {
             this.creditTypes = Input.ofNullable(creditTypes);
             return this;
         }
 
-        public Builder setCreditTypesTreatment(@Nullable Input<String> creditTypesTreatment) {
+        public Builder creditTypesTreatment(@Nullable Input<String> creditTypesTreatment) {
             this.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
 
-        public Builder setCreditTypesTreatment(@Nullable String creditTypesTreatment) {
+        public Builder creditTypesTreatment(@Nullable String creditTypesTreatment) {
             this.creditTypesTreatment = Input.ofNullable(creditTypesTreatment);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setProjects(@Nullable Input<List<String>> projects) {
+        public Builder projects(@Nullable Input<List<String>> projects) {
             this.projects = projects;
             return this;
         }
 
-        public Builder setProjects(@Nullable List<String> projects) {
+        public Builder projects(@Nullable List<String> projects) {
             this.projects = Input.ofNullable(projects);
             return this;
         }
 
-        public Builder setServices(@Nullable Input<List<String>> services) {
+        public Builder services(@Nullable Input<List<String>> services) {
             this.services = services;
             return this;
         }
 
-        public Builder setServices(@Nullable List<String> services) {
+        public Builder services(@Nullable List<String> services) {
             this.services = Input.ofNullable(services);
             return this;
         }
 
-        public Builder setSubaccounts(@Nullable Input<List<String>> subaccounts) {
+        public Builder subaccounts(@Nullable Input<List<String>> subaccounts) {
             this.subaccounts = subaccounts;
             return this;
         }
 
-        public Builder setSubaccounts(@Nullable List<String> subaccounts) {
+        public Builder subaccounts(@Nullable List<String> subaccounts) {
             this.subaccounts = Input.ofNullable(subaccounts);
             return this;
         }

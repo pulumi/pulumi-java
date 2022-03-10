@@ -87,32 +87,32 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<PolicySpecGetArgs> spec) {
+        public Builder spec(@Nullable Input<PolicySpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable PolicySpecGetArgs spec) {
+        public Builder spec(@Nullable PolicySpecGetArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }

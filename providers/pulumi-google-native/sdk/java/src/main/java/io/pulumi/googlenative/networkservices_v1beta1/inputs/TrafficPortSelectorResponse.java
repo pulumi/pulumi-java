@@ -56,7 +56,7 @@ public final class TrafficPortSelectorResponse extends io.pulumi.resources.Invok
     	      this.ports = defaults.ports;
         }
 
-        public Builder setPorts(List<String> ports) {
+        public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

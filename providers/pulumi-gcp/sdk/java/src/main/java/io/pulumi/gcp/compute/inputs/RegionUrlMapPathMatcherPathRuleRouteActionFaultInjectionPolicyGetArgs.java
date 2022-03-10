@@ -75,22 +75,22 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort) {
+        public Builder abort(@Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs> abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setAbort(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs abort) {
+        public Builder abort(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs abort) {
             this.abort = Input.ofNullable(abort);
             return this;
         }
 
-        public Builder setDelay(@Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
+        public Builder delay(@Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs delay) {
+        public Builder delay(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayGetArgs delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }

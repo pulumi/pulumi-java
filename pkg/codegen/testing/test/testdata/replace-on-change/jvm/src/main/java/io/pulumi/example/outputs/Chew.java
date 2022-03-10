@@ -42,7 +42,7 @@ public final class Chew {
     	      this.owner = defaults.owner;
         }
 
-        public Builder setOwner(@Nullable Dog owner) {
+        public Builder owner(@Nullable Dog owner) {
             this.owner = owner;
             return this;
         }

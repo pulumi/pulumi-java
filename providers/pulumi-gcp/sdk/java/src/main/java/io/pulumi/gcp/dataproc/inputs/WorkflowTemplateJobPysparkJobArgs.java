@@ -169,82 +169,82 @@ public final class WorkflowTemplateJobPysparkJobArgs extends io.pulumi.resources
     	      this.pythonFileUris = defaults.pythonFileUris;
         }
 
-        public Builder setArchiveUris(@Nullable Input<List<String>> archiveUris) {
+        public Builder archiveUris(@Nullable Input<List<String>> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
-        public Builder setArchiveUris(@Nullable List<String> archiveUris) {
+        public Builder archiveUris(@Nullable List<String> archiveUris) {
             this.archiveUris = Input.ofNullable(archiveUris);
             return this;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setFileUris(@Nullable Input<List<String>> fileUris) {
+        public Builder fileUris(@Nullable Input<List<String>> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
-        public Builder setFileUris(@Nullable List<String> fileUris) {
+        public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = Input.ofNullable(fileUris);
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable Input<List<String>> jarFileUris) {
+        public Builder jarFileUris(@Nullable Input<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Input.ofNullable(jarFileUris);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<WorkflowTemplateJobPysparkJobLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobPysparkJobLoggingConfigArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobPysparkJobLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setMainPythonFileUri(Input<String> mainPythonFileUri) {
+        public Builder mainPythonFileUri(Input<String> mainPythonFileUri) {
             this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
             return this;
         }
 
-        public Builder setMainPythonFileUri(String mainPythonFileUri) {
+        public Builder mainPythonFileUri(String mainPythonFileUri) {
             this.mainPythonFileUri = Input.of(Objects.requireNonNull(mainPythonFileUri));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setPythonFileUris(@Nullable Input<List<String>> pythonFileUris) {
+        public Builder pythonFileUris(@Nullable Input<List<String>> pythonFileUris) {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
 
-        public Builder setPythonFileUris(@Nullable List<String> pythonFileUris) {
+        public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
             this.pythonFileUris = Input.ofNullable(pythonFileUris);
             return this;
         }

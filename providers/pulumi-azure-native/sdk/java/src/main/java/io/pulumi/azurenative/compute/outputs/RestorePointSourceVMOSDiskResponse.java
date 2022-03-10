@@ -151,37 +151,37 @@ public final class RestorePointSourceVMOSDiskResponse {
     	      this.osType = defaults.osType;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setDiskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
+        public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
             this.diskRestorePoint = diskRestorePoint;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setEncryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
+        public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
+        public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }

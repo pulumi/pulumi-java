@@ -126,52 +126,52 @@ public final class AzureFirewallNatRuleCollectionArgs extends io.pulumi.resource
     	      this.rules = defaults.rules;
         }
 
-        public Builder setAction(@Nullable Input<AzureFirewallNatRCActionArgs> action) {
+        public Builder action(@Nullable Input<AzureFirewallNatRCActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable AzureFirewallNatRCActionArgs action) {
+        public Builder action(@Nullable AzureFirewallNatRCActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<AzureFirewallNatRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<AzureFirewallNatRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<AzureFirewallNatRuleArgs> rules) {
+        public Builder rules(@Nullable List<AzureFirewallNatRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ClusterIdentity {
     	      this.oidcs = defaults.oidcs;
         }
 
-        public Builder setOidcs(@Nullable List<ClusterIdentityOidc> oidcs) {
+        public Builder oidcs(@Nullable List<ClusterIdentityOidc> oidcs) {
             this.oidcs = oidcs;
             return this;
         }

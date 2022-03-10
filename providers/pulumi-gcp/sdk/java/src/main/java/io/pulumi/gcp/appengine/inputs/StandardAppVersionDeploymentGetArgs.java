@@ -75,22 +75,22 @@ public final class StandardAppVersionDeploymentGetArgs extends io.pulumi.resourc
     	      this.zip = defaults.zip;
         }
 
-        public Builder setFiles(@Nullable Input<List<StandardAppVersionDeploymentFileGetArgs>> files) {
+        public Builder files(@Nullable Input<List<StandardAppVersionDeploymentFileGetArgs>> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setFiles(@Nullable List<StandardAppVersionDeploymentFileGetArgs> files) {
+        public Builder files(@Nullable List<StandardAppVersionDeploymentFileGetArgs> files) {
             this.files = Input.ofNullable(files);
             return this;
         }
 
-        public Builder setZip(@Nullable Input<StandardAppVersionDeploymentZipGetArgs> zip) {
+        public Builder zip(@Nullable Input<StandardAppVersionDeploymentZipGetArgs> zip) {
             this.zip = zip;
             return this;
         }
 
-        public Builder setZip(@Nullable StandardAppVersionDeploymentZipGetArgs zip) {
+        public Builder zip(@Nullable StandardAppVersionDeploymentZipGetArgs zip) {
             this.zip = Input.ofNullable(zip);
             return this;
         }

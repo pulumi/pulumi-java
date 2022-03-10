@@ -116,27 +116,27 @@ public final class OriginEndpointSpekeKeyProvider {
     	      this.url = defaults.url;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSystemIds(List<String> systemIds) {
+        public Builder systemIds(List<String> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

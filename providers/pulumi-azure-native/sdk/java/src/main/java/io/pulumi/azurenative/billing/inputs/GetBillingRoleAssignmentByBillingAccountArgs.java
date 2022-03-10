@@ -68,12 +68,12 @@ public final class GetBillingRoleAssignmentByBillingAccountArgs extends io.pulum
     	      this.billingRoleAssignmentName = defaults.billingRoleAssignmentName;
         }
 
-        public Builder setBillingAccountName(String billingAccountName) {
+        public Builder billingAccountName(String billingAccountName) {
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }
 
-        public Builder setBillingRoleAssignmentName(String billingRoleAssignmentName) {
+        public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
             this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName);
             return this;
         }

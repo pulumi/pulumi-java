@@ -84,17 +84,17 @@ public final class GetCloudLinkArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setCloudLinkName(String cloudLinkName) {
+        public Builder cloudLinkName(String cloudLinkName) {
             this.cloudLinkName = Objects.requireNonNull(cloudLinkName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

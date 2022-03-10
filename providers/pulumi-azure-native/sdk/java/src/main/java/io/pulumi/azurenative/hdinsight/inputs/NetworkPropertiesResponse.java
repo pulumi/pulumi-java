@@ -74,12 +74,12 @@ public final class NetworkPropertiesResponse extends io.pulumi.resources.InvokeA
     	      this.resourceProviderConnection = defaults.resourceProviderConnection;
         }
 
-        public Builder setPrivateLink(@Nullable String privateLink) {
+        public Builder privateLink(@Nullable String privateLink) {
             this.privateLink = privateLink;
             return this;
         }
 
-        public Builder setResourceProviderConnection(@Nullable String resourceProviderConnection) {
+        public Builder resourceProviderConnection(@Nullable String resourceProviderConnection) {
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
         }

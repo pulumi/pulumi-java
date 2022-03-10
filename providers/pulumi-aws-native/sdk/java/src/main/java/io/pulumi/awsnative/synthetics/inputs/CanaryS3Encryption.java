@@ -70,12 +70,12 @@ public final class CanaryS3Encryption extends io.pulumi.resources.InvokeArgs {
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEncryptionMode(@Nullable String encryptionMode) {
+        public Builder encryptionMode(@Nullable String encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }

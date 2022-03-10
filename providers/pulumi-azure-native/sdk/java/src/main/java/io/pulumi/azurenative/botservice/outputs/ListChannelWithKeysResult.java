@@ -293,77 +293,77 @@ public final class ListChannelWithKeysResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setEntityTag(@Nullable String entityTag) {
+        public Builder entityTag(@Nullable String entityTag) {
             this.entityTag = entityTag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(Object properties) {
+        public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setResource(@Nullable Object resource) {
+        public Builder resource(@Nullable Object resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setSetting(@Nullable ChannelSettingsResponse setting) {
+        public Builder setting(@Nullable ChannelSettingsResponse setting) {
             this.setting = setting;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(List<String> zones) {
+        public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

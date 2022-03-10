@@ -62,22 +62,22 @@ public final class RuleGroupForwardedIPConfigurationArgs extends io.pulumi.resou
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setFallbackBehavior(Input<RuleGroupForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
+        public Builder fallbackBehavior(Input<RuleGroupForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setFallbackBehavior(RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
+        public Builder fallbackBehavior(RuleGroupForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }

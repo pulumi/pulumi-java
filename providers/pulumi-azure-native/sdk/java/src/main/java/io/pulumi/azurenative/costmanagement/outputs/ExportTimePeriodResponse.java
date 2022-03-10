@@ -65,12 +65,12 @@ public final class ExportTimePeriodResponse {
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(String from) {
+        public Builder from(String from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
-        public Builder setTo(String to) {
+        public Builder to(String to) {
             this.to = Objects.requireNonNull(to);
             return this;
         }

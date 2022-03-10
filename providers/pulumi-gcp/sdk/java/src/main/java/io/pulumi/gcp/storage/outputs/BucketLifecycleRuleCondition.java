@@ -181,47 +181,47 @@ public final class BucketLifecycleRuleCondition {
     	      this.withState = defaults.withState;
         }
 
-        public Builder setAge(@Nullable Integer age) {
+        public Builder age(@Nullable Integer age) {
             this.age = age;
             return this;
         }
 
-        public Builder setCreatedBefore(@Nullable String createdBefore) {
+        public Builder createdBefore(@Nullable String createdBefore) {
             this.createdBefore = createdBefore;
             return this;
         }
 
-        public Builder setCustomTimeBefore(@Nullable String customTimeBefore) {
+        public Builder customTimeBefore(@Nullable String customTimeBefore) {
             this.customTimeBefore = customTimeBefore;
             return this;
         }
 
-        public Builder setDaysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
+        public Builder daysSinceCustomTime(@Nullable Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = daysSinceCustomTime;
             return this;
         }
 
-        public Builder setDaysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
+        public Builder daysSinceNoncurrentTime(@Nullable Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = daysSinceNoncurrentTime;
             return this;
         }
 
-        public Builder setMatchesStorageClasses(@Nullable List<String> matchesStorageClasses) {
+        public Builder matchesStorageClasses(@Nullable List<String> matchesStorageClasses) {
             this.matchesStorageClasses = matchesStorageClasses;
             return this;
         }
 
-        public Builder setNoncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
+        public Builder noncurrentTimeBefore(@Nullable String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = noncurrentTimeBefore;
             return this;
         }
 
-        public Builder setNumNewerVersions(@Nullable Integer numNewerVersions) {
+        public Builder numNewerVersions(@Nullable Integer numNewerVersions) {
             this.numNewerVersions = numNewerVersions;
             return this;
         }
 
-        public Builder setWithState(@Nullable String withState) {
+        public Builder withState(@Nullable String withState) {
             this.withState = withState;
             return this;
         }

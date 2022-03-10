@@ -125,52 +125,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardArgs extend
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons) {
+        public Builder buttons(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs>> buttons) {
             this.buttons = buttons;
             return this;
         }
 
-        public Builder setButtons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs> buttons) {
+        public Builder buttons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonArgs> buttons) {
             this.buttons = Input.ofNullable(buttons);
             return this;
         }
 
-        public Builder setFormattedText(@Nullable Input<String> formattedText) {
+        public Builder formattedText(@Nullable Input<String> formattedText) {
             this.formattedText = formattedText;
             return this;
         }
 
-        public Builder setFormattedText(@Nullable String formattedText) {
+        public Builder formattedText(@Nullable String formattedText) {
             this.formattedText = Input.ofNullable(formattedText);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
+        public Builder image(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
+        public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setSubtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Input<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
-        public Builder setSubtitle(@Nullable String subtitle) {
+        public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Input.ofNullable(subtitle);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

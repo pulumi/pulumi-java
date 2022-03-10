@@ -152,82 +152,82 @@ public final class ConsentStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setConsentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Input<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
-        public Builder setConsentStoreId(String consentStoreId) {
+        public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setDefaultConsentTtl(@Nullable Input<String> defaultConsentTtl) {
+        public Builder defaultConsentTtl(@Nullable Input<String> defaultConsentTtl) {
             this.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
 
-        public Builder setDefaultConsentTtl(@Nullable String defaultConsentTtl) {
+        public Builder defaultConsentTtl(@Nullable String defaultConsentTtl) {
             this.defaultConsentTtl = Input.ofNullable(defaultConsentTtl);
             return this;
         }
 
-        public Builder setEnableConsentCreateOnUpdate(@Nullable Input<Boolean> enableConsentCreateOnUpdate) {
+        public Builder enableConsentCreateOnUpdate(@Nullable Input<Boolean> enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
 
-        public Builder setEnableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
+        public Builder enableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = Input.ofNullable(enableConsentCreateOnUpdate);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

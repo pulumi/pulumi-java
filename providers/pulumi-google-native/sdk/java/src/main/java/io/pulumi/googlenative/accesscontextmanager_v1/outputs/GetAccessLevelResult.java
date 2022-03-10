@@ -115,27 +115,27 @@ public final class GetAccessLevelResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setBasic(BasicLevelResponse basic) {
+        public Builder basic(BasicLevelResponse basic) {
             this.basic = Objects.requireNonNull(basic);
             return this;
         }
 
-        public Builder setCustom(CustomLevelResponse custom) {
+        public Builder custom(CustomLevelResponse custom) {
             this.custom = Objects.requireNonNull(custom);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

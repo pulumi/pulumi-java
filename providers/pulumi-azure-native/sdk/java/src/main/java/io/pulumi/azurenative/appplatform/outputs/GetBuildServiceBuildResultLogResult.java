@@ -50,7 +50,7 @@ public final class GetBuildServiceBuildResultLogResult {
     	      this.blobUrl = defaults.blobUrl;
         }
 
-        public Builder setBlobUrl(@Nullable String blobUrl) {
+        public Builder blobUrl(@Nullable String blobUrl) {
             this.blobUrl = blobUrl;
             return this;
         }

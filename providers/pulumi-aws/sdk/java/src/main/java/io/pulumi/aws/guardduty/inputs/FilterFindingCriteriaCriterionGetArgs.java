@@ -151,72 +151,72 @@ public final class FilterFindingCriteriaCriterionGetArgs extends io.pulumi.resou
     	      this.notEquals = defaults.notEquals;
         }
 
-        public Builder setEquals(@Nullable Input<List<String>> equals) {
+        public Builder equals(@Nullable Input<List<String>> equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setEquals(@Nullable List<String> equals) {
+        public Builder equals(@Nullable List<String> equals) {
             this.equals = Input.ofNullable(equals);
             return this;
         }
 
-        public Builder setField(Input<String> field) {
+        public Builder field(Input<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Input.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder setGreaterThan(@Nullable Input<String> greaterThan) {
+        public Builder greaterThan(@Nullable Input<String> greaterThan) {
             this.greaterThan = greaterThan;
             return this;
         }
 
-        public Builder setGreaterThan(@Nullable String greaterThan) {
+        public Builder greaterThan(@Nullable String greaterThan) {
             this.greaterThan = Input.ofNullable(greaterThan);
             return this;
         }
 
-        public Builder setGreaterThanOrEqual(@Nullable Input<String> greaterThanOrEqual) {
+        public Builder greaterThanOrEqual(@Nullable Input<String> greaterThanOrEqual) {
             this.greaterThanOrEqual = greaterThanOrEqual;
             return this;
         }
 
-        public Builder setGreaterThanOrEqual(@Nullable String greaterThanOrEqual) {
+        public Builder greaterThanOrEqual(@Nullable String greaterThanOrEqual) {
             this.greaterThanOrEqual = Input.ofNullable(greaterThanOrEqual);
             return this;
         }
 
-        public Builder setLessThan(@Nullable Input<String> lessThan) {
+        public Builder lessThan(@Nullable Input<String> lessThan) {
             this.lessThan = lessThan;
             return this;
         }
 
-        public Builder setLessThan(@Nullable String lessThan) {
+        public Builder lessThan(@Nullable String lessThan) {
             this.lessThan = Input.ofNullable(lessThan);
             return this;
         }
 
-        public Builder setLessThanOrEqual(@Nullable Input<String> lessThanOrEqual) {
+        public Builder lessThanOrEqual(@Nullable Input<String> lessThanOrEqual) {
             this.lessThanOrEqual = lessThanOrEqual;
             return this;
         }
 
-        public Builder setLessThanOrEqual(@Nullable String lessThanOrEqual) {
+        public Builder lessThanOrEqual(@Nullable String lessThanOrEqual) {
             this.lessThanOrEqual = Input.ofNullable(lessThanOrEqual);
             return this;
         }
 
-        public Builder setNotEquals(@Nullable Input<List<String>> notEquals) {
+        public Builder notEquals(@Nullable Input<List<String>> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
 
-        public Builder setNotEquals(@Nullable List<String> notEquals) {
+        public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = Input.ofNullable(notEquals);
             return this;
         }

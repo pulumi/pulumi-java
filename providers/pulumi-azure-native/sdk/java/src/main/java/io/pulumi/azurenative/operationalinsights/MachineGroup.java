@@ -196,7 +196,7 @@ public class MachineGroup extends io.pulumi.resources.CustomResource {
     private static MachineGroupArgs makeArgs(MachineGroupArgs args) {
         var builder = args == null ? MachineGroupArgs.builder() : MachineGroupArgs.builder(args);
         return builder
-            .setKind("machineGroup")
+            .kind("machineGroup")
             .build();
     }
 

@@ -105,42 +105,42 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceAr
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Input<Boolean> allowInsecure) {
+        public Builder allowInsecure(@Nullable Input<Boolean> allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Input.ofNullable(allowInsecure);
             return this;
         }
 
-        public Builder setGcs(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs> gcs) {
+        public Builder gcs(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setGcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs gcs) {
+        public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs gcs) {
             this.gcs = Input.ofNullable(gcs);
             return this;
         }
 
-        public Builder setLocalPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Input<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = Input.ofNullable(localPath);
             return this;
         }
 
-        public Builder setRemote(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs> remote) {
+        public Builder remote(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs> remote) {
             this.remote = remote;
             return this;
         }
 
-        public Builder setRemote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs remote) {
+        public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceRemoteArgs remote) {
             this.remote = Input.ofNullable(remote);
             return this;
         }

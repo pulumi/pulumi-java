@@ -65,12 +65,12 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

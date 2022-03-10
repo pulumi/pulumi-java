@@ -74,12 +74,12 @@ public final class ParametersLinkResponse extends io.pulumi.resources.InvokeArgs
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentVersion(@Nullable String contentVersion) {
+        public Builder contentVersion(@Nullable String contentVersion) {
             this.contentVersion = contentVersion;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

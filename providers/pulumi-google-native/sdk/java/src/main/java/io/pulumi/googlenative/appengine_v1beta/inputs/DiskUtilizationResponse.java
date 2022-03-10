@@ -104,22 +104,22 @@ public final class DiskUtilizationResponse extends io.pulumi.resources.InvokeArg
     	      this.targetWriteOpsPerSecond = defaults.targetWriteOpsPerSecond;
         }
 
-        public Builder setTargetReadBytesPerSecond(Integer targetReadBytesPerSecond) {
+        public Builder targetReadBytesPerSecond(Integer targetReadBytesPerSecond) {
             this.targetReadBytesPerSecond = Objects.requireNonNull(targetReadBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
+        public Builder targetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = Objects.requireNonNull(targetReadOpsPerSecond);
             return this;
         }
 
-        public Builder setTargetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
+        public Builder targetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = Objects.requireNonNull(targetWriteBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
+        public Builder targetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = Objects.requireNonNull(targetWriteOpsPerSecond);
             return this;
         }

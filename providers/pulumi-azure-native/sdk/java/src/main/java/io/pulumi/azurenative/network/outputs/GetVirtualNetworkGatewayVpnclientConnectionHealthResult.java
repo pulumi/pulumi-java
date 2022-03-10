@@ -50,7 +50,7 @@ public final class GetVirtualNetworkGatewayVpnclientConnectionHealthResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<VpnClientConnectionHealthDetailResponse> value) {
+        public Builder value(@Nullable List<VpnClientConnectionHealthDetailResponse> value) {
             this.value = value;
             return this;
         }

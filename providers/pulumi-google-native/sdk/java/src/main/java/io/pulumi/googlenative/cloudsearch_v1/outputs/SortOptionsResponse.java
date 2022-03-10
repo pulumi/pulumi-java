@@ -65,12 +65,12 @@ public final class SortOptionsResponse {
     	      this.sortOrder = defaults.sortOrder;
         }
 
-        public Builder setOperatorName(String operatorName) {
+        public Builder operatorName(String operatorName) {
             this.operatorName = Objects.requireNonNull(operatorName);
             return this;
         }
 
-        public Builder setSortOrder(String sortOrder) {
+        public Builder sortOrder(String sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }

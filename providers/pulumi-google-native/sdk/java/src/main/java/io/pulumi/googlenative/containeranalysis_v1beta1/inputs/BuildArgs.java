@@ -75,22 +75,22 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setBuilderVersion(Input<String> builderVersion) {
+        public Builder builderVersion(Input<String> builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
 
-        public Builder setBuilderVersion(String builderVersion) {
+        public Builder builderVersion(String builderVersion) {
             this.builderVersion = Input.of(Objects.requireNonNull(builderVersion));
             return this;
         }
 
-        public Builder setSignature(@Nullable Input<BuildSignatureArgs> signature) {
+        public Builder signature(@Nullable Input<BuildSignatureArgs> signature) {
             this.signature = signature;
             return this;
         }
 
-        public Builder setSignature(@Nullable BuildSignatureArgs signature) {
+        public Builder signature(@Nullable BuildSignatureArgs signature) {
             this.signature = Input.ofNullable(signature);
             return this;
         }

@@ -90,17 +90,17 @@ public final class AnalyticsApplicationReferenceDataSourcesSchema {
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder setRecordColumns(List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn> recordColumns) {
+        public Builder recordColumns(List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable String recordEncoding) {
+        public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
-        public Builder setRecordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat recordFormat) {
+        public Builder recordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }

@@ -83,17 +83,17 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
     	      this.requirement = defaults.requirement;
         }
 
-        public Builder setBehavior(String behavior) {
+        public Builder behavior(String behavior) {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
 
-        public Builder setConditions(List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions) {
+        public Builder conditions(List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setRequirement(String requirement) {
+        public Builder requirement(String requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }

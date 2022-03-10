@@ -83,17 +83,17 @@ public final class OptionsProperties {
     	      this.ipv6Support = defaults.ipv6Support;
         }
 
-        public Builder setApplianceModeSupport(@Nullable String applianceModeSupport) {
+        public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
             this.applianceModeSupport = applianceModeSupport;
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable String dnsSupport) {
+        public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
-        public Builder setIpv6Support(@Nullable String ipv6Support) {
+        public Builder ipv6Support(@Nullable String ipv6Support) {
             this.ipv6Support = ipv6Support;
             return this;
         }

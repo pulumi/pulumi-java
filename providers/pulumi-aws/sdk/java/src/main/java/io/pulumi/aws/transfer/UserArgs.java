@@ -186,92 +186,92 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setHomeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable String homeDirectory) {
+        public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Input.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Input<List<UserHomeDirectoryMappingArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingArgs> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingArgs> homeDirectoryMappings) {
             this.homeDirectoryMappings = Input.ofNullable(homeDirectoryMappings);
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable Input<String> homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable Input<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable String homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
             this.homeDirectoryType = Input.ofNullable(homeDirectoryType);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable Input<UserPosixProfileArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Input<UserPosixProfileArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable UserPosixProfileArgs posixProfile) {
+        public Builder posixProfile(@Nullable UserPosixProfileArgs posixProfile) {
             this.posixProfile = Input.ofNullable(posixProfile);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setServerId(Input<String> serverId) {
+        public Builder serverId(Input<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
-        public Builder setServerId(String serverId) {
+        public Builder serverId(String serverId) {
             this.serverId = Input.of(Objects.requireNonNull(serverId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

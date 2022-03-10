@@ -65,12 +65,12 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
     	      this.email = defaults.email;
         }
 
-        public Builder setDesignation(String designation) {
+        public Builder designation(String designation) {
             this.designation = Objects.requireNonNull(designation);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }

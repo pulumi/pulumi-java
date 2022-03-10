@@ -154,72 +154,72 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     	      this.rawPng = defaults.rawPng;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setAppUserModelID(@Nullable Input<String> appUserModelID) {
+        public Builder appUserModelID(@Nullable Input<String> appUserModelID) {
             this.appUserModelID = appUserModelID;
             return this;
         }
 
-        public Builder setAppUserModelID(@Nullable String appUserModelID) {
+        public Builder appUserModelID(@Nullable String appUserModelID) {
             this.appUserModelID = Input.ofNullable(appUserModelID);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setIconImageName(@Nullable Input<String> iconImageName) {
+        public Builder iconImageName(@Nullable Input<String> iconImageName) {
             this.iconImageName = iconImageName;
             return this;
         }
 
-        public Builder setIconImageName(@Nullable String iconImageName) {
+        public Builder iconImageName(@Nullable String iconImageName) {
             this.iconImageName = Input.ofNullable(iconImageName);
             return this;
         }
 
-        public Builder setRawIcon(@Nullable Input<String> rawIcon) {
+        public Builder rawIcon(@Nullable Input<String> rawIcon) {
             this.rawIcon = rawIcon;
             return this;
         }
 
-        public Builder setRawIcon(@Nullable String rawIcon) {
+        public Builder rawIcon(@Nullable String rawIcon) {
             this.rawIcon = Input.ofNullable(rawIcon);
             return this;
         }
 
-        public Builder setRawPng(@Nullable Input<String> rawPng) {
+        public Builder rawPng(@Nullable Input<String> rawPng) {
             this.rawPng = rawPng;
             return this;
         }
 
-        public Builder setRawPng(@Nullable String rawPng) {
+        public Builder rawPng(@Nullable String rawPng) {
             this.rawPng = Input.ofNullable(rawPng);
             return this;
         }

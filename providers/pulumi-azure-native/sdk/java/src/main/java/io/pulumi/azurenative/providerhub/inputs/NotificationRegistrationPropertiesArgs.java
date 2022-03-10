@@ -104,52 +104,52 @@ public final class NotificationRegistrationPropertiesArgs extends io.pulumi.reso
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setIncludedEvents(@Nullable Input<List<String>> includedEvents) {
+        public Builder includedEvents(@Nullable Input<List<String>> includedEvents) {
             this.includedEvents = includedEvents;
             return this;
         }
 
-        public Builder setIncludedEvents(@Nullable List<String> includedEvents) {
+        public Builder includedEvents(@Nullable List<String> includedEvents) {
             this.includedEvents = Input.ofNullable(includedEvents);
             return this;
         }
 
-        public Builder setMessageScope(@Nullable Input<Either<String,MessageScope>> messageScope) {
+        public Builder messageScope(@Nullable Input<Either<String,MessageScope>> messageScope) {
             this.messageScope = messageScope;
             return this;
         }
 
-        public Builder setMessageScope(@Nullable Either<String,MessageScope> messageScope) {
+        public Builder messageScope(@Nullable Either<String,MessageScope> messageScope) {
             this.messageScope = Input.ofNullable(messageScope);
             return this;
         }
 
-        public Builder setNotificationEndpoints(@Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints) {
+        public Builder notificationEndpoints(@Nullable Input<List<NotificationEndpointArgs>> notificationEndpoints) {
             this.notificationEndpoints = notificationEndpoints;
             return this;
         }
 
-        public Builder setNotificationEndpoints(@Nullable List<NotificationEndpointArgs> notificationEndpoints) {
+        public Builder notificationEndpoints(@Nullable List<NotificationEndpointArgs> notificationEndpoints) {
             this.notificationEndpoints = Input.ofNullable(notificationEndpoints);
             return this;
         }
 
-        public Builder setNotificationMode(@Nullable Input<Either<String,NotificationMode>> notificationMode) {
+        public Builder notificationMode(@Nullable Input<Either<String,NotificationMode>> notificationMode) {
             this.notificationMode = notificationMode;
             return this;
         }
 
-        public Builder setNotificationMode(@Nullable Either<String,NotificationMode> notificationMode) {
+        public Builder notificationMode(@Nullable Either<String,NotificationMode> notificationMode) {
             this.notificationMode = Input.ofNullable(notificationMode);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }

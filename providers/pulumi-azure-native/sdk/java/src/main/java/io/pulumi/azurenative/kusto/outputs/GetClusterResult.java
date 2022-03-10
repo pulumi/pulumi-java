@@ -429,122 +429,122 @@ public final class GetClusterResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setDataIngestionUri(String dataIngestionUri) {
+        public Builder dataIngestionUri(String dataIngestionUri) {
             this.dataIngestionUri = Objects.requireNonNull(dataIngestionUri);
             return this;
         }
 
-        public Builder setEnableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
+        public Builder enableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
             this.enableDiskEncryption = enableDiskEncryption;
             return this;
         }
 
-        public Builder setEnableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
+        public Builder enableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
             this.enableDoubleEncryption = enableDoubleEncryption;
             return this;
         }
 
-        public Builder setEnablePurge(@Nullable Boolean enablePurge) {
+        public Builder enablePurge(@Nullable Boolean enablePurge) {
             this.enablePurge = enablePurge;
             return this;
         }
 
-        public Builder setEnableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
+        public Builder enableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
             this.enableStreamingIngest = enableStreamingIngest;
             return this;
         }
 
-        public Builder setEngineType(@Nullable String engineType) {
+        public Builder engineType(@Nullable String engineType) {
             this.engineType = engineType;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setLanguageExtensions(LanguageExtensionsListResponse languageExtensions) {
+        public Builder languageExtensions(LanguageExtensionsListResponse languageExtensions) {
             this.languageExtensions = Objects.requireNonNull(languageExtensions);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptimizedAutoscale(@Nullable OptimizedAutoscaleResponse optimizedAutoscale) {
+        public Builder optimizedAutoscale(@Nullable OptimizedAutoscaleResponse optimizedAutoscale) {
             this.optimizedAutoscale = optimizedAutoscale;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(AzureSkuResponse sku) {
+        public Builder sku(AzureSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateReason(String stateReason) {
+        public Builder stateReason(String stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTrustedExternalTenants(@Nullable List<TrustedExternalTenantResponse> trustedExternalTenants) {
+        public Builder trustedExternalTenants(@Nullable List<TrustedExternalTenantResponse> trustedExternalTenants) {
             this.trustedExternalTenants = trustedExternalTenants;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

@@ -90,32 +90,32 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder setCertVersion(@Nullable Input<String> certVersion) {
+        public Builder certVersion(@Nullable Input<String> certVersion) {
             this.certVersion = certVersion;
             return this;
         }
 
-        public Builder setCertVersion(@Nullable String certVersion) {
+        public Builder certVersion(@Nullable String certVersion) {
             this.certVersion = Input.ofNullable(certVersion);
             return this;
         }
 
-        public Builder setKeyVaultCertName(Input<String> keyVaultCertName) {
+        public Builder keyVaultCertName(Input<String> keyVaultCertName) {
             this.keyVaultCertName = Objects.requireNonNull(keyVaultCertName);
             return this;
         }
 
-        public Builder setKeyVaultCertName(String keyVaultCertName) {
+        public Builder keyVaultCertName(String keyVaultCertName) {
             this.keyVaultCertName = Input.of(Objects.requireNonNull(keyVaultCertName));
             return this;
         }
 
-        public Builder setVaultUri(Input<String> vaultUri) {
+        public Builder vaultUri(Input<String> vaultUri) {
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
         }
 
-        public Builder setVaultUri(String vaultUri) {
+        public Builder vaultUri(String vaultUri) {
             this.vaultUri = Input.of(Objects.requireNonNull(vaultUri));
             return this;
         }

@@ -209,102 +209,102 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeBindingMode = defaults.volumeBindingMode;
         }
 
-        public Builder setAllowVolumeExpansion(@Nullable Input<Boolean> allowVolumeExpansion) {
+        public Builder allowVolumeExpansion(@Nullable Input<Boolean> allowVolumeExpansion) {
             this.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
 
-        public Builder setAllowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
+        public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
             this.allowVolumeExpansion = Input.ofNullable(allowVolumeExpansion);
             return this;
         }
 
-        public Builder setAllowedTopologies(@Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies) {
+        public Builder allowedTopologies(@Nullable Input<List<TopologySelectorTermArgs>> allowedTopologies) {
             this.allowedTopologies = allowedTopologies;
             return this;
         }
 
-        public Builder setAllowedTopologies(@Nullable List<TopologySelectorTermArgs> allowedTopologies) {
+        public Builder allowedTopologies(@Nullable List<TopologySelectorTermArgs> allowedTopologies) {
             this.allowedTopologies = Input.ofNullable(allowedTopologies);
             return this;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMountOptions(@Nullable Input<List<String>> mountOptions) {
+        public Builder mountOptions(@Nullable Input<List<String>> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable List<String> mountOptions) {
+        public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = Input.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProvisioner(Input<String> provisioner) {
+        public Builder provisioner(Input<String> provisioner) {
             this.provisioner = Objects.requireNonNull(provisioner);
             return this;
         }
 
-        public Builder setProvisioner(String provisioner) {
+        public Builder provisioner(String provisioner) {
             this.provisioner = Input.of(Objects.requireNonNull(provisioner));
             return this;
         }
 
-        public Builder setReclaimPolicy(@Nullable Input<String> reclaimPolicy) {
+        public Builder reclaimPolicy(@Nullable Input<String> reclaimPolicy) {
             this.reclaimPolicy = reclaimPolicy;
             return this;
         }
 
-        public Builder setReclaimPolicy(@Nullable String reclaimPolicy) {
+        public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
             this.reclaimPolicy = Input.ofNullable(reclaimPolicy);
             return this;
         }
 
-        public Builder setVolumeBindingMode(@Nullable Input<String> volumeBindingMode) {
+        public Builder volumeBindingMode(@Nullable Input<String> volumeBindingMode) {
             this.volumeBindingMode = volumeBindingMode;
             return this;
         }
 
-        public Builder setVolumeBindingMode(@Nullable String volumeBindingMode) {
+        public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
             this.volumeBindingMode = Input.ofNullable(volumeBindingMode);
             return this;
         }

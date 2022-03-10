@@ -40,7 +40,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }

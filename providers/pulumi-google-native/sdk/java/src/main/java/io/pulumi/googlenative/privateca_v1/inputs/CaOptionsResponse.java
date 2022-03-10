@@ -73,12 +73,12 @@ public final class CaOptionsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.maxIssuerPathLength = defaults.maxIssuerPathLength;
         }
 
-        public Builder setIsCa(Boolean isCa) {
+        public Builder isCa(Boolean isCa) {
             this.isCa = Objects.requireNonNull(isCa);
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(Integer maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength);
             return this;
         }

@@ -108,42 +108,42 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setCooldown(Input<String> cooldown) {
+        public Builder cooldown(Input<String> cooldown) {
             this.cooldown = Objects.requireNonNull(cooldown);
             return this;
         }
 
-        public Builder setCooldown(String cooldown) {
+        public Builder cooldown(String cooldown) {
             this.cooldown = Input.of(Objects.requireNonNull(cooldown));
             return this;
         }
 
-        public Builder setDirection(Input<ScaleDirection> direction) {
+        public Builder direction(Input<ScaleDirection> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDirection(ScaleDirection direction) {
+        public Builder direction(ScaleDirection direction) {
             this.direction = Input.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder setType(Input<ScaleType> type) {
+        public Builder type(Input<ScaleType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ScaleType type) {
+        public Builder type(ScaleType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

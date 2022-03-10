@@ -64,12 +64,12 @@ public final class GetStudioComponentArgs extends io.pulumi.resources.InvokeArgs
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setStudioComponentId(String studioComponentId) {
+        public Builder studioComponentId(String studioComponentId) {
             this.studioComponentId = Objects.requireNonNull(studioComponentId);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }

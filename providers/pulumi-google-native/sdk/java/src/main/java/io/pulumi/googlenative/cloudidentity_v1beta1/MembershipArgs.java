@@ -101,42 +101,42 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roles = defaults.roles;
         }
 
-        public Builder setGroupId(Input<String> groupId) {
+        public Builder groupId(Input<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Input.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder setMemberKey(@Nullable Input<EntityKeyArgs> memberKey) {
+        public Builder memberKey(@Nullable Input<EntityKeyArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
 
-        public Builder setMemberKey(@Nullable EntityKeyArgs memberKey) {
+        public Builder memberKey(@Nullable EntityKeyArgs memberKey) {
             this.memberKey = Input.ofNullable(memberKey);
             return this;
         }
 
-        public Builder setPreferredMemberKey(Input<EntityKeyArgs> preferredMemberKey) {
+        public Builder preferredMemberKey(Input<EntityKeyArgs> preferredMemberKey) {
             this.preferredMemberKey = Objects.requireNonNull(preferredMemberKey);
             return this;
         }
 
-        public Builder setPreferredMemberKey(EntityKeyArgs preferredMemberKey) {
+        public Builder preferredMemberKey(EntityKeyArgs preferredMemberKey) {
             this.preferredMemberKey = Input.of(Objects.requireNonNull(preferredMemberKey));
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<List<MembershipRoleArgs>> roles) {
+        public Builder roles(@Nullable Input<List<MembershipRoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<MembershipRoleArgs> roles) {
+        public Builder roles(@Nullable List<MembershipRoleArgs> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }

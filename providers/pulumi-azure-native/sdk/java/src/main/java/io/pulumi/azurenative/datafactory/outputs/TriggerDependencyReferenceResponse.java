@@ -68,12 +68,12 @@ public final class TriggerDependencyReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setReferenceTrigger(TriggerReferenceResponse referenceTrigger) {
+        public Builder referenceTrigger(TriggerReferenceResponse referenceTrigger) {
             this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

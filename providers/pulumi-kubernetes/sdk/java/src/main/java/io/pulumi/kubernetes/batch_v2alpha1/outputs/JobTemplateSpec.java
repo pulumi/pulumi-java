@@ -68,12 +68,12 @@ public final class JobTemplateSpec {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable JobSpec spec) {
+        public Builder spec(@Nullable JobSpec spec) {
             this.spec = spec;
             return this;
         }

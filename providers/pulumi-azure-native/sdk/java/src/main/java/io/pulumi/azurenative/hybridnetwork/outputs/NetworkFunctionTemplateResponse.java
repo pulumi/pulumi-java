@@ -50,7 +50,7 @@ public final class NetworkFunctionTemplateResponse {
     	      this.networkFunctionRoleConfigurations = defaults.networkFunctionRoleConfigurations;
         }
 
-        public Builder setNetworkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
+        public Builder networkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
             this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
             return this;
         }

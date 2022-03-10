@@ -104,42 +104,42 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kubeconfig = defaults.kubeconfig;
         }
 
-        public Builder setCluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Input<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
-        public Builder setCluster(@Nullable String cluster) {
+        public Builder cluster(@Nullable String cluster) {
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
 
-        public Builder setContext(@Nullable Input<String> context) {
+        public Builder context(@Nullable Input<String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setKubeClientSettings(@Nullable Input<KubeClientSettingsArgs> kubeClientSettings) {
+        public Builder kubeClientSettings(@Nullable Input<KubeClientSettingsArgs> kubeClientSettings) {
             this.kubeClientSettings = kubeClientSettings;
             return this;
         }
 
-        public Builder setKubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
+        public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
             this.kubeClientSettings = Input.ofNullable(kubeClientSettings);
             return this;
         }
 
-        public Builder setKubeconfig(@Nullable Input<String> kubeconfig) {
+        public Builder kubeconfig(@Nullable Input<String> kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }
 
-        public Builder setKubeconfig(@Nullable String kubeconfig) {
+        public Builder kubeconfig(@Nullable String kubeconfig) {
             this.kubeconfig = Input.ofNullable(kubeconfig);
             return this;
         }

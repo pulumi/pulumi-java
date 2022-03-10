@@ -49,7 +49,7 @@ public final class FunctionMetadata extends io.pulumi.resources.InvokeArgs {
     	      this.functionARN = defaults.functionARN;
         }
 
-        public Builder setFunctionARN(@Nullable String functionARN) {
+        public Builder functionARN(@Nullable String functionARN) {
             this.functionARN = functionARN;
             return this;
         }

@@ -107,42 +107,42 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setAliasContext(@Nullable Input<AliasContextArgs> aliasContext) {
+        public Builder aliasContext(@Nullable Input<AliasContextArgs> aliasContext) {
             this.aliasContext = aliasContext;
             return this;
         }
 
-        public Builder setAliasContext(@Nullable AliasContextArgs aliasContext) {
+        public Builder aliasContext(@Nullable AliasContextArgs aliasContext) {
             this.aliasContext = Input.ofNullable(aliasContext);
             return this;
         }
 
-        public Builder setGerritProject(@Nullable Input<String> gerritProject) {
+        public Builder gerritProject(@Nullable Input<String> gerritProject) {
             this.gerritProject = gerritProject;
             return this;
         }
 
-        public Builder setGerritProject(@Nullable String gerritProject) {
+        public Builder gerritProject(@Nullable String gerritProject) {
             this.gerritProject = Input.ofNullable(gerritProject);
             return this;
         }
 
-        public Builder setHostUri(@Nullable Input<String> hostUri) {
+        public Builder hostUri(@Nullable Input<String> hostUri) {
             this.hostUri = hostUri;
             return this;
         }
 
-        public Builder setHostUri(@Nullable String hostUri) {
+        public Builder hostUri(@Nullable String hostUri) {
             this.hostUri = Input.ofNullable(hostUri);
             return this;
         }
 
-        public Builder setRevisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Input<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
-        public Builder setRevisionId(@Nullable String revisionId) {
+        public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }

@@ -74,22 +74,22 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     	      this.minAcceptableMeanAveragePrecision = defaults.minAcceptableMeanAveragePrecision;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setMinAcceptableMeanAveragePrecision(Input<Double> minAcceptableMeanAveragePrecision) {
+        public Builder minAcceptableMeanAveragePrecision(Input<Double> minAcceptableMeanAveragePrecision) {
             this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
             return this;
         }
 
-        public Builder setMinAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
+        public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
             this.minAcceptableMeanAveragePrecision = Input.of(Objects.requireNonNull(minAcceptableMeanAveragePrecision));
             return this;
         }

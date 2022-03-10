@@ -74,17 +74,17 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
     	      this.router = defaults.router;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRouter(String router) {
+        public Builder router(String router) {
             this.router = Objects.requireNonNull(router);
             return this;
         }

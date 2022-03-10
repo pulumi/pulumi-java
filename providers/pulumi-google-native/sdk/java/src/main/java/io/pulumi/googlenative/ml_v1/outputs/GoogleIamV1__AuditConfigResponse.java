@@ -67,12 +67,12 @@ public final class GoogleIamV1__AuditConfigResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setAuditLogConfigs(List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs) {
+        public Builder auditLogConfigs(List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs) {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

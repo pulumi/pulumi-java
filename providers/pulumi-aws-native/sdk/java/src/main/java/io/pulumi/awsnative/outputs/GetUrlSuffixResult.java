@@ -40,7 +40,7 @@ public final class GetUrlSuffixResult {
     	      this.urlSuffix = defaults.urlSuffix;
         }
 
-        public Builder setUrlSuffix(String urlSuffix) {
+        public Builder urlSuffix(String urlSuffix) {
             this.urlSuffix = Objects.requireNonNull(urlSuffix);
             return this;
         }

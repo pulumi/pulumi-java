@@ -148,37 +148,37 @@ public final class GetClusterResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setClusterConfig(ClusterConfigResponse clusterConfig) {
+        public Builder clusterConfig(ClusterConfigResponse clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
-        public Builder setDefaultStorageType(String defaultStorageType) {
+        public Builder defaultStorageType(String defaultStorageType) {
             this.defaultStorageType = Objects.requireNonNull(defaultStorageType);
             return this;
         }
 
-        public Builder setEncryptionConfig(EncryptionConfigResponse encryptionConfig) {
+        public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServeNodes(Integer serveNodes) {
+        public Builder serveNodes(Integer serveNodes) {
             this.serveNodes = Objects.requireNonNull(serveNodes);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

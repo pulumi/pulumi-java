@@ -102,42 +102,42 @@ public final class InTotoProvenanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder setBuilderConfig(@Nullable Input<BuilderConfigArgs> builderConfig) {
+        public Builder builderConfig(@Nullable Input<BuilderConfigArgs> builderConfig) {
             this.builderConfig = builderConfig;
             return this;
         }
 
-        public Builder setBuilderConfig(@Nullable BuilderConfigArgs builderConfig) {
+        public Builder builderConfig(@Nullable BuilderConfigArgs builderConfig) {
             this.builderConfig = Input.ofNullable(builderConfig);
             return this;
         }
 
-        public Builder setMaterials(@Nullable Input<List<String>> materials) {
+        public Builder materials(@Nullable Input<List<String>> materials) {
             this.materials = materials;
             return this;
         }
 
-        public Builder setMaterials(@Nullable List<String> materials) {
+        public Builder materials(@Nullable List<String> materials) {
             this.materials = Input.ofNullable(materials);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<MetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<MetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable MetadataArgs metadata) {
+        public Builder metadata(@Nullable MetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setRecipe(@Nullable Input<RecipeArgs> recipe) {
+        public Builder recipe(@Nullable Input<RecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
 
-        public Builder setRecipe(@Nullable RecipeArgs recipe) {
+        public Builder recipe(@Nullable RecipeArgs recipe) {
             this.recipe = Input.ofNullable(recipe);
             return this;
         }

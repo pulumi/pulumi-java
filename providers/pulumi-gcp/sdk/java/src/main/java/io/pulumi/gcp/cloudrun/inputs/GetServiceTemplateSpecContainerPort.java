@@ -77,17 +77,17 @@ public final class GetServiceTemplateSpecContainerPort extends io.pulumi.resourc
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

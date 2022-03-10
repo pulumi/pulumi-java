@@ -49,7 +49,7 @@ public final class CSINodeSpec {
     	      this.drivers = defaults.drivers;
         }
 
-        public Builder setDrivers(List<CSINodeDriver> drivers) {
+        public Builder drivers(List<CSINodeDriver> drivers) {
             this.drivers = Objects.requireNonNull(drivers);
             return this;
         }

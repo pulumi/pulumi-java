@@ -138,62 +138,62 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificateId(@Nullable Input<Integer> certificateId) {
+        public Builder certificateId(@Nullable Input<Integer> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable Integer certificateId) {
+        public Builder certificateId(@Nullable Integer certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setManaged(@Nullable Input<MangedSslCertificateManagedArgs> managed) {
+        public Builder managed(@Nullable Input<MangedSslCertificateManagedArgs> managed) {
             this.managed = managed;
             return this;
         }
 
-        public Builder setManaged(@Nullable MangedSslCertificateManagedArgs managed) {
+        public Builder managed(@Nullable MangedSslCertificateManagedArgs managed) {
             this.managed = Input.ofNullable(managed);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

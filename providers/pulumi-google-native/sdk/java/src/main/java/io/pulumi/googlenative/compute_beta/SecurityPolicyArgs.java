@@ -230,132 +230,132 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setAdaptiveProtectionConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
 
-        public Builder setAdaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = Input.ofNullable(adaptiveProtectionConfig);
             return this;
         }
 
-        public Builder setAdvancedOptionsConfig(@Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
+        public Builder advancedOptionsConfig(@Nullable Input<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
             this.advancedOptionsConfig = advancedOptionsConfig;
             return this;
         }
 
-        public Builder setAdvancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
+        public Builder advancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
             this.advancedOptionsConfig = Input.ofNullable(advancedOptionsConfig);
             return this;
         }
 
-        public Builder setAssociations(@Nullable Input<List<SecurityPolicyAssociationArgs>> associations) {
+        public Builder associations(@Nullable Input<List<SecurityPolicyAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setAssociations(@Nullable List<SecurityPolicyAssociationArgs> associations) {
+        public Builder associations(@Nullable List<SecurityPolicyAssociationArgs> associations) {
             this.associations = Input.ofNullable(associations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRecaptchaOptionsConfig(@Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
+        public Builder recaptchaOptionsConfig(@Nullable Input<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = recaptchaOptionsConfig;
             return this;
         }
 
-        public Builder setRecaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
+        public Builder recaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = Input.ofNullable(recaptchaOptionsConfig);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<SecurityPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<SecurityPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<SecurityPolicyRuleArgs> rules) {
+        public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setType(@Nullable Input<SecurityPolicyType> type) {
+        public Builder type(@Nullable Input<SecurityPolicyType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable SecurityPolicyType type) {
+        public Builder type(@Nullable SecurityPolicyType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

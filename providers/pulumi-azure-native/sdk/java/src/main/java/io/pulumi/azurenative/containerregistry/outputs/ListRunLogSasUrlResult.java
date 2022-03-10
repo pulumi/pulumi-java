@@ -67,12 +67,12 @@ public final class ListRunLogSasUrlResult {
     	      this.logLink = defaults.logLink;
         }
 
-        public Builder setLogArtifactLink(@Nullable String logArtifactLink) {
+        public Builder logArtifactLink(@Nullable String logArtifactLink) {
             this.logArtifactLink = logArtifactLink;
             return this;
         }
 
-        public Builder setLogLink(@Nullable String logLink) {
+        public Builder logLink(@Nullable String logLink) {
             this.logLink = logLink;
             return this;
         }

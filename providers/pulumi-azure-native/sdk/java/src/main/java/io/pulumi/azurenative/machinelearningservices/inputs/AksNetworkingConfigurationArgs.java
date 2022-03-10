@@ -106,42 +106,42 @@ public final class AksNetworkingConfigurationArgs extends io.pulumi.resources.Re
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setDnsServiceIP(@Nullable Input<String> dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable Input<String> dnsServiceIP) {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
-        public Builder setDnsServiceIP(@Nullable String dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             this.dnsServiceIP = Input.ofNullable(dnsServiceIP);
             return this;
         }
 
-        public Builder setDockerBridgeCidr(@Nullable Input<String> dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable Input<String> dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
-        public Builder setDockerBridgeCidr(@Nullable String dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = Input.ofNullable(dockerBridgeCidr);
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable Input<String> serviceCidr) {
+        public Builder serviceCidr(@Nullable Input<String> serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = Input.ofNullable(serviceCidr);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

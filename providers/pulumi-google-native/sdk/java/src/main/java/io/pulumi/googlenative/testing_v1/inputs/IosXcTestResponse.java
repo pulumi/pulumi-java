@@ -122,27 +122,27 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     	      this.xctestrun = defaults.xctestrun;
         }
 
-        public Builder setAppBundleId(String appBundleId) {
+        public Builder appBundleId(String appBundleId) {
             this.appBundleId = Objects.requireNonNull(appBundleId);
             return this;
         }
 
-        public Builder setTestSpecialEntitlements(Boolean testSpecialEntitlements) {
+        public Builder testSpecialEntitlements(Boolean testSpecialEntitlements) {
             this.testSpecialEntitlements = Objects.requireNonNull(testSpecialEntitlements);
             return this;
         }
 
-        public Builder setTestsZip(FileReferenceResponse testsZip) {
+        public Builder testsZip(FileReferenceResponse testsZip) {
             this.testsZip = Objects.requireNonNull(testsZip);
             return this;
         }
 
-        public Builder setXcodeVersion(String xcodeVersion) {
+        public Builder xcodeVersion(String xcodeVersion) {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }
 
-        public Builder setXctestrun(FileReferenceResponse xctestrun) {
+        public Builder xctestrun(FileReferenceResponse xctestrun) {
             this.xctestrun = Objects.requireNonNull(xctestrun);
             return this;
         }

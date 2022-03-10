@@ -89,17 +89,17 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
     	      this.oldVnetSiteId = defaults.oldVnetSiteId;
         }
 
-        public Builder setMigrationProgress(MigrationProgressResponse migrationProgress) {
+        public Builder migrationProgress(MigrationProgressResponse migrationProgress) {
             this.migrationProgress = Objects.requireNonNull(migrationProgress);
             return this;
         }
 
-        public Builder setOldSubnetId(String oldSubnetId) {
+        public Builder oldSubnetId(String oldSubnetId) {
             this.oldSubnetId = Objects.requireNonNull(oldSubnetId);
             return this;
         }
 
-        public Builder setOldVnetSiteId(String oldVnetSiteId) {
+        public Builder oldVnetSiteId(String oldVnetSiteId) {
             this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
             return this;
         }

@@ -212,102 +212,102 @@ public final class JobConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spriteSheets = defaults.spriteSheets;
         }
 
-        public Builder setAdBreaks(@Nullable Input<List<AdBreakArgs>> adBreaks) {
+        public Builder adBreaks(@Nullable Input<List<AdBreakArgs>> adBreaks) {
             this.adBreaks = adBreaks;
             return this;
         }
 
-        public Builder setAdBreaks(@Nullable List<AdBreakArgs> adBreaks) {
+        public Builder adBreaks(@Nullable List<AdBreakArgs> adBreaks) {
             this.adBreaks = Input.ofNullable(adBreaks);
             return this;
         }
 
-        public Builder setEditList(@Nullable Input<List<EditAtomArgs>> editList) {
+        public Builder editList(@Nullable Input<List<EditAtomArgs>> editList) {
             this.editList = editList;
             return this;
         }
 
-        public Builder setEditList(@Nullable List<EditAtomArgs> editList) {
+        public Builder editList(@Nullable List<EditAtomArgs> editList) {
             this.editList = Input.ofNullable(editList);
             return this;
         }
 
-        public Builder setElementaryStreams(@Nullable Input<List<ElementaryStreamArgs>> elementaryStreams) {
+        public Builder elementaryStreams(@Nullable Input<List<ElementaryStreamArgs>> elementaryStreams) {
             this.elementaryStreams = elementaryStreams;
             return this;
         }
 
-        public Builder setElementaryStreams(@Nullable List<ElementaryStreamArgs> elementaryStreams) {
+        public Builder elementaryStreams(@Nullable List<ElementaryStreamArgs> elementaryStreams) {
             this.elementaryStreams = Input.ofNullable(elementaryStreams);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<List<InputArgs>> inputs) {
+        public Builder inputs(@Nullable Input<List<InputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<InputArgs> inputs) {
+        public Builder inputs(@Nullable List<InputArgs> inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setManifests(@Nullable Input<List<ManifestArgs>> manifests) {
+        public Builder manifests(@Nullable Input<List<ManifestArgs>> manifests) {
             this.manifests = manifests;
             return this;
         }
 
-        public Builder setManifests(@Nullable List<ManifestArgs> manifests) {
+        public Builder manifests(@Nullable List<ManifestArgs> manifests) {
             this.manifests = Input.ofNullable(manifests);
             return this;
         }
 
-        public Builder setMuxStreams(@Nullable Input<List<MuxStreamArgs>> muxStreams) {
+        public Builder muxStreams(@Nullable Input<List<MuxStreamArgs>> muxStreams) {
             this.muxStreams = muxStreams;
             return this;
         }
 
-        public Builder setMuxStreams(@Nullable List<MuxStreamArgs> muxStreams) {
+        public Builder muxStreams(@Nullable List<MuxStreamArgs> muxStreams) {
             this.muxStreams = Input.ofNullable(muxStreams);
             return this;
         }
 
-        public Builder setOutput(@Nullable Input<OutputArgs> output) {
+        public Builder output(@Nullable Input<OutputArgs> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setOutput(@Nullable OutputArgs output) {
+        public Builder output(@Nullable OutputArgs output) {
             this.output = Input.ofNullable(output);
             return this;
         }
 
-        public Builder setOverlays(@Nullable Input<List<OverlayArgs>> overlays) {
+        public Builder overlays(@Nullable Input<List<OverlayArgs>> overlays) {
             this.overlays = overlays;
             return this;
         }
 
-        public Builder setOverlays(@Nullable List<OverlayArgs> overlays) {
+        public Builder overlays(@Nullable List<OverlayArgs> overlays) {
             this.overlays = Input.ofNullable(overlays);
             return this;
         }
 
-        public Builder setPubsubDestination(@Nullable Input<PubsubDestinationArgs> pubsubDestination) {
+        public Builder pubsubDestination(@Nullable Input<PubsubDestinationArgs> pubsubDestination) {
             this.pubsubDestination = pubsubDestination;
             return this;
         }
 
-        public Builder setPubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
+        public Builder pubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
             this.pubsubDestination = Input.ofNullable(pubsubDestination);
             return this;
         }
 
-        public Builder setSpriteSheets(@Nullable Input<List<SpriteSheetArgs>> spriteSheets) {
+        public Builder spriteSheets(@Nullable Input<List<SpriteSheetArgs>> spriteSheets) {
             this.spriteSheets = spriteSheets;
             return this;
         }
 
-        public Builder setSpriteSheets(@Nullable List<SpriteSheetArgs> spriteSheets) {
+        public Builder spriteSheets(@Nullable List<SpriteSheetArgs> spriteSheets) {
             this.spriteSheets = Input.ofNullable(spriteSheets);
             return this;
         }

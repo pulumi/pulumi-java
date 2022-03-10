@@ -124,52 +124,52 @@ public final class SharedPrivateLinkResourcePropertiesArgs extends io.pulumi.res
     	      this.status = defaults.status;
         }
 
-        public Builder setGroupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Input<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = Input.ofNullable(groupId);
             return this;
         }
 
-        public Builder setPrivateLink(@Nullable Input<ResourceReferenceArgs> privateLink) {
+        public Builder privateLink(@Nullable Input<ResourceReferenceArgs> privateLink) {
             this.privateLink = privateLink;
             return this;
         }
 
-        public Builder setPrivateLink(@Nullable ResourceReferenceArgs privateLink) {
+        public Builder privateLink(@Nullable ResourceReferenceArgs privateLink) {
             this.privateLink = Input.ofNullable(privateLink);
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable Input<String> privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable Input<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable String privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = Input.ofNullable(privateLinkLocation);
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Input<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Input.ofNullable(requestMessage);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<SharedPrivateLinkResourceStatus> status) {
+        public Builder status(@Nullable Input<SharedPrivateLinkResourceStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable SharedPrivateLinkResourceStatus status) {
+        public Builder status(@Nullable SharedPrivateLinkResourceStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -170,82 +170,82 @@ public final class DataCollectionEndpointArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDataCollectionEndpointName(@Nullable Input<String> dataCollectionEndpointName) {
+        public Builder dataCollectionEndpointName(@Nullable Input<String> dataCollectionEndpointName) {
             this.dataCollectionEndpointName = dataCollectionEndpointName;
             return this;
         }
 
-        public Builder setDataCollectionEndpointName(@Nullable String dataCollectionEndpointName) {
+        public Builder dataCollectionEndpointName(@Nullable String dataCollectionEndpointName) {
             this.dataCollectionEndpointName = Input.ofNullable(dataCollectionEndpointName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setImmutableId(@Nullable Input<String> immutableId) {
+        public Builder immutableId(@Nullable Input<String> immutableId) {
             this.immutableId = immutableId;
             return this;
         }
 
-        public Builder setImmutableId(@Nullable String immutableId) {
+        public Builder immutableId(@Nullable String immutableId) {
             this.immutableId = Input.ofNullable(immutableId);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,KnownDataCollectionEndpointResourceKind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,KnownDataCollectionEndpointResourceKind> kind) {
+        public Builder kind(@Nullable Either<String,KnownDataCollectionEndpointResourceKind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls) {
+        public Builder networkAcls(@Nullable Input<DataCollectionEndpointNetworkAclsArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable DataCollectionEndpointNetworkAclsArgs networkAcls) {
+        public Builder networkAcls(@Nullable DataCollectionEndpointNetworkAclsArgs networkAcls) {
             this.networkAcls = Input.ofNullable(networkAcls);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

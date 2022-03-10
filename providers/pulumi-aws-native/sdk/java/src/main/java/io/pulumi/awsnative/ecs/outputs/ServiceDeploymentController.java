@@ -42,7 +42,7 @@ public final class ServiceDeploymentController {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable ServiceDeploymentControllerType type) {
+        public Builder type(@Nullable ServiceDeploymentControllerType type) {
             this.type = type;
             return this;
         }

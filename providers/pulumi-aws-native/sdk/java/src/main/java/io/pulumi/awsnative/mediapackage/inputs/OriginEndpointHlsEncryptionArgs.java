@@ -122,52 +122,52 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setConstantInitializationVector(@Nullable Input<String> constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable Input<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Input.ofNullable(constantInitializationVector);
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod) {
+        public Builder encryptionMethod(@Nullable Input<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
+        public Builder encryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = Input.ofNullable(encryptionMethod);
             return this;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Input<Integer> keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Input<Integer> keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = Input.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
 
-        public Builder setRepeatExtXKey(@Nullable Input<Boolean> repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Input<Boolean> repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
-        public Builder setRepeatExtXKey(@Nullable Boolean repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = Input.ofNullable(repeatExtXKey);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }

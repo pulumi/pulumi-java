@@ -158,72 +158,72 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder setAdminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Input<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Input.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Input<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Input.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder setComputerNamePrefix(@Nullable Input<String> computerNamePrefix) {
+        public Builder computerNamePrefix(@Nullable Input<String> computerNamePrefix) {
             this.computerNamePrefix = computerNamePrefix;
             return this;
         }
 
-        public Builder setComputerNamePrefix(@Nullable String computerNamePrefix) {
+        public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
             this.computerNamePrefix = Input.ofNullable(computerNamePrefix);
             return this;
         }
 
-        public Builder setCustomData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Input<String> customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = Input.ofNullable(customData);
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
             this.linuxConfiguration = Input.ofNullable(linuxConfiguration);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<List<VaultSecretGroupArgs>> secrets) {
+        public Builder secrets(@Nullable Input<List<VaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<VaultSecretGroupArgs> secrets) {
+        public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
             this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
             return this;
         }

@@ -100,22 +100,22 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
     	      this.viewName = defaults.viewName;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setViewName(String viewName) {
+        public Builder viewName(String viewName) {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
         }

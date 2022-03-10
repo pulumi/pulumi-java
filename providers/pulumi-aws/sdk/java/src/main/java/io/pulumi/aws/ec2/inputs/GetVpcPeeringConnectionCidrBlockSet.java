@@ -51,7 +51,7 @@ public final class GetVpcPeeringConnectionCidrBlockSet extends io.pulumi.resourc
     	      this.cidrBlock = defaults.cidrBlock;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }

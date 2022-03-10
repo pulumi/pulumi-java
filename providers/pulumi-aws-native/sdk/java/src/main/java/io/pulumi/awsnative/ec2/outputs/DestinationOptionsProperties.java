@@ -58,17 +58,17 @@ public final class DestinationOptionsProperties {
     	      this.perHourPartition = defaults.perHourPartition;
         }
 
-        public Builder setFileFormat(FlowLogDestinationOptionsPropertiesFileFormat fileFormat) {
+        public Builder fileFormat(FlowLogDestinationOptionsPropertiesFileFormat fileFormat) {
             this.fileFormat = Objects.requireNonNull(fileFormat);
             return this;
         }
 
-        public Builder setHiveCompatiblePartitions(Boolean hiveCompatiblePartitions) {
+        public Builder hiveCompatiblePartitions(Boolean hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = Objects.requireNonNull(hiveCompatiblePartitions);
             return this;
         }
 
-        public Builder setPerHourPartition(Boolean perHourPartition) {
+        public Builder perHourPartition(Boolean perHourPartition) {
             this.perHourPartition = Objects.requireNonNull(perHourPartition);
             return this;
         }

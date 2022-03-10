@@ -121,52 +121,52 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAadAuthority(Input<String> aadAuthority) {
+        public Builder aadAuthority(Input<String> aadAuthority) {
             this.aadAuthority = Objects.requireNonNull(aadAuthority);
             return this;
         }
 
-        public Builder setAadAuthority(String aadAuthority) {
+        public Builder aadAuthority(String aadAuthority) {
             this.aadAuthority = Input.of(Objects.requireNonNull(aadAuthority));
             return this;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setAudience(Input<String> audience) {
+        public Builder audience(Input<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Input.of(Objects.requireNonNull(audience));
             return this;
         }
 
-        public Builder setObjectId(Input<String> objectId) {
+        public Builder objectId(Input<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder setTenantId(Input<String> tenantId) {
+        public Builder tenantId(Input<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }

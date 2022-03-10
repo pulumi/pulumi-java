@@ -108,22 +108,22 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setCapacityInBytes(@Nullable Double capacityInBytes) {
+        public Builder capacityInBytes(@Nullable Double capacityInBytes) {
             this.capacityInBytes = capacityInBytes;
             return this;
         }
 
-        public Builder setFreeSpaceInBytes(@Nullable Double freeSpaceInBytes) {
+        public Builder freeSpaceInBytes(@Nullable Double freeSpaceInBytes) {
             this.freeSpaceInBytes = freeSpaceInBytes;
             return this;
         }
 
-        public Builder setThresholdPercentage(@Nullable Integer thresholdPercentage) {
+        public Builder thresholdPercentage(@Nullable Integer thresholdPercentage) {
             this.thresholdPercentage = thresholdPercentage;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }

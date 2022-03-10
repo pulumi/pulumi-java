@@ -143,62 +143,62 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     	      this.statusCodesRange = defaults.statusCodesRange;
         }
 
-        public Builder setPrivateBytesInKB(@Nullable Input<Integer> privateBytesInKB) {
+        public Builder privateBytesInKB(@Nullable Input<Integer> privateBytesInKB) {
             this.privateBytesInKB = privateBytesInKB;
             return this;
         }
 
-        public Builder setPrivateBytesInKB(@Nullable Integer privateBytesInKB) {
+        public Builder privateBytesInKB(@Nullable Integer privateBytesInKB) {
             this.privateBytesInKB = Input.ofNullable(privateBytesInKB);
             return this;
         }
 
-        public Builder setRequests(@Nullable Input<RequestsBasedTriggerArgs> requests) {
+        public Builder requests(@Nullable Input<RequestsBasedTriggerArgs> requests) {
             this.requests = requests;
             return this;
         }
 
-        public Builder setRequests(@Nullable RequestsBasedTriggerArgs requests) {
+        public Builder requests(@Nullable RequestsBasedTriggerArgs requests) {
             this.requests = Input.ofNullable(requests);
             return this;
         }
 
-        public Builder setSlowRequests(@Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests) {
+        public Builder slowRequests(@Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests) {
             this.slowRequests = slowRequests;
             return this;
         }
 
-        public Builder setSlowRequests(@Nullable SlowRequestsBasedTriggerArgs slowRequests) {
+        public Builder slowRequests(@Nullable SlowRequestsBasedTriggerArgs slowRequests) {
             this.slowRequests = Input.ofNullable(slowRequests);
             return this;
         }
 
-        public Builder setSlowRequestsWithPath(@Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath) {
+        public Builder slowRequestsWithPath(@Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath) {
             this.slowRequestsWithPath = slowRequestsWithPath;
             return this;
         }
 
-        public Builder setSlowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerArgs> slowRequestsWithPath) {
+        public Builder slowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerArgs> slowRequestsWithPath) {
             this.slowRequestsWithPath = Input.ofNullable(slowRequestsWithPath);
             return this;
         }
 
-        public Builder setStatusCodes(@Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes) {
+        public Builder statusCodes(@Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
 
-        public Builder setStatusCodes(@Nullable List<StatusCodesBasedTriggerArgs> statusCodes) {
+        public Builder statusCodes(@Nullable List<StatusCodesBasedTriggerArgs> statusCodes) {
             this.statusCodes = Input.ofNullable(statusCodes);
             return this;
         }
 
-        public Builder setStatusCodesRange(@Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange) {
+        public Builder statusCodesRange(@Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange) {
             this.statusCodesRange = statusCodesRange;
             return this;
         }
 
-        public Builder setStatusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerArgs> statusCodesRange) {
+        public Builder statusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerArgs> statusCodesRange) {
             this.statusCodesRange = Input.ofNullable(statusCodesRange);
             return this;
         }

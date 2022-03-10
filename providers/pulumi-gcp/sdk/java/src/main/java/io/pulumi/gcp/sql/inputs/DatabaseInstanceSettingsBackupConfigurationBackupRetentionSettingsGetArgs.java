@@ -72,22 +72,22 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
     	      this.retentionUnit = defaults.retentionUnit;
         }
 
-        public Builder setRetainedBackups(Input<Integer> retainedBackups) {
+        public Builder retainedBackups(Input<Integer> retainedBackups) {
             this.retainedBackups = Objects.requireNonNull(retainedBackups);
             return this;
         }
 
-        public Builder setRetainedBackups(Integer retainedBackups) {
+        public Builder retainedBackups(Integer retainedBackups) {
             this.retainedBackups = Input.of(Objects.requireNonNull(retainedBackups));
             return this;
         }
 
-        public Builder setRetentionUnit(@Nullable Input<String> retentionUnit) {
+        public Builder retentionUnit(@Nullable Input<String> retentionUnit) {
             this.retentionUnit = retentionUnit;
             return this;
         }
 
-        public Builder setRetentionUnit(@Nullable String retentionUnit) {
+        public Builder retentionUnit(@Nullable String retentionUnit) {
             this.retentionUnit = Input.ofNullable(retentionUnit);
             return this;
         }

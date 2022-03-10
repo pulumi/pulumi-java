@@ -40,7 +40,7 @@ public final class InstanceFromTemplateScratchDisk {
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }

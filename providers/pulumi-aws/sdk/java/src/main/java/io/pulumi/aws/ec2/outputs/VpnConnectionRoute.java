@@ -83,17 +83,17 @@ public final class VpnConnectionRoute {
     	      this.state = defaults.state;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

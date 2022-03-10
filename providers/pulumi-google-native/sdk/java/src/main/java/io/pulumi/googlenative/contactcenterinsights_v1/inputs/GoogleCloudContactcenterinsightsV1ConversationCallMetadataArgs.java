@@ -74,22 +74,22 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     	      this.customerChannel = defaults.customerChannel;
         }
 
-        public Builder setAgentChannel(@Nullable Input<Integer> agentChannel) {
+        public Builder agentChannel(@Nullable Input<Integer> agentChannel) {
             this.agentChannel = agentChannel;
             return this;
         }
 
-        public Builder setAgentChannel(@Nullable Integer agentChannel) {
+        public Builder agentChannel(@Nullable Integer agentChannel) {
             this.agentChannel = Input.ofNullable(agentChannel);
             return this;
         }
 
-        public Builder setCustomerChannel(@Nullable Input<Integer> customerChannel) {
+        public Builder customerChannel(@Nullable Input<Integer> customerChannel) {
             this.customerChannel = customerChannel;
             return this;
         }
 
-        public Builder setCustomerChannel(@Nullable Integer customerChannel) {
+        public Builder customerChannel(@Nullable Integer customerChannel) {
             this.customerChannel = Input.ofNullable(customerChannel);
             return this;
         }

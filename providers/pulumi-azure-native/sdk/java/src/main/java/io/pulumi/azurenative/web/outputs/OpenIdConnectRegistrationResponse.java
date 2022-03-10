@@ -85,17 +85,17 @@ public final class OpenIdConnectRegistrationResponse {
     	      this.openIdConnectConfiguration = defaults.openIdConnectConfiguration;
         }
 
-        public Builder setClientCredential(@Nullable OpenIdConnectClientCredentialResponse clientCredential) {
+        public Builder clientCredential(@Nullable OpenIdConnectClientCredentialResponse clientCredential) {
             this.clientCredential = clientCredential;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setOpenIdConnectConfiguration(@Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
+        public Builder openIdConnectConfiguration(@Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
             this.openIdConnectConfiguration = openIdConnectConfiguration;
             return this;
         }

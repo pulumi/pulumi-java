@@ -103,42 +103,42 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder setAllowSelfManagement(@Nullable Input<Boolean> allowSelfManagement) {
+        public Builder allowSelfManagement(@Nullable Input<Boolean> allowSelfManagement) {
             this.allowSelfManagement = allowSelfManagement;
             return this;
         }
 
-        public Builder setAllowSelfManagement(@Nullable Boolean allowSelfManagement) {
+        public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
             this.allowSelfManagement = Input.ofNullable(allowSelfManagement);
             return this;
         }
 
-        public Builder setSshPublicKey(@Nullable Input<String> sshPublicKey) {
+        public Builder sshPublicKey(@Nullable Input<String> sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
 
-        public Builder setSshPublicKey(@Nullable String sshPublicKey) {
+        public Builder sshPublicKey(@Nullable String sshPublicKey) {
             this.sshPublicKey = Input.ofNullable(sshPublicKey);
             return this;
         }
 
-        public Builder setSshUsername(Input<String> sshUsername) {
+        public Builder sshUsername(Input<String> sshUsername) {
             this.sshUsername = Objects.requireNonNull(sshUsername);
             return this;
         }
 
-        public Builder setSshUsername(String sshUsername) {
+        public Builder sshUsername(String sshUsername) {
             this.sshUsername = Input.of(Objects.requireNonNull(sshUsername));
             return this;
         }
 
-        public Builder setUserArn(Input<String> userArn) {
+        public Builder userArn(Input<String> userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }
 
-        public Builder setUserArn(String userArn) {
+        public Builder userArn(String userArn) {
             this.userArn = Input.of(Objects.requireNonNull(userArn));
             return this;
         }

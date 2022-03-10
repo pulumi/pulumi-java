@@ -278,77 +278,77 @@ public final class GetIntegrationAccountSchemaResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setChangedTime(String changedTime) {
+        public Builder changedTime(String changedTime) {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentLink(ContentLinkResponse contentLink) {
+        public Builder contentLink(ContentLinkResponse contentLink) {
             this.contentLink = Objects.requireNonNull(contentLink);
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDocumentName(@Nullable String documentName) {
+        public Builder documentName(@Nullable String documentName) {
             this.documentName = documentName;
             return this;
         }
 
-        public Builder setFileName(@Nullable String fileName) {
+        public Builder fileName(@Nullable String fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchemaType(String schemaType) {
+        public Builder schemaType(String schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -148,37 +148,37 @@ public final class GetMembershipResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setMemberKey(EntityKeyResponse memberKey) {
+        public Builder memberKey(EntityKeyResponse memberKey) {
             this.memberKey = Objects.requireNonNull(memberKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreferredMemberKey(EntityKeyResponse preferredMemberKey) {
+        public Builder preferredMemberKey(EntityKeyResponse preferredMemberKey) {
             this.preferredMemberKey = Objects.requireNonNull(preferredMemberKey);
             return this;
         }
 
-        public Builder setRoles(List<MembershipRoleResponse> roles) {
+        public Builder roles(List<MembershipRoleResponse> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

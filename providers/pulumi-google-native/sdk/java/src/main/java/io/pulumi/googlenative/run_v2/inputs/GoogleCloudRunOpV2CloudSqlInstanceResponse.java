@@ -56,7 +56,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends io.pulumi.
     	      this.connections = defaults.connections;
         }
 
-        public Builder setConnections(List<String> connections) {
+        public Builder connections(List<String> connections) {
             this.connections = Objects.requireNonNull(connections);
             return this;
         }

@@ -161,82 +161,82 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder setAdmin(@Nullable Input<String> admin) {
+        public Builder admin(@Nullable Input<String> admin) {
             this.admin = admin;
             return this;
         }
 
-        public Builder setAdmin(@Nullable String admin) {
+        public Builder admin(@Nullable String admin) {
             this.admin = Input.ofNullable(admin);
             return this;
         }
 
-        public Builder setAuditLogsEnabled(@Nullable Input<Boolean> auditLogsEnabled) {
+        public Builder auditLogsEnabled(@Nullable Input<Boolean> auditLogsEnabled) {
             this.auditLogsEnabled = auditLogsEnabled;
             return this;
         }
 
-        public Builder setAuditLogsEnabled(@Nullable Boolean auditLogsEnabled) {
+        public Builder auditLogsEnabled(@Nullable Boolean auditLogsEnabled) {
             this.auditLogsEnabled = Input.ofNullable(auditLogsEnabled);
             return this;
         }
 
-        public Builder setAuthorizedNetworks(@Nullable Input<List<String>> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable Input<List<String>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
-        public Builder setAuthorizedNetworks(@Nullable List<String> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
             this.authorizedNetworks = Input.ofNullable(authorizedNetworks);
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocations(Input<List<String>> locations) {
+        public Builder locations(Input<List<String>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setLocations(List<String> locations) {
+        public Builder locations(List<String> locations) {
             this.locations = Input.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReservedIpRange(Input<String> reservedIpRange) {
+        public Builder reservedIpRange(Input<String> reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
 
-        public Builder setReservedIpRange(String reservedIpRange) {
+        public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Input.of(Objects.requireNonNull(reservedIpRange));
             return this;
         }

@@ -75,22 +75,22 @@ public final class MetricAlertActionArgs extends io.pulumi.resources.ResourceArg
     	      this.webHookProperties = defaults.webHookProperties;
         }
 
-        public Builder setActionGroupId(@Nullable Input<String> actionGroupId) {
+        public Builder actionGroupId(@Nullable Input<String> actionGroupId) {
             this.actionGroupId = actionGroupId;
             return this;
         }
 
-        public Builder setActionGroupId(@Nullable String actionGroupId) {
+        public Builder actionGroupId(@Nullable String actionGroupId) {
             this.actionGroupId = Input.ofNullable(actionGroupId);
             return this;
         }
 
-        public Builder setWebHookProperties(@Nullable Input<Map<String,String>> webHookProperties) {
+        public Builder webHookProperties(@Nullable Input<Map<String,String>> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
         }
 
-        public Builder setWebHookProperties(@Nullable Map<String,String> webHookProperties) {
+        public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = Input.ofNullable(webHookProperties);
             return this;
         }

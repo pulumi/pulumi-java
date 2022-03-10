@@ -93,32 +93,32 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
     	      this.partitionKeys = defaults.partitionKeys;
         }
 
-        public Builder setClusterKeys(@Nullable Input<List<ClusterKeyArgs>> clusterKeys) {
+        public Builder clusterKeys(@Nullable Input<List<ClusterKeyArgs>> clusterKeys) {
             this.clusterKeys = clusterKeys;
             return this;
         }
 
-        public Builder setClusterKeys(@Nullable List<ClusterKeyArgs> clusterKeys) {
+        public Builder clusterKeys(@Nullable List<ClusterKeyArgs> clusterKeys) {
             this.clusterKeys = Input.ofNullable(clusterKeys);
             return this;
         }
 
-        public Builder setColumns(@Nullable Input<List<ColumnArgs>> columns) {
+        public Builder columns(@Nullable Input<List<ColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<ColumnArgs> columns) {
+        public Builder columns(@Nullable List<ColumnArgs> columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable Input<List<CassandraPartitionKeyArgs>> partitionKeys) {
+        public Builder partitionKeys(@Nullable Input<List<CassandraPartitionKeyArgs>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable List<CassandraPartitionKeyArgs> partitionKeys) {
+        public Builder partitionKeys(@Nullable List<CassandraPartitionKeyArgs> partitionKeys) {
             this.partitionKeys = Input.ofNullable(partitionKeys);
             return this;
         }

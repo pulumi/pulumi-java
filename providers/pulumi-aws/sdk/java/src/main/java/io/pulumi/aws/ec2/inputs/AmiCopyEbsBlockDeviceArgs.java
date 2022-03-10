@@ -174,82 +174,82 @@ public final class AmiCopyEbsBlockDeviceArgs extends io.pulumi.resources.Resourc
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setIops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Input<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = Input.ofNullable(iops);
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Input<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Input.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder setThroughput(@Nullable Input<Integer> throughput) {
+        public Builder throughput(@Nullable Input<Integer> throughput) {
             this.throughput = throughput;
             return this;
         }
 
-        public Builder setThroughput(@Nullable Integer throughput) {
+        public Builder throughput(@Nullable Integer throughput) {
             this.throughput = Input.ofNullable(throughput);
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = Input.ofNullable(volumeSize);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

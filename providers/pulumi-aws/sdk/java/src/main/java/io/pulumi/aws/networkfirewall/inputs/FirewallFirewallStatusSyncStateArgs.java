@@ -72,22 +72,22 @@ public final class FirewallFirewallStatusSyncStateArgs extends io.pulumi.resourc
     	      this.availabilityZone = defaults.availabilityZone;
         }
 
-        public Builder setAttachments(@Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentArgs>> attachments) {
+        public Builder attachments(@Nullable Input<List<FirewallFirewallStatusSyncStateAttachmentArgs>> attachments) {
             this.attachments = attachments;
             return this;
         }
 
-        public Builder setAttachments(@Nullable List<FirewallFirewallStatusSyncStateAttachmentArgs> attachments) {
+        public Builder attachments(@Nullable List<FirewallFirewallStatusSyncStateAttachmentArgs> attachments) {
             this.attachments = Input.ofNullable(attachments);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }

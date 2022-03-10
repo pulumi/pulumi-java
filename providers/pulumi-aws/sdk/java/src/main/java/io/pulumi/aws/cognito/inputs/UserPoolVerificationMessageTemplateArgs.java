@@ -134,62 +134,62 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     	      this.smsMessage = defaults.smsMessage;
         }
 
-        public Builder setDefaultEmailOption(@Nullable Input<String> defaultEmailOption) {
+        public Builder defaultEmailOption(@Nullable Input<String> defaultEmailOption) {
             this.defaultEmailOption = defaultEmailOption;
             return this;
         }
 
-        public Builder setDefaultEmailOption(@Nullable String defaultEmailOption) {
+        public Builder defaultEmailOption(@Nullable String defaultEmailOption) {
             this.defaultEmailOption = Input.ofNullable(defaultEmailOption);
             return this;
         }
 
-        public Builder setEmailMessage(@Nullable Input<String> emailMessage) {
+        public Builder emailMessage(@Nullable Input<String> emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
 
-        public Builder setEmailMessage(@Nullable String emailMessage) {
+        public Builder emailMessage(@Nullable String emailMessage) {
             this.emailMessage = Input.ofNullable(emailMessage);
             return this;
         }
 
-        public Builder setEmailMessageByLink(@Nullable Input<String> emailMessageByLink) {
+        public Builder emailMessageByLink(@Nullable Input<String> emailMessageByLink) {
             this.emailMessageByLink = emailMessageByLink;
             return this;
         }
 
-        public Builder setEmailMessageByLink(@Nullable String emailMessageByLink) {
+        public Builder emailMessageByLink(@Nullable String emailMessageByLink) {
             this.emailMessageByLink = Input.ofNullable(emailMessageByLink);
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable Input<String> emailSubject) {
+        public Builder emailSubject(@Nullable Input<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable String emailSubject) {
+        public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = Input.ofNullable(emailSubject);
             return this;
         }
 
-        public Builder setEmailSubjectByLink(@Nullable Input<String> emailSubjectByLink) {
+        public Builder emailSubjectByLink(@Nullable Input<String> emailSubjectByLink) {
             this.emailSubjectByLink = emailSubjectByLink;
             return this;
         }
 
-        public Builder setEmailSubjectByLink(@Nullable String emailSubjectByLink) {
+        public Builder emailSubjectByLink(@Nullable String emailSubjectByLink) {
             this.emailSubjectByLink = Input.ofNullable(emailSubjectByLink);
             return this;
         }
 
-        public Builder setSmsMessage(@Nullable Input<String> smsMessage) {
+        public Builder smsMessage(@Nullable Input<String> smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }
 
-        public Builder setSmsMessage(@Nullable String smsMessage) {
+        public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = Input.ofNullable(smsMessage);
             return this;
         }

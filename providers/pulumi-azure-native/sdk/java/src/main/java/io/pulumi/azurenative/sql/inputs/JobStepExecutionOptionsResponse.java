@@ -123,27 +123,27 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setInitialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
+        public Builder initialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
             this.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
             return this;
         }
 
-        public Builder setMaximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
+        public Builder maximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
             this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
             return this;
         }
 
-        public Builder setRetryAttempts(@Nullable Integer retryAttempts) {
+        public Builder retryAttempts(@Nullable Integer retryAttempts) {
             this.retryAttempts = retryAttempts;
             return this;
         }
 
-        public Builder setRetryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
+        public Builder retryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
             this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }

@@ -53,12 +53,12 @@ public final class WebAclDefaultActionBlockGetArgs extends io.pulumi.resources.R
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable Input<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse) {
+        public Builder customResponse(@Nullable Input<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse) {
             this.customResponse = customResponse;
             return this;
         }
 
-        public Builder setCustomResponse(@Nullable WebAclDefaultActionBlockCustomResponseGetArgs customResponse) {
+        public Builder customResponse(@Nullable WebAclDefaultActionBlockCustomResponseGetArgs customResponse) {
             this.customResponse = Input.ofNullable(customResponse);
             return this;
         }

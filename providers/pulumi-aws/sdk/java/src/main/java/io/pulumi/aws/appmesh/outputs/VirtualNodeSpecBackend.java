@@ -48,7 +48,7 @@ public final class VirtualNodeSpecBackend {
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder setVirtualService(VirtualNodeSpecBackendVirtualService virtualService) {
+        public Builder virtualService(VirtualNodeSpecBackendVirtualService virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }

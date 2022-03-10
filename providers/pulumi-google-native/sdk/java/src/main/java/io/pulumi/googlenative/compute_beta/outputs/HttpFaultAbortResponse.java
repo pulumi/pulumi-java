@@ -66,12 +66,12 @@ public final class HttpFaultAbortResponse {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setHttpStatus(Integer httpStatus) {
+        public Builder httpStatus(Integer httpStatus) {
             this.httpStatus = Objects.requireNonNull(httpStatus);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }

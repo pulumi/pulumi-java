@@ -158,72 +158,72 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setAction(@Nullable Input<RuleAction> action) {
+        public Builder action(@Nullable Input<RuleAction> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable RuleAction action) {
+        public Builder action(@Nullable RuleAction action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<ConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIns(@Nullable Input<List<String>> ins) {
+        public Builder ins(@Nullable Input<List<String>> ins) {
             this.ins = ins;
             return this;
         }
 
-        public Builder setIns(@Nullable List<String> ins) {
+        public Builder ins(@Nullable List<String> ins) {
             this.ins = Input.ofNullable(ins);
             return this;
         }
 
-        public Builder setLogConfigs(@Nullable Input<List<LogConfigArgs>> logConfigs) {
+        public Builder logConfigs(@Nullable Input<List<LogConfigArgs>> logConfigs) {
             this.logConfigs = logConfigs;
             return this;
         }
 
-        public Builder setLogConfigs(@Nullable List<LogConfigArgs> logConfigs) {
+        public Builder logConfigs(@Nullable List<LogConfigArgs> logConfigs) {
             this.logConfigs = Input.ofNullable(logConfigs);
             return this;
         }
 
-        public Builder setNotIns(@Nullable Input<List<String>> notIns) {
+        public Builder notIns(@Nullable Input<List<String>> notIns) {
             this.notIns = notIns;
             return this;
         }
 
-        public Builder setNotIns(@Nullable List<String> notIns) {
+        public Builder notIns(@Nullable List<String> notIns) {
             this.notIns = Input.ofNullable(notIns);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Input<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<String> permissions) {
+        public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }

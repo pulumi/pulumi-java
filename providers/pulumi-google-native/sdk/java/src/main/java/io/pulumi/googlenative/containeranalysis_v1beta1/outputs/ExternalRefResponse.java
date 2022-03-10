@@ -97,22 +97,22 @@ public final class ExternalRefResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setLocator(String locator) {
+        public Builder locator(String locator) {
             this.locator = Objects.requireNonNull(locator);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

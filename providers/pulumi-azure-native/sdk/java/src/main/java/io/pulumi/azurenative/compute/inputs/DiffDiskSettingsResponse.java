@@ -74,12 +74,12 @@ public final class DiffDiskSettingsResponse extends io.pulumi.resources.InvokeAr
     	      this.placement = defaults.placement;
         }
 
-        public Builder setOption(@Nullable String option) {
+        public Builder option(@Nullable String option) {
             this.option = option;
             return this;
         }
 
-        public Builder setPlacement(@Nullable String placement) {
+        public Builder placement(@Nullable String placement) {
             this.placement = placement;
             return this;
         }

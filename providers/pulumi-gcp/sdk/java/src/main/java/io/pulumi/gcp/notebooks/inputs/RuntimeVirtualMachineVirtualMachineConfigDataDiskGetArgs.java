@@ -276,122 +276,122 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Input.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder setBoot(@Nullable Input<Boolean> boot) {
+        public Builder boot(@Nullable Input<Boolean> boot) {
             this.boot = boot;
             return this;
         }
 
-        public Builder setBoot(@Nullable Boolean boot) {
+        public Builder boot(@Nullable Boolean boot) {
             this.boot = Input.ofNullable(boot);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable Input<List<String>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Input<List<String>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable List<String> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable List<String> guestOsFeatures) {
             this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder setIndex(@Nullable Input<Integer> index) {
+        public Builder index(@Nullable Input<Integer> index) {
             this.index = index;
             return this;
         }
 
-        public Builder setIndex(@Nullable Integer index) {
+        public Builder index(@Nullable Integer index) {
             this.index = Input.ofNullable(index);
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams) {
+        public Builder initializeParams(@Nullable Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs initializeParams) {
+        public Builder initializeParams(@Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs initializeParams) {
             this.initializeParams = Input.ofNullable(initializeParams);
             return this;
         }
 
-        public Builder set$interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Input<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder set$interface(@Nullable String $interface) {
+        public Builder $interface(@Nullable String $interface) {
             this.$interface = Input.ofNullable($interface);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLicenses(@Nullable Input<List<String>> licenses) {
+        public Builder licenses(@Nullable Input<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
 
-        public Builder setLicenses(@Nullable List<String> licenses) {
+        public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Input.ofNullable(licenses);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

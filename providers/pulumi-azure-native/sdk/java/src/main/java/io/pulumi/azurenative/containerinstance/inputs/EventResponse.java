@@ -137,32 +137,32 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setFirstTimestamp(String firstTimestamp) {
+        public Builder firstTimestamp(String firstTimestamp) {
             this.firstTimestamp = Objects.requireNonNull(firstTimestamp);
             return this;
         }
 
-        public Builder setLastTimestamp(String lastTimestamp) {
+        public Builder lastTimestamp(String lastTimestamp) {
             this.lastTimestamp = Objects.requireNonNull(lastTimestamp);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

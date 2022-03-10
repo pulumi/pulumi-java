@@ -99,22 +99,22 @@ public final class Subject {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setApiGroup(@Nullable String apiGroup) {
+        public Builder apiGroup(@Nullable String apiGroup) {
             this.apiGroup = apiGroup;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

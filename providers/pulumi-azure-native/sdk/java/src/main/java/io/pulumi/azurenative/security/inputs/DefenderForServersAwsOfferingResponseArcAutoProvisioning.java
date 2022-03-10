@@ -75,12 +75,12 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning exte
     	      this.servicePrincipalSecretMetadata = defaults.servicePrincipalSecretMetadata;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setServicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
+        public Builder servicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
             this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }

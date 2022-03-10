@@ -67,12 +67,12 @@ public final class ArtifactsResponse {
     	      this.objects = defaults.objects;
         }
 
-        public Builder setImages(List<String> images) {
+        public Builder images(List<String> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
 
-        public Builder setObjects(ArtifactObjectsResponse objects) {
+        public Builder objects(ArtifactObjectsResponse objects) {
             this.objects = Objects.requireNonNull(objects);
             return this;
         }

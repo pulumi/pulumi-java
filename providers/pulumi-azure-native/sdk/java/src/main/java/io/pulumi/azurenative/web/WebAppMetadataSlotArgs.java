@@ -119,52 +119,52 @@ public final class WebAppMetadataSlotArgs extends io.pulumi.resources.ResourceAr
     	      this.slot = defaults.slot;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSlot(Input<String> slot) {
+        public Builder slot(Input<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }

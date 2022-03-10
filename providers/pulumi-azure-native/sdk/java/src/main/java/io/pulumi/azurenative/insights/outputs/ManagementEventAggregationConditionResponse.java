@@ -84,17 +84,17 @@ public final class ManagementEventAggregationConditionResponse {
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setWindowSize(@Nullable String windowSize) {
+        public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = windowSize;
             return this;
         }

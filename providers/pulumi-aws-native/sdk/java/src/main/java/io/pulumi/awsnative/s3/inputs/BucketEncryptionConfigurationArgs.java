@@ -56,12 +56,12 @@ public final class BucketEncryptionConfigurationArgs extends io.pulumi.resources
     	      this.replicaKmsKeyID = defaults.replicaKmsKeyID;
         }
 
-        public Builder setReplicaKmsKeyID(Input<String> replicaKmsKeyID) {
+        public Builder replicaKmsKeyID(Input<String> replicaKmsKeyID) {
             this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID);
             return this;
         }
 
-        public Builder setReplicaKmsKeyID(String replicaKmsKeyID) {
+        public Builder replicaKmsKeyID(String replicaKmsKeyID) {
             this.replicaKmsKeyID = Input.of(Objects.requireNonNull(replicaKmsKeyID));
             return this;
         }

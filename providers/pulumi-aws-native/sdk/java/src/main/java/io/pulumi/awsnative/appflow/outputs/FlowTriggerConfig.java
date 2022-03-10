@@ -68,12 +68,12 @@ public final class FlowTriggerConfig {
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder setTriggerProperties(@Nullable FlowScheduledTriggerProperties triggerProperties) {
+        public Builder triggerProperties(@Nullable FlowScheduledTriggerProperties triggerProperties) {
             this.triggerProperties = triggerProperties;
             return this;
         }
 
-        public Builder setTriggerType(FlowTriggerType triggerType) {
+        public Builder triggerType(FlowTriggerType triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }

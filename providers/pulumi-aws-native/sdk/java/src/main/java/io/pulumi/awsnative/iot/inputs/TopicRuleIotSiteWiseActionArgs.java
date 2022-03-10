@@ -63,22 +63,22 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutAssetPropertyValueEntries(Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries) {
+        public Builder putAssetPropertyValueEntries(Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries) {
             this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries);
             return this;
         }
 
-        public Builder setPutAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntryArgs> putAssetPropertyValueEntries) {
+        public Builder putAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntryArgs> putAssetPropertyValueEntries) {
             this.putAssetPropertyValueEntries = Input.of(Objects.requireNonNull(putAssetPropertyValueEntries));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

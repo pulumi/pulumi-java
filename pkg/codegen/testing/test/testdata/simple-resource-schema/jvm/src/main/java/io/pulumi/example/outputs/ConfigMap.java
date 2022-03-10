@@ -42,7 +42,7 @@ public final class ConfigMap {
     	      this.config = defaults.config;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = config;
             return this;
         }

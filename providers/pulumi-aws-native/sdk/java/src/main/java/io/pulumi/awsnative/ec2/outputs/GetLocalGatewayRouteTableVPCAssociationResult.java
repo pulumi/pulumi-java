@@ -101,22 +101,22 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocalGatewayId(@Nullable String localGatewayId) {
+        public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableVpcAssociationId(@Nullable String localGatewayRouteTableVpcAssociationId) {
+        public Builder localGatewayRouteTableVpcAssociationId(@Nullable String localGatewayRouteTableVpcAssociationId) {
             this.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags) {
+        public Builder tags(@Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags) {
             this.tags = tags;
             return this;
         }

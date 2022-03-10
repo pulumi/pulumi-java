@@ -116,27 +116,27 @@ public final class SecretAttributesResponse {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCreated(Integer created) {
+        public Builder created(Integer created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setExpires(@Nullable Integer expires) {
+        public Builder expires(@Nullable Integer expires) {
             this.expires = expires;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Integer notBefore) {
+        public Builder notBefore(@Nullable Integer notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setUpdated(Integer updated) {
+        public Builder updated(Integer updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }

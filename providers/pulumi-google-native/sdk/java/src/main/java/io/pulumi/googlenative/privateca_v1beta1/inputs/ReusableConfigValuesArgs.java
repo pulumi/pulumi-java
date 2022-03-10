@@ -127,52 +127,52 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(@Nullable Input<List<X509ExtensionArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Input<List<X509ExtensionArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<X509ExtensionArgs> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<X509ExtensionArgs> additionalExtensions) {
             this.additionalExtensions = Input.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = Input.ofNullable(aiaOcspServers);
             return this;
         }
 
-        public Builder setCaOptions(@Nullable Input<CaOptionsArgs> caOptions) {
+        public Builder caOptions(@Nullable Input<CaOptionsArgs> caOptions) {
             this.caOptions = caOptions;
             return this;
         }
 
-        public Builder setCaOptions(@Nullable CaOptionsArgs caOptions) {
+        public Builder caOptions(@Nullable CaOptionsArgs caOptions) {
             this.caOptions = Input.ofNullable(caOptions);
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable Input<KeyUsageArgs> keyUsage) {
+        public Builder keyUsage(@Nullable Input<KeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable KeyUsageArgs keyUsage) {
+        public Builder keyUsage(@Nullable KeyUsageArgs keyUsage) {
             this.keyUsage = Input.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable Input<List<ObjectIdArgs>> policyIds) {
+        public Builder policyIds(@Nullable Input<List<ObjectIdArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable List<ObjectIdArgs> policyIds) {
+        public Builder policyIds(@Nullable List<ObjectIdArgs> policyIds) {
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }

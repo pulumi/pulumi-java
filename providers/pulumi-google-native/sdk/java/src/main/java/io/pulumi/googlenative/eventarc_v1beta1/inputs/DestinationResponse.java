@@ -55,7 +55,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.cloudRunService = defaults.cloudRunService;
         }
 
-        public Builder setCloudRunService(CloudRunServiceResponse cloudRunService) {
+        public Builder cloudRunService(CloudRunServiceResponse cloudRunService) {
             this.cloudRunService = Objects.requireNonNull(cloudRunService);
             return this;
         }

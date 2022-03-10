@@ -71,22 +71,22 @@ public final class DetectorModelSnsArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setPayload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayloadArgs payload) {
+        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }
 
-        public Builder setTargetArn(Input<String> targetArn) {
+        public Builder targetArn(Input<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Input.of(Objects.requireNonNull(targetArn));
             return this;
         }

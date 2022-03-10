@@ -78,17 +78,17 @@ public final class RuleGroupCustomResponse {
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder setCustomResponseBodyKey(@Nullable String customResponseBodyKey) {
+        public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
 
-        public Builder setResponseCode(Integer responseCode) {
+        public Builder responseCode(Integer responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
+        public Builder responseHeaders(@Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }

@@ -77,22 +77,22 @@ public final class WorkloadIdentityPoolProviderOidcArgs extends io.pulumi.resour
     	      this.issuerUri = defaults.issuerUri;
         }
 
-        public Builder setAllowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = Input.ofNullable(allowedAudiences);
             return this;
         }
 
-        public Builder setIssuerUri(Input<String> issuerUri) {
+        public Builder issuerUri(Input<String> issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
 
-        public Builder setIssuerUri(String issuerUri) {
+        public Builder issuerUri(String issuerUri) {
             this.issuerUri = Input.of(Objects.requireNonNull(issuerUri));
             return this;
         }

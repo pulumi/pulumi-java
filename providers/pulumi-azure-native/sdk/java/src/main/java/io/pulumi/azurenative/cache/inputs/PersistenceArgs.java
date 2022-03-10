@@ -110,42 +110,42 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rdbFrequency = defaults.rdbFrequency;
         }
 
-        public Builder setAofEnabled(@Nullable Input<Boolean> aofEnabled) {
+        public Builder aofEnabled(@Nullable Input<Boolean> aofEnabled) {
             this.aofEnabled = aofEnabled;
             return this;
         }
 
-        public Builder setAofEnabled(@Nullable Boolean aofEnabled) {
+        public Builder aofEnabled(@Nullable Boolean aofEnabled) {
             this.aofEnabled = Input.ofNullable(aofEnabled);
             return this;
         }
 
-        public Builder setAofFrequency(@Nullable Input<Either<String,AofFrequency>> aofFrequency) {
+        public Builder aofFrequency(@Nullable Input<Either<String,AofFrequency>> aofFrequency) {
             this.aofFrequency = aofFrequency;
             return this;
         }
 
-        public Builder setAofFrequency(@Nullable Either<String,AofFrequency> aofFrequency) {
+        public Builder aofFrequency(@Nullable Either<String,AofFrequency> aofFrequency) {
             this.aofFrequency = Input.ofNullable(aofFrequency);
             return this;
         }
 
-        public Builder setRdbEnabled(@Nullable Input<Boolean> rdbEnabled) {
+        public Builder rdbEnabled(@Nullable Input<Boolean> rdbEnabled) {
             this.rdbEnabled = rdbEnabled;
             return this;
         }
 
-        public Builder setRdbEnabled(@Nullable Boolean rdbEnabled) {
+        public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
             this.rdbEnabled = Input.ofNullable(rdbEnabled);
             return this;
         }
 
-        public Builder setRdbFrequency(@Nullable Input<Either<String,RdbFrequency>> rdbFrequency) {
+        public Builder rdbFrequency(@Nullable Input<Either<String,RdbFrequency>> rdbFrequency) {
             this.rdbFrequency = rdbFrequency;
             return this;
         }
 
-        public Builder setRdbFrequency(@Nullable Either<String,RdbFrequency> rdbFrequency) {
+        public Builder rdbFrequency(@Nullable Either<String,RdbFrequency> rdbFrequency) {
             this.rdbFrequency = Input.ofNullable(rdbFrequency);
             return this;
         }

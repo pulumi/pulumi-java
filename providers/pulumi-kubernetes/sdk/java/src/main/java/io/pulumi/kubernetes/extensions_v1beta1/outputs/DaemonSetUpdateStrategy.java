@@ -68,12 +68,12 @@ public final class DaemonSetUpdateStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateDaemonSet rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateDaemonSet rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

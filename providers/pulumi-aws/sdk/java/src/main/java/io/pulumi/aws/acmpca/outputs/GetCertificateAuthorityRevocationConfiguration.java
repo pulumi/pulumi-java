@@ -41,7 +41,7 @@ public final class GetCertificateAuthorityRevocationConfiguration {
     	      this.crlConfigurations = defaults.crlConfigurations;
         }
 
-        public Builder setCrlConfigurations(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
+        public Builder crlConfigurations(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
             this.crlConfigurations = Objects.requireNonNull(crlConfigurations);
             return this;
         }

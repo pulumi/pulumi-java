@@ -70,22 +70,22 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder setSecurityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }

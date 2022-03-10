@@ -68,12 +68,12 @@ public final class EndpointDeploymentConfig {
     	      this.blueGreenUpdatePolicy = defaults.blueGreenUpdatePolicy;
         }
 
-        public Builder setAutoRollbackConfiguration(@Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration) {
+        public Builder autoRollbackConfiguration(@Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration) {
             this.autoRollbackConfiguration = autoRollbackConfiguration;
             return this;
         }
 
-        public Builder setBlueGreenUpdatePolicy(EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy) {
+        public Builder blueGreenUpdatePolicy(EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy) {
             this.blueGreenUpdatePolicy = Objects.requireNonNull(blueGreenUpdatePolicy);
             return this;
         }

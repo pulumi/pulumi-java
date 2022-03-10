@@ -51,7 +51,7 @@ public final class GetInstanceScratchDisk extends io.pulumi.resources.InvokeArgs
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }

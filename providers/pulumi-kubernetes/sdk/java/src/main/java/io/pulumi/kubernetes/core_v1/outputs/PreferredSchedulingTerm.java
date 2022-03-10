@@ -66,12 +66,12 @@ public final class PreferredSchedulingTerm {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setPreference(NodeSelectorTerm preference) {
+        public Builder preference(NodeSelectorTerm preference) {
             this.preference = Objects.requireNonNull(preference);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

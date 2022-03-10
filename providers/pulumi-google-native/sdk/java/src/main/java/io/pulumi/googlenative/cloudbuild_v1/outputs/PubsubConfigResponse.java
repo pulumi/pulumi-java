@@ -97,22 +97,22 @@ public final class PubsubConfigResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubscription(String subscription) {
+        public Builder subscription(String subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

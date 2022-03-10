@@ -97,22 +97,22 @@ public final class ServiceSourceConfiguration extends io.pulumi.resources.Invoke
     	      this.imageRepository = defaults.imageRepository;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable ServiceAuthenticationConfiguration authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfiguration authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAutoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
+        public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
 
-        public Builder setCodeRepository(@Nullable ServiceCodeRepository codeRepository) {
+        public Builder codeRepository(@Nullable ServiceCodeRepository codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
 
-        public Builder setImageRepository(@Nullable ServiceImageRepository imageRepository) {
+        public Builder imageRepository(@Nullable ServiceImageRepository imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }

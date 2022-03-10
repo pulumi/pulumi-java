@@ -391,207 +391,207 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.websiteEndpoint = defaults.websiteEndpoint;
         }
 
-        public Builder setAccelerationStatus(@Nullable Input<String> accelerationStatus) {
+        public Builder accelerationStatus(@Nullable Input<String> accelerationStatus) {
             this.accelerationStatus = accelerationStatus;
             return this;
         }
 
-        public Builder setAccelerationStatus(@Nullable String accelerationStatus) {
+        public Builder accelerationStatus(@Nullable String accelerationStatus) {
             this.accelerationStatus = Input.ofNullable(accelerationStatus);
             return this;
         }
 
-        public Builder setAcl(@Nullable Input<Either<String,CannedAcl>> acl) {
+        public Builder acl(@Nullable Input<Either<String,CannedAcl>> acl) {
             this.acl = acl;
             return this;
         }
 
-        public Builder setAcl(@Nullable Either<String,CannedAcl> acl) {
+        public Builder acl(@Nullable Either<String,CannedAcl> acl) {
             this.acl = Input.ofNullable(acl);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Input.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder setCorsRules(@Nullable Input<List<BucketCorsRuleArgs>> corsRules) {
+        public Builder corsRules(@Nullable Input<List<BucketCorsRuleArgs>> corsRules) {
             this.corsRules = corsRules;
             return this;
         }
 
-        public Builder setCorsRules(@Nullable List<BucketCorsRuleArgs> corsRules) {
+        public Builder corsRules(@Nullable List<BucketCorsRuleArgs> corsRules) {
             this.corsRules = Input.ofNullable(corsRules);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setGrants(@Nullable Input<List<BucketGrantArgs>> grants) {
+        public Builder grants(@Nullable Input<List<BucketGrantArgs>> grants) {
             this.grants = grants;
             return this;
         }
 
-        public Builder setGrants(@Nullable List<BucketGrantArgs> grants) {
+        public Builder grants(@Nullable List<BucketGrantArgs> grants) {
             this.grants = Input.ofNullable(grants);
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Input.ofNullable(hostedZoneId);
             return this;
         }
 
-        public Builder setLifecycleRules(@Nullable Input<List<BucketLifecycleRuleArgs>> lifecycleRules) {
+        public Builder lifecycleRules(@Nullable Input<List<BucketLifecycleRuleArgs>> lifecycleRules) {
             this.lifecycleRules = lifecycleRules;
             return this;
         }
 
-        public Builder setLifecycleRules(@Nullable List<BucketLifecycleRuleArgs> lifecycleRules) {
+        public Builder lifecycleRules(@Nullable List<BucketLifecycleRuleArgs> lifecycleRules) {
             this.lifecycleRules = Input.ofNullable(lifecycleRules);
             return this;
         }
 
-        public Builder setLoggings(@Nullable Input<List<BucketLoggingArgs>> loggings) {
+        public Builder loggings(@Nullable Input<List<BucketLoggingArgs>> loggings) {
             this.loggings = loggings;
             return this;
         }
 
-        public Builder setLoggings(@Nullable List<BucketLoggingArgs> loggings) {
+        public Builder loggings(@Nullable List<BucketLoggingArgs> loggings) {
             this.loggings = Input.ofNullable(loggings);
             return this;
         }
 
-        public Builder setObjectLockConfiguration(@Nullable Input<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
+        public Builder objectLockConfiguration(@Nullable Input<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
             this.objectLockConfiguration = objectLockConfiguration;
             return this;
         }
 
-        public Builder setObjectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
+        public Builder objectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
             this.objectLockConfiguration = Input.ofNullable(objectLockConfiguration);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setReplicationConfiguration(@Nullable Input<BucketReplicationConfigurationArgs> replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable Input<BucketReplicationConfigurationArgs> replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
 
-        public Builder setReplicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
             this.replicationConfiguration = Input.ofNullable(replicationConfiguration);
             return this;
         }
 
-        public Builder setRequestPayer(@Nullable Input<String> requestPayer) {
+        public Builder requestPayer(@Nullable Input<String> requestPayer) {
             this.requestPayer = requestPayer;
             return this;
         }
 
-        public Builder setRequestPayer(@Nullable String requestPayer) {
+        public Builder requestPayer(@Nullable String requestPayer) {
             this.requestPayer = Input.ofNullable(requestPayer);
             return this;
         }
 
-        public Builder setServerSideEncryptionConfiguration(@Nullable Input<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable Input<BucketServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
 
-        public Builder setServerSideEncryptionConfiguration(@Nullable BucketServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
+        public Builder serverSideEncryptionConfiguration(@Nullable BucketServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
             this.serverSideEncryptionConfiguration = Input.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersioning(@Nullable Input<BucketVersioningArgs> versioning) {
+        public Builder versioning(@Nullable Input<BucketVersioningArgs> versioning) {
             this.versioning = versioning;
             return this;
         }
 
-        public Builder setVersioning(@Nullable BucketVersioningArgs versioning) {
+        public Builder versioning(@Nullable BucketVersioningArgs versioning) {
             this.versioning = Input.ofNullable(versioning);
             return this;
         }
 
-        public Builder setWebsite(@Nullable Input<BucketWebsiteArgs> website) {
+        public Builder website(@Nullable Input<BucketWebsiteArgs> website) {
             this.website = website;
             return this;
         }
 
-        public Builder setWebsite(@Nullable BucketWebsiteArgs website) {
+        public Builder website(@Nullable BucketWebsiteArgs website) {
             this.website = Input.ofNullable(website);
             return this;
         }
 
-        public Builder setWebsiteDomain(@Nullable Input<String> websiteDomain) {
+        public Builder websiteDomain(@Nullable Input<String> websiteDomain) {
             this.websiteDomain = websiteDomain;
             return this;
         }
 
-        public Builder setWebsiteDomain(@Nullable String websiteDomain) {
+        public Builder websiteDomain(@Nullable String websiteDomain) {
             this.websiteDomain = Input.ofNullable(websiteDomain);
             return this;
         }
 
-        public Builder setWebsiteEndpoint(@Nullable Input<String> websiteEndpoint) {
+        public Builder websiteEndpoint(@Nullable Input<String> websiteEndpoint) {
             this.websiteEndpoint = websiteEndpoint;
             return this;
         }
 
-        public Builder setWebsiteEndpoint(@Nullable String websiteEndpoint) {
+        public Builder websiteEndpoint(@Nullable String websiteEndpoint) {
             this.websiteEndpoint = Input.ofNullable(websiteEndpoint);
             return this;
         }

@@ -216,57 +216,57 @@ public final class GetFailoverGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabases(@Nullable List<String> databases) {
+        public Builder databases(@Nullable List<String> databases) {
             this.databases = databases;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerServers(List<PartnerInfoResponse> partnerServers) {
+        public Builder partnerServers(List<PartnerInfoResponse> partnerServers) {
             this.partnerServers = Objects.requireNonNull(partnerServers);
             return this;
         }
 
-        public Builder setReadOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
-        public Builder setReadWriteEndpoint(FailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
+        public Builder readWriteEndpoint(FailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
 
-        public Builder setReplicationRole(String replicationRole) {
+        public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
 
-        public Builder setReplicationState(String replicationState) {
+        public Builder replicationState(String replicationState) {
             this.replicationState = Objects.requireNonNull(replicationState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -61,22 +61,22 @@ public final class ServiceTaskSpecContainerSpecHostArgs extends io.pulumi.resour
     	      this.ip = defaults.ip;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setIp(Input<String> ip) {
+        public Builder ip(Input<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
-        public Builder setIp(String ip) {
+        public Builder ip(String ip) {
             this.ip = Input.of(Objects.requireNonNull(ip));
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetFunctionEventTriggerFailurePolicy extends io.pulumi.resour
     	      this.retry = defaults.retry;
         }
 
-        public Builder setRetry(Boolean retry) {
+        public Builder retry(Boolean retry) {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }

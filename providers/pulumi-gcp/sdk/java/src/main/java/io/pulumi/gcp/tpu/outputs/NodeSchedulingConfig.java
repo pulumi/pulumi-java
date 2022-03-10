@@ -48,7 +48,7 @@ public final class NodeSchedulingConfig {
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }

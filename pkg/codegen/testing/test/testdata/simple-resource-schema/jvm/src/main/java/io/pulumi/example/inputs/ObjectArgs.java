@@ -111,52 +111,52 @@ public final class ObjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stillOthers = defaults.stillOthers;
         }
 
-        public Builder setBar(@Nullable Input<String> bar) {
+        public Builder bar(@Nullable Input<String> bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setBar(@Nullable String bar) {
+        public Builder bar(@Nullable String bar) {
             this.bar = Input.ofNullable(bar);
             return this;
         }
 
-        public Builder setConfigs(@Nullable Input<List<ConfigMapArgs>> configs) {
+        public Builder configs(@Nullable Input<List<ConfigMapArgs>> configs) {
             this.configs = configs;
             return this;
         }
 
-        public Builder setConfigs(@Nullable List<ConfigMapArgs> configs) {
+        public Builder configs(@Nullable List<ConfigMapArgs> configs) {
             this.configs = Input.ofNullable(configs);
             return this;
         }
 
-        public Builder setFoo(@Nullable Input<Resource> foo) {
+        public Builder foo(@Nullable Input<Resource> foo) {
             this.foo = foo;
             return this;
         }
 
-        public Builder setFoo(@Nullable Resource foo) {
+        public Builder foo(@Nullable Resource foo) {
             this.foo = Input.ofNullable(foo);
             return this;
         }
 
-        public Builder setOthers(@Nullable Input<List<List<SomeOtherObjectArgs>>> others) {
+        public Builder others(@Nullable Input<List<List<SomeOtherObjectArgs>>> others) {
             this.others = others;
             return this;
         }
 
-        public Builder setOthers(@Nullable List<List<SomeOtherObjectArgs>> others) {
+        public Builder others(@Nullable List<List<SomeOtherObjectArgs>> others) {
             this.others = Input.ofNullable(others);
             return this;
         }
 
-        public Builder setStillOthers(@Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
+        public Builder stillOthers(@Nullable Input<Map<String,List<SomeOtherObjectArgs>>> stillOthers) {
             this.stillOthers = stillOthers;
             return this;
         }
 
-        public Builder setStillOthers(@Nullable Map<String,List<SomeOtherObjectArgs>> stillOthers) {
+        public Builder stillOthers(@Nullable Map<String,List<SomeOtherObjectArgs>> stillOthers) {
             this.stillOthers = Input.ofNullable(stillOthers);
             return this;
         }

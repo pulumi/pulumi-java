@@ -161,72 +161,72 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spannerDetails = defaults.spannerDetails;
         }
 
-        public Builder setBigTableDetails(@Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails) {
+        public Builder bigTableDetails(@Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails) {
             this.bigTableDetails = bigTableDetails;
             return this;
         }
 
-        public Builder setBigTableDetails(@Nullable List<BigTableIODetailsArgs> bigTableDetails) {
+        public Builder bigTableDetails(@Nullable List<BigTableIODetailsArgs> bigTableDetails) {
             this.bigTableDetails = Input.ofNullable(bigTableDetails);
             return this;
         }
 
-        public Builder setBigqueryDetails(@Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails) {
+        public Builder bigqueryDetails(@Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails) {
             this.bigqueryDetails = bigqueryDetails;
             return this;
         }
 
-        public Builder setBigqueryDetails(@Nullable List<BigQueryIODetailsArgs> bigqueryDetails) {
+        public Builder bigqueryDetails(@Nullable List<BigQueryIODetailsArgs> bigqueryDetails) {
             this.bigqueryDetails = Input.ofNullable(bigqueryDetails);
             return this;
         }
 
-        public Builder setDatastoreDetails(@Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails) {
+        public Builder datastoreDetails(@Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails) {
             this.datastoreDetails = datastoreDetails;
             return this;
         }
 
-        public Builder setDatastoreDetails(@Nullable List<DatastoreIODetailsArgs> datastoreDetails) {
+        public Builder datastoreDetails(@Nullable List<DatastoreIODetailsArgs> datastoreDetails) {
             this.datastoreDetails = Input.ofNullable(datastoreDetails);
             return this;
         }
 
-        public Builder setFileDetails(@Nullable Input<List<FileIODetailsArgs>> fileDetails) {
+        public Builder fileDetails(@Nullable Input<List<FileIODetailsArgs>> fileDetails) {
             this.fileDetails = fileDetails;
             return this;
         }
 
-        public Builder setFileDetails(@Nullable List<FileIODetailsArgs> fileDetails) {
+        public Builder fileDetails(@Nullable List<FileIODetailsArgs> fileDetails) {
             this.fileDetails = Input.ofNullable(fileDetails);
             return this;
         }
 
-        public Builder setPubsubDetails(@Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails) {
+        public Builder pubsubDetails(@Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails) {
             this.pubsubDetails = pubsubDetails;
             return this;
         }
 
-        public Builder setPubsubDetails(@Nullable List<PubSubIODetailsArgs> pubsubDetails) {
+        public Builder pubsubDetails(@Nullable List<PubSubIODetailsArgs> pubsubDetails) {
             this.pubsubDetails = Input.ofNullable(pubsubDetails);
             return this;
         }
 
-        public Builder setSdkVersion(@Nullable Input<SdkVersionArgs> sdkVersion) {
+        public Builder sdkVersion(@Nullable Input<SdkVersionArgs> sdkVersion) {
             this.sdkVersion = sdkVersion;
             return this;
         }
 
-        public Builder setSdkVersion(@Nullable SdkVersionArgs sdkVersion) {
+        public Builder sdkVersion(@Nullable SdkVersionArgs sdkVersion) {
             this.sdkVersion = Input.ofNullable(sdkVersion);
             return this;
         }
 
-        public Builder setSpannerDetails(@Nullable Input<List<SpannerIODetailsArgs>> spannerDetails) {
+        public Builder spannerDetails(@Nullable Input<List<SpannerIODetailsArgs>> spannerDetails) {
             this.spannerDetails = spannerDetails;
             return this;
         }
 
-        public Builder setSpannerDetails(@Nullable List<SpannerIODetailsArgs> spannerDetails) {
+        public Builder spannerDetails(@Nullable List<SpannerIODetailsArgs> spannerDetails) {
             this.spannerDetails = Input.ofNullable(spannerDetails);
             return this;
         }

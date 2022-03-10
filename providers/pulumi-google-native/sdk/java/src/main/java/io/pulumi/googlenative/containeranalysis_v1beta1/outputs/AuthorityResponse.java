@@ -48,7 +48,7 @@ public final class AuthorityResponse {
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(HintResponse hint) {
+        public Builder hint(HintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

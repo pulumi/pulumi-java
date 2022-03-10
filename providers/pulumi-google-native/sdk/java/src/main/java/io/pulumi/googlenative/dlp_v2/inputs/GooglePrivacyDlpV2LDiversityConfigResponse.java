@@ -73,12 +73,12 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
     	      this.sensitiveAttribute = defaults.sensitiveAttribute;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
 
-        public Builder setSensitiveAttribute(GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
+        public Builder sensitiveAttribute(GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
             this.sensitiveAttribute = Objects.requireNonNull(sensitiveAttribute);
             return this;
         }

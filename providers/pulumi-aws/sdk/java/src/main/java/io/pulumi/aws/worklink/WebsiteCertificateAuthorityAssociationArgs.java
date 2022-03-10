@@ -86,32 +86,32 @@ public final class WebsiteCertificateAuthorityAssociationArgs extends io.pulumi.
     	      this.fleetArn = defaults.fleetArn;
         }
 
-        public Builder setCertificate(Input<String> certificate) {
+        public Builder certificate(Input<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Input.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFleetArn(Input<String> fleetArn) {
+        public Builder fleetArn(Input<String> fleetArn) {
             this.fleetArn = Objects.requireNonNull(fleetArn);
             return this;
         }
 
-        public Builder setFleetArn(String fleetArn) {
+        public Builder fleetArn(String fleetArn) {
             this.fleetArn = Input.of(Objects.requireNonNull(fleetArn));
             return this;
         }

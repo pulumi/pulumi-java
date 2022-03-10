@@ -361,102 +361,102 @@ public final class GetPredictionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoAnalyze(Boolean autoAnalyze) {
+        public Builder autoAnalyze(Boolean autoAnalyze) {
             this.autoAnalyze = Objects.requireNonNull(autoAnalyze);
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setGrades(@Nullable List<PredictionResponseGrades> grades) {
+        public Builder grades(@Nullable List<PredictionResponseGrades> grades) {
             this.grades = grades;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInvolvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
+        public Builder involvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
             this.involvedInteractionTypes = involvedInteractionTypes;
             return this;
         }
 
-        public Builder setInvolvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
+        public Builder involvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
             this.involvedKpiTypes = involvedKpiTypes;
             return this;
         }
 
-        public Builder setInvolvedRelationships(@Nullable List<String> involvedRelationships) {
+        public Builder involvedRelationships(@Nullable List<String> involvedRelationships) {
             this.involvedRelationships = involvedRelationships;
             return this;
         }
 
-        public Builder setMappings(PredictionResponseMappings mappings) {
+        public Builder mappings(PredictionResponseMappings mappings) {
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNegativeOutcomeExpression(String negativeOutcomeExpression) {
+        public Builder negativeOutcomeExpression(String negativeOutcomeExpression) {
             this.negativeOutcomeExpression = Objects.requireNonNull(negativeOutcomeExpression);
             return this;
         }
 
-        public Builder setPositiveOutcomeExpression(String positiveOutcomeExpression) {
+        public Builder positiveOutcomeExpression(String positiveOutcomeExpression) {
             this.positiveOutcomeExpression = Objects.requireNonNull(positiveOutcomeExpression);
             return this;
         }
 
-        public Builder setPredictionName(@Nullable String predictionName) {
+        public Builder predictionName(@Nullable String predictionName) {
             this.predictionName = predictionName;
             return this;
         }
 
-        public Builder setPrimaryProfileType(String primaryProfileType) {
+        public Builder primaryProfileType(String primaryProfileType) {
             this.primaryProfileType = Objects.requireNonNull(primaryProfileType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScopeExpression(String scopeExpression) {
+        public Builder scopeExpression(String scopeExpression) {
             this.scopeExpression = Objects.requireNonNull(scopeExpression);
             return this;
         }
 
-        public Builder setScoreLabel(String scoreLabel) {
+        public Builder scoreLabel(String scoreLabel) {
             this.scoreLabel = Objects.requireNonNull(scoreLabel);
             return this;
         }
 
-        public Builder setSystemGeneratedEntities(PredictionResponseSystemGeneratedEntities systemGeneratedEntities) {
+        public Builder systemGeneratedEntities(PredictionResponseSystemGeneratedEntities systemGeneratedEntities) {
             this.systemGeneratedEntities = Objects.requireNonNull(systemGeneratedEntities);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

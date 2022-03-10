@@ -154,72 +154,72 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPostgresInstanceName(@Nullable Input<String> postgresInstanceName) {
+        public Builder postgresInstanceName(@Nullable Input<String> postgresInstanceName) {
             this.postgresInstanceName = postgresInstanceName;
             return this;
         }
 
-        public Builder setPostgresInstanceName(@Nullable String postgresInstanceName) {
+        public Builder postgresInstanceName(@Nullable String postgresInstanceName) {
             this.postgresInstanceName = Input.ofNullable(postgresInstanceName);
             return this;
         }
 
-        public Builder setProperties(Input<PostgresInstancePropertiesArgs> properties) {
+        public Builder properties(Input<PostgresInstancePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(PostgresInstancePropertiesArgs properties) {
+        public Builder properties(PostgresInstancePropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<PostgresInstanceSkuArgs> sku) {
+        public Builder sku(@Nullable Input<PostgresInstanceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable PostgresInstanceSkuArgs sku) {
+        public Builder sku(@Nullable PostgresInstanceSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

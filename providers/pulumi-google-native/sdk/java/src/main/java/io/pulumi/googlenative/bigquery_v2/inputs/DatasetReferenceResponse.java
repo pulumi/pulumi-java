@@ -68,12 +68,12 @@ public final class DatasetReferenceResponse extends io.pulumi.resources.InvokeAr
     	      this.project = defaults.project;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

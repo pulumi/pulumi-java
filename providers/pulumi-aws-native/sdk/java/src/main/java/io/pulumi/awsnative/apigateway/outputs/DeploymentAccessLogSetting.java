@@ -67,12 +67,12 @@ public final class DeploymentAccessLogSetting {
     	      this.format = defaults.format;
         }
 
-        public Builder setDestinationArn(@Nullable String destinationArn) {
+        public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }

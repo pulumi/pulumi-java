@@ -50,12 +50,12 @@ public final class AnomalyDetectorVpcConfiguration {
     	      this.subnetIdList = defaults.subnetIdList;
         }
 
-        public Builder setSecurityGroupIdList(List<String> securityGroupIdList) {
+        public Builder securityGroupIdList(List<String> securityGroupIdList) {
             this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList);
             return this;
         }
 
-        public Builder setSubnetIdList(List<String> subnetIdList) {
+        public Builder subnetIdList(List<String> subnetIdList) {
             this.subnetIdList = Objects.requireNonNull(subnetIdList);
             return this;
         }

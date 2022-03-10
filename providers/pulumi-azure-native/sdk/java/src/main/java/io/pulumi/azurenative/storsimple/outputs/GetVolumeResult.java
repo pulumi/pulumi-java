@@ -245,67 +245,67 @@ public final class GetVolumeResult {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setAccessControlRecordIds(List<String> accessControlRecordIds) {
+        public Builder accessControlRecordIds(List<String> accessControlRecordIds) {
             this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds);
             return this;
         }
 
-        public Builder setBackupPolicyIds(List<String> backupPolicyIds) {
+        public Builder backupPolicyIds(List<String> backupPolicyIds) {
             this.backupPolicyIds = Objects.requireNonNull(backupPolicyIds);
             return this;
         }
 
-        public Builder setBackupStatus(String backupStatus) {
+        public Builder backupStatus(String backupStatus) {
             this.backupStatus = Objects.requireNonNull(backupStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMonitoringStatus(String monitoringStatus) {
+        public Builder monitoringStatus(String monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationStatus(String operationStatus) {
+        public Builder operationStatus(String operationStatus) {
             this.operationStatus = Objects.requireNonNull(operationStatus);
             return this;
         }
 
-        public Builder setSizeInBytes(Double sizeInBytes) {
+        public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumeContainerId(String volumeContainerId) {
+        public Builder volumeContainerId(String volumeContainerId) {
             this.volumeContainerId = Objects.requireNonNull(volumeContainerId);
             return this;
         }
 
-        public Builder setVolumeStatus(String volumeStatus) {
+        public Builder volumeStatus(String volumeStatus) {
             this.volumeStatus = Objects.requireNonNull(volumeStatus);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }

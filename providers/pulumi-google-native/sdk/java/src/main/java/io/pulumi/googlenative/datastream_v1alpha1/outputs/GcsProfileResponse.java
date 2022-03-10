@@ -65,12 +65,12 @@ public final class GcsProfileResponse {
     	      this.rootPath = defaults.rootPath;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setRootPath(String rootPath) {
+        public Builder rootPath(String rootPath) {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }

@@ -236,122 +236,122 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder setCommittedStorage(@Nullable Input<String> committedStorage) {
+        public Builder committedStorage(@Nullable Input<String> committedStorage) {
             this.committedStorage = committedStorage;
             return this;
         }
 
-        public Builder setCommittedStorage(@Nullable String committedStorage) {
+        public Builder committedStorage(@Nullable String committedStorage) {
             this.committedStorage = Input.ofNullable(committedStorage);
             return this;
         }
 
-        public Builder setCommittedStorageMb(@Nullable Input<String> committedStorageMb) {
+        public Builder committedStorageMb(@Nullable Input<String> committedStorageMb) {
             this.committedStorageMb = committedStorageMb;
             return this;
         }
 
-        public Builder setCommittedStorageMb(@Nullable String committedStorageMb) {
+        public Builder committedStorageMb(@Nullable String committedStorageMb) {
             this.committedStorageMb = Input.ofNullable(committedStorageMb);
             return this;
         }
 
-        public Builder setCpuCount(@Nullable Input<Integer> cpuCount) {
+        public Builder cpuCount(@Nullable Input<Integer> cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
 
-        public Builder setCpuCount(@Nullable Integer cpuCount) {
+        public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = Input.ofNullable(cpuCount);
             return this;
         }
 
-        public Builder setDatacenterDescription(@Nullable Input<String> datacenterDescription) {
+        public Builder datacenterDescription(@Nullable Input<String> datacenterDescription) {
             this.datacenterDescription = datacenterDescription;
             return this;
         }
 
-        public Builder setDatacenterDescription(@Nullable String datacenterDescription) {
+        public Builder datacenterDescription(@Nullable String datacenterDescription) {
             this.datacenterDescription = Input.ofNullable(datacenterDescription);
             return this;
         }
 
-        public Builder setDatacenterId(@Nullable Input<String> datacenterId) {
+        public Builder datacenterId(@Nullable Input<String> datacenterId) {
             this.datacenterId = datacenterId;
             return this;
         }
 
-        public Builder setDatacenterId(@Nullable String datacenterId) {
+        public Builder datacenterId(@Nullable String datacenterId) {
             this.datacenterId = Input.ofNullable(datacenterId);
             return this;
         }
 
-        public Builder setDiskCount(@Nullable Input<Integer> diskCount) {
+        public Builder diskCount(@Nullable Input<Integer> diskCount) {
             this.diskCount = diskCount;
             return this;
         }
 
-        public Builder setDiskCount(@Nullable Integer diskCount) {
+        public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = Input.ofNullable(diskCount);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGuestDescription(@Nullable Input<String> guestDescription) {
+        public Builder guestDescription(@Nullable Input<String> guestDescription) {
             this.guestDescription = guestDescription;
             return this;
         }
 
-        public Builder setGuestDescription(@Nullable String guestDescription) {
+        public Builder guestDescription(@Nullable String guestDescription) {
             this.guestDescription = Input.ofNullable(guestDescription);
             return this;
         }
 
-        public Builder setMemoryMb(@Nullable Input<Integer> memoryMb) {
+        public Builder memoryMb(@Nullable Input<Integer> memoryMb) {
             this.memoryMb = memoryMb;
             return this;
         }
 
-        public Builder setMemoryMb(@Nullable Integer memoryMb) {
+        public Builder memoryMb(@Nullable Integer memoryMb) {
             this.memoryMb = Input.ofNullable(memoryMb);
             return this;
         }
 
-        public Builder setPowerState(@Nullable Input<VmwareVmDetailsPowerState> powerState) {
+        public Builder powerState(@Nullable Input<VmwareVmDetailsPowerState> powerState) {
             this.powerState = powerState;
             return this;
         }
 
-        public Builder setPowerState(@Nullable VmwareVmDetailsPowerState powerState) {
+        public Builder powerState(@Nullable VmwareVmDetailsPowerState powerState) {
             this.powerState = Input.ofNullable(powerState);
             return this;
         }
 
-        public Builder setUuid(@Nullable Input<String> uuid) {
+        public Builder uuid(@Nullable Input<String> uuid) {
             this.uuid = uuid;
             return this;
         }
 
-        public Builder setUuid(@Nullable String uuid) {
+        public Builder uuid(@Nullable String uuid) {
             this.uuid = Input.ofNullable(uuid);
             return this;
         }
 
-        public Builder setVmId(@Nullable Input<String> vmId) {
+        public Builder vmId(@Nullable Input<String> vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = Input.ofNullable(vmId);
             return this;
         }

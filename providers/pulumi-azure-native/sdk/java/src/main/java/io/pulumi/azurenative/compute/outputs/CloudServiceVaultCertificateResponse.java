@@ -50,7 +50,7 @@ public final class CloudServiceVaultCertificateResponse {
     	      this.certificateUrl = defaults.certificateUrl;
         }
 
-        public Builder setCertificateUrl(@Nullable String certificateUrl) {
+        public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }

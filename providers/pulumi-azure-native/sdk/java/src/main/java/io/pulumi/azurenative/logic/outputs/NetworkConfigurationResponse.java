@@ -86,17 +86,17 @@ public final class NetworkConfigurationResponse {
     	      this.virtualNetworkAddressSpace = defaults.virtualNetworkAddressSpace;
         }
 
-        public Builder setAccessEndpoint(@Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint) {
+        public Builder accessEndpoint(@Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint) {
             this.accessEndpoint = accessEndpoint;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<ResourceReferenceResponse> subnets) {
+        public Builder subnets(@Nullable List<ResourceReferenceResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setVirtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
+        public Builder virtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
             this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }

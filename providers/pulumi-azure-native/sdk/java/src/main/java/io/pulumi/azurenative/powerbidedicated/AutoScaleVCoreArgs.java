@@ -170,82 +170,82 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vcoreName = defaults.vcoreName;
         }
 
-        public Builder setCapacityLimit(@Nullable Input<Integer> capacityLimit) {
+        public Builder capacityLimit(@Nullable Input<Integer> capacityLimit) {
             this.capacityLimit = capacityLimit;
             return this;
         }
 
-        public Builder setCapacityLimit(@Nullable Integer capacityLimit) {
+        public Builder capacityLimit(@Nullable Integer capacityLimit) {
             this.capacityLimit = Input.ofNullable(capacityLimit);
             return this;
         }
 
-        public Builder setCapacityObjectId(@Nullable Input<String> capacityObjectId) {
+        public Builder capacityObjectId(@Nullable Input<String> capacityObjectId) {
             this.capacityObjectId = capacityObjectId;
             return this;
         }
 
-        public Builder setCapacityObjectId(@Nullable String capacityObjectId) {
+        public Builder capacityObjectId(@Nullable String capacityObjectId) {
             this.capacityObjectId = Input.ofNullable(capacityObjectId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<AutoScaleVCoreSkuArgs> sku) {
+        public Builder sku(Input<AutoScaleVCoreSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(AutoScaleVCoreSkuArgs sku) {
+        public Builder sku(AutoScaleVCoreSkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setSystemData(@Nullable Input<SystemDataArgs> systemData) {
+        public Builder systemData(@Nullable Input<SystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
 
-        public Builder setSystemData(@Nullable SystemDataArgs systemData) {
+        public Builder systemData(@Nullable SystemDataArgs systemData) {
             this.systemData = Input.ofNullable(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVcoreName(@Nullable Input<String> vcoreName) {
+        public Builder vcoreName(@Nullable Input<String> vcoreName) {
             this.vcoreName = vcoreName;
             return this;
         }
 
-        public Builder setVcoreName(@Nullable String vcoreName) {
+        public Builder vcoreName(@Nullable String vcoreName) {
             this.vcoreName = Input.ofNullable(vcoreName);
             return this;
         }

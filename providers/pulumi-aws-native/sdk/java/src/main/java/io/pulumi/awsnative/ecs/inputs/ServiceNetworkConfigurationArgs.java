@@ -49,12 +49,12 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.awsvpcConfiguration = defaults.awsvpcConfiguration;
         }
 
-        public Builder setAwsvpcConfiguration(@Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
+        public Builder awsvpcConfiguration(@Nullable Input<ServiceAwsVpcConfigurationArgs> awsvpcConfiguration) {
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }
 
-        public Builder setAwsvpcConfiguration(@Nullable ServiceAwsVpcConfigurationArgs awsvpcConfiguration) {
+        public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfigurationArgs awsvpcConfiguration) {
             this.awsvpcConfiguration = Input.ofNullable(awsvpcConfiguration);
             return this;
         }

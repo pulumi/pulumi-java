@@ -73,12 +73,12 @@ public final class ArtifactResponse extends io.pulumi.resources.InvokeArgs {
     	      this.names = defaults.names;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

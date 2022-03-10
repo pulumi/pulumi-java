@@ -67,12 +67,12 @@ public final class BucketLifecycleRuleAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

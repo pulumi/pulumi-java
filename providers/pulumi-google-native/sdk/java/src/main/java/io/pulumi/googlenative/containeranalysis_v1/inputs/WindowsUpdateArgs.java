@@ -157,72 +157,72 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setCategories(@Nullable Input<List<CategoryArgs>> categories) {
+        public Builder categories(@Nullable Input<List<CategoryArgs>> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setCategories(@Nullable List<CategoryArgs> categories) {
+        public Builder categories(@Nullable List<CategoryArgs> categories) {
             this.categories = Input.ofNullable(categories);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKbArticleIds(@Nullable Input<List<String>> kbArticleIds) {
+        public Builder kbArticleIds(@Nullable Input<List<String>> kbArticleIds) {
             this.kbArticleIds = kbArticleIds;
             return this;
         }
 
-        public Builder setKbArticleIds(@Nullable List<String> kbArticleIds) {
+        public Builder kbArticleIds(@Nullable List<String> kbArticleIds) {
             this.kbArticleIds = Input.ofNullable(kbArticleIds);
             return this;
         }
 
-        public Builder setLastPublishedTimestamp(@Nullable Input<String> lastPublishedTimestamp) {
+        public Builder lastPublishedTimestamp(@Nullable Input<String> lastPublishedTimestamp) {
             this.lastPublishedTimestamp = lastPublishedTimestamp;
             return this;
         }
 
-        public Builder setLastPublishedTimestamp(@Nullable String lastPublishedTimestamp) {
+        public Builder lastPublishedTimestamp(@Nullable String lastPublishedTimestamp) {
             this.lastPublishedTimestamp = Input.ofNullable(lastPublishedTimestamp);
             return this;
         }
 
-        public Builder setSupportUrl(@Nullable Input<String> supportUrl) {
+        public Builder supportUrl(@Nullable Input<String> supportUrl) {
             this.supportUrl = supportUrl;
             return this;
         }
 
-        public Builder setSupportUrl(@Nullable String supportUrl) {
+        public Builder supportUrl(@Nullable String supportUrl) {
             this.supportUrl = Input.ofNullable(supportUrl);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

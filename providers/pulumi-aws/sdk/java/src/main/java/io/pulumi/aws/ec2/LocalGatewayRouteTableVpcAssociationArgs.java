@@ -87,32 +87,32 @@ public final class LocalGatewayRouteTableVpcAssociationArgs extends io.pulumi.re
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setLocalGatewayRouteTableId(Input<String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(Input<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Input.of(Objects.requireNonNull(localGatewayRouteTableId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

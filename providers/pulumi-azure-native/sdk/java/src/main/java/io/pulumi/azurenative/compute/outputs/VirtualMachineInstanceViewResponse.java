@@ -301,82 +301,82 @@ public final class VirtualMachineInstanceViewResponse {
     	      this.vmHealth = defaults.vmHealth;
         }
 
-        public Builder setAssignedHost(String assignedHost) {
+        public Builder assignedHost(String assignedHost) {
             this.assignedHost = Objects.requireNonNull(assignedHost);
             return this;
         }
 
-        public Builder setBootDiagnostics(@Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics) {
+        public Builder bootDiagnostics(@Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics) {
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<DiskInstanceViewResponse> disks) {
+        public Builder disks(@Nullable List<DiskInstanceViewResponse> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions) {
+        public Builder extensions(@Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable String hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
-        public Builder setMaintenanceRedeployStatus(@Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus) {
+        public Builder maintenanceRedeployStatus(@Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus) {
             this.maintenanceRedeployStatus = maintenanceRedeployStatus;
             return this;
         }
 
-        public Builder setOsName(@Nullable String osName) {
+        public Builder osName(@Nullable String osName) {
             this.osName = osName;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-        public Builder setPatchStatus(@Nullable VirtualMachinePatchStatusResponse patchStatus) {
+        public Builder patchStatus(@Nullable VirtualMachinePatchStatusResponse patchStatus) {
             this.patchStatus = patchStatus;
             return this;
         }
 
-        public Builder setPlatformFaultDomain(@Nullable Integer platformFaultDomain) {
+        public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
 
-        public Builder setPlatformUpdateDomain(@Nullable Integer platformUpdateDomain) {
+        public Builder platformUpdateDomain(@Nullable Integer platformUpdateDomain) {
             this.platformUpdateDomain = platformUpdateDomain;
             return this;
         }
 
-        public Builder setRdpThumbPrint(@Nullable String rdpThumbPrint) {
+        public Builder rdpThumbPrint(@Nullable String rdpThumbPrint) {
             this.rdpThumbPrint = rdpThumbPrint;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setVmAgent(@Nullable VirtualMachineAgentInstanceViewResponse vmAgent) {
+        public Builder vmAgent(@Nullable VirtualMachineAgentInstanceViewResponse vmAgent) {
             this.vmAgent = vmAgent;
             return this;
         }
 
-        public Builder setVmHealth(VirtualMachineHealthStatusResponse vmHealth) {
+        public Builder vmHealth(VirtualMachineHealthStatusResponse vmHealth) {
             this.vmHealth = Objects.requireNonNull(vmHealth);
             return this;
         }

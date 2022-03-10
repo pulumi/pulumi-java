@@ -213,112 +213,112 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutConfig = defaults.timeoutConfig;
         }
 
-        public Builder setAbortConfig(@Nullable Input<AbortConfigPropertiesArgs> abortConfig) {
+        public Builder abortConfig(@Nullable Input<AbortConfigPropertiesArgs> abortConfig) {
             this.abortConfig = abortConfig;
             return this;
         }
 
-        public Builder setAbortConfig(@Nullable AbortConfigPropertiesArgs abortConfig) {
+        public Builder abortConfig(@Nullable AbortConfigPropertiesArgs abortConfig) {
             this.abortConfig = Input.ofNullable(abortConfig);
             return this;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setDocument(@Nullable Input<String> document) {
+        public Builder document(@Nullable Input<String> document) {
             this.document = document;
             return this;
         }
 
-        public Builder setDocument(@Nullable String document) {
+        public Builder document(@Nullable String document) {
             this.document = Input.ofNullable(document);
             return this;
         }
 
-        public Builder setDocumentSource(@Nullable Input<String> documentSource) {
+        public Builder documentSource(@Nullable Input<String> documentSource) {
             this.documentSource = documentSource;
             return this;
         }
 
-        public Builder setDocumentSource(@Nullable String documentSource) {
+        public Builder documentSource(@Nullable String documentSource) {
             this.documentSource = Input.ofNullable(documentSource);
             return this;
         }
 
-        public Builder setJobArn(@Nullable Input<String> jobArn) {
+        public Builder jobArn(@Nullable Input<String> jobArn) {
             this.jobArn = jobArn;
             return this;
         }
 
-        public Builder setJobArn(@Nullable String jobArn) {
+        public Builder jobArn(@Nullable String jobArn) {
             this.jobArn = Input.ofNullable(jobArn);
             return this;
         }
 
-        public Builder setJobExecutionsRetryConfig(@Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig) {
+        public Builder jobExecutionsRetryConfig(@Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig) {
             this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
             return this;
         }
 
-        public Builder setJobExecutionsRetryConfig(@Nullable JobExecutionsRetryConfigPropertiesArgs jobExecutionsRetryConfig) {
+        public Builder jobExecutionsRetryConfig(@Nullable JobExecutionsRetryConfigPropertiesArgs jobExecutionsRetryConfig) {
             this.jobExecutionsRetryConfig = Input.ofNullable(jobExecutionsRetryConfig);
             return this;
         }
 
-        public Builder setJobExecutionsRolloutConfig(@Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig) {
+        public Builder jobExecutionsRolloutConfig(@Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig) {
             this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
             return this;
         }
 
-        public Builder setJobExecutionsRolloutConfig(@Nullable JobExecutionsRolloutConfigPropertiesArgs jobExecutionsRolloutConfig) {
+        public Builder jobExecutionsRolloutConfig(@Nullable JobExecutionsRolloutConfigPropertiesArgs jobExecutionsRolloutConfig) {
             this.jobExecutionsRolloutConfig = Input.ofNullable(jobExecutionsRolloutConfig);
             return this;
         }
 
-        public Builder setJobTemplateId(Input<String> jobTemplateId) {
+        public Builder jobTemplateId(Input<String> jobTemplateId) {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
 
-        public Builder setJobTemplateId(String jobTemplateId) {
+        public Builder jobTemplateId(String jobTemplateId) {
             this.jobTemplateId = Input.of(Objects.requireNonNull(jobTemplateId));
             return this;
         }
 
-        public Builder setPresignedUrlConfig(@Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig) {
+        public Builder presignedUrlConfig(@Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig) {
             this.presignedUrlConfig = presignedUrlConfig;
             return this;
         }
 
-        public Builder setPresignedUrlConfig(@Nullable PresignedUrlConfigPropertiesArgs presignedUrlConfig) {
+        public Builder presignedUrlConfig(@Nullable PresignedUrlConfigPropertiesArgs presignedUrlConfig) {
             this.presignedUrlConfig = Input.ofNullable(presignedUrlConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<JobTemplateTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<JobTemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<JobTemplateTagArgs> tags) {
+        public Builder tags(@Nullable List<JobTemplateTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeoutConfig(@Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig) {
+        public Builder timeoutConfig(@Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig) {
             this.timeoutConfig = timeoutConfig;
             return this;
         }
 
-        public Builder setTimeoutConfig(@Nullable TimeoutConfigPropertiesArgs timeoutConfig) {
+        public Builder timeoutConfig(@Nullable TimeoutConfigPropertiesArgs timeoutConfig) {
             this.timeoutConfig = Input.ofNullable(timeoutConfig);
             return this;
         }

@@ -123,27 +123,27 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
+        public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
 
-        public Builder setFormattedText(String formattedText) {
+        public Builder formattedText(String formattedText) {
             this.formattedText = Objects.requireNonNull(formattedText);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

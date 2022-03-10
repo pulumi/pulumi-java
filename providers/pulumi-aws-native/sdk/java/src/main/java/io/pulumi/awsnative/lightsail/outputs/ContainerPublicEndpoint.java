@@ -85,17 +85,17 @@ public final class ContainerPublicEndpoint {
     	      this.healthCheckConfig = defaults.healthCheckConfig;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setHealthCheckConfig(@Nullable ContainerHealthCheckConfig healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfig healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }

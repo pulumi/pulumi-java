@@ -53,12 +53,12 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs extend
     	      this.dailyMaintenanceWindow = defaults.dailyMaintenanceWindow;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable Input<ResourcePolicyDailyCycleArgs> dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable ResourcePolicyDailyCycleArgs dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable ResourcePolicyDailyCycleArgs dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Input.ofNullable(dailyMaintenanceWindow);
             return this;
         }

@@ -161,72 +161,72 @@ public final class GetCloudFormationProvisionedProductResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAcceptLanguage(@Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
+        public Builder acceptLanguage(@Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setCloudformationStackArn(@Nullable String cloudformationStackArn) {
+        public Builder cloudformationStackArn(@Nullable String cloudformationStackArn) {
             this.cloudformationStackArn = cloudformationStackArn;
             return this;
         }
 
-        public Builder setOutputs(@Nullable Object outputs) {
+        public Builder outputs(@Nullable Object outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setPathId(@Nullable String pathId) {
+        public Builder pathId(@Nullable String pathId) {
             this.pathId = pathId;
             return this;
         }
 
-        public Builder setPathName(@Nullable String pathName) {
+        public Builder pathName(@Nullable String pathName) {
             this.pathName = pathName;
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setProvisionedProductId(@Nullable String provisionedProductId) {
+        public Builder provisionedProductId(@Nullable String provisionedProductId) {
             this.provisionedProductId = provisionedProductId;
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable String provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
-        public Builder setProvisioningArtifactName(@Nullable String provisioningArtifactName) {
+        public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
             this.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable List<CloudFormationProvisionedProductProvisioningParameter> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable List<CloudFormationProvisionedProductProvisioningParameter> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
 
-        public Builder setProvisioningPreferences(@Nullable CloudFormationProvisionedProductProvisioningPreferences provisioningPreferences) {
+        public Builder provisioningPreferences(@Nullable CloudFormationProvisionedProductProvisioningPreferences provisioningPreferences) {
             this.provisioningPreferences = provisioningPreferences;
             return this;
         }
 
-        public Builder setRecordId(@Nullable String recordId) {
+        public Builder recordId(@Nullable String recordId) {
             this.recordId = recordId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CloudFormationProvisionedProductTag> tags) {
+        public Builder tags(@Nullable List<CloudFormationProvisionedProductTag> tags) {
             this.tags = tags;
             return this;
         }

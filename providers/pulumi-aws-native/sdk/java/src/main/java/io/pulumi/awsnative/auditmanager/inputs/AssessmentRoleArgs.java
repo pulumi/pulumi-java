@@ -67,22 +67,22 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleType = defaults.roleType;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setRoleType(@Nullable Input<AssessmentRoleType> roleType) {
+        public Builder roleType(@Nullable Input<AssessmentRoleType> roleType) {
             this.roleType = roleType;
             return this;
         }
 
-        public Builder setRoleType(@Nullable AssessmentRoleType roleType) {
+        public Builder roleType(@Nullable AssessmentRoleType roleType) {
             this.roleType = Input.ofNullable(roleType);
             return this;
         }

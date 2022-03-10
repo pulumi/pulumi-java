@@ -74,22 +74,22 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nfsProviderIp = defaults.nfsProviderIp;
         }
 
-        public Builder setNfsFilePath(@Nullable Input<String> nfsFilePath) {
+        public Builder nfsFilePath(@Nullable Input<String> nfsFilePath) {
             this.nfsFilePath = nfsFilePath;
             return this;
         }
 
-        public Builder setNfsFilePath(@Nullable String nfsFilePath) {
+        public Builder nfsFilePath(@Nullable String nfsFilePath) {
             this.nfsFilePath = Input.ofNullable(nfsFilePath);
             return this;
         }
 
-        public Builder setNfsProviderIp(@Nullable Input<String> nfsProviderIp) {
+        public Builder nfsProviderIp(@Nullable Input<String> nfsProviderIp) {
             this.nfsProviderIp = nfsProviderIp;
             return this;
         }
 
-        public Builder setNfsProviderIp(@Nullable String nfsProviderIp) {
+        public Builder nfsProviderIp(@Nullable String nfsProviderIp) {
             this.nfsProviderIp = Input.ofNullable(nfsProviderIp);
             return this;
         }

@@ -50,7 +50,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<String> items) {
+        public Builder items(@Nullable List<String> items) {
             this.items = items;
             return this;
         }

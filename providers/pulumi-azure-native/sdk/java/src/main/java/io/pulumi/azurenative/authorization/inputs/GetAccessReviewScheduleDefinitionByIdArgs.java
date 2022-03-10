@@ -51,7 +51,7 @@ public final class GetAccessReviewScheduleDefinitionByIdArgs extends io.pulumi.r
     	      this.scheduleDefinitionId = defaults.scheduleDefinitionId;
         }
 
-        public Builder setScheduleDefinitionId(String scheduleDefinitionId) {
+        public Builder scheduleDefinitionId(String scheduleDefinitionId) {
             this.scheduleDefinitionId = Objects.requireNonNull(scheduleDefinitionId);
             return this;
         }

@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerConnectionPoolTcp {
     	      this.maxConnections = defaults.maxConnections;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }

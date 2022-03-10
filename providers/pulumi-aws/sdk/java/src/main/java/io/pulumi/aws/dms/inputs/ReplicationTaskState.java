@@ -231,122 +231,122 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
     	      this.targetEndpointArn = defaults.targetEndpointArn;
         }
 
-        public Builder setCdcStartPosition(@Nullable Input<String> cdcStartPosition) {
+        public Builder cdcStartPosition(@Nullable Input<String> cdcStartPosition) {
             this.cdcStartPosition = cdcStartPosition;
             return this;
         }
 
-        public Builder setCdcStartPosition(@Nullable String cdcStartPosition) {
+        public Builder cdcStartPosition(@Nullable String cdcStartPosition) {
             this.cdcStartPosition = Input.ofNullable(cdcStartPosition);
             return this;
         }
 
-        public Builder setCdcStartTime(@Nullable Input<String> cdcStartTime) {
+        public Builder cdcStartTime(@Nullable Input<String> cdcStartTime) {
             this.cdcStartTime = cdcStartTime;
             return this;
         }
 
-        public Builder setCdcStartTime(@Nullable String cdcStartTime) {
+        public Builder cdcStartTime(@Nullable String cdcStartTime) {
             this.cdcStartTime = Input.ofNullable(cdcStartTime);
             return this;
         }
 
-        public Builder setMigrationType(@Nullable Input<String> migrationType) {
+        public Builder migrationType(@Nullable Input<String> migrationType) {
             this.migrationType = migrationType;
             return this;
         }
 
-        public Builder setMigrationType(@Nullable String migrationType) {
+        public Builder migrationType(@Nullable String migrationType) {
             this.migrationType = Input.ofNullable(migrationType);
             return this;
         }
 
-        public Builder setReplicationInstanceArn(@Nullable Input<String> replicationInstanceArn) {
+        public Builder replicationInstanceArn(@Nullable Input<String> replicationInstanceArn) {
             this.replicationInstanceArn = replicationInstanceArn;
             return this;
         }
 
-        public Builder setReplicationInstanceArn(@Nullable String replicationInstanceArn) {
+        public Builder replicationInstanceArn(@Nullable String replicationInstanceArn) {
             this.replicationInstanceArn = Input.ofNullable(replicationInstanceArn);
             return this;
         }
 
-        public Builder setReplicationTaskArn(@Nullable Input<String> replicationTaskArn) {
+        public Builder replicationTaskArn(@Nullable Input<String> replicationTaskArn) {
             this.replicationTaskArn = replicationTaskArn;
             return this;
         }
 
-        public Builder setReplicationTaskArn(@Nullable String replicationTaskArn) {
+        public Builder replicationTaskArn(@Nullable String replicationTaskArn) {
             this.replicationTaskArn = Input.ofNullable(replicationTaskArn);
             return this;
         }
 
-        public Builder setReplicationTaskId(@Nullable Input<String> replicationTaskId) {
+        public Builder replicationTaskId(@Nullable Input<String> replicationTaskId) {
             this.replicationTaskId = replicationTaskId;
             return this;
         }
 
-        public Builder setReplicationTaskId(@Nullable String replicationTaskId) {
+        public Builder replicationTaskId(@Nullable String replicationTaskId) {
             this.replicationTaskId = Input.ofNullable(replicationTaskId);
             return this;
         }
 
-        public Builder setReplicationTaskSettings(@Nullable Input<String> replicationTaskSettings) {
+        public Builder replicationTaskSettings(@Nullable Input<String> replicationTaskSettings) {
             this.replicationTaskSettings = replicationTaskSettings;
             return this;
         }
 
-        public Builder setReplicationTaskSettings(@Nullable String replicationTaskSettings) {
+        public Builder replicationTaskSettings(@Nullable String replicationTaskSettings) {
             this.replicationTaskSettings = Input.ofNullable(replicationTaskSettings);
             return this;
         }
 
-        public Builder setSourceEndpointArn(@Nullable Input<String> sourceEndpointArn) {
+        public Builder sourceEndpointArn(@Nullable Input<String> sourceEndpointArn) {
             this.sourceEndpointArn = sourceEndpointArn;
             return this;
         }
 
-        public Builder setSourceEndpointArn(@Nullable String sourceEndpointArn) {
+        public Builder sourceEndpointArn(@Nullable String sourceEndpointArn) {
             this.sourceEndpointArn = Input.ofNullable(sourceEndpointArn);
             return this;
         }
 
-        public Builder setTableMappings(@Nullable Input<String> tableMappings) {
+        public Builder tableMappings(@Nullable Input<String> tableMappings) {
             this.tableMappings = tableMappings;
             return this;
         }
 
-        public Builder setTableMappings(@Nullable String tableMappings) {
+        public Builder tableMappings(@Nullable String tableMappings) {
             this.tableMappings = Input.ofNullable(tableMappings);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTargetEndpointArn(@Nullable Input<String> targetEndpointArn) {
+        public Builder targetEndpointArn(@Nullable Input<String> targetEndpointArn) {
             this.targetEndpointArn = targetEndpointArn;
             return this;
         }
 
-        public Builder setTargetEndpointArn(@Nullable String targetEndpointArn) {
+        public Builder targetEndpointArn(@Nullable String targetEndpointArn) {
             this.targetEndpointArn = Input.ofNullable(targetEndpointArn);
             return this;
         }

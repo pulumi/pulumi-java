@@ -276,77 +276,77 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse {
     	      this.totalChangesApplied = defaults.totalChangesApplied;
         }
 
-        public Builder setCdcDeleteCounter(String cdcDeleteCounter) {
+        public Builder cdcDeleteCounter(String cdcDeleteCounter) {
             this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
             return this;
         }
 
-        public Builder setCdcInsertCounter(String cdcInsertCounter) {
+        public Builder cdcInsertCounter(String cdcInsertCounter) {
             this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
             return this;
         }
 
-        public Builder setCdcUpdateCounter(String cdcUpdateCounter) {
+        public Builder cdcUpdateCounter(String cdcUpdateCounter) {
             this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
             return this;
         }
 
-        public Builder setDataErrorsCounter(Double dataErrorsCounter) {
+        public Builder dataErrorsCounter(Double dataErrorsCounter) {
             this.dataErrorsCounter = Objects.requireNonNull(dataErrorsCounter);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setFullLoadEndedOn(String fullLoadEndedOn) {
+        public Builder fullLoadEndedOn(String fullLoadEndedOn) {
             this.fullLoadEndedOn = Objects.requireNonNull(fullLoadEndedOn);
             return this;
         }
 
-        public Builder setFullLoadEstFinishTime(String fullLoadEstFinishTime) {
+        public Builder fullLoadEstFinishTime(String fullLoadEstFinishTime) {
             this.fullLoadEstFinishTime = Objects.requireNonNull(fullLoadEstFinishTime);
             return this;
         }
 
-        public Builder setFullLoadStartedOn(String fullLoadStartedOn) {
+        public Builder fullLoadStartedOn(String fullLoadStartedOn) {
             this.fullLoadStartedOn = Objects.requireNonNull(fullLoadStartedOn);
             return this;
         }
 
-        public Builder setFullLoadTotalRows(Double fullLoadTotalRows) {
+        public Builder fullLoadTotalRows(Double fullLoadTotalRows) {
             this.fullLoadTotalRows = Objects.requireNonNull(fullLoadTotalRows);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTotalChangesApplied(Double totalChangesApplied) {
+        public Builder totalChangesApplied(Double totalChangesApplied) {
             this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
             return this;
         }

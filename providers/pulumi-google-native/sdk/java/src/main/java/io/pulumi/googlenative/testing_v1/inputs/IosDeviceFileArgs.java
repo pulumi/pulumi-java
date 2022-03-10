@@ -91,32 +91,32 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.devicePath = defaults.devicePath;
         }
 
-        public Builder setBundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Input<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Input.ofNullable(bundleId);
             return this;
         }
 
-        public Builder setContent(@Nullable Input<FileReferenceArgs> content) {
+        public Builder content(@Nullable Input<FileReferenceArgs> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable FileReferenceArgs content) {
+        public Builder content(@Nullable FileReferenceArgs content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setDevicePath(@Nullable Input<String> devicePath) {
+        public Builder devicePath(@Nullable Input<String> devicePath) {
             this.devicePath = devicePath;
             return this;
         }
 
-        public Builder setDevicePath(@Nullable String devicePath) {
+        public Builder devicePath(@Nullable String devicePath) {
             this.devicePath = Input.ofNullable(devicePath);
             return this;
         }

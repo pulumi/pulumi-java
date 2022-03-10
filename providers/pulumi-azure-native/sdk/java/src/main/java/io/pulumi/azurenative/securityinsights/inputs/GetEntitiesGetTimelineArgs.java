@@ -170,42 +170,42 @@ public final class GetEntitiesGetTimelineArgs extends io.pulumi.resources.Invoke
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setEntityId(String entityId) {
+        public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
 
-        public Builder setKinds(@Nullable List<Either<String,EntityTimelineKind>> kinds) {
+        public Builder kinds(@Nullable List<Either<String,EntityTimelineKind>> kinds) {
             this.kinds = kinds;
             return this;
         }
 
-        public Builder setNumberOfBucket(@Nullable Integer numberOfBucket) {
+        public Builder numberOfBucket(@Nullable Integer numberOfBucket) {
             this.numberOfBucket = numberOfBucket;
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

@@ -103,22 +103,22 @@ public final class TemplateResponse {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setContainers(@Nullable List<ContainerResponse> containers) {
+        public Builder containers(@Nullable List<ContainerResponse> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setDapr(@Nullable DaprResponse dapr) {
+        public Builder dapr(@Nullable DaprResponse dapr) {
             this.dapr = dapr;
             return this;
         }
 
-        public Builder setRevisionSuffix(@Nullable String revisionSuffix) {
+        public Builder revisionSuffix(@Nullable String revisionSuffix) {
             this.revisionSuffix = revisionSuffix;
             return this;
         }
 
-        public Builder setScale(@Nullable ScaleResponse scale) {
+        public Builder scale(@Nullable ScaleResponse scale) {
             this.scale = scale;
             return this;
         }

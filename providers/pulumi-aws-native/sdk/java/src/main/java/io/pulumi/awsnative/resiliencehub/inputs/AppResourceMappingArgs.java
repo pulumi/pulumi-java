@@ -91,42 +91,42 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setLogicalStackName(@Nullable Input<String> logicalStackName) {
+        public Builder logicalStackName(@Nullable Input<String> logicalStackName) {
             this.logicalStackName = logicalStackName;
             return this;
         }
 
-        public Builder setLogicalStackName(@Nullable String logicalStackName) {
+        public Builder logicalStackName(@Nullable String logicalStackName) {
             this.logicalStackName = Input.ofNullable(logicalStackName);
             return this;
         }
 
-        public Builder setMappingType(Input<String> mappingType) {
+        public Builder mappingType(Input<String> mappingType) {
             this.mappingType = Objects.requireNonNull(mappingType);
             return this;
         }
 
-        public Builder setMappingType(String mappingType) {
+        public Builder mappingType(String mappingType) {
             this.mappingType = Input.of(Objects.requireNonNull(mappingType));
             return this;
         }
 
-        public Builder setPhysicalResourceId(Input<AppPhysicalResourceIdArgs> physicalResourceId) {
+        public Builder physicalResourceId(Input<AppPhysicalResourceIdArgs> physicalResourceId) {
             this.physicalResourceId = Objects.requireNonNull(physicalResourceId);
             return this;
         }
 
-        public Builder setPhysicalResourceId(AppPhysicalResourceIdArgs physicalResourceId) {
+        public Builder physicalResourceId(AppPhysicalResourceIdArgs physicalResourceId) {
             this.physicalResourceId = Input.of(Objects.requireNonNull(physicalResourceId));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }

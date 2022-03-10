@@ -52,12 +52,12 @@ public final class DataSourceParametersAwsIotAnalyticsArgs extends io.pulumi.res
     	      this.dataSetName = defaults.dataSetName;
         }
 
-        public Builder setDataSetName(Input<String> dataSetName) {
+        public Builder dataSetName(Input<String> dataSetName) {
             this.dataSetName = Objects.requireNonNull(dataSetName);
             return this;
         }
 
-        public Builder setDataSetName(String dataSetName) {
+        public Builder dataSetName(String dataSetName) {
             this.dataSetName = Input.of(Objects.requireNonNull(dataSetName));
             return this;
         }

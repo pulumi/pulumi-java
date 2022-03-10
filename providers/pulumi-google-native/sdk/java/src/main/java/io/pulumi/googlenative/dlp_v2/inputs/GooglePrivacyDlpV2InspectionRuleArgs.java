@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2InspectionRuleArgs extends io.pulumi.resour
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setExclusionRule(@Nullable Input<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule) {
+        public Builder exclusionRule(@Nullable Input<GooglePrivacyDlpV2ExclusionRuleArgs> exclusionRule) {
             this.exclusionRule = exclusionRule;
             return this;
         }
 
-        public Builder setExclusionRule(@Nullable GooglePrivacyDlpV2ExclusionRuleArgs exclusionRule) {
+        public Builder exclusionRule(@Nullable GooglePrivacyDlpV2ExclusionRuleArgs exclusionRule) {
             this.exclusionRule = Input.ofNullable(exclusionRule);
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
+        public Builder hotwordRule(@Nullable Input<GooglePrivacyDlpV2HotwordRuleArgs> hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
+        public Builder hotwordRule(@Nullable GooglePrivacyDlpV2HotwordRuleArgs hotwordRule) {
             this.hotwordRule = Input.ofNullable(hotwordRule);
             return this;
         }

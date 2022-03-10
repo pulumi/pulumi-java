@@ -70,22 +70,22 @@ public final class DistributionOriginOriginShieldArgs extends io.pulumi.resource
     	      this.originShieldRegion = defaults.originShieldRegion;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setOriginShieldRegion(Input<String> originShieldRegion) {
+        public Builder originShieldRegion(Input<String> originShieldRegion) {
             this.originShieldRegion = Objects.requireNonNull(originShieldRegion);
             return this;
         }
 
-        public Builder setOriginShieldRegion(String originShieldRegion) {
+        public Builder originShieldRegion(String originShieldRegion) {
             this.originShieldRegion = Input.of(Objects.requireNonNull(originShieldRegion));
             return this;
         }

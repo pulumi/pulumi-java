@@ -143,62 +143,62 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAccessSelector(@Nullable Input<AccessSelectorArgs> accessSelector) {
+        public Builder accessSelector(@Nullable Input<AccessSelectorArgs> accessSelector) {
             this.accessSelector = accessSelector;
             return this;
         }
 
-        public Builder setAccessSelector(@Nullable AccessSelectorArgs accessSelector) {
+        public Builder accessSelector(@Nullable AccessSelectorArgs accessSelector) {
             this.accessSelector = Input.ofNullable(accessSelector);
             return this;
         }
 
-        public Builder setConditionContext(@Nullable Input<ConditionContextArgs> conditionContext) {
+        public Builder conditionContext(@Nullable Input<ConditionContextArgs> conditionContext) {
             this.conditionContext = conditionContext;
             return this;
         }
 
-        public Builder setConditionContext(@Nullable ConditionContextArgs conditionContext) {
+        public Builder conditionContext(@Nullable ConditionContextArgs conditionContext) {
             this.conditionContext = Input.ofNullable(conditionContext);
             return this;
         }
 
-        public Builder setIdentitySelector(@Nullable Input<IdentitySelectorArgs> identitySelector) {
+        public Builder identitySelector(@Nullable Input<IdentitySelectorArgs> identitySelector) {
             this.identitySelector = identitySelector;
             return this;
         }
 
-        public Builder setIdentitySelector(@Nullable IdentitySelectorArgs identitySelector) {
+        public Builder identitySelector(@Nullable IdentitySelectorArgs identitySelector) {
             this.identitySelector = Input.ofNullable(identitySelector);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<OptionsArgs> options) {
+        public Builder options(@Nullable Input<OptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsArgs options) {
+        public Builder options(@Nullable OptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setResourceSelector(@Nullable Input<ResourceSelectorArgs> resourceSelector) {
+        public Builder resourceSelector(@Nullable Input<ResourceSelectorArgs> resourceSelector) {
             this.resourceSelector = resourceSelector;
             return this;
         }
 
-        public Builder setResourceSelector(@Nullable ResourceSelectorArgs resourceSelector) {
+        public Builder resourceSelector(@Nullable ResourceSelectorArgs resourceSelector) {
             this.resourceSelector = Input.ofNullable(resourceSelector);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

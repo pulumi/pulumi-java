@@ -89,17 +89,17 @@ public final class CertificateConfig {
     	      this.x509Config = defaults.x509Config;
         }
 
-        public Builder setPublicKey(CertificateConfigPublicKey publicKey) {
+        public Builder publicKey(CertificateConfigPublicKey publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSubjectConfig(CertificateConfigSubjectConfig subjectConfig) {
+        public Builder subjectConfig(CertificateConfigSubjectConfig subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
 
-        public Builder setX509Config(CertificateConfigX509Config x509Config) {
+        public Builder x509Config(CertificateConfigX509Config x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }

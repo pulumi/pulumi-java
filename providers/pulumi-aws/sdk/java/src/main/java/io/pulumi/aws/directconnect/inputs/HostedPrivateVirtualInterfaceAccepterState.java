@@ -135,62 +135,62 @@ public final class HostedPrivateVirtualInterfaceAccepterState extends io.pulumi.
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDxGatewayId(@Nullable Input<String> dxGatewayId) {
+        public Builder dxGatewayId(@Nullable Input<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
 
-        public Builder setDxGatewayId(@Nullable String dxGatewayId) {
+        public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = Input.ofNullable(dxGatewayId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVirtualInterfaceId(@Nullable Input<String> virtualInterfaceId) {
+        public Builder virtualInterfaceId(@Nullable Input<String> virtualInterfaceId) {
             this.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
 
-        public Builder setVirtualInterfaceId(@Nullable String virtualInterfaceId) {
+        public Builder virtualInterfaceId(@Nullable String virtualInterfaceId) {
             this.virtualInterfaceId = Input.ofNullable(virtualInterfaceId);
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable String vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
             return this;
         }

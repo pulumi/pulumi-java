@@ -78,22 +78,22 @@ public final class ServicePerimeterSpecEgressPolicyEgressToGetArgs extends io.pu
     	      this.resources = defaults.resources;
         }
 
-        public Builder setOperations(@Nullable Input<List<ServicePerimeterSpecEgressPolicyEgressToOperationGetArgs>> operations) {
+        public Builder operations(@Nullable Input<List<ServicePerimeterSpecEgressPolicyEgressToOperationGetArgs>> operations) {
             this.operations = operations;
             return this;
         }
 
-        public Builder setOperations(@Nullable List<ServicePerimeterSpecEgressPolicyEgressToOperationGetArgs> operations) {
+        public Builder operations(@Nullable List<ServicePerimeterSpecEgressPolicyEgressToOperationGetArgs> operations) {
             this.operations = Input.ofNullable(operations);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }

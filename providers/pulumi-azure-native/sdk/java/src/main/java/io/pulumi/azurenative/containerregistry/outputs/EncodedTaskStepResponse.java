@@ -152,37 +152,37 @@ public final class EncodedTaskStepResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setBaseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
+        public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setEncodedTaskContent(String encodedTaskContent) {
+        public Builder encodedTaskContent(String encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
 
-        public Builder setEncodedValuesContent(@Nullable String encodedValuesContent) {
+        public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueResponse> values) {
+        public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }

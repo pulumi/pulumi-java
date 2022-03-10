@@ -49,12 +49,12 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fontFamily = defaults.fontFamily;
         }
 
-        public Builder setFontFamily(@Nullable Input<String> fontFamily) {
+        public Builder fontFamily(@Nullable Input<String> fontFamily) {
             this.fontFamily = fontFamily;
             return this;
         }
 
-        public Builder setFontFamily(@Nullable String fontFamily) {
+        public Builder fontFamily(@Nullable String fontFamily) {
             this.fontFamily = Input.ofNullable(fontFamily);
             return this;
         }

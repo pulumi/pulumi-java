@@ -68,12 +68,12 @@ public final class ReliableCollectionsRefResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDoNotPersistState(@Nullable Boolean doNotPersistState) {
+        public Builder doNotPersistState(@Nullable Boolean doNotPersistState) {
             this.doNotPersistState = doNotPersistState;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

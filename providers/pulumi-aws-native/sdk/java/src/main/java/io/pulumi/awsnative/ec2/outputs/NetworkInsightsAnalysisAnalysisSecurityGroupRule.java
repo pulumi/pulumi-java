@@ -84,32 +84,32 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule {
     	      this.securityGroupId = defaults.securityGroupId;
         }
 
-        public Builder setCidr(@Nullable String cidr) {
+        public Builder cidr(@Nullable String cidr) {
             this.cidr = cidr;
             return this;
         }
 
-        public Builder setDirection(@Nullable String direction) {
+        public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setPortRange(@Nullable NetworkInsightsAnalysisPortRange portRange) {
+        public Builder portRange(@Nullable NetworkInsightsAnalysisPortRange portRange) {
             this.portRange = portRange;
             return this;
         }
 
-        public Builder setPrefixListId(@Nullable String prefixListId) {
+        public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable String securityGroupId) {
+        public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }

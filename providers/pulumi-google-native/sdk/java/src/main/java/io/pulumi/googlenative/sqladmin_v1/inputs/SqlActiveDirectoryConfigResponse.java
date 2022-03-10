@@ -72,12 +72,12 @@ public final class SqlActiveDirectoryConfigResponse extends io.pulumi.resources.
     	      this.kind = defaults.kind;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

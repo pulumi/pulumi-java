@@ -112,62 +112,62 @@ public final class InAppTemplateDefaultButtonConfigurationArgs extends io.pulumi
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setBackgroundColor(@Nullable Input<String> backgroundColor) {
+        public Builder backgroundColor(@Nullable Input<String> backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
-        public Builder setBackgroundColor(@Nullable String backgroundColor) {
+        public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = Input.ofNullable(backgroundColor);
             return this;
         }
 
-        public Builder setBorderRadius(@Nullable Input<Integer> borderRadius) {
+        public Builder borderRadius(@Nullable Input<Integer> borderRadius) {
             this.borderRadius = borderRadius;
             return this;
         }
 
-        public Builder setBorderRadius(@Nullable Integer borderRadius) {
+        public Builder borderRadius(@Nullable Integer borderRadius) {
             this.borderRadius = Input.ofNullable(borderRadius);
             return this;
         }
 
-        public Builder setButtonAction(@Nullable Input<InAppTemplateButtonAction> buttonAction) {
+        public Builder buttonAction(@Nullable Input<InAppTemplateButtonAction> buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
 
-        public Builder setButtonAction(@Nullable InAppTemplateButtonAction buttonAction) {
+        public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
             this.buttonAction = Input.ofNullable(buttonAction);
             return this;
         }
 
-        public Builder setLink(@Nullable Input<String> link) {
+        public Builder link(@Nullable Input<String> link) {
             this.link = link;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = Input.ofNullable(link);
             return this;
         }
 
-        public Builder setText(@Nullable Input<String> text) {
+        public Builder text(@Nullable Input<String> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = Input.ofNullable(text);
             return this;
         }
 
-        public Builder setTextColor(@Nullable Input<String> textColor) {
+        public Builder textColor(@Nullable Input<String> textColor) {
             this.textColor = textColor;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = Input.ofNullable(textColor);
             return this;
         }

@@ -50,7 +50,7 @@ public final class Overhead {
     	      this.podFixed = defaults.podFixed;
         }
 
-        public Builder setPodFixed(@Nullable Map<String,String> podFixed) {
+        public Builder podFixed(@Nullable Map<String,String> podFixed) {
             this.podFixed = podFixed;
             return this;
         }

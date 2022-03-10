@@ -66,12 +66,12 @@ public final class GkeClusterResponse {
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder setClusterMissing(Boolean clusterMissing) {
+        public Builder clusterMissing(Boolean clusterMissing) {
             this.clusterMissing = Objects.requireNonNull(clusterMissing);
             return this;
         }
 
-        public Builder setResourceLink(String resourceLink) {
+        public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }

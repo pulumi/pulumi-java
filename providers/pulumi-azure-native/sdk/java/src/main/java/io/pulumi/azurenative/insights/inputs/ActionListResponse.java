@@ -58,7 +58,7 @@ public final class ActionListResponse extends io.pulumi.resources.InvokeArgs {
     	      this.actionGroups = defaults.actionGroups;
         }
 
-        public Builder setActionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
+        public Builder actionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
             this.actionGroups = actionGroups;
             return this;
         }

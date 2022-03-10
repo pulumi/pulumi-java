@@ -48,7 +48,7 @@ public final class ToolExitCodeResponse {
     	      this.number = defaults.number;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }

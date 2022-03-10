@@ -76,17 +76,17 @@ public final class BudgetsActionDefinition extends io.pulumi.resources.InvokeArg
     	      this.ssmActionDefinition = defaults.ssmActionDefinition;
         }
 
-        public Builder setIamActionDefinition(@Nullable BudgetsActionIamActionDefinition iamActionDefinition) {
+        public Builder iamActionDefinition(@Nullable BudgetsActionIamActionDefinition iamActionDefinition) {
             this.iamActionDefinition = iamActionDefinition;
             return this;
         }
 
-        public Builder setScpActionDefinition(@Nullable BudgetsActionScpActionDefinition scpActionDefinition) {
+        public Builder scpActionDefinition(@Nullable BudgetsActionScpActionDefinition scpActionDefinition) {
             this.scpActionDefinition = scpActionDefinition;
             return this;
         }
 
-        public Builder setSsmActionDefinition(@Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
+        public Builder ssmActionDefinition(@Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }

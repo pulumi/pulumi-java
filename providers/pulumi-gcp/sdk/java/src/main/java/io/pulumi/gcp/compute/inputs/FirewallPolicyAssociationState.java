@@ -102,42 +102,42 @@ public final class FirewallPolicyAssociationState extends io.pulumi.resources.Re
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setAttachmentTarget(@Nullable Input<String> attachmentTarget) {
+        public Builder attachmentTarget(@Nullable Input<String> attachmentTarget) {
             this.attachmentTarget = attachmentTarget;
             return this;
         }
 
-        public Builder setAttachmentTarget(@Nullable String attachmentTarget) {
+        public Builder attachmentTarget(@Nullable String attachmentTarget) {
             this.attachmentTarget = Input.ofNullable(attachmentTarget);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable Input<String> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Input<String> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable String firewallPolicy) {
+        public Builder firewallPolicy(@Nullable String firewallPolicy) {
             this.firewallPolicy = Input.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }

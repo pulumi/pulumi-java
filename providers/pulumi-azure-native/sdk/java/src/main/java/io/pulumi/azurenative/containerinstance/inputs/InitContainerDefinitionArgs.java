@@ -125,52 +125,52 @@ public final class InitContainerDefinitionArgs extends io.pulumi.resources.Resou
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Input.ofNullable(volumeMounts);
             return this;
         }

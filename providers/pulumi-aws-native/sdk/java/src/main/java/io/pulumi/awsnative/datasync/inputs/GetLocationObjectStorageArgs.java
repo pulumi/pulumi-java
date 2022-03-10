@@ -51,7 +51,7 @@ public final class GetLocationObjectStorageArgs extends io.pulumi.resources.Invo
     	      this.locationArn = defaults.locationArn;
         }
 
-        public Builder setLocationArn(String locationArn) {
+        public Builder locationArn(String locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }

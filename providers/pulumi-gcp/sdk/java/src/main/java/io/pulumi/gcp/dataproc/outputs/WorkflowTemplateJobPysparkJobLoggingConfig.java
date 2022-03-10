@@ -50,7 +50,7 @@ public final class WorkflowTemplateJobPysparkJobLoggingConfig {
     	      this.driverLogLevels = defaults.driverLogLevels;
         }
 
-        public Builder setDriverLogLevels(@Nullable Map<String,String> driverLogLevels) {
+        public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
             this.driverLogLevels = driverLogLevels;
             return this;
         }

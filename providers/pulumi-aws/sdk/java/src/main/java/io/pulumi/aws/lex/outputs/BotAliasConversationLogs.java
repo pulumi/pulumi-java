@@ -68,12 +68,12 @@ public final class BotAliasConversationLogs {
     	      this.logSettings = defaults.logSettings;
         }
 
-        public Builder setIamRoleArn(String iamRoleArn) {
+        public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
-        public Builder setLogSettings(@Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
+        public Builder logSettings(@Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
             this.logSettings = logSettings;
             return this;
         }

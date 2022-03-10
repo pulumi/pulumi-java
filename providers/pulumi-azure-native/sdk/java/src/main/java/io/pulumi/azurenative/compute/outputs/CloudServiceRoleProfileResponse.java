@@ -50,7 +50,7 @@ public final class CloudServiceRoleProfileResponse {
     	      this.roles = defaults.roles;
         }
 
-        public Builder setRoles(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
+        public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesResponse> roles) {
             this.roles = roles;
             return this;
         }

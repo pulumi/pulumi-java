@@ -49,7 +49,7 @@ public final class GetProfileSupportedOptimizationTypesResult {
     	      this.supportedOptimizationTypes = defaults.supportedOptimizationTypes;
         }
 
-        public Builder setSupportedOptimizationTypes(List<String> supportedOptimizationTypes) {
+        public Builder supportedOptimizationTypes(List<String> supportedOptimizationTypes) {
             this.supportedOptimizationTypes = Objects.requireNonNull(supportedOptimizationTypes);
             return this;
         }

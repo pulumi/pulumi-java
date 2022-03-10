@@ -60,12 +60,12 @@ public final class GetConnectorResult {
     	      this.connectorArn = defaults.connectorArn;
         }
 
-        public Builder setCapacity(@Nullable ConnectorCapacity capacity) {
+        public Builder capacity(@Nullable ConnectorCapacity capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setConnectorArn(@Nullable String connectorArn) {
+        public Builder connectorArn(@Nullable String connectorArn) {
             this.connectorArn = connectorArn;
             return this;
         }

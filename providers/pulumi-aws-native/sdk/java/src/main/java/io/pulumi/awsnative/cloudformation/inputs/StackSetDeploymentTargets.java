@@ -75,12 +75,12 @@ public final class StackSetDeploymentTargets extends io.pulumi.resources.InvokeA
     	      this.organizationalUnitIds = defaults.organizationalUnitIds;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setOrganizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }

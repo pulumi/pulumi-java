@@ -127,52 +127,52 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streamingProtocol = defaults.streamingProtocol;
         }
 
-        public Builder setAccessControl(@Nullable Input<LiveEventInputAccessControlArgs> accessControl) {
+        public Builder accessControl(@Nullable Input<LiveEventInputAccessControlArgs> accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessControl(@Nullable LiveEventInputAccessControlArgs accessControl) {
+        public Builder accessControl(@Nullable LiveEventInputAccessControlArgs accessControl) {
             this.accessControl = Input.ofNullable(accessControl);
             return this;
         }
 
-        public Builder setAccessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Input<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<LiveEventEndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<LiveEventEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
+        public Builder endpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setKeyFrameIntervalDuration(@Nullable Input<String> keyFrameIntervalDuration) {
+        public Builder keyFrameIntervalDuration(@Nullable Input<String> keyFrameIntervalDuration) {
             this.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
 
-        public Builder setKeyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
+        public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
             this.keyFrameIntervalDuration = Input.ofNullable(keyFrameIntervalDuration);
             return this;
         }
 
-        public Builder setStreamingProtocol(Input<Either<String,LiveEventInputProtocol>> streamingProtocol) {
+        public Builder streamingProtocol(Input<Either<String,LiveEventInputProtocol>> streamingProtocol) {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }
 
-        public Builder setStreamingProtocol(Either<String,LiveEventInputProtocol> streamingProtocol) {
+        public Builder streamingProtocol(Either<String,LiveEventInputProtocol> streamingProtocol) {
             this.streamingProtocol = Input.of(Objects.requireNonNull(streamingProtocol));
             return this;
         }

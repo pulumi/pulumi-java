@@ -69,22 +69,22 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDuration(Input<String> duration) {
+        public Builder duration(Input<String> duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Input.of(Objects.requireNonNull(duration));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

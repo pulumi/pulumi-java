@@ -157,37 +157,37 @@ public final class GetVpcArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder set$default(@Nullable Boolean $default) {
+        public Builder $default(@Nullable Boolean $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder setDhcpOptionsId(@Nullable String dhcpOptionsId) {
+        public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

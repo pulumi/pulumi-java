@@ -90,32 +90,32 @@ public final class LicenseResourceCommitmentArgs extends io.pulumi.resources.Res
     	      this.license = defaults.license;
         }
 
-        public Builder setAmount(@Nullable Input<String> amount) {
+        public Builder amount(@Nullable Input<String> amount) {
             this.amount = amount;
             return this;
         }
 
-        public Builder setAmount(@Nullable String amount) {
+        public Builder amount(@Nullable String amount) {
             this.amount = Input.ofNullable(amount);
             return this;
         }
 
-        public Builder setCoresPerLicense(@Nullable Input<String> coresPerLicense) {
+        public Builder coresPerLicense(@Nullable Input<String> coresPerLicense) {
             this.coresPerLicense = coresPerLicense;
             return this;
         }
 
-        public Builder setCoresPerLicense(@Nullable String coresPerLicense) {
+        public Builder coresPerLicense(@Nullable String coresPerLicense) {
             this.coresPerLicense = Input.ofNullable(coresPerLicense);
             return this;
         }
 
-        public Builder setLicense(@Nullable Input<String> license) {
+        public Builder license(@Nullable Input<String> license) {
             this.license = license;
             return this;
         }
 
-        public Builder setLicense(@Nullable String license) {
+        public Builder license(@Nullable String license) {
             this.license = Input.ofNullable(license);
             return this;
         }

@@ -53,12 +53,12 @@ public final class RuleGroupRuleActionAllowPropertiesArgs extends io.pulumi.reso
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable Input<RuleGroupCustomRequestHandlingArgs> customRequestHandling) {
+        public Builder customRequestHandling(@Nullable Input<RuleGroupCustomRequestHandlingArgs> customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
 
-        public Builder setCustomRequestHandling(@Nullable RuleGroupCustomRequestHandlingArgs customRequestHandling) {
+        public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandlingArgs customRequestHandling) {
             this.customRequestHandling = Input.ofNullable(customRequestHandling);
             return this;
         }

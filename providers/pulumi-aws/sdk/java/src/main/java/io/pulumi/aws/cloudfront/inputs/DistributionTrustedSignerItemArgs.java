@@ -71,22 +71,22 @@ public final class DistributionTrustedSignerItemArgs extends io.pulumi.resources
     	      this.keyPairIds = defaults.keyPairIds;
         }
 
-        public Builder setAwsAccountNumber(@Nullable Input<String> awsAccountNumber) {
+        public Builder awsAccountNumber(@Nullable Input<String> awsAccountNumber) {
             this.awsAccountNumber = awsAccountNumber;
             return this;
         }
 
-        public Builder setAwsAccountNumber(@Nullable String awsAccountNumber) {
+        public Builder awsAccountNumber(@Nullable String awsAccountNumber) {
             this.awsAccountNumber = Input.ofNullable(awsAccountNumber);
             return this;
         }
 
-        public Builder setKeyPairIds(@Nullable Input<List<String>> keyPairIds) {
+        public Builder keyPairIds(@Nullable Input<List<String>> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }
 
-        public Builder setKeyPairIds(@Nullable List<String> keyPairIds) {
+        public Builder keyPairIds(@Nullable List<String> keyPairIds) {
             this.keyPairIds = Input.ofNullable(keyPairIds);
             return this;
         }

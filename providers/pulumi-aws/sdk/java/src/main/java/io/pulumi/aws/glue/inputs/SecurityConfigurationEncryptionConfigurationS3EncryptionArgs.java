@@ -70,22 +70,22 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionArgs 
     	      this.s3EncryptionMode = defaults.s3EncryptionMode;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setS3EncryptionMode(@Nullable Input<String> s3EncryptionMode) {
+        public Builder s3EncryptionMode(@Nullable Input<String> s3EncryptionMode) {
             this.s3EncryptionMode = s3EncryptionMode;
             return this;
         }
 
-        public Builder setS3EncryptionMode(@Nullable String s3EncryptionMode) {
+        public Builder s3EncryptionMode(@Nullable String s3EncryptionMode) {
             this.s3EncryptionMode = Input.ofNullable(s3EncryptionMode);
             return this;
         }

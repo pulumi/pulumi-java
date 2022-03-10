@@ -69,12 +69,12 @@ public final class ServiceStatus {
     	      this.loadBalancer = defaults.loadBalancer;
         }
 
-        public Builder setConditions(@Nullable List<Condition> conditions) {
+        public Builder conditions(@Nullable List<Condition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setLoadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
+        public Builder loadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }

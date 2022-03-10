@@ -68,12 +68,12 @@ public final class GetCustomerGatewayAssociationArgs extends io.pulumi.resources
     	      this.globalNetworkId = defaults.globalNetworkId;
         }
 
-        public Builder setCustomerGatewayArn(String customerGatewayArn) {
+        public Builder customerGatewayArn(String customerGatewayArn) {
             this.customerGatewayArn = Objects.requireNonNull(customerGatewayArn);
             return this;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }

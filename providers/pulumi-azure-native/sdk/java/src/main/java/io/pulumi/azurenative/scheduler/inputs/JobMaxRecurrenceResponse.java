@@ -71,12 +71,12 @@ public final class JobMaxRecurrenceResponse extends io.pulumi.resources.InvokeAr
     	      this.interval = defaults.interval;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }

@@ -182,47 +182,47 @@ public final class CSIPersistentVolumeSource {
     	      this.volumeHandle = defaults.volumeHandle;
         }
 
-        public Builder setControllerExpandSecretRef(@Nullable SecretReference controllerExpandSecretRef) {
+        public Builder controllerExpandSecretRef(@Nullable SecretReference controllerExpandSecretRef) {
             this.controllerExpandSecretRef = controllerExpandSecretRef;
             return this;
         }
 
-        public Builder setControllerPublishSecretRef(@Nullable SecretReference controllerPublishSecretRef) {
+        public Builder controllerPublishSecretRef(@Nullable SecretReference controllerPublishSecretRef) {
             this.controllerPublishSecretRef = controllerPublishSecretRef;
             return this;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setNodePublishSecretRef(@Nullable SecretReference nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable SecretReference nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
-        public Builder setNodeStageSecretRef(@Nullable SecretReference nodeStageSecretRef) {
+        public Builder nodeStageSecretRef(@Nullable SecretReference nodeStageSecretRef) {
             this.nodeStageSecretRef = nodeStageSecretRef;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setVolumeAttributes(@Nullable Map<String,String> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
         }
 
-        public Builder setVolumeHandle(String volumeHandle) {
+        public Builder volumeHandle(String volumeHandle) {
             this.volumeHandle = Objects.requireNonNull(volumeHandle);
             return this;
         }

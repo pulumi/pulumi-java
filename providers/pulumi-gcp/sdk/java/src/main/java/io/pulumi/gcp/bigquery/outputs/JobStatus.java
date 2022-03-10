@@ -62,17 +62,17 @@ public final class JobStatus {
     	      this.state = defaults.state;
         }
 
-        public Builder setErrorResults(@Nullable List<JobStatusErrorResult> errorResults) {
+        public Builder errorResults(@Nullable List<JobStatusErrorResult> errorResults) {
             this.errorResults = errorResults;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<JobStatusError> errors) {
+        public Builder errors(@Nullable List<JobStatusError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

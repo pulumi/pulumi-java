@@ -81,22 +81,22 @@ public final class LimitedPriorityLevelConfigurationArgs extends io.pulumi.resou
     	      this.limitResponse = defaults.limitResponse;
         }
 
-        public Builder setAssuredConcurrencyShares(@Nullable Input<Integer> assuredConcurrencyShares) {
+        public Builder assuredConcurrencyShares(@Nullable Input<Integer> assuredConcurrencyShares) {
             this.assuredConcurrencyShares = assuredConcurrencyShares;
             return this;
         }
 
-        public Builder setAssuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
+        public Builder assuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
             this.assuredConcurrencyShares = Input.ofNullable(assuredConcurrencyShares);
             return this;
         }
 
-        public Builder setLimitResponse(@Nullable Input<LimitResponseArgs> limitResponse) {
+        public Builder limitResponse(@Nullable Input<LimitResponseArgs> limitResponse) {
             this.limitResponse = limitResponse;
             return this;
         }
 
-        public Builder setLimitResponse(@Nullable LimitResponseArgs limitResponse) {
+        public Builder limitResponse(@Nullable LimitResponseArgs limitResponse) {
             this.limitResponse = Input.ofNullable(limitResponse);
             return this;
         }

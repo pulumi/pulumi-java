@@ -57,7 +57,7 @@ public final class EncryptionPreferencesResponse extends io.pulumi.resources.Inv
     	      this.doubleEncryption = defaults.doubleEncryption;
         }
 
-        public Builder setDoubleEncryption(@Nullable String doubleEncryption) {
+        public Builder doubleEncryption(@Nullable String doubleEncryption) {
             this.doubleEncryption = doubleEncryption;
             return this;
         }

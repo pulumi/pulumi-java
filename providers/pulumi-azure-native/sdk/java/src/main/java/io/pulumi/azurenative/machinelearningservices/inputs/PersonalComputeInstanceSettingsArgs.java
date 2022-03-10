@@ -57,12 +57,12 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
     	      this.assignedUser = defaults.assignedUser;
         }
 
-        public Builder setAssignedUser(@Nullable Input<AssignedUserArgs> assignedUser) {
+        public Builder assignedUser(@Nullable Input<AssignedUserArgs> assignedUser) {
             this.assignedUser = assignedUser;
             return this;
         }
 
-        public Builder setAssignedUser(@Nullable AssignedUserArgs assignedUser) {
+        public Builder assignedUser(@Nullable AssignedUserArgs assignedUser) {
             this.assignedUser = Input.ofNullable(assignedUser);
             return this;
         }

@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2CharsToIgnoreArgs extends io.pulumi.resourc
     	      this.commonCharactersToIgnore = defaults.commonCharactersToIgnore;
         }
 
-        public Builder setCharactersToSkip(@Nullable Input<String> charactersToSkip) {
+        public Builder charactersToSkip(@Nullable Input<String> charactersToSkip) {
             this.charactersToSkip = charactersToSkip;
             return this;
         }
 
-        public Builder setCharactersToSkip(@Nullable String charactersToSkip) {
+        public Builder charactersToSkip(@Nullable String charactersToSkip) {
             this.charactersToSkip = Input.ofNullable(charactersToSkip);
             return this;
         }
 
-        public Builder setCommonCharactersToIgnore(@Nullable Input<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore) {
+        public Builder commonCharactersToIgnore(@Nullable Input<GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore> commonCharactersToIgnore) {
             this.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }
 
-        public Builder setCommonCharactersToIgnore(@Nullable GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore commonCharactersToIgnore) {
+        public Builder commonCharactersToIgnore(@Nullable GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnore commonCharactersToIgnore) {
             this.commonCharactersToIgnore = Input.ofNullable(commonCharactersToIgnore);
             return this;
         }

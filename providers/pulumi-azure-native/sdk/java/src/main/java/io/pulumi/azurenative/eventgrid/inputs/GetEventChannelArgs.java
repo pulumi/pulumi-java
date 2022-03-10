@@ -84,17 +84,17 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setEventChannelName(String eventChannelName) {
+        public Builder eventChannelName(String eventChannelName) {
             this.eventChannelName = Objects.requireNonNull(eventChannelName);
             return this;
         }
 
-        public Builder setPartnerNamespaceName(String partnerNamespaceName) {
+        public Builder partnerNamespaceName(String partnerNamespaceName) {
             this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

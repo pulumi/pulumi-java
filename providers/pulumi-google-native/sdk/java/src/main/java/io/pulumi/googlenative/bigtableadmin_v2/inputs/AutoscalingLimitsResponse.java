@@ -72,12 +72,12 @@ public final class AutoscalingLimitsResponse extends io.pulumi.resources.InvokeA
     	      this.minServeNodes = defaults.minServeNodes;
         }
 
-        public Builder setMaxServeNodes(Integer maxServeNodes) {
+        public Builder maxServeNodes(Integer maxServeNodes) {
             this.maxServeNodes = Objects.requireNonNull(maxServeNodes);
             return this;
         }
 
-        public Builder setMinServeNodes(Integer minServeNodes) {
+        public Builder minServeNodes(Integer minServeNodes) {
             this.minServeNodes = Objects.requireNonNull(minServeNodes);
             return this;
         }

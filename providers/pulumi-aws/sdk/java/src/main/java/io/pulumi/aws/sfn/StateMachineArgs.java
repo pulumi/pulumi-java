@@ -153,72 +153,72 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(Input<String> definition) {
+        public Builder definition(Input<String> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDefinition(String definition) {
+        public Builder definition(String definition) {
             this.definition = Input.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable StateMachineLoggingConfigurationArgs loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable StateMachineLoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTracingConfiguration(@Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration) {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }
 
-        public Builder setTracingConfiguration(@Nullable StateMachineTracingConfigurationArgs tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable StateMachineTracingConfigurationArgs tracingConfiguration) {
             this.tracingConfiguration = Input.ofNullable(tracingConfiguration);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

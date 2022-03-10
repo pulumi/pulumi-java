@@ -50,7 +50,7 @@ public final class GetDocumentResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(@Nullable List<DocumentTag> tags) {
+        public Builder tags(@Nullable List<DocumentTag> tags) {
             this.tags = tags;
             return this;
         }

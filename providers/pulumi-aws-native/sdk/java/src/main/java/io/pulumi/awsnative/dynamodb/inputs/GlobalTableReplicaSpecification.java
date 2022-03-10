@@ -129,37 +129,37 @@ public final class GlobalTableReplicaSpecification extends io.pulumi.resources.I
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification) {
+        public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification) {
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
-        public Builder setPointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification) {
+        public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification) {
             this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
             return this;
         }
 
-        public Builder setReadProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
+        public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSSESpecification(@Nullable GlobalTableReplicaSSESpecification sSESpecification) {
+        public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecification sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GlobalTableTag> tags) {
+        public Builder tags(@Nullable List<GlobalTableTag> tags) {
             this.tags = tags;
             return this;
         }

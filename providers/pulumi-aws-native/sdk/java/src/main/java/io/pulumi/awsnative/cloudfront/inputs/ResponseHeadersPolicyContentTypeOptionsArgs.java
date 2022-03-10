@@ -48,12 +48,12 @@ public final class ResponseHeadersPolicyContentTypeOptionsArgs extends io.pulumi
     	      this.override = defaults.override;
         }
 
-        public Builder setOverride(Input<Boolean> override) {
+        public Builder override(Input<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }

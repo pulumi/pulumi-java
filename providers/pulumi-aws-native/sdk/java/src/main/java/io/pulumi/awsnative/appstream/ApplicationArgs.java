@@ -185,122 +185,122 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setAppBlockArn(Input<String> appBlockArn) {
+        public Builder appBlockArn(Input<String> appBlockArn) {
             this.appBlockArn = Objects.requireNonNull(appBlockArn);
             return this;
         }
 
-        public Builder setAppBlockArn(String appBlockArn) {
+        public Builder appBlockArn(String appBlockArn) {
             this.appBlockArn = Input.of(Objects.requireNonNull(appBlockArn));
             return this;
         }
 
-        public Builder setAttributesToDelete(@Nullable Input<List<String>> attributesToDelete) {
+        public Builder attributesToDelete(@Nullable Input<List<String>> attributesToDelete) {
             this.attributesToDelete = attributesToDelete;
             return this;
         }
 
-        public Builder setAttributesToDelete(@Nullable List<String> attributesToDelete) {
+        public Builder attributesToDelete(@Nullable List<String> attributesToDelete) {
             this.attributesToDelete = Input.ofNullable(attributesToDelete);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIconS3Location(Input<ApplicationS3LocationArgs> iconS3Location) {
+        public Builder iconS3Location(Input<ApplicationS3LocationArgs> iconS3Location) {
             this.iconS3Location = Objects.requireNonNull(iconS3Location);
             return this;
         }
 
-        public Builder setIconS3Location(ApplicationS3LocationArgs iconS3Location) {
+        public Builder iconS3Location(ApplicationS3LocationArgs iconS3Location) {
             this.iconS3Location = Input.of(Objects.requireNonNull(iconS3Location));
             return this;
         }
 
-        public Builder setInstanceFamilies(Input<List<String>> instanceFamilies) {
+        public Builder instanceFamilies(Input<List<String>> instanceFamilies) {
             this.instanceFamilies = Objects.requireNonNull(instanceFamilies);
             return this;
         }
 
-        public Builder setInstanceFamilies(List<String> instanceFamilies) {
+        public Builder instanceFamilies(List<String> instanceFamilies) {
             this.instanceFamilies = Input.of(Objects.requireNonNull(instanceFamilies));
             return this;
         }
 
-        public Builder setLaunchParameters(@Nullable Input<String> launchParameters) {
+        public Builder launchParameters(@Nullable Input<String> launchParameters) {
             this.launchParameters = launchParameters;
             return this;
         }
 
-        public Builder setLaunchParameters(@Nullable String launchParameters) {
+        public Builder launchParameters(@Nullable String launchParameters) {
             this.launchParameters = Input.ofNullable(launchParameters);
             return this;
         }
 
-        public Builder setLaunchPath(Input<String> launchPath) {
+        public Builder launchPath(Input<String> launchPath) {
             this.launchPath = Objects.requireNonNull(launchPath);
             return this;
         }
 
-        public Builder setLaunchPath(String launchPath) {
+        public Builder launchPath(String launchPath) {
             this.launchPath = Input.of(Objects.requireNonNull(launchPath));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlatforms(Input<List<String>> platforms) {
+        public Builder platforms(Input<List<String>> platforms) {
             this.platforms = Objects.requireNonNull(platforms);
             return this;
         }
 
-        public Builder setPlatforms(List<String> platforms) {
+        public Builder platforms(List<String> platforms) {
             this.platforms = Input.of(Objects.requireNonNull(platforms));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTagArgs> tags) {
+        public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }

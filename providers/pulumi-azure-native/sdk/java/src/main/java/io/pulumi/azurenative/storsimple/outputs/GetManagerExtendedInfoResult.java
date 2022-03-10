@@ -211,57 +211,57 @@ public final class GetManagerExtendedInfoResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
+        public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIntegrityKey(String integrityKey) {
+        public Builder integrityKey(String integrityKey) {
             this.integrityKey = Objects.requireNonNull(integrityKey);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPortalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
+        public Builder portalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
             this.portalCertificateThumbprint = portalCertificateThumbprint;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

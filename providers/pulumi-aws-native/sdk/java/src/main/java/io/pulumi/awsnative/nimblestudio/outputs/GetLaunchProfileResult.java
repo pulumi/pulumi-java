@@ -121,32 +121,32 @@ public final class GetLaunchProfileResult {
     	      this.studioComponentIds = defaults.studioComponentIds;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLaunchProfileId(@Nullable String launchProfileId) {
+        public Builder launchProfileId(@Nullable String launchProfileId) {
             this.launchProfileId = launchProfileId;
             return this;
         }
 
-        public Builder setLaunchProfileProtocolVersions(@Nullable List<String> launchProfileProtocolVersions) {
+        public Builder launchProfileProtocolVersions(@Nullable List<String> launchProfileProtocolVersions) {
             this.launchProfileProtocolVersions = launchProfileProtocolVersions;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStreamConfiguration(@Nullable LaunchProfileStreamConfiguration streamConfiguration) {
+        public Builder streamConfiguration(@Nullable LaunchProfileStreamConfiguration streamConfiguration) {
             this.streamConfiguration = streamConfiguration;
             return this;
         }
 
-        public Builder setStudioComponentIds(@Nullable List<String> studioComponentIds) {
+        public Builder studioComponentIds(@Nullable List<String> studioComponentIds) {
             this.studioComponentIds = studioComponentIds;
             return this;
         }

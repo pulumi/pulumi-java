@@ -55,7 +55,7 @@ public final class WaitStepAttributesResponse extends io.pulumi.resources.Invoke
     	      this.duration = defaults.duration;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }

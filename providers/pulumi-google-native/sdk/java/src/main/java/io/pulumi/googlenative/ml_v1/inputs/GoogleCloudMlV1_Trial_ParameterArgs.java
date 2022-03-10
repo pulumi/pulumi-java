@@ -107,42 +107,42 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setFloatValue(@Nullable Input<Double> floatValue) {
+        public Builder floatValue(@Nullable Input<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
 
-        public Builder setFloatValue(@Nullable Double floatValue) {
+        public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = Input.ofNullable(floatValue);
             return this;
         }
 
-        public Builder setIntValue(@Nullable Input<String> intValue) {
+        public Builder intValue(@Nullable Input<String> intValue) {
             this.intValue = intValue;
             return this;
         }
 
-        public Builder setIntValue(@Nullable String intValue) {
+        public Builder intValue(@Nullable String intValue) {
             this.intValue = Input.ofNullable(intValue);
             return this;
         }
 
-        public Builder setParameter(@Nullable Input<String> parameter) {
+        public Builder parameter(@Nullable Input<String> parameter) {
             this.parameter = parameter;
             return this;
         }
 
-        public Builder setParameter(@Nullable String parameter) {
+        public Builder parameter(@Nullable String parameter) {
             this.parameter = Input.ofNullable(parameter);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }

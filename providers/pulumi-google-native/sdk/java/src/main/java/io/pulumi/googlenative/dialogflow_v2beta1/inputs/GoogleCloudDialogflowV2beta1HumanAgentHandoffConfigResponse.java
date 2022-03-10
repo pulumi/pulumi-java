@@ -73,12 +73,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
     	      this.salesforceLiveAgentConfig = defaults.salesforceLiveAgentConfig;
         }
 
-        public Builder setLivePersonConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig) {
+        public Builder livePersonConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig) {
             this.livePersonConfig = Objects.requireNonNull(livePersonConfig);
             return this;
         }
 
-        public Builder setSalesforceLiveAgentConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
+        public Builder salesforceLiveAgentConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
             this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
             return this;
         }

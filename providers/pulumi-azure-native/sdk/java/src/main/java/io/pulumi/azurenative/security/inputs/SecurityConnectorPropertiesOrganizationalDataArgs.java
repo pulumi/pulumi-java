@@ -109,42 +109,42 @@ public final class SecurityConnectorPropertiesOrganizationalDataArgs extends io.
     	      this.stacksetName = defaults.stacksetName;
         }
 
-        public Builder setExcludedAccountIds(@Nullable Input<List<String>> excludedAccountIds) {
+        public Builder excludedAccountIds(@Nullable Input<List<String>> excludedAccountIds) {
             this.excludedAccountIds = excludedAccountIds;
             return this;
         }
 
-        public Builder setExcludedAccountIds(@Nullable List<String> excludedAccountIds) {
+        public Builder excludedAccountIds(@Nullable List<String> excludedAccountIds) {
             this.excludedAccountIds = Input.ofNullable(excludedAccountIds);
             return this;
         }
 
-        public Builder setOrganizationMembershipType(@Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType) {
+        public Builder organizationMembershipType(@Nullable Input<Either<String,OrganizationMembershipType>> organizationMembershipType) {
             this.organizationMembershipType = organizationMembershipType;
             return this;
         }
 
-        public Builder setOrganizationMembershipType(@Nullable Either<String,OrganizationMembershipType> organizationMembershipType) {
+        public Builder organizationMembershipType(@Nullable Either<String,OrganizationMembershipType> organizationMembershipType) {
             this.organizationMembershipType = Input.ofNullable(organizationMembershipType);
             return this;
         }
 
-        public Builder setParentHierarchyId(@Nullable Input<String> parentHierarchyId) {
+        public Builder parentHierarchyId(@Nullable Input<String> parentHierarchyId) {
             this.parentHierarchyId = parentHierarchyId;
             return this;
         }
 
-        public Builder setParentHierarchyId(@Nullable String parentHierarchyId) {
+        public Builder parentHierarchyId(@Nullable String parentHierarchyId) {
             this.parentHierarchyId = Input.ofNullable(parentHierarchyId);
             return this;
         }
 
-        public Builder setStacksetName(@Nullable Input<String> stacksetName) {
+        public Builder stacksetName(@Nullable Input<String> stacksetName) {
             this.stacksetName = stacksetName;
             return this;
         }
 
-        public Builder setStacksetName(@Nullable String stacksetName) {
+        public Builder stacksetName(@Nullable String stacksetName) {
             this.stacksetName = Input.ofNullable(stacksetName);
             return this;
         }

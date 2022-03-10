@@ -121,52 +121,52 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.queryStringsConfig = defaults.queryStringsConfig;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setCookiesConfig(Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
+        public Builder cookiesConfig(Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
 
-        public Builder setCookiesConfig(OriginRequestPolicyCookiesConfigArgs cookiesConfig) {
+        public Builder cookiesConfig(OriginRequestPolicyCookiesConfigArgs cookiesConfig) {
             this.cookiesConfig = Input.of(Objects.requireNonNull(cookiesConfig));
             return this;
         }
 
-        public Builder setHeadersConfig(Input<OriginRequestPolicyHeadersConfigArgs> headersConfig) {
+        public Builder headersConfig(Input<OriginRequestPolicyHeadersConfigArgs> headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
 
-        public Builder setHeadersConfig(OriginRequestPolicyHeadersConfigArgs headersConfig) {
+        public Builder headersConfig(OriginRequestPolicyHeadersConfigArgs headersConfig) {
             this.headersConfig = Input.of(Objects.requireNonNull(headersConfig));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQueryStringsConfig(Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
+        public Builder queryStringsConfig(Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
 
-        public Builder setQueryStringsConfig(OriginRequestPolicyQueryStringsConfigArgs queryStringsConfig) {
+        public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfigArgs queryStringsConfig) {
             this.queryStringsConfig = Input.of(Objects.requireNonNull(queryStringsConfig));
             return this;
         }

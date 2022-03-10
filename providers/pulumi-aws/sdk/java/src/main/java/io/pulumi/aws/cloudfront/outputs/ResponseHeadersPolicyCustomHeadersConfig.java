@@ -42,7 +42,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfig {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items) {
+        public Builder items(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items) {
             this.items = items;
             return this;
         }

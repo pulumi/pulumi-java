@@ -67,12 +67,12 @@ public final class NodeSelectorTerm {
     	      this.matchFields = defaults.matchFields;
         }
 
-        public Builder setMatchExpressions(@Nullable List<NodeSelectorRequirement> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<NodeSelectorRequirement> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
-        public Builder setMatchFields(@Nullable List<NodeSelectorRequirement> matchFields) {
+        public Builder matchFields(@Nullable List<NodeSelectorRequirement> matchFields) {
             this.matchFields = matchFields;
             return this;
         }

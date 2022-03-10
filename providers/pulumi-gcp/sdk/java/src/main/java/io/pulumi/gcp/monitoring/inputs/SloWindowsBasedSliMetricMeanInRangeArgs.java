@@ -82,22 +82,22 @@ public final class SloWindowsBasedSliMetricMeanInRangeArgs extends io.pulumi.res
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder setRange(Input<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range) {
+        public Builder range(Input<SloWindowsBasedSliMetricMeanInRangeRangeArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setRange(SloWindowsBasedSliMetricMeanInRangeRangeArgs range) {
+        public Builder range(SloWindowsBasedSliMetricMeanInRangeRangeArgs range) {
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }
 
-        public Builder setTimeSeries(Input<String> timeSeries) {
+        public Builder timeSeries(Input<String> timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
 
-        public Builder setTimeSeries(String timeSeries) {
+        public Builder timeSeries(String timeSeries) {
             this.timeSeries = Input.of(Objects.requireNonNull(timeSeries));
             return this;
         }

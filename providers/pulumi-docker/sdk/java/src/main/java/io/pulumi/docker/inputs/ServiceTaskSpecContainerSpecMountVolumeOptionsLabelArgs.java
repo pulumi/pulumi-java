@@ -61,22 +61,22 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs exten
     	      this.value = defaults.value;
         }
 
-        public Builder setLabel(Input<String> label) {
+        public Builder label(Input<String> label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Input.of(Objects.requireNonNull(label));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

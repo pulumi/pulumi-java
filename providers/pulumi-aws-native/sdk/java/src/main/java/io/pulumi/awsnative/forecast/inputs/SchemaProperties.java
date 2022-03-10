@@ -50,7 +50,7 @@ public final class SchemaProperties extends io.pulumi.resources.InvokeArgs {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(@Nullable List<AttributesItemProperties> attributes) {
+        public Builder attributes(@Nullable List<AttributesItemProperties> attributes) {
             this.attributes = attributes;
             return this;
         }

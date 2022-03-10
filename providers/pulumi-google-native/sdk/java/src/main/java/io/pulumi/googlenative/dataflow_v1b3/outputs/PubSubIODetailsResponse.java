@@ -65,12 +65,12 @@ public final class PubSubIODetailsResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setSubscription(String subscription) {
+        public Builder subscription(String subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

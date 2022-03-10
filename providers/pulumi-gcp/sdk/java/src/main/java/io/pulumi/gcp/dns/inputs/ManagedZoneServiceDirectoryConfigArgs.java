@@ -53,12 +53,12 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setNamespace(Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
+        public Builder namespace(Input<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setNamespace(ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
+        public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }

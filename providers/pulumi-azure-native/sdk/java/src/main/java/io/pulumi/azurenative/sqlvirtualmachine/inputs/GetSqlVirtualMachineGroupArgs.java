@@ -68,12 +68,12 @@ public final class GetSqlVirtualMachineGroupArgs extends io.pulumi.resources.Inv
     	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
+        public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
             return this;
         }

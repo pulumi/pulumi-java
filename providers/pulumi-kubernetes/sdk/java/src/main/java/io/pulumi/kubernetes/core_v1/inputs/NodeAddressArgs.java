@@ -80,22 +80,22 @@ public final class NodeAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(Input<String> address) {
+        public Builder address(Input<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Input.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

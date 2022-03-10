@@ -53,12 +53,12 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
     	      this.subscriptionStateOverrideActions = defaults.subscriptionStateOverrideActions;
         }
 
-        public Builder setSoftDeleteTTL(@Nullable String softDeleteTTL) {
+        public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
             this.softDeleteTTL = softDeleteTTL;
             return this;
         }
 
-        public Builder setSubscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
+        public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }

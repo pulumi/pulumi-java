@@ -233,112 +233,112 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xrayTracingEnabled = defaults.xrayTracingEnabled;
         }
 
-        public Builder setAccessLogSettings(@Nullable Input<StageAccessLogSettingsArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Input<StageAccessLogSettingsArgs> accessLogSettings) {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
 
-        public Builder setAccessLogSettings(@Nullable StageAccessLogSettingsArgs accessLogSettings) {
+        public Builder accessLogSettings(@Nullable StageAccessLogSettingsArgs accessLogSettings) {
             this.accessLogSettings = Input.ofNullable(accessLogSettings);
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = Input.ofNullable(cacheClusterEnabled);
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable Input<String> cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable Input<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable String cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = Input.ofNullable(cacheClusterSize);
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Input.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder setDeployment(Input<String> deployment) {
+        public Builder deployment(Input<String> deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable Input<String> documentationVersion) {
+        public Builder documentationVersion(@Nullable Input<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable String documentationVersion) {
+        public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = Input.ofNullable(documentationVersion);
             return this;
         }
 
-        public Builder setRestApi(Input<String> restApi) {
+        public Builder restApi(Input<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder setStageName(Input<String> stageName) {
+        public Builder stageName(Input<String> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Input.of(Objects.requireNonNull(stageName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVariables(@Nullable Input<Map<String,String>> variables) {
+        public Builder variables(@Nullable Input<Map<String,String>> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable Map<String,String> variables) {
+        public Builder variables(@Nullable Map<String,String> variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }
 
-        public Builder setXrayTracingEnabled(@Nullable Input<Boolean> xrayTracingEnabled) {
+        public Builder xrayTracingEnabled(@Nullable Input<Boolean> xrayTracingEnabled) {
             this.xrayTracingEnabled = xrayTracingEnabled;
             return this;
         }
 
-        public Builder setXrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
+        public Builder xrayTracingEnabled(@Nullable Boolean xrayTracingEnabled) {
             this.xrayTracingEnabled = Input.ofNullable(xrayTracingEnabled);
             return this;
         }

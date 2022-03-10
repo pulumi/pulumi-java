@@ -166,102 +166,102 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variants = defaults.variants;
         }
 
-        public Builder setBindingProperties(@Nullable Input<ComponentBindingPropertiesArgs> bindingProperties) {
+        public Builder bindingProperties(@Nullable Input<ComponentBindingPropertiesArgs> bindingProperties) {
             this.bindingProperties = bindingProperties;
             return this;
         }
 
-        public Builder setBindingProperties(@Nullable ComponentBindingPropertiesArgs bindingProperties) {
+        public Builder bindingProperties(@Nullable ComponentBindingPropertiesArgs bindingProperties) {
             this.bindingProperties = Input.ofNullable(bindingProperties);
             return this;
         }
 
-        public Builder setChildren(@Nullable Input<List<ComponentChildArgs>> children) {
+        public Builder children(@Nullable Input<List<ComponentChildArgs>> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setChildren(@Nullable List<ComponentChildArgs> children) {
+        public Builder children(@Nullable List<ComponentChildArgs> children) {
             this.children = Input.ofNullable(children);
             return this;
         }
 
-        public Builder setCollectionProperties(@Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties) {
+        public Builder collectionProperties(@Nullable Input<ComponentCollectionPropertiesArgs> collectionProperties) {
             this.collectionProperties = collectionProperties;
             return this;
         }
 
-        public Builder setCollectionProperties(@Nullable ComponentCollectionPropertiesArgs collectionProperties) {
+        public Builder collectionProperties(@Nullable ComponentCollectionPropertiesArgs collectionProperties) {
             this.collectionProperties = Input.ofNullable(collectionProperties);
             return this;
         }
 
-        public Builder setComponentType(@Nullable Input<String> componentType) {
+        public Builder componentType(@Nullable Input<String> componentType) {
             this.componentType = componentType;
             return this;
         }
 
-        public Builder setComponentType(@Nullable String componentType) {
+        public Builder componentType(@Nullable String componentType) {
             this.componentType = Input.ofNullable(componentType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOverrides(@Nullable Input<ComponentOverridesArgs> overrides) {
+        public Builder overrides(@Nullable Input<ComponentOverridesArgs> overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setOverrides(@Nullable ComponentOverridesArgs overrides) {
+        public Builder overrides(@Nullable ComponentOverridesArgs overrides) {
             this.overrides = Input.ofNullable(overrides);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ComponentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ComponentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ComponentPropertiesArgs properties) {
+        public Builder properties(@Nullable ComponentPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setSourceId(@Nullable Input<String> sourceId) {
+        public Builder sourceId(@Nullable Input<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Input.ofNullable(sourceId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<ComponentTagsArgs> tags) {
+        public Builder tags(@Nullable Input<ComponentTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable ComponentTagsArgs tags) {
+        public Builder tags(@Nullable ComponentTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVariants(@Nullable Input<List<ComponentVariantArgs>> variants) {
+        public Builder variants(@Nullable Input<List<ComponentVariantArgs>> variants) {
             this.variants = variants;
             return this;
         }
 
-        public Builder setVariants(@Nullable List<ComponentVariantArgs> variants) {
+        public Builder variants(@Nullable List<ComponentVariantArgs> variants) {
             this.variants = Input.ofNullable(variants);
             return this;
         }

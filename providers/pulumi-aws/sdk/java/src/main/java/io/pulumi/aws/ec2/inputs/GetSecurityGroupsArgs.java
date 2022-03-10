@@ -73,12 +73,12 @@ public final class GetSecurityGroupsArgs extends io.pulumi.resources.InvokeArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetSecurityGroupsFilter> filters) {
+        public Builder filters(@Nullable List<GetSecurityGroupsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

@@ -133,32 +133,32 @@ public final class ParameterDefinitionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedValues(@Nullable List<Object> allowedValues) {
+        public Builder allowedValues(@Nullable List<Object> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setStrongType(@Nullable String strongType) {
+        public Builder strongType(@Nullable String strongType) {
             this.strongType = strongType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

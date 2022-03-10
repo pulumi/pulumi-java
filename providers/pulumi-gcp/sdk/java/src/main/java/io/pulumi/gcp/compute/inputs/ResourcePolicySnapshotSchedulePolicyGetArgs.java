@@ -90,32 +90,32 @@ public final class ResourcePolicySnapshotSchedulePolicyGetArgs extends io.pulumi
     	      this.snapshotProperties = defaults.snapshotProperties;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs retentionPolicy) {
+        public Builder retentionPolicy(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyGetArgs retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setSchedule(Input<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule) {
+        public Builder schedule(Input<ResourcePolicySnapshotSchedulePolicyScheduleGetArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(ResourcePolicySnapshotSchedulePolicyScheduleGetArgs schedule) {
+        public Builder schedule(ResourcePolicySnapshotSchedulePolicyScheduleGetArgs schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder setSnapshotProperties(@Nullable Input<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties) {
+        public Builder snapshotProperties(@Nullable Input<ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs> snapshotProperties) {
             this.snapshotProperties = snapshotProperties;
             return this;
         }
 
-        public Builder setSnapshotProperties(@Nullable ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs snapshotProperties) {
+        public Builder snapshotProperties(@Nullable ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs snapshotProperties) {
             this.snapshotProperties = Input.ofNullable(snapshotProperties);
             return this;
         }

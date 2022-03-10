@@ -212,57 +212,57 @@ public final class GetJobResult {
     	      this.ttlAfterCompletionDays = defaults.ttlAfterCompletionDays;
         }
 
-        public Builder setConfig(JobConfigResponse config) {
+        public Builder config(JobConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setInputUri(String inputUri) {
+        public Builder inputUri(String inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputUri(String outputUri) {
+        public Builder outputUri(String outputUri) {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTemplateId(String templateId) {
+        public Builder templateId(String templateId) {
             this.templateId = Objects.requireNonNull(templateId);
             return this;
         }
 
-        public Builder setTtlAfterCompletionDays(Integer ttlAfterCompletionDays) {
+        public Builder ttlAfterCompletionDays(Integer ttlAfterCompletionDays) {
             this.ttlAfterCompletionDays = Objects.requireNonNull(ttlAfterCompletionDays);
             return this;
         }

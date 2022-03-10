@@ -164,72 +164,72 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleArgs extends io.pu
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs headerAction) {
+        public Builder headerAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionArgs headerAction) {
             this.headerAction = Input.ofNullable(headerAction);
             return this;
         }
 
-        public Builder setMatchRules(Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules) {
+        public Builder matchRules(Input<List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs>> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
 
-        public Builder setMatchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs> matchRules) {
+        public Builder matchRules(List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleArgs> matchRules) {
             this.matchRules = Input.of(Objects.requireNonNull(matchRules));
             return this;
         }
 
-        public Builder setOrigin(@Nullable Input<String> origin) {
+        public Builder origin(@Nullable Input<String> origin) {
             this.origin = origin;
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = Input.ofNullable(origin);
             return this;
         }
 
-        public Builder setPriority(Input<String> priority) {
+        public Builder priority(Input<String> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(String priority) {
+        public Builder priority(String priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRouteAction(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction) {
+        public Builder routeAction(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setRouteAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs routeAction) {
+        public Builder routeAction(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs routeAction) {
             this.routeAction = Input.ofNullable(routeAction);
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs urlRedirect) {
+        public Builder urlRedirect(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs urlRedirect) {
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }

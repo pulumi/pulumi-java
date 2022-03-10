@@ -62,12 +62,12 @@ public final class ContainerPortInfo extends io.pulumi.resources.InvokeArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

@@ -67,12 +67,12 @@ public final class MCASDataConnectorDataTypesResponse {
     	      this.discoveryLogs = defaults.discoveryLogs;
         }
 
-        public Builder setAlerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
+        public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
             this.alerts = alerts;
             return this;
         }
 
-        public Builder setDiscoveryLogs(@Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
+        public Builder discoveryLogs(@Nullable DataConnectorDataTypeCommonResponse discoveryLogs) {
             this.discoveryLogs = discoveryLogs;
             return this;
         }

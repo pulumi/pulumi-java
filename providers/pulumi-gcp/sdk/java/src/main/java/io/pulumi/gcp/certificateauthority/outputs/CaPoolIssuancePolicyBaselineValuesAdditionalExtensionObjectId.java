@@ -49,7 +49,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
     	      this.objectIdPaths = defaults.objectIdPaths;
         }
 
-        public Builder setObjectIdPaths(List<Integer> objectIdPaths) {
+        public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }

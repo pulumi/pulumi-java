@@ -49,12 +49,12 @@ public final class AiMetadataStoreStateGetArgs extends io.pulumi.resources.Resou
     	      this.diskUtilizationBytes = defaults.diskUtilizationBytes;
         }
 
-        public Builder setDiskUtilizationBytes(@Nullable Input<String> diskUtilizationBytes) {
+        public Builder diskUtilizationBytes(@Nullable Input<String> diskUtilizationBytes) {
             this.diskUtilizationBytes = diskUtilizationBytes;
             return this;
         }
 
-        public Builder setDiskUtilizationBytes(@Nullable String diskUtilizationBytes) {
+        public Builder diskUtilizationBytes(@Nullable String diskUtilizationBytes) {
             this.diskUtilizationBytes = Input.ofNullable(diskUtilizationBytes);
             return this;
         }

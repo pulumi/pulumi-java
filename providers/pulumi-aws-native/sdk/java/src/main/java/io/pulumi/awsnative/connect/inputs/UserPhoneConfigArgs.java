@@ -93,42 +93,42 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.phoneType = defaults.phoneType;
         }
 
-        public Builder setAfterContactWorkTimeLimit(@Nullable Input<Integer> afterContactWorkTimeLimit) {
+        public Builder afterContactWorkTimeLimit(@Nullable Input<Integer> afterContactWorkTimeLimit) {
             this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
             return this;
         }
 
-        public Builder setAfterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
+        public Builder afterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
             this.afterContactWorkTimeLimit = Input.ofNullable(afterContactWorkTimeLimit);
             return this;
         }
 
-        public Builder setAutoAccept(@Nullable Input<Boolean> autoAccept) {
+        public Builder autoAccept(@Nullable Input<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
 
-        public Builder setAutoAccept(@Nullable Boolean autoAccept) {
+        public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = Input.ofNullable(autoAccept);
             return this;
         }
 
-        public Builder setDeskPhoneNumber(@Nullable Input<String> deskPhoneNumber) {
+        public Builder deskPhoneNumber(@Nullable Input<String> deskPhoneNumber) {
             this.deskPhoneNumber = deskPhoneNumber;
             return this;
         }
 
-        public Builder setDeskPhoneNumber(@Nullable String deskPhoneNumber) {
+        public Builder deskPhoneNumber(@Nullable String deskPhoneNumber) {
             this.deskPhoneNumber = Input.ofNullable(deskPhoneNumber);
             return this;
         }
 
-        public Builder setPhoneType(Input<UserPhoneType> phoneType) {
+        public Builder phoneType(Input<UserPhoneType> phoneType) {
             this.phoneType = Objects.requireNonNull(phoneType);
             return this;
         }
 
-        public Builder setPhoneType(UserPhoneType phoneType) {
+        public Builder phoneType(UserPhoneType phoneType) {
             this.phoneType = Input.of(Objects.requireNonNull(phoneType));
             return this;
         }

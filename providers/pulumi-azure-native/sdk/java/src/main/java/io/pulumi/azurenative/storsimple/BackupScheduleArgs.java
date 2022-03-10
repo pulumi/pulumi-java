@@ -219,112 +219,112 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setBackupPolicyName(Input<String> backupPolicyName) {
+        public Builder backupPolicyName(Input<String> backupPolicyName) {
             this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
             return this;
         }
 
-        public Builder setBackupPolicyName(String backupPolicyName) {
+        public Builder backupPolicyName(String backupPolicyName) {
             this.backupPolicyName = Input.of(Objects.requireNonNull(backupPolicyName));
             return this;
         }
 
-        public Builder setBackupScheduleName(@Nullable Input<String> backupScheduleName) {
+        public Builder backupScheduleName(@Nullable Input<String> backupScheduleName) {
             this.backupScheduleName = backupScheduleName;
             return this;
         }
 
-        public Builder setBackupScheduleName(@Nullable String backupScheduleName) {
+        public Builder backupScheduleName(@Nullable String backupScheduleName) {
             this.backupScheduleName = Input.ofNullable(backupScheduleName);
             return this;
         }
 
-        public Builder setBackupType(Input<BackupType> backupType) {
+        public Builder backupType(Input<BackupType> backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
 
-        public Builder setBackupType(BackupType backupType) {
+        public Builder backupType(BackupType backupType) {
             this.backupType = Input.of(Objects.requireNonNull(backupType));
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetentionCount(Input<Double> retentionCount) {
+        public Builder retentionCount(Input<Double> retentionCount) {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }
 
-        public Builder setRetentionCount(Double retentionCount) {
+        public Builder retentionCount(Double retentionCount) {
             this.retentionCount = Input.of(Objects.requireNonNull(retentionCount));
             return this;
         }
 
-        public Builder setScheduleRecurrence(Input<ScheduleRecurrenceArgs> scheduleRecurrence) {
+        public Builder scheduleRecurrence(Input<ScheduleRecurrenceArgs> scheduleRecurrence) {
             this.scheduleRecurrence = Objects.requireNonNull(scheduleRecurrence);
             return this;
         }
 
-        public Builder setScheduleRecurrence(ScheduleRecurrenceArgs scheduleRecurrence) {
+        public Builder scheduleRecurrence(ScheduleRecurrenceArgs scheduleRecurrence) {
             this.scheduleRecurrence = Input.of(Objects.requireNonNull(scheduleRecurrence));
             return this;
         }
 
-        public Builder setScheduleStatus(Input<ScheduleStatus> scheduleStatus) {
+        public Builder scheduleStatus(Input<ScheduleStatus> scheduleStatus) {
             this.scheduleStatus = Objects.requireNonNull(scheduleStatus);
             return this;
         }
 
-        public Builder setScheduleStatus(ScheduleStatus scheduleStatus) {
+        public Builder scheduleStatus(ScheduleStatus scheduleStatus) {
             this.scheduleStatus = Input.of(Objects.requireNonNull(scheduleStatus));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

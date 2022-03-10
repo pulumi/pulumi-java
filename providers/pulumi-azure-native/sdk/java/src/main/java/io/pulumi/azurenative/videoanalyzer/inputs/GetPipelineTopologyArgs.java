@@ -84,17 +84,17 @@ public final class GetPipelineTopologyArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setPipelineTopologyName(String pipelineTopologyName) {
+        public Builder pipelineTopologyName(String pipelineTopologyName) {
             this.pipelineTopologyName = Objects.requireNonNull(pipelineTopologyName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

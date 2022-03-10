@@ -40,7 +40,7 @@ public final class EnvironmentConfigDatabaseConfig {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

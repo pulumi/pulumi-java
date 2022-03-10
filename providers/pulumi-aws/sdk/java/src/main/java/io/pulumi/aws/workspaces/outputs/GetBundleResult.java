@@ -167,42 +167,42 @@ public final class GetBundleResult {
     	      this.userStorages = defaults.userStorages;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setComputeTypes(List<GetBundleComputeType> computeTypes) {
+        public Builder computeTypes(List<GetBundleComputeType> computeTypes) {
             this.computeTypes = Objects.requireNonNull(computeTypes);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setRootStorages(List<GetBundleRootStorage> rootStorages) {
+        public Builder rootStorages(List<GetBundleRootStorage> rootStorages) {
             this.rootStorages = Objects.requireNonNull(rootStorages);
             return this;
         }
 
-        public Builder setUserStorages(List<GetBundleUserStorage> userStorages) {
+        public Builder userStorages(List<GetBundleUserStorage> userStorages) {
             this.userStorages = Objects.requireNonNull(userStorages);
             return this;
         }

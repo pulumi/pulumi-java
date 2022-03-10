@@ -110,42 +110,42 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends io.pulumi.r
     	      this.reverseOrder = defaults.reverseOrder;
         }
 
-        public Builder setCharactersToIgnore(@Nullable Input<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore) {
+        public Builder charactersToIgnore(@Nullable Input<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore) {
             this.charactersToIgnore = charactersToIgnore;
             return this;
         }
 
-        public Builder setCharactersToIgnore(@Nullable List<GooglePrivacyDlpV2CharsToIgnoreArgs> charactersToIgnore) {
+        public Builder charactersToIgnore(@Nullable List<GooglePrivacyDlpV2CharsToIgnoreArgs> charactersToIgnore) {
             this.charactersToIgnore = Input.ofNullable(charactersToIgnore);
             return this;
         }
 
-        public Builder setMaskingCharacter(@Nullable Input<String> maskingCharacter) {
+        public Builder maskingCharacter(@Nullable Input<String> maskingCharacter) {
             this.maskingCharacter = maskingCharacter;
             return this;
         }
 
-        public Builder setMaskingCharacter(@Nullable String maskingCharacter) {
+        public Builder maskingCharacter(@Nullable String maskingCharacter) {
             this.maskingCharacter = Input.ofNullable(maskingCharacter);
             return this;
         }
 
-        public Builder setNumberToMask(@Nullable Input<Integer> numberToMask) {
+        public Builder numberToMask(@Nullable Input<Integer> numberToMask) {
             this.numberToMask = numberToMask;
             return this;
         }
 
-        public Builder setNumberToMask(@Nullable Integer numberToMask) {
+        public Builder numberToMask(@Nullable Integer numberToMask) {
             this.numberToMask = Input.ofNullable(numberToMask);
             return this;
         }
 
-        public Builder setReverseOrder(@Nullable Input<Boolean> reverseOrder) {
+        public Builder reverseOrder(@Nullable Input<Boolean> reverseOrder) {
             this.reverseOrder = reverseOrder;
             return this;
         }
 
-        public Builder setReverseOrder(@Nullable Boolean reverseOrder) {
+        public Builder reverseOrder(@Nullable Boolean reverseOrder) {
             this.reverseOrder = Input.ofNullable(reverseOrder);
             return this;
         }

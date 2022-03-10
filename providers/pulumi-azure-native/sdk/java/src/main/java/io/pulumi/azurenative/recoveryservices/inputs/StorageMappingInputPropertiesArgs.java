@@ -57,12 +57,12 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
     	      this.targetStorageClassificationId = defaults.targetStorageClassificationId;
         }
 
-        public Builder setTargetStorageClassificationId(@Nullable Input<String> targetStorageClassificationId) {
+        public Builder targetStorageClassificationId(@Nullable Input<String> targetStorageClassificationId) {
             this.targetStorageClassificationId = targetStorageClassificationId;
             return this;
         }
 
-        public Builder setTargetStorageClassificationId(@Nullable String targetStorageClassificationId) {
+        public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
             this.targetStorageClassificationId = Input.ofNullable(targetStorageClassificationId);
             return this;
         }

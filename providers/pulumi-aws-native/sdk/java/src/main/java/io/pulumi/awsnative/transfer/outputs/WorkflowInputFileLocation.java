@@ -42,7 +42,7 @@ public final class WorkflowInputFileLocation {
     	      this.s3FileLocation = defaults.s3FileLocation;
         }
 
-        public Builder setS3FileLocation(@Nullable WorkflowS3InputFileLocation s3FileLocation) {
+        public Builder s3FileLocation(@Nullable WorkflowS3InputFileLocation s3FileLocation) {
             this.s3FileLocation = s3FileLocation;
             return this;
         }

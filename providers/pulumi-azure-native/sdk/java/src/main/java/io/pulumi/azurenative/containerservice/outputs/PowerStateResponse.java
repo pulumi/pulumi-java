@@ -50,7 +50,7 @@ public final class PowerStateResponse {
     	      this.code = defaults.code;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }

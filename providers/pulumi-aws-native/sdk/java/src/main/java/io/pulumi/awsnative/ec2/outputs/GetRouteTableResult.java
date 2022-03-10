@@ -69,12 +69,12 @@ public final class GetRouteTableResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setRouteTableId(@Nullable String routeTableId) {
+        public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RouteTableTag> tags) {
+        public Builder tags(@Nullable List<RouteTableTag> tags) {
             this.tags = tags;
             return this;
         }

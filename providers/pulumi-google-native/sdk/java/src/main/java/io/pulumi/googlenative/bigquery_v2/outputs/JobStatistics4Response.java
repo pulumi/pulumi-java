@@ -66,12 +66,12 @@ public final class JobStatistics4Response {
     	      this.inputBytes = defaults.inputBytes;
         }
 
-        public Builder setDestinationUriFileCounts(List<String> destinationUriFileCounts) {
+        public Builder destinationUriFileCounts(List<String> destinationUriFileCounts) {
             this.destinationUriFileCounts = Objects.requireNonNull(destinationUriFileCounts);
             return this;
         }
 
-        public Builder setInputBytes(String inputBytes) {
+        public Builder inputBytes(String inputBytes) {
             this.inputBytes = Objects.requireNonNull(inputBytes);
             return this;
         }

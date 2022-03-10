@@ -51,12 +51,12 @@ public final class GetBucketLifecycleRule {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setActions(List<GetBucketLifecycleRuleAction> actions) {
+        public Builder actions(List<GetBucketLifecycleRuleAction> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setConditions(List<GetBucketLifecycleRuleCondition> conditions) {
+        public Builder conditions(List<GetBucketLifecycleRuleCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

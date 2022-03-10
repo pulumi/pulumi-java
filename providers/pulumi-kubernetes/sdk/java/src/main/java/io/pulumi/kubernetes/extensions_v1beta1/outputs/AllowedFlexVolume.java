@@ -48,7 +48,7 @@ public final class AllowedFlexVolume {
     	      this.driver = defaults.driver;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }

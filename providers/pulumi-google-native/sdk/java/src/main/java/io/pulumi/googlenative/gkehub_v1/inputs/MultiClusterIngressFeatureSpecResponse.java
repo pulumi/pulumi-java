@@ -55,7 +55,7 @@ public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.reso
     	      this.configMembership = defaults.configMembership;
         }
 
-        public Builder setConfigMembership(String configMembership) {
+        public Builder configMembership(String configMembership) {
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }

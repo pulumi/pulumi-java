@@ -68,12 +68,12 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
     	      this.certificateAuthorityArn = defaults.certificateAuthorityArn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }

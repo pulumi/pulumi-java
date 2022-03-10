@@ -81,17 +81,17 @@ public final class EncryptionPropertiesResponse {
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVersion(String keyVersion) {
+        public Builder keyVersion(String keyVersion) {
             this.keyVersion = Objects.requireNonNull(keyVersion);
             return this;
         }
 
-        public Builder setVaultBaseUrl(String vaultBaseUrl) {
+        public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }

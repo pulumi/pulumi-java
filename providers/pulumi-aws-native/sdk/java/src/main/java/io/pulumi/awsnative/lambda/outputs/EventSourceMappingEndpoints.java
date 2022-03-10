@@ -50,7 +50,7 @@ public final class EventSourceMappingEndpoints {
     	      this.kafkaBootstrapServers = defaults.kafkaBootstrapServers;
         }
 
-        public Builder setKafkaBootstrapServers(@Nullable List<String> kafkaBootstrapServers) {
+        public Builder kafkaBootstrapServers(@Nullable List<String> kafkaBootstrapServers) {
             this.kafkaBootstrapServers = kafkaBootstrapServers;
             return this;
         }

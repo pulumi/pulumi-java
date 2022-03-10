@@ -199,92 +199,92 @@ public final class RegionUrlMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tests = defaults.tests;
         }
 
-        public Builder setDefaultService(@Nullable Input<String> defaultService) {
+        public Builder defaultService(@Nullable Input<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
 
-        public Builder setDefaultService(@Nullable String defaultService) {
+        public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = Input.ofNullable(defaultService);
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(@Nullable Input<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable Input<RegionUrlMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(@Nullable RegionUrlMapDefaultUrlRedirectArgs defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable RegionUrlMapDefaultUrlRedirectArgs defaultUrlRedirect) {
             this.defaultUrlRedirect = Input.ofNullable(defaultUrlRedirect);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHostRules(@Nullable Input<List<RegionUrlMapHostRuleArgs>> hostRules) {
+        public Builder hostRules(@Nullable Input<List<RegionUrlMapHostRuleArgs>> hostRules) {
             this.hostRules = hostRules;
             return this;
         }
 
-        public Builder setHostRules(@Nullable List<RegionUrlMapHostRuleArgs> hostRules) {
+        public Builder hostRules(@Nullable List<RegionUrlMapHostRuleArgs> hostRules) {
             this.hostRules = Input.ofNullable(hostRules);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPathMatchers(@Nullable Input<List<RegionUrlMapPathMatcherArgs>> pathMatchers) {
+        public Builder pathMatchers(@Nullable Input<List<RegionUrlMapPathMatcherArgs>> pathMatchers) {
             this.pathMatchers = pathMatchers;
             return this;
         }
 
-        public Builder setPathMatchers(@Nullable List<RegionUrlMapPathMatcherArgs> pathMatchers) {
+        public Builder pathMatchers(@Nullable List<RegionUrlMapPathMatcherArgs> pathMatchers) {
             this.pathMatchers = Input.ofNullable(pathMatchers);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTests(@Nullable Input<List<RegionUrlMapTestArgs>> tests) {
+        public Builder tests(@Nullable Input<List<RegionUrlMapTestArgs>> tests) {
             this.tests = tests;
             return this;
         }
 
-        public Builder setTests(@Nullable List<RegionUrlMapTestArgs> tests) {
+        public Builder tests(@Nullable List<RegionUrlMapTestArgs> tests) {
             this.tests = Input.ofNullable(tests);
             return this;
         }

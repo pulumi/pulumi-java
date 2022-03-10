@@ -107,42 +107,42 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     	      this.modifiedTime = defaults.modifiedTime;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setLinkType(@Nullable Input<LinkedServiceLinkType> linkType) {
+        public Builder linkType(@Nullable Input<LinkedServiceLinkType> linkType) {
             this.linkType = linkType;
             return this;
         }
 
-        public Builder setLinkType(@Nullable LinkedServiceLinkType linkType) {
+        public Builder linkType(@Nullable LinkedServiceLinkType linkType) {
             this.linkType = Input.ofNullable(linkType);
             return this;
         }
 
-        public Builder setLinkedServiceResourceId(Input<String> linkedServiceResourceId) {
+        public Builder linkedServiceResourceId(Input<String> linkedServiceResourceId) {
             this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
             return this;
         }
 
-        public Builder setLinkedServiceResourceId(String linkedServiceResourceId) {
+        public Builder linkedServiceResourceId(String linkedServiceResourceId) {
             this.linkedServiceResourceId = Input.of(Objects.requireNonNull(linkedServiceResourceId));
             return this;
         }
 
-        public Builder setModifiedTime(@Nullable Input<String> modifiedTime) {
+        public Builder modifiedTime(@Nullable Input<String> modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
 
-        public Builder setModifiedTime(@Nullable String modifiedTime) {
+        public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = Input.ofNullable(modifiedTime);
             return this;
         }

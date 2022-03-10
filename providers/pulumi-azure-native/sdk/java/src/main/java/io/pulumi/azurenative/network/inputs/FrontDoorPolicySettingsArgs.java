@@ -143,62 +143,62 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
     	      this.requestBodyCheck = defaults.requestBodyCheck;
         }
 
-        public Builder setCustomBlockResponseBody(@Nullable Input<String> customBlockResponseBody) {
+        public Builder customBlockResponseBody(@Nullable Input<String> customBlockResponseBody) {
             this.customBlockResponseBody = customBlockResponseBody;
             return this;
         }
 
-        public Builder setCustomBlockResponseBody(@Nullable String customBlockResponseBody) {
+        public Builder customBlockResponseBody(@Nullable String customBlockResponseBody) {
             this.customBlockResponseBody = Input.ofNullable(customBlockResponseBody);
             return this;
         }
 
-        public Builder setCustomBlockResponseStatusCode(@Nullable Input<Integer> customBlockResponseStatusCode) {
+        public Builder customBlockResponseStatusCode(@Nullable Input<Integer> customBlockResponseStatusCode) {
             this.customBlockResponseStatusCode = customBlockResponseStatusCode;
             return this;
         }
 
-        public Builder setCustomBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
+        public Builder customBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
             this.customBlockResponseStatusCode = Input.ofNullable(customBlockResponseStatusCode);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,PolicyEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,PolicyEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,PolicyMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,PolicyMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,PolicyMode> mode) {
+        public Builder mode(@Nullable Either<String,PolicyMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setRedirectUrl(@Nullable Input<String> redirectUrl) {
+        public Builder redirectUrl(@Nullable Input<String> redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
 
-        public Builder setRedirectUrl(@Nullable String redirectUrl) {
+        public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = Input.ofNullable(redirectUrl);
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Input<Either<String,PolicyRequestBodyCheck>> requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Input<Either<String,PolicyRequestBodyCheck>> requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Either<String,PolicyRequestBodyCheck> requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Either<String,PolicyRequestBodyCheck> requestBodyCheck) {
             this.requestBodyCheck = Input.ofNullable(requestBodyCheck);
             return this;
         }

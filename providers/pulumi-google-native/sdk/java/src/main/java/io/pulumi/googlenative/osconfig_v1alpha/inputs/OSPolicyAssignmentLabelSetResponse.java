@@ -56,7 +56,7 @@ public final class OSPolicyAssignmentLabelSetResponse extends io.pulumi.resource
     	      this.labels = defaults.labels;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

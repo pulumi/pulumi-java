@@ -233,122 +233,122 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAadClientId(Input<String> aadClientId) {
+        public Builder aadClientId(Input<String> aadClientId) {
             this.aadClientId = Objects.requireNonNull(aadClientId);
             return this;
         }
 
-        public Builder setAadClientId(String aadClientId) {
+        public Builder aadClientId(String aadClientId) {
             this.aadClientId = Input.of(Objects.requireNonNull(aadClientId));
             return this;
         }
 
-        public Builder setAadTenantId(Input<String> aadTenantId) {
+        public Builder aadTenantId(Input<String> aadTenantId) {
             this.aadTenantId = Objects.requireNonNull(aadTenantId);
             return this;
         }
 
-        public Builder setAadTenantId(String aadTenantId) {
+        public Builder aadTenantId(String aadTenantId) {
             this.aadTenantId = Input.of(Objects.requireNonNull(aadTenantId));
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Input<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Input.ofNullable(createdBy);
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Either<String,CreatedByType> createdByType) {
+        public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Input.ofNullable(createdByType);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

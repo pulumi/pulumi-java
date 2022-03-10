@@ -182,47 +182,47 @@ public final class SecurityGroupIngress {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setCidrBlocks(@Nullable List<String> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
-        public Builder setPrefixListIds(@Nullable List<String> prefixListIds) {
+        public Builder prefixListIds(@Nullable List<String> prefixListIds) {
             this.prefixListIds = prefixListIds;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSelf(@Nullable Boolean self) {
+        public Builder self(@Nullable Boolean self) {
             this.self = self;
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

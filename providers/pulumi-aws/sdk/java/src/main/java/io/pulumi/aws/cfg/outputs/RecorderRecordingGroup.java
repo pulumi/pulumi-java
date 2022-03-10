@@ -85,17 +85,17 @@ public final class RecorderRecordingGroup {
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder setAllSupported(@Nullable Boolean allSupported) {
+        public Builder allSupported(@Nullable Boolean allSupported) {
             this.allSupported = allSupported;
             return this;
         }
 
-        public Builder setIncludeGlobalResourceTypes(@Nullable Boolean includeGlobalResourceTypes) {
+        public Builder includeGlobalResourceTypes(@Nullable Boolean includeGlobalResourceTypes) {
             this.includeGlobalResourceTypes = includeGlobalResourceTypes;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }

@@ -279,77 +279,77 @@ public final class VirtualNetworkPeeringResponse {
     	      this.useRemoteGateways = defaults.useRemoteGateways;
         }
 
-        public Builder setAllowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
+        public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
             this.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
 
-        public Builder setAllowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
+        public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
             this.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
 
-        public Builder setAllowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
+        public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
             this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
 
-        public Builder setDoNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
+        public Builder doNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
             this.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPeeringState(@Nullable String peeringState) {
+        public Builder peeringState(@Nullable String peeringState) {
             this.peeringState = peeringState;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRemoteAddressSpace(@Nullable AddressSpaceResponse remoteAddressSpace) {
+        public Builder remoteAddressSpace(@Nullable AddressSpaceResponse remoteAddressSpace) {
             this.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
 
-        public Builder setRemoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities) {
+        public Builder remoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesResponse remoteBgpCommunities) {
             this.remoteBgpCommunities = remoteBgpCommunities;
             return this;
         }
 
-        public Builder setRemoteVirtualNetwork(@Nullable SubResourceResponse remoteVirtualNetwork) {
+        public Builder remoteVirtualNetwork(@Nullable SubResourceResponse remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUseRemoteGateways(@Nullable Boolean useRemoteGateways) {
+        public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
             this.useRemoteGateways = useRemoteGateways;
             return this;
         }

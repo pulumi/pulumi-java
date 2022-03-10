@@ -85,27 +85,27 @@ public final class DatabaseInstanceServerCaCert {
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setSha1Fingerprint(@Nullable String sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }

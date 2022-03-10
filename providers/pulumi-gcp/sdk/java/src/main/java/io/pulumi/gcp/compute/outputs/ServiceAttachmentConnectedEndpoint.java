@@ -51,12 +51,12 @@ public final class ServiceAttachmentConnectedEndpoint {
     	      this.status = defaults.status;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

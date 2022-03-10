@@ -75,12 +75,12 @@ public final class CmkKekIdentityResponse extends io.pulumi.resources.InvokeArgs
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUseSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
+        public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
             this.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }

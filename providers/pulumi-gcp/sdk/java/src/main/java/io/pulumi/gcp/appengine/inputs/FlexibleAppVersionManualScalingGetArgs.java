@@ -54,12 +54,12 @@ public final class FlexibleAppVersionManualScalingGetArgs extends io.pulumi.reso
     	      this.instances = defaults.instances;
         }
 
-        public Builder setInstances(Input<Integer> instances) {
+        public Builder instances(Input<Integer> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setInstances(Integer instances) {
+        public Builder instances(Integer instances) {
             this.instances = Input.of(Objects.requireNonNull(instances));
             return this;
         }

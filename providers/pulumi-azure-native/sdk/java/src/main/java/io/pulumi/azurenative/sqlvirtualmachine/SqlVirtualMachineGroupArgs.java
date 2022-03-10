@@ -154,72 +154,72 @@ public final class SqlVirtualMachineGroupArgs extends io.pulumi.resources.Resour
     	      this.wsfcDomainProfile = defaults.wsfcDomainProfile;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSqlImageOffer(@Nullable Input<String> sqlImageOffer) {
+        public Builder sqlImageOffer(@Nullable Input<String> sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
 
-        public Builder setSqlImageOffer(@Nullable String sqlImageOffer) {
+        public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
             this.sqlImageOffer = Input.ofNullable(sqlImageOffer);
             return this;
         }
 
-        public Builder setSqlImageSku(@Nullable Input<Either<String,SqlVmGroupImageSku>> sqlImageSku) {
+        public Builder sqlImageSku(@Nullable Input<Either<String,SqlVmGroupImageSku>> sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
 
-        public Builder setSqlImageSku(@Nullable Either<String,SqlVmGroupImageSku> sqlImageSku) {
+        public Builder sqlImageSku(@Nullable Either<String,SqlVmGroupImageSku> sqlImageSku) {
             this.sqlImageSku = Input.ofNullable(sqlImageSku);
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupName(@Nullable Input<String> sqlVirtualMachineGroupName) {
+        public Builder sqlVirtualMachineGroupName(@Nullable Input<String> sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupName(@Nullable String sqlVirtualMachineGroupName) {
+        public Builder sqlVirtualMachineGroupName(@Nullable String sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Input.ofNullable(sqlVirtualMachineGroupName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWsfcDomainProfile(@Nullable Input<WsfcDomainProfileArgs> wsfcDomainProfile) {
+        public Builder wsfcDomainProfile(@Nullable Input<WsfcDomainProfileArgs> wsfcDomainProfile) {
             this.wsfcDomainProfile = wsfcDomainProfile;
             return this;
         }
 
-        public Builder setWsfcDomainProfile(@Nullable WsfcDomainProfileArgs wsfcDomainProfile) {
+        public Builder wsfcDomainProfile(@Nullable WsfcDomainProfileArgs wsfcDomainProfile) {
             this.wsfcDomainProfile = Input.ofNullable(wsfcDomainProfile);
             return this;
         }

@@ -74,22 +74,22 @@ public final class LogAnalyticsWorkspaceConfigArgs extends io.pulumi.resources.R
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setPrimaryKey(@Nullable Input<String> primaryKey) {
+        public Builder primaryKey(@Nullable Input<String> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = Input.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Input<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Input.ofNullable(workspaceId);
             return this;
         }

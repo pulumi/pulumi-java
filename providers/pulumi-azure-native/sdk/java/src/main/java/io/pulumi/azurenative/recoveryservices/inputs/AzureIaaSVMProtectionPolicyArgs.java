@@ -160,72 +160,72 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setBackupManagementType(Input<String> backupManagementType) {
+        public Builder backupManagementType(Input<String> backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Input.of(Objects.requireNonNull(backupManagementType));
             return this;
         }
 
-        public Builder setInstantRPDetails(@Nullable Input<InstantRPAdditionalDetailsArgs> instantRPDetails) {
+        public Builder instantRPDetails(@Nullable Input<InstantRPAdditionalDetailsArgs> instantRPDetails) {
             this.instantRPDetails = instantRPDetails;
             return this;
         }
 
-        public Builder setInstantRPDetails(@Nullable InstantRPAdditionalDetailsArgs instantRPDetails) {
+        public Builder instantRPDetails(@Nullable InstantRPAdditionalDetailsArgs instantRPDetails) {
             this.instantRPDetails = Input.ofNullable(instantRPDetails);
             return this;
         }
 
-        public Builder setInstantRpRetentionRangeInDays(@Nullable Input<Integer> instantRpRetentionRangeInDays) {
+        public Builder instantRpRetentionRangeInDays(@Nullable Input<Integer> instantRpRetentionRangeInDays) {
             this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
 
-        public Builder setInstantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
+        public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
             this.instantRpRetentionRangeInDays = Input.ofNullable(instantRpRetentionRangeInDays);
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Input<Integer> protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = Input.ofNullable(protectedItemsCount);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable Input<Object> schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Input<Object> schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable Object schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = Input.ofNullable(schedulePolicy);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

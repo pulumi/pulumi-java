@@ -108,42 +108,42 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPartitionCount(@Nullable Input<Integer> partitionCount) {
+        public Builder partitionCount(@Nullable Input<Integer> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
-        public Builder setPartitionCount(@Nullable Integer partitionCount) {
+        public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = Input.ofNullable(partitionCount);
             return this;
         }
 
-        public Builder setStrategy(Input<Either<String,PlacementStrategy>> strategy) {
+        public Builder strategy(Input<Either<String,PlacementStrategy>> strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setStrategy(Either<String,PlacementStrategy> strategy) {
+        public Builder strategy(Either<String,PlacementStrategy> strategy) {
             this.strategy = Input.of(Objects.requireNonNull(strategy));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

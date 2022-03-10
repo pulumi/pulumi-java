@@ -53,12 +53,12 @@ public final class LoadBalancerConfigurationPropertiesArgs extends io.pulumi.res
     	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
         }
 
-        public Builder setFrontendIPConfigurations(Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(Input<List<LoadBalancerFrontendIPConfigurationArgs>> frontendIPConfigurations) {
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
 
-        public Builder setFrontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationArgs> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationArgs> frontendIPConfigurations) {
             this.frontendIPConfigurations = Input.of(Objects.requireNonNull(frontendIPConfigurations));
             return this;
         }

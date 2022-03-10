@@ -61,22 +61,22 @@ public final class WirelessGatewayLoRaWANGatewayArgs extends io.pulumi.resources
     	      this.rfRegion = defaults.rfRegion;
         }
 
-        public Builder setGatewayEui(Input<String> gatewayEui) {
+        public Builder gatewayEui(Input<String> gatewayEui) {
             this.gatewayEui = Objects.requireNonNull(gatewayEui);
             return this;
         }
 
-        public Builder setGatewayEui(String gatewayEui) {
+        public Builder gatewayEui(String gatewayEui) {
             this.gatewayEui = Input.of(Objects.requireNonNull(gatewayEui));
             return this;
         }
 
-        public Builder setRfRegion(Input<String> rfRegion) {
+        public Builder rfRegion(Input<String> rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
 
-        public Builder setRfRegion(String rfRegion) {
+        public Builder rfRegion(String rfRegion) {
             this.rfRegion = Input.of(Objects.requireNonNull(rfRegion));
             return this;
         }

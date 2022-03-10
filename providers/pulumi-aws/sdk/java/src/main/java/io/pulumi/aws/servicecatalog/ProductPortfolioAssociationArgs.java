@@ -102,42 +102,42 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
     	      this.sourcePortfolioId = defaults.sourcePortfolioId;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setPortfolioId(Input<String> portfolioId) {
+        public Builder portfolioId(Input<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
-        public Builder setPortfolioId(String portfolioId) {
+        public Builder portfolioId(String portfolioId) {
             this.portfolioId = Input.of(Objects.requireNonNull(portfolioId));
             return this;
         }
 
-        public Builder setProductId(Input<String> productId) {
+        public Builder productId(Input<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Input.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder setSourcePortfolioId(@Nullable Input<String> sourcePortfolioId) {
+        public Builder sourcePortfolioId(@Nullable Input<String> sourcePortfolioId) {
             this.sourcePortfolioId = sourcePortfolioId;
             return this;
         }
 
-        public Builder setSourcePortfolioId(@Nullable String sourcePortfolioId) {
+        public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
             this.sourcePortfolioId = Input.ofNullable(sourcePortfolioId);
             return this;
         }

@@ -63,22 +63,22 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     	      this.resources = defaults.resources;
         }
 
-        public Builder setResourceTypes(@Nullable Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Input<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = Input.ofNullable(resourceTypes);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }

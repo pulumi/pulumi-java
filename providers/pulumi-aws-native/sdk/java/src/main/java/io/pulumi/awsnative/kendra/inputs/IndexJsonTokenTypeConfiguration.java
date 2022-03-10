@@ -60,12 +60,12 @@ public final class IndexJsonTokenTypeConfiguration extends io.pulumi.resources.I
     	      this.userNameAttributeField = defaults.userNameAttributeField;
         }
 
-        public Builder setGroupAttributeField(String groupAttributeField) {
+        public Builder groupAttributeField(String groupAttributeField) {
             this.groupAttributeField = Objects.requireNonNull(groupAttributeField);
             return this;
         }
 
-        public Builder setUserNameAttributeField(String userNameAttributeField) {
+        public Builder userNameAttributeField(String userNameAttributeField) {
             this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField);
             return this;
         }

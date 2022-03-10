@@ -50,7 +50,7 @@ public final class GetDiagnosticServiceTokenReadWriteResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

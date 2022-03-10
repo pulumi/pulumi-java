@@ -119,27 +119,27 @@ public final class OrderStatusResponse {
     	      this.updateDateTime = defaults.updateDateTime;
         }
 
-        public Builder setAdditionalOrderDetails(Map<String,String> additionalOrderDetails) {
+        public Builder additionalOrderDetails(Map<String,String> additionalOrderDetails) {
             this.additionalOrderDetails = Objects.requireNonNull(additionalOrderDetails);
             return this;
         }
 
-        public Builder setComments(@Nullable String comments) {
+        public Builder comments(@Nullable String comments) {
             this.comments = comments;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTrackingInformation(TrackingInfoResponse trackingInformation) {
+        public Builder trackingInformation(TrackingInfoResponse trackingInformation) {
             this.trackingInformation = Objects.requireNonNull(trackingInformation);
             return this;
         }
 
-        public Builder setUpdateDateTime(String updateDateTime) {
+        public Builder updateDateTime(String updateDateTime) {
             this.updateDateTime = Objects.requireNonNull(updateDateTime);
             return this;
         }

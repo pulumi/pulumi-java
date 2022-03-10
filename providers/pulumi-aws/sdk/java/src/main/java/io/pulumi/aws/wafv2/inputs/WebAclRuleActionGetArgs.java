@@ -88,32 +88,32 @@ public final class WebAclRuleActionGetArgs extends io.pulumi.resources.ResourceA
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable Input<WebAclRuleActionAllowGetArgs> allow) {
+        public Builder allow(@Nullable Input<WebAclRuleActionAllowGetArgs> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable WebAclRuleActionAllowGetArgs allow) {
+        public Builder allow(@Nullable WebAclRuleActionAllowGetArgs allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }
 
-        public Builder setBlock(@Nullable Input<WebAclRuleActionBlockGetArgs> block) {
+        public Builder block(@Nullable Input<WebAclRuleActionBlockGetArgs> block) {
             this.block = block;
             return this;
         }
 
-        public Builder setBlock(@Nullable WebAclRuleActionBlockGetArgs block) {
+        public Builder block(@Nullable WebAclRuleActionBlockGetArgs block) {
             this.block = Input.ofNullable(block);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<WebAclRuleActionCountGetArgs> count) {
+        public Builder count(@Nullable Input<WebAclRuleActionCountGetArgs> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable WebAclRuleActionCountGetArgs count) {
+        public Builder count(@Nullable WebAclRuleActionCountGetArgs count) {
             this.count = Input.ofNullable(count);
             return this;
         }

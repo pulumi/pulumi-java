@@ -308,212 +308,212 @@ public final class AndroidMAMPolicyByNameArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessRecheckOfflineTimeout(@Nullable Input<String> accessRecheckOfflineTimeout) {
+        public Builder accessRecheckOfflineTimeout(@Nullable Input<String> accessRecheckOfflineTimeout) {
             this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
             return this;
         }
 
-        public Builder setAccessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
+        public Builder accessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
             this.accessRecheckOfflineTimeout = Input.ofNullable(accessRecheckOfflineTimeout);
             return this;
         }
 
-        public Builder setAccessRecheckOnlineTimeout(@Nullable Input<String> accessRecheckOnlineTimeout) {
+        public Builder accessRecheckOnlineTimeout(@Nullable Input<String> accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
             return this;
         }
 
-        public Builder setAccessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
+        public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = Input.ofNullable(accessRecheckOnlineTimeout);
             return this;
         }
 
-        public Builder setAppSharingFromLevel(@Nullable Input<String> appSharingFromLevel) {
+        public Builder appSharingFromLevel(@Nullable Input<String> appSharingFromLevel) {
             this.appSharingFromLevel = appSharingFromLevel;
             return this;
         }
 
-        public Builder setAppSharingFromLevel(@Nullable String appSharingFromLevel) {
+        public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
             this.appSharingFromLevel = Input.ofNullable(appSharingFromLevel);
             return this;
         }
 
-        public Builder setAppSharingToLevel(@Nullable Input<String> appSharingToLevel) {
+        public Builder appSharingToLevel(@Nullable Input<String> appSharingToLevel) {
             this.appSharingToLevel = appSharingToLevel;
             return this;
         }
 
-        public Builder setAppSharingToLevel(@Nullable String appSharingToLevel) {
+        public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
             this.appSharingToLevel = Input.ofNullable(appSharingToLevel);
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<String> authentication) {
+        public Builder authentication(@Nullable Input<String> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable String authentication) {
+        public Builder authentication(@Nullable String authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setClipboardSharingLevel(@Nullable Input<String> clipboardSharingLevel) {
+        public Builder clipboardSharingLevel(@Nullable Input<String> clipboardSharingLevel) {
             this.clipboardSharingLevel = clipboardSharingLevel;
             return this;
         }
 
-        public Builder setClipboardSharingLevel(@Nullable String clipboardSharingLevel) {
+        public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
             this.clipboardSharingLevel = Input.ofNullable(clipboardSharingLevel);
             return this;
         }
 
-        public Builder setDataBackup(@Nullable Input<String> dataBackup) {
+        public Builder dataBackup(@Nullable Input<String> dataBackup) {
             this.dataBackup = dataBackup;
             return this;
         }
 
-        public Builder setDataBackup(@Nullable String dataBackup) {
+        public Builder dataBackup(@Nullable String dataBackup) {
             this.dataBackup = Input.ofNullable(dataBackup);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceCompliance(@Nullable Input<String> deviceCompliance) {
+        public Builder deviceCompliance(@Nullable Input<String> deviceCompliance) {
             this.deviceCompliance = deviceCompliance;
             return this;
         }
 
-        public Builder setDeviceCompliance(@Nullable String deviceCompliance) {
+        public Builder deviceCompliance(@Nullable String deviceCompliance) {
             this.deviceCompliance = Input.ofNullable(deviceCompliance);
             return this;
         }
 
-        public Builder setFileEncryption(@Nullable Input<String> fileEncryption) {
+        public Builder fileEncryption(@Nullable Input<String> fileEncryption) {
             this.fileEncryption = fileEncryption;
             return this;
         }
 
-        public Builder setFileEncryption(@Nullable String fileEncryption) {
+        public Builder fileEncryption(@Nullable String fileEncryption) {
             this.fileEncryption = Input.ofNullable(fileEncryption);
             return this;
         }
 
-        public Builder setFileSharingSaveAs(@Nullable Input<String> fileSharingSaveAs) {
+        public Builder fileSharingSaveAs(@Nullable Input<String> fileSharingSaveAs) {
             this.fileSharingSaveAs = fileSharingSaveAs;
             return this;
         }
 
-        public Builder setFileSharingSaveAs(@Nullable String fileSharingSaveAs) {
+        public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
             this.fileSharingSaveAs = Input.ofNullable(fileSharingSaveAs);
             return this;
         }
 
-        public Builder setFriendlyName(Input<String> friendlyName) {
+        public Builder friendlyName(Input<String> friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Input.of(Objects.requireNonNull(friendlyName));
             return this;
         }
 
-        public Builder setHostName(Input<String> hostName) {
+        public Builder hostName(Input<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Input.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedBrowser(@Nullable Input<String> managedBrowser) {
+        public Builder managedBrowser(@Nullable Input<String> managedBrowser) {
             this.managedBrowser = managedBrowser;
             return this;
         }
 
-        public Builder setManagedBrowser(@Nullable String managedBrowser) {
+        public Builder managedBrowser(@Nullable String managedBrowser) {
             this.managedBrowser = Input.ofNullable(managedBrowser);
             return this;
         }
 
-        public Builder setOfflineWipeTimeout(@Nullable Input<String> offlineWipeTimeout) {
+        public Builder offlineWipeTimeout(@Nullable Input<String> offlineWipeTimeout) {
             this.offlineWipeTimeout = offlineWipeTimeout;
             return this;
         }
 
-        public Builder setOfflineWipeTimeout(@Nullable String offlineWipeTimeout) {
+        public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
             this.offlineWipeTimeout = Input.ofNullable(offlineWipeTimeout);
             return this;
         }
 
-        public Builder setPin(@Nullable Input<String> pin) {
+        public Builder pin(@Nullable Input<String> pin) {
             this.pin = pin;
             return this;
         }
 
-        public Builder setPin(@Nullable String pin) {
+        public Builder pin(@Nullable String pin) {
             this.pin = Input.ofNullable(pin);
             return this;
         }
 
-        public Builder setPinNumRetry(@Nullable Input<Integer> pinNumRetry) {
+        public Builder pinNumRetry(@Nullable Input<Integer> pinNumRetry) {
             this.pinNumRetry = pinNumRetry;
             return this;
         }
 
-        public Builder setPinNumRetry(@Nullable Integer pinNumRetry) {
+        public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
             this.pinNumRetry = Input.ofNullable(pinNumRetry);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setScreenCapture(@Nullable Input<String> screenCapture) {
+        public Builder screenCapture(@Nullable Input<String> screenCapture) {
             this.screenCapture = screenCapture;
             return this;
         }
 
-        public Builder setScreenCapture(@Nullable String screenCapture) {
+        public Builder screenCapture(@Nullable String screenCapture) {
             this.screenCapture = Input.ofNullable(screenCapture);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

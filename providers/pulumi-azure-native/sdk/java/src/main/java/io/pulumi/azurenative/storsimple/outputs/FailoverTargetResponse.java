@@ -214,57 +214,57 @@ public final class FailoverTargetResponse {
     	      this.volumesCount = defaults.volumesCount;
         }
 
-        public Builder setAvailableLocalStorageInBytes(@Nullable Double availableLocalStorageInBytes) {
+        public Builder availableLocalStorageInBytes(@Nullable Double availableLocalStorageInBytes) {
             this.availableLocalStorageInBytes = availableLocalStorageInBytes;
             return this;
         }
 
-        public Builder setAvailableTieredStorageInBytes(@Nullable Double availableTieredStorageInBytes) {
+        public Builder availableTieredStorageInBytes(@Nullable Double availableTieredStorageInBytes) {
             this.availableTieredStorageInBytes = availableTieredStorageInBytes;
             return this;
         }
 
-        public Builder setDataContainersCount(@Nullable Integer dataContainersCount) {
+        public Builder dataContainersCount(@Nullable Integer dataContainersCount) {
             this.dataContainersCount = dataContainersCount;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setDeviceLocation(@Nullable String deviceLocation) {
+        public Builder deviceLocation(@Nullable String deviceLocation) {
             this.deviceLocation = deviceLocation;
             return this;
         }
 
-        public Builder setDeviceSoftwareVersion(@Nullable String deviceSoftwareVersion) {
+        public Builder deviceSoftwareVersion(@Nullable String deviceSoftwareVersion) {
             this.deviceSoftwareVersion = deviceSoftwareVersion;
             return this;
         }
 
-        public Builder setDeviceStatus(@Nullable String deviceStatus) {
+        public Builder deviceStatus(@Nullable String deviceStatus) {
             this.deviceStatus = deviceStatus;
             return this;
         }
 
-        public Builder setEligibilityResult(@Nullable TargetEligibilityResultResponse eligibilityResult) {
+        public Builder eligibilityResult(@Nullable TargetEligibilityResultResponse eligibilityResult) {
             this.eligibilityResult = eligibilityResult;
             return this;
         }
 
-        public Builder setFriendlyDeviceSoftwareVersion(@Nullable String friendlyDeviceSoftwareVersion) {
+        public Builder friendlyDeviceSoftwareVersion(@Nullable String friendlyDeviceSoftwareVersion) {
             this.friendlyDeviceSoftwareVersion = friendlyDeviceSoftwareVersion;
             return this;
         }
 
-        public Builder setModelDescription(@Nullable String modelDescription) {
+        public Builder modelDescription(@Nullable String modelDescription) {
             this.modelDescription = modelDescription;
             return this;
         }
 
-        public Builder setVolumesCount(@Nullable Integer volumesCount) {
+        public Builder volumesCount(@Nullable Integer volumesCount) {
             this.volumesCount = volumesCount;
             return this;
         }

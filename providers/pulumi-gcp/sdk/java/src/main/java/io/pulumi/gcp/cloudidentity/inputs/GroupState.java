@@ -197,92 +197,92 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGroupKey(@Nullable Input<GroupGroupKeyGetArgs> groupKey) {
+        public Builder groupKey(@Nullable Input<GroupGroupKeyGetArgs> groupKey) {
             this.groupKey = groupKey;
             return this;
         }
 
-        public Builder setGroupKey(@Nullable GroupGroupKeyGetArgs groupKey) {
+        public Builder groupKey(@Nullable GroupGroupKeyGetArgs groupKey) {
             this.groupKey = Input.ofNullable(groupKey);
             return this;
         }
 
-        public Builder setInitialGroupConfig(@Nullable Input<String> initialGroupConfig) {
+        public Builder initialGroupConfig(@Nullable Input<String> initialGroupConfig) {
             this.initialGroupConfig = initialGroupConfig;
             return this;
         }
 
-        public Builder setInitialGroupConfig(@Nullable String initialGroupConfig) {
+        public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
             this.initialGroupConfig = Input.ofNullable(initialGroupConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

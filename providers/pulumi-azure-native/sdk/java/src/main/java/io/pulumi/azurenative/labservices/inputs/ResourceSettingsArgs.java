@@ -93,32 +93,32 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.size = defaults.size;
         }
 
-        public Builder setGalleryImageResourceId(@Nullable Input<String> galleryImageResourceId) {
+        public Builder galleryImageResourceId(@Nullable Input<String> galleryImageResourceId) {
             this.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
 
-        public Builder setGalleryImageResourceId(@Nullable String galleryImageResourceId) {
+        public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
             this.galleryImageResourceId = Input.ofNullable(galleryImageResourceId);
             return this;
         }
 
-        public Builder setReferenceVm(Input<ReferenceVmArgs> referenceVm) {
+        public Builder referenceVm(Input<ReferenceVmArgs> referenceVm) {
             this.referenceVm = Objects.requireNonNull(referenceVm);
             return this;
         }
 
-        public Builder setReferenceVm(ReferenceVmArgs referenceVm) {
+        public Builder referenceVm(ReferenceVmArgs referenceVm) {
             this.referenceVm = Input.of(Objects.requireNonNull(referenceVm));
             return this;
         }
 
-        public Builder setSize(@Nullable Input<Either<String,ManagedLabVmSize>> size) {
+        public Builder size(@Nullable Input<Either<String,ManagedLabVmSize>> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable Either<String,ManagedLabVmSize> size) {
+        public Builder size(@Nullable Either<String,ManagedLabVmSize> size) {
             this.size = Input.ofNullable(size);
             return this;
         }

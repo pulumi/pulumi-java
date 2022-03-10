@@ -266,142 +266,142 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDiskBlobName(@Nullable Input<String> diskBlobName) {
+        public Builder diskBlobName(@Nullable Input<String> diskBlobName) {
             this.diskBlobName = diskBlobName;
             return this;
         }
 
-        public Builder setDiskBlobName(@Nullable String diskBlobName) {
+        public Builder diskBlobName(@Nullable String diskBlobName) {
             this.diskBlobName = Input.ofNullable(diskBlobName);
             return this;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Input<Integer> diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Input<Integer> diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Integer diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = Input.ofNullable(diskSizeGiB);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<Either<String,StorageType>> diskType) {
+        public Builder diskType(@Nullable Input<Either<String,StorageType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable Either<String,StorageType> diskType) {
+        public Builder diskType(@Nullable Either<String,StorageType> diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setDiskUri(@Nullable Input<String> diskUri) {
+        public Builder diskUri(@Nullable Input<String> diskUri) {
             this.diskUri = diskUri;
             return this;
         }
 
-        public Builder setDiskUri(@Nullable String diskUri) {
+        public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = Input.ofNullable(diskUri);
             return this;
         }
 
-        public Builder setHostCaching(@Nullable Input<String> hostCaching) {
+        public Builder hostCaching(@Nullable Input<String> hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
 
-        public Builder setHostCaching(@Nullable String hostCaching) {
+        public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = Input.ofNullable(hostCaching);
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLeasedByLabVmId(@Nullable Input<String> leasedByLabVmId) {
+        public Builder leasedByLabVmId(@Nullable Input<String> leasedByLabVmId) {
             this.leasedByLabVmId = leasedByLabVmId;
             return this;
         }
 
-        public Builder setLeasedByLabVmId(@Nullable String leasedByLabVmId) {
+        public Builder leasedByLabVmId(@Nullable String leasedByLabVmId) {
             this.leasedByLabVmId = Input.ofNullable(leasedByLabVmId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedDiskId(@Nullable Input<String> managedDiskId) {
+        public Builder managedDiskId(@Nullable Input<String> managedDiskId) {
             this.managedDiskId = managedDiskId;
             return this;
         }
 
-        public Builder setManagedDiskId(@Nullable String managedDiskId) {
+        public Builder managedDiskId(@Nullable String managedDiskId) {
             this.managedDiskId = Input.ofNullable(managedDiskId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Input.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

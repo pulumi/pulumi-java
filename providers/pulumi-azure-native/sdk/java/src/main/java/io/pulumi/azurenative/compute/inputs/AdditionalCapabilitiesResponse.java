@@ -57,7 +57,7 @@ public final class AdditionalCapabilitiesResponse extends io.pulumi.resources.In
     	      this.ultraSSDEnabled = defaults.ultraSSDEnabled;
         }
 
-        public Builder setUltraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
+        public Builder ultraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
             this.ultraSSDEnabled = ultraSSDEnabled;
             return this;
         }

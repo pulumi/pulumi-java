@@ -151,37 +151,37 @@ public final class GetFileServicePropertiesResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCors(@Nullable CorsRulesResponse cors) {
+        public Builder cors(@Nullable CorsRulesResponse cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtocolSettings(@Nullable ProtocolSettingsResponse protocolSettings) {
+        public Builder protocolSettings(@Nullable ProtocolSettingsResponse protocolSettings) {
             this.protocolSettings = protocolSettings;
             return this;
         }
 
-        public Builder setShareDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse shareDeleteRetentionPolicy) {
+        public Builder shareDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyResponse shareDeleteRetentionPolicy) {
             this.shareDeleteRetentionPolicy = shareDeleteRetentionPolicy;
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

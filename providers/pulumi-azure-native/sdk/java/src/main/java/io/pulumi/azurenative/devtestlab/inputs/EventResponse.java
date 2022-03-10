@@ -57,7 +57,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
     	      this.eventName = defaults.eventName;
         }
 
-        public Builder setEventName(@Nullable String eventName) {
+        public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
         }

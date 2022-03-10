@@ -69,12 +69,12 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder setDiskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
+        public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }

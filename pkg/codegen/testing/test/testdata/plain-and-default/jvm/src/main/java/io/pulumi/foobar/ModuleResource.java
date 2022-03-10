@@ -59,9 +59,9 @@ public class ModuleResource extends io.pulumi.resources.CustomResource {
     private static ModuleResourceArgs makeArgs(ModuleResourceArgs args) {
         var builder = args == null ? ModuleResourceArgs.builder() : ModuleResourceArgs.builder(args);
         return builder
-            .setOptional_const("val")
-            .setPlain_optional_const("val")
-            .setPlain_required_const("val")
+            .optional_const("val")
+            .plain_optional_const("val")
+            .plain_required_const("val")
             .build();
     }
 

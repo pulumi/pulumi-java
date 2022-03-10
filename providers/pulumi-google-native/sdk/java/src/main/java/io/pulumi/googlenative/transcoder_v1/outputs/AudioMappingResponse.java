@@ -131,32 +131,32 @@ public final class AudioMappingResponse {
     	      this.outputChannel = defaults.outputChannel;
         }
 
-        public Builder setAtomKey(String atomKey) {
+        public Builder atomKey(String atomKey) {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
 
-        public Builder setGainDb(Double gainDb) {
+        public Builder gainDb(Double gainDb) {
             this.gainDb = Objects.requireNonNull(gainDb);
             return this;
         }
 
-        public Builder setInputChannel(Integer inputChannel) {
+        public Builder inputChannel(Integer inputChannel) {
             this.inputChannel = Objects.requireNonNull(inputChannel);
             return this;
         }
 
-        public Builder setInputKey(String inputKey) {
+        public Builder inputKey(String inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
 
-        public Builder setInputTrack(Integer inputTrack) {
+        public Builder inputTrack(Integer inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
 
-        public Builder setOutputChannel(Integer outputChannel) {
+        public Builder outputChannel(Integer outputChannel) {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
         }

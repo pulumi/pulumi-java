@@ -141,62 +141,62 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
     	      this.storageAccounts = defaults.storageAccounts;
         }
 
-        public Builder setApplicationConsistentSnapshotFrequencyInHours(@Nullable Input<Integer> applicationConsistentSnapshotFrequencyInHours) {
+        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Input<Integer> applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
-        public Builder setApplicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
+        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = Input.ofNullable(applicationConsistentSnapshotFrequencyInHours);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setOnlineReplicationStartTime(@Nullable Input<String> onlineReplicationStartTime) {
+        public Builder onlineReplicationStartTime(@Nullable Input<String> onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
-        public Builder setOnlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
+        public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = Input.ofNullable(onlineReplicationStartTime);
             return this;
         }
 
-        public Builder setRecoveryPointHistoryDuration(@Nullable Input<Integer> recoveryPointHistoryDuration) {
+        public Builder recoveryPointHistoryDuration(@Nullable Input<Integer> recoveryPointHistoryDuration) {
             this.recoveryPointHistoryDuration = recoveryPointHistoryDuration;
             return this;
         }
 
-        public Builder setRecoveryPointHistoryDuration(@Nullable Integer recoveryPointHistoryDuration) {
+        public Builder recoveryPointHistoryDuration(@Nullable Integer recoveryPointHistoryDuration) {
             this.recoveryPointHistoryDuration = Input.ofNullable(recoveryPointHistoryDuration);
             return this;
         }
 
-        public Builder setReplicationInterval(@Nullable Input<Integer> replicationInterval) {
+        public Builder replicationInterval(@Nullable Input<Integer> replicationInterval) {
             this.replicationInterval = replicationInterval;
             return this;
         }
 
-        public Builder setReplicationInterval(@Nullable Integer replicationInterval) {
+        public Builder replicationInterval(@Nullable Integer replicationInterval) {
             this.replicationInterval = Input.ofNullable(replicationInterval);
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable Input<List<String>> storageAccounts) {
+        public Builder storageAccounts(@Nullable Input<List<String>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable List<String> storageAccounts) {
+        public Builder storageAccounts(@Nullable List<String> storageAccounts) {
             this.storageAccounts = Input.ofNullable(storageAccounts);
             return this;
         }

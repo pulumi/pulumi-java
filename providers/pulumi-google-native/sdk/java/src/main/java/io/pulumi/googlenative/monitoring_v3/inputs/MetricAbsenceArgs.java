@@ -109,42 +109,42 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(@Nullable Input<List<AggregationArgs>> aggregations) {
+        public Builder aggregations(@Nullable Input<List<AggregationArgs>> aggregations) {
             this.aggregations = aggregations;
             return this;
         }
 
-        public Builder setAggregations(@Nullable List<AggregationArgs> aggregations) {
+        public Builder aggregations(@Nullable List<AggregationArgs> aggregations) {
             this.aggregations = Input.ofNullable(aggregations);
             return this;
         }
 
-        public Builder setDuration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Input<String> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setFilter(Input<String> filter) {
+        public Builder filter(Input<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder setTrigger(@Nullable Input<TriggerArgs> trigger) {
+        public Builder trigger(@Nullable Input<TriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setTrigger(@Nullable TriggerArgs trigger) {
+        public Builder trigger(@Nullable TriggerArgs trigger) {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }

@@ -88,32 +88,32 @@ public final class BucketReplicationConfigState extends io.pulumi.resources.Reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<BucketReplicationConfigRuleGetArgs>> rules) {
+        public Builder rules(@Nullable Input<List<BucketReplicationConfigRuleGetArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<BucketReplicationConfigRuleGetArgs> rules) {
+        public Builder rules(@Nullable List<BucketReplicationConfigRuleGetArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

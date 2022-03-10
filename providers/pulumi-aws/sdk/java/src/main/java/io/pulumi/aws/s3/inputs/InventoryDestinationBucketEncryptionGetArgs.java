@@ -71,22 +71,22 @@ public final class InventoryDestinationBucketEncryptionGetArgs extends io.pulumi
     	      this.sseS3 = defaults.sseS3;
         }
 
-        public Builder setSseKms(@Nullable Input<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms) {
+        public Builder sseKms(@Nullable Input<InventoryDestinationBucketEncryptionSseKmsGetArgs> sseKms) {
             this.sseKms = sseKms;
             return this;
         }
 
-        public Builder setSseKms(@Nullable InventoryDestinationBucketEncryptionSseKmsGetArgs sseKms) {
+        public Builder sseKms(@Nullable InventoryDestinationBucketEncryptionSseKmsGetArgs sseKms) {
             this.sseKms = Input.ofNullable(sseKms);
             return this;
         }
 
-        public Builder setSseS3(@Nullable Input<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3) {
+        public Builder sseS3(@Nullable Input<InventoryDestinationBucketEncryptionSseS3GetArgs> sseS3) {
             this.sseS3 = sseS3;
             return this;
         }
 
-        public Builder setSseS3(@Nullable InventoryDestinationBucketEncryptionSseS3GetArgs sseS3) {
+        public Builder sseS3(@Nullable InventoryDestinationBucketEncryptionSseS3GetArgs sseS3) {
             this.sseS3 = Input.ofNullable(sseS3);
             return this;
         }

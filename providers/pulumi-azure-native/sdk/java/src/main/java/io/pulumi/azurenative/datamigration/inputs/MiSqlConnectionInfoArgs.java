@@ -107,42 +107,42 @@ public final class MiSqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     	      this.userName = defaults.userName;
         }
 
-        public Builder setManagedInstanceResourceId(Input<String> managedInstanceResourceId) {
+        public Builder managedInstanceResourceId(Input<String> managedInstanceResourceId) {
             this.managedInstanceResourceId = Objects.requireNonNull(managedInstanceResourceId);
             return this;
         }
 
-        public Builder setManagedInstanceResourceId(String managedInstanceResourceId) {
+        public Builder managedInstanceResourceId(String managedInstanceResourceId) {
             this.managedInstanceResourceId = Input.of(Objects.requireNonNull(managedInstanceResourceId));
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

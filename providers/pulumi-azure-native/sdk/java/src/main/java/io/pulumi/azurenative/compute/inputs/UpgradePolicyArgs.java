@@ -92,32 +92,32 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rollingUpgradePolicy = defaults.rollingUpgradePolicy;
         }
 
-        public Builder setAutomaticOSUpgradePolicy(@Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy) {
+        public Builder automaticOSUpgradePolicy(@Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy) {
             this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
 
-        public Builder setAutomaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyArgs automaticOSUpgradePolicy) {
+        public Builder automaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyArgs automaticOSUpgradePolicy) {
             this.automaticOSUpgradePolicy = Input.ofNullable(automaticOSUpgradePolicy);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<UpgradeMode> mode) {
+        public Builder mode(@Nullable Input<UpgradeMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable UpgradeMode mode) {
+        public Builder mode(@Nullable UpgradeMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setRollingUpgradePolicy(@Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
+        public Builder rollingUpgradePolicy(@Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }
 
-        public Builder setRollingUpgradePolicy(@Nullable RollingUpgradePolicyArgs rollingUpgradePolicy) {
+        public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyArgs rollingUpgradePolicy) {
             this.rollingUpgradePolicy = Input.ofNullable(rollingUpgradePolicy);
             return this;
         }

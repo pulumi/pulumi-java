@@ -103,22 +103,22 @@ public final class GetLoggingConfigurationResult {
     	      this.redactedFields = defaults.redactedFields;
         }
 
-        public Builder setLogDestinationConfigs(@Nullable List<String> logDestinationConfigs) {
+        public Builder logDestinationConfigs(@Nullable List<String> logDestinationConfigs) {
             this.logDestinationConfigs = logDestinationConfigs;
             return this;
         }
 
-        public Builder setLoggingFilter(@Nullable LoggingFilterProperties loggingFilter) {
+        public Builder loggingFilter(@Nullable LoggingFilterProperties loggingFilter) {
             this.loggingFilter = loggingFilter;
             return this;
         }
 
-        public Builder setManagedByFirewallManager(@Nullable Boolean managedByFirewallManager) {
+        public Builder managedByFirewallManager(@Nullable Boolean managedByFirewallManager) {
             this.managedByFirewallManager = managedByFirewallManager;
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable List<LoggingConfigurationFieldToMatch> redactedFields) {
+        public Builder redactedFields(@Nullable List<LoggingConfigurationFieldToMatch> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }

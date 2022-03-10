@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse ex
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items) {
+        public Builder items(List<GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

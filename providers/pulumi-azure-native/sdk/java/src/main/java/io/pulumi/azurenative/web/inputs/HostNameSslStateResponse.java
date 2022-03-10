@@ -139,32 +139,32 @@ public final class HostNameSslStateResponse extends io.pulumi.resources.InvokeAr
     	      this.virtualIP = defaults.virtualIP;
         }
 
-        public Builder setHostType(@Nullable String hostType) {
+        public Builder hostType(@Nullable String hostType) {
             this.hostType = hostType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSslState(@Nullable String sslState) {
+        public Builder sslState(@Nullable String sslState) {
             this.sslState = sslState;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setToUpdate(@Nullable Boolean toUpdate) {
+        public Builder toUpdate(@Nullable Boolean toUpdate) {
             this.toUpdate = toUpdate;
             return this;
         }
 
-        public Builder setVirtualIP(@Nullable String virtualIP) {
+        public Builder virtualIP(@Nullable String virtualIP) {
             this.virtualIP = virtualIP;
             return this;
         }

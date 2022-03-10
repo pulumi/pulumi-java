@@ -52,12 +52,12 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
     	      this.realtimeMetricsSubscriptionStatus = defaults.realtimeMetricsSubscriptionStatus;
         }
 
-        public Builder setRealtimeMetricsSubscriptionStatus(Input<String> realtimeMetricsSubscriptionStatus) {
+        public Builder realtimeMetricsSubscriptionStatus(Input<String> realtimeMetricsSubscriptionStatus) {
             this.realtimeMetricsSubscriptionStatus = Objects.requireNonNull(realtimeMetricsSubscriptionStatus);
             return this;
         }
 
-        public Builder setRealtimeMetricsSubscriptionStatus(String realtimeMetricsSubscriptionStatus) {
+        public Builder realtimeMetricsSubscriptionStatus(String realtimeMetricsSubscriptionStatus) {
             this.realtimeMetricsSubscriptionStatus = Input.of(Objects.requireNonNull(realtimeMetricsSubscriptionStatus));
             return this;
         }

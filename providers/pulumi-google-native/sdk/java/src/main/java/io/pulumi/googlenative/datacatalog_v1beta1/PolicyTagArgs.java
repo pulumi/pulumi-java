@@ -122,62 +122,62 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taxonomyId = defaults.taxonomyId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setParentPolicyTag(@Nullable Input<String> parentPolicyTag) {
+        public Builder parentPolicyTag(@Nullable Input<String> parentPolicyTag) {
             this.parentPolicyTag = parentPolicyTag;
             return this;
         }
 
-        public Builder setParentPolicyTag(@Nullable String parentPolicyTag) {
+        public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
             this.parentPolicyTag = Input.ofNullable(parentPolicyTag);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTaxonomyId(Input<String> taxonomyId) {
+        public Builder taxonomyId(Input<String> taxonomyId) {
             this.taxonomyId = Objects.requireNonNull(taxonomyId);
             return this;
         }
 
-        public Builder setTaxonomyId(String taxonomyId) {
+        public Builder taxonomyId(String taxonomyId) {
             this.taxonomyId = Input.of(Objects.requireNonNull(taxonomyId));
             return this;
         }

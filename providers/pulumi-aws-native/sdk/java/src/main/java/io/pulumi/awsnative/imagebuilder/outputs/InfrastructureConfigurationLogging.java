@@ -42,7 +42,7 @@ public final class InfrastructureConfigurationLogging {
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder setS3Logs(@Nullable InfrastructureConfigurationS3Logs s3Logs) {
+        public Builder s3Logs(@Nullable InfrastructureConfigurationS3Logs s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }

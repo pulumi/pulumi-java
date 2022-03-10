@@ -62,22 +62,22 @@ public final class FilterNumberFilterArgs extends io.pulumi.resources.ResourceAr
     	      this.upperInclusive = defaults.upperInclusive;
         }
 
-        public Builder setLowerInclusive(@Nullable Input<Double> lowerInclusive) {
+        public Builder lowerInclusive(@Nullable Input<Double> lowerInclusive) {
             this.lowerInclusive = lowerInclusive;
             return this;
         }
 
-        public Builder setLowerInclusive(@Nullable Double lowerInclusive) {
+        public Builder lowerInclusive(@Nullable Double lowerInclusive) {
             this.lowerInclusive = Input.ofNullable(lowerInclusive);
             return this;
         }
 
-        public Builder setUpperInclusive(@Nullable Input<Double> upperInclusive) {
+        public Builder upperInclusive(@Nullable Input<Double> upperInclusive) {
             this.upperInclusive = upperInclusive;
             return this;
         }
 
-        public Builder setUpperInclusive(@Nullable Double upperInclusive) {
+        public Builder upperInclusive(@Nullable Double upperInclusive) {
             this.upperInclusive = Input.ofNullable(upperInclusive);
             return this;
         }

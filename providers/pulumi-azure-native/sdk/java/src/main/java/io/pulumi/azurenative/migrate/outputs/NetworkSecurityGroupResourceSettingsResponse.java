@@ -86,17 +86,17 @@ public final class NetworkSecurityGroupResourceSettingsResponse {
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setSecurityRules(@Nullable List<NsgSecurityRuleResponse> securityRules) {
+        public Builder securityRules(@Nullable List<NsgSecurityRuleResponse> securityRules) {
             this.securityRules = securityRules;
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }

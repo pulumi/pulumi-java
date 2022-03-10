@@ -75,12 +75,12 @@ public final class CustomCopyOptionResponse extends io.pulumi.resources.InvokeAr
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

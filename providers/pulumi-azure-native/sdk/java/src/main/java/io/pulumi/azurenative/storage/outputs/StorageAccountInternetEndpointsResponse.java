@@ -97,22 +97,22 @@ public final class StorageAccountInternetEndpointsResponse {
     	      this.web = defaults.web;
         }
 
-        public Builder setBlob(String blob) {
+        public Builder blob(String blob) {
             this.blob = Objects.requireNonNull(blob);
             return this;
         }
 
-        public Builder setDfs(String dfs) {
+        public Builder dfs(String dfs) {
             this.dfs = Objects.requireNonNull(dfs);
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setWeb(String web) {
+        public Builder web(String web) {
             this.web = Objects.requireNonNull(web);
             return this;
         }

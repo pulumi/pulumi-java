@@ -132,32 +132,32 @@ public final class HardwareProfileResponse {
     	      this.numCoresPerSocket = defaults.numCoresPerSocket;
         }
 
-        public Builder setCpuHotAddEnabled(Boolean cpuHotAddEnabled) {
+        public Builder cpuHotAddEnabled(Boolean cpuHotAddEnabled) {
             this.cpuHotAddEnabled = Objects.requireNonNull(cpuHotAddEnabled);
             return this;
         }
 
-        public Builder setCpuHotRemoveEnabled(Boolean cpuHotRemoveEnabled) {
+        public Builder cpuHotRemoveEnabled(Boolean cpuHotRemoveEnabled) {
             this.cpuHotRemoveEnabled = Objects.requireNonNull(cpuHotRemoveEnabled);
             return this;
         }
 
-        public Builder setMemoryHotAddEnabled(Boolean memoryHotAddEnabled) {
+        public Builder memoryHotAddEnabled(Boolean memoryHotAddEnabled) {
             this.memoryHotAddEnabled = Objects.requireNonNull(memoryHotAddEnabled);
             return this;
         }
 
-        public Builder setMemorySizeMB(@Nullable Integer memorySizeMB) {
+        public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
             this.memorySizeMB = memorySizeMB;
             return this;
         }
 
-        public Builder setNumCPUs(@Nullable Integer numCPUs) {
+        public Builder numCPUs(@Nullable Integer numCPUs) {
             this.numCPUs = numCPUs;
             return this;
         }
 
-        public Builder setNumCoresPerSocket(@Nullable Integer numCoresPerSocket) {
+        public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
         }

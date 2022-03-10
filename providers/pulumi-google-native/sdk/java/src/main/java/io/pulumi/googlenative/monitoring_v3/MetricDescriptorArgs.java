@@ -232,122 +232,122 @@ public final class MetricDescriptorArgs extends io.pulumi.resources.ResourceArgs
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<LabelDescriptorArgs>> labels) {
+        public Builder labels(@Nullable Input<List<LabelDescriptorArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<LabelDescriptorArgs> labels) {
+        public Builder labels(@Nullable List<LabelDescriptorArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLaunchStage(@Nullable Input<MetricDescriptorLaunchStage> launchStage) {
+        public Builder launchStage(@Nullable Input<MetricDescriptorLaunchStage> launchStage) {
             this.launchStage = launchStage;
             return this;
         }
 
-        public Builder setLaunchStage(@Nullable MetricDescriptorLaunchStage launchStage) {
+        public Builder launchStage(@Nullable MetricDescriptorLaunchStage launchStage) {
             this.launchStage = Input.ofNullable(launchStage);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<MetricDescriptorMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<MetricDescriptorMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable MetricDescriptorMetadataArgs metadata) {
+        public Builder metadata(@Nullable MetricDescriptorMetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMetricKind(@Nullable Input<MetricDescriptorMetricKind> metricKind) {
+        public Builder metricKind(@Nullable Input<MetricDescriptorMetricKind> metricKind) {
             this.metricKind = metricKind;
             return this;
         }
 
-        public Builder setMetricKind(@Nullable MetricDescriptorMetricKind metricKind) {
+        public Builder metricKind(@Nullable MetricDescriptorMetricKind metricKind) {
             this.metricKind = Input.ofNullable(metricKind);
             return this;
         }
 
-        public Builder setMonitoredResourceTypes(@Nullable Input<List<String>> monitoredResourceTypes) {
+        public Builder monitoredResourceTypes(@Nullable Input<List<String>> monitoredResourceTypes) {
             this.monitoredResourceTypes = monitoredResourceTypes;
             return this;
         }
 
-        public Builder setMonitoredResourceTypes(@Nullable List<String> monitoredResourceTypes) {
+        public Builder monitoredResourceTypes(@Nullable List<String> monitoredResourceTypes) {
             this.monitoredResourceTypes = Input.ofNullable(monitoredResourceTypes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }
 
-        public Builder setValueType(@Nullable Input<MetricDescriptorValueType> valueType) {
+        public Builder valueType(@Nullable Input<MetricDescriptorValueType> valueType) {
             this.valueType = valueType;
             return this;
         }
 
-        public Builder setValueType(@Nullable MetricDescriptorValueType valueType) {
+        public Builder valueType(@Nullable MetricDescriptorValueType valueType) {
             this.valueType = Input.ofNullable(valueType);
             return this;
         }

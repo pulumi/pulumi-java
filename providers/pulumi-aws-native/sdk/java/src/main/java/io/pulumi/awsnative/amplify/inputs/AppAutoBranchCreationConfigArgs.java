@@ -163,102 +163,102 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
     	      this.stage = defaults.stage;
         }
 
-        public Builder setAutoBranchCreationPatterns(@Nullable Input<List<String>> autoBranchCreationPatterns) {
+        public Builder autoBranchCreationPatterns(@Nullable Input<List<String>> autoBranchCreationPatterns) {
             this.autoBranchCreationPatterns = autoBranchCreationPatterns;
             return this;
         }
 
-        public Builder setAutoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
+        public Builder autoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
             this.autoBranchCreationPatterns = Input.ofNullable(autoBranchCreationPatterns);
             return this;
         }
 
-        public Builder setBasicAuthConfig(@Nullable Input<AppBasicAuthConfigArgs> basicAuthConfig) {
+        public Builder basicAuthConfig(@Nullable Input<AppBasicAuthConfigArgs> basicAuthConfig) {
             this.basicAuthConfig = basicAuthConfig;
             return this;
         }
 
-        public Builder setBasicAuthConfig(@Nullable AppBasicAuthConfigArgs basicAuthConfig) {
+        public Builder basicAuthConfig(@Nullable AppBasicAuthConfigArgs basicAuthConfig) {
             this.basicAuthConfig = Input.ofNullable(basicAuthConfig);
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable Input<String> buildSpec) {
+        public Builder buildSpec(@Nullable Input<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = Input.ofNullable(buildSpec);
             return this;
         }
 
-        public Builder setEnableAutoBranchCreation(@Nullable Input<Boolean> enableAutoBranchCreation) {
+        public Builder enableAutoBranchCreation(@Nullable Input<Boolean> enableAutoBranchCreation) {
             this.enableAutoBranchCreation = enableAutoBranchCreation;
             return this;
         }
 
-        public Builder setEnableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
+        public Builder enableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
             this.enableAutoBranchCreation = Input.ofNullable(enableAutoBranchCreation);
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Boolean enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = Input.ofNullable(enableAutoBuild);
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = Input.ofNullable(enablePerformanceMode);
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = Input.ofNullable(enablePullRequestPreview);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<AppEnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<AppEnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<AppEnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<AppEnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = Input.ofNullable(pullRequestEnvironmentName);
             return this;
         }
 
-        public Builder setStage(@Nullable Input<AppAutoBranchCreationConfigStage> stage) {
+        public Builder stage(@Nullable Input<AppAutoBranchCreationConfigStage> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable AppAutoBranchCreationConfigStage stage) {
+        public Builder stage(@Nullable AppAutoBranchCreationConfigStage stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }

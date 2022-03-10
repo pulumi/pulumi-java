@@ -173,42 +173,42 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
     	      this.startingIntents = defaults.startingIntents;
         }
 
-        public Builder setAppApk(FileReferenceResponse appApk) {
+        public Builder appApk(FileReferenceResponse appApk) {
             this.appApk = Objects.requireNonNull(appApk);
             return this;
         }
 
-        public Builder setAppBundle(AppBundleResponse appBundle) {
+        public Builder appBundle(AppBundleResponse appBundle) {
             this.appBundle = Objects.requireNonNull(appBundle);
             return this;
         }
 
-        public Builder setAppInitialActivity(String appInitialActivity) {
+        public Builder appInitialActivity(String appInitialActivity) {
             this.appInitialActivity = Objects.requireNonNull(appInitialActivity);
             return this;
         }
 
-        public Builder setAppPackageId(String appPackageId) {
+        public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
             return this;
         }
 
-        public Builder setRoboDirectives(List<RoboDirectiveResponse> roboDirectives) {
+        public Builder roboDirectives(List<RoboDirectiveResponse> roboDirectives) {
             this.roboDirectives = Objects.requireNonNull(roboDirectives);
             return this;
         }
 
-        public Builder setRoboMode(String roboMode) {
+        public Builder roboMode(String roboMode) {
             this.roboMode = Objects.requireNonNull(roboMode);
             return this;
         }
 
-        public Builder setRoboScript(FileReferenceResponse roboScript) {
+        public Builder roboScript(FileReferenceResponse roboScript) {
             this.roboScript = Objects.requireNonNull(roboScript);
             return this;
         }
 
-        public Builder setStartingIntents(List<RoboStartingIntentResponse> startingIntents) {
+        public Builder startingIntents(List<RoboStartingIntentResponse> startingIntents) {
             this.startingIntents = Objects.requireNonNull(startingIntents);
             return this;
         }

@@ -238,72 +238,72 @@ public final class GetDedicatedHostResult {
     	      this.totalVcpus = defaults.totalVcpus;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAutoPlacement(String autoPlacement) {
+        public Builder autoPlacement(String autoPlacement) {
             this.autoPlacement = Objects.requireNonNull(autoPlacement);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setCores(Integer cores) {
+        public Builder cores(Integer cores) {
             this.cores = Objects.requireNonNull(cores);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetDedicatedHostFilter> filters) {
+        public Builder filters(@Nullable List<GetDedicatedHostFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setHostId(String hostId) {
+        public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
 
-        public Builder setHostRecovery(String hostRecovery) {
+        public Builder hostRecovery(String hostRecovery) {
             this.hostRecovery = Objects.requireNonNull(hostRecovery);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceFamily(String instanceFamily) {
+        public Builder instanceFamily(String instanceFamily) {
             this.instanceFamily = Objects.requireNonNull(instanceFamily);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setSockets(Integer sockets) {
+        public Builder sockets(Integer sockets) {
             this.sockets = Objects.requireNonNull(sockets);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTotalVcpus(Integer totalVcpus) {
+        public Builder totalVcpus(Integer totalVcpus) {
             this.totalVcpus = Objects.requireNonNull(totalVcpus);
             return this;
         }

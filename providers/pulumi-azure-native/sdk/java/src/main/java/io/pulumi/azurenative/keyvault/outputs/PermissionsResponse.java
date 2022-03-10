@@ -99,22 +99,22 @@ public final class PermissionsResponse {
     	      this.storage = defaults.storage;
         }
 
-        public Builder setCertificates(@Nullable List<String> certificates) {
+        public Builder certificates(@Nullable List<String> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<String> keys) {
+        public Builder keys(@Nullable List<String> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<String> secrets) {
+        public Builder secrets(@Nullable List<String> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setStorage(@Nullable List<String> storage) {
+        public Builder storage(@Nullable List<String> storage) {
             this.storage = storage;
             return this;
         }

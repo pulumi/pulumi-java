@@ -88,32 +88,32 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs extends io.pul
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

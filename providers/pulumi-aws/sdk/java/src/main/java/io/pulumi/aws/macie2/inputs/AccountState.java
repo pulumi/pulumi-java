@@ -118,52 +118,52 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable String findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
             this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder setServiceRole(@Nullable Input<String> serviceRole) {
+        public Builder serviceRole(@Nullable Input<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
-        public Builder setServiceRole(@Nullable String serviceRole) {
+        public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Input.ofNullable(serviceRole);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable Input<String> updatedAt) {
+        public Builder updatedAt(@Nullable Input<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable String updatedAt) {
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = Input.ofNullable(updatedAt);
             return this;
         }

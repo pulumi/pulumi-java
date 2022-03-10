@@ -247,67 +247,67 @@ public final class FirehoseDeliveryStreamElasticsearchConfiguration {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setBufferingInterval(@Nullable Integer bufferingInterval) {
+        public Builder bufferingInterval(@Nullable Integer bufferingInterval) {
             this.bufferingInterval = bufferingInterval;
             return this;
         }
 
-        public Builder setBufferingSize(@Nullable Integer bufferingSize) {
+        public Builder bufferingSize(@Nullable Integer bufferingSize) {
             this.bufferingSize = bufferingSize;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setClusterEndpoint(@Nullable String clusterEndpoint) {
+        public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
 
-        public Builder setDomainArn(@Nullable String domainArn) {
+        public Builder domainArn(@Nullable String domainArn) {
             this.domainArn = domainArn;
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexRotationPeriod(@Nullable String indexRotationPeriod) {
+        public Builder indexRotationPeriod(@Nullable String indexRotationPeriod) {
             this.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRetryDuration(@Nullable Integer retryDuration) {
+        public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig vpcConfig) {
+        public Builder vpcConfig(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }

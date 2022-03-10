@@ -50,12 +50,12 @@ public final class StandardSqlStructTypeArgs extends io.pulumi.resources.Resourc
     	      this.fields = defaults.fields;
         }
 
-        public Builder setFields(@Nullable Input<List<StandardSqlFieldArgs>> fields) {
+        public Builder fields(@Nullable Input<List<StandardSqlFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<StandardSqlFieldArgs> fields) {
+        public Builder fields(@Nullable List<StandardSqlFieldArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }

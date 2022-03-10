@@ -70,12 +70,12 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
     	      this.encryptionAtRests = defaults.encryptionAtRests;
         }
 
-        public Builder setConnectionPasswordEncryptions(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions) {
+        public Builder connectionPasswordEncryptions(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions) {
             this.connectionPasswordEncryptions = Objects.requireNonNull(connectionPasswordEncryptions);
             return this;
         }
 
-        public Builder setEncryptionAtRests(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
+        public Builder encryptionAtRests(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
             this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ManagedZoneServiceDirectoryConfig {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setNamespace(ManagedZoneServiceDirectoryConfigNamespace namespace) {
+        public Builder namespace(ManagedZoneServiceDirectoryConfigNamespace namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

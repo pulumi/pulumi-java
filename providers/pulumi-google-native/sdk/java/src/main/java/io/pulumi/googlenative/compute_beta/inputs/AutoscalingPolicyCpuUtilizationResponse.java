@@ -73,12 +73,12 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends io.pulumi.res
     	      this.utilizationTarget = defaults.utilizationTarget;
         }
 
-        public Builder setPredictiveMethod(String predictiveMethod) {
+        public Builder predictiveMethod(String predictiveMethod) {
             this.predictiveMethod = Objects.requireNonNull(predictiveMethod);
             return this;
         }
 
-        public Builder setUtilizationTarget(Double utilizationTarget) {
+        public Builder utilizationTarget(Double utilizationTarget) {
             this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
             return this;
         }

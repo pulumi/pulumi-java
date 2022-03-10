@@ -184,92 +184,92 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setCondition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Input<String> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setConditionVersion(@Nullable Input<String> conditionVersion) {
+        public Builder conditionVersion(@Nullable Input<String> conditionVersion) {
             this.conditionVersion = conditionVersion;
             return this;
         }
 
-        public Builder setConditionVersion(@Nullable String conditionVersion) {
+        public Builder conditionVersion(@Nullable String conditionVersion) {
             this.conditionVersion = Input.ofNullable(conditionVersion);
             return this;
         }
 
-        public Builder setDelegatedManagedIdentityResourceId(@Nullable Input<String> delegatedManagedIdentityResourceId) {
+        public Builder delegatedManagedIdentityResourceId(@Nullable Input<String> delegatedManagedIdentityResourceId) {
             this.delegatedManagedIdentityResourceId = delegatedManagedIdentityResourceId;
             return this;
         }
 
-        public Builder setDelegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
+        public Builder delegatedManagedIdentityResourceId(@Nullable String delegatedManagedIdentityResourceId) {
             this.delegatedManagedIdentityResourceId = Input.ofNullable(delegatedManagedIdentityResourceId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable Input<Either<String,PrincipalType>> principalType) {
+        public Builder principalType(@Nullable Input<Either<String,PrincipalType>> principalType) {
             this.principalType = principalType;
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable Either<String,PrincipalType> principalType) {
+        public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
             this.principalType = Input.ofNullable(principalType);
             return this;
         }
 
-        public Builder setRoleAssignmentName(@Nullable Input<String> roleAssignmentName) {
+        public Builder roleAssignmentName(@Nullable Input<String> roleAssignmentName) {
             this.roleAssignmentName = roleAssignmentName;
             return this;
         }
 
-        public Builder setRoleAssignmentName(@Nullable String roleAssignmentName) {
+        public Builder roleAssignmentName(@Nullable String roleAssignmentName) {
             this.roleAssignmentName = Input.ofNullable(roleAssignmentName);
             return this;
         }
 
-        public Builder setRoleDefinitionId(Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(Input<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

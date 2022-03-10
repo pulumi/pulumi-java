@@ -88,32 +88,32 @@ public final class WorkflowStepCopyStepDetailsPropertiesArgs extends io.pulumi.r
     	      this.overwriteExisting = defaults.overwriteExisting;
         }
 
-        public Builder setDestinationFileLocation(@Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation) {
+        public Builder destinationFileLocation(@Nullable Input<WorkflowInputFileLocationArgs> destinationFileLocation) {
             this.destinationFileLocation = destinationFileLocation;
             return this;
         }
 
-        public Builder setDestinationFileLocation(@Nullable WorkflowInputFileLocationArgs destinationFileLocation) {
+        public Builder destinationFileLocation(@Nullable WorkflowInputFileLocationArgs destinationFileLocation) {
             this.destinationFileLocation = Input.ofNullable(destinationFileLocation);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOverwriteExisting(@Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
+        public Builder overwriteExisting(@Nullable Input<WorkflowStepCopyStepDetailsPropertiesOverwriteExisting> overwriteExisting) {
             this.overwriteExisting = overwriteExisting;
             return this;
         }
 
-        public Builder setOverwriteExisting(@Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
+        public Builder overwriteExisting(@Nullable WorkflowStepCopyStepDetailsPropertiesOverwriteExisting overwriteExisting) {
             this.overwriteExisting = Input.ofNullable(overwriteExisting);
             return this;
         }

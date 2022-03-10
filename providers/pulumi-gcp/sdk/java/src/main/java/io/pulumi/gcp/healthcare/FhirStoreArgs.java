@@ -241,102 +241,102 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setDataset(Input<String> dataset) {
+        public Builder dataset(Input<String> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDataset(String dataset) {
+        public Builder dataset(String dataset) {
             this.dataset = Input.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder setDisableReferentialIntegrity(@Nullable Input<Boolean> disableReferentialIntegrity) {
+        public Builder disableReferentialIntegrity(@Nullable Input<Boolean> disableReferentialIntegrity) {
             this.disableReferentialIntegrity = disableReferentialIntegrity;
             return this;
         }
 
-        public Builder setDisableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
+        public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
             this.disableReferentialIntegrity = Input.ofNullable(disableReferentialIntegrity);
             return this;
         }
 
-        public Builder setDisableResourceVersioning(@Nullable Input<Boolean> disableResourceVersioning) {
+        public Builder disableResourceVersioning(@Nullable Input<Boolean> disableResourceVersioning) {
             this.disableResourceVersioning = disableResourceVersioning;
             return this;
         }
 
-        public Builder setDisableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
+        public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
             this.disableResourceVersioning = Input.ofNullable(disableResourceVersioning);
             return this;
         }
 
-        public Builder setEnableHistoryImport(@Nullable Input<Boolean> enableHistoryImport) {
+        public Builder enableHistoryImport(@Nullable Input<Boolean> enableHistoryImport) {
             this.enableHistoryImport = enableHistoryImport;
             return this;
         }
 
-        public Builder setEnableHistoryImport(@Nullable Boolean enableHistoryImport) {
+        public Builder enableHistoryImport(@Nullable Boolean enableHistoryImport) {
             this.enableHistoryImport = Input.ofNullable(enableHistoryImport);
             return this;
         }
 
-        public Builder setEnableUpdateCreate(@Nullable Input<Boolean> enableUpdateCreate) {
+        public Builder enableUpdateCreate(@Nullable Input<Boolean> enableUpdateCreate) {
             this.enableUpdateCreate = enableUpdateCreate;
             return this;
         }
 
-        public Builder setEnableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
+        public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
             this.enableUpdateCreate = Input.ofNullable(enableUpdateCreate);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<FhirStoreNotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<FhirStoreNotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable FhirStoreNotificationConfigArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable FhirStoreNotificationConfigArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setStreamConfigs(@Nullable Input<List<FhirStoreStreamConfigArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Input<List<FhirStoreStreamConfigArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
 
-        public Builder setStreamConfigs(@Nullable List<FhirStoreStreamConfigArgs> streamConfigs) {
+        public Builder streamConfigs(@Nullable List<FhirStoreStreamConfigArgs> streamConfigs) {
             this.streamConfigs = Input.ofNullable(streamConfigs);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

@@ -153,72 +153,72 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
     	      this.synchronizationTime = defaults.synchronizationTime;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setRecurrenceInterval(Input<Either<String,RecurrenceInterval>> recurrenceInterval) {
+        public Builder recurrenceInterval(Input<Either<String,RecurrenceInterval>> recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
 
-        public Builder setRecurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
+        public Builder recurrenceInterval(Either<String,RecurrenceInterval> recurrenceInterval) {
             this.recurrenceInterval = Input.of(Objects.requireNonNull(recurrenceInterval));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareName(Input<String> shareName) {
+        public Builder shareName(Input<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Input.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder setSynchronizationSettingName(@Nullable Input<String> synchronizationSettingName) {
+        public Builder synchronizationSettingName(@Nullable Input<String> synchronizationSettingName) {
             this.synchronizationSettingName = synchronizationSettingName;
             return this;
         }
 
-        public Builder setSynchronizationSettingName(@Nullable String synchronizationSettingName) {
+        public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
             this.synchronizationSettingName = Input.ofNullable(synchronizationSettingName);
             return this;
         }
 
-        public Builder setSynchronizationTime(Input<String> synchronizationTime) {
+        public Builder synchronizationTime(Input<String> synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
 
-        public Builder setSynchronizationTime(String synchronizationTime) {
+        public Builder synchronizationTime(String synchronizationTime) {
             this.synchronizationTime = Input.of(Objects.requireNonNull(synchronizationTime));
             return this;
         }

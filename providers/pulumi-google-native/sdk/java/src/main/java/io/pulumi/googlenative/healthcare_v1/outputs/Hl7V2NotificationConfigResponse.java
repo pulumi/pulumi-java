@@ -65,12 +65,12 @@ public final class Hl7V2NotificationConfigResponse {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

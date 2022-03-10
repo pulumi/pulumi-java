@@ -160,72 +160,72 @@ public final class BlobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFolderPath(Input<String> folderPath) {
+        public Builder folderPath(Input<String> folderPath) {
             this.folderPath = Objects.requireNonNull(folderPath);
             return this;
         }
 
-        public Builder setFolderPath(String folderPath) {
+        public Builder folderPath(String folderPath) {
             this.folderPath = Input.of(Objects.requireNonNull(folderPath));
             return this;
         }
 
-        public Builder setLinkedService(Input<LinkedServiceReferenceArgs> linkedService) {
+        public Builder linkedService(Input<LinkedServiceReferenceArgs> linkedService) {
             this.linkedService = Objects.requireNonNull(linkedService);
             return this;
         }
 
-        public Builder setLinkedService(LinkedServiceReferenceArgs linkedService) {
+        public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
             this.linkedService = Input.of(Objects.requireNonNull(linkedService));
             return this;
         }
 
-        public Builder setMaxConcurrency(Input<Integer> maxConcurrency) {
+        public Builder maxConcurrency(Input<Integer> maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
 
-        public Builder setMaxConcurrency(Integer maxConcurrency) {
+        public Builder maxConcurrency(Integer maxConcurrency) {
             this.maxConcurrency = Input.of(Objects.requireNonNull(maxConcurrency));
             return this;
         }
 
-        public Builder setPipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
+        public Builder pipelines(@Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
-        public Builder setPipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
+        public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
             this.pipelines = Input.ofNullable(pipelines);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -71,22 +71,22 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     	      this.regexPatternStrings = defaults.regexPatternStrings;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegexPatternStrings(@Nullable Input<List<String>> regexPatternStrings) {
+        public Builder regexPatternStrings(@Nullable Input<List<String>> regexPatternStrings) {
             this.regexPatternStrings = regexPatternStrings;
             return this;
         }
 
-        public Builder setRegexPatternStrings(@Nullable List<String> regexPatternStrings) {
+        public Builder regexPatternStrings(@Nullable List<String> regexPatternStrings) {
             this.regexPatternStrings = Input.ofNullable(regexPatternStrings);
             return this;
         }

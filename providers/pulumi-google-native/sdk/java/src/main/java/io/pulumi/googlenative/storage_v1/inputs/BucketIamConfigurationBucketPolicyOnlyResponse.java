@@ -73,12 +73,12 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pul
     	      this.lockedTime = defaults.lockedTime;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLockedTime(String lockedTime) {
+        public Builder lockedTime(String lockedTime) {
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
         }

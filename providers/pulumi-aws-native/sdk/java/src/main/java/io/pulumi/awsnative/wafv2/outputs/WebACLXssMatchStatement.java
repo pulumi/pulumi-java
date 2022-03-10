@@ -51,12 +51,12 @@ public final class WebACLXssMatchStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(WebACLFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setTextTransformations(List<WebACLTextTransformation> textTransformations) {
+        public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

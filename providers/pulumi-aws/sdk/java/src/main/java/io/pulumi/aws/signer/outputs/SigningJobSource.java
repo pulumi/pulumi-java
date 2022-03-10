@@ -48,7 +48,7 @@ public final class SigningJobSource {
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setS3(SigningJobSourceS3 s3) {
+        public Builder s3(SigningJobSourceS3 s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }

@@ -86,17 +86,17 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
     	      this.token = defaults.token;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

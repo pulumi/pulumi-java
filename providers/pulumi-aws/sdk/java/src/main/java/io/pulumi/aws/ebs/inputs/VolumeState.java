@@ -245,132 +245,132 @@ public final class VolumeState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setIops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Input<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = Input.ofNullable(iops);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setMultiAttachEnabled(@Nullable Input<Boolean> multiAttachEnabled) {
+        public Builder multiAttachEnabled(@Nullable Input<Boolean> multiAttachEnabled) {
             this.multiAttachEnabled = multiAttachEnabled;
             return this;
         }
 
-        public Builder setMultiAttachEnabled(@Nullable Boolean multiAttachEnabled) {
+        public Builder multiAttachEnabled(@Nullable Boolean multiAttachEnabled) {
             this.multiAttachEnabled = Input.ofNullable(multiAttachEnabled);
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Input<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable String outpostArn) {
+        public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Input.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Input<Integer> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Input<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Input.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setThroughput(@Nullable Input<Integer> throughput) {
+        public Builder throughput(@Nullable Input<Integer> throughput) {
             this.throughput = throughput;
             return this;
         }
 
-        public Builder setThroughput(@Nullable Integer throughput) {
+        public Builder throughput(@Nullable Integer throughput) {
             this.throughput = Input.ofNullable(throughput);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

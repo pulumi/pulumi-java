@@ -285,77 +285,77 @@ public final class MongoDbLinkedServiceResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setAllowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
+        public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthSource(@Nullable Object authSource) {
+        public Builder authSource(@Nullable Object authSource) {
             this.authSource = authSource;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDatabaseName(Object databaseName) {
+        public Builder databaseName(Object databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Object enableSsl) {
+        public Builder enableSsl(@Nullable Object enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPort(@Nullable Object port) {
+        public Builder port(@Nullable Object port) {
             this.port = port;
             return this;
         }
 
-        public Builder setServer(Object server) {
+        public Builder server(Object server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
         }

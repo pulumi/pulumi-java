@@ -113,62 +113,62 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
     	      this.useChangeLog = defaults.useChangeLog;
         }
 
-        public Builder setCrawlComments(@Nullable Input<Boolean> crawlComments) {
+        public Builder crawlComments(@Nullable Input<Boolean> crawlComments) {
             this.crawlComments = crawlComments;
             return this;
         }
 
-        public Builder setCrawlComments(@Nullable Boolean crawlComments) {
+        public Builder crawlComments(@Nullable Boolean crawlComments) {
             this.crawlComments = Input.ofNullable(crawlComments);
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setUseChangeLog(@Nullable Input<Boolean> useChangeLog) {
+        public Builder useChangeLog(@Nullable Input<Boolean> useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }
 
-        public Builder setUseChangeLog(@Nullable Boolean useChangeLog) {
+        public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = Input.ofNullable(useChangeLog);
             return this;
         }

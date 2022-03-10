@@ -133,32 +133,32 @@ public final class ParameterContractResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

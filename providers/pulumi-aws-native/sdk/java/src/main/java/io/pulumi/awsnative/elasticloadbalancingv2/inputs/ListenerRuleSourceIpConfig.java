@@ -50,7 +50,7 @@ public final class ListenerRuleSourceIpConfig extends io.pulumi.resources.Invoke
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

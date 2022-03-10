@@ -66,22 +66,22 @@ public final class SkuResourcePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.skuSettings = defaults.skuSettings;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setSkuSettings(Input<List<SkuSettingArgs>> skuSettings) {
+        public Builder skuSettings(Input<List<SkuSettingArgs>> skuSettings) {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }
 
-        public Builder setSkuSettings(List<SkuSettingArgs> skuSettings) {
+        public Builder skuSettings(List<SkuSettingArgs> skuSettings) {
             this.skuSettings = Input.of(Objects.requireNonNull(skuSettings));
             return this;
         }

@@ -97,22 +97,22 @@ public final class CropResponse {
     	      this.topPixels = defaults.topPixels;
         }
 
-        public Builder setBottomPixels(Integer bottomPixels) {
+        public Builder bottomPixels(Integer bottomPixels) {
             this.bottomPixels = Objects.requireNonNull(bottomPixels);
             return this;
         }
 
-        public Builder setLeftPixels(Integer leftPixels) {
+        public Builder leftPixels(Integer leftPixels) {
             this.leftPixels = Objects.requireNonNull(leftPixels);
             return this;
         }
 
-        public Builder setRightPixels(Integer rightPixels) {
+        public Builder rightPixels(Integer rightPixels) {
             this.rightPixels = Objects.requireNonNull(rightPixels);
             return this;
         }
 
-        public Builder setTopPixels(Integer topPixels) {
+        public Builder topPixels(Integer topPixels) {
             this.topPixels = Objects.requireNonNull(topPixels);
             return this;
         }

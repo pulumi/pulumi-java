@@ -73,22 +73,22 @@ public final class LanguageCodePairArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetLanguageCode = defaults.targetLanguageCode;
         }
 
-        public Builder setSourceLanguageCode(Input<String> sourceLanguageCode) {
+        public Builder sourceLanguageCode(Input<String> sourceLanguageCode) {
             this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
             return this;
         }
 
-        public Builder setSourceLanguageCode(String sourceLanguageCode) {
+        public Builder sourceLanguageCode(String sourceLanguageCode) {
             this.sourceLanguageCode = Input.of(Objects.requireNonNull(sourceLanguageCode));
             return this;
         }
 
-        public Builder setTargetLanguageCode(Input<String> targetLanguageCode) {
+        public Builder targetLanguageCode(Input<String> targetLanguageCode) {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }
 
-        public Builder setTargetLanguageCode(String targetLanguageCode) {
+        public Builder targetLanguageCode(String targetLanguageCode) {
             this.targetLanguageCode = Input.of(Objects.requireNonNull(targetLanguageCode));
             return this;
         }

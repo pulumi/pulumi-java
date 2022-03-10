@@ -100,42 +100,42 @@ public final class NetworkInterfaceSubInterfaceArgs extends io.pulumi.resources.
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setIpAllocationMode(@Nullable Input<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode) {
+        public Builder ipAllocationMode(@Nullable Input<NetworkInterfaceSubInterfaceIpAllocationMode> ipAllocationMode) {
             this.ipAllocationMode = ipAllocationMode;
             return this;
         }
 
-        public Builder setIpAllocationMode(@Nullable NetworkInterfaceSubInterfaceIpAllocationMode ipAllocationMode) {
+        public Builder ipAllocationMode(@Nullable NetworkInterfaceSubInterfaceIpAllocationMode ipAllocationMode) {
             this.ipAllocationMode = Input.ofNullable(ipAllocationMode);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder setVlan(@Nullable Input<Integer> vlan) {
+        public Builder vlan(@Nullable Input<Integer> vlan) {
             this.vlan = vlan;
             return this;
         }
 
-        public Builder setVlan(@Nullable Integer vlan) {
+        public Builder vlan(@Nullable Integer vlan) {
             this.vlan = Input.ofNullable(vlan);
             return this;
         }

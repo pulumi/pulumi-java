@@ -207,52 +207,52 @@ public final class UptimeCheckConfigHttpCheck {
     	      this.validateSsl = defaults.validateSsl;
         }
 
-        public Builder setAuthInfo(@Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo) {
+        public Builder authInfo(@Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo) {
             this.authInfo = authInfo;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMaskHeaders(@Nullable Boolean maskHeaders) {
+        public Builder maskHeaders(@Nullable Boolean maskHeaders) {
             this.maskHeaders = maskHeaders;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable String requestMethod) {
+        public Builder requestMethod(@Nullable String requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setUseSsl(@Nullable Boolean useSsl) {
+        public Builder useSsl(@Nullable Boolean useSsl) {
             this.useSsl = useSsl;
             return this;
         }
 
-        public Builder setValidateSsl(@Nullable Boolean validateSsl) {
+        public Builder validateSsl(@Nullable Boolean validateSsl) {
             this.validateSsl = validateSsl;
             return this;
         }

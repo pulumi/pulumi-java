@@ -54,12 +54,12 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
     	      this.chatbotSns = defaults.chatbotSns;
         }
 
-        public Builder setChatbotSns(@Nullable Input<List<String>> chatbotSns) {
+        public Builder chatbotSns(@Nullable Input<List<String>> chatbotSns) {
             this.chatbotSns = chatbotSns;
             return this;
         }
 
-        public Builder setChatbotSns(@Nullable List<String> chatbotSns) {
+        public Builder chatbotSns(@Nullable List<String> chatbotSns) {
             this.chatbotSns = Input.ofNullable(chatbotSns);
             return this;
         }

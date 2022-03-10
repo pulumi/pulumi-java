@@ -82,17 +82,17 @@ public final class PubsubTargetResponse {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAttributes(Map<String,String> attributes) {
+        public Builder attributes(Map<String,String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }

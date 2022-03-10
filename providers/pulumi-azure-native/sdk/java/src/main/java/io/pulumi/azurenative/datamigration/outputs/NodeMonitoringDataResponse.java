@@ -181,47 +181,47 @@ public final class NodeMonitoringDataResponse {
     	      this.sentBytes = defaults.sentBytes;
         }
 
-        public Builder setAdditionalProperties(Map<String,Object> additionalProperties) {
+        public Builder additionalProperties(Map<String,Object> additionalProperties) {
             this.additionalProperties = Objects.requireNonNull(additionalProperties);
             return this;
         }
 
-        public Builder setAvailableMemoryInMB(Integer availableMemoryInMB) {
+        public Builder availableMemoryInMB(Integer availableMemoryInMB) {
             this.availableMemoryInMB = Objects.requireNonNull(availableMemoryInMB);
             return this;
         }
 
-        public Builder setConcurrentJobsLimit(Integer concurrentJobsLimit) {
+        public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
             this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
             return this;
         }
 
-        public Builder setConcurrentJobsRunning(Integer concurrentJobsRunning) {
+        public Builder concurrentJobsRunning(Integer concurrentJobsRunning) {
             this.concurrentJobsRunning = Objects.requireNonNull(concurrentJobsRunning);
             return this;
         }
 
-        public Builder setCpuUtilization(Integer cpuUtilization) {
+        public Builder cpuUtilization(Integer cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
 
-        public Builder setMaxConcurrentJobs(Integer maxConcurrentJobs) {
+        public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
             this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
             return this;
         }
 
-        public Builder setNodeName(String nodeName) {
+        public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
 
-        public Builder setReceivedBytes(Double receivedBytes) {
+        public Builder receivedBytes(Double receivedBytes) {
             this.receivedBytes = Objects.requireNonNull(receivedBytes);
             return this;
         }
 
-        public Builder setSentBytes(Double sentBytes) {
+        public Builder sentBytes(Double sentBytes) {
             this.sentBytes = Objects.requireNonNull(sentBytes);
             return this;
         }

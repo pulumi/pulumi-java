@@ -131,62 +131,62 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<ConsentStoreIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable ConsentStoreIamMemberConditionGetArgs condition) {
+        public Builder condition(@Nullable ConsentStoreIamMemberConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setConsentStoreId(@Nullable Input<String> consentStoreId) {
+        public Builder consentStoreId(@Nullable Input<String> consentStoreId) {
             this.consentStoreId = consentStoreId;
             return this;
         }
 
-        public Builder setConsentStoreId(@Nullable String consentStoreId) {
+        public Builder consentStoreId(@Nullable String consentStoreId) {
             this.consentStoreId = Input.ofNullable(consentStoreId);
             return this;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setMember(@Nullable Input<String> member) {
+        public Builder member(@Nullable Input<String> member) {
             this.member = member;
             return this;
         }
 
-        public Builder setMember(@Nullable String member) {
+        public Builder member(@Nullable String member) {
             this.member = Input.ofNullable(member);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }

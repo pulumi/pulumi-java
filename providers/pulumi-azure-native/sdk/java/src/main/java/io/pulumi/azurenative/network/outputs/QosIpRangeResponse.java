@@ -67,12 +67,12 @@ public final class QosIpRangeResponse {
     	      this.startIP = defaults.startIP;
         }
 
-        public Builder setEndIP(@Nullable String endIP) {
+        public Builder endIP(@Nullable String endIP) {
             this.endIP = endIP;
             return this;
         }
 
-        public Builder setStartIP(@Nullable String startIP) {
+        public Builder startIP(@Nullable String startIP) {
             this.startIP = startIP;
             return this;
         }

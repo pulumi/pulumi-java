@@ -53,7 +53,7 @@ public final class ClusterConfiguration extends io.pulumi.resources.InvokeArgs {
     	      this.executeCommandConfiguration = defaults.executeCommandConfiguration;
         }
 
-        public Builder setExecuteCommandConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
+        public Builder executeCommandConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
             this.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }

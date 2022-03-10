@@ -84,17 +84,17 @@ public final class GetRoutingControlResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoutingControlArn(@Nullable String routingControlArn) {
+        public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable RoutingControlStatus status) {
+        public Builder status(@Nullable RoutingControlStatus status) {
             this.status = status;
             return this;
         }

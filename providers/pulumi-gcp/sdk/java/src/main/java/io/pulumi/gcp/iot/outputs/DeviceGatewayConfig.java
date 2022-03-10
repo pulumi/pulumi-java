@@ -109,22 +109,22 @@ public final class DeviceGatewayConfig {
     	      this.lastAccessedGatewayTime = defaults.lastAccessedGatewayTime;
         }
 
-        public Builder setGatewayAuthMethod(@Nullable String gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable String gatewayAuthMethod) {
             this.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
-        public Builder setGatewayType(@Nullable String gatewayType) {
+        public Builder gatewayType(@Nullable String gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
-        public Builder setLastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
+        public Builder lastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
             this.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
 
-        public Builder setLastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
+        public Builder lastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
             this.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }

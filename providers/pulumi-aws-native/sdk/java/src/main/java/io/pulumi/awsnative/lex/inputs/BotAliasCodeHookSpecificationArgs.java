@@ -52,12 +52,12 @@ public final class BotAliasCodeHookSpecificationArgs extends io.pulumi.resources
     	      this.lambdaCodeHook = defaults.lambdaCodeHook;
         }
 
-        public Builder setLambdaCodeHook(Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
+        public Builder lambdaCodeHook(Input<BotAliasLambdaCodeHookArgs> lambdaCodeHook) {
             this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
             return this;
         }
 
-        public Builder setLambdaCodeHook(BotAliasLambdaCodeHookArgs lambdaCodeHook) {
+        public Builder lambdaCodeHook(BotAliasLambdaCodeHookArgs lambdaCodeHook) {
             this.lambdaCodeHook = Input.of(Objects.requireNonNull(lambdaCodeHook));
             return this;
         }

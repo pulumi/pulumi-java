@@ -50,7 +50,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
     	      this.filterValues = defaults.filterValues;
         }
 
-        public Builder setFilterValues(@Nullable List<String> filterValues) {
+        public Builder filterValues(@Nullable List<String> filterValues) {
             this.filterValues = filterValues;
             return this;
         }

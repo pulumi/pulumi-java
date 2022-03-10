@@ -86,32 +86,32 @@ public final class ServerDnsAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setDnsAliasName(@Nullable Input<String> dnsAliasName) {
+        public Builder dnsAliasName(@Nullable Input<String> dnsAliasName) {
             this.dnsAliasName = dnsAliasName;
             return this;
         }
 
-        public Builder setDnsAliasName(@Nullable String dnsAliasName) {
+        public Builder dnsAliasName(@Nullable String dnsAliasName) {
             this.dnsAliasName = Input.ofNullable(dnsAliasName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

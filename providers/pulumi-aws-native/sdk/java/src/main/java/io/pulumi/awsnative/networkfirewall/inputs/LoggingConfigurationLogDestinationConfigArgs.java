@@ -79,32 +79,32 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends io.pulum
     	      this.logType = defaults.logType;
         }
 
-        public Builder setLogDestination(Input<Object> logDestination) {
+        public Builder logDestination(Input<Object> logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setLogDestination(Object logDestination) {
+        public Builder logDestination(Object logDestination) {
             this.logDestination = Input.of(Objects.requireNonNull(logDestination));
             return this;
         }
 
-        public Builder setLogDestinationType(Input<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType) {
+        public Builder logDestinationType(Input<LoggingConfigurationLogDestinationConfigLogDestinationType> logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
 
-        public Builder setLogDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
+        public Builder logDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
             this.logDestinationType = Input.of(Objects.requireNonNull(logDestinationType));
             return this;
         }
 
-        public Builder setLogType(Input<LoggingConfigurationLogDestinationConfigLogType> logType) {
+        public Builder logType(Input<LoggingConfigurationLogDestinationConfigLogType> logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
-        public Builder setLogType(LoggingConfigurationLogDestinationConfigLogType logType) {
+        public Builder logType(LoggingConfigurationLogDestinationConfigLogType logType) {
             this.logType = Input.of(Objects.requireNonNull(logType));
             return this;
         }

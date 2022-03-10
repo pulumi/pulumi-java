@@ -100,32 +100,32 @@ public final class GetAccountAccessTokenResult {
     	      this.targetServiceAccount = defaults.targetServiceAccount;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
 
-        public Builder setDelegates(@Nullable List<String> delegates) {
+        public Builder delegates(@Nullable List<String> delegates) {
             this.delegates = delegates;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setTargetServiceAccount(String targetServiceAccount) {
+        public Builder targetServiceAccount(String targetServiceAccount) {
             this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
             return this;
         }

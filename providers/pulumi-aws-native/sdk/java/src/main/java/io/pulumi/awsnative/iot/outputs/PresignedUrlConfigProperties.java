@@ -52,12 +52,12 @@ public final class PresignedUrlConfigProperties {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setExpiresInSec(@Nullable Integer expiresInSec) {
+        public Builder expiresInSec(@Nullable Integer expiresInSec) {
             this.expiresInSec = expiresInSec;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

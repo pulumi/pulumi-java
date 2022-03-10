@@ -102,22 +102,22 @@ public final class AvailabilitySetResourceSettingsResponse {
     	      this.updateDomain = defaults.updateDomain;
         }
 
-        public Builder setFaultDomain(@Nullable Integer faultDomain) {
+        public Builder faultDomain(@Nullable Integer faultDomain) {
             this.faultDomain = faultDomain;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setUpdateDomain(@Nullable Integer updateDomain) {
+        public Builder updateDomain(@Nullable Integer updateDomain) {
             this.updateDomain = updateDomain;
             return this;
         }

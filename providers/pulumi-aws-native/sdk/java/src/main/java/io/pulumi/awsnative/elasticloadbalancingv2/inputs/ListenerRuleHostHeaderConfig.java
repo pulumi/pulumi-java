@@ -50,7 +50,7 @@ public final class ListenerRuleHostHeaderConfig extends io.pulumi.resources.Invo
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

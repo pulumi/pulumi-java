@@ -77,12 +77,12 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookies {
     	      this.whitelistedNames = defaults.whitelistedNames;
         }
 
-        public Builder setForward(String forward) {
+        public Builder forward(String forward) {
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
 
-        public Builder setWhitelistedNames(@Nullable List<String> whitelistedNames) {
+        public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
             this.whitelistedNames = whitelistedNames;
             return this;
         }

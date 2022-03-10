@@ -143,62 +143,62 @@ public final class AzureMachineLearningWebServiceFunctionBindingArgs extends io.
     	      this.type = defaults.type;
         }
 
-        public Builder setApiKey(@Nullable Input<String> apiKey) {
+        public Builder apiKey(@Nullable Input<String> apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setApiKey(@Nullable String apiKey) {
+        public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = Input.ofNullable(apiKey);
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Input<Integer> batchSize) {
+        public Builder batchSize(@Nullable Input<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Input.ofNullable(batchSize);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs) {
+        public Builder inputs(@Nullable Input<AzureMachineLearningWebServiceInputsArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable AzureMachineLearningWebServiceInputsArgs inputs) {
+        public Builder inputs(@Nullable AzureMachineLearningWebServiceInputsArgs inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<AzureMachineLearningWebServiceOutputColumnArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<AzureMachineLearningWebServiceOutputColumnArgs> outputs) {
+        public Builder outputs(@Nullable List<AzureMachineLearningWebServiceOutputColumnArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

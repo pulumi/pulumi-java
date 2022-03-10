@@ -50,7 +50,7 @@ public final class GetWebAppSlotResult {
     	      this.siteConfig = defaults.siteConfig;
         }
 
-        public Builder setSiteConfig(@Nullable SiteConfigResponse siteConfig) {
+        public Builder siteConfig(@Nullable SiteConfigResponse siteConfig) {
             this.siteConfig = siteConfig;
             return this;
         }

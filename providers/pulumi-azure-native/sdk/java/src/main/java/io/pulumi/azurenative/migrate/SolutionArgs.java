@@ -103,42 +103,42 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.solutionName = defaults.solutionName;
         }
 
-        public Builder setMigrateProjectName(Input<String> migrateProjectName) {
+        public Builder migrateProjectName(Input<String> migrateProjectName) {
             this.migrateProjectName = Objects.requireNonNull(migrateProjectName);
             return this;
         }
 
-        public Builder setMigrateProjectName(String migrateProjectName) {
+        public Builder migrateProjectName(String migrateProjectName) {
             this.migrateProjectName = Input.of(Objects.requireNonNull(migrateProjectName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<SolutionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<SolutionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable SolutionPropertiesArgs properties) {
+        public Builder properties(@Nullable SolutionPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSolutionName(@Nullable Input<String> solutionName) {
+        public Builder solutionName(@Nullable Input<String> solutionName) {
             this.solutionName = solutionName;
             return this;
         }
 
-        public Builder setSolutionName(@Nullable String solutionName) {
+        public Builder solutionName(@Nullable String solutionName) {
             this.solutionName = Input.ofNullable(solutionName);
             return this;
         }

@@ -157,72 +157,72 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(@Nullable Input<WebAclRuleActionArgs> action) {
+        public Builder action(@Nullable Input<WebAclRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable WebAclRuleActionArgs action) {
+        public Builder action(@Nullable WebAclRuleActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable Input<WebAclRuleOverrideActionArgs> overrideAction) {
+        public Builder overrideAction(@Nullable Input<WebAclRuleOverrideActionArgs> overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
+        public Builder overrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
             this.overrideAction = Input.ofNullable(overrideAction);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels) {
+        public Builder ruleLabels(@Nullable Input<List<WebAclRuleRuleLabelArgs>> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<WebAclRuleRuleLabelArgs> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<WebAclRuleRuleLabelArgs> ruleLabels) {
             this.ruleLabels = Input.ofNullable(ruleLabels);
             return this;
         }
 
-        public Builder setStatement(Input<WebAclRuleStatementArgs> statement) {
+        public Builder statement(Input<WebAclRuleStatementArgs> statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setStatement(WebAclRuleStatementArgs statement) {
+        public Builder statement(WebAclRuleStatementArgs statement) {
             this.statement = Input.of(Objects.requireNonNull(statement));
             return this;
         }
 
-        public Builder setVisibilityConfig(Input<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
+        public Builder visibilityConfig(Input<WebAclRuleVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
-        public Builder setVisibilityConfig(WebAclRuleVisibilityConfigArgs visibilityConfig) {
+        public Builder visibilityConfig(WebAclRuleVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }

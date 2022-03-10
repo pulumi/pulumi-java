@@ -110,42 +110,42 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     	      this.taggingPriority = defaults.taggingPriority;
         }
 
-        public Builder setCriteria(@Nullable Input<List<ScheduleBasedBackupCriteriaArgs>> criteria) {
+        public Builder criteria(@Nullable Input<List<ScheduleBasedBackupCriteriaArgs>> criteria) {
             this.criteria = criteria;
             return this;
         }
 
-        public Builder setCriteria(@Nullable List<ScheduleBasedBackupCriteriaArgs> criteria) {
+        public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaArgs> criteria) {
             this.criteria = Input.ofNullable(criteria);
             return this;
         }
 
-        public Builder setIsDefault(Input<Boolean> isDefault) {
+        public Builder isDefault(Input<Boolean> isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
 
-        public Builder setIsDefault(Boolean isDefault) {
+        public Builder isDefault(Boolean isDefault) {
             this.isDefault = Input.of(Objects.requireNonNull(isDefault));
             return this;
         }
 
-        public Builder setTagInfo(Input<RetentionTagArgs> tagInfo) {
+        public Builder tagInfo(Input<RetentionTagArgs> tagInfo) {
             this.tagInfo = Objects.requireNonNull(tagInfo);
             return this;
         }
 
-        public Builder setTagInfo(RetentionTagArgs tagInfo) {
+        public Builder tagInfo(RetentionTagArgs tagInfo) {
             this.tagInfo = Input.of(Objects.requireNonNull(tagInfo));
             return this;
         }
 
-        public Builder setTaggingPriority(Input<Double> taggingPriority) {
+        public Builder taggingPriority(Input<Double> taggingPriority) {
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
         }
 
-        public Builder setTaggingPriority(Double taggingPriority) {
+        public Builder taggingPriority(Double taggingPriority) {
             this.taggingPriority = Input.of(Objects.requireNonNull(taggingPriority));
             return this;
         }

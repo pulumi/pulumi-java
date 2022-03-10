@@ -57,7 +57,7 @@ public final class LogAnalyticsWorkspaceConfigResponse extends io.pulumi.resourc
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

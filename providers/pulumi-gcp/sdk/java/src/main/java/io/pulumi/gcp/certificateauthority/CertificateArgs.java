@@ -209,102 +209,102 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setCertificateAuthority(@Nullable Input<String> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Input<String> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
-        public Builder setCertificateAuthority(@Nullable String certificateAuthority) {
+        public Builder certificateAuthority(@Nullable String certificateAuthority) {
             this.certificateAuthority = Input.ofNullable(certificateAuthority);
             return this;
         }
 
-        public Builder setCertificateTemplate(@Nullable Input<String> certificateTemplate) {
+        public Builder certificateTemplate(@Nullable Input<String> certificateTemplate) {
             this.certificateTemplate = certificateTemplate;
             return this;
         }
 
-        public Builder setCertificateTemplate(@Nullable String certificateTemplate) {
+        public Builder certificateTemplate(@Nullable String certificateTemplate) {
             this.certificateTemplate = Input.ofNullable(certificateTemplate);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<CertificateConfigArgs> config) {
+        public Builder config(@Nullable Input<CertificateConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable CertificateConfigArgs config) {
+        public Builder config(@Nullable CertificateConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifetime(@Nullable Input<String> lifetime) {
+        public Builder lifetime(@Nullable Input<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = Input.ofNullable(lifetime);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPemCsr(@Nullable Input<String> pemCsr) {
+        public Builder pemCsr(@Nullable Input<String> pemCsr) {
             this.pemCsr = pemCsr;
             return this;
         }
 
-        public Builder setPemCsr(@Nullable String pemCsr) {
+        public Builder pemCsr(@Nullable String pemCsr) {
             this.pemCsr = Input.ofNullable(pemCsr);
             return this;
         }
 
-        public Builder setPool(Input<String> pool) {
+        public Builder pool(Input<String> pool) {
             this.pool = Objects.requireNonNull(pool);
             return this;
         }
 
-        public Builder setPool(String pool) {
+        public Builder pool(String pool) {
             this.pool = Input.of(Objects.requireNonNull(pool));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

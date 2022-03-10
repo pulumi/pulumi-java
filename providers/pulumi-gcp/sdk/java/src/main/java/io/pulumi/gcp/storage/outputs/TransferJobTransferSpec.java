@@ -153,37 +153,37 @@ public final class TransferJobTransferSpec {
     	      this.transferOptions = defaults.transferOptions;
         }
 
-        public Builder setAwsS3DataSource(@Nullable TransferJobTransferSpecAwsS3DataSource awsS3DataSource) {
+        public Builder awsS3DataSource(@Nullable TransferJobTransferSpecAwsS3DataSource awsS3DataSource) {
             this.awsS3DataSource = awsS3DataSource;
             return this;
         }
 
-        public Builder setAzureBlobStorageDataSource(@Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource) {
+        public Builder azureBlobStorageDataSource(@Nullable TransferJobTransferSpecAzureBlobStorageDataSource azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
 
-        public Builder setGcsDataSink(@Nullable TransferJobTransferSpecGcsDataSink gcsDataSink) {
+        public Builder gcsDataSink(@Nullable TransferJobTransferSpecGcsDataSink gcsDataSink) {
             this.gcsDataSink = gcsDataSink;
             return this;
         }
 
-        public Builder setGcsDataSource(@Nullable TransferJobTransferSpecGcsDataSource gcsDataSource) {
+        public Builder gcsDataSource(@Nullable TransferJobTransferSpecGcsDataSource gcsDataSource) {
             this.gcsDataSource = gcsDataSource;
             return this;
         }
 
-        public Builder setHttpDataSource(@Nullable TransferJobTransferSpecHttpDataSource httpDataSource) {
+        public Builder httpDataSource(@Nullable TransferJobTransferSpecHttpDataSource httpDataSource) {
             this.httpDataSource = httpDataSource;
             return this;
         }
 
-        public Builder setObjectConditions(@Nullable TransferJobTransferSpecObjectConditions objectConditions) {
+        public Builder objectConditions(@Nullable TransferJobTransferSpecObjectConditions objectConditions) {
             this.objectConditions = objectConditions;
             return this;
         }
 
-        public Builder setTransferOptions(@Nullable TransferJobTransferSpecTransferOptions transferOptions) {
+        public Builder transferOptions(@Nullable TransferJobTransferSpecTransferOptions transferOptions) {
             this.transferOptions = transferOptions;
             return this;
         }

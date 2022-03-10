@@ -67,12 +67,12 @@ public final class FirewallFirewallStatusSyncStateAttachment {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setEndpointId(@Nullable String endpointId) {
+        public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

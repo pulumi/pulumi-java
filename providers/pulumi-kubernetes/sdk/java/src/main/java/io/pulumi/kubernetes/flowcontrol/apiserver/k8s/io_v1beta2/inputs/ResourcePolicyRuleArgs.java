@@ -124,52 +124,52 @@ public final class ResourcePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setApiGroups(Input<List<String>> apiGroups) {
+        public Builder apiGroups(Input<List<String>> apiGroups) {
             this.apiGroups = Objects.requireNonNull(apiGroups);
             return this;
         }
 
-        public Builder setApiGroups(List<String> apiGroups) {
+        public Builder apiGroups(List<String> apiGroups) {
             this.apiGroups = Input.of(Objects.requireNonNull(apiGroups));
             return this;
         }
 
-        public Builder setClusterScope(@Nullable Input<Boolean> clusterScope) {
+        public Builder clusterScope(@Nullable Input<Boolean> clusterScope) {
             this.clusterScope = clusterScope;
             return this;
         }
 
-        public Builder setClusterScope(@Nullable Boolean clusterScope) {
+        public Builder clusterScope(@Nullable Boolean clusterScope) {
             this.clusterScope = Input.ofNullable(clusterScope);
             return this;
         }
 
-        public Builder setNamespaces(@Nullable Input<List<String>> namespaces) {
+        public Builder namespaces(@Nullable Input<List<String>> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
-        public Builder setNamespaces(@Nullable List<String> namespaces) {
+        public Builder namespaces(@Nullable List<String> namespaces) {
             this.namespaces = Input.ofNullable(namespaces);
             return this;
         }
 
-        public Builder setResources(Input<List<String>> resources) {
+        public Builder resources(Input<List<String>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setResources(List<String> resources) {
+        public Builder resources(List<String> resources) {
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }
 
-        public Builder setVerbs(Input<List<String>> verbs) {
+        public Builder verbs(Input<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Input.of(Objects.requireNonNull(verbs));
             return this;
         }

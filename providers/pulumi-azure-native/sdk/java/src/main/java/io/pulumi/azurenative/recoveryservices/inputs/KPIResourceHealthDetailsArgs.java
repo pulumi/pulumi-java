@@ -59,12 +59,12 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
     	      this.resourceHealthStatus = defaults.resourceHealthStatus;
         }
 
-        public Builder setResourceHealthStatus(@Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
+        public Builder resourceHealthStatus(@Nullable Input<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
         }
 
-        public Builder setResourceHealthStatus(@Nullable Either<String,ResourceHealthStatus> resourceHealthStatus) {
+        public Builder resourceHealthStatus(@Nullable Either<String,ResourceHealthStatus> resourceHealthStatus) {
             this.resourceHealthStatus = Input.ofNullable(resourceHealthStatus);
             return this;
         }

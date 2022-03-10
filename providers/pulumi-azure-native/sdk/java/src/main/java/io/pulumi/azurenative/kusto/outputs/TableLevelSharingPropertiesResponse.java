@@ -131,32 +131,32 @@ public final class TableLevelSharingPropertiesResponse {
     	      this.tablesToInclude = defaults.tablesToInclude;
         }
 
-        public Builder setExternalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
+        public Builder externalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
             this.externalTablesToExclude = externalTablesToExclude;
             return this;
         }
 
-        public Builder setExternalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
+        public Builder externalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
             this.externalTablesToInclude = externalTablesToInclude;
             return this;
         }
 
-        public Builder setMaterializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
+        public Builder materializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
             this.materializedViewsToExclude = materializedViewsToExclude;
             return this;
         }
 
-        public Builder setMaterializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
+        public Builder materializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
             this.materializedViewsToInclude = materializedViewsToInclude;
             return this;
         }
 
-        public Builder setTablesToExclude(@Nullable List<String> tablesToExclude) {
+        public Builder tablesToExclude(@Nullable List<String> tablesToExclude) {
             this.tablesToExclude = tablesToExclude;
             return this;
         }
 
-        public Builder setTablesToInclude(@Nullable List<String> tablesToInclude) {
+        public Builder tablesToInclude(@Nullable List<String> tablesToInclude) {
             this.tablesToInclude = tablesToInclude;
             return this;
         }

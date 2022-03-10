@@ -130,17 +130,17 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
     	      this.trackingMode = defaults.trackingMode;
         }
 
-        public Builder setConnectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
 
-        public Builder setIdleTimeoutSec(@Nullable Integer idleTimeoutSec) {
+        public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
 
-        public Builder setTrackingMode(@Nullable String trackingMode) {
+        public Builder trackingMode(@Nullable String trackingMode) {
             this.trackingMode = trackingMode;
             return this;
         }

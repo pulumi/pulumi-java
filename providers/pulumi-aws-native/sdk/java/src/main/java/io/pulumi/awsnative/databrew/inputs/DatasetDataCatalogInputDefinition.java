@@ -99,22 +99,22 @@ public final class DatasetDataCatalogInputDefinition extends io.pulumi.resources
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable DatasetS3Location tempDirectory) {
+        public Builder tempDirectory(@Nullable DatasetS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }

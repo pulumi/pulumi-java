@@ -69,12 +69,12 @@ public final class LogToMetricActionResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCriteria(List<CriteriaResponse> criteria) {
+        public Builder criteria(List<CriteriaResponse> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

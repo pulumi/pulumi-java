@@ -52,7 +52,7 @@ public final class PreventionJobTriggerTrigger {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(@Nullable PreventionJobTriggerTriggerSchedule schedule) {
+        public Builder schedule(@Nullable PreventionJobTriggerTriggerSchedule schedule) {
             this.schedule = schedule;
             return this;
         }

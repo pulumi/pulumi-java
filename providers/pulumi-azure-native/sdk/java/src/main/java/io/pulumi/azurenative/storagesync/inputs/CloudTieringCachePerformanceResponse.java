@@ -106,22 +106,22 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
     	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
         }
 
-        public Builder setCacheHitBytes(Double cacheHitBytes) {
+        public Builder cacheHitBytes(Double cacheHitBytes) {
             this.cacheHitBytes = Objects.requireNonNull(cacheHitBytes);
             return this;
         }
 
-        public Builder setCacheHitBytesPercent(Integer cacheHitBytesPercent) {
+        public Builder cacheHitBytesPercent(Integer cacheHitBytesPercent) {
             this.cacheHitBytesPercent = Objects.requireNonNull(cacheHitBytesPercent);
             return this;
         }
 
-        public Builder setCacheMissBytes(Double cacheMissBytes) {
+        public Builder cacheMissBytes(Double cacheMissBytes) {
             this.cacheMissBytes = Objects.requireNonNull(cacheMissBytes);
             return this;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }

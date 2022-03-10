@@ -49,7 +49,7 @@ public final class RuleGroupRuleActionAllowCustomRequestHandling {
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder setInsertHeaders(List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
+        public Builder insertHeaders(List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }

@@ -74,22 +74,22 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.varieties = defaults.varieties;
         }
 
-        public Builder setSizes(@Nullable Input<Map<String,TreeSize>> sizes) {
+        public Builder sizes(@Nullable Input<Map<String,TreeSize>> sizes) {
             this.sizes = sizes;
             return this;
         }
 
-        public Builder setSizes(@Nullable Map<String,TreeSize> sizes) {
+        public Builder sizes(@Nullable Map<String,TreeSize> sizes) {
             this.sizes = Input.ofNullable(sizes);
             return this;
         }
 
-        public Builder setVarieties(Input<List<RubberTreeVariety>> varieties) {
+        public Builder varieties(Input<List<RubberTreeVariety>> varieties) {
             this.varieties = Objects.requireNonNull(varieties);
             return this;
         }
 
-        public Builder setVarieties(List<RubberTreeVariety> varieties) {
+        public Builder varieties(List<RubberTreeVariety> varieties) {
             this.varieties = Input.of(Objects.requireNonNull(varieties));
             return this;
         }

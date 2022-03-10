@@ -66,12 +66,12 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     	      this.intervalUnit = defaults.intervalUnit;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setIntervalUnit(String intervalUnit) {
+        public Builder intervalUnit(String intervalUnit) {
             this.intervalUnit = Objects.requireNonNull(intervalUnit);
             return this;
         }

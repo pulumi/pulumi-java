@@ -50,7 +50,7 @@ public final class VirtualRouterSpec {
     	      this.listener = defaults.listener;
         }
 
-        public Builder setListener(VirtualRouterSpecListener listener) {
+        public Builder listener(VirtualRouterSpecListener listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }

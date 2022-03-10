@@ -49,12 +49,12 @@ public final class CertificateEdiPartyName {
     	      this.partyName = defaults.partyName;
         }
 
-        public Builder setNameAssigner(String nameAssigner) {
+        public Builder nameAssigner(String nameAssigner) {
             this.nameAssigner = Objects.requireNonNull(nameAssigner);
             return this;
         }
 
-        public Builder setPartyName(String partyName) {
+        public Builder partyName(String partyName) {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
         }

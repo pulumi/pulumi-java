@@ -65,12 +65,12 @@ public final class ManagedGroupConfigResponse {
     	      this.instanceTemplateName = defaults.instanceTemplateName;
         }
 
-        public Builder setInstanceGroupManagerName(String instanceGroupManagerName) {
+        public Builder instanceGroupManagerName(String instanceGroupManagerName) {
             this.instanceGroupManagerName = Objects.requireNonNull(instanceGroupManagerName);
             return this;
         }
 
-        public Builder setInstanceTemplateName(String instanceTemplateName) {
+        public Builder instanceTemplateName(String instanceTemplateName) {
             this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
             return this;
         }

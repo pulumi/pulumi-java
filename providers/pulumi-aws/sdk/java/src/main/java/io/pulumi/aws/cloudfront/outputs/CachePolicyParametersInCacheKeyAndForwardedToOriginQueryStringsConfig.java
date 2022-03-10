@@ -68,12 +68,12 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setQueryStringBehavior(String queryStringBehavior) {
+        public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings queryStrings) {
+        public Builder queryStrings(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }

@@ -102,22 +102,22 @@ public final class MigrateSqlServerSqlDbSyncTaskInputResponse {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setSelectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable MigrationValidationOptionsResponse validationOptions) {
+        public Builder validationOptions(@Nullable MigrationValidationOptionsResponse validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }

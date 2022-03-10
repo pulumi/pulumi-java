@@ -52,12 +52,12 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder setEndpointInput(Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
+        public Builder endpointInput(Input<ModelExplainabilityJobDefinitionEndpointInputArgs> endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
 
-        public Builder setEndpointInput(ModelExplainabilityJobDefinitionEndpointInputArgs endpointInput) {
+        public Builder endpointInput(ModelExplainabilityJobDefinitionEndpointInputArgs endpointInput) {
             this.endpointInput = Input.of(Objects.requireNonNull(endpointInput));
             return this;
         }

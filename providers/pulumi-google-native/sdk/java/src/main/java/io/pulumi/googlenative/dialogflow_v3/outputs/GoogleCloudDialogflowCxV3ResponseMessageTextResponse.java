@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder setText(List<String> text) {
+        public Builder text(List<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

@@ -100,22 +100,22 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setDestIpRanges(List<String> destIpRanges) {
+        public Builder destIpRanges(List<String> destIpRanges) {
             this.destIpRanges = Objects.requireNonNull(destIpRanges);
             return this;
         }
 
-        public Builder setDestPorts(List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts) {
+        public Builder destPorts(List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts) {
             this.destPorts = Objects.requireNonNull(destPorts);
             return this;
         }
 
-        public Builder setLayer4Configs(List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs) {
+        public Builder layer4Configs(List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
-        public Builder setSrcIpRanges(List<String> srcIpRanges) {
+        public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }

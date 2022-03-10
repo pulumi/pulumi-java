@@ -90,42 +90,42 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
     	      this.resourceRecords = defaults.resourceRecords;
         }
 
-        public Builder setConditions(@Nullable Input<List<DomainMappingStatusConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<DomainMappingStatusConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<DomainMappingStatusConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<DomainMappingStatusConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setMappedRouteName(@Nullable Input<String> mappedRouteName) {
+        public Builder mappedRouteName(@Nullable Input<String> mappedRouteName) {
             this.mappedRouteName = mappedRouteName;
             return this;
         }
 
-        public Builder setMappedRouteName(@Nullable String mappedRouteName) {
+        public Builder mappedRouteName(@Nullable String mappedRouteName) {
             this.mappedRouteName = Input.ofNullable(mappedRouteName);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder setResourceRecords(@Nullable Input<List<DomainMappingStatusResourceRecordArgs>> resourceRecords) {
+        public Builder resourceRecords(@Nullable Input<List<DomainMappingStatusResourceRecordArgs>> resourceRecords) {
             this.resourceRecords = resourceRecords;
             return this;
         }
 
-        public Builder setResourceRecords(@Nullable List<DomainMappingStatusResourceRecordArgs> resourceRecords) {
+        public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecordArgs> resourceRecords) {
             this.resourceRecords = Input.ofNullable(resourceRecords);
             return this;
         }

@@ -162,82 +162,82 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     	      this.syncWaitSecs = defaults.syncWaitSecs;
         }
 
-        public Builder setGcpServiceAccountEmail(@Nullable Input<String> gcpServiceAccountEmail) {
+        public Builder gcpServiceAccountEmail(@Nullable Input<String> gcpServiceAccountEmail) {
             this.gcpServiceAccountEmail = gcpServiceAccountEmail;
             return this;
         }
 
-        public Builder setGcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
+        public Builder gcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
             this.gcpServiceAccountEmail = Input.ofNullable(gcpServiceAccountEmail);
             return this;
         }
 
-        public Builder setHttpsProxy(@Nullable Input<String> httpsProxy) {
+        public Builder httpsProxy(@Nullable Input<String> httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = Input.ofNullable(httpsProxy);
             return this;
         }
 
-        public Builder setPolicyDir(@Nullable Input<String> policyDir) {
+        public Builder policyDir(@Nullable Input<String> policyDir) {
             this.policyDir = policyDir;
             return this;
         }
 
-        public Builder setPolicyDir(@Nullable String policyDir) {
+        public Builder policyDir(@Nullable String policyDir) {
             this.policyDir = Input.ofNullable(policyDir);
             return this;
         }
 
-        public Builder setSecretType(@Nullable Input<String> secretType) {
+        public Builder secretType(@Nullable Input<String> secretType) {
             this.secretType = secretType;
             return this;
         }
 
-        public Builder setSecretType(@Nullable String secretType) {
+        public Builder secretType(@Nullable String secretType) {
             this.secretType = Input.ofNullable(secretType);
             return this;
         }
 
-        public Builder setSyncBranch(@Nullable Input<String> syncBranch) {
+        public Builder syncBranch(@Nullable Input<String> syncBranch) {
             this.syncBranch = syncBranch;
             return this;
         }
 
-        public Builder setSyncBranch(@Nullable String syncBranch) {
+        public Builder syncBranch(@Nullable String syncBranch) {
             this.syncBranch = Input.ofNullable(syncBranch);
             return this;
         }
 
-        public Builder setSyncRepo(@Nullable Input<String> syncRepo) {
+        public Builder syncRepo(@Nullable Input<String> syncRepo) {
             this.syncRepo = syncRepo;
             return this;
         }
 
-        public Builder setSyncRepo(@Nullable String syncRepo) {
+        public Builder syncRepo(@Nullable String syncRepo) {
             this.syncRepo = Input.ofNullable(syncRepo);
             return this;
         }
 
-        public Builder setSyncRev(@Nullable Input<String> syncRev) {
+        public Builder syncRev(@Nullable Input<String> syncRev) {
             this.syncRev = syncRev;
             return this;
         }
 
-        public Builder setSyncRev(@Nullable String syncRev) {
+        public Builder syncRev(@Nullable String syncRev) {
             this.syncRev = Input.ofNullable(syncRev);
             return this;
         }
 
-        public Builder setSyncWaitSecs(@Nullable Input<String> syncWaitSecs) {
+        public Builder syncWaitSecs(@Nullable Input<String> syncWaitSecs) {
             this.syncWaitSecs = syncWaitSecs;
             return this;
         }
 
-        public Builder setSyncWaitSecs(@Nullable String syncWaitSecs) {
+        public Builder syncWaitSecs(@Nullable String syncWaitSecs) {
             this.syncWaitSecs = Input.ofNullable(syncWaitSecs);
             return this;
         }

@@ -113,27 +113,27 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

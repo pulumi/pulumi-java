@@ -106,52 +106,52 @@ public final class WebACLByteMatchStatementArgs extends io.pulumi.resources.Reso
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setPositionalConstraint(Input<WebACLPositionalConstraint> positionalConstraint) {
+        public Builder positionalConstraint(Input<WebACLPositionalConstraint> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
-        public Builder setPositionalConstraint(WebACLPositionalConstraint positionalConstraint) {
+        public Builder positionalConstraint(WebACLPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Input.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
 
-        public Builder setSearchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Input<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
-        public Builder setSearchString(@Nullable String searchString) {
+        public Builder searchString(@Nullable String searchString) {
             this.searchString = Input.ofNullable(searchString);
             return this;
         }
 
-        public Builder setSearchStringBase64(@Nullable Input<String> searchStringBase64) {
+        public Builder searchStringBase64(@Nullable Input<String> searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
 
-        public Builder setSearchStringBase64(@Nullable String searchStringBase64) {
+        public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = Input.ofNullable(searchStringBase64);
             return this;
         }
 
-        public Builder setTextTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
-        public Builder setTextTransformations(List<WebACLTextTransformationArgs> textTransformations) {
+        public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }

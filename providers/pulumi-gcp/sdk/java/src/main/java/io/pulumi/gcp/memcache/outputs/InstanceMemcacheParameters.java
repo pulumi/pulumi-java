@@ -70,12 +70,12 @@ public final class InstanceMemcacheParameters {
     	      this.params = defaults.params;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setParams(@Nullable Map<String,String> params) {
+        public Builder params(@Nullable Map<String,String> params) {
             this.params = params;
             return this;
         }

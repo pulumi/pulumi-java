@@ -50,7 +50,7 @@ public final class EnabledConfigResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

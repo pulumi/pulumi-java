@@ -159,72 +159,72 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentLocale(@Nullable Input<String> documentLocale) {
+        public Builder documentLocale(@Nullable Input<String> documentLocale) {
             this.documentLocale = documentLocale;
             return this;
         }
 
-        public Builder setDocumentLocale(@Nullable String documentLocale) {
+        public Builder documentLocale(@Nullable String documentLocale) {
             this.documentLocale = Input.ofNullable(documentLocale);
             return this;
         }
 
-        public Builder setFolder(@Nullable Input<DataFlowFolderArgs> folder) {
+        public Builder folder(@Nullable Input<DataFlowFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolder(@Nullable DataFlowFolderArgs folder) {
+        public Builder folder(@Nullable DataFlowFolderArgs folder) {
             this.folder = Input.ofNullable(folder);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<PowerQuerySourceArgs>> sources) {
+        public Builder sources(@Nullable Input<List<PowerQuerySourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<PowerQuerySourceArgs> sources) {
+        public Builder sources(@Nullable List<PowerQuerySourceArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

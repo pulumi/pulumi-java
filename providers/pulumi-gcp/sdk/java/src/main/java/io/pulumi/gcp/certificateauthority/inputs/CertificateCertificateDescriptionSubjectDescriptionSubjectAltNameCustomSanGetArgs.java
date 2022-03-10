@@ -86,32 +86,32 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     	      this.value = defaults.value;
         }
 
-        public Builder setCritical(@Nullable Input<Boolean> critical) {
+        public Builder critical(@Nullable Input<Boolean> critical) {
             this.critical = critical;
             return this;
         }
 
-        public Builder setCritical(@Nullable Boolean critical) {
+        public Builder critical(@Nullable Boolean critical) {
             this.critical = Input.ofNullable(critical);
             return this;
         }
 
-        public Builder setObectIds(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds) {
+        public Builder obectIds(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds) {
             this.obectIds = obectIds;
             return this;
         }
 
-        public Builder setObectIds(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs> obectIds) {
+        public Builder obectIds(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs> obectIds) {
             this.obectIds = Input.ofNullable(obectIds);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

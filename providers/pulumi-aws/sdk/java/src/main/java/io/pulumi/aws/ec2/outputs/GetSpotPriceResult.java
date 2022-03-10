@@ -109,32 +109,32 @@ public final class GetSpotPriceResult {
     	      this.spotPriceTimestamp = defaults.spotPriceTimestamp;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetSpotPriceFilter> filters) {
+        public Builder filters(@Nullable List<GetSpotPriceFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setSpotPrice(String spotPrice) {
+        public Builder spotPrice(String spotPrice) {
             this.spotPrice = Objects.requireNonNull(spotPrice);
             return this;
         }
 
-        public Builder setSpotPriceTimestamp(String spotPriceTimestamp) {
+        public Builder spotPriceTimestamp(String spotPriceTimestamp) {
             this.spotPriceTimestamp = Objects.requireNonNull(spotPriceTimestamp);
             return this;
         }

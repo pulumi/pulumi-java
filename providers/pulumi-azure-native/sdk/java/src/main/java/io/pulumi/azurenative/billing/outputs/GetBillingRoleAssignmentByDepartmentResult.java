@@ -243,67 +243,67 @@ public final class GetBillingRoleAssignmentByDepartmentResult {
     	      this.userEmailAddress = defaults.userEmailAddress;
         }
 
-        public Builder setCreatedByPrincipalId(String createdByPrincipalId) {
+        public Builder createdByPrincipalId(String createdByPrincipalId) {
             this.createdByPrincipalId = Objects.requireNonNull(createdByPrincipalId);
             return this;
         }
 
-        public Builder setCreatedByPrincipalTenantId(String createdByPrincipalTenantId) {
+        public Builder createdByPrincipalTenantId(String createdByPrincipalTenantId) {
             this.createdByPrincipalTenantId = Objects.requireNonNull(createdByPrincipalTenantId);
             return this;
         }
 
-        public Builder setCreatedByUserEmailAddress(String createdByUserEmailAddress) {
+        public Builder createdByUserEmailAddress(String createdByUserEmailAddress) {
             this.createdByUserEmailAddress = Objects.requireNonNull(createdByUserEmailAddress);
             return this;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalTenantId(@Nullable String principalTenantId) {
+        public Builder principalTenantId(@Nullable String principalTenantId) {
             this.principalTenantId = principalTenantId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserAuthenticationType(@Nullable String userAuthenticationType) {
+        public Builder userAuthenticationType(@Nullable String userAuthenticationType) {
             this.userAuthenticationType = userAuthenticationType;
             return this;
         }
 
-        public Builder setUserEmailAddress(@Nullable String userEmailAddress) {
+        public Builder userEmailAddress(@Nullable String userEmailAddress) {
             this.userEmailAddress = userEmailAddress;
             return this;
         }

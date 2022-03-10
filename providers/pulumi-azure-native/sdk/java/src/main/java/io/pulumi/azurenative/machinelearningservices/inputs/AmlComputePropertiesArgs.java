@@ -211,102 +211,102 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setEnableNodePublicIp(@Nullable Input<Boolean> enableNodePublicIp) {
+        public Builder enableNodePublicIp(@Nullable Input<Boolean> enableNodePublicIp) {
             this.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
 
-        public Builder setEnableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
+        public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
             this.enableNodePublicIp = Input.ofNullable(enableNodePublicIp);
             return this;
         }
 
-        public Builder setIsolatedNetwork(@Nullable Input<Boolean> isolatedNetwork) {
+        public Builder isolatedNetwork(@Nullable Input<Boolean> isolatedNetwork) {
             this.isolatedNetwork = isolatedNetwork;
             return this;
         }
 
-        public Builder setIsolatedNetwork(@Nullable Boolean isolatedNetwork) {
+        public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
             this.isolatedNetwork = Input.ofNullable(isolatedNetwork);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<Either<String,OsType>> osType) {
+        public Builder osType(@Nullable Input<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable Either<String,OsType> osType) {
+        public Builder osType(@Nullable Either<String,OsType> osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setRemoteLoginPortPublicAccess(@Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
+        public Builder remoteLoginPortPublicAccess(@Nullable Input<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
 
-        public Builder setRemoteLoginPortPublicAccess(@Nullable Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
+        public Builder remoteLoginPortPublicAccess(@Nullable Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = Input.ofNullable(remoteLoginPortPublicAccess);
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable Input<ScaleSettingsArgs> scaleSettings) {
+        public Builder scaleSettings(@Nullable Input<ScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
+        public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
             this.scaleSettings = Input.ofNullable(scaleSettings);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<ResourceIdArgs> subnet) {
+        public Builder subnet(@Nullable Input<ResourceIdArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ResourceIdArgs subnet) {
+        public Builder subnet(@Nullable ResourceIdArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setUserAccountCredentials(@Nullable Input<UserAccountCredentialsArgs> userAccountCredentials) {
+        public Builder userAccountCredentials(@Nullable Input<UserAccountCredentialsArgs> userAccountCredentials) {
             this.userAccountCredentials = userAccountCredentials;
             return this;
         }
 
-        public Builder setUserAccountCredentials(@Nullable UserAccountCredentialsArgs userAccountCredentials) {
+        public Builder userAccountCredentials(@Nullable UserAccountCredentialsArgs userAccountCredentials) {
             this.userAccountCredentials = Input.ofNullable(userAccountCredentials);
             return this;
         }
 
-        public Builder setVirtualMachineImage(@Nullable Input<VirtualMachineImageArgs> virtualMachineImage) {
+        public Builder virtualMachineImage(@Nullable Input<VirtualMachineImageArgs> virtualMachineImage) {
             this.virtualMachineImage = virtualMachineImage;
             return this;
         }
 
-        public Builder setVirtualMachineImage(@Nullable VirtualMachineImageArgs virtualMachineImage) {
+        public Builder virtualMachineImage(@Nullable VirtualMachineImageArgs virtualMachineImage) {
             this.virtualMachineImage = Input.ofNullable(virtualMachineImage);
             return this;
         }
 
-        public Builder setVmPriority(@Nullable Input<Either<String,VmPriority>> vmPriority) {
+        public Builder vmPriority(@Nullable Input<Either<String,VmPriority>> vmPriority) {
             this.vmPriority = vmPriority;
             return this;
         }
 
-        public Builder setVmPriority(@Nullable Either<String,VmPriority> vmPriority) {
+        public Builder vmPriority(@Nullable Either<String,VmPriority> vmPriority) {
             this.vmPriority = Input.ofNullable(vmPriority);
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }

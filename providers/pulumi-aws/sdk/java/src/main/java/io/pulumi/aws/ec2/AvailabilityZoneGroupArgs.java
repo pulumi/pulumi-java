@@ -69,22 +69,22 @@ public final class AvailabilityZoneGroupArgs extends io.pulumi.resources.Resourc
     	      this.optInStatus = defaults.optInStatus;
         }
 
-        public Builder setGroupName(Input<String> groupName) {
+        public Builder groupName(Input<String> groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Input.of(Objects.requireNonNull(groupName));
             return this;
         }
 
-        public Builder setOptInStatus(Input<String> optInStatus) {
+        public Builder optInStatus(Input<String> optInStatus) {
             this.optInStatus = Objects.requireNonNull(optInStatus);
             return this;
         }
 
-        public Builder setOptInStatus(String optInStatus) {
+        public Builder optInStatus(String optInStatus) {
             this.optInStatus = Input.of(Objects.requireNonNull(optInStatus));
             return this;
         }

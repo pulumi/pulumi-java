@@ -119,27 +119,27 @@ public final class EnvironmentSizeResponse {
     	      this.vmSizes = defaults.vmSizes;
         }
 
-        public Builder setMaxPrice(Double maxPrice) {
+        public Builder maxPrice(Double maxPrice) {
             this.maxPrice = Objects.requireNonNull(maxPrice);
             return this;
         }
 
-        public Builder setMinMemory(Double minMemory) {
+        public Builder minMemory(Double minMemory) {
             this.minMemory = Objects.requireNonNull(minMemory);
             return this;
         }
 
-        public Builder setMinNumberOfCores(Integer minNumberOfCores) {
+        public Builder minNumberOfCores(Integer minNumberOfCores) {
             this.minNumberOfCores = Objects.requireNonNull(minNumberOfCores);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setVmSizes(@Nullable List<SizeInfoResponse> vmSizes) {
+        public Builder vmSizes(@Nullable List<SizeInfoResponse> vmSizes) {
             this.vmSizes = vmSizes;
             return this;
         }

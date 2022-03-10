@@ -152,37 +152,37 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.startAfter = defaults.startAfter;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setEncodingType(@Nullable String encodingType) {
+        public Builder encodingType(@Nullable String encodingType) {
             this.encodingType = encodingType;
             return this;
         }
 
-        public Builder setFetchOwner(@Nullable Boolean fetchOwner) {
+        public Builder fetchOwner(@Nullable Boolean fetchOwner) {
             this.fetchOwner = fetchOwner;
             return this;
         }
 
-        public Builder setMaxKeys(@Nullable Integer maxKeys) {
+        public Builder maxKeys(@Nullable Integer maxKeys) {
             this.maxKeys = maxKeys;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setStartAfter(@Nullable String startAfter) {
+        public Builder startAfter(@Nullable String startAfter) {
             this.startAfter = startAfter;
             return this;
         }

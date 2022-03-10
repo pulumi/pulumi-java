@@ -84,17 +84,17 @@ public final class ListAuthorizationServerSecretsArgs extends io.pulumi.resource
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setAuthsid(String authsid) {
+        public Builder authsid(String authsid) {
             this.authsid = Objects.requireNonNull(authsid);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

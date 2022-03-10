@@ -168,82 +168,82 @@ public final class EmailTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<EmailTemplateParametersContractPropertiesArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<EmailTemplateParametersContractPropertiesArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<EmailTemplateParametersContractPropertiesArgs> parameters) {
+        public Builder parameters(@Nullable List<EmailTemplateParametersContractPropertiesArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSubject(@Nullable Input<String> subject) {
+        public Builder subject(@Nullable Input<String> subject) {
             this.subject = subject;
             return this;
         }
 
-        public Builder setSubject(@Nullable String subject) {
+        public Builder subject(@Nullable String subject) {
             this.subject = Input.ofNullable(subject);
             return this;
         }
 
-        public Builder setTemplateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Input<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = Input.ofNullable(templateName);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

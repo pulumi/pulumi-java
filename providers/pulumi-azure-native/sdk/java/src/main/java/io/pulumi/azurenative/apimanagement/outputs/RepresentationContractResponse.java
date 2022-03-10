@@ -117,27 +117,27 @@ public final class RepresentationContractResponse {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setFormParameters(@Nullable List<ParameterContractResponse> formParameters) {
+        public Builder formParameters(@Nullable List<ParameterContractResponse> formParameters) {
             this.formParameters = formParameters;
             return this;
         }
 
-        public Builder setSample(@Nullable String sample) {
+        public Builder sample(@Nullable String sample) {
             this.sample = sample;
             return this;
         }
 
-        public Builder setSchemaId(@Nullable String schemaId) {
+        public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }

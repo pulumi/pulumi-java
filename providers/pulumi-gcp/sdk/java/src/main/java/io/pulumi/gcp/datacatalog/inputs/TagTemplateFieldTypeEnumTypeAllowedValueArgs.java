@@ -52,12 +52,12 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValueArgs extends io.pulum
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }

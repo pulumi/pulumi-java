@@ -85,32 +85,32 @@ public final class EnvironmentConfigSoftwareConfig {
     	      this.schedulerCount = defaults.schedulerCount;
         }
 
-        public Builder setAirflowConfigOverrides(@Nullable Map<String,String> airflowConfigOverrides) {
+        public Builder airflowConfigOverrides(@Nullable Map<String,String> airflowConfigOverrides) {
             this.airflowConfigOverrides = airflowConfigOverrides;
             return this;
         }
 
-        public Builder setEnvVariables(@Nullable Map<String,String> envVariables) {
+        public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
 
-        public Builder setImageVersion(@Nullable String imageVersion) {
+        public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
 
-        public Builder setPypiPackages(@Nullable Map<String,String> pypiPackages) {
+        public Builder pypiPackages(@Nullable Map<String,String> pypiPackages) {
             this.pypiPackages = pypiPackages;
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable String pythonVersion) {
+        public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
-        public Builder setSchedulerCount(@Nullable Integer schedulerCount) {
+        public Builder schedulerCount(@Nullable Integer schedulerCount) {
             this.schedulerCount = schedulerCount;
             return this;
         }

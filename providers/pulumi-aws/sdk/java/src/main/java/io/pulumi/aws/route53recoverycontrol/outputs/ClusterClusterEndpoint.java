@@ -67,12 +67,12 @@ public final class ClusterClusterEndpoint {
     	      this.region = defaults.region;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

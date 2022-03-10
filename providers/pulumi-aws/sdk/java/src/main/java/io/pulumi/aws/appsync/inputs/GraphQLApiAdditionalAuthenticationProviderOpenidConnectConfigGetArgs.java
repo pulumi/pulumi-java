@@ -103,42 +103,42 @@ public final class GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setAuthTtl(@Nullable Input<Integer> authTtl) {
+        public Builder authTtl(@Nullable Input<Integer> authTtl) {
             this.authTtl = authTtl;
             return this;
         }
 
-        public Builder setAuthTtl(@Nullable Integer authTtl) {
+        public Builder authTtl(@Nullable Integer authTtl) {
             this.authTtl = Input.ofNullable(authTtl);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setIatTtl(@Nullable Input<Integer> iatTtl) {
+        public Builder iatTtl(@Nullable Input<Integer> iatTtl) {
             this.iatTtl = iatTtl;
             return this;
         }
 
-        public Builder setIatTtl(@Nullable Integer iatTtl) {
+        public Builder iatTtl(@Nullable Integer iatTtl) {
             this.iatTtl = Input.ofNullable(iatTtl);
             return this;
         }
 
-        public Builder setIssuer(Input<String> issuer) {
+        public Builder issuer(Input<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Input.of(Objects.requireNonNull(issuer));
             return this;
         }

@@ -68,12 +68,12 @@ public final class RouterNatLogConfig {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

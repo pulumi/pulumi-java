@@ -104,42 +104,42 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
     	      this.storageClassAnalysis = defaults.storageClassAnalysis;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<AnalyticsConfigurationFilterGetArgs> filter) {
+        public Builder filter(@Nullable Input<AnalyticsConfigurationFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable AnalyticsConfigurationFilterGetArgs filter) {
+        public Builder filter(@Nullable AnalyticsConfigurationFilterGetArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStorageClassAnalysis(@Nullable Input<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis) {
+        public Builder storageClassAnalysis(@Nullable Input<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis) {
             this.storageClassAnalysis = storageClassAnalysis;
             return this;
         }
 
-        public Builder setStorageClassAnalysis(@Nullable AnalyticsConfigurationStorageClassAnalysisGetArgs storageClassAnalysis) {
+        public Builder storageClassAnalysis(@Nullable AnalyticsConfigurationStorageClassAnalysisGetArgs storageClassAnalysis) {
             this.storageClassAnalysis = Input.ofNullable(storageClassAnalysis);
             return this;
         }

@@ -146,37 +146,37 @@ public final class LivenessCheckResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCheckInterval(String checkInterval) {
+        public Builder checkInterval(String checkInterval) {
             this.checkInterval = Objects.requireNonNull(checkInterval);
             return this;
         }
 
-        public Builder setFailureThreshold(Integer failureThreshold) {
+        public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = Objects.requireNonNull(failureThreshold);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setInitialDelay(String initialDelay) {
+        public Builder initialDelay(String initialDelay) {
             this.initialDelay = Objects.requireNonNull(initialDelay);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setSuccessThreshold(Integer successThreshold) {
+        public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = Objects.requireNonNull(successThreshold);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }

@@ -76,17 +76,17 @@ public final class GetLoadBalancerTlsCertificateResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setIsAttached(@Nullable Boolean isAttached) {
+        public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = isAttached;
             return this;
         }
 
-        public Builder setLoadBalancerTlsCertificateArn(@Nullable String loadBalancerTlsCertificateArn) {
+        public Builder loadBalancerTlsCertificateArn(@Nullable String loadBalancerTlsCertificateArn) {
             this.loadBalancerTlsCertificateArn = loadBalancerTlsCertificateArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

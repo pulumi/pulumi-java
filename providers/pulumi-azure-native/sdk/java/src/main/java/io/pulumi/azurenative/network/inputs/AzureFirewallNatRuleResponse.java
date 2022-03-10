@@ -203,52 +203,52 @@ public final class AzureFirewallNatRuleResponse extends io.pulumi.resources.Invo
     	      this.translatedPort = defaults.translatedPort;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<String> protocols) {
+        public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourceIpGroups(@Nullable List<String> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
-        public Builder setTranslatedAddress(@Nullable String translatedAddress) {
+        public Builder translatedAddress(@Nullable String translatedAddress) {
             this.translatedAddress = translatedAddress;
             return this;
         }
 
-        public Builder setTranslatedFqdn(@Nullable String translatedFqdn) {
+        public Builder translatedFqdn(@Nullable String translatedFqdn) {
             this.translatedFqdn = translatedFqdn;
             return this;
         }
 
-        public Builder setTranslatedPort(@Nullable String translatedPort) {
+        public Builder translatedPort(@Nullable String translatedPort) {
             this.translatedPort = translatedPort;
             return this;
         }

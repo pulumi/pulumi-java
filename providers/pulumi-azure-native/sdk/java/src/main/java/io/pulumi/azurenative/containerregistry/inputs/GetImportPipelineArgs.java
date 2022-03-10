@@ -84,17 +84,17 @@ public final class GetImportPipelineArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setImportPipelineName(String importPipelineName) {
+        public Builder importPipelineName(String importPipelineName) {
             this.importPipelineName = Objects.requireNonNull(importPipelineName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

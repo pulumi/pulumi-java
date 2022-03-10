@@ -217,57 +217,57 @@ public final class SecurityContext {
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder setAllowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable Capabilities capabilities) {
+        public Builder capabilities(@Nullable Capabilities capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Boolean privileged) {
+        public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = privileged;
             return this;
         }
 
-        public Builder setProcMount(@Nullable String procMount) {
+        public Builder procMount(@Nullable String procMount) {
             this.procMount = procMount;
             return this;
         }
 
-        public Builder setReadOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Integer runAsGroup) {
+        public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Boolean runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Integer runAsUser) {
+        public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable SeccompProfile seccompProfile) {
+        public Builder seccompProfile(@Nullable SeccompProfile seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
+        public Builder windowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }

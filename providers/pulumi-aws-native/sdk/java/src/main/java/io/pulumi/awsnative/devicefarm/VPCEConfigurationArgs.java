@@ -100,52 +100,52 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.vpceServiceName = defaults.vpceServiceName;
         }
 
-        public Builder setServiceDnsName(Input<String> serviceDnsName) {
+        public Builder serviceDnsName(Input<String> serviceDnsName) {
             this.serviceDnsName = Objects.requireNonNull(serviceDnsName);
             return this;
         }
 
-        public Builder setServiceDnsName(String serviceDnsName) {
+        public Builder serviceDnsName(String serviceDnsName) {
             this.serviceDnsName = Input.of(Objects.requireNonNull(serviceDnsName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<VPCEConfigurationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<VPCEConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VPCEConfigurationTagArgs> tags) {
+        public Builder tags(@Nullable List<VPCEConfigurationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpceConfigurationDescription(@Nullable Input<String> vpceConfigurationDescription) {
+        public Builder vpceConfigurationDescription(@Nullable Input<String> vpceConfigurationDescription) {
             this.vpceConfigurationDescription = vpceConfigurationDescription;
             return this;
         }
 
-        public Builder setVpceConfigurationDescription(@Nullable String vpceConfigurationDescription) {
+        public Builder vpceConfigurationDescription(@Nullable String vpceConfigurationDescription) {
             this.vpceConfigurationDescription = Input.ofNullable(vpceConfigurationDescription);
             return this;
         }
 
-        public Builder setVpceConfigurationName(Input<String> vpceConfigurationName) {
+        public Builder vpceConfigurationName(Input<String> vpceConfigurationName) {
             this.vpceConfigurationName = Objects.requireNonNull(vpceConfigurationName);
             return this;
         }
 
-        public Builder setVpceConfigurationName(String vpceConfigurationName) {
+        public Builder vpceConfigurationName(String vpceConfigurationName) {
             this.vpceConfigurationName = Input.of(Objects.requireNonNull(vpceConfigurationName));
             return this;
         }
 
-        public Builder setVpceServiceName(Input<String> vpceServiceName) {
+        public Builder vpceServiceName(Input<String> vpceServiceName) {
             this.vpceServiceName = Objects.requireNonNull(vpceServiceName);
             return this;
         }
 
-        public Builder setVpceServiceName(String vpceServiceName) {
+        public Builder vpceServiceName(String vpceServiceName) {
             this.vpceServiceName = Input.of(Objects.requireNonNull(vpceServiceName));
             return this;
         }

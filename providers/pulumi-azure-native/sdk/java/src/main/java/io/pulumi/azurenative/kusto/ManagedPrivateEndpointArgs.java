@@ -150,72 +150,72 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setGroupId(Input<String> groupId) {
+        public Builder groupId(Input<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Input.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder setManagedPrivateEndpointName(@Nullable Input<String> managedPrivateEndpointName) {
+        public Builder managedPrivateEndpointName(@Nullable Input<String> managedPrivateEndpointName) {
             this.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
 
-        public Builder setManagedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
+        public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
             this.managedPrivateEndpointName = Input.ofNullable(managedPrivateEndpointName);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(Input<String> privateLinkResourceId) {
             this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(String privateLinkResourceId) {
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
             this.privateLinkResourceId = Input.of(Objects.requireNonNull(privateLinkResourceId));
             return this;
         }
 
-        public Builder setPrivateLinkResourceRegion(@Nullable Input<String> privateLinkResourceRegion) {
+        public Builder privateLinkResourceRegion(@Nullable Input<String> privateLinkResourceRegion) {
             this.privateLinkResourceRegion = privateLinkResourceRegion;
             return this;
         }
 
-        public Builder setPrivateLinkResourceRegion(@Nullable String privateLinkResourceRegion) {
+        public Builder privateLinkResourceRegion(@Nullable String privateLinkResourceRegion) {
             this.privateLinkResourceRegion = Input.ofNullable(privateLinkResourceRegion);
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Input<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Input.ofNullable(requestMessage);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

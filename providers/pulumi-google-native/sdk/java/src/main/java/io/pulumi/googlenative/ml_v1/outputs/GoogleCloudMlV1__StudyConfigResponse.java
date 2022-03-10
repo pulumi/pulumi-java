@@ -101,22 +101,22 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setAutomatedStoppingConfig(GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig) {
+        public Builder automatedStoppingConfig(GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig) {
             this.automatedStoppingConfig = Objects.requireNonNull(automatedStoppingConfig);
             return this;
         }
 
-        public Builder setMetrics(List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics) {
+        public Builder metrics(List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setParameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
+        public Builder parameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

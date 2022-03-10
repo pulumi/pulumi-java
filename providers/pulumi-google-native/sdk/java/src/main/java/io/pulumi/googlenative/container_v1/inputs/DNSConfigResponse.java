@@ -88,17 +88,17 @@ public final class DNSConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.clusterDnsScope = defaults.clusterDnsScope;
         }
 
-        public Builder setClusterDns(String clusterDns) {
+        public Builder clusterDns(String clusterDns) {
             this.clusterDns = Objects.requireNonNull(clusterDns);
             return this;
         }
 
-        public Builder setClusterDnsDomain(String clusterDnsDomain) {
+        public Builder clusterDnsDomain(String clusterDnsDomain) {
             this.clusterDnsDomain = Objects.requireNonNull(clusterDnsDomain);
             return this;
         }
 
-        public Builder setClusterDnsScope(String clusterDnsScope) {
+        public Builder clusterDnsScope(String clusterDnsScope) {
             this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
             return this;
         }

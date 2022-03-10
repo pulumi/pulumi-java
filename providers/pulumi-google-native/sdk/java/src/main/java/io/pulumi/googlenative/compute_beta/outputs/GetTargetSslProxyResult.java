@@ -194,52 +194,52 @@ public final class GetTargetSslProxyResult {
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder setCertificateMap(String certificateMap) {
+        public Builder certificateMap(String certificateMap) {
             this.certificateMap = Objects.requireNonNull(certificateMap);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProxyHeader(String proxyHeader) {
+        public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setSslCertificates(List<String> sslCertificates) {
+        public Builder sslCertificates(List<String> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
 
-        public Builder setSslPolicy(String sslPolicy) {
+        public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }

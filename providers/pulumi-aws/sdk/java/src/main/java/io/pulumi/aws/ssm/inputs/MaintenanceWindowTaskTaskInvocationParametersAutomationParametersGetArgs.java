@@ -72,22 +72,22 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setDocumentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Input<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Input.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs> parameters) {
+        public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

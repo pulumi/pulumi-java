@@ -68,12 +68,12 @@ public final class WorkteamMemberDefinition {
     	      this.oidcMemberDefinition = defaults.oidcMemberDefinition;
         }
 
-        public Builder setCognitoMemberDefinition(@Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition) {
+        public Builder cognitoMemberDefinition(@Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition) {
             this.cognitoMemberDefinition = cognitoMemberDefinition;
             return this;
         }
 
-        public Builder setOidcMemberDefinition(@Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
+        public Builder oidcMemberDefinition(@Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
             this.oidcMemberDefinition = oidcMemberDefinition;
             return this;
         }

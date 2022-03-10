@@ -333,192 +333,192 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variantsHistory = defaults.variantsHistory;
         }
 
-        public Builder setAgentId(Input<String> agentId) {
+        public Builder agentId(Input<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Input.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDefinition(@Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> definition) {
+        public Builder definition(@Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinition(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs definition) {
+        public Builder definition(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs definition) {
             this.definition = Input.ofNullable(definition);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setExperimentLength(@Nullable Input<String> experimentLength) {
+        public Builder experimentLength(@Nullable Input<String> experimentLength) {
             this.experimentLength = experimentLength;
             return this;
         }
 
-        public Builder setExperimentLength(@Nullable String experimentLength) {
+        public Builder experimentLength(@Nullable String experimentLength) {
             this.experimentLength = Input.ofNullable(experimentLength);
             return this;
         }
 
-        public Builder setLastUpdateTime(@Nullable Input<String> lastUpdateTime) {
+        public Builder lastUpdateTime(@Nullable Input<String> lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
             return this;
         }
 
-        public Builder setLastUpdateTime(@Nullable String lastUpdateTime) {
+        public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
             this.lastUpdateTime = Input.ofNullable(lastUpdateTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResult(@Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> result) {
+        public Builder result(@Nullable Input<GoogleCloudDialogflowCxV3beta1ExperimentResultArgs> result) {
             this.result = result;
             return this;
         }
 
-        public Builder setResult(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentResultArgs result) {
+        public Builder result(@Nullable GoogleCloudDialogflowCxV3beta1ExperimentResultArgs result) {
             this.result = Input.ofNullable(result);
             return this;
         }
 
-        public Builder setRolloutConfig(@Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> rolloutConfig) {
+        public Builder rolloutConfig(@Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutConfigArgs> rolloutConfig) {
             this.rolloutConfig = rolloutConfig;
             return this;
         }
 
-        public Builder setRolloutConfig(@Nullable GoogleCloudDialogflowCxV3beta1RolloutConfigArgs rolloutConfig) {
+        public Builder rolloutConfig(@Nullable GoogleCloudDialogflowCxV3beta1RolloutConfigArgs rolloutConfig) {
             this.rolloutConfig = Input.ofNullable(rolloutConfig);
             return this;
         }
 
-        public Builder setRolloutFailureReason(@Nullable Input<String> rolloutFailureReason) {
+        public Builder rolloutFailureReason(@Nullable Input<String> rolloutFailureReason) {
             this.rolloutFailureReason = rolloutFailureReason;
             return this;
         }
 
-        public Builder setRolloutFailureReason(@Nullable String rolloutFailureReason) {
+        public Builder rolloutFailureReason(@Nullable String rolloutFailureReason) {
             this.rolloutFailureReason = Input.ofNullable(rolloutFailureReason);
             return this;
         }
 
-        public Builder setRolloutState(@Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> rolloutState) {
+        public Builder rolloutState(@Nullable Input<GoogleCloudDialogflowCxV3beta1RolloutStateArgs> rolloutState) {
             this.rolloutState = rolloutState;
             return this;
         }
 
-        public Builder setRolloutState(@Nullable GoogleCloudDialogflowCxV3beta1RolloutStateArgs rolloutState) {
+        public Builder rolloutState(@Nullable GoogleCloudDialogflowCxV3beta1RolloutStateArgs rolloutState) {
             this.rolloutState = Input.ofNullable(rolloutState);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setState(@Nullable Input<ExperimentState> state) {
+        public Builder state(@Nullable Input<ExperimentState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ExperimentState state) {
+        public Builder state(@Nullable ExperimentState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setVariantsHistory(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> variantsHistory) {
+        public Builder variantsHistory(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs>> variantsHistory) {
             this.variantsHistory = variantsHistory;
             return this;
         }
 
-        public Builder setVariantsHistory(@Nullable List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs> variantsHistory) {
+        public Builder variantsHistory(@Nullable List<GoogleCloudDialogflowCxV3beta1VariantsHistoryArgs> variantsHistory) {
             this.variantsHistory = Input.ofNullable(variantsHistory);
             return this;
         }

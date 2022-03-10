@@ -62,22 +62,22 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
     	      this.portSets = defaults.portSets;
         }
 
-        public Builder setIPSets(@Nullable Input<Object> iPSets) {
+        public Builder iPSets(@Nullable Input<Object> iPSets) {
             this.iPSets = iPSets;
             return this;
         }
 
-        public Builder setIPSets(@Nullable Object iPSets) {
+        public Builder iPSets(@Nullable Object iPSets) {
             this.iPSets = Input.ofNullable(iPSets);
             return this;
         }
 
-        public Builder setPortSets(@Nullable Input<Object> portSets) {
+        public Builder portSets(@Nullable Input<Object> portSets) {
             this.portSets = portSets;
             return this;
         }
 
-        public Builder setPortSets(@Nullable Object portSets) {
+        public Builder portSets(@Nullable Object portSets) {
             this.portSets = Input.ofNullable(portSets);
             return this;
         }

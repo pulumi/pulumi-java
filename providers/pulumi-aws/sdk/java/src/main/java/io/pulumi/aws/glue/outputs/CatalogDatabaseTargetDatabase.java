@@ -65,12 +65,12 @@ public final class CatalogDatabaseTargetDatabase {
     	      this.databaseName = defaults.databaseName;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }

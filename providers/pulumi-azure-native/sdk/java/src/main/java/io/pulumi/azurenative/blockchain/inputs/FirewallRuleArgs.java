@@ -90,32 +90,32 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIpAddress = defaults.startIpAddress;
         }
 
-        public Builder setEndIpAddress(@Nullable Input<String> endIpAddress) {
+        public Builder endIpAddress(@Nullable Input<String> endIpAddress) {
             this.endIpAddress = endIpAddress;
             return this;
         }
 
-        public Builder setEndIpAddress(@Nullable String endIpAddress) {
+        public Builder endIpAddress(@Nullable String endIpAddress) {
             this.endIpAddress = Input.ofNullable(endIpAddress);
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setStartIpAddress(@Nullable Input<String> startIpAddress) {
+        public Builder startIpAddress(@Nullable Input<String> startIpAddress) {
             this.startIpAddress = startIpAddress;
             return this;
         }
 
-        public Builder setStartIpAddress(@Nullable String startIpAddress) {
+        public Builder startIpAddress(@Nullable String startIpAddress) {
             this.startIpAddress = Input.ofNullable(startIpAddress);
             return this;
         }

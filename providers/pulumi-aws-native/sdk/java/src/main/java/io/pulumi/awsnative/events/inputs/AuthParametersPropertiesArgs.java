@@ -89,42 +89,42 @@ public final class AuthParametersPropertiesArgs extends io.pulumi.resources.Reso
     	      this.oAuthParameters = defaults.oAuthParameters;
         }
 
-        public Builder setApiKeyAuthParameters(@Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters) {
+        public Builder apiKeyAuthParameters(@Nullable Input<ConnectionApiKeyAuthParametersArgs> apiKeyAuthParameters) {
             this.apiKeyAuthParameters = apiKeyAuthParameters;
             return this;
         }
 
-        public Builder setApiKeyAuthParameters(@Nullable ConnectionApiKeyAuthParametersArgs apiKeyAuthParameters) {
+        public Builder apiKeyAuthParameters(@Nullable ConnectionApiKeyAuthParametersArgs apiKeyAuthParameters) {
             this.apiKeyAuthParameters = Input.ofNullable(apiKeyAuthParameters);
             return this;
         }
 
-        public Builder setBasicAuthParameters(@Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters) {
+        public Builder basicAuthParameters(@Nullable Input<ConnectionBasicAuthParametersArgs> basicAuthParameters) {
             this.basicAuthParameters = basicAuthParameters;
             return this;
         }
 
-        public Builder setBasicAuthParameters(@Nullable ConnectionBasicAuthParametersArgs basicAuthParameters) {
+        public Builder basicAuthParameters(@Nullable ConnectionBasicAuthParametersArgs basicAuthParameters) {
             this.basicAuthParameters = Input.ofNullable(basicAuthParameters);
             return this;
         }
 
-        public Builder setInvocationHttpParameters(@Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters) {
+        public Builder invocationHttpParameters(@Nullable Input<ConnectionHttpParametersArgs> invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
 
-        public Builder setInvocationHttpParameters(@Nullable ConnectionHttpParametersArgs invocationHttpParameters) {
+        public Builder invocationHttpParameters(@Nullable ConnectionHttpParametersArgs invocationHttpParameters) {
             this.invocationHttpParameters = Input.ofNullable(invocationHttpParameters);
             return this;
         }
 
-        public Builder setOAuthParameters(@Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters) {
+        public Builder oAuthParameters(@Nullable Input<ConnectionOAuthParametersArgs> oAuthParameters) {
             this.oAuthParameters = oAuthParameters;
             return this;
         }
 
-        public Builder setOAuthParameters(@Nullable ConnectionOAuthParametersArgs oAuthParameters) {
+        public Builder oAuthParameters(@Nullable ConnectionOAuthParametersArgs oAuthParameters) {
             this.oAuthParameters = Input.ofNullable(oAuthParameters);
             return this;
         }

@@ -141,37 +141,37 @@ public final class GetSecurityPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable SecurityPolicyWebApplicationFirewallParametersResponse parameters) {
+        public Builder parameters(@Nullable SecurityPolicyWebApplicationFirewallParametersResponse parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

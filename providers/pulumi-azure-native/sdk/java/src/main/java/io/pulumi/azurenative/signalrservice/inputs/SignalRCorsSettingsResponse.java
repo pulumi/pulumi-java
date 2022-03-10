@@ -58,7 +58,7 @@ public final class SignalRCorsSettingsResponse extends io.pulumi.resources.Invok
     	      this.allowedOrigins = defaults.allowedOrigins;
         }
 
-        public Builder setAllowedOrigins(@Nullable List<String> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }

@@ -208,112 +208,112 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testExecutionMatrixId = defaults.testExecutionMatrixId;
         }
 
-        public Builder setCompletionTime(@Nullable Input<TimestampArgs> completionTime) {
+        public Builder completionTime(@Nullable Input<TimestampArgs> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
-        public Builder setCompletionTime(@Nullable TimestampArgs completionTime) {
+        public Builder completionTime(@Nullable TimestampArgs completionTime) {
             this.completionTime = Input.ofNullable(completionTime);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<TimestampArgs> creationTime) {
+        public Builder creationTime(@Nullable Input<TimestampArgs> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable TimestampArgs creationTime) {
+        public Builder creationTime(@Nullable TimestampArgs creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDimensionDefinitions(@Nullable Input<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions) {
+        public Builder dimensionDefinitions(@Nullable Input<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions) {
             this.dimensionDefinitions = dimensionDefinitions;
             return this;
         }
 
-        public Builder setDimensionDefinitions(@Nullable List<MatrixDimensionDefinitionArgs> dimensionDefinitions) {
+        public Builder dimensionDefinitions(@Nullable List<MatrixDimensionDefinitionArgs> dimensionDefinitions) {
             this.dimensionDefinitions = Input.ofNullable(dimensionDefinitions);
             return this;
         }
 
-        public Builder setExecutionId(@Nullable Input<String> executionId) {
+        public Builder executionId(@Nullable Input<String> executionId) {
             this.executionId = executionId;
             return this;
         }
 
-        public Builder setExecutionId(@Nullable String executionId) {
+        public Builder executionId(@Nullable String executionId) {
             this.executionId = Input.ofNullable(executionId);
             return this;
         }
 
-        public Builder setHistoryId(Input<String> historyId) {
+        public Builder historyId(Input<String> historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Input.of(Objects.requireNonNull(historyId));
             return this;
         }
 
-        public Builder setOutcome(@Nullable Input<OutcomeArgs> outcome) {
+        public Builder outcome(@Nullable Input<OutcomeArgs> outcome) {
             this.outcome = outcome;
             return this;
         }
 
-        public Builder setOutcome(@Nullable OutcomeArgs outcome) {
+        public Builder outcome(@Nullable OutcomeArgs outcome) {
             this.outcome = Input.ofNullable(outcome);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSpecification(@Nullable Input<SpecificationArgs> specification) {
+        public Builder specification(@Nullable Input<SpecificationArgs> specification) {
             this.specification = specification;
             return this;
         }
 
-        public Builder setSpecification(@Nullable SpecificationArgs specification) {
+        public Builder specification(@Nullable SpecificationArgs specification) {
             this.specification = Input.ofNullable(specification);
             return this;
         }
 
-        public Builder setState(@Nullable Input<ExecutionState> state) {
+        public Builder state(@Nullable Input<ExecutionState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ExecutionState state) {
+        public Builder state(@Nullable ExecutionState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTestExecutionMatrixId(@Nullable Input<String> testExecutionMatrixId) {
+        public Builder testExecutionMatrixId(@Nullable Input<String> testExecutionMatrixId) {
             this.testExecutionMatrixId = testExecutionMatrixId;
             return this;
         }
 
-        public Builder setTestExecutionMatrixId(@Nullable String testExecutionMatrixId) {
+        public Builder testExecutionMatrixId(@Nullable String testExecutionMatrixId) {
             this.testExecutionMatrixId = Input.ofNullable(testExecutionMatrixId);
             return this;
         }

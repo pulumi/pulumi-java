@@ -136,62 +136,62 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     	      this.templateLibraryInstalled = defaults.templateLibraryInstalled;
         }
 
-        public Builder setAuditIntervalSeconds(@Nullable Input<String> auditIntervalSeconds) {
+        public Builder auditIntervalSeconds(@Nullable Input<String> auditIntervalSeconds) {
             this.auditIntervalSeconds = auditIntervalSeconds;
             return this;
         }
 
-        public Builder setAuditIntervalSeconds(@Nullable String auditIntervalSeconds) {
+        public Builder auditIntervalSeconds(@Nullable String auditIntervalSeconds) {
             this.auditIntervalSeconds = Input.ofNullable(auditIntervalSeconds);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setExemptableNamespaces(@Nullable Input<List<String>> exemptableNamespaces) {
+        public Builder exemptableNamespaces(@Nullable Input<List<String>> exemptableNamespaces) {
             this.exemptableNamespaces = exemptableNamespaces;
             return this;
         }
 
-        public Builder setExemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
+        public Builder exemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
             this.exemptableNamespaces = Input.ofNullable(exemptableNamespaces);
             return this;
         }
 
-        public Builder setLogDeniesEnabled(@Nullable Input<Boolean> logDeniesEnabled) {
+        public Builder logDeniesEnabled(@Nullable Input<Boolean> logDeniesEnabled) {
             this.logDeniesEnabled = logDeniesEnabled;
             return this;
         }
 
-        public Builder setLogDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
+        public Builder logDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
             this.logDeniesEnabled = Input.ofNullable(logDeniesEnabled);
             return this;
         }
 
-        public Builder setReferentialRulesEnabled(@Nullable Input<Boolean> referentialRulesEnabled) {
+        public Builder referentialRulesEnabled(@Nullable Input<Boolean> referentialRulesEnabled) {
             this.referentialRulesEnabled = referentialRulesEnabled;
             return this;
         }
 
-        public Builder setReferentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
+        public Builder referentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
             this.referentialRulesEnabled = Input.ofNullable(referentialRulesEnabled);
             return this;
         }
 
-        public Builder setTemplateLibraryInstalled(@Nullable Input<Boolean> templateLibraryInstalled) {
+        public Builder templateLibraryInstalled(@Nullable Input<Boolean> templateLibraryInstalled) {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
 
-        public Builder setTemplateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
+        public Builder templateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
             this.templateLibraryInstalled = Input.ofNullable(templateLibraryInstalled);
             return this;
         }

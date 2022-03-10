@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindings {
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder setOutputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig) {
+        public Builder outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }

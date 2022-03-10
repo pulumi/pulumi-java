@@ -51,7 +51,7 @@ public final class GetMultiRegionAccessPointArgs extends io.pulumi.resources.Inv
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -86,17 +86,17 @@ public final class GetContactListResult {
     	      this.topics = defaults.topics;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ContactListTag> tags) {
+        public Builder tags(@Nullable List<ContactListTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTopics(@Nullable List<ContactListTopic> topics) {
+        public Builder topics(@Nullable List<ContactListTopic> topics) {
             this.topics = topics;
             return this;
         }

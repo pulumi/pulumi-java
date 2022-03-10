@@ -173,82 +173,82 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trustType = defaults.trustType;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelectiveAuthentication(@Nullable Input<Boolean> selectiveAuthentication) {
+        public Builder selectiveAuthentication(@Nullable Input<Boolean> selectiveAuthentication) {
             this.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
 
-        public Builder setSelectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
+        public Builder selectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
             this.selectiveAuthentication = Input.ofNullable(selectiveAuthentication);
             return this;
         }
 
-        public Builder setTargetDnsIpAddresses(Input<List<String>> targetDnsIpAddresses) {
+        public Builder targetDnsIpAddresses(Input<List<String>> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
             return this;
         }
 
-        public Builder setTargetDnsIpAddresses(List<String> targetDnsIpAddresses) {
+        public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Input.of(Objects.requireNonNull(targetDnsIpAddresses));
             return this;
         }
 
-        public Builder setTargetDomainName(Input<String> targetDomainName) {
+        public Builder targetDomainName(Input<String> targetDomainName) {
             this.targetDomainName = Objects.requireNonNull(targetDomainName);
             return this;
         }
 
-        public Builder setTargetDomainName(String targetDomainName) {
+        public Builder targetDomainName(String targetDomainName) {
             this.targetDomainName = Input.of(Objects.requireNonNull(targetDomainName));
             return this;
         }
 
-        public Builder setTrustDirection(Input<String> trustDirection) {
+        public Builder trustDirection(Input<String> trustDirection) {
             this.trustDirection = Objects.requireNonNull(trustDirection);
             return this;
         }
 
-        public Builder setTrustDirection(String trustDirection) {
+        public Builder trustDirection(String trustDirection) {
             this.trustDirection = Input.of(Objects.requireNonNull(trustDirection));
             return this;
         }
 
-        public Builder setTrustHandshakeSecret(Input<String> trustHandshakeSecret) {
+        public Builder trustHandshakeSecret(Input<String> trustHandshakeSecret) {
             this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
             return this;
         }
 
-        public Builder setTrustHandshakeSecret(String trustHandshakeSecret) {
+        public Builder trustHandshakeSecret(String trustHandshakeSecret) {
             this.trustHandshakeSecret = Input.of(Objects.requireNonNull(trustHandshakeSecret));
             return this;
         }
 
-        public Builder setTrustType(Input<String> trustType) {
+        public Builder trustType(Input<String> trustType) {
             this.trustType = Objects.requireNonNull(trustType);
             return this;
         }
 
-        public Builder setTrustType(String trustType) {
+        public Builder trustType(String trustType) {
             this.trustType = Input.of(Objects.requireNonNull(trustType));
             return this;
         }

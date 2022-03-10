@@ -77,22 +77,22 @@ public final class LabelSelectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.matchLabels = defaults.matchLabels;
         }
 
-        public Builder setMatchExpressions(@Nullable Input<List<LabelSelectorRequirementArgs>> matchExpressions) {
+        public Builder matchExpressions(@Nullable Input<List<LabelSelectorRequirementArgs>> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
-        public Builder setMatchExpressions(@Nullable List<LabelSelectorRequirementArgs> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<LabelSelectorRequirementArgs> matchExpressions) {
             this.matchExpressions = Input.ofNullable(matchExpressions);
             return this;
         }
 
-        public Builder setMatchLabels(@Nullable Input<Map<String,String>> matchLabels) {
+        public Builder matchLabels(@Nullable Input<Map<String,String>> matchLabels) {
             this.matchLabels = matchLabels;
             return this;
         }
 
-        public Builder setMatchLabels(@Nullable Map<String,String> matchLabels) {
+        public Builder matchLabels(@Nullable Map<String,String> matchLabels) {
             this.matchLabels = Input.ofNullable(matchLabels);
             return this;
         }

@@ -99,52 +99,52 @@ public final class ContainerVolumeGetArgs extends io.pulumi.resources.ResourceAr
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setContainerPath(@Nullable Input<String> containerPath) {
+        public Builder containerPath(@Nullable Input<String> containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
-        public Builder setContainerPath(@Nullable String containerPath) {
+        public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = Input.ofNullable(containerPath);
             return this;
         }
 
-        public Builder setFromContainer(@Nullable Input<String> fromContainer) {
+        public Builder fromContainer(@Nullable Input<String> fromContainer) {
             this.fromContainer = fromContainer;
             return this;
         }
 
-        public Builder setFromContainer(@Nullable String fromContainer) {
+        public Builder fromContainer(@Nullable String fromContainer) {
             this.fromContainer = Input.ofNullable(fromContainer);
             return this;
         }
 
-        public Builder setHostPath(@Nullable Input<String> hostPath) {
+        public Builder hostPath(@Nullable Input<String> hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
-        public Builder setHostPath(@Nullable String hostPath) {
+        public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = Input.ofNullable(hostPath);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setVolumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Input<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }

@@ -87,17 +87,17 @@ public final class RuleEmailActionResponse {
     	      this.sendToServiceOwners = defaults.sendToServiceOwners;
         }
 
-        public Builder setCustomEmails(@Nullable List<String> customEmails) {
+        public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setSendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
+        public Builder sendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
             this.sendToServiceOwners = sendToServiceOwners;
             return this;
         }

@@ -73,12 +73,12 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
     	      this.source = defaults.source;
         }
 
-        public Builder setFileDescriptorSet(ApigatewayApiConfigFileResponse fileDescriptorSet) {
+        public Builder fileDescriptorSet(ApigatewayApiConfigFileResponse fileDescriptorSet) {
             this.fileDescriptorSet = Objects.requireNonNull(fileDescriptorSet);
             return this;
         }
 
-        public Builder setSource(List<ApigatewayApiConfigFileResponse> source) {
+        public Builder source(List<ApigatewayApiConfigFileResponse> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

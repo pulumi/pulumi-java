@@ -58,12 +58,12 @@ public final class ManagedIdentitySettingsArgs extends io.pulumi.resources.Resou
     	      this.resource = defaults.resource;
         }
 
-        public Builder setResource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Input<String> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }

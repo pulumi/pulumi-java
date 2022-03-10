@@ -207,97 +207,97 @@ public final class GetDomainResult {
     	      this.vPCOptions = defaults.vPCOptions;
         }
 
-        public Builder setAccessPolicies(@Nullable Object accessPolicies) {
+        public Builder accessPolicies(@Nullable Object accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setAdvancedOptions(@Nullable Object advancedOptions) {
+        public Builder advancedOptions(@Nullable Object advancedOptions) {
             this.advancedOptions = advancedOptions;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setClusterConfig(@Nullable DomainClusterConfig clusterConfig) {
+        public Builder clusterConfig(@Nullable DomainClusterConfig clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
 
-        public Builder setCognitoOptions(@Nullable DomainCognitoOptions cognitoOptions) {
+        public Builder cognitoOptions(@Nullable DomainCognitoOptions cognitoOptions) {
             this.cognitoOptions = cognitoOptions;
             return this;
         }
 
-        public Builder setDomainArn(@Nullable String domainArn) {
+        public Builder domainArn(@Nullable String domainArn) {
             this.domainArn = domainArn;
             return this;
         }
 
-        public Builder setDomainEndpoint(@Nullable String domainEndpoint) {
+        public Builder domainEndpoint(@Nullable String domainEndpoint) {
             this.domainEndpoint = domainEndpoint;
             return this;
         }
 
-        public Builder setDomainEndpointOptions(@Nullable DomainEndpointOptions domainEndpointOptions) {
+        public Builder domainEndpointOptions(@Nullable DomainEndpointOptions domainEndpointOptions) {
             this.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
 
-        public Builder setDomainEndpoints(@Nullable Object domainEndpoints) {
+        public Builder domainEndpoints(@Nullable Object domainEndpoints) {
             this.domainEndpoints = domainEndpoints;
             return this;
         }
 
-        public Builder setEBSOptions(@Nullable DomainEBSOptions eBSOptions) {
+        public Builder eBSOptions(@Nullable DomainEBSOptions eBSOptions) {
             this.eBSOptions = eBSOptions;
             return this;
         }
 
-        public Builder setEncryptionAtRestOptions(@Nullable DomainEncryptionAtRestOptions encryptionAtRestOptions) {
+        public Builder encryptionAtRestOptions(@Nullable DomainEncryptionAtRestOptions encryptionAtRestOptions) {
             this.encryptionAtRestOptions = encryptionAtRestOptions;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLogPublishingOptions(@Nullable Object logPublishingOptions) {
+        public Builder logPublishingOptions(@Nullable Object logPublishingOptions) {
             this.logPublishingOptions = logPublishingOptions;
             return this;
         }
 
-        public Builder setNodeToNodeEncryptionOptions(@Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions) {
+        public Builder nodeToNodeEncryptionOptions(@Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions) {
             this.nodeToNodeEncryptionOptions = nodeToNodeEncryptionOptions;
             return this;
         }
 
-        public Builder setServiceSoftwareOptions(@Nullable DomainServiceSoftwareOptions serviceSoftwareOptions) {
+        public Builder serviceSoftwareOptions(@Nullable DomainServiceSoftwareOptions serviceSoftwareOptions) {
             this.serviceSoftwareOptions = serviceSoftwareOptions;
             return this;
         }
 
-        public Builder setSnapshotOptions(@Nullable DomainSnapshotOptions snapshotOptions) {
+        public Builder snapshotOptions(@Nullable DomainSnapshotOptions snapshotOptions) {
             this.snapshotOptions = snapshotOptions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTag> tags) {
+        public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVPCOptions(@Nullable DomainVPCOptions vPCOptions) {
+        public Builder vPCOptions(@Nullable DomainVPCOptions vPCOptions) {
             this.vPCOptions = vPCOptions;
             return this;
         }

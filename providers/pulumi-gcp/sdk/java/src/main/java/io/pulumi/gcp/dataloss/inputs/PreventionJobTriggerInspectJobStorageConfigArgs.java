@@ -109,42 +109,42 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends io.pu
     	      this.timespanConfig = defaults.timespanConfig;
         }
 
-        public Builder setBigQueryOptions(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions) {
+        public Builder bigQueryOptions(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions) {
             this.bigQueryOptions = bigQueryOptions;
             return this;
         }
 
-        public Builder setBigQueryOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs bigQueryOptions) {
+        public Builder bigQueryOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs bigQueryOptions) {
             this.bigQueryOptions = Input.ofNullable(bigQueryOptions);
             return this;
         }
 
-        public Builder setCloudStorageOptions(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions) {
+        public Builder cloudStorageOptions(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions) {
             this.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
 
-        public Builder setCloudStorageOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs cloudStorageOptions) {
+        public Builder cloudStorageOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs cloudStorageOptions) {
             this.cloudStorageOptions = Input.ofNullable(cloudStorageOptions);
             return this;
         }
 
-        public Builder setDatastoreOptions(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions) {
+        public Builder datastoreOptions(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions) {
             this.datastoreOptions = datastoreOptions;
             return this;
         }
 
-        public Builder setDatastoreOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs datastoreOptions) {
+        public Builder datastoreOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs datastoreOptions) {
             this.datastoreOptions = Input.ofNullable(datastoreOptions);
             return this;
         }
 
-        public Builder setTimespanConfig(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig) {
+        public Builder timespanConfig(@Nullable Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig) {
             this.timespanConfig = timespanConfig;
             return this;
         }
 
-        public Builder setTimespanConfig(@Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs timespanConfig) {
+        public Builder timespanConfig(@Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs timespanConfig) {
             this.timespanConfig = Input.ofNullable(timespanConfig);
             return this;
         }

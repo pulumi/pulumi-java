@@ -56,12 +56,12 @@ public final class LoggingConfigurationConditionActionConditionPropertiesArgs ex
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(Input<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
+        public Builder action(Input<LoggingConfigurationConditionActionConditionPropertiesAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(LoggingConfigurationConditionActionConditionPropertiesAction action) {
+        public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }

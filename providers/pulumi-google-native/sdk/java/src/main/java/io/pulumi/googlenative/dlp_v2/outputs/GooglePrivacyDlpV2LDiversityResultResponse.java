@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
     	      this.sensitiveValueFrequencyHistogramBuckets = defaults.sensitiveValueFrequencyHistogramBuckets;
         }
 
-        public Builder setSensitiveValueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
+        public Builder sensitiveValueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
             this.sensitiveValueFrequencyHistogramBuckets = Objects.requireNonNull(sensitiveValueFrequencyHistogramBuckets);
             return this;
         }

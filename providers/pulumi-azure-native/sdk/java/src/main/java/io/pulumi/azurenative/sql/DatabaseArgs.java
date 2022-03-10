@@ -517,282 +517,282 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setAutoPauseDelay(@Nullable Input<Integer> autoPauseDelay) {
+        public Builder autoPauseDelay(@Nullable Input<Integer> autoPauseDelay) {
             this.autoPauseDelay = autoPauseDelay;
             return this;
         }
 
-        public Builder setAutoPauseDelay(@Nullable Integer autoPauseDelay) {
+        public Builder autoPauseDelay(@Nullable Integer autoPauseDelay) {
             this.autoPauseDelay = Input.ofNullable(autoPauseDelay);
             return this;
         }
 
-        public Builder setCatalogCollation(@Nullable Input<Either<String,CatalogCollationType>> catalogCollation) {
+        public Builder catalogCollation(@Nullable Input<Either<String,CatalogCollationType>> catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
 
-        public Builder setCatalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
+        public Builder catalogCollation(@Nullable Either<String,CatalogCollationType> catalogCollation) {
             this.catalogCollation = Input.ofNullable(catalogCollation);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Input<Either<String,CreateMode>> createMode) {
+        public Builder createMode(@Nullable Input<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Either<String,CreateMode> createMode) {
+        public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
             this.createMode = Input.ofNullable(createMode);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setElasticPoolId(@Nullable Input<String> elasticPoolId) {
+        public Builder elasticPoolId(@Nullable Input<String> elasticPoolId) {
             this.elasticPoolId = elasticPoolId;
             return this;
         }
 
-        public Builder setElasticPoolId(@Nullable String elasticPoolId) {
+        public Builder elasticPoolId(@Nullable String elasticPoolId) {
             this.elasticPoolId = Input.ofNullable(elasticPoolId);
             return this;
         }
 
-        public Builder setHighAvailabilityReplicaCount(@Nullable Input<Integer> highAvailabilityReplicaCount) {
+        public Builder highAvailabilityReplicaCount(@Nullable Input<Integer> highAvailabilityReplicaCount) {
             this.highAvailabilityReplicaCount = highAvailabilityReplicaCount;
             return this;
         }
 
-        public Builder setHighAvailabilityReplicaCount(@Nullable Integer highAvailabilityReplicaCount) {
+        public Builder highAvailabilityReplicaCount(@Nullable Integer highAvailabilityReplicaCount) {
             this.highAvailabilityReplicaCount = Input.ofNullable(highAvailabilityReplicaCount);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<Either<String,DatabaseLicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Input<Either<String,DatabaseLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Either<String,DatabaseLicenseType> licenseType) {
+        public Builder licenseType(@Nullable Either<String,DatabaseLicenseType> licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLongTermRetentionBackupResourceId(@Nullable Input<String> longTermRetentionBackupResourceId) {
+        public Builder longTermRetentionBackupResourceId(@Nullable Input<String> longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = longTermRetentionBackupResourceId;
             return this;
         }
 
-        public Builder setLongTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
+        public Builder longTermRetentionBackupResourceId(@Nullable String longTermRetentionBackupResourceId) {
             this.longTermRetentionBackupResourceId = Input.ofNullable(longTermRetentionBackupResourceId);
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder setMaxSizeBytes(@Nullable Input<Double> maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Input<Double> maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
-        public Builder setMaxSizeBytes(@Nullable Double maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = Input.ofNullable(maxSizeBytes);
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Input<Double> minCapacity) {
+        public Builder minCapacity(@Nullable Input<Double> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Double minCapacity) {
+        public Builder minCapacity(@Nullable Double minCapacity) {
             this.minCapacity = Input.ofNullable(minCapacity);
             return this;
         }
 
-        public Builder setReadScale(@Nullable Input<Either<String,DatabaseReadScale>> readScale) {
+        public Builder readScale(@Nullable Input<Either<String,DatabaseReadScale>> readScale) {
             this.readScale = readScale;
             return this;
         }
 
-        public Builder setReadScale(@Nullable Either<String,DatabaseReadScale> readScale) {
+        public Builder readScale(@Nullable Either<String,DatabaseReadScale> readScale) {
             this.readScale = Input.ofNullable(readScale);
             return this;
         }
 
-        public Builder setRecoverableDatabaseId(@Nullable Input<String> recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable Input<String> recoverableDatabaseId) {
             this.recoverableDatabaseId = recoverableDatabaseId;
             return this;
         }
 
-        public Builder setRecoverableDatabaseId(@Nullable String recoverableDatabaseId) {
+        public Builder recoverableDatabaseId(@Nullable String recoverableDatabaseId) {
             this.recoverableDatabaseId = Input.ofNullable(recoverableDatabaseId);
             return this;
         }
 
-        public Builder setRecoveryServicesRecoveryPointId(@Nullable Input<String> recoveryServicesRecoveryPointId) {
+        public Builder recoveryServicesRecoveryPointId(@Nullable Input<String> recoveryServicesRecoveryPointId) {
             this.recoveryServicesRecoveryPointId = recoveryServicesRecoveryPointId;
             return this;
         }
 
-        public Builder setRecoveryServicesRecoveryPointId(@Nullable String recoveryServicesRecoveryPointId) {
+        public Builder recoveryServicesRecoveryPointId(@Nullable String recoveryServicesRecoveryPointId) {
             this.recoveryServicesRecoveryPointId = Input.ofNullable(recoveryServicesRecoveryPointId);
             return this;
         }
 
-        public Builder setRequestedBackupStorageRedundancy(@Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy) {
+        public Builder requestedBackupStorageRedundancy(@Nullable Input<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy) {
             this.requestedBackupStorageRedundancy = requestedBackupStorageRedundancy;
             return this;
         }
 
-        public Builder setRequestedBackupStorageRedundancy(@Nullable Either<String,RequestedBackupStorageRedundancy> requestedBackupStorageRedundancy) {
+        public Builder requestedBackupStorageRedundancy(@Nullable Either<String,RequestedBackupStorageRedundancy> requestedBackupStorageRedundancy) {
             this.requestedBackupStorageRedundancy = Input.ofNullable(requestedBackupStorageRedundancy);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestorableDroppedDatabaseId(@Nullable Input<String> restorableDroppedDatabaseId) {
+        public Builder restorableDroppedDatabaseId(@Nullable Input<String> restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = restorableDroppedDatabaseId;
             return this;
         }
 
-        public Builder setRestorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
+        public Builder restorableDroppedDatabaseId(@Nullable String restorableDroppedDatabaseId) {
             this.restorableDroppedDatabaseId = Input.ofNullable(restorableDroppedDatabaseId);
             return this;
         }
 
-        public Builder setRestorePointInTime(@Nullable Input<String> restorePointInTime) {
+        public Builder restorePointInTime(@Nullable Input<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
-        public Builder setRestorePointInTime(@Nullable String restorePointInTime) {
+        public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = Input.ofNullable(restorePointInTime);
             return this;
         }
 
-        public Builder setSampleName(@Nullable Input<Either<String,SampleName>> sampleName) {
+        public Builder sampleName(@Nullable Input<Either<String,SampleName>> sampleName) {
             this.sampleName = sampleName;
             return this;
         }
 
-        public Builder setSampleName(@Nullable Either<String,SampleName> sampleName) {
+        public Builder sampleName(@Nullable Either<String,SampleName> sampleName) {
             this.sampleName = Input.ofNullable(sampleName);
             return this;
         }
 
-        public Builder setSecondaryType(@Nullable Input<Either<String,SecondaryType>> secondaryType) {
+        public Builder secondaryType(@Nullable Input<Either<String,SecondaryType>> secondaryType) {
             this.secondaryType = secondaryType;
             return this;
         }
 
-        public Builder setSecondaryType(@Nullable Either<String,SecondaryType> secondaryType) {
+        public Builder secondaryType(@Nullable Either<String,SecondaryType> secondaryType) {
             this.secondaryType = Input.ofNullable(secondaryType);
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSourceDatabaseDeletionDate(@Nullable Input<String> sourceDatabaseDeletionDate) {
+        public Builder sourceDatabaseDeletionDate(@Nullable Input<String> sourceDatabaseDeletionDate) {
             this.sourceDatabaseDeletionDate = sourceDatabaseDeletionDate;
             return this;
         }
 
-        public Builder setSourceDatabaseDeletionDate(@Nullable String sourceDatabaseDeletionDate) {
+        public Builder sourceDatabaseDeletionDate(@Nullable String sourceDatabaseDeletionDate) {
             this.sourceDatabaseDeletionDate = Input.ofNullable(sourceDatabaseDeletionDate);
             return this;
         }
 
-        public Builder setSourceDatabaseId(@Nullable Input<String> sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable Input<String> sourceDatabaseId) {
             this.sourceDatabaseId = sourceDatabaseId;
             return this;
         }
 
-        public Builder setSourceDatabaseId(@Nullable String sourceDatabaseId) {
+        public Builder sourceDatabaseId(@Nullable String sourceDatabaseId) {
             this.sourceDatabaseId = Input.ofNullable(sourceDatabaseId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Boolean zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = Input.ofNullable(zoneRedundant);
             return this;
         }

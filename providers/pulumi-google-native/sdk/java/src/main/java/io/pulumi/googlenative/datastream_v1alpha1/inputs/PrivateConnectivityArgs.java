@@ -53,12 +53,12 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     	      this.privateConnectionName = defaults.privateConnectionName;
         }
 
-        public Builder setPrivateConnectionName(@Nullable Input<String> privateConnectionName) {
+        public Builder privateConnectionName(@Nullable Input<String> privateConnectionName) {
             this.privateConnectionName = privateConnectionName;
             return this;
         }
 
-        public Builder setPrivateConnectionName(@Nullable String privateConnectionName) {
+        public Builder privateConnectionName(@Nullable String privateConnectionName) {
             this.privateConnectionName = Input.ofNullable(privateConnectionName);
             return this;
         }

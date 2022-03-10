@@ -124,52 +124,52 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setBitrate(@Nullable Input<Integer> bitrate) {
+        public Builder bitrate(@Nullable Input<Integer> bitrate) {
             this.bitrate = bitrate;
             return this;
         }
 
-        public Builder setBitrate(@Nullable Integer bitrate) {
+        public Builder bitrate(@Nullable Integer bitrate) {
             this.bitrate = Input.ofNullable(bitrate);
             return this;
         }
 
-        public Builder setChannels(@Nullable Input<Integer> channels) {
+        public Builder channels(@Nullable Input<Integer> channels) {
             this.channels = channels;
             return this;
         }
 
-        public Builder setChannels(@Nullable Integer channels) {
+        public Builder channels(@Nullable Integer channels) {
             this.channels = Input.ofNullable(channels);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Input<Integer> samplingRate) {
+        public Builder samplingRate(@Nullable Input<Integer> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Integer samplingRate) {
+        public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = Input.ofNullable(samplingRate);
             return this;
         }

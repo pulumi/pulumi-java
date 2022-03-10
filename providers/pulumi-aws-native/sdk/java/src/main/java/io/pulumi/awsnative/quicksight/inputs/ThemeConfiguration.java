@@ -94,22 +94,22 @@ public final class ThemeConfiguration extends io.pulumi.resources.InvokeArgs {
     	      this.uIColorPalette = defaults.uIColorPalette;
         }
 
-        public Builder setDataColorPalette(@Nullable ThemeDataColorPalette dataColorPalette) {
+        public Builder dataColorPalette(@Nullable ThemeDataColorPalette dataColorPalette) {
             this.dataColorPalette = dataColorPalette;
             return this;
         }
 
-        public Builder setSheet(@Nullable ThemeSheetStyle sheet) {
+        public Builder sheet(@Nullable ThemeSheetStyle sheet) {
             this.sheet = sheet;
             return this;
         }
 
-        public Builder setTypography(@Nullable ThemeTypography typography) {
+        public Builder typography(@Nullable ThemeTypography typography) {
             this.typography = typography;
             return this;
         }
 
-        public Builder setUIColorPalette(@Nullable ThemeUIColorPalette uIColorPalette) {
+        public Builder uIColorPalette(@Nullable ThemeUIColorPalette uIColorPalette) {
             this.uIColorPalette = uIColorPalette;
             return this;
         }

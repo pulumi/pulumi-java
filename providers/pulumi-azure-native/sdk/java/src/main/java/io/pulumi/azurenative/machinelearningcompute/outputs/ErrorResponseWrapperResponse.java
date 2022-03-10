@@ -50,7 +50,7 @@ public final class ErrorResponseWrapperResponse {
     	      this.error = defaults.error;
         }
 
-        public Builder setError(@Nullable ErrorResponseResponse error) {
+        public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
         }

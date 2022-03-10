@@ -50,7 +50,7 @@ public final class SqlWorkloadTypeUpdateSettingsResponse {
     	      this.sqlWorkloadType = defaults.sqlWorkloadType;
         }
 
-        public Builder setSqlWorkloadType(@Nullable String sqlWorkloadType) {
+        public Builder sqlWorkloadType(@Nullable String sqlWorkloadType) {
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
         }

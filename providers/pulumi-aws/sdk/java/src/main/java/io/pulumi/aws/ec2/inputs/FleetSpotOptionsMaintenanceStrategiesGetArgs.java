@@ -53,12 +53,12 @@ public final class FleetSpotOptionsMaintenanceStrategiesGetArgs extends io.pulum
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder setCapacityRebalance(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
-        public Builder setCapacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
+        public Builder capacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceGetArgs capacityRebalance) {
             this.capacityRebalance = Input.ofNullable(capacityRebalance);
             return this;
         }

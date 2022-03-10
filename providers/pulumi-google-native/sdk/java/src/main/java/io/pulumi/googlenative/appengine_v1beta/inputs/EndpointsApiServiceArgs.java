@@ -108,42 +108,42 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
     	      this.rolloutStrategy = defaults.rolloutStrategy;
         }
 
-        public Builder setConfigId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Input<String> configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = Input.ofNullable(configId);
             return this;
         }
 
-        public Builder setDisableTraceSampling(@Nullable Input<Boolean> disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Input<Boolean> disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
-        public Builder setDisableTraceSampling(@Nullable Boolean disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
             this.disableTraceSampling = Input.ofNullable(disableTraceSampling);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRolloutStrategy(@Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable Input<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }
 
-        public Builder setRolloutStrategy(@Nullable EndpointsApiServiceRolloutStrategy rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable EndpointsApiServiceRolloutStrategy rolloutStrategy) {
             this.rolloutStrategy = Input.ofNullable(rolloutStrategy);
             return this;
         }

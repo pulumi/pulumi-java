@@ -229,112 +229,112 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     	      this.validationSettings = defaults.validationSettings;
         }
 
-        public Builder setAcknowledgementSettings(Input<EdifactAcknowledgementSettingsArgs> acknowledgementSettings) {
+        public Builder acknowledgementSettings(Input<EdifactAcknowledgementSettingsArgs> acknowledgementSettings) {
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
 
-        public Builder setAcknowledgementSettings(EdifactAcknowledgementSettingsArgs acknowledgementSettings) {
+        public Builder acknowledgementSettings(EdifactAcknowledgementSettingsArgs acknowledgementSettings) {
             this.acknowledgementSettings = Input.of(Objects.requireNonNull(acknowledgementSettings));
             return this;
         }
 
-        public Builder setEdifactDelimiterOverrides(@Nullable Input<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides) {
+        public Builder edifactDelimiterOverrides(@Nullable Input<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides) {
             this.edifactDelimiterOverrides = edifactDelimiterOverrides;
             return this;
         }
 
-        public Builder setEdifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideArgs> edifactDelimiterOverrides) {
+        public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideArgs> edifactDelimiterOverrides) {
             this.edifactDelimiterOverrides = Input.ofNullable(edifactDelimiterOverrides);
             return this;
         }
 
-        public Builder setEnvelopeOverrides(@Nullable Input<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides) {
+        public Builder envelopeOverrides(@Nullable Input<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
-        public Builder setEnvelopeOverrides(@Nullable List<EdifactEnvelopeOverrideArgs> envelopeOverrides) {
+        public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideArgs> envelopeOverrides) {
             this.envelopeOverrides = Input.ofNullable(envelopeOverrides);
             return this;
         }
 
-        public Builder setEnvelopeSettings(Input<EdifactEnvelopeSettingsArgs> envelopeSettings) {
+        public Builder envelopeSettings(Input<EdifactEnvelopeSettingsArgs> envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
 
-        public Builder setEnvelopeSettings(EdifactEnvelopeSettingsArgs envelopeSettings) {
+        public Builder envelopeSettings(EdifactEnvelopeSettingsArgs envelopeSettings) {
             this.envelopeSettings = Input.of(Objects.requireNonNull(envelopeSettings));
             return this;
         }
 
-        public Builder setFramingSettings(Input<EdifactFramingSettingsArgs> framingSettings) {
+        public Builder framingSettings(Input<EdifactFramingSettingsArgs> framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
 
-        public Builder setFramingSettings(EdifactFramingSettingsArgs framingSettings) {
+        public Builder framingSettings(EdifactFramingSettingsArgs framingSettings) {
             this.framingSettings = Input.of(Objects.requireNonNull(framingSettings));
             return this;
         }
 
-        public Builder setMessageFilter(Input<EdifactMessageFilterArgs> messageFilter) {
+        public Builder messageFilter(Input<EdifactMessageFilterArgs> messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
 
-        public Builder setMessageFilter(EdifactMessageFilterArgs messageFilter) {
+        public Builder messageFilter(EdifactMessageFilterArgs messageFilter) {
             this.messageFilter = Input.of(Objects.requireNonNull(messageFilter));
             return this;
         }
 
-        public Builder setMessageFilterList(@Nullable Input<List<EdifactMessageIdentifierArgs>> messageFilterList) {
+        public Builder messageFilterList(@Nullable Input<List<EdifactMessageIdentifierArgs>> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
 
-        public Builder setMessageFilterList(@Nullable List<EdifactMessageIdentifierArgs> messageFilterList) {
+        public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierArgs> messageFilterList) {
             this.messageFilterList = Input.ofNullable(messageFilterList);
             return this;
         }
 
-        public Builder setProcessingSettings(Input<EdifactProcessingSettingsArgs> processingSettings) {
+        public Builder processingSettings(Input<EdifactProcessingSettingsArgs> processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
 
-        public Builder setProcessingSettings(EdifactProcessingSettingsArgs processingSettings) {
+        public Builder processingSettings(EdifactProcessingSettingsArgs processingSettings) {
             this.processingSettings = Input.of(Objects.requireNonNull(processingSettings));
             return this;
         }
 
-        public Builder setSchemaReferences(Input<List<EdifactSchemaReferenceArgs>> schemaReferences) {
+        public Builder schemaReferences(Input<List<EdifactSchemaReferenceArgs>> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
 
-        public Builder setSchemaReferences(List<EdifactSchemaReferenceArgs> schemaReferences) {
+        public Builder schemaReferences(List<EdifactSchemaReferenceArgs> schemaReferences) {
             this.schemaReferences = Input.of(Objects.requireNonNull(schemaReferences));
             return this;
         }
 
-        public Builder setValidationOverrides(@Nullable Input<List<EdifactValidationOverrideArgs>> validationOverrides) {
+        public Builder validationOverrides(@Nullable Input<List<EdifactValidationOverrideArgs>> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
 
-        public Builder setValidationOverrides(@Nullable List<EdifactValidationOverrideArgs> validationOverrides) {
+        public Builder validationOverrides(@Nullable List<EdifactValidationOverrideArgs> validationOverrides) {
             this.validationOverrides = Input.ofNullable(validationOverrides);
             return this;
         }
 
-        public Builder setValidationSettings(Input<EdifactValidationSettingsArgs> validationSettings) {
+        public Builder validationSettings(Input<EdifactValidationSettingsArgs> validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
 
-        public Builder setValidationSettings(EdifactValidationSettingsArgs validationSettings) {
+        public Builder validationSettings(EdifactValidationSettingsArgs validationSettings) {
             this.validationSettings = Input.of(Objects.requireNonNull(validationSettings));
             return this;
         }

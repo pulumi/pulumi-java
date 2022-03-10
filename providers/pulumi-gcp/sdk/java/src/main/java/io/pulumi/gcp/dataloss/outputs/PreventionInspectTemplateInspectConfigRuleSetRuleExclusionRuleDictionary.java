@@ -72,12 +72,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setCloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath cloudStoragePath) {
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
-        public Builder setWordList(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList wordList) {
+        public Builder wordList(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList wordList) {
             this.wordList = wordList;
             return this;
         }

@@ -186,92 +186,92 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetServiceTopologyId = defaults.targetServiceTopologyId;
         }
 
-        public Builder setArtifactSourceId(@Nullable Input<String> artifactSourceId) {
+        public Builder artifactSourceId(@Nullable Input<String> artifactSourceId) {
             this.artifactSourceId = artifactSourceId;
             return this;
         }
 
-        public Builder setArtifactSourceId(@Nullable String artifactSourceId) {
+        public Builder artifactSourceId(@Nullable String artifactSourceId) {
             this.artifactSourceId = Input.ofNullable(artifactSourceId);
             return this;
         }
 
-        public Builder setBuildVersion(Input<String> buildVersion) {
+        public Builder buildVersion(Input<String> buildVersion) {
             this.buildVersion = Objects.requireNonNull(buildVersion);
             return this;
         }
 
-        public Builder setBuildVersion(String buildVersion) {
+        public Builder buildVersion(String buildVersion) {
             this.buildVersion = Input.of(Objects.requireNonNull(buildVersion));
             return this;
         }
 
-        public Builder setIdentity(Input<IdentityArgs> identity) {
+        public Builder identity(Input<IdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setIdentity(IdentityArgs identity) {
+        public Builder identity(IdentityArgs identity) {
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRolloutName(@Nullable Input<String> rolloutName) {
+        public Builder rolloutName(@Nullable Input<String> rolloutName) {
             this.rolloutName = rolloutName;
             return this;
         }
 
-        public Builder setRolloutName(@Nullable String rolloutName) {
+        public Builder rolloutName(@Nullable String rolloutName) {
             this.rolloutName = Input.ofNullable(rolloutName);
             return this;
         }
 
-        public Builder setStepGroups(Input<List<StepGroupArgs>> stepGroups) {
+        public Builder stepGroups(Input<List<StepGroupArgs>> stepGroups) {
             this.stepGroups = Objects.requireNonNull(stepGroups);
             return this;
         }
 
-        public Builder setStepGroups(List<StepGroupArgs> stepGroups) {
+        public Builder stepGroups(List<StepGroupArgs> stepGroups) {
             this.stepGroups = Input.of(Objects.requireNonNull(stepGroups));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetServiceTopologyId(Input<String> targetServiceTopologyId) {
+        public Builder targetServiceTopologyId(Input<String> targetServiceTopologyId) {
             this.targetServiceTopologyId = Objects.requireNonNull(targetServiceTopologyId);
             return this;
         }
 
-        public Builder setTargetServiceTopologyId(String targetServiceTopologyId) {
+        public Builder targetServiceTopologyId(String targetServiceTopologyId) {
             this.targetServiceTopologyId = Input.of(Objects.requireNonNull(targetServiceTopologyId));
             return this;
         }

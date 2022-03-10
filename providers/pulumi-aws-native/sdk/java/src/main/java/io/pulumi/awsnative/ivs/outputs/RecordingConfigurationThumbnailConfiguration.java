@@ -68,12 +68,12 @@ public final class RecordingConfigurationThumbnailConfiguration {
     	      this.targetIntervalSeconds = defaults.targetIntervalSeconds;
         }
 
-        public Builder setRecordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
+        public Builder recordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
             this.recordingMode = Objects.requireNonNull(recordingMode);
             return this;
         }
 
-        public Builder setTargetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
+        public Builder targetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
             this.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }

@@ -48,7 +48,7 @@ public final class NotificationConfigResponse {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

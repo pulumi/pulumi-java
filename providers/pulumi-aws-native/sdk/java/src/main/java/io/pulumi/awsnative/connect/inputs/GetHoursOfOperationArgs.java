@@ -51,7 +51,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
     	      this.hoursOfOperationArn = defaults.hoursOfOperationArn;
         }
 
-        public Builder setHoursOfOperationArn(String hoursOfOperationArn) {
+        public Builder hoursOfOperationArn(String hoursOfOperationArn) {
             this.hoursOfOperationArn = Objects.requireNonNull(hoursOfOperationArn);
             return this;
         }

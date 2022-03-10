@@ -142,82 +142,82 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versioningConfiguration = defaults.versioningConfiguration;
         }
 
-        public Builder setActions(Input<List<DatasetActionArgs>> actions) {
+        public Builder actions(Input<List<DatasetActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<DatasetActionArgs> actions) {
+        public Builder actions(List<DatasetActionArgs> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setContentDeliveryRules(@Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules) {
+        public Builder contentDeliveryRules(@Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules) {
             this.contentDeliveryRules = contentDeliveryRules;
             return this;
         }
 
-        public Builder setContentDeliveryRules(@Nullable List<DatasetContentDeliveryRuleArgs> contentDeliveryRules) {
+        public Builder contentDeliveryRules(@Nullable List<DatasetContentDeliveryRuleArgs> contentDeliveryRules) {
             this.contentDeliveryRules = Input.ofNullable(contentDeliveryRules);
             return this;
         }
 
-        public Builder setDatasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Input<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Input.ofNullable(datasetName);
             return this;
         }
 
-        public Builder setLateDataRules(@Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules) {
+        public Builder lateDataRules(@Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules) {
             this.lateDataRules = lateDataRules;
             return this;
         }
 
-        public Builder setLateDataRules(@Nullable List<DatasetLateDataRuleArgs> lateDataRules) {
+        public Builder lateDataRules(@Nullable List<DatasetLateDataRuleArgs> lateDataRules) {
             this.lateDataRules = Input.ofNullable(lateDataRules);
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable DatasetRetentionPeriodArgs retentionPeriod) {
+        public Builder retentionPeriod(@Nullable DatasetRetentionPeriodArgs retentionPeriod) {
             this.retentionPeriod = Input.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DatasetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DatasetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatasetTagArgs> tags) {
+        public Builder tags(@Nullable List<DatasetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<List<DatasetTriggerArgs>> triggers) {
+        public Builder triggers(@Nullable Input<List<DatasetTriggerArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable List<DatasetTriggerArgs> triggers) {
+        public Builder triggers(@Nullable List<DatasetTriggerArgs> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }
 
-        public Builder setVersioningConfiguration(@Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration) {
+        public Builder versioningConfiguration(@Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration) {
             this.versioningConfiguration = versioningConfiguration;
             return this;
         }
 
-        public Builder setVersioningConfiguration(@Nullable DatasetVersioningConfigurationArgs versioningConfiguration) {
+        public Builder versioningConfiguration(@Nullable DatasetVersioningConfigurationArgs versioningConfiguration) {
             this.versioningConfiguration = Input.ofNullable(versioningConfiguration);
             return this;
         }

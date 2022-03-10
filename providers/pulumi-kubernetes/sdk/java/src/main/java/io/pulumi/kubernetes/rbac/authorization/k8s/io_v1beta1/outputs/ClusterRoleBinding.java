@@ -119,27 +119,27 @@ public final class ClusterRoleBinding {
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setRoleRef(RoleRef roleRef) {
+        public Builder roleRef(RoleRef roleRef) {
             this.roleRef = Objects.requireNonNull(roleRef);
             return this;
         }
 
-        public Builder setSubjects(@Nullable List<Subject> subjects) {
+        public Builder subjects(@Nullable List<Subject> subjects) {
             this.subjects = subjects;
             return this;
         }

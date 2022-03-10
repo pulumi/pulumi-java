@@ -50,7 +50,7 @@ public final class LoadBalancerStatus {
     	      this.ingress = defaults.ingress;
         }
 
-        public Builder setIngress(@Nullable List<LoadBalancerIngress> ingress) {
+        public Builder ingress(@Nullable List<LoadBalancerIngress> ingress) {
             this.ingress = ingress;
             return this;
         }

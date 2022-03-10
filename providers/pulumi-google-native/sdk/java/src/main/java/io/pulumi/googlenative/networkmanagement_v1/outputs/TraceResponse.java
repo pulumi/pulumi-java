@@ -67,12 +67,12 @@ public final class TraceResponse {
     	      this.steps = defaults.steps;
         }
 
-        public Builder setEndpointInfo(EndpointInfoResponse endpointInfo) {
+        public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
             this.endpointInfo = Objects.requireNonNull(endpointInfo);
             return this;
         }
 
-        public Builder setSteps(List<StepResponse> steps) {
+        public Builder steps(List<StepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }

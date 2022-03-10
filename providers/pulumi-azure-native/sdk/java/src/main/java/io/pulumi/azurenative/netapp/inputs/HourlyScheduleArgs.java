@@ -91,32 +91,32 @@ public final class HourlyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usedBytes = defaults.usedBytes;
         }
 
-        public Builder setMinute(@Nullable Input<Integer> minute) {
+        public Builder minute(@Nullable Input<Integer> minute) {
             this.minute = minute;
             return this;
         }
 
-        public Builder setMinute(@Nullable Integer minute) {
+        public Builder minute(@Nullable Integer minute) {
             this.minute = Input.ofNullable(minute);
             return this;
         }
 
-        public Builder setSnapshotsToKeep(@Nullable Input<Integer> snapshotsToKeep) {
+        public Builder snapshotsToKeep(@Nullable Input<Integer> snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
-        public Builder setSnapshotsToKeep(@Nullable Integer snapshotsToKeep) {
+        public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = Input.ofNullable(snapshotsToKeep);
             return this;
         }
 
-        public Builder setUsedBytes(@Nullable Input<Double> usedBytes) {
+        public Builder usedBytes(@Nullable Input<Double> usedBytes) {
             this.usedBytes = usedBytes;
             return this;
         }
 
-        public Builder setUsedBytes(@Nullable Double usedBytes) {
+        public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = Input.ofNullable(usedBytes);
             return this;
         }

@@ -91,32 +91,32 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
     	      this.path = defaults.path;
         }
 
-        public Builder setAudience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Input<String> audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = Input.ofNullable(audience);
             return this;
         }
 
-        public Builder setExpirationSeconds(@Nullable Input<Integer> expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Input<Integer> expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
 
-        public Builder setExpirationSeconds(@Nullable Integer expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = Input.ofNullable(expirationSeconds);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }

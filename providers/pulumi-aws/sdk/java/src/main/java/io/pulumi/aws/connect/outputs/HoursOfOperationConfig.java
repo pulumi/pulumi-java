@@ -83,17 +83,17 @@ public final class HoursOfOperationConfig {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setEndTime(HoursOfOperationConfigEndTime endTime) {
+        public Builder endTime(HoursOfOperationConfigEndTime endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(HoursOfOperationConfigStartTime startTime) {
+        public Builder startTime(HoursOfOperationConfigStartTime startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

@@ -143,62 +143,62 @@ public final class GooglePrivacyDlpV2ActionArgs extends io.pulumi.resources.Reso
     	      this.saveFindings = defaults.saveFindings;
         }
 
-        public Builder setJobNotificationEmails(@Nullable Input<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails) {
+        public Builder jobNotificationEmails(@Nullable Input<GooglePrivacyDlpV2JobNotificationEmailsArgs> jobNotificationEmails) {
             this.jobNotificationEmails = jobNotificationEmails;
             return this;
         }
 
-        public Builder setJobNotificationEmails(@Nullable GooglePrivacyDlpV2JobNotificationEmailsArgs jobNotificationEmails) {
+        public Builder jobNotificationEmails(@Nullable GooglePrivacyDlpV2JobNotificationEmailsArgs jobNotificationEmails) {
             this.jobNotificationEmails = Input.ofNullable(jobNotificationEmails);
             return this;
         }
 
-        public Builder setPubSub(@Nullable Input<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub) {
+        public Builder pubSub(@Nullable Input<GooglePrivacyDlpV2PublishToPubSubArgs> pubSub) {
             this.pubSub = pubSub;
             return this;
         }
 
-        public Builder setPubSub(@Nullable GooglePrivacyDlpV2PublishToPubSubArgs pubSub) {
+        public Builder pubSub(@Nullable GooglePrivacyDlpV2PublishToPubSubArgs pubSub) {
             this.pubSub = Input.ofNullable(pubSub);
             return this;
         }
 
-        public Builder setPublishFindingsToCloudDataCatalog(@Nullable Input<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog) {
+        public Builder publishFindingsToCloudDataCatalog(@Nullable Input<GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs> publishFindingsToCloudDataCatalog) {
             this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;
             return this;
         }
 
-        public Builder setPublishFindingsToCloudDataCatalog(@Nullable GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs publishFindingsToCloudDataCatalog) {
+        public Builder publishFindingsToCloudDataCatalog(@Nullable GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogArgs publishFindingsToCloudDataCatalog) {
             this.publishFindingsToCloudDataCatalog = Input.ofNullable(publishFindingsToCloudDataCatalog);
             return this;
         }
 
-        public Builder setPublishSummaryToCscc(@Nullable Input<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc) {
+        public Builder publishSummaryToCscc(@Nullable Input<GooglePrivacyDlpV2PublishSummaryToCsccArgs> publishSummaryToCscc) {
             this.publishSummaryToCscc = publishSummaryToCscc;
             return this;
         }
 
-        public Builder setPublishSummaryToCscc(@Nullable GooglePrivacyDlpV2PublishSummaryToCsccArgs publishSummaryToCscc) {
+        public Builder publishSummaryToCscc(@Nullable GooglePrivacyDlpV2PublishSummaryToCsccArgs publishSummaryToCscc) {
             this.publishSummaryToCscc = Input.ofNullable(publishSummaryToCscc);
             return this;
         }
 
-        public Builder setPublishToStackdriver(@Nullable Input<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver) {
+        public Builder publishToStackdriver(@Nullable Input<GooglePrivacyDlpV2PublishToStackdriverArgs> publishToStackdriver) {
             this.publishToStackdriver = publishToStackdriver;
             return this;
         }
 
-        public Builder setPublishToStackdriver(@Nullable GooglePrivacyDlpV2PublishToStackdriverArgs publishToStackdriver) {
+        public Builder publishToStackdriver(@Nullable GooglePrivacyDlpV2PublishToStackdriverArgs publishToStackdriver) {
             this.publishToStackdriver = Input.ofNullable(publishToStackdriver);
             return this;
         }
 
-        public Builder setSaveFindings(@Nullable Input<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings) {
+        public Builder saveFindings(@Nullable Input<GooglePrivacyDlpV2SaveFindingsArgs> saveFindings) {
             this.saveFindings = saveFindings;
             return this;
         }
 
-        public Builder setSaveFindings(@Nullable GooglePrivacyDlpV2SaveFindingsArgs saveFindings) {
+        public Builder saveFindings(@Nullable GooglePrivacyDlpV2SaveFindingsArgs saveFindings) {
             this.saveFindings = Input.ofNullable(saveFindings);
             return this;
         }

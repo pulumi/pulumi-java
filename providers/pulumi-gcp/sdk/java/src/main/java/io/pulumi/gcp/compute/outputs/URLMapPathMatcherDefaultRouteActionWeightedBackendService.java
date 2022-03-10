@@ -103,17 +103,17 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendService {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBackendService(@Nullable String backendService) {
+        public Builder backendService(@Nullable String backendService) {
             this.backendService = backendService;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction headerAction) {
+        public Builder headerAction(@Nullable URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

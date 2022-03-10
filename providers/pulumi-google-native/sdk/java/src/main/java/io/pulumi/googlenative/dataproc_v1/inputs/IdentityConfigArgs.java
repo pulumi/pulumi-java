@@ -57,12 +57,12 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userServiceAccountMapping = defaults.userServiceAccountMapping;
         }
 
-        public Builder setUserServiceAccountMapping(Input<Map<String,String>> userServiceAccountMapping) {
+        public Builder userServiceAccountMapping(Input<Map<String,String>> userServiceAccountMapping) {
             this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
             return this;
         }
 
-        public Builder setUserServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
+        public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
             this.userServiceAccountMapping = Input.of(Objects.requireNonNull(userServiceAccountMapping));
             return this;
         }

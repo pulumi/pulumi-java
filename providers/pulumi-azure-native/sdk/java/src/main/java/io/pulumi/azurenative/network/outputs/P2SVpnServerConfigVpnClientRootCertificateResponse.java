@@ -115,27 +115,27 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse {
     	      this.publicCertData = defaults.publicCertData;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicCertData(String publicCertData) {
+        public Builder publicCertData(String publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }

@@ -123,52 +123,52 @@ public final class WorkbookTemplateGalleryArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder setCategory(@Nullable Input<String> category) {
+        public Builder category(@Nullable Input<String> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrder(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Input<Integer> order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = Input.ofNullable(order);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

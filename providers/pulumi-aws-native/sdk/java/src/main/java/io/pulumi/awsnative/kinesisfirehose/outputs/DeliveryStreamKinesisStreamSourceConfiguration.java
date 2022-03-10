@@ -49,12 +49,12 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setKinesisStreamARN(String kinesisStreamARN) {
+        public Builder kinesisStreamARN(String kinesisStreamARN) {
             this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN);
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }

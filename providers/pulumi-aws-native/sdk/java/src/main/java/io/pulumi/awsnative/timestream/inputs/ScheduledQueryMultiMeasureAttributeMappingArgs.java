@@ -79,32 +79,32 @@ public final class ScheduledQueryMultiMeasureAttributeMappingArgs extends io.pul
     	      this.targetMultiMeasureAttributeName = defaults.targetMultiMeasureAttributeName;
         }
 
-        public Builder setMeasureValueType(Input<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType) {
+        public Builder measureValueType(Input<ScheduledQueryMultiMeasureAttributeMappingMeasureValueType> measureValueType) {
             this.measureValueType = Objects.requireNonNull(measureValueType);
             return this;
         }
 
-        public Builder setMeasureValueType(ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType) {
+        public Builder measureValueType(ScheduledQueryMultiMeasureAttributeMappingMeasureValueType measureValueType) {
             this.measureValueType = Input.of(Objects.requireNonNull(measureValueType));
             return this;
         }
 
-        public Builder setSourceColumn(Input<String> sourceColumn) {
+        public Builder sourceColumn(Input<String> sourceColumn) {
             this.sourceColumn = Objects.requireNonNull(sourceColumn);
             return this;
         }
 
-        public Builder setSourceColumn(String sourceColumn) {
+        public Builder sourceColumn(String sourceColumn) {
             this.sourceColumn = Input.of(Objects.requireNonNull(sourceColumn));
             return this;
         }
 
-        public Builder setTargetMultiMeasureAttributeName(@Nullable Input<String> targetMultiMeasureAttributeName) {
+        public Builder targetMultiMeasureAttributeName(@Nullable Input<String> targetMultiMeasureAttributeName) {
             this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;
             return this;
         }
 
-        public Builder setTargetMultiMeasureAttributeName(@Nullable String targetMultiMeasureAttributeName) {
+        public Builder targetMultiMeasureAttributeName(@Nullable String targetMultiMeasureAttributeName) {
             this.targetMultiMeasureAttributeName = Input.ofNullable(targetMultiMeasureAttributeName);
             return this;
         }

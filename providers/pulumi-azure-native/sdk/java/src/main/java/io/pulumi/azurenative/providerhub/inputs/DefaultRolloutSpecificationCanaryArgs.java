@@ -63,22 +63,22 @@ public final class DefaultRolloutSpecificationCanaryArgs extends io.pulumi.resou
     	      this.skipRegions = defaults.skipRegions;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }
 
-        public Builder setSkipRegions(@Nullable Input<List<String>> skipRegions) {
+        public Builder skipRegions(@Nullable Input<List<String>> skipRegions) {
             this.skipRegions = skipRegions;
             return this;
         }
 
-        public Builder setSkipRegions(@Nullable List<String> skipRegions) {
+        public Builder skipRegions(@Nullable List<String> skipRegions) {
             this.skipRegions = Input.ofNullable(skipRegions);
             return this;
         }

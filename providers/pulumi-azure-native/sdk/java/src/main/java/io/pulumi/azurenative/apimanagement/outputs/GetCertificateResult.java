@@ -148,37 +148,37 @@ public final class GetCertificateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyVault(@Nullable KeyVaultContractPropertiesResponse keyVault) {
+        public Builder keyVault(@Nullable KeyVaultContractPropertiesResponse keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

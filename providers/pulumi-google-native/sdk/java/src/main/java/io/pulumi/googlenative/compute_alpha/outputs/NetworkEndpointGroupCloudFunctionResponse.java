@@ -65,12 +65,12 @@ public final class NetworkEndpointGroupCloudFunctionResponse {
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setUrlMask(String urlMask) {
+        public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }

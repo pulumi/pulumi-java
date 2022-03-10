@@ -69,22 +69,22 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }

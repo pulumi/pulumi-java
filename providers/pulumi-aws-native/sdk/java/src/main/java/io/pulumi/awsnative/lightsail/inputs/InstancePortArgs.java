@@ -192,102 +192,102 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setAccessDirection(@Nullable Input<String> accessDirection) {
+        public Builder accessDirection(@Nullable Input<String> accessDirection) {
             this.accessDirection = accessDirection;
             return this;
         }
 
-        public Builder setAccessDirection(@Nullable String accessDirection) {
+        public Builder accessDirection(@Nullable String accessDirection) {
             this.accessDirection = Input.ofNullable(accessDirection);
             return this;
         }
 
-        public Builder setAccessFrom(@Nullable Input<String> accessFrom) {
+        public Builder accessFrom(@Nullable Input<String> accessFrom) {
             this.accessFrom = accessFrom;
             return this;
         }
 
-        public Builder setAccessFrom(@Nullable String accessFrom) {
+        public Builder accessFrom(@Nullable String accessFrom) {
             this.accessFrom = Input.ofNullable(accessFrom);
             return this;
         }
 
-        public Builder setAccessType(@Nullable Input<String> accessType) {
+        public Builder accessType(@Nullable Input<String> accessType) {
             this.accessType = accessType;
             return this;
         }
 
-        public Builder setAccessType(@Nullable String accessType) {
+        public Builder accessType(@Nullable String accessType) {
             this.accessType = Input.ofNullable(accessType);
             return this;
         }
 
-        public Builder setCidrListAliases(@Nullable Input<List<String>> cidrListAliases) {
+        public Builder cidrListAliases(@Nullable Input<List<String>> cidrListAliases) {
             this.cidrListAliases = cidrListAliases;
             return this;
         }
 
-        public Builder setCidrListAliases(@Nullable List<String> cidrListAliases) {
+        public Builder cidrListAliases(@Nullable List<String> cidrListAliases) {
             this.cidrListAliases = Input.ofNullable(cidrListAliases);
             return this;
         }
 
-        public Builder setCidrs(@Nullable Input<List<String>> cidrs) {
+        public Builder cidrs(@Nullable Input<List<String>> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
-        public Builder setCidrs(@Nullable List<String> cidrs) {
+        public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = Input.ofNullable(cidrs);
             return this;
         }
 
-        public Builder setCommonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Input<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = Input.ofNullable(commonName);
             return this;
         }
 
-        public Builder setFromPort(@Nullable Input<Integer> fromPort) {
+        public Builder fromPort(@Nullable Input<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
-        public Builder setFromPort(@Nullable Integer fromPort) {
+        public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = Input.ofNullable(fromPort);
             return this;
         }
 
-        public Builder setIpv6Cidrs(@Nullable Input<List<String>> ipv6Cidrs) {
+        public Builder ipv6Cidrs(@Nullable Input<List<String>> ipv6Cidrs) {
             this.ipv6Cidrs = ipv6Cidrs;
             return this;
         }
 
-        public Builder setIpv6Cidrs(@Nullable List<String> ipv6Cidrs) {
+        public Builder ipv6Cidrs(@Nullable List<String> ipv6Cidrs) {
             this.ipv6Cidrs = Input.ofNullable(ipv6Cidrs);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setToPort(@Nullable Input<Integer> toPort) {
+        public Builder toPort(@Nullable Input<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
 
-        public Builder setToPort(@Nullable Integer toPort) {
+        public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Input.ofNullable(toPort);
             return this;
         }

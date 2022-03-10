@@ -50,7 +50,7 @@ public final class DataSourceAthenaParameters {
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder setWorkGroup(@Nullable String workGroup) {
+        public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = workGroup;
             return this;
         }

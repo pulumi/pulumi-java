@@ -259,132 +259,132 @@ public final class AzureMLLinkedServiceArgs extends io.pulumi.resources.Resource
     	      this.updateResourceEndpoint = defaults.updateResourceEndpoint;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setApiKey(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> apiKey) {
+        public Builder apiKey(Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setApiKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> apiKey) {
+        public Builder apiKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> apiKey) {
             this.apiKey = Input.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<Object> authentication) {
+        public Builder authentication(@Nullable Input<Object> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Object authentication) {
+        public Builder authentication(@Nullable Object authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setMlEndpoint(Input<Object> mlEndpoint) {
+        public Builder mlEndpoint(Input<Object> mlEndpoint) {
             this.mlEndpoint = Objects.requireNonNull(mlEndpoint);
             return this;
         }
 
-        public Builder setMlEndpoint(Object mlEndpoint) {
+        public Builder mlEndpoint(Object mlEndpoint) {
             this.mlEndpoint = Input.of(Objects.requireNonNull(mlEndpoint));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
             return this;
         }
 
-        public Builder setTenant(@Nullable Input<Object> tenant) {
+        public Builder tenant(@Nullable Input<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setTenant(@Nullable Object tenant) {
+        public Builder tenant(@Nullable Object tenant) {
             this.tenant = Input.ofNullable(tenant);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUpdateResourceEndpoint(@Nullable Input<Object> updateResourceEndpoint) {
+        public Builder updateResourceEndpoint(@Nullable Input<Object> updateResourceEndpoint) {
             this.updateResourceEndpoint = updateResourceEndpoint;
             return this;
         }
 
-        public Builder setUpdateResourceEndpoint(@Nullable Object updateResourceEndpoint) {
+        public Builder updateResourceEndpoint(@Nullable Object updateResourceEndpoint) {
             this.updateResourceEndpoint = Input.ofNullable(updateResourceEndpoint);
             return this;
         }

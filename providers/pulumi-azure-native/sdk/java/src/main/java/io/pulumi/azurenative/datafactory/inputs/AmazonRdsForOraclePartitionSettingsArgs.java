@@ -107,42 +107,42 @@ public final class AmazonRdsForOraclePartitionSettingsArgs extends io.pulumi.res
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder setPartitionColumnName(@Nullable Input<Object> partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Input<Object> partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = Input.ofNullable(partitionColumnName);
             return this;
         }
 
-        public Builder setPartitionLowerBound(@Nullable Input<Object> partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Input<Object> partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
-        public Builder setPartitionLowerBound(@Nullable Object partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = Input.ofNullable(partitionLowerBound);
             return this;
         }
 
-        public Builder setPartitionNames(@Nullable Input<List<Object>> partitionNames) {
+        public Builder partitionNames(@Nullable Input<List<Object>> partitionNames) {
             this.partitionNames = partitionNames;
             return this;
         }
 
-        public Builder setPartitionNames(@Nullable List<Object> partitionNames) {
+        public Builder partitionNames(@Nullable List<Object> partitionNames) {
             this.partitionNames = Input.ofNullable(partitionNames);
             return this;
         }
 
-        public Builder setPartitionUpperBound(@Nullable Input<Object> partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Input<Object> partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
 
-        public Builder setPartitionUpperBound(@Nullable Object partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = Input.ofNullable(partitionUpperBound);
             return this;
         }

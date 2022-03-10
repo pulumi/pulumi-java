@@ -75,22 +75,22 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
     	      this.template = defaults.template;
         }
 
-        public Builder setSourceRepository(@Nullable Input<CodeRepositoryArgs> sourceRepository) {
+        public Builder sourceRepository(@Nullable Input<CodeRepositoryArgs> sourceRepository) {
             this.sourceRepository = sourceRepository;
             return this;
         }
 
-        public Builder setSourceRepository(@Nullable CodeRepositoryArgs sourceRepository) {
+        public Builder sourceRepository(@Nullable CodeRepositoryArgs sourceRepository) {
             this.sourceRepository = Input.ofNullable(sourceRepository);
             return this;
         }
 
-        public Builder setTemplate(Input<PipelineTemplateArgs> template) {
+        public Builder template(Input<PipelineTemplateArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(PipelineTemplateArgs template) {
+        public Builder template(PipelineTemplateArgs template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }

@@ -137,62 +137,62 @@ public final class VpcEndpointServiceArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAcceptanceRequired(Input<Boolean> acceptanceRequired) {
+        public Builder acceptanceRequired(Input<Boolean> acceptanceRequired) {
             this.acceptanceRequired = Objects.requireNonNull(acceptanceRequired);
             return this;
         }
 
-        public Builder setAcceptanceRequired(Boolean acceptanceRequired) {
+        public Builder acceptanceRequired(Boolean acceptanceRequired) {
             this.acceptanceRequired = Input.of(Objects.requireNonNull(acceptanceRequired));
             return this;
         }
 
-        public Builder setAllowedPrincipals(@Nullable Input<List<String>> allowedPrincipals) {
+        public Builder allowedPrincipals(@Nullable Input<List<String>> allowedPrincipals) {
             this.allowedPrincipals = allowedPrincipals;
             return this;
         }
 
-        public Builder setAllowedPrincipals(@Nullable List<String> allowedPrincipals) {
+        public Builder allowedPrincipals(@Nullable List<String> allowedPrincipals) {
             this.allowedPrincipals = Input.ofNullable(allowedPrincipals);
             return this;
         }
 
-        public Builder setGatewayLoadBalancerArns(@Nullable Input<List<String>> gatewayLoadBalancerArns) {
+        public Builder gatewayLoadBalancerArns(@Nullable Input<List<String>> gatewayLoadBalancerArns) {
             this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
             return this;
         }
 
-        public Builder setGatewayLoadBalancerArns(@Nullable List<String> gatewayLoadBalancerArns) {
+        public Builder gatewayLoadBalancerArns(@Nullable List<String> gatewayLoadBalancerArns) {
             this.gatewayLoadBalancerArns = Input.ofNullable(gatewayLoadBalancerArns);
             return this;
         }
 
-        public Builder setNetworkLoadBalancerArns(@Nullable Input<List<String>> networkLoadBalancerArns) {
+        public Builder networkLoadBalancerArns(@Nullable Input<List<String>> networkLoadBalancerArns) {
             this.networkLoadBalancerArns = networkLoadBalancerArns;
             return this;
         }
 
-        public Builder setNetworkLoadBalancerArns(@Nullable List<String> networkLoadBalancerArns) {
+        public Builder networkLoadBalancerArns(@Nullable List<String> networkLoadBalancerArns) {
             this.networkLoadBalancerArns = Input.ofNullable(networkLoadBalancerArns);
             return this;
         }
 
-        public Builder setPrivateDnsName(@Nullable Input<String> privateDnsName) {
+        public Builder privateDnsName(@Nullable Input<String> privateDnsName) {
             this.privateDnsName = privateDnsName;
             return this;
         }
 
-        public Builder setPrivateDnsName(@Nullable String privateDnsName) {
+        public Builder privateDnsName(@Nullable String privateDnsName) {
             this.privateDnsName = Input.ofNullable(privateDnsName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

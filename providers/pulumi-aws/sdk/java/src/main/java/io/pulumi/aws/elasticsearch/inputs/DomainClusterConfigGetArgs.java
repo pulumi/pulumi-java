@@ -201,102 +201,102 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
     	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
         }
 
-        public Builder setDedicatedMasterCount(@Nullable Input<Integer> dedicatedMasterCount) {
+        public Builder dedicatedMasterCount(@Nullable Input<Integer> dedicatedMasterCount) {
             this.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
 
-        public Builder setDedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
+        public Builder dedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
             this.dedicatedMasterCount = Input.ofNullable(dedicatedMasterCount);
             return this;
         }
 
-        public Builder setDedicatedMasterEnabled(@Nullable Input<Boolean> dedicatedMasterEnabled) {
+        public Builder dedicatedMasterEnabled(@Nullable Input<Boolean> dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
 
-        public Builder setDedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
+        public Builder dedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = Input.ofNullable(dedicatedMasterEnabled);
             return this;
         }
 
-        public Builder setDedicatedMasterType(@Nullable Input<String> dedicatedMasterType) {
+        public Builder dedicatedMasterType(@Nullable Input<String> dedicatedMasterType) {
             this.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
 
-        public Builder setDedicatedMasterType(@Nullable String dedicatedMasterType) {
+        public Builder dedicatedMasterType(@Nullable String dedicatedMasterType) {
             this.dedicatedMasterType = Input.ofNullable(dedicatedMasterType);
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Input.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setWarmCount(@Nullable Input<Integer> warmCount) {
+        public Builder warmCount(@Nullable Input<Integer> warmCount) {
             this.warmCount = warmCount;
             return this;
         }
 
-        public Builder setWarmCount(@Nullable Integer warmCount) {
+        public Builder warmCount(@Nullable Integer warmCount) {
             this.warmCount = Input.ofNullable(warmCount);
             return this;
         }
 
-        public Builder setWarmEnabled(@Nullable Input<Boolean> warmEnabled) {
+        public Builder warmEnabled(@Nullable Input<Boolean> warmEnabled) {
             this.warmEnabled = warmEnabled;
             return this;
         }
 
-        public Builder setWarmEnabled(@Nullable Boolean warmEnabled) {
+        public Builder warmEnabled(@Nullable Boolean warmEnabled) {
             this.warmEnabled = Input.ofNullable(warmEnabled);
             return this;
         }
 
-        public Builder setWarmType(@Nullable Input<String> warmType) {
+        public Builder warmType(@Nullable Input<String> warmType) {
             this.warmType = warmType;
             return this;
         }
 
-        public Builder setWarmType(@Nullable String warmType) {
+        public Builder warmType(@Nullable String warmType) {
             this.warmType = Input.ofNullable(warmType);
             return this;
         }
 
-        public Builder setZoneAwarenessConfig(@Nullable Input<DomainClusterConfigZoneAwarenessConfigGetArgs> zoneAwarenessConfig) {
+        public Builder zoneAwarenessConfig(@Nullable Input<DomainClusterConfigZoneAwarenessConfigGetArgs> zoneAwarenessConfig) {
             this.zoneAwarenessConfig = zoneAwarenessConfig;
             return this;
         }
 
-        public Builder setZoneAwarenessConfig(@Nullable DomainClusterConfigZoneAwarenessConfigGetArgs zoneAwarenessConfig) {
+        public Builder zoneAwarenessConfig(@Nullable DomainClusterConfigZoneAwarenessConfigGetArgs zoneAwarenessConfig) {
             this.zoneAwarenessConfig = Input.ofNullable(zoneAwarenessConfig);
             return this;
         }
 
-        public Builder setZoneAwarenessEnabled(@Nullable Input<Boolean> zoneAwarenessEnabled) {
+        public Builder zoneAwarenessEnabled(@Nullable Input<Boolean> zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }
 
-        public Builder setZoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
+        public Builder zoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = Input.ofNullable(zoneAwarenessEnabled);
             return this;
         }

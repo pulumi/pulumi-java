@@ -42,7 +42,7 @@ public final class TopLevel {
     	      this.buzz = defaults.buzz;
         }
 
-        public Builder setBuzz(@Nullable String buzz) {
+        public Builder buzz(@Nullable String buzz) {
             this.buzz = buzz;
             return this;
         }

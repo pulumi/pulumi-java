@@ -143,62 +143,62 @@ public final class BackendServiceCircuitBreakersGetArgs extends io.pulumi.resour
     	      this.maxRetries = defaults.maxRetries;
         }
 
-        public Builder setConnectTimeout(@Nullable Input<BackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout) {
+        public Builder connectTimeout(@Nullable Input<BackendServiceCircuitBreakersConnectTimeoutGetArgs> connectTimeout) {
             this.connectTimeout = connectTimeout;
             return this;
         }
 
-        public Builder setConnectTimeout(@Nullable BackendServiceCircuitBreakersConnectTimeoutGetArgs connectTimeout) {
+        public Builder connectTimeout(@Nullable BackendServiceCircuitBreakersConnectTimeoutGetArgs connectTimeout) {
             this.connectTimeout = Input.ofNullable(connectTimeout);
             return this;
         }
 
-        public Builder setMaxConnections(@Nullable Input<Integer> maxConnections) {
+        public Builder maxConnections(@Nullable Input<Integer> maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
 
-        public Builder setMaxConnections(@Nullable Integer maxConnections) {
+        public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = Input.ofNullable(maxConnections);
             return this;
         }
 
-        public Builder setMaxPendingRequests(@Nullable Input<Integer> maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Input<Integer> maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }
 
-        public Builder setMaxPendingRequests(@Nullable Integer maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = Input.ofNullable(maxPendingRequests);
             return this;
         }
 
-        public Builder setMaxRequests(@Nullable Input<Integer> maxRequests) {
+        public Builder maxRequests(@Nullable Input<Integer> maxRequests) {
             this.maxRequests = maxRequests;
             return this;
         }
 
-        public Builder setMaxRequests(@Nullable Integer maxRequests) {
+        public Builder maxRequests(@Nullable Integer maxRequests) {
             this.maxRequests = Input.ofNullable(maxRequests);
             return this;
         }
 
-        public Builder setMaxRequestsPerConnection(@Nullable Input<Integer> maxRequestsPerConnection) {
+        public Builder maxRequestsPerConnection(@Nullable Input<Integer> maxRequestsPerConnection) {
             this.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
 
-        public Builder setMaxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
+        public Builder maxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = Input.ofNullable(maxRequestsPerConnection);
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Input.ofNullable(maxRetries);
             return this;
         }

@@ -102,22 +102,22 @@ public final class DatabaseProjectSummaryResponse {
     	      this.refreshSummaryState = defaults.refreshSummaryState;
         }
 
-        public Builder setExtendedSummary(@Nullable Map<String,String> extendedSummary) {
+        public Builder extendedSummary(@Nullable Map<String,String> extendedSummary) {
             this.extendedSummary = extendedSummary;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
+        public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
             this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
 
-        public Builder setRefreshSummaryState(@Nullable String refreshSummaryState) {
+        public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
             this.refreshSummaryState = refreshSummaryState;
             return this;
         }

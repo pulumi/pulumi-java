@@ -104,42 +104,42 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setCredential(Input<ConnectionCloudSqlCredentialArgs> credential) {
+        public Builder credential(Input<ConnectionCloudSqlCredentialArgs> credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setCredential(ConnectionCloudSqlCredentialArgs credential) {
+        public Builder credential(ConnectionCloudSqlCredentialArgs credential) {
             this.credential = Input.of(Objects.requireNonNull(credential));
             return this;
         }
 
-        public Builder setDatabase(Input<String> database) {
+        public Builder database(Input<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Input.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

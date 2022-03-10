@@ -53,12 +53,12 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
     	      this.listenerArns = defaults.listenerArns;
         }
 
-        public Builder setListenerArns(Input<List<String>> listenerArns) {
+        public Builder listenerArns(Input<List<String>> listenerArns) {
             this.listenerArns = Objects.requireNonNull(listenerArns);
             return this;
         }
 
-        public Builder setListenerArns(List<String> listenerArns) {
+        public Builder listenerArns(List<String> listenerArns) {
             this.listenerArns = Input.of(Objects.requireNonNull(listenerArns));
             return this;
         }

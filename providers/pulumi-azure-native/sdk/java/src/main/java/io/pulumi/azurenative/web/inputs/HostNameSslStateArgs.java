@@ -141,62 +141,62 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     	      this.virtualIP = defaults.virtualIP;
         }
 
-        public Builder setHostType(@Nullable Input<HostType> hostType) {
+        public Builder hostType(@Nullable Input<HostType> hostType) {
             this.hostType = hostType;
             return this;
         }
 
-        public Builder setHostType(@Nullable HostType hostType) {
+        public Builder hostType(@Nullable HostType hostType) {
             this.hostType = Input.ofNullable(hostType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSslState(@Nullable Input<SslState> sslState) {
+        public Builder sslState(@Nullable Input<SslState> sslState) {
             this.sslState = sslState;
             return this;
         }
 
-        public Builder setSslState(@Nullable SslState sslState) {
+        public Builder sslState(@Nullable SslState sslState) {
             this.sslState = Input.ofNullable(sslState);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }
 
-        public Builder setToUpdate(@Nullable Input<Boolean> toUpdate) {
+        public Builder toUpdate(@Nullable Input<Boolean> toUpdate) {
             this.toUpdate = toUpdate;
             return this;
         }
 
-        public Builder setToUpdate(@Nullable Boolean toUpdate) {
+        public Builder toUpdate(@Nullable Boolean toUpdate) {
             this.toUpdate = Input.ofNullable(toUpdate);
             return this;
         }
 
-        public Builder setVirtualIP(@Nullable Input<String> virtualIP) {
+        public Builder virtualIP(@Nullable Input<String> virtualIP) {
             this.virtualIP = virtualIP;
             return this;
         }
 
-        public Builder setVirtualIP(@Nullable String virtualIP) {
+        public Builder virtualIP(@Nullable String virtualIP) {
             this.virtualIP = Input.ofNullable(virtualIP);
             return this;
         }

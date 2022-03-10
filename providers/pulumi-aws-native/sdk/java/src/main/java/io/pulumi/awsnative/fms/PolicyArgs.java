@@ -188,122 +188,122 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDeleteAllPolicyResources(@Nullable Input<Boolean> deleteAllPolicyResources) {
+        public Builder deleteAllPolicyResources(@Nullable Input<Boolean> deleteAllPolicyResources) {
             this.deleteAllPolicyResources = deleteAllPolicyResources;
             return this;
         }
 
-        public Builder setDeleteAllPolicyResources(@Nullable Boolean deleteAllPolicyResources) {
+        public Builder deleteAllPolicyResources(@Nullable Boolean deleteAllPolicyResources) {
             this.deleteAllPolicyResources = Input.ofNullable(deleteAllPolicyResources);
             return this;
         }
 
-        public Builder setExcludeMap(@Nullable Input<PolicyIEMapArgs> excludeMap) {
+        public Builder excludeMap(@Nullable Input<PolicyIEMapArgs> excludeMap) {
             this.excludeMap = excludeMap;
             return this;
         }
 
-        public Builder setExcludeMap(@Nullable PolicyIEMapArgs excludeMap) {
+        public Builder excludeMap(@Nullable PolicyIEMapArgs excludeMap) {
             this.excludeMap = Input.ofNullable(excludeMap);
             return this;
         }
 
-        public Builder setExcludeResourceTags(Input<Boolean> excludeResourceTags) {
+        public Builder excludeResourceTags(Input<Boolean> excludeResourceTags) {
             this.excludeResourceTags = Objects.requireNonNull(excludeResourceTags);
             return this;
         }
 
-        public Builder setExcludeResourceTags(Boolean excludeResourceTags) {
+        public Builder excludeResourceTags(Boolean excludeResourceTags) {
             this.excludeResourceTags = Input.of(Objects.requireNonNull(excludeResourceTags));
             return this;
         }
 
-        public Builder setIncludeMap(@Nullable Input<PolicyIEMapArgs> includeMap) {
+        public Builder includeMap(@Nullable Input<PolicyIEMapArgs> includeMap) {
             this.includeMap = includeMap;
             return this;
         }
 
-        public Builder setIncludeMap(@Nullable PolicyIEMapArgs includeMap) {
+        public Builder includeMap(@Nullable PolicyIEMapArgs includeMap) {
             this.includeMap = Input.ofNullable(includeMap);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setRemediationEnabled(Input<Boolean> remediationEnabled) {
+        public Builder remediationEnabled(Input<Boolean> remediationEnabled) {
             this.remediationEnabled = Objects.requireNonNull(remediationEnabled);
             return this;
         }
 
-        public Builder setRemediationEnabled(Boolean remediationEnabled) {
+        public Builder remediationEnabled(Boolean remediationEnabled) {
             this.remediationEnabled = Input.of(Objects.requireNonNull(remediationEnabled));
             return this;
         }
 
-        public Builder setResourceTags(@Nullable Input<List<PolicyResourceTagArgs>> resourceTags) {
+        public Builder resourceTags(@Nullable Input<List<PolicyResourceTagArgs>> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable List<PolicyResourceTagArgs> resourceTags) {
+        public Builder resourceTags(@Nullable List<PolicyResourceTagArgs> resourceTags) {
             this.resourceTags = Input.ofNullable(resourceTags);
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setResourceTypeList(@Nullable Input<List<String>> resourceTypeList) {
+        public Builder resourceTypeList(@Nullable Input<List<String>> resourceTypeList) {
             this.resourceTypeList = resourceTypeList;
             return this;
         }
 
-        public Builder setResourceTypeList(@Nullable List<String> resourceTypeList) {
+        public Builder resourceTypeList(@Nullable List<String> resourceTypeList) {
             this.resourceTypeList = Input.ofNullable(resourceTypeList);
             return this;
         }
 
-        public Builder setResourcesCleanUp(@Nullable Input<Boolean> resourcesCleanUp) {
+        public Builder resourcesCleanUp(@Nullable Input<Boolean> resourcesCleanUp) {
             this.resourcesCleanUp = resourcesCleanUp;
             return this;
         }
 
-        public Builder setResourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
+        public Builder resourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
             this.resourcesCleanUp = Input.ofNullable(resourcesCleanUp);
             return this;
         }
 
-        public Builder setSecurityServicePolicyData(Input<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData) {
+        public Builder securityServicePolicyData(Input<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData) {
             this.securityServicePolicyData = Objects.requireNonNull(securityServicePolicyData);
             return this;
         }
 
-        public Builder setSecurityServicePolicyData(SecurityServicePolicyDataPropertiesArgs securityServicePolicyData) {
+        public Builder securityServicePolicyData(SecurityServicePolicyDataPropertiesArgs securityServicePolicyData) {
             this.securityServicePolicyData = Input.of(Objects.requireNonNull(securityServicePolicyData));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PolicyTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PolicyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PolicyTagArgs> tags) {
+        public Builder tags(@Nullable List<PolicyTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

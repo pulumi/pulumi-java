@@ -139,62 +139,62 @@ public final class AzureDiskVolumeSourceArgs extends io.pulumi.resources.Resourc
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setCachingMode(@Nullable Input<String> cachingMode) {
+        public Builder cachingMode(@Nullable Input<String> cachingMode) {
             this.cachingMode = cachingMode;
             return this;
         }
 
-        public Builder setCachingMode(@Nullable String cachingMode) {
+        public Builder cachingMode(@Nullable String cachingMode) {
             this.cachingMode = Input.ofNullable(cachingMode);
             return this;
         }
 
-        public Builder setDiskName(Input<String> diskName) {
+        public Builder diskName(Input<String> diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Input.of(Objects.requireNonNull(diskName));
             return this;
         }
 
-        public Builder setDiskURI(Input<String> diskURI) {
+        public Builder diskURI(Input<String> diskURI) {
             this.diskURI = Objects.requireNonNull(diskURI);
             return this;
         }
 
-        public Builder setDiskURI(String diskURI) {
+        public Builder diskURI(String diskURI) {
             this.diskURI = Input.of(Objects.requireNonNull(diskURI));
             return this;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }

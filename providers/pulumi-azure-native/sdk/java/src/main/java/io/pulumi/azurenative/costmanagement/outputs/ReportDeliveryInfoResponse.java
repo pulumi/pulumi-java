@@ -48,7 +48,7 @@ public final class ReportDeliveryInfoResponse {
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(ReportDeliveryDestinationResponse destination) {
+        public Builder destination(ReportDeliveryDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }

@@ -106,22 +106,22 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setCooldown(String cooldown) {
+        public Builder cooldown(String cooldown) {
             this.cooldown = Objects.requireNonNull(cooldown);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

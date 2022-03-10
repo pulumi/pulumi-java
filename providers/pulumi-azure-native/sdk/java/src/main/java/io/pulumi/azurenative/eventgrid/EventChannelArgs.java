@@ -171,82 +171,82 @@ public final class EventChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder setDestination(@Nullable Input<EventChannelDestinationArgs> destination) {
+        public Builder destination(@Nullable Input<EventChannelDestinationArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable EventChannelDestinationArgs destination) {
+        public Builder destination(@Nullable EventChannelDestinationArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setEventChannelName(@Nullable Input<String> eventChannelName) {
+        public Builder eventChannelName(@Nullable Input<String> eventChannelName) {
             this.eventChannelName = eventChannelName;
             return this;
         }
 
-        public Builder setEventChannelName(@Nullable String eventChannelName) {
+        public Builder eventChannelName(@Nullable String eventChannelName) {
             this.eventChannelName = Input.ofNullable(eventChannelName);
             return this;
         }
 
-        public Builder setExpirationTimeIfNotActivatedUtc(@Nullable Input<String> expirationTimeIfNotActivatedUtc) {
+        public Builder expirationTimeIfNotActivatedUtc(@Nullable Input<String> expirationTimeIfNotActivatedUtc) {
             this.expirationTimeIfNotActivatedUtc = expirationTimeIfNotActivatedUtc;
             return this;
         }
 
-        public Builder setExpirationTimeIfNotActivatedUtc(@Nullable String expirationTimeIfNotActivatedUtc) {
+        public Builder expirationTimeIfNotActivatedUtc(@Nullable String expirationTimeIfNotActivatedUtc) {
             this.expirationTimeIfNotActivatedUtc = Input.ofNullable(expirationTimeIfNotActivatedUtc);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<EventChannelFilterArgs> filter) {
+        public Builder filter(@Nullable Input<EventChannelFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable EventChannelFilterArgs filter) {
+        public Builder filter(@Nullable EventChannelFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setPartnerNamespaceName(Input<String> partnerNamespaceName) {
+        public Builder partnerNamespaceName(Input<String> partnerNamespaceName) {
             this.partnerNamespaceName = Objects.requireNonNull(partnerNamespaceName);
             return this;
         }
 
-        public Builder setPartnerNamespaceName(String partnerNamespaceName) {
+        public Builder partnerNamespaceName(String partnerNamespaceName) {
             this.partnerNamespaceName = Input.of(Objects.requireNonNull(partnerNamespaceName));
             return this;
         }
 
-        public Builder setPartnerTopicFriendlyDescription(@Nullable Input<String> partnerTopicFriendlyDescription) {
+        public Builder partnerTopicFriendlyDescription(@Nullable Input<String> partnerTopicFriendlyDescription) {
             this.partnerTopicFriendlyDescription = partnerTopicFriendlyDescription;
             return this;
         }
 
-        public Builder setPartnerTopicFriendlyDescription(@Nullable String partnerTopicFriendlyDescription) {
+        public Builder partnerTopicFriendlyDescription(@Nullable String partnerTopicFriendlyDescription) {
             this.partnerTopicFriendlyDescription = Input.ofNullable(partnerTopicFriendlyDescription);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(@Nullable Input<EventChannelSourceArgs> source) {
+        public Builder source(@Nullable Input<EventChannelSourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable EventChannelSourceArgs source) {
+        public Builder source(@Nullable EventChannelSourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }

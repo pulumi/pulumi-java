@@ -208,112 +208,112 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suspended = defaults.suspended;
         }
 
-        public Builder setAuthConfig(@Nullable Input<AuthConfigArgs> authConfig) {
+        public Builder authConfig(@Nullable Input<AuthConfigArgs> authConfig) {
             this.authConfig = authConfig;
             return this;
         }
 
-        public Builder setAuthConfig(@Nullable AuthConfigArgs authConfig) {
+        public Builder authConfig(@Nullable AuthConfigArgs authConfig) {
             this.authConfig = Input.ofNullable(authConfig);
             return this;
         }
 
-        public Builder setConfigVariables(@Nullable Input<List<ConfigVariableArgs>> configVariables) {
+        public Builder configVariables(@Nullable Input<List<ConfigVariableArgs>> configVariables) {
             this.configVariables = configVariables;
             return this;
         }
 
-        public Builder setConfigVariables(@Nullable List<ConfigVariableArgs> configVariables) {
+        public Builder configVariables(@Nullable List<ConfigVariableArgs> configVariables) {
             this.configVariables = Input.ofNullable(configVariables);
             return this;
         }
 
-        public Builder setConnectionId(Input<String> connectionId) {
+        public Builder connectionId(Input<String> connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Input.of(Objects.requireNonNull(connectionId));
             return this;
         }
 
-        public Builder setConnectorVersion(Input<String> connectorVersion) {
+        public Builder connectorVersion(Input<String> connectorVersion) {
             this.connectorVersion = Objects.requireNonNull(connectorVersion);
             return this;
         }
 
-        public Builder setConnectorVersion(String connectorVersion) {
+        public Builder connectorVersion(String connectorVersion) {
             this.connectorVersion = Input.of(Objects.requireNonNull(connectorVersion));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLockConfig(@Nullable Input<LockConfigArgs> lockConfig) {
+        public Builder lockConfig(@Nullable Input<LockConfigArgs> lockConfig) {
             this.lockConfig = lockConfig;
             return this;
         }
 
-        public Builder setLockConfig(@Nullable LockConfigArgs lockConfig) {
+        public Builder lockConfig(@Nullable LockConfigArgs lockConfig) {
             this.lockConfig = Input.ofNullable(lockConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setSuspended(@Nullable Input<Boolean> suspended) {
+        public Builder suspended(@Nullable Input<Boolean> suspended) {
             this.suspended = suspended;
             return this;
         }
 
-        public Builder setSuspended(@Nullable Boolean suspended) {
+        public Builder suspended(@Nullable Boolean suspended) {
             this.suspended = Input.ofNullable(suspended);
             return this;
         }

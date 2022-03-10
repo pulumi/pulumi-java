@@ -258,67 +258,67 @@ public final class K8sOnlineDeploymentResponse {
     	      this.scaleSettings = defaults.scaleSettings;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
-        public Builder setCodeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
+        public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEndpointComputeType(String endpointComputeType) {
+        public Builder endpointComputeType(String endpointComputeType) {
             this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
+        public Builder livenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
-        public Builder setModel(@Nullable Object model) {
+        public Builder model(@Nullable Object model) {
             this.model = model;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
+        public Builder requestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
             this.requestSettings = requestSettings;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
+        public Builder scaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }

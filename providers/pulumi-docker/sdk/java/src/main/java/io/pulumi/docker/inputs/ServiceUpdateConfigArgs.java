@@ -111,62 +111,62 @@ public final class ServiceUpdateConfigArgs extends io.pulumi.resources.ResourceA
     	      this.parallelism = defaults.parallelism;
         }
 
-        public Builder setDelay(@Nullable Input<String> delay) {
+        public Builder delay(@Nullable Input<String> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable String delay) {
+        public Builder delay(@Nullable String delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }
 
-        public Builder setFailureAction(@Nullable Input<String> failureAction) {
+        public Builder failureAction(@Nullable Input<String> failureAction) {
             this.failureAction = failureAction;
             return this;
         }
 
-        public Builder setFailureAction(@Nullable String failureAction) {
+        public Builder failureAction(@Nullable String failureAction) {
             this.failureAction = Input.ofNullable(failureAction);
             return this;
         }
 
-        public Builder setMaxFailureRatio(@Nullable Input<String> maxFailureRatio) {
+        public Builder maxFailureRatio(@Nullable Input<String> maxFailureRatio) {
             this.maxFailureRatio = maxFailureRatio;
             return this;
         }
 
-        public Builder setMaxFailureRatio(@Nullable String maxFailureRatio) {
+        public Builder maxFailureRatio(@Nullable String maxFailureRatio) {
             this.maxFailureRatio = Input.ofNullable(maxFailureRatio);
             return this;
         }
 
-        public Builder setMonitor(@Nullable Input<String> monitor) {
+        public Builder monitor(@Nullable Input<String> monitor) {
             this.monitor = monitor;
             return this;
         }
 
-        public Builder setMonitor(@Nullable String monitor) {
+        public Builder monitor(@Nullable String monitor) {
             this.monitor = Input.ofNullable(monitor);
             return this;
         }
 
-        public Builder setOrder(@Nullable Input<String> order) {
+        public Builder order(@Nullable Input<String> order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrder(@Nullable String order) {
+        public Builder order(@Nullable String order) {
             this.order = Input.ofNullable(order);
             return this;
         }
 
-        public Builder setParallelism(@Nullable Input<Integer> parallelism) {
+        public Builder parallelism(@Nullable Input<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = Input.ofNullable(parallelism);
             return this;
         }

@@ -111,42 +111,42 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs exte
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder setImageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Input<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = Input.ofNullable(imageType);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = Input.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }

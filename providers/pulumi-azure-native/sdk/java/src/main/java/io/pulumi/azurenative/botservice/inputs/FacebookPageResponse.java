@@ -74,12 +74,12 @@ public final class FacebookPageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.id = defaults.id;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

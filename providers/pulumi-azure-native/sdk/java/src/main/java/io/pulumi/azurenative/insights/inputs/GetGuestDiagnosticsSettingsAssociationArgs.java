@@ -68,12 +68,12 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setAssociationName(String associationName) {
+        public Builder associationName(String associationName) {
             this.associationName = Objects.requireNonNull(associationName);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

@@ -119,52 +119,52 @@ public final class DirectoryWorkspaceCreationPropertiesArgs extends io.pulumi.re
     	      this.userEnabledAsLocalAdministrator = defaults.userEnabledAsLocalAdministrator;
         }
 
-        public Builder setCustomSecurityGroupId(@Nullable Input<String> customSecurityGroupId) {
+        public Builder customSecurityGroupId(@Nullable Input<String> customSecurityGroupId) {
             this.customSecurityGroupId = customSecurityGroupId;
             return this;
         }
 
-        public Builder setCustomSecurityGroupId(@Nullable String customSecurityGroupId) {
+        public Builder customSecurityGroupId(@Nullable String customSecurityGroupId) {
             this.customSecurityGroupId = Input.ofNullable(customSecurityGroupId);
             return this;
         }
 
-        public Builder setDefaultOu(@Nullable Input<String> defaultOu) {
+        public Builder defaultOu(@Nullable Input<String> defaultOu) {
             this.defaultOu = defaultOu;
             return this;
         }
 
-        public Builder setDefaultOu(@Nullable String defaultOu) {
+        public Builder defaultOu(@Nullable String defaultOu) {
             this.defaultOu = Input.ofNullable(defaultOu);
             return this;
         }
 
-        public Builder setEnableInternetAccess(@Nullable Input<Boolean> enableInternetAccess) {
+        public Builder enableInternetAccess(@Nullable Input<Boolean> enableInternetAccess) {
             this.enableInternetAccess = enableInternetAccess;
             return this;
         }
 
-        public Builder setEnableInternetAccess(@Nullable Boolean enableInternetAccess) {
+        public Builder enableInternetAccess(@Nullable Boolean enableInternetAccess) {
             this.enableInternetAccess = Input.ofNullable(enableInternetAccess);
             return this;
         }
 
-        public Builder setEnableMaintenanceMode(@Nullable Input<Boolean> enableMaintenanceMode) {
+        public Builder enableMaintenanceMode(@Nullable Input<Boolean> enableMaintenanceMode) {
             this.enableMaintenanceMode = enableMaintenanceMode;
             return this;
         }
 
-        public Builder setEnableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
+        public Builder enableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
             this.enableMaintenanceMode = Input.ofNullable(enableMaintenanceMode);
             return this;
         }
 
-        public Builder setUserEnabledAsLocalAdministrator(@Nullable Input<Boolean> userEnabledAsLocalAdministrator) {
+        public Builder userEnabledAsLocalAdministrator(@Nullable Input<Boolean> userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
             return this;
         }
 
-        public Builder setUserEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
+        public Builder userEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = Input.ofNullable(userEnabledAsLocalAdministrator);
             return this;
         }

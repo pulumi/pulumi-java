@@ -86,32 +86,32 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetResourceId = defaults.targetResourceId;
         }
 
-        public Builder setAssociationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Input<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
-        public Builder setAssociationName(@Nullable String associationName) {
+        public Builder associationName(@Nullable String associationName) {
             this.associationName = Input.ofNullable(associationName);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable Input<String> targetResourceId) {
+        public Builder targetResourceId(@Nullable Input<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable String targetResourceId) {
+        public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = Input.ofNullable(targetResourceId);
             return this;
         }

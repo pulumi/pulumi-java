@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
     	      this.match = defaults.match;
         }
 
-        public Builder setMatch(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
+        public Builder match(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }

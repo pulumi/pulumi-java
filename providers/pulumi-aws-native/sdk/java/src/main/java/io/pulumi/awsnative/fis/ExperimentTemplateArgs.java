@@ -115,62 +115,62 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
     	      this.targets = defaults.targets;
         }
 
-        public Builder setActions(@Nullable Input<ExperimentTemplateActionMapArgs> actions) {
+        public Builder actions(@Nullable Input<ExperimentTemplateActionMapArgs> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable ExperimentTemplateActionMapArgs actions) {
+        public Builder actions(@Nullable ExperimentTemplateActionMapArgs actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStopConditions(Input<List<ExperimentTemplateStopConditionArgs>> stopConditions) {
+        public Builder stopConditions(Input<List<ExperimentTemplateStopConditionArgs>> stopConditions) {
             this.stopConditions = Objects.requireNonNull(stopConditions);
             return this;
         }
 
-        public Builder setStopConditions(List<ExperimentTemplateStopConditionArgs> stopConditions) {
+        public Builder stopConditions(List<ExperimentTemplateStopConditionArgs> stopConditions) {
             this.stopConditions = Input.of(Objects.requireNonNull(stopConditions));
             return this;
         }
 
-        public Builder setTags(Input<Object> tags) {
+        public Builder tags(Input<Object> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTags(Object tags) {
+        public Builder tags(Object tags) {
             this.tags = Input.of(Objects.requireNonNull(tags));
             return this;
         }
 
-        public Builder setTargets(Input<ExperimentTemplateTargetMapArgs> targets) {
+        public Builder targets(Input<ExperimentTemplateTargetMapArgs> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
 
-        public Builder setTargets(ExperimentTemplateTargetMapArgs targets) {
+        public Builder targets(ExperimentTemplateTargetMapArgs targets) {
             this.targets = Input.of(Objects.requireNonNull(targets));
             return this;
         }

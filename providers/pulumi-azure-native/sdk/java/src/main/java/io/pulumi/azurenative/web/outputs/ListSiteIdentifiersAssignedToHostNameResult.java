@@ -67,12 +67,12 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<IdentifierResponse> value) {
+        public Builder value(List<IdentifierResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

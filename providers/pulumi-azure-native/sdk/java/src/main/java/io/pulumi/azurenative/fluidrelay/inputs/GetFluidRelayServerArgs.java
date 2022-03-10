@@ -68,12 +68,12 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }

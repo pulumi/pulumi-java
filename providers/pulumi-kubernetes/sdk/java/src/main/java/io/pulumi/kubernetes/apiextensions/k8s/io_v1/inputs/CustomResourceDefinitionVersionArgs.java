@@ -175,82 +175,82 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
     	      this.subresources = defaults.subresources;
         }
 
-        public Builder setAdditionalPrinterColumns(@Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable Input<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns) {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
-        public Builder setAdditionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinitionArgs> additionalPrinterColumns) {
             this.additionalPrinterColumns = Input.ofNullable(additionalPrinterColumns);
             return this;
         }
 
-        public Builder setDeprecated(@Nullable Input<Boolean> deprecated) {
+        public Builder deprecated(@Nullable Input<Boolean> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
-        public Builder setDeprecated(@Nullable Boolean deprecated) {
+        public Builder deprecated(@Nullable Boolean deprecated) {
             this.deprecated = Input.ofNullable(deprecated);
             return this;
         }
 
-        public Builder setDeprecationWarning(@Nullable Input<String> deprecationWarning) {
+        public Builder deprecationWarning(@Nullable Input<String> deprecationWarning) {
             this.deprecationWarning = deprecationWarning;
             return this;
         }
 
-        public Builder setDeprecationWarning(@Nullable String deprecationWarning) {
+        public Builder deprecationWarning(@Nullable String deprecationWarning) {
             this.deprecationWarning = Input.ofNullable(deprecationWarning);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<CustomResourceValidationArgs> schema) {
+        public Builder schema(@Nullable Input<CustomResourceValidationArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable CustomResourceValidationArgs schema) {
+        public Builder schema(@Nullable CustomResourceValidationArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setServed(Input<Boolean> served) {
+        public Builder served(Input<Boolean> served) {
             this.served = Objects.requireNonNull(served);
             return this;
         }
 
-        public Builder setServed(Boolean served) {
+        public Builder served(Boolean served) {
             this.served = Input.of(Objects.requireNonNull(served));
             return this;
         }
 
-        public Builder setStorage(Input<Boolean> storage) {
+        public Builder storage(Input<Boolean> storage) {
             this.storage = Objects.requireNonNull(storage);
             return this;
         }
 
-        public Builder setStorage(Boolean storage) {
+        public Builder storage(Boolean storage) {
             this.storage = Input.of(Objects.requireNonNull(storage));
             return this;
         }
 
-        public Builder setSubresources(@Nullable Input<CustomResourceSubresourcesArgs> subresources) {
+        public Builder subresources(@Nullable Input<CustomResourceSubresourcesArgs> subresources) {
             this.subresources = subresources;
             return this;
         }
 
-        public Builder setSubresources(@Nullable CustomResourceSubresourcesArgs subresources) {
+        public Builder subresources(@Nullable CustomResourceSubresourcesArgs subresources) {
             this.subresources = Input.ofNullable(subresources);
             return this;
         }

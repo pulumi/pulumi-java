@@ -264,72 +264,72 @@ public final class GetRegionUrlMapResult {
     	      this.tests = defaults.tests;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDefaultRouteAction(HttpRouteActionResponse defaultRouteAction) {
+        public Builder defaultRouteAction(HttpRouteActionResponse defaultRouteAction) {
             this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction);
             return this;
         }
 
-        public Builder setDefaultService(String defaultService) {
+        public Builder defaultService(String defaultService) {
             this.defaultService = Objects.requireNonNull(defaultService);
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(HttpRedirectActionResponse defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(HttpRedirectActionResponse defaultUrlRedirect) {
             this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setHeaderAction(HttpHeaderActionResponse headerAction) {
+        public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setHostRules(List<HostRuleResponse> hostRules) {
+        public Builder hostRules(List<HostRuleResponse> hostRules) {
             this.hostRules = Objects.requireNonNull(hostRules);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPathMatchers(List<PathMatcherResponse> pathMatchers) {
+        public Builder pathMatchers(List<PathMatcherResponse> pathMatchers) {
             this.pathMatchers = Objects.requireNonNull(pathMatchers);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setTests(List<UrlMapTestResponse> tests) {
+        public Builder tests(List<UrlMapTestResponse> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }

@@ -121,27 +121,27 @@ public final class BasicYarnAutoscalingConfigResponse extends io.pulumi.resource
     	      this.scaleUpMinWorkerFraction = defaults.scaleUpMinWorkerFraction;
         }
 
-        public Builder setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
+        public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
             return this;
         }
 
-        public Builder setScaleDownFactor(Double scaleDownFactor) {
+        public Builder scaleDownFactor(Double scaleDownFactor) {
             this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
             return this;
         }
 
-        public Builder setScaleDownMinWorkerFraction(Double scaleDownMinWorkerFraction) {
+        public Builder scaleDownMinWorkerFraction(Double scaleDownMinWorkerFraction) {
             this.scaleDownMinWorkerFraction = Objects.requireNonNull(scaleDownMinWorkerFraction);
             return this;
         }
 
-        public Builder setScaleUpFactor(Double scaleUpFactor) {
+        public Builder scaleUpFactor(Double scaleUpFactor) {
             this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
             return this;
         }
 
-        public Builder setScaleUpMinWorkerFraction(Double scaleUpMinWorkerFraction) {
+        public Builder scaleUpMinWorkerFraction(Double scaleUpMinWorkerFraction) {
             this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction);
             return this;
         }

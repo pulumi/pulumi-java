@@ -104,42 +104,42 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceScope = defaults.resourceScope;
         }
 
-        public Builder setArtifactName(@Nullable Input<String> artifactName) {
+        public Builder artifactName(@Nullable Input<String> artifactName) {
             this.artifactName = artifactName;
             return this;
         }
 
-        public Builder setArtifactName(@Nullable String artifactName) {
+        public Builder artifactName(@Nullable String artifactName) {
             this.artifactName = Input.ofNullable(artifactName);
             return this;
         }
 
-        public Builder setBlueprintName(Input<String> blueprintName) {
+        public Builder blueprintName(Input<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
 
-        public Builder setBlueprintName(String blueprintName) {
+        public Builder blueprintName(String blueprintName) {
             this.blueprintName = Input.of(Objects.requireNonNull(blueprintName));
             return this;
         }
 
-        public Builder setKind(Input<Either<String,ArtifactKind>> kind) {
+        public Builder kind(Input<Either<String,ArtifactKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,ArtifactKind> kind) {
+        public Builder kind(Either<String,ArtifactKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Input<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
             return this;
         }

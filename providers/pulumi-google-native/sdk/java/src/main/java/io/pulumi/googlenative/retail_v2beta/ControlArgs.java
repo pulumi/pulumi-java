@@ -170,92 +170,92 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.solutionTypes = defaults.solutionTypes;
         }
 
-        public Builder setCatalogId(Input<String> catalogId) {
+        public Builder catalogId(Input<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Input.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder setControlId(Input<String> controlId) {
+        public Builder controlId(Input<String> controlId) {
             this.controlId = Objects.requireNonNull(controlId);
             return this;
         }
 
-        public Builder setControlId(String controlId) {
+        public Builder controlId(String controlId) {
             this.controlId = Input.of(Objects.requireNonNull(controlId));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setFacetSpec(@Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec) {
+        public Builder facetSpec(@Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec) {
             this.facetSpec = facetSpec;
             return this;
         }
 
-        public Builder setFacetSpec(@Nullable GoogleCloudRetailV2betaSearchRequestFacetSpecArgs facetSpec) {
+        public Builder facetSpec(@Nullable GoogleCloudRetailV2betaSearchRequestFacetSpecArgs facetSpec) {
             this.facetSpec = Input.ofNullable(facetSpec);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRule(@Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule) {
+        public Builder rule(@Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule) {
             this.rule = rule;
             return this;
         }
 
-        public Builder setRule(@Nullable GoogleCloudRetailV2betaRuleArgs rule) {
+        public Builder rule(@Nullable GoogleCloudRetailV2betaRuleArgs rule) {
             this.rule = Input.ofNullable(rule);
             return this;
         }
 
-        public Builder setSolutionTypes(Input<List<ControlSolutionTypesItem>> solutionTypes) {
+        public Builder solutionTypes(Input<List<ControlSolutionTypesItem>> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
 
-        public Builder setSolutionTypes(List<ControlSolutionTypesItem> solutionTypes) {
+        public Builder solutionTypes(List<ControlSolutionTypesItem> solutionTypes) {
             this.solutionTypes = Input.of(Objects.requireNonNull(solutionTypes));
             return this;
         }

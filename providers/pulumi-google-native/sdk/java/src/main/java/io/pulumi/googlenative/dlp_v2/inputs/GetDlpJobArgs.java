@@ -74,17 +74,17 @@ public final class GetDlpJobArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDlpJobId(String dlpJobId) {
+        public Builder dlpJobId(String dlpJobId) {
             this.dlpJobId = Objects.requireNonNull(dlpJobId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

@@ -57,7 +57,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse e
     	      this.encryptionKeyReference = defaults.encryptionKeyReference;
         }
 
-        public Builder setEncryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
+        public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
         }

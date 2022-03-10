@@ -57,12 +57,12 @@ public final class ConnectionMonitorIcmpConfigurationArgs extends io.pulumi.reso
     	      this.disableTraceRoute = defaults.disableTraceRoute;
         }
 
-        public Builder setDisableTraceRoute(@Nullable Input<Boolean> disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Input<Boolean> disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
 
-        public Builder setDisableTraceRoute(@Nullable Boolean disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = Input.ofNullable(disableTraceRoute);
             return this;
         }

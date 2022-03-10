@@ -62,12 +62,12 @@ public final class GetSslPolicyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSslPolicy(String sslPolicy) {
+        public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }

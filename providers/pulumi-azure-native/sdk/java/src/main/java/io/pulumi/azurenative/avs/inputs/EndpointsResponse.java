@@ -88,17 +88,17 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.vcsa = defaults.vcsa;
         }
 
-        public Builder setHcxCloudManager(String hcxCloudManager) {
+        public Builder hcxCloudManager(String hcxCloudManager) {
             this.hcxCloudManager = Objects.requireNonNull(hcxCloudManager);
             return this;
         }
 
-        public Builder setNsxtManager(String nsxtManager) {
+        public Builder nsxtManager(String nsxtManager) {
             this.nsxtManager = Objects.requireNonNull(nsxtManager);
             return this;
         }
 
-        public Builder setVcsa(String vcsa) {
+        public Builder vcsa(String vcsa) {
             this.vcsa = Objects.requireNonNull(vcsa);
             return this;
         }

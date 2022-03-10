@@ -49,7 +49,7 @@ public final class IosDeviceListResponse {
     	      this.iosDevices = defaults.iosDevices;
         }
 
-        public Builder setIosDevices(List<IosDeviceResponse> iosDevices) {
+        public Builder iosDevices(List<IosDeviceResponse> iosDevices) {
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }

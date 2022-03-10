@@ -86,42 +86,42 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setCallerReference(Input<String> callerReference) {
+        public Builder callerReference(Input<String> callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
 
-        public Builder setCallerReference(String callerReference) {
+        public Builder callerReference(String callerReference) {
             this.callerReference = Input.of(Objects.requireNonNull(callerReference));
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setEncodedKey(Input<String> encodedKey) {
+        public Builder encodedKey(Input<String> encodedKey) {
             this.encodedKey = Objects.requireNonNull(encodedKey);
             return this;
         }
 
-        public Builder setEncodedKey(String encodedKey) {
+        public Builder encodedKey(String encodedKey) {
             this.encodedKey = Input.of(Objects.requireNonNull(encodedKey));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

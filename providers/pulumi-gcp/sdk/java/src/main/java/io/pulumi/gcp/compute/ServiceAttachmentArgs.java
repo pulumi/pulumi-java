@@ -214,102 +214,102 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     	      this.targetService = defaults.targetService;
         }
 
-        public Builder setConnectionPreference(Input<String> connectionPreference) {
+        public Builder connectionPreference(Input<String> connectionPreference) {
             this.connectionPreference = Objects.requireNonNull(connectionPreference);
             return this;
         }
 
-        public Builder setConnectionPreference(String connectionPreference) {
+        public Builder connectionPreference(String connectionPreference) {
             this.connectionPreference = Input.of(Objects.requireNonNull(connectionPreference));
             return this;
         }
 
-        public Builder setConsumerAcceptLists(@Nullable Input<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable Input<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists) {
             this.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
 
-        public Builder setConsumerAcceptLists(@Nullable List<ServiceAttachmentConsumerAcceptListArgs> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerAcceptListArgs> consumerAcceptLists) {
             this.consumerAcceptLists = Input.ofNullable(consumerAcceptLists);
             return this;
         }
 
-        public Builder setConsumerRejectLists(@Nullable Input<List<String>> consumerRejectLists) {
+        public Builder consumerRejectLists(@Nullable Input<List<String>> consumerRejectLists) {
             this.consumerRejectLists = consumerRejectLists;
             return this;
         }
 
-        public Builder setConsumerRejectLists(@Nullable List<String> consumerRejectLists) {
+        public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
             this.consumerRejectLists = Input.ofNullable(consumerRejectLists);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableProxyProtocol(Input<Boolean> enableProxyProtocol) {
+        public Builder enableProxyProtocol(Input<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = Objects.requireNonNull(enableProxyProtocol);
             return this;
         }
 
-        public Builder setEnableProxyProtocol(Boolean enableProxyProtocol) {
+        public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Input.of(Objects.requireNonNull(enableProxyProtocol));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNatSubnets(Input<List<String>> natSubnets) {
+        public Builder natSubnets(Input<List<String>> natSubnets) {
             this.natSubnets = Objects.requireNonNull(natSubnets);
             return this;
         }
 
-        public Builder setNatSubnets(List<String> natSubnets) {
+        public Builder natSubnets(List<String> natSubnets) {
             this.natSubnets = Input.of(Objects.requireNonNull(natSubnets));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTargetService(Input<String> targetService) {
+        public Builder targetService(Input<String> targetService) {
             this.targetService = Objects.requireNonNull(targetService);
             return this;
         }
 
-        public Builder setTargetService(String targetService) {
+        public Builder targetService(String targetService) {
             this.targetService = Input.of(Objects.requireNonNull(targetService));
             return this;
         }

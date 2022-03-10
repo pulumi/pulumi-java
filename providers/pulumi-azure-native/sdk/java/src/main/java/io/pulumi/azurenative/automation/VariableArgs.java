@@ -151,72 +151,72 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsEncrypted(@Nullable Input<Boolean> isEncrypted) {
+        public Builder isEncrypted(@Nullable Input<Boolean> isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
-        public Builder setIsEncrypted(@Nullable Boolean isEncrypted) {
+        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = Input.ofNullable(isEncrypted);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setVariableName(@Nullable Input<String> variableName) {
+        public Builder variableName(@Nullable Input<String> variableName) {
             this.variableName = variableName;
             return this;
         }
 
-        public Builder setVariableName(@Nullable String variableName) {
+        public Builder variableName(@Nullable String variableName) {
             this.variableName = Input.ofNullable(variableName);
             return this;
         }

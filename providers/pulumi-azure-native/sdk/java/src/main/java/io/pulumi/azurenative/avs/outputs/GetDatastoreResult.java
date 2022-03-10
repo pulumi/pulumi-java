@@ -133,32 +133,32 @@ public final class GetDatastoreResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDiskPoolVolume(@Nullable DiskPoolVolumeResponse diskPoolVolume) {
+        public Builder diskPoolVolume(@Nullable DiskPoolVolumeResponse diskPoolVolume) {
             this.diskPoolVolume = diskPoolVolume;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetAppVolume(@Nullable NetAppVolumeResponse netAppVolume) {
+        public Builder netAppVolume(@Nullable NetAppVolumeResponse netAppVolume) {
             this.netAppVolume = netAppVolume;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

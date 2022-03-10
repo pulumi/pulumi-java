@@ -50,12 +50,12 @@ public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends io
     	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
         }
 
-        public Builder setRequiredFeaturesPolicy(Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
+        public Builder requiredFeaturesPolicy(Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
 
-        public Builder setRequiredFeaturesPolicy(Either<String,FeaturesPolicy> requiredFeaturesPolicy) {
+        public Builder requiredFeaturesPolicy(Either<String,FeaturesPolicy> requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Input.of(Objects.requireNonNull(requiredFeaturesPolicy));
             return this;
         }

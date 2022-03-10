@@ -51,12 +51,12 @@ public final class LicenseIssuerData {
     	      this.signKey = defaults.signKey;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSignKey(@Nullable String signKey) {
+        public Builder signKey(@Nullable String signKey) {
             this.signKey = signKey;
             return this;
         }

@@ -72,17 +72,17 @@ public final class GetInstanceMaintenanceSchedule extends io.pulumi.resources.In
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setScheduleDeadlineTime(String scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

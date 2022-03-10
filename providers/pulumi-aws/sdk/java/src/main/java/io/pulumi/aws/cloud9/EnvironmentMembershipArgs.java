@@ -85,32 +85,32 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setPermissions(Input<String> permissions) {
+        public Builder permissions(Input<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Input.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder setUserArn(Input<String> userArn) {
+        public Builder userArn(Input<String> userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }
 
-        public Builder setUserArn(String userArn) {
+        public Builder userArn(String userArn) {
             this.userArn = Input.of(Objects.requireNonNull(userArn));
             return this;
         }

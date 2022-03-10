@@ -92,32 +92,32 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
     	      this.value = defaults.value;
         }
 
-        public Builder setField(Input<GooglePrivacyDlpV2FieldIdArgs> field) {
+        public Builder field(Input<GooglePrivacyDlpV2FieldIdArgs> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdArgs field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
             this.field = Input.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder setOperator(Input<GooglePrivacyDlpV2ConditionOperator> operator) {
+        public Builder operator(Input<GooglePrivacyDlpV2ConditionOperator> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(GooglePrivacyDlpV2ConditionOperator operator) {
+        public Builder operator(GooglePrivacyDlpV2ConditionOperator operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<GooglePrivacyDlpV2ValueArgs> value) {
+        public Builder value(@Nullable Input<GooglePrivacyDlpV2ValueArgs> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable GooglePrivacyDlpV2ValueArgs value) {
+        public Builder value(@Nullable GooglePrivacyDlpV2ValueArgs value) {
             this.value = Input.ofNullable(value);
             return this;
         }

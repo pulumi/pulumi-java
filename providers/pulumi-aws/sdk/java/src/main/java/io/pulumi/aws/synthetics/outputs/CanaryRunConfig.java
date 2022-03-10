@@ -84,17 +84,17 @@ public final class CanaryRunConfig {
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setActiveTracing(@Nullable Boolean activeTracing) {
+        public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = activeTracing;
             return this;
         }
 
-        public Builder setMemoryInMb(@Nullable Integer memoryInMb) {
+        public Builder memoryInMb(@Nullable Integer memoryInMb) {
             this.memoryInMb = memoryInMb;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }

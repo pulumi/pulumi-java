@@ -132,32 +132,32 @@ public final class ScriptStatusResponse {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setContainerInstanceId(String containerInstanceId) {
+        public Builder containerInstanceId(String containerInstanceId) {
             this.containerInstanceId = Objects.requireNonNull(containerInstanceId);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(@Nullable ErrorResponseResponse error) {
+        public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

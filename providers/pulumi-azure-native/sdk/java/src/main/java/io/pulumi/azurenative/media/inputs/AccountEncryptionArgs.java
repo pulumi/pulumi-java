@@ -73,22 +73,22 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setKeyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
 
-        public Builder setType(Input<Either<String,AccountEncryptionKeyType>> type) {
+        public Builder type(Input<Either<String,AccountEncryptionKeyType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,AccountEncryptionKeyType> type) {
+        public Builder type(Either<String,AccountEncryptionKeyType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -143,37 +143,37 @@ public final class GetAcceleratorResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAcceleratorArn(@Nullable String acceleratorArn) {
+        public Builder acceleratorArn(@Nullable String acceleratorArn) {
             this.acceleratorArn = acceleratorArn;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setIpAddressType(@Nullable AcceleratorIpAddressType ipAddressType) {
+        public Builder ipAddressType(@Nullable AcceleratorIpAddressType ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AcceleratorTag> tags) {
+        public Builder tags(@Nullable List<AcceleratorTag> tags) {
             this.tags = tags;
             return this;
         }

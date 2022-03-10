@@ -86,22 +86,22 @@ public final class GetDatacenterConnectorArgs extends io.pulumi.resources.Invoke
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setDatacenterConnectorId(String datacenterConnectorId) {
+        public Builder datacenterConnectorId(String datacenterConnectorId) {
             this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }

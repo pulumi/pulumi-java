@@ -49,7 +49,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
+        public Builder dimensions(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }

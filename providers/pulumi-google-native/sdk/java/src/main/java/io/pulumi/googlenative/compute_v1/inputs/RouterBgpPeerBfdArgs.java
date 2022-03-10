@@ -103,42 +103,42 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     	      this.sessionInitializationMode = defaults.sessionInitializationMode;
         }
 
-        public Builder setMinReceiveInterval(@Nullable Input<Integer> minReceiveInterval) {
+        public Builder minReceiveInterval(@Nullable Input<Integer> minReceiveInterval) {
             this.minReceiveInterval = minReceiveInterval;
             return this;
         }
 
-        public Builder setMinReceiveInterval(@Nullable Integer minReceiveInterval) {
+        public Builder minReceiveInterval(@Nullable Integer minReceiveInterval) {
             this.minReceiveInterval = Input.ofNullable(minReceiveInterval);
             return this;
         }
 
-        public Builder setMinTransmitInterval(@Nullable Input<Integer> minTransmitInterval) {
+        public Builder minTransmitInterval(@Nullable Input<Integer> minTransmitInterval) {
             this.minTransmitInterval = minTransmitInterval;
             return this;
         }
 
-        public Builder setMinTransmitInterval(@Nullable Integer minTransmitInterval) {
+        public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
             this.minTransmitInterval = Input.ofNullable(minTransmitInterval);
             return this;
         }
 
-        public Builder setMultiplier(@Nullable Input<Integer> multiplier) {
+        public Builder multiplier(@Nullable Input<Integer> multiplier) {
             this.multiplier = multiplier;
             return this;
         }
 
-        public Builder setMultiplier(@Nullable Integer multiplier) {
+        public Builder multiplier(@Nullable Integer multiplier) {
             this.multiplier = Input.ofNullable(multiplier);
             return this;
         }
 
-        public Builder setSessionInitializationMode(@Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
+        public Builder sessionInitializationMode(@Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
             this.sessionInitializationMode = sessionInitializationMode;
             return this;
         }
 
-        public Builder setSessionInitializationMode(@Nullable RouterBgpPeerBfdSessionInitializationMode sessionInitializationMode) {
+        public Builder sessionInitializationMode(@Nullable RouterBgpPeerBfdSessionInitializationMode sessionInitializationMode) {
             this.sessionInitializationMode = Input.ofNullable(sessionInitializationMode);
             return this;
         }

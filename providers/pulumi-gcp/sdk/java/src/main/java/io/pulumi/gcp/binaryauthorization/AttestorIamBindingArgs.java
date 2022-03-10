@@ -115,52 +115,52 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder setAttestor(Input<String> attestor) {
+        public Builder attestor(Input<String> attestor) {
             this.attestor = Objects.requireNonNull(attestor);
             return this;
         }
 
-        public Builder setAttestor(String attestor) {
+        public Builder attestor(String attestor) {
             this.attestor = Input.of(Objects.requireNonNull(attestor));
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<AttestorIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Input<AttestorIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable AttestorIamBindingConditionArgs condition) {
+        public Builder condition(@Nullable AttestorIamBindingConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setMembers(Input<List<String>> members) {
+        public Builder members(Input<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

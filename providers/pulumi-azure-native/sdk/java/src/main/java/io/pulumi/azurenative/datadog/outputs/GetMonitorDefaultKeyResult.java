@@ -99,22 +99,22 @@ public final class GetMonitorDefaultKeyResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

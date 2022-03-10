@@ -91,17 +91,17 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.googleDomainsDns = defaults.googleDomainsDns;
         }
 
-        public Builder setCustomDns(CustomDnsResponse customDns) {
+        public Builder customDns(CustomDnsResponse customDns) {
             this.customDns = Objects.requireNonNull(customDns);
             return this;
         }
 
-        public Builder setGlueRecords(List<GlueRecordResponse> glueRecords) {
+        public Builder glueRecords(List<GlueRecordResponse> glueRecords) {
             this.glueRecords = Objects.requireNonNull(glueRecords);
             return this;
         }
 
-        public Builder setGoogleDomainsDns(GoogleDomainsDnsResponse googleDomainsDns) {
+        public Builder googleDomainsDns(GoogleDomainsDnsResponse googleDomainsDns) {
             this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
             return this;
         }

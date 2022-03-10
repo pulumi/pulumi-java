@@ -50,7 +50,7 @@ public final class OSDiskImageEncryptionResponse {
     	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }

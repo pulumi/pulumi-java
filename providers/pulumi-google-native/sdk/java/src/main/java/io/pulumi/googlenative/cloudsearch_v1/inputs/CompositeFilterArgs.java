@@ -72,22 +72,22 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
     	      this.subFilters = defaults.subFilters;
         }
 
-        public Builder setLogicOperator(@Nullable Input<CompositeFilterLogicOperator> logicOperator) {
+        public Builder logicOperator(@Nullable Input<CompositeFilterLogicOperator> logicOperator) {
             this.logicOperator = logicOperator;
             return this;
         }
 
-        public Builder setLogicOperator(@Nullable CompositeFilterLogicOperator logicOperator) {
+        public Builder logicOperator(@Nullable CompositeFilterLogicOperator logicOperator) {
             this.logicOperator = Input.ofNullable(logicOperator);
             return this;
         }
 
-        public Builder setSubFilters(@Nullable Input<List<FilterArgs>> subFilters) {
+        public Builder subFilters(@Nullable Input<List<FilterArgs>> subFilters) {
             this.subFilters = subFilters;
             return this;
         }
 
-        public Builder setSubFilters(@Nullable List<FilterArgs> subFilters) {
+        public Builder subFilters(@Nullable List<FilterArgs> subFilters) {
             this.subFilters = Input.ofNullable(subFilters);
             return this;
         }

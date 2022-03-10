@@ -55,7 +55,7 @@ public final class VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse
     	      this.domainNameLabel = defaults.domainNameLabel;
         }
 
-        public Builder setDomainNameLabel(String domainNameLabel) {
+        public Builder domainNameLabel(String domainNameLabel) {
             this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
             return this;
         }

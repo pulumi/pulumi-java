@@ -55,7 +55,7 @@ public final class GalleryIdentifierResponse extends io.pulumi.resources.InvokeA
     	      this.uniqueName = defaults.uniqueName;
         }
 
-        public Builder setUniqueName(String uniqueName) {
+        public Builder uniqueName(String uniqueName) {
             this.uniqueName = Objects.requireNonNull(uniqueName);
             return this;
         }

@@ -60,12 +60,12 @@ public final class GetMembershipArgs extends io.pulumi.resources.InvokeArgs {
     	      this.membershipId = defaults.membershipId;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setMembershipId(String membershipId) {
+        public Builder membershipId(String membershipId) {
             this.membershipId = Objects.requireNonNull(membershipId);
             return this;
         }

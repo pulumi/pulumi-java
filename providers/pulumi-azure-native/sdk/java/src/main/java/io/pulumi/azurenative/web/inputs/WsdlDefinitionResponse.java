@@ -107,22 +107,22 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
     	      this.url = defaults.url;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setImportMethod(@Nullable String importMethod) {
+        public Builder importMethod(@Nullable String importMethod) {
             this.importMethod = importMethod;
             return this;
         }
 
-        public Builder setService(@Nullable WsdlServiceResponse service) {
+        public Builder service(@Nullable WsdlServiceResponse service) {
             this.service = service;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

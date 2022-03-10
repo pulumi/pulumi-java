@@ -89,32 +89,32 @@ public final class EndpointGroupEndpointConfigurationGetArgs extends io.pulumi.r
     	      this.weight = defaults.weight;
         }
 
-        public Builder setClientIpPreservationEnabled(@Nullable Input<Boolean> clientIpPreservationEnabled) {
+        public Builder clientIpPreservationEnabled(@Nullable Input<Boolean> clientIpPreservationEnabled) {
             this.clientIpPreservationEnabled = clientIpPreservationEnabled;
             return this;
         }
 
-        public Builder setClientIpPreservationEnabled(@Nullable Boolean clientIpPreservationEnabled) {
+        public Builder clientIpPreservationEnabled(@Nullable Boolean clientIpPreservationEnabled) {
             this.clientIpPreservationEnabled = Input.ofNullable(clientIpPreservationEnabled);
             return this;
         }
 
-        public Builder setEndpointId(@Nullable Input<String> endpointId) {
+        public Builder endpointId(@Nullable Input<String> endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
-        public Builder setEndpointId(@Nullable String endpointId) {
+        public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = Input.ofNullable(endpointId);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Input<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

@@ -109,42 +109,42 @@ public final class LegacyMicrosoftAccountArgs extends io.pulumi.resources.Resour
     	      this.validation = defaults.validation;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<LoginScopesArgs> login) {
+        public Builder login(@Nullable Input<LoginScopesArgs> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginScopesArgs login) {
+        public Builder login(@Nullable LoginScopesArgs login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setRegistration(@Nullable Input<ClientRegistrationArgs> registration) {
+        public Builder registration(@Nullable Input<ClientRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setRegistration(@Nullable ClientRegistrationArgs registration) {
+        public Builder registration(@Nullable ClientRegistrationArgs registration) {
             this.registration = Input.ofNullable(registration);
             return this;
         }
 
-        public Builder setValidation(@Nullable Input<AllowedAudiencesValidationArgs> validation) {
+        public Builder validation(@Nullable Input<AllowedAudiencesValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidation(@Nullable AllowedAudiencesValidationArgs validation) {
+        public Builder validation(@Nullable AllowedAudiencesValidationArgs validation) {
             this.validation = Input.ofNullable(validation);
             return this;
         }

@@ -152,72 +152,72 @@ public final class OrganizationConformancePackArgs extends io.pulumi.resources.R
     	      this.templateS3Uri = defaults.templateS3Uri;
         }
 
-        public Builder setConformancePackInputParameters(@Nullable Input<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters) {
+        public Builder conformancePackInputParameters(@Nullable Input<List<OrganizationConformancePackConformancePackInputParameterArgs>> conformancePackInputParameters) {
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
 
-        public Builder setConformancePackInputParameters(@Nullable List<OrganizationConformancePackConformancePackInputParameterArgs> conformancePackInputParameters) {
+        public Builder conformancePackInputParameters(@Nullable List<OrganizationConformancePackConformancePackInputParameterArgs> conformancePackInputParameters) {
             this.conformancePackInputParameters = Input.ofNullable(conformancePackInputParameters);
             return this;
         }
 
-        public Builder setDeliveryS3Bucket(@Nullable Input<String> deliveryS3Bucket) {
+        public Builder deliveryS3Bucket(@Nullable Input<String> deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
 
-        public Builder setDeliveryS3Bucket(@Nullable String deliveryS3Bucket) {
+        public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
             this.deliveryS3Bucket = Input.ofNullable(deliveryS3Bucket);
             return this;
         }
 
-        public Builder setDeliveryS3KeyPrefix(@Nullable Input<String> deliveryS3KeyPrefix) {
+        public Builder deliveryS3KeyPrefix(@Nullable Input<String> deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
 
-        public Builder setDeliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
+        public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = Input.ofNullable(deliveryS3KeyPrefix);
             return this;
         }
 
-        public Builder setExcludedAccounts(@Nullable Input<List<String>> excludedAccounts) {
+        public Builder excludedAccounts(@Nullable Input<List<String>> excludedAccounts) {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
 
-        public Builder setExcludedAccounts(@Nullable List<String> excludedAccounts) {
+        public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
             this.excludedAccounts = Input.ofNullable(excludedAccounts);
             return this;
         }
 
-        public Builder setOrganizationConformancePackName(@Nullable Input<String> organizationConformancePackName) {
+        public Builder organizationConformancePackName(@Nullable Input<String> organizationConformancePackName) {
             this.organizationConformancePackName = organizationConformancePackName;
             return this;
         }
 
-        public Builder setOrganizationConformancePackName(@Nullable String organizationConformancePackName) {
+        public Builder organizationConformancePackName(@Nullable String organizationConformancePackName) {
             this.organizationConformancePackName = Input.ofNullable(organizationConformancePackName);
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Input<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable String templateBody) {
+        public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Input.ofNullable(templateBody);
             return this;
         }
 
-        public Builder setTemplateS3Uri(@Nullable Input<String> templateS3Uri) {
+        public Builder templateS3Uri(@Nullable Input<String> templateS3Uri) {
             this.templateS3Uri = templateS3Uri;
             return this;
         }
 
-        public Builder setTemplateS3Uri(@Nullable String templateS3Uri) {
+        public Builder templateS3Uri(@Nullable String templateS3Uri) {
             this.templateS3Uri = Input.ofNullable(templateS3Uri);
             return this;
         }

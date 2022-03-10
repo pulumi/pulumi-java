@@ -168,82 +168,82 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCurrentRevisionId(@Nullable Input<String> currentRevisionId) {
+        public Builder currentRevisionId(@Nullable Input<String> currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
 
-        public Builder setCurrentRevisionId(@Nullable String currentRevisionId) {
+        public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = Input.ofNullable(currentRevisionId);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Input<String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRenderingEngine(@Nullable Input<SimulationApplicationRenderingEngineArgs> renderingEngine) {
+        public Builder renderingEngine(@Nullable Input<SimulationApplicationRenderingEngineArgs> renderingEngine) {
             this.renderingEngine = renderingEngine;
             return this;
         }
 
-        public Builder setRenderingEngine(@Nullable SimulationApplicationRenderingEngineArgs renderingEngine) {
+        public Builder renderingEngine(@Nullable SimulationApplicationRenderingEngineArgs renderingEngine) {
             this.renderingEngine = Input.ofNullable(renderingEngine);
             return this;
         }
 
-        public Builder setRobotSoftwareSuite(Input<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(Input<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite) {
             this.robotSoftwareSuite = Objects.requireNonNull(robotSoftwareSuite);
             return this;
         }
 
-        public Builder setRobotSoftwareSuite(SimulationApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(SimulationApplicationRobotSoftwareSuiteArgs robotSoftwareSuite) {
             this.robotSoftwareSuite = Input.of(Objects.requireNonNull(robotSoftwareSuite));
             return this;
         }
 
-        public Builder setSimulationSoftwareSuite(Input<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite) {
+        public Builder simulationSoftwareSuite(Input<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite) {
             this.simulationSoftwareSuite = Objects.requireNonNull(simulationSoftwareSuite);
             return this;
         }
 
-        public Builder setSimulationSoftwareSuite(SimulationApplicationSimulationSoftwareSuiteArgs simulationSoftwareSuite) {
+        public Builder simulationSoftwareSuite(SimulationApplicationSimulationSoftwareSuiteArgs simulationSoftwareSuite) {
             this.simulationSoftwareSuite = Input.of(Objects.requireNonNull(simulationSoftwareSuite));
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<SimulationApplicationSourceConfigArgs>> sources) {
+        public Builder sources(@Nullable Input<List<SimulationApplicationSourceConfigArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<SimulationApplicationSourceConfigArgs> sources) {
+        public Builder sources(@Nullable List<SimulationApplicationSourceConfigArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<SimulationApplicationTagsArgs> tags) {
+        public Builder tags(@Nullable Input<SimulationApplicationTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable SimulationApplicationTagsArgs tags) {
+        public Builder tags(@Nullable SimulationApplicationTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

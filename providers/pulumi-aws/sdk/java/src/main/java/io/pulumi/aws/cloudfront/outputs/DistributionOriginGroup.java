@@ -84,17 +84,17 @@ public final class DistributionOriginGroup {
     	      this.originId = defaults.originId;
         }
 
-        public Builder setFailoverCriteria(DistributionOriginGroupFailoverCriteria failoverCriteria) {
+        public Builder failoverCriteria(DistributionOriginGroupFailoverCriteria failoverCriteria) {
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
 
-        public Builder setMembers(List<DistributionOriginGroupMember> members) {
+        public Builder members(List<DistributionOriginGroupMember> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }

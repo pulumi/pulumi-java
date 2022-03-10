@@ -63,12 +63,12 @@ public final class OriginRequestPolicyHeadersConfig extends io.pulumi.resources.
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(String headerBehavior) {
+        public Builder headerBehavior(String headerBehavior) {
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }

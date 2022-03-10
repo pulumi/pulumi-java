@@ -98,32 +98,32 @@ public final class BackendServiceConsistentHashArgs extends io.pulumi.resources.
     	      this.minimumRingSize = defaults.minimumRingSize;
         }
 
-        public Builder setHttpCookie(@Nullable Input<BackendServiceConsistentHashHttpCookieArgs> httpCookie) {
+        public Builder httpCookie(@Nullable Input<BackendServiceConsistentHashHttpCookieArgs> httpCookie) {
             this.httpCookie = httpCookie;
             return this;
         }
 
-        public Builder setHttpCookie(@Nullable BackendServiceConsistentHashHttpCookieArgs httpCookie) {
+        public Builder httpCookie(@Nullable BackendServiceConsistentHashHttpCookieArgs httpCookie) {
             this.httpCookie = Input.ofNullable(httpCookie);
             return this;
         }
 
-        public Builder setHttpHeaderName(@Nullable Input<String> httpHeaderName) {
+        public Builder httpHeaderName(@Nullable Input<String> httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
 
-        public Builder setHttpHeaderName(@Nullable String httpHeaderName) {
+        public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = Input.ofNullable(httpHeaderName);
             return this;
         }
 
-        public Builder setMinimumRingSize(@Nullable Input<Integer> minimumRingSize) {
+        public Builder minimumRingSize(@Nullable Input<Integer> minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
 
-        public Builder setMinimumRingSize(@Nullable Integer minimumRingSize) {
+        public Builder minimumRingSize(@Nullable Integer minimumRingSize) {
             this.minimumRingSize = Input.ofNullable(minimumRingSize);
             return this;
         }

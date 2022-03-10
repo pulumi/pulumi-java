@@ -57,12 +57,12 @@ public final class StorageLensActivityMetricsArgs extends io.pulumi.resources.Re
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }

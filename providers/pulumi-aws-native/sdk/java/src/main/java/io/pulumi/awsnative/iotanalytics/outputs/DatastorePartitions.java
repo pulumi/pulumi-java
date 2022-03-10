@@ -42,7 +42,7 @@ public final class DatastorePartitions {
     	      this.partitions = defaults.partitions;
         }
 
-        public Builder setPartitions(@Nullable List<DatastorePartition> partitions) {
+        public Builder partitions(@Nullable List<DatastorePartition> partitions) {
             this.partitions = partitions;
             return this;
         }

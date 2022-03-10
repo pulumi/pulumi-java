@@ -106,42 +106,42 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setFramework(@Nullable Input<String> framework) {
+        public Builder framework(@Nullable Input<String> framework) {
             this.framework = framework;
             return this;
         }
 
-        public Builder setFramework(@Nullable String framework) {
+        public Builder framework(@Nullable String framework) {
             this.framework = Input.ofNullable(framework);
             return this;
         }
 
-        public Builder setModelPath(@Nullable Input<String> modelPath) {
+        public Builder modelPath(@Nullable Input<String> modelPath) {
             this.modelPath = modelPath;
             return this;
         }
 
-        public Builder setModelPath(@Nullable String modelPath) {
+        public Builder modelPath(@Nullable String modelPath) {
             this.modelPath = Input.ofNullable(modelPath);
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable Input<String> pythonVersion) {
+        public Builder pythonVersion(@Nullable Input<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable String pythonVersion) {
+        public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = Input.ofNullable(pythonVersion);
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }

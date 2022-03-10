@@ -110,42 +110,42 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setExpirationDate(Input<String> expirationDate) {
+        public Builder expirationDate(Input<String> expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Input.of(Objects.requireNonNull(expirationDate));
             return this;
         }
 
-        public Builder setFrequency(Input<RecurrenceFrequency> frequency) {
+        public Builder frequency(Input<RecurrenceFrequency> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setFrequency(RecurrenceFrequency frequency) {
+        public Builder frequency(RecurrenceFrequency frequency) {
             this.frequency = Input.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setWeekDays(@Nullable Input<List<WeekDay>> weekDays) {
+        public Builder weekDays(@Nullable Input<List<WeekDay>> weekDays) {
             this.weekDays = weekDays;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<WeekDay> weekDays) {
+        public Builder weekDays(@Nullable List<WeekDay> weekDays) {
             this.weekDays = Input.ofNullable(weekDays);
             return this;
         }

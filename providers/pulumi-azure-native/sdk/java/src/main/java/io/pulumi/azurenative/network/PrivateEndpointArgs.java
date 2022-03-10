@@ -204,102 +204,102 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCustomDnsConfigs(@Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs) {
+        public Builder customDnsConfigs(@Nullable Input<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs) {
             this.customDnsConfigs = customDnsConfigs;
             return this;
         }
 
-        public Builder setCustomDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
+        public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatArgs> customDnsConfigs) {
             this.customDnsConfigs = Input.ofNullable(customDnsConfigs);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManualPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
-        public Builder setManualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = Input.ofNullable(manualPrivateLinkServiceConnections);
             return this;
         }
 
-        public Builder setPrivateEndpointName(@Nullable Input<String> privateEndpointName) {
+        public Builder privateEndpointName(@Nullable Input<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
 
-        public Builder setPrivateEndpointName(@Nullable String privateEndpointName) {
+        public Builder privateEndpointName(@Nullable String privateEndpointName) {
             this.privateEndpointName = Input.ofNullable(privateEndpointName);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
+        public Builder privateLinkServiceConnections(@Nullable Input<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
+        public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionArgs> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = Input.ofNullable(privateLinkServiceConnections);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetArgs subnet) {
+        public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

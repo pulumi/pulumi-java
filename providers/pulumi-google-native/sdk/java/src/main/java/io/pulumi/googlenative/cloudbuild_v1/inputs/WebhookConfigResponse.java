@@ -72,12 +72,12 @@ public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

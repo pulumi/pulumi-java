@@ -89,17 +89,17 @@ public final class ServiceTemplateSpecContainerEnvFrom {
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder setConfigMapRef(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRef configMapRef) {
+        public Builder configMapRef(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRef configMapRef) {
             this.configMapRef = configMapRef;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable ServiceTemplateSpecContainerEnvFromSecretRef secretRef) {
+        public Builder secretRef(@Nullable ServiceTemplateSpecContainerEnvFromSecretRef secretRef) {
             this.secretRef = secretRef;
             return this;
         }

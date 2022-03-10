@@ -49,12 +49,12 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.kind = defaults.kind;
         }
 
-        public Builder setKind(@Nullable Input<FrontEndServiceType> kind) {
+        public Builder kind(@Nullable Input<FrontEndServiceType> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable FrontEndServiceType kind) {
+        public Builder kind(@Nullable FrontEndServiceType kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }

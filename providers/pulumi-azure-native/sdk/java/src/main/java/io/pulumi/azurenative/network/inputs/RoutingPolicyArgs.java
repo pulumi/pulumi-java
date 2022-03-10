@@ -90,32 +90,32 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nextHop = defaults.nextHop;
         }
 
-        public Builder setDestinations(Input<List<String>> destinations) {
+        public Builder destinations(Input<List<String>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setDestinations(List<String> destinations) {
+        public Builder destinations(List<String> destinations) {
             this.destinations = Input.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNextHop(Input<String> nextHop) {
+        public Builder nextHop(Input<String> nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Input.of(Objects.requireNonNull(nextHop));
             return this;
         }

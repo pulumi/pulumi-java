@@ -76,22 +76,22 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
     	      this.identity = defaults.identity;
         }
 
-        public Builder setDeadLetterDestination(@Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable Input<StorageBlobDeadLetterDestinationArgs> deadLetterDestination) {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
-        public Builder setDeadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
             this.deadLetterDestination = Input.ofNullable(deadLetterDestination);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<EventSubscriptionIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<EventSubscriptionIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EventSubscriptionIdentityArgs identity) {
+        public Builder identity(@Nullable EventSubscriptionIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }

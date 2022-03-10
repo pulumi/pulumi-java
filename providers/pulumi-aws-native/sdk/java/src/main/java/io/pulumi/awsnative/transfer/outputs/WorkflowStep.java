@@ -111,27 +111,27 @@ public final class WorkflowStep {
     	      this.type = defaults.type;
         }
 
-        public Builder setCopyStepDetails(@Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails) {
+        public Builder copyStepDetails(@Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails) {
             this.copyStepDetails = copyStepDetails;
             return this;
         }
 
-        public Builder setCustomStepDetails(@Nullable WorkflowStepCustomStepDetailsProperties customStepDetails) {
+        public Builder customStepDetails(@Nullable WorkflowStepCustomStepDetailsProperties customStepDetails) {
             this.customStepDetails = customStepDetails;
             return this;
         }
 
-        public Builder setDeleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails) {
+        public Builder deleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails) {
             this.deleteStepDetails = deleteStepDetails;
             return this;
         }
 
-        public Builder setTagStepDetails(@Nullable WorkflowStepTagStepDetailsProperties tagStepDetails) {
+        public Builder tagStepDetails(@Nullable WorkflowStepTagStepDetailsProperties tagStepDetails) {
             this.tagStepDetails = tagStepDetails;
             return this;
         }
 
-        public Builder setType(@Nullable WorkflowStepType type) {
+        public Builder type(@Nullable WorkflowStepType type) {
             this.type = type;
             return this;
         }

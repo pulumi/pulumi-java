@@ -115,27 +115,27 @@ public final class PresetAudio {
     	      this.sampleRate = defaults.sampleRate;
         }
 
-        public Builder setAudioPackingMode(@Nullable String audioPackingMode) {
+        public Builder audioPackingMode(@Nullable String audioPackingMode) {
             this.audioPackingMode = audioPackingMode;
             return this;
         }
 
-        public Builder setBitRate(@Nullable String bitRate) {
+        public Builder bitRate(@Nullable String bitRate) {
             this.bitRate = bitRate;
             return this;
         }
 
-        public Builder setChannels(@Nullable String channels) {
+        public Builder channels(@Nullable String channels) {
             this.channels = channels;
             return this;
         }
 
-        public Builder setCodec(@Nullable String codec) {
+        public Builder codec(@Nullable String codec) {
             this.codec = codec;
             return this;
         }
 
-        public Builder setSampleRate(@Nullable String sampleRate) {
+        public Builder sampleRate(@Nullable String sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }

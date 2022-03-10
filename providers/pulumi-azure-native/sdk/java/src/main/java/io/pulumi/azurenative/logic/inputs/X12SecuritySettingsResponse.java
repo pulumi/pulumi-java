@@ -106,22 +106,22 @@ public final class X12SecuritySettingsResponse extends io.pulumi.resources.Invok
     	      this.securityQualifier = defaults.securityQualifier;
         }
 
-        public Builder setAuthorizationQualifier(String authorizationQualifier) {
+        public Builder authorizationQualifier(String authorizationQualifier) {
             this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
             return this;
         }
 
-        public Builder setAuthorizationValue(@Nullable String authorizationValue) {
+        public Builder authorizationValue(@Nullable String authorizationValue) {
             this.authorizationValue = authorizationValue;
             return this;
         }
 
-        public Builder setPasswordValue(@Nullable String passwordValue) {
+        public Builder passwordValue(@Nullable String passwordValue) {
             this.passwordValue = passwordValue;
             return this;
         }
 
-        public Builder setSecurityQualifier(String securityQualifier) {
+        public Builder securityQualifier(String securityQualifier) {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
         }

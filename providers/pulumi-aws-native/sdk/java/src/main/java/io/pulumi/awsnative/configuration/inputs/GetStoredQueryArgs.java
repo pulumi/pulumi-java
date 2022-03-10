@@ -47,7 +47,7 @@ public final class GetStoredQueryArgs extends io.pulumi.resources.InvokeArgs {
     	      this.queryName = defaults.queryName;
         }
 
-        public Builder setQueryName(String queryName) {
+        public Builder queryName(String queryName) {
             this.queryName = Objects.requireNonNull(queryName);
             return this;
         }

@@ -48,7 +48,7 @@ public final class PrivateConnectivityResponse {
     	      this.privateConnection = defaults.privateConnection;
         }
 
-        public Builder setPrivateConnection(String privateConnection) {
+        public Builder privateConnection(String privateConnection) {
             this.privateConnection = Objects.requireNonNull(privateConnection);
             return this;
         }

@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
     	      this.expressions = defaults.expressions;
         }
 
-        public Builder setExpressions(@Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
+        public Builder expressions(@Nullable Input<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
             this.expressions = expressions;
             return this;
         }
 
-        public Builder setExpressions(@Nullable GooglePrivacyDlpV2ExpressionsArgs expressions) {
+        public Builder expressions(@Nullable GooglePrivacyDlpV2ExpressionsArgs expressions) {
             this.expressions = Input.ofNullable(expressions);
             return this;
         }

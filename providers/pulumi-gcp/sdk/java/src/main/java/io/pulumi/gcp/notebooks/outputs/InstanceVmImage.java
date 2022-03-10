@@ -85,17 +85,17 @@ public final class InstanceVmImage {
     	      this.project = defaults.project;
         }
 
-        public Builder setImageFamily(@Nullable String imageFamily) {
+        public Builder imageFamily(@Nullable String imageFamily) {
             this.imageFamily = imageFamily;
             return this;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

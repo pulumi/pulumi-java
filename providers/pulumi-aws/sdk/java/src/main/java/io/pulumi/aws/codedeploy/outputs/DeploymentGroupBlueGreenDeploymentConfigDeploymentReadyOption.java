@@ -72,12 +72,12 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
     	      this.waitTimeInMinutes = defaults.waitTimeInMinutes;
         }
 
-        public Builder setActionOnTimeout(@Nullable String actionOnTimeout) {
+        public Builder actionOnTimeout(@Nullable String actionOnTimeout) {
             this.actionOnTimeout = actionOnTimeout;
             return this;
         }
 
-        public Builder setWaitTimeInMinutes(@Nullable Integer waitTimeInMinutes) {
+        public Builder waitTimeInMinutes(@Nullable Integer waitTimeInMinutes) {
             this.waitTimeInMinutes = waitTimeInMinutes;
             return this;
         }

@@ -42,7 +42,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesResult {
     	      this.inputs = defaults.inputs;
         }
 
-        public Builder setInputs(@Nullable List<ExpressionRootResponse> inputs) {
+        public Builder inputs(@Nullable List<ExpressionRootResponse> inputs) {
             this.inputs = inputs;
             return this;
         }

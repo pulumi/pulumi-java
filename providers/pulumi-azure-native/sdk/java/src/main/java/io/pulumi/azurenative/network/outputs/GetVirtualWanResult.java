@@ -247,67 +247,67 @@ public final class GetVirtualWanResult {
     	      this.vpnSites = defaults.vpnSites;
         }
 
-        public Builder setAllowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
+        public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
 
-        public Builder setAllowVnetToVnetTraffic(@Nullable Boolean allowVnetToVnetTraffic) {
+        public Builder allowVnetToVnetTraffic(@Nullable Boolean allowVnetToVnetTraffic) {
             this.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
             return this;
         }
 
-        public Builder setDisableVpnEncryption(@Nullable Boolean disableVpnEncryption) {
+        public Builder disableVpnEncryption(@Nullable Boolean disableVpnEncryption) {
             this.disableVpnEncryption = disableVpnEncryption;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOffice365LocalBreakoutCategory(String office365LocalBreakoutCategory) {
+        public Builder office365LocalBreakoutCategory(String office365LocalBreakoutCategory) {
             this.office365LocalBreakoutCategory = Objects.requireNonNull(office365LocalBreakoutCategory);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualHubs(List<SubResourceResponse> virtualHubs) {
+        public Builder virtualHubs(List<SubResourceResponse> virtualHubs) {
             this.virtualHubs = Objects.requireNonNull(virtualHubs);
             return this;
         }
 
-        public Builder setVpnSites(List<SubResourceResponse> vpnSites) {
+        public Builder vpnSites(List<SubResourceResponse> vpnSites) {
             this.vpnSites = Objects.requireNonNull(vpnSites);
             return this;
         }

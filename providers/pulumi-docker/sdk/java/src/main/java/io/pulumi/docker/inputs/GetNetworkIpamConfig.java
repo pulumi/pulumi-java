@@ -88,22 +88,22 @@ public final class GetNetworkIpamConfig extends io.pulumi.resources.InvokeArgs {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setAuxAddress(@Nullable Map<String,Object> auxAddress) {
+        public Builder auxAddress(@Nullable Map<String,Object> auxAddress) {
             this.auxAddress = auxAddress;
             return this;
         }
 
-        public Builder setGateway(@Nullable String gateway) {
+        public Builder gateway(@Nullable String gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setIpRange(@Nullable String ipRange) {
+        public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }

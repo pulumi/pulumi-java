@@ -60,12 +60,12 @@ public final class GetServiceConsumerIamPolicyArgs extends io.pulumi.resources.I
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder setConsumerId(String consumerId) {
+        public Builder consumerId(String consumerId) {
             this.consumerId = Objects.requireNonNull(consumerId);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }

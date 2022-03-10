@@ -279,77 +279,77 @@ public final class ApplicationGatewayHttpListenerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCustomErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
+        public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
             this.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
+        public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
-        public Builder setFrontendPort(@Nullable SubResourceResponse frontendPort) {
+        public Builder frontendPort(@Nullable SubResourceResponse frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostNames(@Nullable List<String> hostNames) {
+        public Builder hostNames(@Nullable List<String> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
+        public Builder requireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
             this.requireServerNameIndication = requireServerNameIndication;
             return this;
         }
 
-        public Builder setSslCertificate(@Nullable SubResourceResponse sslCertificate) {
+        public Builder sslCertificate(@Nullable SubResourceResponse sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
 
-        public Builder setSslProfile(@Nullable SubResourceResponse sslProfile) {
+        public Builder sslProfile(@Nullable SubResourceResponse sslProfile) {
             this.sslProfile = sslProfile;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

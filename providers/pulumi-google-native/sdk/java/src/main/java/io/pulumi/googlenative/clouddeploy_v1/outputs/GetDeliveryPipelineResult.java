@@ -196,52 +196,52 @@ public final class GetDeliveryPipelineResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setCondition(PipelineConditionResponse condition) {
+        public Builder condition(PipelineConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSerialPipeline(SerialPipelineResponse serialPipeline) {
+        public Builder serialPipeline(SerialPipelineResponse serialPipeline) {
             this.serialPipeline = Objects.requireNonNull(serialPipeline);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -100,22 +100,22 @@ public final class OSPolicyResourceFileResponse {
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(Boolean allowInsecure) {
+        public Builder allowInsecure(Boolean allowInsecure) {
             this.allowInsecure = Objects.requireNonNull(allowInsecure);
             return this;
         }
 
-        public Builder setGcs(OSPolicyResourceFileGcsResponse gcs) {
+        public Builder gcs(OSPolicyResourceFileGcsResponse gcs) {
             this.gcs = Objects.requireNonNull(gcs);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setRemote(OSPolicyResourceFileRemoteResponse remote) {
+        public Builder remote(OSPolicyResourceFileRemoteResponse remote) {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }

@@ -87,32 +87,32 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder setFailureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Input.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder setResourcePath(@Nullable Input<String> resourcePath) {
+        public Builder resourcePath(@Nullable Input<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = Input.ofNullable(resourcePath);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

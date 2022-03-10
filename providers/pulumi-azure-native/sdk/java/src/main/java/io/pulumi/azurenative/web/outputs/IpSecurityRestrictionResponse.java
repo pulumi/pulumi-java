@@ -250,57 +250,57 @@ public final class IpSecurityRestrictionResponse {
     	      this.vnetTrafficTag = defaults.vnetTrafficTag;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,List<String>> headers) {
+        public Builder headers(@Nullable Map<String,List<String>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSubnetMask(@Nullable String subnetMask) {
+        public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }
 
-        public Builder setSubnetTrafficTag(@Nullable Integer subnetTrafficTag) {
+        public Builder subnetTrafficTag(@Nullable Integer subnetTrafficTag) {
             this.subnetTrafficTag = subnetTrafficTag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setVnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
+        public Builder vnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
             this.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;
         }
 
-        public Builder setVnetTrafficTag(@Nullable Integer vnetTrafficTag) {
+        public Builder vnetTrafficTag(@Nullable Integer vnetTrafficTag) {
             this.vnetTrafficTag = vnetTrafficTag;
             return this;
         }

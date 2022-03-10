@@ -88,32 +88,32 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setEventType(Input<String> eventType) {
+        public Builder eventType(Input<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Input.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder setIncludeBody(@Nullable Input<Boolean> includeBody) {
+        public Builder includeBody(@Nullable Input<Boolean> includeBody) {
             this.includeBody = includeBody;
             return this;
         }
 
-        public Builder setIncludeBody(@Nullable Boolean includeBody) {
+        public Builder includeBody(@Nullable Boolean includeBody) {
             this.includeBody = Input.ofNullable(includeBody);
             return this;
         }
 
-        public Builder setLambdaArn(Input<String> lambdaArn) {
+        public Builder lambdaArn(Input<String> lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
 
-        public Builder setLambdaArn(String lambdaArn) {
+        public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Input.of(Objects.requireNonNull(lambdaArn));
             return this;
         }

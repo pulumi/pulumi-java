@@ -209,7 +209,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
     private static ADLSGen2FileSystemDataSetArgs makeArgs(ADLSGen2FileSystemDataSetArgs args) {
         var builder = args == null ? ADLSGen2FileSystemDataSetArgs.builder() : ADLSGen2FileSystemDataSetArgs.builder(args);
         return builder
-            .setKind("AdlsGen2FileSystem")
+            .kind("AdlsGen2FileSystem")
             .build();
     }
 

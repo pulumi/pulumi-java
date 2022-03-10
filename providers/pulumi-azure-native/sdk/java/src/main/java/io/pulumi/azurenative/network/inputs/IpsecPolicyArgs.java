@@ -177,82 +177,82 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.saLifeTimeSeconds = defaults.saLifeTimeSeconds;
         }
 
-        public Builder setDhGroup(Input<Either<String,DhGroup>> dhGroup) {
+        public Builder dhGroup(Input<Either<String,DhGroup>> dhGroup) {
             this.dhGroup = Objects.requireNonNull(dhGroup);
             return this;
         }
 
-        public Builder setDhGroup(Either<String,DhGroup> dhGroup) {
+        public Builder dhGroup(Either<String,DhGroup> dhGroup) {
             this.dhGroup = Input.of(Objects.requireNonNull(dhGroup));
             return this;
         }
 
-        public Builder setIkeEncryption(Input<Either<String,IkeEncryption>> ikeEncryption) {
+        public Builder ikeEncryption(Input<Either<String,IkeEncryption>> ikeEncryption) {
             this.ikeEncryption = Objects.requireNonNull(ikeEncryption);
             return this;
         }
 
-        public Builder setIkeEncryption(Either<String,IkeEncryption> ikeEncryption) {
+        public Builder ikeEncryption(Either<String,IkeEncryption> ikeEncryption) {
             this.ikeEncryption = Input.of(Objects.requireNonNull(ikeEncryption));
             return this;
         }
 
-        public Builder setIkeIntegrity(Input<Either<String,IkeIntegrity>> ikeIntegrity) {
+        public Builder ikeIntegrity(Input<Either<String,IkeIntegrity>> ikeIntegrity) {
             this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity);
             return this;
         }
 
-        public Builder setIkeIntegrity(Either<String,IkeIntegrity> ikeIntegrity) {
+        public Builder ikeIntegrity(Either<String,IkeIntegrity> ikeIntegrity) {
             this.ikeIntegrity = Input.of(Objects.requireNonNull(ikeIntegrity));
             return this;
         }
 
-        public Builder setIpsecEncryption(Input<Either<String,IpsecEncryption>> ipsecEncryption) {
+        public Builder ipsecEncryption(Input<Either<String,IpsecEncryption>> ipsecEncryption) {
             this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption);
             return this;
         }
 
-        public Builder setIpsecEncryption(Either<String,IpsecEncryption> ipsecEncryption) {
+        public Builder ipsecEncryption(Either<String,IpsecEncryption> ipsecEncryption) {
             this.ipsecEncryption = Input.of(Objects.requireNonNull(ipsecEncryption));
             return this;
         }
 
-        public Builder setIpsecIntegrity(Input<Either<String,IpsecIntegrity>> ipsecIntegrity) {
+        public Builder ipsecIntegrity(Input<Either<String,IpsecIntegrity>> ipsecIntegrity) {
             this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity);
             return this;
         }
 
-        public Builder setIpsecIntegrity(Either<String,IpsecIntegrity> ipsecIntegrity) {
+        public Builder ipsecIntegrity(Either<String,IpsecIntegrity> ipsecIntegrity) {
             this.ipsecIntegrity = Input.of(Objects.requireNonNull(ipsecIntegrity));
             return this;
         }
 
-        public Builder setPfsGroup(Input<Either<String,PfsGroup>> pfsGroup) {
+        public Builder pfsGroup(Input<Either<String,PfsGroup>> pfsGroup) {
             this.pfsGroup = Objects.requireNonNull(pfsGroup);
             return this;
         }
 
-        public Builder setPfsGroup(Either<String,PfsGroup> pfsGroup) {
+        public Builder pfsGroup(Either<String,PfsGroup> pfsGroup) {
             this.pfsGroup = Input.of(Objects.requireNonNull(pfsGroup));
             return this;
         }
 
-        public Builder setSaDataSizeKilobytes(Input<Integer> saDataSizeKilobytes) {
+        public Builder saDataSizeKilobytes(Input<Integer> saDataSizeKilobytes) {
             this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes);
             return this;
         }
 
-        public Builder setSaDataSizeKilobytes(Integer saDataSizeKilobytes) {
+        public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
             this.saDataSizeKilobytes = Input.of(Objects.requireNonNull(saDataSizeKilobytes));
             return this;
         }
 
-        public Builder setSaLifeTimeSeconds(Input<Integer> saLifeTimeSeconds) {
+        public Builder saLifeTimeSeconds(Input<Integer> saLifeTimeSeconds) {
             this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
             return this;
         }
 
-        public Builder setSaLifeTimeSeconds(Integer saLifeTimeSeconds) {
+        public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
             this.saLifeTimeSeconds = Input.of(Objects.requireNonNull(saLifeTimeSeconds));
             return this;
         }

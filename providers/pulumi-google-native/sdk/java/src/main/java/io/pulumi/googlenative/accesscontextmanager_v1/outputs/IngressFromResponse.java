@@ -83,17 +83,17 @@ public final class IngressFromResponse {
     	      this.sources = defaults.sources;
         }
 
-        public Builder setIdentities(List<String> identities) {
+        public Builder identities(List<String> identities) {
             this.identities = Objects.requireNonNull(identities);
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setSources(List<IngressSourceResponse> sources) {
+        public Builder sources(List<IngressSourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }

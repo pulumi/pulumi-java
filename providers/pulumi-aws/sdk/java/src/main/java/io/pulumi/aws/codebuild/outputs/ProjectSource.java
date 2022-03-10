@@ -192,47 +192,47 @@ public final class ProjectSource {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuth(@Nullable ProjectSourceAuth auth) {
+        public Builder auth(@Nullable ProjectSourceAuth auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setBuildStatusConfig(@Nullable ProjectSourceBuildStatusConfig buildStatusConfig) {
+        public Builder buildStatusConfig(@Nullable ProjectSourceBuildStatusConfig buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
 
-        public Builder setBuildspec(@Nullable String buildspec) {
+        public Builder buildspec(@Nullable String buildspec) {
             this.buildspec = buildspec;
             return this;
         }
 
-        public Builder setGitCloneDepth(@Nullable Integer gitCloneDepth) {
+        public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
 
-        public Builder setGitSubmodulesConfig(@Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig) {
+        public Builder gitSubmodulesConfig(@Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
 
-        public Builder setInsecureSsl(@Nullable Boolean insecureSsl) {
+        public Builder insecureSsl(@Nullable Boolean insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setReportBuildStatus(@Nullable Boolean reportBuildStatus) {
+        public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

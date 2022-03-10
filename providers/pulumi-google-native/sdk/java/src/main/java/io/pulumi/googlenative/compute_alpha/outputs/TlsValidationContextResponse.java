@@ -82,17 +82,17 @@ public final class TlsValidationContextResponse {
     	      this.validationSource = defaults.validationSource;
         }
 
-        public Builder setCertificatePath(String certificatePath) {
+        public Builder certificatePath(String certificatePath) {
             this.certificatePath = Objects.requireNonNull(certificatePath);
             return this;
         }
 
-        public Builder setSdsConfig(SdsConfigResponse sdsConfig) {
+        public Builder sdsConfig(SdsConfigResponse sdsConfig) {
             this.sdsConfig = Objects.requireNonNull(sdsConfig);
             return this;
         }
 
-        public Builder setValidationSource(String validationSource) {
+        public Builder validationSource(String validationSource) {
             this.validationSource = Objects.requireNonNull(validationSource);
             return this;
         }

@@ -73,12 +73,12 @@ public final class HealthStateResponse extends io.pulumi.resources.InvokeArgs {
     	      this.severity = defaults.severity;
         }
 
-        public Builder setHealthStateName(String healthStateName) {
+        public Builder healthStateName(String healthStateName) {
             this.healthStateName = Objects.requireNonNull(healthStateName);
             return this;
         }
 
-        public Builder setSeverity(Double severity) {
+        public Builder severity(Double severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }

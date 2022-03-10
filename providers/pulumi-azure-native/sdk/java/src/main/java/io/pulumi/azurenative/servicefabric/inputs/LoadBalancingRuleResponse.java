@@ -123,27 +123,27 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setBackendPort(Integer backendPort) {
+        public Builder backendPort(Integer backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
-        public Builder setFrontendPort(Integer frontendPort) {
+        public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
 
-        public Builder setProbeProtocol(String probeProtocol) {
+        public Builder probeProtocol(String probeProtocol) {
             this.probeProtocol = Objects.requireNonNull(probeProtocol);
             return this;
         }
 
-        public Builder setProbeRequestPath(@Nullable String probeRequestPath) {
+        public Builder probeRequestPath(@Nullable String probeRequestPath) {
             this.probeRequestPath = probeRequestPath;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

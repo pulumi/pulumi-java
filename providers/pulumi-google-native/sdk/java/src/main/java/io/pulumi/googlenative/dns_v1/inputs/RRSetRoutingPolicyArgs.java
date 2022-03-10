@@ -80,32 +80,32 @@ public final class RRSetRoutingPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.wrr = defaults.wrr;
         }
 
-        public Builder setGeo(@Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo) {
+        public Builder geo(@Nullable Input<RRSetRoutingPolicyGeoPolicyArgs> geo) {
             this.geo = geo;
             return this;
         }
 
-        public Builder setGeo(@Nullable RRSetRoutingPolicyGeoPolicyArgs geo) {
+        public Builder geo(@Nullable RRSetRoutingPolicyGeoPolicyArgs geo) {
             this.geo = Input.ofNullable(geo);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setWrr(@Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
+        public Builder wrr(@Nullable Input<RRSetRoutingPolicyWrrPolicyArgs> wrr) {
             this.wrr = wrr;
             return this;
         }
 
-        public Builder setWrr(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrr) {
+        public Builder wrr(@Nullable RRSetRoutingPolicyWrrPolicyArgs wrr) {
             this.wrr = Input.ofNullable(wrr);
             return this;
         }

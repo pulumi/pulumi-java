@@ -69,22 +69,22 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
     	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
         }
 
-        public Builder setTransitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Input.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
         }
 
-        public Builder setTransitGatewayRouteTableId(Input<String> transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(Input<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Objects.requireNonNull(transitGatewayRouteTableId);
             return this;
         }
 
-        public Builder setTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(String transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Input.of(Objects.requireNonNull(transitGatewayRouteTableId));
             return this;
         }

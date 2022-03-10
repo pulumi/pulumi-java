@@ -100,22 +100,22 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
     	      this.routeName = defaults.routeName;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRouteName(String routeName) {
+        public Builder routeName(String routeName) {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }

@@ -188,122 +188,122 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setBasicAuthConfig(@Nullable Input<BranchBasicAuthConfigArgs> basicAuthConfig) {
+        public Builder basicAuthConfig(@Nullable Input<BranchBasicAuthConfigArgs> basicAuthConfig) {
             this.basicAuthConfig = basicAuthConfig;
             return this;
         }
 
-        public Builder setBasicAuthConfig(@Nullable BranchBasicAuthConfigArgs basicAuthConfig) {
+        public Builder basicAuthConfig(@Nullable BranchBasicAuthConfigArgs basicAuthConfig) {
             this.basicAuthConfig = Input.ofNullable(basicAuthConfig);
             return this;
         }
 
-        public Builder setBranchName(@Nullable Input<String> branchName) {
+        public Builder branchName(@Nullable Input<String> branchName) {
             this.branchName = branchName;
             return this;
         }
 
-        public Builder setBranchName(@Nullable String branchName) {
+        public Builder branchName(@Nullable String branchName) {
             this.branchName = Input.ofNullable(branchName);
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable Input<String> buildSpec) {
+        public Builder buildSpec(@Nullable Input<String> buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = Input.ofNullable(buildSpec);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Input<Boolean> enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Boolean enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = Input.ofNullable(enableAutoBuild);
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Input<Boolean> enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = Input.ofNullable(enablePerformanceMode);
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Input<Boolean> enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = Input.ofNullable(enablePullRequestPreview);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<BranchEnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<BranchEnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<BranchEnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<BranchEnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable Input<String> pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = Input.ofNullable(pullRequestEnvironmentName);
             return this;
         }
 
-        public Builder setStage(@Nullable Input<BranchStage> stage) {
+        public Builder stage(@Nullable Input<BranchStage> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable BranchStage stage) {
+        public Builder stage(@Nullable BranchStage stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<BranchTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<BranchTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BranchTagArgs> tags) {
+        public Builder tags(@Nullable List<BranchTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

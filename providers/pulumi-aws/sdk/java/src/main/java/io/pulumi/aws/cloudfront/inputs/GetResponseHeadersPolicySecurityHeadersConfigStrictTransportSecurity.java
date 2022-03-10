@@ -101,22 +101,22 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     	      this.preload = defaults.preload;
         }
 
-        public Builder setAccessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder setIncludeSubdomains(Boolean includeSubdomains) {
+        public Builder includeSubdomains(Boolean includeSubdomains) {
             this.includeSubdomains = Objects.requireNonNull(includeSubdomains);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setPreload(Boolean preload) {
+        public Builder preload(Boolean preload) {
             this.preload = Objects.requireNonNull(preload);
             return this;
         }

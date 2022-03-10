@@ -268,72 +268,72 @@ public final class GetVpnGatewayResult {
     	      this.vpnGatewayScaleUnit = defaults.vpnGatewayScaleUnit;
         }
 
-        public Builder setBgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
+        public Builder bgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
-        public Builder setConnections(@Nullable List<VpnConnectionResponse> connections) {
+        public Builder connections(@Nullable List<VpnConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpConfigurations(List<VpnGatewayIpConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(List<VpnGatewayIpConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
 
-        public Builder setIsRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
+        public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNatRules(@Nullable List<VpnGatewayNatRuleResponse> natRules) {
+        public Builder natRules(@Nullable List<VpnGatewayNatRuleResponse> natRules) {
             this.natRules = natRules;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceResponse virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
 
-        public Builder setVpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
+        public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }

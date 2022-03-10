@@ -92,12 +92,12 @@ public final class EntryGcsFilesetSpec {
     	      this.sampleGcsFileSpecs = defaults.sampleGcsFileSpecs;
         }
 
-        public Builder setFilePatterns(List<String> filePatterns) {
+        public Builder filePatterns(List<String> filePatterns) {
             this.filePatterns = Objects.requireNonNull(filePatterns);
             return this;
         }
 
-        public Builder setSampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
+        public Builder sampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
             this.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }

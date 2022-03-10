@@ -114,27 +114,27 @@ public final class GetTestablePermissionsPermission {
     	      this.title = defaults.title;
         }
 
-        public Builder setApiDisabled(Boolean apiDisabled) {
+        public Builder apiDisabled(Boolean apiDisabled) {
             this.apiDisabled = Objects.requireNonNull(apiDisabled);
             return this;
         }
 
-        public Builder setCustomSupportLevel(String customSupportLevel) {
+        public Builder customSupportLevel(String customSupportLevel) {
             this.customSupportLevel = Objects.requireNonNull(customSupportLevel);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

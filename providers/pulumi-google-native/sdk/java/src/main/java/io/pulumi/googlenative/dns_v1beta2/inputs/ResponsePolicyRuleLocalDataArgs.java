@@ -54,12 +54,12 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
     	      this.localDatas = defaults.localDatas;
         }
 
-        public Builder setLocalDatas(@Nullable Input<List<ResourceRecordSetArgs>> localDatas) {
+        public Builder localDatas(@Nullable Input<List<ResourceRecordSetArgs>> localDatas) {
             this.localDatas = localDatas;
             return this;
         }
 
-        public Builder setLocalDatas(@Nullable List<ResourceRecordSetArgs> localDatas) {
+        public Builder localDatas(@Nullable List<ResourceRecordSetArgs> localDatas) {
             this.localDatas = Input.ofNullable(localDatas);
             return this;
         }

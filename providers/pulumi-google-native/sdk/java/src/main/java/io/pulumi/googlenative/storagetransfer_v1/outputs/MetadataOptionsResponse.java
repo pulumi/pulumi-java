@@ -161,42 +161,42 @@ public final class MetadataOptionsResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAcl(String acl) {
+        public Builder acl(String acl) {
             this.acl = Objects.requireNonNull(acl);
             return this;
         }
 
-        public Builder setGid(String gid) {
+        public Builder gid(String gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setSymlink(String symlink) {
+        public Builder symlink(String symlink) {
             this.symlink = Objects.requireNonNull(symlink);
             return this;
         }
 
-        public Builder setTemporaryHold(String temporaryHold) {
+        public Builder temporaryHold(String temporaryHold) {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

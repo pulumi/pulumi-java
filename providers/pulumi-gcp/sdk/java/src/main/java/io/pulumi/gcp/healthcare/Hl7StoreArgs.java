@@ -160,62 +160,62 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parserConfig = defaults.parserConfig;
         }
 
-        public Builder setDataset(Input<String> dataset) {
+        public Builder dataset(Input<String> dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDataset(String dataset) {
+        public Builder dataset(String dataset) {
             this.dataset = Input.of(Objects.requireNonNull(dataset));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<Hl7StoreNotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<Hl7StoreNotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Hl7StoreNotificationConfigArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable Hl7StoreNotificationConfigArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setNotificationConfigs(@Nullable Input<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs) {
+        public Builder notificationConfigs(@Nullable Input<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs) {
             this.notificationConfigs = notificationConfigs;
             return this;
         }
 
-        public Builder setNotificationConfigs(@Nullable List<Hl7StoreNotificationConfigsArgs> notificationConfigs) {
+        public Builder notificationConfigs(@Nullable List<Hl7StoreNotificationConfigsArgs> notificationConfigs) {
             this.notificationConfigs = Input.ofNullable(notificationConfigs);
             return this;
         }
 
-        public Builder setParserConfig(@Nullable Input<Hl7StoreParserConfigArgs> parserConfig) {
+        public Builder parserConfig(@Nullable Input<Hl7StoreParserConfigArgs> parserConfig) {
             this.parserConfig = parserConfig;
             return this;
         }
 
-        public Builder setParserConfig(@Nullable Hl7StoreParserConfigArgs parserConfig) {
+        public Builder parserConfig(@Nullable Hl7StoreParserConfigArgs parserConfig) {
             this.parserConfig = Input.ofNullable(parserConfig);
             return this;
         }

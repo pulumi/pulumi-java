@@ -111,22 +111,22 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.reverseOrder = defaults.reverseOrder;
         }
 
-        public Builder setCharactersToIgnores(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores) {
+        public Builder charactersToIgnores(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores) {
             this.charactersToIgnores = charactersToIgnores;
             return this;
         }
 
-        public Builder setMaskingCharacter(@Nullable String maskingCharacter) {
+        public Builder maskingCharacter(@Nullable String maskingCharacter) {
             this.maskingCharacter = maskingCharacter;
             return this;
         }
 
-        public Builder setNumberToMask(@Nullable Integer numberToMask) {
+        public Builder numberToMask(@Nullable Integer numberToMask) {
             this.numberToMask = numberToMask;
             return this;
         }
 
-        public Builder setReverseOrder(@Nullable Boolean reverseOrder) {
+        public Builder reverseOrder(@Nullable Boolean reverseOrder) {
             this.reverseOrder = reverseOrder;
             return this;
         }

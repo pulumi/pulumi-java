@@ -203,57 +203,57 @@ public final class GetClusterResult {
     	      this.zookeeperConnectString = defaults.zookeeperConnectString;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBootstrapBrokers(String bootstrapBrokers) {
+        public Builder bootstrapBrokers(String bootstrapBrokers) {
             this.bootstrapBrokers = Objects.requireNonNull(bootstrapBrokers);
             return this;
         }
 
-        public Builder setBootstrapBrokersSaslIam(String bootstrapBrokersSaslIam) {
+        public Builder bootstrapBrokersSaslIam(String bootstrapBrokersSaslIam) {
             this.bootstrapBrokersSaslIam = Objects.requireNonNull(bootstrapBrokersSaslIam);
             return this;
         }
 
-        public Builder setBootstrapBrokersSaslScram(String bootstrapBrokersSaslScram) {
+        public Builder bootstrapBrokersSaslScram(String bootstrapBrokersSaslScram) {
             this.bootstrapBrokersSaslScram = Objects.requireNonNull(bootstrapBrokersSaslScram);
             return this;
         }
 
-        public Builder setBootstrapBrokersTls(String bootstrapBrokersTls) {
+        public Builder bootstrapBrokersTls(String bootstrapBrokersTls) {
             this.bootstrapBrokersTls = Objects.requireNonNull(bootstrapBrokersTls);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKafkaVersion(String kafkaVersion) {
+        public Builder kafkaVersion(String kafkaVersion) {
             this.kafkaVersion = Objects.requireNonNull(kafkaVersion);
             return this;
         }
 
-        public Builder setNumberOfBrokerNodes(Integer numberOfBrokerNodes) {
+        public Builder numberOfBrokerNodes(Integer numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Objects.requireNonNull(numberOfBrokerNodes);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setZookeeperConnectString(String zookeeperConnectString) {
+        public Builder zookeeperConnectString(String zookeeperConnectString) {
             this.zookeeperConnectString = Objects.requireNonNull(zookeeperConnectString);
             return this;
         }

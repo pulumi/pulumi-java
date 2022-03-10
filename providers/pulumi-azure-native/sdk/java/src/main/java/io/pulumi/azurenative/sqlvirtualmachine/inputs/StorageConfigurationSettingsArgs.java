@@ -126,52 +126,52 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
     	      this.storageWorkloadType = defaults.storageWorkloadType;
         }
 
-        public Builder setDiskConfigurationType(@Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable Input<Either<String,DiskConfigurationType>> diskConfigurationType) {
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
-        public Builder setDiskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
             this.diskConfigurationType = Input.ofNullable(diskConfigurationType);
             return this;
         }
 
-        public Builder setSqlDataSettings(@Nullable Input<SQLStorageSettingsArgs> sqlDataSettings) {
+        public Builder sqlDataSettings(@Nullable Input<SQLStorageSettingsArgs> sqlDataSettings) {
             this.sqlDataSettings = sqlDataSettings;
             return this;
         }
 
-        public Builder setSqlDataSettings(@Nullable SQLStorageSettingsArgs sqlDataSettings) {
+        public Builder sqlDataSettings(@Nullable SQLStorageSettingsArgs sqlDataSettings) {
             this.sqlDataSettings = Input.ofNullable(sqlDataSettings);
             return this;
         }
 
-        public Builder setSqlLogSettings(@Nullable Input<SQLStorageSettingsArgs> sqlLogSettings) {
+        public Builder sqlLogSettings(@Nullable Input<SQLStorageSettingsArgs> sqlLogSettings) {
             this.sqlLogSettings = sqlLogSettings;
             return this;
         }
 
-        public Builder setSqlLogSettings(@Nullable SQLStorageSettingsArgs sqlLogSettings) {
+        public Builder sqlLogSettings(@Nullable SQLStorageSettingsArgs sqlLogSettings) {
             this.sqlLogSettings = Input.ofNullable(sqlLogSettings);
             return this;
         }
 
-        public Builder setSqlTempDbSettings(@Nullable Input<SQLStorageSettingsArgs> sqlTempDbSettings) {
+        public Builder sqlTempDbSettings(@Nullable Input<SQLStorageSettingsArgs> sqlTempDbSettings) {
             this.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
 
-        public Builder setSqlTempDbSettings(@Nullable SQLStorageSettingsArgs sqlTempDbSettings) {
+        public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsArgs sqlTempDbSettings) {
             this.sqlTempDbSettings = Input.ofNullable(sqlTempDbSettings);
             return this;
         }
 
-        public Builder setStorageWorkloadType(@Nullable Input<Either<String,StorageWorkloadType>> storageWorkloadType) {
+        public Builder storageWorkloadType(@Nullable Input<Either<String,StorageWorkloadType>> storageWorkloadType) {
             this.storageWorkloadType = storageWorkloadType;
             return this;
         }
 
-        public Builder setStorageWorkloadType(@Nullable Either<String,StorageWorkloadType> storageWorkloadType) {
+        public Builder storageWorkloadType(@Nullable Either<String,StorageWorkloadType> storageWorkloadType) {
             this.storageWorkloadType = Input.ofNullable(storageWorkloadType);
             return this;
         }

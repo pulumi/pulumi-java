@@ -74,12 +74,12 @@ public final class HealthCheckStepPropertiesResponse extends io.pulumi.resources
     	      this.stepType = defaults.stepType;
         }
 
-        public Builder setAttributes(RestHealthCheckStepAttributesResponse attributes) {
+        public Builder attributes(RestHealthCheckStepAttributesResponse attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setStepType(String stepType) {
+        public Builder stepType(String stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }

@@ -86,17 +86,17 @@ public final class LabelCategoryResponse {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setAllowMultiSelect(@Nullable Boolean allowMultiSelect) {
+        public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
             this.allowMultiSelect = allowMultiSelect;
             return this;
         }
 
-        public Builder setClasses(Map<String,LabelClassResponse> classes) {
+        public Builder classes(Map<String,LabelClassResponse> classes) {
             this.classes = Objects.requireNonNull(classes);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }

@@ -75,22 +75,22 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
     	      this.throughput = defaults.throughput;
         }
 
-        public Builder setAutoscaleSettings(@Nullable Input<AutoscaleSettingsArgs> autoscaleSettings) {
+        public Builder autoscaleSettings(@Nullable Input<AutoscaleSettingsArgs> autoscaleSettings) {
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
 
-        public Builder setAutoscaleSettings(@Nullable AutoscaleSettingsArgs autoscaleSettings) {
+        public Builder autoscaleSettings(@Nullable AutoscaleSettingsArgs autoscaleSettings) {
             this.autoscaleSettings = Input.ofNullable(autoscaleSettings);
             return this;
         }
 
-        public Builder setThroughput(@Nullable Input<Integer> throughput) {
+        public Builder throughput(@Nullable Input<Integer> throughput) {
             this.throughput = throughput;
             return this;
         }
 
-        public Builder setThroughput(@Nullable Integer throughput) {
+        public Builder throughput(@Nullable Integer throughput) {
             this.throughput = Input.ofNullable(throughput);
             return this;
         }

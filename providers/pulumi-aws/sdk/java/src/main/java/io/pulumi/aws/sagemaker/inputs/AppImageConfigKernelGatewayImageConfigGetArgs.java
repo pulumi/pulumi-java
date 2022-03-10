@@ -71,22 +71,22 @@ public final class AppImageConfigKernelGatewayImageConfigGetArgs extends io.pulu
     	      this.kernelSpec = defaults.kernelSpec;
         }
 
-        public Builder setFileSystemConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs> fileSystemConfig) {
+        public Builder fileSystemConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs> fileSystemConfig) {
             this.fileSystemConfig = fileSystemConfig;
             return this;
         }
 
-        public Builder setFileSystemConfig(@Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs fileSystemConfig) {
+        public Builder fileSystemConfig(@Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs fileSystemConfig) {
             this.fileSystemConfig = Input.ofNullable(fileSystemConfig);
             return this;
         }
 
-        public Builder setKernelSpec(Input<AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs> kernelSpec) {
+        public Builder kernelSpec(Input<AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs> kernelSpec) {
             this.kernelSpec = Objects.requireNonNull(kernelSpec);
             return this;
         }
 
-        public Builder setKernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs kernelSpec) {
+        public Builder kernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs kernelSpec) {
             this.kernelSpec = Input.of(Objects.requireNonNull(kernelSpec));
             return this;
         }

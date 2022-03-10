@@ -62,12 +62,12 @@ public final class GetRulesetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.rulesetId = defaults.rulesetId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRulesetId(String rulesetId) {
+        public Builder rulesetId(String rulesetId) {
             this.rulesetId = Objects.requireNonNull(rulesetId);
             return this;
         }

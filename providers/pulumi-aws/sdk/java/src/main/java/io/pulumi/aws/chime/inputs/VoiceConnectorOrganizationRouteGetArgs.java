@@ -119,52 +119,52 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     	      this.weight = defaults.weight;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setWeight(Input<Integer> weight) {
+        public Builder weight(Input<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }

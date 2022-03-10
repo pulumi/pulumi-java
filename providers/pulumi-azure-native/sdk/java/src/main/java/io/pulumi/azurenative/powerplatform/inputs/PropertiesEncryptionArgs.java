@@ -77,22 +77,22 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
     	      this.state = defaults.state;
         }
 
-        public Builder setKeyVault(@Nullable Input<KeyVaultPropertiesArgs> keyVault) {
+        public Builder keyVault(@Nullable Input<KeyVaultPropertiesArgs> keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setKeyVault(@Nullable KeyVaultPropertiesArgs keyVault) {
+        public Builder keyVault(@Nullable KeyVaultPropertiesArgs keyVault) {
             this.keyVault = Input.ofNullable(keyVault);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,State>> state) {
+        public Builder state(@Nullable Input<Either<String,State>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,State> state) {
+        public Builder state(@Nullable Either<String,State> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

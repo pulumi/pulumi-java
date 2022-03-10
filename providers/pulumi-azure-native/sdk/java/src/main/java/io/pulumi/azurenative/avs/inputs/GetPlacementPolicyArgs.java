@@ -100,22 +100,22 @@ public final class GetPlacementPolicyArgs extends io.pulumi.resources.InvokeArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setPlacementPolicyName(String placementPolicyName) {
+        public Builder placementPolicyName(String placementPolicyName) {
             this.placementPolicyName = Objects.requireNonNull(placementPolicyName);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -66,12 +66,12 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse {
     	      this.policyOverlay = defaults.policyOverlay;
         }
 
-        public Builder setLogSource(String logSource) {
+        public Builder logSource(String logSource) {
             this.logSource = Objects.requireNonNull(logSource);
             return this;
         }
 
-        public Builder setPolicyOverlay(Map<String,String> policyOverlay) {
+        public Builder policyOverlay(Map<String,String> policyOverlay) {
             this.policyOverlay = Objects.requireNonNull(policyOverlay);
             return this;
         }

@@ -197,52 +197,52 @@ public final class GetPrefixResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setEvents(List<PeeringServicePrefixEventResponse> events) {
+        public Builder events(List<PeeringServicePrefixEventResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLearnedType(String learnedType) {
+        public Builder learnedType(String learnedType) {
             this.learnedType = Objects.requireNonNull(learnedType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
+        public Builder peeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
             this.peeringServicePrefixKey = peeringServicePrefixKey;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefixValidationState(String prefixValidationState) {
+        public Builder prefixValidationState(String prefixValidationState) {
             this.prefixValidationState = Objects.requireNonNull(prefixValidationState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

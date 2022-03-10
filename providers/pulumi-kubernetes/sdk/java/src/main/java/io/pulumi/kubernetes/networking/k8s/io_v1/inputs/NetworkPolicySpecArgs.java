@@ -110,42 +110,42 @@ public final class NetworkPolicySpecArgs extends io.pulumi.resources.ResourceArg
     	      this.policyTypes = defaults.policyTypes;
         }
 
-        public Builder setEgress(@Nullable Input<List<NetworkPolicyEgressRuleArgs>> egress) {
+        public Builder egress(@Nullable Input<List<NetworkPolicyEgressRuleArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable List<NetworkPolicyEgressRuleArgs> egress) {
+        public Builder egress(@Nullable List<NetworkPolicyEgressRuleArgs> egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<List<NetworkPolicyIngressRuleArgs>> ingress) {
+        public Builder ingress(@Nullable Input<List<NetworkPolicyIngressRuleArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<NetworkPolicyIngressRuleArgs> ingress) {
+        public Builder ingress(@Nullable List<NetworkPolicyIngressRuleArgs> ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setPodSelector(Input<LabelSelectorArgs> podSelector) {
+        public Builder podSelector(Input<LabelSelectorArgs> podSelector) {
             this.podSelector = Objects.requireNonNull(podSelector);
             return this;
         }
 
-        public Builder setPodSelector(LabelSelectorArgs podSelector) {
+        public Builder podSelector(LabelSelectorArgs podSelector) {
             this.podSelector = Input.of(Objects.requireNonNull(podSelector));
             return this;
         }
 
-        public Builder setPolicyTypes(@Nullable Input<List<String>> policyTypes) {
+        public Builder policyTypes(@Nullable Input<List<String>> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }
 
-        public Builder setPolicyTypes(@Nullable List<String> policyTypes) {
+        public Builder policyTypes(@Nullable List<String> policyTypes) {
             this.policyTypes = Input.ofNullable(policyTypes);
             return this;
         }

@@ -126,8 +126,8 @@ public class NamespaceList extends io.pulumi.resources.CustomResource {
     private static NamespaceListArgs makeArgs(NamespaceListArgs args) {
         var builder = args == null ? NamespaceListArgs.builder() : NamespaceListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("NamespaceList")
+            .apiVersion("v1")
+            .kind("NamespaceList")
             .build();
     }
 

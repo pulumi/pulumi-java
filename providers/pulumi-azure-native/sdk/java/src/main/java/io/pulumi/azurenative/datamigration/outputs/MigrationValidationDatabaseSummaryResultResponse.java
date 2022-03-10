@@ -145,37 +145,37 @@ public final class MigrationValidationDatabaseSummaryResultResponse {
     	      this.targetDatabaseName = defaults.targetDatabaseName;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMigrationId(String migrationId) {
+        public Builder migrationId(String migrationId) {
             this.migrationId = Objects.requireNonNull(migrationId);
             return this;
         }
 
-        public Builder setSourceDatabaseName(String sourceDatabaseName) {
+        public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetDatabaseName(String targetDatabaseName) {
+        public Builder targetDatabaseName(String targetDatabaseName) {
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
         }

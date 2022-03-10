@@ -92,17 +92,17 @@ public final class GetInstancesArgs extends io.pulumi.resources.InvokeArgs {
     	      this.instanceTags = defaults.instanceTags;
         }
 
-        public Builder setFilters(@Nullable List<GetInstancesFilter> filters) {
+        public Builder filters(@Nullable List<GetInstancesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setInstanceStateNames(@Nullable List<String> instanceStateNames) {
+        public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
             this.instanceStateNames = instanceStateNames;
             return this;
         }
 
-        public Builder setInstanceTags(@Nullable Map<String,String> instanceTags) {
+        public Builder instanceTags(@Nullable Map<String,String> instanceTags) {
             this.instanceTags = instanceTags;
             return this;
         }

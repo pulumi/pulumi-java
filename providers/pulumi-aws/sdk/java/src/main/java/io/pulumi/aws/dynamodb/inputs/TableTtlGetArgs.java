@@ -71,22 +71,22 @@ public final class TableTtlGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAttributeName(Input<String> attributeName) {
+        public Builder attributeName(Input<String> attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Input.of(Objects.requireNonNull(attributeName));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }

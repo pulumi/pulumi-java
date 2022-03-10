@@ -96,42 +96,42 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
     	      this.provisioningParameters = defaults.provisioningParameters;
         }
 
-        public Builder setPathId(@Nullable Input<String> pathId) {
+        public Builder pathId(@Nullable Input<String> pathId) {
             this.pathId = pathId;
             return this;
         }
 
-        public Builder setPathId(@Nullable String pathId) {
+        public Builder pathId(@Nullable String pathId) {
             this.pathId = Input.ofNullable(pathId);
             return this;
         }
 
-        public Builder setProductId(Input<String> productId) {
+        public Builder productId(Input<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Input.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable Input<String> provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable Input<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable String provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = Input.ofNullable(provisioningArtifactId);
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable Input<List<ProjectProvisioningParameterArgs>> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable Input<List<ProjectProvisioningParameterArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable List<ProjectProvisioningParameterArgs> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable List<ProjectProvisioningParameterArgs> provisioningParameters) {
             this.provisioningParameters = Input.ofNullable(provisioningParameters);
             return this;
         }

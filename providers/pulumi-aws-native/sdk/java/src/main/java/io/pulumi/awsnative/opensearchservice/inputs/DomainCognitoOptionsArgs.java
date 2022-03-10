@@ -87,42 +87,42 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable Input<String> identityPoolId) {
+        public Builder identityPoolId(@Nullable Input<String> identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable String identityPoolId) {
+        public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Input.ofNullable(identityPoolId);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Input<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable String userPoolId) {
+        public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Input.ofNullable(userPoolId);
             return this;
         }

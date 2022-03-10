@@ -261,72 +261,72 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
     	      this.s3BackupMode = defaults.s3BackupMode;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setBufferInterval(@Nullable Integer bufferInterval) {
+        public Builder bufferInterval(@Nullable Integer bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
 
-        public Builder setBufferSize(@Nullable Integer bufferSize) {
+        public Builder bufferSize(@Nullable Integer bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable String compressionFormat) {
+        public Builder compressionFormat(@Nullable String compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setDataFormatConversionConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration dataFormatConversionConfiguration) {
+        public Builder dataFormatConversionConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration dataFormatConversionConfiguration) {
             this.dataFormatConversionConfiguration = dataFormatConversionConfiguration;
             return this;
         }
 
-        public Builder setDynamicPartitioningConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
+        public Builder dynamicPartitioningConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
             this.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setS3BackupConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }

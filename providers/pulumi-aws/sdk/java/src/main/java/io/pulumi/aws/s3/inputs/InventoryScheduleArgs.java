@@ -52,12 +52,12 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.frequency = defaults.frequency;
         }
 
-        public Builder setFrequency(Input<String> frequency) {
+        public Builder frequency(Input<String> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Input.of(Objects.requireNonNull(frequency));
             return this;
         }

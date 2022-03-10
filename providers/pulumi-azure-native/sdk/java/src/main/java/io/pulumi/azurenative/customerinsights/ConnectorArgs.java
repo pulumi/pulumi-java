@@ -171,82 +171,82 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setConnectorName(@Nullable Input<String> connectorName) {
+        public Builder connectorName(@Nullable Input<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
 
-        public Builder setConnectorName(@Nullable String connectorName) {
+        public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = Input.ofNullable(connectorName);
             return this;
         }
 
-        public Builder setConnectorProperties(Input<Map<String,Object>> connectorProperties) {
+        public Builder connectorProperties(Input<Map<String,Object>> connectorProperties) {
             this.connectorProperties = Objects.requireNonNull(connectorProperties);
             return this;
         }
 
-        public Builder setConnectorProperties(Map<String,Object> connectorProperties) {
+        public Builder connectorProperties(Map<String,Object> connectorProperties) {
             this.connectorProperties = Input.of(Objects.requireNonNull(connectorProperties));
             return this;
         }
 
-        public Builder setConnectorType(Input<Either<String,ConnectorTypes>> connectorType) {
+        public Builder connectorType(Input<Either<String,ConnectorTypes>> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setConnectorType(Either<String,ConnectorTypes> connectorType) {
+        public Builder connectorType(Either<String,ConnectorTypes> connectorType) {
             this.connectorType = Input.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setIsInternal(@Nullable Input<Boolean> isInternal) {
+        public Builder isInternal(@Nullable Input<Boolean> isInternal) {
             this.isInternal = isInternal;
             return this;
         }
 
-        public Builder setIsInternal(@Nullable Boolean isInternal) {
+        public Builder isInternal(@Nullable Boolean isInternal) {
             this.isInternal = Input.ofNullable(isInternal);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

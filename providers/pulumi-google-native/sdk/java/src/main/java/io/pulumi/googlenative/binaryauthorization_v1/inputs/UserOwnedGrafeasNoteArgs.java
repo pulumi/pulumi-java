@@ -76,22 +76,22 @@ public final class UserOwnedGrafeasNoteArgs extends io.pulumi.resources.Resource
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setNoteReference(Input<String> noteReference) {
+        public Builder noteReference(Input<String> noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
 
-        public Builder setNoteReference(String noteReference) {
+        public Builder noteReference(String noteReference) {
             this.noteReference = Input.of(Objects.requireNonNull(noteReference));
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable Input<List<AttestorPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Input<List<AttestorPublicKeyArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<AttestorPublicKeyArgs> publicKeys) {
+        public Builder publicKeys(@Nullable List<AttestorPublicKeyArgs> publicKeys) {
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }

@@ -86,17 +86,17 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
     	      this.queryStringBehavior = defaults.queryStringBehavior;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable String queryParameters) {
+        public Builder queryParameters(@Nullable String queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
 
-        public Builder setQueryStringBehavior(String queryStringBehavior) {
+        public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }

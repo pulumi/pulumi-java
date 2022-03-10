@@ -90,32 +90,32 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     	      this.materials = defaults.materials;
         }
 
-        public Builder setArguments(@Nullable Input<Boolean> arguments) {
+        public Builder arguments(@Nullable Input<Boolean> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable Boolean arguments) {
+        public Builder arguments(@Nullable Boolean arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<Boolean> environment) {
+        public Builder environment(@Nullable Input<Boolean> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Boolean environment) {
+        public Builder environment(@Nullable Boolean environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setMaterials(@Nullable Input<Boolean> materials) {
+        public Builder materials(@Nullable Input<Boolean> materials) {
             this.materials = materials;
             return this;
         }
 
-        public Builder setMaterials(@Nullable Boolean materials) {
+        public Builder materials(@Nullable Boolean materials) {
             this.materials = Input.ofNullable(materials);
             return this;
         }

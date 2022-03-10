@@ -144,62 +144,62 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     	      this.state = defaults.state;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setEndpointsConfiguration(@Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
-        public Builder setEndpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
             this.endpointsConfiguration = Input.ofNullable(endpointsConfiguration);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentId(@Nullable Input<String> integrationServiceEnvironmentId) {
+        public Builder integrationServiceEnvironmentId(@Nullable Input<String> integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
+        public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = Input.ofNullable(integrationServiceEnvironmentId);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable Input<NetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Input<NetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
+        public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
             this.networkConfiguration = Input.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,WorkflowProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,WorkflowProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,WorkflowProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,WorkflowState>> state) {
+        public Builder state(@Nullable Input<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,WorkflowState> state) {
+        public Builder state(@Nullable Either<String,WorkflowState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

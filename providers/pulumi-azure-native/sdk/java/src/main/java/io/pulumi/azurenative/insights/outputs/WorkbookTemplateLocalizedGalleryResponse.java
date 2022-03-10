@@ -69,12 +69,12 @@ public final class WorkbookTemplateLocalizedGalleryResponse {
     	      this.templateData = defaults.templateData;
         }
 
-        public Builder setGalleries(@Nullable List<WorkbookTemplateGalleryResponse> galleries) {
+        public Builder galleries(@Nullable List<WorkbookTemplateGalleryResponse> galleries) {
             this.galleries = galleries;
             return this;
         }
 
-        public Builder setTemplateData(@Nullable Object templateData) {
+        public Builder templateData(@Nullable Object templateData) {
             this.templateData = templateData;
             return this;
         }

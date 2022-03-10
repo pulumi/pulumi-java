@@ -67,12 +67,12 @@ public final class ListWorkspaceKeysResult {
     	      this.secondaryToken = defaults.secondaryToken;
         }
 
-        public Builder setPrimaryToken(@Nullable String primaryToken) {
+        public Builder primaryToken(@Nullable String primaryToken) {
             this.primaryToken = primaryToken;
             return this;
         }
 
-        public Builder setSecondaryToken(@Nullable String secondaryToken) {
+        public Builder secondaryToken(@Nullable String secondaryToken) {
             this.secondaryToken = secondaryToken;
             return this;
         }

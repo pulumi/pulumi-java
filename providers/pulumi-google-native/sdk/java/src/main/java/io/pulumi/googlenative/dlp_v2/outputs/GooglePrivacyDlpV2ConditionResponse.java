@@ -83,17 +83,17 @@ public final class GooglePrivacyDlpV2ConditionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setValue(GooglePrivacyDlpV2ValueResponse value) {
+        public Builder value(GooglePrivacyDlpV2ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

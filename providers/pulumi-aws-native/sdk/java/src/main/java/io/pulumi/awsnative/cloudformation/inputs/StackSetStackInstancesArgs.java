@@ -89,32 +89,32 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     	      this.regions = defaults.regions;
         }
 
-        public Builder setDeploymentTargets(Input<StackSetDeploymentTargetsArgs> deploymentTargets) {
+        public Builder deploymentTargets(Input<StackSetDeploymentTargetsArgs> deploymentTargets) {
             this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
             return this;
         }
 
-        public Builder setDeploymentTargets(StackSetDeploymentTargetsArgs deploymentTargets) {
+        public Builder deploymentTargets(StackSetDeploymentTargetsArgs deploymentTargets) {
             this.deploymentTargets = Input.of(Objects.requireNonNull(deploymentTargets));
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable Input<List<StackSetParameterArgs>> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Input<List<StackSetParameterArgs>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable List<StackSetParameterArgs> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable List<StackSetParameterArgs> parameterOverrides) {
             this.parameterOverrides = Input.ofNullable(parameterOverrides);
             return this;
         }
 
-        public Builder setRegions(Input<List<String>> regions) {
+        public Builder regions(Input<List<String>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
-        public Builder setRegions(List<String> regions) {
+        public Builder regions(List<String> regions) {
             this.regions = Input.of(Objects.requireNonNull(regions));
             return this;
         }

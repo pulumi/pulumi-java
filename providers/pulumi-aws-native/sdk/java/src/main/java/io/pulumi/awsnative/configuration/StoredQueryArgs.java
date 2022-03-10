@@ -92,42 +92,42 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setQueryDescription(@Nullable Input<String> queryDescription) {
+        public Builder queryDescription(@Nullable Input<String> queryDescription) {
             this.queryDescription = queryDescription;
             return this;
         }
 
-        public Builder setQueryDescription(@Nullable String queryDescription) {
+        public Builder queryDescription(@Nullable String queryDescription) {
             this.queryDescription = Input.ofNullable(queryDescription);
             return this;
         }
 
-        public Builder setQueryExpression(Input<String> queryExpression) {
+        public Builder queryExpression(Input<String> queryExpression) {
             this.queryExpression = Objects.requireNonNull(queryExpression);
             return this;
         }
 
-        public Builder setQueryExpression(String queryExpression) {
+        public Builder queryExpression(String queryExpression) {
             this.queryExpression = Input.of(Objects.requireNonNull(queryExpression));
             return this;
         }
 
-        public Builder setQueryName(Input<String> queryName) {
+        public Builder queryName(Input<String> queryName) {
             this.queryName = Objects.requireNonNull(queryName);
             return this;
         }
 
-        public Builder setQueryName(String queryName) {
+        public Builder queryName(String queryName) {
             this.queryName = Input.of(Objects.requireNonNull(queryName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StoredQueryTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StoredQueryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StoredQueryTagArgs> tags) {
+        public Builder tags(@Nullable List<StoredQueryTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

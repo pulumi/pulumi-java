@@ -197,57 +197,57 @@ public final class GetSchemaRegistryResult {
     	      this.updatedAtUtc = defaults.updatedAtUtc;
         }
 
-        public Builder setCreatedAtUtc(String createdAtUtc) {
+        public Builder createdAtUtc(String createdAtUtc) {
             this.createdAtUtc = Objects.requireNonNull(createdAtUtc);
             return this;
         }
 
-        public Builder setETag(String eTag) {
+        public Builder eTag(String eTag) {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
 
-        public Builder setGroupProperties(@Nullable Map<String,String> groupProperties) {
+        public Builder groupProperties(@Nullable Map<String,String> groupProperties) {
             this.groupProperties = groupProperties;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchemaCompatibility(@Nullable String schemaCompatibility) {
+        public Builder schemaCompatibility(@Nullable String schemaCompatibility) {
             this.schemaCompatibility = schemaCompatibility;
             return this;
         }
 
-        public Builder setSchemaType(@Nullable String schemaType) {
+        public Builder schemaType(@Nullable String schemaType) {
             this.schemaType = schemaType;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAtUtc(String updatedAtUtc) {
+        public Builder updatedAtUtc(String updatedAtUtc) {
             this.updatedAtUtc = Objects.requireNonNull(updatedAtUtc);
             return this;
         }

@@ -70,22 +70,22 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
     	      this.domain = defaults.domain;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }

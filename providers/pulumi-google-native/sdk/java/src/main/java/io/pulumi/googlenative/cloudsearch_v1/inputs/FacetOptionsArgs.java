@@ -107,42 +107,42 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceName = defaults.sourceName;
         }
 
-        public Builder setNumFacetBuckets(@Nullable Input<Integer> numFacetBuckets) {
+        public Builder numFacetBuckets(@Nullable Input<Integer> numFacetBuckets) {
             this.numFacetBuckets = numFacetBuckets;
             return this;
         }
 
-        public Builder setNumFacetBuckets(@Nullable Integer numFacetBuckets) {
+        public Builder numFacetBuckets(@Nullable Integer numFacetBuckets) {
             this.numFacetBuckets = Input.ofNullable(numFacetBuckets);
             return this;
         }
 
-        public Builder setObjectType(@Nullable Input<String> objectType) {
+        public Builder objectType(@Nullable Input<String> objectType) {
             this.objectType = objectType;
             return this;
         }
 
-        public Builder setObjectType(@Nullable String objectType) {
+        public Builder objectType(@Nullable String objectType) {
             this.objectType = Input.ofNullable(objectType);
             return this;
         }
 
-        public Builder setOperatorName(@Nullable Input<String> operatorName) {
+        public Builder operatorName(@Nullable Input<String> operatorName) {
             this.operatorName = operatorName;
             return this;
         }
 
-        public Builder setOperatorName(@Nullable String operatorName) {
+        public Builder operatorName(@Nullable String operatorName) {
             this.operatorName = Input.ofNullable(operatorName);
             return this;
         }
 
-        public Builder setSourceName(@Nullable Input<String> sourceName) {
+        public Builder sourceName(@Nullable Input<String> sourceName) {
             this.sourceName = sourceName;
             return this;
         }
 
-        public Builder setSourceName(@Nullable String sourceName) {
+        public Builder sourceName(@Nullable String sourceName) {
             this.sourceName = Input.ofNullable(sourceName);
             return this;
         }

@@ -167,82 +167,82 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scriptUrlSasToken = defaults.scriptUrlSasToken;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setContinueOnErrors(@Nullable Input<Boolean> continueOnErrors) {
+        public Builder continueOnErrors(@Nullable Input<Boolean> continueOnErrors) {
             this.continueOnErrors = continueOnErrors;
             return this;
         }
 
-        public Builder setContinueOnErrors(@Nullable Boolean continueOnErrors) {
+        public Builder continueOnErrors(@Nullable Boolean continueOnErrors) {
             this.continueOnErrors = Input.ofNullable(continueOnErrors);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScriptName(@Nullable Input<String> scriptName) {
+        public Builder scriptName(@Nullable Input<String> scriptName) {
             this.scriptName = scriptName;
             return this;
         }
 
-        public Builder setScriptName(@Nullable String scriptName) {
+        public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = Input.ofNullable(scriptName);
             return this;
         }
 
-        public Builder setScriptUrl(Input<String> scriptUrl) {
+        public Builder scriptUrl(Input<String> scriptUrl) {
             this.scriptUrl = Objects.requireNonNull(scriptUrl);
             return this;
         }
 
-        public Builder setScriptUrl(String scriptUrl) {
+        public Builder scriptUrl(String scriptUrl) {
             this.scriptUrl = Input.of(Objects.requireNonNull(scriptUrl));
             return this;
         }
 
-        public Builder setScriptUrlSasToken(Input<String> scriptUrlSasToken) {
+        public Builder scriptUrlSasToken(Input<String> scriptUrlSasToken) {
             this.scriptUrlSasToken = Objects.requireNonNull(scriptUrlSasToken);
             return this;
         }
 
-        public Builder setScriptUrlSasToken(String scriptUrlSasToken) {
+        public Builder scriptUrlSasToken(String scriptUrlSasToken) {
             this.scriptUrlSasToken = Input.of(Objects.requireNonNull(scriptUrlSasToken));
             return this;
         }

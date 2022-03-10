@@ -230,62 +230,62 @@ public final class GetContainerAppResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConfiguration(@Nullable ConfigurationResponse configuration) {
+        public Builder configuration(@Nullable ConfigurationResponse configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKubeEnvironmentId(@Nullable String kubeEnvironmentId) {
+        public Builder kubeEnvironmentId(@Nullable String kubeEnvironmentId) {
             this.kubeEnvironmentId = kubeEnvironmentId;
             return this;
         }
 
-        public Builder setLatestRevisionFqdn(String latestRevisionFqdn) {
+        public Builder latestRevisionFqdn(String latestRevisionFqdn) {
             this.latestRevisionFqdn = Objects.requireNonNull(latestRevisionFqdn);
             return this;
         }
 
-        public Builder setLatestRevisionName(String latestRevisionName) {
+        public Builder latestRevisionName(String latestRevisionName) {
             this.latestRevisionName = Objects.requireNonNull(latestRevisionName);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplate(@Nullable TemplateResponse template) {
+        public Builder template(@Nullable TemplateResponse template) {
             this.template = template;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

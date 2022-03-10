@@ -52,12 +52,12 @@ public final class UptimeCheckConfigTcpCheckGetArgs extends io.pulumi.resources.
     	      this.port = defaults.port;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }

@@ -140,32 +140,32 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetSnapshotFilter> filters) {
+        public Builder filters(@Nullable List<GetSnapshotFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setOwners(@Nullable List<String> owners) {
+        public Builder owners(@Nullable List<String> owners) {
             this.owners = owners;
             return this;
         }
 
-        public Builder setRestorableByUserIds(@Nullable List<String> restorableByUserIds) {
+        public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
             this.restorableByUserIds = restorableByUserIds;
             return this;
         }
 
-        public Builder setSnapshotIds(@Nullable List<String> snapshotIds) {
+        public Builder snapshotIds(@Nullable List<String> snapshotIds) {
             this.snapshotIds = snapshotIds;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

@@ -77,22 +77,22 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZoneOffset = defaults.timeZoneOffset;
         }
 
-        public Builder setFormat(@Nullable Input<Either<String,LocalTimestampFormat>> format) {
+        public Builder format(@Nullable Input<Either<String,LocalTimestampFormat>> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable Either<String,LocalTimestampFormat> format) {
+        public Builder format(@Nullable Either<String,LocalTimestampFormat> format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setTimeZoneOffset(@Nullable Input<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
+        public Builder timeZoneOffset(@Nullable Input<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
             this.timeZoneOffset = timeZoneOffset;
             return this;
         }
 
-        public Builder setTimeZoneOffset(@Nullable LocalTimestampTimeZoneOffsetArgs timeZoneOffset) {
+        public Builder timeZoneOffset(@Nullable LocalTimestampTimeZoneOffsetArgs timeZoneOffset) {
             this.timeZoneOffset = Input.ofNullable(timeZoneOffset);
             return this;
         }

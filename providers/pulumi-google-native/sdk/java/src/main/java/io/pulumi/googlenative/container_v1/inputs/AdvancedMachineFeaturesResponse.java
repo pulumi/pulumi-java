@@ -55,7 +55,7 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder setThreadsPerCore(String threadsPerCore) {
+        public Builder threadsPerCore(String threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }

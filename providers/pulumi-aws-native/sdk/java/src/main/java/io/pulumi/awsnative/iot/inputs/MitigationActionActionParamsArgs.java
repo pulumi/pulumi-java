@@ -119,62 +119,62 @@ public final class MitigationActionActionParamsArgs extends io.pulumi.resources.
     	      this.updateDeviceCertificateParams = defaults.updateDeviceCertificateParams;
         }
 
-        public Builder setAddThingsToThingGroupParams(@Nullable Input<MitigationActionAddThingsToThingGroupParamsArgs> addThingsToThingGroupParams) {
+        public Builder addThingsToThingGroupParams(@Nullable Input<MitigationActionAddThingsToThingGroupParamsArgs> addThingsToThingGroupParams) {
             this.addThingsToThingGroupParams = addThingsToThingGroupParams;
             return this;
         }
 
-        public Builder setAddThingsToThingGroupParams(@Nullable MitigationActionAddThingsToThingGroupParamsArgs addThingsToThingGroupParams) {
+        public Builder addThingsToThingGroupParams(@Nullable MitigationActionAddThingsToThingGroupParamsArgs addThingsToThingGroupParams) {
             this.addThingsToThingGroupParams = Input.ofNullable(addThingsToThingGroupParams);
             return this;
         }
 
-        public Builder setEnableIoTLoggingParams(@Nullable Input<MitigationActionEnableIoTLoggingParamsArgs> enableIoTLoggingParams) {
+        public Builder enableIoTLoggingParams(@Nullable Input<MitigationActionEnableIoTLoggingParamsArgs> enableIoTLoggingParams) {
             this.enableIoTLoggingParams = enableIoTLoggingParams;
             return this;
         }
 
-        public Builder setEnableIoTLoggingParams(@Nullable MitigationActionEnableIoTLoggingParamsArgs enableIoTLoggingParams) {
+        public Builder enableIoTLoggingParams(@Nullable MitigationActionEnableIoTLoggingParamsArgs enableIoTLoggingParams) {
             this.enableIoTLoggingParams = Input.ofNullable(enableIoTLoggingParams);
             return this;
         }
 
-        public Builder setPublishFindingToSnsParams(@Nullable Input<MitigationActionPublishFindingToSnsParamsArgs> publishFindingToSnsParams) {
+        public Builder publishFindingToSnsParams(@Nullable Input<MitigationActionPublishFindingToSnsParamsArgs> publishFindingToSnsParams) {
             this.publishFindingToSnsParams = publishFindingToSnsParams;
             return this;
         }
 
-        public Builder setPublishFindingToSnsParams(@Nullable MitigationActionPublishFindingToSnsParamsArgs publishFindingToSnsParams) {
+        public Builder publishFindingToSnsParams(@Nullable MitigationActionPublishFindingToSnsParamsArgs publishFindingToSnsParams) {
             this.publishFindingToSnsParams = Input.ofNullable(publishFindingToSnsParams);
             return this;
         }
 
-        public Builder setReplaceDefaultPolicyVersionParams(@Nullable Input<MitigationActionReplaceDefaultPolicyVersionParamsArgs> replaceDefaultPolicyVersionParams) {
+        public Builder replaceDefaultPolicyVersionParams(@Nullable Input<MitigationActionReplaceDefaultPolicyVersionParamsArgs> replaceDefaultPolicyVersionParams) {
             this.replaceDefaultPolicyVersionParams = replaceDefaultPolicyVersionParams;
             return this;
         }
 
-        public Builder setReplaceDefaultPolicyVersionParams(@Nullable MitigationActionReplaceDefaultPolicyVersionParamsArgs replaceDefaultPolicyVersionParams) {
+        public Builder replaceDefaultPolicyVersionParams(@Nullable MitigationActionReplaceDefaultPolicyVersionParamsArgs replaceDefaultPolicyVersionParams) {
             this.replaceDefaultPolicyVersionParams = Input.ofNullable(replaceDefaultPolicyVersionParams);
             return this;
         }
 
-        public Builder setUpdateCACertificateParams(@Nullable Input<MitigationActionUpdateCACertificateParamsArgs> updateCACertificateParams) {
+        public Builder updateCACertificateParams(@Nullable Input<MitigationActionUpdateCACertificateParamsArgs> updateCACertificateParams) {
             this.updateCACertificateParams = updateCACertificateParams;
             return this;
         }
 
-        public Builder setUpdateCACertificateParams(@Nullable MitigationActionUpdateCACertificateParamsArgs updateCACertificateParams) {
+        public Builder updateCACertificateParams(@Nullable MitigationActionUpdateCACertificateParamsArgs updateCACertificateParams) {
             this.updateCACertificateParams = Input.ofNullable(updateCACertificateParams);
             return this;
         }
 
-        public Builder setUpdateDeviceCertificateParams(@Nullable Input<MitigationActionUpdateDeviceCertificateParamsArgs> updateDeviceCertificateParams) {
+        public Builder updateDeviceCertificateParams(@Nullable Input<MitigationActionUpdateDeviceCertificateParamsArgs> updateDeviceCertificateParams) {
             this.updateDeviceCertificateParams = updateDeviceCertificateParams;
             return this;
         }
 
-        public Builder setUpdateDeviceCertificateParams(@Nullable MitigationActionUpdateDeviceCertificateParamsArgs updateDeviceCertificateParams) {
+        public Builder updateDeviceCertificateParams(@Nullable MitigationActionUpdateDeviceCertificateParamsArgs updateDeviceCertificateParams) {
             this.updateDeviceCertificateParams = Input.ofNullable(updateDeviceCertificateParams);
             return this;
         }

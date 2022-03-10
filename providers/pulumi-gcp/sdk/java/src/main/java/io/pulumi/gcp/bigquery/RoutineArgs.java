@@ -250,122 +250,122 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routineType = defaults.routineType;
         }
 
-        public Builder setArguments(@Nullable Input<List<RoutineArgumentArgs>> arguments) {
+        public Builder arguments(@Nullable Input<List<RoutineArgumentArgs>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable List<RoutineArgumentArgs> arguments) {
+        public Builder arguments(@Nullable List<RoutineArgumentArgs> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setDefinitionBody(Input<String> definitionBody) {
+        public Builder definitionBody(Input<String> definitionBody) {
             this.definitionBody = Objects.requireNonNull(definitionBody);
             return this;
         }
 
-        public Builder setDefinitionBody(String definitionBody) {
+        public Builder definitionBody(String definitionBody) {
             this.definitionBody = Input.of(Objects.requireNonNull(definitionBody));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeterminismLevel(@Nullable Input<String> determinismLevel) {
+        public Builder determinismLevel(@Nullable Input<String> determinismLevel) {
             this.determinismLevel = determinismLevel;
             return this;
         }
 
-        public Builder setDeterminismLevel(@Nullable String determinismLevel) {
+        public Builder determinismLevel(@Nullable String determinismLevel) {
             this.determinismLevel = Input.ofNullable(determinismLevel);
             return this;
         }
 
-        public Builder setImportedLibraries(@Nullable Input<List<String>> importedLibraries) {
+        public Builder importedLibraries(@Nullable Input<List<String>> importedLibraries) {
             this.importedLibraries = importedLibraries;
             return this;
         }
 
-        public Builder setImportedLibraries(@Nullable List<String> importedLibraries) {
+        public Builder importedLibraries(@Nullable List<String> importedLibraries) {
             this.importedLibraries = Input.ofNullable(importedLibraries);
             return this;
         }
 
-        public Builder setLanguage(@Nullable Input<String> language) {
+        public Builder language(@Nullable Input<String> language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = Input.ofNullable(language);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReturnTableType(@Nullable Input<String> returnTableType) {
+        public Builder returnTableType(@Nullable Input<String> returnTableType) {
             this.returnTableType = returnTableType;
             return this;
         }
 
-        public Builder setReturnTableType(@Nullable String returnTableType) {
+        public Builder returnTableType(@Nullable String returnTableType) {
             this.returnTableType = Input.ofNullable(returnTableType);
             return this;
         }
 
-        public Builder setReturnType(@Nullable Input<String> returnType) {
+        public Builder returnType(@Nullable Input<String> returnType) {
             this.returnType = returnType;
             return this;
         }
 
-        public Builder setReturnType(@Nullable String returnType) {
+        public Builder returnType(@Nullable String returnType) {
             this.returnType = Input.ofNullable(returnType);
             return this;
         }
 
-        public Builder setRoutineId(Input<String> routineId) {
+        public Builder routineId(Input<String> routineId) {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }
 
-        public Builder setRoutineId(String routineId) {
+        public Builder routineId(String routineId) {
             this.routineId = Input.of(Objects.requireNonNull(routineId));
             return this;
         }
 
-        public Builder setRoutineType(@Nullable Input<String> routineType) {
+        public Builder routineType(@Nullable Input<String> routineType) {
             this.routineType = routineType;
             return this;
         }
 
-        public Builder setRoutineType(@Nullable String routineType) {
+        public Builder routineType(@Nullable String routineType) {
             this.routineType = Input.ofNullable(routineType);
             return this;
         }

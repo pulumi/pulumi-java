@@ -88,17 +88,17 @@ public final class PlatformImagePurchasePlanResponse extends io.pulumi.resources
     	      this.planPublisher = defaults.planPublisher;
         }
 
-        public Builder setPlanName(String planName) {
+        public Builder planName(String planName) {
             this.planName = Objects.requireNonNull(planName);
             return this;
         }
 
-        public Builder setPlanProduct(String planProduct) {
+        public Builder planProduct(String planProduct) {
             this.planProduct = Objects.requireNonNull(planProduct);
             return this;
         }
 
-        public Builder setPlanPublisher(String planPublisher) {
+        public Builder planPublisher(String planPublisher) {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
         }

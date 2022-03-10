@@ -71,22 +71,22 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable Input<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file) {
+        public Builder file(@Nullable Input<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecListenerTlsValidationTrustFileArgs file) {
+        public Builder file(@Nullable VirtualNodeSpecListenerTlsValidationTrustFileArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setSds(@Nullable Input<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds) {
+        public Builder sds(@Nullable Input<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSdsArgs sds) {
+        public Builder sds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSdsArgs sds) {
             this.sds = Input.ofNullable(sds);
             return this;
         }

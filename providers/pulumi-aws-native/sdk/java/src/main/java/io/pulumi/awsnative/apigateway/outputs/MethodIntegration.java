@@ -267,72 +267,72 @@ public final class MethodIntegration {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
+        public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
             this.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
 
-        public Builder setCacheNamespace(@Nullable String cacheNamespace) {
+        public Builder cacheNamespace(@Nullable String cacheNamespace) {
             this.cacheNamespace = cacheNamespace;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionType(@Nullable MethodIntegrationConnectionType connectionType) {
+        public Builder connectionType(@Nullable MethodIntegrationConnectionType connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
-        public Builder setContentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
+        public Builder contentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
-        public Builder setCredentials(@Nullable String credentials) {
+        public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setIntegrationHttpMethod(@Nullable String integrationHttpMethod) {
+        public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
             this.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
 
-        public Builder setIntegrationResponses(@Nullable List<MethodIntegrationResponse> integrationResponses) {
+        public Builder integrationResponses(@Nullable List<MethodIntegrationResponse> integrationResponses) {
             this.integrationResponses = integrationResponses;
             return this;
         }
 
-        public Builder setPassthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
+        public Builder passthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Object requestParameters) {
+        public Builder requestParameters(@Nullable Object requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
-        public Builder setRequestTemplates(@Nullable Object requestTemplates) {
+        public Builder requestTemplates(@Nullable Object requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
 
-        public Builder setTimeoutInMillis(@Nullable Integer timeoutInMillis) {
+        public Builder timeoutInMillis(@Nullable Integer timeoutInMillis) {
             this.timeoutInMillis = timeoutInMillis;
             return this;
         }
 
-        public Builder setType(MethodIntegrationType type) {
+        public Builder type(MethodIntegrationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

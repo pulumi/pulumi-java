@@ -134,32 +134,32 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
     	      this.numericalStatsConfig = defaults.numericalStatsConfig;
         }
 
-        public Builder setCategoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig) {
+        public Builder categoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig) {
             this.categoricalStatsConfig = Objects.requireNonNull(categoricalStatsConfig);
             return this;
         }
 
-        public Builder setDeltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig) {
+        public Builder deltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig) {
             this.deltaPresenceEstimationConfig = Objects.requireNonNull(deltaPresenceEstimationConfig);
             return this;
         }
 
-        public Builder setKAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig) {
+        public Builder kAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig) {
             this.kAnonymityConfig = Objects.requireNonNull(kAnonymityConfig);
             return this;
         }
 
-        public Builder setKMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig) {
+        public Builder kMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig) {
             this.kMapEstimationConfig = Objects.requireNonNull(kMapEstimationConfig);
             return this;
         }
 
-        public Builder setLDiversityConfig(GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig) {
+        public Builder lDiversityConfig(GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig) {
             this.lDiversityConfig = Objects.requireNonNull(lDiversityConfig);
             return this;
         }
 
-        public Builder setNumericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
+        public Builder numericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
             this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
             return this;
         }

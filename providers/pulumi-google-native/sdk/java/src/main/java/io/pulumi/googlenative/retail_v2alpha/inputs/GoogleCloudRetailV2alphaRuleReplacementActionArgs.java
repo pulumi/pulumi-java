@@ -91,32 +91,32 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
     	      this.term = defaults.term;
         }
 
-        public Builder setQueryTerms(@Nullable Input<List<String>> queryTerms) {
+        public Builder queryTerms(@Nullable Input<List<String>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
 
-        public Builder setQueryTerms(@Nullable List<String> queryTerms) {
+        public Builder queryTerms(@Nullable List<String> queryTerms) {
             this.queryTerms = Input.ofNullable(queryTerms);
             return this;
         }
 
-        public Builder setReplacementTerm(@Nullable Input<String> replacementTerm) {
+        public Builder replacementTerm(@Nullable Input<String> replacementTerm) {
             this.replacementTerm = replacementTerm;
             return this;
         }
 
-        public Builder setReplacementTerm(@Nullable String replacementTerm) {
+        public Builder replacementTerm(@Nullable String replacementTerm) {
             this.replacementTerm = Input.ofNullable(replacementTerm);
             return this;
         }
 
-        public Builder setTerm(@Nullable Input<String> term) {
+        public Builder term(@Nullable Input<String> term) {
             this.term = term;
             return this;
         }
 
-        public Builder setTerm(@Nullable String term) {
+        public Builder term(@Nullable String term) {
             this.term = Input.ofNullable(term);
             return this;
         }

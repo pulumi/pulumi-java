@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse {
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }

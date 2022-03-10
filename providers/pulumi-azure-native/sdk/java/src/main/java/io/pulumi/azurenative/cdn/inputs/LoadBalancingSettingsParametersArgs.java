@@ -90,32 +90,32 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
     	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
         }
 
-        public Builder setAdditionalLatencyInMilliseconds(@Nullable Input<Integer> additionalLatencyInMilliseconds) {
+        public Builder additionalLatencyInMilliseconds(@Nullable Input<Integer> additionalLatencyInMilliseconds) {
             this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
 
-        public Builder setAdditionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
+        public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
             this.additionalLatencyInMilliseconds = Input.ofNullable(additionalLatencyInMilliseconds);
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Input<Integer> sampleSize) {
+        public Builder sampleSize(@Nullable Input<Integer> sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Integer sampleSize) {
+        public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = Input.ofNullable(sampleSize);
             return this;
         }
 
-        public Builder setSuccessfulSamplesRequired(@Nullable Input<Integer> successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Input<Integer> successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
 
-        public Builder setSuccessfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             this.successfulSamplesRequired = Input.ofNullable(successfulSamplesRequired);
             return this;
         }

@@ -572,167 +572,167 @@ public final class VMwareDetailsResponse {
     	      this.webLoadStatus = defaults.webLoadStatus;
         }
 
-        public Builder setAgentCount(@Nullable String agentCount) {
+        public Builder agentCount(@Nullable String agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
-        public Builder setAgentExpiryDate(@Nullable String agentExpiryDate) {
+        public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
+        public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             this.agentVersionDetails = agentVersionDetails;
             return this;
         }
 
-        public Builder setAvailableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
+        public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
             this.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
 
-        public Builder setAvailableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
+        public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
             this.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
 
-        public Builder setCpuLoad(@Nullable String cpuLoad) {
+        public Builder cpuLoad(@Nullable String cpuLoad) {
             this.cpuLoad = cpuLoad;
             return this;
         }
 
-        public Builder setCpuLoadStatus(@Nullable String cpuLoadStatus) {
+        public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
             this.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
 
-        public Builder setCsServiceStatus(@Nullable String csServiceStatus) {
+        public Builder csServiceStatus(@Nullable String csServiceStatus) {
             this.csServiceStatus = csServiceStatus;
             return this;
         }
 
-        public Builder setDatabaseServerLoad(@Nullable String databaseServerLoad) {
+        public Builder databaseServerLoad(@Nullable String databaseServerLoad) {
             this.databaseServerLoad = databaseServerLoad;
             return this;
         }
 
-        public Builder setDatabaseServerLoadStatus(@Nullable String databaseServerLoadStatus) {
+        public Builder databaseServerLoadStatus(@Nullable String databaseServerLoadStatus) {
             this.databaseServerLoadStatus = databaseServerLoadStatus;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLastHeartbeat(@Nullable String lastHeartbeat) {
+        public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
-        public Builder setMasterTargetServers(@Nullable List<MasterTargetServerResponse> masterTargetServers) {
+        public Builder masterTargetServers(@Nullable List<MasterTargetServerResponse> masterTargetServers) {
             this.masterTargetServers = masterTargetServers;
             return this;
         }
 
-        public Builder setMemoryUsageStatus(@Nullable String memoryUsageStatus) {
+        public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
             this.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
 
-        public Builder setProcessServerCount(@Nullable String processServerCount) {
+        public Builder processServerCount(@Nullable String processServerCount) {
             this.processServerCount = processServerCount;
             return this;
         }
 
-        public Builder setProcessServers(@Nullable List<ProcessServerResponse> processServers) {
+        public Builder processServers(@Nullable List<ProcessServerResponse> processServers) {
             this.processServers = processServers;
             return this;
         }
 
-        public Builder setProtectedServers(@Nullable String protectedServers) {
+        public Builder protectedServers(@Nullable String protectedServers) {
             this.protectedServers = protectedServers;
             return this;
         }
 
-        public Builder setPsTemplateVersion(@Nullable String psTemplateVersion) {
+        public Builder psTemplateVersion(@Nullable String psTemplateVersion) {
             this.psTemplateVersion = psTemplateVersion;
             return this;
         }
 
-        public Builder setReplicationPairCount(@Nullable String replicationPairCount) {
+        public Builder replicationPairCount(@Nullable String replicationPairCount) {
             this.replicationPairCount = replicationPairCount;
             return this;
         }
 
-        public Builder setRunAsAccounts(@Nullable List<RunAsAccountResponse> runAsAccounts) {
+        public Builder runAsAccounts(@Nullable List<RunAsAccountResponse> runAsAccounts) {
             this.runAsAccounts = runAsAccounts;
             return this;
         }
 
-        public Builder setSpaceUsageStatus(@Nullable String spaceUsageStatus) {
+        public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
             this.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
 
-        public Builder setSslCertExpiryDate(@Nullable String sslCertExpiryDate) {
+        public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
             this.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
 
-        public Builder setSslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
+        public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
             this.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
 
-        public Builder setSystemLoad(@Nullable String systemLoad) {
+        public Builder systemLoad(@Nullable String systemLoad) {
             this.systemLoad = systemLoad;
             return this;
         }
 
-        public Builder setSystemLoadStatus(@Nullable String systemLoadStatus) {
+        public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
             this.systemLoadStatus = systemLoadStatus;
             return this;
         }
 
-        public Builder setTotalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
+        public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
             this.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
 
-        public Builder setTotalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
+        public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
             this.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
 
-        public Builder setVersionStatus(@Nullable String versionStatus) {
+        public Builder versionStatus(@Nullable String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
         }
 
-        public Builder setWebLoad(@Nullable String webLoad) {
+        public Builder webLoad(@Nullable String webLoad) {
             this.webLoad = webLoad;
             return this;
         }
 
-        public Builder setWebLoadStatus(@Nullable String webLoadStatus) {
+        public Builder webLoadStatus(@Nullable String webLoadStatus) {
             this.webLoadStatus = webLoadStatus;
             return this;
         }

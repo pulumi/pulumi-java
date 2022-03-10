@@ -169,42 +169,42 @@ public final class StatefulSetSpec {
     	      this.volumeClaimTemplates = defaults.volumeClaimTemplates;
         }
 
-        public Builder setPodManagementPolicy(@Nullable String podManagementPolicy) {
+        public Builder podManagementPolicy(@Nullable String podManagementPolicy) {
             this.podManagementPolicy = podManagementPolicy;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpec template) {
+        public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setUpdateStrategy(@Nullable StatefulSetUpdateStrategy updateStrategy) {
+        public Builder updateStrategy(@Nullable StatefulSetUpdateStrategy updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
 
-        public Builder setVolumeClaimTemplates(@Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
+        public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }

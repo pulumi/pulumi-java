@@ -288,152 +288,152 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Input<String> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setDestinationId(@Nullable Input<String> destinationId) {
+        public Builder destinationId(@Nullable Input<String> destinationId) {
             this.destinationId = destinationId;
             return this;
         }
 
-        public Builder setDestinationId(@Nullable String destinationId) {
+        public Builder destinationId(@Nullable String destinationId) {
             this.destinationId = Input.ofNullable(destinationId);
             return this;
         }
 
-        public Builder setElasticsearchConfiguration(@Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration) {
+        public Builder elasticsearchConfiguration(@Nullable Input<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration) {
             this.elasticsearchConfiguration = elasticsearchConfiguration;
             return this;
         }
 
-        public Builder setElasticsearchConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationGetArgs elasticsearchConfiguration) {
+        public Builder elasticsearchConfiguration(@Nullable FirehoseDeliveryStreamElasticsearchConfigurationGetArgs elasticsearchConfiguration) {
             this.elasticsearchConfiguration = Input.ofNullable(elasticsearchConfiguration);
             return this;
         }
 
-        public Builder setExtendedS3Configuration(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration) {
+        public Builder extendedS3Configuration(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration) {
             this.extendedS3Configuration = extendedS3Configuration;
             return this;
         }
 
-        public Builder setExtendedS3Configuration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extendedS3Configuration) {
+        public Builder extendedS3Configuration(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs extendedS3Configuration) {
             this.extendedS3Configuration = Input.ofNullable(extendedS3Configuration);
             return this;
         }
 
-        public Builder setHttpEndpointConfiguration(@Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration) {
+        public Builder httpEndpointConfiguration(@Nullable Input<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration) {
             this.httpEndpointConfiguration = httpEndpointConfiguration;
             return this;
         }
 
-        public Builder setHttpEndpointConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs httpEndpointConfiguration) {
+        public Builder httpEndpointConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs httpEndpointConfiguration) {
             this.httpEndpointConfiguration = Input.ofNullable(httpEndpointConfiguration);
             return this;
         }
 
-        public Builder setKinesisSourceConfiguration(@Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration) {
+        public Builder kinesisSourceConfiguration(@Nullable Input<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration) {
             this.kinesisSourceConfiguration = kinesisSourceConfiguration;
             return this;
         }
 
-        public Builder setKinesisSourceConfiguration(@Nullable FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs kinesisSourceConfiguration) {
+        public Builder kinesisSourceConfiguration(@Nullable FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs kinesisSourceConfiguration) {
             this.kinesisSourceConfiguration = Input.ofNullable(kinesisSourceConfiguration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRedshiftConfiguration(@Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration) {
+        public Builder redshiftConfiguration(@Nullable Input<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration) {
             this.redshiftConfiguration = redshiftConfiguration;
             return this;
         }
 
-        public Builder setRedshiftConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationGetArgs redshiftConfiguration) {
+        public Builder redshiftConfiguration(@Nullable FirehoseDeliveryStreamRedshiftConfigurationGetArgs redshiftConfiguration) {
             this.redshiftConfiguration = Input.ofNullable(redshiftConfiguration);
             return this;
         }
 
-        public Builder setS3Configuration(@Nullable Input<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration) {
+        public Builder s3Configuration(@Nullable Input<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
         }
 
-        public Builder setS3Configuration(@Nullable FirehoseDeliveryStreamS3ConfigurationGetArgs s3Configuration) {
+        public Builder s3Configuration(@Nullable FirehoseDeliveryStreamS3ConfigurationGetArgs s3Configuration) {
             this.s3Configuration = Input.ofNullable(s3Configuration);
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable Input<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Input<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable FirehoseDeliveryStreamServerSideEncryptionGetArgs serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable FirehoseDeliveryStreamServerSideEncryptionGetArgs serverSideEncryption) {
             this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder setSplunkConfiguration(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration) {
+        public Builder splunkConfiguration(@Nullable Input<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration) {
             this.splunkConfiguration = splunkConfiguration;
             return this;
         }
 
-        public Builder setSplunkConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationGetArgs splunkConfiguration) {
+        public Builder splunkConfiguration(@Nullable FirehoseDeliveryStreamSplunkConfigurationGetArgs splunkConfiguration) {
             this.splunkConfiguration = Input.ofNullable(splunkConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVersionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Input<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = Input.ofNullable(versionId);
             return this;
         }

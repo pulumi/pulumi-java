@@ -119,62 +119,62 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespaceId(Input<String> namespaceId) {
+        public Builder namespaceId(Input<String> namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
 
-        public Builder setNamespaceId(String namespaceId) {
+        public Builder namespaceId(String namespaceId) {
             this.namespaceId = Input.of(Objects.requireNonNull(namespaceId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceId(Input<String> serviceId) {
+        public Builder serviceId(Input<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }

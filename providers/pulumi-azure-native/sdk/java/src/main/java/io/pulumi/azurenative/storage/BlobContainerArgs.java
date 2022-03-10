@@ -153,72 +153,72 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setDefaultEncryptionScope(@Nullable Input<String> defaultEncryptionScope) {
+        public Builder defaultEncryptionScope(@Nullable Input<String> defaultEncryptionScope) {
             this.defaultEncryptionScope = defaultEncryptionScope;
             return this;
         }
 
-        public Builder setDefaultEncryptionScope(@Nullable String defaultEncryptionScope) {
+        public Builder defaultEncryptionScope(@Nullable String defaultEncryptionScope) {
             this.defaultEncryptionScope = Input.ofNullable(defaultEncryptionScope);
             return this;
         }
 
-        public Builder setDenyEncryptionScopeOverride(@Nullable Input<Boolean> denyEncryptionScopeOverride) {
+        public Builder denyEncryptionScopeOverride(@Nullable Input<Boolean> denyEncryptionScopeOverride) {
             this.denyEncryptionScopeOverride = denyEncryptionScopeOverride;
             return this;
         }
 
-        public Builder setDenyEncryptionScopeOverride(@Nullable Boolean denyEncryptionScopeOverride) {
+        public Builder denyEncryptionScopeOverride(@Nullable Boolean denyEncryptionScopeOverride) {
             this.denyEncryptionScopeOverride = Input.ofNullable(denyEncryptionScopeOverride);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPublicAccess(@Nullable Input<PublicAccess> publicAccess) {
+        public Builder publicAccess(@Nullable Input<PublicAccess> publicAccess) {
             this.publicAccess = publicAccess;
             return this;
         }
 
-        public Builder setPublicAccess(@Nullable PublicAccess publicAccess) {
+        public Builder publicAccess(@Nullable PublicAccess publicAccess) {
             this.publicAccess = Input.ofNullable(publicAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

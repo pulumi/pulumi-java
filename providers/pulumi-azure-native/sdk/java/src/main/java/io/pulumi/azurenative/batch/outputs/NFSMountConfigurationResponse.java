@@ -75,17 +75,17 @@ public final class NFSMountConfigurationResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setRelativeMountPath(String relativeMountPath) {
+        public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

@@ -93,32 +93,32 @@ public final class AuthPlatformArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setConfigFilePath(@Nullable Input<String> configFilePath) {
+        public Builder configFilePath(@Nullable Input<String> configFilePath) {
             this.configFilePath = configFilePath;
             return this;
         }
 
-        public Builder setConfigFilePath(@Nullable String configFilePath) {
+        public Builder configFilePath(@Nullable String configFilePath) {
             this.configFilePath = Input.ofNullable(configFilePath);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }

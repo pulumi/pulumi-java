@@ -183,47 +183,47 @@ public final class ApplicationRuleConditionResponse {
     	      this.targetFqdns = defaults.targetFqdns;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setFqdnTags(@Nullable List<String> fqdnTags) {
+        public Builder fqdnTags(@Nullable List<String> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols) {
+        public Builder protocols(@Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setRuleConditionType(String ruleConditionType) {
+        public Builder ruleConditionType(String ruleConditionType) {
             this.ruleConditionType = Objects.requireNonNull(ruleConditionType);
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourceIpGroups(@Nullable List<String> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
-        public Builder setTargetFqdns(@Nullable List<String> targetFqdns) {
+        public Builder targetFqdns(@Nullable List<String> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }

@@ -57,7 +57,7 @@ public final class CloudErrorResponse extends io.pulumi.resources.InvokeArgs {
     	      this.error = defaults.error;
         }
 
-        public Builder setError(@Nullable CloudErrorBodyResponse error) {
+        public Builder error(@Nullable CloudErrorBodyResponse error) {
             this.error = error;
             return this;
         }

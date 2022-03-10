@@ -192,92 +192,92 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.query = defaults.query;
         }
 
-        public Builder setCopy(@Nullable Input<JobCopyArgs> copy) {
+        public Builder copy(@Nullable Input<JobCopyArgs> copy) {
             this.copy = copy;
             return this;
         }
 
-        public Builder setCopy(@Nullable JobCopyArgs copy) {
+        public Builder copy(@Nullable JobCopyArgs copy) {
             this.copy = Input.ofNullable(copy);
             return this;
         }
 
-        public Builder setExtract(@Nullable Input<JobExtractArgs> extract) {
+        public Builder extract(@Nullable Input<JobExtractArgs> extract) {
             this.extract = extract;
             return this;
         }
 
-        public Builder setExtract(@Nullable JobExtractArgs extract) {
+        public Builder extract(@Nullable JobExtractArgs extract) {
             this.extract = Input.ofNullable(extract);
             return this;
         }
 
-        public Builder setJobId(Input<String> jobId) {
+        public Builder jobId(Input<String> jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Input.of(Objects.requireNonNull(jobId));
             return this;
         }
 
-        public Builder setJobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
             this.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
-        public Builder setJobTimeoutMs(@Nullable String jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
             this.jobTimeoutMs = Input.ofNullable(jobTimeoutMs);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLoad(@Nullable Input<JobLoadArgs> load) {
+        public Builder load(@Nullable Input<JobLoadArgs> load) {
             this.load = load;
             return this;
         }
 
-        public Builder setLoad(@Nullable JobLoadArgs load) {
+        public Builder load(@Nullable JobLoadArgs load) {
             this.load = Input.ofNullable(load);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<JobQueryArgs> query) {
+        public Builder query(@Nullable Input<JobQueryArgs> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable JobQueryArgs query) {
+        public Builder query(@Nullable JobQueryArgs query) {
             this.query = Input.ofNullable(query);
             return this;
         }

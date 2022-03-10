@@ -91,32 +91,32 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
     	      this.scope = defaults.scope;
         }
 
-        public Builder setFirst(@Nullable Input<String> first) {
+        public Builder first(@Nullable Input<String> first) {
             this.first = first;
             return this;
         }
 
-        public Builder setFirst(@Nullable String first) {
+        public Builder first(@Nullable String first) {
             this.first = Input.ofNullable(first);
             return this;
         }
 
-        public Builder setLast(@Nullable Input<String> last) {
+        public Builder last(@Nullable Input<String> last) {
             this.last = last;
             return this;
         }
 
-        public Builder setLast(@Nullable String last) {
+        public Builder last(@Nullable String last) {
             this.last = Input.ofNullable(last);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<Integer> scope) {
+        public Builder scope(@Nullable Input<Integer> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable Integer scope) {
+        public Builder scope(@Nullable Integer scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

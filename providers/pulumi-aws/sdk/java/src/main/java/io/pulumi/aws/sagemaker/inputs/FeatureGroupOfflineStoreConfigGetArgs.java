@@ -88,32 +88,32 @@ public final class FeatureGroupOfflineStoreConfigGetArgs extends io.pulumi.resou
     	      this.s3StorageConfig = defaults.s3StorageConfig;
         }
 
-        public Builder setDataCatalogConfig(@Nullable Input<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable Input<FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs> dataCatalogConfig) {
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
-        public Builder setDataCatalogConfig(@Nullable FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs dataCatalogConfig) {
             this.dataCatalogConfig = Input.ofNullable(dataCatalogConfig);
             return this;
         }
 
-        public Builder setDisableGlueTableCreation(@Nullable Input<Boolean> disableGlueTableCreation) {
+        public Builder disableGlueTableCreation(@Nullable Input<Boolean> disableGlueTableCreation) {
             this.disableGlueTableCreation = disableGlueTableCreation;
             return this;
         }
 
-        public Builder setDisableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
+        public Builder disableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
             this.disableGlueTableCreation = Input.ofNullable(disableGlueTableCreation);
             return this;
         }
 
-        public Builder setS3StorageConfig(Input<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> s3StorageConfig) {
+        public Builder s3StorageConfig(Input<FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs> s3StorageConfig) {
             this.s3StorageConfig = Objects.requireNonNull(s3StorageConfig);
             return this;
         }
 
-        public Builder setS3StorageConfig(FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs s3StorageConfig) {
+        public Builder s3StorageConfig(FeatureGroupOfflineStoreConfigS3StorageConfigGetArgs s3StorageConfig) {
             this.s3StorageConfig = Input.of(Objects.requireNonNull(s3StorageConfig));
             return this;
         }

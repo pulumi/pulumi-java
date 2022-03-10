@@ -120,52 +120,52 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCodeRepositoryName(@Nullable Input<String> codeRepositoryName) {
+        public Builder codeRepositoryName(@Nullable Input<String> codeRepositoryName) {
             this.codeRepositoryName = codeRepositoryName;
             return this;
         }
 
-        public Builder setCodeRepositoryName(@Nullable String codeRepositoryName) {
+        public Builder codeRepositoryName(@Nullable String codeRepositoryName) {
             this.codeRepositoryName = Input.ofNullable(codeRepositoryName);
             return this;
         }
 
-        public Builder setGitConfig(@Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig) {
+        public Builder gitConfig(@Nullable Input<CodeRepositoryGitConfigGetArgs> gitConfig) {
             this.gitConfig = gitConfig;
             return this;
         }
 
-        public Builder setGitConfig(@Nullable CodeRepositoryGitConfigGetArgs gitConfig) {
+        public Builder gitConfig(@Nullable CodeRepositoryGitConfigGetArgs gitConfig) {
             this.gitConfig = Input.ofNullable(gitConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

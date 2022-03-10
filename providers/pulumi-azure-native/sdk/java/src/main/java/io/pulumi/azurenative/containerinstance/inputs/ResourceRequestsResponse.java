@@ -91,17 +91,17 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder setCpu(Double cpu) {
+        public Builder cpu(Double cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setGpu(@Nullable GpuResourceResponse gpu) {
+        public Builder gpu(@Nullable GpuResourceResponse gpu) {
             this.gpu = gpu;
             return this;
         }
 
-        public Builder setMemoryInGB(Double memoryInGB) {
+        public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }

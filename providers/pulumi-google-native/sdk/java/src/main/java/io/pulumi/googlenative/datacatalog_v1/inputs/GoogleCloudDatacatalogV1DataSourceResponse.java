@@ -72,12 +72,12 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends io.pulumi.
     	      this.service = defaults.service;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

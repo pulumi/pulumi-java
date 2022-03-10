@@ -88,32 +88,32 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm) {
+        public Builder acm(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setAcm(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
+        public Builder acm(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
             this.acm = Input.ofNullable(acm);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
+        public Builder file(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
+        public Builder file(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setSds(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
+        public Builder sds(@Nullable Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
+        public Builder sds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
             this.sds = Input.ofNullable(sds);
             return this;
         }

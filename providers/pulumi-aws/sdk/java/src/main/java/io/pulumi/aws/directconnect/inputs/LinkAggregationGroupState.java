@@ -228,122 +228,122 @@ public final class LinkAggregationGroupState extends io.pulumi.resources.Resourc
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }
 
-        public Builder setConnectionsBandwidth(@Nullable Input<String> connectionsBandwidth) {
+        public Builder connectionsBandwidth(@Nullable Input<String> connectionsBandwidth) {
             this.connectionsBandwidth = connectionsBandwidth;
             return this;
         }
 
-        public Builder setConnectionsBandwidth(@Nullable String connectionsBandwidth) {
+        public Builder connectionsBandwidth(@Nullable String connectionsBandwidth) {
             this.connectionsBandwidth = Input.ofNullable(connectionsBandwidth);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setHasLogicalRedundancy(@Nullable Input<String> hasLogicalRedundancy) {
+        public Builder hasLogicalRedundancy(@Nullable Input<String> hasLogicalRedundancy) {
             this.hasLogicalRedundancy = hasLogicalRedundancy;
             return this;
         }
 
-        public Builder setHasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
+        public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
             this.hasLogicalRedundancy = Input.ofNullable(hasLogicalRedundancy);
             return this;
         }
 
-        public Builder setJumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Input<Boolean> jumboFrameCapable) {
             this.jumboFrameCapable = jumboFrameCapable;
             return this;
         }
 
-        public Builder setJumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
+        public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
             this.jumboFrameCapable = Input.ofNullable(jumboFrameCapable);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerAccountId(@Nullable Input<String> ownerAccountId) {
+        public Builder ownerAccountId(@Nullable Input<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
 
-        public Builder setOwnerAccountId(@Nullable String ownerAccountId) {
+        public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = Input.ofNullable(ownerAccountId);
             return this;
         }
 
-        public Builder setProviderName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Input<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
-        public Builder setProviderName(@Nullable String providerName) {
+        public Builder providerName(@Nullable String providerName) {
             this.providerName = Input.ofNullable(providerName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

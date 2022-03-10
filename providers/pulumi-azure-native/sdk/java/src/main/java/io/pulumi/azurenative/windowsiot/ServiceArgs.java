@@ -168,82 +168,82 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdminDomainName(@Nullable Input<String> adminDomainName) {
+        public Builder adminDomainName(@Nullable Input<String> adminDomainName) {
             this.adminDomainName = adminDomainName;
             return this;
         }
 
-        public Builder setAdminDomainName(@Nullable String adminDomainName) {
+        public Builder adminDomainName(@Nullable String adminDomainName) {
             this.adminDomainName = Input.ofNullable(adminDomainName);
             return this;
         }
 
-        public Builder setBillingDomainName(@Nullable Input<String> billingDomainName) {
+        public Builder billingDomainName(@Nullable Input<String> billingDomainName) {
             this.billingDomainName = billingDomainName;
             return this;
         }
 
-        public Builder setBillingDomainName(@Nullable String billingDomainName) {
+        public Builder billingDomainName(@Nullable String billingDomainName) {
             this.billingDomainName = Input.ofNullable(billingDomainName);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setQuantity(@Nullable Input<Double> quantity) {
+        public Builder quantity(@Nullable Input<Double> quantity) {
             this.quantity = quantity;
             return this;
         }
 
-        public Builder setQuantity(@Nullable Double quantity) {
+        public Builder quantity(@Nullable Double quantity) {
             this.quantity = Input.ofNullable(quantity);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -569,152 +569,152 @@ public final class GetClusterResult {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAddOnFeatures(@Nullable List<String> addOnFeatures) {
+        public Builder addOnFeatures(@Nullable List<String> addOnFeatures) {
             this.addOnFeatures = addOnFeatures;
             return this;
         }
 
-        public Builder setApplicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyResponse applicationTypeVersionsCleanupPolicy) {
+        public Builder applicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyResponse applicationTypeVersionsCleanupPolicy) {
             this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
             return this;
         }
 
-        public Builder setAvailableClusterVersions(List<ClusterVersionDetailsResponse> availableClusterVersions) {
+        public Builder availableClusterVersions(List<ClusterVersionDetailsResponse> availableClusterVersions) {
             this.availableClusterVersions = Objects.requireNonNull(availableClusterVersions);
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
-        public Builder setCertificate(@Nullable CertificateDescriptionResponse certificate) {
+        public Builder certificate(@Nullable CertificateDescriptionResponse certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificateCommonNames(@Nullable ServerCertificateCommonNamesResponse certificateCommonNames) {
+        public Builder certificateCommonNames(@Nullable ServerCertificateCommonNamesResponse certificateCommonNames) {
             this.certificateCommonNames = certificateCommonNames;
             return this;
         }
 
-        public Builder setClientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameResponse> clientCertificateCommonNames) {
+        public Builder clientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameResponse> clientCertificateCommonNames) {
             this.clientCertificateCommonNames = clientCertificateCommonNames;
             return this;
         }
 
-        public Builder setClientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintResponse> clientCertificateThumbprints) {
+        public Builder clientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintResponse> clientCertificateThumbprints) {
             this.clientCertificateThumbprints = clientCertificateThumbprints;
             return this;
         }
 
-        public Builder setClusterCodeVersion(@Nullable String clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
 
-        public Builder setClusterEndpoint(String clusterEndpoint) {
+        public Builder clusterEndpoint(String clusterEndpoint) {
             this.clusterEndpoint = Objects.requireNonNull(clusterEndpoint);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterState(String clusterState) {
+        public Builder clusterState(String clusterState) {
             this.clusterState = Objects.requireNonNull(clusterState);
             return this;
         }
 
-        public Builder setDiagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigResponse diagnosticsStorageAccountConfig) {
+        public Builder diagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigResponse diagnosticsStorageAccountConfig) {
             this.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setEventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
+        public Builder eventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
             this.eventStoreServiceEnabled = eventStoreServiceEnabled;
             return this;
         }
 
-        public Builder setFabricSettings(@Nullable List<SettingsSectionDescriptionResponse> fabricSettings) {
+        public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionResponse> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagementEndpoint(String managementEndpoint) {
+        public Builder managementEndpoint(String managementEndpoint) {
             this.managementEndpoint = Objects.requireNonNull(managementEndpoint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeTypes(List<NodeTypeDescriptionResponse> nodeTypes) {
+        public Builder nodeTypes(List<NodeTypeDescriptionResponse> nodeTypes) {
             this.nodeTypes = Objects.requireNonNull(nodeTypes);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReliabilityLevel(@Nullable String reliabilityLevel) {
+        public Builder reliabilityLevel(@Nullable String reliabilityLevel) {
             this.reliabilityLevel = reliabilityLevel;
             return this;
         }
 
-        public Builder setReverseProxyCertificate(@Nullable CertificateDescriptionResponse reverseProxyCertificate) {
+        public Builder reverseProxyCertificate(@Nullable CertificateDescriptionResponse reverseProxyCertificate) {
             this.reverseProxyCertificate = reverseProxyCertificate;
             return this;
         }
 
-        public Builder setReverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesResponse reverseProxyCertificateCommonNames) {
+        public Builder reverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesResponse reverseProxyCertificateCommonNames) {
             this.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpgradeDescription(@Nullable ClusterUpgradePolicyResponse upgradeDescription) {
+        public Builder upgradeDescription(@Nullable ClusterUpgradePolicyResponse upgradeDescription) {
             this.upgradeDescription = upgradeDescription;
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable String upgradeMode) {
+        public Builder upgradeMode(@Nullable String upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
-        public Builder setVmImage(@Nullable String vmImage) {
+        public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = vmImage;
             return this;
         }

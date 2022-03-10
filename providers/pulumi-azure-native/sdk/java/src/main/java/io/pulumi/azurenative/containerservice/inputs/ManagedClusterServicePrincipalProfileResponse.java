@@ -74,12 +74,12 @@ public final class ManagedClusterServicePrincipalProfileResponse extends io.pulu
     	      this.secret = defaults.secret;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }

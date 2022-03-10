@@ -269,142 +269,142 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.voiceId = defaults.voiceId;
         }
 
-        public Builder setAbortStatement(Input<BotAbortStatementArgs> abortStatement) {
+        public Builder abortStatement(Input<BotAbortStatementArgs> abortStatement) {
             this.abortStatement = Objects.requireNonNull(abortStatement);
             return this;
         }
 
-        public Builder setAbortStatement(BotAbortStatementArgs abortStatement) {
+        public Builder abortStatement(BotAbortStatementArgs abortStatement) {
             this.abortStatement = Input.of(Objects.requireNonNull(abortStatement));
             return this;
         }
 
-        public Builder setChildDirected(Input<Boolean> childDirected) {
+        public Builder childDirected(Input<Boolean> childDirected) {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
 
-        public Builder setChildDirected(Boolean childDirected) {
+        public Builder childDirected(Boolean childDirected) {
             this.childDirected = Input.of(Objects.requireNonNull(childDirected));
             return this;
         }
 
-        public Builder setClarificationPrompt(@Nullable Input<BotClarificationPromptArgs> clarificationPrompt) {
+        public Builder clarificationPrompt(@Nullable Input<BotClarificationPromptArgs> clarificationPrompt) {
             this.clarificationPrompt = clarificationPrompt;
             return this;
         }
 
-        public Builder setClarificationPrompt(@Nullable BotClarificationPromptArgs clarificationPrompt) {
+        public Builder clarificationPrompt(@Nullable BotClarificationPromptArgs clarificationPrompt) {
             this.clarificationPrompt = Input.ofNullable(clarificationPrompt);
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Boolean createVersion) {
+        public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Input.ofNullable(createVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDetectSentiment(@Nullable Input<Boolean> detectSentiment) {
+        public Builder detectSentiment(@Nullable Input<Boolean> detectSentiment) {
             this.detectSentiment = detectSentiment;
             return this;
         }
 
-        public Builder setDetectSentiment(@Nullable Boolean detectSentiment) {
+        public Builder detectSentiment(@Nullable Boolean detectSentiment) {
             this.detectSentiment = Input.ofNullable(detectSentiment);
             return this;
         }
 
-        public Builder setEnableModelImprovements(@Nullable Input<Boolean> enableModelImprovements) {
+        public Builder enableModelImprovements(@Nullable Input<Boolean> enableModelImprovements) {
             this.enableModelImprovements = enableModelImprovements;
             return this;
         }
 
-        public Builder setEnableModelImprovements(@Nullable Boolean enableModelImprovements) {
+        public Builder enableModelImprovements(@Nullable Boolean enableModelImprovements) {
             this.enableModelImprovements = Input.ofNullable(enableModelImprovements);
             return this;
         }
 
-        public Builder setIdleSessionTtlInSeconds(@Nullable Input<Integer> idleSessionTtlInSeconds) {
+        public Builder idleSessionTtlInSeconds(@Nullable Input<Integer> idleSessionTtlInSeconds) {
             this.idleSessionTtlInSeconds = idleSessionTtlInSeconds;
             return this;
         }
 
-        public Builder setIdleSessionTtlInSeconds(@Nullable Integer idleSessionTtlInSeconds) {
+        public Builder idleSessionTtlInSeconds(@Nullable Integer idleSessionTtlInSeconds) {
             this.idleSessionTtlInSeconds = Input.ofNullable(idleSessionTtlInSeconds);
             return this;
         }
 
-        public Builder setIntents(Input<List<BotIntentArgs>> intents) {
+        public Builder intents(Input<List<BotIntentArgs>> intents) {
             this.intents = Objects.requireNonNull(intents);
             return this;
         }
 
-        public Builder setIntents(List<BotIntentArgs> intents) {
+        public Builder intents(List<BotIntentArgs> intents) {
             this.intents = Input.of(Objects.requireNonNull(intents));
             return this;
         }
 
-        public Builder setLocale(@Nullable Input<String> locale) {
+        public Builder locale(@Nullable Input<String> locale) {
             this.locale = locale;
             return this;
         }
 
-        public Builder setLocale(@Nullable String locale) {
+        public Builder locale(@Nullable String locale) {
             this.locale = Input.ofNullable(locale);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNluIntentConfidenceThreshold(@Nullable Input<Double> nluIntentConfidenceThreshold) {
+        public Builder nluIntentConfidenceThreshold(@Nullable Input<Double> nluIntentConfidenceThreshold) {
             this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
             return this;
         }
 
-        public Builder setNluIntentConfidenceThreshold(@Nullable Double nluIntentConfidenceThreshold) {
+        public Builder nluIntentConfidenceThreshold(@Nullable Double nluIntentConfidenceThreshold) {
             this.nluIntentConfidenceThreshold = Input.ofNullable(nluIntentConfidenceThreshold);
             return this;
         }
 
-        public Builder setProcessBehavior(@Nullable Input<String> processBehavior) {
+        public Builder processBehavior(@Nullable Input<String> processBehavior) {
             this.processBehavior = processBehavior;
             return this;
         }
 
-        public Builder setProcessBehavior(@Nullable String processBehavior) {
+        public Builder processBehavior(@Nullable String processBehavior) {
             this.processBehavior = Input.ofNullable(processBehavior);
             return this;
         }
 
-        public Builder setVoiceId(@Nullable Input<String> voiceId) {
+        public Builder voiceId(@Nullable Input<String> voiceId) {
             this.voiceId = voiceId;
             return this;
         }
 
-        public Builder setVoiceId(@Nullable String voiceId) {
+        public Builder voiceId(@Nullable String voiceId) {
             this.voiceId = Input.ofNullable(voiceId);
             return this;
         }

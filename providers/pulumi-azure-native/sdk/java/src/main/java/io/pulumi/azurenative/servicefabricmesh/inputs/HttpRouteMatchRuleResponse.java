@@ -76,12 +76,12 @@ public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.Invoke
     	      this.path = defaults.path;
         }
 
-        public Builder setHeaders(@Nullable List<HttpRouteMatchHeaderResponse> headers) {
+        public Builder headers(@Nullable List<HttpRouteMatchHeaderResponse> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setPath(HttpRouteMatchPathResponse path) {
+        public Builder path(HttpRouteMatchPathResponse path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

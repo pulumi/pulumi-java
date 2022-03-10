@@ -102,42 +102,42 @@ public final class TagByProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagId = defaults.tagId;
         }
 
-        public Builder setProductId(Input<String> productId) {
+        public Builder productId(Input<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Input.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTagId(@Nullable Input<String> tagId) {
+        public Builder tagId(@Nullable Input<String> tagId) {
             this.tagId = tagId;
             return this;
         }
 
-        public Builder setTagId(@Nullable String tagId) {
+        public Builder tagId(@Nullable String tagId) {
             this.tagId = Input.ofNullable(tagId);
             return this;
         }

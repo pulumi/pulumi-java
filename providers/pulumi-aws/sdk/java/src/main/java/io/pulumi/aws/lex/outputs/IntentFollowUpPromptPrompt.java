@@ -94,17 +94,17 @@ public final class IntentFollowUpPromptPrompt {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMaxAttempts(Integer maxAttempts) {
+        public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
 
-        public Builder setMessages(List<IntentFollowUpPromptPromptMessage> messages) {
+        public Builder messages(List<IntentFollowUpPromptPromptMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

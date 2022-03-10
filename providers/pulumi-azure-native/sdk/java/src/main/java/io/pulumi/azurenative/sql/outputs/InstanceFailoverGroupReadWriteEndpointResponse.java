@@ -68,12 +68,12 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse {
     	      this.failoverWithDataLossGracePeriodMinutes = defaults.failoverWithDataLossGracePeriodMinutes;
         }
 
-        public Builder setFailoverPolicy(String failoverPolicy) {
+        public Builder failoverPolicy(String failoverPolicy) {
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
 
-        public Builder setFailoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
+        public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
             this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
         }

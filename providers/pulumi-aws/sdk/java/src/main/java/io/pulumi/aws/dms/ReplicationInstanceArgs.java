@@ -282,152 +282,152 @@ public final class ReplicationInstanceArgs extends io.pulumi.resources.ResourceA
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setAllocatedStorage(@Nullable Input<Integer> allocatedStorage) {
+        public Builder allocatedStorage(@Nullable Input<Integer> allocatedStorage) {
             this.allocatedStorage = allocatedStorage;
             return this;
         }
 
-        public Builder setAllocatedStorage(@Nullable Integer allocatedStorage) {
+        public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
             this.allocatedStorage = Input.ofNullable(allocatedStorage);
             return this;
         }
 
-        public Builder setAllowMajorVersionUpgrade(@Nullable Input<Boolean> allowMajorVersionUpgrade) {
+        public Builder allowMajorVersionUpgrade(@Nullable Input<Boolean> allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
             return this;
         }
 
-        public Builder setAllowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
+        public Builder allowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
             this.allowMajorVersionUpgrade = Input.ofNullable(allowMajorVersionUpgrade);
             return this;
         }
 
-        public Builder setApplyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
-        public Builder setApplyImmediately(@Nullable Boolean applyImmediately) {
+        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Input.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Input<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setMultiAz(@Nullable Input<Boolean> multiAz) {
+        public Builder multiAz(@Nullable Input<Boolean> multiAz) {
             this.multiAz = multiAz;
             return this;
         }
 
-        public Builder setMultiAz(@Nullable Boolean multiAz) {
+        public Builder multiAz(@Nullable Boolean multiAz) {
             this.multiAz = Input.ofNullable(multiAz);
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder setReplicationInstanceClass(Input<String> replicationInstanceClass) {
+        public Builder replicationInstanceClass(Input<String> replicationInstanceClass) {
             this.replicationInstanceClass = Objects.requireNonNull(replicationInstanceClass);
             return this;
         }
 
-        public Builder setReplicationInstanceClass(String replicationInstanceClass) {
+        public Builder replicationInstanceClass(String replicationInstanceClass) {
             this.replicationInstanceClass = Input.of(Objects.requireNonNull(replicationInstanceClass));
             return this;
         }
 
-        public Builder setReplicationInstanceId(Input<String> replicationInstanceId) {
+        public Builder replicationInstanceId(Input<String> replicationInstanceId) {
             this.replicationInstanceId = Objects.requireNonNull(replicationInstanceId);
             return this;
         }
 
-        public Builder setReplicationInstanceId(String replicationInstanceId) {
+        public Builder replicationInstanceId(String replicationInstanceId) {
             this.replicationInstanceId = Input.of(Objects.requireNonNull(replicationInstanceId));
             return this;
         }
 
-        public Builder setReplicationSubnetGroupId(@Nullable Input<String> replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(@Nullable Input<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = replicationSubnetGroupId;
             return this;
         }
 
-        public Builder setReplicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Input.ofNullable(replicationSubnetGroupId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
             return this;
         }

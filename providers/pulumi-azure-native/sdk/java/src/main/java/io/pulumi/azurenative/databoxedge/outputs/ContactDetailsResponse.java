@@ -98,22 +98,22 @@ public final class ContactDetailsResponse {
     	      this.phone = defaults.phone;
         }
 
-        public Builder setCompanyName(String companyName) {
+        public Builder companyName(String companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
 
-        public Builder setContactPerson(String contactPerson) {
+        public Builder contactPerson(String contactPerson) {
             this.contactPerson = Objects.requireNonNull(contactPerson);
             return this;
         }
 
-        public Builder setEmailList(List<String> emailList) {
+        public Builder emailList(List<String> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }

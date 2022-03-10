@@ -81,17 +81,17 @@ public final class ScaleCapacityResponse {
     	      this.minimum = defaults.minimum;
         }
 
-        public Builder set$default(String $default) {
+        public Builder $default(String $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
-        public Builder setMaximum(String maximum) {
+        public Builder maximum(String maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
-        public Builder setMinimum(String minimum) {
+        public Builder minimum(String minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }

@@ -67,12 +67,12 @@ public final class BucketNoncurrentVersionExpiration {
     	      this.noncurrentDays = defaults.noncurrentDays;
         }
 
-        public Builder setNewerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
+        public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
-        public Builder setNoncurrentDays(Integer noncurrentDays) {
+        public Builder noncurrentDays(Integer noncurrentDays) {
             this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
             return this;
         }

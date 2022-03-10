@@ -133,62 +133,62 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setAscLocation(Input<String> ascLocation) {
+        public Builder ascLocation(Input<String> ascLocation) {
             this.ascLocation = Objects.requireNonNull(ascLocation);
             return this;
         }
 
-        public Builder setAscLocation(String ascLocation) {
+        public Builder ascLocation(String ascLocation) {
             this.ascLocation = Input.of(Objects.requireNonNull(ascLocation));
             return this;
         }
 
-        public Builder setJitNetworkAccessPolicyName(@Nullable Input<String> jitNetworkAccessPolicyName) {
+        public Builder jitNetworkAccessPolicyName(@Nullable Input<String> jitNetworkAccessPolicyName) {
             this.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
             return this;
         }
 
-        public Builder setJitNetworkAccessPolicyName(@Nullable String jitNetworkAccessPolicyName) {
+        public Builder jitNetworkAccessPolicyName(@Nullable String jitNetworkAccessPolicyName) {
             this.jitNetworkAccessPolicyName = Input.ofNullable(jitNetworkAccessPolicyName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setRequests(@Nullable Input<List<JitNetworkAccessRequestArgs>> requests) {
+        public Builder requests(@Nullable Input<List<JitNetworkAccessRequestArgs>> requests) {
             this.requests = requests;
             return this;
         }
 
-        public Builder setRequests(@Nullable List<JitNetworkAccessRequestArgs> requests) {
+        public Builder requests(@Nullable List<JitNetworkAccessRequestArgs> requests) {
             this.requests = Input.ofNullable(requests);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVirtualMachines(Input<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines) {
+        public Builder virtualMachines(Input<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
 
-        public Builder setVirtualMachines(List<JitNetworkAccessPolicyVirtualMachineArgs> virtualMachines) {
+        public Builder virtualMachines(List<JitNetworkAccessPolicyVirtualMachineArgs> virtualMachines) {
             this.virtualMachines = Input.of(Objects.requireNonNull(virtualMachines));
             return this;
         }

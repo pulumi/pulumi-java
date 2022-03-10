@@ -70,12 +70,12 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis {
     	      this.monitoringInterval = defaults.monitoringInterval;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setMonitoringInterval(@Nullable String monitoringInterval) {
+        public Builder monitoringInterval(@Nullable String monitoringInterval) {
             this.monitoringInterval = monitoringInterval;
             return this;
         }

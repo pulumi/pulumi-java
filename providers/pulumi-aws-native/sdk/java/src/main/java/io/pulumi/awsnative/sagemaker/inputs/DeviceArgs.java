@@ -90,32 +90,32 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iotThingName = defaults.iotThingName;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setIotThingName(@Nullable Input<String> iotThingName) {
+        public Builder iotThingName(@Nullable Input<String> iotThingName) {
             this.iotThingName = iotThingName;
             return this;
         }
 
-        public Builder setIotThingName(@Nullable String iotThingName) {
+        public Builder iotThingName(@Nullable String iotThingName) {
             this.iotThingName = Input.ofNullable(iotThingName);
             return this;
         }

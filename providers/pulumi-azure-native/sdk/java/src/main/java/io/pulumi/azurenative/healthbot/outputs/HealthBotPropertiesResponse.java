@@ -65,12 +65,12 @@ public final class HealthBotPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setBotManagementPortalLink(String botManagementPortalLink) {
+        public Builder botManagementPortalLink(String botManagementPortalLink) {
             this.botManagementPortalLink = Objects.requireNonNull(botManagementPortalLink);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

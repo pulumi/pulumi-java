@@ -163,72 +163,72 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAlternativeNameServerConfig(@Nullable Input<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(@Nullable Input<PolicyAlternativeNameServerConfigGetArgs> alternativeNameServerConfig) {
             this.alternativeNameServerConfig = alternativeNameServerConfig;
             return this;
         }
 
-        public Builder setAlternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigGetArgs alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(@Nullable PolicyAlternativeNameServerConfigGetArgs alternativeNameServerConfig) {
             this.alternativeNameServerConfig = Input.ofNullable(alternativeNameServerConfig);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableInboundForwarding(@Nullable Input<Boolean> enableInboundForwarding) {
+        public Builder enableInboundForwarding(@Nullable Input<Boolean> enableInboundForwarding) {
             this.enableInboundForwarding = enableInboundForwarding;
             return this;
         }
 
-        public Builder setEnableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
+        public Builder enableInboundForwarding(@Nullable Boolean enableInboundForwarding) {
             this.enableInboundForwarding = Input.ofNullable(enableInboundForwarding);
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Boolean enableLogging) {
+        public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Input.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworks(@Nullable Input<List<PolicyNetworkGetArgs>> networks) {
+        public Builder networks(@Nullable Input<List<PolicyNetworkGetArgs>> networks) {
             this.networks = networks;
             return this;
         }
 
-        public Builder setNetworks(@Nullable List<PolicyNetworkGetArgs> networks) {
+        public Builder networks(@Nullable List<PolicyNetworkGetArgs> networks) {
             this.networks = Input.ofNullable(networks);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

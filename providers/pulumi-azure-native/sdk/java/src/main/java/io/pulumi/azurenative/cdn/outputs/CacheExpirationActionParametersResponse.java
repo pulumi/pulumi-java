@@ -91,22 +91,22 @@ public final class CacheExpirationActionParametersResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCacheBehavior(String cacheBehavior) {
+        public Builder cacheBehavior(String cacheBehavior) {
             this.cacheBehavior = Objects.requireNonNull(cacheBehavior);
             return this;
         }
 
-        public Builder setCacheDuration(@Nullable String cacheDuration) {
+        public Builder cacheDuration(@Nullable String cacheDuration) {
             this.cacheDuration = cacheDuration;
             return this;
         }
 
-        public Builder setCacheType(String cacheType) {
+        public Builder cacheType(String cacheType) {
             this.cacheType = Objects.requireNonNull(cacheType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

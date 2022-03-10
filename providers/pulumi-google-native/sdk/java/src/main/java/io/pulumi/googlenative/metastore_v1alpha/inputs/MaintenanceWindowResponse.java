@@ -73,12 +73,12 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     	      this.hourOfDay = defaults.hourOfDay;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setHourOfDay(Integer hourOfDay) {
+        public Builder hourOfDay(Integer hourOfDay) {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }

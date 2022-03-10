@@ -211,57 +211,57 @@ public final class AccessReviewHistoryInstanceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDownloadUri(String downloadUri) {
+        public Builder downloadUri(String downloadUri) {
             this.downloadUri = Objects.requireNonNull(downloadUri);
             return this;
         }
 
-        public Builder setExpiration(@Nullable String expiration) {
+        public Builder expiration(@Nullable String expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setFulfilledDateTime(@Nullable String fulfilledDateTime) {
+        public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
             this.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
+        public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
 
-        public Builder setReviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
+        public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
 
-        public Builder setRunDateTime(@Nullable String runDateTime) {
+        public Builder runDateTime(@Nullable String runDateTime) {
             this.runDateTime = runDateTime;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -55,7 +55,7 @@ public final class SourceScoringConfigResponse extends io.pulumi.resources.Invok
     	      this.sourceImportance = defaults.sourceImportance;
         }
 
-        public Builder setSourceImportance(String sourceImportance) {
+        public Builder sourceImportance(String sourceImportance) {
             this.sourceImportance = Objects.requireNonNull(sourceImportance);
             return this;
         }

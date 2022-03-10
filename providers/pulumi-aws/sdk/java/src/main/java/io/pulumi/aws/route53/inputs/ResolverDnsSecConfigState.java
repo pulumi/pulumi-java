@@ -102,42 +102,42 @@ public final class ResolverDnsSecConfigState extends io.pulumi.resources.Resourc
     	      this.validationStatus = defaults.validationStatus;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setValidationStatus(@Nullable Input<String> validationStatus) {
+        public Builder validationStatus(@Nullable Input<String> validationStatus) {
             this.validationStatus = validationStatus;
             return this;
         }
 
-        public Builder setValidationStatus(@Nullable String validationStatus) {
+        public Builder validationStatus(@Nullable String validationStatus) {
             this.validationStatus = Input.ofNullable(validationStatus);
             return this;
         }

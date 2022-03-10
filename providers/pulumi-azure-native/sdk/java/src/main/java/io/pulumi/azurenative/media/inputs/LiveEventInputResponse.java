@@ -125,27 +125,27 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
     	      this.streamingProtocol = defaults.streamingProtocol;
         }
 
-        public Builder setAccessControl(@Nullable LiveEventInputAccessControlResponse accessControl) {
+        public Builder accessControl(@Nullable LiveEventInputAccessControlResponse accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
+        public Builder endpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setKeyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
+        public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
             this.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
 
-        public Builder setStreamingProtocol(String streamingProtocol) {
+        public Builder streamingProtocol(String streamingProtocol) {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }

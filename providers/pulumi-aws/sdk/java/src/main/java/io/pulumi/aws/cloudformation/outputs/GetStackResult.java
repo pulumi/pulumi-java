@@ -221,62 +221,62 @@ public final class GetStackResult {
     	      this.timeoutInMinutes = defaults.timeoutInMinutes;
         }
 
-        public Builder setCapabilities(List<String> capabilities) {
+        public Builder capabilities(List<String> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisableRollback(Boolean disableRollback) {
+        public Builder disableRollback(Boolean disableRollback) {
             this.disableRollback = Objects.requireNonNull(disableRollback);
             return this;
         }
 
-        public Builder setIamRoleArn(String iamRoleArn) {
+        public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationArns(List<String> notificationArns) {
+        public Builder notificationArns(List<String> notificationArns) {
             this.notificationArns = Objects.requireNonNull(notificationArns);
             return this;
         }
 
-        public Builder setOutputs(Map<String,String> outputs) {
+        public Builder outputs(Map<String,String> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setParameters(Map<String,String> parameters) {
+        public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTemplateBody(String templateBody) {
+        public Builder templateBody(String templateBody) {
             this.templateBody = Objects.requireNonNull(templateBody);
             return this;
         }
 
-        public Builder setTimeoutInMinutes(Integer timeoutInMinutes) {
+        public Builder timeoutInMinutes(Integer timeoutInMinutes) {
             this.timeoutInMinutes = Objects.requireNonNull(timeoutInMinutes);
             return this;
         }

@@ -65,12 +65,12 @@ public final class GetLaunchConfigurationEphemeralBlockDevice {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setVirtualName(String virtualName) {
+        public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }

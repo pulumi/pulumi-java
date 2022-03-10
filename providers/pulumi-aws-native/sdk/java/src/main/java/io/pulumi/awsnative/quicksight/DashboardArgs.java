@@ -192,102 +192,102 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder setAwsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Input<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder setDashboardId(Input<String> dashboardId) {
+        public Builder dashboardId(Input<String> dashboardId) {
             this.dashboardId = Objects.requireNonNull(dashboardId);
             return this;
         }
 
-        public Builder setDashboardId(String dashboardId) {
+        public Builder dashboardId(String dashboardId) {
             this.dashboardId = Input.of(Objects.requireNonNull(dashboardId));
             return this;
         }
 
-        public Builder setDashboardPublishOptions(@Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions) {
+        public Builder dashboardPublishOptions(@Nullable Input<DashboardPublishOptionsArgs> dashboardPublishOptions) {
             this.dashboardPublishOptions = dashboardPublishOptions;
             return this;
         }
 
-        public Builder setDashboardPublishOptions(@Nullable DashboardPublishOptionsArgs dashboardPublishOptions) {
+        public Builder dashboardPublishOptions(@Nullable DashboardPublishOptionsArgs dashboardPublishOptions) {
             this.dashboardPublishOptions = Input.ofNullable(dashboardPublishOptions);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<DashboardParametersArgs> parameters) {
+        public Builder parameters(@Nullable Input<DashboardParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable DashboardParametersArgs parameters) {
+        public Builder parameters(@Nullable DashboardParametersArgs parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<DashboardResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<DashboardResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<DashboardResourcePermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<DashboardResourcePermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setSourceEntity(Input<DashboardSourceEntityArgs> sourceEntity) {
+        public Builder sourceEntity(Input<DashboardSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
 
-        public Builder setSourceEntity(DashboardSourceEntityArgs sourceEntity) {
+        public Builder sourceEntity(DashboardSourceEntityArgs sourceEntity) {
             this.sourceEntity = Input.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DashboardTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DashboardTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DashboardTagArgs> tags) {
+        public Builder tags(@Nullable List<DashboardTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThemeArn(@Nullable Input<String> themeArn) {
+        public Builder themeArn(@Nullable Input<String> themeArn) {
             this.themeArn = themeArn;
             return this;
         }
 
-        public Builder setThemeArn(@Nullable String themeArn) {
+        public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = Input.ofNullable(themeArn);
             return this;
         }
 
-        public Builder setVersionDescription(@Nullable Input<String> versionDescription) {
+        public Builder versionDescription(@Nullable Input<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
 
-        public Builder setVersionDescription(@Nullable String versionDescription) {
+        public Builder versionDescription(@Nullable String versionDescription) {
             this.versionDescription = Input.ofNullable(versionDescription);
             return this;
         }

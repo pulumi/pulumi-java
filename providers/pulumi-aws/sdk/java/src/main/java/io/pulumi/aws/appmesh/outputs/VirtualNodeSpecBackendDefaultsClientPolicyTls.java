@@ -103,22 +103,22 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTls {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate certificate) {
+        public Builder certificate(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setEnforce(@Nullable Boolean enforce) {
+        public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<Integer> ports) {
+        public Builder ports(@Nullable List<Integer> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setValidation(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation validation) {
+        public Builder validation(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidation validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }

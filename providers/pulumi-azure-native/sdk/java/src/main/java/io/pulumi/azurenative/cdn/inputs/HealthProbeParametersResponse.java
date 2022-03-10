@@ -107,22 +107,22 @@ public final class HealthProbeParametersResponse extends io.pulumi.resources.Inv
     	      this.probeRequestType = defaults.probeRequestType;
         }
 
-        public Builder setProbeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
+        public Builder probeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
             this.probeIntervalInSeconds = probeIntervalInSeconds;
             return this;
         }
 
-        public Builder setProbePath(@Nullable String probePath) {
+        public Builder probePath(@Nullable String probePath) {
             this.probePath = probePath;
             return this;
         }
 
-        public Builder setProbeProtocol(@Nullable String probeProtocol) {
+        public Builder probeProtocol(@Nullable String probeProtocol) {
             this.probeProtocol = probeProtocol;
             return this;
         }
 
-        public Builder setProbeRequestType(@Nullable String probeRequestType) {
+        public Builder probeRequestType(@Nullable String probeRequestType) {
             this.probeRequestType = probeRequestType;
             return this;
         }

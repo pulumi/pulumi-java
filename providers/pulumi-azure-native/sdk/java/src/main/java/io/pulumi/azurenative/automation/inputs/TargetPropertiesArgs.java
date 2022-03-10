@@ -76,22 +76,22 @@ public final class TargetPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.nonAzureQueries = defaults.nonAzureQueries;
         }
 
-        public Builder setAzureQueries(@Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries) {
+        public Builder azureQueries(@Nullable Input<List<AzureQueryPropertiesArgs>> azureQueries) {
             this.azureQueries = azureQueries;
             return this;
         }
 
-        public Builder setAzureQueries(@Nullable List<AzureQueryPropertiesArgs> azureQueries) {
+        public Builder azureQueries(@Nullable List<AzureQueryPropertiesArgs> azureQueries) {
             this.azureQueries = Input.ofNullable(azureQueries);
             return this;
         }
 
-        public Builder setNonAzureQueries(@Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries) {
+        public Builder nonAzureQueries(@Nullable Input<List<NonAzureQueryPropertiesArgs>> nonAzureQueries) {
             this.nonAzureQueries = nonAzureQueries;
             return this;
         }
 
-        public Builder setNonAzureQueries(@Nullable List<NonAzureQueryPropertiesArgs> nonAzureQueries) {
+        public Builder nonAzureQueries(@Nullable List<NonAzureQueryPropertiesArgs> nonAzureQueries) {
             this.nonAzureQueries = Input.ofNullable(nonAzureQueries);
             return this;
         }

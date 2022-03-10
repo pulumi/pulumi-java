@@ -132,62 +132,62 @@ public final class TunnelInstanceIAMBindingArgs extends io.pulumi.resources.Reso
     	      this.zone = defaults.zone;
         }
 
-        public Builder setCondition(@Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Input<TunnelInstanceIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable TunnelInstanceIAMBindingConditionArgs condition) {
+        public Builder condition(@Nullable TunnelInstanceIAMBindingConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setInstance(Input<String> instance) {
+        public Builder instance(Input<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Input.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder setMembers(Input<List<String>> members) {
+        public Builder members(Input<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

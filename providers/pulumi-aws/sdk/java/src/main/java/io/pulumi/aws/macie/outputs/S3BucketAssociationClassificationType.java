@@ -71,12 +71,12 @@ public final class S3BucketAssociationClassificationType {
     	      this.oneTime = defaults.oneTime;
         }
 
-        public Builder setContinuous(@Nullable String continuous) {
+        public Builder continuous(@Nullable String continuous) {
             this.continuous = continuous;
             return this;
         }
 
-        public Builder setOneTime(@Nullable String oneTime) {
+        public Builder oneTime(@Nullable String oneTime) {
             this.oneTime = oneTime;
             return this;
         }

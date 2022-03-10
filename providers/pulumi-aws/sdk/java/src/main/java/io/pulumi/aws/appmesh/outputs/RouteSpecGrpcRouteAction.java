@@ -51,7 +51,7 @@ public final class RouteSpecGrpcRouteAction {
     	      this.weightedTargets = defaults.weightedTargets;
         }
 
-        public Builder setWeightedTargets(List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets) {
+        public Builder weightedTargets(List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets) {
             this.weightedTargets = Objects.requireNonNull(weightedTargets);
             return this;
         }

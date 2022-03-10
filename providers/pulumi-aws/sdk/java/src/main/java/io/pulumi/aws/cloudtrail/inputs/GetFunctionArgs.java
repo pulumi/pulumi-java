@@ -68,12 +68,12 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.stage = defaults.stage;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }

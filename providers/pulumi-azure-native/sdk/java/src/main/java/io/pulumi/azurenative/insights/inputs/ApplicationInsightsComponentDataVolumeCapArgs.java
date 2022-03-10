@@ -108,42 +108,42 @@ public final class ApplicationInsightsComponentDataVolumeCapArgs extends io.pulu
     	      this.warningThreshold = defaults.warningThreshold;
         }
 
-        public Builder setCap(@Nullable Input<Double> cap) {
+        public Builder cap(@Nullable Input<Double> cap) {
             this.cap = cap;
             return this;
         }
 
-        public Builder setCap(@Nullable Double cap) {
+        public Builder cap(@Nullable Double cap) {
             this.cap = Input.ofNullable(cap);
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitCap(@Nullable Input<Boolean> stopSendNotificationWhenHitCap) {
+        public Builder stopSendNotificationWhenHitCap(@Nullable Input<Boolean> stopSendNotificationWhenHitCap) {
             this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
+        public Builder stopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
             this.stopSendNotificationWhenHitCap = Input.ofNullable(stopSendNotificationWhenHitCap);
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitThreshold(@Nullable Input<Boolean> stopSendNotificationWhenHitThreshold) {
+        public Builder stopSendNotificationWhenHitThreshold(@Nullable Input<Boolean> stopSendNotificationWhenHitThreshold) {
             this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
+        public Builder stopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
             this.stopSendNotificationWhenHitThreshold = Input.ofNullable(stopSendNotificationWhenHitThreshold);
             return this;
         }
 
-        public Builder setWarningThreshold(@Nullable Input<Integer> warningThreshold) {
+        public Builder warningThreshold(@Nullable Input<Integer> warningThreshold) {
             this.warningThreshold = warningThreshold;
             return this;
         }
 
-        public Builder setWarningThreshold(@Nullable Integer warningThreshold) {
+        public Builder warningThreshold(@Nullable Integer warningThreshold) {
             this.warningThreshold = Input.ofNullable(warningThreshold);
             return this;
         }

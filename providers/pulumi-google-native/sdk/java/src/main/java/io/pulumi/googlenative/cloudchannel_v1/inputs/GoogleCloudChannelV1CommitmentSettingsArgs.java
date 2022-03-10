@@ -57,12 +57,12 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
     	      this.renewalSettings = defaults.renewalSettings;
         }
 
-        public Builder setRenewalSettings(@Nullable Input<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings) {
+        public Builder renewalSettings(@Nullable Input<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings) {
             this.renewalSettings = renewalSettings;
             return this;
         }
 
-        public Builder setRenewalSettings(@Nullable GoogleCloudChannelV1RenewalSettingsArgs renewalSettings) {
+        public Builder renewalSettings(@Nullable GoogleCloudChannelV1RenewalSettingsArgs renewalSettings) {
             this.renewalSettings = Input.ofNullable(renewalSettings);
             return this;
         }

@@ -68,12 +68,12 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.codeContentType = defaults.codeContentType;
         }
 
-        public Builder setCodeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent) {
+        public Builder codeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent) {
             this.codeContent = codeContent;
             return this;
         }
 
-        public Builder setCodeContentType(String codeContentType) {
+        public Builder codeContentType(String codeContentType) {
             this.codeContentType = Objects.requireNonNull(codeContentType);
             return this;
         }

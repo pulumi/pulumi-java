@@ -67,12 +67,12 @@ public final class ClusterClientAuthenticationSasl {
     	      this.scram = defaults.scram;
         }
 
-        public Builder setIam(@Nullable Boolean iam) {
+        public Builder iam(@Nullable Boolean iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder setScram(@Nullable Boolean scram) {
+        public Builder scram(@Nullable Boolean scram) {
             this.scram = scram;
             return this;
         }

@@ -49,7 +49,7 @@ public final class SourceInstanceParamsResponse {
     	      this.diskConfigs = defaults.diskConfigs;
         }
 
-        public Builder setDiskConfigs(List<DiskInstantiationConfigResponse> diskConfigs) {
+        public Builder diskConfigs(List<DiskInstantiationConfigResponse> diskConfigs) {
             this.diskConfigs = Objects.requireNonNull(diskConfigs);
             return this;
         }

@@ -101,22 +101,22 @@ public final class OsProfileResponse {
     	      this.linuxConfiguration = defaults.linuxConfiguration;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomDataRequired(@Nullable Boolean customDataRequired) {
+        public Builder customDataRequired(@Nullable Boolean customDataRequired) {
             this.customDataRequired = customDataRequired;
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }

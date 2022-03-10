@@ -248,132 +248,132 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCompatibility(@Nullable Input<String> compatibility) {
+        public Builder compatibility(@Nullable Input<String> compatibility) {
             this.compatibility = compatibility;
             return this;
         }
 
-        public Builder setCompatibility(@Nullable String compatibility) {
+        public Builder compatibility(@Nullable String compatibility) {
             this.compatibility = Input.ofNullable(compatibility);
             return this;
         }
 
-        public Builder setDataFormat(@Nullable Input<String> dataFormat) {
+        public Builder dataFormat(@Nullable Input<String> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
 
-        public Builder setDataFormat(@Nullable String dataFormat) {
+        public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = Input.ofNullable(dataFormat);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLatestSchemaVersion(@Nullable Input<Integer> latestSchemaVersion) {
+        public Builder latestSchemaVersion(@Nullable Input<Integer> latestSchemaVersion) {
             this.latestSchemaVersion = latestSchemaVersion;
             return this;
         }
 
-        public Builder setLatestSchemaVersion(@Nullable Integer latestSchemaVersion) {
+        public Builder latestSchemaVersion(@Nullable Integer latestSchemaVersion) {
             this.latestSchemaVersion = Input.ofNullable(latestSchemaVersion);
             return this;
         }
 
-        public Builder setNextSchemaVersion(@Nullable Input<Integer> nextSchemaVersion) {
+        public Builder nextSchemaVersion(@Nullable Input<Integer> nextSchemaVersion) {
             this.nextSchemaVersion = nextSchemaVersion;
             return this;
         }
 
-        public Builder setNextSchemaVersion(@Nullable Integer nextSchemaVersion) {
+        public Builder nextSchemaVersion(@Nullable Integer nextSchemaVersion) {
             this.nextSchemaVersion = Input.ofNullable(nextSchemaVersion);
             return this;
         }
 
-        public Builder setRegistryArn(@Nullable Input<String> registryArn) {
+        public Builder registryArn(@Nullable Input<String> registryArn) {
             this.registryArn = registryArn;
             return this;
         }
 
-        public Builder setRegistryArn(@Nullable String registryArn) {
+        public Builder registryArn(@Nullable String registryArn) {
             this.registryArn = Input.ofNullable(registryArn);
             return this;
         }
 
-        public Builder setRegistryName(@Nullable Input<String> registryName) {
+        public Builder registryName(@Nullable Input<String> registryName) {
             this.registryName = registryName;
             return this;
         }
 
-        public Builder setRegistryName(@Nullable String registryName) {
+        public Builder registryName(@Nullable String registryName) {
             this.registryName = Input.ofNullable(registryName);
             return this;
         }
 
-        public Builder setSchemaCheckpoint(@Nullable Input<Integer> schemaCheckpoint) {
+        public Builder schemaCheckpoint(@Nullable Input<Integer> schemaCheckpoint) {
             this.schemaCheckpoint = schemaCheckpoint;
             return this;
         }
 
-        public Builder setSchemaCheckpoint(@Nullable Integer schemaCheckpoint) {
+        public Builder schemaCheckpoint(@Nullable Integer schemaCheckpoint) {
             this.schemaCheckpoint = Input.ofNullable(schemaCheckpoint);
             return this;
         }
 
-        public Builder setSchemaDefinition(@Nullable Input<String> schemaDefinition) {
+        public Builder schemaDefinition(@Nullable Input<String> schemaDefinition) {
             this.schemaDefinition = schemaDefinition;
             return this;
         }
 
-        public Builder setSchemaDefinition(@Nullable String schemaDefinition) {
+        public Builder schemaDefinition(@Nullable String schemaDefinition) {
             this.schemaDefinition = Input.ofNullable(schemaDefinition);
             return this;
         }
 
-        public Builder setSchemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Input<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
-        public Builder setSchemaName(@Nullable String schemaName) {
+        public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = Input.ofNullable(schemaName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

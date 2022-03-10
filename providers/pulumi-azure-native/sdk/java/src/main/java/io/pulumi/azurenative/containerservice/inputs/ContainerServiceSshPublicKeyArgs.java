@@ -56,12 +56,12 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
     	      this.keyData = defaults.keyData;
         }
 
-        public Builder setKeyData(Input<String> keyData) {
+        public Builder keyData(Input<String> keyData) {
             this.keyData = Objects.requireNonNull(keyData);
             return this;
         }
 
-        public Builder setKeyData(String keyData) {
+        public Builder keyData(String keyData) {
             this.keyData = Input.of(Objects.requireNonNull(keyData));
             return this;
         }

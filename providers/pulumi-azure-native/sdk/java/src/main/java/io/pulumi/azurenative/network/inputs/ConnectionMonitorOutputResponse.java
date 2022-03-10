@@ -75,12 +75,12 @@ public final class ConnectionMonitorOutputResponse extends io.pulumi.resources.I
     	      this.workspaceSettings = defaults.workspaceSettings;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setWorkspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
+        public Builder workspaceSettings(@Nullable ConnectionMonitorWorkspaceSettingsResponse workspaceSettings) {
             this.workspaceSettings = workspaceSettings;
             return this;
         }

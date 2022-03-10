@@ -77,22 +77,22 @@ public final class EncryptionServiceArgs extends io.pulumi.resources.ResourceArg
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<Either<String,KeyType>> keyType) {
+        public Builder keyType(@Nullable Input<Either<String,KeyType>> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable Either<String,KeyType> keyType) {
+        public Builder keyType(@Nullable Either<String,KeyType> keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }

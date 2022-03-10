@@ -87,32 +87,32 @@ public final class AggregateAuthorizationArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

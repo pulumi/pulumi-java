@@ -132,32 +132,32 @@ public final class DirectLineSpeechChannelPropertiesResponse {
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder setCognitiveServiceRegion(String cognitiveServiceRegion) {
+        public Builder cognitiveServiceRegion(String cognitiveServiceRegion) {
             this.cognitiveServiceRegion = Objects.requireNonNull(cognitiveServiceRegion);
             return this;
         }
 
-        public Builder setCognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
+        public Builder cognitiveServiceSubscriptionKey(String cognitiveServiceSubscriptionKey) {
             this.cognitiveServiceSubscriptionKey = Objects.requireNonNull(cognitiveServiceSubscriptionKey);
             return this;
         }
 
-        public Builder setCustomSpeechModelId(@Nullable String customSpeechModelId) {
+        public Builder customSpeechModelId(@Nullable String customSpeechModelId) {
             this.customSpeechModelId = customSpeechModelId;
             return this;
         }
 
-        public Builder setCustomVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
+        public Builder customVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
             this.customVoiceDeploymentId = customVoiceDeploymentId;
             return this;
         }
 
-        public Builder setIsDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
+        public Builder isDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
             this.isDefaultBotForCogSvcAccount = isDefaultBotForCogSvcAccount;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }

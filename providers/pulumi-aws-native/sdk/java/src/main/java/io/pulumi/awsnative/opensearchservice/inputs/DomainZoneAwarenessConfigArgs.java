@@ -49,12 +49,12 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
     	      this.availabilityZoneCount = defaults.availabilityZoneCount;
         }
 
-        public Builder setAvailabilityZoneCount(@Nullable Input<Integer> availabilityZoneCount) {
+        public Builder availabilityZoneCount(@Nullable Input<Integer> availabilityZoneCount) {
             this.availabilityZoneCount = availabilityZoneCount;
             return this;
         }
 
-        public Builder setAvailabilityZoneCount(@Nullable Integer availabilityZoneCount) {
+        public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
             this.availabilityZoneCount = Input.ofNullable(availabilityZoneCount);
             return this;
         }

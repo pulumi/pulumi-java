@@ -97,22 +97,22 @@ public final class SecurityPolicyAssociationResponse {
     	      this.securityPolicyId = defaults.securityPolicyId;
         }
 
-        public Builder setAttachmentId(String attachmentId) {
+        public Builder attachmentId(String attachmentId) {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecurityPolicyId(String securityPolicyId) {
+        public Builder securityPolicyId(String securityPolicyId) {
             this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
             return this;
         }

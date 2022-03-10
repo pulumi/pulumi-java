@@ -49,7 +49,7 @@ public final class ColumnLayoutResponse {
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(List<ColumnResponse> columns) {
+        public Builder columns(List<ColumnResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }

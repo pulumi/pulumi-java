@@ -106,42 +106,42 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
     	      this.name = defaults.name;
         }
 
-        public Builder setCookieName(@Nullable Input<String> cookieName) {
+        public Builder cookieName(@Nullable Input<String> cookieName) {
             this.cookieName = cookieName;
             return this;
         }
 
-        public Builder setCookieName(@Nullable String cookieName) {
+        public Builder cookieName(@Nullable String cookieName) {
             this.cookieName = Input.ofNullable(cookieName);
             return this;
         }
 
-        public Builder setLbPort(@Nullable Input<Integer> lbPort) {
+        public Builder lbPort(@Nullable Input<Integer> lbPort) {
             this.lbPort = lbPort;
             return this;
         }
 
-        public Builder setLbPort(@Nullable Integer lbPort) {
+        public Builder lbPort(@Nullable Integer lbPort) {
             this.lbPort = Input.ofNullable(lbPort);
             return this;
         }
 
-        public Builder setLoadBalancer(@Nullable Input<String> loadBalancer) {
+        public Builder loadBalancer(@Nullable Input<String> loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }
 
-        public Builder setLoadBalancer(@Nullable String loadBalancer) {
+        public Builder loadBalancer(@Nullable String loadBalancer) {
             this.loadBalancer = Input.ofNullable(loadBalancer);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

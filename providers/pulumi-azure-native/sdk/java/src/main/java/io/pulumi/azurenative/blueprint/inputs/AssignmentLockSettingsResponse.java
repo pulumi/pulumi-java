@@ -91,17 +91,17 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
     	      this.mode = defaults.mode;
         }
 
-        public Builder setExcludedActions(@Nullable List<String> excludedActions) {
+        public Builder excludedActions(@Nullable List<String> excludedActions) {
             this.excludedActions = excludedActions;
             return this;
         }
 
-        public Builder setExcludedPrincipals(@Nullable List<String> excludedPrincipals) {
+        public Builder excludedPrincipals(@Nullable List<String> excludedPrincipals) {
             this.excludedPrincipals = excludedPrincipals;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

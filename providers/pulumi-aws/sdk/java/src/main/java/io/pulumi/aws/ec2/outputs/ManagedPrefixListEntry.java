@@ -67,12 +67,12 @@ public final class ManagedPrefixListEntry {
     	      this.description = defaults.description;
         }
 
-        public Builder setCidr(String cidr) {
+        public Builder cidr(String cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

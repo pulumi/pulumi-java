@@ -62,22 +62,22 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs extends io.pu
     	      this.updateVersion = defaults.updateVersion;
         }
 
-        public Builder setCurrentVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion) {
+        public Builder currentVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
+        public Builder currentVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs currentVersion) {
             this.currentVersion = Input.ofNullable(currentVersion);
             return this;
         }
 
-        public Builder setUpdateVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
+        public Builder updateVersion(@Nullable Input<TaskDefinitionLoRaWANGatewayVersionArgs> updateVersion) {
             this.updateVersion = updateVersion;
             return this;
         }
 
-        public Builder setUpdateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
+        public Builder updateVersion(@Nullable TaskDefinitionLoRaWANGatewayVersionArgs updateVersion) {
             this.updateVersion = Input.ofNullable(updateVersion);
             return this;
         }

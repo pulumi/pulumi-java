@@ -40,7 +40,7 @@ public final class FleetCertificateConfiguration {
     	      this.certificateType = defaults.certificateType;
         }
 
-        public Builder setCertificateType(FleetCertificateConfigurationCertificateType certificateType) {
+        public Builder certificateType(FleetCertificateConfigurationCertificateType certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }

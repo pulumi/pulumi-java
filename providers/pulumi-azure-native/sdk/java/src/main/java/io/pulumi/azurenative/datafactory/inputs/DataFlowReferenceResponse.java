@@ -108,22 +108,22 @@ public final class DataFlowReferenceResponse extends io.pulumi.resources.InvokeA
     	      this.type = defaults.type;
         }
 
-        public Builder setDatasetParameters(@Nullable Object datasetParameters) {
+        public Builder datasetParameters(@Nullable Object datasetParameters) {
             this.datasetParameters = datasetParameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setReferenceName(String referenceName) {
+        public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

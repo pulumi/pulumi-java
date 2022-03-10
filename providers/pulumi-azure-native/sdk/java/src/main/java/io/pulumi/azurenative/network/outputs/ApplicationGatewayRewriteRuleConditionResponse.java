@@ -100,22 +100,22 @@ public final class ApplicationGatewayRewriteRuleConditionResponse {
     	      this.variable = defaults.variable;
         }
 
-        public Builder setIgnoreCase(@Nullable Boolean ignoreCase) {
+        public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
-        public Builder setNegate(@Nullable Boolean negate) {
+        public Builder negate(@Nullable Boolean negate) {
             this.negate = negate;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setVariable(@Nullable String variable) {
+        public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
         }

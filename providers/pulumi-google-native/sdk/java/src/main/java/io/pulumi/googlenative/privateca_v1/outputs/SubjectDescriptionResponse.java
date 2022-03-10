@@ -131,32 +131,32 @@ public final class SubjectDescriptionResponse {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setHexSerialNumber(String hexSerialNumber) {
+        public Builder hexSerialNumber(String hexSerialNumber) {
             this.hexSerialNumber = Objects.requireNonNull(hexSerialNumber);
             return this;
         }
 
-        public Builder setLifetime(String lifetime) {
+        public Builder lifetime(String lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
 
-        public Builder setNotAfterTime(String notAfterTime) {
+        public Builder notAfterTime(String notAfterTime) {
             this.notAfterTime = Objects.requireNonNull(notAfterTime);
             return this;
         }
 
-        public Builder setNotBeforeTime(String notBeforeTime) {
+        public Builder notBeforeTime(String notBeforeTime) {
             this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
             return this;
         }
 
-        public Builder setSubject(SubjectResponse subject) {
+        public Builder subject(SubjectResponse subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubjectAltName(SubjectAltNamesResponse subjectAltName) {
+        public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }

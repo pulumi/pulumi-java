@@ -72,12 +72,12 @@ public final class CertificateConfigSubjectConfig {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setSubject(CertificateConfigSubjectConfigSubject subject) {
+        public Builder subject(CertificateConfigSubjectConfigSubject subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName) {
+        public Builder subjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }

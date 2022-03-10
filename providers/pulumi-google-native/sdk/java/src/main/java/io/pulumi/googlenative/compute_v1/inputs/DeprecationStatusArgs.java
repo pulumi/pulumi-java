@@ -123,52 +123,52 @@ public final class DeprecationStatusArgs extends io.pulumi.resources.ResourceArg
     	      this.state = defaults.state;
         }
 
-        public Builder setDeleted(@Nullable Input<String> deleted) {
+        public Builder deleted(@Nullable Input<String> deleted) {
             this.deleted = deleted;
             return this;
         }
 
-        public Builder setDeleted(@Nullable String deleted) {
+        public Builder deleted(@Nullable String deleted) {
             this.deleted = Input.ofNullable(deleted);
             return this;
         }
 
-        public Builder setDeprecated(@Nullable Input<String> deprecated) {
+        public Builder deprecated(@Nullable Input<String> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
-        public Builder setDeprecated(@Nullable String deprecated) {
+        public Builder deprecated(@Nullable String deprecated) {
             this.deprecated = Input.ofNullable(deprecated);
             return this;
         }
 
-        public Builder setObsolete(@Nullable Input<String> obsolete) {
+        public Builder obsolete(@Nullable Input<String> obsolete) {
             this.obsolete = obsolete;
             return this;
         }
 
-        public Builder setObsolete(@Nullable String obsolete) {
+        public Builder obsolete(@Nullable String obsolete) {
             this.obsolete = Input.ofNullable(obsolete);
             return this;
         }
 
-        public Builder setReplacement(@Nullable Input<String> replacement) {
+        public Builder replacement(@Nullable Input<String> replacement) {
             this.replacement = replacement;
             return this;
         }
 
-        public Builder setReplacement(@Nullable String replacement) {
+        public Builder replacement(@Nullable String replacement) {
             this.replacement = Input.ofNullable(replacement);
             return this;
         }
 
-        public Builder setState(@Nullable Input<DeprecationStatusState> state) {
+        public Builder state(@Nullable Input<DeprecationStatusState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable DeprecationStatusState state) {
+        public Builder state(@Nullable DeprecationStatusState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

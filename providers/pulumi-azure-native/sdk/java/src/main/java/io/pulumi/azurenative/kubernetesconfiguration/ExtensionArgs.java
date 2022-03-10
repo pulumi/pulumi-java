@@ -268,142 +268,142 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setClusterResourceName(Input<String> clusterResourceName) {
+        public Builder clusterResourceName(Input<String> clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
 
-        public Builder setClusterResourceName(String clusterResourceName) {
+        public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Input.of(Objects.requireNonNull(clusterResourceName));
             return this;
         }
 
-        public Builder setClusterRp(Input<String> clusterRp) {
+        public Builder clusterRp(Input<String> clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
 
-        public Builder setClusterRp(String clusterRp) {
+        public Builder clusterRp(String clusterRp) {
             this.clusterRp = Input.of(Objects.requireNonNull(clusterRp));
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Input<Map<String,String>> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Input<Map<String,String>> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = Input.ofNullable(configurationProtectedSettings);
             return this;
         }
 
-        public Builder setConfigurationSettings(@Nullable Input<Map<String,String>> configurationSettings) {
+        public Builder configurationSettings(@Nullable Input<Map<String,String>> configurationSettings) {
             this.configurationSettings = configurationSettings;
             return this;
         }
 
-        public Builder setConfigurationSettings(@Nullable Map<String,String> configurationSettings) {
+        public Builder configurationSettings(@Nullable Map<String,String> configurationSettings) {
             this.configurationSettings = Input.ofNullable(configurationSettings);
             return this;
         }
 
-        public Builder setExtensionInstanceName(@Nullable Input<String> extensionInstanceName) {
+        public Builder extensionInstanceName(@Nullable Input<String> extensionInstanceName) {
             this.extensionInstanceName = extensionInstanceName;
             return this;
         }
 
-        public Builder setExtensionInstanceName(@Nullable String extensionInstanceName) {
+        public Builder extensionInstanceName(@Nullable String extensionInstanceName) {
             this.extensionInstanceName = Input.ofNullable(extensionInstanceName);
             return this;
         }
 
-        public Builder setExtensionType(@Nullable Input<String> extensionType) {
+        public Builder extensionType(@Nullable Input<String> extensionType) {
             this.extensionType = extensionType;
             return this;
         }
 
-        public Builder setExtensionType(@Nullable String extensionType) {
+        public Builder extensionType(@Nullable String extensionType) {
             this.extensionType = Input.ofNullable(extensionType);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ConfigurationIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ConfigurationIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ConfigurationIdentityArgs identity) {
+        public Builder identity(@Nullable ConfigurationIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setReleaseTrain(@Nullable Input<String> releaseTrain) {
+        public Builder releaseTrain(@Nullable Input<String> releaseTrain) {
             this.releaseTrain = releaseTrain;
             return this;
         }
 
-        public Builder setReleaseTrain(@Nullable String releaseTrain) {
+        public Builder releaseTrain(@Nullable String releaseTrain) {
             this.releaseTrain = Input.ofNullable(releaseTrain);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScope(@Nullable Input<ScopeArgs> scope) {
+        public Builder scope(@Nullable Input<ScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable ScopeArgs scope) {
+        public Builder scope(@Nullable ScopeArgs scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setStatuses(@Nullable Input<List<ExtensionStatusArgs>> statuses) {
+        public Builder statuses(@Nullable Input<List<ExtensionStatusArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<ExtensionStatusArgs> statuses) {
+        public Builder statuses(@Nullable List<ExtensionStatusArgs> statuses) {
             this.statuses = Input.ofNullable(statuses);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

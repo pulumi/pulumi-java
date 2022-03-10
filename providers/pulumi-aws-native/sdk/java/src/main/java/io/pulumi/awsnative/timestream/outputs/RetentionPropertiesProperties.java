@@ -67,12 +67,12 @@ public final class RetentionPropertiesProperties {
     	      this.memoryStoreRetentionPeriodInHours = defaults.memoryStoreRetentionPeriodInHours;
         }
 
-        public Builder setMagneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
+        public Builder magneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
             this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
             return this;
         }
 
-        public Builder setMemoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
+        public Builder memoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }

@@ -87,32 +87,32 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     	      this.policyTag = defaults.policyTag;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setPolicyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Input<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
-        public Builder setPolicyData(@Nullable String policyData) {
+        public Builder policyData(@Nullable String policyData) {
             this.policyData = Input.ofNullable(policyData);
             return this;
         }
 
-        public Builder setPolicyTag(@Nullable Input<String> policyTag) {
+        public Builder policyTag(@Nullable Input<String> policyTag) {
             this.policyTag = policyTag;
             return this;
         }
 
-        public Builder setPolicyTag(@Nullable String policyTag) {
+        public Builder policyTag(@Nullable String policyTag) {
             this.policyTag = Input.ofNullable(policyTag);
             return this;
         }

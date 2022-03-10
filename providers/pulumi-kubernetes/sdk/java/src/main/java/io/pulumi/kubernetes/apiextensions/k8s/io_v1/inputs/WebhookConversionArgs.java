@@ -76,22 +76,22 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
     	      this.conversionReviewVersions = defaults.conversionReviewVersions;
         }
 
-        public Builder setClientConfig(@Nullable Input<WebhookClientConfigArgs> clientConfig) {
+        public Builder clientConfig(@Nullable Input<WebhookClientConfigArgs> clientConfig) {
             this.clientConfig = clientConfig;
             return this;
         }
 
-        public Builder setClientConfig(@Nullable WebhookClientConfigArgs clientConfig) {
+        public Builder clientConfig(@Nullable WebhookClientConfigArgs clientConfig) {
             this.clientConfig = Input.ofNullable(clientConfig);
             return this;
         }
 
-        public Builder setConversionReviewVersions(Input<List<String>> conversionReviewVersions) {
+        public Builder conversionReviewVersions(Input<List<String>> conversionReviewVersions) {
             this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
             return this;
         }
 
-        public Builder setConversionReviewVersions(List<String> conversionReviewVersions) {
+        public Builder conversionReviewVersions(List<String> conversionReviewVersions) {
             this.conversionReviewVersions = Input.of(Objects.requireNonNull(conversionReviewVersions));
             return this;
         }

@@ -548,157 +548,157 @@ public final class GetLaunchTemplateResult {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBlockDeviceMappings(List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings) {
+        public Builder blockDeviceMappings(List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
             return this;
         }
 
-        public Builder setCreditSpecifications(List<GetLaunchTemplateCreditSpecification> creditSpecifications) {
+        public Builder creditSpecifications(List<GetLaunchTemplateCreditSpecification> creditSpecifications) {
             this.creditSpecifications = Objects.requireNonNull(creditSpecifications);
             return this;
         }
 
-        public Builder setDefaultVersion(Integer defaultVersion) {
+        public Builder defaultVersion(Integer defaultVersion) {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisableApiTermination(Boolean disableApiTermination) {
+        public Builder disableApiTermination(Boolean disableApiTermination) {
             this.disableApiTermination = Objects.requireNonNull(disableApiTermination);
             return this;
         }
 
-        public Builder setEbsOptimized(String ebsOptimized) {
+        public Builder ebsOptimized(String ebsOptimized) {
             this.ebsOptimized = Objects.requireNonNull(ebsOptimized);
             return this;
         }
 
-        public Builder setElasticGpuSpecifications(List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications) {
+        public Builder elasticGpuSpecifications(List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications) {
             this.elasticGpuSpecifications = Objects.requireNonNull(elasticGpuSpecifications);
             return this;
         }
 
-        public Builder setEnclaveOptions(List<GetLaunchTemplateEnclaveOption> enclaveOptions) {
+        public Builder enclaveOptions(List<GetLaunchTemplateEnclaveOption> enclaveOptions) {
             this.enclaveOptions = Objects.requireNonNull(enclaveOptions);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetLaunchTemplateFilter> filters) {
+        public Builder filters(@Nullable List<GetLaunchTemplateFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setHibernationOptions(List<GetLaunchTemplateHibernationOption> hibernationOptions) {
+        public Builder hibernationOptions(List<GetLaunchTemplateHibernationOption> hibernationOptions) {
             this.hibernationOptions = Objects.requireNonNull(hibernationOptions);
             return this;
         }
 
-        public Builder setIamInstanceProfiles(List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles) {
+        public Builder iamInstanceProfiles(List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles) {
             this.iamInstanceProfiles = Objects.requireNonNull(iamInstanceProfiles);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setInstanceInitiatedShutdownBehavior(String instanceInitiatedShutdownBehavior) {
+        public Builder instanceInitiatedShutdownBehavior(String instanceInitiatedShutdownBehavior) {
             this.instanceInitiatedShutdownBehavior = Objects.requireNonNull(instanceInitiatedShutdownBehavior);
             return this;
         }
 
-        public Builder setInstanceMarketOptions(List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions) {
+        public Builder instanceMarketOptions(List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions) {
             this.instanceMarketOptions = Objects.requireNonNull(instanceMarketOptions);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setKernelId(String kernelId) {
+        public Builder kernelId(String kernelId) {
             this.kernelId = Objects.requireNonNull(kernelId);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setLatestVersion(Integer latestVersion) {
+        public Builder latestVersion(Integer latestVersion) {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
 
-        public Builder setMetadataOptions(List<GetLaunchTemplateMetadataOption> metadataOptions) {
+        public Builder metadataOptions(List<GetLaunchTemplateMetadataOption> metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
 
-        public Builder setMonitorings(List<GetLaunchTemplateMonitoring> monitorings) {
+        public Builder monitorings(List<GetLaunchTemplateMonitoring> monitorings) {
             this.monitorings = Objects.requireNonNull(monitorings);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<GetLaunchTemplateNetworkInterface> networkInterfaces) {
+        public Builder networkInterfaces(List<GetLaunchTemplateNetworkInterface> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setPlacements(List<GetLaunchTemplatePlacement> placements) {
+        public Builder placements(List<GetLaunchTemplatePlacement> placements) {
             this.placements = Objects.requireNonNull(placements);
             return this;
         }
 
-        public Builder setRamDiskId(String ramDiskId) {
+        public Builder ramDiskId(String ramDiskId) {
             this.ramDiskId = Objects.requireNonNull(ramDiskId);
             return this;
         }
 
-        public Builder setSecurityGroupNames(List<String> securityGroupNames) {
+        public Builder securityGroupNames(List<String> securityGroupNames) {
             this.securityGroupNames = Objects.requireNonNull(securityGroupNames);
             return this;
         }
 
-        public Builder setTagSpecifications(List<GetLaunchTemplateTagSpecification> tagSpecifications) {
+        public Builder tagSpecifications(List<GetLaunchTemplateTagSpecification> tagSpecifications) {
             this.tagSpecifications = Objects.requireNonNull(tagSpecifications);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setUserData(String userData) {
+        public Builder userData(String userData) {
             this.userData = Objects.requireNonNull(userData);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }

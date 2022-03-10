@@ -52,12 +52,12 @@ public final class AnalyticsApplicationInputsProcessingConfigurationArgs extends
     	      this.lambda = defaults.lambda;
         }
 
-        public Builder setLambda(Input<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda) {
+        public Builder lambda(Input<AnalyticsApplicationInputsProcessingConfigurationLambdaArgs> lambda) {
             this.lambda = Objects.requireNonNull(lambda);
             return this;
         }
 
-        public Builder setLambda(AnalyticsApplicationInputsProcessingConfigurationLambdaArgs lambda) {
+        public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambdaArgs lambda) {
             this.lambda = Input.of(Objects.requireNonNull(lambda));
             return this;
         }

@@ -117,62 +117,62 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     	      this.inclusionPrefixes = defaults.inclusionPrefixes;
         }
 
-        public Builder setAccessControlListConfiguration(@Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration) {
+        public Builder accessControlListConfiguration(@Nullable Input<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration) {
             this.accessControlListConfiguration = accessControlListConfiguration;
             return this;
         }
 
-        public Builder setAccessControlListConfiguration(@Nullable DataSourceAccessControlListConfigurationArgs accessControlListConfiguration) {
+        public Builder accessControlListConfiguration(@Nullable DataSourceAccessControlListConfigurationArgs accessControlListConfiguration) {
             this.accessControlListConfiguration = Input.ofNullable(accessControlListConfiguration);
             return this;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setDocumentsMetadataConfiguration(@Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration) {
+        public Builder documentsMetadataConfiguration(@Nullable Input<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration) {
             this.documentsMetadataConfiguration = documentsMetadataConfiguration;
             return this;
         }
 
-        public Builder setDocumentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfigurationArgs documentsMetadataConfiguration) {
+        public Builder documentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfigurationArgs documentsMetadataConfiguration) {
             this.documentsMetadataConfiguration = Input.ofNullable(documentsMetadataConfiguration);
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder setInclusionPrefixes(@Nullable Input<List<String>> inclusionPrefixes) {
+        public Builder inclusionPrefixes(@Nullable Input<List<String>> inclusionPrefixes) {
             this.inclusionPrefixes = inclusionPrefixes;
             return this;
         }
 
-        public Builder setInclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
+        public Builder inclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
             this.inclusionPrefixes = Input.ofNullable(inclusionPrefixes);
             return this;
         }

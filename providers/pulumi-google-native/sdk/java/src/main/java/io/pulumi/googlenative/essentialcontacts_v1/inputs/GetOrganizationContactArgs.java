@@ -60,12 +60,12 @@ public final class GetOrganizationContactArgs extends io.pulumi.resources.Invoke
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setContactId(String contactId) {
+        public Builder contactId(String contactId) {
             this.contactId = Objects.requireNonNull(contactId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

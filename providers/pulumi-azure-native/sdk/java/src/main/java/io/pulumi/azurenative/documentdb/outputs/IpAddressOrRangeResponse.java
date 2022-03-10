@@ -50,7 +50,7 @@ public final class IpAddressOrRangeResponse {
     	      this.ipAddressOrRange = defaults.ipAddressOrRange;
         }
 
-        public Builder setIpAddressOrRange(@Nullable String ipAddressOrRange) {
+        public Builder ipAddressOrRange(@Nullable String ipAddressOrRange) {
             this.ipAddressOrRange = ipAddressOrRange;
             return this;
         }

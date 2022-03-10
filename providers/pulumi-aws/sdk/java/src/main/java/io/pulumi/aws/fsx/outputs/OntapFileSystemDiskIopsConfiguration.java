@@ -68,12 +68,12 @@ public final class OntapFileSystemDiskIopsConfiguration {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

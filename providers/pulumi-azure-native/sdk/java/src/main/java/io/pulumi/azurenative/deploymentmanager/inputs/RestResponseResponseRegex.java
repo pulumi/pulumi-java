@@ -75,12 +75,12 @@ public final class RestResponseResponseRegex extends io.pulumi.resources.InvokeA
     	      this.matches = defaults.matches;
         }
 
-        public Builder setMatchQuantifier(@Nullable String matchQuantifier) {
+        public Builder matchQuantifier(@Nullable String matchQuantifier) {
             this.matchQuantifier = matchQuantifier;
             return this;
         }
 
-        public Builder setMatches(@Nullable List<String> matches) {
+        public Builder matches(@Nullable List<String> matches) {
             this.matches = matches;
             return this;
         }

@@ -75,17 +75,17 @@ public final class GetDelegatedServicesResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setDelegatedServices(List<GetDelegatedServicesDelegatedService> delegatedServices) {
+        public Builder delegatedServices(List<GetDelegatedServicesDelegatedService> delegatedServices) {
             this.delegatedServices = Objects.requireNonNull(delegatedServices);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

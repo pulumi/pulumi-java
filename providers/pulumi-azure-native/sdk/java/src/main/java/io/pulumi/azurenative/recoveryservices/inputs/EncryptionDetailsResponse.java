@@ -90,17 +90,17 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
     	      this.kekState = defaults.kekState;
         }
 
-        public Builder setKekCertExpiryDate(@Nullable String kekCertExpiryDate) {
+        public Builder kekCertExpiryDate(@Nullable String kekCertExpiryDate) {
             this.kekCertExpiryDate = kekCertExpiryDate;
             return this;
         }
 
-        public Builder setKekCertThumbprint(@Nullable String kekCertThumbprint) {
+        public Builder kekCertThumbprint(@Nullable String kekCertThumbprint) {
             this.kekCertThumbprint = kekCertThumbprint;
             return this;
         }
 
-        public Builder setKekState(@Nullable String kekState) {
+        public Builder kekState(@Nullable String kekState) {
             this.kekState = kekState;
             return this;
         }

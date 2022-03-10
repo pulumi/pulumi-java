@@ -48,7 +48,7 @@ public final class AzureNodePoolConfigSshConfig {
     	      this.authorizedKey = defaults.authorizedKey;
         }
 
-        public Builder setAuthorizedKey(String authorizedKey) {
+        public Builder authorizedKey(String authorizedKey) {
             this.authorizedKey = Objects.requireNonNull(authorizedKey);
             return this;
         }

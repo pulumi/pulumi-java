@@ -81,17 +81,17 @@ public final class GetClusterGatewaySettingsResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setIsCredentialEnabled(String isCredentialEnabled) {
+        public Builder isCredentialEnabled(String isCredentialEnabled) {
             this.isCredentialEnabled = Objects.requireNonNull(isCredentialEnabled);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

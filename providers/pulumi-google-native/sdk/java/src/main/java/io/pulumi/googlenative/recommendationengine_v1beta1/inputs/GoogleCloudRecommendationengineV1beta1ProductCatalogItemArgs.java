@@ -176,82 +176,82 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     	      this.stockState = defaults.stockState;
         }
 
-        public Builder setAvailableQuantity(@Nullable Input<String> availableQuantity) {
+        public Builder availableQuantity(@Nullable Input<String> availableQuantity) {
             this.availableQuantity = availableQuantity;
             return this;
         }
 
-        public Builder setAvailableQuantity(@Nullable String availableQuantity) {
+        public Builder availableQuantity(@Nullable String availableQuantity) {
             this.availableQuantity = Input.ofNullable(availableQuantity);
             return this;
         }
 
-        public Builder setCanonicalProductUri(@Nullable Input<String> canonicalProductUri) {
+        public Builder canonicalProductUri(@Nullable Input<String> canonicalProductUri) {
             this.canonicalProductUri = canonicalProductUri;
             return this;
         }
 
-        public Builder setCanonicalProductUri(@Nullable String canonicalProductUri) {
+        public Builder canonicalProductUri(@Nullable String canonicalProductUri) {
             this.canonicalProductUri = Input.ofNullable(canonicalProductUri);
             return this;
         }
 
-        public Builder setCosts(@Nullable Input<Map<String,String>> costs) {
+        public Builder costs(@Nullable Input<Map<String,String>> costs) {
             this.costs = costs;
             return this;
         }
 
-        public Builder setCosts(@Nullable Map<String,String> costs) {
+        public Builder costs(@Nullable Map<String,String> costs) {
             this.costs = Input.ofNullable(costs);
             return this;
         }
 
-        public Builder setCurrencyCode(@Nullable Input<String> currencyCode) {
+        public Builder currencyCode(@Nullable Input<String> currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
 
-        public Builder setCurrencyCode(@Nullable String currencyCode) {
+        public Builder currencyCode(@Nullable String currencyCode) {
             this.currencyCode = Input.ofNullable(currencyCode);
             return this;
         }
 
-        public Builder setExactPrice(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice) {
+        public Builder exactPrice(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice) {
             this.exactPrice = exactPrice;
             return this;
         }
 
-        public Builder setExactPrice(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs exactPrice) {
+        public Builder exactPrice(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs exactPrice) {
             this.exactPrice = Input.ofNullable(exactPrice);
             return this;
         }
 
-        public Builder setImages(@Nullable Input<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images) {
+        public Builder images(@Nullable Input<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setImages(@Nullable List<GoogleCloudRecommendationengineV1beta1ImageArgs> images) {
+        public Builder images(@Nullable List<GoogleCloudRecommendationengineV1beta1ImageArgs> images) {
             this.images = Input.ofNullable(images);
             return this;
         }
 
-        public Builder setPriceRange(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange) {
+        public Builder priceRange(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange) {
             this.priceRange = priceRange;
             return this;
         }
 
-        public Builder setPriceRange(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs priceRange) {
+        public Builder priceRange(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs priceRange) {
             this.priceRange = Input.ofNullable(priceRange);
             return this;
         }
 
-        public Builder setStockState(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState) {
+        public Builder stockState(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState) {
             this.stockState = stockState;
             return this;
         }
 
-        public Builder setStockState(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState stockState) {
+        public Builder stockState(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState stockState) {
             this.stockState = Input.ofNullable(stockState);
             return this;
         }

@@ -60,17 +60,17 @@ public final class DataflowEndpointGroupSecurityDetails {
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }

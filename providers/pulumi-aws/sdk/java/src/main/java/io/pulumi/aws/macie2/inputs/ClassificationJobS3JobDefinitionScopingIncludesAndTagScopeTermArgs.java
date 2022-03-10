@@ -104,42 +104,42 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     	      this.target = defaults.target;
         }
 
-        public Builder setComparator(@Nullable Input<String> comparator) {
+        public Builder comparator(@Nullable Input<String> comparator) {
             this.comparator = comparator;
             return this;
         }
 
-        public Builder setComparator(@Nullable String comparator) {
+        public Builder comparator(@Nullable String comparator) {
             this.comparator = Input.ofNullable(comparator);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setTagValues(@Nullable Input<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs>> tagValues) {
+        public Builder tagValues(@Nullable Input<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs>> tagValues) {
             this.tagValues = tagValues;
             return this;
         }
 
-        public Builder setTagValues(@Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs> tagValues) {
+        public Builder tagValues(@Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs> tagValues) {
             this.tagValues = Input.ofNullable(tagValues);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

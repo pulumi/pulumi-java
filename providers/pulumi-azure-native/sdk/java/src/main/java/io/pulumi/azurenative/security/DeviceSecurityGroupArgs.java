@@ -139,62 +139,62 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
     	      this.timeWindowRules = defaults.timeWindowRules;
         }
 
-        public Builder setAllowlistRules(@Nullable Input<List<AllowlistCustomAlertRuleArgs>> allowlistRules) {
+        public Builder allowlistRules(@Nullable Input<List<AllowlistCustomAlertRuleArgs>> allowlistRules) {
             this.allowlistRules = allowlistRules;
             return this;
         }
 
-        public Builder setAllowlistRules(@Nullable List<AllowlistCustomAlertRuleArgs> allowlistRules) {
+        public Builder allowlistRules(@Nullable List<AllowlistCustomAlertRuleArgs> allowlistRules) {
             this.allowlistRules = Input.ofNullable(allowlistRules);
             return this;
         }
 
-        public Builder setDenylistRules(@Nullable Input<List<DenylistCustomAlertRuleArgs>> denylistRules) {
+        public Builder denylistRules(@Nullable Input<List<DenylistCustomAlertRuleArgs>> denylistRules) {
             this.denylistRules = denylistRules;
             return this;
         }
 
-        public Builder setDenylistRules(@Nullable List<DenylistCustomAlertRuleArgs> denylistRules) {
+        public Builder denylistRules(@Nullable List<DenylistCustomAlertRuleArgs> denylistRules) {
             this.denylistRules = Input.ofNullable(denylistRules);
             return this;
         }
 
-        public Builder setDeviceSecurityGroupName(@Nullable Input<String> deviceSecurityGroupName) {
+        public Builder deviceSecurityGroupName(@Nullable Input<String> deviceSecurityGroupName) {
             this.deviceSecurityGroupName = deviceSecurityGroupName;
             return this;
         }
 
-        public Builder setDeviceSecurityGroupName(@Nullable String deviceSecurityGroupName) {
+        public Builder deviceSecurityGroupName(@Nullable String deviceSecurityGroupName) {
             this.deviceSecurityGroupName = Input.ofNullable(deviceSecurityGroupName);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setThresholdRules(@Nullable Input<List<ThresholdCustomAlertRuleArgs>> thresholdRules) {
+        public Builder thresholdRules(@Nullable Input<List<ThresholdCustomAlertRuleArgs>> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
 
-        public Builder setThresholdRules(@Nullable List<ThresholdCustomAlertRuleArgs> thresholdRules) {
+        public Builder thresholdRules(@Nullable List<ThresholdCustomAlertRuleArgs> thresholdRules) {
             this.thresholdRules = Input.ofNullable(thresholdRules);
             return this;
         }
 
-        public Builder setTimeWindowRules(@Nullable Input<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules) {
+        public Builder timeWindowRules(@Nullable Input<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules) {
             this.timeWindowRules = timeWindowRules;
             return this;
         }
 
-        public Builder setTimeWindowRules(@Nullable List<TimeWindowCustomAlertRuleArgs> timeWindowRules) {
+        public Builder timeWindowRules(@Nullable List<TimeWindowCustomAlertRuleArgs> timeWindowRules) {
             this.timeWindowRules = Input.ofNullable(timeWindowRules);
             return this;
         }

@@ -75,22 +75,22 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
     	      this.operator = defaults.operator;
         }
 
-        public Builder setDimensionName(Input<String> dimensionName) {
+        public Builder dimensionName(Input<String> dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
-        public Builder setDimensionName(String dimensionName) {
+        public Builder dimensionName(String dimensionName) {
             this.dimensionName = Input.of(Objects.requireNonNull(dimensionName));
             return this;
         }
 
-        public Builder setOperator(@Nullable Input<SecurityProfileMetricDimensionOperator> operator) {
+        public Builder operator(@Nullable Input<SecurityProfileMetricDimensionOperator> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable SecurityProfileMetricDimensionOperator operator) {
+        public Builder operator(@Nullable SecurityProfileMetricDimensionOperator operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }

@@ -60,17 +60,17 @@ public final class TopicRuleRepublishAction {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setQos(@Nullable Integer qos) {
+        public Builder qos(@Nullable Integer qos) {
             this.qos = qos;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

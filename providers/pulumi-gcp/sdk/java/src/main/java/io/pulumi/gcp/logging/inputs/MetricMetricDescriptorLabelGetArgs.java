@@ -89,32 +89,32 @@ public final class MetricMetricDescriptorLabelGetArgs extends io.pulumi.resource
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setValueType(@Nullable Input<String> valueType) {
+        public Builder valueType(@Nullable Input<String> valueType) {
             this.valueType = valueType;
             return this;
         }
 
-        public Builder setValueType(@Nullable String valueType) {
+        public Builder valueType(@Nullable String valueType) {
             this.valueType = Input.ofNullable(valueType);
             return this;
         }

@@ -87,17 +87,17 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
     	      this.value = defaults.value;
         }
 
-        public Builder setCritical(Boolean critical) {
+        public Builder critical(Boolean critical) {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
 
-        public Builder setObjectId(AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId) {
+        public Builder objectId(AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

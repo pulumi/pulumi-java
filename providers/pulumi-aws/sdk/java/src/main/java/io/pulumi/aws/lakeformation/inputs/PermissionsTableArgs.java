@@ -99,42 +99,42 @@ public final class PermissionsTableArgs extends io.pulumi.resources.ResourceArgs
     	      this.wildcard = defaults.wildcard;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setWildcard(@Nullable Input<Boolean> wildcard) {
+        public Builder wildcard(@Nullable Input<Boolean> wildcard) {
             this.wildcard = wildcard;
             return this;
         }
 
-        public Builder setWildcard(@Nullable Boolean wildcard) {
+        public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = Input.ofNullable(wildcard);
             return this;
         }

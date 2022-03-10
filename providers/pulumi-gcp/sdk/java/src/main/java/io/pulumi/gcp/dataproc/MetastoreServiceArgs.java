@@ -195,92 +195,92 @@ public final class MetastoreServiceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tier = defaults.tier;
         }
 
-        public Builder setHiveMetastoreConfig(@Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(@Nullable Input<MetastoreServiceHiveMetastoreConfigArgs> hiveMetastoreConfig) {
             this.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
 
-        public Builder setHiveMetastoreConfig(@Nullable MetastoreServiceHiveMetastoreConfigArgs hiveMetastoreConfig) {
+        public Builder hiveMetastoreConfig(@Nullable MetastoreServiceHiveMetastoreConfigArgs hiveMetastoreConfig) {
             this.hiveMetastoreConfig = Input.ofNullable(hiveMetastoreConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<MetastoreServiceMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable MetastoreServiceMaintenanceWindowArgs maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable MetastoreServiceMaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceId(Input<String> serviceId) {
+        public Builder serviceId(Input<String> serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

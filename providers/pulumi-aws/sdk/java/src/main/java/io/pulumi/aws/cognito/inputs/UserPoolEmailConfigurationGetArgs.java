@@ -118,52 +118,52 @@ public final class UserPoolEmailConfigurationGetArgs extends io.pulumi.resources
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder setConfigurationSet(@Nullable Input<String> configurationSet) {
+        public Builder configurationSet(@Nullable Input<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
-        public Builder setConfigurationSet(@Nullable String configurationSet) {
+        public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = Input.ofNullable(configurationSet);
             return this;
         }
 
-        public Builder setEmailSendingAccount(@Nullable Input<String> emailSendingAccount) {
+        public Builder emailSendingAccount(@Nullable Input<String> emailSendingAccount) {
             this.emailSendingAccount = emailSendingAccount;
             return this;
         }
 
-        public Builder setEmailSendingAccount(@Nullable String emailSendingAccount) {
+        public Builder emailSendingAccount(@Nullable String emailSendingAccount) {
             this.emailSendingAccount = Input.ofNullable(emailSendingAccount);
             return this;
         }
 
-        public Builder setFromEmailAddress(@Nullable Input<String> fromEmailAddress) {
+        public Builder fromEmailAddress(@Nullable Input<String> fromEmailAddress) {
             this.fromEmailAddress = fromEmailAddress;
             return this;
         }
 
-        public Builder setFromEmailAddress(@Nullable String fromEmailAddress) {
+        public Builder fromEmailAddress(@Nullable String fromEmailAddress) {
             this.fromEmailAddress = Input.ofNullable(fromEmailAddress);
             return this;
         }
 
-        public Builder setReplyToEmailAddress(@Nullable Input<String> replyToEmailAddress) {
+        public Builder replyToEmailAddress(@Nullable Input<String> replyToEmailAddress) {
             this.replyToEmailAddress = replyToEmailAddress;
             return this;
         }
 
-        public Builder setReplyToEmailAddress(@Nullable String replyToEmailAddress) {
+        public Builder replyToEmailAddress(@Nullable String replyToEmailAddress) {
             this.replyToEmailAddress = Input.ofNullable(replyToEmailAddress);
             return this;
         }
 
-        public Builder setSourceArn(@Nullable Input<String> sourceArn) {
+        public Builder sourceArn(@Nullable Input<String> sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = Input.ofNullable(sourceArn);
             return this;
         }

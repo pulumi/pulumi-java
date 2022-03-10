@@ -173,82 +173,82 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptionSpec(@Nullable Input<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec) {
+        public Builder encryptionSpec(@Nullable Input<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
 
-        public Builder setEncryptionSpec(@Nullable AiMetadataStoreEncryptionSpecGetArgs encryptionSpec) {
+        public Builder encryptionSpec(@Nullable AiMetadataStoreEncryptionSpecGetArgs encryptionSpec) {
             this.encryptionSpec = Input.ofNullable(encryptionSpec);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setStates(@Nullable Input<List<AiMetadataStoreStateGetArgs>> states) {
+        public Builder states(@Nullable Input<List<AiMetadataStoreStateGetArgs>> states) {
             this.states = states;
             return this;
         }
 
-        public Builder setStates(@Nullable List<AiMetadataStoreStateGetArgs> states) {
+        public Builder states(@Nullable List<AiMetadataStoreStateGetArgs> states) {
             this.states = Input.ofNullable(states);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

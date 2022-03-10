@@ -85,17 +85,17 @@ public final class CronJobStatus {
     	      this.lastSuccessfulTime = defaults.lastSuccessfulTime;
         }
 
-        public Builder setActive(@Nullable List<ObjectReference> active) {
+        public Builder active(@Nullable List<ObjectReference> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setLastScheduleTime(@Nullable String lastScheduleTime) {
+        public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
             this.lastScheduleTime = lastScheduleTime;
             return this;
         }
 
-        public Builder setLastSuccessfulTime(@Nullable String lastSuccessfulTime) {
+        public Builder lastSuccessfulTime(@Nullable String lastSuccessfulTime) {
             this.lastSuccessfulTime = lastSuccessfulTime;
             return this;
         }

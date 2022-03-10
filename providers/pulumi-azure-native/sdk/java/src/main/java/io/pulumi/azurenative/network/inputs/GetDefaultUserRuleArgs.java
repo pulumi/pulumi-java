@@ -116,27 +116,27 @@ public final class GetDefaultUserRuleArgs extends io.pulumi.resources.InvokeArgs
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRuleCollectionName(String ruleCollectionName) {
+        public Builder ruleCollectionName(String ruleCollectionName) {
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }

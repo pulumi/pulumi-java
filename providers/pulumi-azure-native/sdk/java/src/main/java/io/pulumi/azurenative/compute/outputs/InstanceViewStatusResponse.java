@@ -115,27 +115,27 @@ public final class InstanceViewStatusResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDisplayStatus(@Nullable String displayStatus) {
+        public Builder displayStatus(@Nullable String displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }

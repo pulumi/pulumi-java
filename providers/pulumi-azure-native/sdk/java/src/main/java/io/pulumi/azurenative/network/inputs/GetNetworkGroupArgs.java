@@ -84,17 +84,17 @@ public final class GetNetworkGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setNetworkGroupName(String networkGroupName) {
+        public Builder networkGroupName(String networkGroupName) {
             this.networkGroupName = Objects.requireNonNull(networkGroupName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

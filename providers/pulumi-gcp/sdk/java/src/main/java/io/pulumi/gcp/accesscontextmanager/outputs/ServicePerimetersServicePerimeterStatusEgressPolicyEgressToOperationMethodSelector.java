@@ -73,12 +73,12 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
     	      this.permission = defaults.permission;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setPermission(@Nullable String permission) {
+        public Builder permission(@Nullable String permission) {
             this.permission = permission;
             return this;
         }

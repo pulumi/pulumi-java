@@ -83,32 +83,32 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setProperties(@Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
+        public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setProviderNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Input<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }

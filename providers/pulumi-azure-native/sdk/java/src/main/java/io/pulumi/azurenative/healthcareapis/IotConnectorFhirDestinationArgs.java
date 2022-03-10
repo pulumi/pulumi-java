@@ -169,82 +169,82 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setFhirDestinationName(@Nullable Input<String> fhirDestinationName) {
+        public Builder fhirDestinationName(@Nullable Input<String> fhirDestinationName) {
             this.fhirDestinationName = fhirDestinationName;
             return this;
         }
 
-        public Builder setFhirDestinationName(@Nullable String fhirDestinationName) {
+        public Builder fhirDestinationName(@Nullable String fhirDestinationName) {
             this.fhirDestinationName = Input.ofNullable(fhirDestinationName);
             return this;
         }
 
-        public Builder setFhirMapping(Input<IotMappingPropertiesArgs> fhirMapping) {
+        public Builder fhirMapping(Input<IotMappingPropertiesArgs> fhirMapping) {
             this.fhirMapping = Objects.requireNonNull(fhirMapping);
             return this;
         }
 
-        public Builder setFhirMapping(IotMappingPropertiesArgs fhirMapping) {
+        public Builder fhirMapping(IotMappingPropertiesArgs fhirMapping) {
             this.fhirMapping = Input.of(Objects.requireNonNull(fhirMapping));
             return this;
         }
 
-        public Builder setFhirServiceResourceId(Input<String> fhirServiceResourceId) {
+        public Builder fhirServiceResourceId(Input<String> fhirServiceResourceId) {
             this.fhirServiceResourceId = Objects.requireNonNull(fhirServiceResourceId);
             return this;
         }
 
-        public Builder setFhirServiceResourceId(String fhirServiceResourceId) {
+        public Builder fhirServiceResourceId(String fhirServiceResourceId) {
             this.fhirServiceResourceId = Input.of(Objects.requireNonNull(fhirServiceResourceId));
             return this;
         }
 
-        public Builder setIotConnectorName(Input<String> iotConnectorName) {
+        public Builder iotConnectorName(Input<String> iotConnectorName) {
             this.iotConnectorName = Objects.requireNonNull(iotConnectorName);
             return this;
         }
 
-        public Builder setIotConnectorName(String iotConnectorName) {
+        public Builder iotConnectorName(String iotConnectorName) {
             this.iotConnectorName = Input.of(Objects.requireNonNull(iotConnectorName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceIdentityResolutionType(Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType) {
+        public Builder resourceIdentityResolutionType(Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType) {
             this.resourceIdentityResolutionType = Objects.requireNonNull(resourceIdentityResolutionType);
             return this;
         }
 
-        public Builder setResourceIdentityResolutionType(Either<String,IotIdentityResolutionType> resourceIdentityResolutionType) {
+        public Builder resourceIdentityResolutionType(Either<String,IotIdentityResolutionType> resourceIdentityResolutionType) {
             this.resourceIdentityResolutionType = Input.of(Objects.requireNonNull(resourceIdentityResolutionType));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

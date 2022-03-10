@@ -68,22 +68,22 @@ public final class TopicRuleS3Action {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setCannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
+        public Builder cannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
             this.cannedAcl = cannedAcl;
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

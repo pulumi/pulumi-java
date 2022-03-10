@@ -42,7 +42,7 @@ public final class KnowledgeBaseSourceConfiguration {
     	      this.appIntegrations = defaults.appIntegrations;
         }
 
-        public Builder setAppIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
+        public Builder appIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
             this.appIntegrations = appIntegrations;
             return this;
         }

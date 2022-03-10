@@ -75,12 +75,12 @@ public final class IgnoreTags extends io.pulumi.resources.InvokeArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeyPrefixes(@Nullable List<String> keyPrefixes) {
+        public Builder keyPrefixes(@Nullable List<String> keyPrefixes) {
             this.keyPrefixes = keyPrefixes;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<String> keys) {
+        public Builder keys(@Nullable List<String> keys) {
             this.keys = keys;
             return this;
         }

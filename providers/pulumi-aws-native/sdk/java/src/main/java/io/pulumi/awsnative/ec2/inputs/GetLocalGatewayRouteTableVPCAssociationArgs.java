@@ -51,7 +51,7 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends io.pulumi
     	      this.localGatewayRouteTableVpcAssociationId = defaults.localGatewayRouteTableVpcAssociationId;
         }
 
-        public Builder setLocalGatewayRouteTableVpcAssociationId(String localGatewayRouteTableVpcAssociationId) {
+        public Builder localGatewayRouteTableVpcAssociationId(String localGatewayRouteTableVpcAssociationId) {
             this.localGatewayRouteTableVpcAssociationId = Objects.requireNonNull(localGatewayRouteTableVpcAssociationId);
             return this;
         }

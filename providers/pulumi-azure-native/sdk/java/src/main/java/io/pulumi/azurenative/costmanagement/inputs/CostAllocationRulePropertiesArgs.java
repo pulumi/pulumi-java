@@ -93,32 +93,32 @@ public final class CostAllocationRulePropertiesArgs extends io.pulumi.resources.
     	      this.status = defaults.status;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDetails(Input<CostAllocationRuleDetailsArgs> details) {
+        public Builder details(Input<CostAllocationRuleDetailsArgs> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setDetails(CostAllocationRuleDetailsArgs details) {
+        public Builder details(CostAllocationRuleDetailsArgs details) {
             this.details = Input.of(Objects.requireNonNull(details));
             return this;
         }
 
-        public Builder setStatus(Input<Either<String,RuleStatus>> status) {
+        public Builder status(Input<Either<String,RuleStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(Either<String,RuleStatus> status) {
+        public Builder status(Either<String,RuleStatus> status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

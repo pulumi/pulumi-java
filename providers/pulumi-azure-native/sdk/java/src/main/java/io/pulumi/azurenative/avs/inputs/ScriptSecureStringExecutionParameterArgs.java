@@ -91,32 +91,32 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSecureValue(@Nullable Input<String> secureValue) {
+        public Builder secureValue(@Nullable Input<String> secureValue) {
             this.secureValue = secureValue;
             return this;
         }
 
-        public Builder setSecureValue(@Nullable String secureValue) {
+        public Builder secureValue(@Nullable String secureValue) {
             this.secureValue = Input.ofNullable(secureValue);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

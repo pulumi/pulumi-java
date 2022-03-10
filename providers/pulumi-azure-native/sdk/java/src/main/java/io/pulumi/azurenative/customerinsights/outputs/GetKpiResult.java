@@ -394,112 +394,112 @@ public final class GetKpiResult {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAliases(@Nullable List<KpiAliasResponse> aliases) {
+        public Builder aliases(@Nullable List<KpiAliasResponse> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setCalculationWindow(String calculationWindow) {
+        public Builder calculationWindow(String calculationWindow) {
             this.calculationWindow = Objects.requireNonNull(calculationWindow);
             return this;
         }
 
-        public Builder setCalculationWindowFieldName(@Nullable String calculationWindowFieldName) {
+        public Builder calculationWindowFieldName(@Nullable String calculationWindowFieldName) {
             this.calculationWindowFieldName = calculationWindowFieldName;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setEntityTypeName(String entityTypeName) {
+        public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExtracts(@Nullable List<KpiExtractResponse> extracts) {
+        public Builder extracts(@Nullable List<KpiExtractResponse> extracts) {
             this.extracts = extracts;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setGroupBy(@Nullable List<String> groupBy) {
+        public Builder groupBy(@Nullable List<String> groupBy) {
             this.groupBy = groupBy;
             return this;
         }
 
-        public Builder setGroupByMetadata(List<KpiGroupByMetadataResponse> groupByMetadata) {
+        public Builder groupByMetadata(List<KpiGroupByMetadataResponse> groupByMetadata) {
             this.groupByMetadata = Objects.requireNonNull(groupByMetadata);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKpiName(String kpiName) {
+        public Builder kpiName(String kpiName) {
             this.kpiName = Objects.requireNonNull(kpiName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParticipantProfilesMetadata(List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata) {
+        public Builder participantProfilesMetadata(List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata) {
             this.participantProfilesMetadata = Objects.requireNonNull(participantProfilesMetadata);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setThresHolds(@Nullable KpiThresholdsResponse thresHolds) {
+        public Builder thresHolds(@Nullable KpiThresholdsResponse thresHolds) {
             this.thresHolds = thresHolds;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }

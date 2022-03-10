@@ -69,22 +69,22 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordRowDelimiter = defaults.recordRowDelimiter;
         }
 
-        public Builder setRecordColumnDelimiter(Input<String> recordColumnDelimiter) {
+        public Builder recordColumnDelimiter(Input<String> recordColumnDelimiter) {
             this.recordColumnDelimiter = Objects.requireNonNull(recordColumnDelimiter);
             return this;
         }
 
-        public Builder setRecordColumnDelimiter(String recordColumnDelimiter) {
+        public Builder recordColumnDelimiter(String recordColumnDelimiter) {
             this.recordColumnDelimiter = Input.of(Objects.requireNonNull(recordColumnDelimiter));
             return this;
         }
 
-        public Builder setRecordRowDelimiter(Input<String> recordRowDelimiter) {
+        public Builder recordRowDelimiter(Input<String> recordRowDelimiter) {
             this.recordRowDelimiter = Objects.requireNonNull(recordRowDelimiter);
             return this;
         }
 
-        public Builder setRecordRowDelimiter(String recordRowDelimiter) {
+        public Builder recordRowDelimiter(String recordRowDelimiter) {
             this.recordRowDelimiter = Input.of(Objects.requireNonNull(recordRowDelimiter));
             return this;
         }

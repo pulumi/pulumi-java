@@ -65,12 +65,12 @@ public final class GetTestResultDownloadURLResult {
     	      this.expirationTime = defaults.expirationTime;
         }
 
-        public Builder setDownloadUrl(String downloadUrl) {
+        public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = Objects.requireNonNull(downloadUrl);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }

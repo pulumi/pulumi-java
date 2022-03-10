@@ -75,22 +75,22 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterName = defaults.clusterName;
         }
 
-        public Builder setClusterLabels(@Nullable Input<Map<String,String>> clusterLabels) {
+        public Builder clusterLabels(@Nullable Input<Map<String,String>> clusterLabels) {
             this.clusterLabels = clusterLabels;
             return this;
         }
 
-        public Builder setClusterLabels(@Nullable Map<String,String> clusterLabels) {
+        public Builder clusterLabels(@Nullable Map<String,String> clusterLabels) {
             this.clusterLabels = Input.ofNullable(clusterLabels);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }

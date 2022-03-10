@@ -146,82 +146,82 @@ public final class NetworkEdgeSecurityServiceArgs extends io.pulumi.resources.Re
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable Input<String> securityPolicy) {
+        public Builder securityPolicy(@Nullable Input<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable String securityPolicy) {
+        public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = Input.ofNullable(securityPolicy);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

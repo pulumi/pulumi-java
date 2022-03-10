@@ -69,12 +69,12 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     	      this.processors = defaults.processors;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setProcessors(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor> processors) {
+        public Builder processors(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessor> processors) {
             this.processors = processors;
             return this;
         }

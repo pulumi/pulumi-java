@@ -70,22 +70,22 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
     	      this.roleSessionName = defaults.roleSessionName;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setRoleSessionName(@Nullable Input<String> roleSessionName) {
+        public Builder roleSessionName(@Nullable Input<String> roleSessionName) {
             this.roleSessionName = roleSessionName;
             return this;
         }
 
-        public Builder setRoleSessionName(@Nullable String roleSessionName) {
+        public Builder roleSessionName(@Nullable String roleSessionName) {
             this.roleSessionName = Input.ofNullable(roleSessionName);
             return this;
         }

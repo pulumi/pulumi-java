@@ -108,42 +108,42 @@ public final class ThresholdCustomAlertRuleArgs extends io.pulumi.resources.Reso
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setMaxThreshold(Input<Integer> maxThreshold) {
+        public Builder maxThreshold(Input<Integer> maxThreshold) {
             this.maxThreshold = Objects.requireNonNull(maxThreshold);
             return this;
         }
 
-        public Builder setMaxThreshold(Integer maxThreshold) {
+        public Builder maxThreshold(Integer maxThreshold) {
             this.maxThreshold = Input.of(Objects.requireNonNull(maxThreshold));
             return this;
         }
 
-        public Builder setMinThreshold(Input<Integer> minThreshold) {
+        public Builder minThreshold(Input<Integer> minThreshold) {
             this.minThreshold = Objects.requireNonNull(minThreshold);
             return this;
         }
 
-        public Builder setMinThreshold(Integer minThreshold) {
+        public Builder minThreshold(Integer minThreshold) {
             this.minThreshold = Input.of(Objects.requireNonNull(minThreshold));
             return this;
         }
 
-        public Builder setRuleType(Input<String> ruleType) {
+        public Builder ruleType(Input<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }

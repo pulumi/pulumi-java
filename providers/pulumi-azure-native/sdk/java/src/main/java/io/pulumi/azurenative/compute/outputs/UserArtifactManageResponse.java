@@ -83,17 +83,17 @@ public final class UserArtifactManageResponse {
     	      this.update = defaults.update;
         }
 
-        public Builder setInstall(String install) {
+        public Builder install(String install) {
             this.install = Objects.requireNonNull(install);
             return this;
         }
 
-        public Builder setRemove(String remove) {
+        public Builder remove(String remove) {
             this.remove = Objects.requireNonNull(remove);
             return this;
         }
 
-        public Builder setUpdate(@Nullable String update) {
+        public Builder update(@Nullable String update) {
             this.update = update;
             return this;
         }

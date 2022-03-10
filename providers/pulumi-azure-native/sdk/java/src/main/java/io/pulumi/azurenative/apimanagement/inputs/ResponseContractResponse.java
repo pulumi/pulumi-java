@@ -110,22 +110,22 @@ public final class ResponseContractResponse extends io.pulumi.resources.InvokeAr
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<ParameterContractResponse> headers) {
+        public Builder headers(@Nullable List<ParameterContractResponse> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setRepresentations(@Nullable List<RepresentationContractResponse> representations) {
+        public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
             this.representations = representations;
             return this;
         }
 
-        public Builder setStatusCode(Integer statusCode) {
+        public Builder statusCode(Integer statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

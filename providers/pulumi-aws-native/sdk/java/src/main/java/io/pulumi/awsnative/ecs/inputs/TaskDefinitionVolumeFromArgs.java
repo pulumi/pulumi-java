@@ -63,22 +63,22 @@ public final class TaskDefinitionVolumeFromArgs extends io.pulumi.resources.Reso
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSourceContainer(@Nullable Input<String> sourceContainer) {
+        public Builder sourceContainer(@Nullable Input<String> sourceContainer) {
             this.sourceContainer = sourceContainer;
             return this;
         }
 
-        public Builder setSourceContainer(@Nullable String sourceContainer) {
+        public Builder sourceContainer(@Nullable String sourceContainer) {
             this.sourceContainer = Input.ofNullable(sourceContainer);
             return this;
         }

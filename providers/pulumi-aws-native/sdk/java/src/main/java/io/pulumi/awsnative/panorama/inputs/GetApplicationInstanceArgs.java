@@ -47,7 +47,7 @@ public final class GetApplicationInstanceArgs extends io.pulumi.resources.Invoke
     	      this.applicationInstanceId = defaults.applicationInstanceId;
         }
 
-        public Builder setApplicationInstanceId(String applicationInstanceId) {
+        public Builder applicationInstanceId(String applicationInstanceId) {
             this.applicationInstanceId = Objects.requireNonNull(applicationInstanceId);
             return this;
         }

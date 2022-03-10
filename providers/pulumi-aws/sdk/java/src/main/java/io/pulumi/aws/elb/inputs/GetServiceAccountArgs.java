@@ -54,7 +54,7 @@ public final class GetServiceAccountArgs extends io.pulumi.resources.InvokeArgs 
     	      this.region = defaults.region;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

@@ -65,12 +65,12 @@ public final class GetListenerDefaultActionForwardTargetGroup extends io.pulumi.
     	      this.weight = defaults.weight;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

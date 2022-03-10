@@ -50,7 +50,7 @@ public final class DailyRetentionFormatResponse {
     	      this.daysOfTheMonth = defaults.daysOfTheMonth;
         }
 
-        public Builder setDaysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
+        public Builder daysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }

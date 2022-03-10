@@ -81,17 +81,17 @@ public final class GetActiveReceiptRuleSetResult {
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRuleSetName(String ruleSetName) {
+        public Builder ruleSetName(String ruleSetName) {
             this.ruleSetName = Objects.requireNonNull(ruleSetName);
             return this;
         }

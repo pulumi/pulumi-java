@@ -134,62 +134,62 @@ public final class AccountAssignmentState extends io.pulumi.resources.ResourceAr
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder setInstanceArn(@Nullable Input<String> instanceArn) {
+        public Builder instanceArn(@Nullable Input<String> instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = Input.ofNullable(instanceArn);
             return this;
         }
 
-        public Builder setPermissionSetArn(@Nullable Input<String> permissionSetArn) {
+        public Builder permissionSetArn(@Nullable Input<String> permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
 
-        public Builder setPermissionSetArn(@Nullable String permissionSetArn) {
+        public Builder permissionSetArn(@Nullable String permissionSetArn) {
             this.permissionSetArn = Input.ofNullable(permissionSetArn);
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Input<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable Input<String> principalType) {
+        public Builder principalType(@Nullable Input<String> principalType) {
             this.principalType = principalType;
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable String principalType) {
+        public Builder principalType(@Nullable String principalType) {
             this.principalType = Input.ofNullable(principalType);
             return this;
         }
 
-        public Builder setTargetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Input<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }
 
-        public Builder setTargetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Input<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
-        public Builder setTargetType(@Nullable String targetType) {
+        public Builder targetType(@Nullable String targetType) {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }

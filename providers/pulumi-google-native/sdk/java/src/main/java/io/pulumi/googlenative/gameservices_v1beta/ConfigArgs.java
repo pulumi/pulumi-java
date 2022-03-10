@@ -170,92 +170,92 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scalingConfigs = defaults.scalingConfigs;
         }
 
-        public Builder setConfigId(Input<String> configId) {
+        public Builder configId(Input<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Input.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFleetConfigs(@Nullable Input<List<FleetConfigArgs>> fleetConfigs) {
+        public Builder fleetConfigs(@Nullable Input<List<FleetConfigArgs>> fleetConfigs) {
             this.fleetConfigs = fleetConfigs;
             return this;
         }
 
-        public Builder setFleetConfigs(@Nullable List<FleetConfigArgs> fleetConfigs) {
+        public Builder fleetConfigs(@Nullable List<FleetConfigArgs> fleetConfigs) {
             this.fleetConfigs = Input.ofNullable(fleetConfigs);
             return this;
         }
 
-        public Builder setGameServerDeploymentId(Input<String> gameServerDeploymentId) {
+        public Builder gameServerDeploymentId(Input<String> gameServerDeploymentId) {
             this.gameServerDeploymentId = Objects.requireNonNull(gameServerDeploymentId);
             return this;
         }
 
-        public Builder setGameServerDeploymentId(String gameServerDeploymentId) {
+        public Builder gameServerDeploymentId(String gameServerDeploymentId) {
             this.gameServerDeploymentId = Input.of(Objects.requireNonNull(gameServerDeploymentId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setScalingConfigs(@Nullable Input<List<ScalingConfigArgs>> scalingConfigs) {
+        public Builder scalingConfigs(@Nullable Input<List<ScalingConfigArgs>> scalingConfigs) {
             this.scalingConfigs = scalingConfigs;
             return this;
         }
 
-        public Builder setScalingConfigs(@Nullable List<ScalingConfigArgs> scalingConfigs) {
+        public Builder scalingConfigs(@Nullable List<ScalingConfigArgs> scalingConfigs) {
             this.scalingConfigs = Input.ofNullable(scalingConfigs);
             return this;
         }

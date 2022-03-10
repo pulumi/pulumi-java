@@ -70,22 +70,22 @@ public final class LogServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Input<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }

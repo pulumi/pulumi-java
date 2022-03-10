@@ -57,7 +57,7 @@ public final class HourDetailsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.minute = defaults.minute;
         }
 
-        public Builder setMinute(@Nullable Integer minute) {
+        public Builder minute(@Nullable Integer minute) {
             this.minute = minute;
             return this;
         }

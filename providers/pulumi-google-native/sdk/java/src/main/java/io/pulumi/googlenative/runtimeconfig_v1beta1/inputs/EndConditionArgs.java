@@ -57,12 +57,12 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cardinality = defaults.cardinality;
         }
 
-        public Builder setCardinality(@Nullable Input<CardinalityArgs> cardinality) {
+        public Builder cardinality(@Nullable Input<CardinalityArgs> cardinality) {
             this.cardinality = cardinality;
             return this;
         }
 
-        public Builder setCardinality(@Nullable CardinalityArgs cardinality) {
+        public Builder cardinality(@Nullable CardinalityArgs cardinality) {
             this.cardinality = Input.ofNullable(cardinality);
             return this;
         }

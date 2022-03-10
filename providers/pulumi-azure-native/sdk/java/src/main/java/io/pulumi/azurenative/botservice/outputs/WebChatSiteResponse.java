@@ -130,32 +130,32 @@ public final class WebChatSiteResponse {
     	      this.siteName = defaults.siteName;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
+        public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
             this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey2(String key2) {
+        public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setSiteName(String siteName) {
+        public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }

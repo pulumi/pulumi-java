@@ -209,102 +209,102 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transferType = defaults.transferType;
         }
 
-        public Builder setDeliveryInfo(@Nullable Input<JobDeliveryInfoArgs> deliveryInfo) {
+        public Builder deliveryInfo(@Nullable Input<JobDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = deliveryInfo;
             return this;
         }
 
-        public Builder setDeliveryInfo(@Nullable JobDeliveryInfoArgs deliveryInfo) {
+        public Builder deliveryInfo(@Nullable JobDeliveryInfoArgs deliveryInfo) {
             this.deliveryInfo = Input.ofNullable(deliveryInfo);
             return this;
         }
 
-        public Builder setDeliveryType(@Nullable Input<Either<String,JobDeliveryType>> deliveryType) {
+        public Builder deliveryType(@Nullable Input<Either<String,JobDeliveryType>> deliveryType) {
             this.deliveryType = deliveryType;
             return this;
         }
 
-        public Builder setDeliveryType(@Nullable Either<String,JobDeliveryType> deliveryType) {
+        public Builder deliveryType(@Nullable Either<String,JobDeliveryType> deliveryType) {
             this.deliveryType = Input.ofNullable(deliveryType);
             return this;
         }
 
-        public Builder setDetails(@Nullable Input<Object> details) {
+        public Builder details(@Nullable Input<Object> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable Object details) {
+        public Builder details(@Nullable Object details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setJobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Input<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = Input.ofNullable(jobName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransferType(Input<Either<String,TransferType>> transferType) {
+        public Builder transferType(Input<Either<String,TransferType>> transferType) {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }
 
-        public Builder setTransferType(Either<String,TransferType> transferType) {
+        public Builder transferType(Either<String,TransferType> transferType) {
             this.transferType = Input.of(Objects.requireNonNull(transferType));
             return this;
         }

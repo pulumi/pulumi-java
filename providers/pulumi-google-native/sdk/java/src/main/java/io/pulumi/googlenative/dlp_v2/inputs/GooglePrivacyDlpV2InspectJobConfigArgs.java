@@ -110,42 +110,42 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
     	      this.storageConfig = defaults.storageConfig;
         }
 
-        public Builder setActions(@Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions) {
+        public Builder actions(@Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
+        public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setInspectConfig(@Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
+        public Builder inspectConfig(@Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
 
-        public Builder setInspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
+        public Builder inspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
             this.inspectConfig = Input.ofNullable(inspectConfig);
             return this;
         }
 
-        public Builder setInspectTemplateName(@Nullable Input<String> inspectTemplateName) {
+        public Builder inspectTemplateName(@Nullable Input<String> inspectTemplateName) {
             this.inspectTemplateName = inspectTemplateName;
             return this;
         }
 
-        public Builder setInspectTemplateName(@Nullable String inspectTemplateName) {
+        public Builder inspectTemplateName(@Nullable String inspectTemplateName) {
             this.inspectTemplateName = Input.ofNullable(inspectTemplateName);
             return this;
         }
 
-        public Builder setStorageConfig(@Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
+        public Builder storageConfig(@Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig) {
             this.storageConfig = storageConfig;
             return this;
         }
 
-        public Builder setStorageConfig(@Nullable GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
+        public Builder storageConfig(@Nullable GooglePrivacyDlpV2StorageConfigArgs storageConfig) {
             this.storageConfig = Input.ofNullable(storageConfig);
             return this;
         }

@@ -686,202 +686,202 @@ public final class GetVirtualMachineResult {
     	      this.virtualMachineCreationSource = defaults.virtualMachineCreationSource;
         }
 
-        public Builder setAllowClaim(@Nullable Boolean allowClaim) {
+        public Builder allowClaim(@Nullable Boolean allowClaim) {
             this.allowClaim = allowClaim;
             return this;
         }
 
-        public Builder setApplicableSchedule(ApplicableScheduleResponse applicableSchedule) {
+        public Builder applicableSchedule(ApplicableScheduleResponse applicableSchedule) {
             this.applicableSchedule = Objects.requireNonNull(applicableSchedule);
             return this;
         }
 
-        public Builder setArtifactDeploymentStatus(ArtifactDeploymentStatusPropertiesResponse artifactDeploymentStatus) {
+        public Builder artifactDeploymentStatus(ArtifactDeploymentStatusPropertiesResponse artifactDeploymentStatus) {
             this.artifactDeploymentStatus = Objects.requireNonNull(artifactDeploymentStatus);
             return this;
         }
 
-        public Builder setArtifacts(@Nullable List<ArtifactInstallPropertiesResponse> artifacts) {
+        public Builder artifacts(@Nullable List<ArtifactInstallPropertiesResponse> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setComputeId(String computeId) {
+        public Builder computeId(String computeId) {
             this.computeId = Objects.requireNonNull(computeId);
             return this;
         }
 
-        public Builder setComputeVm(ComputeVmPropertiesResponse computeVm) {
+        public Builder computeVm(ComputeVmPropertiesResponse computeVm) {
             this.computeVm = Objects.requireNonNull(computeVm);
             return this;
         }
 
-        public Builder setCreatedByUser(String createdByUser) {
+        public Builder createdByUser(String createdByUser) {
             this.createdByUser = Objects.requireNonNull(createdByUser);
             return this;
         }
 
-        public Builder setCreatedByUserId(String createdByUserId) {
+        public Builder createdByUserId(String createdByUserId) {
             this.createdByUserId = Objects.requireNonNull(createdByUserId);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCustomImageId(@Nullable String customImageId) {
+        public Builder customImageId(@Nullable String customImageId) {
             this.customImageId = customImageId;
             return this;
         }
 
-        public Builder setDataDiskParameters(@Nullable List<DataDiskPropertiesResponse> dataDiskParameters) {
+        public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesResponse> dataDiskParameters) {
             this.dataDiskParameters = dataDiskParameters;
             return this;
         }
 
-        public Builder setDisallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
+        public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
             this.disallowPublicIpAddress = disallowPublicIpAddress;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setGalleryImageReference(@Nullable GalleryImageReferenceResponse galleryImageReference) {
+        public Builder galleryImageReference(@Nullable GalleryImageReferenceResponse galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
+        public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
             this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
             return this;
         }
 
-        public Builder setLabSubnetName(@Nullable String labSubnetName) {
+        public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
-        public Builder setLabVirtualNetworkId(@Nullable String labVirtualNetworkId) {
+        public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
             this.labVirtualNetworkId = labVirtualNetworkId;
             return this;
         }
 
-        public Builder setLastKnownPowerState(String lastKnownPowerState) {
+        public Builder lastKnownPowerState(String lastKnownPowerState) {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkInterface(@Nullable NetworkInterfacePropertiesResponse networkInterface) {
+        public Builder networkInterface(@Nullable NetworkInterfacePropertiesResponse networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setOwnerObjectId(@Nullable String ownerObjectId) {
+        public Builder ownerObjectId(@Nullable String ownerObjectId) {
             this.ownerObjectId = ownerObjectId;
             return this;
         }
 
-        public Builder setOwnerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
+        public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
             this.ownerUserPrincipalName = ownerUserPrincipalName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPlanId(@Nullable String planId) {
+        public Builder planId(@Nullable String planId) {
             this.planId = planId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScheduleParameters(@Nullable List<ScheduleCreationParameterResponse> scheduleParameters) {
+        public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterResponse> scheduleParameters) {
             this.scheduleParameters = scheduleParameters;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSshKey(@Nullable String sshKey) {
+        public Builder sshKey(@Nullable String sshKey) {
             this.sshKey = sshKey;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setVirtualMachineCreationSource(String virtualMachineCreationSource) {
+        public Builder virtualMachineCreationSource(String virtualMachineCreationSource) {
             this.virtualMachineCreationSource = Objects.requireNonNull(virtualMachineCreationSource);
             return this;
         }

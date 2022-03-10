@@ -167,32 +167,32 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder setCommonAlphabet(@Nullable String commonAlphabet) {
+        public Builder commonAlphabet(@Nullable String commonAlphabet) {
             this.commonAlphabet = commonAlphabet;
             return this;
         }
 
-        public Builder setContext(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext context) {
+        public Builder context(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext context) {
             this.context = context;
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey cryptoKey) {
+        public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
-        public Builder setCustomAlphabet(@Nullable String customAlphabet) {
+        public Builder customAlphabet(@Nullable String customAlphabet) {
             this.customAlphabet = customAlphabet;
             return this;
         }
 
-        public Builder setRadix(@Nullable Integer radix) {
+        public Builder radix(@Nullable Integer radix) {
             this.radix = radix;
             return this;
         }
 
-        public Builder setSurrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }

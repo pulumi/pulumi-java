@@ -70,22 +70,22 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setGroupId(Input<String> groupId) {
+        public Builder groupId(Input<String> groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Input.of(Objects.requireNonNull(groupId));
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }

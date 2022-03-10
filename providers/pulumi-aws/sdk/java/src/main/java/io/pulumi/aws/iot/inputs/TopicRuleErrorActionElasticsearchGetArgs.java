@@ -117,52 +117,52 @@ public final class TopicRuleErrorActionElasticsearchGetArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder setEndpoint(Input<String> endpoint) {
+        public Builder endpoint(Input<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setIndex(Input<String> index) {
+        public Builder index(Input<String> index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
-        public Builder setIndex(String index) {
+        public Builder index(String index) {
             this.index = Input.of(Objects.requireNonNull(index));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

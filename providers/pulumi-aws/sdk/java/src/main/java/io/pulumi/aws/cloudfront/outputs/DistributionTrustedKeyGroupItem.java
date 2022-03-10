@@ -68,12 +68,12 @@ public final class DistributionTrustedKeyGroupItem {
     	      this.keyPairIds = defaults.keyPairIds;
         }
 
-        public Builder setKeyGroupId(@Nullable String keyGroupId) {
+        public Builder keyGroupId(@Nullable String keyGroupId) {
             this.keyGroupId = keyGroupId;
             return this;
         }
 
-        public Builder setKeyPairIds(@Nullable List<String> keyPairIds) {
+        public Builder keyPairIds(@Nullable List<String> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }

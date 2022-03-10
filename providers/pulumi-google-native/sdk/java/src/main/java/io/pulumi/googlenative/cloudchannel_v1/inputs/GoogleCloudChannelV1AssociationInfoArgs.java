@@ -57,12 +57,12 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
     	      this.baseEntitlement = defaults.baseEntitlement;
         }
 
-        public Builder setBaseEntitlement(@Nullable Input<String> baseEntitlement) {
+        public Builder baseEntitlement(@Nullable Input<String> baseEntitlement) {
             this.baseEntitlement = baseEntitlement;
             return this;
         }
 
-        public Builder setBaseEntitlement(@Nullable String baseEntitlement) {
+        public Builder baseEntitlement(@Nullable String baseEntitlement) {
             this.baseEntitlement = Input.ofNullable(baseEntitlement);
             return this;
         }

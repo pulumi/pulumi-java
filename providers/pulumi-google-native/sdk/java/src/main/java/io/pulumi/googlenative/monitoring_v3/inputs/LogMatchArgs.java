@@ -75,22 +75,22 @@ public final class LogMatchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labelExtractors = defaults.labelExtractors;
         }
 
-        public Builder setFilter(Input<String> filter) {
+        public Builder filter(Input<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder setLabelExtractors(@Nullable Input<Map<String,String>> labelExtractors) {
+        public Builder labelExtractors(@Nullable Input<Map<String,String>> labelExtractors) {
             this.labelExtractors = labelExtractors;
             return this;
         }
 
-        public Builder setLabelExtractors(@Nullable Map<String,String> labelExtractors) {
+        public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
             this.labelExtractors = Input.ofNullable(labelExtractors);
             return this;
         }

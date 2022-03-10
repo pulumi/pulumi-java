@@ -256,132 +256,132 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
-        public Builder setBypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Input.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
 
-        public Builder setCustomerMasterKeySpec(@Nullable Input<String> customerMasterKeySpec) {
+        public Builder customerMasterKeySpec(@Nullable Input<String> customerMasterKeySpec) {
             this.customerMasterKeySpec = customerMasterKeySpec;
             return this;
         }
 
-        public Builder setCustomerMasterKeySpec(@Nullable String customerMasterKeySpec) {
+        public Builder customerMasterKeySpec(@Nullable String customerMasterKeySpec) {
             this.customerMasterKeySpec = Input.ofNullable(customerMasterKeySpec);
             return this;
         }
 
-        public Builder setDeletionWindowInDays(@Nullable Input<Integer> deletionWindowInDays) {
+        public Builder deletionWindowInDays(@Nullable Input<Integer> deletionWindowInDays) {
             this.deletionWindowInDays = deletionWindowInDays;
             return this;
         }
 
-        public Builder setDeletionWindowInDays(@Nullable Integer deletionWindowInDays) {
+        public Builder deletionWindowInDays(@Nullable Integer deletionWindowInDays) {
             this.deletionWindowInDays = Input.ofNullable(deletionWindowInDays);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableKeyRotation(@Nullable Input<Boolean> enableKeyRotation) {
+        public Builder enableKeyRotation(@Nullable Input<Boolean> enableKeyRotation) {
             this.enableKeyRotation = enableKeyRotation;
             return this;
         }
 
-        public Builder setEnableKeyRotation(@Nullable Boolean enableKeyRotation) {
+        public Builder enableKeyRotation(@Nullable Boolean enableKeyRotation) {
             this.enableKeyRotation = Input.ofNullable(enableKeyRotation);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable Input<String> keyUsage) {
+        public Builder keyUsage(@Nullable Input<String> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable String keyUsage) {
+        public Builder keyUsage(@Nullable String keyUsage) {
             this.keyUsage = Input.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder setMultiRegion(@Nullable Input<Boolean> multiRegion) {
+        public Builder multiRegion(@Nullable Input<Boolean> multiRegion) {
             this.multiRegion = multiRegion;
             return this;
         }
 
-        public Builder setMultiRegion(@Nullable Boolean multiRegion) {
+        public Builder multiRegion(@Nullable Boolean multiRegion) {
             this.multiRegion = Input.ofNullable(multiRegion);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

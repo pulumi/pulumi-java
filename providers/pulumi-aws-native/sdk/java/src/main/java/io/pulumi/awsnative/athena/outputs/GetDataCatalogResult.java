@@ -103,22 +103,22 @@ public final class GetDataCatalogResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataCatalogTag> tags) {
+        public Builder tags(@Nullable List<DataCatalogTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable DataCatalogType type) {
+        public Builder type(@Nullable DataCatalogType type) {
             this.type = type;
             return this;
         }

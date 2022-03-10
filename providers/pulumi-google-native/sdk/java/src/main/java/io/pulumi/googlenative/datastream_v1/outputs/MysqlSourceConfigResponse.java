@@ -65,12 +65,12 @@ public final class MysqlSourceConfigResponse {
     	      this.includeObjects = defaults.includeObjects;
         }
 
-        public Builder setExcludeObjects(MysqlRdbmsResponse excludeObjects) {
+        public Builder excludeObjects(MysqlRdbmsResponse excludeObjects) {
             this.excludeObjects = Objects.requireNonNull(excludeObjects);
             return this;
         }
 
-        public Builder setIncludeObjects(MysqlRdbmsResponse includeObjects) {
+        public Builder includeObjects(MysqlRdbmsResponse includeObjects) {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }

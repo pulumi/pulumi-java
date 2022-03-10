@@ -168,82 +168,82 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     	      this.userProfileName = defaults.userProfileName;
         }
 
-        public Builder setAppName(@Nullable Input<String> appName) {
+        public Builder appName(@Nullable Input<String> appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = Input.ofNullable(appName);
             return this;
         }
 
-        public Builder setAppType(@Nullable Input<String> appType) {
+        public Builder appType(@Nullable Input<String> appType) {
             this.appType = appType;
             return this;
         }
 
-        public Builder setAppType(@Nullable String appType) {
+        public Builder appType(@Nullable String appType) {
             this.appType = Input.ofNullable(appType);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDomainId(@Nullable Input<String> domainId) {
+        public Builder domainId(@Nullable Input<String> domainId) {
             this.domainId = domainId;
             return this;
         }
 
-        public Builder setDomainId(@Nullable String domainId) {
+        public Builder domainId(@Nullable String domainId) {
             this.domainId = Input.ofNullable(domainId);
             return this;
         }
 
-        public Builder setResourceSpec(@Nullable Input<AppResourceSpecGetArgs> resourceSpec) {
+        public Builder resourceSpec(@Nullable Input<AppResourceSpecGetArgs> resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }
 
-        public Builder setResourceSpec(@Nullable AppResourceSpecGetArgs resourceSpec) {
+        public Builder resourceSpec(@Nullable AppResourceSpecGetArgs resourceSpec) {
             this.resourceSpec = Input.ofNullable(resourceSpec);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserProfileName(@Nullable Input<String> userProfileName) {
+        public Builder userProfileName(@Nullable Input<String> userProfileName) {
             this.userProfileName = userProfileName;
             return this;
         }
 
-        public Builder setUserProfileName(@Nullable String userProfileName) {
+        public Builder userProfileName(@Nullable String userProfileName) {
             this.userProfileName = Input.ofNullable(userProfileName);
             return this;
         }

@@ -139,37 +139,37 @@ public final class GetAuthorizationTokenResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuthorizationToken(String authorizationToken) {
+        public Builder authorizationToken(String authorizationToken) {
             this.authorizationToken = Objects.requireNonNull(authorizationToken);
             return this;
         }
 
-        public Builder setExpiresAt(String expiresAt) {
+        public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setProxyEndpoint(String proxyEndpoint) {
+        public Builder proxyEndpoint(String proxyEndpoint) {
             this.proxyEndpoint = Objects.requireNonNull(proxyEndpoint);
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

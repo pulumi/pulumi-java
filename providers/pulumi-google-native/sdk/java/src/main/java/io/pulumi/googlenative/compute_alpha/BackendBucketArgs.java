@@ -194,102 +194,102 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setCdnPolicy(@Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Input<BackendBucketCdnPolicyArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
 
-        public Builder setCdnPolicy(@Nullable BackendBucketCdnPolicyArgs cdnPolicy) {
+        public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyArgs cdnPolicy) {
             this.cdnPolicy = Input.ofNullable(cdnPolicy);
             return this;
         }
 
-        public Builder setCompressionMode(@Nullable Input<BackendBucketCompressionMode> compressionMode) {
+        public Builder compressionMode(@Nullable Input<BackendBucketCompressionMode> compressionMode) {
             this.compressionMode = compressionMode;
             return this;
         }
 
-        public Builder setCompressionMode(@Nullable BackendBucketCompressionMode compressionMode) {
+        public Builder compressionMode(@Nullable BackendBucketCompressionMode compressionMode) {
             this.compressionMode = Input.ofNullable(compressionMode);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(@Nullable Input<List<String>> customResponseHeaders) {
+        public Builder customResponseHeaders(@Nullable Input<List<String>> customResponseHeaders) {
             this.customResponseHeaders = customResponseHeaders;
             return this;
         }
 
-        public Builder setCustomResponseHeaders(@Nullable List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
             this.customResponseHeaders = Input.ofNullable(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableCdn(@Nullable Input<Boolean> enableCdn) {
+        public Builder enableCdn(@Nullable Input<Boolean> enableCdn) {
             this.enableCdn = enableCdn;
             return this;
         }
 
-        public Builder setEnableCdn(@Nullable Boolean enableCdn) {
+        public Builder enableCdn(@Nullable Boolean enableCdn) {
             this.enableCdn = Input.ofNullable(enableCdn);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

@@ -315,87 +315,87 @@ public final class GetServiceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setHostingMode(@Nullable String hostingMode) {
+        public Builder hostingMode(@Nullable String hostingMode) {
             this.hostingMode = hostingMode;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkRuleSet(@Nullable NetworkRuleSetResponse networkRuleSet) {
+        public Builder networkRuleSet(@Nullable NetworkRuleSetResponse networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
 
-        public Builder setPartitionCount(@Nullable Integer partitionCount) {
+        public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setSharedPrivateLinkResources(List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
+        public Builder sharedPrivateLinkResources(List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = Objects.requireNonNull(sharedPrivateLinkResources);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(String statusDetails) {
+        public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -86,32 +86,32 @@ public final class ReceiptRuleAddHeaderActionArgs extends io.pulumi.resources.Re
     	      this.position = defaults.position;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setHeaderValue(Input<String> headerValue) {
+        public Builder headerValue(Input<String> headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Input.of(Objects.requireNonNull(headerValue));
             return this;
         }
 
-        public Builder setPosition(Input<Integer> position) {
+        public Builder position(Input<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }

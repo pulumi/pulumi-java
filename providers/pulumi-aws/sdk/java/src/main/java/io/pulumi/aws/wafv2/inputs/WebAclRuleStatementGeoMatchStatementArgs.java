@@ -72,22 +72,22 @@ public final class WebAclRuleStatementGeoMatchStatementArgs extends io.pulumi.re
     	      this.forwardedIpConfig = defaults.forwardedIpConfig;
         }
 
-        public Builder setCountryCodes(Input<List<String>> countryCodes) {
+        public Builder countryCodes(Input<List<String>> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
-        public Builder setCountryCodes(List<String> countryCodes) {
+        public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Input.of(Objects.requireNonNull(countryCodes));
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable Input<WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable Input<WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable WebAclRuleStatementGeoMatchStatementForwardedIpConfigArgs forwardedIpConfig) {
             this.forwardedIpConfig = Input.ofNullable(forwardedIpConfig);
             return this;
         }

@@ -109,42 +109,42 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
     	      this.template = defaults.template;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setParameters(Input<List<ArmTemplateParameterArgs>> parameters) {
+        public Builder parameters(Input<List<ArmTemplateParameterArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(List<ArmTemplateParameterArgs> parameters) {
+        public Builder parameters(List<ArmTemplateParameterArgs> parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder setParentResourceType(Input<String> parentResourceType) {
+        public Builder parentResourceType(Input<String> parentResourceType) {
             this.parentResourceType = Objects.requireNonNull(parentResourceType);
             return this;
         }
 
-        public Builder setParentResourceType(String parentResourceType) {
+        public Builder parentResourceType(String parentResourceType) {
             this.parentResourceType = Input.of(Objects.requireNonNull(parentResourceType));
             return this;
         }
 
-        public Builder setTemplate(Input<Object> template) {
+        public Builder template(Input<Object> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(Object template) {
+        public Builder template(Object template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }

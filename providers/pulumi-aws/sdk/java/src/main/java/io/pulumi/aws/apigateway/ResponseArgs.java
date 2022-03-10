@@ -119,52 +119,52 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setResponseParameters(@Nullable Input<Map<String,String>> responseParameters) {
+        public Builder responseParameters(@Nullable Input<Map<String,String>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Map<String,String> responseParameters) {
+        public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
             this.responseParameters = Input.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
+        public Builder responseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Map<String,String> responseTemplates) {
+        public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
             this.responseTemplates = Input.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder setResponseType(Input<String> responseType) {
+        public Builder responseType(Input<String> responseType) {
             this.responseType = Objects.requireNonNull(responseType);
             return this;
         }
 
-        public Builder setResponseType(String responseType) {
+        public Builder responseType(String responseType) {
             this.responseType = Input.of(Objects.requireNonNull(responseType));
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder setStatusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Input<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Input.ofNullable(statusCode);
             return this;
         }

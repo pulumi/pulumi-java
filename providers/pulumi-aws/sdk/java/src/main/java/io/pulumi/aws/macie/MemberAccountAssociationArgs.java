@@ -52,12 +52,12 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
     	      this.memberAccountId = defaults.memberAccountId;
         }
 
-        public Builder setMemberAccountId(Input<String> memberAccountId) {
+        public Builder memberAccountId(Input<String> memberAccountId) {
             this.memberAccountId = Objects.requireNonNull(memberAccountId);
             return this;
         }
 
-        public Builder setMemberAccountId(String memberAccountId) {
+        public Builder memberAccountId(String memberAccountId) {
             this.memberAccountId = Input.of(Objects.requireNonNull(memberAccountId));
             return this;
         }

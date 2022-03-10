@@ -118,52 +118,52 @@ public final class HostedConfigurationVersionArgs extends io.pulumi.resources.Re
     	      this.description = defaults.description;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setConfigurationProfileId(Input<String> configurationProfileId) {
+        public Builder configurationProfileId(Input<String> configurationProfileId) {
             this.configurationProfileId = Objects.requireNonNull(configurationProfileId);
             return this;
         }
 
-        public Builder setConfigurationProfileId(String configurationProfileId) {
+        public Builder configurationProfileId(String configurationProfileId) {
             this.configurationProfileId = Input.of(Objects.requireNonNull(configurationProfileId));
             return this;
         }
 
-        public Builder setContent(Input<String> content) {
+        public Builder content(Input<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setContentType(Input<String> contentType) {
+        public Builder contentType(Input<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Input.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }

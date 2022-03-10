@@ -130,52 +130,52 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.grouping = defaults.grouping;
         }
 
-        public Builder setAggregation(@Nullable Input<Map<String,ReportAggregationArgs>> aggregation) {
+        public Builder aggregation(@Nullable Input<Map<String,ReportAggregationArgs>> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setAggregation(@Nullable Map<String,ReportAggregationArgs> aggregation) {
+        public Builder aggregation(@Nullable Map<String,ReportAggregationArgs> aggregation) {
             this.aggregation = Input.ofNullable(aggregation);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Input<ReportDatasetConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<ReportDatasetConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ReportDatasetConfigurationArgs configuration) {
+        public Builder configuration(@Nullable ReportDatasetConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<ReportFilterArgs> filter) {
+        public Builder filter(@Nullable Input<ReportFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable ReportFilterArgs filter) {
+        public Builder filter(@Nullable ReportFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setGranularity(@Nullable Input<Either<String,GranularityType>> granularity) {
+        public Builder granularity(@Nullable Input<Either<String,GranularityType>> granularity) {
             this.granularity = granularity;
             return this;
         }
 
-        public Builder setGranularity(@Nullable Either<String,GranularityType> granularity) {
+        public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
             this.granularity = Input.ofNullable(granularity);
             return this;
         }
 
-        public Builder setGrouping(@Nullable Input<List<ReportGroupingArgs>> grouping) {
+        public Builder grouping(@Nullable Input<List<ReportGroupingArgs>> grouping) {
             this.grouping = grouping;
             return this;
         }
 
-        public Builder setGrouping(@Nullable List<ReportGroupingArgs> grouping) {
+        public Builder grouping(@Nullable List<ReportGroupingArgs> grouping) {
             this.grouping = Input.ofNullable(grouping);
             return this;
         }

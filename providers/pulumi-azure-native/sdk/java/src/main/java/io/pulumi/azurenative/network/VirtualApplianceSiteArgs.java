@@ -151,72 +151,72 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     	      this.siteName = defaults.siteName;
         }
 
-        public Builder setAddressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkVirtualApplianceName(Input<String> networkVirtualApplianceName) {
+        public Builder networkVirtualApplianceName(Input<String> networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName);
             return this;
         }
 
-        public Builder setNetworkVirtualApplianceName(String networkVirtualApplianceName) {
+        public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Input.of(Objects.requireNonNull(networkVirtualApplianceName));
             return this;
         }
 
-        public Builder setO365Policy(@Nullable Input<Office365PolicyPropertiesArgs> o365Policy) {
+        public Builder o365Policy(@Nullable Input<Office365PolicyPropertiesArgs> o365Policy) {
             this.o365Policy = o365Policy;
             return this;
         }
 
-        public Builder setO365Policy(@Nullable Office365PolicyPropertiesArgs o365Policy) {
+        public Builder o365Policy(@Nullable Office365PolicyPropertiesArgs o365Policy) {
             this.o365Policy = Input.ofNullable(o365Policy);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSiteName(@Nullable Input<String> siteName) {
+        public Builder siteName(@Nullable Input<String> siteName) {
             this.siteName = siteName;
             return this;
         }
 
-        public Builder setSiteName(@Nullable String siteName) {
+        public Builder siteName(@Nullable String siteName) {
             this.siteName = Input.ofNullable(siteName);
             return this;
         }

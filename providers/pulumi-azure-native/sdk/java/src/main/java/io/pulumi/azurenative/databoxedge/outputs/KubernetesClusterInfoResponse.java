@@ -84,17 +84,17 @@ public final class KubernetesClusterInfoResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setEtcdInfo(EtcdInfoResponse etcdInfo) {
+        public Builder etcdInfo(EtcdInfoResponse etcdInfo) {
             this.etcdInfo = Objects.requireNonNull(etcdInfo);
             return this;
         }
 
-        public Builder setNodes(List<NodeInfoResponse> nodes) {
+        public Builder nodes(List<NodeInfoResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -90,32 +90,32 @@ public final class RelationshipOccurrenceArgs extends io.pulumi.resources.Resour
     	      this.target = defaults.target;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

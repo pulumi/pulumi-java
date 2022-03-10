@@ -50,7 +50,7 @@ public final class ImageOutputResource {
     	      this.amis = defaults.amis;
         }
 
-        public Builder setAmis(@Nullable List<ImageOutputResourceAmi> amis) {
+        public Builder amis(@Nullable List<ImageOutputResourceAmi> amis) {
             this.amis = amis;
             return this;
         }

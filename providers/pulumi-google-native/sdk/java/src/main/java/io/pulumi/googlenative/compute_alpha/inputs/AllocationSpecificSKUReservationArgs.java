@@ -75,22 +75,22 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
     	      this.instanceProperties = defaults.instanceProperties;
         }
 
-        public Builder setCount(@Nullable Input<String> count) {
+        public Builder count(@Nullable Input<String> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable String count) {
+        public Builder count(@Nullable String count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setInstanceProperties(@Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
+        public Builder instanceProperties(@Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
             this.instanceProperties = instanceProperties;
             return this;
         }
 
-        public Builder setInstanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
+        public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
             this.instanceProperties = Input.ofNullable(instanceProperties);
             return this;
         }

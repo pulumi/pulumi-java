@@ -312,87 +312,87 @@ public final class Event {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setDeprecatedCount(@Nullable Integer deprecatedCount) {
+        public Builder deprecatedCount(@Nullable Integer deprecatedCount) {
             this.deprecatedCount = deprecatedCount;
             return this;
         }
 
-        public Builder setDeprecatedFirstTimestamp(@Nullable String deprecatedFirstTimestamp) {
+        public Builder deprecatedFirstTimestamp(@Nullable String deprecatedFirstTimestamp) {
             this.deprecatedFirstTimestamp = deprecatedFirstTimestamp;
             return this;
         }
 
-        public Builder setDeprecatedLastTimestamp(@Nullable String deprecatedLastTimestamp) {
+        public Builder deprecatedLastTimestamp(@Nullable String deprecatedLastTimestamp) {
             this.deprecatedLastTimestamp = deprecatedLastTimestamp;
             return this;
         }
 
-        public Builder setDeprecatedSource(@Nullable EventSource deprecatedSource) {
+        public Builder deprecatedSource(@Nullable EventSource deprecatedSource) {
             this.deprecatedSource = deprecatedSource;
             return this;
         }
 
-        public Builder setEventTime(String eventTime) {
+        public Builder eventTime(String eventTime) {
             this.eventTime = Objects.requireNonNull(eventTime);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setNote(@Nullable String note) {
+        public Builder note(@Nullable String note) {
             this.note = note;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setRegarding(@Nullable ObjectReference regarding) {
+        public Builder regarding(@Nullable ObjectReference regarding) {
             this.regarding = regarding;
             return this;
         }
 
-        public Builder setRelated(@Nullable ObjectReference related) {
+        public Builder related(@Nullable ObjectReference related) {
             this.related = related;
             return this;
         }
 
-        public Builder setReportingController(@Nullable String reportingController) {
+        public Builder reportingController(@Nullable String reportingController) {
             this.reportingController = reportingController;
             return this;
         }
 
-        public Builder setReportingInstance(@Nullable String reportingInstance) {
+        public Builder reportingInstance(@Nullable String reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
 
-        public Builder setSeries(@Nullable EventSeries series) {
+        public Builder series(@Nullable EventSeries series) {
             this.series = series;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

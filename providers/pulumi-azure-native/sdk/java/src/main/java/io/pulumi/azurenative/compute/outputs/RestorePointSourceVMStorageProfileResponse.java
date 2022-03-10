@@ -69,12 +69,12 @@ public final class RestorePointSourceVMStorageProfileResponse {
     	      this.osDisk = defaults.osDisk;
         }
 
-        public Builder setDataDisks(@Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks) {
+        public Builder dataDisks(@Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setOsDisk(@Nullable RestorePointSourceVMOSDiskResponse osDisk) {
+        public Builder osDisk(@Nullable RestorePointSourceVMOSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
         }

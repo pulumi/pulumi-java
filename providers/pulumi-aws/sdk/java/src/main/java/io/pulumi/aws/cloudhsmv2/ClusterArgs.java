@@ -104,42 +104,42 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setHsmType(Input<String> hsmType) {
+        public Builder hsmType(Input<String> hsmType) {
             this.hsmType = Objects.requireNonNull(hsmType);
             return this;
         }
 
-        public Builder setHsmType(String hsmType) {
+        public Builder hsmType(String hsmType) {
             this.hsmType = Input.of(Objects.requireNonNull(hsmType));
             return this;
         }
 
-        public Builder setSourceBackupIdentifier(@Nullable Input<String> sourceBackupIdentifier) {
+        public Builder sourceBackupIdentifier(@Nullable Input<String> sourceBackupIdentifier) {
             this.sourceBackupIdentifier = sourceBackupIdentifier;
             return this;
         }
 
-        public Builder setSourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
+        public Builder sourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
             this.sourceBackupIdentifier = Input.ofNullable(sourceBackupIdentifier);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -62,12 +62,12 @@ public final class GetTargetSslProxyArgs extends io.pulumi.resources.InvokeArgs 
     	      this.targetSslProxy = defaults.targetSslProxy;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setTargetSslProxy(String targetSslProxy) {
+        public Builder targetSslProxy(String targetSslProxy) {
             this.targetSslProxy = Objects.requireNonNull(targetSslProxy);
             return this;
         }

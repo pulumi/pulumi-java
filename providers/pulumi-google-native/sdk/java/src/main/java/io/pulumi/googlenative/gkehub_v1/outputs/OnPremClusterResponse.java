@@ -82,17 +82,17 @@ public final class OnPremClusterResponse {
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder setAdminCluster(Boolean adminCluster) {
+        public Builder adminCluster(Boolean adminCluster) {
             this.adminCluster = Objects.requireNonNull(adminCluster);
             return this;
         }
 
-        public Builder setClusterMissing(Boolean clusterMissing) {
+        public Builder clusterMissing(Boolean clusterMissing) {
             this.clusterMissing = Objects.requireNonNull(clusterMissing);
             return this;
         }
 
-        public Builder setResourceLink(String resourceLink) {
+        public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }

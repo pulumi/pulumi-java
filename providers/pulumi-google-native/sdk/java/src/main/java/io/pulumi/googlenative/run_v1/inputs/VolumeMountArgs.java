@@ -107,42 +107,42 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subPath = defaults.subPath;
         }
 
-        public Builder setMountPath(@Nullable Input<String> mountPath) {
+        public Builder mountPath(@Nullable Input<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Input.ofNullable(mountPath);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSubPath(@Nullable Input<String> subPath) {
+        public Builder subPath(@Nullable Input<String> subPath) {
             this.subPath = subPath;
             return this;
         }
 
-        public Builder setSubPath(@Nullable String subPath) {
+        public Builder subPath(@Nullable String subPath) {
             this.subPath = Input.ofNullable(subPath);
             return this;
         }

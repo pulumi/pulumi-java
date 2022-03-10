@@ -161,72 +161,72 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setApplicationSharingPolicy(@Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy) {
+        public Builder applicationSharingPolicy(@Nullable Input<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy) {
             this.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
 
-        public Builder setApplicationSharingPolicy(@Nullable Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
+        public Builder applicationSharingPolicy(@Nullable Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
             this.applicationSharingPolicy = Input.ofNullable(applicationSharingPolicy);
             return this;
         }
 
-        public Builder setComputeInstanceAuthorizationType(@Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
+        public Builder computeInstanceAuthorizationType(@Nullable Input<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
             this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
 
-        public Builder setComputeInstanceAuthorizationType(@Nullable Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
+        public Builder computeInstanceAuthorizationType(@Nullable Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
             this.computeInstanceAuthorizationType = Input.ofNullable(computeInstanceAuthorizationType);
             return this;
         }
 
-        public Builder setPersonalComputeInstanceSettings(@Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
+        public Builder personalComputeInstanceSettings(@Nullable Input<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
             this.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
 
-        public Builder setPersonalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
+        public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
             this.personalComputeInstanceSettings = Input.ofNullable(personalComputeInstanceSettings);
             return this;
         }
 
-        public Builder setSetupScripts(@Nullable Input<SetupScriptsArgs> setupScripts) {
+        public Builder setupScripts(@Nullable Input<SetupScriptsArgs> setupScripts) {
             this.setupScripts = setupScripts;
             return this;
         }
 
-        public Builder setSetupScripts(@Nullable SetupScriptsArgs setupScripts) {
+        public Builder setupScripts(@Nullable SetupScriptsArgs setupScripts) {
             this.setupScripts = Input.ofNullable(setupScripts);
             return this;
         }
 
-        public Builder setSshSettings(@Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings) {
+        public Builder sshSettings(@Nullable Input<ComputeInstanceSshSettingsArgs> sshSettings) {
             this.sshSettings = sshSettings;
             return this;
         }
 
-        public Builder setSshSettings(@Nullable ComputeInstanceSshSettingsArgs sshSettings) {
+        public Builder sshSettings(@Nullable ComputeInstanceSshSettingsArgs sshSettings) {
             this.sshSettings = Input.ofNullable(sshSettings);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<ResourceIdArgs> subnet) {
+        public Builder subnet(@Nullable Input<ResourceIdArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ResourceIdArgs subnet) {
+        public Builder subnet(@Nullable ResourceIdArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }

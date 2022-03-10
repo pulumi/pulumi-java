@@ -314,172 +314,172 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setArcSettingName(Input<String> arcSettingName) {
+        public Builder arcSettingName(Input<String> arcSettingName) {
             this.arcSettingName = Objects.requireNonNull(arcSettingName);
             return this;
         }
 
-        public Builder setArcSettingName(String arcSettingName) {
+        public Builder arcSettingName(String arcSettingName) {
             this.arcSettingName = Input.of(Objects.requireNonNull(arcSettingName));
             return this;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Input<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = Input.ofNullable(createdBy);
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable Either<String,CreatedByType> createdByType) {
+        public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
             this.createdByType = Input.ofNullable(createdByType);
             return this;
         }
 
-        public Builder setExtensionName(@Nullable Input<String> extensionName) {
+        public Builder extensionName(@Nullable Input<String> extensionName) {
             this.extensionName = extensionName;
             return this;
         }
 
-        public Builder setExtensionName(@Nullable String extensionName) {
+        public Builder extensionName(@Nullable String extensionName) {
             this.extensionName = Input.ofNullable(extensionName);
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
             this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable Input<Object> protectedSettings) {
+        public Builder protectedSettings(@Nullable Input<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable Object protectedSettings) {
+        public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = Input.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder setPublisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Input<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = Input.ofNullable(publisher);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<Object> settings) {
+        public Builder settings(@Nullable Input<Object> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable Object settings) {
+        public Builder settings(@Nullable Object settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
             return this;
         }

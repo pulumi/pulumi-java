@@ -103,42 +103,42 @@ public final class TargetGroupAttachmentArgs extends io.pulumi.resources.Resourc
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setTargetGroupArn(Input<String> targetGroupArn) {
+        public Builder targetGroupArn(Input<String> targetGroupArn) {
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }
 
-        public Builder setTargetGroupArn(String targetGroupArn) {
+        public Builder targetGroupArn(String targetGroupArn) {
             this.targetGroupArn = Input.of(Objects.requireNonNull(targetGroupArn));
             return this;
         }
 
-        public Builder setTargetId(Input<String> targetId) {
+        public Builder targetId(Input<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Input.of(Objects.requireNonNull(targetId));
             return this;
         }

@@ -59,12 +59,12 @@ public final class OfficeDataConnectorDataTypesTeamsArgs extends io.pulumi.resou
     	      this.state = defaults.state;
         }
 
-        public Builder setState(@Nullable Input<Either<String,DataTypeState>> state) {
+        public Builder state(@Nullable Input<Either<String,DataTypeState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,DataTypeState> state) {
+        public Builder state(@Nullable Either<String,DataTypeState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

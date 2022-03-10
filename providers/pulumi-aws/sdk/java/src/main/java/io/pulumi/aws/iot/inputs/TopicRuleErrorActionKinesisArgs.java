@@ -86,32 +86,32 @@ public final class TopicRuleErrorActionKinesisArgs extends io.pulumi.resources.R
     	      this.streamName = defaults.streamName;
         }
 
-        public Builder setPartitionKey(@Nullable Input<String> partitionKey) {
+        public Builder partitionKey(@Nullable Input<String> partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = Input.ofNullable(partitionKey);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStreamName(Input<String> streamName) {
+        public Builder streamName(Input<String> streamName) {
             this.streamName = Objects.requireNonNull(streamName);
             return this;
         }
 
-        public Builder setStreamName(String streamName) {
+        public Builder streamName(String streamName) {
             this.streamName = Input.of(Objects.requireNonNull(streamName));
             return this;
         }

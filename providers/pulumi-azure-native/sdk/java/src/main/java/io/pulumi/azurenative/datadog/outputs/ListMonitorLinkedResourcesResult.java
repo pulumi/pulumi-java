@@ -69,12 +69,12 @@ public final class ListMonitorLinkedResourcesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<LinkedResourceResponse> value) {
+        public Builder value(@Nullable List<LinkedResourceResponse> value) {
             this.value = value;
             return this;
         }

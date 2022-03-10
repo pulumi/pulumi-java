@@ -68,12 +68,12 @@ public final class ListSqlMigrationServiceAuthKeysArgs extends io.pulumi.resourc
     	      this.sqlMigrationServiceName = defaults.sqlMigrationServiceName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSqlMigrationServiceName(String sqlMigrationServiceName) {
+        public Builder sqlMigrationServiceName(String sqlMigrationServiceName) {
             this.sqlMigrationServiceName = Objects.requireNonNull(sqlMigrationServiceName);
             return this;
         }

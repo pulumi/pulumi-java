@@ -335,92 +335,92 @@ public final class GetCacheResult {
     	      this.upgradeStatus = defaults.upgradeStatus;
         }
 
-        public Builder setCacheSizeGB(@Nullable Integer cacheSizeGB) {
+        public Builder cacheSizeGB(@Nullable Integer cacheSizeGB) {
             this.cacheSizeGB = cacheSizeGB;
             return this;
         }
 
-        public Builder setDirectoryServicesSettings(@Nullable CacheDirectorySettingsResponse directoryServicesSettings) {
+        public Builder directoryServicesSettings(@Nullable CacheDirectorySettingsResponse directoryServicesSettings) {
             this.directoryServicesSettings = directoryServicesSettings;
             return this;
         }
 
-        public Builder setEncryptionSettings(@Nullable CacheEncryptionSettingsResponse encryptionSettings) {
+        public Builder encryptionSettings(@Nullable CacheEncryptionSettingsResponse encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
-        public Builder setHealth(CacheHealthResponse health) {
+        public Builder health(CacheHealthResponse health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable CacheIdentityResponse identity) {
+        public Builder identity(@Nullable CacheIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMountAddresses(List<String> mountAddresses) {
+        public Builder mountAddresses(List<String> mountAddresses) {
             this.mountAddresses = Objects.requireNonNull(mountAddresses);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkSettings(@Nullable CacheNetworkSettingsResponse networkSettings) {
+        public Builder networkSettings(@Nullable CacheNetworkSettingsResponse networkSettings) {
             this.networkSettings = networkSettings;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable CacheSecuritySettingsResponse securitySettings) {
+        public Builder securitySettings(@Nullable CacheSecuritySettingsResponse securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
-        public Builder setSku(@Nullable CacheResponseSku sku) {
+        public Builder sku(@Nullable CacheResponseSku sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpgradeStatus(@Nullable CacheUpgradeStatusResponse upgradeStatus) {
+        public Builder upgradeStatus(@Nullable CacheUpgradeStatusResponse upgradeStatus) {
             this.upgradeStatus = upgradeStatus;
             return this;
         }

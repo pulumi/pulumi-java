@@ -84,17 +84,17 @@ public final class GetStreamingEndpointArgs extends io.pulumi.resources.InvokeAr
     	      this.streamingEndpointName = defaults.streamingEndpointName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStreamingEndpointName(String streamingEndpointName) {
+        public Builder streamingEndpointName(String streamingEndpointName) {
             this.streamingEndpointName = Objects.requireNonNull(streamingEndpointName);
             return this;
         }

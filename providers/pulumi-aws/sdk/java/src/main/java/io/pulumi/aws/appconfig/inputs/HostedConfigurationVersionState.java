@@ -151,72 +151,72 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConfigurationProfileId(@Nullable Input<String> configurationProfileId) {
+        public Builder configurationProfileId(@Nullable Input<String> configurationProfileId) {
             this.configurationProfileId = configurationProfileId;
             return this;
         }
 
-        public Builder setConfigurationProfileId(@Nullable String configurationProfileId) {
+        public Builder configurationProfileId(@Nullable String configurationProfileId) {
             this.configurationProfileId = Input.ofNullable(configurationProfileId);
             return this;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Input<Integer> versionNumber) {
+        public Builder versionNumber(@Nullable Input<Integer> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Integer versionNumber) {
+        public Builder versionNumber(@Nullable Integer versionNumber) {
             this.versionNumber = Input.ofNullable(versionNumber);
             return this;
         }

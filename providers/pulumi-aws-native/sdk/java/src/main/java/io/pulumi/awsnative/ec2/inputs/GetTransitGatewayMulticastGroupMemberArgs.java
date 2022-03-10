@@ -84,17 +84,17 @@ public final class GetTransitGatewayMulticastGroupMemberArgs extends io.pulumi.r
     	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
         }
 
-        public Builder setGroupIpAddress(String groupIpAddress) {
+        public Builder groupIpAddress(String groupIpAddress) {
             this.groupIpAddress = Objects.requireNonNull(groupIpAddress);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }

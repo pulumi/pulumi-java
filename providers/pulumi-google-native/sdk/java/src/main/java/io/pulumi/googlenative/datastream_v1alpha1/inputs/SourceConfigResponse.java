@@ -90,17 +90,17 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sourceConnectionProfileName = defaults.sourceConnectionProfileName;
         }
 
-        public Builder setMysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
+        public Builder mysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
             this.mysqlSourceConfig = Objects.requireNonNull(mysqlSourceConfig);
             return this;
         }
 
-        public Builder setOracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
+        public Builder oracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
             this.oracleSourceConfig = Objects.requireNonNull(oracleSourceConfig);
             return this;
         }
 
-        public Builder setSourceConnectionProfileName(String sourceConnectionProfileName) {
+        public Builder sourceConnectionProfileName(String sourceConnectionProfileName) {
             this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName);
             return this;
         }

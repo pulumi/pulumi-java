@@ -88,32 +88,32 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setIpSetDescriptors(@Nullable Input<List<IpSetIpSetDescriptorGetArgs>> ipSetDescriptors) {
+        public Builder ipSetDescriptors(@Nullable Input<List<IpSetIpSetDescriptorGetArgs>> ipSetDescriptors) {
             this.ipSetDescriptors = ipSetDescriptors;
             return this;
         }
 
-        public Builder setIpSetDescriptors(@Nullable List<IpSetIpSetDescriptorGetArgs> ipSetDescriptors) {
+        public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorGetArgs> ipSetDescriptors) {
             this.ipSetDescriptors = Input.ofNullable(ipSetDescriptors);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

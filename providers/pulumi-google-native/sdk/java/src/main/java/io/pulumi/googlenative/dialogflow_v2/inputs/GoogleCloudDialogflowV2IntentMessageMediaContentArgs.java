@@ -76,22 +76,22 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder setMediaObjects(Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects) {
+        public Builder mediaObjects(Input<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects) {
             this.mediaObjects = Objects.requireNonNull(mediaObjects);
             return this;
         }
 
-        public Builder setMediaObjects(List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs> mediaObjects) {
+        public Builder mediaObjects(List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs> mediaObjects) {
             this.mediaObjects = Input.of(Objects.requireNonNull(mediaObjects));
             return this;
         }
 
-        public Builder setMediaType(@Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType) {
+        public Builder mediaType(@Nullable Input<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
-        public Builder setMediaType(@Nullable GoogleCloudDialogflowV2IntentMessageMediaContentMediaType mediaType) {
+        public Builder mediaType(@Nullable GoogleCloudDialogflowV2IntentMessageMediaContentMediaType mediaType) {
             this.mediaType = Input.ofNullable(mediaType);
             return this;
         }

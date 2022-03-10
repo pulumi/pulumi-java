@@ -51,7 +51,7 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
     	      this.licenseArn = defaults.licenseArn;
         }
 
-        public Builder setLicenseArn(String licenseArn) {
+        public Builder licenseArn(String licenseArn) {
             this.licenseArn = Objects.requireNonNull(licenseArn);
             return this;
         }

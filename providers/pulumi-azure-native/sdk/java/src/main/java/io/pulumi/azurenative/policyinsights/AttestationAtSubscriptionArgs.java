@@ -170,82 +170,82 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder setAttestationName(@Nullable Input<String> attestationName) {
+        public Builder attestationName(@Nullable Input<String> attestationName) {
             this.attestationName = attestationName;
             return this;
         }
 
-        public Builder setAttestationName(@Nullable String attestationName) {
+        public Builder attestationName(@Nullable String attestationName) {
             this.attestationName = Input.ofNullable(attestationName);
             return this;
         }
 
-        public Builder setComments(@Nullable Input<String> comments) {
+        public Builder comments(@Nullable Input<String> comments) {
             this.comments = comments;
             return this;
         }
 
-        public Builder setComments(@Nullable String comments) {
+        public Builder comments(@Nullable String comments) {
             this.comments = Input.ofNullable(comments);
             return this;
         }
 
-        public Builder setComplianceState(@Nullable Input<Either<String,ComplianceState>> complianceState) {
+        public Builder complianceState(@Nullable Input<Either<String,ComplianceState>> complianceState) {
             this.complianceState = complianceState;
             return this;
         }
 
-        public Builder setComplianceState(@Nullable Either<String,ComplianceState> complianceState) {
+        public Builder complianceState(@Nullable Either<String,ComplianceState> complianceState) {
             this.complianceState = Input.ofNullable(complianceState);
             return this;
         }
 
-        public Builder setEvidence(@Nullable Input<List<AttestationEvidenceArgs>> evidence) {
+        public Builder evidence(@Nullable Input<List<AttestationEvidenceArgs>> evidence) {
             this.evidence = evidence;
             return this;
         }
 
-        public Builder setEvidence(@Nullable List<AttestationEvidenceArgs> evidence) {
+        public Builder evidence(@Nullable List<AttestationEvidenceArgs> evidence) {
             this.evidence = Input.ofNullable(evidence);
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable Input<String> expiresOn) {
+        public Builder expiresOn(@Nullable Input<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable String expiresOn) {
+        public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = Input.ofNullable(expiresOn);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setPolicyAssignmentId(Input<String> policyAssignmentId) {
+        public Builder policyAssignmentId(Input<String> policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
 
-        public Builder setPolicyAssignmentId(String policyAssignmentId) {
+        public Builder policyAssignmentId(String policyAssignmentId) {
             this.policyAssignmentId = Input.of(Objects.requireNonNull(policyAssignmentId));
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
             return this;
         }

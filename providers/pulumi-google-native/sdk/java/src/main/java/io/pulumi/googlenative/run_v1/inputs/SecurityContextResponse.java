@@ -55,7 +55,7 @@ public final class SecurityContextResponse extends io.pulumi.resources.InvokeArg
     	      this.runAsUser = defaults.runAsUser;
         }
 
-        public Builder setRunAsUser(Integer runAsUser) {
+        public Builder runAsUser(Integer runAsUser) {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }

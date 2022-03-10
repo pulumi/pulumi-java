@@ -67,22 +67,22 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
     	      this.statisticsResource = defaults.statisticsResource;
         }
 
-        public Builder setConstraintsResource(@Nullable Input<MonitoringScheduleConstraintsResourceArgs> constraintsResource) {
+        public Builder constraintsResource(@Nullable Input<MonitoringScheduleConstraintsResourceArgs> constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable MonitoringScheduleConstraintsResourceArgs constraintsResource) {
+        public Builder constraintsResource(@Nullable MonitoringScheduleConstraintsResourceArgs constraintsResource) {
             this.constraintsResource = Input.ofNullable(constraintsResource);
             return this;
         }
 
-        public Builder setStatisticsResource(@Nullable Input<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
+        public Builder statisticsResource(@Nullable Input<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }
 
-        public Builder setStatisticsResource(@Nullable MonitoringScheduleStatisticsResourceArgs statisticsResource) {
+        public Builder statisticsResource(@Nullable MonitoringScheduleStatisticsResourceArgs statisticsResource) {
             this.statisticsResource = Input.ofNullable(statisticsResource);
             return this;
         }

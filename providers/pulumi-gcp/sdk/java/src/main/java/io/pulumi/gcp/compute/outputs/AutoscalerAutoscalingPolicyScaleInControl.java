@@ -72,12 +72,12 @@ public final class AutoscalerAutoscalingPolicyScaleInControl {
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder setMaxScaledInReplicas(@Nullable AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas) {
+        public Builder maxScaledInReplicas(@Nullable AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas) {
             this.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
 
-        public Builder setTimeWindowSec(@Nullable Integer timeWindowSec) {
+        public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }

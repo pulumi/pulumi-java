@@ -100,22 +100,22 @@ public final class ManagedClusterWindowsProfileResponse {
     	      this.licenseType = defaults.licenseType;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminUsername(String adminUsername) {
+        public Builder adminUsername(String adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
-        public Builder setEnableCSIProxy(@Nullable Boolean enableCSIProxy) {
+        public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
             this.enableCSIProxy = enableCSIProxy;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }

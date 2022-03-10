@@ -67,12 +67,12 @@ public final class AutomationRuleRunPlaybookActionResponseActionConfiguration {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setLogicAppResourceId(@Nullable String logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

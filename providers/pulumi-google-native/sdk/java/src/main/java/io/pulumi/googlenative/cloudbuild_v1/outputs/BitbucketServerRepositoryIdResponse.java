@@ -82,17 +82,17 @@ public final class BitbucketServerRepositoryIdResponse {
     	      this.webhookId = defaults.webhookId;
         }
 
-        public Builder setProjectKey(String projectKey) {
+        public Builder projectKey(String projectKey) {
             this.projectKey = Objects.requireNonNull(projectKey);
             return this;
         }
 
-        public Builder setRepoSlug(String repoSlug) {
+        public Builder repoSlug(String repoSlug) {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
 
-        public Builder setWebhookId(Integer webhookId) {
+        public Builder webhookId(Integer webhookId) {
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
         }

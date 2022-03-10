@@ -90,17 +90,17 @@ public final class VirtualNetworkConfigurationResponse extends io.pulumi.resourc
     	      this.vnetid = defaults.vnetid;
         }
 
-        public Builder setSubnetResourceId(@Nullable String subnetResourceId) {
+        public Builder subnetResourceId(@Nullable String subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
 
-        public Builder setSubnetname(String subnetname) {
+        public Builder subnetname(String subnetname) {
             this.subnetname = Objects.requireNonNull(subnetname);
             return this;
         }
 
-        public Builder setVnetid(String vnetid) {
+        public Builder vnetid(String vnetid) {
             this.vnetid = Objects.requireNonNull(vnetid);
             return this;
         }

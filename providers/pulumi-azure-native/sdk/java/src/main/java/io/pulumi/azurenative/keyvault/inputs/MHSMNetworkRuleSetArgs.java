@@ -112,42 +112,42 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setBypass(@Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass) {
+        public Builder bypass(@Nullable Input<Either<String,NetworkRuleBypassOptions>> bypass) {
             this.bypass = bypass;
             return this;
         }
 
-        public Builder setBypass(@Nullable Either<String,NetworkRuleBypassOptions> bypass) {
+        public Builder bypass(@Nullable Either<String,NetworkRuleBypassOptions> bypass) {
             this.bypass = Input.ofNullable(bypass);
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable Input<Either<String,NetworkRuleAction>> defaultAction) {
+        public Builder defaultAction(@Nullable Input<Either<String,NetworkRuleAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable Either<String,NetworkRuleAction> defaultAction) {
+        public Builder defaultAction(@Nullable Either<String,NetworkRuleAction> defaultAction) {
             this.defaultAction = Input.ofNullable(defaultAction);
             return this;
         }
 
-        public Builder setIpRules(@Nullable Input<List<MHSMIPRuleArgs>> ipRules) {
+        public Builder ipRules(@Nullable Input<List<MHSMIPRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<MHSMIPRuleArgs> ipRules) {
+        public Builder ipRules(@Nullable List<MHSMIPRuleArgs> ipRules) {
             this.ipRules = Input.ofNullable(ipRules);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable Input<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Input<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleArgs> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }

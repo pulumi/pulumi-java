@@ -71,22 +71,22 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
     	      this.awsIamConfig = defaults.awsIamConfig;
         }
 
-        public Builder setAuthorizationType(@Nullable Input<String> authorizationType) {
+        public Builder authorizationType(@Nullable Input<String> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable String authorizationType) {
+        public Builder authorizationType(@Nullable String authorizationType) {
             this.authorizationType = Input.ofNullable(authorizationType);
             return this;
         }
 
-        public Builder setAwsIamConfig(@Nullable Input<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> awsIamConfig) {
+        public Builder awsIamConfig(@Nullable Input<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> awsIamConfig) {
             this.awsIamConfig = awsIamConfig;
             return this;
         }
 
-        public Builder setAwsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs awsIamConfig) {
+        public Builder awsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs awsIamConfig) {
             this.awsIamConfig = Input.ofNullable(awsIamConfig);
             return this;
         }

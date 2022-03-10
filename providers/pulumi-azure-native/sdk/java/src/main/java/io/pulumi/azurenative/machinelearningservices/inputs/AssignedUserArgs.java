@@ -73,22 +73,22 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setObjectId(Input<String> objectId) {
+        public Builder objectId(Input<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder setTenantId(Input<String> tenantId) {
+        public Builder tenantId(Input<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }

@@ -57,12 +57,12 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
     	      this.encryptionKeyReference = defaults.encryptionKeyReference;
         }
 
-        public Builder setEncryptionKeyReference(@Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
+        public Builder encryptionKeyReference(@Nullable Input<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
         }
 
-        public Builder setEncryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceArgs encryptionKeyReference) {
+        public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceArgs encryptionKeyReference) {
             this.encryptionKeyReference = Input.ofNullable(encryptionKeyReference);
             return this;
         }

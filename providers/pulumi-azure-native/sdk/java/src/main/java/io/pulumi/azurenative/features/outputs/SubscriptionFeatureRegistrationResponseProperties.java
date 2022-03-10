@@ -262,72 +262,72 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setApprovalType(String approvalType) {
+        public Builder approvalType(String approvalType) {
             this.approvalType = Objects.requireNonNull(approvalType);
             return this;
         }
 
-        public Builder setAuthorizationProfile(@Nullable AuthorizationProfileResponse authorizationProfile) {
+        public Builder authorizationProfile(@Nullable AuthorizationProfileResponse authorizationProfile) {
             this.authorizationProfile = authorizationProfile;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDocumentationLink(String documentationLink) {
+        public Builder documentationLink(String documentationLink) {
             this.documentationLink = Objects.requireNonNull(documentationLink);
             return this;
         }
 
-        public Builder setFeatureName(String featureName) {
+        public Builder featureName(String featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setRegistrationDate(String registrationDate) {
+        public Builder registrationDate(String registrationDate) {
             this.registrationDate = Objects.requireNonNull(registrationDate);
             return this;
         }
 
-        public Builder setReleaseDate(String releaseDate) {
+        public Builder releaseDate(String releaseDate) {
             this.releaseDate = Objects.requireNonNull(releaseDate);
             return this;
         }
 
-        public Builder setShouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
+        public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
             this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

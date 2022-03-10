@@ -74,12 +74,12 @@ public final class DetectorModelPayload extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setContentExpression(String contentExpression) {
+        public Builder contentExpression(String contentExpression) {
             this.contentExpression = Objects.requireNonNull(contentExpression);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

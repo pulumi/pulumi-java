@@ -74,22 +74,22 @@ public final class PngFormatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setFilenamePattern(Input<String> filenamePattern) {
+        public Builder filenamePattern(Input<String> filenamePattern) {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
 
-        public Builder setFilenamePattern(String filenamePattern) {
+        public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Input.of(Objects.requireNonNull(filenamePattern));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

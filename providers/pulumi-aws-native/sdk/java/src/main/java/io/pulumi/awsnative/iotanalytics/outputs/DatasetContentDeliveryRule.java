@@ -52,12 +52,12 @@ public final class DatasetContentDeliveryRule {
     	      this.entryName = defaults.entryName;
         }
 
-        public Builder setDestination(DatasetContentDeliveryRuleDestination destination) {
+        public Builder destination(DatasetContentDeliveryRuleDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setEntryName(@Nullable String entryName) {
+        public Builder entryName(@Nullable String entryName) {
             this.entryName = entryName;
             return this;
         }

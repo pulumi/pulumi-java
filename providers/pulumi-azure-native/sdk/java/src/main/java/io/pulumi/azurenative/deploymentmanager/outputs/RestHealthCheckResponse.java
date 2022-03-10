@@ -85,17 +85,17 @@ public final class RestHealthCheckResponse {
     	      this.response = defaults.response;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequest(RestRequestResponse request) {
+        public Builder request(RestRequestResponse request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setResponse(@Nullable RestResponseResponse response) {
+        public Builder response(@Nullable RestResponseResponse response) {
             this.response = response;
             return this;
         }

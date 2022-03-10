@@ -58,12 +58,12 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs extends 
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setSynonyms(@Nullable Input<List<String>> synonyms) {
+        public Builder synonyms(@Nullable Input<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
-        public Builder setSynonyms(@Nullable List<String> synonyms) {
+        public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }

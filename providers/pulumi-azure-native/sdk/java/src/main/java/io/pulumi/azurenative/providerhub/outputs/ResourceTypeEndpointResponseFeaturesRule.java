@@ -40,7 +40,7 @@ public final class ResourceTypeEndpointResponseFeaturesRule {
     	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
         }
 
-        public Builder setRequiredFeaturesPolicy(String requiredFeaturesPolicy) {
+        public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }

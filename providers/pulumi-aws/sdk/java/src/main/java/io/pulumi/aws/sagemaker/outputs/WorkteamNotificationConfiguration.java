@@ -50,7 +50,7 @@ public final class WorkteamNotificationConfiguration {
     	      this.notificationTopicArn = defaults.notificationTopicArn;
         }
 
-        public Builder setNotificationTopicArn(@Nullable String notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }

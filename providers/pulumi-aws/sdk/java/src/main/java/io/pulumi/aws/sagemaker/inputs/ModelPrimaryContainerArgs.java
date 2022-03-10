@@ -137,62 +137,62 @@ public final class ModelPrimaryContainerArgs extends io.pulumi.resources.Resourc
     	      this.modelDataUrl = defaults.modelDataUrl;
         }
 
-        public Builder setContainerHostname(@Nullable Input<String> containerHostname) {
+        public Builder containerHostname(@Nullable Input<String> containerHostname) {
             this.containerHostname = containerHostname;
             return this;
         }
 
-        public Builder setContainerHostname(@Nullable String containerHostname) {
+        public Builder containerHostname(@Nullable String containerHostname) {
             this.containerHostname = Input.ofNullable(containerHostname);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<Map<String,String>> environment) {
+        public Builder environment(@Nullable Input<Map<String,String>> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Map<String,String> environment) {
+        public Builder environment(@Nullable Map<String,String> environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setImageConfig(@Nullable Input<ModelPrimaryContainerImageConfigArgs> imageConfig) {
+        public Builder imageConfig(@Nullable Input<ModelPrimaryContainerImageConfigArgs> imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
 
-        public Builder setImageConfig(@Nullable ModelPrimaryContainerImageConfigArgs imageConfig) {
+        public Builder imageConfig(@Nullable ModelPrimaryContainerImageConfigArgs imageConfig) {
             this.imageConfig = Input.ofNullable(imageConfig);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setModelDataUrl(@Nullable Input<String> modelDataUrl) {
+        public Builder modelDataUrl(@Nullable Input<String> modelDataUrl) {
             this.modelDataUrl = modelDataUrl;
             return this;
         }
 
-        public Builder setModelDataUrl(@Nullable String modelDataUrl) {
+        public Builder modelDataUrl(@Nullable String modelDataUrl) {
             this.modelDataUrl = Input.ofNullable(modelDataUrl);
             return this;
         }

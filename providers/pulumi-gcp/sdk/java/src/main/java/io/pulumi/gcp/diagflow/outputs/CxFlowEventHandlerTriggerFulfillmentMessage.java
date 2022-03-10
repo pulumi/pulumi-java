@@ -50,7 +50,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
+        public Builder text(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
             this.text = text;
             return this;
         }

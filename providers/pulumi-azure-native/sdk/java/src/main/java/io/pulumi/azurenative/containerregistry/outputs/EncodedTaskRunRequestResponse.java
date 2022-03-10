@@ -238,62 +238,62 @@ public final class EncodedTaskRunRequestResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CredentialsResponse credentials) {
+        public Builder credentials(@Nullable CredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setEncodedTaskContent(String encodedTaskContent) {
+        public Builder encodedTaskContent(String encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
 
-        public Builder setEncodedValuesContent(@Nullable String encodedValuesContent) {
+        public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setPlatform(PlatformPropertiesResponse platform) {
+        public Builder platform(PlatformPropertiesResponse platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setSourceLocation(@Nullable String sourceLocation) {
+        public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueResponse> values) {
+        public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }

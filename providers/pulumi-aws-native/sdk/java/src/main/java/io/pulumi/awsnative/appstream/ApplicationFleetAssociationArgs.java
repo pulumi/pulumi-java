@@ -61,22 +61,22 @@ public final class ApplicationFleetAssociationArgs extends io.pulumi.resources.R
     	      this.fleetName = defaults.fleetName;
         }
 
-        public Builder setApplicationArn(Input<String> applicationArn) {
+        public Builder applicationArn(Input<String> applicationArn) {
             this.applicationArn = Objects.requireNonNull(applicationArn);
             return this;
         }
 
-        public Builder setApplicationArn(String applicationArn) {
+        public Builder applicationArn(String applicationArn) {
             this.applicationArn = Input.of(Objects.requireNonNull(applicationArn));
             return this;
         }
 
-        public Builder setFleetName(Input<String> fleetName) {
+        public Builder fleetName(Input<String> fleetName) {
             this.fleetName = Objects.requireNonNull(fleetName);
             return this;
         }
 
-        public Builder setFleetName(String fleetName) {
+        public Builder fleetName(String fleetName) {
             this.fleetName = Input.of(Objects.requireNonNull(fleetName));
             return this;
         }

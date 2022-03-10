@@ -241,122 +241,122 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setDestinationOptions(@Nullable Input<FlowLogDestinationOptionsArgs> destinationOptions) {
+        public Builder destinationOptions(@Nullable Input<FlowLogDestinationOptionsArgs> destinationOptions) {
             this.destinationOptions = destinationOptions;
             return this;
         }
 
-        public Builder setDestinationOptions(@Nullable FlowLogDestinationOptionsArgs destinationOptions) {
+        public Builder destinationOptions(@Nullable FlowLogDestinationOptionsArgs destinationOptions) {
             this.destinationOptions = Input.ofNullable(destinationOptions);
             return this;
         }
 
-        public Builder setEniId(@Nullable Input<String> eniId) {
+        public Builder eniId(@Nullable Input<String> eniId) {
             this.eniId = eniId;
             return this;
         }
 
-        public Builder setEniId(@Nullable String eniId) {
+        public Builder eniId(@Nullable String eniId) {
             this.eniId = Input.ofNullable(eniId);
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable String iamRoleArn) {
+        public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Input.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder setLogDestination(@Nullable Input<String> logDestination) {
+        public Builder logDestination(@Nullable Input<String> logDestination) {
             this.logDestination = logDestination;
             return this;
         }
 
-        public Builder setLogDestination(@Nullable String logDestination) {
+        public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = Input.ofNullable(logDestination);
             return this;
         }
 
-        public Builder setLogDestinationType(@Nullable Input<String> logDestinationType) {
+        public Builder logDestinationType(@Nullable Input<String> logDestinationType) {
             this.logDestinationType = logDestinationType;
             return this;
         }
 
-        public Builder setLogDestinationType(@Nullable String logDestinationType) {
+        public Builder logDestinationType(@Nullable String logDestinationType) {
             this.logDestinationType = Input.ofNullable(logDestinationType);
             return this;
         }
 
-        public Builder setLogFormat(@Nullable Input<String> logFormat) {
+        public Builder logFormat(@Nullable Input<String> logFormat) {
             this.logFormat = logFormat;
             return this;
         }
 
-        public Builder setLogFormat(@Nullable String logFormat) {
+        public Builder logFormat(@Nullable String logFormat) {
             this.logFormat = Input.ofNullable(logFormat);
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable Input<String> logGroupName) {
+        public Builder logGroupName(@Nullable Input<String> logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = Input.ofNullable(logGroupName);
             return this;
         }
 
-        public Builder setMaxAggregationInterval(@Nullable Input<Integer> maxAggregationInterval) {
+        public Builder maxAggregationInterval(@Nullable Input<Integer> maxAggregationInterval) {
             this.maxAggregationInterval = maxAggregationInterval;
             return this;
         }
 
-        public Builder setMaxAggregationInterval(@Nullable Integer maxAggregationInterval) {
+        public Builder maxAggregationInterval(@Nullable Integer maxAggregationInterval) {
             this.maxAggregationInterval = Input.ofNullable(maxAggregationInterval);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrafficType(Input<String> trafficType) {
+        public Builder trafficType(Input<String> trafficType) {
             this.trafficType = Objects.requireNonNull(trafficType);
             return this;
         }
 
-        public Builder setTrafficType(String trafficType) {
+        public Builder trafficType(String trafficType) {
             this.trafficType = Input.of(Objects.requireNonNull(trafficType));
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

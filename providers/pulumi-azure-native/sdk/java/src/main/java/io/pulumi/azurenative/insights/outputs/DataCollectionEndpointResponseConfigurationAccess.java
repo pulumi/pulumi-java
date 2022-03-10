@@ -48,7 +48,7 @@ public final class DataCollectionEndpointResponseConfigurationAccess {
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }

@@ -234,122 +234,122 @@ public final class EnvironmentSettingArgs extends io.pulumi.resources.ResourceAr
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setConfigurationState(@Nullable Input<Either<String,ConfigurationState>> configurationState) {
+        public Builder configurationState(@Nullable Input<Either<String,ConfigurationState>> configurationState) {
             this.configurationState = configurationState;
             return this;
         }
 
-        public Builder setConfigurationState(@Nullable Either<String,ConfigurationState> configurationState) {
+        public Builder configurationState(@Nullable Either<String,ConfigurationState> configurationState) {
             this.configurationState = Input.ofNullable(configurationState);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentSettingName(@Nullable Input<String> environmentSettingName) {
+        public Builder environmentSettingName(@Nullable Input<String> environmentSettingName) {
             this.environmentSettingName = environmentSettingName;
             return this;
         }
 
-        public Builder setEnvironmentSettingName(@Nullable String environmentSettingName) {
+        public Builder environmentSettingName(@Nullable String environmentSettingName) {
             this.environmentSettingName = Input.ofNullable(environmentSettingName);
             return this;
         }
 
-        public Builder setLabAccountName(Input<String> labAccountName) {
+        public Builder labAccountName(Input<String> labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
 
-        public Builder setLabAccountName(String labAccountName) {
+        public Builder labAccountName(String labAccountName) {
             this.labAccountName = Input.of(Objects.requireNonNull(labAccountName));
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceSettings(Input<ResourceSettingsArgs> resourceSettings) {
+        public Builder resourceSettings(Input<ResourceSettingsArgs> resourceSettings) {
             this.resourceSettings = Objects.requireNonNull(resourceSettings);
             return this;
         }
 
-        public Builder setResourceSettings(ResourceSettingsArgs resourceSettings) {
+        public Builder resourceSettings(ResourceSettingsArgs resourceSettings) {
             this.resourceSettings = Input.of(Objects.requireNonNull(resourceSettings));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable String uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
             return this;
         }

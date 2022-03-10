@@ -103,42 +103,42 @@ public final class S3BucketAssociationState extends io.pulumi.resources.Resource
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setClassificationType(@Nullable Input<S3BucketAssociationClassificationTypeGetArgs> classificationType) {
+        public Builder classificationType(@Nullable Input<S3BucketAssociationClassificationTypeGetArgs> classificationType) {
             this.classificationType = classificationType;
             return this;
         }
 
-        public Builder setClassificationType(@Nullable S3BucketAssociationClassificationTypeGetArgs classificationType) {
+        public Builder classificationType(@Nullable S3BucketAssociationClassificationTypeGetArgs classificationType) {
             this.classificationType = Input.ofNullable(classificationType);
             return this;
         }
 
-        public Builder setMemberAccountId(@Nullable Input<String> memberAccountId) {
+        public Builder memberAccountId(@Nullable Input<String> memberAccountId) {
             this.memberAccountId = memberAccountId;
             return this;
         }
 
-        public Builder setMemberAccountId(@Nullable String memberAccountId) {
+        public Builder memberAccountId(@Nullable String memberAccountId) {
             this.memberAccountId = Input.ofNullable(memberAccountId);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }

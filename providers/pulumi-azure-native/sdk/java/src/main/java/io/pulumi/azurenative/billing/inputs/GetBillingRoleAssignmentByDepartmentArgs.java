@@ -84,17 +84,17 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
     	      this.departmentName = defaults.departmentName;
         }
 
-        public Builder setBillingAccountName(String billingAccountName) {
+        public Builder billingAccountName(String billingAccountName) {
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }
 
-        public Builder setBillingRoleAssignmentName(String billingRoleAssignmentName) {
+        public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
             this.billingRoleAssignmentName = Objects.requireNonNull(billingRoleAssignmentName);
             return this;
         }
 
-        public Builder setDepartmentName(String departmentName) {
+        public Builder departmentName(String departmentName) {
             this.departmentName = Objects.requireNonNull(departmentName);
             return this;
         }

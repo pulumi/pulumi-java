@@ -137,62 +137,62 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficPercentStrategy = defaults.trafficPercentStrategy;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDeleteServiceStrategy(@Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy) {
+        public Builder deleteServiceStrategy(@Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy) {
             this.deleteServiceStrategy = deleteServiceStrategy;
             return this;
         }
 
-        public Builder setDeleteServiceStrategy(@Nullable DeleteServiceStrategyArgs deleteServiceStrategy) {
+        public Builder deleteServiceStrategy(@Nullable DeleteServiceStrategyArgs deleteServiceStrategy) {
             this.deleteServiceStrategy = Input.ofNullable(deleteServiceStrategy);
             return this;
         }
 
-        public Builder setRolloutId(@Nullable Input<String> rolloutId) {
+        public Builder rolloutId(@Nullable Input<String> rolloutId) {
             this.rolloutId = rolloutId;
             return this;
         }
 
-        public Builder setRolloutId(@Nullable String rolloutId) {
+        public Builder rolloutId(@Nullable String rolloutId) {
             this.rolloutId = Input.ofNullable(rolloutId);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<RolloutStatus> status) {
+        public Builder status(@Nullable Input<RolloutStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable RolloutStatus status) {
+        public Builder status(@Nullable RolloutStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTrafficPercentStrategy(@Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy) {
+        public Builder trafficPercentStrategy(@Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy) {
             this.trafficPercentStrategy = trafficPercentStrategy;
             return this;
         }
 
-        public Builder setTrafficPercentStrategy(@Nullable TrafficPercentStrategyArgs trafficPercentStrategy) {
+        public Builder trafficPercentStrategy(@Nullable TrafficPercentStrategyArgs trafficPercentStrategy) {
             this.trafficPercentStrategy = Input.ofNullable(trafficPercentStrategy);
             return this;
         }

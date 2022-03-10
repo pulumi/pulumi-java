@@ -55,7 +55,7 @@ public final class DisplayDeviceResponse extends io.pulumi.resources.InvokeArgs 
     	      this.enableDisplay = defaults.enableDisplay;
         }
 
-        public Builder setEnableDisplay(Boolean enableDisplay) {
+        public Builder enableDisplay(Boolean enableDisplay) {
             this.enableDisplay = Objects.requireNonNull(enableDisplay);
             return this;
         }

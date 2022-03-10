@@ -125,27 +125,27 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse extends io.pulum
     	      this.updateLimit = defaults.updateLimit;
         }
 
-        public Builder setFilters(@Nullable List<String> filters) {
+        public Builder filters(@Nullable List<String> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSearchCriteria(@Nullable String searchCriteria) {
+        public Builder searchCriteria(@Nullable String searchCriteria) {
             this.searchCriteria = searchCriteria;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateLimit(@Nullable Integer updateLimit) {
+        public Builder updateLimit(@Nullable Integer updateLimit) {
             this.updateLimit = updateLimit;
             return this;
         }

@@ -51,12 +51,12 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange 
     	      this.value = defaults.value;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

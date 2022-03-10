@@ -92,32 +92,32 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs ex
     	      this.sentimentConfig = defaults.sentimentConfig;
         }
 
-        public Builder setAllowMultiLabel(@Nullable Input<Boolean> allowMultiLabel) {
+        public Builder allowMultiLabel(@Nullable Input<Boolean> allowMultiLabel) {
             this.allowMultiLabel = allowMultiLabel;
             return this;
         }
 
-        public Builder setAllowMultiLabel(@Nullable Boolean allowMultiLabel) {
+        public Builder allowMultiLabel(@Nullable Boolean allowMultiLabel) {
             this.allowMultiLabel = Input.ofNullable(allowMultiLabel);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(Input<String> annotationSpecSet) {
+        public Builder annotationSpecSet(Input<String> annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Input.of(Objects.requireNonNull(annotationSpecSet));
             return this;
         }
 
-        public Builder setSentimentConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig) {
+        public Builder sentimentConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1SentimentConfigArgs> sentimentConfig) {
             this.sentimentConfig = sentimentConfig;
             return this;
         }
 
-        public Builder setSentimentConfig(@Nullable GoogleCloudDatalabelingV1beta1SentimentConfigArgs sentimentConfig) {
+        public Builder sentimentConfig(@Nullable GoogleCloudDatalabelingV1beta1SentimentConfigArgs sentimentConfig) {
             this.sentimentConfig = Input.ofNullable(sentimentConfig);
             return this;
         }

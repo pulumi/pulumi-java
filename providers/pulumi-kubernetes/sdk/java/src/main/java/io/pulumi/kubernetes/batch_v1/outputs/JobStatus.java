@@ -197,47 +197,47 @@ public final class JobStatus {
     	      this.uncountedTerminatedPods = defaults.uncountedTerminatedPods;
         }
 
-        public Builder setActive(@Nullable Integer active) {
+        public Builder active(@Nullable Integer active) {
             this.active = active;
             return this;
         }
 
-        public Builder setCompletedIndexes(@Nullable String completedIndexes) {
+        public Builder completedIndexes(@Nullable String completedIndexes) {
             this.completedIndexes = completedIndexes;
             return this;
         }
 
-        public Builder setCompletionTime(@Nullable String completionTime) {
+        public Builder completionTime(@Nullable String completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<JobCondition> conditions) {
+        public Builder conditions(@Nullable List<JobCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setFailed(@Nullable Integer failed) {
+        public Builder failed(@Nullable Integer failed) {
             this.failed = failed;
             return this;
         }
 
-        public Builder setReady(@Nullable Integer ready) {
+        public Builder ready(@Nullable Integer ready) {
             this.ready = ready;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setSucceeded(@Nullable Integer succeeded) {
+        public Builder succeeded(@Nullable Integer succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
-        public Builder setUncountedTerminatedPods(@Nullable UncountedTerminatedPods uncountedTerminatedPods) {
+        public Builder uncountedTerminatedPods(@Nullable UncountedTerminatedPods uncountedTerminatedPods) {
             this.uncountedTerminatedPods = uncountedTerminatedPods;
             return this;
         }

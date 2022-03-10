@@ -57,7 +57,7 @@ public final class RealtimeConfigurationResponse extends io.pulumi.resources.Inv
     	      this.maxConcurrentCalls = defaults.maxConcurrentCalls;
         }
 
-        public Builder setMaxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
+        public Builder maxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
             this.maxConcurrentCalls = maxConcurrentCalls;
             return this;
         }

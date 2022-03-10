@@ -50,7 +50,7 @@ public final class DiskAutoSnapshotAddOn {
     	      this.snapshotTimeOfDay = defaults.snapshotTimeOfDay;
         }
 
-        public Builder setSnapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
+        public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }

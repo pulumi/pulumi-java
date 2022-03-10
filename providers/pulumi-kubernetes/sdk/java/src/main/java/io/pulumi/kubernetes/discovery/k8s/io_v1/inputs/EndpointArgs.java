@@ -175,82 +175,82 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAddresses(Input<List<String>> addresses) {
+        public Builder addresses(Input<List<String>> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
-        public Builder setAddresses(List<String> addresses) {
+        public Builder addresses(List<String> addresses) {
             this.addresses = Input.of(Objects.requireNonNull(addresses));
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<EndpointConditionsArgs> conditions) {
+        public Builder conditions(@Nullable Input<EndpointConditionsArgs> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable EndpointConditionsArgs conditions) {
+        public Builder conditions(@Nullable EndpointConditionsArgs conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setDeprecatedTopology(@Nullable Input<Map<String,String>> deprecatedTopology) {
+        public Builder deprecatedTopology(@Nullable Input<Map<String,String>> deprecatedTopology) {
             this.deprecatedTopology = deprecatedTopology;
             return this;
         }
 
-        public Builder setDeprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
+        public Builder deprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
             this.deprecatedTopology = Input.ofNullable(deprecatedTopology);
             return this;
         }
 
-        public Builder setHints(@Nullable Input<EndpointHintsArgs> hints) {
+        public Builder hints(@Nullable Input<EndpointHintsArgs> hints) {
             this.hints = hints;
             return this;
         }
 
-        public Builder setHints(@Nullable EndpointHintsArgs hints) {
+        public Builder hints(@Nullable EndpointHintsArgs hints) {
             this.hints = Input.ofNullable(hints);
             return this;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setNodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Input<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Input.ofNullable(nodeName);
             return this;
         }
 
-        public Builder setTargetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
+        public Builder targetRef(@Nullable Input<ObjectReferenceArgs> targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
-        public Builder setTargetRef(@Nullable ObjectReferenceArgs targetRef) {
+        public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
             this.targetRef = Input.ofNullable(targetRef);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

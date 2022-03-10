@@ -63,22 +63,22 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
     	      this.readCapacityUnits = defaults.readCapacityUnits;
         }
 
-        public Builder setReadCapacityAutoScalingSettings(@Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings) {
+        public Builder readCapacityAutoScalingSettings(@Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings) {
             this.readCapacityAutoScalingSettings = readCapacityAutoScalingSettings;
             return this;
         }
 
-        public Builder setReadCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs readCapacityAutoScalingSettings) {
+        public Builder readCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettingsArgs readCapacityAutoScalingSettings) {
             this.readCapacityAutoScalingSettings = Input.ofNullable(readCapacityAutoScalingSettings);
             return this;
         }
 
-        public Builder setReadCapacityUnits(@Nullable Input<Integer> readCapacityUnits) {
+        public Builder readCapacityUnits(@Nullable Input<Integer> readCapacityUnits) {
             this.readCapacityUnits = readCapacityUnits;
             return this;
         }
 
-        public Builder setReadCapacityUnits(@Nullable Integer readCapacityUnits) {
+        public Builder readCapacityUnits(@Nullable Integer readCapacityUnits) {
             this.readCapacityUnits = Input.ofNullable(readCapacityUnits);
             return this;
         }

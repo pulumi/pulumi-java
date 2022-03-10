@@ -42,7 +42,7 @@ public final class WebACLAllowAction {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

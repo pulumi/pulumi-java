@@ -70,12 +70,12 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serviceCode = defaults.serviceCode;
         }
 
-        public Builder setFilters(List<GetProductFilter> filters) {
+        public Builder filters(List<GetProductFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setServiceCode(String serviceCode) {
+        public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }

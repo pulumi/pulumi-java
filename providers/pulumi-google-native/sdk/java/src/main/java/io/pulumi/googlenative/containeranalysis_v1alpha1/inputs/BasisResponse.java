@@ -73,12 +73,12 @@ public final class BasisResponse extends io.pulumi.resources.InvokeArgs {
     	      this.resourceUrl = defaults.resourceUrl;
         }
 
-        public Builder setFingerprint(FingerprintResponse fingerprint) {
+        public Builder fingerprint(FingerprintResponse fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setResourceUrl(String resourceUrl) {
+        public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }

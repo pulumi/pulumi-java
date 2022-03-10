@@ -132,32 +132,32 @@ public final class GetChannelResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setChannelFunctions(@Nullable List<String> channelFunctions) {
+        public Builder channelFunctions(@Nullable List<String> channelFunctions) {
             this.channelFunctions = channelFunctions;
             return this;
         }
 
-        public Builder setChannelType(String channelType) {
+        public Builder channelType(String channelType) {
             this.channelType = Objects.requireNonNull(channelType);
             return this;
         }
 
-        public Builder setCredentials(@Nullable Map<String,String> credentials) {
+        public Builder credentials(@Nullable Map<String,String> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

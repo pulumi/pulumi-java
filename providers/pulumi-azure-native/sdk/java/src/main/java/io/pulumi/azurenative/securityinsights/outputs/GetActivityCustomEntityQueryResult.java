@@ -314,87 +314,87 @@ public final class GetActivityCustomEntityQueryResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setCreatedTimeUtc(String createdTimeUtc) {
+        public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEntitiesFilter(@Nullable Map<String,List<String>> entitiesFilter) {
+        public Builder entitiesFilter(@Nullable Map<String,List<String>> entitiesFilter) {
             this.entitiesFilter = entitiesFilter;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInputEntityType(@Nullable String inputEntityType) {
+        public Builder inputEntityType(@Nullable String inputEntityType) {
             this.inputEntityType = inputEntityType;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastModifiedTimeUtc(String lastModifiedTimeUtc) {
+        public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQueryDefinitions(@Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions) {
+        public Builder queryDefinitions(@Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions) {
             this.queryDefinitions = queryDefinitions;
             return this;
         }
 
-        public Builder setRequiredInputFieldsSets(@Nullable List<List<String>> requiredInputFieldsSets) {
+        public Builder requiredInputFieldsSets(@Nullable List<List<String>> requiredInputFieldsSets) {
             this.requiredInputFieldsSets = requiredInputFieldsSets;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

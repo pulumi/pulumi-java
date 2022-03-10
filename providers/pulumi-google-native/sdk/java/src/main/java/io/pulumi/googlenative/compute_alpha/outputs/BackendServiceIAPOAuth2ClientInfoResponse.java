@@ -81,17 +81,17 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
     	      this.developerEmailAddress = defaults.developerEmailAddress;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setClientName(String clientName) {
+        public Builder clientName(String clientName) {
             this.clientName = Objects.requireNonNull(clientName);
             return this;
         }
 
-        public Builder setDeveloperEmailAddress(String developerEmailAddress) {
+        public Builder developerEmailAddress(String developerEmailAddress) {
             this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress);
             return this;
         }

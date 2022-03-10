@@ -67,12 +67,12 @@ public final class EndpointResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndpointUrl(@Nullable String endpointUrl) {
+        public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

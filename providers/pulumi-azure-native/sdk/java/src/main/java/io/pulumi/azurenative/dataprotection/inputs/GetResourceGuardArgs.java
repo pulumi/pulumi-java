@@ -68,12 +68,12 @@ public final class GetResourceGuardArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGuardsName = defaults.resourceGuardsName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGuardsName(String resourceGuardsName) {
+        public Builder resourceGuardsName(String resourceGuardsName) {
             this.resourceGuardsName = Objects.requireNonNull(resourceGuardsName);
             return this;
         }

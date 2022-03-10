@@ -76,12 +76,12 @@ public final class CapacityReservationInstanceViewResponse extends io.pulumi.res
     	      this.utilizationInfo = defaults.utilizationInfo;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setUtilizationInfo(@Nullable CapacityReservationUtilizationResponse utilizationInfo) {
+        public Builder utilizationInfo(@Nullable CapacityReservationUtilizationResponse utilizationInfo) {
             this.utilizationInfo = utilizationInfo;
             return this;
         }

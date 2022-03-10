@@ -189,92 +189,92 @@ public final class GoogleCloudApigeeV1TlsInfoArgs extends io.pulumi.resources.Re
     	      this.trustStore = defaults.trustStore;
         }
 
-        public Builder setCiphers(@Nullable Input<List<String>> ciphers) {
+        public Builder ciphers(@Nullable Input<List<String>> ciphers) {
             this.ciphers = ciphers;
             return this;
         }
 
-        public Builder setCiphers(@Nullable List<String> ciphers) {
+        public Builder ciphers(@Nullable List<String> ciphers) {
             this.ciphers = Input.ofNullable(ciphers);
             return this;
         }
 
-        public Builder setClientAuthEnabled(@Nullable Input<Boolean> clientAuthEnabled) {
+        public Builder clientAuthEnabled(@Nullable Input<Boolean> clientAuthEnabled) {
             this.clientAuthEnabled = clientAuthEnabled;
             return this;
         }
 
-        public Builder setClientAuthEnabled(@Nullable Boolean clientAuthEnabled) {
+        public Builder clientAuthEnabled(@Nullable Boolean clientAuthEnabled) {
             this.clientAuthEnabled = Input.ofNullable(clientAuthEnabled);
             return this;
         }
 
-        public Builder setCommonName(@Nullable Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName) {
+        public Builder commonName(@Nullable Input<GoogleCloudApigeeV1TlsInfoCommonNameArgs> commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCommonName(@Nullable GoogleCloudApigeeV1TlsInfoCommonNameArgs commonName) {
+        public Builder commonName(@Nullable GoogleCloudApigeeV1TlsInfoCommonNameArgs commonName) {
             this.commonName = Input.ofNullable(commonName);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setIgnoreValidationErrors(@Nullable Input<Boolean> ignoreValidationErrors) {
+        public Builder ignoreValidationErrors(@Nullable Input<Boolean> ignoreValidationErrors) {
             this.ignoreValidationErrors = ignoreValidationErrors;
             return this;
         }
 
-        public Builder setIgnoreValidationErrors(@Nullable Boolean ignoreValidationErrors) {
+        public Builder ignoreValidationErrors(@Nullable Boolean ignoreValidationErrors) {
             this.ignoreValidationErrors = Input.ofNullable(ignoreValidationErrors);
             return this;
         }
 
-        public Builder setKeyAlias(@Nullable Input<String> keyAlias) {
+        public Builder keyAlias(@Nullable Input<String> keyAlias) {
             this.keyAlias = keyAlias;
             return this;
         }
 
-        public Builder setKeyAlias(@Nullable String keyAlias) {
+        public Builder keyAlias(@Nullable String keyAlias) {
             this.keyAlias = Input.ofNullable(keyAlias);
             return this;
         }
 
-        public Builder setKeyStore(@Nullable Input<String> keyStore) {
+        public Builder keyStore(@Nullable Input<String> keyStore) {
             this.keyStore = keyStore;
             return this;
         }
 
-        public Builder setKeyStore(@Nullable String keyStore) {
+        public Builder keyStore(@Nullable String keyStore) {
             this.keyStore = Input.ofNullable(keyStore);
             return this;
         }
 
-        public Builder setProtocols(@Nullable Input<List<String>> protocols) {
+        public Builder protocols(@Nullable Input<List<String>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<String> protocols) {
+        public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = Input.ofNullable(protocols);
             return this;
         }
 
-        public Builder setTrustStore(@Nullable Input<String> trustStore) {
+        public Builder trustStore(@Nullable Input<String> trustStore) {
             this.trustStore = trustStore;
             return this;
         }
 
-        public Builder setTrustStore(@Nullable String trustStore) {
+        public Builder trustStore(@Nullable String trustStore) {
             this.trustStore = Input.ofNullable(trustStore);
             return this;
         }

@@ -99,22 +99,22 @@ public final class VmRecommendationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setConfigurationStatus(@Nullable String configurationStatus) {
+        public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
-        public Builder setEnforcementSupport(@Nullable String enforcementSupport) {
+        public Builder enforcementSupport(@Nullable String enforcementSupport) {
             this.enforcementSupport = enforcementSupport;
             return this;
         }
 
-        public Builder setRecommendationAction(@Nullable String recommendationAction) {
+        public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

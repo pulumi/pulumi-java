@@ -84,17 +84,17 @@ public final class FieldDefinitionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setIsEncrypted(@Nullable Boolean isEncrypted) {
+        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
-        public Builder setIsOptional(@Nullable Boolean isOptional) {
+        public Builder isOptional(@Nullable Boolean isOptional) {
             this.isOptional = isOptional;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

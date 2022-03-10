@@ -75,22 +75,22 @@ public final class ComputeIsolationPropertiesArgs extends io.pulumi.resources.Re
     	      this.hostSku = defaults.hostSku;
         }
 
-        public Builder setEnableComputeIsolation(@Nullable Input<Boolean> enableComputeIsolation) {
+        public Builder enableComputeIsolation(@Nullable Input<Boolean> enableComputeIsolation) {
             this.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
 
-        public Builder setEnableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
+        public Builder enableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
             this.enableComputeIsolation = Input.ofNullable(enableComputeIsolation);
             return this;
         }
 
-        public Builder setHostSku(@Nullable Input<String> hostSku) {
+        public Builder hostSku(@Nullable Input<String> hostSku) {
             this.hostSku = hostSku;
             return this;
         }
 
-        public Builder setHostSku(@Nullable String hostSku) {
+        public Builder hostSku(@Nullable String hostSku) {
             this.hostSku = Input.ofNullable(hostSku);
             return this;
         }

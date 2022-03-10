@@ -117,27 +117,27 @@ public final class MethodIntegrationResponse {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
+        public Builder contentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Object responseParameters) {
+        public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Object responseTemplates) {
+        public Builder responseTemplates(@Nullable Object responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
-        public Builder setSelectionPattern(@Nullable String selectionPattern) {
+        public Builder selectionPattern(@Nullable String selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

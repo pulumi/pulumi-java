@@ -61,22 +61,22 @@ public final class NotificationRuleTargetArgs extends io.pulumi.resources.Resour
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder setTargetAddress(Input<String> targetAddress) {
+        public Builder targetAddress(Input<String> targetAddress) {
             this.targetAddress = Objects.requireNonNull(targetAddress);
             return this;
         }
 
-        public Builder setTargetAddress(String targetAddress) {
+        public Builder targetAddress(String targetAddress) {
             this.targetAddress = Input.of(Objects.requireNonNull(targetAddress));
             return this;
         }
 
-        public Builder setTargetType(Input<String> targetType) {
+        public Builder targetType(Input<String> targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
-        public Builder setTargetType(String targetType) {
+        public Builder targetType(String targetType) {
             this.targetType = Input.of(Objects.requireNonNull(targetType));
             return this;
         }

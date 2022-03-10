@@ -126,8 +126,8 @@ public class LimitRangeList extends io.pulumi.resources.CustomResource {
     private static LimitRangeListArgs makeArgs(LimitRangeListArgs args) {
         var builder = args == null ? LimitRangeListArgs.builder() : LimitRangeListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("LimitRangeList")
+            .apiVersion("v1")
+            .kind("LimitRangeList")
             .build();
     }
 

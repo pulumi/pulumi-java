@@ -67,12 +67,12 @@ public final class GoogleCloudHealthcareV1ConsentPolicyResponse {
     	      this.resourceAttributes = defaults.resourceAttributes;
         }
 
-        public Builder setAuthorizationRule(ExprResponse authorizationRule) {
+        public Builder authorizationRule(ExprResponse authorizationRule) {
             this.authorizationRule = Objects.requireNonNull(authorizationRule);
             return this;
         }
 
-        public Builder setResourceAttributes(List<AttributeResponse> resourceAttributes) {
+        public Builder resourceAttributes(List<AttributeResponse> resourceAttributes) {
             this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
             return this;
         }

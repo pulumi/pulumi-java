@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
     	      this.property = defaults.property;
         }
 
-        public Builder setProperty(List<GoogleCloudApigeeV1PropertyResponse> property) {
+        public Builder property(List<GoogleCloudApigeeV1PropertyResponse> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }

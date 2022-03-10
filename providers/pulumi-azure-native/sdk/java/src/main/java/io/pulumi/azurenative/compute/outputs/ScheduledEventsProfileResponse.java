@@ -50,7 +50,7 @@ public final class ScheduledEventsProfileResponse {
     	      this.terminateNotificationProfile = defaults.terminateNotificationProfile;
         }
 
-        public Builder setTerminateNotificationProfile(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
+        public Builder terminateNotificationProfile(@Nullable TerminateNotificationProfileResponse terminateNotificationProfile) {
             this.terminateNotificationProfile = terminateNotificationProfile;
             return this;
         }

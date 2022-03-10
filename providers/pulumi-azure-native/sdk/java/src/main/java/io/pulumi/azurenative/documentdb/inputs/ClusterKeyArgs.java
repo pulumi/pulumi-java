@@ -74,22 +74,22 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orderBy = defaults.orderBy;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrderBy(@Nullable Input<String> orderBy) {
+        public Builder orderBy(@Nullable Input<String> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
 
-        public Builder setOrderBy(@Nullable String orderBy) {
+        public Builder orderBy(@Nullable String orderBy) {
             this.orderBy = Input.ofNullable(orderBy);
             return this;
         }

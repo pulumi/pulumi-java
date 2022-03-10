@@ -156,52 +156,52 @@ public final class GetResolverRuleResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setResolverEndpointId(String resolverEndpointId) {
+        public Builder resolverEndpointId(String resolverEndpointId) {
             this.resolverEndpointId = Objects.requireNonNull(resolverEndpointId);
             return this;
         }
 
-        public Builder setResolverRuleId(String resolverRuleId) {
+        public Builder resolverRuleId(String resolverRuleId) {
             this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setShareStatus(String shareStatus) {
+        public Builder shareStatus(String shareStatus) {
             this.shareStatus = Objects.requireNonNull(shareStatus);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

@@ -229,112 +229,112 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setEventHandler(@Nullable Input<EventHandlerSettingsArgs> eventHandler) {
+        public Builder eventHandler(@Nullable Input<EventHandlerSettingsArgs> eventHandler) {
             this.eventHandler = eventHandler;
             return this;
         }
 
-        public Builder setEventHandler(@Nullable EventHandlerSettingsArgs eventHandler) {
+        public Builder eventHandler(@Nullable EventHandlerSettingsArgs eventHandler) {
             this.eventHandler = Input.ofNullable(eventHandler);
             return this;
         }
 
-        public Builder setFeatures(@Nullable Input<List<WebPubSubFeatureArgs>> features) {
+        public Builder features(@Nullable Input<List<WebPubSubFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<WebPubSubFeatureArgs> features) {
+        public Builder features(@Nullable List<WebPubSubFeatureArgs> features) {
             this.features = Input.ofNullable(features);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkACLs(@Nullable Input<WebPubSubNetworkACLsArgs> networkACLs) {
+        public Builder networkACLs(@Nullable Input<WebPubSubNetworkACLsArgs> networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
 
-        public Builder setNetworkACLs(@Nullable WebPubSubNetworkACLsArgs networkACLs) {
+        public Builder networkACLs(@Nullable WebPubSubNetworkACLsArgs networkACLs) {
             this.networkACLs = Input.ofNullable(networkACLs);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<ResourceSkuArgs> sku) {
+        public Builder sku(@Nullable Input<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceSkuArgs sku) {
+        public Builder sku(@Nullable ResourceSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTls(@Nullable Input<WebPubSubTlsSettingsArgs> tls) {
+        public Builder tls(@Nullable Input<WebPubSubTlsSettingsArgs> tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setTls(@Nullable WebPubSubTlsSettingsArgs tls) {
+        public Builder tls(@Nullable WebPubSubTlsSettingsArgs tls) {
             this.tls = Input.ofNullable(tls);
             return this;
         }

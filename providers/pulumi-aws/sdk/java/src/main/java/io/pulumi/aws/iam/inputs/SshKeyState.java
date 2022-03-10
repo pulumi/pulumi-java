@@ -134,62 +134,62 @@ public final class SshKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setFingerprint(@Nullable Input<String> fingerprint) {
+        public Builder fingerprint(@Nullable Input<String> fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
 
-        public Builder setFingerprint(@Nullable String fingerprint) {
+        public Builder fingerprint(@Nullable String fingerprint) {
             this.fingerprint = Input.ofNullable(fingerprint);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
 
-        public Builder setSshPublicKeyId(@Nullable Input<String> sshPublicKeyId) {
+        public Builder sshPublicKeyId(@Nullable Input<String> sshPublicKeyId) {
             this.sshPublicKeyId = sshPublicKeyId;
             return this;
         }
 
-        public Builder setSshPublicKeyId(@Nullable String sshPublicKeyId) {
+        public Builder sshPublicKeyId(@Nullable String sshPublicKeyId) {
             this.sshPublicKeyId = Input.ofNullable(sshPublicKeyId);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

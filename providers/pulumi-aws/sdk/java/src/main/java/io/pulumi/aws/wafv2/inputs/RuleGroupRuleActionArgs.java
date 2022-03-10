@@ -88,32 +88,32 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable Input<RuleGroupRuleActionAllowArgs> allow) {
+        public Builder allow(@Nullable Input<RuleGroupRuleActionAllowArgs> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable RuleGroupRuleActionAllowArgs allow) {
+        public Builder allow(@Nullable RuleGroupRuleActionAllowArgs allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }
 
-        public Builder setBlock(@Nullable Input<RuleGroupRuleActionBlockArgs> block) {
+        public Builder block(@Nullable Input<RuleGroupRuleActionBlockArgs> block) {
             this.block = block;
             return this;
         }
 
-        public Builder setBlock(@Nullable RuleGroupRuleActionBlockArgs block) {
+        public Builder block(@Nullable RuleGroupRuleActionBlockArgs block) {
             this.block = Input.ofNullable(block);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<RuleGroupRuleActionCountArgs> count) {
+        public Builder count(@Nullable Input<RuleGroupRuleActionCountArgs> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable RuleGroupRuleActionCountArgs count) {
+        public Builder count(@Nullable RuleGroupRuleActionCountArgs count) {
             this.count = Input.ofNullable(count);
             return this;
         }

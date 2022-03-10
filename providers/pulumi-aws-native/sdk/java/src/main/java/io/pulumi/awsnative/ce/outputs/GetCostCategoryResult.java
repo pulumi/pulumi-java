@@ -116,32 +116,32 @@ public final class GetCostCategoryResult {
     	      this.splitChargeRules = defaults.splitChargeRules;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setEffectiveStart(@Nullable String effectiveStart) {
+        public Builder effectiveStart(@Nullable String effectiveStart) {
             this.effectiveStart = effectiveStart;
             return this;
         }
 
-        public Builder setRuleVersion(@Nullable CostCategoryRuleVersion ruleVersion) {
+        public Builder ruleVersion(@Nullable CostCategoryRuleVersion ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
 
-        public Builder setRules(@Nullable String rules) {
+        public Builder rules(@Nullable String rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setSplitChargeRules(@Nullable String splitChargeRules) {
+        public Builder splitChargeRules(@Nullable String splitChargeRules) {
             this.splitChargeRules = splitChargeRules;
             return this;
         }

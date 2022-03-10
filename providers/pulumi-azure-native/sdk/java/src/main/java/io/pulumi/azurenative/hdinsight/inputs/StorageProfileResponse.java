@@ -58,7 +58,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.storageaccounts = defaults.storageaccounts;
         }
 
-        public Builder setStorageaccounts(@Nullable List<StorageAccountResponse> storageaccounts) {
+        public Builder storageaccounts(@Nullable List<StorageAccountResponse> storageaccounts) {
             this.storageaccounts = storageaccounts;
             return this;
         }

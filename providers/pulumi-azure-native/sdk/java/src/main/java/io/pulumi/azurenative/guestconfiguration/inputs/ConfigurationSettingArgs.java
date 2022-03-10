@@ -143,62 +143,62 @@ public final class ConfigurationSettingArgs extends io.pulumi.resources.Resource
     	      this.refreshFrequencyMins = defaults.refreshFrequencyMins;
         }
 
-        public Builder setActionAfterReboot(@Nullable Input<Either<String,ActionAfterReboot>> actionAfterReboot) {
+        public Builder actionAfterReboot(@Nullable Input<Either<String,ActionAfterReboot>> actionAfterReboot) {
             this.actionAfterReboot = actionAfterReboot;
             return this;
         }
 
-        public Builder setActionAfterReboot(@Nullable Either<String,ActionAfterReboot> actionAfterReboot) {
+        public Builder actionAfterReboot(@Nullable Either<String,ActionAfterReboot> actionAfterReboot) {
             this.actionAfterReboot = Input.ofNullable(actionAfterReboot);
             return this;
         }
 
-        public Builder setAllowModuleOverwrite(@Nullable Input<Boolean> allowModuleOverwrite) {
+        public Builder allowModuleOverwrite(@Nullable Input<Boolean> allowModuleOverwrite) {
             this.allowModuleOverwrite = allowModuleOverwrite;
             return this;
         }
 
-        public Builder setAllowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
+        public Builder allowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
             this.allowModuleOverwrite = Input.ofNullable(allowModuleOverwrite);
             return this;
         }
 
-        public Builder setConfigurationMode(@Nullable Input<Either<String,ConfigurationMode>> configurationMode) {
+        public Builder configurationMode(@Nullable Input<Either<String,ConfigurationMode>> configurationMode) {
             this.configurationMode = configurationMode;
             return this;
         }
 
-        public Builder setConfigurationMode(@Nullable Either<String,ConfigurationMode> configurationMode) {
+        public Builder configurationMode(@Nullable Either<String,ConfigurationMode> configurationMode) {
             this.configurationMode = Input.ofNullable(configurationMode);
             return this;
         }
 
-        public Builder setConfigurationModeFrequencyMins(@Nullable Input<Double> configurationModeFrequencyMins) {
+        public Builder configurationModeFrequencyMins(@Nullable Input<Double> configurationModeFrequencyMins) {
             this.configurationModeFrequencyMins = configurationModeFrequencyMins;
             return this;
         }
 
-        public Builder setConfigurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
+        public Builder configurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
             this.configurationModeFrequencyMins = Input.ofNullable(configurationModeFrequencyMins);
             return this;
         }
 
-        public Builder setRebootIfNeeded(@Nullable Input<Boolean> rebootIfNeeded) {
+        public Builder rebootIfNeeded(@Nullable Input<Boolean> rebootIfNeeded) {
             this.rebootIfNeeded = rebootIfNeeded;
             return this;
         }
 
-        public Builder setRebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
+        public Builder rebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
             this.rebootIfNeeded = Input.ofNullable(rebootIfNeeded);
             return this;
         }
 
-        public Builder setRefreshFrequencyMins(@Nullable Input<Double> refreshFrequencyMins) {
+        public Builder refreshFrequencyMins(@Nullable Input<Double> refreshFrequencyMins) {
             this.refreshFrequencyMins = refreshFrequencyMins;
             return this;
         }
 
-        public Builder setRefreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
+        public Builder refreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
             this.refreshFrequencyMins = Input.ofNullable(refreshFrequencyMins);
             return this;
         }

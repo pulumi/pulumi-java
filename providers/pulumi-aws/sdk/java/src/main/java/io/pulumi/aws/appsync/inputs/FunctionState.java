@@ -216,112 +216,112 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     	      this.syncConfig = defaults.syncConfig;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDataSource(@Nullable Input<String> dataSource) {
+        public Builder dataSource(@Nullable Input<String> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataSource(@Nullable String dataSource) {
+        public Builder dataSource(@Nullable String dataSource) {
             this.dataSource = Input.ofNullable(dataSource);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFunctionId(@Nullable Input<String> functionId) {
+        public Builder functionId(@Nullable Input<String> functionId) {
             this.functionId = functionId;
             return this;
         }
 
-        public Builder setFunctionId(@Nullable String functionId) {
+        public Builder functionId(@Nullable String functionId) {
             this.functionId = Input.ofNullable(functionId);
             return this;
         }
 
-        public Builder setFunctionVersion(@Nullable Input<String> functionVersion) {
+        public Builder functionVersion(@Nullable Input<String> functionVersion) {
             this.functionVersion = functionVersion;
             return this;
         }
 
-        public Builder setFunctionVersion(@Nullable String functionVersion) {
+        public Builder functionVersion(@Nullable String functionVersion) {
             this.functionVersion = Input.ofNullable(functionVersion);
             return this;
         }
 
-        public Builder setMaxBatchSize(@Nullable Input<Integer> maxBatchSize) {
+        public Builder maxBatchSize(@Nullable Input<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
 
-        public Builder setMaxBatchSize(@Nullable Integer maxBatchSize) {
+        public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
             this.maxBatchSize = Input.ofNullable(maxBatchSize);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRequestMappingTemplate(@Nullable Input<String> requestMappingTemplate) {
+        public Builder requestMappingTemplate(@Nullable Input<String> requestMappingTemplate) {
             this.requestMappingTemplate = requestMappingTemplate;
             return this;
         }
 
-        public Builder setRequestMappingTemplate(@Nullable String requestMappingTemplate) {
+        public Builder requestMappingTemplate(@Nullable String requestMappingTemplate) {
             this.requestMappingTemplate = Input.ofNullable(requestMappingTemplate);
             return this;
         }
 
-        public Builder setResponseMappingTemplate(@Nullable Input<String> responseMappingTemplate) {
+        public Builder responseMappingTemplate(@Nullable Input<String> responseMappingTemplate) {
             this.responseMappingTemplate = responseMappingTemplate;
             return this;
         }
 
-        public Builder setResponseMappingTemplate(@Nullable String responseMappingTemplate) {
+        public Builder responseMappingTemplate(@Nullable String responseMappingTemplate) {
             this.responseMappingTemplate = Input.ofNullable(responseMappingTemplate);
             return this;
         }
 
-        public Builder setSyncConfig(@Nullable Input<FunctionSyncConfigGetArgs> syncConfig) {
+        public Builder syncConfig(@Nullable Input<FunctionSyncConfigGetArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
 
-        public Builder setSyncConfig(@Nullable FunctionSyncConfigGetArgs syncConfig) {
+        public Builder syncConfig(@Nullable FunctionSyncConfigGetArgs syncConfig) {
             this.syncConfig = Input.ofNullable(syncConfig);
             return this;
         }

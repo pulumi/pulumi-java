@@ -47,7 +47,7 @@ public final class SinkConfigurationResponse extends io.pulumi.resources.InvokeA
     	      this.kind = defaults.kind;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

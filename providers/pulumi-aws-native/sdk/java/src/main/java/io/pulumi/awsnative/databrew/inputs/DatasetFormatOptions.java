@@ -80,17 +80,17 @@ public final class DatasetFormatOptions extends io.pulumi.resources.InvokeArgs {
     	      this.json = defaults.json;
         }
 
-        public Builder setCsv(@Nullable DatasetCsvOptions csv) {
+        public Builder csv(@Nullable DatasetCsvOptions csv) {
             this.csv = csv;
             return this;
         }
 
-        public Builder setExcel(@Nullable DatasetExcelOptions excel) {
+        public Builder excel(@Nullable DatasetExcelOptions excel) {
             this.excel = excel;
             return this;
         }
 
-        public Builder setJson(@Nullable DatasetJsonOptions json) {
+        public Builder json(@Nullable DatasetJsonOptions json) {
             this.json = json;
             return this;
         }

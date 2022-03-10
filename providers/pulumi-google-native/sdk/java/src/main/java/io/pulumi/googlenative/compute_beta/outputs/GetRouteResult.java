@@ -357,102 +357,102 @@ public final class GetRouteResult {
     	      this.warnings = defaults.warnings;
         }
 
-        public Builder setAsPaths(List<RouteAsPathResponse> asPaths) {
+        public Builder asPaths(List<RouteAsPathResponse> asPaths) {
             this.asPaths = Objects.requireNonNull(asPaths);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDestRange(String destRange) {
+        public Builder destRange(String destRange) {
             this.destRange = Objects.requireNonNull(destRange);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNextHopGateway(String nextHopGateway) {
+        public Builder nextHopGateway(String nextHopGateway) {
             this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
             return this;
         }
 
-        public Builder setNextHopIlb(String nextHopIlb) {
+        public Builder nextHopIlb(String nextHopIlb) {
             this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
             return this;
         }
 
-        public Builder setNextHopInstance(String nextHopInstance) {
+        public Builder nextHopInstance(String nextHopInstance) {
             this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
             return this;
         }
 
-        public Builder setNextHopInterconnectAttachment(String nextHopInterconnectAttachment) {
+        public Builder nextHopInterconnectAttachment(String nextHopInterconnectAttachment) {
             this.nextHopInterconnectAttachment = Objects.requireNonNull(nextHopInterconnectAttachment);
             return this;
         }
 
-        public Builder setNextHopIp(String nextHopIp) {
+        public Builder nextHopIp(String nextHopIp) {
             this.nextHopIp = Objects.requireNonNull(nextHopIp);
             return this;
         }
 
-        public Builder setNextHopNetwork(String nextHopNetwork) {
+        public Builder nextHopNetwork(String nextHopNetwork) {
             this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
             return this;
         }
 
-        public Builder setNextHopPeering(String nextHopPeering) {
+        public Builder nextHopPeering(String nextHopPeering) {
             this.nextHopPeering = Objects.requireNonNull(nextHopPeering);
             return this;
         }
 
-        public Builder setNextHopVpnTunnel(String nextHopVpnTunnel) {
+        public Builder nextHopVpnTunnel(String nextHopVpnTunnel) {
             this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteType(String routeType) {
+        public Builder routeType(String routeType) {
             this.routeType = Objects.requireNonNull(routeType);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setWarnings(List<RouteWarningsItemResponse> warnings) {
+        public Builder warnings(List<RouteWarningsItemResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }

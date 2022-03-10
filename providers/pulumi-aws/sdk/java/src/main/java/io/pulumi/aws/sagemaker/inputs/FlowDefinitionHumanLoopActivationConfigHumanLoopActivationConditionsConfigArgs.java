@@ -52,12 +52,12 @@ public final class FlowDefinitionHumanLoopActivationConfigHumanLoopActivationCon
     	      this.humanLoopActivationConditions = defaults.humanLoopActivationConditions;
         }
 
-        public Builder setHumanLoopActivationConditions(Input<String> humanLoopActivationConditions) {
+        public Builder humanLoopActivationConditions(Input<String> humanLoopActivationConditions) {
             this.humanLoopActivationConditions = Objects.requireNonNull(humanLoopActivationConditions);
             return this;
         }
 
-        public Builder setHumanLoopActivationConditions(String humanLoopActivationConditions) {
+        public Builder humanLoopActivationConditions(String humanLoopActivationConditions) {
             this.humanLoopActivationConditions = Input.of(Objects.requireNonNull(humanLoopActivationConditions));
             return this;
         }

@@ -287,152 +287,152 @@ public final class MetricAlertArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setActions(@Nullable Input<List<MetricAlertActionArgs>> actions) {
+        public Builder actions(@Nullable Input<List<MetricAlertActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<MetricAlertActionArgs> actions) {
+        public Builder actions(@Nullable List<MetricAlertActionArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setAutoMitigate(@Nullable Input<Boolean> autoMitigate) {
+        public Builder autoMitigate(@Nullable Input<Boolean> autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
 
-        public Builder setAutoMitigate(@Nullable Boolean autoMitigate) {
+        public Builder autoMitigate(@Nullable Boolean autoMitigate) {
             this.autoMitigate = Input.ofNullable(autoMitigate);
             return this;
         }
 
-        public Builder setCriteria(Input<Object> criteria) {
+        public Builder criteria(Input<Object> criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
-        public Builder setCriteria(Object criteria) {
+        public Builder criteria(Object criteria) {
             this.criteria = Input.of(Objects.requireNonNull(criteria));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setEvaluationFrequency(Input<String> evaluationFrequency) {
+        public Builder evaluationFrequency(Input<String> evaluationFrequency) {
             this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency);
             return this;
         }
 
-        public Builder setEvaluationFrequency(String evaluationFrequency) {
+        public Builder evaluationFrequency(String evaluationFrequency) {
             this.evaluationFrequency = Input.of(Objects.requireNonNull(evaluationFrequency));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setScopes(Input<List<String>> scopes) {
+        public Builder scopes(Input<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Input.of(Objects.requireNonNull(scopes));
             return this;
         }
 
-        public Builder setSeverity(Input<Integer> severity) {
+        public Builder severity(Input<Integer> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(Integer severity) {
+        public Builder severity(Integer severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetResourceRegion(@Nullable Input<String> targetResourceRegion) {
+        public Builder targetResourceRegion(@Nullable Input<String> targetResourceRegion) {
             this.targetResourceRegion = targetResourceRegion;
             return this;
         }
 
-        public Builder setTargetResourceRegion(@Nullable String targetResourceRegion) {
+        public Builder targetResourceRegion(@Nullable String targetResourceRegion) {
             this.targetResourceRegion = Input.ofNullable(targetResourceRegion);
             return this;
         }
 
-        public Builder setTargetResourceType(@Nullable Input<String> targetResourceType) {
+        public Builder targetResourceType(@Nullable Input<String> targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
 
-        public Builder setTargetResourceType(@Nullable String targetResourceType) {
+        public Builder targetResourceType(@Nullable String targetResourceType) {
             this.targetResourceType = Input.ofNullable(targetResourceType);
             return this;
         }
 
-        public Builder setWindowSize(Input<String> windowSize) {
+        public Builder windowSize(Input<String> windowSize) {
             this.windowSize = Objects.requireNonNull(windowSize);
             return this;
         }
 
-        public Builder setWindowSize(String windowSize) {
+        public Builder windowSize(String windowSize) {
             this.windowSize = Input.of(Objects.requireNonNull(windowSize));
             return this;
         }

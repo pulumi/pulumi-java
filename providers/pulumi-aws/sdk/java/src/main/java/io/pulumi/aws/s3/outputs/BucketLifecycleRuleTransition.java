@@ -84,17 +84,17 @@ public final class BucketLifecycleRuleTransition {
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setDate(@Nullable String date) {
+        public Builder date(@Nullable String date) {
             this.date = date;
             return this;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }

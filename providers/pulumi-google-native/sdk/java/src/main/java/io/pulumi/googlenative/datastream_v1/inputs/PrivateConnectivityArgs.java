@@ -56,12 +56,12 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     	      this.privateConnection = defaults.privateConnection;
         }
 
-        public Builder setPrivateConnection(Input<String> privateConnection) {
+        public Builder privateConnection(Input<String> privateConnection) {
             this.privateConnection = Objects.requireNonNull(privateConnection);
             return this;
         }
 
-        public Builder setPrivateConnection(String privateConnection) {
+        public Builder privateConnection(String privateConnection) {
             this.privateConnection = Input.of(Objects.requireNonNull(privateConnection));
             return this;
         }

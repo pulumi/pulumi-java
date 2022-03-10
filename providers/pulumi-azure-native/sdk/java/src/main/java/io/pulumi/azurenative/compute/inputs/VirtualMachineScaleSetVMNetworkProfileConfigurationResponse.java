@@ -58,7 +58,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse e
     	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }

@@ -51,12 +51,12 @@ public final class AlertPolicyCreationRecord {
     	      this.mutatedBy = defaults.mutatedBy;
         }
 
-        public Builder setMutateTime(@Nullable String mutateTime) {
+        public Builder mutateTime(@Nullable String mutateTime) {
             this.mutateTime = mutateTime;
             return this;
         }
 
-        public Builder setMutatedBy(@Nullable String mutatedBy) {
+        public Builder mutatedBy(@Nullable String mutatedBy) {
             this.mutatedBy = mutatedBy;
             return this;
         }

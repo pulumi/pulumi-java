@@ -71,12 +71,12 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicy {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = code;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
         }

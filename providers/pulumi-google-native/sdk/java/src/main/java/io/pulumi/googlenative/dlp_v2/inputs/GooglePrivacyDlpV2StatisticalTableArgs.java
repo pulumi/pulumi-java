@@ -92,32 +92,32 @@ public final class GooglePrivacyDlpV2StatisticalTableArgs extends io.pulumi.reso
     	      this.table = defaults.table;
         }
 
-        public Builder setQuasiIds(Input<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> quasiIds) {
+        public Builder quasiIds(Input<List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs>> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdentifierFieldArgs> quasiIds) {
             this.quasiIds = Input.of(Objects.requireNonNull(quasiIds));
             return this;
         }
 
-        public Builder setRelativeFrequency(Input<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency) {
+        public Builder relativeFrequency(Input<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency) {
             this.relativeFrequency = Objects.requireNonNull(relativeFrequency);
             return this;
         }
 
-        public Builder setRelativeFrequency(GooglePrivacyDlpV2FieldIdArgs relativeFrequency) {
+        public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdArgs relativeFrequency) {
             this.relativeFrequency = Input.of(Objects.requireNonNull(relativeFrequency));
             return this;
         }
 
-        public Builder setTable(Input<GooglePrivacyDlpV2BigQueryTableArgs> table) {
+        public Builder table(Input<GooglePrivacyDlpV2BigQueryTableArgs> table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
-        public Builder setTable(GooglePrivacyDlpV2BigQueryTableArgs table) {
+        public Builder table(GooglePrivacyDlpV2BigQueryTableArgs table) {
             this.table = Input.of(Objects.requireNonNull(table));
             return this;
         }

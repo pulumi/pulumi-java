@@ -47,7 +47,7 @@ public final class GetMapArgs extends io.pulumi.resources.InvokeArgs {
     	      this.mapName = defaults.mapName;
         }
 
-        public Builder setMapName(String mapName) {
+        public Builder mapName(String mapName) {
             this.mapName = Objects.requireNonNull(mapName);
             return this;
         }

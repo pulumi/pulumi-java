@@ -132,32 +132,32 @@ public final class ReceiptRuleBounceAction {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setSender(String sender) {
+        public Builder sender(String sender) {
             this.sender = Objects.requireNonNull(sender);
             return this;
         }
 
-        public Builder setSmtpReplyCode(String smtpReplyCode) {
+        public Builder smtpReplyCode(String smtpReplyCode) {
             this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode);
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
         }

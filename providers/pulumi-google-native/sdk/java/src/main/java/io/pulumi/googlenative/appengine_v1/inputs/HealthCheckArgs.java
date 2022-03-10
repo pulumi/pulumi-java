@@ -156,72 +156,72 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setCheckInterval(@Nullable Input<String> checkInterval) {
+        public Builder checkInterval(@Nullable Input<String> checkInterval) {
             this.checkInterval = checkInterval;
             return this;
         }
 
-        public Builder setCheckInterval(@Nullable String checkInterval) {
+        public Builder checkInterval(@Nullable String checkInterval) {
             this.checkInterval = Input.ofNullable(checkInterval);
             return this;
         }
 
-        public Builder setDisableHealthCheck(@Nullable Input<Boolean> disableHealthCheck) {
+        public Builder disableHealthCheck(@Nullable Input<Boolean> disableHealthCheck) {
             this.disableHealthCheck = disableHealthCheck;
             return this;
         }
 
-        public Builder setDisableHealthCheck(@Nullable Boolean disableHealthCheck) {
+        public Builder disableHealthCheck(@Nullable Boolean disableHealthCheck) {
             this.disableHealthCheck = Input.ofNullable(disableHealthCheck);
             return this;
         }
 
-        public Builder setHealthyThreshold(@Nullable Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Input<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
-        public Builder setHealthyThreshold(@Nullable Integer healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = Input.ofNullable(healthyThreshold);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setRestartThreshold(@Nullable Input<Integer> restartThreshold) {
+        public Builder restartThreshold(@Nullable Input<Integer> restartThreshold) {
             this.restartThreshold = restartThreshold;
             return this;
         }
 
-        public Builder setRestartThreshold(@Nullable Integer restartThreshold) {
+        public Builder restartThreshold(@Nullable Integer restartThreshold) {
             this.restartThreshold = Input.ofNullable(restartThreshold);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
             return this;
         }

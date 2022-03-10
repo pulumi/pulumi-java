@@ -92,32 +92,32 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setEndpointConfiguration(@Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable PoolEndpointConfigurationArgs endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationArgs endpointConfiguration) {
             this.endpointConfiguration = Input.ofNullable(endpointConfiguration);
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = Input.ofNullable(publicIPAddressConfiguration);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

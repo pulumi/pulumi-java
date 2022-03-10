@@ -48,7 +48,7 @@ public final class UserPoolUserPoolAddOns {
     	      this.advancedSecurityMode = defaults.advancedSecurityMode;
         }
 
-        public Builder setAdvancedSecurityMode(String advancedSecurityMode) {
+        public Builder advancedSecurityMode(String advancedSecurityMode) {
             this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode);
             return this;
         }

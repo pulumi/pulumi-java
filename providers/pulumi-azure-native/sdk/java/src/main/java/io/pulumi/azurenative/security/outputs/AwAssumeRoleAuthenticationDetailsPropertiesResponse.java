@@ -132,32 +132,32 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse {
     	      this.grantedPermissions = defaults.grantedPermissions;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAuthenticationProvisioningState(String authenticationProvisioningState) {
+        public Builder authenticationProvisioningState(String authenticationProvisioningState) {
             this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAwsAssumeRoleArn(String awsAssumeRoleArn) {
+        public Builder awsAssumeRoleArn(String awsAssumeRoleArn) {
             this.awsAssumeRoleArn = Objects.requireNonNull(awsAssumeRoleArn);
             return this;
         }
 
-        public Builder setAwsExternalId(String awsExternalId) {
+        public Builder awsExternalId(String awsExternalId) {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }
 
-        public Builder setGrantedPermissions(List<String> grantedPermissions) {
+        public Builder grantedPermissions(List<String> grantedPermissions) {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }

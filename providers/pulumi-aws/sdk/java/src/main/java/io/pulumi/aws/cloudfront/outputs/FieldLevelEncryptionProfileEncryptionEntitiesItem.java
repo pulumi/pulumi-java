@@ -82,17 +82,17 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItem {
     	      this.publicKeyId = defaults.publicKeyId;
         }
 
-        public Builder setFieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns fieldPatterns) {
+        public Builder fieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns fieldPatterns) {
             this.fieldPatterns = Objects.requireNonNull(fieldPatterns);
             return this;
         }
 
-        public Builder setProviderId(String providerId) {
+        public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
 
-        public Builder setPublicKeyId(String publicKeyId) {
+        public Builder publicKeyId(String publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }

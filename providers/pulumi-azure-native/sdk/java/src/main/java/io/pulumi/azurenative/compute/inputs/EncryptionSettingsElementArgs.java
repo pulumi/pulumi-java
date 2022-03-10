@@ -75,22 +75,22 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
     	      this.keyEncryptionKey = defaults.keyEncryptionKey;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable KeyVaultAndSecretReferenceArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable KeyVaultAndSecretReferenceArgs diskEncryptionKey) {
             this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable KeyVaultAndKeyReferenceArgs keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable KeyVaultAndKeyReferenceArgs keyEncryptionKey) {
             this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
             return this;
         }

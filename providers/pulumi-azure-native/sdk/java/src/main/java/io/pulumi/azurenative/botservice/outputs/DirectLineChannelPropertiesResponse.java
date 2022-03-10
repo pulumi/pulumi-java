@@ -69,12 +69,12 @@ public final class DirectLineChannelPropertiesResponse {
     	      this.sites = defaults.sites;
         }
 
-        public Builder setDirectLineEmbedCode(@Nullable String directLineEmbedCode) {
+        public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
             this.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
 
-        public Builder setSites(@Nullable List<DirectLineSiteResponse> sites) {
+        public Builder sites(@Nullable List<DirectLineSiteResponse> sites) {
             this.sites = sites;
             return this;
         }

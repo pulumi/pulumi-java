@@ -85,17 +85,17 @@ public final class AddressPropertiesResponse {
     	      this.shippingAddress = defaults.shippingAddress;
         }
 
-        public Builder setAddressValidationStatus(String addressValidationStatus) {
+        public Builder addressValidationStatus(String addressValidationStatus) {
             this.addressValidationStatus = Objects.requireNonNull(addressValidationStatus);
             return this;
         }
 
-        public Builder setContactDetails(ContactDetailsResponse contactDetails) {
+        public Builder contactDetails(ContactDetailsResponse contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
+        public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }

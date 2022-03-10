@@ -58,17 +58,17 @@ public final class RulePredicate {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataId(String dataId) {
+        public Builder dataId(String dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
 
-        public Builder setNegated(Boolean negated) {
+        public Builder negated(Boolean negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

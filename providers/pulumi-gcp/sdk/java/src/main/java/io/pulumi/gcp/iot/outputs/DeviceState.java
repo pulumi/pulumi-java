@@ -51,12 +51,12 @@ public final class DeviceState {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setBinaryData(@Nullable String binaryData) {
+        public Builder binaryData(@Nullable String binaryData) {
             this.binaryData = binaryData;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }

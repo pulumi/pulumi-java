@@ -92,32 +92,32 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setPhone(@Nullable Input<String> phone) {
+        public Builder phone(@Nullable Input<String> phone) {
             this.phone = phone;
             return this;
         }
 
-        public Builder setPhone(@Nullable String phone) {
+        public Builder phone(@Nullable String phone) {
             this.phone = Input.ofNullable(phone);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<Either<String,Role>> role) {
+        public Builder role(@Nullable Input<Either<String,Role>> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable Either<String,Role> role) {
+        public Builder role(@Nullable Either<String,Role> role) {
             this.role = Input.ofNullable(role);
             return this;
         }

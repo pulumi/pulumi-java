@@ -69,12 +69,12 @@ public final class WebhookConversion {
     	      this.conversionReviewVersions = defaults.conversionReviewVersions;
         }
 
-        public Builder setClientConfig(@Nullable WebhookClientConfig clientConfig) {
+        public Builder clientConfig(@Nullable WebhookClientConfig clientConfig) {
             this.clientConfig = clientConfig;
             return this;
         }
 
-        public Builder setConversionReviewVersions(List<String> conversionReviewVersions) {
+        public Builder conversionReviewVersions(List<String> conversionReviewVersions) {
             this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
             return this;
         }

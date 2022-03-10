@@ -106,22 +106,22 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.storageAccountResourceId = defaults.storageAccountResourceId;
         }
 
-        public Builder setArchiveNameFormat(@Nullable String archiveNameFormat) {
+        public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
             this.archiveNameFormat = archiveNameFormat;
             return this;
         }
 
-        public Builder setBlobContainer(@Nullable String blobContainer) {
+        public Builder blobContainer(@Nullable String blobContainer) {
             this.blobContainer = blobContainer;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable String storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }

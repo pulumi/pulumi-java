@@ -88,32 +88,32 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCodeRepositoryName(Input<String> codeRepositoryName) {
+        public Builder codeRepositoryName(Input<String> codeRepositoryName) {
             this.codeRepositoryName = Objects.requireNonNull(codeRepositoryName);
             return this;
         }
 
-        public Builder setCodeRepositoryName(String codeRepositoryName) {
+        public Builder codeRepositoryName(String codeRepositoryName) {
             this.codeRepositoryName = Input.of(Objects.requireNonNull(codeRepositoryName));
             return this;
         }
 
-        public Builder setGitConfig(Input<CodeRepositoryGitConfigArgs> gitConfig) {
+        public Builder gitConfig(Input<CodeRepositoryGitConfigArgs> gitConfig) {
             this.gitConfig = Objects.requireNonNull(gitConfig);
             return this;
         }
 
-        public Builder setGitConfig(CodeRepositoryGitConfigArgs gitConfig) {
+        public Builder gitConfig(CodeRepositoryGitConfigArgs gitConfig) {
             this.gitConfig = Input.of(Objects.requireNonNull(gitConfig));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

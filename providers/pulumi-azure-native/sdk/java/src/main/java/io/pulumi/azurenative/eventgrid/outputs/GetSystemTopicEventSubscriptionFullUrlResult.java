@@ -50,7 +50,7 @@ public final class GetSystemTopicEventSubscriptionFullUrlResult {
     	      this.endpointUrl = defaults.endpointUrl;
         }
 
-        public Builder setEndpointUrl(@Nullable String endpointUrl) {
+        public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }

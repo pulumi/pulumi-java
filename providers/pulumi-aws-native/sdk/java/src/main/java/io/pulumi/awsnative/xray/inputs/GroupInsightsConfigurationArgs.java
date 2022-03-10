@@ -70,22 +70,22 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
     	      this.notificationsEnabled = defaults.notificationsEnabled;
         }
 
-        public Builder setInsightsEnabled(@Nullable Input<Boolean> insightsEnabled) {
+        public Builder insightsEnabled(@Nullable Input<Boolean> insightsEnabled) {
             this.insightsEnabled = insightsEnabled;
             return this;
         }
 
-        public Builder setInsightsEnabled(@Nullable Boolean insightsEnabled) {
+        public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
             this.insightsEnabled = Input.ofNullable(insightsEnabled);
             return this;
         }
 
-        public Builder setNotificationsEnabled(@Nullable Input<Boolean> notificationsEnabled) {
+        public Builder notificationsEnabled(@Nullable Input<Boolean> notificationsEnabled) {
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }
 
-        public Builder setNotificationsEnabled(@Nullable Boolean notificationsEnabled) {
+        public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
             this.notificationsEnabled = Input.ofNullable(notificationsEnabled);
             return this;
         }

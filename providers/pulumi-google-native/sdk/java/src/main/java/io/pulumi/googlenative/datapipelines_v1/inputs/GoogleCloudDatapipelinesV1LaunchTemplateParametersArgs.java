@@ -125,52 +125,52 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     	      this.update = defaults.update;
         }
 
-        public Builder setEnvironment(@Nullable Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment) {
+        public Builder environment(@Nullable Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs environment) {
+        public Builder environment(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setJobName(Input<String> jobName) {
+        public Builder jobName(Input<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Input.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setTransformNameMapping(@Nullable Input<Map<String,String>> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Input<Map<String,String>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
 
-        public Builder setTransformNameMapping(@Nullable Map<String,String> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
             this.transformNameMapping = Input.ofNullable(transformNameMapping);
             return this;
         }
 
-        public Builder setUpdate(@Nullable Input<Boolean> update) {
+        public Builder update(@Nullable Input<Boolean> update) {
             this.update = update;
             return this;
         }
 
-        public Builder setUpdate(@Nullable Boolean update) {
+        public Builder update(@Nullable Boolean update) {
             this.update = Input.ofNullable(update);
             return this;
         }

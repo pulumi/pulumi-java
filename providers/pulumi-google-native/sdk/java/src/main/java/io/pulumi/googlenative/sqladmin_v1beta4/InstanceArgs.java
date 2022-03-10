@@ -535,302 +535,302 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suspensionReason = defaults.suspensionReason;
         }
 
-        public Builder setBackendType(@Nullable Input<InstanceBackendType> backendType) {
+        public Builder backendType(@Nullable Input<InstanceBackendType> backendType) {
             this.backendType = backendType;
             return this;
         }
 
-        public Builder setBackendType(@Nullable InstanceBackendType backendType) {
+        public Builder backendType(@Nullable InstanceBackendType backendType) {
             this.backendType = Input.ofNullable(backendType);
             return this;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setCurrentDiskSize(@Nullable Input<String> currentDiskSize) {
+        public Builder currentDiskSize(@Nullable Input<String> currentDiskSize) {
             this.currentDiskSize = currentDiskSize;
             return this;
         }
 
-        public Builder setCurrentDiskSize(@Nullable String currentDiskSize) {
+        public Builder currentDiskSize(@Nullable String currentDiskSize) {
             this.currentDiskSize = Input.ofNullable(currentDiskSize);
             return this;
         }
 
-        public Builder setDatabaseVersion(@Nullable Input<InstanceDatabaseVersion> databaseVersion) {
+        public Builder databaseVersion(@Nullable Input<InstanceDatabaseVersion> databaseVersion) {
             this.databaseVersion = databaseVersion;
             return this;
         }
 
-        public Builder setDatabaseVersion(@Nullable InstanceDatabaseVersion databaseVersion) {
+        public Builder databaseVersion(@Nullable InstanceDatabaseVersion databaseVersion) {
             this.databaseVersion = Input.ofNullable(databaseVersion);
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Input.ofNullable(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDiskEncryptionStatus(@Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(@Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus) {
             this.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
 
-        public Builder setDiskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
             this.diskEncryptionStatus = Input.ofNullable(diskEncryptionStatus);
             return this;
         }
 
-        public Builder setFailoverReplica(@Nullable Input<InstanceFailoverReplicaArgs> failoverReplica) {
+        public Builder failoverReplica(@Nullable Input<InstanceFailoverReplicaArgs> failoverReplica) {
             this.failoverReplica = failoverReplica;
             return this;
         }
 
-        public Builder setFailoverReplica(@Nullable InstanceFailoverReplicaArgs failoverReplica) {
+        public Builder failoverReplica(@Nullable InstanceFailoverReplicaArgs failoverReplica) {
             this.failoverReplica = Input.ofNullable(failoverReplica);
             return this;
         }
 
-        public Builder setGceZone(@Nullable Input<String> gceZone) {
+        public Builder gceZone(@Nullable Input<String> gceZone) {
             this.gceZone = gceZone;
             return this;
         }
 
-        public Builder setGceZone(@Nullable String gceZone) {
+        public Builder gceZone(@Nullable String gceZone) {
             this.gceZone = Input.ofNullable(gceZone);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<InstanceInstanceType> instanceType) {
+        public Builder instanceType(@Nullable Input<InstanceInstanceType> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable InstanceInstanceType instanceType) {
+        public Builder instanceType(@Nullable InstanceInstanceType instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable Input<List<IpMappingArgs>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Input<List<IpMappingArgs>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<IpMappingArgs> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<IpMappingArgs> ipAddresses) {
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMasterInstanceName(@Nullable Input<String> masterInstanceName) {
+        public Builder masterInstanceName(@Nullable Input<String> masterInstanceName) {
             this.masterInstanceName = masterInstanceName;
             return this;
         }
 
-        public Builder setMasterInstanceName(@Nullable String masterInstanceName) {
+        public Builder masterInstanceName(@Nullable String masterInstanceName) {
             this.masterInstanceName = Input.ofNullable(masterInstanceName);
             return this;
         }
 
-        public Builder setMaxDiskSize(@Nullable Input<String> maxDiskSize) {
+        public Builder maxDiskSize(@Nullable Input<String> maxDiskSize) {
             this.maxDiskSize = maxDiskSize;
             return this;
         }
 
-        public Builder setMaxDiskSize(@Nullable String maxDiskSize) {
+        public Builder maxDiskSize(@Nullable String maxDiskSize) {
             this.maxDiskSize = Input.ofNullable(maxDiskSize);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOnPremisesConfiguration(@Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration) {
+        public Builder onPremisesConfiguration(@Nullable Input<OnPremisesConfigurationArgs> onPremisesConfiguration) {
             this.onPremisesConfiguration = onPremisesConfiguration;
             return this;
         }
 
-        public Builder setOnPremisesConfiguration(@Nullable OnPremisesConfigurationArgs onPremisesConfiguration) {
+        public Builder onPremisesConfiguration(@Nullable OnPremisesConfigurationArgs onPremisesConfiguration) {
             this.onPremisesConfiguration = Input.ofNullable(onPremisesConfiguration);
             return this;
         }
 
-        public Builder setOutOfDiskReport(@Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport) {
+        public Builder outOfDiskReport(@Nullable Input<SqlOutOfDiskReportArgs> outOfDiskReport) {
             this.outOfDiskReport = outOfDiskReport;
             return this;
         }
 
-        public Builder setOutOfDiskReport(@Nullable SqlOutOfDiskReportArgs outOfDiskReport) {
+        public Builder outOfDiskReport(@Nullable SqlOutOfDiskReportArgs outOfDiskReport) {
             this.outOfDiskReport = Input.ofNullable(outOfDiskReport);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setReplicaConfiguration(@Nullable Input<ReplicaConfigurationArgs> replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable Input<ReplicaConfigurationArgs> replicaConfiguration) {
             this.replicaConfiguration = replicaConfiguration;
             return this;
         }
 
-        public Builder setReplicaConfiguration(@Nullable ReplicaConfigurationArgs replicaConfiguration) {
+        public Builder replicaConfiguration(@Nullable ReplicaConfigurationArgs replicaConfiguration) {
             this.replicaConfiguration = Input.ofNullable(replicaConfiguration);
             return this;
         }
 
-        public Builder setReplicaNames(@Nullable Input<List<String>> replicaNames) {
+        public Builder replicaNames(@Nullable Input<List<String>> replicaNames) {
             this.replicaNames = replicaNames;
             return this;
         }
 
-        public Builder setReplicaNames(@Nullable List<String> replicaNames) {
+        public Builder replicaNames(@Nullable List<String> replicaNames) {
             this.replicaNames = Input.ofNullable(replicaNames);
             return this;
         }
 
-        public Builder setRootPassword(@Nullable Input<String> rootPassword) {
+        public Builder rootPassword(@Nullable Input<String> rootPassword) {
             this.rootPassword = rootPassword;
             return this;
         }
 
-        public Builder setRootPassword(@Nullable String rootPassword) {
+        public Builder rootPassword(@Nullable String rootPassword) {
             this.rootPassword = Input.ofNullable(rootPassword);
             return this;
         }
 
-        public Builder setSatisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
-        public Builder setSatisfiesPzs(@Nullable Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
             this.satisfiesPzs = Input.ofNullable(satisfiesPzs);
             return this;
         }
 
-        public Builder setScheduledMaintenance(@Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance) {
+        public Builder scheduledMaintenance(@Nullable Input<SqlScheduledMaintenanceArgs> scheduledMaintenance) {
             this.scheduledMaintenance = scheduledMaintenance;
             return this;
         }
 
-        public Builder setScheduledMaintenance(@Nullable SqlScheduledMaintenanceArgs scheduledMaintenance) {
+        public Builder scheduledMaintenance(@Nullable SqlScheduledMaintenanceArgs scheduledMaintenance) {
             this.scheduledMaintenance = Input.ofNullable(scheduledMaintenance);
             return this;
         }
 
-        public Builder setSecondaryGceZone(@Nullable Input<String> secondaryGceZone) {
+        public Builder secondaryGceZone(@Nullable Input<String> secondaryGceZone) {
             this.secondaryGceZone = secondaryGceZone;
             return this;
         }
 
-        public Builder setSecondaryGceZone(@Nullable String secondaryGceZone) {
+        public Builder secondaryGceZone(@Nullable String secondaryGceZone) {
             this.secondaryGceZone = Input.ofNullable(secondaryGceZone);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setServerCaCert(@Nullable Input<SslCertArgs> serverCaCert) {
+        public Builder serverCaCert(@Nullable Input<SslCertArgs> serverCaCert) {
             this.serverCaCert = serverCaCert;
             return this;
         }
 
-        public Builder setServerCaCert(@Nullable SslCertArgs serverCaCert) {
+        public Builder serverCaCert(@Nullable SslCertArgs serverCaCert) {
             this.serverCaCert = Input.ofNullable(serverCaCert);
             return this;
         }
 
-        public Builder setServiceAccountEmailAddress(@Nullable Input<String> serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(@Nullable Input<String> serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
 
-        public Builder setServiceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = Input.ofNullable(serviceAccountEmailAddress);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<SettingsArgs> settings) {
+        public Builder settings(@Nullable Input<SettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable SettingsArgs settings) {
+        public Builder settings(@Nullable SettingsArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setState(@Nullable Input<InstanceState> state) {
+        public Builder state(@Nullable Input<InstanceState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable InstanceState state) {
+        public Builder state(@Nullable InstanceState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setSuspensionReason(@Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason) {
+        public Builder suspensionReason(@Nullable Input<List<InstanceSuspensionReasonItem>> suspensionReason) {
             this.suspensionReason = suspensionReason;
             return this;
         }
 
-        public Builder setSuspensionReason(@Nullable List<InstanceSuspensionReasonItem> suspensionReason) {
+        public Builder suspensionReason(@Nullable List<InstanceSuspensionReasonItem> suspensionReason) {
             this.suspensionReason = Input.ofNullable(suspensionReason);
             return this;
         }

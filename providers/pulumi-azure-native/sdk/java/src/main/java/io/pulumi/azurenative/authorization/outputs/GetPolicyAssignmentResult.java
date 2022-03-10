@@ -265,72 +265,72 @@ public final class GetPolicyAssignmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEnforcementMode(@Nullable String enforcementMode) {
+        public Builder enforcementMode(@Nullable String enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNonComplianceMessages(@Nullable List<NonComplianceMessageResponse> nonComplianceMessages) {
+        public Builder nonComplianceMessages(@Nullable List<NonComplianceMessageResponse> nonComplianceMessages) {
             this.nonComplianceMessages = nonComplianceMessages;
             return this;
         }
 
-        public Builder setNotScopes(@Nullable List<String> notScopes) {
+        public Builder notScopes(@Nullable List<String> notScopes) {
             this.notScopes = notScopes;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicyDefinitionId(@Nullable String policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

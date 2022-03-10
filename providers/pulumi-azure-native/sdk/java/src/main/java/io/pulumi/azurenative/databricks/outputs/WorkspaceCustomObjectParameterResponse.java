@@ -66,12 +66,12 @@ public final class WorkspaceCustomObjectParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -346,97 +346,97 @@ public final class GetNodeTypeResult {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setApplicationPorts(@Nullable EndpointRangeDescriptionResponse applicationPorts) {
+        public Builder applicationPorts(@Nullable EndpointRangeDescriptionResponse applicationPorts) {
             this.applicationPorts = applicationPorts;
             return this;
         }
 
-        public Builder setCapacities(@Nullable Map<String,String> capacities) {
+        public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = capacities;
             return this;
         }
 
-        public Builder setDataDiskSizeGB(Integer dataDiskSizeGB) {
+        public Builder dataDiskSizeGB(Integer dataDiskSizeGB) {
             this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
             return this;
         }
 
-        public Builder setEphemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsPrimary(Boolean isPrimary) {
+        public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlacementProperties(@Nullable Map<String,String> placementProperties) {
+        public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmExtensions(@Nullable List<VMSSExtensionResponse> vmExtensions) {
+        public Builder vmExtensions(@Nullable List<VMSSExtensionResponse> vmExtensions) {
             this.vmExtensions = vmExtensions;
             return this;
         }
 
-        public Builder setVmImageOffer(@Nullable String vmImageOffer) {
+        public Builder vmImageOffer(@Nullable String vmImageOffer) {
             this.vmImageOffer = vmImageOffer;
             return this;
         }
 
-        public Builder setVmImagePublisher(@Nullable String vmImagePublisher) {
+        public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
             this.vmImagePublisher = vmImagePublisher;
             return this;
         }
 
-        public Builder setVmImageSku(@Nullable String vmImageSku) {
+        public Builder vmImageSku(@Nullable String vmImageSku) {
             this.vmImageSku = vmImageSku;
             return this;
         }
 
-        public Builder setVmImageVersion(@Nullable String vmImageVersion) {
+        public Builder vmImageVersion(@Nullable String vmImageVersion) {
             this.vmImageVersion = vmImageVersion;
             return this;
         }
 
-        public Builder setVmInstanceCount(Integer vmInstanceCount) {
+        public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
 
-        public Builder setVmSecrets(@Nullable List<VaultSecretGroupResponse> vmSecrets) {
+        public Builder vmSecrets(@Nullable List<VaultSecretGroupResponse> vmSecrets) {
             this.vmSecrets = vmSecrets;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

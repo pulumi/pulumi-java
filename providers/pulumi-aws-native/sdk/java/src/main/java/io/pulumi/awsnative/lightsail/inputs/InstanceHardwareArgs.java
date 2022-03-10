@@ -92,32 +92,32 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
     	      this.ramSizeInGb = defaults.ramSizeInGb;
         }
 
-        public Builder setCpuCount(@Nullable Input<Integer> cpuCount) {
+        public Builder cpuCount(@Nullable Input<Integer> cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
 
-        public Builder setCpuCount(@Nullable Integer cpuCount) {
+        public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = Input.ofNullable(cpuCount);
             return this;
         }
 
-        public Builder setDisks(@Nullable Input<List<InstanceDiskArgs>> disks) {
+        public Builder disks(@Nullable Input<List<InstanceDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<InstanceDiskArgs> disks) {
+        public Builder disks(@Nullable List<InstanceDiskArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setRamSizeInGb(@Nullable Input<Integer> ramSizeInGb) {
+        public Builder ramSizeInGb(@Nullable Input<Integer> ramSizeInGb) {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }
 
-        public Builder setRamSizeInGb(@Nullable Integer ramSizeInGb) {
+        public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
             this.ramSizeInGb = Input.ofNullable(ramSizeInGb);
             return this;
         }

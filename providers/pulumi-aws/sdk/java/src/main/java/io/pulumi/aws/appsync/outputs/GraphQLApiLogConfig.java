@@ -84,17 +84,17 @@ public final class GraphQLApiLogConfig {
     	      this.fieldLogLevel = defaults.fieldLogLevel;
         }
 
-        public Builder setCloudwatchLogsRoleArn(String cloudwatchLogsRoleArn) {
+        public Builder cloudwatchLogsRoleArn(String cloudwatchLogsRoleArn) {
             this.cloudwatchLogsRoleArn = Objects.requireNonNull(cloudwatchLogsRoleArn);
             return this;
         }
 
-        public Builder setExcludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
+        public Builder excludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
             this.excludeVerboseContent = excludeVerboseContent;
             return this;
         }
 
-        public Builder setFieldLogLevel(String fieldLogLevel) {
+        public Builder fieldLogLevel(String fieldLogLevel) {
             this.fieldLogLevel = Objects.requireNonNull(fieldLogLevel);
             return this;
         }

@@ -185,92 +185,92 @@ public final class RemoteRenderingAccountArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<SkuArgs> kind) {
+        public Builder kind(@Nullable Input<SkuArgs> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable SkuArgs kind) {
+        public Builder kind(@Nullable SkuArgs kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<IdentityArgs> plan) {
+        public Builder plan(@Nullable Input<IdentityArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable IdentityArgs plan) {
+        public Builder plan(@Nullable IdentityArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable String storageAccountName) {
+        public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

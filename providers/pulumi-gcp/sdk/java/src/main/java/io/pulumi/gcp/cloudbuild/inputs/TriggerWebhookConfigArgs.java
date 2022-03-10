@@ -73,22 +73,22 @@ public final class TriggerWebhookConfigArgs extends io.pulumi.resources.Resource
     	      this.state = defaults.state;
         }
 
-        public Builder setSecret(Input<String> secret) {
+        public Builder secret(Input<String> secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

@@ -93,17 +93,17 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.osDisk = defaults.osDisk;
         }
 
-        public Builder setDataDisks(@Nullable List<DataDiskResponse> dataDisks) {
+        public Builder dataDisks(@Nullable List<DataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setImageReference(@Nullable ImageReferenceResponse imageReference) {
+        public Builder imageReference(@Nullable ImageReferenceResponse imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
-        public Builder setOsDisk(@Nullable OSDiskResponse osDisk) {
+        public Builder osDisk(@Nullable OSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
         }

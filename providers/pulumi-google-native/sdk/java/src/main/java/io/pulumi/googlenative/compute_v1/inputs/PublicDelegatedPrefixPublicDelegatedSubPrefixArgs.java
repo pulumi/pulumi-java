@@ -123,52 +123,52 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
     	      this.name = defaults.name;
         }
 
-        public Builder setDelegateeProject(@Nullable Input<String> delegateeProject) {
+        public Builder delegateeProject(@Nullable Input<String> delegateeProject) {
             this.delegateeProject = delegateeProject;
             return this;
         }
 
-        public Builder setDelegateeProject(@Nullable String delegateeProject) {
+        public Builder delegateeProject(@Nullable String delegateeProject) {
             this.delegateeProject = Input.ofNullable(delegateeProject);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
-        public Builder setIpCidrRange(@Nullable String ipCidrRange) {
+        public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Input.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder setIsAddress(@Nullable Input<Boolean> isAddress) {
+        public Builder isAddress(@Nullable Input<Boolean> isAddress) {
             this.isAddress = isAddress;
             return this;
         }
 
-        public Builder setIsAddress(@Nullable Boolean isAddress) {
+        public Builder isAddress(@Nullable Boolean isAddress) {
             this.isAddress = Input.ofNullable(isAddress);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

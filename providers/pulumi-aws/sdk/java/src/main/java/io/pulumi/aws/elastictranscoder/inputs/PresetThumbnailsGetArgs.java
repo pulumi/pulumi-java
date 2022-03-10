@@ -166,82 +166,82 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
     	      this.sizingPolicy = defaults.sizingPolicy;
         }
 
-        public Builder setAspectRatio(@Nullable Input<String> aspectRatio) {
+        public Builder aspectRatio(@Nullable Input<String> aspectRatio) {
             this.aspectRatio = aspectRatio;
             return this;
         }
 
-        public Builder setAspectRatio(@Nullable String aspectRatio) {
+        public Builder aspectRatio(@Nullable String aspectRatio) {
             this.aspectRatio = Input.ofNullable(aspectRatio);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<String> format) {
+        public Builder format(@Nullable Input<String> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Input<String> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable Input<String> maxHeight) {
+        public Builder maxHeight(@Nullable Input<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable String maxHeight) {
+        public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = Input.ofNullable(maxHeight);
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable Input<String> maxWidth) {
+        public Builder maxWidth(@Nullable Input<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable String maxWidth) {
+        public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = Input.ofNullable(maxWidth);
             return this;
         }
 
-        public Builder setPaddingPolicy(@Nullable Input<String> paddingPolicy) {
+        public Builder paddingPolicy(@Nullable Input<String> paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
 
-        public Builder setPaddingPolicy(@Nullable String paddingPolicy) {
+        public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = Input.ofNullable(paddingPolicy);
             return this;
         }
 
-        public Builder setResolution(@Nullable Input<String> resolution) {
+        public Builder resolution(@Nullable Input<String> resolution) {
             this.resolution = resolution;
             return this;
         }
 
-        public Builder setResolution(@Nullable String resolution) {
+        public Builder resolution(@Nullable String resolution) {
             this.resolution = Input.ofNullable(resolution);
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable Input<String> sizingPolicy) {
+        public Builder sizingPolicy(@Nullable Input<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable String sizingPolicy) {
+        public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = Input.ofNullable(sizingPolicy);
             return this;
         }

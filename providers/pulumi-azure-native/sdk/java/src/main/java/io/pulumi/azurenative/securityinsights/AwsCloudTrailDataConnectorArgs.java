@@ -136,62 +136,62 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAwsRoleArn(@Nullable Input<String> awsRoleArn) {
+        public Builder awsRoleArn(@Nullable Input<String> awsRoleArn) {
             this.awsRoleArn = awsRoleArn;
             return this;
         }
 
-        public Builder setAwsRoleArn(@Nullable String awsRoleArn) {
+        public Builder awsRoleArn(@Nullable String awsRoleArn) {
             this.awsRoleArn = Input.ofNullable(awsRoleArn);
             return this;
         }
 
-        public Builder setDataConnectorId(@Nullable Input<String> dataConnectorId) {
+        public Builder dataConnectorId(@Nullable Input<String> dataConnectorId) {
             this.dataConnectorId = dataConnectorId;
             return this;
         }
 
-        public Builder setDataConnectorId(@Nullable String dataConnectorId) {
+        public Builder dataConnectorId(@Nullable String dataConnectorId) {
             this.dataConnectorId = Input.ofNullable(dataConnectorId);
             return this;
         }
 
-        public Builder setDataTypes(@Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes) {
+        public Builder dataTypes(@Nullable Input<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setDataTypes(@Nullable AwsCloudTrailDataConnectorDataTypesArgs dataTypes) {
+        public Builder dataTypes(@Nullable AwsCloudTrailDataConnectorDataTypesArgs dataTypes) {
             this.dataTypes = Input.ofNullable(dataTypes);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

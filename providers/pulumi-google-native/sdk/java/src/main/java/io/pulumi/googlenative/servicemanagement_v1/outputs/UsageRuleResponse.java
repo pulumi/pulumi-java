@@ -82,17 +82,17 @@ public final class UsageRuleResponse {
     	      this.skipServiceControl = defaults.skipServiceControl;
         }
 
-        public Builder setAllowUnregisteredCalls(Boolean allowUnregisteredCalls) {
+        public Builder allowUnregisteredCalls(Boolean allowUnregisteredCalls) {
             this.allowUnregisteredCalls = Objects.requireNonNull(allowUnregisteredCalls);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSkipServiceControl(Boolean skipServiceControl) {
+        public Builder skipServiceControl(Boolean skipServiceControl) {
             this.skipServiceControl = Objects.requireNonNull(skipServiceControl);
             return this;
         }

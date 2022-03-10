@@ -42,7 +42,7 @@ public final class GetProjectResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

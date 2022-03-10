@@ -74,22 +74,22 @@ public final class PerInstanceConfigPreservedStateArgs extends io.pulumi.resourc
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setDisks(@Nullable Input<List<PerInstanceConfigPreservedStateDiskArgs>> disks) {
+        public Builder disks(@Nullable Input<List<PerInstanceConfigPreservedStateDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<PerInstanceConfigPreservedStateDiskArgs> disks) {
+        public Builder disks(@Nullable List<PerInstanceConfigPreservedStateDiskArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }

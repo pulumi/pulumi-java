@@ -78,23 +78,21 @@ public final class MyStack extends Stack {
         // separately managed node pools. So we create the smallest possible default
         // node pool and immediately delete it.
         final var cluster = new Cluster(name,
-            ClusterArgs.builder()
-            .setInitialNodeCount(1)
-            .setRemoveDefaultNodePool(true)
-            .setMinMasterVersion(masterVersion)
-            .build()
+            $ -> $.initialNodeCount(1)
+            .removeDefaultNodePool(true)
+            .minMasterVersion(masterVersion)
         );
 
         final var nodePool = new NodePool("primary-node-pool",
             NodePoolArgs.builder()
-            .setCluster(cluster.getName().toInput())
-            .setLocation(cluster.getLocation().toInput())
-            .setVersion(masterVersion)
-            .setInitialNodeCount(2)
-            .setNodeConfig(NodePoolNodeConfigArgs.builder()
-                .setPreemptible(true)
-                .setMachineType("n1-standard-1")
-                .setOauthScopes(List.of(
+            .cluster(cluster.getName().toInput())
+            .location(cluster.getLocation().toInput())
+            .version(masterVersion)
+            .initialNodeCount(2)
+            .nodeConfig(NodePoolNodeConfigArgs.builder()
+                .preemptible(true)
+                .machineType("n1-standard-1")
+                .oauthScopes(List.of(
                     "https://www.googleapis.com/auth/compute",
                     "https://www.googleapis.com/auth/devstorage.read_only",
                     "https://www.googleapis.com/auth/logging.write",
@@ -102,8 +100,8 @@ public final class MyStack extends Stack {
                 ))
                 .build()
             )
-            .setManagement(NodePoolManagementArgs.builder()
-                .setAutoRepair(true)
+            .management(NodePoolManagementArgs.builder()
+                .autoRepair(true)
                 .build()
             )
             .build(),
@@ -155,7 +153,7 @@ public final class MyStack extends Stack {
         // Create a Kubernetes provider instance that uses our cluster from above.
         final var clusterProvider = new Provider(name,
             ProviderArgs.builder()
-                .setKubeconfig(this.kubeconfig.toInput())
+                .kubeconfig(this.kubeconfig.toInput())
                 .build(),
             CustomResourceOptions.builder()
                 .setDependsOn(List.of(nodePool, cluster))
@@ -176,27 +174,27 @@ public final class MyStack extends Stack {
         final var appLabels = Map.of("appClass", name);
         
         final var metadata = ObjectMetaArgs.builder()
-                .setNamespace(namespaceName.toInput())
-                .setLabels(appLabels)
+                .namespace(namespaceName.toInput())
+                .labels(appLabels)
                 .build();
 
         // Create a NGINX Deployment
         final var deployment = new Deployment(name, DeploymentArgs.builder()
-            .setMetadata(metadata)
-            .setSpec(DeploymentSpecArgs.builder()
-                .setReplicas(1)
-                .setSelector(LabelSelectorArgs.builder()
-                    .setMatchLabels(appLabels)
+            .metadata(metadata)
+            .spec(DeploymentSpecArgs.builder()
+                .replicas(1)
+                .selector(LabelSelectorArgs.builder()
+                    .matchLabels(appLabels)
                     .build())
-                .setTemplate(PodTemplateSpecArgs.builder()
-                    .setMetadata(metadata)
-                    .setSpec(PodSpecArgs.builder()
-                        .setContainers(List.of(ContainerArgs.builder()
-                            .setName(name)
-                            .setImage("nginx:latest")
-                            .setPorts(List.of(ContainerPortArgs.builder()
-                                .setName("http")
-                                .setContainerPort(80)
+                .template(PodTemplateSpecArgs.builder()
+                    .metadata(metadata)
+                    .spec(PodSpecArgs.builder()
+                        .containers(List.of(ContainerArgs.builder()
+                            .name(name)
+                            .image("nginx:latest")
+                            .ports(List.of(ContainerPortArgs.builder()
+                                .name("http")
+                                .containerPort(80)
                                 .build()))
                             .build()))
                         .build())
@@ -209,14 +207,14 @@ public final class MyStack extends Stack {
 
         // Create a LoadBalancer Service for the NGINX Deployment
         final var service = new Service(name, ServiceArgs.builder()
-            .setMetadata(metadata)
-            .setSpec(ServiceSpecArgs.builder()
-                .setType(Input.ofRight(ServiceSpecType.LoadBalancer))
-                .setPorts(List.of(ServicePortArgs.builder()
-                    .setPort(80)
-                    .setTargetPort(Input.ofRight("http"))
+            .metadata(metadata)
+            .spec(ServiceSpecArgs.builder()
+                .type(Input.ofRight(ServiceSpecType.LoadBalancer))
+                .ports(List.of(ServicePortArgs.builder()
+                    .port(80)
+                    .targetPort(Input.ofRight("http"))
                     .build()))
-                .setSelector(appLabels)
+                .selector(appLabels)
                 .build())
             .build(), clusterResourceOptions);
 

@@ -353,97 +353,97 @@ public final class GetJobResult {
     	      this.yarnApplications = defaults.yarnApplications;
         }
 
-        public Builder setDone(Boolean done) {
+        public Builder done(Boolean done) {
             this.done = Objects.requireNonNull(done);
             return this;
         }
 
-        public Builder setDriverControlFilesUri(String driverControlFilesUri) {
+        public Builder driverControlFilesUri(String driverControlFilesUri) {
             this.driverControlFilesUri = Objects.requireNonNull(driverControlFilesUri);
             return this;
         }
 
-        public Builder setDriverOutputResourceUri(String driverOutputResourceUri) {
+        public Builder driverOutputResourceUri(String driverOutputResourceUri) {
             this.driverOutputResourceUri = Objects.requireNonNull(driverOutputResourceUri);
             return this;
         }
 
-        public Builder setHadoopJob(HadoopJobResponse hadoopJob) {
+        public Builder hadoopJob(HadoopJobResponse hadoopJob) {
             this.hadoopJob = Objects.requireNonNull(hadoopJob);
             return this;
         }
 
-        public Builder setHiveJob(HiveJobResponse hiveJob) {
+        public Builder hiveJob(HiveJobResponse hiveJob) {
             this.hiveJob = Objects.requireNonNull(hiveJob);
             return this;
         }
 
-        public Builder setJobUuid(String jobUuid) {
+        public Builder jobUuid(String jobUuid) {
             this.jobUuid = Objects.requireNonNull(jobUuid);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setPigJob(PigJobResponse pigJob) {
+        public Builder pigJob(PigJobResponse pigJob) {
             this.pigJob = Objects.requireNonNull(pigJob);
             return this;
         }
 
-        public Builder setPlacement(JobPlacementResponse placement) {
+        public Builder placement(JobPlacementResponse placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
 
-        public Builder setPrestoJob(PrestoJobResponse prestoJob) {
+        public Builder prestoJob(PrestoJobResponse prestoJob) {
             this.prestoJob = Objects.requireNonNull(prestoJob);
             return this;
         }
 
-        public Builder setPysparkJob(PySparkJobResponse pysparkJob) {
+        public Builder pysparkJob(PySparkJobResponse pysparkJob) {
             this.pysparkJob = Objects.requireNonNull(pysparkJob);
             return this;
         }
 
-        public Builder setReference(JobReferenceResponse reference) {
+        public Builder reference(JobReferenceResponse reference) {
             this.reference = Objects.requireNonNull(reference);
             return this;
         }
 
-        public Builder setScheduling(JobSchedulingResponse scheduling) {
+        public Builder scheduling(JobSchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setSparkJob(SparkJobResponse sparkJob) {
+        public Builder sparkJob(SparkJobResponse sparkJob) {
             this.sparkJob = Objects.requireNonNull(sparkJob);
             return this;
         }
 
-        public Builder setSparkRJob(SparkRJobResponse sparkRJob) {
+        public Builder sparkRJob(SparkRJobResponse sparkRJob) {
             this.sparkRJob = Objects.requireNonNull(sparkRJob);
             return this;
         }
 
-        public Builder setSparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
+        public Builder sparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
             this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
             return this;
         }
 
-        public Builder setStatus(JobStatusResponse status) {
+        public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusHistory(List<JobStatusResponse> statusHistory) {
+        public Builder statusHistory(List<JobStatusResponse> statusHistory) {
             this.statusHistory = Objects.requireNonNull(statusHistory);
             return this;
         }
 
-        public Builder setYarnApplications(List<YarnApplicationResponse> yarnApplications) {
+        public Builder yarnApplications(List<YarnApplicationResponse> yarnApplications) {
             this.yarnApplications = Objects.requireNonNull(yarnApplications);
             return this;
         }

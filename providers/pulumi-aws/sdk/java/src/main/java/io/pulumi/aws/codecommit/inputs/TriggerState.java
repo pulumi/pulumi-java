@@ -84,32 +84,32 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setConfigurationId(@Nullable Input<String> configurationId) {
+        public Builder configurationId(@Nullable Input<String> configurationId) {
             this.configurationId = configurationId;
             return this;
         }
 
-        public Builder setConfigurationId(@Nullable String configurationId) {
+        public Builder configurationId(@Nullable String configurationId) {
             this.configurationId = Input.ofNullable(configurationId);
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Input<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Input.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<List<TriggerTriggerGetArgs>> triggers) {
+        public Builder triggers(@Nullable Input<List<TriggerTriggerGetArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable List<TriggerTriggerGetArgs> triggers) {
+        public Builder triggers(@Nullable List<TriggerTriggerGetArgs> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }

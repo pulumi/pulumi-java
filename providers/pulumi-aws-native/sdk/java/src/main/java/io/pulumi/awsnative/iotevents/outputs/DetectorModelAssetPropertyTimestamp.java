@@ -67,12 +67,12 @@ public final class DetectorModelAssetPropertyTimestamp {
     	      this.timeInSeconds = defaults.timeInSeconds;
         }
 
-        public Builder setOffsetInNanos(@Nullable String offsetInNanos) {
+        public Builder offsetInNanos(@Nullable String offsetInNanos) {
             this.offsetInNanos = offsetInNanos;
             return this;
         }
 
-        public Builder setTimeInSeconds(String timeInSeconds) {
+        public Builder timeInSeconds(String timeInSeconds) {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }

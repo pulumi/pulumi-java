@@ -75,22 +75,22 @@ public final class DeblockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.strength = defaults.strength;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setStrength(@Nullable Input<Double> strength) {
+        public Builder strength(@Nullable Input<Double> strength) {
             this.strength = strength;
             return this;
         }
 
-        public Builder setStrength(@Nullable Double strength) {
+        public Builder strength(@Nullable Double strength) {
             this.strength = Input.ofNullable(strength);
             return this;
         }

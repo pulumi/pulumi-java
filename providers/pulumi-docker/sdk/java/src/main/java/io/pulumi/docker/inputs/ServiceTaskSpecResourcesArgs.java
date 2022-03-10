@@ -63,22 +63,22 @@ public final class ServiceTaskSpecResourcesArgs extends io.pulumi.resources.Reso
     	      this.reservation = defaults.reservation;
         }
 
-        public Builder setLimits(@Nullable Input<ServiceTaskSpecResourcesLimitsArgs> limits) {
+        public Builder limits(@Nullable Input<ServiceTaskSpecResourcesLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable ServiceTaskSpecResourcesLimitsArgs limits) {
+        public Builder limits(@Nullable ServiceTaskSpecResourcesLimitsArgs limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }
 
-        public Builder setReservation(@Nullable Input<ServiceTaskSpecResourcesReservationArgs> reservation) {
+        public Builder reservation(@Nullable Input<ServiceTaskSpecResourcesReservationArgs> reservation) {
             this.reservation = reservation;
             return this;
         }
 
-        public Builder setReservation(@Nullable ServiceTaskSpecResourcesReservationArgs reservation) {
+        public Builder reservation(@Nullable ServiceTaskSpecResourcesReservationArgs reservation) {
             this.reservation = Input.ofNullable(reservation);
             return this;
         }

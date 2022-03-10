@@ -84,32 +84,32 @@ public final class ContainerUpload {
     	      this.sourceHash = defaults.sourceHash;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentBase64(@Nullable String contentBase64) {
+        public Builder contentBase64(@Nullable String contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
 
-        public Builder setExecutable(@Nullable Boolean executable) {
+        public Builder executable(@Nullable Boolean executable) {
             this.executable = executable;
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSourceHash(@Nullable String sourceHash) {
+        public Builder sourceHash(@Nullable String sourceHash) {
             this.sourceHash = sourceHash;
             return this;
         }

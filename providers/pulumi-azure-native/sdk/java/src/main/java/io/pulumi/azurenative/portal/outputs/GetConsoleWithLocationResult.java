@@ -48,7 +48,7 @@ public final class GetConsoleWithLocationResult {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(ConsolePropertiesResponse properties) {
+        public Builder properties(ConsolePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

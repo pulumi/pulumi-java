@@ -68,12 +68,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
     	      this.source = defaults.source;
         }
 
-        public Builder setProperties(@Nullable List<String> properties) {
+        public Builder properties(@Nullable List<String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setSource(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
+        public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

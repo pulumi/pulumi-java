@@ -75,12 +75,12 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
     	      this.allowedDataActions = defaults.allowedDataActions;
         }
 
-        public Builder setAllowedActions(@Nullable List<String> allowedActions) {
+        public Builder allowedActions(@Nullable List<String> allowedActions) {
             this.allowedActions = allowedActions;
             return this;
         }
 
-        public Builder setAllowedDataActions(@Nullable List<String> allowedDataActions) {
+        public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
             this.allowedDataActions = allowedDataActions;
             return this;
         }

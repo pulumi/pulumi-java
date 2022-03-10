@@ -117,27 +117,27 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin {
     	      this.queryStringsConfigs = defaults.queryStringsConfigs;
         }
 
-        public Builder setCookiesConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> cookiesConfigs) {
+        public Builder cookiesConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> cookiesConfigs) {
             this.cookiesConfigs = Objects.requireNonNull(cookiesConfigs);
             return this;
         }
 
-        public Builder setEnableAcceptEncodingBrotli(Boolean enableAcceptEncodingBrotli) {
+        public Builder enableAcceptEncodingBrotli(Boolean enableAcceptEncodingBrotli) {
             this.enableAcceptEncodingBrotli = Objects.requireNonNull(enableAcceptEncodingBrotli);
             return this;
         }
 
-        public Builder setEnableAcceptEncodingGzip(Boolean enableAcceptEncodingGzip) {
+        public Builder enableAcceptEncodingGzip(Boolean enableAcceptEncodingGzip) {
             this.enableAcceptEncodingGzip = Objects.requireNonNull(enableAcceptEncodingGzip);
             return this;
         }
 
-        public Builder setHeadersConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs) {
+        public Builder headersConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs) {
             this.headersConfigs = Objects.requireNonNull(headersConfigs);
             return this;
         }
 
-        public Builder setQueryStringsConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs) {
+        public Builder queryStringsConfigs(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs) {
             this.queryStringsConfigs = Objects.requireNonNull(queryStringsConfigs);
             return this;
         }

@@ -96,42 +96,42 @@ public final class IamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTableId(Input<String> tableId) {
+        public Builder tableId(Input<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }

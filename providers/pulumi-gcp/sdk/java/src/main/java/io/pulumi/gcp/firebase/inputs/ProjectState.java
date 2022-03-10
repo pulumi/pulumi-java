@@ -87,32 +87,32 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     	      this.projectNumber = defaults.projectNumber;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProjectNumber(@Nullable Input<String> projectNumber) {
+        public Builder projectNumber(@Nullable Input<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
-        public Builder setProjectNumber(@Nullable String projectNumber) {
+        public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = Input.ofNullable(projectNumber);
             return this;
         }

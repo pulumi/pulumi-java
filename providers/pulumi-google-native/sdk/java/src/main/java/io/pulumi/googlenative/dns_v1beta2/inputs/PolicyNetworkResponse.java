@@ -64,12 +64,12 @@ public final class PolicyNetworkResponse extends io.pulumi.resources.InvokeArgs 
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNetworkUrl(String networkUrl) {
+        public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }

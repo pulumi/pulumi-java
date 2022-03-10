@@ -151,72 +151,72 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable Input<String> connectionArn) {
+        public Builder connectionArn(@Nullable Input<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = Input.ofNullable(connectionArn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Input<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Input.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder setInvocationEndpoint(@Nullable Input<String> invocationEndpoint) {
+        public Builder invocationEndpoint(@Nullable Input<String> invocationEndpoint) {
             this.invocationEndpoint = invocationEndpoint;
             return this;
         }
 
-        public Builder setInvocationEndpoint(@Nullable String invocationEndpoint) {
+        public Builder invocationEndpoint(@Nullable String invocationEndpoint) {
             this.invocationEndpoint = Input.ofNullable(invocationEndpoint);
             return this;
         }
 
-        public Builder setInvocationRateLimitPerSecond(@Nullable Input<Integer> invocationRateLimitPerSecond) {
+        public Builder invocationRateLimitPerSecond(@Nullable Input<Integer> invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
 
-        public Builder setInvocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
+        public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = Input.ofNullable(invocationRateLimitPerSecond);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

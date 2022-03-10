@@ -98,22 +98,22 @@ public final class AzureBlobStorageDataResponse {
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setAzureCredentials(AzureCredentialsResponse azureCredentials) {
+        public Builder azureCredentials(AzureCredentialsResponse azureCredentials) {
             this.azureCredentials = Objects.requireNonNull(azureCredentials);
             return this;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setStorageAccount(String storageAccount) {
+        public Builder storageAccount(String storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }

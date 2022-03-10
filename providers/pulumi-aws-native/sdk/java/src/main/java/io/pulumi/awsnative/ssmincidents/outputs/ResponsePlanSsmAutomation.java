@@ -118,27 +118,27 @@ public final class ResponsePlanSsmAutomation {
     	      this.targetAccount = defaults.targetAccount;
         }
 
-        public Builder setDocumentName(String documentName) {
+        public Builder documentName(String documentName) {
             this.documentName = Objects.requireNonNull(documentName);
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ResponsePlanSsmParameter> parameters) {
+        public Builder parameters(@Nullable List<ResponsePlanSsmParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTargetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
+        public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
             this.targetAccount = targetAccount;
             return this;
         }

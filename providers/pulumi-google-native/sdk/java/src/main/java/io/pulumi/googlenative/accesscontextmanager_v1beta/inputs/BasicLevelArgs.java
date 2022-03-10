@@ -76,22 +76,22 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setCombiningFunction(@Nullable Input<BasicLevelCombiningFunction> combiningFunction) {
+        public Builder combiningFunction(@Nullable Input<BasicLevelCombiningFunction> combiningFunction) {
             this.combiningFunction = combiningFunction;
             return this;
         }
 
-        public Builder setCombiningFunction(@Nullable BasicLevelCombiningFunction combiningFunction) {
+        public Builder combiningFunction(@Nullable BasicLevelCombiningFunction combiningFunction) {
             this.combiningFunction = Input.ofNullable(combiningFunction);
             return this;
         }
 
-        public Builder setConditions(Input<List<ConditionArgs>> conditions) {
+        public Builder conditions(Input<List<ConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConditions(List<ConditionArgs> conditions) {
+        public Builder conditions(List<ConditionArgs> conditions) {
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }

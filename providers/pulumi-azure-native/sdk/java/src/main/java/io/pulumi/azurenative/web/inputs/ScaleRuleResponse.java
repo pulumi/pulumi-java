@@ -109,22 +109,22 @@ public final class ScaleRuleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setAzureQueue(@Nullable QueueScaleRuleResponse azureQueue) {
+        public Builder azureQueue(@Nullable QueueScaleRuleResponse azureQueue) {
             this.azureQueue = azureQueue;
             return this;
         }
 
-        public Builder setCustom(@Nullable CustomScaleRuleResponse custom) {
+        public Builder custom(@Nullable CustomScaleRuleResponse custom) {
             this.custom = custom;
             return this;
         }
 
-        public Builder setHttp(@Nullable HttpScaleRuleResponse http) {
+        public Builder http(@Nullable HttpScaleRuleResponse http) {
             this.http = http;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

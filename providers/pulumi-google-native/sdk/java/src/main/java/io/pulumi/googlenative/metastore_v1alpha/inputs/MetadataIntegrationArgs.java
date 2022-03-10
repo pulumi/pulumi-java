@@ -75,22 +75,22 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
     	      this.dataplexConfig = defaults.dataplexConfig;
         }
 
-        public Builder setDataCatalogConfig(@Nullable Input<DataCatalogConfigArgs> dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable Input<DataCatalogConfigArgs> dataCatalogConfig) {
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
-        public Builder setDataCatalogConfig(@Nullable DataCatalogConfigArgs dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable DataCatalogConfigArgs dataCatalogConfig) {
             this.dataCatalogConfig = Input.ofNullable(dataCatalogConfig);
             return this;
         }
 
-        public Builder setDataplexConfig(@Nullable Input<DataplexConfigArgs> dataplexConfig) {
+        public Builder dataplexConfig(@Nullable Input<DataplexConfigArgs> dataplexConfig) {
             this.dataplexConfig = dataplexConfig;
             return this;
         }
 
-        public Builder setDataplexConfig(@Nullable DataplexConfigArgs dataplexConfig) {
+        public Builder dataplexConfig(@Nullable DataplexConfigArgs dataplexConfig) {
             this.dataplexConfig = Input.ofNullable(dataplexConfig);
             return this;
         }

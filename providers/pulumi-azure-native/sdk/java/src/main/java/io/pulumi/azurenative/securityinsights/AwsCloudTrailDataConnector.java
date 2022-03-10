@@ -167,7 +167,7 @@ public class AwsCloudTrailDataConnector extends io.pulumi.resources.CustomResour
     private static AwsCloudTrailDataConnectorArgs makeArgs(AwsCloudTrailDataConnectorArgs args) {
         var builder = args == null ? AwsCloudTrailDataConnectorArgs.builder() : AwsCloudTrailDataConnectorArgs.builder(args);
         return builder
-            .setKind("AmazonWebServicesCloudTrail")
+            .kind("AmazonWebServicesCloudTrail")
             .build();
     }
 

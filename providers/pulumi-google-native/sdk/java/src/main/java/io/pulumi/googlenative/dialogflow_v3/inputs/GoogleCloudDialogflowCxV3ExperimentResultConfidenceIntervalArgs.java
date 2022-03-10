@@ -106,42 +106,42 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalAr
     	      this.upperBound = defaults.upperBound;
         }
 
-        public Builder setConfidenceLevel(@Nullable Input<Double> confidenceLevel) {
+        public Builder confidenceLevel(@Nullable Input<Double> confidenceLevel) {
             this.confidenceLevel = confidenceLevel;
             return this;
         }
 
-        public Builder setConfidenceLevel(@Nullable Double confidenceLevel) {
+        public Builder confidenceLevel(@Nullable Double confidenceLevel) {
             this.confidenceLevel = Input.ofNullable(confidenceLevel);
             return this;
         }
 
-        public Builder setLowerBound(@Nullable Input<Double> lowerBound) {
+        public Builder lowerBound(@Nullable Input<Double> lowerBound) {
             this.lowerBound = lowerBound;
             return this;
         }
 
-        public Builder setLowerBound(@Nullable Double lowerBound) {
+        public Builder lowerBound(@Nullable Double lowerBound) {
             this.lowerBound = Input.ofNullable(lowerBound);
             return this;
         }
 
-        public Builder setRatio(@Nullable Input<Double> ratio) {
+        public Builder ratio(@Nullable Input<Double> ratio) {
             this.ratio = ratio;
             return this;
         }
 
-        public Builder setRatio(@Nullable Double ratio) {
+        public Builder ratio(@Nullable Double ratio) {
             this.ratio = Input.ofNullable(ratio);
             return this;
         }
 
-        public Builder setUpperBound(@Nullable Input<Double> upperBound) {
+        public Builder upperBound(@Nullable Input<Double> upperBound) {
             this.upperBound = upperBound;
             return this;
         }
 
-        public Builder setUpperBound(@Nullable Double upperBound) {
+        public Builder upperBound(@Nullable Double upperBound) {
             this.upperBound = Input.ofNullable(upperBound);
             return this;
         }

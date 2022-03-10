@@ -168,42 +168,42 @@ public final class H265VideoResponse {
     	      this.syncMode = defaults.syncMode;
         }
 
-        public Builder setComplexity(@Nullable String complexity) {
+        public Builder complexity(@Nullable String complexity) {
             this.complexity = complexity;
             return this;
         }
 
-        public Builder setKeyFrameInterval(@Nullable String keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLayers(@Nullable List<H265LayerResponse> layers) {
+        public Builder layers(@Nullable List<H265LayerResponse> layers) {
             this.layers = layers;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setSceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
+        public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
             this.sceneChangeDetection = sceneChangeDetection;
             return this;
         }
 
-        public Builder setStretchMode(@Nullable String stretchMode) {
+        public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
-        public Builder setSyncMode(@Nullable String syncMode) {
+        public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
         }

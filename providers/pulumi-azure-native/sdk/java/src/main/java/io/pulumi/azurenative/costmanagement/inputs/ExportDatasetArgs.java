@@ -77,22 +77,22 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.granularity = defaults.granularity;
         }
 
-        public Builder setConfiguration(@Nullable Input<ExportDatasetConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<ExportDatasetConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ExportDatasetConfigurationArgs configuration) {
+        public Builder configuration(@Nullable ExportDatasetConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setGranularity(@Nullable Input<Either<String,GranularityType>> granularity) {
+        public Builder granularity(@Nullable Input<Either<String,GranularityType>> granularity) {
             this.granularity = granularity;
             return this;
         }
 
-        public Builder setGranularity(@Nullable Either<String,GranularityType> granularity) {
+        public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
             this.granularity = Input.ofNullable(granularity);
             return this;
         }

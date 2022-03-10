@@ -69,22 +69,22 @@ public final class GetOrganizationPolicyListPolicy {
     	      this.suggestedValue = defaults.suggestedValue;
         }
 
-        public Builder setAllows(List<GetOrganizationPolicyListPolicyAllow> allows) {
+        public Builder allows(List<GetOrganizationPolicyListPolicyAllow> allows) {
             this.allows = Objects.requireNonNull(allows);
             return this;
         }
 
-        public Builder setDenies(List<GetOrganizationPolicyListPolicyDeny> denies) {
+        public Builder denies(List<GetOrganizationPolicyListPolicyDeny> denies) {
             this.denies = Objects.requireNonNull(denies);
             return this;
         }
 
-        public Builder setInheritFromParent(Boolean inheritFromParent) {
+        public Builder inheritFromParent(Boolean inheritFromParent) {
             this.inheritFromParent = Objects.requireNonNull(inheritFromParent);
             return this;
         }
 
-        public Builder setSuggestedValue(String suggestedValue) {
+        public Builder suggestedValue(String suggestedValue) {
             this.suggestedValue = Objects.requireNonNull(suggestedValue);
             return this;
         }

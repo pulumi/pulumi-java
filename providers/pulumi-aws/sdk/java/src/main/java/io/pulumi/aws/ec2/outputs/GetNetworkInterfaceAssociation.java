@@ -145,37 +145,37 @@ public final class GetNetworkInterfaceAssociation {
     	      this.publicIp = defaults.publicIp;
         }
 
-        public Builder setAllocationId(String allocationId) {
+        public Builder allocationId(String allocationId) {
             this.allocationId = Objects.requireNonNull(allocationId);
             return this;
         }
 
-        public Builder setAssociationId(String associationId) {
+        public Builder associationId(String associationId) {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
 
-        public Builder setCarrierIp(String carrierIp) {
+        public Builder carrierIp(String carrierIp) {
             this.carrierIp = Objects.requireNonNull(carrierIp);
             return this;
         }
 
-        public Builder setCustomerOwnedIp(String customerOwnedIp) {
+        public Builder customerOwnedIp(String customerOwnedIp) {
             this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp);
             return this;
         }
 
-        public Builder setIpOwnerId(String ipOwnerId) {
+        public Builder ipOwnerId(String ipOwnerId) {
             this.ipOwnerId = Objects.requireNonNull(ipOwnerId);
             return this;
         }
 
-        public Builder setPublicDnsName(String publicDnsName) {
+        public Builder publicDnsName(String publicDnsName) {
             this.publicDnsName = Objects.requireNonNull(publicDnsName);
             return this;
         }
 
-        public Builder setPublicIp(String publicIp) {
+        public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }

@@ -72,12 +72,12 @@ public final class ToolResultsHistoryResponse extends io.pulumi.resources.Invoke
     	      this.project = defaults.project;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

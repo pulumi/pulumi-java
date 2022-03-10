@@ -82,17 +82,17 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDocumentationUrl(String documentationUrl) {
+        public Builder documentationUrl(String documentationUrl) {
             this.documentationUrl = Objects.requireNonNull(documentationUrl);
             return this;
         }
 
-        public Builder setLevel(String level) {
+        public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setType(ServiceMeshTypeResponse type) {
+        public Builder type(ServiceMeshTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

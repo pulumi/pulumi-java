@@ -209,102 +209,102 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder setDisabledRuleGroups(@Nullable Input<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups) {
+        public Builder disabledRuleGroups(@Nullable Input<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups) {
             this.disabledRuleGroups = disabledRuleGroups;
             return this;
         }
 
-        public Builder setDisabledRuleGroups(@Nullable List<ApplicationGatewayFirewallDisabledRuleGroupArgs> disabledRuleGroups) {
+        public Builder disabledRuleGroups(@Nullable List<ApplicationGatewayFirewallDisabledRuleGroupArgs> disabledRuleGroups) {
             this.disabledRuleGroups = Input.ofNullable(disabledRuleGroups);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setExclusions(@Nullable Input<List<ApplicationGatewayFirewallExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Input<List<ApplicationGatewayFirewallExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<ApplicationGatewayFirewallExclusionArgs> exclusions) {
+        public Builder exclusions(@Nullable List<ApplicationGatewayFirewallExclusionArgs> exclusions) {
             this.exclusions = Input.ofNullable(exclusions);
             return this;
         }
 
-        public Builder setFileUploadLimitInMb(@Nullable Input<Integer> fileUploadLimitInMb) {
+        public Builder fileUploadLimitInMb(@Nullable Input<Integer> fileUploadLimitInMb) {
             this.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
 
-        public Builder setFileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
+        public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             this.fileUploadLimitInMb = Input.ofNullable(fileUploadLimitInMb);
             return this;
         }
 
-        public Builder setFirewallMode(Input<Either<String,ApplicationGatewayFirewallMode>> firewallMode) {
+        public Builder firewallMode(Input<Either<String,ApplicationGatewayFirewallMode>> firewallMode) {
             this.firewallMode = Objects.requireNonNull(firewallMode);
             return this;
         }
 
-        public Builder setFirewallMode(Either<String,ApplicationGatewayFirewallMode> firewallMode) {
+        public Builder firewallMode(Either<String,ApplicationGatewayFirewallMode> firewallMode) {
             this.firewallMode = Input.of(Objects.requireNonNull(firewallMode));
             return this;
         }
 
-        public Builder setMaxRequestBodySize(@Nullable Input<Integer> maxRequestBodySize) {
+        public Builder maxRequestBodySize(@Nullable Input<Integer> maxRequestBodySize) {
             this.maxRequestBodySize = maxRequestBodySize;
             return this;
         }
 
-        public Builder setMaxRequestBodySize(@Nullable Integer maxRequestBodySize) {
+        public Builder maxRequestBodySize(@Nullable Integer maxRequestBodySize) {
             this.maxRequestBodySize = Input.ofNullable(maxRequestBodySize);
             return this;
         }
 
-        public Builder setMaxRequestBodySizeInKb(@Nullable Input<Integer> maxRequestBodySizeInKb) {
+        public Builder maxRequestBodySizeInKb(@Nullable Input<Integer> maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
 
-        public Builder setMaxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
+        public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = Input.ofNullable(maxRequestBodySizeInKb);
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Input<Boolean> requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Input<Boolean> requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Boolean requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             this.requestBodyCheck = Input.ofNullable(requestBodyCheck);
             return this;
         }
 
-        public Builder setRuleSetType(Input<String> ruleSetType) {
+        public Builder ruleSetType(Input<String> ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
-        public Builder setRuleSetType(String ruleSetType) {
+        public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Input.of(Objects.requireNonNull(ruleSetType));
             return this;
         }
 
-        public Builder setRuleSetVersion(Input<String> ruleSetVersion) {
+        public Builder ruleSetVersion(Input<String> ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
 
-        public Builder setRuleSetVersion(String ruleSetVersion) {
+        public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Input.of(Objects.requireNonNull(ruleSetVersion));
             return this;
         }

@@ -53,12 +53,12 @@ public final class CapacityReservationFleetTagSpecification {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CapacityReservationFleetTag> tags) {
+        public Builder tags(@Nullable List<CapacityReservationFleetTag> tags) {
             this.tags = tags;
             return this;
         }

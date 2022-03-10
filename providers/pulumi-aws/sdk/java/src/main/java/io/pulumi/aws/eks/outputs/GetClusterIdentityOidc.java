@@ -48,7 +48,7 @@ public final class GetClusterIdentityOidc {
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }

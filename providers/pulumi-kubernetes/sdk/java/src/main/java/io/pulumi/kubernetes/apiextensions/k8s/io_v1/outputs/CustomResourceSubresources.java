@@ -68,12 +68,12 @@ public final class CustomResourceSubresources {
     	      this.status = defaults.status;
         }
 
-        public Builder setScale(@Nullable CustomResourceSubresourceScale scale) {
+        public Builder scale(@Nullable CustomResourceSubresourceScale scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setStatus(@Nullable JsonElement status) {
+        public Builder status(@Nullable JsonElement status) {
             this.status = status;
             return this;
         }

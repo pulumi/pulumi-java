@@ -110,42 +110,42 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(Input<ManagementPolicyDefinitionArgs> definition) {
+        public Builder definition(Input<ManagementPolicyDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDefinition(ManagementPolicyDefinitionArgs definition) {
+        public Builder definition(ManagementPolicyDefinitionArgs definition) {
             this.definition = Input.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<Either<String,RuleType>> type) {
+        public Builder type(Input<Either<String,RuleType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,RuleType> type) {
+        public Builder type(Either<String,RuleType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -232,62 +232,62 @@ public final class GetGuestAgentResult {
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder setCredentials(@Nullable GuestCredentialResponse credentials) {
+        public Builder credentials(@Nullable GuestCredentialResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCustomResourceName(String customResourceName) {
+        public Builder customResourceName(String customResourceName) {
             this.customResourceName = Objects.requireNonNull(customResourceName);
             return this;
         }
 
-        public Builder setHttpProxyConfig(@Nullable HttpProxyConfigurationResponse httpProxyConfig) {
+        public Builder httpProxyConfig(@Nullable HttpProxyConfigurationResponse httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningAction(@Nullable String provisioningAction) {
+        public Builder provisioningAction(@Nullable String provisioningAction) {
             this.provisioningAction = provisioningAction;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatuses(List<ResourceStatusResponse> statuses) {
+        public Builder statuses(List<ResourceStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUuid(String uuid) {
+        public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }

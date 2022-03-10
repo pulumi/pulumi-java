@@ -99,22 +99,22 @@ public final class TimeSeriesFilterRatioResponse {
     	      this.secondaryAggregation = defaults.secondaryAggregation;
         }
 
-        public Builder setDenominator(RatioPartResponse denominator) {
+        public Builder denominator(RatioPartResponse denominator) {
             this.denominator = Objects.requireNonNull(denominator);
             return this;
         }
 
-        public Builder setNumerator(RatioPartResponse numerator) {
+        public Builder numerator(RatioPartResponse numerator) {
             this.numerator = Objects.requireNonNull(numerator);
             return this;
         }
 
-        public Builder setPickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
+        public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
             return this;
         }
 
-        public Builder setSecondaryAggregation(AggregationResponse secondaryAggregation) {
+        public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
         }

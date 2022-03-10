@@ -71,22 +71,22 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
     	      this.dns = defaults.dns;
         }
 
-        public Builder setAwsCloudMap(@Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap) {
+        public Builder awsCloudMap(@Nullable Input<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap) {
             this.awsCloudMap = awsCloudMap;
             return this;
         }
 
-        public Builder setAwsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs awsCloudMap) {
+        public Builder awsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs awsCloudMap) {
             this.awsCloudMap = Input.ofNullable(awsCloudMap);
             return this;
         }
 
-        public Builder setDns(@Nullable Input<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
+        public Builder dns(@Nullable Input<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
             this.dns = dns;
             return this;
         }
 
-        public Builder setDns(@Nullable VirtualNodeSpecServiceDiscoveryDnsArgs dns) {
+        public Builder dns(@Nullable VirtualNodeSpecServiceDiscoveryDnsArgs dns) {
             this.dns = Input.ofNullable(dns);
             return this;
         }

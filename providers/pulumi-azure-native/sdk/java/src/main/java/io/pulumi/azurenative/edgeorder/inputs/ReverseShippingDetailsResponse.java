@@ -120,27 +120,27 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setCarrierDisplayName(String carrierDisplayName) {
+        public Builder carrierDisplayName(String carrierDisplayName) {
             this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName);
             return this;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setSasKeyForLabel(String sasKeyForLabel) {
+        public Builder sasKeyForLabel(String sasKeyForLabel) {
             this.sasKeyForLabel = Objects.requireNonNull(sasKeyForLabel);
             return this;
         }
 
-        public Builder setTrackingId(String trackingId) {
+        public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
 
-        public Builder setTrackingUrl(String trackingUrl) {
+        public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }

@@ -135,62 +135,62 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setFabricName(Input<String> fabricName) {
+        public Builder fabricName(Input<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Input.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder setNetworkMappingName(@Nullable Input<String> networkMappingName) {
+        public Builder networkMappingName(@Nullable Input<String> networkMappingName) {
             this.networkMappingName = networkMappingName;
             return this;
         }
 
-        public Builder setNetworkMappingName(@Nullable String networkMappingName) {
+        public Builder networkMappingName(@Nullable String networkMappingName) {
             this.networkMappingName = Input.ofNullable(networkMappingName);
             return this;
         }
 
-        public Builder setNetworkName(Input<String> networkName) {
+        public Builder networkName(Input<String> networkName) {
             this.networkName = Objects.requireNonNull(networkName);
             return this;
         }
 
-        public Builder setNetworkName(String networkName) {
+        public Builder networkName(String networkName) {
             this.networkName = Input.of(Objects.requireNonNull(networkName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable CreateNetworkMappingInputPropertiesArgs properties) {
+        public Builder properties(@Nullable CreateNetworkMappingInputPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

@@ -119,52 +119,52 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     	      this.targetKeyId = defaults.targetKeyId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setTargetKeyArn(@Nullable Input<String> targetKeyArn) {
+        public Builder targetKeyArn(@Nullable Input<String> targetKeyArn) {
             this.targetKeyArn = targetKeyArn;
             return this;
         }
 
-        public Builder setTargetKeyArn(@Nullable String targetKeyArn) {
+        public Builder targetKeyArn(@Nullable String targetKeyArn) {
             this.targetKeyArn = Input.ofNullable(targetKeyArn);
             return this;
         }
 
-        public Builder setTargetKeyId(@Nullable Input<String> targetKeyId) {
+        public Builder targetKeyId(@Nullable Input<String> targetKeyId) {
             this.targetKeyId = targetKeyId;
             return this;
         }
 
-        public Builder setTargetKeyId(@Nullable String targetKeyId) {
+        public Builder targetKeyId(@Nullable String targetKeyId) {
             this.targetKeyId = Input.ofNullable(targetKeyId);
             return this;
         }

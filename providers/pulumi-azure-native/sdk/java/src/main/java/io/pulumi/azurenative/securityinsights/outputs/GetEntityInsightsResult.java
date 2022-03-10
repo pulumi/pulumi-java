@@ -69,12 +69,12 @@ public final class GetEntityInsightsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setMetaData(@Nullable GetInsightsResultsMetadataResponse metaData) {
+        public Builder metaData(@Nullable GetInsightsResultsMetadataResponse metaData) {
             this.metaData = metaData;
             return this;
         }
 
-        public Builder setValue(@Nullable List<EntityInsightItemResponse> value) {
+        public Builder value(@Nullable List<EntityInsightItemResponse> value) {
             this.value = value;
             return this;
         }

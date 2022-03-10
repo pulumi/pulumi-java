@@ -65,12 +65,12 @@ public final class MessageResponse {
     	      this.timeStamp = defaults.timeStamp;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setTimeStamp(String timeStamp) {
+        public Builder timeStamp(String timeStamp) {
             this.timeStamp = Objects.requireNonNull(timeStamp);
             return this;
         }

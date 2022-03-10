@@ -145,62 +145,62 @@ public final class DatabaseState extends io.pulumi.resources.ResourceArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setCharset(@Nullable Input<String> charset) {
+        public Builder charset(@Nullable Input<String> charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = Input.ofNullable(charset);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setInstance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Input<String> instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = Input.ofNullable(instance);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }

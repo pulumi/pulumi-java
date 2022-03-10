@@ -90,17 +90,17 @@ public final class GrpcServiceConfigResponse extends io.pulumi.resources.InvokeA
     	      this.targetUri = defaults.targetUri;
         }
 
-        public Builder setCallCredentials(CallCredentialsResponse callCredentials) {
+        public Builder callCredentials(CallCredentialsResponse callCredentials) {
             this.callCredentials = Objects.requireNonNull(callCredentials);
             return this;
         }
 
-        public Builder setChannelCredentials(ChannelCredentialsResponse channelCredentials) {
+        public Builder channelCredentials(ChannelCredentialsResponse channelCredentials) {
             this.channelCredentials = Objects.requireNonNull(channelCredentials);
             return this;
         }
 
-        public Builder setTargetUri(String targetUri) {
+        public Builder targetUri(String targetUri) {
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }

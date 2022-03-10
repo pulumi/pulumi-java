@@ -83,17 +83,17 @@ public final class GuestPoliciesAssignmentOsType {
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsArchitecture(@Nullable String osArchitecture) {
+        public Builder osArchitecture(@Nullable String osArchitecture) {
             this.osArchitecture = osArchitecture;
             return this;
         }
 
-        public Builder setOsShortName(@Nullable String osShortName) {
+        public Builder osShortName(@Nullable String osShortName) {
             this.osShortName = osShortName;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }

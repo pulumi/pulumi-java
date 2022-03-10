@@ -201,92 +201,92 @@ public final class OrganizationFeedState extends io.pulumi.resources.ResourceArg
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder setAssetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
-        public Builder setAssetNames(@Nullable List<String> assetNames) {
+        public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Input.ofNullable(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable List<String> assetTypes) {
+        public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Input.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder setBillingProject(@Nullable Input<String> billingProject) {
+        public Builder billingProject(@Nullable Input<String> billingProject) {
             this.billingProject = billingProject;
             return this;
         }
 
-        public Builder setBillingProject(@Nullable String billingProject) {
+        public Builder billingProject(@Nullable String billingProject) {
             this.billingProject = Input.ofNullable(billingProject);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<OrganizationFeedConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<OrganizationFeedConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable OrganizationFeedConditionGetArgs condition) {
+        public Builder condition(@Nullable OrganizationFeedConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setFeedId(@Nullable Input<String> feedId) {
+        public Builder feedId(@Nullable Input<String> feedId) {
             this.feedId = feedId;
             return this;
         }
 
-        public Builder setFeedId(@Nullable String feedId) {
+        public Builder feedId(@Nullable String feedId) {
             this.feedId = Input.ofNullable(feedId);
             return this;
         }
 
-        public Builder setFeedOutputConfig(@Nullable Input<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(@Nullable Input<OrganizationFeedFeedOutputConfigGetArgs> feedOutputConfig) {
             this.feedOutputConfig = feedOutputConfig;
             return this;
         }
 
-        public Builder setFeedOutputConfig(@Nullable OrganizationFeedFeedOutputConfigGetArgs feedOutputConfig) {
+        public Builder feedOutputConfig(@Nullable OrganizationFeedFeedOutputConfigGetArgs feedOutputConfig) {
             this.feedOutputConfig = Input.ofNullable(feedOutputConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Input<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
-        public Builder setOrgId(@Nullable String orgId) {
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }

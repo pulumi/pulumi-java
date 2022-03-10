@@ -76,17 +76,17 @@ public final class RuleGroup extends io.pulumi.resources.InvokeArgs {
     	      this.statefulRuleOptions = defaults.statefulRuleOptions;
         }
 
-        public Builder setRuleVariables(@Nullable RuleGroupRuleVariables ruleVariables) {
+        public Builder ruleVariables(@Nullable RuleGroupRuleVariables ruleVariables) {
             this.ruleVariables = ruleVariables;
             return this;
         }
 
-        public Builder setRulesSource(RuleGroupRulesSource rulesSource) {
+        public Builder rulesSource(RuleGroupRulesSource rulesSource) {
             this.rulesSource = Objects.requireNonNull(rulesSource);
             return this;
         }
 
-        public Builder setStatefulRuleOptions(@Nullable RuleGroupStatefulRuleOptions statefulRuleOptions) {
+        public Builder statefulRuleOptions(@Nullable RuleGroupStatefulRuleOptions statefulRuleOptions) {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }

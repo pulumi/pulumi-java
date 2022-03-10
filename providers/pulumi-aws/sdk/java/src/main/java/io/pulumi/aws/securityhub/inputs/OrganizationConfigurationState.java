@@ -53,12 +53,12 @@ public final class OrganizationConfigurationState extends io.pulumi.resources.Re
     	      this.autoEnable = defaults.autoEnable;
         }
 
-        public Builder setAutoEnable(@Nullable Input<Boolean> autoEnable) {
+        public Builder autoEnable(@Nullable Input<Boolean> autoEnable) {
             this.autoEnable = autoEnable;
             return this;
         }
 
-        public Builder setAutoEnable(@Nullable Boolean autoEnable) {
+        public Builder autoEnable(@Nullable Boolean autoEnable) {
             this.autoEnable = Input.ofNullable(autoEnable);
             return this;
         }

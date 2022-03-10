@@ -51,7 +51,7 @@ public final class GetParameterGroupArgs extends io.pulumi.resources.InvokeArgs 
     	      this.parameterGroupName = defaults.parameterGroupName;
         }
 
-        public Builder setParameterGroupName(String parameterGroupName) {
+        public Builder parameterGroupName(String parameterGroupName) {
             this.parameterGroupName = Objects.requireNonNull(parameterGroupName);
             return this;
         }

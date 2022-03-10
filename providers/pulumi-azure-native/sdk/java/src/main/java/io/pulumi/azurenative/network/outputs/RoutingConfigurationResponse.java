@@ -85,17 +85,17 @@ public final class RoutingConfigurationResponse {
     	      this.vnetRoutes = defaults.vnetRoutes;
         }
 
-        public Builder setAssociatedRouteTable(@Nullable SubResourceResponse associatedRouteTable) {
+        public Builder associatedRouteTable(@Nullable SubResourceResponse associatedRouteTable) {
             this.associatedRouteTable = associatedRouteTable;
             return this;
         }
 
-        public Builder setPropagatedRouteTables(@Nullable PropagatedRouteTableResponse propagatedRouteTables) {
+        public Builder propagatedRouteTables(@Nullable PropagatedRouteTableResponse propagatedRouteTables) {
             this.propagatedRouteTables = propagatedRouteTables;
             return this;
         }
 
-        public Builder setVnetRoutes(@Nullable VnetRouteResponse vnetRoutes) {
+        public Builder vnetRoutes(@Nullable VnetRouteResponse vnetRoutes) {
             this.vnetRoutes = vnetRoutes;
             return this;
         }

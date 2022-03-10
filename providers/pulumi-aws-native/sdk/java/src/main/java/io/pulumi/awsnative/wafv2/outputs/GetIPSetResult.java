@@ -94,32 +94,32 @@ public final class GetIPSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddresses(@Nullable List<String> addresses) {
+        public Builder addresses(@Nullable List<String> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIPAddressVersion(@Nullable IPSetIPAddressVersion iPAddressVersion) {
+        public Builder iPAddressVersion(@Nullable IPSetIPAddressVersion iPAddressVersion) {
             this.iPAddressVersion = iPAddressVersion;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IPSetTag> tags) {
+        public Builder tags(@Nullable List<IPSetTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -187,92 +187,92 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setDevice(@Nullable Input<SubResourceArgs> device) {
+        public Builder device(@Nullable Input<SubResourceArgs> device) {
             this.device = device;
             return this;
         }
 
-        public Builder setDevice(@Nullable SubResourceArgs device) {
+        public Builder device(@Nullable SubResourceArgs device) {
             this.device = Input.ofNullable(device);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedApplicationParameters(@Nullable Input<Object> managedApplicationParameters) {
+        public Builder managedApplicationParameters(@Nullable Input<Object> managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
 
-        public Builder setManagedApplicationParameters(@Nullable Object managedApplicationParameters) {
+        public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
             this.managedApplicationParameters = Input.ofNullable(managedApplicationParameters);
             return this;
         }
 
-        public Builder setNetworkFunctionName(@Nullable Input<String> networkFunctionName) {
+        public Builder networkFunctionName(@Nullable Input<String> networkFunctionName) {
             this.networkFunctionName = networkFunctionName;
             return this;
         }
 
-        public Builder setNetworkFunctionName(@Nullable String networkFunctionName) {
+        public Builder networkFunctionName(@Nullable String networkFunctionName) {
             this.networkFunctionName = Input.ofNullable(networkFunctionName);
             return this;
         }
 
-        public Builder setNetworkFunctionUserConfigurations(@Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
+        public Builder networkFunctionUserConfigurations(@Nullable Input<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
             this.networkFunctionUserConfigurations = networkFunctionUserConfigurations;
             return this;
         }
 
-        public Builder setNetworkFunctionUserConfigurations(@Nullable List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
+        public Builder networkFunctionUserConfigurations(@Nullable List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
             this.networkFunctionUserConfigurations = Input.ofNullable(networkFunctionUserConfigurations);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSkuName(@Nullable Input<String> skuName) {
+        public Builder skuName(@Nullable Input<String> skuName) {
             this.skuName = skuName;
             return this;
         }
 
-        public Builder setSkuName(@Nullable String skuName) {
+        public Builder skuName(@Nullable String skuName) {
             this.skuName = Input.ofNullable(skuName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVendorName(@Nullable Input<String> vendorName) {
+        public Builder vendorName(@Nullable Input<String> vendorName) {
             this.vendorName = vendorName;
             return this;
         }
 
-        public Builder setVendorName(@Nullable String vendorName) {
+        public Builder vendorName(@Nullable String vendorName) {
             this.vendorName = Input.ofNullable(vendorName);
             return this;
         }

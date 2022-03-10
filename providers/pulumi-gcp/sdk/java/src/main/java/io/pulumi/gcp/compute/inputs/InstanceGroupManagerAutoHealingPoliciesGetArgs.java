@@ -71,22 +71,22 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends io.pul
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder setHealthCheck(Input<String> healthCheck) {
+        public Builder healthCheck(Input<String> healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
-        public Builder setHealthCheck(String healthCheck) {
+        public Builder healthCheck(String healthCheck) {
             this.healthCheck = Input.of(Objects.requireNonNull(healthCheck));
             return this;
         }
 
-        public Builder setInitialDelaySec(Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(Input<Integer> initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
 
-        public Builder setInitialDelaySec(Integer initialDelaySec) {
+        public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Input.of(Objects.requireNonNull(initialDelaySec));
             return this;
         }

@@ -92,32 +92,32 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
     	      this.healthCheckConfig = defaults.healthCheckConfig;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Input<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Input.ofNullable(containerPort);
             return this;
         }
 
-        public Builder setHealthCheckConfig(@Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable Input<ContainerHealthCheckConfigArgs> healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
-        public Builder setHealthCheckConfig(@Nullable ContainerHealthCheckConfigArgs healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfigArgs healthCheckConfig) {
             this.healthCheckConfig = Input.ofNullable(healthCheckConfig);
             return this;
         }

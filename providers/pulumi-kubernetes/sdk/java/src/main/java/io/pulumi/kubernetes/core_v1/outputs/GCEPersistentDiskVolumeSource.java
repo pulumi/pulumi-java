@@ -101,22 +101,22 @@ public final class GCEPersistentDiskVolumeSource {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setPartition(@Nullable Integer partition) {
+        public Builder partition(@Nullable Integer partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setPdName(String pdName) {
+        public Builder pdName(String pdName) {
             this.pdName = Objects.requireNonNull(pdName);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

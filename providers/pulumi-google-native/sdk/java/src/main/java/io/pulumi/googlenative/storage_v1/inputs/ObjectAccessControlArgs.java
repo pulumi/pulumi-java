@@ -262,132 +262,132 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setEntity(@Nullable Input<String> entity) {
+        public Builder entity(@Nullable Input<String> entity) {
             this.entity = entity;
             return this;
         }
 
-        public Builder setEntity(@Nullable String entity) {
+        public Builder entity(@Nullable String entity) {
             this.entity = Input.ofNullable(entity);
             return this;
         }
 
-        public Builder setEntityId(@Nullable Input<String> entityId) {
+        public Builder entityId(@Nullable Input<String> entityId) {
             this.entityId = entityId;
             return this;
         }
 
-        public Builder setEntityId(@Nullable String entityId) {
+        public Builder entityId(@Nullable String entityId) {
             this.entityId = Input.ofNullable(entityId);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setGeneration(@Nullable Input<String> generation) {
+        public Builder generation(@Nullable Input<String> generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setGeneration(@Nullable String generation) {
+        public Builder generation(@Nullable String generation) {
             this.generation = Input.ofNullable(generation);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setObject(@Nullable Input<String> object) {
+        public Builder object(@Nullable Input<String> object) {
             this.object = object;
             return this;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = Input.ofNullable(object);
             return this;
         }
 
-        public Builder setProjectTeam(@Nullable Input<ObjectAccessControlProjectTeamArgs> projectTeam) {
+        public Builder projectTeam(@Nullable Input<ObjectAccessControlProjectTeamArgs> projectTeam) {
             this.projectTeam = projectTeam;
             return this;
         }
 
-        public Builder setProjectTeam(@Nullable ObjectAccessControlProjectTeamArgs projectTeam) {
+        public Builder projectTeam(@Nullable ObjectAccessControlProjectTeamArgs projectTeam) {
             this.projectTeam = Input.ofNullable(projectTeam);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }

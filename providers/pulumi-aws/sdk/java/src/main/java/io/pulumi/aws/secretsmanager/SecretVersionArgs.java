@@ -103,42 +103,42 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionStages = defaults.versionStages;
         }
 
-        public Builder setSecretBinary(@Nullable Input<String> secretBinary) {
+        public Builder secretBinary(@Nullable Input<String> secretBinary) {
             this.secretBinary = secretBinary;
             return this;
         }
 
-        public Builder setSecretBinary(@Nullable String secretBinary) {
+        public Builder secretBinary(@Nullable String secretBinary) {
             this.secretBinary = Input.ofNullable(secretBinary);
             return this;
         }
 
-        public Builder setSecretId(Input<String> secretId) {
+        public Builder secretId(Input<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }
 
-        public Builder setSecretString(@Nullable Input<String> secretString) {
+        public Builder secretString(@Nullable Input<String> secretString) {
             this.secretString = secretString;
             return this;
         }
 
-        public Builder setSecretString(@Nullable String secretString) {
+        public Builder secretString(@Nullable String secretString) {
             this.secretString = Input.ofNullable(secretString);
             return this;
         }
 
-        public Builder setVersionStages(@Nullable Input<List<String>> versionStages) {
+        public Builder versionStages(@Nullable Input<List<String>> versionStages) {
             this.versionStages = versionStages;
             return this;
         }
 
-        public Builder setVersionStages(@Nullable List<String> versionStages) {
+        public Builder versionStages(@Nullable List<String> versionStages) {
             this.versionStages = Input.ofNullable(versionStages);
             return this;
         }

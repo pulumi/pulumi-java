@@ -182,92 +182,92 @@ public final class ManagedPrefixListState extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder setAddressFamily(@Nullable Input<String> addressFamily) {
+        public Builder addressFamily(@Nullable Input<String> addressFamily) {
             this.addressFamily = addressFamily;
             return this;
         }
 
-        public Builder setAddressFamily(@Nullable String addressFamily) {
+        public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Input.ofNullable(addressFamily);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEntries(@Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries) {
+        public Builder entries(@Nullable Input<List<ManagedPrefixListEntryGetArgs>> entries) {
             this.entries = entries;
             return this;
         }
 
-        public Builder setEntries(@Nullable List<ManagedPrefixListEntryGetArgs> entries) {
+        public Builder entries(@Nullable List<ManagedPrefixListEntryGetArgs> entries) {
             this.entries = Input.ofNullable(entries);
             return this;
         }
 
-        public Builder setMaxEntries(@Nullable Input<Integer> maxEntries) {
+        public Builder maxEntries(@Nullable Input<Integer> maxEntries) {
             this.maxEntries = maxEntries;
             return this;
         }
 
-        public Builder setMaxEntries(@Nullable Integer maxEntries) {
+        public Builder maxEntries(@Nullable Integer maxEntries) {
             this.maxEntries = Input.ofNullable(maxEntries);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

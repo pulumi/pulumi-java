@@ -1126,662 +1126,662 @@ public final class SiteConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xManagedServiceIdentityId = defaults.xManagedServiceIdentityId;
         }
 
-        public Builder setAcrUseManagedIdentityCreds(@Nullable Input<Boolean> acrUseManagedIdentityCreds) {
+        public Builder acrUseManagedIdentityCreds(@Nullable Input<Boolean> acrUseManagedIdentityCreds) {
             this.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
             return this;
         }
 
-        public Builder setAcrUseManagedIdentityCreds(@Nullable Boolean acrUseManagedIdentityCreds) {
+        public Builder acrUseManagedIdentityCreds(@Nullable Boolean acrUseManagedIdentityCreds) {
             this.acrUseManagedIdentityCreds = Input.ofNullable(acrUseManagedIdentityCreds);
             return this;
         }
 
-        public Builder setAcrUserManagedIdentityID(@Nullable Input<String> acrUserManagedIdentityID) {
+        public Builder acrUserManagedIdentityID(@Nullable Input<String> acrUserManagedIdentityID) {
             this.acrUserManagedIdentityID = acrUserManagedIdentityID;
             return this;
         }
 
-        public Builder setAcrUserManagedIdentityID(@Nullable String acrUserManagedIdentityID) {
+        public Builder acrUserManagedIdentityID(@Nullable String acrUserManagedIdentityID) {
             this.acrUserManagedIdentityID = Input.ofNullable(acrUserManagedIdentityID);
             return this;
         }
 
-        public Builder setAlwaysOn(@Nullable Input<Boolean> alwaysOn) {
+        public Builder alwaysOn(@Nullable Input<Boolean> alwaysOn) {
             this.alwaysOn = alwaysOn;
             return this;
         }
 
-        public Builder setAlwaysOn(@Nullable Boolean alwaysOn) {
+        public Builder alwaysOn(@Nullable Boolean alwaysOn) {
             this.alwaysOn = Input.ofNullable(alwaysOn);
             return this;
         }
 
-        public Builder setApiDefinition(@Nullable Input<ApiDefinitionInfoArgs> apiDefinition) {
+        public Builder apiDefinition(@Nullable Input<ApiDefinitionInfoArgs> apiDefinition) {
             this.apiDefinition = apiDefinition;
             return this;
         }
 
-        public Builder setApiDefinition(@Nullable ApiDefinitionInfoArgs apiDefinition) {
+        public Builder apiDefinition(@Nullable ApiDefinitionInfoArgs apiDefinition) {
             this.apiDefinition = Input.ofNullable(apiDefinition);
             return this;
         }
 
-        public Builder setApiManagementConfig(@Nullable Input<ApiManagementConfigArgs> apiManagementConfig) {
+        public Builder apiManagementConfig(@Nullable Input<ApiManagementConfigArgs> apiManagementConfig) {
             this.apiManagementConfig = apiManagementConfig;
             return this;
         }
 
-        public Builder setApiManagementConfig(@Nullable ApiManagementConfigArgs apiManagementConfig) {
+        public Builder apiManagementConfig(@Nullable ApiManagementConfigArgs apiManagementConfig) {
             this.apiManagementConfig = Input.ofNullable(apiManagementConfig);
             return this;
         }
 
-        public Builder setAppCommandLine(@Nullable Input<String> appCommandLine) {
+        public Builder appCommandLine(@Nullable Input<String> appCommandLine) {
             this.appCommandLine = appCommandLine;
             return this;
         }
 
-        public Builder setAppCommandLine(@Nullable String appCommandLine) {
+        public Builder appCommandLine(@Nullable String appCommandLine) {
             this.appCommandLine = Input.ofNullable(appCommandLine);
             return this;
         }
 
-        public Builder setAppSettings(@Nullable Input<List<NameValuePairArgs>> appSettings) {
+        public Builder appSettings(@Nullable Input<List<NameValuePairArgs>> appSettings) {
             this.appSettings = appSettings;
             return this;
         }
 
-        public Builder setAppSettings(@Nullable List<NameValuePairArgs> appSettings) {
+        public Builder appSettings(@Nullable List<NameValuePairArgs> appSettings) {
             this.appSettings = Input.ofNullable(appSettings);
             return this;
         }
 
-        public Builder setAutoHealEnabled(@Nullable Input<Boolean> autoHealEnabled) {
+        public Builder autoHealEnabled(@Nullable Input<Boolean> autoHealEnabled) {
             this.autoHealEnabled = autoHealEnabled;
             return this;
         }
 
-        public Builder setAutoHealEnabled(@Nullable Boolean autoHealEnabled) {
+        public Builder autoHealEnabled(@Nullable Boolean autoHealEnabled) {
             this.autoHealEnabled = Input.ofNullable(autoHealEnabled);
             return this;
         }
 
-        public Builder setAutoHealRules(@Nullable Input<AutoHealRulesArgs> autoHealRules) {
+        public Builder autoHealRules(@Nullable Input<AutoHealRulesArgs> autoHealRules) {
             this.autoHealRules = autoHealRules;
             return this;
         }
 
-        public Builder setAutoHealRules(@Nullable AutoHealRulesArgs autoHealRules) {
+        public Builder autoHealRules(@Nullable AutoHealRulesArgs autoHealRules) {
             this.autoHealRules = Input.ofNullable(autoHealRules);
             return this;
         }
 
-        public Builder setAutoSwapSlotName(@Nullable Input<String> autoSwapSlotName) {
+        public Builder autoSwapSlotName(@Nullable Input<String> autoSwapSlotName) {
             this.autoSwapSlotName = autoSwapSlotName;
             return this;
         }
 
-        public Builder setAutoSwapSlotName(@Nullable String autoSwapSlotName) {
+        public Builder autoSwapSlotName(@Nullable String autoSwapSlotName) {
             this.autoSwapSlotName = Input.ofNullable(autoSwapSlotName);
             return this;
         }
 
-        public Builder setAzureStorageAccounts(@Nullable Input<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts) {
+        public Builder azureStorageAccounts(@Nullable Input<Map<String,AzureStorageInfoValueArgs>> azureStorageAccounts) {
             this.azureStorageAccounts = azureStorageAccounts;
             return this;
         }
 
-        public Builder setAzureStorageAccounts(@Nullable Map<String,AzureStorageInfoValueArgs> azureStorageAccounts) {
+        public Builder azureStorageAccounts(@Nullable Map<String,AzureStorageInfoValueArgs> azureStorageAccounts) {
             this.azureStorageAccounts = Input.ofNullable(azureStorageAccounts);
             return this;
         }
 
-        public Builder setConnectionStrings(@Nullable Input<List<ConnStringInfoArgs>> connectionStrings) {
+        public Builder connectionStrings(@Nullable Input<List<ConnStringInfoArgs>> connectionStrings) {
             this.connectionStrings = connectionStrings;
             return this;
         }
 
-        public Builder setConnectionStrings(@Nullable List<ConnStringInfoArgs> connectionStrings) {
+        public Builder connectionStrings(@Nullable List<ConnStringInfoArgs> connectionStrings) {
             this.connectionStrings = Input.ofNullable(connectionStrings);
             return this;
         }
 
-        public Builder setCors(@Nullable Input<CorsSettingsArgs> cors) {
+        public Builder cors(@Nullable Input<CorsSettingsArgs> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable CorsSettingsArgs cors) {
+        public Builder cors(@Nullable CorsSettingsArgs cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setDefaultDocuments(@Nullable Input<List<String>> defaultDocuments) {
+        public Builder defaultDocuments(@Nullable Input<List<String>> defaultDocuments) {
             this.defaultDocuments = defaultDocuments;
             return this;
         }
 
-        public Builder setDefaultDocuments(@Nullable List<String> defaultDocuments) {
+        public Builder defaultDocuments(@Nullable List<String> defaultDocuments) {
             this.defaultDocuments = Input.ofNullable(defaultDocuments);
             return this;
         }
 
-        public Builder setDetailedErrorLoggingEnabled(@Nullable Input<Boolean> detailedErrorLoggingEnabled) {
+        public Builder detailedErrorLoggingEnabled(@Nullable Input<Boolean> detailedErrorLoggingEnabled) {
             this.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
             return this;
         }
 
-        public Builder setDetailedErrorLoggingEnabled(@Nullable Boolean detailedErrorLoggingEnabled) {
+        public Builder detailedErrorLoggingEnabled(@Nullable Boolean detailedErrorLoggingEnabled) {
             this.detailedErrorLoggingEnabled = Input.ofNullable(detailedErrorLoggingEnabled);
             return this;
         }
 
-        public Builder setDocumentRoot(@Nullable Input<String> documentRoot) {
+        public Builder documentRoot(@Nullable Input<String> documentRoot) {
             this.documentRoot = documentRoot;
             return this;
         }
 
-        public Builder setDocumentRoot(@Nullable String documentRoot) {
+        public Builder documentRoot(@Nullable String documentRoot) {
             this.documentRoot = Input.ofNullable(documentRoot);
             return this;
         }
 
-        public Builder setExperiments(@Nullable Input<ExperimentsArgs> experiments) {
+        public Builder experiments(@Nullable Input<ExperimentsArgs> experiments) {
             this.experiments = experiments;
             return this;
         }
 
-        public Builder setExperiments(@Nullable ExperimentsArgs experiments) {
+        public Builder experiments(@Nullable ExperimentsArgs experiments) {
             this.experiments = Input.ofNullable(experiments);
             return this;
         }
 
-        public Builder setFtpsState(@Nullable Input<Either<String,FtpsState>> ftpsState) {
+        public Builder ftpsState(@Nullable Input<Either<String,FtpsState>> ftpsState) {
             this.ftpsState = ftpsState;
             return this;
         }
 
-        public Builder setFtpsState(@Nullable Either<String,FtpsState> ftpsState) {
+        public Builder ftpsState(@Nullable Either<String,FtpsState> ftpsState) {
             this.ftpsState = Input.ofNullable(ftpsState);
             return this;
         }
 
-        public Builder setFunctionAppScaleLimit(@Nullable Input<Integer> functionAppScaleLimit) {
+        public Builder functionAppScaleLimit(@Nullable Input<Integer> functionAppScaleLimit) {
             this.functionAppScaleLimit = functionAppScaleLimit;
             return this;
         }
 
-        public Builder setFunctionAppScaleLimit(@Nullable Integer functionAppScaleLimit) {
+        public Builder functionAppScaleLimit(@Nullable Integer functionAppScaleLimit) {
             this.functionAppScaleLimit = Input.ofNullable(functionAppScaleLimit);
             return this;
         }
 
-        public Builder setFunctionsRuntimeScaleMonitoringEnabled(@Nullable Input<Boolean> functionsRuntimeScaleMonitoringEnabled) {
+        public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Input<Boolean> functionsRuntimeScaleMonitoringEnabled) {
             this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
             return this;
         }
 
-        public Builder setFunctionsRuntimeScaleMonitoringEnabled(@Nullable Boolean functionsRuntimeScaleMonitoringEnabled) {
+        public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Boolean functionsRuntimeScaleMonitoringEnabled) {
             this.functionsRuntimeScaleMonitoringEnabled = Input.ofNullable(functionsRuntimeScaleMonitoringEnabled);
             return this;
         }
 
-        public Builder setHandlerMappings(@Nullable Input<List<HandlerMappingArgs>> handlerMappings) {
+        public Builder handlerMappings(@Nullable Input<List<HandlerMappingArgs>> handlerMappings) {
             this.handlerMappings = handlerMappings;
             return this;
         }
 
-        public Builder setHandlerMappings(@Nullable List<HandlerMappingArgs> handlerMappings) {
+        public Builder handlerMappings(@Nullable List<HandlerMappingArgs> handlerMappings) {
             this.handlerMappings = Input.ofNullable(handlerMappings);
             return this;
         }
 
-        public Builder setHealthCheckPath(@Nullable Input<String> healthCheckPath) {
+        public Builder healthCheckPath(@Nullable Input<String> healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
 
-        public Builder setHealthCheckPath(@Nullable String healthCheckPath) {
+        public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = Input.ofNullable(healthCheckPath);
             return this;
         }
 
-        public Builder setHttp20Enabled(@Nullable Input<Boolean> http20Enabled) {
+        public Builder http20Enabled(@Nullable Input<Boolean> http20Enabled) {
             this.http20Enabled = http20Enabled;
             return this;
         }
 
-        public Builder setHttp20Enabled(@Nullable Boolean http20Enabled) {
+        public Builder http20Enabled(@Nullable Boolean http20Enabled) {
             this.http20Enabled = Input.ofNullable(http20Enabled);
             return this;
         }
 
-        public Builder setHttpLoggingEnabled(@Nullable Input<Boolean> httpLoggingEnabled) {
+        public Builder httpLoggingEnabled(@Nullable Input<Boolean> httpLoggingEnabled) {
             this.httpLoggingEnabled = httpLoggingEnabled;
             return this;
         }
 
-        public Builder setHttpLoggingEnabled(@Nullable Boolean httpLoggingEnabled) {
+        public Builder httpLoggingEnabled(@Nullable Boolean httpLoggingEnabled) {
             this.httpLoggingEnabled = Input.ofNullable(httpLoggingEnabled);
             return this;
         }
 
-        public Builder setIpSecurityRestrictions(@Nullable Input<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions) {
+        public Builder ipSecurityRestrictions(@Nullable Input<List<IpSecurityRestrictionArgs>> ipSecurityRestrictions) {
             this.ipSecurityRestrictions = ipSecurityRestrictions;
             return this;
         }
 
-        public Builder setIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> ipSecurityRestrictions) {
+        public Builder ipSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> ipSecurityRestrictions) {
             this.ipSecurityRestrictions = Input.ofNullable(ipSecurityRestrictions);
             return this;
         }
 
-        public Builder setJavaContainer(@Nullable Input<String> javaContainer) {
+        public Builder javaContainer(@Nullable Input<String> javaContainer) {
             this.javaContainer = javaContainer;
             return this;
         }
 
-        public Builder setJavaContainer(@Nullable String javaContainer) {
+        public Builder javaContainer(@Nullable String javaContainer) {
             this.javaContainer = Input.ofNullable(javaContainer);
             return this;
         }
 
-        public Builder setJavaContainerVersion(@Nullable Input<String> javaContainerVersion) {
+        public Builder javaContainerVersion(@Nullable Input<String> javaContainerVersion) {
             this.javaContainerVersion = javaContainerVersion;
             return this;
         }
 
-        public Builder setJavaContainerVersion(@Nullable String javaContainerVersion) {
+        public Builder javaContainerVersion(@Nullable String javaContainerVersion) {
             this.javaContainerVersion = Input.ofNullable(javaContainerVersion);
             return this;
         }
 
-        public Builder setJavaVersion(@Nullable Input<String> javaVersion) {
+        public Builder javaVersion(@Nullable Input<String> javaVersion) {
             this.javaVersion = javaVersion;
             return this;
         }
 
-        public Builder setJavaVersion(@Nullable String javaVersion) {
+        public Builder javaVersion(@Nullable String javaVersion) {
             this.javaVersion = Input.ofNullable(javaVersion);
             return this;
         }
 
-        public Builder setKeyVaultReferenceIdentity(@Nullable Input<String> keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(@Nullable Input<String> keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
 
-        public Builder setKeyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = Input.ofNullable(keyVaultReferenceIdentity);
             return this;
         }
 
-        public Builder setLimits(@Nullable Input<SiteLimitsArgs> limits) {
+        public Builder limits(@Nullable Input<SiteLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable SiteLimitsArgs limits) {
+        public Builder limits(@Nullable SiteLimitsArgs limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }
 
-        public Builder setLinuxFxVersion(@Nullable Input<String> linuxFxVersion) {
+        public Builder linuxFxVersion(@Nullable Input<String> linuxFxVersion) {
             this.linuxFxVersion = linuxFxVersion;
             return this;
         }
 
-        public Builder setLinuxFxVersion(@Nullable String linuxFxVersion) {
+        public Builder linuxFxVersion(@Nullable String linuxFxVersion) {
             this.linuxFxVersion = Input.ofNullable(linuxFxVersion);
             return this;
         }
 
-        public Builder setLoadBalancing(@Nullable Input<SiteLoadBalancing> loadBalancing) {
+        public Builder loadBalancing(@Nullable Input<SiteLoadBalancing> loadBalancing) {
             this.loadBalancing = loadBalancing;
             return this;
         }
 
-        public Builder setLoadBalancing(@Nullable SiteLoadBalancing loadBalancing) {
+        public Builder loadBalancing(@Nullable SiteLoadBalancing loadBalancing) {
             this.loadBalancing = Input.ofNullable(loadBalancing);
             return this;
         }
 
-        public Builder setLocalMySqlEnabled(@Nullable Input<Boolean> localMySqlEnabled) {
+        public Builder localMySqlEnabled(@Nullable Input<Boolean> localMySqlEnabled) {
             this.localMySqlEnabled = localMySqlEnabled;
             return this;
         }
 
-        public Builder setLocalMySqlEnabled(@Nullable Boolean localMySqlEnabled) {
+        public Builder localMySqlEnabled(@Nullable Boolean localMySqlEnabled) {
             this.localMySqlEnabled = Input.ofNullable(localMySqlEnabled);
             return this;
         }
 
-        public Builder setLogsDirectorySizeLimit(@Nullable Input<Integer> logsDirectorySizeLimit) {
+        public Builder logsDirectorySizeLimit(@Nullable Input<Integer> logsDirectorySizeLimit) {
             this.logsDirectorySizeLimit = logsDirectorySizeLimit;
             return this;
         }
 
-        public Builder setLogsDirectorySizeLimit(@Nullable Integer logsDirectorySizeLimit) {
+        public Builder logsDirectorySizeLimit(@Nullable Integer logsDirectorySizeLimit) {
             this.logsDirectorySizeLimit = Input.ofNullable(logsDirectorySizeLimit);
             return this;
         }
 
-        public Builder setManagedPipelineMode(@Nullable Input<ManagedPipelineMode> managedPipelineMode) {
+        public Builder managedPipelineMode(@Nullable Input<ManagedPipelineMode> managedPipelineMode) {
             this.managedPipelineMode = managedPipelineMode;
             return this;
         }
 
-        public Builder setManagedPipelineMode(@Nullable ManagedPipelineMode managedPipelineMode) {
+        public Builder managedPipelineMode(@Nullable ManagedPipelineMode managedPipelineMode) {
             this.managedPipelineMode = Input.ofNullable(managedPipelineMode);
             return this;
         }
 
-        public Builder setManagedServiceIdentityId(@Nullable Input<Integer> managedServiceIdentityId) {
+        public Builder managedServiceIdentityId(@Nullable Input<Integer> managedServiceIdentityId) {
             this.managedServiceIdentityId = managedServiceIdentityId;
             return this;
         }
 
-        public Builder setManagedServiceIdentityId(@Nullable Integer managedServiceIdentityId) {
+        public Builder managedServiceIdentityId(@Nullable Integer managedServiceIdentityId) {
             this.managedServiceIdentityId = Input.ofNullable(managedServiceIdentityId);
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable Input<Either<String,SupportedTlsVersions>> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Input<Either<String,SupportedTlsVersions>> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable Either<String,SupportedTlsVersions> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Either<String,SupportedTlsVersions> minTlsVersion) {
             this.minTlsVersion = Input.ofNullable(minTlsVersion);
             return this;
         }
 
-        public Builder setMinimumElasticInstanceCount(@Nullable Input<Integer> minimumElasticInstanceCount) {
+        public Builder minimumElasticInstanceCount(@Nullable Input<Integer> minimumElasticInstanceCount) {
             this.minimumElasticInstanceCount = minimumElasticInstanceCount;
             return this;
         }
 
-        public Builder setMinimumElasticInstanceCount(@Nullable Integer minimumElasticInstanceCount) {
+        public Builder minimumElasticInstanceCount(@Nullable Integer minimumElasticInstanceCount) {
             this.minimumElasticInstanceCount = Input.ofNullable(minimumElasticInstanceCount);
             return this;
         }
 
-        public Builder setNetFrameworkVersion(@Nullable Input<String> netFrameworkVersion) {
+        public Builder netFrameworkVersion(@Nullable Input<String> netFrameworkVersion) {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
 
-        public Builder setNetFrameworkVersion(@Nullable String netFrameworkVersion) {
+        public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
             this.netFrameworkVersion = Input.ofNullable(netFrameworkVersion);
             return this;
         }
 
-        public Builder setNodeVersion(@Nullable Input<String> nodeVersion) {
+        public Builder nodeVersion(@Nullable Input<String> nodeVersion) {
             this.nodeVersion = nodeVersion;
             return this;
         }
 
-        public Builder setNodeVersion(@Nullable String nodeVersion) {
+        public Builder nodeVersion(@Nullable String nodeVersion) {
             this.nodeVersion = Input.ofNullable(nodeVersion);
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Integer numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder setPhpVersion(@Nullable Input<String> phpVersion) {
+        public Builder phpVersion(@Nullable Input<String> phpVersion) {
             this.phpVersion = phpVersion;
             return this;
         }
 
-        public Builder setPhpVersion(@Nullable String phpVersion) {
+        public Builder phpVersion(@Nullable String phpVersion) {
             this.phpVersion = Input.ofNullable(phpVersion);
             return this;
         }
 
-        public Builder setPowerShellVersion(@Nullable Input<String> powerShellVersion) {
+        public Builder powerShellVersion(@Nullable Input<String> powerShellVersion) {
             this.powerShellVersion = powerShellVersion;
             return this;
         }
 
-        public Builder setPowerShellVersion(@Nullable String powerShellVersion) {
+        public Builder powerShellVersion(@Nullable String powerShellVersion) {
             this.powerShellVersion = Input.ofNullable(powerShellVersion);
             return this;
         }
 
-        public Builder setPreWarmedInstanceCount(@Nullable Input<Integer> preWarmedInstanceCount) {
+        public Builder preWarmedInstanceCount(@Nullable Input<Integer> preWarmedInstanceCount) {
             this.preWarmedInstanceCount = preWarmedInstanceCount;
             return this;
         }
 
-        public Builder setPreWarmedInstanceCount(@Nullable Integer preWarmedInstanceCount) {
+        public Builder preWarmedInstanceCount(@Nullable Integer preWarmedInstanceCount) {
             this.preWarmedInstanceCount = Input.ofNullable(preWarmedInstanceCount);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<String> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setPublishingUsername(@Nullable Input<String> publishingUsername) {
+        public Builder publishingUsername(@Nullable Input<String> publishingUsername) {
             this.publishingUsername = publishingUsername;
             return this;
         }
 
-        public Builder setPublishingUsername(@Nullable String publishingUsername) {
+        public Builder publishingUsername(@Nullable String publishingUsername) {
             this.publishingUsername = Input.ofNullable(publishingUsername);
             return this;
         }
 
-        public Builder setPush(@Nullable Input<PushSettingsArgs> push) {
+        public Builder push(@Nullable Input<PushSettingsArgs> push) {
             this.push = push;
             return this;
         }
 
-        public Builder setPush(@Nullable PushSettingsArgs push) {
+        public Builder push(@Nullable PushSettingsArgs push) {
             this.push = Input.ofNullable(push);
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable Input<String> pythonVersion) {
+        public Builder pythonVersion(@Nullable Input<String> pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable String pythonVersion) {
+        public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = Input.ofNullable(pythonVersion);
             return this;
         }
 
-        public Builder setRemoteDebuggingEnabled(@Nullable Input<Boolean> remoteDebuggingEnabled) {
+        public Builder remoteDebuggingEnabled(@Nullable Input<Boolean> remoteDebuggingEnabled) {
             this.remoteDebuggingEnabled = remoteDebuggingEnabled;
             return this;
         }
 
-        public Builder setRemoteDebuggingEnabled(@Nullable Boolean remoteDebuggingEnabled) {
+        public Builder remoteDebuggingEnabled(@Nullable Boolean remoteDebuggingEnabled) {
             this.remoteDebuggingEnabled = Input.ofNullable(remoteDebuggingEnabled);
             return this;
         }
 
-        public Builder setRemoteDebuggingVersion(@Nullable Input<String> remoteDebuggingVersion) {
+        public Builder remoteDebuggingVersion(@Nullable Input<String> remoteDebuggingVersion) {
             this.remoteDebuggingVersion = remoteDebuggingVersion;
             return this;
         }
 
-        public Builder setRemoteDebuggingVersion(@Nullable String remoteDebuggingVersion) {
+        public Builder remoteDebuggingVersion(@Nullable String remoteDebuggingVersion) {
             this.remoteDebuggingVersion = Input.ofNullable(remoteDebuggingVersion);
             return this;
         }
 
-        public Builder setRequestTracingEnabled(@Nullable Input<Boolean> requestTracingEnabled) {
+        public Builder requestTracingEnabled(@Nullable Input<Boolean> requestTracingEnabled) {
             this.requestTracingEnabled = requestTracingEnabled;
             return this;
         }
 
-        public Builder setRequestTracingEnabled(@Nullable Boolean requestTracingEnabled) {
+        public Builder requestTracingEnabled(@Nullable Boolean requestTracingEnabled) {
             this.requestTracingEnabled = Input.ofNullable(requestTracingEnabled);
             return this;
         }
 
-        public Builder setRequestTracingExpirationTime(@Nullable Input<String> requestTracingExpirationTime) {
+        public Builder requestTracingExpirationTime(@Nullable Input<String> requestTracingExpirationTime) {
             this.requestTracingExpirationTime = requestTracingExpirationTime;
             return this;
         }
 
-        public Builder setRequestTracingExpirationTime(@Nullable String requestTracingExpirationTime) {
+        public Builder requestTracingExpirationTime(@Nullable String requestTracingExpirationTime) {
             this.requestTracingExpirationTime = Input.ofNullable(requestTracingExpirationTime);
             return this;
         }
 
-        public Builder setScmIpSecurityRestrictions(@Nullable Input<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions) {
+        public Builder scmIpSecurityRestrictions(@Nullable Input<List<IpSecurityRestrictionArgs>> scmIpSecurityRestrictions) {
             this.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
             return this;
         }
 
-        public Builder setScmIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> scmIpSecurityRestrictions) {
+        public Builder scmIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionArgs> scmIpSecurityRestrictions) {
             this.scmIpSecurityRestrictions = Input.ofNullable(scmIpSecurityRestrictions);
             return this;
         }
 
-        public Builder setScmIpSecurityRestrictionsUseMain(@Nullable Input<Boolean> scmIpSecurityRestrictionsUseMain) {
+        public Builder scmIpSecurityRestrictionsUseMain(@Nullable Input<Boolean> scmIpSecurityRestrictionsUseMain) {
             this.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
             return this;
         }
 
-        public Builder setScmIpSecurityRestrictionsUseMain(@Nullable Boolean scmIpSecurityRestrictionsUseMain) {
+        public Builder scmIpSecurityRestrictionsUseMain(@Nullable Boolean scmIpSecurityRestrictionsUseMain) {
             this.scmIpSecurityRestrictionsUseMain = Input.ofNullable(scmIpSecurityRestrictionsUseMain);
             return this;
         }
 
-        public Builder setScmMinTlsVersion(@Nullable Input<Either<String,SupportedTlsVersions>> scmMinTlsVersion) {
+        public Builder scmMinTlsVersion(@Nullable Input<Either<String,SupportedTlsVersions>> scmMinTlsVersion) {
             this.scmMinTlsVersion = scmMinTlsVersion;
             return this;
         }
 
-        public Builder setScmMinTlsVersion(@Nullable Either<String,SupportedTlsVersions> scmMinTlsVersion) {
+        public Builder scmMinTlsVersion(@Nullable Either<String,SupportedTlsVersions> scmMinTlsVersion) {
             this.scmMinTlsVersion = Input.ofNullable(scmMinTlsVersion);
             return this;
         }
 
-        public Builder setScmType(@Nullable Input<Either<String,ScmType>> scmType) {
+        public Builder scmType(@Nullable Input<Either<String,ScmType>> scmType) {
             this.scmType = scmType;
             return this;
         }
 
-        public Builder setScmType(@Nullable Either<String,ScmType> scmType) {
+        public Builder scmType(@Nullable Either<String,ScmType> scmType) {
             this.scmType = Input.ofNullable(scmType);
             return this;
         }
 
-        public Builder setTracingOptions(@Nullable Input<String> tracingOptions) {
+        public Builder tracingOptions(@Nullable Input<String> tracingOptions) {
             this.tracingOptions = tracingOptions;
             return this;
         }
 
-        public Builder setTracingOptions(@Nullable String tracingOptions) {
+        public Builder tracingOptions(@Nullable String tracingOptions) {
             this.tracingOptions = Input.ofNullable(tracingOptions);
             return this;
         }
 
-        public Builder setUse32BitWorkerProcess(@Nullable Input<Boolean> use32BitWorkerProcess) {
+        public Builder use32BitWorkerProcess(@Nullable Input<Boolean> use32BitWorkerProcess) {
             this.use32BitWorkerProcess = use32BitWorkerProcess;
             return this;
         }
 
-        public Builder setUse32BitWorkerProcess(@Nullable Boolean use32BitWorkerProcess) {
+        public Builder use32BitWorkerProcess(@Nullable Boolean use32BitWorkerProcess) {
             this.use32BitWorkerProcess = Input.ofNullable(use32BitWorkerProcess);
             return this;
         }
 
-        public Builder setVirtualApplications(@Nullable Input<List<VirtualApplicationArgs>> virtualApplications) {
+        public Builder virtualApplications(@Nullable Input<List<VirtualApplicationArgs>> virtualApplications) {
             this.virtualApplications = virtualApplications;
             return this;
         }
 
-        public Builder setVirtualApplications(@Nullable List<VirtualApplicationArgs> virtualApplications) {
+        public Builder virtualApplications(@Nullable List<VirtualApplicationArgs> virtualApplications) {
             this.virtualApplications = Input.ofNullable(virtualApplications);
             return this;
         }
 
-        public Builder setVnetName(@Nullable Input<String> vnetName) {
+        public Builder vnetName(@Nullable Input<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
 
-        public Builder setVnetName(@Nullable String vnetName) {
+        public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = Input.ofNullable(vnetName);
             return this;
         }
 
-        public Builder setVnetPrivatePortsCount(@Nullable Input<Integer> vnetPrivatePortsCount) {
+        public Builder vnetPrivatePortsCount(@Nullable Input<Integer> vnetPrivatePortsCount) {
             this.vnetPrivatePortsCount = vnetPrivatePortsCount;
             return this;
         }
 
-        public Builder setVnetPrivatePortsCount(@Nullable Integer vnetPrivatePortsCount) {
+        public Builder vnetPrivatePortsCount(@Nullable Integer vnetPrivatePortsCount) {
             this.vnetPrivatePortsCount = Input.ofNullable(vnetPrivatePortsCount);
             return this;
         }
 
-        public Builder setVnetRouteAllEnabled(@Nullable Input<Boolean> vnetRouteAllEnabled) {
+        public Builder vnetRouteAllEnabled(@Nullable Input<Boolean> vnetRouteAllEnabled) {
             this.vnetRouteAllEnabled = vnetRouteAllEnabled;
             return this;
         }
 
-        public Builder setVnetRouteAllEnabled(@Nullable Boolean vnetRouteAllEnabled) {
+        public Builder vnetRouteAllEnabled(@Nullable Boolean vnetRouteAllEnabled) {
             this.vnetRouteAllEnabled = Input.ofNullable(vnetRouteAllEnabled);
             return this;
         }
 
-        public Builder setWebSocketsEnabled(@Nullable Input<Boolean> webSocketsEnabled) {
+        public Builder webSocketsEnabled(@Nullable Input<Boolean> webSocketsEnabled) {
             this.webSocketsEnabled = webSocketsEnabled;
             return this;
         }
 
-        public Builder setWebSocketsEnabled(@Nullable Boolean webSocketsEnabled) {
+        public Builder webSocketsEnabled(@Nullable Boolean webSocketsEnabled) {
             this.webSocketsEnabled = Input.ofNullable(webSocketsEnabled);
             return this;
         }
 
-        public Builder setWebsiteTimeZone(@Nullable Input<String> websiteTimeZone) {
+        public Builder websiteTimeZone(@Nullable Input<String> websiteTimeZone) {
             this.websiteTimeZone = websiteTimeZone;
             return this;
         }
 
-        public Builder setWebsiteTimeZone(@Nullable String websiteTimeZone) {
+        public Builder websiteTimeZone(@Nullable String websiteTimeZone) {
             this.websiteTimeZone = Input.ofNullable(websiteTimeZone);
             return this;
         }
 
-        public Builder setWindowsFxVersion(@Nullable Input<String> windowsFxVersion) {
+        public Builder windowsFxVersion(@Nullable Input<String> windowsFxVersion) {
             this.windowsFxVersion = windowsFxVersion;
             return this;
         }
 
-        public Builder setWindowsFxVersion(@Nullable String windowsFxVersion) {
+        public Builder windowsFxVersion(@Nullable String windowsFxVersion) {
             this.windowsFxVersion = Input.ofNullable(windowsFxVersion);
             return this;
         }
 
-        public Builder setXManagedServiceIdentityId(@Nullable Input<Integer> xManagedServiceIdentityId) {
+        public Builder xManagedServiceIdentityId(@Nullable Input<Integer> xManagedServiceIdentityId) {
             this.xManagedServiceIdentityId = xManagedServiceIdentityId;
             return this;
         }
 
-        public Builder setXManagedServiceIdentityId(@Nullable Integer xManagedServiceIdentityId) {
+        public Builder xManagedServiceIdentityId(@Nullable Integer xManagedServiceIdentityId) {
             this.xManagedServiceIdentityId = Input.ofNullable(xManagedServiceIdentityId);
             return this;
         }

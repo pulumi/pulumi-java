@@ -100,22 +100,22 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDataManagerName(String dataManagerName) {
+        public Builder dataManagerName(String dataManagerName) {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
 
-        public Builder setDataServiceName(String dataServiceName) {
+        public Builder dataServiceName(String dataServiceName) {
             this.dataServiceName = Objects.requireNonNull(dataServiceName);
             return this;
         }
 
-        public Builder setJobDefinitionName(String jobDefinitionName) {
+        public Builder jobDefinitionName(String jobDefinitionName) {
             this.jobDefinitionName = Objects.requireNonNull(jobDefinitionName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

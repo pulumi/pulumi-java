@@ -97,22 +97,22 @@ public final class PrivateEndpointConnectionResponseProperties extends io.pulumi
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setGroupIds(@Nullable List<String> groupIds) {
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
+        public Builder privateEndpoint(@Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

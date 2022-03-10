@@ -58,12 +58,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextArgs extends io.
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable Input<List<String>> text) {
+        public Builder text(@Nullable Input<List<String>> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable List<String> text) {
+        public Builder text(@Nullable List<String> text) {
             this.text = Input.ofNullable(text);
             return this;
         }

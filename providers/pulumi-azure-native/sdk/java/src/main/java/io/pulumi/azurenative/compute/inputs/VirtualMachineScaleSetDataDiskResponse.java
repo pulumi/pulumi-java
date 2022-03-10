@@ -190,47 +190,47 @@ public final class VirtualMachineScaleSetDataDiskResponse extends io.pulumi.reso
     	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCreateOption(String createOption) {
+        public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setDiskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
+        public Builder diskIOPSReadWrite(@Nullable Double diskIOPSReadWrite) {
             this.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
 
-        public Builder setDiskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
+        public Builder diskMBpsReadWrite(@Nullable Double diskMBpsReadWrite) {
             this.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
+        public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }

@@ -51,12 +51,12 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin {
     	      this.response = defaults.response;
         }
 
-        public Builder setRequest(@Nullable List<String> request) {
+        public Builder request(@Nullable List<String> request) {
             this.request = request;
             return this;
         }
 
-        public Builder setResponse(@Nullable List<String> response) {
+        public Builder response(@Nullable List<String> response) {
             this.response = response;
             return this;
         }

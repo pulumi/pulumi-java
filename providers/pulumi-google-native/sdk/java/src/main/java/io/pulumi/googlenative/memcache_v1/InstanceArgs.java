@@ -241,132 +241,132 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable String authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setInstanceMessages(@Nullable Input<List<InstanceMessageArgs>> instanceMessages) {
+        public Builder instanceMessages(@Nullable Input<List<InstanceMessageArgs>> instanceMessages) {
             this.instanceMessages = instanceMessages;
             return this;
         }
 
-        public Builder setInstanceMessages(@Nullable List<InstanceMessageArgs> instanceMessages) {
+        public Builder instanceMessages(@Nullable List<InstanceMessageArgs> instanceMessages) {
             this.instanceMessages = Input.ofNullable(instanceMessages);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMemcacheVersion(@Nullable Input<InstanceMemcacheVersion> memcacheVersion) {
+        public Builder memcacheVersion(@Nullable Input<InstanceMemcacheVersion> memcacheVersion) {
             this.memcacheVersion = memcacheVersion;
             return this;
         }
 
-        public Builder setMemcacheVersion(@Nullable InstanceMemcacheVersion memcacheVersion) {
+        public Builder memcacheVersion(@Nullable InstanceMemcacheVersion memcacheVersion) {
             this.memcacheVersion = Input.ofNullable(memcacheVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNodeConfig(Input<NodeConfigArgs> nodeConfig) {
+        public Builder nodeConfig(Input<NodeConfigArgs> nodeConfig) {
             this.nodeConfig = Objects.requireNonNull(nodeConfig);
             return this;
         }
 
-        public Builder setNodeConfig(NodeConfigArgs nodeConfig) {
+        public Builder nodeConfig(NodeConfigArgs nodeConfig) {
             this.nodeConfig = Input.of(Objects.requireNonNull(nodeConfig));
             return this;
         }
 
-        public Builder setNodeCount(Input<Integer> nodeCount) {
+        public Builder nodeCount(Input<Integer> nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Input.of(Objects.requireNonNull(nodeCount));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<MemcacheParametersArgs> parameters) {
+        public Builder parameters(@Nullable Input<MemcacheParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable MemcacheParametersArgs parameters) {
+        public Builder parameters(@Nullable MemcacheParametersArgs parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

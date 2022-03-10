@@ -69,12 +69,12 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigResponse extends i
     	      this.ports = defaults.ports;
         }
 
-        public Builder setIpProtocol(String ipProtocol) {
+        public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
 
-        public Builder setPorts(List<String> ports) {
+        public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

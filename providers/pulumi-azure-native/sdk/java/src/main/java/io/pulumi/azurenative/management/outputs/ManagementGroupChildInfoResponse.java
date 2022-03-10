@@ -116,27 +116,27 @@ public final class ManagementGroupChildInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setChildren(@Nullable List<ManagementGroupChildInfoResponse> children) {
+        public Builder children(@Nullable List<ManagementGroupChildInfoResponse> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

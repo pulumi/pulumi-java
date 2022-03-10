@@ -137,62 +137,62 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
     	      this.workforceName = defaults.workforceName;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCognitoConfig(@Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig) {
+        public Builder cognitoConfig(@Nullable Input<WorkforceCognitoConfigGetArgs> cognitoConfig) {
             this.cognitoConfig = cognitoConfig;
             return this;
         }
 
-        public Builder setCognitoConfig(@Nullable WorkforceCognitoConfigGetArgs cognitoConfig) {
+        public Builder cognitoConfig(@Nullable WorkforceCognitoConfigGetArgs cognitoConfig) {
             this.cognitoConfig = Input.ofNullable(cognitoConfig);
             return this;
         }
 
-        public Builder setOidcConfig(@Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig) {
+        public Builder oidcConfig(@Nullable Input<WorkforceOidcConfigGetArgs> oidcConfig) {
             this.oidcConfig = oidcConfig;
             return this;
         }
 
-        public Builder setOidcConfig(@Nullable WorkforceOidcConfigGetArgs oidcConfig) {
+        public Builder oidcConfig(@Nullable WorkforceOidcConfigGetArgs oidcConfig) {
             this.oidcConfig = Input.ofNullable(oidcConfig);
             return this;
         }
 
-        public Builder setSourceIpConfig(@Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable Input<WorkforceSourceIpConfigGetArgs> sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
 
-        public Builder setSourceIpConfig(@Nullable WorkforceSourceIpConfigGetArgs sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigGetArgs sourceIpConfig) {
             this.sourceIpConfig = Input.ofNullable(sourceIpConfig);
             return this;
         }
 
-        public Builder setSubdomain(@Nullable Input<String> subdomain) {
+        public Builder subdomain(@Nullable Input<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
-        public Builder setSubdomain(@Nullable String subdomain) {
+        public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = Input.ofNullable(subdomain);
             return this;
         }
 
-        public Builder setWorkforceName(@Nullable Input<String> workforceName) {
+        public Builder workforceName(@Nullable Input<String> workforceName) {
             this.workforceName = workforceName;
             return this;
         }
 
-        public Builder setWorkforceName(@Nullable String workforceName) {
+        public Builder workforceName(@Nullable String workforceName) {
             this.workforceName = Input.ofNullable(workforceName);
             return this;
         }

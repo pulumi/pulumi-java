@@ -60,12 +60,12 @@ public final class GetResourceCollectionResult {
     	      this.resourceCollectionType = defaults.resourceCollectionType;
         }
 
-        public Builder setResourceCollectionFilter(@Nullable ResourceCollectionFilter resourceCollectionFilter) {
+        public Builder resourceCollectionFilter(@Nullable ResourceCollectionFilter resourceCollectionFilter) {
             this.resourceCollectionFilter = resourceCollectionFilter;
             return this;
         }
 
-        public Builder setResourceCollectionType(@Nullable ResourceCollectionType resourceCollectionType) {
+        public Builder resourceCollectionType(@Nullable ResourceCollectionType resourceCollectionType) {
             this.resourceCollectionType = resourceCollectionType;
             return this;
         }

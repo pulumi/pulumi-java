@@ -134,32 +134,32 @@ public final class GetLocalGatewayRouteTableArgs extends io.pulumi.resources.Inv
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetLocalGatewayRouteTableFilter> filters) {
+        public Builder filters(@Nullable List<GetLocalGatewayRouteTableFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setLocalGatewayId(@Nullable String localGatewayId) {
+        public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable String outpostArn) {
+        public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

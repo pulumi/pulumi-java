@@ -97,22 +97,22 @@ public final class DetectorModelState extends io.pulumi.resources.InvokeArgs {
     	      this.stateName = defaults.stateName;
         }
 
-        public Builder setOnEnter(@Nullable DetectorModelOnEnter onEnter) {
+        public Builder onEnter(@Nullable DetectorModelOnEnter onEnter) {
             this.onEnter = onEnter;
             return this;
         }
 
-        public Builder setOnExit(@Nullable DetectorModelOnExit onExit) {
+        public Builder onExit(@Nullable DetectorModelOnExit onExit) {
             this.onExit = onExit;
             return this;
         }
 
-        public Builder setOnInput(@Nullable DetectorModelOnInput onInput) {
+        public Builder onInput(@Nullable DetectorModelOnInput onInput) {
             this.onInput = onInput;
             return this;
         }
 
-        public Builder setStateName(String stateName) {
+        public Builder stateName(String stateName) {
             this.stateName = Objects.requireNonNull(stateName);
             return this;
         }

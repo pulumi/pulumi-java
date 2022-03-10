@@ -323,172 +323,172 @@ public final class DynamicsCrmLinkedServiceArgs extends io.pulumi.resources.Reso
     	      this.username = defaults.username;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthenticationType(Input<Object> authenticationType) {
+        public Builder authenticationType(Input<Object> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(Object authenticationType) {
+        public Builder authenticationType(Object authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDeploymentType(Input<Object> deploymentType) {
+        public Builder deploymentType(Input<Object> deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
 
-        public Builder setDeploymentType(Object deploymentType) {
+        public Builder deploymentType(Object deploymentType) {
             this.deploymentType = Input.of(Objects.requireNonNull(deploymentType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setHostName(@Nullable Input<Object> hostName) {
+        public Builder hostName(@Nullable Input<Object> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable Object hostName) {
+        public Builder hostName(@Nullable Object hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setOrganizationName(@Nullable Input<Object> organizationName) {
+        public Builder organizationName(@Nullable Input<Object> organizationName) {
             this.organizationName = organizationName;
             return this;
         }
 
-        public Builder setOrganizationName(@Nullable Object organizationName) {
+        public Builder organizationName(@Nullable Object organizationName) {
             this.organizationName = Input.ofNullable(organizationName);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Object> port) {
+        public Builder port(@Nullable Input<Object> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Object port) {
+        public Builder port(@Nullable Object port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setServicePrincipalCredential(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
+        public Builder servicePrincipalCredential(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
             this.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
 
-        public Builder setServicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
+        public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
             this.servicePrincipalCredential = Input.ofNullable(servicePrincipalCredential);
             return this;
         }
 
-        public Builder setServicePrincipalCredentialType(@Nullable Input<Object> servicePrincipalCredentialType) {
+        public Builder servicePrincipalCredentialType(@Nullable Input<Object> servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
 
-        public Builder setServicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
+        public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = Input.ofNullable(servicePrincipalCredentialType);
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder setServiceUri(@Nullable Input<Object> serviceUri) {
+        public Builder serviceUri(@Nullable Input<Object> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
 
-        public Builder setServiceUri(@Nullable Object serviceUri) {
+        public Builder serviceUri(@Nullable Object serviceUri) {
             this.serviceUri = Input.ofNullable(serviceUri);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Input<Object> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = Input.ofNullable(username);
             return this;
         }

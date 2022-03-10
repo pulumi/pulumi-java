@@ -47,7 +47,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.
     	      this.ddosProtection = defaults.ddosProtection;
         }
 
-        public Builder setDdosProtection(String ddosProtection) {
+        public Builder ddosProtection(String ddosProtection) {
             this.ddosProtection = Objects.requireNonNull(ddosProtection);
             return this;
         }

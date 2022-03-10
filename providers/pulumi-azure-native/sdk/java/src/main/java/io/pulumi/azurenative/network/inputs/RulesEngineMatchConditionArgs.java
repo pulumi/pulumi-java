@@ -144,62 +144,62 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder setNegateCondition(@Nullable Input<Boolean> negateCondition) {
+        public Builder negateCondition(@Nullable Input<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = Input.ofNullable(negateCondition);
             return this;
         }
 
-        public Builder setRulesEngineMatchValue(Input<List<String>> rulesEngineMatchValue) {
+        public Builder rulesEngineMatchValue(Input<List<String>> rulesEngineMatchValue) {
             this.rulesEngineMatchValue = Objects.requireNonNull(rulesEngineMatchValue);
             return this;
         }
 
-        public Builder setRulesEngineMatchValue(List<String> rulesEngineMatchValue) {
+        public Builder rulesEngineMatchValue(List<String> rulesEngineMatchValue) {
             this.rulesEngineMatchValue = Input.of(Objects.requireNonNull(rulesEngineMatchValue));
             return this;
         }
 
-        public Builder setRulesEngineMatchVariable(Input<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable) {
+        public Builder rulesEngineMatchVariable(Input<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable) {
             this.rulesEngineMatchVariable = Objects.requireNonNull(rulesEngineMatchVariable);
             return this;
         }
 
-        public Builder setRulesEngineMatchVariable(Either<String,RulesEngineMatchVariable> rulesEngineMatchVariable) {
+        public Builder rulesEngineMatchVariable(Either<String,RulesEngineMatchVariable> rulesEngineMatchVariable) {
             this.rulesEngineMatchVariable = Input.of(Objects.requireNonNull(rulesEngineMatchVariable));
             return this;
         }
 
-        public Builder setRulesEngineOperator(Input<Either<String,RulesEngineOperator>> rulesEngineOperator) {
+        public Builder rulesEngineOperator(Input<Either<String,RulesEngineOperator>> rulesEngineOperator) {
             this.rulesEngineOperator = Objects.requireNonNull(rulesEngineOperator);
             return this;
         }
 
-        public Builder setRulesEngineOperator(Either<String,RulesEngineOperator> rulesEngineOperator) {
+        public Builder rulesEngineOperator(Either<String,RulesEngineOperator> rulesEngineOperator) {
             this.rulesEngineOperator = Input.of(Objects.requireNonNull(rulesEngineOperator));
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Input<String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setTransforms(@Nullable Input<List<Either<String,Transform>>> transforms) {
+        public Builder transforms(@Nullable Input<List<Either<String,Transform>>> transforms) {
             this.transforms = transforms;
             return this;
         }
 
-        public Builder setTransforms(@Nullable List<Either<String,Transform>> transforms) {
+        public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
             this.transforms = Input.ofNullable(transforms);
             return this;
         }

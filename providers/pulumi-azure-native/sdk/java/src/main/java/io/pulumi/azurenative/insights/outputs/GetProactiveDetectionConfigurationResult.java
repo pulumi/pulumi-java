@@ -134,32 +134,32 @@ public final class GetProactiveDetectionConfigurationResult {
     	      this.sendEmailsToSubscriptionOwners = defaults.sendEmailsToSubscriptionOwners;
         }
 
-        public Builder setCustomEmails(@Nullable List<String> customEmails) {
+        public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRuleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions) {
+        public Builder ruleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions) {
             this.ruleDefinitions = ruleDefinitions;
             return this;
         }
 
-        public Builder setSendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
+        public Builder sendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
             this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
         }

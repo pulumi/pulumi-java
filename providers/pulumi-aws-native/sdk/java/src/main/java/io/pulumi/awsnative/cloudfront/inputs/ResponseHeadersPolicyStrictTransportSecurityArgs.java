@@ -87,42 +87,42 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     	      this.preload = defaults.preload;
         }
 
-        public Builder setAccessControlMaxAgeSec(Input<Integer> accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Input<Integer> accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder setAccessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Input.of(Objects.requireNonNull(accessControlMaxAgeSec));
             return this;
         }
 
-        public Builder setIncludeSubdomains(@Nullable Input<Boolean> includeSubdomains) {
+        public Builder includeSubdomains(@Nullable Input<Boolean> includeSubdomains) {
             this.includeSubdomains = includeSubdomains;
             return this;
         }
 
-        public Builder setIncludeSubdomains(@Nullable Boolean includeSubdomains) {
+        public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
             this.includeSubdomains = Input.ofNullable(includeSubdomains);
             return this;
         }
 
-        public Builder setOverride(Input<Boolean> override) {
+        public Builder override(Input<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }
 
-        public Builder setPreload(@Nullable Input<Boolean> preload) {
+        public Builder preload(@Nullable Input<Boolean> preload) {
             this.preload = preload;
             return this;
         }
 
-        public Builder setPreload(@Nullable Boolean preload) {
+        public Builder preload(@Nullable Boolean preload) {
             this.preload = Input.ofNullable(preload);
             return this;
         }

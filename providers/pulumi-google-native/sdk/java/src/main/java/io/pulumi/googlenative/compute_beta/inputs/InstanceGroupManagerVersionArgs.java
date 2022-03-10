@@ -87,32 +87,32 @@ public final class InstanceGroupManagerVersionArgs extends io.pulumi.resources.R
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder setInstanceTemplate(@Nullable Input<String> instanceTemplate) {
+        public Builder instanceTemplate(@Nullable Input<String> instanceTemplate) {
             this.instanceTemplate = instanceTemplate;
             return this;
         }
 
-        public Builder setInstanceTemplate(@Nullable String instanceTemplate) {
+        public Builder instanceTemplate(@Nullable String instanceTemplate) {
             this.instanceTemplate = Input.ofNullable(instanceTemplate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Input<FixedOrPercentArgs> targetSize) {
+        public Builder targetSize(@Nullable Input<FixedOrPercentArgs> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable FixedOrPercentArgs targetSize) {
+        public Builder targetSize(@Nullable FixedOrPercentArgs targetSize) {
             this.targetSize = Input.ofNullable(targetSize);
             return this;
         }

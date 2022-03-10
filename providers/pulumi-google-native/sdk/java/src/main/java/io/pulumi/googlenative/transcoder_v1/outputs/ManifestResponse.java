@@ -82,17 +82,17 @@ public final class ManifestResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setMuxStreams(List<String> muxStreams) {
+        public Builder muxStreams(List<String> muxStreams) {
             this.muxStreams = Objects.requireNonNull(muxStreams);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

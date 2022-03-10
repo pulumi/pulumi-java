@@ -51,12 +51,12 @@ public final class GetBotVersionResult {
     	      this.description = defaults.description;
         }
 
-        public Builder setBotVersion(@Nullable String botVersion) {
+        public Builder botVersion(@Nullable String botVersion) {
             this.botVersion = botVersion;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

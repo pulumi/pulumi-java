@@ -106,22 +106,22 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.userPrincipalName = defaults.userPrincipalName;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setUserPrincipalName(@Nullable String userPrincipalName) {
+        public Builder userPrincipalName(@Nullable String userPrincipalName) {
             this.userPrincipalName = userPrincipalName;
             return this;
         }

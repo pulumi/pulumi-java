@@ -107,22 +107,22 @@ public final class ResultStorageResponse extends io.pulumi.resources.InvokeArgs 
     	      this.toolResultsHistory = defaults.toolResultsHistory;
         }
 
-        public Builder setGoogleCloudStorage(GoogleCloudStorageResponse googleCloudStorage) {
+        public Builder googleCloudStorage(GoogleCloudStorageResponse googleCloudStorage) {
             this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
             return this;
         }
 
-        public Builder setResultsUrl(String resultsUrl) {
+        public Builder resultsUrl(String resultsUrl) {
             this.resultsUrl = Objects.requireNonNull(resultsUrl);
             return this;
         }
 
-        public Builder setToolResultsExecution(ToolResultsExecutionResponse toolResultsExecution) {
+        public Builder toolResultsExecution(ToolResultsExecutionResponse toolResultsExecution) {
             this.toolResultsExecution = Objects.requireNonNull(toolResultsExecution);
             return this;
         }
 
-        public Builder setToolResultsHistory(ToolResultsHistoryResponse toolResultsHistory) {
+        public Builder toolResultsHistory(ToolResultsHistoryResponse toolResultsHistory) {
             this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
             return this;
         }

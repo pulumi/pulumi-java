@@ -91,17 +91,17 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
     	      this.stagingLinkedService = defaults.stagingLinkedService;
         }
 
-        public Builder setConnectVia(@Nullable EntityReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable EntityReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setStagingLinkedService(@Nullable EntityReferenceResponse stagingLinkedService) {
+        public Builder stagingLinkedService(@Nullable EntityReferenceResponse stagingLinkedService) {
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }

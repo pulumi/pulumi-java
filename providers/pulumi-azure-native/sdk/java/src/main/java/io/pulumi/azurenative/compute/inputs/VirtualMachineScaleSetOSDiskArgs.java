@@ -212,102 +212,102 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
     	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
         }
 
-        public Builder setCaching(@Nullable Input<CachingTypes> caching) {
+        public Builder caching(@Nullable Input<CachingTypes> caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCaching(@Nullable CachingTypes caching) {
+        public Builder caching(@Nullable CachingTypes caching) {
             this.caching = Input.ofNullable(caching);
             return this;
         }
 
-        public Builder setCreateOption(Input<Either<String,DiskCreateOptionTypes>> createOption) {
+        public Builder createOption(Input<Either<String,DiskCreateOptionTypes>> createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setCreateOption(Either<String,DiskCreateOptionTypes> createOption) {
+        public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
             this.createOption = Input.of(Objects.requireNonNull(createOption));
             return this;
         }
 
-        public Builder setDiffDiskSettings(@Nullable Input<DiffDiskSettingsArgs> diffDiskSettings) {
+        public Builder diffDiskSettings(@Nullable Input<DiffDiskSettingsArgs> diffDiskSettings) {
             this.diffDiskSettings = diffDiskSettings;
             return this;
         }
 
-        public Builder setDiffDiskSettings(@Nullable DiffDiskSettingsArgs diffDiskSettings) {
+        public Builder diffDiskSettings(@Nullable DiffDiskSettingsArgs diffDiskSettings) {
             this.diffDiskSettings = Input.ofNullable(diffDiskSettings);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Input.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<VirtualHardDiskArgs> image) {
+        public Builder image(@Nullable Input<VirtualHardDiskArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable VirtualHardDiskArgs image) {
+        public Builder image(@Nullable VirtualHardDiskArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk) {
+        public Builder managedDisk(@Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
+        public Builder managedDisk(@Nullable VirtualMachineScaleSetManagedDiskParametersArgs managedDisk) {
             this.managedDisk = Input.ofNullable(managedDisk);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<OperatingSystemTypes> osType) {
+        public Builder osType(@Nullable Input<OperatingSystemTypes> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable OperatingSystemTypes osType) {
+        public Builder osType(@Nullable OperatingSystemTypes osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setVhdContainers(@Nullable Input<List<String>> vhdContainers) {
+        public Builder vhdContainers(@Nullable Input<List<String>> vhdContainers) {
             this.vhdContainers = vhdContainers;
             return this;
         }
 
-        public Builder setVhdContainers(@Nullable List<String> vhdContainers) {
+        public Builder vhdContainers(@Nullable List<String> vhdContainers) {
             this.vhdContainers = Input.ofNullable(vhdContainers);
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Input<Boolean> writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Input<Boolean> writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = Input.ofNullable(writeAcceleratorEnabled);
             return this;
         }

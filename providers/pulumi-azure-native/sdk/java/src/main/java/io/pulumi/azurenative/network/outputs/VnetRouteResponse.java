@@ -50,7 +50,7 @@ public final class VnetRouteResponse {
     	      this.staticRoutes = defaults.staticRoutes;
         }
 
-        public Builder setStaticRoutes(@Nullable List<StaticRouteResponse> staticRoutes) {
+        public Builder staticRoutes(@Nullable List<StaticRouteResponse> staticRoutes) {
             this.staticRoutes = staticRoutes;
             return this;
         }

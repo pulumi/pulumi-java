@@ -148,32 +148,32 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setExecutableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(@Nullable List<String> executableUsers) {
             this.executableUsers = executableUsers;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetAmiFilter> filters) {
+        public Builder filters(@Nullable List<GetAmiFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setNameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(@Nullable String nameRegex) {
             this.nameRegex = nameRegex;
             return this;
         }
 
-        public Builder setOwners(List<String> owners) {
+        public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

@@ -86,22 +86,22 @@ public final class GetWorkflowTemplateArgs extends io.pulumi.resources.InvokeArg
     	      this.workflowTemplateId = defaults.workflowTemplateId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-        public Builder setWorkflowTemplateId(String workflowTemplateId) {
+        public Builder workflowTemplateId(String workflowTemplateId) {
             this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
             return this;
         }

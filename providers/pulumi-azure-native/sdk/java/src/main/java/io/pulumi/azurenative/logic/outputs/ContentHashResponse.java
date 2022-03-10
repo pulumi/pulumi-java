@@ -67,12 +67,12 @@ public final class ContentHashResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

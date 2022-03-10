@@ -61,22 +61,22 @@ public final class TopicRuleTimestreamTimestampArgs extends io.pulumi.resources.
     	      this.value = defaults.value;
         }
 
-        public Builder setUnit(Input<String> unit) {
+        public Builder unit(Input<String> unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Input.of(Objects.requireNonNull(unit));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

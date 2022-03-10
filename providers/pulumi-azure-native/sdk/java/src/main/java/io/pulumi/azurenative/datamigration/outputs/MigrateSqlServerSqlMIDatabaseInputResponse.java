@@ -101,22 +101,22 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
     	      this.restoreDatabaseName = defaults.restoreDatabaseName;
         }
 
-        public Builder setBackupFilePaths(@Nullable List<String> backupFilePaths) {
+        public Builder backupFilePaths(@Nullable List<String> backupFilePaths) {
             this.backupFilePaths = backupFilePaths;
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareResponse backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestoreDatabaseName(String restoreDatabaseName) {
+        public Builder restoreDatabaseName(String restoreDatabaseName) {
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
         }

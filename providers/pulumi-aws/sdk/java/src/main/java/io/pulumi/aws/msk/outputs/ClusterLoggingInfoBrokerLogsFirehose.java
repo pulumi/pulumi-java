@@ -68,12 +68,12 @@ public final class ClusterLoggingInfoBrokerLogsFirehose {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDeliveryStream(@Nullable String deliveryStream) {
+        public Builder deliveryStream(@Nullable String deliveryStream) {
             this.deliveryStream = deliveryStream;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

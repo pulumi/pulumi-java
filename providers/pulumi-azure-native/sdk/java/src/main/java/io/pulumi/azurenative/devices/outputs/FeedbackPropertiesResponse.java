@@ -84,17 +84,17 @@ public final class FeedbackPropertiesResponse {
     	      this.ttlAsIso8601 = defaults.ttlAsIso8601;
         }
 
-        public Builder setLockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
+        public Builder lockDurationAsIso8601(@Nullable String lockDurationAsIso8601) {
             this.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Integer maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
-        public Builder setTtlAsIso8601(@Nullable String ttlAsIso8601) {
+        public Builder ttlAsIso8601(@Nullable String ttlAsIso8601) {
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }

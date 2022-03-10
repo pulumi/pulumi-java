@@ -73,12 +73,12 @@ public final class StorageAccountDetailsResponse extends io.pulumi.resources.Inv
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

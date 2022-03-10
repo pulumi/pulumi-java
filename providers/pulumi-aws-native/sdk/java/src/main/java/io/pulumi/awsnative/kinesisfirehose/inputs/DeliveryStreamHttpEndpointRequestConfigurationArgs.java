@@ -64,22 +64,22 @@ public final class DeliveryStreamHttpEndpointRequestConfigurationArgs extends io
     	      this.contentEncoding = defaults.contentEncoding;
         }
 
-        public Builder setCommonAttributes(@Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes) {
+        public Builder commonAttributes(@Nullable Input<List<DeliveryStreamHttpEndpointCommonAttributeArgs>> commonAttributes) {
             this.commonAttributes = commonAttributes;
             return this;
         }
 
-        public Builder setCommonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttributeArgs> commonAttributes) {
+        public Builder commonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttributeArgs> commonAttributes) {
             this.commonAttributes = Input.ofNullable(commonAttributes);
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding) {
+        public Builder contentEncoding(@Nullable Input<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
+        public Builder contentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
             this.contentEncoding = Input.ofNullable(contentEncoding);
             return this;
         }

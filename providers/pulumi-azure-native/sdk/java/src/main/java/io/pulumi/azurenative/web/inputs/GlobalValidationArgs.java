@@ -111,42 +111,42 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
     	      this.unauthenticatedClientAction = defaults.unauthenticatedClientAction;
         }
 
-        public Builder setExcludedPaths(@Nullable Input<List<String>> excludedPaths) {
+        public Builder excludedPaths(@Nullable Input<List<String>> excludedPaths) {
             this.excludedPaths = excludedPaths;
             return this;
         }
 
-        public Builder setExcludedPaths(@Nullable List<String> excludedPaths) {
+        public Builder excludedPaths(@Nullable List<String> excludedPaths) {
             this.excludedPaths = Input.ofNullable(excludedPaths);
             return this;
         }
 
-        public Builder setRedirectToProvider(@Nullable Input<String> redirectToProvider) {
+        public Builder redirectToProvider(@Nullable Input<String> redirectToProvider) {
             this.redirectToProvider = redirectToProvider;
             return this;
         }
 
-        public Builder setRedirectToProvider(@Nullable String redirectToProvider) {
+        public Builder redirectToProvider(@Nullable String redirectToProvider) {
             this.redirectToProvider = Input.ofNullable(redirectToProvider);
             return this;
         }
 
-        public Builder setRequireAuthentication(@Nullable Input<Boolean> requireAuthentication) {
+        public Builder requireAuthentication(@Nullable Input<Boolean> requireAuthentication) {
             this.requireAuthentication = requireAuthentication;
             return this;
         }
 
-        public Builder setRequireAuthentication(@Nullable Boolean requireAuthentication) {
+        public Builder requireAuthentication(@Nullable Boolean requireAuthentication) {
             this.requireAuthentication = Input.ofNullable(requireAuthentication);
             return this;
         }
 
-        public Builder setUnauthenticatedClientAction(@Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
 
-        public Builder setUnauthenticatedClientAction(@Nullable UnauthenticatedClientActionV2 unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable UnauthenticatedClientActionV2 unauthenticatedClientAction) {
             this.unauthenticatedClientAction = Input.ofNullable(unauthenticatedClientAction);
             return this;
         }

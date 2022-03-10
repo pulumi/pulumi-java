@@ -95,37 +95,37 @@ public final class ScheduledQueryTimestreamConfiguration {
     	      this.timeColumn = defaults.timeColumn;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDimensionMappings(List<ScheduledQueryDimensionMapping> dimensionMappings) {
+        public Builder dimensionMappings(List<ScheduledQueryDimensionMapping> dimensionMappings) {
             this.dimensionMappings = Objects.requireNonNull(dimensionMappings);
             return this;
         }
 
-        public Builder setMeasureNameColumn(@Nullable String measureNameColumn) {
+        public Builder measureNameColumn(@Nullable String measureNameColumn) {
             this.measureNameColumn = measureNameColumn;
             return this;
         }
 
-        public Builder setMixedMeasureMappings(@Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings) {
+        public Builder mixedMeasureMappings(@Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings) {
             this.mixedMeasureMappings = mixedMeasureMappings;
             return this;
         }
 
-        public Builder setMultiMeasureMappings(@Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings) {
+        public Builder multiMeasureMappings(@Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings) {
             this.multiMeasureMappings = multiMeasureMappings;
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTimeColumn(String timeColumn) {
+        public Builder timeColumn(String timeColumn) {
             this.timeColumn = Objects.requireNonNull(timeColumn);
             return this;
         }

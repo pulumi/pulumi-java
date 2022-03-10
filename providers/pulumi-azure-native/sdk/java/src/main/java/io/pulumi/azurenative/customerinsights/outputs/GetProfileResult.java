@@ -376,107 +376,107 @@ public final class GetProfileResult {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setApiEntitySetName(@Nullable String apiEntitySetName) {
+        public Builder apiEntitySetName(@Nullable String apiEntitySetName) {
             this.apiEntitySetName = apiEntitySetName;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,List<String>> attributes) {
+        public Builder attributes(@Nullable Map<String,List<String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEntityType(@Nullable String entityType) {
+        public Builder entityType(@Nullable String entityType) {
             this.entityType = entityType;
             return this;
         }
 
-        public Builder setFields(@Nullable List<PropertyDefinitionResponse> fields) {
+        public Builder fields(@Nullable List<PropertyDefinitionResponse> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstancesCount(@Nullable Integer instancesCount) {
+        public Builder instancesCount(@Nullable Integer instancesCount) {
             this.instancesCount = instancesCount;
             return this;
         }
 
-        public Builder setLargeImage(@Nullable String largeImage) {
+        public Builder largeImage(@Nullable String largeImage) {
             this.largeImage = largeImage;
             return this;
         }
 
-        public Builder setLastChangedUtc(String lastChangedUtc) {
+        public Builder lastChangedUtc(String lastChangedUtc) {
             this.lastChangedUtc = Objects.requireNonNull(lastChangedUtc);
             return this;
         }
 
-        public Builder setLocalizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
+        public Builder localizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
             this.localizedAttributes = localizedAttributes;
             return this;
         }
 
-        public Builder setMediumImage(@Nullable String mediumImage) {
+        public Builder mediumImage(@Nullable String mediumImage) {
             this.mediumImage = mediumImage;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSchemaItemTypeLink(@Nullable String schemaItemTypeLink) {
+        public Builder schemaItemTypeLink(@Nullable String schemaItemTypeLink) {
             this.schemaItemTypeLink = schemaItemTypeLink;
             return this;
         }
 
-        public Builder setSmallImage(@Nullable String smallImage) {
+        public Builder smallImage(@Nullable String smallImage) {
             this.smallImage = smallImage;
             return this;
         }
 
-        public Builder setStrongIds(@Nullable List<StrongIdResponse> strongIds) {
+        public Builder strongIds(@Nullable List<StrongIdResponse> strongIds) {
             this.strongIds = strongIds;
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTimestampFieldName(@Nullable String timestampFieldName) {
+        public Builder timestampFieldName(@Nullable String timestampFieldName) {
             this.timestampFieldName = timestampFieldName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }

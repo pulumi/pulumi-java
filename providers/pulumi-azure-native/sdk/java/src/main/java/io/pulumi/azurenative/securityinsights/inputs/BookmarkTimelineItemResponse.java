@@ -189,47 +189,47 @@ public final class BookmarkTimelineItemResponse extends io.pulumi.resources.Invo
     	      this.startTimeUtc = defaults.startTimeUtc;
         }
 
-        public Builder setAzureResourceId(String azureResourceId) {
+        public Builder azureResourceId(String azureResourceId) {
             this.azureResourceId = Objects.requireNonNull(azureResourceId);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable UserInfoResponse createdBy) {
+        public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEndTimeUtc(@Nullable String endTimeUtc) {
+        public Builder endTimeUtc(@Nullable String endTimeUtc) {
             this.endTimeUtc = endTimeUtc;
             return this;
         }
 
-        public Builder setEventTime(@Nullable String eventTime) {
+        public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setStartTimeUtc(@Nullable String startTimeUtc) {
+        public Builder startTimeUtc(@Nullable String startTimeUtc) {
             this.startTimeUtc = startTimeUtc;
             return this;
         }

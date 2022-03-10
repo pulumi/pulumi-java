@@ -75,22 +75,22 @@ public final class JavaScriptFunctionBindingArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

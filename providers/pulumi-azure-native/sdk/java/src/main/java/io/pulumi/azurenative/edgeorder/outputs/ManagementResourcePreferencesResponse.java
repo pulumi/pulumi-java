@@ -50,7 +50,7 @@ public final class ManagementResourcePreferencesResponse {
     	      this.preferredManagementResourceId = defaults.preferredManagementResourceId;
         }
 
-        public Builder setPreferredManagementResourceId(@Nullable String preferredManagementResourceId) {
+        public Builder preferredManagementResourceId(@Nullable String preferredManagementResourceId) {
             this.preferredManagementResourceId = preferredManagementResourceId;
             return this;
         }

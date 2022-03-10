@@ -279,77 +279,77 @@ public final class GetRelationshipResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCardinality(@Nullable String cardinality) {
+        public Builder cardinality(@Nullable String cardinality) {
             this.cardinality = cardinality;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setExpiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
+        public Builder expiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
             this.expiryDateTimeUtc = expiryDateTimeUtc;
             return this;
         }
 
-        public Builder setFields(@Nullable List<PropertyDefinitionResponse> fields) {
+        public Builder fields(@Nullable List<PropertyDefinitionResponse> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLookupMappings(@Nullable List<RelationshipTypeMappingResponse> lookupMappings) {
+        public Builder lookupMappings(@Nullable List<RelationshipTypeMappingResponse> lookupMappings) {
             this.lookupMappings = lookupMappings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProfileType(String profileType) {
+        public Builder profileType(String profileType) {
             this.profileType = Objects.requireNonNull(profileType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRelatedProfileType(String relatedProfileType) {
+        public Builder relatedProfileType(String relatedProfileType) {
             this.relatedProfileType = Objects.requireNonNull(relatedProfileType);
             return this;
         }
 
-        public Builder setRelationshipGuidId(String relationshipGuidId) {
+        public Builder relationshipGuidId(String relationshipGuidId) {
             this.relationshipGuidId = Objects.requireNonNull(relationshipGuidId);
             return this;
         }
 
-        public Builder setRelationshipName(String relationshipName) {
+        public Builder relationshipName(String relationshipName) {
             this.relationshipName = Objects.requireNonNull(relationshipName);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

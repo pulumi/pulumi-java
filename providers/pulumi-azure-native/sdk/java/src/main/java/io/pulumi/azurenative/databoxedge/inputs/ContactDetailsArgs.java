@@ -106,42 +106,42 @@ public final class ContactDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phone = defaults.phone;
         }
 
-        public Builder setCompanyName(Input<String> companyName) {
+        public Builder companyName(Input<String> companyName) {
             this.companyName = Objects.requireNonNull(companyName);
             return this;
         }
 
-        public Builder setCompanyName(String companyName) {
+        public Builder companyName(String companyName) {
             this.companyName = Input.of(Objects.requireNonNull(companyName));
             return this;
         }
 
-        public Builder setContactPerson(Input<String> contactPerson) {
+        public Builder contactPerson(Input<String> contactPerson) {
             this.contactPerson = Objects.requireNonNull(contactPerson);
             return this;
         }
 
-        public Builder setContactPerson(String contactPerson) {
+        public Builder contactPerson(String contactPerson) {
             this.contactPerson = Input.of(Objects.requireNonNull(contactPerson));
             return this;
         }
 
-        public Builder setEmailList(Input<List<String>> emailList) {
+        public Builder emailList(Input<List<String>> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
 
-        public Builder setEmailList(List<String> emailList) {
+        public Builder emailList(List<String> emailList) {
             this.emailList = Input.of(Objects.requireNonNull(emailList));
             return this;
         }
 
-        public Builder setPhone(Input<String> phone) {
+        public Builder phone(Input<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Input.of(Objects.requireNonNull(phone));
             return this;
         }

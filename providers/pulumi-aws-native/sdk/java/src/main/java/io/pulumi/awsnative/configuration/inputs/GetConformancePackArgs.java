@@ -51,7 +51,7 @@ public final class GetConformancePackArgs extends io.pulumi.resources.InvokeArgs
     	      this.conformancePackName = defaults.conformancePackName;
         }
 
-        public Builder setConformancePackName(String conformancePackName) {
+        public Builder conformancePackName(String conformancePackName) {
             this.conformancePackName = Objects.requireNonNull(conformancePackName);
             return this;
         }

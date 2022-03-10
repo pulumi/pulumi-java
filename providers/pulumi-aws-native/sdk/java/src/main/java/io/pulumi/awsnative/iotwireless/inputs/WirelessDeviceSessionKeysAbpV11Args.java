@@ -85,42 +85,42 @@ public final class WirelessDeviceSessionKeysAbpV11Args extends io.pulumi.resourc
     	      this.sNwkSIntKey = defaults.sNwkSIntKey;
         }
 
-        public Builder setAppSKey(Input<String> appSKey) {
+        public Builder appSKey(Input<String> appSKey) {
             this.appSKey = Objects.requireNonNull(appSKey);
             return this;
         }
 
-        public Builder setAppSKey(String appSKey) {
+        public Builder appSKey(String appSKey) {
             this.appSKey = Input.of(Objects.requireNonNull(appSKey));
             return this;
         }
 
-        public Builder setFNwkSIntKey(Input<String> fNwkSIntKey) {
+        public Builder fNwkSIntKey(Input<String> fNwkSIntKey) {
             this.fNwkSIntKey = Objects.requireNonNull(fNwkSIntKey);
             return this;
         }
 
-        public Builder setFNwkSIntKey(String fNwkSIntKey) {
+        public Builder fNwkSIntKey(String fNwkSIntKey) {
             this.fNwkSIntKey = Input.of(Objects.requireNonNull(fNwkSIntKey));
             return this;
         }
 
-        public Builder setNwkSEncKey(Input<String> nwkSEncKey) {
+        public Builder nwkSEncKey(Input<String> nwkSEncKey) {
             this.nwkSEncKey = Objects.requireNonNull(nwkSEncKey);
             return this;
         }
 
-        public Builder setNwkSEncKey(String nwkSEncKey) {
+        public Builder nwkSEncKey(String nwkSEncKey) {
             this.nwkSEncKey = Input.of(Objects.requireNonNull(nwkSEncKey));
             return this;
         }
 
-        public Builder setSNwkSIntKey(Input<String> sNwkSIntKey) {
+        public Builder sNwkSIntKey(Input<String> sNwkSIntKey) {
             this.sNwkSIntKey = Objects.requireNonNull(sNwkSIntKey);
             return this;
         }
 
-        public Builder setSNwkSIntKey(String sNwkSIntKey) {
+        public Builder sNwkSIntKey(String sNwkSIntKey) {
             this.sNwkSIntKey = Input.of(Objects.requireNonNull(sNwkSIntKey));
             return this;
         }

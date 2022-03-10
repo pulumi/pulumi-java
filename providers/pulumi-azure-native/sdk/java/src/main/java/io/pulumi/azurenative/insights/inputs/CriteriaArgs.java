@@ -76,22 +76,22 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.metricName = defaults.metricName;
         }
 
-        public Builder setDimensions(@Nullable Input<List<DimensionArgs>> dimensions) {
+        public Builder dimensions(@Nullable Input<List<DimensionArgs>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<DimensionArgs> dimensions) {
+        public Builder dimensions(@Nullable List<DimensionArgs> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }

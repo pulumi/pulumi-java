@@ -114,27 +114,27 @@ public final class TestIssueResponse {
     	      this.warning = defaults.warning;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWarning(AnyResponse warning) {
+        public Builder warning(AnyResponse warning) {
             this.warning = Objects.requireNonNull(warning);
             return this;
         }

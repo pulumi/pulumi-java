@@ -159,72 +159,72 @@ public final class FailActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setErrorCode(Input<Object> errorCode) {
+        public Builder errorCode(Input<Object> errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setErrorCode(Object errorCode) {
+        public Builder errorCode(Object errorCode) {
             this.errorCode = Input.of(Objects.requireNonNull(errorCode));
             return this;
         }
 
-        public Builder setMessage(Input<Object> message) {
+        public Builder message(Input<Object> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setMessage(Object message) {
+        public Builder message(Object message) {
             this.message = Input.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

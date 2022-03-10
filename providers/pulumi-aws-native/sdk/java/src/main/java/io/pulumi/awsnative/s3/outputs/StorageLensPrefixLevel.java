@@ -40,7 +40,7 @@ public final class StorageLensPrefixLevel {
     	      this.storageMetrics = defaults.storageMetrics;
         }
 
-        public Builder setStorageMetrics(StorageLensPrefixLevelStorageMetrics storageMetrics) {
+        public Builder storageMetrics(StorageLensPrefixLevelStorageMetrics storageMetrics) {
             this.storageMetrics = Objects.requireNonNull(storageMetrics);
             return this;
         }

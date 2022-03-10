@@ -197,122 +197,122 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setDatadog(@Nullable Input<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog) {
+        public Builder datadog(@Nullable Input<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog) {
             this.datadog = datadog;
             return this;
         }
 
-        public Builder setDatadog(@Nullable ConnectorProfileDatadogConnectorProfilePropertiesArgs datadog) {
+        public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfilePropertiesArgs datadog) {
             this.datadog = Input.ofNullable(datadog);
             return this;
         }
 
-        public Builder setDynatrace(@Nullable Input<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace) {
+        public Builder dynatrace(@Nullable Input<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
 
-        public Builder setDynatrace(@Nullable ConnectorProfileDynatraceConnectorProfilePropertiesArgs dynatrace) {
+        public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfilePropertiesArgs dynatrace) {
             this.dynatrace = Input.ofNullable(dynatrace);
             return this;
         }
 
-        public Builder setInforNexus(@Nullable Input<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus) {
+        public Builder inforNexus(@Nullable Input<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
 
-        public Builder setInforNexus(@Nullable ConnectorProfileInforNexusConnectorProfilePropertiesArgs inforNexus) {
+        public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfilePropertiesArgs inforNexus) {
             this.inforNexus = Input.ofNullable(inforNexus);
             return this;
         }
 
-        public Builder setMarketo(@Nullable Input<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo) {
+        public Builder marketo(@Nullable Input<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setMarketo(@Nullable ConnectorProfileMarketoConnectorProfilePropertiesArgs marketo) {
+        public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfilePropertiesArgs marketo) {
             this.marketo = Input.ofNullable(marketo);
             return this;
         }
 
-        public Builder setRedshift(@Nullable Input<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift) {
+        public Builder redshift(@Nullable Input<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setRedshift(@Nullable ConnectorProfileRedshiftConnectorProfilePropertiesArgs redshift) {
+        public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfilePropertiesArgs redshift) {
             this.redshift = Input.ofNullable(redshift);
             return this;
         }
 
-        public Builder setSAPOData(@Nullable Input<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData) {
+        public Builder sAPOData(@Nullable Input<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
 
-        public Builder setSAPOData(@Nullable ConnectorProfileSAPODataConnectorProfilePropertiesArgs sAPOData) {
+        public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfilePropertiesArgs sAPOData) {
             this.sAPOData = Input.ofNullable(sAPOData);
             return this;
         }
 
-        public Builder setSalesforce(@Nullable Input<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce) {
+        public Builder salesforce(@Nullable Input<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable ConnectorProfileSalesforceConnectorProfilePropertiesArgs salesforce) {
+        public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfilePropertiesArgs salesforce) {
             this.salesforce = Input.ofNullable(salesforce);
             return this;
         }
 
-        public Builder setServiceNow(@Nullable Input<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow) {
+        public Builder serviceNow(@Nullable Input<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable ConnectorProfileServiceNowConnectorProfilePropertiesArgs serviceNow) {
+        public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfilePropertiesArgs serviceNow) {
             this.serviceNow = Input.ofNullable(serviceNow);
             return this;
         }
 
-        public Builder setSlack(@Nullable Input<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack) {
+        public Builder slack(@Nullable Input<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack) {
             this.slack = slack;
             return this;
         }
 
-        public Builder setSlack(@Nullable ConnectorProfileSlackConnectorProfilePropertiesArgs slack) {
+        public Builder slack(@Nullable ConnectorProfileSlackConnectorProfilePropertiesArgs slack) {
             this.slack = Input.ofNullable(slack);
             return this;
         }
 
-        public Builder setSnowflake(@Nullable Input<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake) {
+        public Builder snowflake(@Nullable Input<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake) {
             this.snowflake = snowflake;
             return this;
         }
 
-        public Builder setSnowflake(@Nullable ConnectorProfileSnowflakeConnectorProfilePropertiesArgs snowflake) {
+        public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfilePropertiesArgs snowflake) {
             this.snowflake = Input.ofNullable(snowflake);
             return this;
         }
 
-        public Builder setVeeva(@Nullable Input<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva) {
+        public Builder veeva(@Nullable Input<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva) {
             this.veeva = veeva;
             return this;
         }
 
-        public Builder setVeeva(@Nullable ConnectorProfileVeevaConnectorProfilePropertiesArgs veeva) {
+        public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfilePropertiesArgs veeva) {
             this.veeva = Input.ofNullable(veeva);
             return this;
         }
 
-        public Builder setZendesk(@Nullable Input<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk) {
+        public Builder zendesk(@Nullable Input<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
-        public Builder setZendesk(@Nullable ConnectorProfileZendeskConnectorProfilePropertiesArgs zendesk) {
+        public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfilePropertiesArgs zendesk) {
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }

@@ -83,32 +83,32 @@ public final class NotificationRegistrationArgs extends io.pulumi.resources.Reso
     	      this.providerNamespace = defaults.providerNamespace;
         }
 
-        public Builder setNotificationRegistrationName(@Nullable Input<String> notificationRegistrationName) {
+        public Builder notificationRegistrationName(@Nullable Input<String> notificationRegistrationName) {
             this.notificationRegistrationName = notificationRegistrationName;
             return this;
         }
 
-        public Builder setNotificationRegistrationName(@Nullable String notificationRegistrationName) {
+        public Builder notificationRegistrationName(@Nullable String notificationRegistrationName) {
             this.notificationRegistrationName = Input.ofNullable(notificationRegistrationName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<NotificationRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<NotificationRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable NotificationRegistrationPropertiesArgs properties) {
+        public Builder properties(@Nullable NotificationRegistrationPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setProviderNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Input<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
-        public Builder setProviderNamespace(String providerNamespace) {
+        public Builder providerNamespace(String providerNamespace) {
             this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
             return this;
         }

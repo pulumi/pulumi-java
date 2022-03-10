@@ -68,12 +68,12 @@ public final class ScaleSettingsResponse {
     	      this.fixedScale = defaults.fixedScale;
         }
 
-        public Builder setAutoScale(@Nullable AutoScaleSettingsResponse autoScale) {
+        public Builder autoScale(@Nullable AutoScaleSettingsResponse autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setFixedScale(@Nullable FixedScaleSettingsResponse fixedScale) {
+        public Builder fixedScale(@Nullable FixedScaleSettingsResponse fixedScale) {
             this.fixedScale = fixedScale;
             return this;
         }

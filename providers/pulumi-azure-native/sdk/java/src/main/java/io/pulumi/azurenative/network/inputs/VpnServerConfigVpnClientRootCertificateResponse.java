@@ -74,12 +74,12 @@ public final class VpnServerConfigVpnClientRootCertificateResponse extends io.pu
     	      this.publicCertData = defaults.publicCertData;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPublicCertData(@Nullable String publicCertData) {
+        public Builder publicCertData(@Nullable String publicCertData) {
             this.publicCertData = publicCertData;
             return this;
         }

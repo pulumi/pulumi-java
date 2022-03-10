@@ -57,12 +57,12 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
     	      this.uninstallAfterBuild = defaults.uninstallAfterBuild;
         }
 
-        public Builder setUninstallAfterBuild(@Nullable Input<Boolean> uninstallAfterBuild) {
+        public Builder uninstallAfterBuild(@Nullable Input<Boolean> uninstallAfterBuild) {
             this.uninstallAfterBuild = uninstallAfterBuild;
             return this;
         }
 
-        public Builder setUninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
+        public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
             this.uninstallAfterBuild = Input.ofNullable(uninstallAfterBuild);
             return this;
         }

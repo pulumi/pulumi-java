@@ -86,17 +86,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.referenceDataSource = defaults.referenceDataSource;
         }
 
-        public Builder setInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input) {
+        public Builder input(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs) {
+        public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setReferenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
+        public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
             this.referenceDataSource = referenceDataSource;
             return this;
         }

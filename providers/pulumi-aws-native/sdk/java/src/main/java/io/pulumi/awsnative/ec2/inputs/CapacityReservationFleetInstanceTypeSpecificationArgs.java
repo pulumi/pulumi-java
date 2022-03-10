@@ -125,72 +125,72 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable Input<String> availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable Input<String> availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable String availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = Input.ofNullable(availabilityZoneId);
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Input.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder setInstancePlatform(@Nullable Input<String> instancePlatform) {
+        public Builder instancePlatform(@Nullable Input<String> instancePlatform) {
             this.instancePlatform = instancePlatform;
             return this;
         }
 
-        public Builder setInstancePlatform(@Nullable String instancePlatform) {
+        public Builder instancePlatform(@Nullable String instancePlatform) {
             this.instancePlatform = Input.ofNullable(instancePlatform);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Double> weight) {
+        public Builder weight(@Nullable Input<Double> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Double weight) {
+        public Builder weight(@Nullable Double weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

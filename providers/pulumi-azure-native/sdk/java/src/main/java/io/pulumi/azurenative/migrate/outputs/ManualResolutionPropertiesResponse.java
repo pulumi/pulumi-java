@@ -50,7 +50,7 @@ public final class ManualResolutionPropertiesResponse {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
         }

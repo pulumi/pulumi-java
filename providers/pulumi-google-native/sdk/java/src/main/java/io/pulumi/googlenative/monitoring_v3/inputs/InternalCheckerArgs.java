@@ -139,62 +139,62 @@ public final class InternalCheckerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGcpZone(@Nullable Input<String> gcpZone) {
+        public Builder gcpZone(@Nullable Input<String> gcpZone) {
             this.gcpZone = gcpZone;
             return this;
         }
 
-        public Builder setGcpZone(@Nullable String gcpZone) {
+        public Builder gcpZone(@Nullable String gcpZone) {
             this.gcpZone = Input.ofNullable(gcpZone);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPeerProjectId(@Nullable Input<String> peerProjectId) {
+        public Builder peerProjectId(@Nullable Input<String> peerProjectId) {
             this.peerProjectId = peerProjectId;
             return this;
         }
 
-        public Builder setPeerProjectId(@Nullable String peerProjectId) {
+        public Builder peerProjectId(@Nullable String peerProjectId) {
             this.peerProjectId = Input.ofNullable(peerProjectId);
             return this;
         }
 
-        public Builder setState(@Nullable Input<InternalCheckerState> state) {
+        public Builder state(@Nullable Input<InternalCheckerState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable InternalCheckerState state) {
+        public Builder state(@Nullable InternalCheckerState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

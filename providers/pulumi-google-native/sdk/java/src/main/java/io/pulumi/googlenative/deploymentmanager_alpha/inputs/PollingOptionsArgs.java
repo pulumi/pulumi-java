@@ -120,52 +120,52 @@ public final class PollingOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetLink = defaults.targetLink;
         }
 
-        public Builder setDiagnostics(@Nullable Input<List<DiagnosticArgs>> diagnostics) {
+        public Builder diagnostics(@Nullable Input<List<DiagnosticArgs>> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable List<DiagnosticArgs> diagnostics) {
+        public Builder diagnostics(@Nullable List<DiagnosticArgs> diagnostics) {
             this.diagnostics = Input.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder setFailCondition(@Nullable Input<String> failCondition) {
+        public Builder failCondition(@Nullable Input<String> failCondition) {
             this.failCondition = failCondition;
             return this;
         }
 
-        public Builder setFailCondition(@Nullable String failCondition) {
+        public Builder failCondition(@Nullable String failCondition) {
             this.failCondition = Input.ofNullable(failCondition);
             return this;
         }
 
-        public Builder setFinishCondition(@Nullable Input<String> finishCondition) {
+        public Builder finishCondition(@Nullable Input<String> finishCondition) {
             this.finishCondition = finishCondition;
             return this;
         }
 
-        public Builder setFinishCondition(@Nullable String finishCondition) {
+        public Builder finishCondition(@Nullable String finishCondition) {
             this.finishCondition = Input.ofNullable(finishCondition);
             return this;
         }
 
-        public Builder setPollingLink(@Nullable Input<String> pollingLink) {
+        public Builder pollingLink(@Nullable Input<String> pollingLink) {
             this.pollingLink = pollingLink;
             return this;
         }
 
-        public Builder setPollingLink(@Nullable String pollingLink) {
+        public Builder pollingLink(@Nullable String pollingLink) {
             this.pollingLink = Input.ofNullable(pollingLink);
             return this;
         }
 
-        public Builder setTargetLink(@Nullable Input<String> targetLink) {
+        public Builder targetLink(@Nullable Input<String> targetLink) {
             this.targetLink = targetLink;
             return this;
         }
 
-        public Builder setTargetLink(@Nullable String targetLink) {
+        public Builder targetLink(@Nullable String targetLink) {
             this.targetLink = Input.ofNullable(targetLink);
             return this;
         }

@@ -132,32 +132,32 @@ public final class HostNameResponse {
     	      this.siteNames = defaults.siteNames;
         }
 
-        public Builder setAzureResourceName(@Nullable String azureResourceName) {
+        public Builder azureResourceName(@Nullable String azureResourceName) {
             this.azureResourceName = azureResourceName;
             return this;
         }
 
-        public Builder setAzureResourceType(@Nullable String azureResourceType) {
+        public Builder azureResourceType(@Nullable String azureResourceType) {
             this.azureResourceType = azureResourceType;
             return this;
         }
 
-        public Builder setCustomHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
+        public Builder customHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
 
-        public Builder setHostNameType(@Nullable String hostNameType) {
+        public Builder hostNameType(@Nullable String hostNameType) {
             this.hostNameType = hostNameType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSiteNames(@Nullable List<String> siteNames) {
+        public Builder siteNames(@Nullable List<String> siteNames) {
             this.siteNames = siteNames;
             return this;
         }

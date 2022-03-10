@@ -90,17 +90,17 @@ public final class GoogleDomainsDnsResponse extends io.pulumi.resources.InvokeAr
     	      this.nameServers = defaults.nameServers;
         }
 
-        public Builder setDsRecords(List<DsRecordResponse> dsRecords) {
+        public Builder dsRecords(List<DsRecordResponse> dsRecords) {
             this.dsRecords = Objects.requireNonNull(dsRecords);
             return this;
         }
 
-        public Builder setDsState(String dsState) {
+        public Builder dsState(String dsState) {
             this.dsState = Objects.requireNonNull(dsState);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }

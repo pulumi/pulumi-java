@@ -125,52 +125,52 @@ public final class KeyPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kty = defaults.kty;
         }
 
-        public Builder setAttributes(@Nullable Input<KeyAttributesArgs> attributes) {
+        public Builder attributes(@Nullable Input<KeyAttributesArgs> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable KeyAttributesArgs attributes) {
+        public Builder attributes(@Nullable KeyAttributesArgs attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setCurveName(@Nullable Input<Either<String,JsonWebKeyCurveName>> curveName) {
+        public Builder curveName(@Nullable Input<Either<String,JsonWebKeyCurveName>> curveName) {
             this.curveName = curveName;
             return this;
         }
 
-        public Builder setCurveName(@Nullable Either<String,JsonWebKeyCurveName> curveName) {
+        public Builder curveName(@Nullable Either<String,JsonWebKeyCurveName> curveName) {
             this.curveName = Input.ofNullable(curveName);
             return this;
         }
 
-        public Builder setKeyOps(@Nullable Input<List<Either<String,JsonWebKeyOperation>>> keyOps) {
+        public Builder keyOps(@Nullable Input<List<Either<String,JsonWebKeyOperation>>> keyOps) {
             this.keyOps = keyOps;
             return this;
         }
 
-        public Builder setKeyOps(@Nullable List<Either<String,JsonWebKeyOperation>> keyOps) {
+        public Builder keyOps(@Nullable List<Either<String,JsonWebKeyOperation>> keyOps) {
             this.keyOps = Input.ofNullable(keyOps);
             return this;
         }
 
-        public Builder setKeySize(@Nullable Input<Integer> keySize) {
+        public Builder keySize(@Nullable Input<Integer> keySize) {
             this.keySize = keySize;
             return this;
         }
 
-        public Builder setKeySize(@Nullable Integer keySize) {
+        public Builder keySize(@Nullable Integer keySize) {
             this.keySize = Input.ofNullable(keySize);
             return this;
         }
 
-        public Builder setKty(@Nullable Input<Either<String,JsonWebKeyType>> kty) {
+        public Builder kty(@Nullable Input<Either<String,JsonWebKeyType>> kty) {
             this.kty = kty;
             return this;
         }
 
-        public Builder setKty(@Nullable Either<String,JsonWebKeyType> kty) {
+        public Builder kty(@Nullable Either<String,JsonWebKeyType> kty) {
             this.kty = Input.ofNullable(kty);
             return this;
         }

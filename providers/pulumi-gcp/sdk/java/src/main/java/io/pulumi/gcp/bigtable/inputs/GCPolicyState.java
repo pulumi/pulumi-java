@@ -153,72 +153,72 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.table = defaults.table;
         }
 
-        public Builder setColumnFamily(@Nullable Input<String> columnFamily) {
+        public Builder columnFamily(@Nullable Input<String> columnFamily) {
             this.columnFamily = columnFamily;
             return this;
         }
 
-        public Builder setColumnFamily(@Nullable String columnFamily) {
+        public Builder columnFamily(@Nullable String columnFamily) {
             this.columnFamily = Input.ofNullable(columnFamily);
             return this;
         }
 
-        public Builder setInstanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Input<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Input.ofNullable(instanceName);
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Input<GCPolicyMaxAgeGetArgs> maxAge) {
+        public Builder maxAge(@Nullable Input<GCPolicyMaxAgeGetArgs> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
-        public Builder setMaxAge(@Nullable GCPolicyMaxAgeGetArgs maxAge) {
+        public Builder maxAge(@Nullable GCPolicyMaxAgeGetArgs maxAge) {
             this.maxAge = Input.ofNullable(maxAge);
             return this;
         }
 
-        public Builder setMaxVersions(@Nullable Input<List<GCPolicyMaxVersionGetArgs>> maxVersions) {
+        public Builder maxVersions(@Nullable Input<List<GCPolicyMaxVersionGetArgs>> maxVersions) {
             this.maxVersions = maxVersions;
             return this;
         }
 
-        public Builder setMaxVersions(@Nullable List<GCPolicyMaxVersionGetArgs> maxVersions) {
+        public Builder maxVersions(@Nullable List<GCPolicyMaxVersionGetArgs> maxVersions) {
             this.maxVersions = Input.ofNullable(maxVersions);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<String> table) {
+        public Builder table(@Nullable Input<String> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = Input.ofNullable(table);
             return this;
         }

@@ -91,17 +91,17 @@ public final class CertificateConfigX509ConfigKeyUsage {
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder setBaseKeyUsage(CertificateConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage) {
+        public Builder baseKeyUsage(CertificateConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage) {
             this.baseKeyUsage = Objects.requireNonNull(baseKeyUsage);
             return this;
         }
 
-        public Builder setExtendedKeyUsage(CertificateConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage) {
+        public Builder extendedKeyUsage(CertificateConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage) {
             this.extendedKeyUsage = Objects.requireNonNull(extendedKeyUsage);
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable List<CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }

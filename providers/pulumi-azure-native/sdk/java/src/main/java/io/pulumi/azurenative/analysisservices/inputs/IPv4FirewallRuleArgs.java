@@ -90,32 +90,32 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     	      this.rangeStart = defaults.rangeStart;
         }
 
-        public Builder setFirewallRuleName(@Nullable Input<String> firewallRuleName) {
+        public Builder firewallRuleName(@Nullable Input<String> firewallRuleName) {
             this.firewallRuleName = firewallRuleName;
             return this;
         }
 
-        public Builder setFirewallRuleName(@Nullable String firewallRuleName) {
+        public Builder firewallRuleName(@Nullable String firewallRuleName) {
             this.firewallRuleName = Input.ofNullable(firewallRuleName);
             return this;
         }
 
-        public Builder setRangeEnd(@Nullable Input<String> rangeEnd) {
+        public Builder rangeEnd(@Nullable Input<String> rangeEnd) {
             this.rangeEnd = rangeEnd;
             return this;
         }
 
-        public Builder setRangeEnd(@Nullable String rangeEnd) {
+        public Builder rangeEnd(@Nullable String rangeEnd) {
             this.rangeEnd = Input.ofNullable(rangeEnd);
             return this;
         }
 
-        public Builder setRangeStart(@Nullable Input<String> rangeStart) {
+        public Builder rangeStart(@Nullable Input<String> rangeStart) {
             this.rangeStart = rangeStart;
             return this;
         }
 
-        public Builder setRangeStart(@Nullable String rangeStart) {
+        public Builder rangeStart(@Nullable String rangeStart) {
             this.rangeStart = Input.ofNullable(rangeStart);
             return this;
         }

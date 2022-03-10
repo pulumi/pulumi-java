@@ -109,42 +109,42 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     	      this.tableOptions = defaults.tableOptions;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setRequiredFindingLabelKeys(@Nullable Input<List<String>> requiredFindingLabelKeys) {
+        public Builder requiredFindingLabelKeys(@Nullable Input<List<String>> requiredFindingLabelKeys) {
             this.requiredFindingLabelKeys = requiredFindingLabelKeys;
             return this;
         }
 
-        public Builder setRequiredFindingLabelKeys(@Nullable List<String> requiredFindingLabelKeys) {
+        public Builder requiredFindingLabelKeys(@Nullable List<String> requiredFindingLabelKeys) {
             this.requiredFindingLabelKeys = Input.ofNullable(requiredFindingLabelKeys);
             return this;
         }
 
-        public Builder setTableOptions(@Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
+        public Builder tableOptions(@Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions) {
             this.tableOptions = tableOptions;
             return this;
         }
 
-        public Builder setTableOptions(@Nullable GooglePrivacyDlpV2TableOptionsArgs tableOptions) {
+        public Builder tableOptions(@Nullable GooglePrivacyDlpV2TableOptionsArgs tableOptions) {
             this.tableOptions = Input.ofNullable(tableOptions);
             return this;
         }

@@ -134,32 +134,32 @@ public final class GetAnnotationResult {
     	      this.textAnnotation = defaults.textAnnotation;
         }
 
-        public Builder setAnnotationSource(AnnotationSourceResponse annotationSource) {
+        public Builder annotationSource(AnnotationSourceResponse annotationSource) {
             this.annotationSource = Objects.requireNonNull(annotationSource);
             return this;
         }
 
-        public Builder setCustomData(Map<String,String> customData) {
+        public Builder customData(Map<String,String> customData) {
             this.customData = Objects.requireNonNull(customData);
             return this;
         }
 
-        public Builder setImageAnnotation(ImageAnnotationResponse imageAnnotation) {
+        public Builder imageAnnotation(ImageAnnotationResponse imageAnnotation) {
             this.imageAnnotation = Objects.requireNonNull(imageAnnotation);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceAnnotation(ResourceAnnotationResponse resourceAnnotation) {
+        public Builder resourceAnnotation(ResourceAnnotationResponse resourceAnnotation) {
             this.resourceAnnotation = Objects.requireNonNull(resourceAnnotation);
             return this;
         }
 
-        public Builder setTextAnnotation(SensitiveTextAnnotationResponse textAnnotation) {
+        public Builder textAnnotation(SensitiveTextAnnotationResponse textAnnotation) {
             this.textAnnotation = Objects.requireNonNull(textAnnotation);
             return this;
         }

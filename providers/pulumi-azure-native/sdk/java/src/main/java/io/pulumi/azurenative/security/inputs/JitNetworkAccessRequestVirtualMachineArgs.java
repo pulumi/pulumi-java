@@ -71,22 +71,22 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
     	      this.ports = defaults.ports;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setPorts(Input<List<JitNetworkAccessRequestPortArgs>> ports) {
+        public Builder ports(Input<List<JitNetworkAccessRequestPortArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setPorts(List<JitNetworkAccessRequestPortArgs> ports) {
+        public Builder ports(List<JitNetworkAccessRequestPortArgs> ports) {
             this.ports = Input.of(Objects.requireNonNull(ports));
             return this;
         }

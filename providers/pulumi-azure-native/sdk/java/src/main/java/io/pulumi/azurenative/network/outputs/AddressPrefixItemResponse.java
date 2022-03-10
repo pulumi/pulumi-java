@@ -67,12 +67,12 @@ public final class AddressPrefixItemResponse {
     	      this.addressPrefixType = defaults.addressPrefixType;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefixType(@Nullable String addressPrefixType) {
+        public Builder addressPrefixType(@Nullable String addressPrefixType) {
             this.addressPrefixType = addressPrefixType;
             return this;
         }

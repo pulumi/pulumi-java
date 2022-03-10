@@ -78,32 +78,32 @@ public final class JobStatusErrorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }

@@ -430,132 +430,132 @@ public final class GetBucketObjectResult {
     	      this.websiteRedirectLocation = defaults.websiteRedirectLocation;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucketKeyEnabled(Boolean bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = Objects.requireNonNull(bucketKeyEnabled);
             return this;
         }
 
-        public Builder setCacheControl(String cacheControl) {
+        public Builder cacheControl(String cacheControl) {
             this.cacheControl = Objects.requireNonNull(cacheControl);
             return this;
         }
 
-        public Builder setContentDisposition(String contentDisposition) {
+        public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = Objects.requireNonNull(contentDisposition);
             return this;
         }
 
-        public Builder setContentEncoding(String contentEncoding) {
+        public Builder contentEncoding(String contentEncoding) {
             this.contentEncoding = Objects.requireNonNull(contentEncoding);
             return this;
         }
 
-        public Builder setContentLanguage(String contentLanguage) {
+        public Builder contentLanguage(String contentLanguage) {
             this.contentLanguage = Objects.requireNonNull(contentLanguage);
             return this;
         }
 
-        public Builder setContentLength(Integer contentLength) {
+        public Builder contentLength(Integer contentLength) {
             this.contentLength = Objects.requireNonNull(contentLength);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpiration(String expiration) {
+        public Builder expiration(String expiration) {
             this.expiration = Objects.requireNonNull(expiration);
             return this;
         }
 
-        public Builder setExpires(String expires) {
+        public Builder expires(String expires) {
             this.expires = Objects.requireNonNull(expires);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setObjectLockLegalHoldStatus(String objectLockLegalHoldStatus) {
+        public Builder objectLockLegalHoldStatus(String objectLockLegalHoldStatus) {
             this.objectLockLegalHoldStatus = Objects.requireNonNull(objectLockLegalHoldStatus);
             return this;
         }
 
-        public Builder setObjectLockMode(String objectLockMode) {
+        public Builder objectLockMode(String objectLockMode) {
             this.objectLockMode = Objects.requireNonNull(objectLockMode);
             return this;
         }
 
-        public Builder setObjectLockRetainUntilDate(String objectLockRetainUntilDate) {
+        public Builder objectLockRetainUntilDate(String objectLockRetainUntilDate) {
             this.objectLockRetainUntilDate = Objects.requireNonNull(objectLockRetainUntilDate);
             return this;
         }
 
-        public Builder setRange(@Nullable String range) {
+        public Builder range(@Nullable String range) {
             this.range = range;
             return this;
         }
 
-        public Builder setServerSideEncryption(String serverSideEncryption) {
+        public Builder serverSideEncryption(String serverSideEncryption) {
             this.serverSideEncryption = Objects.requireNonNull(serverSideEncryption);
             return this;
         }
 
-        public Builder setSseKmsKeyId(String sseKmsKeyId) {
+        public Builder sseKmsKeyId(String sseKmsKeyId) {
             this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVersionId(String versionId) {
+        public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
 
-        public Builder setWebsiteRedirectLocation(String websiteRedirectLocation) {
+        public Builder websiteRedirectLocation(String websiteRedirectLocation) {
             this.websiteRedirectLocation = Objects.requireNonNull(websiteRedirectLocation);
             return this;
         }

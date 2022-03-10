@@ -110,42 +110,42 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDnsNameLabel(@Nullable Input<String> dnsNameLabel) {
+        public Builder dnsNameLabel(@Nullable Input<String> dnsNameLabel) {
             this.dnsNameLabel = dnsNameLabel;
             return this;
         }
 
-        public Builder setDnsNameLabel(@Nullable String dnsNameLabel) {
+        public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
             this.dnsNameLabel = Input.ofNullable(dnsNameLabel);
             return this;
         }
 
-        public Builder setIp(@Nullable Input<String> ip) {
+        public Builder ip(@Nullable Input<String> ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = Input.ofNullable(ip);
             return this;
         }
 
-        public Builder setPorts(Input<List<PortArgs>> ports) {
+        public Builder ports(Input<List<PortArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setPorts(List<PortArgs> ports) {
+        public Builder ports(List<PortArgs> ports) {
             this.ports = Input.of(Objects.requireNonNull(ports));
             return this;
         }
 
-        public Builder setType(Input<Either<String,ContainerGroupIpAddressType>> type) {
+        public Builder type(Input<Either<String,ContainerGroupIpAddressType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ContainerGroupIpAddressType> type) {
+        public Builder type(Either<String,ContainerGroupIpAddressType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

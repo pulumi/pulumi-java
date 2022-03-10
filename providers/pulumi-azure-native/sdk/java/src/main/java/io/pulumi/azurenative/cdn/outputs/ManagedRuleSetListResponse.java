@@ -50,7 +50,7 @@ public final class ManagedRuleSetListResponse {
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder setManagedRuleSets(@Nullable List<ManagedRuleSetResponse> managedRuleSets) {
+        public Builder managedRuleSets(@Nullable List<ManagedRuleSetResponse> managedRuleSets) {
             this.managedRuleSets = managedRuleSets;
             return this;
         }

@@ -66,12 +66,12 @@ public final class VirtualNodeSpecListenerTimeoutTcpIdle {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

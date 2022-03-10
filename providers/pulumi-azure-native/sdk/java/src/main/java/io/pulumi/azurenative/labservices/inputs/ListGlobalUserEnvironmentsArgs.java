@@ -70,12 +70,12 @@ public final class ListGlobalUserEnvironmentsArgs extends io.pulumi.resources.In
     	      this.userName = defaults.userName;
         }
 
-        public Builder setLabId(@Nullable String labId) {
+        public Builder labId(@Nullable String labId) {
             this.labId = labId;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

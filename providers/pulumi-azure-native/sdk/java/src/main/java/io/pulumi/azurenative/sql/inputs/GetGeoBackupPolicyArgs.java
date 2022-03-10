@@ -100,22 +100,22 @@ public final class GetGeoBackupPolicyArgs extends io.pulumi.resources.InvokeArgs
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setGeoBackupPolicyName(String geoBackupPolicyName) {
+        public Builder geoBackupPolicyName(String geoBackupPolicyName) {
             this.geoBackupPolicyName = Objects.requireNonNull(geoBackupPolicyName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }

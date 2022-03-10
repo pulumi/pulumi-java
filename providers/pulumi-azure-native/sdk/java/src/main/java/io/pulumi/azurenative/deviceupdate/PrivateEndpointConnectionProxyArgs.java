@@ -119,52 +119,52 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
     	      this.status = defaults.status;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionProxyId(@Nullable Input<String> privateEndpointConnectionProxyId) {
+        public Builder privateEndpointConnectionProxyId(@Nullable Input<String> privateEndpointConnectionProxyId) {
             this.privateEndpointConnectionProxyId = privateEndpointConnectionProxyId;
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionProxyId(@Nullable String privateEndpointConnectionProxyId) {
+        public Builder privateEndpointConnectionProxyId(@Nullable String privateEndpointConnectionProxyId) {
             this.privateEndpointConnectionProxyId = Input.ofNullable(privateEndpointConnectionProxyId);
             return this;
         }
 
-        public Builder setRemotePrivateEndpoint(@Nullable Input<RemotePrivateEndpointArgs> remotePrivateEndpoint) {
+        public Builder remotePrivateEndpoint(@Nullable Input<RemotePrivateEndpointArgs> remotePrivateEndpoint) {
             this.remotePrivateEndpoint = remotePrivateEndpoint;
             return this;
         }
 
-        public Builder setRemotePrivateEndpoint(@Nullable RemotePrivateEndpointArgs remotePrivateEndpoint) {
+        public Builder remotePrivateEndpoint(@Nullable RemotePrivateEndpointArgs remotePrivateEndpoint) {
             this.remotePrivateEndpoint = Input.ofNullable(remotePrivateEndpoint);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

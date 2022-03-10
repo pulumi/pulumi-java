@@ -71,22 +71,22 @@ public final class ProjectLogsConfigGetArgs extends io.pulumi.resources.Resource
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder setCloudwatchLogs(@Nullable Input<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs) {
+        public Builder cloudwatchLogs(@Nullable Input<ProjectLogsConfigCloudwatchLogsGetArgs> cloudwatchLogs) {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
 
-        public Builder setCloudwatchLogs(@Nullable ProjectLogsConfigCloudwatchLogsGetArgs cloudwatchLogs) {
+        public Builder cloudwatchLogs(@Nullable ProjectLogsConfigCloudwatchLogsGetArgs cloudwatchLogs) {
             this.cloudwatchLogs = Input.ofNullable(cloudwatchLogs);
             return this;
         }
 
-        public Builder setS3Logs(@Nullable Input<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
+        public Builder s3Logs(@Nullable Input<ProjectLogsConfigS3LogsGetArgs> s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }
 
-        public Builder setS3Logs(@Nullable ProjectLogsConfigS3LogsGetArgs s3Logs) {
+        public Builder s3Logs(@Nullable ProjectLogsConfigS3LogsGetArgs s3Logs) {
             this.s3Logs = Input.ofNullable(s3Logs);
             return this;
         }

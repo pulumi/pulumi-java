@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityArgs extends io.p
     	      this.value = defaults.value;
         }
 
-        public Builder setSynonyms(Input<List<String>> synonyms) {
+        public Builder synonyms(Input<List<String>> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Input.of(Objects.requireNonNull(synonyms));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

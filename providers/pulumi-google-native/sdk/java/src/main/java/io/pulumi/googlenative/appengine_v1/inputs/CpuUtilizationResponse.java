@@ -73,12 +73,12 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setAggregationWindowLength(String aggregationWindowLength) {
+        public Builder aggregationWindowLength(String aggregationWindowLength) {
             this.aggregationWindowLength = Objects.requireNonNull(aggregationWindowLength);
             return this;
         }
 
-        public Builder setTargetUtilization(Double targetUtilization) {
+        public Builder targetUtilization(Double targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }

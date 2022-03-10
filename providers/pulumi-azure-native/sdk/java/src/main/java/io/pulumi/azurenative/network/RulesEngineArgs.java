@@ -104,42 +104,42 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rulesEngineName = defaults.rulesEngineName;
         }
 
-        public Builder setFrontDoorName(Input<String> frontDoorName) {
+        public Builder frontDoorName(Input<String> frontDoorName) {
             this.frontDoorName = Objects.requireNonNull(frontDoorName);
             return this;
         }
 
-        public Builder setFrontDoorName(String frontDoorName) {
+        public Builder frontDoorName(String frontDoorName) {
             this.frontDoorName = Input.of(Objects.requireNonNull(frontDoorName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<RulesEngineRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<RulesEngineRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RulesEngineRuleArgs> rules) {
+        public Builder rules(@Nullable List<RulesEngineRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setRulesEngineName(@Nullable Input<String> rulesEngineName) {
+        public Builder rulesEngineName(@Nullable Input<String> rulesEngineName) {
             this.rulesEngineName = rulesEngineName;
             return this;
         }
 
-        public Builder setRulesEngineName(@Nullable String rulesEngineName) {
+        public Builder rulesEngineName(@Nullable String rulesEngineName) {
             this.rulesEngineName = Input.ofNullable(rulesEngineName);
             return this;
         }

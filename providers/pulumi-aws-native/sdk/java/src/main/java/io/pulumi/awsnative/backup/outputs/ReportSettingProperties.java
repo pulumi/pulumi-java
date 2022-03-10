@@ -67,12 +67,12 @@ public final class ReportSettingProperties {
     	      this.reportTemplate = defaults.reportTemplate;
         }
 
-        public Builder setFrameworkArns(@Nullable List<String> frameworkArns) {
+        public Builder frameworkArns(@Nullable List<String> frameworkArns) {
             this.frameworkArns = frameworkArns;
             return this;
         }
 
-        public Builder setReportTemplate(String reportTemplate) {
+        public Builder reportTemplate(String reportTemplate) {
             this.reportTemplate = Objects.requireNonNull(reportTemplate);
             return this;
         }

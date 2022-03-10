@@ -136,62 +136,62 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ProjectPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ProjectPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ProjectPropertiesArgs properties) {
+        public Builder properties(@Nullable ProjectPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Input<Object> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

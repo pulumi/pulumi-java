@@ -77,17 +77,17 @@ public final class BackupPlanResourceType extends io.pulumi.resources.InvokeArgs
     	      this.backupPlanRule = defaults.backupPlanRule;
         }
 
-        public Builder setAdvancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings) {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
 
-        public Builder setBackupPlanName(String backupPlanName) {
+        public Builder backupPlanName(String backupPlanName) {
             this.backupPlanName = Objects.requireNonNull(backupPlanName);
             return this;
         }
 
-        public Builder setBackupPlanRule(List<BackupPlanBackupRuleResourceType> backupPlanRule) {
+        public Builder backupPlanRule(List<BackupPlanBackupRuleResourceType> backupPlanRule) {
             this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
             return this;
         }

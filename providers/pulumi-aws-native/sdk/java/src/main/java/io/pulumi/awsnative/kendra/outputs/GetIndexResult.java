@@ -153,52 +153,52 @@ public final class GetIndexResult {
     	      this.userTokenConfigurations = defaults.userTokenConfigurations;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCapacityUnits(@Nullable IndexCapacityUnitsConfiguration capacityUnits) {
+        public Builder capacityUnits(@Nullable IndexCapacityUnitsConfiguration capacityUnits) {
             this.capacityUnits = capacityUnits;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations) {
+        public Builder documentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfiguration> documentMetadataConfigurations) {
             this.documentMetadataConfigurations = documentMetadataConfigurations;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IndexTag> tags) {
+        public Builder tags(@Nullable List<IndexTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUserContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
+        public Builder userContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
             this.userContextPolicy = userContextPolicy;
             return this;
         }
 
-        public Builder setUserTokenConfigurations(@Nullable List<IndexUserTokenConfiguration> userTokenConfigurations) {
+        public Builder userTokenConfigurations(@Nullable List<IndexUserTokenConfiguration> userTokenConfigurations) {
             this.userTokenConfigurations = userTokenConfigurations;
             return this;
         }

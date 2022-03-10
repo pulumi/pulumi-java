@@ -53,12 +53,12 @@ public final class ManagedInstancePrivateEndpointPropertyArgs extends io.pulumi.
     	      this.id = defaults.id;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }

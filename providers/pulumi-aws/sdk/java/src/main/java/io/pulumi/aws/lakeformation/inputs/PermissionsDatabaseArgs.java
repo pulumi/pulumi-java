@@ -70,22 +70,22 @@ public final class PermissionsDatabaseArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

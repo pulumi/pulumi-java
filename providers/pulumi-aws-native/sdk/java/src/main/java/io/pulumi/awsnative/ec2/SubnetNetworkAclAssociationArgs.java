@@ -69,22 +69,22 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setNetworkAclId(Input<String> networkAclId) {
+        public Builder networkAclId(Input<String> networkAclId) {
             this.networkAclId = Objects.requireNonNull(networkAclId);
             return this;
         }
 
-        public Builder setNetworkAclId(String networkAclId) {
+        public Builder networkAclId(String networkAclId) {
             this.networkAclId = Input.of(Objects.requireNonNull(networkAclId));
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }

@@ -141,62 +141,62 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
     	      this.target = defaults.target;
         }
 
-        public Builder setInstanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Input.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setIsLocal(@Nullable Input<Boolean> isLocal) {
+        public Builder isLocal(@Nullable Input<Boolean> isLocal) {
             this.isLocal = isLocal;
             return this;
         }
 
-        public Builder setIsLocal(@Nullable Boolean isLocal) {
+        public Builder isLocal(@Nullable Boolean isLocal) {
             this.isLocal = Input.ofNullable(isLocal);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

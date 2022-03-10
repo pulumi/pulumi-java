@@ -49,7 +49,7 @@ public final class FindingsFilterFindingCriteria extends io.pulumi.resources.Inv
     	      this.criterion = defaults.criterion;
         }
 
-        public Builder setCriterion(@Nullable FindingsFilterCriterion criterion) {
+        public Builder criterion(@Nullable FindingsFilterCriterion criterion) {
             this.criterion = criterion;
             return this;
         }

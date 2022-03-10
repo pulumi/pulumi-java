@@ -68,12 +68,12 @@ public final class VirtualGatewaySpecListenerTlsValidationTrust {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable VirtualGatewaySpecListenerTlsValidationTrustFile file) {
+        public Builder file(@Nullable VirtualGatewaySpecListenerTlsValidationTrustFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualGatewaySpecListenerTlsValidationTrustSds sds) {
+        public Builder sds(@Nullable VirtualGatewaySpecListenerTlsValidationTrustSds sds) {
             this.sds = sds;
             return this;
         }

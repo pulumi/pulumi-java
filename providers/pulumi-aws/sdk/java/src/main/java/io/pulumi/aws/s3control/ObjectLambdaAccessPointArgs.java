@@ -83,32 +83,32 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setConfiguration(Input<ObjectLambdaAccessPointConfigurationArgs> configuration) {
+        public Builder configuration(Input<ObjectLambdaAccessPointConfigurationArgs> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setConfiguration(ObjectLambdaAccessPointConfigurationArgs configuration) {
+        public Builder configuration(ObjectLambdaAccessPointConfigurationArgs configuration) {
             this.configuration = Input.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

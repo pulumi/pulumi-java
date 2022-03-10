@@ -76,22 +76,22 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
     	      this.level = defaults.level;
         }
 
-        public Builder setExpiry(@Nullable Input<String> expiry) {
+        public Builder expiry(@Nullable Input<String> expiry) {
             this.expiry = expiry;
             return this;
         }
 
-        public Builder setExpiry(@Nullable String expiry) {
+        public Builder expiry(@Nullable String expiry) {
             this.expiry = Input.ofNullable(expiry);
             return this;
         }
 
-        public Builder setLevel(Input<Either<String,DiagnosticsLevel>> level) {
+        public Builder level(Input<Either<String,DiagnosticsLevel>> level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setLevel(Either<String,DiagnosticsLevel> level) {
+        public Builder level(Either<String,DiagnosticsLevel> level) {
             this.level = Input.of(Objects.requireNonNull(level));
             return this;
         }

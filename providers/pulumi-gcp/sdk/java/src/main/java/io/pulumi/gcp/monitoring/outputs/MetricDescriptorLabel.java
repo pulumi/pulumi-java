@@ -87,17 +87,17 @@ public final class MetricDescriptorLabel {
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValueType(@Nullable String valueType) {
+        public Builder valueType(@Nullable String valueType) {
             this.valueType = valueType;
             return this;
         }

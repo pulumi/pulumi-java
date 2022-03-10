@@ -125,52 +125,52 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     	      this.waitDuration = defaults.waitDuration;
         }
 
-        public Builder setHealthChecks(Input<List<RestHealthCheckArgs>> healthChecks) {
+        public Builder healthChecks(Input<List<RestHealthCheckArgs>> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
 
-        public Builder setHealthChecks(List<RestHealthCheckArgs> healthChecks) {
+        public Builder healthChecks(List<RestHealthCheckArgs> healthChecks) {
             this.healthChecks = Input.of(Objects.requireNonNull(healthChecks));
             return this;
         }
 
-        public Builder setHealthyStateDuration(Input<String> healthyStateDuration) {
+        public Builder healthyStateDuration(Input<String> healthyStateDuration) {
             this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
             return this;
         }
 
-        public Builder setHealthyStateDuration(String healthyStateDuration) {
+        public Builder healthyStateDuration(String healthyStateDuration) {
             this.healthyStateDuration = Input.of(Objects.requireNonNull(healthyStateDuration));
             return this;
         }
 
-        public Builder setMaxElasticDuration(@Nullable Input<String> maxElasticDuration) {
+        public Builder maxElasticDuration(@Nullable Input<String> maxElasticDuration) {
             this.maxElasticDuration = maxElasticDuration;
             return this;
         }
 
-        public Builder setMaxElasticDuration(@Nullable String maxElasticDuration) {
+        public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
             this.maxElasticDuration = Input.ofNullable(maxElasticDuration);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWaitDuration(@Nullable Input<String> waitDuration) {
+        public Builder waitDuration(@Nullable Input<String> waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }
 
-        public Builder setWaitDuration(@Nullable String waitDuration) {
+        public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = Input.ofNullable(waitDuration);
             return this;
         }

@@ -174,82 +174,82 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setInspectJob(@Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
+        public Builder inspectJob(@Nullable Input<PreventionJobTriggerInspectJobGetArgs> inspectJob) {
             this.inspectJob = inspectJob;
             return this;
         }
 
-        public Builder setInspectJob(@Nullable PreventionJobTriggerInspectJobGetArgs inspectJob) {
+        public Builder inspectJob(@Nullable PreventionJobTriggerInspectJobGetArgs inspectJob) {
             this.inspectJob = Input.ofNullable(inspectJob);
             return this;
         }
 
-        public Builder setLastRunTime(@Nullable Input<String> lastRunTime) {
+        public Builder lastRunTime(@Nullable Input<String> lastRunTime) {
             this.lastRunTime = lastRunTime;
             return this;
         }
 
-        public Builder setLastRunTime(@Nullable String lastRunTime) {
+        public Builder lastRunTime(@Nullable String lastRunTime) {
             this.lastRunTime = Input.ofNullable(lastRunTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
+        public Builder triggers(@Nullable Input<List<PreventionJobTriggerTriggerGetArgs>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable List<PreventionJobTriggerTriggerGetArgs> triggers) {
+        public Builder triggers(@Nullable List<PreventionJobTriggerTriggerGetArgs> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }

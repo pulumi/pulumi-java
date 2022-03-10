@@ -85,17 +85,17 @@ public final class DataSourceConfigurationResponse {
     	      this.providers = defaults.providers;
         }
 
-        public Builder setEventLogs(@Nullable List<EventLogConfigurationResponse> eventLogs) {
+        public Builder eventLogs(@Nullable List<EventLogConfigurationResponse> eventLogs) {
             this.eventLogs = eventLogs;
             return this;
         }
 
-        public Builder setPerfCounters(@Nullable List<PerformanceCounterConfigurationResponse> perfCounters) {
+        public Builder perfCounters(@Nullable List<PerformanceCounterConfigurationResponse> perfCounters) {
             this.perfCounters = perfCounters;
             return this;
         }
 
-        public Builder setProviders(@Nullable List<EtwProviderConfigurationResponse> providers) {
+        public Builder providers(@Nullable List<EtwProviderConfigurationResponse> providers) {
             this.providers = providers;
             return this;
         }

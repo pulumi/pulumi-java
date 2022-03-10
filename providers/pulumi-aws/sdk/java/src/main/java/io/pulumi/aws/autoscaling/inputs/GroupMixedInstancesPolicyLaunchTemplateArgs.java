@@ -72,22 +72,22 @@ public final class GroupMixedInstancesPolicyLaunchTemplateArgs extends io.pulumi
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder setLaunchTemplateSpecification(Input<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(Input<GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs> launchTemplateSpecification) {
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
 
-        public Builder setLaunchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecificationArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Input.of(Objects.requireNonNull(launchTemplateSpecification));
             return this;
         }
 
-        public Builder setOverrides(@Nullable Input<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides) {
+        public Builder overrides(@Nullable Input<List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs> overrides) {
+        public Builder overrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverrideArgs> overrides) {
             this.overrides = Input.ofNullable(overrides);
             return this;
         }

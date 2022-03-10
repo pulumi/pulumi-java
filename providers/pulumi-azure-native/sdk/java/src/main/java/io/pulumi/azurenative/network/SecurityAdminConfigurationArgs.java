@@ -153,72 +153,72 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
     	      this.securityType = defaults.securityType;
         }
 
-        public Builder setConfigurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Input<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Input.ofNullable(configurationName);
             return this;
         }
 
-        public Builder setDeleteExistingNSGs(@Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs) {
+        public Builder deleteExistingNSGs(@Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs) {
             this.deleteExistingNSGs = deleteExistingNSGs;
             return this;
         }
 
-        public Builder setDeleteExistingNSGs(@Nullable Either<String,DeleteExistingNSGs> deleteExistingNSGs) {
+        public Builder deleteExistingNSGs(@Nullable Either<String,DeleteExistingNSGs> deleteExistingNSGs) {
             this.deleteExistingNSGs = Input.ofNullable(deleteExistingNSGs);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setNetworkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Input<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecurityType(@Nullable Input<Either<String,SecurityType>> securityType) {
+        public Builder securityType(@Nullable Input<Either<String,SecurityType>> securityType) {
             this.securityType = securityType;
             return this;
         }
 
-        public Builder setSecurityType(@Nullable Either<String,SecurityType> securityType) {
+        public Builder securityType(@Nullable Either<String,SecurityType> securityType) {
             this.securityType = Input.ofNullable(securityType);
             return this;
         }

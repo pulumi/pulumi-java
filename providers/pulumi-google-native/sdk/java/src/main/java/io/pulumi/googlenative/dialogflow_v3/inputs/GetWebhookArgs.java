@@ -86,22 +86,22 @@ public final class GetWebhookArgs extends io.pulumi.resources.InvokeArgs {
     	      this.webhookId = defaults.webhookId;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setWebhookId(String webhookId) {
+        public Builder webhookId(String webhookId) {
             this.webhookId = Objects.requireNonNull(webhookId);
             return this;
         }

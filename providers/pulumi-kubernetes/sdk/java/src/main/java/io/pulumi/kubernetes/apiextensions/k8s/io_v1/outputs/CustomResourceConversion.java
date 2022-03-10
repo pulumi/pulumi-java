@@ -70,12 +70,12 @@ public final class CustomResourceConversion {
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setWebhook(@Nullable WebhookConversion webhook) {
+        public Builder webhook(@Nullable WebhookConversion webhook) {
             this.webhook = webhook;
             return this;
         }

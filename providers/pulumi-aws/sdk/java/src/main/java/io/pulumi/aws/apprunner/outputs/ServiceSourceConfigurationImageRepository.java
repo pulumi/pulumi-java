@@ -86,17 +86,17 @@ public final class ServiceSourceConfigurationImageRepository {
     	      this.imageRepositoryType = defaults.imageRepositoryType;
         }
 
-        public Builder setImageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfiguration imageConfiguration) {
+        public Builder imageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfiguration imageConfiguration) {
             this.imageConfiguration = imageConfiguration;
             return this;
         }
 
-        public Builder setImageIdentifier(String imageIdentifier) {
+        public Builder imageIdentifier(String imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
 
-        public Builder setImageRepositoryType(String imageRepositoryType) {
+        public Builder imageRepositoryType(String imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }

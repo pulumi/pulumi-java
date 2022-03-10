@@ -73,22 +73,22 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(Input<Double> max) {
+        public Builder max(Input<Double> max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMax(Double max) {
+        public Builder max(Double max) {
             this.max = Input.of(Objects.requireNonNull(max));
             return this;
         }
 
-        public Builder setMin(Input<Double> min) {
+        public Builder min(Input<Double> min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
-        public Builder setMin(Double min) {
+        public Builder min(Double min) {
             this.min = Input.of(Objects.requireNonNull(min));
             return this;
         }

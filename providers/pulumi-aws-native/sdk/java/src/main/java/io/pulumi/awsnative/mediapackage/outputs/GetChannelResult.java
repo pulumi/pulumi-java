@@ -117,27 +117,27 @@ public final class GetChannelResult {
     	      this.ingressAccessLogs = defaults.ingressAccessLogs;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEgressAccessLogs(@Nullable ChannelLogConfiguration egressAccessLogs) {
+        public Builder egressAccessLogs(@Nullable ChannelLogConfiguration egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
 
-        public Builder setHlsIngest(@Nullable ChannelHlsIngest hlsIngest) {
+        public Builder hlsIngest(@Nullable ChannelHlsIngest hlsIngest) {
             this.hlsIngest = hlsIngest;
             return this;
         }
 
-        public Builder setIngressAccessLogs(@Nullable ChannelLogConfiguration ingressAccessLogs) {
+        public Builder ingressAccessLogs(@Nullable ChannelLogConfiguration ingressAccessLogs) {
             this.ingressAccessLogs = ingressAccessLogs;
             return this;
         }

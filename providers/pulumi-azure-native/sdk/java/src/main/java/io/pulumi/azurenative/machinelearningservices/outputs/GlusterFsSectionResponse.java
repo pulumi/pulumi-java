@@ -65,12 +65,12 @@ public final class GlusterFsSectionResponse {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setServerAddress(String serverAddress) {
+        public Builder serverAddress(String serverAddress) {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
 
-        public Builder setVolumeName(String volumeName) {
+        public Builder volumeName(String volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }

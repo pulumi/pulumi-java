@@ -201,102 +201,102 @@ public final class DistributionCacheBehavior {
     	      this.viewerProtocolPolicy = defaults.viewerProtocolPolicy;
         }
 
-        public Builder setAllowedMethods(@Nullable List<String> allowedMethods) {
+        public Builder allowedMethods(@Nullable List<String> allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
 
-        public Builder setCachePolicyId(@Nullable String cachePolicyId) {
+        public Builder cachePolicyId(@Nullable String cachePolicyId) {
             this.cachePolicyId = cachePolicyId;
             return this;
         }
 
-        public Builder setCachedMethods(@Nullable List<String> cachedMethods) {
+        public Builder cachedMethods(@Nullable List<String> cachedMethods) {
             this.cachedMethods = cachedMethods;
             return this;
         }
 
-        public Builder setCompress(@Nullable Boolean compress) {
+        public Builder compress(@Nullable Boolean compress) {
             this.compress = compress;
             return this;
         }
 
-        public Builder setDefaultTTL(@Nullable Double defaultTTL) {
+        public Builder defaultTTL(@Nullable Double defaultTTL) {
             this.defaultTTL = defaultTTL;
             return this;
         }
 
-        public Builder setFieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
+        public Builder fieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
             this.fieldLevelEncryptionId = fieldLevelEncryptionId;
             return this;
         }
 
-        public Builder setForwardedValues(@Nullable DistributionForwardedValues forwardedValues) {
+        public Builder forwardedValues(@Nullable DistributionForwardedValues forwardedValues) {
             this.forwardedValues = forwardedValues;
             return this;
         }
 
-        public Builder setFunctionAssociations(@Nullable List<DistributionFunctionAssociation> functionAssociations) {
+        public Builder functionAssociations(@Nullable List<DistributionFunctionAssociation> functionAssociations) {
             this.functionAssociations = functionAssociations;
             return this;
         }
 
-        public Builder setLambdaFunctionAssociations(@Nullable List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations) {
+        public Builder lambdaFunctionAssociations(@Nullable List<DistributionLambdaFunctionAssociation> lambdaFunctionAssociations) {
             this.lambdaFunctionAssociations = lambdaFunctionAssociations;
             return this;
         }
 
-        public Builder setMaxTTL(@Nullable Double maxTTL) {
+        public Builder maxTTL(@Nullable Double maxTTL) {
             this.maxTTL = maxTTL;
             return this;
         }
 
-        public Builder setMinTTL(@Nullable Double minTTL) {
+        public Builder minTTL(@Nullable Double minTTL) {
             this.minTTL = minTTL;
             return this;
         }
 
-        public Builder setOriginRequestPolicyId(@Nullable String originRequestPolicyId) {
+        public Builder originRequestPolicyId(@Nullable String originRequestPolicyId) {
             this.originRequestPolicyId = originRequestPolicyId;
             return this;
         }
 
-        public Builder setPathPattern(String pathPattern) {
+        public Builder pathPattern(String pathPattern) {
             this.pathPattern = Objects.requireNonNull(pathPattern);
             return this;
         }
 
-        public Builder setRealtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
+        public Builder realtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
             this.realtimeLogConfigArn = realtimeLogConfigArn;
             return this;
         }
 
-        public Builder setResponseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
+        public Builder responseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
             this.responseHeadersPolicyId = responseHeadersPolicyId;
             return this;
         }
 
-        public Builder setSmoothStreaming(@Nullable Boolean smoothStreaming) {
+        public Builder smoothStreaming(@Nullable Boolean smoothStreaming) {
             this.smoothStreaming = smoothStreaming;
             return this;
         }
 
-        public Builder setTargetOriginId(String targetOriginId) {
+        public Builder targetOriginId(String targetOriginId) {
             this.targetOriginId = Objects.requireNonNull(targetOriginId);
             return this;
         }
 
-        public Builder setTrustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
+        public Builder trustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
             this.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
 
-        public Builder setTrustedSigners(@Nullable List<String> trustedSigners) {
+        public Builder trustedSigners(@Nullable List<String> trustedSigners) {
             this.trustedSigners = trustedSigners;
             return this;
         }
 
-        public Builder setViewerProtocolPolicy(String viewerProtocolPolicy) {
+        public Builder viewerProtocolPolicy(String viewerProtocolPolicy) {
             this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
             return this;
         }

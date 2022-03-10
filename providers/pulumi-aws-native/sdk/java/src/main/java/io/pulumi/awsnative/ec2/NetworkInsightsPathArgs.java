@@ -126,72 +126,72 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setDestinationIp(@Nullable Input<String> destinationIp) {
+        public Builder destinationIp(@Nullable Input<String> destinationIp) {
             this.destinationIp = destinationIp;
             return this;
         }
 
-        public Builder setDestinationIp(@Nullable String destinationIp) {
+        public Builder destinationIp(@Nullable String destinationIp) {
             this.destinationIp = Input.ofNullable(destinationIp);
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Input.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder setProtocol(Input<NetworkInsightsPathProtocol> protocol) {
+        public Builder protocol(Input<NetworkInsightsPathProtocol> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(NetworkInsightsPathProtocol protocol) {
+        public Builder protocol(NetworkInsightsPathProtocol protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setSource(Input<String> source) {
+        public Builder source(Input<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setSourceIp(@Nullable Input<String> sourceIp) {
+        public Builder sourceIp(@Nullable Input<String> sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
 
-        public Builder setSourceIp(@Nullable String sourceIp) {
+        public Builder sourceIp(@Nullable String sourceIp) {
             this.sourceIp = Input.ofNullable(sourceIp);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<NetworkInsightsPathTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<NetworkInsightsPathTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsPathTagArgs> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsPathTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

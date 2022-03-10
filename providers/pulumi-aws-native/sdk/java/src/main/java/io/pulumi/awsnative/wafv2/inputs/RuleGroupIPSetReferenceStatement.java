@@ -63,12 +63,12 @@ public final class RuleGroupIPSetReferenceStatement extends io.pulumi.resources.
     	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setIPSetForwardedIPConfig(@Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
+        public Builder iPSetForwardedIPConfig(@Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }

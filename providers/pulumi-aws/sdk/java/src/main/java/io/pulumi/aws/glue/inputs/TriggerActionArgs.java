@@ -137,62 +137,62 @@ public final class TriggerActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setArguments(@Nullable Input<Map<String,String>> arguments) {
+        public Builder arguments(@Nullable Input<Map<String,String>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable Map<String,String> arguments) {
+        public Builder arguments(@Nullable Map<String,String> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setCrawlerName(@Nullable Input<String> crawlerName) {
+        public Builder crawlerName(@Nullable Input<String> crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
 
-        public Builder setCrawlerName(@Nullable String crawlerName) {
+        public Builder crawlerName(@Nullable String crawlerName) {
             this.crawlerName = Input.ofNullable(crawlerName);
             return this;
         }
 
-        public Builder setJobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Input<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = Input.ofNullable(jobName);
             return this;
         }
 
-        public Builder setNotificationProperty(@Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty) {
+        public Builder notificationProperty(@Nullable Input<TriggerActionNotificationPropertyArgs> notificationProperty) {
             this.notificationProperty = notificationProperty;
             return this;
         }
 
-        public Builder setNotificationProperty(@Nullable TriggerActionNotificationPropertyArgs notificationProperty) {
+        public Builder notificationProperty(@Nullable TriggerActionNotificationPropertyArgs notificationProperty) {
             this.notificationProperty = Input.ofNullable(notificationProperty);
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable String securityConfiguration) {
+        public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Input.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

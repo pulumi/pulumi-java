@@ -97,22 +97,22 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationMs(String expirationMs) {
+        public Builder expirationMs(String expirationMs) {
             this.expirationMs = Objects.requireNonNull(expirationMs);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setRequirePartitionFilter(Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -151,72 +151,72 @@ public final class VirtualGatewaySpecListenerHealthCheckArgs extends io.pulumi.r
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setHealthyThreshold(Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(Input<Integer> healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
-        public Builder setHealthyThreshold(Integer healthyThreshold) {
+        public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Input.of(Objects.requireNonNull(healthyThreshold));
             return this;
         }
 
-        public Builder setIntervalMillis(Input<Integer> intervalMillis) {
+        public Builder intervalMillis(Input<Integer> intervalMillis) {
             this.intervalMillis = Objects.requireNonNull(intervalMillis);
             return this;
         }
 
-        public Builder setIntervalMillis(Integer intervalMillis) {
+        public Builder intervalMillis(Integer intervalMillis) {
             this.intervalMillis = Input.of(Objects.requireNonNull(intervalMillis));
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setTimeoutMillis(Input<Integer> timeoutMillis) {
+        public Builder timeoutMillis(Input<Integer> timeoutMillis) {
             this.timeoutMillis = Objects.requireNonNull(timeoutMillis);
             return this;
         }
 
-        public Builder setTimeoutMillis(Integer timeoutMillis) {
+        public Builder timeoutMillis(Integer timeoutMillis) {
             this.timeoutMillis = Input.of(Objects.requireNonNull(timeoutMillis));
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(Input<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Input.of(Objects.requireNonNull(unhealthyThreshold));
             return this;
         }

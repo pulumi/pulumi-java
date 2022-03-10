@@ -127,52 +127,52 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setFileUploadLimitInMb(@Nullable Input<Integer> fileUploadLimitInMb) {
+        public Builder fileUploadLimitInMb(@Nullable Input<Integer> fileUploadLimitInMb) {
             this.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
 
-        public Builder setFileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
+        public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             this.fileUploadLimitInMb = Input.ofNullable(fileUploadLimitInMb);
             return this;
         }
 
-        public Builder setMaxRequestBodySizeInKb(@Nullable Input<Integer> maxRequestBodySizeInKb) {
+        public Builder maxRequestBodySizeInKb(@Nullable Input<Integer> maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
 
-        public Builder setMaxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
+        public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = Input.ofNullable(maxRequestBodySizeInKb);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,WebApplicationFirewallMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,WebApplicationFirewallMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,WebApplicationFirewallMode> mode) {
+        public Builder mode(@Nullable Either<String,WebApplicationFirewallMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Input<Boolean> requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Input<Boolean> requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Boolean requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             this.requestBodyCheck = Input.ofNullable(requestBodyCheck);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,WebApplicationFirewallEnabledState>> state) {
+        public Builder state(@Nullable Input<Either<String,WebApplicationFirewallEnabledState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,WebApplicationFirewallEnabledState> state) {
+        public Builder state(@Nullable Either<String,WebApplicationFirewallEnabledState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

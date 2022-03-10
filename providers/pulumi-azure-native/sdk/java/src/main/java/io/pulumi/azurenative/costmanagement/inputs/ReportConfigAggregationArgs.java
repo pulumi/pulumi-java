@@ -75,22 +75,22 @@ public final class ReportConfigAggregationArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder setFunction(Input<Either<String,FunctionType>> function) {
+        public Builder function(Input<Either<String,FunctionType>> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setFunction(Either<String,FunctionType> function) {
+        public Builder function(Either<String,FunctionType> function) {
             this.function = Input.of(Objects.requireNonNull(function));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

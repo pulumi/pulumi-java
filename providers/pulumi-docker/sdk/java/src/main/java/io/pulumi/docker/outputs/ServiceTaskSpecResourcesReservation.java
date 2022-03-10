@@ -60,17 +60,17 @@ public final class ServiceTaskSpecResourcesReservation {
     	      this.nanoCpus = defaults.nanoCpus;
         }
 
-        public Builder setGenericResources(@Nullable ServiceTaskSpecResourcesReservationGenericResources genericResources) {
+        public Builder genericResources(@Nullable ServiceTaskSpecResourcesReservationGenericResources genericResources) {
             this.genericResources = genericResources;
             return this;
         }
 
-        public Builder setMemoryBytes(@Nullable Integer memoryBytes) {
+        public Builder memoryBytes(@Nullable Integer memoryBytes) {
             this.memoryBytes = memoryBytes;
             return this;
         }
 
-        public Builder setNanoCpus(@Nullable Integer nanoCpus) {
+        public Builder nanoCpus(@Nullable Integer nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
         }

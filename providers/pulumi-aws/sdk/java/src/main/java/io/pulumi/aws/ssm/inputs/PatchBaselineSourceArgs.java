@@ -86,32 +86,32 @@ public final class PatchBaselineSourceArgs extends io.pulumi.resources.ResourceA
     	      this.products = defaults.products;
         }
 
-        public Builder setConfiguration(Input<String> configuration) {
+        public Builder configuration(Input<String> configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setConfiguration(String configuration) {
+        public Builder configuration(String configuration) {
             this.configuration = Input.of(Objects.requireNonNull(configuration));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProducts(Input<List<String>> products) {
+        public Builder products(Input<List<String>> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }
 
-        public Builder setProducts(List<String> products) {
+        public Builder products(List<String> products) {
             this.products = Input.of(Objects.requireNonNull(products));
             return this;
         }

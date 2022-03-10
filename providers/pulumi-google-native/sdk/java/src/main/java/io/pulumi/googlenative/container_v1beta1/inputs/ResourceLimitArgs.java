@@ -90,32 +90,32 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setMaximum(@Nullable Input<String> maximum) {
+        public Builder maximum(@Nullable Input<String> maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMaximum(@Nullable String maximum) {
+        public Builder maximum(@Nullable String maximum) {
             this.maximum = Input.ofNullable(maximum);
             return this;
         }
 
-        public Builder setMinimum(@Nullable Input<String> minimum) {
+        public Builder minimum(@Nullable Input<String> minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setMinimum(@Nullable String minimum) {
+        public Builder minimum(@Nullable String minimum) {
             this.minimum = Input.ofNullable(minimum);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }

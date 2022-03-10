@@ -40,7 +40,7 @@ public final class RuleGroupNotStatement {
     	      this.statement = defaults.statement;
         }
 
-        public Builder setStatement(RuleGroupStatement statement) {
+        public Builder statement(RuleGroupStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }

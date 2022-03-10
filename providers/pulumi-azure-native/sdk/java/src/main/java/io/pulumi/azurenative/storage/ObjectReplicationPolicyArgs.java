@@ -136,62 +136,62 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
     	      this.sourceAccount = defaults.sourceAccount;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDestinationAccount(Input<String> destinationAccount) {
+        public Builder destinationAccount(Input<String> destinationAccount) {
             this.destinationAccount = Objects.requireNonNull(destinationAccount);
             return this;
         }
 
-        public Builder setDestinationAccount(String destinationAccount) {
+        public Builder destinationAccount(String destinationAccount) {
             this.destinationAccount = Input.of(Objects.requireNonNull(destinationAccount));
             return this;
         }
 
-        public Builder setObjectReplicationPolicyId(@Nullable Input<String> objectReplicationPolicyId) {
+        public Builder objectReplicationPolicyId(@Nullable Input<String> objectReplicationPolicyId) {
             this.objectReplicationPolicyId = objectReplicationPolicyId;
             return this;
         }
 
-        public Builder setObjectReplicationPolicyId(@Nullable String objectReplicationPolicyId) {
+        public Builder objectReplicationPolicyId(@Nullable String objectReplicationPolicyId) {
             this.objectReplicationPolicyId = Input.ofNullable(objectReplicationPolicyId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<ObjectReplicationPolicyRuleArgs> rules) {
+        public Builder rules(@Nullable List<ObjectReplicationPolicyRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setSourceAccount(Input<String> sourceAccount) {
+        public Builder sourceAccount(Input<String> sourceAccount) {
             this.sourceAccount = Objects.requireNonNull(sourceAccount);
             return this;
         }
 
-        public Builder setSourceAccount(String sourceAccount) {
+        public Builder sourceAccount(String sourceAccount) {
             this.sourceAccount = Input.of(Objects.requireNonNull(sourceAccount));
             return this;
         }

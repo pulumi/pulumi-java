@@ -383,107 +383,107 @@ public final class GetApplicationDefinitionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifacts(@Nullable List<ApplicationDefinitionArtifactResponse> artifacts) {
+        public Builder artifacts(@Nullable List<ApplicationDefinitionArtifactResponse> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable List<ApplicationAuthorizationResponse> authorizations) {
+        public Builder authorizations(@Nullable List<ApplicationAuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setCreateUiDefinition(@Nullable Object createUiDefinition) {
+        public Builder createUiDefinition(@Nullable Object createUiDefinition) {
             this.createUiDefinition = createUiDefinition;
             return this;
         }
 
-        public Builder setDeploymentPolicy(@Nullable ApplicationDeploymentPolicyResponse deploymentPolicy) {
+        public Builder deploymentPolicy(@Nullable ApplicationDeploymentPolicyResponse deploymentPolicy) {
             this.deploymentPolicy = deploymentPolicy;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLockLevel(String lockLevel) {
+        public Builder lockLevel(String lockLevel) {
             this.lockLevel = Objects.requireNonNull(lockLevel);
             return this;
         }
 
-        public Builder setLockingPolicy(@Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy) {
+        public Builder lockingPolicy(@Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy) {
             this.lockingPolicy = lockingPolicy;
             return this;
         }
 
-        public Builder setMainTemplate(@Nullable Object mainTemplate) {
+        public Builder mainTemplate(@Nullable Object mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagementPolicy(@Nullable ApplicationManagementPolicyResponse managementPolicy) {
+        public Builder managementPolicy(@Nullable ApplicationManagementPolicyResponse managementPolicy) {
             this.managementPolicy = managementPolicy;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationPolicy(@Nullable ApplicationNotificationPolicyResponse notificationPolicy) {
+        public Builder notificationPolicy(@Nullable ApplicationNotificationPolicyResponse notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
 
-        public Builder setPackageFileUri(@Nullable String packageFileUri) {
+        public Builder packageFileUri(@Nullable String packageFileUri) {
             this.packageFileUri = packageFileUri;
             return this;
         }
 
-        public Builder setPolicies(@Nullable List<ApplicationPolicyResponse> policies) {
+        public Builder policies(@Nullable List<ApplicationPolicyResponse> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

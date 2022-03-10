@@ -91,17 +91,17 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated extends i
     	      this.solutions = defaults.solutions;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setSolutions(@Nullable List<String> solutions) {
+        public Builder solutions(@Nullable List<String> solutions) {
             this.solutions = solutions;
             return this;
         }

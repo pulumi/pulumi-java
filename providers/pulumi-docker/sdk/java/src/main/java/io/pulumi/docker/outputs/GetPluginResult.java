@@ -93,37 +93,37 @@ public final class GetPluginResult {
     	      this.pluginReference = defaults.pluginReference;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnvs(List<String> envs) {
+        public Builder envs(List<String> envs) {
             this.envs = Objects.requireNonNull(envs);
             return this;
         }
 
-        public Builder setGrantAllPermissions(Boolean grantAllPermissions) {
+        public Builder grantAllPermissions(Boolean grantAllPermissions) {
             this.grantAllPermissions = Objects.requireNonNull(grantAllPermissions);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPluginReference(String pluginReference) {
+        public Builder pluginReference(String pluginReference) {
             this.pluginReference = Objects.requireNonNull(pluginReference);
             return this;
         }

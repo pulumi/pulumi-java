@@ -85,32 +85,32 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
     	      this.messageGroupsList = defaults.messageGroupsList;
         }
 
-        public Builder setAllowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Input.ofNullable(allowInterrupt);
             return this;
         }
 
-        public Builder setMaxRetries(Input<Integer> maxRetries) {
+        public Builder maxRetries(Input<Integer> maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
 
-        public Builder setMaxRetries(Integer maxRetries) {
+        public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Input.of(Objects.requireNonNull(maxRetries));
             return this;
         }
 
-        public Builder setMessageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
+        public Builder messageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
 
-        public Builder setMessageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
+        public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
             this.messageGroupsList = Input.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }

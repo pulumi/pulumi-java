@@ -67,22 +67,22 @@ public final class GetRouteCalculatorResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCalculatorArn(@Nullable String calculatorArn) {
+        public Builder calculatorArn(@Nullable String calculatorArn) {
             this.calculatorArn = calculatorArn;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }

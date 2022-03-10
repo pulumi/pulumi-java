@@ -123,52 +123,52 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     	      this.time = defaults.time;
         }
 
-        public Builder setCode(@Nullable Input<String> code) {
+        public Builder code(@Nullable Input<String> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setDisplayStatus(@Nullable Input<String> displayStatus) {
+        public Builder displayStatus(@Nullable Input<String> displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
 
-        public Builder setDisplayStatus(@Nullable String displayStatus) {
+        public Builder displayStatus(@Nullable String displayStatus) {
             this.displayStatus = Input.ofNullable(displayStatus);
             return this;
         }
 
-        public Builder setLevel(@Nullable Input<StatusLevelTypes> level) {
+        public Builder level(@Nullable Input<StatusLevelTypes> level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLevel(@Nullable StatusLevelTypes level) {
+        public Builder level(@Nullable StatusLevelTypes level) {
             this.level = Input.ofNullable(level);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setTime(@Nullable Input<String> time) {
+        public Builder time(@Nullable Input<String> time) {
             this.time = time;
             return this;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = Input.ofNullable(time);
             return this;
         }

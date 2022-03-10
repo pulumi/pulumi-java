@@ -252,172 +252,172 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder setAlarmIdentifier(@Nullable Input<HealthCheckAlarmIdentifierArgs> alarmIdentifier) {
+        public Builder alarmIdentifier(@Nullable Input<HealthCheckAlarmIdentifierArgs> alarmIdentifier) {
             this.alarmIdentifier = alarmIdentifier;
             return this;
         }
 
-        public Builder setAlarmIdentifier(@Nullable HealthCheckAlarmIdentifierArgs alarmIdentifier) {
+        public Builder alarmIdentifier(@Nullable HealthCheckAlarmIdentifierArgs alarmIdentifier) {
             this.alarmIdentifier = Input.ofNullable(alarmIdentifier);
             return this;
         }
 
-        public Builder setChildHealthChecks(@Nullable Input<List<String>> childHealthChecks) {
+        public Builder childHealthChecks(@Nullable Input<List<String>> childHealthChecks) {
             this.childHealthChecks = childHealthChecks;
             return this;
         }
 
-        public Builder setChildHealthChecks(@Nullable List<String> childHealthChecks) {
+        public Builder childHealthChecks(@Nullable List<String> childHealthChecks) {
             this.childHealthChecks = Input.ofNullable(childHealthChecks);
             return this;
         }
 
-        public Builder setEnableSNI(@Nullable Input<Boolean> enableSNI) {
+        public Builder enableSNI(@Nullable Input<Boolean> enableSNI) {
             this.enableSNI = enableSNI;
             return this;
         }
 
-        public Builder setEnableSNI(@Nullable Boolean enableSNI) {
+        public Builder enableSNI(@Nullable Boolean enableSNI) {
             this.enableSNI = Input.ofNullable(enableSNI);
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Input.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(@Nullable Input<String> fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(@Nullable Input<String> fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = Input.ofNullable(fullyQualifiedDomainName);
             return this;
         }
 
-        public Builder setHealthThreshold(@Nullable Input<Integer> healthThreshold) {
+        public Builder healthThreshold(@Nullable Input<Integer> healthThreshold) {
             this.healthThreshold = healthThreshold;
             return this;
         }
 
-        public Builder setHealthThreshold(@Nullable Integer healthThreshold) {
+        public Builder healthThreshold(@Nullable Integer healthThreshold) {
             this.healthThreshold = Input.ofNullable(healthThreshold);
             return this;
         }
 
-        public Builder setIPAddress(@Nullable Input<String> iPAddress) {
+        public Builder iPAddress(@Nullable Input<String> iPAddress) {
             this.iPAddress = iPAddress;
             return this;
         }
 
-        public Builder setIPAddress(@Nullable String iPAddress) {
+        public Builder iPAddress(@Nullable String iPAddress) {
             this.iPAddress = Input.ofNullable(iPAddress);
             return this;
         }
 
-        public Builder setInsufficientDataHealthStatus(@Nullable Input<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus) {
+        public Builder insufficientDataHealthStatus(@Nullable Input<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
 
-        public Builder setInsufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
+        public Builder insufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = Input.ofNullable(insufficientDataHealthStatus);
             return this;
         }
 
-        public Builder setInverted(@Nullable Input<Boolean> inverted) {
+        public Builder inverted(@Nullable Input<Boolean> inverted) {
             this.inverted = inverted;
             return this;
         }
 
-        public Builder setInverted(@Nullable Boolean inverted) {
+        public Builder inverted(@Nullable Boolean inverted) {
             this.inverted = Input.ofNullable(inverted);
             return this;
         }
 
-        public Builder setMeasureLatency(@Nullable Input<Boolean> measureLatency) {
+        public Builder measureLatency(@Nullable Input<Boolean> measureLatency) {
             this.measureLatency = measureLatency;
             return this;
         }
 
-        public Builder setMeasureLatency(@Nullable Boolean measureLatency) {
+        public Builder measureLatency(@Nullable Boolean measureLatency) {
             this.measureLatency = Input.ofNullable(measureLatency);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Input<Integer> requestInterval) {
+        public Builder requestInterval(@Nullable Input<Integer> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Integer requestInterval) {
+        public Builder requestInterval(@Nullable Integer requestInterval) {
             this.requestInterval = Input.ofNullable(requestInterval);
             return this;
         }
 
-        public Builder setResourcePath(@Nullable Input<String> resourcePath) {
+        public Builder resourcePath(@Nullable Input<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = Input.ofNullable(resourcePath);
             return this;
         }
 
-        public Builder setRoutingControlArn(@Nullable Input<String> routingControlArn) {
+        public Builder routingControlArn(@Nullable Input<String> routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
 
-        public Builder setRoutingControlArn(@Nullable String routingControlArn) {
+        public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = Input.ofNullable(routingControlArn);
             return this;
         }
 
-        public Builder setSearchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Input<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
-        public Builder setSearchString(@Nullable String searchString) {
+        public Builder searchString(@Nullable String searchString) {
             this.searchString = Input.ofNullable(searchString);
             return this;
         }
 
-        public Builder setType(Input<HealthCheckConfigPropertiesType> type) {
+        public Builder type(Input<HealthCheckConfigPropertiesType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(HealthCheckConfigPropertiesType type) {
+        public Builder type(HealthCheckConfigPropertiesType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

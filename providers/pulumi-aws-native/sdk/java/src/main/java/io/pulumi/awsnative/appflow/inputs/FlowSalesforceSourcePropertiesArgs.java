@@ -75,32 +75,32 @@ public final class FlowSalesforceSourcePropertiesArgs extends io.pulumi.resource
     	      this.object = defaults.object;
         }
 
-        public Builder setEnableDynamicFieldUpdate(@Nullable Input<Boolean> enableDynamicFieldUpdate) {
+        public Builder enableDynamicFieldUpdate(@Nullable Input<Boolean> enableDynamicFieldUpdate) {
             this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
 
-        public Builder setEnableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
+        public Builder enableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
             this.enableDynamicFieldUpdate = Input.ofNullable(enableDynamicFieldUpdate);
             return this;
         }
 
-        public Builder setIncludeDeletedRecords(@Nullable Input<Boolean> includeDeletedRecords) {
+        public Builder includeDeletedRecords(@Nullable Input<Boolean> includeDeletedRecords) {
             this.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
 
-        public Builder setIncludeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
+        public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
             this.includeDeletedRecords = Input.ofNullable(includeDeletedRecords);
             return this;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }

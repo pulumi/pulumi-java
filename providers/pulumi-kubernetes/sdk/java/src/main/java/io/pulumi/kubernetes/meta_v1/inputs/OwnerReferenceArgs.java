@@ -139,62 +139,62 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setApiVersion(Input<String> apiVersion) {
+        public Builder apiVersion(Input<String> apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Input.of(Objects.requireNonNull(apiVersion));
             return this;
         }
 
-        public Builder setBlockOwnerDeletion(@Nullable Input<Boolean> blockOwnerDeletion) {
+        public Builder blockOwnerDeletion(@Nullable Input<Boolean> blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
 
-        public Builder setBlockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
+        public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = Input.ofNullable(blockOwnerDeletion);
             return this;
         }
 
-        public Builder setController(@Nullable Input<Boolean> controller) {
+        public Builder controller(@Nullable Input<Boolean> controller) {
             this.controller = controller;
             return this;
         }
 
-        public Builder setController(@Nullable Boolean controller) {
+        public Builder controller(@Nullable Boolean controller) {
             this.controller = Input.ofNullable(controller);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setUid(Input<String> uid) {
+        public Builder uid(Input<String> uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Input.of(Objects.requireNonNull(uid));
             return this;
         }

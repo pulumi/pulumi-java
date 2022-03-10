@@ -132,37 +132,37 @@ public final class GetNetworkResult {
     	      this.subnetworksSelfLinks = defaults.subnetworksSelfLinks;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGatewayIpv4(String gatewayIpv4) {
+        public Builder gatewayIpv4(String gatewayIpv4) {
             this.gatewayIpv4 = Objects.requireNonNull(gatewayIpv4);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSubnetworksSelfLinks(List<String> subnetworksSelfLinks) {
+        public Builder subnetworksSelfLinks(List<String> subnetworksSelfLinks) {
             this.subnetworksSelfLinks = Objects.requireNonNull(subnetworksSelfLinks);
             return this;
         }

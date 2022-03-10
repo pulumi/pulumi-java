@@ -52,7 +52,7 @@ public final class InboundSamlConfigSpConfigSpCertificate {
     	      this.x509Certificate = defaults.x509Certificate;
         }
 
-        public Builder setX509Certificate(@Nullable String x509Certificate) {
+        public Builder x509Certificate(@Nullable String x509Certificate) {
             this.x509Certificate = x509Certificate;
             return this;
         }

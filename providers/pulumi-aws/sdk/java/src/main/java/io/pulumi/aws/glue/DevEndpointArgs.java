@@ -282,152 +282,152 @@ public final class DevEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerType = defaults.workerType;
         }
 
-        public Builder setArguments(@Nullable Input<Map<String,Object>> arguments) {
+        public Builder arguments(@Nullable Input<Map<String,Object>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable Map<String,Object> arguments) {
+        public Builder arguments(@Nullable Map<String,Object> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setExtraJarsS3Path(@Nullable Input<String> extraJarsS3Path) {
+        public Builder extraJarsS3Path(@Nullable Input<String> extraJarsS3Path) {
             this.extraJarsS3Path = extraJarsS3Path;
             return this;
         }
 
-        public Builder setExtraJarsS3Path(@Nullable String extraJarsS3Path) {
+        public Builder extraJarsS3Path(@Nullable String extraJarsS3Path) {
             this.extraJarsS3Path = Input.ofNullable(extraJarsS3Path);
             return this;
         }
 
-        public Builder setExtraPythonLibsS3Path(@Nullable Input<String> extraPythonLibsS3Path) {
+        public Builder extraPythonLibsS3Path(@Nullable Input<String> extraPythonLibsS3Path) {
             this.extraPythonLibsS3Path = extraPythonLibsS3Path;
             return this;
         }
 
-        public Builder setExtraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
+        public Builder extraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
             this.extraPythonLibsS3Path = Input.ofNullable(extraPythonLibsS3Path);
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable Input<String> glueVersion) {
+        public Builder glueVersion(@Nullable Input<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable String glueVersion) {
+        public Builder glueVersion(@Nullable String glueVersion) {
             this.glueVersion = Input.ofNullable(glueVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Input<Integer> numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Input<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = Input.ofNullable(numberOfNodes);
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Integer numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable Input<List<String>> publicKeys) {
+        public Builder publicKeys(@Nullable Input<List<String>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<String> publicKeys) {
+        public Builder publicKeys(@Nullable List<String> publicKeys) {
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable String securityConfiguration) {
+        public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Input.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkerType(@Nullable Input<String> workerType) {
+        public Builder workerType(@Nullable Input<String> workerType) {
             this.workerType = workerType;
             return this;
         }
 
-        public Builder setWorkerType(@Nullable String workerType) {
+        public Builder workerType(@Nullable String workerType) {
             this.workerType = Input.ofNullable(workerType);
             return this;
         }

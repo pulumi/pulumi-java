@@ -120,52 +120,52 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setExecutionRoleArn(Input<String> executionRoleArn) {
+        public Builder executionRoleArn(Input<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
-        public Builder setExecutionRoleArn(String executionRoleArn) {
+        public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Input.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
 
-        public Builder setPolicyDetails(Input<LifecyclePolicyPolicyDetailsArgs> policyDetails) {
+        public Builder policyDetails(Input<LifecyclePolicyPolicyDetailsArgs> policyDetails) {
             this.policyDetails = Objects.requireNonNull(policyDetails);
             return this;
         }
 
-        public Builder setPolicyDetails(LifecyclePolicyPolicyDetailsArgs policyDetails) {
+        public Builder policyDetails(LifecyclePolicyPolicyDetailsArgs policyDetails) {
             this.policyDetails = Input.of(Objects.requireNonNull(policyDetails));
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -232,112 +232,112 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suppressHelmHookWarnings = defaults.suppressHelmHookWarnings;
         }
 
-        public Builder setCluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Input<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
-        public Builder setCluster(@Nullable String cluster) {
+        public Builder cluster(@Nullable String cluster) {
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
 
-        public Builder setContext(@Nullable Input<String> context) {
+        public Builder context(@Nullable Input<String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setEnableDryRun(@Nullable Input<Boolean> enableDryRun) {
+        public Builder enableDryRun(@Nullable Input<Boolean> enableDryRun) {
             this.enableDryRun = enableDryRun;
             return this;
         }
 
-        public Builder setEnableDryRun(@Nullable Boolean enableDryRun) {
+        public Builder enableDryRun(@Nullable Boolean enableDryRun) {
             this.enableDryRun = Input.ofNullable(enableDryRun);
             return this;
         }
 
-        public Builder setEnableReplaceCRD(@Nullable Input<Boolean> enableReplaceCRD) {
+        public Builder enableReplaceCRD(@Nullable Input<Boolean> enableReplaceCRD) {
             this.enableReplaceCRD = enableReplaceCRD;
             return this;
         }
 
-        public Builder setEnableReplaceCRD(@Nullable Boolean enableReplaceCRD) {
+        public Builder enableReplaceCRD(@Nullable Boolean enableReplaceCRD) {
             this.enableReplaceCRD = Input.ofNullable(enableReplaceCRD);
             return this;
         }
 
-        public Builder setHelmReleaseSettings(@Nullable Input<HelmReleaseSettingsArgs> helmReleaseSettings) {
+        public Builder helmReleaseSettings(@Nullable Input<HelmReleaseSettingsArgs> helmReleaseSettings) {
             this.helmReleaseSettings = helmReleaseSettings;
             return this;
         }
 
-        public Builder setHelmReleaseSettings(@Nullable HelmReleaseSettingsArgs helmReleaseSettings) {
+        public Builder helmReleaseSettings(@Nullable HelmReleaseSettingsArgs helmReleaseSettings) {
             this.helmReleaseSettings = Input.ofNullable(helmReleaseSettings);
             return this;
         }
 
-        public Builder setKubeClientSettings(@Nullable Input<KubeClientSettingsArgs> kubeClientSettings) {
+        public Builder kubeClientSettings(@Nullable Input<KubeClientSettingsArgs> kubeClientSettings) {
             this.kubeClientSettings = kubeClientSettings;
             return this;
         }
 
-        public Builder setKubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
+        public Builder kubeClientSettings(@Nullable KubeClientSettingsArgs kubeClientSettings) {
             this.kubeClientSettings = Input.ofNullable(kubeClientSettings);
             return this;
         }
 
-        public Builder setKubeconfig(@Nullable Input<String> kubeconfig) {
+        public Builder kubeconfig(@Nullable Input<String> kubeconfig) {
             this.kubeconfig = kubeconfig;
             return this;
         }
 
-        public Builder setKubeconfig(@Nullable String kubeconfig) {
+        public Builder kubeconfig(@Nullable String kubeconfig) {
             this.kubeconfig = Input.ofNullable(kubeconfig);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setRenderYamlToDirectory(@Nullable Input<String> renderYamlToDirectory) {
+        public Builder renderYamlToDirectory(@Nullable Input<String> renderYamlToDirectory) {
             this.renderYamlToDirectory = renderYamlToDirectory;
             return this;
         }
 
-        public Builder setRenderYamlToDirectory(@Nullable String renderYamlToDirectory) {
+        public Builder renderYamlToDirectory(@Nullable String renderYamlToDirectory) {
             this.renderYamlToDirectory = Input.ofNullable(renderYamlToDirectory);
             return this;
         }
 
-        public Builder setSuppressDeprecationWarnings(@Nullable Input<Boolean> suppressDeprecationWarnings) {
+        public Builder suppressDeprecationWarnings(@Nullable Input<Boolean> suppressDeprecationWarnings) {
             this.suppressDeprecationWarnings = suppressDeprecationWarnings;
             return this;
         }
 
-        public Builder setSuppressDeprecationWarnings(@Nullable Boolean suppressDeprecationWarnings) {
+        public Builder suppressDeprecationWarnings(@Nullable Boolean suppressDeprecationWarnings) {
             this.suppressDeprecationWarnings = Input.ofNullable(suppressDeprecationWarnings);
             return this;
         }
 
-        public Builder setSuppressHelmHookWarnings(@Nullable Input<Boolean> suppressHelmHookWarnings) {
+        public Builder suppressHelmHookWarnings(@Nullable Input<Boolean> suppressHelmHookWarnings) {
             this.suppressHelmHookWarnings = suppressHelmHookWarnings;
             return this;
         }
 
-        public Builder setSuppressHelmHookWarnings(@Nullable Boolean suppressHelmHookWarnings) {
+        public Builder suppressHelmHookWarnings(@Nullable Boolean suppressHelmHookWarnings) {
             this.suppressHelmHookWarnings = Input.ofNullable(suppressHelmHookWarnings);
             return this;
         }

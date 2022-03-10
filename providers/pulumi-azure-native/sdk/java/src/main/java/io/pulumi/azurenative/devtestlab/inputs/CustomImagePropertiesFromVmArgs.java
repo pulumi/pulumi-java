@@ -92,32 +92,32 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
     	      this.windowsOsInfo = defaults.windowsOsInfo;
         }
 
-        public Builder setLinuxOsInfo(@Nullable Input<LinuxOsInfoArgs> linuxOsInfo) {
+        public Builder linuxOsInfo(@Nullable Input<LinuxOsInfoArgs> linuxOsInfo) {
             this.linuxOsInfo = linuxOsInfo;
             return this;
         }
 
-        public Builder setLinuxOsInfo(@Nullable LinuxOsInfoArgs linuxOsInfo) {
+        public Builder linuxOsInfo(@Nullable LinuxOsInfoArgs linuxOsInfo) {
             this.linuxOsInfo = Input.ofNullable(linuxOsInfo);
             return this;
         }
 
-        public Builder setSourceVmId(@Nullable Input<String> sourceVmId) {
+        public Builder sourceVmId(@Nullable Input<String> sourceVmId) {
             this.sourceVmId = sourceVmId;
             return this;
         }
 
-        public Builder setSourceVmId(@Nullable String sourceVmId) {
+        public Builder sourceVmId(@Nullable String sourceVmId) {
             this.sourceVmId = Input.ofNullable(sourceVmId);
             return this;
         }
 
-        public Builder setWindowsOsInfo(@Nullable Input<WindowsOsInfoArgs> windowsOsInfo) {
+        public Builder windowsOsInfo(@Nullable Input<WindowsOsInfoArgs> windowsOsInfo) {
             this.windowsOsInfo = windowsOsInfo;
             return this;
         }
 
-        public Builder setWindowsOsInfo(@Nullable WindowsOsInfoArgs windowsOsInfo) {
+        public Builder windowsOsInfo(@Nullable WindowsOsInfoArgs windowsOsInfo) {
             this.windowsOsInfo = Input.ofNullable(windowsOsInfo);
             return this;
         }

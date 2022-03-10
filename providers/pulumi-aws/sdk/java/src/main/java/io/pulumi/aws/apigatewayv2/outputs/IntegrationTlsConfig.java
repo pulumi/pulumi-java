@@ -50,7 +50,7 @@ public final class IntegrationTlsConfig {
     	      this.serverNameToVerify = defaults.serverNameToVerify;
         }
 
-        public Builder setServerNameToVerify(@Nullable String serverNameToVerify) {
+        public Builder serverNameToVerify(@Nullable String serverNameToVerify) {
             this.serverNameToVerify = serverNameToVerify;
             return this;
         }

@@ -75,22 +75,22 @@ public final class GoogleCloudNetworksecurityV1beta1CertificateProviderArgs exte
     	      this.grpcEndpoint = defaults.grpcEndpoint;
         }
 
-        public Builder setCertificateProviderInstance(@Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance) {
+        public Builder certificateProviderInstance(@Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance) {
             this.certificateProviderInstance = certificateProviderInstance;
             return this;
         }
 
-        public Builder setCertificateProviderInstance(@Nullable CertificateProviderInstanceArgs certificateProviderInstance) {
+        public Builder certificateProviderInstance(@Nullable CertificateProviderInstanceArgs certificateProviderInstance) {
             this.certificateProviderInstance = Input.ofNullable(certificateProviderInstance);
             return this;
         }
 
-        public Builder setGrpcEndpoint(@Nullable Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint) {
+        public Builder grpcEndpoint(@Nullable Input<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint) {
             this.grpcEndpoint = grpcEndpoint;
             return this;
         }
 
-        public Builder setGrpcEndpoint(@Nullable GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs grpcEndpoint) {
+        public Builder grpcEndpoint(@Nullable GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs grpcEndpoint) {
             this.grpcEndpoint = Input.ofNullable(grpcEndpoint);
             return this;
         }

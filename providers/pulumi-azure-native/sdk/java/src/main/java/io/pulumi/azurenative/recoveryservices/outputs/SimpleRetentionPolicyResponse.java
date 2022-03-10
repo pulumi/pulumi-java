@@ -70,12 +70,12 @@ public final class SimpleRetentionPolicyResponse {
     	      this.retentionPolicyType = defaults.retentionPolicyType;
         }
 
-        public Builder setRetentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
+        public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
-        public Builder setRetentionPolicyType(String retentionPolicyType) {
+        public Builder retentionPolicyType(String retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }

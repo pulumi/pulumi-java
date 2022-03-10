@@ -331,92 +331,92 @@ public final class GetExtensionResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
-        public Builder setConfigurationSettings(@Nullable Map<String,String> configurationSettings) {
+        public Builder configurationSettings(@Nullable Map<String,String> configurationSettings) {
             this.configurationSettings = configurationSettings;
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setErrorInfo(ErrorDefinitionResponse errorInfo) {
+        public Builder errorInfo(ErrorDefinitionResponse errorInfo) {
             this.errorInfo = Objects.requireNonNull(errorInfo);
             return this;
         }
 
-        public Builder setExtensionType(@Nullable String extensionType) {
+        public Builder extensionType(@Nullable String extensionType) {
             this.extensionType = extensionType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ConfigurationIdentityResponse identity) {
+        public Builder identity(@Nullable ConfigurationIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInstallState(String installState) {
+        public Builder installState(String installState) {
             this.installState = Objects.requireNonNull(installState);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLastStatusTime(String lastStatusTime) {
+        public Builder lastStatusTime(String lastStatusTime) {
             this.lastStatusTime = Objects.requireNonNull(lastStatusTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReleaseTrain(@Nullable String releaseTrain) {
+        public Builder releaseTrain(@Nullable String releaseTrain) {
             this.releaseTrain = releaseTrain;
             return this;
         }
 
-        public Builder setScope(@Nullable ScopeResponse scope) {
+        public Builder scope(@Nullable ScopeResponse scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<ExtensionStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<ExtensionStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setSystemData(@Nullable SystemDataResponse systemData) {
+        public Builder systemData(@Nullable SystemDataResponse systemData) {
             this.systemData = systemData;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

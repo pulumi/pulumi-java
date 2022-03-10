@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse {
     	      this.event = defaults.event;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }

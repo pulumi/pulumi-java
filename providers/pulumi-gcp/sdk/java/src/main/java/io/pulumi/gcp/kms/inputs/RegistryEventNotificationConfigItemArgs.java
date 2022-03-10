@@ -62,22 +62,22 @@ public final class RegistryEventNotificationConfigItemArgs extends io.pulumi.res
     	      this.subfolderMatches = defaults.subfolderMatches;
         }
 
-        public Builder setPubsubTopicName(Input<String> pubsubTopicName) {
+        public Builder pubsubTopicName(Input<String> pubsubTopicName) {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
 
-        public Builder setPubsubTopicName(String pubsubTopicName) {
+        public Builder pubsubTopicName(String pubsubTopicName) {
             this.pubsubTopicName = Input.of(Objects.requireNonNull(pubsubTopicName));
             return this;
         }
 
-        public Builder setSubfolderMatches(@Nullable Input<String> subfolderMatches) {
+        public Builder subfolderMatches(@Nullable Input<String> subfolderMatches) {
             this.subfolderMatches = subfolderMatches;
             return this;
         }
 
-        public Builder setSubfolderMatches(@Nullable String subfolderMatches) {
+        public Builder subfolderMatches(@Nullable String subfolderMatches) {
             this.subfolderMatches = Input.ofNullable(subfolderMatches);
             return this;
         }

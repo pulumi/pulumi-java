@@ -67,12 +67,12 @@ public final class Lifecycle {
     	      this.preStop = defaults.preStop;
         }
 
-        public Builder setPostStart(@Nullable LifecycleHandler postStart) {
+        public Builder postStart(@Nullable LifecycleHandler postStart) {
             this.postStart = postStart;
             return this;
         }
 
-        public Builder setPreStop(@Nullable LifecycleHandler preStop) {
+        public Builder preStop(@Nullable LifecycleHandler preStop) {
             this.preStop = preStop;
             return this;
         }

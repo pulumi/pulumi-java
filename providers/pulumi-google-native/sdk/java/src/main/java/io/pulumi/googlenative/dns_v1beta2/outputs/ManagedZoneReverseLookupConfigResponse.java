@@ -40,7 +40,7 @@ public final class ManagedZoneReverseLookupConfigResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

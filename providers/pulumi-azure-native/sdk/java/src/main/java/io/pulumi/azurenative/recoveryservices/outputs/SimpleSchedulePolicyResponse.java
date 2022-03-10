@@ -119,27 +119,27 @@ public final class SimpleSchedulePolicyResponse {
     	      this.scheduleWeeklyFrequency = defaults.scheduleWeeklyFrequency;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
 
-        public Builder setScheduleRunDays(@Nullable List<String> scheduleRunDays) {
+        public Builder scheduleRunDays(@Nullable List<String> scheduleRunDays) {
             this.scheduleRunDays = scheduleRunDays;
             return this;
         }
 
-        public Builder setScheduleRunFrequency(@Nullable String scheduleRunFrequency) {
+        public Builder scheduleRunFrequency(@Nullable String scheduleRunFrequency) {
             this.scheduleRunFrequency = scheduleRunFrequency;
             return this;
         }
 
-        public Builder setScheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
+        public Builder scheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
             this.scheduleRunTimes = scheduleRunTimes;
             return this;
         }
 
-        public Builder setScheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
+        public Builder scheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
             this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
         }

@@ -220,122 +220,122 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trainingPhrases = defaults.trainingPhrases;
         }
 
-        public Builder setAgentId(Input<String> agentId) {
+        public Builder agentId(Input<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Input.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Input<Boolean> isFallback) {
+        public Builder isFallback(@Nullable Input<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Boolean isFallback) {
+        public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Input.ofNullable(isFallback);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3beta1IntentParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTrainingPhrases(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs>> trainingPhrases) {
             this.trainingPhrases = trainingPhrases;
             return this;
         }
 
-        public Builder setTrainingPhrases(@Nullable List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseArgs> trainingPhrases) {
             this.trainingPhrases = Input.ofNullable(trainingPhrases);
             return this;
         }

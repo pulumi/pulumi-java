@@ -102,22 +102,22 @@ public final class DistributionConfigurationDistribution {
     	      this.region = defaults.region;
         }
 
-        public Builder setAmiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration) {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
-        public Builder setContainerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

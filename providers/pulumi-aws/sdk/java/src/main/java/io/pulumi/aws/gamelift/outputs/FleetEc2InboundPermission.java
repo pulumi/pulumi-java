@@ -98,22 +98,22 @@ public final class FleetEc2InboundPermission {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

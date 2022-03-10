@@ -70,22 +70,22 @@ public final class IntegrationSourceFlowConfig {
     	      this.sourceConnectorProperties = defaults.sourceConnectorProperties;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorType(IntegrationConnectorType connectorType) {
+        public Builder connectorType(IntegrationConnectorType connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setIncrementalPullConfig(@Nullable IntegrationIncrementalPullConfig incrementalPullConfig) {
+        public Builder incrementalPullConfig(@Nullable IntegrationIncrementalPullConfig incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
 
-        public Builder setSourceConnectorProperties(IntegrationSourceConnectorProperties sourceConnectorProperties) {
+        public Builder sourceConnectorProperties(IntegrationSourceConnectorProperties sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }

@@ -53,12 +53,12 @@ public final class RuleGroupRuleActionAllowCustomRequestHandlingGetArgs extends 
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder setInsertHeaders(Input<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
+        public Builder insertHeaders(Input<List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
 
-        public Builder setInsertHeaders(List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
+        public Builder insertHeaders(List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs> insertHeaders) {
             this.insertHeaders = Input.of(Objects.requireNonNull(insertHeaders));
             return this;
         }

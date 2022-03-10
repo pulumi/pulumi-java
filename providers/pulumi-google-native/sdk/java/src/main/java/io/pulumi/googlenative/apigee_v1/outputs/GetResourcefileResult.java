@@ -83,17 +83,17 @@ public final class GetResourcefileResult {
     	      this.extensions = defaults.extensions;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setExtensions(List<Map<String,String>> extensions) {
+        public Builder extensions(List<Map<String,String>> extensions) {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
         }

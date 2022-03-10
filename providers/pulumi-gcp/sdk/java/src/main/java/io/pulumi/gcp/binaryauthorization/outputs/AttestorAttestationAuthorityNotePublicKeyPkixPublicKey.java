@@ -77,12 +77,12 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder setPublicKeyPem(@Nullable String publicKeyPem) {
+        public Builder publicKeyPem(@Nullable String publicKeyPem) {
             this.publicKeyPem = publicKeyPem;
             return this;
         }
 
-        public Builder setSignatureAlgorithm(@Nullable String signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable String signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }

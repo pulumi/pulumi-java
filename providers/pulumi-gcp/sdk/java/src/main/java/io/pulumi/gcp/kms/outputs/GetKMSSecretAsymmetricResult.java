@@ -99,27 +99,27 @@ public final class GetKMSSecretAsymmetricResult {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setCiphertext(String ciphertext) {
+        public Builder ciphertext(String ciphertext) {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
 
-        public Builder setCrc32(@Nullable String crc32) {
+        public Builder crc32(@Nullable String crc32) {
             this.crc32 = crc32;
             return this;
         }
 
-        public Builder setCryptoKeyVersion(String cryptoKeyVersion) {
+        public Builder cryptoKeyVersion(String cryptoKeyVersion) {
             this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPlaintext(String plaintext) {
+        public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }

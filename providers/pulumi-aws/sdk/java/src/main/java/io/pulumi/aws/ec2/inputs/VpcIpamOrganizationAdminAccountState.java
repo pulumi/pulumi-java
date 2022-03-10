@@ -114,52 +114,52 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDelegatedAdminAccountId(@Nullable Input<String> delegatedAdminAccountId) {
+        public Builder delegatedAdminAccountId(@Nullable Input<String> delegatedAdminAccountId) {
             this.delegatedAdminAccountId = delegatedAdminAccountId;
             return this;
         }
 
-        public Builder setDelegatedAdminAccountId(@Nullable String delegatedAdminAccountId) {
+        public Builder delegatedAdminAccountId(@Nullable String delegatedAdminAccountId) {
             this.delegatedAdminAccountId = Input.ofNullable(delegatedAdminAccountId);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable Input<String> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Input<String> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable String servicePrincipal) {
+        public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = Input.ofNullable(servicePrincipal);
             return this;
         }

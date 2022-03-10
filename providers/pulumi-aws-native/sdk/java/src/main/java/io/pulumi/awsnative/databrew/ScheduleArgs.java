@@ -96,42 +96,42 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCronExpression(Input<String> cronExpression) {
+        public Builder cronExpression(Input<String> cronExpression) {
             this.cronExpression = Objects.requireNonNull(cronExpression);
             return this;
         }
 
-        public Builder setCronExpression(String cronExpression) {
+        public Builder cronExpression(String cronExpression) {
             this.cronExpression = Input.of(Objects.requireNonNull(cronExpression));
             return this;
         }
 
-        public Builder setJobNames(@Nullable Input<List<String>> jobNames) {
+        public Builder jobNames(@Nullable Input<List<String>> jobNames) {
             this.jobNames = jobNames;
             return this;
         }
 
-        public Builder setJobNames(@Nullable List<String> jobNames) {
+        public Builder jobNames(@Nullable List<String> jobNames) {
             this.jobNames = Input.ofNullable(jobNames);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ScheduleTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ScheduleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ScheduleTagArgs> tags) {
+        public Builder tags(@Nullable List<ScheduleTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

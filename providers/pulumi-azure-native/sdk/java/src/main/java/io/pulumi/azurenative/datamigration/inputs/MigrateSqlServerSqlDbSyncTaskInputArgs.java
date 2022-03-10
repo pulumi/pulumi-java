@@ -109,42 +109,42 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setSelectedDatabases(Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Input<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSelectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputArgs> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateSqlServerSqlDbSyncDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder setSourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder setTargetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<SqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable Input<MigrationValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Input<MigrationValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable MigrationValidationOptionsArgs validationOptions) {
+        public Builder validationOptions(@Nullable MigrationValidationOptionsArgs validationOptions) {
             this.validationOptions = Input.ofNullable(validationOptions);
             return this;
         }

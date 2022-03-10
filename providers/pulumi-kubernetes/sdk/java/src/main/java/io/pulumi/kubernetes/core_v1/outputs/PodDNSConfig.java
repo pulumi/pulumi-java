@@ -84,17 +84,17 @@ public final class PodDNSConfig {
     	      this.searches = defaults.searches;
         }
 
-        public Builder setNameservers(@Nullable List<String> nameservers) {
+        public Builder nameservers(@Nullable List<String> nameservers) {
             this.nameservers = nameservers;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<PodDNSConfigOption> options) {
+        public Builder options(@Nullable List<PodDNSConfigOption> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setSearches(@Nullable List<String> searches) {
+        public Builder searches(@Nullable List<String> searches) {
             this.searches = searches;
             return this;
         }

@@ -67,22 +67,22 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDestination(@Nullable Input<BotAliasTextLogDestinationArgs> destination) {
+        public Builder destination(@Nullable Input<BotAliasTextLogDestinationArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable BotAliasTextLogDestinationArgs destination) {
+        public Builder destination(@Nullable BotAliasTextLogDestinationArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }

@@ -48,7 +48,7 @@ public final class TelemetryResponse {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
     	      this.bucketName = defaults.bucketName;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }

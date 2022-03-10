@@ -134,32 +134,32 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
     	      this.subchannel = defaults.subchannel;
         }
 
-        public Builder setChannel(String channel) {
+        public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubchannel(String subchannel) {
+        public Builder subchannel(String subchannel) {
             this.subchannel = Objects.requireNonNull(subchannel);
             return this;
         }

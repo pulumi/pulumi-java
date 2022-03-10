@@ -136,62 +136,62 @@ public final class ControlPanelState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setClusterArn(@Nullable Input<String> clusterArn) {
+        public Builder clusterArn(@Nullable Input<String> clusterArn) {
             this.clusterArn = clusterArn;
             return this;
         }
 
-        public Builder setClusterArn(@Nullable String clusterArn) {
+        public Builder clusterArn(@Nullable String clusterArn) {
             this.clusterArn = Input.ofNullable(clusterArn);
             return this;
         }
 
-        public Builder setDefaultControlPanel(@Nullable Input<Boolean> defaultControlPanel) {
+        public Builder defaultControlPanel(@Nullable Input<Boolean> defaultControlPanel) {
             this.defaultControlPanel = defaultControlPanel;
             return this;
         }
 
-        public Builder setDefaultControlPanel(@Nullable Boolean defaultControlPanel) {
+        public Builder defaultControlPanel(@Nullable Boolean defaultControlPanel) {
             this.defaultControlPanel = Input.ofNullable(defaultControlPanel);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoutingControlCount(@Nullable Input<Integer> routingControlCount) {
+        public Builder routingControlCount(@Nullable Input<Integer> routingControlCount) {
             this.routingControlCount = routingControlCount;
             return this;
         }
 
-        public Builder setRoutingControlCount(@Nullable Integer routingControlCount) {
+        public Builder routingControlCount(@Nullable Integer routingControlCount) {
             this.routingControlCount = Input.ofNullable(routingControlCount);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -52,12 +52,12 @@ public final class BucketOwnershipControlsRuleGetArgs extends io.pulumi.resource
     	      this.objectOwnership = defaults.objectOwnership;
         }
 
-        public Builder setObjectOwnership(Input<String> objectOwnership) {
+        public Builder objectOwnership(Input<String> objectOwnership) {
             this.objectOwnership = Objects.requireNonNull(objectOwnership);
             return this;
         }
 
-        public Builder setObjectOwnership(String objectOwnership) {
+        public Builder objectOwnership(String objectOwnership) {
             this.objectOwnership = Input.of(Objects.requireNonNull(objectOwnership));
             return this;
         }

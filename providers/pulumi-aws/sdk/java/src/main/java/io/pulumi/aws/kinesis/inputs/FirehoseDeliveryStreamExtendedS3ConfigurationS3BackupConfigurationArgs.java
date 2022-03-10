@@ -186,92 +186,92 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketArn(Input<String> bucketArn) {
+        public Builder bucketArn(Input<String> bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Input.of(Objects.requireNonNull(bucketArn));
             return this;
         }
 
-        public Builder setBufferInterval(@Nullable Input<Integer> bufferInterval) {
+        public Builder bufferInterval(@Nullable Input<Integer> bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
 
-        public Builder setBufferInterval(@Nullable Integer bufferInterval) {
+        public Builder bufferInterval(@Nullable Integer bufferInterval) {
             this.bufferInterval = Input.ofNullable(bufferInterval);
             return this;
         }
 
-        public Builder setBufferSize(@Nullable Input<Integer> bufferSize) {
+        public Builder bufferSize(@Nullable Input<Integer> bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
 
-        public Builder setBufferSize(@Nullable Integer bufferSize) {
+        public Builder bufferSize(@Nullable Integer bufferSize) {
             this.bufferSize = Input.ofNullable(bufferSize);
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Input<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable Input<String> compressionFormat) {
+        public Builder compressionFormat(@Nullable Input<String> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable String compressionFormat) {
+        public Builder compressionFormat(@Nullable String compressionFormat) {
             this.compressionFormat = Input.ofNullable(compressionFormat);
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = Input.ofNullable(errorOutputPrefix);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

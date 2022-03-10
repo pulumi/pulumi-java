@@ -50,7 +50,7 @@ public final class VirtualNodeSpecLoggingAccessLog {
     	      this.file = defaults.file;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecLoggingAccessLogFile file) {
+        public Builder file(@Nullable VirtualNodeSpecLoggingAccessLogFile file) {
             this.file = file;
             return this;
         }

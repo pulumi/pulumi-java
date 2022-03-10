@@ -52,12 +52,12 @@ public final class GameServerGroupTargetTrackingConfigurationArgs extends io.pul
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setTargetValue(Input<Double> targetValue) {
+        public Builder targetValue(Input<Double> targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }
 
-        public Builder setTargetValue(Double targetValue) {
+        public Builder targetValue(Double targetValue) {
             this.targetValue = Input.of(Objects.requireNonNull(targetValue));
             return this;
         }

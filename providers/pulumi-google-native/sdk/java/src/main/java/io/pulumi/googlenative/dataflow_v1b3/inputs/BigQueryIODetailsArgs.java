@@ -106,42 +106,42 @@ public final class BigQueryIODetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.table = defaults.table;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<String> table) {
+        public Builder table(@Nullable Input<String> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = Input.ofNullable(table);
             return this;
         }

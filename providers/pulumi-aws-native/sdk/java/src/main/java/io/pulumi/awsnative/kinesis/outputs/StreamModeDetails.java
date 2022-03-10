@@ -48,7 +48,7 @@ public final class StreamModeDetails {
     	      this.streamMode = defaults.streamMode;
         }
 
-        public Builder setStreamMode(StreamModeDetailsStreamMode streamMode) {
+        public Builder streamMode(StreamModeDetailsStreamMode streamMode) {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }

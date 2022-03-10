@@ -220,112 +220,112 @@ public final class StreamState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEncryptionType(@Nullable Input<String> encryptionType) {
+        public Builder encryptionType(@Nullable Input<String> encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
-        public Builder setEncryptionType(@Nullable String encryptionType) {
+        public Builder encryptionType(@Nullable String encryptionType) {
             this.encryptionType = Input.ofNullable(encryptionType);
             return this;
         }
 
-        public Builder setEnforceConsumerDeletion(@Nullable Input<Boolean> enforceConsumerDeletion) {
+        public Builder enforceConsumerDeletion(@Nullable Input<Boolean> enforceConsumerDeletion) {
             this.enforceConsumerDeletion = enforceConsumerDeletion;
             return this;
         }
 
-        public Builder setEnforceConsumerDeletion(@Nullable Boolean enforceConsumerDeletion) {
+        public Builder enforceConsumerDeletion(@Nullable Boolean enforceConsumerDeletion) {
             this.enforceConsumerDeletion = Input.ofNullable(enforceConsumerDeletion);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Input<Integer> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Input<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Integer retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = Input.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder setShardCount(@Nullable Input<Integer> shardCount) {
+        public Builder shardCount(@Nullable Input<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
-        public Builder setShardCount(@Nullable Integer shardCount) {
+        public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = Input.ofNullable(shardCount);
             return this;
         }
 
-        public Builder setShardLevelMetrics(@Nullable Input<List<String>> shardLevelMetrics) {
+        public Builder shardLevelMetrics(@Nullable Input<List<String>> shardLevelMetrics) {
             this.shardLevelMetrics = shardLevelMetrics;
             return this;
         }
 
-        public Builder setShardLevelMetrics(@Nullable List<String> shardLevelMetrics) {
+        public Builder shardLevelMetrics(@Nullable List<String> shardLevelMetrics) {
             this.shardLevelMetrics = Input.ofNullable(shardLevelMetrics);
             return this;
         }
 
-        public Builder setStreamModeDetails(@Nullable Input<StreamStreamModeDetailsGetArgs> streamModeDetails) {
+        public Builder streamModeDetails(@Nullable Input<StreamStreamModeDetailsGetArgs> streamModeDetails) {
             this.streamModeDetails = streamModeDetails;
             return this;
         }
 
-        public Builder setStreamModeDetails(@Nullable StreamStreamModeDetailsGetArgs streamModeDetails) {
+        public Builder streamModeDetails(@Nullable StreamStreamModeDetailsGetArgs streamModeDetails) {
             this.streamModeDetails = Input.ofNullable(streamModeDetails);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

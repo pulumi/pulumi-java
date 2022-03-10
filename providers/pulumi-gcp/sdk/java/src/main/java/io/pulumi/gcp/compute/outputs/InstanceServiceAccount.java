@@ -78,12 +78,12 @@ public final class InstanceServiceAccount {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }

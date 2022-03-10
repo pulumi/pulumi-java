@@ -89,17 +89,17 @@ public final class SegmentResponse extends io.pulumi.resources.InvokeArgs {
     	      this.setId = defaults.setId;
         }
 
-        public Builder setFields(Map<String,String> fields) {
+        public Builder fields(Map<String,String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setSegmentId(String segmentId) {
+        public Builder segmentId(String segmentId) {
             this.segmentId = Objects.requireNonNull(segmentId);
             return this;
         }
 
-        public Builder setSetId(String setId) {
+        public Builder setId(String setId) {
             this.setId = Objects.requireNonNull(setId);
             return this;
         }

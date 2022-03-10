@@ -93,32 +93,32 @@ public final class SoftwareRecipeStepRunScriptArgs extends io.pulumi.resources.R
     	      this.script = defaults.script;
         }
 
-        public Builder setAllowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable Input<List<Integer>> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
-        public Builder setAllowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Input.ofNullable(allowedExitCodes);
             return this;
         }
 
-        public Builder setInterpreter(@Nullable Input<SoftwareRecipeStepRunScriptInterpreter> interpreter) {
+        public Builder interpreter(@Nullable Input<SoftwareRecipeStepRunScriptInterpreter> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
-        public Builder setInterpreter(@Nullable SoftwareRecipeStepRunScriptInterpreter interpreter) {
+        public Builder interpreter(@Nullable SoftwareRecipeStepRunScriptInterpreter interpreter) {
             this.interpreter = Input.ofNullable(interpreter);
             return this;
         }
 
-        public Builder setScript(Input<String> script) {
+        public Builder script(Input<String> script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Input.of(Objects.requireNonNull(script));
             return this;
         }

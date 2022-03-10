@@ -118,27 +118,27 @@ public final class Job {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable JobSpec spec) {
+        public Builder spec(@Nullable JobSpec spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setStatus(@Nullable JobStatus status) {
+        public Builder status(@Nullable JobStatus status) {
             this.status = status;
             return this;
         }

@@ -76,12 +76,12 @@ public final class IPv4FirewallSettingsResponse extends io.pulumi.resources.Invo
     	      this.firewallRules = defaults.firewallRules;
         }
 
-        public Builder setEnablePowerBIService(@Nullable Boolean enablePowerBIService) {
+        public Builder enablePowerBIService(@Nullable Boolean enablePowerBIService) {
             this.enablePowerBIService = enablePowerBIService;
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<IPv4FirewallRuleResponse> firewallRules) {
+        public Builder firewallRules(@Nullable List<IPv4FirewallRuleResponse> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }

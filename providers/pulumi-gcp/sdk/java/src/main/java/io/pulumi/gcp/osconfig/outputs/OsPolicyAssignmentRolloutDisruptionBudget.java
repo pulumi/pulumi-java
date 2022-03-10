@@ -67,12 +67,12 @@ public final class OsPolicyAssignmentRolloutDisruptionBudget {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setFixed(@Nullable Integer fixed) {
+        public Builder fixed(@Nullable Integer fixed) {
             this.fixed = fixed;
             return this;
         }
 
-        public Builder setPercent(@Nullable Integer percent) {
+        public Builder percent(@Nullable Integer percent) {
             this.percent = percent;
             return this;
         }

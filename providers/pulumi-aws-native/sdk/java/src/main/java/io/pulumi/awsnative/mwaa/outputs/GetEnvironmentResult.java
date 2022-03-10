@@ -232,102 +232,102 @@ public final class GetEnvironmentResult {
     	      this.weeklyMaintenanceWindowStart = defaults.weeklyMaintenanceWindowStart;
         }
 
-        public Builder setAirflowConfigurationOptions(@Nullable Object airflowConfigurationOptions) {
+        public Builder airflowConfigurationOptions(@Nullable Object airflowConfigurationOptions) {
             this.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
 
-        public Builder setAirflowVersion(@Nullable String airflowVersion) {
+        public Builder airflowVersion(@Nullable String airflowVersion) {
             this.airflowVersion = airflowVersion;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDagS3Path(@Nullable String dagS3Path) {
+        public Builder dagS3Path(@Nullable String dagS3Path) {
             this.dagS3Path = dagS3Path;
             return this;
         }
 
-        public Builder setEnvironmentClass(@Nullable String environmentClass) {
+        public Builder environmentClass(@Nullable String environmentClass) {
             this.environmentClass = environmentClass;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable EnvironmentLoggingConfiguration loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable EnvironmentLoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Integer maxWorkers) {
+        public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
 
-        public Builder setMinWorkers(@Nullable Integer minWorkers) {
+        public Builder minWorkers(@Nullable Integer minWorkers) {
             this.minWorkers = minWorkers;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable EnvironmentNetworkConfiguration networkConfiguration) {
+        public Builder networkConfiguration(@Nullable EnvironmentNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setPluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
+        public Builder pluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
             this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
             return this;
         }
 
-        public Builder setPluginsS3Path(@Nullable String pluginsS3Path) {
+        public Builder pluginsS3Path(@Nullable String pluginsS3Path) {
             this.pluginsS3Path = pluginsS3Path;
             return this;
         }
 
-        public Builder setRequirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
+        public Builder requirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
             this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
             return this;
         }
 
-        public Builder setRequirementsS3Path(@Nullable String requirementsS3Path) {
+        public Builder requirementsS3Path(@Nullable String requirementsS3Path) {
             this.requirementsS3Path = requirementsS3Path;
             return this;
         }
 
-        public Builder setSchedulers(@Nullable Integer schedulers) {
+        public Builder schedulers(@Nullable Integer schedulers) {
             this.schedulers = schedulers;
             return this;
         }
 
-        public Builder setSourceBucketArn(@Nullable String sourceBucketArn) {
+        public Builder sourceBucketArn(@Nullable String sourceBucketArn) {
             this.sourceBucketArn = sourceBucketArn;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWebserverAccessMode(@Nullable EnvironmentWebserverAccessMode webserverAccessMode) {
+        public Builder webserverAccessMode(@Nullable EnvironmentWebserverAccessMode webserverAccessMode) {
             this.webserverAccessMode = webserverAccessMode;
             return this;
         }
 
-        public Builder setWebserverUrl(@Nullable String webserverUrl) {
+        public Builder webserverUrl(@Nullable String webserverUrl) {
             this.webserverUrl = webserverUrl;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
+        public Builder weeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
             this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }

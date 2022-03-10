@@ -66,22 +66,22 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(Input<FlowOperatorPropertiesKeys> key) {
+        public Builder key(Input<FlowOperatorPropertiesKeys> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(FlowOperatorPropertiesKeys key) {
+        public Builder key(FlowOperatorPropertiesKeys key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

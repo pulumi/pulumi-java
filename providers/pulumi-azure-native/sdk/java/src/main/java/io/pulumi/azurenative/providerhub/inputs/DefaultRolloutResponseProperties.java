@@ -80,17 +80,17 @@ public final class DefaultRolloutResponseProperties extends io.pulumi.resources.
     	      this.status = defaults.status;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSpecification(@Nullable DefaultRolloutPropertiesResponseSpecification specification) {
+        public Builder specification(@Nullable DefaultRolloutPropertiesResponseSpecification specification) {
             this.specification = specification;
             return this;
         }
 
-        public Builder setStatus(@Nullable DefaultRolloutPropertiesResponseStatus status) {
+        public Builder status(@Nullable DefaultRolloutPropertiesResponseStatus status) {
             this.status = status;
             return this;
         }

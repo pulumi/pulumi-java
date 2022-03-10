@@ -77,22 +77,22 @@ public final class OccurenceAttestationArgs extends io.pulumi.resources.Resource
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setSerializedPayload(Input<String> serializedPayload) {
+        public Builder serializedPayload(Input<String> serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
-        public Builder setSerializedPayload(String serializedPayload) {
+        public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Input.of(Objects.requireNonNull(serializedPayload));
             return this;
         }
 
-        public Builder setSignatures(Input<List<OccurenceAttestationSignatureArgs>> signatures) {
+        public Builder signatures(Input<List<OccurenceAttestationSignatureArgs>> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
 
-        public Builder setSignatures(List<OccurenceAttestationSignatureArgs> signatures) {
+        public Builder signatures(List<OccurenceAttestationSignatureArgs> signatures) {
             this.signatures = Input.of(Objects.requireNonNull(signatures));
             return this;
         }

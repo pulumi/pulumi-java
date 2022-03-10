@@ -84,17 +84,17 @@ public final class ClusterSnapshotCopy {
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder setDestinationRegion(String destinationRegion) {
+        public Builder destinationRegion(String destinationRegion) {
             this.destinationRegion = Objects.requireNonNull(destinationRegion);
             return this;
         }
 
-        public Builder setGrantName(@Nullable String grantName) {
+        public Builder grantName(@Nullable String grantName) {
             this.grantName = grantName;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Integer retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }

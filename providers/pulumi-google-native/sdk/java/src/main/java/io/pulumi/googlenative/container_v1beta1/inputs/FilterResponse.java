@@ -56,7 +56,7 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
     	      this.eventType = defaults.eventType;
         }
 
-        public Builder setEventType(List<String> eventType) {
+        public Builder eventType(List<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }

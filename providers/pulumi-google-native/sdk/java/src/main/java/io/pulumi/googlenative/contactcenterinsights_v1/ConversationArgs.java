@@ -254,142 +254,142 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setAgentId(@Nullable Input<String> agentId) {
+        public Builder agentId(@Nullable Input<String> agentId) {
             this.agentId = agentId;
             return this;
         }
 
-        public Builder setAgentId(@Nullable String agentId) {
+        public Builder agentId(@Nullable String agentId) {
             this.agentId = Input.ofNullable(agentId);
             return this;
         }
 
-        public Builder setCallMetadata(@Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata) {
+        public Builder callMetadata(@Nullable Input<GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs> callMetadata) {
             this.callMetadata = callMetadata;
             return this;
         }
 
-        public Builder setCallMetadata(@Nullable GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs callMetadata) {
+        public Builder callMetadata(@Nullable GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs callMetadata) {
             this.callMetadata = Input.ofNullable(callMetadata);
             return this;
         }
 
-        public Builder setConversationId(@Nullable Input<String> conversationId) {
+        public Builder conversationId(@Nullable Input<String> conversationId) {
             this.conversationId = conversationId;
             return this;
         }
 
-        public Builder setConversationId(@Nullable String conversationId) {
+        public Builder conversationId(@Nullable String conversationId) {
             this.conversationId = Input.ofNullable(conversationId);
             return this;
         }
 
-        public Builder setDataSource(@Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource) {
+        public Builder dataSource(@Nullable Input<GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataSource(@Nullable GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs dataSource) {
+        public Builder dataSource(@Nullable GoogleCloudContactcenterinsightsV1ConversationDataSourceArgs dataSource) {
             this.dataSource = Input.ofNullable(dataSource);
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMedium(@Nullable Input<ConversationMedium> medium) {
+        public Builder medium(@Nullable Input<ConversationMedium> medium) {
             this.medium = medium;
             return this;
         }
 
-        public Builder setMedium(@Nullable ConversationMedium medium) {
+        public Builder medium(@Nullable ConversationMedium medium) {
             this.medium = Input.ofNullable(medium);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setObfuscatedUserId(@Nullable Input<String> obfuscatedUserId) {
+        public Builder obfuscatedUserId(@Nullable Input<String> obfuscatedUserId) {
             this.obfuscatedUserId = obfuscatedUserId;
             return this;
         }
 
-        public Builder setObfuscatedUserId(@Nullable String obfuscatedUserId) {
+        public Builder obfuscatedUserId(@Nullable String obfuscatedUserId) {
             this.obfuscatedUserId = Input.ofNullable(obfuscatedUserId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Input<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable String ttl) {
+        public Builder ttl(@Nullable String ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }

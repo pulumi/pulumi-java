@@ -103,42 +103,42 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setCiphertextBlob(@Nullable Input<String> ciphertextBlob) {
+        public Builder ciphertextBlob(@Nullable Input<String> ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
             return this;
         }
 
-        public Builder setCiphertextBlob(@Nullable String ciphertextBlob) {
+        public Builder ciphertextBlob(@Nullable String ciphertextBlob) {
             this.ciphertextBlob = Input.ofNullable(ciphertextBlob);
             return this;
         }
 
-        public Builder setContext(@Nullable Input<Map<String,String>> context) {
+        public Builder context(@Nullable Input<Map<String,String>> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable Map<String,String> context) {
+        public Builder context(@Nullable Map<String,String> context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setPlaintext(@Nullable Input<String> plaintext) {
+        public Builder plaintext(@Nullable Input<String> plaintext) {
             this.plaintext = plaintext;
             return this;
         }
 
-        public Builder setPlaintext(@Nullable String plaintext) {
+        public Builder plaintext(@Nullable String plaintext) {
             this.plaintext = Input.ofNullable(plaintext);
             return this;
         }

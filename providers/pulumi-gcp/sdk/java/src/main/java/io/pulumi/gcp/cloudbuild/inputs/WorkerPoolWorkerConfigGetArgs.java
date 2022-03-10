@@ -88,32 +88,32 @@ public final class WorkerPoolWorkerConfigGetArgs extends io.pulumi.resources.Res
     	      this.noExternalIp = defaults.noExternalIp;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setNoExternalIp(@Nullable Input<Boolean> noExternalIp) {
+        public Builder noExternalIp(@Nullable Input<Boolean> noExternalIp) {
             this.noExternalIp = noExternalIp;
             return this;
         }
 
-        public Builder setNoExternalIp(@Nullable Boolean noExternalIp) {
+        public Builder noExternalIp(@Nullable Boolean noExternalIp) {
             this.noExternalIp = Input.ofNullable(noExternalIp);
             return this;
         }

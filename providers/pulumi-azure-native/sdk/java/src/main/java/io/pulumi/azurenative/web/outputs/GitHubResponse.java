@@ -85,17 +85,17 @@ public final class GitHubResponse {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginScopesResponse login) {
+        public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
 
-        public Builder setRegistration(@Nullable ClientRegistrationResponse registration) {
+        public Builder registration(@Nullable ClientRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }

@@ -84,17 +84,17 @@ public final class GlobalReplicationGroupMember {
     	      this.role = defaults.role;
         }
 
-        public Builder setReplicationGroupId(@Nullable String replicationGroupId) {
+        public Builder replicationGroupId(@Nullable String replicationGroupId) {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
 
-        public Builder setReplicationGroupRegion(@Nullable String replicationGroupRegion) {
+        public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
-        public Builder setRole(@Nullable GlobalReplicationGroupMemberRole role) {
+        public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
             this.role = role;
             return this;
         }

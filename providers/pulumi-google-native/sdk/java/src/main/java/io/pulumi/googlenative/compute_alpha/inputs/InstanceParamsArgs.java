@@ -58,12 +58,12 @@ public final class InstanceParamsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceManagerTags = defaults.resourceManagerTags;
         }
 
-        public Builder setResourceManagerTags(@Nullable Input<Map<String,String>> resourceManagerTags) {
+        public Builder resourceManagerTags(@Nullable Input<Map<String,String>> resourceManagerTags) {
             this.resourceManagerTags = resourceManagerTags;
             return this;
         }
 
-        public Builder setResourceManagerTags(@Nullable Map<String,String> resourceManagerTags) {
+        public Builder resourceManagerTags(@Nullable Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Input.ofNullable(resourceManagerTags);
             return this;
         }

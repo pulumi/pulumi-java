@@ -51,7 +51,7 @@ public final class GetDiskArgs extends io.pulumi.resources.InvokeArgs {
     	      this.diskName = defaults.diskName;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }

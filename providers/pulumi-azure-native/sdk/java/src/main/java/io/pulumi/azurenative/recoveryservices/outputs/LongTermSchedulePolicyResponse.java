@@ -50,7 +50,7 @@ public final class LongTermSchedulePolicyResponse {
     	      this.schedulePolicyType = defaults.schedulePolicyType;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }

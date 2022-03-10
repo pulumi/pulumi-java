@@ -52,12 +52,12 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
     	      this.apiSecretKey = defaults.apiSecretKey;
         }
 
-        public Builder setApiSecretKey(Input<String> apiSecretKey) {
+        public Builder apiSecretKey(Input<String> apiSecretKey) {
             this.apiSecretKey = Objects.requireNonNull(apiSecretKey);
             return this;
         }
 
-        public Builder setApiSecretKey(String apiSecretKey) {
+        public Builder apiSecretKey(String apiSecretKey) {
             this.apiSecretKey = Input.of(Objects.requireNonNull(apiSecretKey));
             return this;
         }

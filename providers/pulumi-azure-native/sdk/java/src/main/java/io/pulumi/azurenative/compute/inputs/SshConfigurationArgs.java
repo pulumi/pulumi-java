@@ -58,12 +58,12 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setPublicKeys(@Nullable Input<List<SshPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Input<List<SshPublicKeyArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<SshPublicKeyArgs> publicKeys) {
+        public Builder publicKeys(@Nullable List<SshPublicKeyArgs> publicKeys) {
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }

@@ -145,37 +145,37 @@ public final class ListQueueKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setAliasPrimaryConnectionString(String aliasPrimaryConnectionString) {
+        public Builder aliasPrimaryConnectionString(String aliasPrimaryConnectionString) {
             this.aliasPrimaryConnectionString = Objects.requireNonNull(aliasPrimaryConnectionString);
             return this;
         }
 
-        public Builder setAliasSecondaryConnectionString(String aliasSecondaryConnectionString) {
+        public Builder aliasSecondaryConnectionString(String aliasSecondaryConnectionString) {
             this.aliasSecondaryConnectionString = Objects.requireNonNull(aliasSecondaryConnectionString);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setPrimaryConnectionString(String primaryConnectionString) {
+        public Builder primaryConnectionString(String primaryConnectionString) {
             this.primaryConnectionString = Objects.requireNonNull(primaryConnectionString);
             return this;
         }
 
-        public Builder setPrimaryKey(String primaryKey) {
+        public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
 
-        public Builder setSecondaryConnectionString(String secondaryConnectionString) {
+        public Builder secondaryConnectionString(String secondaryConnectionString) {
             this.secondaryConnectionString = Objects.requireNonNull(secondaryConnectionString);
             return this;
         }
 
-        public Builder setSecondaryKey(String secondaryKey) {
+        public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }

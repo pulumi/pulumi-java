@@ -86,32 +86,32 @@ public final class RuleSourceSourceDetailArgs extends io.pulumi.resources.Resour
     	      this.messageType = defaults.messageType;
         }
 
-        public Builder setEventSource(@Nullable Input<String> eventSource) {
+        public Builder eventSource(@Nullable Input<String> eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
-        public Builder setEventSource(@Nullable String eventSource) {
+        public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = Input.ofNullable(eventSource);
             return this;
         }
 
-        public Builder setMaximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable Input<String> maximumExecutionFrequency) {
             this.maximumExecutionFrequency = maximumExecutionFrequency;
             return this;
         }
 
-        public Builder setMaximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
+        public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
             this.maximumExecutionFrequency = Input.ofNullable(maximumExecutionFrequency);
             return this;
         }
 
-        public Builder setMessageType(@Nullable Input<String> messageType) {
+        public Builder messageType(@Nullable Input<String> messageType) {
             this.messageType = messageType;
             return this;
         }
 
-        public Builder setMessageType(@Nullable String messageType) {
+        public Builder messageType(@Nullable String messageType) {
             this.messageType = Input.ofNullable(messageType);
             return this;
         }

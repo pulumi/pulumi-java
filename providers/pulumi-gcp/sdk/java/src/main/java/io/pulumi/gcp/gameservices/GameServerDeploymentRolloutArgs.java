@@ -111,42 +111,42 @@ public final class GameServerDeploymentRolloutArgs extends io.pulumi.resources.R
     	      this.project = defaults.project;
         }
 
-        public Builder setDefaultGameServerConfig(Input<String> defaultGameServerConfig) {
+        public Builder defaultGameServerConfig(Input<String> defaultGameServerConfig) {
             this.defaultGameServerConfig = Objects.requireNonNull(defaultGameServerConfig);
             return this;
         }
 
-        public Builder setDefaultGameServerConfig(String defaultGameServerConfig) {
+        public Builder defaultGameServerConfig(String defaultGameServerConfig) {
             this.defaultGameServerConfig = Input.of(Objects.requireNonNull(defaultGameServerConfig));
             return this;
         }
 
-        public Builder setDeploymentId(Input<String> deploymentId) {
+        public Builder deploymentId(Input<String> deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Input.of(Objects.requireNonNull(deploymentId));
             return this;
         }
 
-        public Builder setGameServerConfigOverrides(@Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides) {
+        public Builder gameServerConfigOverrides(@Nullable Input<List<GameServerDeploymentRolloutGameServerConfigOverrideArgs>> gameServerConfigOverrides) {
             this.gameServerConfigOverrides = gameServerConfigOverrides;
             return this;
         }
 
-        public Builder setGameServerConfigOverrides(@Nullable List<GameServerDeploymentRolloutGameServerConfigOverrideArgs> gameServerConfigOverrides) {
+        public Builder gameServerConfigOverrides(@Nullable List<GameServerDeploymentRolloutGameServerConfigOverrideArgs> gameServerConfigOverrides) {
             this.gameServerConfigOverrides = Input.ofNullable(gameServerConfigOverrides);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

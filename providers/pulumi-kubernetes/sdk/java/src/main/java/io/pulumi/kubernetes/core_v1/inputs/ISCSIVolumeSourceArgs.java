@@ -222,112 +222,112 @@ public final class ISCSIVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     	      this.targetPortal = defaults.targetPortal;
         }
 
-        public Builder setChapAuthDiscovery(@Nullable Input<Boolean> chapAuthDiscovery) {
+        public Builder chapAuthDiscovery(@Nullable Input<Boolean> chapAuthDiscovery) {
             this.chapAuthDiscovery = chapAuthDiscovery;
             return this;
         }
 
-        public Builder setChapAuthDiscovery(@Nullable Boolean chapAuthDiscovery) {
+        public Builder chapAuthDiscovery(@Nullable Boolean chapAuthDiscovery) {
             this.chapAuthDiscovery = Input.ofNullable(chapAuthDiscovery);
             return this;
         }
 
-        public Builder setChapAuthSession(@Nullable Input<Boolean> chapAuthSession) {
+        public Builder chapAuthSession(@Nullable Input<Boolean> chapAuthSession) {
             this.chapAuthSession = chapAuthSession;
             return this;
         }
 
-        public Builder setChapAuthSession(@Nullable Boolean chapAuthSession) {
+        public Builder chapAuthSession(@Nullable Boolean chapAuthSession) {
             this.chapAuthSession = Input.ofNullable(chapAuthSession);
             return this;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setInitiatorName(@Nullable Input<String> initiatorName) {
+        public Builder initiatorName(@Nullable Input<String> initiatorName) {
             this.initiatorName = initiatorName;
             return this;
         }
 
-        public Builder setInitiatorName(@Nullable String initiatorName) {
+        public Builder initiatorName(@Nullable String initiatorName) {
             this.initiatorName = Input.ofNullable(initiatorName);
             return this;
         }
 
-        public Builder setIqn(Input<String> iqn) {
+        public Builder iqn(Input<String> iqn) {
             this.iqn = Objects.requireNonNull(iqn);
             return this;
         }
 
-        public Builder setIqn(String iqn) {
+        public Builder iqn(String iqn) {
             this.iqn = Input.of(Objects.requireNonNull(iqn));
             return this;
         }
 
-        public Builder setIscsiInterface(@Nullable Input<String> iscsiInterface) {
+        public Builder iscsiInterface(@Nullable Input<String> iscsiInterface) {
             this.iscsiInterface = iscsiInterface;
             return this;
         }
 
-        public Builder setIscsiInterface(@Nullable String iscsiInterface) {
+        public Builder iscsiInterface(@Nullable String iscsiInterface) {
             this.iscsiInterface = Input.ofNullable(iscsiInterface);
             return this;
         }
 
-        public Builder setLun(Input<Integer> lun) {
+        public Builder lun(Input<Integer> lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Input.of(Objects.requireNonNull(lun));
             return this;
         }
 
-        public Builder setPortals(@Nullable Input<List<String>> portals) {
+        public Builder portals(@Nullable Input<List<String>> portals) {
             this.portals = portals;
             return this;
         }
 
-        public Builder setPortals(@Nullable List<String> portals) {
+        public Builder portals(@Nullable List<String> portals) {
             this.portals = Input.ofNullable(portals);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSecretRef(@Nullable Input<LocalObjectReferenceArgs> secretRef) {
+        public Builder secretRef(@Nullable Input<LocalObjectReferenceArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable LocalObjectReferenceArgs secretRef) {
+        public Builder secretRef(@Nullable LocalObjectReferenceArgs secretRef) {
             this.secretRef = Input.ofNullable(secretRef);
             return this;
         }
 
-        public Builder setTargetPortal(Input<String> targetPortal) {
+        public Builder targetPortal(Input<String> targetPortal) {
             this.targetPortal = Objects.requireNonNull(targetPortal);
             return this;
         }
 
-        public Builder setTargetPortal(String targetPortal) {
+        public Builder targetPortal(String targetPortal) {
             this.targetPortal = Input.of(Objects.requireNonNull(targetPortal));
             return this;
         }

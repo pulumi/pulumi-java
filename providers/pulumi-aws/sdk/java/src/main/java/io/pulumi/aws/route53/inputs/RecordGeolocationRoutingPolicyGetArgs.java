@@ -86,32 +86,32 @@ public final class RecordGeolocationRoutingPolicyGetArgs extends io.pulumi.resou
     	      this.subdivision = defaults.subdivision;
         }
 
-        public Builder setContinent(@Nullable Input<String> continent) {
+        public Builder continent(@Nullable Input<String> continent) {
             this.continent = continent;
             return this;
         }
 
-        public Builder setContinent(@Nullable String continent) {
+        public Builder continent(@Nullable String continent) {
             this.continent = Input.ofNullable(continent);
             return this;
         }
 
-        public Builder setCountry(@Nullable Input<String> country) {
+        public Builder country(@Nullable Input<String> country) {
             this.country = country;
             return this;
         }
 
-        public Builder setCountry(@Nullable String country) {
+        public Builder country(@Nullable String country) {
             this.country = Input.ofNullable(country);
             return this;
         }
 
-        public Builder setSubdivision(@Nullable Input<String> subdivision) {
+        public Builder subdivision(@Nullable Input<String> subdivision) {
             this.subdivision = subdivision;
             return this;
         }
 
-        public Builder setSubdivision(@Nullable String subdivision) {
+        public Builder subdivision(@Nullable String subdivision) {
             this.subdivision = Input.ofNullable(subdivision);
             return this;
         }

@@ -130,32 +130,32 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setDimensions(List<String> dimensions) {
+        public Builder dimensions(List<String> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setEndTimestamp(String endTimestamp) {
+        public Builder endTimestamp(String endTimestamp) {
             this.endTimestamp = Objects.requireNonNull(endTimestamp);
             return this;
         }
 
-        public Builder setMetrics(List<String> metrics) {
+        public Builder metrics(List<String> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setOutputFormat(String outputFormat) {
+        public Builder outputFormat(String outputFormat) {
             this.outputFormat = Objects.requireNonNull(outputFormat);
             return this;
         }
 
-        public Builder setStartTimestamp(String startTimestamp) {
+        public Builder startTimestamp(String startTimestamp) {
             this.startTimestamp = Objects.requireNonNull(startTimestamp);
             return this;
         }
 
-        public Builder setTimeUnit(String timeUnit) {
+        public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }

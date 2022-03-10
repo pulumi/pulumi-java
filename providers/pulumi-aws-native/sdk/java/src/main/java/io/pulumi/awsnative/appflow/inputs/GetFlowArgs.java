@@ -51,7 +51,7 @@ public final class GetFlowArgs extends io.pulumi.resources.InvokeArgs {
     	      this.flowName = defaults.flowName;
         }
 
-        public Builder setFlowName(String flowName) {
+        public Builder flowName(String flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }

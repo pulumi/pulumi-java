@@ -157,72 +157,72 @@ public final class RedirectConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.redirectType = defaults.redirectType;
         }
 
-        public Builder setCustomFragment(@Nullable Input<String> customFragment) {
+        public Builder customFragment(@Nullable Input<String> customFragment) {
             this.customFragment = customFragment;
             return this;
         }
 
-        public Builder setCustomFragment(@Nullable String customFragment) {
+        public Builder customFragment(@Nullable String customFragment) {
             this.customFragment = Input.ofNullable(customFragment);
             return this;
         }
 
-        public Builder setCustomHost(@Nullable Input<String> customHost) {
+        public Builder customHost(@Nullable Input<String> customHost) {
             this.customHost = customHost;
             return this;
         }
 
-        public Builder setCustomHost(@Nullable String customHost) {
+        public Builder customHost(@Nullable String customHost) {
             this.customHost = Input.ofNullable(customHost);
             return this;
         }
 
-        public Builder setCustomPath(@Nullable Input<String> customPath) {
+        public Builder customPath(@Nullable Input<String> customPath) {
             this.customPath = customPath;
             return this;
         }
 
-        public Builder setCustomPath(@Nullable String customPath) {
+        public Builder customPath(@Nullable String customPath) {
             this.customPath = Input.ofNullable(customPath);
             return this;
         }
 
-        public Builder setCustomQueryString(@Nullable Input<String> customQueryString) {
+        public Builder customQueryString(@Nullable Input<String> customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
 
-        public Builder setCustomQueryString(@Nullable String customQueryString) {
+        public Builder customQueryString(@Nullable String customQueryString) {
             this.customQueryString = Input.ofNullable(customQueryString);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setRedirectProtocol(@Nullable Input<Either<String,FrontDoorRedirectProtocol>> redirectProtocol) {
+        public Builder redirectProtocol(@Nullable Input<Either<String,FrontDoorRedirectProtocol>> redirectProtocol) {
             this.redirectProtocol = redirectProtocol;
             return this;
         }
 
-        public Builder setRedirectProtocol(@Nullable Either<String,FrontDoorRedirectProtocol> redirectProtocol) {
+        public Builder redirectProtocol(@Nullable Either<String,FrontDoorRedirectProtocol> redirectProtocol) {
             this.redirectProtocol = Input.ofNullable(redirectProtocol);
             return this;
         }
 
-        public Builder setRedirectType(@Nullable Input<Either<String,FrontDoorRedirectType>> redirectType) {
+        public Builder redirectType(@Nullable Input<Either<String,FrontDoorRedirectType>> redirectType) {
             this.redirectType = redirectType;
             return this;
         }
 
-        public Builder setRedirectType(@Nullable Either<String,FrontDoorRedirectType> redirectType) {
+        public Builder redirectType(@Nullable Either<String,FrontDoorRedirectType> redirectType) {
             this.redirectType = Input.ofNullable(redirectType);
             return this;
         }

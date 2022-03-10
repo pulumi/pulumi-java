@@ -67,12 +67,12 @@ public final class SubscriptionKeyParameterNamesContractResponse {
     	      this.query = defaults.query;
         }
 
-        public Builder setHeader(@Nullable String header) {
+        public Builder header(@Nullable String header) {
             this.header = header;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }

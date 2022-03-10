@@ -382,212 +382,212 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setChildHealthThreshold(@Nullable Input<Integer> childHealthThreshold) {
+        public Builder childHealthThreshold(@Nullable Input<Integer> childHealthThreshold) {
             this.childHealthThreshold = childHealthThreshold;
             return this;
         }
 
-        public Builder setChildHealthThreshold(@Nullable Integer childHealthThreshold) {
+        public Builder childHealthThreshold(@Nullable Integer childHealthThreshold) {
             this.childHealthThreshold = Input.ofNullable(childHealthThreshold);
             return this;
         }
 
-        public Builder setChildHealthchecks(@Nullable Input<List<String>> childHealthchecks) {
+        public Builder childHealthchecks(@Nullable Input<List<String>> childHealthchecks) {
             this.childHealthchecks = childHealthchecks;
             return this;
         }
 
-        public Builder setChildHealthchecks(@Nullable List<String> childHealthchecks) {
+        public Builder childHealthchecks(@Nullable List<String> childHealthchecks) {
             this.childHealthchecks = Input.ofNullable(childHealthchecks);
             return this;
         }
 
-        public Builder setCloudwatchAlarmName(@Nullable Input<String> cloudwatchAlarmName) {
+        public Builder cloudwatchAlarmName(@Nullable Input<String> cloudwatchAlarmName) {
             this.cloudwatchAlarmName = cloudwatchAlarmName;
             return this;
         }
 
-        public Builder setCloudwatchAlarmName(@Nullable String cloudwatchAlarmName) {
+        public Builder cloudwatchAlarmName(@Nullable String cloudwatchAlarmName) {
             this.cloudwatchAlarmName = Input.ofNullable(cloudwatchAlarmName);
             return this;
         }
 
-        public Builder setCloudwatchAlarmRegion(@Nullable Input<String> cloudwatchAlarmRegion) {
+        public Builder cloudwatchAlarmRegion(@Nullable Input<String> cloudwatchAlarmRegion) {
             this.cloudwatchAlarmRegion = cloudwatchAlarmRegion;
             return this;
         }
 
-        public Builder setCloudwatchAlarmRegion(@Nullable String cloudwatchAlarmRegion) {
+        public Builder cloudwatchAlarmRegion(@Nullable String cloudwatchAlarmRegion) {
             this.cloudwatchAlarmRegion = Input.ofNullable(cloudwatchAlarmRegion);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setEnableSni(@Nullable Input<Boolean> enableSni) {
+        public Builder enableSni(@Nullable Input<Boolean> enableSni) {
             this.enableSni = enableSni;
             return this;
         }
 
-        public Builder setEnableSni(@Nullable Boolean enableSni) {
+        public Builder enableSni(@Nullable Boolean enableSni) {
             this.enableSni = Input.ofNullable(enableSni);
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = Input.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setInsufficientDataHealthStatus(@Nullable Input<String> insufficientDataHealthStatus) {
+        public Builder insufficientDataHealthStatus(@Nullable Input<String> insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
 
-        public Builder setInsufficientDataHealthStatus(@Nullable String insufficientDataHealthStatus) {
+        public Builder insufficientDataHealthStatus(@Nullable String insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = Input.ofNullable(insufficientDataHealthStatus);
             return this;
         }
 
-        public Builder setInvertHealthcheck(@Nullable Input<Boolean> invertHealthcheck) {
+        public Builder invertHealthcheck(@Nullable Input<Boolean> invertHealthcheck) {
             this.invertHealthcheck = invertHealthcheck;
             return this;
         }
 
-        public Builder setInvertHealthcheck(@Nullable Boolean invertHealthcheck) {
+        public Builder invertHealthcheck(@Nullable Boolean invertHealthcheck) {
             this.invertHealthcheck = Input.ofNullable(invertHealthcheck);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setMeasureLatency(@Nullable Input<Boolean> measureLatency) {
+        public Builder measureLatency(@Nullable Input<Boolean> measureLatency) {
             this.measureLatency = measureLatency;
             return this;
         }
 
-        public Builder setMeasureLatency(@Nullable Boolean measureLatency) {
+        public Builder measureLatency(@Nullable Boolean measureLatency) {
             this.measureLatency = Input.ofNullable(measureLatency);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setReferenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Input<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
-        public Builder setReferenceName(@Nullable String referenceName) {
+        public Builder referenceName(@Nullable String referenceName) {
             this.referenceName = Input.ofNullable(referenceName);
             return this;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Input<Integer> requestInterval) {
+        public Builder requestInterval(@Nullable Input<Integer> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Integer requestInterval) {
+        public Builder requestInterval(@Nullable Integer requestInterval) {
             this.requestInterval = Input.ofNullable(requestInterval);
             return this;
         }
 
-        public Builder setResourcePath(@Nullable Input<String> resourcePath) {
+        public Builder resourcePath(@Nullable Input<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = Input.ofNullable(resourcePath);
             return this;
         }
 
-        public Builder setRoutingControlArn(@Nullable Input<String> routingControlArn) {
+        public Builder routingControlArn(@Nullable Input<String> routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
 
-        public Builder setRoutingControlArn(@Nullable String routingControlArn) {
+        public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = Input.ofNullable(routingControlArn);
             return this;
         }
 
-        public Builder setSearchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Input<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
-        public Builder setSearchString(@Nullable String searchString) {
+        public Builder searchString(@Nullable String searchString) {
             this.searchString = Input.ofNullable(searchString);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

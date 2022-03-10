@@ -164,42 +164,42 @@ public final class TestSuiteOverviewResponse {
     	      this.xmlSource = defaults.xmlSource;
         }
 
-        public Builder setElapsedTime(DurationResponse elapsedTime) {
+        public Builder elapsedTime(DurationResponse elapsedTime) {
             this.elapsedTime = Objects.requireNonNull(elapsedTime);
             return this;
         }
 
-        public Builder setErrorCount(Integer errorCount) {
+        public Builder errorCount(Integer errorCount) {
             this.errorCount = Objects.requireNonNull(errorCount);
             return this;
         }
 
-        public Builder setFailureCount(Integer failureCount) {
+        public Builder failureCount(Integer failureCount) {
             this.failureCount = Objects.requireNonNull(failureCount);
             return this;
         }
 
-        public Builder setFlakyCount(Integer flakyCount) {
+        public Builder flakyCount(Integer flakyCount) {
             this.flakyCount = Objects.requireNonNull(flakyCount);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSkippedCount(Integer skippedCount) {
+        public Builder skippedCount(Integer skippedCount) {
             this.skippedCount = Objects.requireNonNull(skippedCount);
             return this;
         }
 
-        public Builder setTotalCount(Integer totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
 
-        public Builder setXmlSource(FileReferenceResponse xmlSource) {
+        public Builder xmlSource(FileReferenceResponse xmlSource) {
             this.xmlSource = Objects.requireNonNull(xmlSource);
             return this;
         }

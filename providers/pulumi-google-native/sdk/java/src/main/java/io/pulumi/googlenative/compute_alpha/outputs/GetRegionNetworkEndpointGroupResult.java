@@ -359,102 +359,102 @@ public final class GetRegionNetworkEndpointGroupResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setAppEngine(NetworkEndpointGroupAppEngineResponse appEngine) {
+        public Builder appEngine(NetworkEndpointGroupAppEngineResponse appEngine) {
             this.appEngine = Objects.requireNonNull(appEngine);
             return this;
         }
 
-        public Builder setCloudFunction(NetworkEndpointGroupCloudFunctionResponse cloudFunction) {
+        public Builder cloudFunction(NetworkEndpointGroupCloudFunctionResponse cloudFunction) {
             this.cloudFunction = Objects.requireNonNull(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(NetworkEndpointGroupCloudRunResponse cloudRun) {
+        public Builder cloudRun(NetworkEndpointGroupCloudRunResponse cloudRun) {
             this.cloudRun = Objects.requireNonNull(cloudRun);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDefaultPort(Integer defaultPort) {
+        public Builder defaultPort(Integer defaultPort) {
             this.defaultPort = Objects.requireNonNull(defaultPort);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkEndpointType(String networkEndpointType) {
+        public Builder networkEndpointType(String networkEndpointType) {
             this.networkEndpointType = Objects.requireNonNull(networkEndpointType);
             return this;
         }
 
-        public Builder setPscTargetService(String pscTargetService) {
+        public Builder pscTargetService(String pscTargetService) {
             this.pscTargetService = Objects.requireNonNull(pscTargetService);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setServerlessDeployment(NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment) {
+        public Builder serverlessDeployment(NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment) {
             this.serverlessDeployment = Objects.requireNonNull(serverlessDeployment);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

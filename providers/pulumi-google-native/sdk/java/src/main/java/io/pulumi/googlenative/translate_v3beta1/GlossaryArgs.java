@@ -129,62 +129,62 @@ public final class GlossaryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setInputConfig(Input<GlossaryInputConfigArgs> inputConfig) {
+        public Builder inputConfig(Input<GlossaryInputConfigArgs> inputConfig) {
             this.inputConfig = Objects.requireNonNull(inputConfig);
             return this;
         }
 
-        public Builder setInputConfig(GlossaryInputConfigArgs inputConfig) {
+        public Builder inputConfig(GlossaryInputConfigArgs inputConfig) {
             this.inputConfig = Input.of(Objects.requireNonNull(inputConfig));
             return this;
         }
 
-        public Builder setLanguageCodesSet(@Nullable Input<LanguageCodesSetArgs> languageCodesSet) {
+        public Builder languageCodesSet(@Nullable Input<LanguageCodesSetArgs> languageCodesSet) {
             this.languageCodesSet = languageCodesSet;
             return this;
         }
 
-        public Builder setLanguageCodesSet(@Nullable LanguageCodesSetArgs languageCodesSet) {
+        public Builder languageCodesSet(@Nullable LanguageCodesSetArgs languageCodesSet) {
             this.languageCodesSet = Input.ofNullable(languageCodesSet);
             return this;
         }
 
-        public Builder setLanguagePair(@Nullable Input<LanguageCodePairArgs> languagePair) {
+        public Builder languagePair(@Nullable Input<LanguageCodePairArgs> languagePair) {
             this.languagePair = languagePair;
             return this;
         }
 
-        public Builder setLanguagePair(@Nullable LanguageCodePairArgs languagePair) {
+        public Builder languagePair(@Nullable LanguageCodePairArgs languagePair) {
             this.languagePair = Input.ofNullable(languagePair);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

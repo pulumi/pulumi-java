@@ -57,12 +57,12 @@ public final class OutputFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setLabels(Input<List<String>> labels) {
+        public Builder labels(Input<List<String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLabels(List<String> labels) {
+        public Builder labels(List<String> labels) {
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }

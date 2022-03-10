@@ -119,52 +119,52 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setClusterIdentifier(@Nullable Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable Input<String> clusterIdentifier) {
             this.clusterIdentifier = clusterIdentifier;
             return this;
         }
 
-        public Builder setClusterIdentifier(@Nullable String clusterIdentifier) {
+        public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
             this.clusterIdentifier = Input.ofNullable(clusterIdentifier);
             return this;
         }
 
-        public Builder setEndpointName(Input<String> endpointName) {
+        public Builder endpointName(Input<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Input.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder setResourceOwner(@Nullable Input<String> resourceOwner) {
+        public Builder resourceOwner(@Nullable Input<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
 
-        public Builder setResourceOwner(@Nullable String resourceOwner) {
+        public Builder resourceOwner(@Nullable String resourceOwner) {
             this.resourceOwner = Input.ofNullable(resourceOwner);
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable String subnetGroupName) {
+        public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = Input.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.of(Objects.requireNonNull(vpcSecurityGroupIds));
             return this;
         }

@@ -48,7 +48,7 @@ public final class ProviderHubMetadataResponseProviderAuthentication extends io.
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder setAllowedAudiences(List<String> allowedAudiences) {
+        public Builder allowedAudiences(List<String> allowedAudiences) {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }

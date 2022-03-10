@@ -109,42 +109,42 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder setConnectMode(@Nullable Input<NetworkConfigConnectMode> connectMode) {
+        public Builder connectMode(@Nullable Input<NetworkConfigConnectMode> connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
-        public Builder setConnectMode(@Nullable NetworkConfigConnectMode connectMode) {
+        public Builder connectMode(@Nullable NetworkConfigConnectMode connectMode) {
             this.connectMode = Input.ofNullable(connectMode);
             return this;
         }
 
-        public Builder setModes(@Nullable Input<List<NetworkConfigModesItem>> modes) {
+        public Builder modes(@Nullable Input<List<NetworkConfigModesItem>> modes) {
             this.modes = modes;
             return this;
         }
 
-        public Builder setModes(@Nullable List<NetworkConfigModesItem> modes) {
+        public Builder modes(@Nullable List<NetworkConfigModesItem> modes) {
             this.modes = Input.ofNullable(modes);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable Input<String> reservedIpRange) {
+        public Builder reservedIpRange(@Nullable Input<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable String reservedIpRange) {
+        public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = Input.ofNullable(reservedIpRange);
             return this;
         }

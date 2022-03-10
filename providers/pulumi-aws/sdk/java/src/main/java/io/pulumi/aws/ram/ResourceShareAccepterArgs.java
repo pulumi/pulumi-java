@@ -52,12 +52,12 @@ public final class ResourceShareAccepterArgs extends io.pulumi.resources.Resourc
     	      this.shareArn = defaults.shareArn;
         }
 
-        public Builder setShareArn(Input<String> shareArn) {
+        public Builder shareArn(Input<String> shareArn) {
             this.shareArn = Objects.requireNonNull(shareArn);
             return this;
         }
 
-        public Builder setShareArn(String shareArn) {
+        public Builder shareArn(String shareArn) {
             this.shareArn = Input.of(Objects.requireNonNull(shareArn));
             return this;
         }

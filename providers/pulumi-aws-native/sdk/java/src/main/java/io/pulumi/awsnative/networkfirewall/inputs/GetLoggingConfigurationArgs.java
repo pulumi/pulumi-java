@@ -47,7 +47,7 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
     	      this.firewallArn = defaults.firewallArn;
         }
 
-        public Builder setFirewallArn(String firewallArn) {
+        public Builder firewallArn(String firewallArn) {
             this.firewallArn = Objects.requireNonNull(firewallArn);
             return this;
         }

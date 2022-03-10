@@ -90,32 +90,32 @@ public final class DicomStoreIamPolicyState extends io.pulumi.resources.Resource
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder setDicomStoreId(@Nullable Input<String> dicomStoreId) {
+        public Builder dicomStoreId(@Nullable Input<String> dicomStoreId) {
             this.dicomStoreId = dicomStoreId;
             return this;
         }
 
-        public Builder setDicomStoreId(@Nullable String dicomStoreId) {
+        public Builder dicomStoreId(@Nullable String dicomStoreId) {
             this.dicomStoreId = Input.ofNullable(dicomStoreId);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setPolicyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Input<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
-        public Builder setPolicyData(@Nullable String policyData) {
+        public Builder policyData(@Nullable String policyData) {
             this.policyData = Input.ofNullable(policyData);
             return this;
         }

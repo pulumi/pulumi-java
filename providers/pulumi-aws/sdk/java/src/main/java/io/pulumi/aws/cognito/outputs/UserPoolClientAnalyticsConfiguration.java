@@ -116,27 +116,27 @@ public final class UserPoolClientAnalyticsConfiguration {
     	      this.userDataShared = defaults.userDataShared;
         }
 
-        public Builder setApplicationArn(@Nullable String applicationArn) {
+        public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setUserDataShared(@Nullable Boolean userDataShared) {
+        public Builder userDataShared(@Nullable Boolean userDataShared) {
             this.userDataShared = userDataShared;
             return this;
         }

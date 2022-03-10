@@ -71,22 +71,22 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     	      this.virtualMachineConfiguration = defaults.virtualMachineConfiguration;
         }
 
-        public Builder setCloudServiceConfiguration(@Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration) {
+        public Builder cloudServiceConfiguration(@Nullable Input<CloudServiceConfigurationArgs> cloudServiceConfiguration) {
             this.cloudServiceConfiguration = cloudServiceConfiguration;
             return this;
         }
 
-        public Builder setCloudServiceConfiguration(@Nullable CloudServiceConfigurationArgs cloudServiceConfiguration) {
+        public Builder cloudServiceConfiguration(@Nullable CloudServiceConfigurationArgs cloudServiceConfiguration) {
             this.cloudServiceConfiguration = Input.ofNullable(cloudServiceConfiguration);
             return this;
         }
 
-        public Builder setVirtualMachineConfiguration(@Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
+        public Builder virtualMachineConfiguration(@Nullable Input<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
             this.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;
         }
 
-        public Builder setVirtualMachineConfiguration(@Nullable VirtualMachineConfigurationArgs virtualMachineConfiguration) {
+        public Builder virtualMachineConfiguration(@Nullable VirtualMachineConfigurationArgs virtualMachineConfiguration) {
             this.virtualMachineConfiguration = Input.ofNullable(virtualMachineConfiguration);
             return this;
         }

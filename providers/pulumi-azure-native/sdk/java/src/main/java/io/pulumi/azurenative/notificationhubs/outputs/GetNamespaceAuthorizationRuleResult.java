@@ -279,77 +279,77 @@ public final class GetNamespaceAuthorizationRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setClaimType(String claimType) {
+        public Builder claimType(String claimType) {
             this.claimType = Objects.requireNonNull(claimType);
             return this;
         }
 
-        public Builder setClaimValue(String claimValue) {
+        public Builder claimValue(String claimValue) {
             this.claimValue = Objects.requireNonNull(claimValue);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setModifiedTime(String modifiedTime) {
+        public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimaryKey(String primaryKey) {
+        public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setRights(@Nullable List<String> rights) {
+        public Builder rights(@Nullable List<String> rights) {
             this.rights = rights;
             return this;
         }
 
-        public Builder setSecondaryKey(String secondaryKey) {
+        public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

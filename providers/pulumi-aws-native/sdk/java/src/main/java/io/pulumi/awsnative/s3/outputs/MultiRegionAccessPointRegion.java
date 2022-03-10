@@ -40,7 +40,7 @@ public final class MultiRegionAccessPointRegion {
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }

@@ -42,7 +42,7 @@ public final class FunctionMetadata {
     	      this.functionARN = defaults.functionARN;
         }
 
-        public Builder setFunctionARN(@Nullable String functionARN) {
+        public Builder functionARN(@Nullable String functionARN) {
             this.functionARN = functionARN;
             return this;
         }

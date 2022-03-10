@@ -69,12 +69,12 @@ public final class MetricRulesResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setFilteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
+        public Builder filteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
             this.filteringTags = filteringTags;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }

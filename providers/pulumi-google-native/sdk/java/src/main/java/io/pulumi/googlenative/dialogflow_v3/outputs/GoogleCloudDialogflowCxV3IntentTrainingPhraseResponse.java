@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse {
     	      this.repeatCount = defaults.repeatCount;
         }
 
-        public Builder setParts(List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse> parts) {
+        public Builder parts(List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
-        public Builder setRepeatCount(Integer repeatCount) {
+        public Builder repeatCount(Integer repeatCount) {
             this.repeatCount = Objects.requireNonNull(repeatCount);
             return this;
         }

@@ -42,7 +42,7 @@ public final class ThemeTypography {
     	      this.fontFamilies = defaults.fontFamilies;
         }
 
-        public Builder setFontFamilies(@Nullable List<ThemeFont> fontFamilies) {
+        public Builder fontFamilies(@Nullable List<ThemeFont> fontFamilies) {
             this.fontFamilies = fontFamilies;
             return this;
         }

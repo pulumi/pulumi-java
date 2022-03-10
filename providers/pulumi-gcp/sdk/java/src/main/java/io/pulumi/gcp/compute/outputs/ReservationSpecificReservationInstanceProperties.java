@@ -114,22 +114,22 @@ public final class ReservationSpecificReservationInstanceProperties {
     	      this.minCpuPlatform = defaults.minCpuPlatform;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<ReservationSpecificReservationInstancePropertiesGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setLocalSsds(@Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds) {
+        public Builder localSsds(@Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsd> localSsds) {
             this.localSsds = localSsds;
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }

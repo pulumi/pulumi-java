@@ -68,12 +68,12 @@ public final class ObjectReplicationPolicyFilterResponse {
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder setMinCreationTime(@Nullable String minCreationTime) {
+        public Builder minCreationTime(@Nullable String minCreationTime) {
             this.minCreationTime = minCreationTime;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable List<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }

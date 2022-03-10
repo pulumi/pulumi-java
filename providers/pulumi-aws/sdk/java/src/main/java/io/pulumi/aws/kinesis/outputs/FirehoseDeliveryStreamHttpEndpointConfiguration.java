@@ -215,57 +215,57 @@ public final class FirehoseDeliveryStreamHttpEndpointConfiguration {
     	      this.url = defaults.url;
         }
 
-        public Builder setAccessKey(@Nullable String accessKey) {
+        public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setBufferingInterval(@Nullable Integer bufferingInterval) {
+        public Builder bufferingInterval(@Nullable Integer bufferingInterval) {
             this.bufferingInterval = bufferingInterval;
             return this;
         }
 
-        public Builder setBufferingSize(@Nullable Integer bufferingSize) {
+        public Builder bufferingSize(@Nullable Integer bufferingSize) {
             this.bufferingSize = bufferingSize;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRequestConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration requestConfiguration) {
+        public Builder requestConfiguration(@Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration requestConfiguration) {
             this.requestConfiguration = requestConfiguration;
             return this;
         }
 
-        public Builder setRetryDuration(@Nullable Integer retryDuration) {
+        public Builder retryDuration(@Nullable Integer retryDuration) {
             this.retryDuration = retryDuration;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

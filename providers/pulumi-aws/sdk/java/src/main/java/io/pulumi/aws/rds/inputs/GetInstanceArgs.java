@@ -67,12 +67,12 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDbInstanceIdentifier(String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

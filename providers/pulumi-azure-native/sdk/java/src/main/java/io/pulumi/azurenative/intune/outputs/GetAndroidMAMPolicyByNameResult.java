@@ -277,127 +277,127 @@ public final class GetAndroidMAMPolicyByNameResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
+        public Builder accessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
             this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
             return this;
         }
 
-        public Builder setAccessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
+        public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
             return this;
         }
 
-        public Builder setAppSharingFromLevel(@Nullable String appSharingFromLevel) {
+        public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
             this.appSharingFromLevel = appSharingFromLevel;
             return this;
         }
 
-        public Builder setAppSharingToLevel(@Nullable String appSharingToLevel) {
+        public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
             this.appSharingToLevel = appSharingToLevel;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable String authentication) {
+        public Builder authentication(@Nullable String authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setClipboardSharingLevel(@Nullable String clipboardSharingLevel) {
+        public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
             this.clipboardSharingLevel = clipboardSharingLevel;
             return this;
         }
 
-        public Builder setDataBackup(@Nullable String dataBackup) {
+        public Builder dataBackup(@Nullable String dataBackup) {
             this.dataBackup = dataBackup;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeviceCompliance(@Nullable String deviceCompliance) {
+        public Builder deviceCompliance(@Nullable String deviceCompliance) {
             this.deviceCompliance = deviceCompliance;
             return this;
         }
 
-        public Builder setFileEncryption(@Nullable String fileEncryption) {
+        public Builder fileEncryption(@Nullable String fileEncryption) {
             this.fileEncryption = fileEncryption;
             return this;
         }
 
-        public Builder setFileSharingSaveAs(@Nullable String fileSharingSaveAs) {
+        public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
             this.fileSharingSaveAs = fileSharingSaveAs;
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setGroupStatus(String groupStatus) {
+        public Builder groupStatus(String groupStatus) {
             this.groupStatus = Objects.requireNonNull(groupStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedBrowser(@Nullable String managedBrowser) {
+        public Builder managedBrowser(@Nullable String managedBrowser) {
             this.managedBrowser = managedBrowser;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumOfApps(Integer numOfApps) {
+        public Builder numOfApps(Integer numOfApps) {
             this.numOfApps = Objects.requireNonNull(numOfApps);
             return this;
         }
 
-        public Builder setOfflineWipeTimeout(@Nullable String offlineWipeTimeout) {
+        public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
             this.offlineWipeTimeout = offlineWipeTimeout;
             return this;
         }
 
-        public Builder setPin(@Nullable String pin) {
+        public Builder pin(@Nullable String pin) {
             this.pin = pin;
             return this;
         }
 
-        public Builder setPinNumRetry(@Nullable Integer pinNumRetry) {
+        public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
             this.pinNumRetry = pinNumRetry;
             return this;
         }
 
-        public Builder setScreenCapture(@Nullable String screenCapture) {
+        public Builder screenCapture(@Nullable String screenCapture) {
             this.screenCapture = screenCapture;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -57,7 +57,7 @@ public final class QuotaInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.coresUsed = defaults.coresUsed;
         }
 
-        public Builder setCoresUsed(@Nullable Integer coresUsed) {
+        public Builder coresUsed(@Nullable Integer coresUsed) {
             this.coresUsed = coresUsed;
             return this;
         }

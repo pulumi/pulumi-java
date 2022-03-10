@@ -103,42 +103,42 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder setAllowSelfManagement(@Nullable Input<Boolean> allowSelfManagement) {
+        public Builder allowSelfManagement(@Nullable Input<Boolean> allowSelfManagement) {
             this.allowSelfManagement = allowSelfManagement;
             return this;
         }
 
-        public Builder setAllowSelfManagement(@Nullable Boolean allowSelfManagement) {
+        public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
             this.allowSelfManagement = Input.ofNullable(allowSelfManagement);
             return this;
         }
 
-        public Builder setSshPublicKey(@Nullable Input<String> sshPublicKey) {
+        public Builder sshPublicKey(@Nullable Input<String> sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
 
-        public Builder setSshPublicKey(@Nullable String sshPublicKey) {
+        public Builder sshPublicKey(@Nullable String sshPublicKey) {
             this.sshPublicKey = Input.ofNullable(sshPublicKey);
             return this;
         }
 
-        public Builder setSshUsername(@Nullable Input<String> sshUsername) {
+        public Builder sshUsername(@Nullable Input<String> sshUsername) {
             this.sshUsername = sshUsername;
             return this;
         }
 
-        public Builder setSshUsername(@Nullable String sshUsername) {
+        public Builder sshUsername(@Nullable String sshUsername) {
             this.sshUsername = Input.ofNullable(sshUsername);
             return this;
         }
 
-        public Builder setUserArn(@Nullable Input<String> userArn) {
+        public Builder userArn(@Nullable Input<String> userArn) {
             this.userArn = userArn;
             return this;
         }
 
-        public Builder setUserArn(@Nullable String userArn) {
+        public Builder userArn(@Nullable String userArn) {
             this.userArn = Input.ofNullable(userArn);
             return this;
         }

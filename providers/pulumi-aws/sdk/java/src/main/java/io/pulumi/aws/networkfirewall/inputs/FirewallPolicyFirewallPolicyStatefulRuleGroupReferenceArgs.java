@@ -71,22 +71,22 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs ex
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }

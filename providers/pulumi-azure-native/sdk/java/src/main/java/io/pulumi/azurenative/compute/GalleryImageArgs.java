@@ -337,182 +337,182 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisallowed(@Nullable Input<DisallowedArgs> disallowed) {
+        public Builder disallowed(@Nullable Input<DisallowedArgs> disallowed) {
             this.disallowed = disallowed;
             return this;
         }
 
-        public Builder setDisallowed(@Nullable DisallowedArgs disallowed) {
+        public Builder disallowed(@Nullable DisallowedArgs disallowed) {
             this.disallowed = Input.ofNullable(disallowed);
             return this;
         }
 
-        public Builder setEndOfLifeDate(@Nullable Input<String> endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable Input<String> endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
-        public Builder setEndOfLifeDate(@Nullable String endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = Input.ofNullable(endOfLifeDate);
             return this;
         }
 
-        public Builder setEula(@Nullable Input<String> eula) {
+        public Builder eula(@Nullable Input<String> eula) {
             this.eula = eula;
             return this;
         }
 
-        public Builder setEula(@Nullable String eula) {
+        public Builder eula(@Nullable String eula) {
             this.eula = Input.ofNullable(eula);
             return this;
         }
 
-        public Builder setFeatures(@Nullable Input<List<GalleryImageFeatureArgs>> features) {
+        public Builder features(@Nullable Input<List<GalleryImageFeatureArgs>> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<GalleryImageFeatureArgs> features) {
+        public Builder features(@Nullable List<GalleryImageFeatureArgs> features) {
             this.features = Input.ofNullable(features);
             return this;
         }
 
-        public Builder setGalleryImageName(@Nullable Input<String> galleryImageName) {
+        public Builder galleryImageName(@Nullable Input<String> galleryImageName) {
             this.galleryImageName = galleryImageName;
             return this;
         }
 
-        public Builder setGalleryImageName(@Nullable String galleryImageName) {
+        public Builder galleryImageName(@Nullable String galleryImageName) {
             this.galleryImageName = Input.ofNullable(galleryImageName);
             return this;
         }
 
-        public Builder setGalleryName(Input<String> galleryName) {
+        public Builder galleryName(Input<String> galleryName) {
             this.galleryName = Objects.requireNonNull(galleryName);
             return this;
         }
 
-        public Builder setGalleryName(String galleryName) {
+        public Builder galleryName(String galleryName) {
             this.galleryName = Input.of(Objects.requireNonNull(galleryName));
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
             this.hyperVGeneration = Input.ofNullable(hyperVGeneration);
             return this;
         }
 
-        public Builder setIdentifier(Input<GalleryImageIdentifierArgs> identifier) {
+        public Builder identifier(Input<GalleryImageIdentifierArgs> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setIdentifier(GalleryImageIdentifierArgs identifier) {
+        public Builder identifier(GalleryImageIdentifierArgs identifier) {
             this.identifier = Input.of(Objects.requireNonNull(identifier));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOsState(Input<OperatingSystemStateTypes> osState) {
+        public Builder osState(Input<OperatingSystemStateTypes> osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
 
-        public Builder setOsState(OperatingSystemStateTypes osState) {
+        public Builder osState(OperatingSystemStateTypes osState) {
             this.osState = Input.of(Objects.requireNonNull(osState));
             return this;
         }
 
-        public Builder setOsType(Input<OperatingSystemTypes> osType) {
+        public Builder osType(Input<OperatingSystemTypes> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setOsType(OperatingSystemTypes osType) {
+        public Builder osType(OperatingSystemTypes osType) {
             this.osType = Input.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder setPrivacyStatementUri(@Nullable Input<String> privacyStatementUri) {
+        public Builder privacyStatementUri(@Nullable Input<String> privacyStatementUri) {
             this.privacyStatementUri = privacyStatementUri;
             return this;
         }
 
-        public Builder setPrivacyStatementUri(@Nullable String privacyStatementUri) {
+        public Builder privacyStatementUri(@Nullable String privacyStatementUri) {
             this.privacyStatementUri = Input.ofNullable(privacyStatementUri);
             return this;
         }
 
-        public Builder setPurchasePlan(@Nullable Input<ImagePurchasePlanArgs> purchasePlan) {
+        public Builder purchasePlan(@Nullable Input<ImagePurchasePlanArgs> purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
 
-        public Builder setPurchasePlan(@Nullable ImagePurchasePlanArgs purchasePlan) {
+        public Builder purchasePlan(@Nullable ImagePurchasePlanArgs purchasePlan) {
             this.purchasePlan = Input.ofNullable(purchasePlan);
             return this;
         }
 
-        public Builder setRecommended(@Nullable Input<RecommendedMachineConfigurationArgs> recommended) {
+        public Builder recommended(@Nullable Input<RecommendedMachineConfigurationArgs> recommended) {
             this.recommended = recommended;
             return this;
         }
 
-        public Builder setRecommended(@Nullable RecommendedMachineConfigurationArgs recommended) {
+        public Builder recommended(@Nullable RecommendedMachineConfigurationArgs recommended) {
             this.recommended = Input.ofNullable(recommended);
             return this;
         }
 
-        public Builder setReleaseNoteUri(@Nullable Input<String> releaseNoteUri) {
+        public Builder releaseNoteUri(@Nullable Input<String> releaseNoteUri) {
             this.releaseNoteUri = releaseNoteUri;
             return this;
         }
 
-        public Builder setReleaseNoteUri(@Nullable String releaseNoteUri) {
+        public Builder releaseNoteUri(@Nullable String releaseNoteUri) {
             this.releaseNoteUri = Input.ofNullable(releaseNoteUri);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

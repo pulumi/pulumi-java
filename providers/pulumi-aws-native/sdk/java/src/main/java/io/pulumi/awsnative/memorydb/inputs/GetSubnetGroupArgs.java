@@ -51,7 +51,7 @@ public final class GetSubnetGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.subnetGroupName = defaults.subnetGroupName;
         }
 
-        public Builder setSubnetGroupName(String subnetGroupName) {
+        public Builder subnetGroupName(String subnetGroupName) {
             this.subnetGroupName = Objects.requireNonNull(subnetGroupName);
             return this;
         }

@@ -125,52 +125,52 @@ public final class LiveEventPreviewArgs extends io.pulumi.resources.ResourceArgs
     	      this.streamingPolicyName = defaults.streamingPolicyName;
         }
 
-        public Builder setAccessControl(@Nullable Input<LiveEventPreviewAccessControlArgs> accessControl) {
+        public Builder accessControl(@Nullable Input<LiveEventPreviewAccessControlArgs> accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessControl(@Nullable LiveEventPreviewAccessControlArgs accessControl) {
+        public Builder accessControl(@Nullable LiveEventPreviewAccessControlArgs accessControl) {
             this.accessControl = Input.ofNullable(accessControl);
             return this;
         }
 
-        public Builder setAlternativeMediaId(@Nullable Input<String> alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable Input<String> alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
 
-        public Builder setAlternativeMediaId(@Nullable String alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
             this.alternativeMediaId = Input.ofNullable(alternativeMediaId);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<LiveEventEndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<LiveEventEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
+        public Builder endpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setPreviewLocator(@Nullable Input<String> previewLocator) {
+        public Builder previewLocator(@Nullable Input<String> previewLocator) {
             this.previewLocator = previewLocator;
             return this;
         }
 
-        public Builder setPreviewLocator(@Nullable String previewLocator) {
+        public Builder previewLocator(@Nullable String previewLocator) {
             this.previewLocator = Input.ofNullable(previewLocator);
             return this;
         }
 
-        public Builder setStreamingPolicyName(@Nullable Input<String> streamingPolicyName) {
+        public Builder streamingPolicyName(@Nullable Input<String> streamingPolicyName) {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }
 
-        public Builder setStreamingPolicyName(@Nullable String streamingPolicyName) {
+        public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
             this.streamingPolicyName = Input.ofNullable(streamingPolicyName);
             return this;
         }

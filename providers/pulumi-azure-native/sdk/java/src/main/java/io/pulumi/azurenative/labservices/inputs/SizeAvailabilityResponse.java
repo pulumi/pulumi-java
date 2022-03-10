@@ -75,12 +75,12 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
     	      this.sizeCategory = defaults.sizeCategory;
         }
 
-        public Builder setIsAvailable(@Nullable Boolean isAvailable) {
+        public Builder isAvailable(@Nullable Boolean isAvailable) {
             this.isAvailable = isAvailable;
             return this;
         }
 
-        public Builder setSizeCategory(@Nullable String sizeCategory) {
+        public Builder sizeCategory(@Nullable String sizeCategory) {
             this.sizeCategory = sizeCategory;
             return this;
         }

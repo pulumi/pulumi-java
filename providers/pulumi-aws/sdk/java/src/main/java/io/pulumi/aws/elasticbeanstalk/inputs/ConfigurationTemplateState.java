@@ -139,62 +139,62 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
     	      this.solutionStackName = defaults.solutionStackName;
         }
 
-        public Builder setApplication(@Nullable Input<String> application) {
+        public Builder application(@Nullable Input<String> application) {
             this.application = application;
             return this;
         }
 
-        public Builder setApplication(@Nullable String application) {
+        public Builder application(@Nullable String application) {
             this.application = Input.ofNullable(application);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings) {
+        public Builder settings(@Nullable Input<List<ConfigurationTemplateSettingGetArgs>> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable List<ConfigurationTemplateSettingGetArgs> settings) {
+        public Builder settings(@Nullable List<ConfigurationTemplateSettingGetArgs> settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setSolutionStackName(@Nullable Input<String> solutionStackName) {
+        public Builder solutionStackName(@Nullable Input<String> solutionStackName) {
             this.solutionStackName = solutionStackName;
             return this;
         }
 
-        public Builder setSolutionStackName(@Nullable String solutionStackName) {
+        public Builder solutionStackName(@Nullable String solutionStackName) {
             this.solutionStackName = Input.ofNullable(solutionStackName);
             return this;
         }

@@ -86,32 +86,32 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
     	      this.vpcEndpointState = defaults.vpcEndpointState;
         }
 
-        public Builder setVpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Input.ofNullable(vpcEndpointServiceId);
             return this;
         }
 
-        public Builder setVpcEndpointState(@Nullable Input<String> vpcEndpointState) {
+        public Builder vpcEndpointState(@Nullable Input<String> vpcEndpointState) {
             this.vpcEndpointState = vpcEndpointState;
             return this;
         }
 
-        public Builder setVpcEndpointState(@Nullable String vpcEndpointState) {
+        public Builder vpcEndpointState(@Nullable String vpcEndpointState) {
             this.vpcEndpointState = Input.ofNullable(vpcEndpointState);
             return this;
         }

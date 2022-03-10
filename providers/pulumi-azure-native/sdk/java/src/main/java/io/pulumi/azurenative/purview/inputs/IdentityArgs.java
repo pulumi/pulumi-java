@@ -59,12 +59,12 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<Either<String,Type>> type) {
+        public Builder type(@Nullable Input<Either<String,Type>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,Type> type) {
+        public Builder type(@Nullable Either<String,Type> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

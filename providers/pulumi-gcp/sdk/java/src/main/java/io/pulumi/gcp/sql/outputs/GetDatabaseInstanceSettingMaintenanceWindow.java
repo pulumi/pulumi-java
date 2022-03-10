@@ -58,17 +58,17 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
     	      this.updateTrack = defaults.updateTrack;
         }
 
-        public Builder setDay(Integer day) {
+        public Builder day(Integer day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setHour(Integer hour) {
+        public Builder hour(Integer hour) {
             this.hour = Objects.requireNonNull(hour);
             return this;
         }
 
-        public Builder setUpdateTrack(String updateTrack) {
+        public Builder updateTrack(String updateTrack) {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
         }

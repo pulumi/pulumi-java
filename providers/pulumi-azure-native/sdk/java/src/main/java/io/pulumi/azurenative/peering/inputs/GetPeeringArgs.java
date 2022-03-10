@@ -68,12 +68,12 @@ public final class GetPeeringArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

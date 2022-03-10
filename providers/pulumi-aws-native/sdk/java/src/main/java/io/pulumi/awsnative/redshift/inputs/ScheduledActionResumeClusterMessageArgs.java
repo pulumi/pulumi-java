@@ -52,12 +52,12 @@ public final class ScheduledActionResumeClusterMessageArgs extends io.pulumi.res
     	      this.clusterIdentifier = defaults.clusterIdentifier;
         }
 
-        public Builder setClusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }

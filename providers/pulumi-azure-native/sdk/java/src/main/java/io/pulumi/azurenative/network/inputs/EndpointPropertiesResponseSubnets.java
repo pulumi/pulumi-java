@@ -91,17 +91,17 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
     	      this.scope = defaults.scope;
         }
 
-        public Builder setFirst(@Nullable String first) {
+        public Builder first(@Nullable String first) {
             this.first = first;
             return this;
         }
 
-        public Builder setLast(@Nullable String last) {
+        public Builder last(@Nullable String last) {
             this.last = last;
             return this;
         }
 
-        public Builder setScope(@Nullable Integer scope) {
+        public Builder scope(@Nullable Integer scope) {
             this.scope = scope;
             return this;
         }

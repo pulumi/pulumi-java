@@ -56,7 +56,7 @@ public final class RowLayoutResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rows = defaults.rows;
         }
 
-        public Builder setRows(List<RowResponse> rows) {
+        public Builder rows(List<RowResponse> rows) {
             this.rows = Objects.requireNonNull(rows);
             return this;
         }

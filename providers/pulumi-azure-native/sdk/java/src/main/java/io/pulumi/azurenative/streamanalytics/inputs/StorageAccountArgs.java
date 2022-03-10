@@ -74,22 +74,22 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accountName = defaults.accountName;
         }
 
-        public Builder setAccountKey(@Nullable Input<String> accountKey) {
+        public Builder accountKey(@Nullable Input<String> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = Input.ofNullable(accountKey);
             return this;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }

@@ -81,17 +81,17 @@ public final class ListBatchAccountKeysResult {
     	      this.secondary = defaults.secondary;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setPrimary(String primary) {
+        public Builder primary(String primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
 
-        public Builder setSecondary(String secondary) {
+        public Builder secondary(String secondary) {
             this.secondary = Objects.requireNonNull(secondary);
             return this;
         }

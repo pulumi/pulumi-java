@@ -86,32 +86,32 @@ public final class TopicRulePayload {
     	      this.sql = defaults.sql;
         }
 
-        public Builder setActions(List<TopicRuleAction> actions) {
+        public Builder actions(List<TopicRuleAction> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setAwsIotSqlVersion(@Nullable String awsIotSqlVersion) {
+        public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
             this.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setErrorAction(@Nullable TopicRuleAction errorAction) {
+        public Builder errorAction(@Nullable TopicRuleAction errorAction) {
             this.errorAction = errorAction;
             return this;
         }
 
-        public Builder setRuleDisabled(@Nullable Boolean ruleDisabled) {
+        public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
             this.ruleDisabled = ruleDisabled;
             return this;
         }
 
-        public Builder setSql(String sql) {
+        public Builder sql(String sql) {
             this.sql = Objects.requireNonNull(sql);
             return this;
         }

@@ -72,22 +72,22 @@ public final class JobDefinitionRetryStrategyArgs extends io.pulumi.resources.Re
     	      this.evaluateOnExits = defaults.evaluateOnExits;
         }
 
-        public Builder setAttempts(@Nullable Input<Integer> attempts) {
+        public Builder attempts(@Nullable Input<Integer> attempts) {
             this.attempts = attempts;
             return this;
         }
 
-        public Builder setAttempts(@Nullable Integer attempts) {
+        public Builder attempts(@Nullable Integer attempts) {
             this.attempts = Input.ofNullable(attempts);
             return this;
         }
 
-        public Builder setEvaluateOnExits(@Nullable Input<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits) {
+        public Builder evaluateOnExits(@Nullable Input<List<JobDefinitionRetryStrategyEvaluateOnExitArgs>> evaluateOnExits) {
             this.evaluateOnExits = evaluateOnExits;
             return this;
         }
 
-        public Builder setEvaluateOnExits(@Nullable List<JobDefinitionRetryStrategyEvaluateOnExitArgs> evaluateOnExits) {
+        public Builder evaluateOnExits(@Nullable List<JobDefinitionRetryStrategyEvaluateOnExitArgs> evaluateOnExits) {
             this.evaluateOnExits = Input.ofNullable(evaluateOnExits);
             return this;
         }

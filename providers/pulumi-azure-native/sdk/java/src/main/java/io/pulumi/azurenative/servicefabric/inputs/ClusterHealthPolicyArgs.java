@@ -105,32 +105,32 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.maxPercentUnhealthyNodes = defaults.maxPercentUnhealthyNodes;
         }
 
-        public Builder setApplicationHealthPolicies(@Nullable Input<Map<String,ApplicationHealthPolicyArgs>> applicationHealthPolicies) {
+        public Builder applicationHealthPolicies(@Nullable Input<Map<String,ApplicationHealthPolicyArgs>> applicationHealthPolicies) {
             this.applicationHealthPolicies = applicationHealthPolicies;
             return this;
         }
 
-        public Builder setApplicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyArgs> applicationHealthPolicies) {
+        public Builder applicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyArgs> applicationHealthPolicies) {
             this.applicationHealthPolicies = Input.ofNullable(applicationHealthPolicies);
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyApplications(@Nullable Input<Integer> maxPercentUnhealthyApplications) {
+        public Builder maxPercentUnhealthyApplications(@Nullable Input<Integer> maxPercentUnhealthyApplications) {
             this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
+        public Builder maxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
             this.maxPercentUnhealthyApplications = Input.ofNullable(maxPercentUnhealthyApplications);
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyNodes(@Nullable Input<Integer> maxPercentUnhealthyNodes) {
+        public Builder maxPercentUnhealthyNodes(@Nullable Input<Integer> maxPercentUnhealthyNodes) {
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
+        public Builder maxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
             this.maxPercentUnhealthyNodes = Input.ofNullable(maxPercentUnhealthyNodes);
             return this;
         }

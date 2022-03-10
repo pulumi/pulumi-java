@@ -68,12 +68,12 @@ public final class HubIPAddressesResponse {
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPublicIPs(@Nullable HubPublicIPAddressesResponse publicIPs) {
+        public Builder publicIPs(@Nullable HubPublicIPAddressesResponse publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }

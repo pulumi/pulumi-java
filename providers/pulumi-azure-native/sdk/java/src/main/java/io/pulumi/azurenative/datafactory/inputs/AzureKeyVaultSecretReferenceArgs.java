@@ -109,42 +109,42 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder setSecretName(Input<Object> secretName) {
+        public Builder secretName(Input<Object> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretName(Object secretName) {
+        public Builder secretName(Object secretName) {
             this.secretName = Input.of(Objects.requireNonNull(secretName));
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable Input<Object> secretVersion) {
+        public Builder secretVersion(@Nullable Input<Object> secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable Object secretVersion) {
+        public Builder secretVersion(@Nullable Object secretVersion) {
             this.secretVersion = Input.ofNullable(secretVersion);
             return this;
         }
 
-        public Builder setStore(Input<LinkedServiceReferenceArgs> store) {
+        public Builder store(Input<LinkedServiceReferenceArgs> store) {
             this.store = Objects.requireNonNull(store);
             return this;
         }
 
-        public Builder setStore(LinkedServiceReferenceArgs store) {
+        public Builder store(LinkedServiceReferenceArgs store) {
             this.store = Input.of(Objects.requireNonNull(store));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

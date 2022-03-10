@@ -255,132 +255,132 @@ public final class BuildProvenanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.triggerId = defaults.triggerId;
         }
 
-        public Builder setBuildOptions(@Nullable Input<Map<String,String>> buildOptions) {
+        public Builder buildOptions(@Nullable Input<Map<String,String>> buildOptions) {
             this.buildOptions = buildOptions;
             return this;
         }
 
-        public Builder setBuildOptions(@Nullable Map<String,String> buildOptions) {
+        public Builder buildOptions(@Nullable Map<String,String> buildOptions) {
             this.buildOptions = Input.ofNullable(buildOptions);
             return this;
         }
 
-        public Builder setBuilderVersion(@Nullable Input<String> builderVersion) {
+        public Builder builderVersion(@Nullable Input<String> builderVersion) {
             this.builderVersion = builderVersion;
             return this;
         }
 
-        public Builder setBuilderVersion(@Nullable String builderVersion) {
+        public Builder builderVersion(@Nullable String builderVersion) {
             this.builderVersion = Input.ofNullable(builderVersion);
             return this;
         }
 
-        public Builder setBuiltArtifacts(@Nullable Input<List<ArtifactArgs>> builtArtifacts) {
+        public Builder builtArtifacts(@Nullable Input<List<ArtifactArgs>> builtArtifacts) {
             this.builtArtifacts = builtArtifacts;
             return this;
         }
 
-        public Builder setBuiltArtifacts(@Nullable List<ArtifactArgs> builtArtifacts) {
+        public Builder builtArtifacts(@Nullable List<ArtifactArgs> builtArtifacts) {
             this.builtArtifacts = Input.ofNullable(builtArtifacts);
             return this;
         }
 
-        public Builder setCommands(@Nullable Input<List<CommandArgs>> commands) {
+        public Builder commands(@Nullable Input<List<CommandArgs>> commands) {
             this.commands = commands;
             return this;
         }
 
-        public Builder setCommands(@Nullable List<CommandArgs> commands) {
+        public Builder commands(@Nullable List<CommandArgs> commands) {
             this.commands = Input.ofNullable(commands);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setCreator(@Nullable Input<String> creator) {
+        public Builder creator(@Nullable Input<String> creator) {
             this.creator = creator;
             return this;
         }
 
-        public Builder setCreator(@Nullable String creator) {
+        public Builder creator(@Nullable String creator) {
             this.creator = Input.ofNullable(creator);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setLogsUri(@Nullable Input<String> logsUri) {
+        public Builder logsUri(@Nullable Input<String> logsUri) {
             this.logsUri = logsUri;
             return this;
         }
 
-        public Builder setLogsUri(@Nullable String logsUri) {
+        public Builder logsUri(@Nullable String logsUri) {
             this.logsUri = Input.ofNullable(logsUri);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSourceProvenance(@Nullable Input<SourceArgs> sourceProvenance) {
+        public Builder sourceProvenance(@Nullable Input<SourceArgs> sourceProvenance) {
             this.sourceProvenance = sourceProvenance;
             return this;
         }
 
-        public Builder setSourceProvenance(@Nullable SourceArgs sourceProvenance) {
+        public Builder sourceProvenance(@Nullable SourceArgs sourceProvenance) {
             this.sourceProvenance = Input.ofNullable(sourceProvenance);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTriggerId(@Nullable Input<String> triggerId) {
+        public Builder triggerId(@Nullable Input<String> triggerId) {
             this.triggerId = triggerId;
             return this;
         }
 
-        public Builder setTriggerId(@Nullable String triggerId) {
+        public Builder triggerId(@Nullable String triggerId) {
             this.triggerId = Input.ofNullable(triggerId);
             return this;
         }

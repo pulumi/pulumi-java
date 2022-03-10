@@ -119,27 +119,27 @@ public final class OpenZfsFileSystemRootVolumeConfiguration {
     	      this.userAndGroupQuotas = defaults.userAndGroupQuotas;
         }
 
-        public Builder setCopyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
             this.copyTagsToSnapshots = copyTagsToSnapshots;
             return this;
         }
 
-        public Builder setDataCompressionType(@Nullable String dataCompressionType) {
+        public Builder dataCompressionType(@Nullable String dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
 
-        public Builder setNfsExports(@Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExports nfsExports) {
+        public Builder nfsExports(@Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExports nfsExports) {
             this.nfsExports = nfsExports;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setUserAndGroupQuotas(@Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas) {
             this.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }

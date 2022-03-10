@@ -106,42 +106,42 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.userPrincipalName = defaults.userPrincipalName;
         }
 
-        public Builder setAssignedTo(@Nullable Input<String> assignedTo) {
+        public Builder assignedTo(@Nullable Input<String> assignedTo) {
             this.assignedTo = assignedTo;
             return this;
         }
 
-        public Builder setAssignedTo(@Nullable String assignedTo) {
+        public Builder assignedTo(@Nullable String assignedTo) {
             this.assignedTo = Input.ofNullable(assignedTo);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setObjectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Input<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = Input.ofNullable(objectId);
             return this;
         }
 
-        public Builder setUserPrincipalName(@Nullable Input<String> userPrincipalName) {
+        public Builder userPrincipalName(@Nullable Input<String> userPrincipalName) {
             this.userPrincipalName = userPrincipalName;
             return this;
         }
 
-        public Builder setUserPrincipalName(@Nullable String userPrincipalName) {
+        public Builder userPrincipalName(@Nullable String userPrincipalName) {
             this.userPrincipalName = Input.ofNullable(userPrincipalName);
             return this;
         }

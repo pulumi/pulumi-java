@@ -74,32 +74,32 @@ public final class ContainerUlimitGetArgs extends io.pulumi.resources.ResourceAr
     	      this.soft = defaults.soft;
         }
 
-        public Builder setHard(Input<Integer> hard) {
+        public Builder hard(Input<Integer> hard) {
             this.hard = Objects.requireNonNull(hard);
             return this;
         }
 
-        public Builder setHard(Integer hard) {
+        public Builder hard(Integer hard) {
             this.hard = Input.of(Objects.requireNonNull(hard));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSoft(Input<Integer> soft) {
+        public Builder soft(Input<Integer> soft) {
             this.soft = Objects.requireNonNull(soft);
             return this;
         }
 
-        public Builder setSoft(Integer soft) {
+        public Builder soft(Integer soft) {
             this.soft = Input.of(Objects.requireNonNull(soft));
             return this;
         }

@@ -185,92 +185,92 @@ public final class NetworkPeeringState extends io.pulumi.resources.ResourceArgs 
     	      this.stateDetails = defaults.stateDetails;
         }
 
-        public Builder setExportCustomRoutes(@Nullable Input<Boolean> exportCustomRoutes) {
+        public Builder exportCustomRoutes(@Nullable Input<Boolean> exportCustomRoutes) {
             this.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
 
-        public Builder setExportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
+        public Builder exportCustomRoutes(@Nullable Boolean exportCustomRoutes) {
             this.exportCustomRoutes = Input.ofNullable(exportCustomRoutes);
             return this;
         }
 
-        public Builder setExportSubnetRoutesWithPublicIp(@Nullable Input<Boolean> exportSubnetRoutesWithPublicIp) {
+        public Builder exportSubnetRoutesWithPublicIp(@Nullable Input<Boolean> exportSubnetRoutesWithPublicIp) {
             this.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
             return this;
         }
 
-        public Builder setExportSubnetRoutesWithPublicIp(@Nullable Boolean exportSubnetRoutesWithPublicIp) {
+        public Builder exportSubnetRoutesWithPublicIp(@Nullable Boolean exportSubnetRoutesWithPublicIp) {
             this.exportSubnetRoutesWithPublicIp = Input.ofNullable(exportSubnetRoutesWithPublicIp);
             return this;
         }
 
-        public Builder setImportCustomRoutes(@Nullable Input<Boolean> importCustomRoutes) {
+        public Builder importCustomRoutes(@Nullable Input<Boolean> importCustomRoutes) {
             this.importCustomRoutes = importCustomRoutes;
             return this;
         }
 
-        public Builder setImportCustomRoutes(@Nullable Boolean importCustomRoutes) {
+        public Builder importCustomRoutes(@Nullable Boolean importCustomRoutes) {
             this.importCustomRoutes = Input.ofNullable(importCustomRoutes);
             return this;
         }
 
-        public Builder setImportSubnetRoutesWithPublicIp(@Nullable Input<Boolean> importSubnetRoutesWithPublicIp) {
+        public Builder importSubnetRoutesWithPublicIp(@Nullable Input<Boolean> importSubnetRoutesWithPublicIp) {
             this.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
             return this;
         }
 
-        public Builder setImportSubnetRoutesWithPublicIp(@Nullable Boolean importSubnetRoutesWithPublicIp) {
+        public Builder importSubnetRoutesWithPublicIp(@Nullable Boolean importSubnetRoutesWithPublicIp) {
             this.importSubnetRoutesWithPublicIp = Input.ofNullable(importSubnetRoutesWithPublicIp);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPeerNetwork(@Nullable Input<String> peerNetwork) {
+        public Builder peerNetwork(@Nullable Input<String> peerNetwork) {
             this.peerNetwork = peerNetwork;
             return this;
         }
 
-        public Builder setPeerNetwork(@Nullable String peerNetwork) {
+        public Builder peerNetwork(@Nullable String peerNetwork) {
             this.peerNetwork = Input.ofNullable(peerNetwork);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStateDetails(@Nullable Input<String> stateDetails) {
+        public Builder stateDetails(@Nullable Input<String> stateDetails) {
             this.stateDetails = stateDetails;
             return this;
         }
 
-        public Builder setStateDetails(@Nullable String stateDetails) {
+        public Builder stateDetails(@Nullable String stateDetails) {
             this.stateDetails = Input.ofNullable(stateDetails);
             return this;
         }

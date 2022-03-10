@@ -88,32 +88,32 @@ public final class VirtualGatewaySpecListenerTlsCertificateArgs extends io.pulum
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable Input<VirtualGatewaySpecListenerTlsCertificateAcmArgs> acm) {
+        public Builder acm(@Nullable Input<VirtualGatewaySpecListenerTlsCertificateAcmArgs> acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setAcm(@Nullable VirtualGatewaySpecListenerTlsCertificateAcmArgs acm) {
+        public Builder acm(@Nullable VirtualGatewaySpecListenerTlsCertificateAcmArgs acm) {
             this.acm = Input.ofNullable(acm);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<VirtualGatewaySpecListenerTlsCertificateFileArgs> file) {
+        public Builder file(@Nullable Input<VirtualGatewaySpecListenerTlsCertificateFileArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualGatewaySpecListenerTlsCertificateFileArgs file) {
+        public Builder file(@Nullable VirtualGatewaySpecListenerTlsCertificateFileArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setSds(@Nullable Input<VirtualGatewaySpecListenerTlsCertificateSdsArgs> sds) {
+        public Builder sds(@Nullable Input<VirtualGatewaySpecListenerTlsCertificateSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualGatewaySpecListenerTlsCertificateSdsArgs sds) {
+        public Builder sds(@Nullable VirtualGatewaySpecListenerTlsCertificateSdsArgs sds) {
             this.sds = Input.ofNullable(sds);
             return this;
         }

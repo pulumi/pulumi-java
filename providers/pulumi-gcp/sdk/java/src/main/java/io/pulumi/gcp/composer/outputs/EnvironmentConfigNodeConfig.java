@@ -127,57 +127,57 @@ public final class EnvironmentConfigNodeConfig {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setEnableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
+        public Builder enableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
             this.enableIpMasqAgent = enableIpMasqAgent;
             return this;
         }
 
-        public Builder setIpAllocationPolicy(@Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(@Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMaxPodsPerNode(@Nullable Integer maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

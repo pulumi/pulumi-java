@@ -75,32 +75,32 @@ public final class PipelineSelectAttributesArgs extends io.pulumi.resources.Reso
     	      this.next = defaults.next;
         }
 
-        public Builder setAttributes(Input<List<String>> attributes) {
+        public Builder attributes(Input<List<String>> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setAttributes(List<String> attributes) {
+        public Builder attributes(List<String> attributes) {
             this.attributes = Input.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNext(@Nullable Input<String> next) {
+        public Builder next(@Nullable Input<String> next) {
             this.next = next;
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = Input.ofNullable(next);
             return this;
         }

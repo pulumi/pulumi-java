@@ -66,12 +66,12 @@ public final class ShardingOptionResponse {
     	      this.uniformSharding = defaults.uniformSharding;
         }
 
-        public Builder setManualSharding(ManualShardingResponse manualSharding) {
+        public Builder manualSharding(ManualShardingResponse manualSharding) {
             this.manualSharding = Objects.requireNonNull(manualSharding);
             return this;
         }
 
-        public Builder setUniformSharding(UniformShardingResponse uniformSharding) {
+        public Builder uniformSharding(UniformShardingResponse uniformSharding) {
             this.uniformSharding = Objects.requireNonNull(uniformSharding);
             return this;
         }

@@ -111,52 +111,52 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(@Nullable Input<String> definition) {
+        public Builder definition(@Nullable Input<String> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinition(@Nullable String definition) {
+        public Builder definition(@Nullable String definition) {
             this.definition = Input.ofNullable(definition);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchemaId(@Nullable Input<String> schemaId) {
+        public Builder schemaId(@Nullable Input<String> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
-        public Builder setSchemaId(@Nullable String schemaId) {
+        public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = Input.ofNullable(schemaId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<SchemaType> type) {
+        public Builder type(@Nullable Input<SchemaType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable SchemaType type) {
+        public Builder type(@Nullable SchemaType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

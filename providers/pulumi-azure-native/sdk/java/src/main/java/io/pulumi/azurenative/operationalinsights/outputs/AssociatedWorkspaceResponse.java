@@ -97,22 +97,22 @@ public final class AssociatedWorkspaceResponse {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAssociateDate(String associateDate) {
+        public Builder associateDate(String associateDate) {
             this.associateDate = Objects.requireNonNull(associateDate);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

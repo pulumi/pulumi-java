@@ -99,27 +99,27 @@ public final class LaunchMetricDefinitionObject {
     	      this.valueKey = defaults.valueKey;
         }
 
-        public Builder setEntityIdKey(String entityIdKey) {
+        public Builder entityIdKey(String entityIdKey) {
             this.entityIdKey = Objects.requireNonNull(entityIdKey);
             return this;
         }
 
-        public Builder setEventPattern(String eventPattern) {
+        public Builder eventPattern(String eventPattern) {
             this.eventPattern = Objects.requireNonNull(eventPattern);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setUnitLabel(@Nullable String unitLabel) {
+        public Builder unitLabel(@Nullable String unitLabel) {
             this.unitLabel = unitLabel;
             return this;
         }
 
-        public Builder setValueKey(String valueKey) {
+        public Builder valueKey(String valueKey) {
             this.valueKey = Objects.requireNonNull(valueKey);
             return this;
         }

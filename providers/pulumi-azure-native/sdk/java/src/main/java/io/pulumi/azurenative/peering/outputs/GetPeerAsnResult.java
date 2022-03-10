@@ -166,42 +166,42 @@ public final class GetPeerAsnResult {
     	      this.validationState = defaults.validationState;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Integer peerAsn) {
+        public Builder peerAsn(@Nullable Integer peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerContactDetail(@Nullable List<ContactDetailResponse> peerContactDetail) {
+        public Builder peerContactDetail(@Nullable List<ContactDetailResponse> peerContactDetail) {
             this.peerContactDetail = peerContactDetail;
             return this;
         }
 
-        public Builder setPeerName(@Nullable String peerName) {
+        public Builder peerName(@Nullable String peerName) {
             this.peerName = peerName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationState(@Nullable String validationState) {
+        public Builder validationState(@Nullable String validationState) {
             this.validationState = validationState;
             return this;
         }

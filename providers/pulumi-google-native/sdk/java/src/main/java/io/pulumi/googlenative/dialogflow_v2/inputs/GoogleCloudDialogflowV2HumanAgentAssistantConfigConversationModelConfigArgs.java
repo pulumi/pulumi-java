@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
     	      this.model = defaults.model;
         }
 
-        public Builder setModel(@Nullable Input<String> model) {
+        public Builder model(@Nullable Input<String> model) {
             this.model = model;
             return this;
         }
 
-        public Builder setModel(@Nullable String model) {
+        public Builder model(@Nullable String model) {
             this.model = Input.ofNullable(model);
             return this;
         }

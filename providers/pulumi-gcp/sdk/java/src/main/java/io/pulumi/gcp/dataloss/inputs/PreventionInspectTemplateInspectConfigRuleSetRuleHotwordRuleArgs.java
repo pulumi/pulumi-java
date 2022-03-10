@@ -94,32 +94,32 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
     	      this.proximity = defaults.proximity;
         }
 
-        public Builder setHotwordRegex(Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex) {
+        public Builder hotwordRegex(Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex) {
             this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
             return this;
         }
 
-        public Builder setHotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs hotwordRegex) {
+        public Builder hotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs hotwordRegex) {
             this.hotwordRegex = Input.of(Objects.requireNonNull(hotwordRegex));
             return this;
         }
 
-        public Builder setLikelihoodAdjustment(Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment) {
+        public Builder likelihoodAdjustment(Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment) {
             this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
             return this;
         }
 
-        public Builder setLikelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs likelihoodAdjustment) {
+        public Builder likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs likelihoodAdjustment) {
             this.likelihoodAdjustment = Input.of(Objects.requireNonNull(likelihoodAdjustment));
             return this;
         }
 
-        public Builder setProximity(Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity) {
+        public Builder proximity(Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity) {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }
 
-        public Builder setProximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs proximity) {
+        public Builder proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs proximity) {
             this.proximity = Input.of(Objects.requireNonNull(proximity));
             return this;
         }

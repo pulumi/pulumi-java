@@ -77,12 +77,12 @@ public final class IntentFollowUpPromptRejectionStatement {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMessages(List<IntentFollowUpPromptRejectionStatementMessage> messages) {
+        public Builder messages(List<IntentFollowUpPromptRejectionStatementMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

@@ -98,22 +98,22 @@ public final class NetworkConfigResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setCanIpForward(Boolean canIpForward) {
+        public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
 
-        public Builder setEnableExternalIps(Boolean enableExternalIps) {
+        public Builder enableExternalIps(Boolean enableExternalIps) {
             this.enableExternalIps = Objects.requireNonNull(enableExternalIps);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

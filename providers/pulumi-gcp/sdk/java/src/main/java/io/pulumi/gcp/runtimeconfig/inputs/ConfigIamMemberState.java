@@ -130,62 +130,62 @@ public final class ConfigIamMemberState extends io.pulumi.resources.ResourceArgs
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<ConfigIamMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<ConfigIamMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable ConfigIamMemberConditionGetArgs condition) {
+        public Builder condition(@Nullable ConfigIamMemberConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<String> config) {
+        public Builder config(@Nullable Input<String> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setMember(@Nullable Input<String> member) {
+        public Builder member(@Nullable Input<String> member) {
             this.member = member;
             return this;
         }
 
-        public Builder setMember(@Nullable String member) {
+        public Builder member(@Nullable String member) {
             this.member = Input.ofNullable(member);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }

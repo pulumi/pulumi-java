@@ -57,7 +57,7 @@ public final class FileSystemApplicationLogsConfigResponse extends io.pulumi.res
     	      this.level = defaults.level;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }

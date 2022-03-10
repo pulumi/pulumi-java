@@ -126,52 +126,52 @@ public final class BaseImageTriggerArgs extends io.pulumi.resources.ResourceArgs
     	      this.updateTriggerPayloadType = defaults.updateTriggerPayloadType;
         }
 
-        public Builder setBaseImageTriggerType(Input<Either<String,BaseImageTriggerType>> baseImageTriggerType) {
+        public Builder baseImageTriggerType(Input<Either<String,BaseImageTriggerType>> baseImageTriggerType) {
             this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType);
             return this;
         }
 
-        public Builder setBaseImageTriggerType(Either<String,BaseImageTriggerType> baseImageTriggerType) {
+        public Builder baseImageTriggerType(Either<String,BaseImageTriggerType> baseImageTriggerType) {
             this.baseImageTriggerType = Input.of(Objects.requireNonNull(baseImageTriggerType));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,TriggerStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,TriggerStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,TriggerStatus> status) {
+        public Builder status(@Nullable Either<String,TriggerStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setUpdateTriggerEndpoint(@Nullable Input<String> updateTriggerEndpoint) {
+        public Builder updateTriggerEndpoint(@Nullable Input<String> updateTriggerEndpoint) {
             this.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
 
-        public Builder setUpdateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
+        public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
             this.updateTriggerEndpoint = Input.ofNullable(updateTriggerEndpoint);
             return this;
         }
 
-        public Builder setUpdateTriggerPayloadType(@Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
+        public Builder updateTriggerPayloadType(@Nullable Input<Either<String,UpdateTriggerPayloadType>> updateTriggerPayloadType) {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
 
-        public Builder setUpdateTriggerPayloadType(@Nullable Either<String,UpdateTriggerPayloadType> updateTriggerPayloadType) {
+        public Builder updateTriggerPayloadType(@Nullable Either<String,UpdateTriggerPayloadType> updateTriggerPayloadType) {
             this.updateTriggerPayloadType = Input.ofNullable(updateTriggerPayloadType);
             return this;
         }

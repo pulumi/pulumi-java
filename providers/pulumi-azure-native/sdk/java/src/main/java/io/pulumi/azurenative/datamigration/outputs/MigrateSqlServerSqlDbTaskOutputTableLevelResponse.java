@@ -212,57 +212,57 @@ public final class MigrateSqlServerSqlDbTaskOutputTableLevelResponse {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setErrorPrefix(String errorPrefix) {
+        public Builder errorPrefix(String errorPrefix) {
             this.errorPrefix = Objects.requireNonNull(errorPrefix);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setItemsCompletedCount(Double itemsCompletedCount) {
+        public Builder itemsCompletedCount(Double itemsCompletedCount) {
             this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount);
             return this;
         }
 
-        public Builder setItemsCount(Double itemsCount) {
+        public Builder itemsCount(Double itemsCount) {
             this.itemsCount = Objects.requireNonNull(itemsCount);
             return this;
         }
 
-        public Builder setObjectName(String objectName) {
+        public Builder objectName(String objectName) {
             this.objectName = Objects.requireNonNull(objectName);
             return this;
         }
 
-        public Builder setResultPrefix(String resultPrefix) {
+        public Builder resultPrefix(String resultPrefix) {
             this.resultPrefix = Objects.requireNonNull(resultPrefix);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }

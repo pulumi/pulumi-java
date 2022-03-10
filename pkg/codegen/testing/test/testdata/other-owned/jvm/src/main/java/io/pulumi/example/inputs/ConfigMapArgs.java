@@ -49,12 +49,12 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.config = defaults.config;
         }
 
-        public Builder setConfig(@Nullable Input<String> config) {
+        public Builder config(@Nullable Input<String> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = Input.ofNullable(config);
             return this;
         }

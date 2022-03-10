@@ -221,112 +221,112 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAccelerator(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator) {
+        public Builder accelerator(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator) {
             this.accelerator = accelerator;
             return this;
         }
 
-        public Builder setAccelerator(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs accelerator) {
+        public Builder accelerator(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs accelerator) {
             this.accelerator = Input.ofNullable(accelerator);
             return this;
         }
 
-        public Builder setDiskSizeGb(Input<String> diskSizeGb) {
+        public Builder diskSizeGb(Input<String> diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Input.of(Objects.requireNonNull(diskSizeGb));
             return this;
         }
 
-        public Builder setDiskType(Input<String> diskType) {
+        public Builder diskType(Input<String> diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Input.of(Objects.requireNonNull(diskType));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMachineType(Input<String> machineType) {
+        public Builder machineType(Input<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder setMaxConcurrentActions(@Nullable Input<String> maxConcurrentActions) {
+        public Builder maxConcurrentActions(@Nullable Input<String> maxConcurrentActions) {
             this.maxConcurrentActions = maxConcurrentActions;
             return this;
         }
 
-        public Builder setMaxConcurrentActions(@Nullable String maxConcurrentActions) {
+        public Builder maxConcurrentActions(@Nullable String maxConcurrentActions) {
             this.maxConcurrentActions = Input.ofNullable(maxConcurrentActions);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setNetworkAccess(@Nullable Input<String> networkAccess) {
+        public Builder networkAccess(@Nullable Input<String> networkAccess) {
             this.networkAccess = networkAccess;
             return this;
         }
 
-        public Builder setNetworkAccess(@Nullable String networkAccess) {
+        public Builder networkAccess(@Nullable String networkAccess) {
             this.networkAccess = Input.ofNullable(networkAccess);
             return this;
         }
 
-        public Builder setReserved(@Nullable Input<Boolean> reserved) {
+        public Builder reserved(@Nullable Input<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
 
-        public Builder setReserved(@Nullable Boolean reserved) {
+        public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = Input.ofNullable(reserved);
             return this;
         }
 
-        public Builder setSoleTenantNodeType(@Nullable Input<String> soleTenantNodeType) {
+        public Builder soleTenantNodeType(@Nullable Input<String> soleTenantNodeType) {
             this.soleTenantNodeType = soleTenantNodeType;
             return this;
         }
 
-        public Builder setSoleTenantNodeType(@Nullable String soleTenantNodeType) {
+        public Builder soleTenantNodeType(@Nullable String soleTenantNodeType) {
             this.soleTenantNodeType = Input.ofNullable(soleTenantNodeType);
             return this;
         }
 
-        public Builder setVmImage(@Nullable Input<String> vmImage) {
+        public Builder vmImage(@Nullable Input<String> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
-        public Builder setVmImage(@Nullable String vmImage) {
+        public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }

@@ -167,82 +167,82 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     	      this.neqs = defaults.neqs;
         }
 
-        public Builder setEqExactMatches(@Nullable Input<List<String>> eqExactMatches) {
+        public Builder eqExactMatches(@Nullable Input<List<String>> eqExactMatches) {
             this.eqExactMatches = eqExactMatches;
             return this;
         }
 
-        public Builder setEqExactMatches(@Nullable List<String> eqExactMatches) {
+        public Builder eqExactMatches(@Nullable List<String> eqExactMatches) {
             this.eqExactMatches = Input.ofNullable(eqExactMatches);
             return this;
         }
 
-        public Builder setEqs(@Nullable Input<List<String>> eqs) {
+        public Builder eqs(@Nullable Input<List<String>> eqs) {
             this.eqs = eqs;
             return this;
         }
 
-        public Builder setEqs(@Nullable List<String> eqs) {
+        public Builder eqs(@Nullable List<String> eqs) {
             this.eqs = Input.ofNullable(eqs);
             return this;
         }
 
-        public Builder setField(Input<String> field) {
+        public Builder field(Input<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Input.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder setGt(@Nullable Input<String> gt) {
+        public Builder gt(@Nullable Input<String> gt) {
             this.gt = gt;
             return this;
         }
 
-        public Builder setGt(@Nullable String gt) {
+        public Builder gt(@Nullable String gt) {
             this.gt = Input.ofNullable(gt);
             return this;
         }
 
-        public Builder setGte(@Nullable Input<String> gte) {
+        public Builder gte(@Nullable Input<String> gte) {
             this.gte = gte;
             return this;
         }
 
-        public Builder setGte(@Nullable String gte) {
+        public Builder gte(@Nullable String gte) {
             this.gte = Input.ofNullable(gte);
             return this;
         }
 
-        public Builder setLt(@Nullable Input<String> lt) {
+        public Builder lt(@Nullable Input<String> lt) {
             this.lt = lt;
             return this;
         }
 
-        public Builder setLt(@Nullable String lt) {
+        public Builder lt(@Nullable String lt) {
             this.lt = Input.ofNullable(lt);
             return this;
         }
 
-        public Builder setLte(@Nullable Input<String> lte) {
+        public Builder lte(@Nullable Input<String> lte) {
             this.lte = lte;
             return this;
         }
 
-        public Builder setLte(@Nullable String lte) {
+        public Builder lte(@Nullable String lte) {
             this.lte = Input.ofNullable(lte);
             return this;
         }
 
-        public Builder setNeqs(@Nullable Input<List<String>> neqs) {
+        public Builder neqs(@Nullable Input<List<String>> neqs) {
             this.neqs = neqs;
             return this;
         }
 
-        public Builder setNeqs(@Nullable List<String> neqs) {
+        public Builder neqs(@Nullable List<String> neqs) {
             this.neqs = Input.ofNullable(neqs);
             return this;
         }

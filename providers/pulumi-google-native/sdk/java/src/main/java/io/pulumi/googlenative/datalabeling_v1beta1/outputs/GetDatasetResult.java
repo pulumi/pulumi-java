@@ -163,42 +163,42 @@ public final class GetDatasetResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setBlockingResources(List<String> blockingResources) {
+        public Builder blockingResources(List<String> blockingResources) {
             this.blockingResources = Objects.requireNonNull(blockingResources);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDataItemCount(String dataItemCount) {
+        public Builder dataItemCount(String dataItemCount) {
             this.dataItemCount = Objects.requireNonNull(dataItemCount);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setInputConfigs(List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs) {
+        public Builder inputConfigs(List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs) {
             this.inputConfigs = Objects.requireNonNull(inputConfigs);
             return this;
         }
 
-        public Builder setLastMigrateTime(String lastMigrateTime) {
+        public Builder lastMigrateTime(String lastMigrateTime) {
             this.lastMigrateTime = Objects.requireNonNull(lastMigrateTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

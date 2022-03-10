@@ -71,22 +71,22 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
     	      this.sourceSecurityGroupIds = defaults.sourceSecurityGroupIds;
         }
 
-        public Builder setEc2SshKey(@Nullable Input<String> ec2SshKey) {
+        public Builder ec2SshKey(@Nullable Input<String> ec2SshKey) {
             this.ec2SshKey = ec2SshKey;
             return this;
         }
 
-        public Builder setEc2SshKey(@Nullable String ec2SshKey) {
+        public Builder ec2SshKey(@Nullable String ec2SshKey) {
             this.ec2SshKey = Input.ofNullable(ec2SshKey);
             return this;
         }
 
-        public Builder setSourceSecurityGroupIds(@Nullable Input<List<String>> sourceSecurityGroupIds) {
+        public Builder sourceSecurityGroupIds(@Nullable Input<List<String>> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }
 
-        public Builder setSourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
+        public Builder sourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = Input.ofNullable(sourceSecurityGroupIds);
             return this;
         }

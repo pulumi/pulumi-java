@@ -74,22 +74,22 @@ public final class MCASDataConnectorDataTypesArgs extends io.pulumi.resources.Re
     	      this.discoveryLogs = defaults.discoveryLogs;
         }
 
-        public Builder setAlerts(@Nullable Input<DataConnectorDataTypeCommonArgs> alerts) {
+        public Builder alerts(@Nullable Input<DataConnectorDataTypeCommonArgs> alerts) {
             this.alerts = alerts;
             return this;
         }
 
-        public Builder setAlerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
+        public Builder alerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
             this.alerts = Input.ofNullable(alerts);
             return this;
         }
 
-        public Builder setDiscoveryLogs(@Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs) {
+        public Builder discoveryLogs(@Nullable Input<DataConnectorDataTypeCommonArgs> discoveryLogs) {
             this.discoveryLogs = discoveryLogs;
             return this;
         }
 
-        public Builder setDiscoveryLogs(@Nullable DataConnectorDataTypeCommonArgs discoveryLogs) {
+        public Builder discoveryLogs(@Nullable DataConnectorDataTypeCommonArgs discoveryLogs) {
             this.discoveryLogs = Input.ofNullable(discoveryLogs);
             return this;
         }

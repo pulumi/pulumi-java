@@ -100,22 +100,22 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
     	      this.targetGroupName = defaults.targetGroupName;
         }
 
-        public Builder setJobAgentName(String jobAgentName) {
+        public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setTargetGroupName(String targetGroupName) {
+        public Builder targetGroupName(String targetGroupName) {
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }

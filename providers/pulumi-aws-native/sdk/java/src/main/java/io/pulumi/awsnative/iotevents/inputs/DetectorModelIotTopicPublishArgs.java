@@ -71,22 +71,22 @@ public final class DetectorModelIotTopicPublishArgs extends io.pulumi.resources.
     	      this.payload = defaults.payload;
         }
 
-        public Builder setMqttTopic(Input<String> mqttTopic) {
+        public Builder mqttTopic(Input<String> mqttTopic) {
             this.mqttTopic = Objects.requireNonNull(mqttTopic);
             return this;
         }
 
-        public Builder setMqttTopic(String mqttTopic) {
+        public Builder mqttTopic(String mqttTopic) {
             this.mqttTopic = Input.of(Objects.requireNonNull(mqttTopic));
             return this;
         }
 
-        public Builder setPayload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayloadArgs payload) {
+        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }

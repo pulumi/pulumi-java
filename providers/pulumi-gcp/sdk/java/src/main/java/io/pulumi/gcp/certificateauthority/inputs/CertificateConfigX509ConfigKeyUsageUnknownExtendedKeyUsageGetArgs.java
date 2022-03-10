@@ -53,12 +53,12 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGet
     	      this.objectIdPaths = defaults.objectIdPaths;
         }
 
-        public Builder setObjectIdPaths(Input<List<Integer>> objectIdPaths) {
+        public Builder objectIdPaths(Input<List<Integer>> objectIdPaths) {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
 
-        public Builder setObjectIdPaths(List<Integer> objectIdPaths) {
+        public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }

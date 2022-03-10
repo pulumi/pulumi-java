@@ -91,32 +91,32 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxTasksDispatchedPerSecond = defaults.maxTasksDispatchedPerSecond;
         }
 
-        public Builder setMaxBurstSize(@Nullable Input<Integer> maxBurstSize) {
+        public Builder maxBurstSize(@Nullable Input<Integer> maxBurstSize) {
             this.maxBurstSize = maxBurstSize;
             return this;
         }
 
-        public Builder setMaxBurstSize(@Nullable Integer maxBurstSize) {
+        public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
             this.maxBurstSize = Input.ofNullable(maxBurstSize);
             return this;
         }
 
-        public Builder setMaxConcurrentTasks(@Nullable Input<Integer> maxConcurrentTasks) {
+        public Builder maxConcurrentTasks(@Nullable Input<Integer> maxConcurrentTasks) {
             this.maxConcurrentTasks = maxConcurrentTasks;
             return this;
         }
 
-        public Builder setMaxConcurrentTasks(@Nullable Integer maxConcurrentTasks) {
+        public Builder maxConcurrentTasks(@Nullable Integer maxConcurrentTasks) {
             this.maxConcurrentTasks = Input.ofNullable(maxConcurrentTasks);
             return this;
         }
 
-        public Builder setMaxTasksDispatchedPerSecond(@Nullable Input<Double> maxTasksDispatchedPerSecond) {
+        public Builder maxTasksDispatchedPerSecond(@Nullable Input<Double> maxTasksDispatchedPerSecond) {
             this.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
             return this;
         }
 
-        public Builder setMaxTasksDispatchedPerSecond(@Nullable Double maxTasksDispatchedPerSecond) {
+        public Builder maxTasksDispatchedPerSecond(@Nullable Double maxTasksDispatchedPerSecond) {
             this.maxTasksDispatchedPerSecond = Input.ofNullable(maxTasksDispatchedPerSecond);
             return this;
         }

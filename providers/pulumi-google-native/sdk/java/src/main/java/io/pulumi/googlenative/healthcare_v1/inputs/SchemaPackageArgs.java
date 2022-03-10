@@ -127,52 +127,52 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unexpectedSegmentHandling = defaults.unexpectedSegmentHandling;
         }
 
-        public Builder setIgnoreMinOccurs(@Nullable Input<Boolean> ignoreMinOccurs) {
+        public Builder ignoreMinOccurs(@Nullable Input<Boolean> ignoreMinOccurs) {
             this.ignoreMinOccurs = ignoreMinOccurs;
             return this;
         }
 
-        public Builder setIgnoreMinOccurs(@Nullable Boolean ignoreMinOccurs) {
+        public Builder ignoreMinOccurs(@Nullable Boolean ignoreMinOccurs) {
             this.ignoreMinOccurs = Input.ofNullable(ignoreMinOccurs);
             return this;
         }
 
-        public Builder setSchemas(@Nullable Input<List<Hl7SchemaConfigArgs>> schemas) {
+        public Builder schemas(@Nullable Input<List<Hl7SchemaConfigArgs>> schemas) {
             this.schemas = schemas;
             return this;
         }
 
-        public Builder setSchemas(@Nullable List<Hl7SchemaConfigArgs> schemas) {
+        public Builder schemas(@Nullable List<Hl7SchemaConfigArgs> schemas) {
             this.schemas = Input.ofNullable(schemas);
             return this;
         }
 
-        public Builder setSchematizedParsingType(@Nullable Input<SchemaPackageSchematizedParsingType> schematizedParsingType) {
+        public Builder schematizedParsingType(@Nullable Input<SchemaPackageSchematizedParsingType> schematizedParsingType) {
             this.schematizedParsingType = schematizedParsingType;
             return this;
         }
 
-        public Builder setSchematizedParsingType(@Nullable SchemaPackageSchematizedParsingType schematizedParsingType) {
+        public Builder schematizedParsingType(@Nullable SchemaPackageSchematizedParsingType schematizedParsingType) {
             this.schematizedParsingType = Input.ofNullable(schematizedParsingType);
             return this;
         }
 
-        public Builder setTypes(@Nullable Input<List<Hl7TypesConfigArgs>> types) {
+        public Builder types(@Nullable Input<List<Hl7TypesConfigArgs>> types) {
             this.types = types;
             return this;
         }
 
-        public Builder setTypes(@Nullable List<Hl7TypesConfigArgs> types) {
+        public Builder types(@Nullable List<Hl7TypesConfigArgs> types) {
             this.types = Input.ofNullable(types);
             return this;
         }
 
-        public Builder setUnexpectedSegmentHandling(@Nullable Input<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling) {
+        public Builder unexpectedSegmentHandling(@Nullable Input<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling) {
             this.unexpectedSegmentHandling = unexpectedSegmentHandling;
             return this;
         }
 
-        public Builder setUnexpectedSegmentHandling(@Nullable SchemaPackageUnexpectedSegmentHandling unexpectedSegmentHandling) {
+        public Builder unexpectedSegmentHandling(@Nullable SchemaPackageUnexpectedSegmentHandling unexpectedSegmentHandling) {
             this.unexpectedSegmentHandling = Input.ofNullable(unexpectedSegmentHandling);
             return this;
         }

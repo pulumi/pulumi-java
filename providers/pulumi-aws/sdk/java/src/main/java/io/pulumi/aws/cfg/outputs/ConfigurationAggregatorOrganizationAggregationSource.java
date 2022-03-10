@@ -85,17 +85,17 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAllRegions(@Nullable Boolean allRegions) {
+        public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

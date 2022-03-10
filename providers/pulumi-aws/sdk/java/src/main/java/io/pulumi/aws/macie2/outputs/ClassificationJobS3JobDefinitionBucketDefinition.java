@@ -66,12 +66,12 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
     	      this.buckets = defaults.buckets;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setBuckets(List<String> buckets) {
+        public Builder buckets(List<String> buckets) {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }

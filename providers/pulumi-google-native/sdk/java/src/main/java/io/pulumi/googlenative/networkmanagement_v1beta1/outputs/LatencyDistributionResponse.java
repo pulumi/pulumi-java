@@ -49,7 +49,7 @@ public final class LatencyDistributionResponse {
     	      this.latencyPercentiles = defaults.latencyPercentiles;
         }
 
-        public Builder setLatencyPercentiles(List<LatencyPercentileResponse> latencyPercentiles) {
+        public Builder latencyPercentiles(List<LatencyPercentileResponse> latencyPercentiles) {
             this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
             return this;
         }

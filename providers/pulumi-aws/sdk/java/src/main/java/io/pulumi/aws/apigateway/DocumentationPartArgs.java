@@ -86,32 +86,32 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setLocation(Input<DocumentationPartLocationArgs> location) {
+        public Builder location(Input<DocumentationPartLocationArgs> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(DocumentationPartLocationArgs location) {
+        public Builder location(DocumentationPartLocationArgs location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setProperties(Input<String> properties) {
+        public Builder properties(Input<String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(String properties) {
+        public Builder properties(String properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }

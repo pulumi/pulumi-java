@@ -216,112 +216,112 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.servingStatus = defaults.servingStatus;
         }
 
-        public Builder setAuthDomain(@Nullable Input<String> authDomain) {
+        public Builder authDomain(@Nullable Input<String> authDomain) {
             this.authDomain = authDomain;
             return this;
         }
 
-        public Builder setAuthDomain(@Nullable String authDomain) {
+        public Builder authDomain(@Nullable String authDomain) {
             this.authDomain = Input.ofNullable(authDomain);
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable Input<AppDatabaseType> databaseType) {
+        public Builder databaseType(@Nullable Input<AppDatabaseType> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable AppDatabaseType databaseType) {
+        public Builder databaseType(@Nullable AppDatabaseType databaseType) {
             this.databaseType = Input.ofNullable(databaseType);
             return this;
         }
 
-        public Builder setDefaultCookieExpiration(@Nullable Input<String> defaultCookieExpiration) {
+        public Builder defaultCookieExpiration(@Nullable Input<String> defaultCookieExpiration) {
             this.defaultCookieExpiration = defaultCookieExpiration;
             return this;
         }
 
-        public Builder setDefaultCookieExpiration(@Nullable String defaultCookieExpiration) {
+        public Builder defaultCookieExpiration(@Nullable String defaultCookieExpiration) {
             this.defaultCookieExpiration = Input.ofNullable(defaultCookieExpiration);
             return this;
         }
 
-        public Builder setDispatchRules(@Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules) {
+        public Builder dispatchRules(@Nullable Input<List<UrlDispatchRuleArgs>> dispatchRules) {
             this.dispatchRules = dispatchRules;
             return this;
         }
 
-        public Builder setDispatchRules(@Nullable List<UrlDispatchRuleArgs> dispatchRules) {
+        public Builder dispatchRules(@Nullable List<UrlDispatchRuleArgs> dispatchRules) {
             this.dispatchRules = Input.ofNullable(dispatchRules);
             return this;
         }
 
-        public Builder setFeatureSettings(@Nullable Input<FeatureSettingsArgs> featureSettings) {
+        public Builder featureSettings(@Nullable Input<FeatureSettingsArgs> featureSettings) {
             this.featureSettings = featureSettings;
             return this;
         }
 
-        public Builder setFeatureSettings(@Nullable FeatureSettingsArgs featureSettings) {
+        public Builder featureSettings(@Nullable FeatureSettingsArgs featureSettings) {
             this.featureSettings = Input.ofNullable(featureSettings);
             return this;
         }
 
-        public Builder setGcrDomain(@Nullable Input<String> gcrDomain) {
+        public Builder gcrDomain(@Nullable Input<String> gcrDomain) {
             this.gcrDomain = gcrDomain;
             return this;
         }
 
-        public Builder setGcrDomain(@Nullable String gcrDomain) {
+        public Builder gcrDomain(@Nullable String gcrDomain) {
             this.gcrDomain = Input.ofNullable(gcrDomain);
             return this;
         }
 
-        public Builder setIap(@Nullable Input<IdentityAwareProxyArgs> iap) {
+        public Builder iap(@Nullable Input<IdentityAwareProxyArgs> iap) {
             this.iap = iap;
             return this;
         }
 
-        public Builder setIap(@Nullable IdentityAwareProxyArgs iap) {
+        public Builder iap(@Nullable IdentityAwareProxyArgs iap) {
             this.iap = Input.ofNullable(iap);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setServingStatus(@Nullable Input<AppServingStatus> servingStatus) {
+        public Builder servingStatus(@Nullable Input<AppServingStatus> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
 
-        public Builder setServingStatus(@Nullable AppServingStatus servingStatus) {
+        public Builder servingStatus(@Nullable AppServingStatus servingStatus) {
             this.servingStatus = Input.ofNullable(servingStatus);
             return this;
         }

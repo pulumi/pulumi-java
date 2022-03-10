@@ -216,112 +216,112 @@ public final class ExpressRouteCircuitConnectionArgs extends io.pulumi.resources
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAddressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = Input.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder setCircuitName(Input<String> circuitName) {
+        public Builder circuitName(Input<String> circuitName) {
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
 
-        public Builder setCircuitName(String circuitName) {
+        public Builder circuitName(String circuitName) {
             this.circuitName = Input.of(Objects.requireNonNull(circuitName));
             return this;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(@Nullable Input<SubResourceArgs> expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(@Nullable Input<SubResourceArgs> expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = expressRouteCircuitPeering;
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(@Nullable SubResourceArgs expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(@Nullable SubResourceArgs expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Input.ofNullable(expressRouteCircuitPeering);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpv6CircuitConnectionConfig(@Nullable Input<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig) {
+        public Builder ipv6CircuitConnectionConfig(@Nullable Input<Ipv6CircuitConnectionConfigArgs> ipv6CircuitConnectionConfig) {
             this.ipv6CircuitConnectionConfig = ipv6CircuitConnectionConfig;
             return this;
         }
 
-        public Builder setIpv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigArgs ipv6CircuitConnectionConfig) {
+        public Builder ipv6CircuitConnectionConfig(@Nullable Ipv6CircuitConnectionConfigArgs ipv6CircuitConnectionConfig) {
             this.ipv6CircuitConnectionConfig = Input.ofNullable(ipv6CircuitConnectionConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuitPeering(@Nullable Input<SubResourceArgs> peerExpressRouteCircuitPeering) {
+        public Builder peerExpressRouteCircuitPeering(@Nullable Input<SubResourceArgs> peerExpressRouteCircuitPeering) {
             this.peerExpressRouteCircuitPeering = peerExpressRouteCircuitPeering;
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuitPeering(@Nullable SubResourceArgs peerExpressRouteCircuitPeering) {
+        public Builder peerExpressRouteCircuitPeering(@Nullable SubResourceArgs peerExpressRouteCircuitPeering) {
             this.peerExpressRouteCircuitPeering = Input.ofNullable(peerExpressRouteCircuitPeering);
             return this;
         }
 
-        public Builder setPeeringName(Input<String> peeringName) {
+        public Builder peeringName(Input<String> peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Input.of(Objects.requireNonNull(peeringName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

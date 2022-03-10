@@ -117,27 +117,27 @@ public final class ExchangeConnectionResponse {
     	      this.peeringDBFacilityId = defaults.peeringDBFacilityId;
         }
 
-        public Builder setBgpSession(@Nullable BgpSessionResponse bgpSession) {
+        public Builder bgpSession(@Nullable BgpSessionResponse bgpSession) {
             this.bgpSession = bgpSession;
             return this;
         }
 
-        public Builder setConnectionIdentifier(@Nullable String connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
-        public Builder setConnectionState(String connectionState) {
+        public Builder connectionState(String connectionState) {
             this.connectionState = Objects.requireNonNull(connectionState);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setPeeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
+        public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             this.peeringDBFacilityId = peeringDBFacilityId;
             return this;
         }

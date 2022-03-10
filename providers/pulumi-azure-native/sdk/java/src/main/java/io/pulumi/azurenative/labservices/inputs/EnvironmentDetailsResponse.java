@@ -186,47 +186,47 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
     	      this.virtualMachineDetails = defaults.virtualMachineDetails;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnvironmentState(String environmentState) {
+        public Builder environmentState(String environmentState) {
             this.environmentState = Objects.requireNonNull(environmentState);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLatestOperationResult(LatestOperationResultResponse latestOperationResult) {
+        public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPasswordLastReset(String passwordLastReset) {
+        public Builder passwordLastReset(String passwordLastReset) {
             this.passwordLastReset = Objects.requireNonNull(passwordLastReset);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTotalUsage(String totalUsage) {
+        public Builder totalUsage(String totalUsage) {
             this.totalUsage = Objects.requireNonNull(totalUsage);
             return this;
         }
 
-        public Builder setVirtualMachineDetails(VirtualMachineDetailsResponse virtualMachineDetails) {
+        public Builder virtualMachineDetails(VirtualMachineDetailsResponse virtualMachineDetails) {
             this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
             return this;
         }

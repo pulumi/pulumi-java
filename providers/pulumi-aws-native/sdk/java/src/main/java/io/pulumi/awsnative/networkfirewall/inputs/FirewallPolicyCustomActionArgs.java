@@ -62,22 +62,22 @@ public final class FirewallPolicyCustomActionArgs extends io.pulumi.resources.Re
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder setActionDefinition(Input<FirewallPolicyActionDefinitionArgs> actionDefinition) {
+        public Builder actionDefinition(Input<FirewallPolicyActionDefinitionArgs> actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
-        public Builder setActionDefinition(FirewallPolicyActionDefinitionArgs actionDefinition) {
+        public Builder actionDefinition(FirewallPolicyActionDefinitionArgs actionDefinition) {
             this.actionDefinition = Input.of(Objects.requireNonNull(actionDefinition));
             return this;
         }
 
-        public Builder setActionName(Input<String> actionName) {
+        public Builder actionName(Input<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Input.of(Objects.requireNonNull(actionName));
             return this;
         }

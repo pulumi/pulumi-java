@@ -107,42 +107,42 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.videoName = defaults.videoName;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setTimeSequences(Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences) {
+        public Builder timeSequences(Input<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences) {
             this.timeSequences = Objects.requireNonNull(timeSequences);
             return this;
         }
 
-        public Builder setTimeSequences(VideoSequenceAbsoluteTimeMarkersArgs timeSequences) {
+        public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersArgs timeSequences) {
             this.timeSequences = Input.of(Objects.requireNonNull(timeSequences));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVideoName(Input<String> videoName) {
+        public Builder videoName(Input<String> videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
 
-        public Builder setVideoName(String videoName) {
+        public Builder videoName(String videoName) {
             this.videoName = Input.of(Objects.requireNonNull(videoName));
             return this;
         }

@@ -97,42 +97,42 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setAllowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Input.ofNullable(allowInterrupt);
             return this;
         }
 
-        public Builder setFrequencyInSeconds(Input<Integer> frequencyInSeconds) {
+        public Builder frequencyInSeconds(Input<Integer> frequencyInSeconds) {
             this.frequencyInSeconds = Objects.requireNonNull(frequencyInSeconds);
             return this;
         }
 
-        public Builder setFrequencyInSeconds(Integer frequencyInSeconds) {
+        public Builder frequencyInSeconds(Integer frequencyInSeconds) {
             this.frequencyInSeconds = Input.of(Objects.requireNonNull(frequencyInSeconds));
             return this;
         }
 
-        public Builder setMessageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
+        public Builder messageGroupsList(Input<List<BotMessageGroupArgs>> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }
 
-        public Builder setMessageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
+        public Builder messageGroupsList(List<BotMessageGroupArgs> messageGroupsList) {
             this.messageGroupsList = Input.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }
 
-        public Builder setTimeoutInSeconds(Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.of(Objects.requireNonNull(timeoutInSeconds));
             return this;
         }

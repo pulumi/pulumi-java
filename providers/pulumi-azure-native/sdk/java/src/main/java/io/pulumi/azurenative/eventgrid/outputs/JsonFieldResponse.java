@@ -50,7 +50,7 @@ public final class JsonFieldResponse {
     	      this.sourceField = defaults.sourceField;
         }
 
-        public Builder setSourceField(@Nullable String sourceField) {
+        public Builder sourceField(@Nullable String sourceField) {
             this.sourceField = sourceField;
             return this;
         }

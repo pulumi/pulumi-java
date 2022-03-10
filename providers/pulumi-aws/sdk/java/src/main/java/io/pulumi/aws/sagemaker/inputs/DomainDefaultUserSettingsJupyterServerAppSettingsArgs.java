@@ -72,22 +72,22 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsArgs extends
     	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable Input<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
             this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
             return this;
         }
 
-        public Builder setLifecycleConfigArns(@Nullable Input<List<String>> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable Input<List<String>> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }
 
-        public Builder setLifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = Input.ofNullable(lifecycleConfigArns);
             return this;
         }

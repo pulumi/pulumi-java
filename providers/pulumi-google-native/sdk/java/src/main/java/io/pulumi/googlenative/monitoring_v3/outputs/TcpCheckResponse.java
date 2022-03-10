@@ -48,7 +48,7 @@ public final class TcpCheckResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

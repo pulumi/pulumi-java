@@ -99,52 +99,52 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
     	      this.zone = defaults.zone;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setNodeId(@Nullable Input<String> nodeId) {
+        public Builder nodeId(@Nullable Input<String> nodeId) {
             this.nodeId = nodeId;
             return this;
         }
 
-        public Builder setNodeId(@Nullable String nodeId) {
+        public Builder nodeId(@Nullable String nodeId) {
             this.nodeId = Input.ofNullable(nodeId);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

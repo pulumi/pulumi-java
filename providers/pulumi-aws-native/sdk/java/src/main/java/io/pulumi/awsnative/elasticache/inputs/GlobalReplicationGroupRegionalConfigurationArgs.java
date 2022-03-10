@@ -88,32 +88,32 @@ public final class GlobalReplicationGroupRegionalConfigurationArgs extends io.pu
     	      this.reshardingConfigurations = defaults.reshardingConfigurations;
         }
 
-        public Builder setReplicationGroupId(@Nullable Input<String> replicationGroupId) {
+        public Builder replicationGroupId(@Nullable Input<String> replicationGroupId) {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
 
-        public Builder setReplicationGroupId(@Nullable String replicationGroupId) {
+        public Builder replicationGroupId(@Nullable String replicationGroupId) {
             this.replicationGroupId = Input.ofNullable(replicationGroupId);
             return this;
         }
 
-        public Builder setReplicationGroupRegion(@Nullable Input<String> replicationGroupRegion) {
+        public Builder replicationGroupRegion(@Nullable Input<String> replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
-        public Builder setReplicationGroupRegion(@Nullable String replicationGroupRegion) {
+        public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             this.replicationGroupRegion = Input.ofNullable(replicationGroupRegion);
             return this;
         }
 
-        public Builder setReshardingConfigurations(@Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
+        public Builder reshardingConfigurations(@Nullable Input<List<GlobalReplicationGroupReshardingConfigurationArgs>> reshardingConfigurations) {
             this.reshardingConfigurations = reshardingConfigurations;
             return this;
         }
 
-        public Builder setReshardingConfigurations(@Nullable List<GlobalReplicationGroupReshardingConfigurationArgs> reshardingConfigurations) {
+        public Builder reshardingConfigurations(@Nullable List<GlobalReplicationGroupReshardingConfigurationArgs> reshardingConfigurations) {
             this.reshardingConfigurations = Input.ofNullable(reshardingConfigurations);
             return this;
         }

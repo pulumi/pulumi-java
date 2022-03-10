@@ -157,72 +157,72 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runtimeType = defaults.runtimeType;
         }
 
-        public Builder setAnalyticsRegion(@Nullable Input<String> analyticsRegion) {
+        public Builder analyticsRegion(@Nullable Input<String> analyticsRegion) {
             this.analyticsRegion = analyticsRegion;
             return this;
         }
 
-        public Builder setAnalyticsRegion(@Nullable String analyticsRegion) {
+        public Builder analyticsRegion(@Nullable String analyticsRegion) {
             this.analyticsRegion = Input.ofNullable(analyticsRegion);
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable String authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder setRuntimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
 
-        public Builder setRuntimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Input.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
 
-        public Builder setRuntimeType(@Nullable Input<String> runtimeType) {
+        public Builder runtimeType(@Nullable Input<String> runtimeType) {
             this.runtimeType = runtimeType;
             return this;
         }
 
-        public Builder setRuntimeType(@Nullable String runtimeType) {
+        public Builder runtimeType(@Nullable String runtimeType) {
             this.runtimeType = Input.ofNullable(runtimeType);
             return this;
         }

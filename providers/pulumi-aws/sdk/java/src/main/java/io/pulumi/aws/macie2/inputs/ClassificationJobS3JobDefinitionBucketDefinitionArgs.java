@@ -70,22 +70,22 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionArgs extends 
     	      this.buckets = defaults.buckets;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setBuckets(Input<List<String>> buckets) {
+        public Builder buckets(Input<List<String>> buckets) {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
 
-        public Builder setBuckets(List<String> buckets) {
+        public Builder buckets(List<String> buckets) {
             this.buckets = Input.of(Objects.requireNonNull(buckets));
             return this;
         }

@@ -67,12 +67,12 @@ public final class StreamConfigResponse {
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder setBigqueryDestination(GoogleCloudHealthcareV1FhirBigQueryDestinationResponse bigqueryDestination) {
+        public Builder bigqueryDestination(GoogleCloudHealthcareV1FhirBigQueryDestinationResponse bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setResourceTypes(List<String> resourceTypes) {
+        public Builder resourceTypes(List<String> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }

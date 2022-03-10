@@ -106,22 +106,22 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder setBindingId(String bindingId) {
+        public Builder bindingId(String bindingId) {
             this.bindingId = Objects.requireNonNull(bindingId);
             return this;
         }
 
-        public Builder setCondition(ExprResponse condition) {
+        public Builder condition(ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

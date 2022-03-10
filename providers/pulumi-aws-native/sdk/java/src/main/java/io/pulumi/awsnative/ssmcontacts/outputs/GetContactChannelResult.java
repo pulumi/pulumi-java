@@ -100,22 +100,22 @@ public final class GetContactChannelResult {
     	      this.deferActivation = defaults.deferActivation;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setChannelAddress(@Nullable String channelAddress) {
+        public Builder channelAddress(@Nullable String channelAddress) {
             this.channelAddress = channelAddress;
             return this;
         }
 
-        public Builder setChannelName(@Nullable String channelName) {
+        public Builder channelName(@Nullable String channelName) {
             this.channelName = channelName;
             return this;
         }
 
-        public Builder setDeferActivation(@Nullable Boolean deferActivation) {
+        public Builder deferActivation(@Nullable Boolean deferActivation) {
             this.deferActivation = deferActivation;
             return this;
         }

@@ -76,22 +76,22 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends io.pulumi.reso
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setInput(@Nullable Input<ConnectToTargetSqlDbTaskInputArgs> input) {
+        public Builder input(@Nullable Input<ConnectToTargetSqlDbTaskInputArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable ConnectToTargetSqlDbTaskInputArgs input) {
+        public Builder input(@Nullable ConnectToTargetSqlDbTaskInputArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setTaskType(Input<String> taskType) {
+        public Builder taskType(Input<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }

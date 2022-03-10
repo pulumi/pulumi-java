@@ -56,12 +56,12 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
     	      this.clusterSize = defaults.clusterSize;
         }
 
-        public Builder setClusterSize(Input<Integer> clusterSize) {
+        public Builder clusterSize(Input<Integer> clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
 
-        public Builder setClusterSize(Integer clusterSize) {
+        public Builder clusterSize(Integer clusterSize) {
             this.clusterSize = Input.of(Objects.requireNonNull(clusterSize));
             return this;
         }

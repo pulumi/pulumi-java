@@ -102,42 +102,42 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
     	      this.supportCode = defaults.supportCode;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSupportCode(@Nullable Input<String> supportCode) {
+        public Builder supportCode(@Nullable Input<String> supportCode) {
             this.supportCode = supportCode;
             return this;
         }
 
-        public Builder setSupportCode(@Nullable String supportCode) {
+        public Builder supportCode(@Nullable String supportCode) {
             this.supportCode = Input.ofNullable(supportCode);
             return this;
         }

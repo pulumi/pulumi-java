@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
     	      this.title = defaults.title;
         }
 
-        public Builder setQuickReplies(List<String> quickReplies) {
+        public Builder quickReplies(List<String> quickReplies) {
             this.quickReplies = Objects.requireNonNull(quickReplies);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

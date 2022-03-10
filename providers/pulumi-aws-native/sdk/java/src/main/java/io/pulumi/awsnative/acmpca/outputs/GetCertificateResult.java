@@ -67,12 +67,12 @@ public final class GetCertificateResult {
     	      this.certificate = defaults.certificate;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }

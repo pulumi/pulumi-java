@@ -52,12 +52,12 @@ public final class ResourceSetTargetResource {
     	      this.r53Resource = defaults.r53Resource;
         }
 
-        public Builder setNLBResource(@Nullable ResourceSetNLBResource nLBResource) {
+        public Builder nLBResource(@Nullable ResourceSetNLBResource nLBResource) {
             this.nLBResource = nLBResource;
             return this;
         }
 
-        public Builder setR53Resource(@Nullable ResourceSetR53ResourceRecord r53Resource) {
+        public Builder r53Resource(@Nullable ResourceSetR53ResourceRecord r53Resource) {
             this.r53Resource = r53Resource;
             return this;
         }

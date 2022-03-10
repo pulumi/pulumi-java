@@ -105,42 +105,42 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setAdditionalAuthenticatedData(@Nullable Input<String> additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(@Nullable Input<String> additionalAuthenticatedData) {
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
 
-        public Builder setAdditionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
             this.additionalAuthenticatedData = Input.ofNullable(additionalAuthenticatedData);
             return this;
         }
 
-        public Builder setCiphertext(@Nullable Input<String> ciphertext) {
+        public Builder ciphertext(@Nullable Input<String> ciphertext) {
             this.ciphertext = ciphertext;
             return this;
         }
 
-        public Builder setCiphertext(@Nullable String ciphertext) {
+        public Builder ciphertext(@Nullable String ciphertext) {
             this.ciphertext = Input.ofNullable(ciphertext);
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable Input<String> cryptoKey) {
+        public Builder cryptoKey(@Nullable Input<String> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable String cryptoKey) {
+        public Builder cryptoKey(@Nullable String cryptoKey) {
             this.cryptoKey = Input.ofNullable(cryptoKey);
             return this;
         }
 
-        public Builder setPlaintext(@Nullable Input<String> plaintext) {
+        public Builder plaintext(@Nullable Input<String> plaintext) {
             this.plaintext = plaintext;
             return this;
         }
 
-        public Builder setPlaintext(@Nullable String plaintext) {
+        public Builder plaintext(@Nullable String plaintext) {
             this.plaintext = Input.ofNullable(plaintext);
             return this;
         }

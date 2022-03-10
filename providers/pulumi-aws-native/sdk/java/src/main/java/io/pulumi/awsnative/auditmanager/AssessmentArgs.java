@@ -161,92 +161,92 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssessmentReportsDestination(@Nullable Input<AssessmentReportsDestinationArgs> assessmentReportsDestination) {
+        public Builder assessmentReportsDestination(@Nullable Input<AssessmentReportsDestinationArgs> assessmentReportsDestination) {
             this.assessmentReportsDestination = assessmentReportsDestination;
             return this;
         }
 
-        public Builder setAssessmentReportsDestination(@Nullable AssessmentReportsDestinationArgs assessmentReportsDestination) {
+        public Builder assessmentReportsDestination(@Nullable AssessmentReportsDestinationArgs assessmentReportsDestination) {
             this.assessmentReportsDestination = Input.ofNullable(assessmentReportsDestination);
             return this;
         }
 
-        public Builder setAwsAccount(@Nullable Input<AssessmentAWSAccountArgs> awsAccount) {
+        public Builder awsAccount(@Nullable Input<AssessmentAWSAccountArgs> awsAccount) {
             this.awsAccount = awsAccount;
             return this;
         }
 
-        public Builder setAwsAccount(@Nullable AssessmentAWSAccountArgs awsAccount) {
+        public Builder awsAccount(@Nullable AssessmentAWSAccountArgs awsAccount) {
             this.awsAccount = Input.ofNullable(awsAccount);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFrameworkId(@Nullable Input<String> frameworkId) {
+        public Builder frameworkId(@Nullable Input<String> frameworkId) {
             this.frameworkId = frameworkId;
             return this;
         }
 
-        public Builder setFrameworkId(@Nullable String frameworkId) {
+        public Builder frameworkId(@Nullable String frameworkId) {
             this.frameworkId = Input.ofNullable(frameworkId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<List<AssessmentRoleArgs>> roles) {
+        public Builder roles(@Nullable Input<List<AssessmentRoleArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<AssessmentRoleArgs> roles) {
+        public Builder roles(@Nullable List<AssessmentRoleArgs> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<AssessmentScopeArgs> scope) {
+        public Builder scope(@Nullable Input<AssessmentScopeArgs> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable AssessmentScopeArgs scope) {
+        public Builder scope(@Nullable AssessmentScopeArgs scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<AssessmentStatus> status) {
+        public Builder status(@Nullable Input<AssessmentStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable AssessmentStatus status) {
+        public Builder status(@Nullable AssessmentStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AssessmentTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AssessmentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssessmentTagArgs> tags) {
+        public Builder tags(@Nullable List<AssessmentTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

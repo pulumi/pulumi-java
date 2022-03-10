@@ -192,92 +192,92 @@ public final class GuestConfigurationNavigationArgs extends io.pulumi.resources.
     	      this.version = defaults.version;
         }
 
-        public Builder setAssignmentType(@Nullable Input<Either<String,AssignmentType>> assignmentType) {
+        public Builder assignmentType(@Nullable Input<Either<String,AssignmentType>> assignmentType) {
             this.assignmentType = assignmentType;
             return this;
         }
 
-        public Builder setAssignmentType(@Nullable Either<String,AssignmentType> assignmentType) {
+        public Builder assignmentType(@Nullable Either<String,AssignmentType> assignmentType) {
             this.assignmentType = Input.ofNullable(assignmentType);
             return this;
         }
 
-        public Builder setConfigurationParameter(@Nullable Input<List<ConfigurationParameterArgs>> configurationParameter) {
+        public Builder configurationParameter(@Nullable Input<List<ConfigurationParameterArgs>> configurationParameter) {
             this.configurationParameter = configurationParameter;
             return this;
         }
 
-        public Builder setConfigurationParameter(@Nullable List<ConfigurationParameterArgs> configurationParameter) {
+        public Builder configurationParameter(@Nullable List<ConfigurationParameterArgs> configurationParameter) {
             this.configurationParameter = Input.ofNullable(configurationParameter);
             return this;
         }
 
-        public Builder setConfigurationProtectedParameter(@Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter) {
+        public Builder configurationProtectedParameter(@Nullable Input<List<ConfigurationParameterArgs>> configurationProtectedParameter) {
             this.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
 
-        public Builder setConfigurationProtectedParameter(@Nullable List<ConfigurationParameterArgs> configurationProtectedParameter) {
+        public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterArgs> configurationProtectedParameter) {
             this.configurationProtectedParameter = Input.ofNullable(configurationProtectedParameter);
             return this;
         }
 
-        public Builder setConfigurationSetting(@Nullable Input<ConfigurationSettingArgs> configurationSetting) {
+        public Builder configurationSetting(@Nullable Input<ConfigurationSettingArgs> configurationSetting) {
             this.configurationSetting = configurationSetting;
             return this;
         }
 
-        public Builder setConfigurationSetting(@Nullable ConfigurationSettingArgs configurationSetting) {
+        public Builder configurationSetting(@Nullable ConfigurationSettingArgs configurationSetting) {
             this.configurationSetting = Input.ofNullable(configurationSetting);
             return this;
         }
 
-        public Builder setContentHash(@Nullable Input<String> contentHash) {
+        public Builder contentHash(@Nullable Input<String> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
-        public Builder setContentHash(@Nullable String contentHash) {
+        public Builder contentHash(@Nullable String contentHash) {
             this.contentHash = Input.ofNullable(contentHash);
             return this;
         }
 
-        public Builder setContentUri(@Nullable Input<String> contentUri) {
+        public Builder contentUri(@Nullable Input<String> contentUri) {
             this.contentUri = contentUri;
             return this;
         }
 
-        public Builder setContentUri(@Nullable String contentUri) {
+        public Builder contentUri(@Nullable String contentUri) {
             this.contentUri = Input.ofNullable(contentUri);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,Kind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,Kind> kind) {
+        public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

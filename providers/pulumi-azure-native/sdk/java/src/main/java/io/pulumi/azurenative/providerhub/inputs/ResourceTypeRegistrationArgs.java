@@ -49,12 +49,12 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(@Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
+        public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

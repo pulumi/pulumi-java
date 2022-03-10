@@ -103,42 +103,42 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.severityName = defaults.severityName;
         }
 
-        public Builder setAffectedLocation(@Nullable Input<VulnerabilityLocationArgs> affectedLocation) {
+        public Builder affectedLocation(@Nullable Input<VulnerabilityLocationArgs> affectedLocation) {
             this.affectedLocation = affectedLocation;
             return this;
         }
 
-        public Builder setAffectedLocation(@Nullable VulnerabilityLocationArgs affectedLocation) {
+        public Builder affectedLocation(@Nullable VulnerabilityLocationArgs affectedLocation) {
             this.affectedLocation = Input.ofNullable(affectedLocation);
             return this;
         }
 
-        public Builder setFixedLocation(@Nullable Input<VulnerabilityLocationArgs> fixedLocation) {
+        public Builder fixedLocation(@Nullable Input<VulnerabilityLocationArgs> fixedLocation) {
             this.fixedLocation = fixedLocation;
             return this;
         }
 
-        public Builder setFixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
+        public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
             this.fixedLocation = Input.ofNullable(fixedLocation);
             return this;
         }
 
-        public Builder setPackageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Input<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
-        public Builder setPackageType(@Nullable String packageType) {
+        public Builder packageType(@Nullable String packageType) {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }
 
-        public Builder setSeverityName(@Nullable Input<String> severityName) {
+        public Builder severityName(@Nullable Input<String> severityName) {
             this.severityName = severityName;
             return this;
         }
 
-        public Builder setSeverityName(@Nullable String severityName) {
+        public Builder severityName(@Nullable String severityName) {
             this.severityName = Input.ofNullable(severityName);
             return this;
         }

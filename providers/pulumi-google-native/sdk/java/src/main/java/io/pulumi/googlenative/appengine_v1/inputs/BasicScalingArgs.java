@@ -75,22 +75,22 @@ public final class BasicScalingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxInstances = defaults.maxInstances;
         }
 
-        public Builder setIdleTimeout(@Nullable Input<String> idleTimeout) {
+        public Builder idleTimeout(@Nullable Input<String> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
-        public Builder setIdleTimeout(@Nullable String idleTimeout) {
+        public Builder idleTimeout(@Nullable String idleTimeout) {
             this.idleTimeout = Input.ofNullable(idleTimeout);
             return this;
         }
 
-        public Builder setMaxInstances(@Nullable Input<Integer> maxInstances) {
+        public Builder maxInstances(@Nullable Input<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
-        public Builder setMaxInstances(@Nullable Integer maxInstances) {
+        public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Input.ofNullable(maxInstances);
             return this;
         }

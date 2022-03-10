@@ -124,52 +124,52 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
     	      this.retryDurationSec = defaults.retryDurationSec;
         }
 
-        public Builder setAuthority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Input<String> authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = Input.ofNullable(authority);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setPayloadName(@Nullable Input<String> payloadName) {
+        public Builder payloadName(@Nullable Input<String> payloadName) {
             this.payloadName = payloadName;
             return this;
         }
 
-        public Builder setPayloadName(@Nullable String payloadName) {
+        public Builder payloadName(@Nullable String payloadName) {
             this.payloadName = Input.ofNullable(payloadName);
             return this;
         }
 
-        public Builder setResendInterval(@Nullable Input<DurationArgs> resendInterval) {
+        public Builder resendInterval(@Nullable Input<DurationArgs> resendInterval) {
             this.resendInterval = resendInterval;
             return this;
         }
 
-        public Builder setResendInterval(@Nullable DurationArgs resendInterval) {
+        public Builder resendInterval(@Nullable DurationArgs resendInterval) {
             this.resendInterval = Input.ofNullable(resendInterval);
             return this;
         }
 
-        public Builder setRetryDurationSec(@Nullable Input<Integer> retryDurationSec) {
+        public Builder retryDurationSec(@Nullable Input<Integer> retryDurationSec) {
             this.retryDurationSec = retryDurationSec;
             return this;
         }
 
-        public Builder setRetryDurationSec(@Nullable Integer retryDurationSec) {
+        public Builder retryDurationSec(@Nullable Integer retryDurationSec) {
             this.retryDurationSec = Input.ofNullable(retryDurationSec);
             return this;
         }

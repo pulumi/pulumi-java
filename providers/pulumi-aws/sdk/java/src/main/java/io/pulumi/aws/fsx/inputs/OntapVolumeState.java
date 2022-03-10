@@ -278,152 +278,152 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Input.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder setFlexcacheEndpointType(@Nullable Input<String> flexcacheEndpointType) {
+        public Builder flexcacheEndpointType(@Nullable Input<String> flexcacheEndpointType) {
             this.flexcacheEndpointType = flexcacheEndpointType;
             return this;
         }
 
-        public Builder setFlexcacheEndpointType(@Nullable String flexcacheEndpointType) {
+        public Builder flexcacheEndpointType(@Nullable String flexcacheEndpointType) {
             this.flexcacheEndpointType = Input.ofNullable(flexcacheEndpointType);
             return this;
         }
 
-        public Builder setJunctionPath(@Nullable Input<String> junctionPath) {
+        public Builder junctionPath(@Nullable Input<String> junctionPath) {
             this.junctionPath = junctionPath;
             return this;
         }
 
-        public Builder setJunctionPath(@Nullable String junctionPath) {
+        public Builder junctionPath(@Nullable String junctionPath) {
             this.junctionPath = Input.ofNullable(junctionPath);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOntapVolumeType(@Nullable Input<String> ontapVolumeType) {
+        public Builder ontapVolumeType(@Nullable Input<String> ontapVolumeType) {
             this.ontapVolumeType = ontapVolumeType;
             return this;
         }
 
-        public Builder setOntapVolumeType(@Nullable String ontapVolumeType) {
+        public Builder ontapVolumeType(@Nullable String ontapVolumeType) {
             this.ontapVolumeType = Input.ofNullable(ontapVolumeType);
             return this;
         }
 
-        public Builder setSecurityStyle(@Nullable Input<String> securityStyle) {
+        public Builder securityStyle(@Nullable Input<String> securityStyle) {
             this.securityStyle = securityStyle;
             return this;
         }
 
-        public Builder setSecurityStyle(@Nullable String securityStyle) {
+        public Builder securityStyle(@Nullable String securityStyle) {
             this.securityStyle = Input.ofNullable(securityStyle);
             return this;
         }
 
-        public Builder setSizeInMegabytes(@Nullable Input<Integer> sizeInMegabytes) {
+        public Builder sizeInMegabytes(@Nullable Input<Integer> sizeInMegabytes) {
             this.sizeInMegabytes = sizeInMegabytes;
             return this;
         }
 
-        public Builder setSizeInMegabytes(@Nullable Integer sizeInMegabytes) {
+        public Builder sizeInMegabytes(@Nullable Integer sizeInMegabytes) {
             this.sizeInMegabytes = Input.ofNullable(sizeInMegabytes);
             return this;
         }
 
-        public Builder setStorageEfficiencyEnabled(@Nullable Input<Boolean> storageEfficiencyEnabled) {
+        public Builder storageEfficiencyEnabled(@Nullable Input<Boolean> storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = storageEfficiencyEnabled;
             return this;
         }
 
-        public Builder setStorageEfficiencyEnabled(@Nullable Boolean storageEfficiencyEnabled) {
+        public Builder storageEfficiencyEnabled(@Nullable Boolean storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = Input.ofNullable(storageEfficiencyEnabled);
             return this;
         }
 
-        public Builder setStorageVirtualMachineId(@Nullable Input<String> storageVirtualMachineId) {
+        public Builder storageVirtualMachineId(@Nullable Input<String> storageVirtualMachineId) {
             this.storageVirtualMachineId = storageVirtualMachineId;
             return this;
         }
 
-        public Builder setStorageVirtualMachineId(@Nullable String storageVirtualMachineId) {
+        public Builder storageVirtualMachineId(@Nullable String storageVirtualMachineId) {
             this.storageVirtualMachineId = Input.ofNullable(storageVirtualMachineId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTieringPolicy(@Nullable Input<OntapVolumeTieringPolicyGetArgs> tieringPolicy) {
+        public Builder tieringPolicy(@Nullable Input<OntapVolumeTieringPolicyGetArgs> tieringPolicy) {
             this.tieringPolicy = tieringPolicy;
             return this;
         }
 
-        public Builder setTieringPolicy(@Nullable OntapVolumeTieringPolicyGetArgs tieringPolicy) {
+        public Builder tieringPolicy(@Nullable OntapVolumeTieringPolicyGetArgs tieringPolicy) {
             this.tieringPolicy = Input.ofNullable(tieringPolicy);
             return this;
         }
 
-        public Builder setUuid(@Nullable Input<String> uuid) {
+        public Builder uuid(@Nullable Input<String> uuid) {
             this.uuid = uuid;
             return this;
         }
 
-        public Builder setUuid(@Nullable String uuid) {
+        public Builder uuid(@Nullable String uuid) {
             this.uuid = Input.ofNullable(uuid);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

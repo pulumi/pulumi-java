@@ -316,172 +316,172 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
     	      this.username = defaults.username;
         }
 
-        public Builder setActiveDirectoryId(@Nullable Input<String> activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable Input<String> activeDirectoryId) {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
-        public Builder setActiveDirectoryId(@Nullable String activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             this.activeDirectoryId = Input.ofNullable(activeDirectoryId);
             return this;
         }
 
-        public Builder setAdName(@Nullable Input<String> adName) {
+        public Builder adName(@Nullable Input<String> adName) {
             this.adName = adName;
             return this;
         }
 
-        public Builder setAdName(@Nullable String adName) {
+        public Builder adName(@Nullable String adName) {
             this.adName = Input.ofNullable(adName);
             return this;
         }
 
-        public Builder setAesEncryption(@Nullable Input<Boolean> aesEncryption) {
+        public Builder aesEncryption(@Nullable Input<Boolean> aesEncryption) {
             this.aesEncryption = aesEncryption;
             return this;
         }
 
-        public Builder setAesEncryption(@Nullable Boolean aesEncryption) {
+        public Builder aesEncryption(@Nullable Boolean aesEncryption) {
             this.aesEncryption = Input.ofNullable(aesEncryption);
             return this;
         }
 
-        public Builder setAllowLocalNfsUsersWithLdap(@Nullable Input<Boolean> allowLocalNfsUsersWithLdap) {
+        public Builder allowLocalNfsUsersWithLdap(@Nullable Input<Boolean> allowLocalNfsUsersWithLdap) {
             this.allowLocalNfsUsersWithLdap = allowLocalNfsUsersWithLdap;
             return this;
         }
 
-        public Builder setAllowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
+        public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
             this.allowLocalNfsUsersWithLdap = Input.ofNullable(allowLocalNfsUsersWithLdap);
             return this;
         }
 
-        public Builder setBackupOperators(@Nullable Input<List<String>> backupOperators) {
+        public Builder backupOperators(@Nullable Input<List<String>> backupOperators) {
             this.backupOperators = backupOperators;
             return this;
         }
 
-        public Builder setBackupOperators(@Nullable List<String> backupOperators) {
+        public Builder backupOperators(@Nullable List<String> backupOperators) {
             this.backupOperators = Input.ofNullable(backupOperators);
             return this;
         }
 
-        public Builder setDns(@Nullable Input<String> dns) {
+        public Builder dns(@Nullable Input<String> dns) {
             this.dns = dns;
             return this;
         }
 
-        public Builder setDns(@Nullable String dns) {
+        public Builder dns(@Nullable String dns) {
             this.dns = Input.ofNullable(dns);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setKdcIP(@Nullable Input<String> kdcIP) {
+        public Builder kdcIP(@Nullable Input<String> kdcIP) {
             this.kdcIP = kdcIP;
             return this;
         }
 
-        public Builder setKdcIP(@Nullable String kdcIP) {
+        public Builder kdcIP(@Nullable String kdcIP) {
             this.kdcIP = Input.ofNullable(kdcIP);
             return this;
         }
 
-        public Builder setLdapOverTLS(@Nullable Input<Boolean> ldapOverTLS) {
+        public Builder ldapOverTLS(@Nullable Input<Boolean> ldapOverTLS) {
             this.ldapOverTLS = ldapOverTLS;
             return this;
         }
 
-        public Builder setLdapOverTLS(@Nullable Boolean ldapOverTLS) {
+        public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
             this.ldapOverTLS = Input.ofNullable(ldapOverTLS);
             return this;
         }
 
-        public Builder setLdapSigning(@Nullable Input<Boolean> ldapSigning) {
+        public Builder ldapSigning(@Nullable Input<Boolean> ldapSigning) {
             this.ldapSigning = ldapSigning;
             return this;
         }
 
-        public Builder setLdapSigning(@Nullable Boolean ldapSigning) {
+        public Builder ldapSigning(@Nullable Boolean ldapSigning) {
             this.ldapSigning = Input.ofNullable(ldapSigning);
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable Input<String> organizationalUnit) {
+        public Builder organizationalUnit(@Nullable Input<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable String organizationalUnit) {
+        public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Input.ofNullable(organizationalUnit);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setSecurityOperators(@Nullable Input<List<String>> securityOperators) {
+        public Builder securityOperators(@Nullable Input<List<String>> securityOperators) {
             this.securityOperators = securityOperators;
             return this;
         }
 
-        public Builder setSecurityOperators(@Nullable List<String> securityOperators) {
+        public Builder securityOperators(@Nullable List<String> securityOperators) {
             this.securityOperators = Input.ofNullable(securityOperators);
             return this;
         }
 
-        public Builder setServerRootCACertificate(@Nullable Input<String> serverRootCACertificate) {
+        public Builder serverRootCACertificate(@Nullable Input<String> serverRootCACertificate) {
             this.serverRootCACertificate = serverRootCACertificate;
             return this;
         }
 
-        public Builder setServerRootCACertificate(@Nullable String serverRootCACertificate) {
+        public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
             this.serverRootCACertificate = Input.ofNullable(serverRootCACertificate);
             return this;
         }
 
-        public Builder setSite(@Nullable Input<String> site) {
+        public Builder site(@Nullable Input<String> site) {
             this.site = site;
             return this;
         }
 
-        public Builder setSite(@Nullable String site) {
+        public Builder site(@Nullable String site) {
             this.site = Input.ofNullable(site);
             return this;
         }
 
-        public Builder setSmbServerName(@Nullable Input<String> smbServerName) {
+        public Builder smbServerName(@Nullable Input<String> smbServerName) {
             this.smbServerName = smbServerName;
             return this;
         }
 
-        public Builder setSmbServerName(@Nullable String smbServerName) {
+        public Builder smbServerName(@Nullable String smbServerName) {
             this.smbServerName = Input.ofNullable(smbServerName);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

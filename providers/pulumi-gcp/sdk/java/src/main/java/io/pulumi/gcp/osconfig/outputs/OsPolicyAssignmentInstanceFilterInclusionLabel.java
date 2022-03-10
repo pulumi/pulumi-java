@@ -50,7 +50,7 @@ public final class OsPolicyAssignmentInstanceFilterInclusionLabel {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }

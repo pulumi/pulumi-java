@@ -70,12 +70,12 @@ public final class GetSlotTypeArgs extends io.pulumi.resources.InvokeArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -183,92 +183,92 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setIncludeControlDetails(@Nullable Input<Boolean> includeControlDetails) {
+        public Builder includeControlDetails(@Nullable Input<Boolean> includeControlDetails) {
             this.includeControlDetails = includeControlDetails;
             return this;
         }
 
-        public Builder setIncludeControlDetails(@Nullable Boolean includeControlDetails) {
+        public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
             this.includeControlDetails = Input.ofNullable(includeControlDetails);
             return this;
         }
 
-        public Builder setIncludeNullAndEmpty(@Nullable Input<Boolean> includeNullAndEmpty) {
+        public Builder includeNullAndEmpty(@Nullable Input<Boolean> includeNullAndEmpty) {
             this.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
 
-        public Builder setIncludeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
+        public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
             this.includeNullAndEmpty = Input.ofNullable(includeNullAndEmpty);
             return this;
         }
 
-        public Builder setIncludePartitionValue(@Nullable Input<Boolean> includePartitionValue) {
+        public Builder includePartitionValue(@Nullable Input<Boolean> includePartitionValue) {
             this.includePartitionValue = includePartitionValue;
             return this;
         }
 
-        public Builder setIncludePartitionValue(@Nullable Boolean includePartitionValue) {
+        public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
             this.includePartitionValue = Input.ofNullable(includePartitionValue);
             return this;
         }
 
-        public Builder setIncludeTableAlterOperations(@Nullable Input<Boolean> includeTableAlterOperations) {
+        public Builder includeTableAlterOperations(@Nullable Input<Boolean> includeTableAlterOperations) {
             this.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
 
-        public Builder setIncludeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
+        public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
             this.includeTableAlterOperations = Input.ofNullable(includeTableAlterOperations);
             return this;
         }
 
-        public Builder setIncludeTransactionDetails(@Nullable Input<Boolean> includeTransactionDetails) {
+        public Builder includeTransactionDetails(@Nullable Input<Boolean> includeTransactionDetails) {
             this.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
 
-        public Builder setIncludeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
+        public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
             this.includeTransactionDetails = Input.ofNullable(includeTransactionDetails);
             return this;
         }
 
-        public Builder setMessageFormat(@Nullable Input<String> messageFormat) {
+        public Builder messageFormat(@Nullable Input<String> messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
-        public Builder setMessageFormat(@Nullable String messageFormat) {
+        public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = Input.ofNullable(messageFormat);
             return this;
         }
 
-        public Builder setPartitionIncludeSchemaTable(@Nullable Input<Boolean> partitionIncludeSchemaTable) {
+        public Builder partitionIncludeSchemaTable(@Nullable Input<Boolean> partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
 
-        public Builder setPartitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
+        public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = Input.ofNullable(partitionIncludeSchemaTable);
             return this;
         }
 
-        public Builder setServiceAccessRoleArn(@Nullable Input<String> serviceAccessRoleArn) {
+        public Builder serviceAccessRoleArn(@Nullable Input<String> serviceAccessRoleArn) {
             this.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
 
-        public Builder setServiceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
+        public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
             this.serviceAccessRoleArn = Input.ofNullable(serviceAccessRoleArn);
             return this;
         }
 
-        public Builder setStreamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Input<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = Input.ofNullable(streamArn);
             return this;
         }

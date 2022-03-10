@@ -97,42 +97,42 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setIsDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Input.ofNullable(isDefault);
             return this;
         }
 
-        public Builder setLifecycles(Input<List<SourceLifeCycleArgs>> lifecycles) {
+        public Builder lifecycles(Input<List<SourceLifeCycleArgs>> lifecycles) {
             this.lifecycles = Objects.requireNonNull(lifecycles);
             return this;
         }
 
-        public Builder setLifecycles(List<SourceLifeCycleArgs> lifecycles) {
+        public Builder lifecycles(List<SourceLifeCycleArgs> lifecycles) {
             this.lifecycles = Input.of(Objects.requireNonNull(lifecycles));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setObjectType(Input<String> objectType) {
+        public Builder objectType(Input<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }

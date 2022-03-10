@@ -119,52 +119,52 @@ public final class ContactState extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setLanguageTag(@Nullable Input<String> languageTag) {
+        public Builder languageTag(@Nullable Input<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
 
-        public Builder setLanguageTag(@Nullable String languageTag) {
+        public Builder languageTag(@Nullable String languageTag) {
             this.languageTag = Input.ofNullable(languageTag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(@Nullable Input<List<String>> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable Input<List<String>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(@Nullable List<String> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable List<String> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Input.ofNullable(notificationCategorySubscriptions);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }

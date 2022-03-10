@@ -262,72 +262,72 @@ public final class GetRelationshipLinkResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInteractionType(String interactionType) {
+        public Builder interactionType(String interactionType) {
             this.interactionType = Objects.requireNonNull(interactionType);
             return this;
         }
 
-        public Builder setLinkName(String linkName) {
+        public Builder linkName(String linkName) {
             this.linkName = Objects.requireNonNull(linkName);
             return this;
         }
 
-        public Builder setMappings(@Nullable List<RelationshipLinkFieldMappingResponse> mappings) {
+        public Builder mappings(@Nullable List<RelationshipLinkFieldMappingResponse> mappings) {
             this.mappings = mappings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProfilePropertyReferences(List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences) {
+        public Builder profilePropertyReferences(List<ParticipantProfilePropertyReferenceResponse> profilePropertyReferences) {
             this.profilePropertyReferences = Objects.requireNonNull(profilePropertyReferences);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRelatedProfilePropertyReferences(List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences) {
+        public Builder relatedProfilePropertyReferences(List<ParticipantProfilePropertyReferenceResponse> relatedProfilePropertyReferences) {
             this.relatedProfilePropertyReferences = Objects.requireNonNull(relatedProfilePropertyReferences);
             return this;
         }
 
-        public Builder setRelationshipGuidId(String relationshipGuidId) {
+        public Builder relationshipGuidId(String relationshipGuidId) {
             this.relationshipGuidId = Objects.requireNonNull(relationshipGuidId);
             return this;
         }
 
-        public Builder setRelationshipName(String relationshipName) {
+        public Builder relationshipName(String relationshipName) {
             this.relationshipName = Objects.requireNonNull(relationshipName);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

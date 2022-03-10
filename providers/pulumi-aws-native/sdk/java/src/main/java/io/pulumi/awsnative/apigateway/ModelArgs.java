@@ -119,52 +119,52 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<Object> schema) {
+        public Builder schema(@Nullable Input<Object> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }

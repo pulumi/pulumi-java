@@ -140,37 +140,37 @@ public final class ResourceRecordSetResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoutingPolicy(RRSetRoutingPolicyResponse routingPolicy) {
+        public Builder routingPolicy(RRSetRoutingPolicyResponse routingPolicy) {
             this.routingPolicy = Objects.requireNonNull(routingPolicy);
             return this;
         }
 
-        public Builder setRrdatas(List<String> rrdatas) {
+        public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
 
-        public Builder setSignatureRrdatas(List<String> signatureRrdatas) {
+        public Builder signatureRrdatas(List<String> signatureRrdatas) {
             this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
             return this;
         }
 
-        public Builder setTtl(Integer ttl) {
+        public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

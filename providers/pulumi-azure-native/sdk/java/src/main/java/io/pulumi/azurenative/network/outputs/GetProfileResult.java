@@ -249,67 +249,67 @@ public final class GetProfileResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedEndpointRecordTypes(@Nullable List<String> allowedEndpointRecordTypes) {
+        public Builder allowedEndpointRecordTypes(@Nullable List<String> allowedEndpointRecordTypes) {
             this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable DnsConfigResponse dnsConfig) {
+        public Builder dnsConfig(@Nullable DnsConfigResponse dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<EndpointResponse> endpoints) {
+        public Builder endpoints(@Nullable List<EndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMaxReturn(@Nullable Double maxReturn) {
+        public Builder maxReturn(@Nullable Double maxReturn) {
             this.maxReturn = maxReturn;
             return this;
         }
 
-        public Builder setMonitorConfig(@Nullable MonitorConfigResponse monitorConfig) {
+        public Builder monitorConfig(@Nullable MonitorConfigResponse monitorConfig) {
             this.monitorConfig = monitorConfig;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProfileStatus(@Nullable String profileStatus) {
+        public Builder profileStatus(@Nullable String profileStatus) {
             this.profileStatus = profileStatus;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTrafficRoutingMethod(@Nullable String trafficRoutingMethod) {
+        public Builder trafficRoutingMethod(@Nullable String trafficRoutingMethod) {
             this.trafficRoutingMethod = trafficRoutingMethod;
             return this;
         }
 
-        public Builder setTrafficViewEnrollmentStatus(@Nullable String trafficViewEnrollmentStatus) {
+        public Builder trafficViewEnrollmentStatus(@Nullable String trafficViewEnrollmentStatus) {
             this.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

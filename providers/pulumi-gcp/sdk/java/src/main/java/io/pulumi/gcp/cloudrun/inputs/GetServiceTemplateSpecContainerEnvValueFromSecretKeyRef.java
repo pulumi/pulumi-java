@@ -64,12 +64,12 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef exten
     	      this.name = defaults.name;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

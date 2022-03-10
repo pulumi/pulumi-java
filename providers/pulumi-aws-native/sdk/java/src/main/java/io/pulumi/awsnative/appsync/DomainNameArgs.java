@@ -62,22 +62,22 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     	      this.description = defaults.description;
         }
 
-        public Builder setCertificateArn(Input<String> certificateArn) {
+        public Builder certificateArn(Input<String> certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Input.of(Objects.requireNonNull(certificateArn));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }

@@ -74,12 +74,12 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
     	      this.provisioningErrorCode = defaults.provisioningErrorCode;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setProvisioningErrorCode(@Nullable String provisioningErrorCode) {
+        public Builder provisioningErrorCode(@Nullable String provisioningErrorCode) {
             this.provisioningErrorCode = provisioningErrorCode;
             return this;
         }

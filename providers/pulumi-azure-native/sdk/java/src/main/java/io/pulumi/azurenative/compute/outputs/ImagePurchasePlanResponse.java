@@ -83,17 +83,17 @@ public final class ImagePurchasePlanResponse {
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProduct(@Nullable String product) {
+        public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }

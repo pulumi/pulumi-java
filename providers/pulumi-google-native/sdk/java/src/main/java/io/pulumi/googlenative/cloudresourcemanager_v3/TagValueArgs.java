@@ -130,62 +130,62 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setShortName(Input<String> shortName) {
+        public Builder shortName(Input<String> shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
 
-        public Builder setShortName(String shortName) {
+        public Builder shortName(String shortName) {
             this.shortName = Input.of(Objects.requireNonNull(shortName));
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

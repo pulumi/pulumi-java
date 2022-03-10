@@ -61,17 +61,17 @@ public final class EnvironmentModuleLoggingConfiguration {
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable EnvironmentLoggingLevel logLevel) {
+        public Builder logLevel(@Nullable EnvironmentLoggingLevel logLevel) {
             this.logLevel = logLevel;
             return this;
         }

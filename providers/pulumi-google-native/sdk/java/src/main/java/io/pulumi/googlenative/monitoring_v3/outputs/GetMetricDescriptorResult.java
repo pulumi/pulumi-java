@@ -212,57 +212,57 @@ public final class GetMetricDescriptorResult {
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLabels(List<LabelDescriptorResponse> labels) {
+        public Builder labels(List<LabelDescriptorResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLaunchStage(String launchStage) {
+        public Builder launchStage(String launchStage) {
             this.launchStage = Objects.requireNonNull(launchStage);
             return this;
         }
 
-        public Builder setMetadata(MetricDescriptorMetadataResponse metadata) {
+        public Builder metadata(MetricDescriptorMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetricKind(String metricKind) {
+        public Builder metricKind(String metricKind) {
             this.metricKind = Objects.requireNonNull(metricKind);
             return this;
         }
 
-        public Builder setMonitoredResourceTypes(List<String> monitoredResourceTypes) {
+        public Builder monitoredResourceTypes(List<String> monitoredResourceTypes) {
             this.monitoredResourceTypes = Objects.requireNonNull(monitoredResourceTypes);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setValueType(String valueType) {
+        public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }

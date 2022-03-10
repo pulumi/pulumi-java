@@ -69,22 +69,22 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setOperation(Input<String> operation) {
+        public Builder operation(Input<String> operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Input.of(Objects.requireNonNull(operation));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Either<RecipeParametersArgs,RecipeParameterMapArgs> parameters) {
+        public Builder parameters(@Nullable Either<RecipeParametersArgs,RecipeParameterMapArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

@@ -84,17 +84,17 @@ public final class AppImageConfigFileSystemConfig {
     	      this.mountPath = defaults.mountPath;
         }
 
-        public Builder setDefaultGid(@Nullable Integer defaultGid) {
+        public Builder defaultGid(@Nullable Integer defaultGid) {
             this.defaultGid = defaultGid;
             return this;
         }
 
-        public Builder setDefaultUid(@Nullable Integer defaultUid) {
+        public Builder defaultUid(@Nullable Integer defaultUid) {
             this.defaultUid = defaultUid;
             return this;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = mountPath;
             return this;
         }

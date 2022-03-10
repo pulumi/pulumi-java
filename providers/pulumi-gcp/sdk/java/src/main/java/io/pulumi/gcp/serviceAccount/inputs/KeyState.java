@@ -223,112 +223,112 @@ public final class KeyState extends io.pulumi.resources.ResourceArgs {
     	      this.validBefore = defaults.validBefore;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setKeyAlgorithm(@Nullable Input<String> keyAlgorithm) {
+        public Builder keyAlgorithm(@Nullable Input<String> keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
-        public Builder setKeyAlgorithm(@Nullable String keyAlgorithm) {
+        public Builder keyAlgorithm(@Nullable String keyAlgorithm) {
             this.keyAlgorithm = Input.ofNullable(keyAlgorithm);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setPrivateKeyType(@Nullable Input<String> privateKeyType) {
+        public Builder privateKeyType(@Nullable Input<String> privateKeyType) {
             this.privateKeyType = privateKeyType;
             return this;
         }
 
-        public Builder setPrivateKeyType(@Nullable String privateKeyType) {
+        public Builder privateKeyType(@Nullable String privateKeyType) {
             this.privateKeyType = Input.ofNullable(privateKeyType);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
 
-        public Builder setPublicKeyData(@Nullable Input<String> publicKeyData) {
+        public Builder publicKeyData(@Nullable Input<String> publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
 
-        public Builder setPublicKeyData(@Nullable String publicKeyData) {
+        public Builder publicKeyData(@Nullable String publicKeyData) {
             this.publicKeyData = Input.ofNullable(publicKeyData);
             return this;
         }
 
-        public Builder setPublicKeyType(@Nullable Input<String> publicKeyType) {
+        public Builder publicKeyType(@Nullable Input<String> publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
         }
 
-        public Builder setPublicKeyType(@Nullable String publicKeyType) {
+        public Builder publicKeyType(@Nullable String publicKeyType) {
             this.publicKeyType = Input.ofNullable(publicKeyType);
             return this;
         }
 
-        public Builder setServiceAccountId(@Nullable Input<String> serviceAccountId) {
+        public Builder serviceAccountId(@Nullable Input<String> serviceAccountId) {
             this.serviceAccountId = serviceAccountId;
             return this;
         }
 
-        public Builder setServiceAccountId(@Nullable String serviceAccountId) {
+        public Builder serviceAccountId(@Nullable String serviceAccountId) {
             this.serviceAccountId = Input.ofNullable(serviceAccountId);
             return this;
         }
 
-        public Builder setValidAfter(@Nullable Input<String> validAfter) {
+        public Builder validAfter(@Nullable Input<String> validAfter) {
             this.validAfter = validAfter;
             return this;
         }
 
-        public Builder setValidAfter(@Nullable String validAfter) {
+        public Builder validAfter(@Nullable String validAfter) {
             this.validAfter = Input.ofNullable(validAfter);
             return this;
         }
 
-        public Builder setValidBefore(@Nullable Input<String> validBefore) {
+        public Builder validBefore(@Nullable Input<String> validBefore) {
             this.validBefore = validBefore;
             return this;
         }
 
-        public Builder setValidBefore(@Nullable String validBefore) {
+        public Builder validBefore(@Nullable String validBefore) {
             this.validBefore = Input.ofNullable(validBefore);
             return this;
         }

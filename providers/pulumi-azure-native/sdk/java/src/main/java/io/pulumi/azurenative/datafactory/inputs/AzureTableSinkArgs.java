@@ -220,112 +220,112 @@ public final class AzureTableSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeBatchTimeout = defaults.writeBatchTimeout;
         }
 
-        public Builder setAzureTableDefaultPartitionKeyValue(@Nullable Input<Object> azureTableDefaultPartitionKeyValue) {
+        public Builder azureTableDefaultPartitionKeyValue(@Nullable Input<Object> azureTableDefaultPartitionKeyValue) {
             this.azureTableDefaultPartitionKeyValue = azureTableDefaultPartitionKeyValue;
             return this;
         }
 
-        public Builder setAzureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
+        public Builder azureTableDefaultPartitionKeyValue(@Nullable Object azureTableDefaultPartitionKeyValue) {
             this.azureTableDefaultPartitionKeyValue = Input.ofNullable(azureTableDefaultPartitionKeyValue);
             return this;
         }
 
-        public Builder setAzureTableInsertType(@Nullable Input<Object> azureTableInsertType) {
+        public Builder azureTableInsertType(@Nullable Input<Object> azureTableInsertType) {
             this.azureTableInsertType = azureTableInsertType;
             return this;
         }
 
-        public Builder setAzureTableInsertType(@Nullable Object azureTableInsertType) {
+        public Builder azureTableInsertType(@Nullable Object azureTableInsertType) {
             this.azureTableInsertType = Input.ofNullable(azureTableInsertType);
             return this;
         }
 
-        public Builder setAzureTablePartitionKeyName(@Nullable Input<Object> azureTablePartitionKeyName) {
+        public Builder azureTablePartitionKeyName(@Nullable Input<Object> azureTablePartitionKeyName) {
             this.azureTablePartitionKeyName = azureTablePartitionKeyName;
             return this;
         }
 
-        public Builder setAzureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
+        public Builder azureTablePartitionKeyName(@Nullable Object azureTablePartitionKeyName) {
             this.azureTablePartitionKeyName = Input.ofNullable(azureTablePartitionKeyName);
             return this;
         }
 
-        public Builder setAzureTableRowKeyName(@Nullable Input<Object> azureTableRowKeyName) {
+        public Builder azureTableRowKeyName(@Nullable Input<Object> azureTableRowKeyName) {
             this.azureTableRowKeyName = azureTableRowKeyName;
             return this;
         }
 
-        public Builder setAzureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
+        public Builder azureTableRowKeyName(@Nullable Object azureTableRowKeyName) {
             this.azureTableRowKeyName = Input.ofNullable(azureTableRowKeyName);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Input.ofNullable(sinkRetryCount);
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Input.ofNullable(sinkRetryWait);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Input<Object> writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Input<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Input.ofNullable(writeBatchSize);
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Input.ofNullable(writeBatchTimeout);
             return this;
         }

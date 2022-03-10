@@ -57,12 +57,12 @@ public final class SetupScriptsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scripts = defaults.scripts;
         }
 
-        public Builder setScripts(@Nullable Input<ScriptsToExecuteArgs> scripts) {
+        public Builder scripts(@Nullable Input<ScriptsToExecuteArgs> scripts) {
             this.scripts = scripts;
             return this;
         }
 
-        public Builder setScripts(@Nullable ScriptsToExecuteArgs scripts) {
+        public Builder scripts(@Nullable ScriptsToExecuteArgs scripts) {
             this.scripts = Input.ofNullable(scripts);
             return this;
         }

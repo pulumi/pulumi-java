@@ -50,12 +50,12 @@ public final class GetClusterNetworkPolicy {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }

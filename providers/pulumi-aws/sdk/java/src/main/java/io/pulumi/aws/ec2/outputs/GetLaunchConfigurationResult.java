@@ -359,102 +359,102 @@ public final class GetLaunchConfigurationResult {
     	      this.vpcClassicLinkSecurityGroups = defaults.vpcClassicLinkSecurityGroups;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Objects.requireNonNull(associatePublicIpAddress);
             return this;
         }
 
-        public Builder setEbsBlockDevices(List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices) {
+        public Builder ebsBlockDevices(List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices) {
             this.ebsBlockDevices = Objects.requireNonNull(ebsBlockDevices);
             return this;
         }
 
-        public Builder setEbsOptimized(Boolean ebsOptimized) {
+        public Builder ebsOptimized(Boolean ebsOptimized) {
             this.ebsOptimized = Objects.requireNonNull(ebsOptimized);
             return this;
         }
 
-        public Builder setEnableMonitoring(Boolean enableMonitoring) {
+        public Builder enableMonitoring(Boolean enableMonitoring) {
             this.enableMonitoring = Objects.requireNonNull(enableMonitoring);
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Objects.requireNonNull(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder setIamInstanceProfile(String iamInstanceProfile) {
+        public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setMetadataOptions(List<GetLaunchConfigurationMetadataOption> metadataOptions) {
+        public Builder metadataOptions(List<GetLaunchConfigurationMetadataOption> metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlacementTenancy(String placementTenancy) {
+        public Builder placementTenancy(String placementTenancy) {
             this.placementTenancy = Objects.requireNonNull(placementTenancy);
             return this;
         }
 
-        public Builder setRootBlockDevices(List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices) {
+        public Builder rootBlockDevices(List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices) {
             this.rootBlockDevices = Objects.requireNonNull(rootBlockDevices);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSpotPrice(String spotPrice) {
+        public Builder spotPrice(String spotPrice) {
             this.spotPrice = Objects.requireNonNull(spotPrice);
             return this;
         }
 
-        public Builder setUserData(String userData) {
+        public Builder userData(String userData) {
             this.userData = Objects.requireNonNull(userData);
             return this;
         }
 
-        public Builder setVpcClassicLinkId(String vpcClassicLinkId) {
+        public Builder vpcClassicLinkId(String vpcClassicLinkId) {
             this.vpcClassicLinkId = Objects.requireNonNull(vpcClassicLinkId);
             return this;
         }
 
-        public Builder setVpcClassicLinkSecurityGroups(List<String> vpcClassicLinkSecurityGroups) {
+        public Builder vpcClassicLinkSecurityGroups(List<String> vpcClassicLinkSecurityGroups) {
             this.vpcClassicLinkSecurityGroups = Objects.requireNonNull(vpcClassicLinkSecurityGroups);
             return this;
         }

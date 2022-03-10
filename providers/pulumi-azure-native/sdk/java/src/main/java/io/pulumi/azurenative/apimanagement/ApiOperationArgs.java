@@ -234,122 +234,122 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlTemplate = defaults.urlTemplate;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setMethod(Input<String> method) {
+        public Builder method(Input<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Input.of(Objects.requireNonNull(method));
             return this;
         }
 
-        public Builder setOperationId(@Nullable Input<String> operationId) {
+        public Builder operationId(@Nullable Input<String> operationId) {
             this.operationId = operationId;
             return this;
         }
 
-        public Builder setOperationId(@Nullable String operationId) {
+        public Builder operationId(@Nullable String operationId) {
             this.operationId = Input.ofNullable(operationId);
             return this;
         }
 
-        public Builder setPolicies(@Nullable Input<String> policies) {
+        public Builder policies(@Nullable Input<String> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setPolicies(@Nullable String policies) {
+        public Builder policies(@Nullable String policies) {
             this.policies = Input.ofNullable(policies);
             return this;
         }
 
-        public Builder setRequest(@Nullable Input<RequestContractArgs> request) {
+        public Builder request(@Nullable Input<RequestContractArgs> request) {
             this.request = request;
             return this;
         }
 
-        public Builder setRequest(@Nullable RequestContractArgs request) {
+        public Builder request(@Nullable RequestContractArgs request) {
             this.request = Input.ofNullable(request);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResponses(@Nullable Input<List<ResponseContractArgs>> responses) {
+        public Builder responses(@Nullable Input<List<ResponseContractArgs>> responses) {
             this.responses = responses;
             return this;
         }
 
-        public Builder setResponses(@Nullable List<ResponseContractArgs> responses) {
+        public Builder responses(@Nullable List<ResponseContractArgs> responses) {
             this.responses = Input.ofNullable(responses);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTemplateParameters(@Nullable Input<List<ParameterContractArgs>> templateParameters) {
+        public Builder templateParameters(@Nullable Input<List<ParameterContractArgs>> templateParameters) {
             this.templateParameters = templateParameters;
             return this;
         }
 
-        public Builder setTemplateParameters(@Nullable List<ParameterContractArgs> templateParameters) {
+        public Builder templateParameters(@Nullable List<ParameterContractArgs> templateParameters) {
             this.templateParameters = Input.ofNullable(templateParameters);
             return this;
         }
 
-        public Builder setUrlTemplate(Input<String> urlTemplate) {
+        public Builder urlTemplate(Input<String> urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Input.of(Objects.requireNonNull(urlTemplate));
             return this;
         }

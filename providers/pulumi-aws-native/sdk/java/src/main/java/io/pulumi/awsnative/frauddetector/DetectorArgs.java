@@ -165,82 +165,82 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssociatedModels(@Nullable Input<List<DetectorModelArgs>> associatedModels) {
+        public Builder associatedModels(@Nullable Input<List<DetectorModelArgs>> associatedModels) {
             this.associatedModels = associatedModels;
             return this;
         }
 
-        public Builder setAssociatedModels(@Nullable List<DetectorModelArgs> associatedModels) {
+        public Builder associatedModels(@Nullable List<DetectorModelArgs> associatedModels) {
             this.associatedModels = Input.ofNullable(associatedModels);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDetectorId(Input<String> detectorId) {
+        public Builder detectorId(Input<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
-        public Builder setDetectorId(String detectorId) {
+        public Builder detectorId(String detectorId) {
             this.detectorId = Input.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder setDetectorVersionStatus(@Nullable Input<DetectorVersionStatus> detectorVersionStatus) {
+        public Builder detectorVersionStatus(@Nullable Input<DetectorVersionStatus> detectorVersionStatus) {
             this.detectorVersionStatus = detectorVersionStatus;
             return this;
         }
 
-        public Builder setDetectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
+        public Builder detectorVersionStatus(@Nullable DetectorVersionStatus detectorVersionStatus) {
             this.detectorVersionStatus = Input.ofNullable(detectorVersionStatus);
             return this;
         }
 
-        public Builder setEventType(Input<DetectorEventTypeArgs> eventType) {
+        public Builder eventType(Input<DetectorEventTypeArgs> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setEventType(DetectorEventTypeArgs eventType) {
+        public Builder eventType(DetectorEventTypeArgs eventType) {
             this.eventType = Input.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder setRuleExecutionMode(@Nullable Input<DetectorRuleExecutionMode> ruleExecutionMode) {
+        public Builder ruleExecutionMode(@Nullable Input<DetectorRuleExecutionMode> ruleExecutionMode) {
             this.ruleExecutionMode = ruleExecutionMode;
             return this;
         }
 
-        public Builder setRuleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
+        public Builder ruleExecutionMode(@Nullable DetectorRuleExecutionMode ruleExecutionMode) {
             this.ruleExecutionMode = Input.ofNullable(ruleExecutionMode);
             return this;
         }
 
-        public Builder setRules(Input<List<DetectorRuleArgs>> rules) {
+        public Builder rules(Input<List<DetectorRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<DetectorRuleArgs> rules) {
+        public Builder rules(List<DetectorRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DetectorTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorTagArgs> tags) {
+        public Builder tags(@Nullable List<DetectorTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

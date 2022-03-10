@@ -60,17 +60,17 @@ public final class GetResponseHeadersPolicyResult {
     	      this.responseHeadersPolicyConfig = defaults.responseHeadersPolicyConfig;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setResponseHeadersPolicyConfig(@Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
+        public Builder responseHeadersPolicyConfig(@Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
             this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
             return this;
         }

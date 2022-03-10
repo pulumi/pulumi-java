@@ -179,47 +179,47 @@ public final class GetSqlPoolWorkloadClassifierResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = context;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImportance(@Nullable String importance) {
+        public Builder importance(@Nullable String importance) {
             this.importance = importance;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setMemberName(String memberName) {
+        public Builder memberName(String memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -50,7 +50,7 @@ public final class GetAmiResult {
     	      this.kernelId = defaults.kernelId;
         }
 
-        public Builder setKernelId(String kernelId) {
+        public Builder kernelId(String kernelId) {
             this.kernelId = Objects.requireNonNull(kernelId);
             return this;
         }

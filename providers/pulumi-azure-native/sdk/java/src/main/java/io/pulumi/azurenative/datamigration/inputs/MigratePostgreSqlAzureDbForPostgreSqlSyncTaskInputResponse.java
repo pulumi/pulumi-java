@@ -90,17 +90,17 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInputResponse ex
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setSelectedDatabases(List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases) {
+        public Builder selectedDatabases(List<MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(PostgreSqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(PostgreSqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

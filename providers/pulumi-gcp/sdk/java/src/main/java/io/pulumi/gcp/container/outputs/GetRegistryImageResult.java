@@ -99,37 +99,37 @@ public final class GetRegistryImageResult {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageUrl(String imageUrl) {
+        public Builder imageUrl(String imageUrl) {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

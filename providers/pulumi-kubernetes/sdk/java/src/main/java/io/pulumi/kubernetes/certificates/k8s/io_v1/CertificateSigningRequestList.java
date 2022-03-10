@@ -118,8 +118,8 @@ public class CertificateSigningRequestList extends io.pulumi.resources.CustomRes
     private static CertificateSigningRequestListArgs makeArgs(CertificateSigningRequestListArgs args) {
         var builder = args == null ? CertificateSigningRequestListArgs.builder() : CertificateSigningRequestListArgs.builder(args);
         return builder
-            .setApiVersion("certificates.k8s.io/v1")
-            .setKind("CertificateSigningRequestList")
+            .apiVersion("certificates.k8s.io/v1")
+            .kind("CertificateSigningRequestList")
             .build();
     }
 

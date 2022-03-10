@@ -105,42 +105,42 @@ public final class VirtualNodeSpecListenerTimeoutArgs extends io.pulumi.resource
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder setGrpc(@Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc) {
+        public Builder grpc(@Nullable Input<VirtualNodeSpecListenerTimeoutGrpcArgs> grpc) {
             this.grpc = grpc;
             return this;
         }
 
-        public Builder setGrpc(@Nullable VirtualNodeSpecListenerTimeoutGrpcArgs grpc) {
+        public Builder grpc(@Nullable VirtualNodeSpecListenerTimeoutGrpcArgs grpc) {
             this.grpc = Input.ofNullable(grpc);
             return this;
         }
 
-        public Builder setHttp(@Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http) {
+        public Builder http(@Nullable Input<VirtualNodeSpecListenerTimeoutHttpArgs> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp(@Nullable VirtualNodeSpecListenerTimeoutHttpArgs http) {
+        public Builder http(@Nullable VirtualNodeSpecListenerTimeoutHttpArgs http) {
             this.http = Input.ofNullable(http);
             return this;
         }
 
-        public Builder setHttp2(@Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2) {
+        public Builder http2(@Nullable Input<VirtualNodeSpecListenerTimeoutHttp2Args> http2) {
             this.http2 = http2;
             return this;
         }
 
-        public Builder setHttp2(@Nullable VirtualNodeSpecListenerTimeoutHttp2Args http2) {
+        public Builder http2(@Nullable VirtualNodeSpecListenerTimeoutHttp2Args http2) {
             this.http2 = Input.ofNullable(http2);
             return this;
         }
 
-        public Builder setTcp(@Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp) {
+        public Builder tcp(@Nullable Input<VirtualNodeSpecListenerTimeoutTcpArgs> tcp) {
             this.tcp = tcp;
             return this;
         }
 
-        public Builder setTcp(@Nullable VirtualNodeSpecListenerTimeoutTcpArgs tcp) {
+        public Builder tcp(@Nullable VirtualNodeSpecListenerTimeoutTcpArgs tcp) {
             this.tcp = Input.ofNullable(tcp);
             return this;
         }

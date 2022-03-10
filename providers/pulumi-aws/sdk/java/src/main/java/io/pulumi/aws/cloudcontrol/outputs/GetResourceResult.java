@@ -99,32 +99,32 @@ public final class GetResourceResult {
     	      this.typeVersionId = defaults.typeVersionId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentifier(String identifier) {
+        public Builder identifier(String identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setProperties(String properties) {
+        public Builder properties(String properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTypeName(String typeName) {
+        public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
 
-        public Builder setTypeVersionId(@Nullable String typeVersionId) {
+        public Builder typeVersionId(@Nullable String typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
         }

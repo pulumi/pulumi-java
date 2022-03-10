@@ -183,7 +183,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
     private static FileEventTriggerArgs makeArgs(FileEventTriggerArgs args) {
         var builder = args == null ? FileEventTriggerArgs.builder() : FileEventTriggerArgs.builder(args);
         return builder
-            .setKind("FileEvent")
+            .kind("FileEvent")
             .build();
     }
 

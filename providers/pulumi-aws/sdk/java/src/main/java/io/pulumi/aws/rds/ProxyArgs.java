@@ -203,102 +203,102 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder setAuths(Input<List<ProxyAuthArgs>> auths) {
+        public Builder auths(Input<List<ProxyAuthArgs>> auths) {
             this.auths = Objects.requireNonNull(auths);
             return this;
         }
 
-        public Builder setAuths(List<ProxyAuthArgs> auths) {
+        public Builder auths(List<ProxyAuthArgs> auths) {
             this.auths = Input.of(Objects.requireNonNull(auths));
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Input<Boolean> debugLogging) {
+        public Builder debugLogging(@Nullable Input<Boolean> debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Boolean debugLogging) {
+        public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = Input.ofNullable(debugLogging);
             return this;
         }
 
-        public Builder setEngineFamily(Input<String> engineFamily) {
+        public Builder engineFamily(Input<String> engineFamily) {
             this.engineFamily = Objects.requireNonNull(engineFamily);
             return this;
         }
 
-        public Builder setEngineFamily(String engineFamily) {
+        public Builder engineFamily(String engineFamily) {
             this.engineFamily = Input.of(Objects.requireNonNull(engineFamily));
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Integer idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = Input.ofNullable(idleClientTimeout);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRequireTls(@Nullable Input<Boolean> requireTls) {
+        public Builder requireTls(@Nullable Input<Boolean> requireTls) {
             this.requireTls = requireTls;
             return this;
         }
 
-        public Builder setRequireTls(@Nullable Boolean requireTls) {
+        public Builder requireTls(@Nullable Boolean requireTls) {
             this.requireTls = Input.ofNullable(requireTls);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder setVpcSubnetIds(Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(Input<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
 
-        public Builder setVpcSubnetIds(List<String> vpcSubnetIds) {
+        public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }

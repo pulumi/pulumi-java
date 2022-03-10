@@ -135,62 +135,62 @@ public final class VpnConnectionVgwTelemetryArgs extends io.pulumi.resources.Res
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setAcceptedRouteCount(@Nullable Input<Integer> acceptedRouteCount) {
+        public Builder acceptedRouteCount(@Nullable Input<Integer> acceptedRouteCount) {
             this.acceptedRouteCount = acceptedRouteCount;
             return this;
         }
 
-        public Builder setAcceptedRouteCount(@Nullable Integer acceptedRouteCount) {
+        public Builder acceptedRouteCount(@Nullable Integer acceptedRouteCount) {
             this.acceptedRouteCount = Input.ofNullable(acceptedRouteCount);
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setLastStatusChange(@Nullable Input<String> lastStatusChange) {
+        public Builder lastStatusChange(@Nullable Input<String> lastStatusChange) {
             this.lastStatusChange = lastStatusChange;
             return this;
         }
 
-        public Builder setLastStatusChange(@Nullable String lastStatusChange) {
+        public Builder lastStatusChange(@Nullable String lastStatusChange) {
             this.lastStatusChange = Input.ofNullable(lastStatusChange);
             return this;
         }
 
-        public Builder setOutsideIpAddress(@Nullable Input<String> outsideIpAddress) {
+        public Builder outsideIpAddress(@Nullable Input<String> outsideIpAddress) {
             this.outsideIpAddress = outsideIpAddress;
             return this;
         }
 
-        public Builder setOutsideIpAddress(@Nullable String outsideIpAddress) {
+        public Builder outsideIpAddress(@Nullable String outsideIpAddress) {
             this.outsideIpAddress = Input.ofNullable(outsideIpAddress);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable Input<String> statusMessage) {
+        public Builder statusMessage(@Nullable Input<String> statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = Input.ofNullable(statusMessage);
             return this;
         }

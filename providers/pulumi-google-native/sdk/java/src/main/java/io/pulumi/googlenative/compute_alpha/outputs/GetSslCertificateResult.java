@@ -260,72 +260,72 @@ public final class GetSslCertificateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setManaged(SslCertificateManagedSslCertificateResponse managed) {
+        public Builder managed(SslCertificateManagedSslCertificateResponse managed) {
             this.managed = Objects.requireNonNull(managed);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSelfManaged(SslCertificateSelfManagedSslCertificateResponse selfManaged) {
+        public Builder selfManaged(SslCertificateSelfManagedSslCertificateResponse selfManaged) {
             this.selfManaged = Objects.requireNonNull(selfManaged);
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(List<String> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

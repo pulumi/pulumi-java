@@ -48,7 +48,7 @@ public final class MachinePropertiesResponseOsProfile {
     	      this.computerName = defaults.computerName;
         }
 
-        public Builder setComputerName(String computerName) {
+        public Builder computerName(String computerName) {
             this.computerName = Objects.requireNonNull(computerName);
             return this;
         }

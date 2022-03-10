@@ -70,22 +70,22 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.days = defaults.days;
         }
 
-        public Builder setAccessTier(Input<BucketTieringAccessTier> accessTier) {
+        public Builder accessTier(Input<BucketTieringAccessTier> accessTier) {
             this.accessTier = Objects.requireNonNull(accessTier);
             return this;
         }
 
-        public Builder setAccessTier(BucketTieringAccessTier accessTier) {
+        public Builder accessTier(BucketTieringAccessTier accessTier) {
             this.accessTier = Input.of(Objects.requireNonNull(accessTier));
             return this;
         }
 
-        public Builder setDays(Input<Integer> days) {
+        public Builder days(Input<Integer> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setDays(Integer days) {
+        public Builder days(Integer days) {
             this.days = Input.of(Objects.requireNonNull(days));
             return this;
         }

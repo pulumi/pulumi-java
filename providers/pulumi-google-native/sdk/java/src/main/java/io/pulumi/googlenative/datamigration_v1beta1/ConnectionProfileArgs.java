@@ -203,112 +203,112 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     	      this.state = defaults.state;
         }
 
-        public Builder setCloudsql(@Nullable Input<CloudSqlConnectionProfileArgs> cloudsql) {
+        public Builder cloudsql(@Nullable Input<CloudSqlConnectionProfileArgs> cloudsql) {
             this.cloudsql = cloudsql;
             return this;
         }
 
-        public Builder setCloudsql(@Nullable CloudSqlConnectionProfileArgs cloudsql) {
+        public Builder cloudsql(@Nullable CloudSqlConnectionProfileArgs cloudsql) {
             this.cloudsql = Input.ofNullable(cloudsql);
             return this;
         }
 
-        public Builder setConnectionProfileId(Input<String> connectionProfileId) {
+        public Builder connectionProfileId(Input<String> connectionProfileId) {
             this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
             return this;
         }
 
-        public Builder setConnectionProfileId(String connectionProfileId) {
+        public Builder connectionProfileId(String connectionProfileId) {
             this.connectionProfileId = Input.of(Objects.requireNonNull(connectionProfileId));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMysql(@Nullable Input<MySqlConnectionProfileArgs> mysql) {
+        public Builder mysql(@Nullable Input<MySqlConnectionProfileArgs> mysql) {
             this.mysql = mysql;
             return this;
         }
 
-        public Builder setMysql(@Nullable MySqlConnectionProfileArgs mysql) {
+        public Builder mysql(@Nullable MySqlConnectionProfileArgs mysql) {
             this.mysql = Input.ofNullable(mysql);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProvider(@Nullable Input<ConnectionProfileProvider> provider) {
+        public Builder provider(@Nullable Input<ConnectionProfileProvider> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable ConnectionProfileProvider provider) {
+        public Builder provider(@Nullable ConnectionProfileProvider provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setState(@Nullable Input<ConnectionProfileState> state) {
+        public Builder state(@Nullable Input<ConnectionProfileState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ConnectionProfileState state) {
+        public Builder state(@Nullable ConnectionProfileState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

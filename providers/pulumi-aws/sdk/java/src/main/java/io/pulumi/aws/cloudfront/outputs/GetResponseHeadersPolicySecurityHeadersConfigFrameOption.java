@@ -66,12 +66,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption {
     	      this.override = defaults.override;
         }
 
-        public Builder setFrameOption(String frameOption) {
+        public Builder frameOption(String frameOption) {
             this.frameOption = Objects.requireNonNull(frameOption);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }

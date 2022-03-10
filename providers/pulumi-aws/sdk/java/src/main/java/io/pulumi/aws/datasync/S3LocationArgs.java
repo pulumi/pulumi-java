@@ -137,62 +137,62 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentArns(@Nullable Input<List<String>> agentArns) {
+        public Builder agentArns(@Nullable Input<List<String>> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
-        public Builder setAgentArns(@Nullable List<String> agentArns) {
+        public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = Input.ofNullable(agentArns);
             return this;
         }
 
-        public Builder setS3BucketArn(Input<String> s3BucketArn) {
+        public Builder s3BucketArn(Input<String> s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
 
-        public Builder setS3BucketArn(String s3BucketArn) {
+        public Builder s3BucketArn(String s3BucketArn) {
             this.s3BucketArn = Input.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }
 
-        public Builder setS3Config(Input<S3LocationS3ConfigArgs> s3Config) {
+        public Builder s3Config(Input<S3LocationS3ConfigArgs> s3Config) {
             this.s3Config = Objects.requireNonNull(s3Config);
             return this;
         }
 
-        public Builder setS3Config(S3LocationS3ConfigArgs s3Config) {
+        public Builder s3Config(S3LocationS3ConfigArgs s3Config) {
             this.s3Config = Input.of(Objects.requireNonNull(s3Config));
             return this;
         }
 
-        public Builder setS3StorageClass(@Nullable Input<String> s3StorageClass) {
+        public Builder s3StorageClass(@Nullable Input<String> s3StorageClass) {
             this.s3StorageClass = s3StorageClass;
             return this;
         }
 
-        public Builder setS3StorageClass(@Nullable String s3StorageClass) {
+        public Builder s3StorageClass(@Nullable String s3StorageClass) {
             this.s3StorageClass = Input.ofNullable(s3StorageClass);
             return this;
         }
 
-        public Builder setSubdirectory(Input<String> subdirectory) {
+        public Builder subdirectory(Input<String> subdirectory) {
             this.subdirectory = Objects.requireNonNull(subdirectory);
             return this;
         }
 
-        public Builder setSubdirectory(String subdirectory) {
+        public Builder subdirectory(String subdirectory) {
             this.subdirectory = Input.of(Objects.requireNonNull(subdirectory));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

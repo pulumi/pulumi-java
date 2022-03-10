@@ -72,12 +72,12 @@ public final class RelationshipTypeFieldMappingResponse extends io.pulumi.resour
     	      this.relatedProfileKeyProperty = defaults.relatedProfileKeyProperty;
         }
 
-        public Builder setProfileFieldName(String profileFieldName) {
+        public Builder profileFieldName(String profileFieldName) {
             this.profileFieldName = Objects.requireNonNull(profileFieldName);
             return this;
         }
 
-        public Builder setRelatedProfileKeyProperty(String relatedProfileKeyProperty) {
+        public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
             this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
             return this;
         }

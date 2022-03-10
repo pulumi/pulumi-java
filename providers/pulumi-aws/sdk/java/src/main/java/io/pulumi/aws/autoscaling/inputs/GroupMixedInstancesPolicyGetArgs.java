@@ -71,22 +71,22 @@ public final class GroupMixedInstancesPolicyGetArgs extends io.pulumi.resources.
     	      this.launchTemplate = defaults.launchTemplate;
         }
 
-        public Builder setInstancesDistribution(@Nullable Input<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution) {
+        public Builder instancesDistribution(@Nullable Input<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution) {
             this.instancesDistribution = instancesDistribution;
             return this;
         }
 
-        public Builder setInstancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistributionGetArgs instancesDistribution) {
+        public Builder instancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistributionGetArgs instancesDistribution) {
             this.instancesDistribution = Input.ofNullable(instancesDistribution);
             return this;
         }
 
-        public Builder setLaunchTemplate(Input<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate) {
+        public Builder launchTemplate(Input<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate) {
             this.launchTemplate = Objects.requireNonNull(launchTemplate);
             return this;
         }
 
-        public Builder setLaunchTemplate(GroupMixedInstancesPolicyLaunchTemplateGetArgs launchTemplate) {
+        public Builder launchTemplate(GroupMixedInstancesPolicyLaunchTemplateGetArgs launchTemplate) {
             this.launchTemplate = Input.of(Objects.requireNonNull(launchTemplate));
             return this;
         }

@@ -71,22 +71,22 @@ public final class ClusterEncryptionInfoEncryptionInTransitArgs extends io.pulum
     	      this.inCluster = defaults.inCluster;
         }
 
-        public Builder setClientBroker(@Nullable Input<String> clientBroker) {
+        public Builder clientBroker(@Nullable Input<String> clientBroker) {
             this.clientBroker = clientBroker;
             return this;
         }
 
-        public Builder setClientBroker(@Nullable String clientBroker) {
+        public Builder clientBroker(@Nullable String clientBroker) {
             this.clientBroker = Input.ofNullable(clientBroker);
             return this;
         }
 
-        public Builder setInCluster(@Nullable Input<Boolean> inCluster) {
+        public Builder inCluster(@Nullable Input<Boolean> inCluster) {
             this.inCluster = inCluster;
             return this;
         }
 
-        public Builder setInCluster(@Nullable Boolean inCluster) {
+        public Builder inCluster(@Nullable Boolean inCluster) {
             this.inCluster = Input.ofNullable(inCluster);
             return this;
         }

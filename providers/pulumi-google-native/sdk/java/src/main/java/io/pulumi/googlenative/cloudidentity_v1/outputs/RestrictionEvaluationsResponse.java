@@ -48,7 +48,7 @@ public final class RestrictionEvaluationsResponse {
     	      this.memberRestrictionEvaluation = defaults.memberRestrictionEvaluation;
         }
 
-        public Builder setMemberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
+        public Builder memberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
             this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
             return this;
         }

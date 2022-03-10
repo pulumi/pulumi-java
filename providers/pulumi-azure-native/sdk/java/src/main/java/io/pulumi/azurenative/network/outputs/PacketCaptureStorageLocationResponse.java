@@ -83,17 +83,17 @@ public final class PacketCaptureStorageLocationResponse {
     	      this.storagePath = defaults.storagePath;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setStorageId(@Nullable String storageId) {
+        public Builder storageId(@Nullable String storageId) {
             this.storageId = storageId;
             return this;
         }
 
-        public Builder setStoragePath(@Nullable String storagePath) {
+        public Builder storagePath(@Nullable String storagePath) {
             this.storagePath = storagePath;
             return this;
         }

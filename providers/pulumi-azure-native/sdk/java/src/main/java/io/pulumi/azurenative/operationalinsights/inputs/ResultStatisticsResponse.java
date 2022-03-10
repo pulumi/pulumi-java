@@ -73,12 +73,12 @@ public final class ResultStatisticsResponse extends io.pulumi.resources.InvokeAr
     	      this.progress = defaults.progress;
         }
 
-        public Builder setIngestedRecords(Integer ingestedRecords) {
+        public Builder ingestedRecords(Integer ingestedRecords) {
             this.ingestedRecords = Objects.requireNonNull(ingestedRecords);
             return this;
         }
 
-        public Builder setProgress(Double progress) {
+        public Builder progress(Double progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }

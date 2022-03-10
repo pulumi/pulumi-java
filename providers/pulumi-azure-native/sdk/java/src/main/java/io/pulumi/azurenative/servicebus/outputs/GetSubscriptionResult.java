@@ -359,102 +359,102 @@ public final class GetSubscriptionResult {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setAccessedAt(String accessedAt) {
+        public Builder accessedAt(String accessedAt) {
             this.accessedAt = Objects.requireNonNull(accessedAt);
             return this;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
             this.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
 
-        public Builder setCountDetails(MessageCountDetailsResponse countDetails) {
+        public Builder countDetails(MessageCountDetailsResponse countDetails) {
             this.countDetails = Objects.requireNonNull(countDetails);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDeadLetteringOnFilterEvaluationExceptions(@Nullable Boolean deadLetteringOnFilterEvaluationExceptions) {
+        public Builder deadLetteringOnFilterEvaluationExceptions(@Nullable Boolean deadLetteringOnFilterEvaluationExceptions) {
             this.deadLetteringOnFilterEvaluationExceptions = deadLetteringOnFilterEvaluationExceptions;
             return this;
         }
 
-        public Builder setDeadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
+        public Builder deadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
             this.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
 
-        public Builder setForwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
+        public Builder forwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
             return this;
         }
 
-        public Builder setForwardTo(@Nullable String forwardTo) {
+        public Builder forwardTo(@Nullable String forwardTo) {
             this.forwardTo = forwardTo;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLockDuration(@Nullable String lockDuration) {
+        public Builder lockDuration(@Nullable String lockDuration) {
             this.lockDuration = lockDuration;
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Integer maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
-        public Builder setMessageCount(Double messageCount) {
+        public Builder messageCount(Double messageCount) {
             this.messageCount = Objects.requireNonNull(messageCount);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequiresSession(@Nullable Boolean requiresSession) {
+        public Builder requiresSession(@Nullable Boolean requiresSession) {
             this.requiresSession = requiresSession;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }

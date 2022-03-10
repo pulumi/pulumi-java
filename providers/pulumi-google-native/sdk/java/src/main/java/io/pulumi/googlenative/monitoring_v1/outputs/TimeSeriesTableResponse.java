@@ -49,7 +49,7 @@ public final class TimeSeriesTableResponse {
     	      this.dataSets = defaults.dataSets;
         }
 
-        public Builder setDataSets(List<TableDataSetResponse> dataSets) {
+        public Builder dataSets(List<TableDataSetResponse> dataSets) {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }

@@ -57,12 +57,12 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
     	      this.authType = defaults.authType;
         }
 
-        public Builder setAuthType(Input<String> authType) {
+        public Builder authType(Input<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Input.of(Objects.requireNonNull(authType));
             return this;
         }

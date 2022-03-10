@@ -164,82 +164,82 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCheckpointVersion(@Nullable Input<SchemaVersionArgs> checkpointVersion) {
+        public Builder checkpointVersion(@Nullable Input<SchemaVersionArgs> checkpointVersion) {
             this.checkpointVersion = checkpointVersion;
             return this;
         }
 
-        public Builder setCheckpointVersion(@Nullable SchemaVersionArgs checkpointVersion) {
+        public Builder checkpointVersion(@Nullable SchemaVersionArgs checkpointVersion) {
             this.checkpointVersion = Input.ofNullable(checkpointVersion);
             return this;
         }
 
-        public Builder setCompatibility(Input<SchemaCompatibility> compatibility) {
+        public Builder compatibility(Input<SchemaCompatibility> compatibility) {
             this.compatibility = Objects.requireNonNull(compatibility);
             return this;
         }
 
-        public Builder setCompatibility(SchemaCompatibility compatibility) {
+        public Builder compatibility(SchemaCompatibility compatibility) {
             this.compatibility = Input.of(Objects.requireNonNull(compatibility));
             return this;
         }
 
-        public Builder setDataFormat(Input<SchemaDataFormat> dataFormat) {
+        public Builder dataFormat(Input<SchemaDataFormat> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
-        public Builder setDataFormat(SchemaDataFormat dataFormat) {
+        public Builder dataFormat(SchemaDataFormat dataFormat) {
             this.dataFormat = Input.of(Objects.requireNonNull(dataFormat));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegistry(@Nullable Input<SchemaRegistryArgs> registry) {
+        public Builder registry(@Nullable Input<SchemaRegistryArgs> registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setRegistry(@Nullable SchemaRegistryArgs registry) {
+        public Builder registry(@Nullable SchemaRegistryArgs registry) {
             this.registry = Input.ofNullable(registry);
             return this;
         }
 
-        public Builder setSchemaDefinition(Input<String> schemaDefinition) {
+        public Builder schemaDefinition(Input<String> schemaDefinition) {
             this.schemaDefinition = Objects.requireNonNull(schemaDefinition);
             return this;
         }
 
-        public Builder setSchemaDefinition(String schemaDefinition) {
+        public Builder schemaDefinition(String schemaDefinition) {
             this.schemaDefinition = Input.of(Objects.requireNonNull(schemaDefinition));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SchemaTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SchemaTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SchemaTagArgs> tags) {
+        public Builder tags(@Nullable List<SchemaTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

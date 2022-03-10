@@ -57,7 +57,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
     	      this.ref = defaults.ref;
         }
 
-        public Builder setRef(@Nullable String ref) {
+        public Builder ref(@Nullable String ref) {
             this.ref = ref;
             return this;
         }

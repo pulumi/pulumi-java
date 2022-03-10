@@ -76,22 +76,22 @@ public final class LogSchedulePolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.schedulePolicyType = defaults.schedulePolicyType;
         }
 
-        public Builder setScheduleFrequencyInMins(@Nullable Input<Integer> scheduleFrequencyInMins) {
+        public Builder scheduleFrequencyInMins(@Nullable Input<Integer> scheduleFrequencyInMins) {
             this.scheduleFrequencyInMins = scheduleFrequencyInMins;
             return this;
         }
 
-        public Builder setScheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
+        public Builder scheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
             this.scheduleFrequencyInMins = Input.ofNullable(scheduleFrequencyInMins);
             return this;
         }
 
-        public Builder setSchedulePolicyType(Input<String> schedulePolicyType) {
+        public Builder schedulePolicyType(Input<String> schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Input.of(Objects.requireNonNull(schedulePolicyType));
             return this;
         }

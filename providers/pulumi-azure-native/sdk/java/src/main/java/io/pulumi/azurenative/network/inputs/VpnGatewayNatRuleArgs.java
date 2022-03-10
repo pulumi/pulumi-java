@@ -159,72 +159,72 @@ public final class VpnGatewayNatRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setExternalMappings(@Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings) {
+        public Builder externalMappings(@Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings) {
             this.externalMappings = externalMappings;
             return this;
         }
 
-        public Builder setExternalMappings(@Nullable List<VpnNatRuleMappingArgs> externalMappings) {
+        public Builder externalMappings(@Nullable List<VpnNatRuleMappingArgs> externalMappings) {
             this.externalMappings = Input.ofNullable(externalMappings);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInternalMappings(@Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings) {
+        public Builder internalMappings(@Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings) {
             this.internalMappings = internalMappings;
             return this;
         }
 
-        public Builder setInternalMappings(@Nullable List<VpnNatRuleMappingArgs> internalMappings) {
+        public Builder internalMappings(@Nullable List<VpnNatRuleMappingArgs> internalMappings) {
             this.internalMappings = Input.ofNullable(internalMappings);
             return this;
         }
 
-        public Builder setIpConfigurationId(@Nullable Input<String> ipConfigurationId) {
+        public Builder ipConfigurationId(@Nullable Input<String> ipConfigurationId) {
             this.ipConfigurationId = ipConfigurationId;
             return this;
         }
 
-        public Builder setIpConfigurationId(@Nullable String ipConfigurationId) {
+        public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
             this.ipConfigurationId = Input.ofNullable(ipConfigurationId);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,VpnNatRuleMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,VpnNatRuleMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,VpnNatRuleMode> mode) {
+        public Builder mode(@Nullable Either<String,VpnNatRuleMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,VpnNatRuleType>> type) {
+        public Builder type(@Nullable Input<Either<String,VpnNatRuleType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,VpnNatRuleType> type) {
+        public Builder type(@Nullable Either<String,VpnNatRuleType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

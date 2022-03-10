@@ -57,12 +57,12 @@ public final class GroupPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.groupType = defaults.groupType;
         }
 
-        public Builder setGroupType(@Nullable Input<String> groupType) {
+        public Builder groupType(@Nullable Input<String> groupType) {
             this.groupType = groupType;
             return this;
         }
 
-        public Builder setGroupType(@Nullable String groupType) {
+        public Builder groupType(@Nullable String groupType) {
             this.groupType = Input.ofNullable(groupType);
             return this;
         }

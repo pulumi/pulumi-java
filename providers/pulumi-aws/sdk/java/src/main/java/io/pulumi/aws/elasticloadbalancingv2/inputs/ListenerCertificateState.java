@@ -70,22 +70,22 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
     	      this.listenerArn = defaults.listenerArn;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setListenerArn(@Nullable Input<String> listenerArn) {
+        public Builder listenerArn(@Nullable Input<String> listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
 
-        public Builder setListenerArn(@Nullable String listenerArn) {
+        public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = Input.ofNullable(listenerArn);
             return this;
         }

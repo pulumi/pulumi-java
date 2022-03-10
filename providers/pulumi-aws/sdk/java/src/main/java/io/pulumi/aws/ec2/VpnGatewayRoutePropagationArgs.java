@@ -69,22 +69,22 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder setRouteTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Input<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
-        public Builder setRouteTableId(String routeTableId) {
+        public Builder routeTableId(String routeTableId) {
             this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder setVpnGatewayId(Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(Input<String> vpnGatewayId) {
             this.vpnGatewayId = Objects.requireNonNull(vpnGatewayId);
             return this;
         }
 
-        public Builder setVpnGatewayId(String vpnGatewayId) {
+        public Builder vpnGatewayId(String vpnGatewayId) {
             this.vpnGatewayId = Input.of(Objects.requireNonNull(vpnGatewayId));
             return this;
         }

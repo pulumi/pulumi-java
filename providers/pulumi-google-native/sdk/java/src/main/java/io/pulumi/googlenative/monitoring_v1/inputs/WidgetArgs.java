@@ -177,82 +177,82 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xyChart = defaults.xyChart;
         }
 
-        public Builder setAlertChart(@Nullable Input<AlertChartArgs> alertChart) {
+        public Builder alertChart(@Nullable Input<AlertChartArgs> alertChart) {
             this.alertChart = alertChart;
             return this;
         }
 
-        public Builder setAlertChart(@Nullable AlertChartArgs alertChart) {
+        public Builder alertChart(@Nullable AlertChartArgs alertChart) {
             this.alertChart = Input.ofNullable(alertChart);
             return this;
         }
 
-        public Builder setBlank(@Nullable Input<EmptyArgs> blank) {
+        public Builder blank(@Nullable Input<EmptyArgs> blank) {
             this.blank = blank;
             return this;
         }
 
-        public Builder setBlank(@Nullable EmptyArgs blank) {
+        public Builder blank(@Nullable EmptyArgs blank) {
             this.blank = Input.ofNullable(blank);
             return this;
         }
 
-        public Builder setLogsPanel(@Nullable Input<LogsPanelArgs> logsPanel) {
+        public Builder logsPanel(@Nullable Input<LogsPanelArgs> logsPanel) {
             this.logsPanel = logsPanel;
             return this;
         }
 
-        public Builder setLogsPanel(@Nullable LogsPanelArgs logsPanel) {
+        public Builder logsPanel(@Nullable LogsPanelArgs logsPanel) {
             this.logsPanel = Input.ofNullable(logsPanel);
             return this;
         }
 
-        public Builder setScorecard(@Nullable Input<ScorecardArgs> scorecard) {
+        public Builder scorecard(@Nullable Input<ScorecardArgs> scorecard) {
             this.scorecard = scorecard;
             return this;
         }
 
-        public Builder setScorecard(@Nullable ScorecardArgs scorecard) {
+        public Builder scorecard(@Nullable ScorecardArgs scorecard) {
             this.scorecard = Input.ofNullable(scorecard);
             return this;
         }
 
-        public Builder setText(@Nullable Input<TextArgs> text) {
+        public Builder text(@Nullable Input<TextArgs> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable TextArgs text) {
+        public Builder text(@Nullable TextArgs text) {
             this.text = Input.ofNullable(text);
             return this;
         }
 
-        public Builder setTimeSeriesTable(@Nullable Input<TimeSeriesTableArgs> timeSeriesTable) {
+        public Builder timeSeriesTable(@Nullable Input<TimeSeriesTableArgs> timeSeriesTable) {
             this.timeSeriesTable = timeSeriesTable;
             return this;
         }
 
-        public Builder setTimeSeriesTable(@Nullable TimeSeriesTableArgs timeSeriesTable) {
+        public Builder timeSeriesTable(@Nullable TimeSeriesTableArgs timeSeriesTable) {
             this.timeSeriesTable = Input.ofNullable(timeSeriesTable);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setXyChart(@Nullable Input<XyChartArgs> xyChart) {
+        public Builder xyChart(@Nullable Input<XyChartArgs> xyChart) {
             this.xyChart = xyChart;
             return this;
         }
 
-        public Builder setXyChart(@Nullable XyChartArgs xyChart) {
+        public Builder xyChart(@Nullable XyChartArgs xyChart) {
             this.xyChart = Input.ofNullable(xyChart);
             return this;
         }

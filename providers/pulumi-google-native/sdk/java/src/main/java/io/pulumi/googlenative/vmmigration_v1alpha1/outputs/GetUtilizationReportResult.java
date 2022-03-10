@@ -213,57 +213,57 @@ public final class GetUtilizationReportResult {
     	      this.vmsCount = defaults.vmsCount;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setFrameEndTime(String frameEndTime) {
+        public Builder frameEndTime(String frameEndTime) {
             this.frameEndTime = Objects.requireNonNull(frameEndTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateTime(String stateTime) {
+        public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
 
-        public Builder setTimeFrame(String timeFrame) {
+        public Builder timeFrame(String timeFrame) {
             this.timeFrame = Objects.requireNonNull(timeFrame);
             return this;
         }
 
-        public Builder setVmCount(Integer vmCount) {
+        public Builder vmCount(Integer vmCount) {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
 
-        public Builder setVms(List<VmUtilizationInfoResponse> vms) {
+        public Builder vms(List<VmUtilizationInfoResponse> vms) {
             this.vms = Objects.requireNonNull(vms);
             return this;
         }
 
-        public Builder setVmsCount(Integer vmsCount) {
+        public Builder vmsCount(Integer vmsCount) {
             this.vmsCount = Objects.requireNonNull(vmsCount);
             return this;
         }

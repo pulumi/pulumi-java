@@ -356,102 +356,102 @@ public final class H264CodecSettingsResponse {
     	      this.widthPixels = defaults.widthPixels;
         }
 
-        public Builder setAllowOpenGop(Boolean allowOpenGop) {
+        public Builder allowOpenGop(Boolean allowOpenGop) {
             this.allowOpenGop = Objects.requireNonNull(allowOpenGop);
             return this;
         }
 
-        public Builder setAqStrength(Double aqStrength) {
+        public Builder aqStrength(Double aqStrength) {
             this.aqStrength = Objects.requireNonNull(aqStrength);
             return this;
         }
 
-        public Builder setBFrameCount(Integer bFrameCount) {
+        public Builder bFrameCount(Integer bFrameCount) {
             this.bFrameCount = Objects.requireNonNull(bFrameCount);
             return this;
         }
 
-        public Builder setBPyramid(Boolean bPyramid) {
+        public Builder bPyramid(Boolean bPyramid) {
             this.bPyramid = Objects.requireNonNull(bPyramid);
             return this;
         }
 
-        public Builder setBitrateBps(Integer bitrateBps) {
+        public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
 
-        public Builder setCrfLevel(Integer crfLevel) {
+        public Builder crfLevel(Integer crfLevel) {
             this.crfLevel = Objects.requireNonNull(crfLevel);
             return this;
         }
 
-        public Builder setEnableTwoPass(Boolean enableTwoPass) {
+        public Builder enableTwoPass(Boolean enableTwoPass) {
             this.enableTwoPass = Objects.requireNonNull(enableTwoPass);
             return this;
         }
 
-        public Builder setEntropyCoder(String entropyCoder) {
+        public Builder entropyCoder(String entropyCoder) {
             this.entropyCoder = Objects.requireNonNull(entropyCoder);
             return this;
         }
 
-        public Builder setFrameRate(Double frameRate) {
+        public Builder frameRate(Double frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
 
-        public Builder setGopDuration(String gopDuration) {
+        public Builder gopDuration(String gopDuration) {
             this.gopDuration = Objects.requireNonNull(gopDuration);
             return this;
         }
 
-        public Builder setGopFrameCount(Integer gopFrameCount) {
+        public Builder gopFrameCount(Integer gopFrameCount) {
             this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
             return this;
         }
 
-        public Builder setHeightPixels(Integer heightPixels) {
+        public Builder heightPixels(Integer heightPixels) {
             this.heightPixels = Objects.requireNonNull(heightPixels);
             return this;
         }
 
-        public Builder setPixelFormat(String pixelFormat) {
+        public Builder pixelFormat(String pixelFormat) {
             this.pixelFormat = Objects.requireNonNull(pixelFormat);
             return this;
         }
 
-        public Builder setPreset(String preset) {
+        public Builder preset(String preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
 
-        public Builder setProfile(String profile) {
+        public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
 
-        public Builder setRateControlMode(String rateControlMode) {
+        public Builder rateControlMode(String rateControlMode) {
             this.rateControlMode = Objects.requireNonNull(rateControlMode);
             return this;
         }
 
-        public Builder setTune(String tune) {
+        public Builder tune(String tune) {
             this.tune = Objects.requireNonNull(tune);
             return this;
         }
 
-        public Builder setVbvFullnessBits(Integer vbvFullnessBits) {
+        public Builder vbvFullnessBits(Integer vbvFullnessBits) {
             this.vbvFullnessBits = Objects.requireNonNull(vbvFullnessBits);
             return this;
         }
 
-        public Builder setVbvSizeBits(Integer vbvSizeBits) {
+        public Builder vbvSizeBits(Integer vbvSizeBits) {
             this.vbvSizeBits = Objects.requireNonNull(vbvSizeBits);
             return this;
         }
 
-        public Builder setWidthPixels(Integer widthPixels) {
+        public Builder widthPixels(Integer widthPixels) {
             this.widthPixels = Objects.requireNonNull(widthPixels);
             return this;
         }

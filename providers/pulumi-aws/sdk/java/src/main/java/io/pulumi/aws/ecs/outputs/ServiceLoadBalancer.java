@@ -100,22 +100,22 @@ public final class ServiceLoadBalancer {
     	      this.targetGroupArn = defaults.targetGroupArn;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setElbName(@Nullable String elbName) {
+        public Builder elbName(@Nullable String elbName) {
             this.elbName = elbName;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }

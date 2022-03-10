@@ -56,12 +56,12 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs extends 
     	      this.agent = defaults.agent;
         }
 
-        public Builder setAgent(Input<String> agent) {
+        public Builder agent(Input<String> agent) {
             this.agent = Objects.requireNonNull(agent);
             return this;
         }
 
-        public Builder setAgent(String agent) {
+        public Builder agent(String agent) {
             this.agent = Input.of(Objects.requireNonNull(agent));
             return this;
         }

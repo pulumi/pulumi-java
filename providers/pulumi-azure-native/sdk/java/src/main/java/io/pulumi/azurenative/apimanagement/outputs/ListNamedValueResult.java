@@ -50,7 +50,7 @@ public final class ListNamedValueResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

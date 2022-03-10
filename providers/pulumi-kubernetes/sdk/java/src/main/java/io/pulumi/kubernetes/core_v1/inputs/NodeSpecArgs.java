@@ -158,72 +158,72 @@ public final class NodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unschedulable = defaults.unschedulable;
         }
 
-        public Builder setConfigSource(@Nullable Input<NodeConfigSourceArgs> configSource) {
+        public Builder configSource(@Nullable Input<NodeConfigSourceArgs> configSource) {
             this.configSource = configSource;
             return this;
         }
 
-        public Builder setConfigSource(@Nullable NodeConfigSourceArgs configSource) {
+        public Builder configSource(@Nullable NodeConfigSourceArgs configSource) {
             this.configSource = Input.ofNullable(configSource);
             return this;
         }
 
-        public Builder setExternalID(@Nullable Input<String> externalID) {
+        public Builder externalID(@Nullable Input<String> externalID) {
             this.externalID = externalID;
             return this;
         }
 
-        public Builder setExternalID(@Nullable String externalID) {
+        public Builder externalID(@Nullable String externalID) {
             this.externalID = Input.ofNullable(externalID);
             return this;
         }
 
-        public Builder setPodCIDR(@Nullable Input<String> podCIDR) {
+        public Builder podCIDR(@Nullable Input<String> podCIDR) {
             this.podCIDR = podCIDR;
             return this;
         }
 
-        public Builder setPodCIDR(@Nullable String podCIDR) {
+        public Builder podCIDR(@Nullable String podCIDR) {
             this.podCIDR = Input.ofNullable(podCIDR);
             return this;
         }
 
-        public Builder setPodCIDRs(@Nullable Input<List<String>> podCIDRs) {
+        public Builder podCIDRs(@Nullable Input<List<String>> podCIDRs) {
             this.podCIDRs = podCIDRs;
             return this;
         }
 
-        public Builder setPodCIDRs(@Nullable List<String> podCIDRs) {
+        public Builder podCIDRs(@Nullable List<String> podCIDRs) {
             this.podCIDRs = Input.ofNullable(podCIDRs);
             return this;
         }
 
-        public Builder setProviderID(@Nullable Input<String> providerID) {
+        public Builder providerID(@Nullable Input<String> providerID) {
             this.providerID = providerID;
             return this;
         }
 
-        public Builder setProviderID(@Nullable String providerID) {
+        public Builder providerID(@Nullable String providerID) {
             this.providerID = Input.ofNullable(providerID);
             return this;
         }
 
-        public Builder setTaints(@Nullable Input<List<TaintArgs>> taints) {
+        public Builder taints(@Nullable Input<List<TaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<TaintArgs> taints) {
+        public Builder taints(@Nullable List<TaintArgs> taints) {
             this.taints = Input.ofNullable(taints);
             return this;
         }
 
-        public Builder setUnschedulable(@Nullable Input<Boolean> unschedulable) {
+        public Builder unschedulable(@Nullable Input<Boolean> unschedulable) {
             this.unschedulable = unschedulable;
             return this;
         }
 
-        public Builder setUnschedulable(@Nullable Boolean unschedulable) {
+        public Builder unschedulable(@Nullable Boolean unschedulable) {
             this.unschedulable = Input.ofNullable(unschedulable);
             return this;
         }

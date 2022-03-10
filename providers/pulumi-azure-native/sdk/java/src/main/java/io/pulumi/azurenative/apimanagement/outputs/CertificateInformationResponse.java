@@ -81,17 +81,17 @@ public final class CertificateInformationResponse {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setExpiry(String expiry) {
+        public Builder expiry(String expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }

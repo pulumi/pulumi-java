@@ -40,7 +40,7 @@ public final class GlobalTableReplicaSSESpecification {
     	      this.kMSMasterKeyId = defaults.kMSMasterKeyId;
         }
 
-        public Builder setKMSMasterKeyId(String kMSMasterKeyId) {
+        public Builder kMSMasterKeyId(String kMSMasterKeyId) {
             this.kMSMasterKeyId = Objects.requireNonNull(kMSMasterKeyId);
             return this;
         }

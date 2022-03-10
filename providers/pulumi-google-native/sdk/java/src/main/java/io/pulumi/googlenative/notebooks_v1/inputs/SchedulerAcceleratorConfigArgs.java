@@ -75,22 +75,22 @@ public final class SchedulerAcceleratorConfigArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setCoreCount(@Nullable Input<String> coreCount) {
+        public Builder coreCount(@Nullable Input<String> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable String coreCount) {
+        public Builder coreCount(@Nullable String coreCount) {
             this.coreCount = Input.ofNullable(coreCount);
             return this;
         }
 
-        public Builder setType(@Nullable Input<SchedulerAcceleratorConfigType> type) {
+        public Builder type(@Nullable Input<SchedulerAcceleratorConfigType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable SchedulerAcceleratorConfigType type) {
+        public Builder type(@Nullable SchedulerAcceleratorConfigType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

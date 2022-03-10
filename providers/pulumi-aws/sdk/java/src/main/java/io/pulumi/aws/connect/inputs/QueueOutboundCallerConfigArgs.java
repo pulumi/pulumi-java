@@ -86,32 +86,32 @@ public final class QueueOutboundCallerConfigArgs extends io.pulumi.resources.Res
     	      this.outboundFlowId = defaults.outboundFlowId;
         }
 
-        public Builder setOutboundCallerIdName(@Nullable Input<String> outboundCallerIdName) {
+        public Builder outboundCallerIdName(@Nullable Input<String> outboundCallerIdName) {
             this.outboundCallerIdName = outboundCallerIdName;
             return this;
         }
 
-        public Builder setOutboundCallerIdName(@Nullable String outboundCallerIdName) {
+        public Builder outboundCallerIdName(@Nullable String outboundCallerIdName) {
             this.outboundCallerIdName = Input.ofNullable(outboundCallerIdName);
             return this;
         }
 
-        public Builder setOutboundCallerIdNumberId(@Nullable Input<String> outboundCallerIdNumberId) {
+        public Builder outboundCallerIdNumberId(@Nullable Input<String> outboundCallerIdNumberId) {
             this.outboundCallerIdNumberId = outboundCallerIdNumberId;
             return this;
         }
 
-        public Builder setOutboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
+        public Builder outboundCallerIdNumberId(@Nullable String outboundCallerIdNumberId) {
             this.outboundCallerIdNumberId = Input.ofNullable(outboundCallerIdNumberId);
             return this;
         }
 
-        public Builder setOutboundFlowId(@Nullable Input<String> outboundFlowId) {
+        public Builder outboundFlowId(@Nullable Input<String> outboundFlowId) {
             this.outboundFlowId = outboundFlowId;
             return this;
         }
 
-        public Builder setOutboundFlowId(@Nullable String outboundFlowId) {
+        public Builder outboundFlowId(@Nullable String outboundFlowId) {
             this.outboundFlowId = Input.ofNullable(outboundFlowId);
             return this;
         }

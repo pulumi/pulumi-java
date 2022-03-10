@@ -89,42 +89,42 @@ public final class ServiceTaskSpecPlacementGetArgs extends io.pulumi.resources.R
     	      this.prefs = defaults.prefs;
         }
 
-        public Builder setConstraints(@Nullable Input<List<String>> constraints) {
+        public Builder constraints(@Nullable Input<List<String>> constraints) {
             this.constraints = constraints;
             return this;
         }
 
-        public Builder setConstraints(@Nullable List<String> constraints) {
+        public Builder constraints(@Nullable List<String> constraints) {
             this.constraints = Input.ofNullable(constraints);
             return this;
         }
 
-        public Builder setMaxReplicas(@Nullable Input<Integer> maxReplicas) {
+        public Builder maxReplicas(@Nullable Input<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = Input.ofNullable(maxReplicas);
             return this;
         }
 
-        public Builder setPlatforms(@Nullable Input<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms) {
+        public Builder platforms(@Nullable Input<List<ServiceTaskSpecPlacementPlatformGetArgs>> platforms) {
             this.platforms = platforms;
             return this;
         }
 
-        public Builder setPlatforms(@Nullable List<ServiceTaskSpecPlacementPlatformGetArgs> platforms) {
+        public Builder platforms(@Nullable List<ServiceTaskSpecPlacementPlatformGetArgs> platforms) {
             this.platforms = Input.ofNullable(platforms);
             return this;
         }
 
-        public Builder setPrefs(@Nullable Input<List<String>> prefs) {
+        public Builder prefs(@Nullable Input<List<String>> prefs) {
             this.prefs = prefs;
             return this;
         }
 
-        public Builder setPrefs(@Nullable List<String> prefs) {
+        public Builder prefs(@Nullable List<String> prefs) {
             this.prefs = Input.ofNullable(prefs);
             return this;
         }

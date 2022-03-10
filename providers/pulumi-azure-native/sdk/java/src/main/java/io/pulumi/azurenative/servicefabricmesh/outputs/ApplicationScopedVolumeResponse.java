@@ -101,22 +101,22 @@ public final class ApplicationScopedVolumeResponse {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setCreationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters) {
+        public Builder creationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse creationParameters) {
             this.creationParameters = Objects.requireNonNull(creationParameters);
             return this;
         }
 
-        public Builder setDestinationPath(String destinationPath) {
+        public Builder destinationPath(String destinationPath) {
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

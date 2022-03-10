@@ -144,72 +144,72 @@ public final class ContainerNetworkDataGetArgs extends io.pulumi.resources.Resou
     	      this.networkName = defaults.networkName;
         }
 
-        public Builder setGateway(@Nullable Input<String> gateway) {
+        public Builder gateway(@Nullable Input<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setGateway(@Nullable String gateway) {
+        public Builder gateway(@Nullable String gateway) {
             this.gateway = Input.ofNullable(gateway);
             return this;
         }
 
-        public Builder setGlobalIpv6Address(@Nullable Input<String> globalIpv6Address) {
+        public Builder globalIpv6Address(@Nullable Input<String> globalIpv6Address) {
             this.globalIpv6Address = globalIpv6Address;
             return this;
         }
 
-        public Builder setGlobalIpv6Address(@Nullable String globalIpv6Address) {
+        public Builder globalIpv6Address(@Nullable String globalIpv6Address) {
             this.globalIpv6Address = Input.ofNullable(globalIpv6Address);
             return this;
         }
 
-        public Builder setGlobalIpv6PrefixLength(@Nullable Input<Integer> globalIpv6PrefixLength) {
+        public Builder globalIpv6PrefixLength(@Nullable Input<Integer> globalIpv6PrefixLength) {
             this.globalIpv6PrefixLength = globalIpv6PrefixLength;
             return this;
         }
 
-        public Builder setGlobalIpv6PrefixLength(@Nullable Integer globalIpv6PrefixLength) {
+        public Builder globalIpv6PrefixLength(@Nullable Integer globalIpv6PrefixLength) {
             this.globalIpv6PrefixLength = Input.ofNullable(globalIpv6PrefixLength);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setIpPrefixLength(@Nullable Input<Integer> ipPrefixLength) {
+        public Builder ipPrefixLength(@Nullable Input<Integer> ipPrefixLength) {
             this.ipPrefixLength = ipPrefixLength;
             return this;
         }
 
-        public Builder setIpPrefixLength(@Nullable Integer ipPrefixLength) {
+        public Builder ipPrefixLength(@Nullable Integer ipPrefixLength) {
             this.ipPrefixLength = Input.ofNullable(ipPrefixLength);
             return this;
         }
 
-        public Builder setIpv6Gateway(@Nullable Input<String> ipv6Gateway) {
+        public Builder ipv6Gateway(@Nullable Input<String> ipv6Gateway) {
             this.ipv6Gateway = ipv6Gateway;
             return this;
         }
 
-        public Builder setIpv6Gateway(@Nullable String ipv6Gateway) {
+        public Builder ipv6Gateway(@Nullable String ipv6Gateway) {
             this.ipv6Gateway = Input.ofNullable(ipv6Gateway);
             return this;
         }
 
-        public Builder setNetworkName(@Nullable Input<String> networkName) {
+        public Builder networkName(@Nullable Input<String> networkName) {
             this.networkName = networkName;
             return this;
         }
 
-        public Builder setNetworkName(@Nullable String networkName) {
+        public Builder networkName(@Nullable String networkName) {
             this.networkName = Input.ofNullable(networkName);
             return this;
         }

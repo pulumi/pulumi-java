@@ -120,52 +120,52 @@ public final class CryptoKeyIAMMemberState extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<CryptoKeyIAMMemberConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<CryptoKeyIAMMemberConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable CryptoKeyIAMMemberConditionGetArgs condition) {
+        public Builder condition(@Nullable CryptoKeyIAMMemberConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setCryptoKeyId(@Nullable Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(@Nullable Input<String> cryptoKeyId) {
             this.cryptoKeyId = cryptoKeyId;
             return this;
         }
 
-        public Builder setCryptoKeyId(@Nullable String cryptoKeyId) {
+        public Builder cryptoKeyId(@Nullable String cryptoKeyId) {
             this.cryptoKeyId = Input.ofNullable(cryptoKeyId);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setMember(@Nullable Input<String> member) {
+        public Builder member(@Nullable Input<String> member) {
             this.member = member;
             return this;
         }
 
-        public Builder setMember(@Nullable String member) {
+        public Builder member(@Nullable String member) {
             this.member = Input.ofNullable(member);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }

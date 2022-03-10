@@ -72,12 +72,12 @@ public final class QueryInterpretationConfigResponse extends io.pulumi.resources
     	      this.forceVerbatimMode = defaults.forceVerbatimMode;
         }
 
-        public Builder setForceDisableSupplementalResults(Boolean forceDisableSupplementalResults) {
+        public Builder forceDisableSupplementalResults(Boolean forceDisableSupplementalResults) {
             this.forceDisableSupplementalResults = Objects.requireNonNull(forceDisableSupplementalResults);
             return this;
         }
 
-        public Builder setForceVerbatimMode(Boolean forceVerbatimMode) {
+        public Builder forceVerbatimMode(Boolean forceVerbatimMode) {
             this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
             return this;
         }

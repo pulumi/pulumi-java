@@ -255,7 +255,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
     private static IoTRoleArgs makeArgs(IoTRoleArgs args) {
         var builder = args == null ? IoTRoleArgs.builder() : IoTRoleArgs.builder(args);
         return builder
-            .setKind("IOT")
+            .kind("IOT")
             .build();
     }
 

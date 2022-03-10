@@ -53,12 +53,12 @@ public final class PatchDeploymentOneTimeScheduleArgs extends io.pulumi.resource
     	      this.executeTime = defaults.executeTime;
         }
 
-        public Builder setExecuteTime(Input<String> executeTime) {
+        public Builder executeTime(Input<String> executeTime) {
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }
 
-        public Builder setExecuteTime(String executeTime) {
+        public Builder executeTime(String executeTime) {
             this.executeTime = Input.of(Objects.requireNonNull(executeTime));
             return this;
         }

@@ -64,12 +64,12 @@ public final class JobEntityDetectorConfiguration extends io.pulumi.resources.In
     	      this.entityTypes = defaults.entityTypes;
         }
 
-        public Builder setAllowedStatistics(@Nullable JobAllowedStatistics allowedStatistics) {
+        public Builder allowedStatistics(@Nullable JobAllowedStatistics allowedStatistics) {
             this.allowedStatistics = allowedStatistics;
             return this;
         }
 
-        public Builder setEntityTypes(List<String> entityTypes) {
+        public Builder entityTypes(List<String> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }

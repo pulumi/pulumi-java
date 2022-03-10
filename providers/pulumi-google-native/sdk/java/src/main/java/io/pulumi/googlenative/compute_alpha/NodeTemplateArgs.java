@@ -217,122 +217,122 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverBinding = defaults.serverBinding;
         }
 
-        public Builder setAccelerators(@Nullable Input<List<AcceleratorConfigArgs>> accelerators) {
+        public Builder accelerators(@Nullable Input<List<AcceleratorConfigArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setAccelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
+        public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
             this.accelerators = Input.ofNullable(accelerators);
             return this;
         }
 
-        public Builder setCpuOvercommitType(@Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType) {
+        public Builder cpuOvercommitType(@Nullable Input<NodeTemplateCpuOvercommitType> cpuOvercommitType) {
             this.cpuOvercommitType = cpuOvercommitType;
             return this;
         }
 
-        public Builder setCpuOvercommitType(@Nullable NodeTemplateCpuOvercommitType cpuOvercommitType) {
+        public Builder cpuOvercommitType(@Nullable NodeTemplateCpuOvercommitType cpuOvercommitType) {
             this.cpuOvercommitType = Input.ofNullable(cpuOvercommitType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisks(@Nullable Input<List<LocalDiskArgs>> disks) {
+        public Builder disks(@Nullable Input<List<LocalDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<LocalDiskArgs> disks) {
+        public Builder disks(@Nullable List<LocalDiskArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNodeAffinityLabels(@Nullable Input<Map<String,String>> nodeAffinityLabels) {
+        public Builder nodeAffinityLabels(@Nullable Input<Map<String,String>> nodeAffinityLabels) {
             this.nodeAffinityLabels = nodeAffinityLabels;
             return this;
         }
 
-        public Builder setNodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
+        public Builder nodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
             this.nodeAffinityLabels = Input.ofNullable(nodeAffinityLabels);
             return this;
         }
 
-        public Builder setNodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Input<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Input.ofNullable(nodeType);
             return this;
         }
 
-        public Builder setNodeTypeFlexibility(@Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(@Nullable Input<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility) {
             this.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
 
-        public Builder setNodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityArgs nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityArgs nodeTypeFlexibility) {
             this.nodeTypeFlexibility = Input.ofNullable(nodeTypeFlexibility);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setServerBinding(@Nullable Input<ServerBindingArgs> serverBinding) {
+        public Builder serverBinding(@Nullable Input<ServerBindingArgs> serverBinding) {
             this.serverBinding = serverBinding;
             return this;
         }
 
-        public Builder setServerBinding(@Nullable ServerBindingArgs serverBinding) {
+        public Builder serverBinding(@Nullable ServerBindingArgs serverBinding) {
             this.serverBinding = Input.ofNullable(serverBinding);
             return this;
         }

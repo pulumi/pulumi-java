@@ -67,12 +67,12 @@ public final class AssetModelTransform {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setVariables(List<AssetModelExpressionVariable> variables) {
+        public Builder variables(List<AssetModelExpressionVariable> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }

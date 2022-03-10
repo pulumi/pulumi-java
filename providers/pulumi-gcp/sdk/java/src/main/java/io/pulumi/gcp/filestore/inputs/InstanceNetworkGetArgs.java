@@ -128,52 +128,52 @@ public final class InstanceNetworkGetArgs extends io.pulumi.resources.ResourceAr
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder setConnectMode(@Nullable Input<String> connectMode) {
+        public Builder connectMode(@Nullable Input<String> connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
-        public Builder setConnectMode(@Nullable String connectMode) {
+        public Builder connectMode(@Nullable String connectMode) {
             this.connectMode = Input.ofNullable(connectMode);
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = Input.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder setModes(Input<List<String>> modes) {
+        public Builder modes(Input<List<String>> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
 
-        public Builder setModes(List<String> modes) {
+        public Builder modes(List<String> modes) {
             this.modes = Input.of(Objects.requireNonNull(modes));
             return this;
         }
 
-        public Builder setNetwork(Input<String> network) {
+        public Builder network(Input<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable Input<String> reservedIpRange) {
+        public Builder reservedIpRange(@Nullable Input<String> reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable String reservedIpRange) {
+        public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = Input.ofNullable(reservedIpRange);
             return this;
         }

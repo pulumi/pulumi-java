@@ -87,32 +87,32 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setSourceArn(Input<String> sourceArn) {
+        public Builder sourceArn(Input<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
 
-        public Builder setSourceArn(String sourceArn) {
+        public Builder sourceArn(String sourceArn) {
             this.sourceArn = Input.of(Objects.requireNonNull(sourceArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

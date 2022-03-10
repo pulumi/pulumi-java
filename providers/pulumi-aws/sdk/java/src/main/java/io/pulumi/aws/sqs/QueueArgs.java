@@ -329,182 +329,182 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityTimeoutSeconds = defaults.visibilityTimeoutSeconds;
         }
 
-        public Builder setContentBasedDeduplication(@Nullable Input<Boolean> contentBasedDeduplication) {
+        public Builder contentBasedDeduplication(@Nullable Input<Boolean> contentBasedDeduplication) {
             this.contentBasedDeduplication = contentBasedDeduplication;
             return this;
         }
 
-        public Builder setContentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
+        public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
             this.contentBasedDeduplication = Input.ofNullable(contentBasedDeduplication);
             return this;
         }
 
-        public Builder setDeduplicationScope(@Nullable Input<String> deduplicationScope) {
+        public Builder deduplicationScope(@Nullable Input<String> deduplicationScope) {
             this.deduplicationScope = deduplicationScope;
             return this;
         }
 
-        public Builder setDeduplicationScope(@Nullable String deduplicationScope) {
+        public Builder deduplicationScope(@Nullable String deduplicationScope) {
             this.deduplicationScope = Input.ofNullable(deduplicationScope);
             return this;
         }
 
-        public Builder setDelaySeconds(@Nullable Input<Integer> delaySeconds) {
+        public Builder delaySeconds(@Nullable Input<Integer> delaySeconds) {
             this.delaySeconds = delaySeconds;
             return this;
         }
 
-        public Builder setDelaySeconds(@Nullable Integer delaySeconds) {
+        public Builder delaySeconds(@Nullable Integer delaySeconds) {
             this.delaySeconds = Input.ofNullable(delaySeconds);
             return this;
         }
 
-        public Builder setFifoQueue(@Nullable Input<Boolean> fifoQueue) {
+        public Builder fifoQueue(@Nullable Input<Boolean> fifoQueue) {
             this.fifoQueue = fifoQueue;
             return this;
         }
 
-        public Builder setFifoQueue(@Nullable Boolean fifoQueue) {
+        public Builder fifoQueue(@Nullable Boolean fifoQueue) {
             this.fifoQueue = Input.ofNullable(fifoQueue);
             return this;
         }
 
-        public Builder setFifoThroughputLimit(@Nullable Input<String> fifoThroughputLimit) {
+        public Builder fifoThroughputLimit(@Nullable Input<String> fifoThroughputLimit) {
             this.fifoThroughputLimit = fifoThroughputLimit;
             return this;
         }
 
-        public Builder setFifoThroughputLimit(@Nullable String fifoThroughputLimit) {
+        public Builder fifoThroughputLimit(@Nullable String fifoThroughputLimit) {
             this.fifoThroughputLimit = Input.ofNullable(fifoThroughputLimit);
             return this;
         }
 
-        public Builder setKmsDataKeyReusePeriodSeconds(@Nullable Input<Integer> kmsDataKeyReusePeriodSeconds) {
+        public Builder kmsDataKeyReusePeriodSeconds(@Nullable Input<Integer> kmsDataKeyReusePeriodSeconds) {
             this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
             return this;
         }
 
-        public Builder setKmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
+        public Builder kmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
             this.kmsDataKeyReusePeriodSeconds = Input.ofNullable(kmsDataKeyReusePeriodSeconds);
             return this;
         }
 
-        public Builder setKmsMasterKeyId(@Nullable Input<String> kmsMasterKeyId) {
+        public Builder kmsMasterKeyId(@Nullable Input<String> kmsMasterKeyId) {
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
 
-        public Builder setKmsMasterKeyId(@Nullable String kmsMasterKeyId) {
+        public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = Input.ofNullable(kmsMasterKeyId);
             return this;
         }
 
-        public Builder setMaxMessageSize(@Nullable Input<Integer> maxMessageSize) {
+        public Builder maxMessageSize(@Nullable Input<Integer> maxMessageSize) {
             this.maxMessageSize = maxMessageSize;
             return this;
         }
 
-        public Builder setMaxMessageSize(@Nullable Integer maxMessageSize) {
+        public Builder maxMessageSize(@Nullable Integer maxMessageSize) {
             this.maxMessageSize = Input.ofNullable(maxMessageSize);
             return this;
         }
 
-        public Builder setMessageRetentionSeconds(@Nullable Input<Integer> messageRetentionSeconds) {
+        public Builder messageRetentionSeconds(@Nullable Input<Integer> messageRetentionSeconds) {
             this.messageRetentionSeconds = messageRetentionSeconds;
             return this;
         }
 
-        public Builder setMessageRetentionSeconds(@Nullable Integer messageRetentionSeconds) {
+        public Builder messageRetentionSeconds(@Nullable Integer messageRetentionSeconds) {
             this.messageRetentionSeconds = Input.ofNullable(messageRetentionSeconds);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setReceiveWaitTimeSeconds(@Nullable Input<Integer> receiveWaitTimeSeconds) {
+        public Builder receiveWaitTimeSeconds(@Nullable Input<Integer> receiveWaitTimeSeconds) {
             this.receiveWaitTimeSeconds = receiveWaitTimeSeconds;
             return this;
         }
 
-        public Builder setReceiveWaitTimeSeconds(@Nullable Integer receiveWaitTimeSeconds) {
+        public Builder receiveWaitTimeSeconds(@Nullable Integer receiveWaitTimeSeconds) {
             this.receiveWaitTimeSeconds = Input.ofNullable(receiveWaitTimeSeconds);
             return this;
         }
 
-        public Builder setRedriveAllowPolicy(@Nullable Input<String> redriveAllowPolicy) {
+        public Builder redriveAllowPolicy(@Nullable Input<String> redriveAllowPolicy) {
             this.redriveAllowPolicy = redriveAllowPolicy;
             return this;
         }
 
-        public Builder setRedriveAllowPolicy(@Nullable String redriveAllowPolicy) {
+        public Builder redriveAllowPolicy(@Nullable String redriveAllowPolicy) {
             this.redriveAllowPolicy = Input.ofNullable(redriveAllowPolicy);
             return this;
         }
 
-        public Builder setRedrivePolicy(@Nullable Input<String> redrivePolicy) {
+        public Builder redrivePolicy(@Nullable Input<String> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
 
-        public Builder setRedrivePolicy(@Nullable String redrivePolicy) {
+        public Builder redrivePolicy(@Nullable String redrivePolicy) {
             this.redrivePolicy = Input.ofNullable(redrivePolicy);
             return this;
         }
 
-        public Builder setSqsManagedSseEnabled(@Nullable Input<Boolean> sqsManagedSseEnabled) {
+        public Builder sqsManagedSseEnabled(@Nullable Input<Boolean> sqsManagedSseEnabled) {
             this.sqsManagedSseEnabled = sqsManagedSseEnabled;
             return this;
         }
 
-        public Builder setSqsManagedSseEnabled(@Nullable Boolean sqsManagedSseEnabled) {
+        public Builder sqsManagedSseEnabled(@Nullable Boolean sqsManagedSseEnabled) {
             this.sqsManagedSseEnabled = Input.ofNullable(sqsManagedSseEnabled);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVisibilityTimeoutSeconds(@Nullable Input<Integer> visibilityTimeoutSeconds) {
+        public Builder visibilityTimeoutSeconds(@Nullable Input<Integer> visibilityTimeoutSeconds) {
             this.visibilityTimeoutSeconds = visibilityTimeoutSeconds;
             return this;
         }
 
-        public Builder setVisibilityTimeoutSeconds(@Nullable Integer visibilityTimeoutSeconds) {
+        public Builder visibilityTimeoutSeconds(@Nullable Integer visibilityTimeoutSeconds) {
             this.visibilityTimeoutSeconds = Input.ofNullable(visibilityTimeoutSeconds);
             return this;
         }

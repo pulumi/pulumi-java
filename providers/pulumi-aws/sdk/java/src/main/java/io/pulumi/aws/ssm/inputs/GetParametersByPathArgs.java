@@ -87,17 +87,17 @@ public final class GetParametersByPathArgs extends io.pulumi.resources.InvokeArg
     	      this.withDecryption = defaults.withDecryption;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRecursive(@Nullable Boolean recursive) {
+        public Builder recursive(@Nullable Boolean recursive) {
             this.recursive = recursive;
             return this;
         }
 
-        public Builder setWithDecryption(@Nullable Boolean withDecryption) {
+        public Builder withDecryption(@Nullable Boolean withDecryption) {
             this.withDecryption = withDecryption;
             return this;
         }

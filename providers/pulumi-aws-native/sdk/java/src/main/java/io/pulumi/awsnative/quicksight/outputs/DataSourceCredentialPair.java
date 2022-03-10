@@ -100,17 +100,17 @@ public final class DataSourceCredentialPair {
     	      this.username = defaults.username;
         }
 
-        public Builder setAlternateDataSourceParameters(@Nullable List<DataSourceParameters> alternateDataSourceParameters) {
+        public Builder alternateDataSourceParameters(@Nullable List<DataSourceParameters> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

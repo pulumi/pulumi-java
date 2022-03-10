@@ -50,7 +50,7 @@ public final class ManagementLockOwnerResponse {
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }

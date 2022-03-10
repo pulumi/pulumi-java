@@ -161,72 +161,72 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.region = defaults.region;
         }
 
-        public Builder setBgp(@Nullable Input<RouterBgpArgs> bgp) {
+        public Builder bgp(@Nullable Input<RouterBgpArgs> bgp) {
             this.bgp = bgp;
             return this;
         }
 
-        public Builder setBgp(@Nullable RouterBgpArgs bgp) {
+        public Builder bgp(@Nullable RouterBgpArgs bgp) {
             this.bgp = Input.ofNullable(bgp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedInterconnectRouter(@Nullable Input<Boolean> encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(@Nullable Input<Boolean> encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
 
-        public Builder setEncryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Input.ofNullable(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(Input<String> network) {
+        public Builder network(Input<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }

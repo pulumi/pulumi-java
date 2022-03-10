@@ -55,12 +55,12 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
     	      this.ingressTrafficAllowed = defaults.ingressTrafficAllowed;
         }
 
-        public Builder setIngressTrafficAllowed(@Nullable Input<String> ingressTrafficAllowed) {
+        public Builder ingressTrafficAllowed(@Nullable Input<String> ingressTrafficAllowed) {
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
 
-        public Builder setIngressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
+        public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
             this.ingressTrafficAllowed = Input.ofNullable(ingressTrafficAllowed);
             return this;
         }

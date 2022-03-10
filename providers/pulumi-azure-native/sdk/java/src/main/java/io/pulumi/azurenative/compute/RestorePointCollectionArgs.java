@@ -120,52 +120,52 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestorePointCollectionName(@Nullable Input<String> restorePointCollectionName) {
+        public Builder restorePointCollectionName(@Nullable Input<String> restorePointCollectionName) {
             this.restorePointCollectionName = restorePointCollectionName;
             return this;
         }
 
-        public Builder setRestorePointCollectionName(@Nullable String restorePointCollectionName) {
+        public Builder restorePointCollectionName(@Nullable String restorePointCollectionName) {
             this.restorePointCollectionName = Input.ofNullable(restorePointCollectionName);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<RestorePointCollectionSourcePropertiesArgs> source) {
+        public Builder source(@Nullable Input<RestorePointCollectionSourcePropertiesArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable RestorePointCollectionSourcePropertiesArgs source) {
+        public Builder source(@Nullable RestorePointCollectionSourcePropertiesArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

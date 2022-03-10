@@ -77,22 +77,22 @@ public final class AudioTrackDescriptorArgs extends io.pulumi.resources.Resource
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setChannelMapping(@Nullable Input<Either<String,ChannelMapping>> channelMapping) {
+        public Builder channelMapping(@Nullable Input<Either<String,ChannelMapping>> channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
 
-        public Builder setChannelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
+        public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
             this.channelMapping = Input.ofNullable(channelMapping);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

@@ -67,12 +67,12 @@ public final class FirewallPolicyRuleMatchLayer4Config {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setIpProtocol(String ipProtocol) {
+        public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
 
-        public Builder setPorts(@Nullable List<String> ports) {
+        public Builder ports(@Nullable List<String> ports) {
             this.ports = ports;
             return this;
         }

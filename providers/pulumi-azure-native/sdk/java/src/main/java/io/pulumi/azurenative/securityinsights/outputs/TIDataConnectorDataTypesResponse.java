@@ -50,7 +50,7 @@ public final class TIDataConnectorDataTypesResponse {
     	      this.indicators = defaults.indicators;
         }
 
-        public Builder setIndicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
+        public Builder indicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
             this.indicators = indicators;
             return this;
         }

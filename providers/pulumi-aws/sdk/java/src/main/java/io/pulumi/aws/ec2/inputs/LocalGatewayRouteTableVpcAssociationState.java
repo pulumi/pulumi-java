@@ -115,52 +115,52 @@ public final class LocalGatewayRouteTableVpcAssociationState extends io.pulumi.r
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setLocalGatewayId(@Nullable Input<String> localGatewayId) {
+        public Builder localGatewayId(@Nullable Input<String> localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
 
-        public Builder setLocalGatewayId(@Nullable String localGatewayId) {
+        public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = Input.ofNullable(localGatewayId);
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(@Nullable Input<String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable Input<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = localGatewayRouteTableId;
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Input.ofNullable(localGatewayRouteTableId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

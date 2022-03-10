@@ -146,8 +146,8 @@ public class ControllerRevision extends io.pulumi.resources.CustomResource {
     private static ControllerRevisionArgs makeArgs(ControllerRevisionArgs args) {
         var builder = args == null ? ControllerRevisionArgs.builder() : ControllerRevisionArgs.builder(args);
         return builder
-            .setApiVersion("apps/v1beta1")
-            .setKind("ControllerRevision")
+            .apiVersion("apps/v1beta1")
+            .kind("ControllerRevision")
             .build();
     }
 

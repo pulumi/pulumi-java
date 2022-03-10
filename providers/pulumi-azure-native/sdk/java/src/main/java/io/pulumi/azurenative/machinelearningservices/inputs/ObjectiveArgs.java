@@ -75,22 +75,22 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
     	      this.primaryMetric = defaults.primaryMetric;
         }
 
-        public Builder setGoal(Input<Either<String,Goal>> goal) {
+        public Builder goal(Input<Either<String,Goal>> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setGoal(Either<String,Goal> goal) {
+        public Builder goal(Either<String,Goal> goal) {
             this.goal = Input.of(Objects.requireNonNull(goal));
             return this;
         }
 
-        public Builder setPrimaryMetric(Input<String> primaryMetric) {
+        public Builder primaryMetric(Input<String> primaryMetric) {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
         }
 
-        public Builder setPrimaryMetric(String primaryMetric) {
+        public Builder primaryMetric(String primaryMetric) {
             this.primaryMetric = Input.of(Objects.requireNonNull(primaryMetric));
             return this;
         }

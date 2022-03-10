@@ -58,12 +58,12 @@ public final class DataImportDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.accountDetails = defaults.accountDetails;
         }
 
-        public Builder setAccountDetails(Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
+        public Builder accountDetails(Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
 
-        public Builder setAccountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
+        public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
             this.accountDetails = Input.of(Objects.requireNonNull(accountDetails));
             return this;
         }

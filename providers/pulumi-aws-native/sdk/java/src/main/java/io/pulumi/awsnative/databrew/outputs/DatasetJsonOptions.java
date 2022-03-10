@@ -42,7 +42,7 @@ public final class DatasetJsonOptions {
     	      this.multiLine = defaults.multiLine;
         }
 
-        public Builder setMultiLine(@Nullable Boolean multiLine) {
+        public Builder multiLine(@Nullable Boolean multiLine) {
             this.multiLine = multiLine;
             return this;
         }

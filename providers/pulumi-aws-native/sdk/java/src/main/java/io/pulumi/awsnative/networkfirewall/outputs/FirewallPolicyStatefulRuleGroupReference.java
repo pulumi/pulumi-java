@@ -52,12 +52,12 @@ public final class FirewallPolicyStatefulRuleGroupReference {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }

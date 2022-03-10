@@ -62,22 +62,22 @@ public final class EventLogConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.logName = defaults.logName;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setLogName(Input<String> logName) {
+        public Builder logName(Input<String> logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }
 
-        public Builder setLogName(String logName) {
+        public Builder logName(String logName) {
             this.logName = Input.of(Objects.requireNonNull(logName));
             return this;
         }

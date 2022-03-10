@@ -81,17 +81,17 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
     	      this.serviceDirectoryRegion = defaults.serviceDirectoryRegion;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setServiceDirectoryRegion(String serviceDirectoryRegion) {
+        public Builder serviceDirectoryRegion(String serviceDirectoryRegion) {
             this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion);
             return this;
         }

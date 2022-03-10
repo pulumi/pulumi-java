@@ -48,12 +48,12 @@ public final class InstanceFromMachineImageConfidentialInstanceConfigGetArgs ext
     	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
         }
 
-        public Builder setEnableConfidentialCompute(Input<Boolean> enableConfidentialCompute) {
+        public Builder enableConfidentialCompute(Input<Boolean> enableConfidentialCompute) {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
 
-        public Builder setEnableConfidentialCompute(Boolean enableConfidentialCompute) {
+        public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Input.of(Objects.requireNonNull(enableConfidentialCompute));
             return this;
         }

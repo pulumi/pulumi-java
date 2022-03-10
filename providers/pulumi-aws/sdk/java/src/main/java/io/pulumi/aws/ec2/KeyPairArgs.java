@@ -103,42 +103,42 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setKeyNamePrefix(@Nullable Input<String> keyNamePrefix) {
+        public Builder keyNamePrefix(@Nullable Input<String> keyNamePrefix) {
             this.keyNamePrefix = keyNamePrefix;
             return this;
         }
 
-        public Builder setKeyNamePrefix(@Nullable String keyNamePrefix) {
+        public Builder keyNamePrefix(@Nullable String keyNamePrefix) {
             this.keyNamePrefix = Input.ofNullable(keyNamePrefix);
             return this;
         }
 
-        public Builder setPublicKey(Input<String> publicKey) {
+        public Builder publicKey(Input<String> publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Input.of(Objects.requireNonNull(publicKey));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

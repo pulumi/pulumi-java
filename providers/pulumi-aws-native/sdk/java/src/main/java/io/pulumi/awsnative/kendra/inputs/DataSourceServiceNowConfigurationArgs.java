@@ -114,62 +114,62 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
     	      this.serviceNowBuildVersion = defaults.serviceNowBuildVersion;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<DataSourceServiceNowAuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Input<DataSourceServiceNowAuthenticationType> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
+        public Builder authenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setHostUrl(Input<String> hostUrl) {
+        public Builder hostUrl(Input<String> hostUrl) {
             this.hostUrl = Objects.requireNonNull(hostUrl);
             return this;
         }
 
-        public Builder setHostUrl(String hostUrl) {
+        public Builder hostUrl(String hostUrl) {
             this.hostUrl = Input.of(Objects.requireNonNull(hostUrl));
             return this;
         }
 
-        public Builder setKnowledgeArticleConfiguration(@Nullable Input<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration) {
+        public Builder knowledgeArticleConfiguration(@Nullable Input<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
 
-        public Builder setKnowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
+        public Builder knowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = Input.ofNullable(knowledgeArticleConfiguration);
             return this;
         }
 
-        public Builder setSecretArn(Input<String> secretArn) {
+        public Builder secretArn(Input<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder setServiceCatalogConfiguration(@Nullable Input<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration) {
+        public Builder serviceCatalogConfiguration(@Nullable Input<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration) {
             this.serviceCatalogConfiguration = serviceCatalogConfiguration;
             return this;
         }
 
-        public Builder setServiceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfigurationArgs serviceCatalogConfiguration) {
+        public Builder serviceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfigurationArgs serviceCatalogConfiguration) {
             this.serviceCatalogConfiguration = Input.ofNullable(serviceCatalogConfiguration);
             return this;
         }
 
-        public Builder setServiceNowBuildVersion(Input<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion) {
+        public Builder serviceNowBuildVersion(Input<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion) {
             this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
             return this;
         }
 
-        public Builder setServiceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
+        public Builder serviceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
             this.serviceNowBuildVersion = Input.of(Objects.requireNonNull(serviceNowBuildVersion));
             return this;
         }

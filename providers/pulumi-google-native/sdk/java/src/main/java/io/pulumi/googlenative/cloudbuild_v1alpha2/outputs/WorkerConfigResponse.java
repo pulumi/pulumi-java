@@ -65,12 +65,12 @@ public final class WorkerConfigResponse {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

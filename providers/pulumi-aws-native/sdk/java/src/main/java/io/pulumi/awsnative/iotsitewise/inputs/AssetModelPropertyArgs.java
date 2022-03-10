@@ -141,62 +141,62 @@ public final class AssetModelPropertyArgs extends io.pulumi.resources.ResourceAr
     	      this.unit = defaults.unit;
         }
 
-        public Builder setDataType(Input<AssetModelDataType> dataType) {
+        public Builder dataType(Input<AssetModelDataType> dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setDataType(AssetModelDataType dataType) {
+        public Builder dataType(AssetModelDataType dataType) {
             this.dataType = Input.of(Objects.requireNonNull(dataType));
             return this;
         }
 
-        public Builder setDataTypeSpec(@Nullable Input<AssetModelDataTypeSpec> dataTypeSpec) {
+        public Builder dataTypeSpec(@Nullable Input<AssetModelDataTypeSpec> dataTypeSpec) {
             this.dataTypeSpec = dataTypeSpec;
             return this;
         }
 
-        public Builder setDataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
+        public Builder dataTypeSpec(@Nullable AssetModelDataTypeSpec dataTypeSpec) {
             this.dataTypeSpec = Input.ofNullable(dataTypeSpec);
             return this;
         }
 
-        public Builder setLogicalId(Input<String> logicalId) {
+        public Builder logicalId(Input<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
-        public Builder setLogicalId(String logicalId) {
+        public Builder logicalId(String logicalId) {
             this.logicalId = Input.of(Objects.requireNonNull(logicalId));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<AssetModelPropertyTypeArgs> type) {
+        public Builder type(Input<AssetModelPropertyTypeArgs> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(AssetModelPropertyTypeArgs type) {
+        public Builder type(AssetModelPropertyTypeArgs type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }

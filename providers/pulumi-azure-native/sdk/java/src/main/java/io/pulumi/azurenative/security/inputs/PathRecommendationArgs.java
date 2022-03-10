@@ -182,92 +182,92 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     	      this.usernames = defaults.usernames;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setCommon(@Nullable Input<Boolean> common) {
+        public Builder common(@Nullable Input<Boolean> common) {
             this.common = common;
             return this;
         }
 
-        public Builder setCommon(@Nullable Boolean common) {
+        public Builder common(@Nullable Boolean common) {
             this.common = Input.ofNullable(common);
             return this;
         }
 
-        public Builder setConfigurationStatus(@Nullable Input<String> configurationStatus) {
+        public Builder configurationStatus(@Nullable Input<String> configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
-        public Builder setConfigurationStatus(@Nullable String configurationStatus) {
+        public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = Input.ofNullable(configurationStatus);
             return this;
         }
 
-        public Builder setFileType(@Nullable Input<String> fileType) {
+        public Builder fileType(@Nullable Input<String> fileType) {
             this.fileType = fileType;
             return this;
         }
 
-        public Builder setFileType(@Nullable String fileType) {
+        public Builder fileType(@Nullable String fileType) {
             this.fileType = Input.ofNullable(fileType);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPublisherInfo(@Nullable Input<PublisherInfoArgs> publisherInfo) {
+        public Builder publisherInfo(@Nullable Input<PublisherInfoArgs> publisherInfo) {
             this.publisherInfo = publisherInfo;
             return this;
         }
 
-        public Builder setPublisherInfo(@Nullable PublisherInfoArgs publisherInfo) {
+        public Builder publisherInfo(@Nullable PublisherInfoArgs publisherInfo) {
             this.publisherInfo = Input.ofNullable(publisherInfo);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserSids(@Nullable Input<List<String>> userSids) {
+        public Builder userSids(@Nullable Input<List<String>> userSids) {
             this.userSids = userSids;
             return this;
         }
 
-        public Builder setUserSids(@Nullable List<String> userSids) {
+        public Builder userSids(@Nullable List<String> userSids) {
             this.userSids = Input.ofNullable(userSids);
             return this;
         }
 
-        public Builder setUsernames(@Nullable Input<List<UserRecommendationArgs>> usernames) {
+        public Builder usernames(@Nullable Input<List<UserRecommendationArgs>> usernames) {
             this.usernames = usernames;
             return this;
         }
 
-        public Builder setUsernames(@Nullable List<UserRecommendationArgs> usernames) {
+        public Builder usernames(@Nullable List<UserRecommendationArgs> usernames) {
             this.usernames = Input.ofNullable(usernames);
             return this;
         }

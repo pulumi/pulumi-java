@@ -80,22 +80,22 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setNonResourceURLs(Input<List<String>> nonResourceURLs) {
+        public Builder nonResourceURLs(Input<List<String>> nonResourceURLs) {
             this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs);
             return this;
         }
 
-        public Builder setNonResourceURLs(List<String> nonResourceURLs) {
+        public Builder nonResourceURLs(List<String> nonResourceURLs) {
             this.nonResourceURLs = Input.of(Objects.requireNonNull(nonResourceURLs));
             return this;
         }
 
-        public Builder setVerbs(Input<List<String>> verbs) {
+        public Builder verbs(Input<List<String>> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Input.of(Objects.requireNonNull(verbs));
             return this;
         }

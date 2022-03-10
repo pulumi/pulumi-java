@@ -135,42 +135,42 @@ public final class MonitorPropertiesResponse {
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder setLiftrResourceCategory(String liftrResourceCategory) {
+        public Builder liftrResourceCategory(String liftrResourceCategory) {
             this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
             return this;
         }
 
-        public Builder setLiftrResourcePreference(Integer liftrResourcePreference) {
+        public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
             return this;
         }
 
-        public Builder setLogzOrganizationProperties(@Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties) {
+        public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties) {
             this.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
 
-        public Builder setMarketplaceSubscriptionStatus(@Nullable String marketplaceSubscriptionStatus) {
+        public Builder marketplaceSubscriptionStatus(@Nullable String marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable String monitoringStatus) {
+        public Builder monitoringStatus(@Nullable String monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
-        public Builder setPlanData(@Nullable PlanDataResponse planData) {
+        public Builder planData(@Nullable PlanDataResponse planData) {
             this.planData = planData;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setUserInfo(@Nullable UserInfoResponse userInfo) {
+        public Builder userInfo(@Nullable UserInfoResponse userInfo) {
             this.userInfo = userInfo;
             return this;
         }

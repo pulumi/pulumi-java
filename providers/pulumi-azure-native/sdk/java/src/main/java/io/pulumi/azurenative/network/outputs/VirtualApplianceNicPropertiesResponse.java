@@ -81,17 +81,17 @@ public final class VirtualApplianceNicPropertiesResponse {
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setPublicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }

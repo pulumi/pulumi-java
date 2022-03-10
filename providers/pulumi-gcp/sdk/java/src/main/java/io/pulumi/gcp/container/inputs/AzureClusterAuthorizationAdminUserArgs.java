@@ -52,12 +52,12 @@ public final class AzureClusterAuthorizationAdminUserArgs extends io.pulumi.reso
     	      this.username = defaults.username;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

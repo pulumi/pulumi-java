@@ -203,102 +203,102 @@ public final class FeatureState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDeleteTime(@Nullable Input<String> deleteTime) {
+        public Builder deleteTime(@Nullable Input<String> deleteTime) {
             this.deleteTime = deleteTime;
             return this;
         }
 
-        public Builder setDeleteTime(@Nullable String deleteTime) {
+        public Builder deleteTime(@Nullable String deleteTime) {
             this.deleteTime = Input.ofNullable(deleteTime);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResourceStates(@Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates) {
+        public Builder resourceStates(@Nullable Input<List<FeatureResourceStateGetArgs>> resourceStates) {
             this.resourceStates = resourceStates;
             return this;
         }
 
-        public Builder setResourceStates(@Nullable List<FeatureResourceStateGetArgs> resourceStates) {
+        public Builder resourceStates(@Nullable List<FeatureResourceStateGetArgs> resourceStates) {
             this.resourceStates = Input.ofNullable(resourceStates);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<FeatureSpecGetArgs> spec) {
+        public Builder spec(@Nullable Input<FeatureSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable FeatureSpecGetArgs spec) {
+        public Builder spec(@Nullable FeatureSpecGetArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }
 
-        public Builder setStates(@Nullable Input<List<FeatureStateGetArgs>> states) {
+        public Builder states(@Nullable Input<List<FeatureStateGetArgs>> states) {
             this.states = states;
             return this;
         }
 
-        public Builder setStates(@Nullable List<FeatureStateGetArgs> states) {
+        public Builder states(@Nullable List<FeatureStateGetArgs> states) {
             this.states = Input.ofNullable(states);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

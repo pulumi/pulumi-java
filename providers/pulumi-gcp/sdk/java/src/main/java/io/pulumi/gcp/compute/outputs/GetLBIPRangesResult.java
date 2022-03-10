@@ -82,17 +82,17 @@ public final class GetLBIPRangesResult {
     	      this.networks = defaults.networks;
         }
 
-        public Builder setHttpSslTcpInternals(List<String> httpSslTcpInternals) {
+        public Builder httpSslTcpInternals(List<String> httpSslTcpInternals) {
             this.httpSslTcpInternals = Objects.requireNonNull(httpSslTcpInternals);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNetworks(List<String> networks) {
+        public Builder networks(List<String> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }

@@ -1068,642 +1068,642 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCustomerGatewayConfiguration(@Nullable Input<String> customerGatewayConfiguration) {
+        public Builder customerGatewayConfiguration(@Nullable Input<String> customerGatewayConfiguration) {
             this.customerGatewayConfiguration = customerGatewayConfiguration;
             return this;
         }
 
-        public Builder setCustomerGatewayConfiguration(@Nullable String customerGatewayConfiguration) {
+        public Builder customerGatewayConfiguration(@Nullable String customerGatewayConfiguration) {
             this.customerGatewayConfiguration = Input.ofNullable(customerGatewayConfiguration);
             return this;
         }
 
-        public Builder setCustomerGatewayId(@Nullable Input<String> customerGatewayId) {
+        public Builder customerGatewayId(@Nullable Input<String> customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
             return this;
         }
 
-        public Builder setCustomerGatewayId(@Nullable String customerGatewayId) {
+        public Builder customerGatewayId(@Nullable String customerGatewayId) {
             this.customerGatewayId = Input.ofNullable(customerGatewayId);
             return this;
         }
 
-        public Builder setEnableAcceleration(@Nullable Input<Boolean> enableAcceleration) {
+        public Builder enableAcceleration(@Nullable Input<Boolean> enableAcceleration) {
             this.enableAcceleration = enableAcceleration;
             return this;
         }
 
-        public Builder setEnableAcceleration(@Nullable Boolean enableAcceleration) {
+        public Builder enableAcceleration(@Nullable Boolean enableAcceleration) {
             this.enableAcceleration = Input.ofNullable(enableAcceleration);
             return this;
         }
 
-        public Builder setLocalIpv4NetworkCidr(@Nullable Input<String> localIpv4NetworkCidr) {
+        public Builder localIpv4NetworkCidr(@Nullable Input<String> localIpv4NetworkCidr) {
             this.localIpv4NetworkCidr = localIpv4NetworkCidr;
             return this;
         }
 
-        public Builder setLocalIpv4NetworkCidr(@Nullable String localIpv4NetworkCidr) {
+        public Builder localIpv4NetworkCidr(@Nullable String localIpv4NetworkCidr) {
             this.localIpv4NetworkCidr = Input.ofNullable(localIpv4NetworkCidr);
             return this;
         }
 
-        public Builder setLocalIpv6NetworkCidr(@Nullable Input<String> localIpv6NetworkCidr) {
+        public Builder localIpv6NetworkCidr(@Nullable Input<String> localIpv6NetworkCidr) {
             this.localIpv6NetworkCidr = localIpv6NetworkCidr;
             return this;
         }
 
-        public Builder setLocalIpv6NetworkCidr(@Nullable String localIpv6NetworkCidr) {
+        public Builder localIpv6NetworkCidr(@Nullable String localIpv6NetworkCidr) {
             this.localIpv6NetworkCidr = Input.ofNullable(localIpv6NetworkCidr);
             return this;
         }
 
-        public Builder setRemoteIpv4NetworkCidr(@Nullable Input<String> remoteIpv4NetworkCidr) {
+        public Builder remoteIpv4NetworkCidr(@Nullable Input<String> remoteIpv4NetworkCidr) {
             this.remoteIpv4NetworkCidr = remoteIpv4NetworkCidr;
             return this;
         }
 
-        public Builder setRemoteIpv4NetworkCidr(@Nullable String remoteIpv4NetworkCidr) {
+        public Builder remoteIpv4NetworkCidr(@Nullable String remoteIpv4NetworkCidr) {
             this.remoteIpv4NetworkCidr = Input.ofNullable(remoteIpv4NetworkCidr);
             return this;
         }
 
-        public Builder setRemoteIpv6NetworkCidr(@Nullable Input<String> remoteIpv6NetworkCidr) {
+        public Builder remoteIpv6NetworkCidr(@Nullable Input<String> remoteIpv6NetworkCidr) {
             this.remoteIpv6NetworkCidr = remoteIpv6NetworkCidr;
             return this;
         }
 
-        public Builder setRemoteIpv6NetworkCidr(@Nullable String remoteIpv6NetworkCidr) {
+        public Builder remoteIpv6NetworkCidr(@Nullable String remoteIpv6NetworkCidr) {
             this.remoteIpv6NetworkCidr = Input.ofNullable(remoteIpv6NetworkCidr);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<List<VpnConnectionRouteGetArgs>> routes) {
+        public Builder routes(@Nullable Input<List<VpnConnectionRouteGetArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<VpnConnectionRouteGetArgs> routes) {
+        public Builder routes(@Nullable List<VpnConnectionRouteGetArgs> routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }
 
-        public Builder setStaticRoutesOnly(@Nullable Input<Boolean> staticRoutesOnly) {
+        public Builder staticRoutesOnly(@Nullable Input<Boolean> staticRoutesOnly) {
             this.staticRoutesOnly = staticRoutesOnly;
             return this;
         }
 
-        public Builder setStaticRoutesOnly(@Nullable Boolean staticRoutesOnly) {
+        public Builder staticRoutesOnly(@Nullable Boolean staticRoutesOnly) {
             this.staticRoutesOnly = Input.ofNullable(staticRoutesOnly);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Input.ofNullable(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable Input<String> transitGatewayId) {
+        public Builder transitGatewayId(@Nullable Input<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Input.ofNullable(transitGatewayId);
             return this;
         }
 
-        public Builder setTunnel1Address(@Nullable Input<String> tunnel1Address) {
+        public Builder tunnel1Address(@Nullable Input<String> tunnel1Address) {
             this.tunnel1Address = tunnel1Address;
             return this;
         }
 
-        public Builder setTunnel1Address(@Nullable String tunnel1Address) {
+        public Builder tunnel1Address(@Nullable String tunnel1Address) {
             this.tunnel1Address = Input.ofNullable(tunnel1Address);
             return this;
         }
 
-        public Builder setTunnel1BgpAsn(@Nullable Input<String> tunnel1BgpAsn) {
+        public Builder tunnel1BgpAsn(@Nullable Input<String> tunnel1BgpAsn) {
             this.tunnel1BgpAsn = tunnel1BgpAsn;
             return this;
         }
 
-        public Builder setTunnel1BgpAsn(@Nullable String tunnel1BgpAsn) {
+        public Builder tunnel1BgpAsn(@Nullable String tunnel1BgpAsn) {
             this.tunnel1BgpAsn = Input.ofNullable(tunnel1BgpAsn);
             return this;
         }
 
-        public Builder setTunnel1BgpHoldtime(@Nullable Input<Integer> tunnel1BgpHoldtime) {
+        public Builder tunnel1BgpHoldtime(@Nullable Input<Integer> tunnel1BgpHoldtime) {
             this.tunnel1BgpHoldtime = tunnel1BgpHoldtime;
             return this;
         }
 
-        public Builder setTunnel1BgpHoldtime(@Nullable Integer tunnel1BgpHoldtime) {
+        public Builder tunnel1BgpHoldtime(@Nullable Integer tunnel1BgpHoldtime) {
             this.tunnel1BgpHoldtime = Input.ofNullable(tunnel1BgpHoldtime);
             return this;
         }
 
-        public Builder setTunnel1CgwInsideAddress(@Nullable Input<String> tunnel1CgwInsideAddress) {
+        public Builder tunnel1CgwInsideAddress(@Nullable Input<String> tunnel1CgwInsideAddress) {
             this.tunnel1CgwInsideAddress = tunnel1CgwInsideAddress;
             return this;
         }
 
-        public Builder setTunnel1CgwInsideAddress(@Nullable String tunnel1CgwInsideAddress) {
+        public Builder tunnel1CgwInsideAddress(@Nullable String tunnel1CgwInsideAddress) {
             this.tunnel1CgwInsideAddress = Input.ofNullable(tunnel1CgwInsideAddress);
             return this;
         }
 
-        public Builder setTunnel1DpdTimeoutAction(@Nullable Input<String> tunnel1DpdTimeoutAction) {
+        public Builder tunnel1DpdTimeoutAction(@Nullable Input<String> tunnel1DpdTimeoutAction) {
             this.tunnel1DpdTimeoutAction = tunnel1DpdTimeoutAction;
             return this;
         }
 
-        public Builder setTunnel1DpdTimeoutAction(@Nullable String tunnel1DpdTimeoutAction) {
+        public Builder tunnel1DpdTimeoutAction(@Nullable String tunnel1DpdTimeoutAction) {
             this.tunnel1DpdTimeoutAction = Input.ofNullable(tunnel1DpdTimeoutAction);
             return this;
         }
 
-        public Builder setTunnel1DpdTimeoutSeconds(@Nullable Input<Integer> tunnel1DpdTimeoutSeconds) {
+        public Builder tunnel1DpdTimeoutSeconds(@Nullable Input<Integer> tunnel1DpdTimeoutSeconds) {
             this.tunnel1DpdTimeoutSeconds = tunnel1DpdTimeoutSeconds;
             return this;
         }
 
-        public Builder setTunnel1DpdTimeoutSeconds(@Nullable Integer tunnel1DpdTimeoutSeconds) {
+        public Builder tunnel1DpdTimeoutSeconds(@Nullable Integer tunnel1DpdTimeoutSeconds) {
             this.tunnel1DpdTimeoutSeconds = Input.ofNullable(tunnel1DpdTimeoutSeconds);
             return this;
         }
 
-        public Builder setTunnel1IkeVersions(@Nullable Input<List<String>> tunnel1IkeVersions) {
+        public Builder tunnel1IkeVersions(@Nullable Input<List<String>> tunnel1IkeVersions) {
             this.tunnel1IkeVersions = tunnel1IkeVersions;
             return this;
         }
 
-        public Builder setTunnel1IkeVersions(@Nullable List<String> tunnel1IkeVersions) {
+        public Builder tunnel1IkeVersions(@Nullable List<String> tunnel1IkeVersions) {
             this.tunnel1IkeVersions = Input.ofNullable(tunnel1IkeVersions);
             return this;
         }
 
-        public Builder setTunnel1InsideCidr(@Nullable Input<String> tunnel1InsideCidr) {
+        public Builder tunnel1InsideCidr(@Nullable Input<String> tunnel1InsideCidr) {
             this.tunnel1InsideCidr = tunnel1InsideCidr;
             return this;
         }
 
-        public Builder setTunnel1InsideCidr(@Nullable String tunnel1InsideCidr) {
+        public Builder tunnel1InsideCidr(@Nullable String tunnel1InsideCidr) {
             this.tunnel1InsideCidr = Input.ofNullable(tunnel1InsideCidr);
             return this;
         }
 
-        public Builder setTunnel1InsideIpv6Cidr(@Nullable Input<String> tunnel1InsideIpv6Cidr) {
+        public Builder tunnel1InsideIpv6Cidr(@Nullable Input<String> tunnel1InsideIpv6Cidr) {
             this.tunnel1InsideIpv6Cidr = tunnel1InsideIpv6Cidr;
             return this;
         }
 
-        public Builder setTunnel1InsideIpv6Cidr(@Nullable String tunnel1InsideIpv6Cidr) {
+        public Builder tunnel1InsideIpv6Cidr(@Nullable String tunnel1InsideIpv6Cidr) {
             this.tunnel1InsideIpv6Cidr = Input.ofNullable(tunnel1InsideIpv6Cidr);
             return this;
         }
 
-        public Builder setTunnel1Phase1DhGroupNumbers(@Nullable Input<List<Integer>> tunnel1Phase1DhGroupNumbers) {
+        public Builder tunnel1Phase1DhGroupNumbers(@Nullable Input<List<Integer>> tunnel1Phase1DhGroupNumbers) {
             this.tunnel1Phase1DhGroupNumbers = tunnel1Phase1DhGroupNumbers;
             return this;
         }
 
-        public Builder setTunnel1Phase1DhGroupNumbers(@Nullable List<Integer> tunnel1Phase1DhGroupNumbers) {
+        public Builder tunnel1Phase1DhGroupNumbers(@Nullable List<Integer> tunnel1Phase1DhGroupNumbers) {
             this.tunnel1Phase1DhGroupNumbers = Input.ofNullable(tunnel1Phase1DhGroupNumbers);
             return this;
         }
 
-        public Builder setTunnel1Phase1EncryptionAlgorithms(@Nullable Input<List<String>> tunnel1Phase1EncryptionAlgorithms) {
+        public Builder tunnel1Phase1EncryptionAlgorithms(@Nullable Input<List<String>> tunnel1Phase1EncryptionAlgorithms) {
             this.tunnel1Phase1EncryptionAlgorithms = tunnel1Phase1EncryptionAlgorithms;
             return this;
         }
 
-        public Builder setTunnel1Phase1EncryptionAlgorithms(@Nullable List<String> tunnel1Phase1EncryptionAlgorithms) {
+        public Builder tunnel1Phase1EncryptionAlgorithms(@Nullable List<String> tunnel1Phase1EncryptionAlgorithms) {
             this.tunnel1Phase1EncryptionAlgorithms = Input.ofNullable(tunnel1Phase1EncryptionAlgorithms);
             return this;
         }
 
-        public Builder setTunnel1Phase1IntegrityAlgorithms(@Nullable Input<List<String>> tunnel1Phase1IntegrityAlgorithms) {
+        public Builder tunnel1Phase1IntegrityAlgorithms(@Nullable Input<List<String>> tunnel1Phase1IntegrityAlgorithms) {
             this.tunnel1Phase1IntegrityAlgorithms = tunnel1Phase1IntegrityAlgorithms;
             return this;
         }
 
-        public Builder setTunnel1Phase1IntegrityAlgorithms(@Nullable List<String> tunnel1Phase1IntegrityAlgorithms) {
+        public Builder tunnel1Phase1IntegrityAlgorithms(@Nullable List<String> tunnel1Phase1IntegrityAlgorithms) {
             this.tunnel1Phase1IntegrityAlgorithms = Input.ofNullable(tunnel1Phase1IntegrityAlgorithms);
             return this;
         }
 
-        public Builder setTunnel1Phase1LifetimeSeconds(@Nullable Input<Integer> tunnel1Phase1LifetimeSeconds) {
+        public Builder tunnel1Phase1LifetimeSeconds(@Nullable Input<Integer> tunnel1Phase1LifetimeSeconds) {
             this.tunnel1Phase1LifetimeSeconds = tunnel1Phase1LifetimeSeconds;
             return this;
         }
 
-        public Builder setTunnel1Phase1LifetimeSeconds(@Nullable Integer tunnel1Phase1LifetimeSeconds) {
+        public Builder tunnel1Phase1LifetimeSeconds(@Nullable Integer tunnel1Phase1LifetimeSeconds) {
             this.tunnel1Phase1LifetimeSeconds = Input.ofNullable(tunnel1Phase1LifetimeSeconds);
             return this;
         }
 
-        public Builder setTunnel1Phase2DhGroupNumbers(@Nullable Input<List<Integer>> tunnel1Phase2DhGroupNumbers) {
+        public Builder tunnel1Phase2DhGroupNumbers(@Nullable Input<List<Integer>> tunnel1Phase2DhGroupNumbers) {
             this.tunnel1Phase2DhGroupNumbers = tunnel1Phase2DhGroupNumbers;
             return this;
         }
 
-        public Builder setTunnel1Phase2DhGroupNumbers(@Nullable List<Integer> tunnel1Phase2DhGroupNumbers) {
+        public Builder tunnel1Phase2DhGroupNumbers(@Nullable List<Integer> tunnel1Phase2DhGroupNumbers) {
             this.tunnel1Phase2DhGroupNumbers = Input.ofNullable(tunnel1Phase2DhGroupNumbers);
             return this;
         }
 
-        public Builder setTunnel1Phase2EncryptionAlgorithms(@Nullable Input<List<String>> tunnel1Phase2EncryptionAlgorithms) {
+        public Builder tunnel1Phase2EncryptionAlgorithms(@Nullable Input<List<String>> tunnel1Phase2EncryptionAlgorithms) {
             this.tunnel1Phase2EncryptionAlgorithms = tunnel1Phase2EncryptionAlgorithms;
             return this;
         }
 
-        public Builder setTunnel1Phase2EncryptionAlgorithms(@Nullable List<String> tunnel1Phase2EncryptionAlgorithms) {
+        public Builder tunnel1Phase2EncryptionAlgorithms(@Nullable List<String> tunnel1Phase2EncryptionAlgorithms) {
             this.tunnel1Phase2EncryptionAlgorithms = Input.ofNullable(tunnel1Phase2EncryptionAlgorithms);
             return this;
         }
 
-        public Builder setTunnel1Phase2IntegrityAlgorithms(@Nullable Input<List<String>> tunnel1Phase2IntegrityAlgorithms) {
+        public Builder tunnel1Phase2IntegrityAlgorithms(@Nullable Input<List<String>> tunnel1Phase2IntegrityAlgorithms) {
             this.tunnel1Phase2IntegrityAlgorithms = tunnel1Phase2IntegrityAlgorithms;
             return this;
         }
 
-        public Builder setTunnel1Phase2IntegrityAlgorithms(@Nullable List<String> tunnel1Phase2IntegrityAlgorithms) {
+        public Builder tunnel1Phase2IntegrityAlgorithms(@Nullable List<String> tunnel1Phase2IntegrityAlgorithms) {
             this.tunnel1Phase2IntegrityAlgorithms = Input.ofNullable(tunnel1Phase2IntegrityAlgorithms);
             return this;
         }
 
-        public Builder setTunnel1Phase2LifetimeSeconds(@Nullable Input<Integer> tunnel1Phase2LifetimeSeconds) {
+        public Builder tunnel1Phase2LifetimeSeconds(@Nullable Input<Integer> tunnel1Phase2LifetimeSeconds) {
             this.tunnel1Phase2LifetimeSeconds = tunnel1Phase2LifetimeSeconds;
             return this;
         }
 
-        public Builder setTunnel1Phase2LifetimeSeconds(@Nullable Integer tunnel1Phase2LifetimeSeconds) {
+        public Builder tunnel1Phase2LifetimeSeconds(@Nullable Integer tunnel1Phase2LifetimeSeconds) {
             this.tunnel1Phase2LifetimeSeconds = Input.ofNullable(tunnel1Phase2LifetimeSeconds);
             return this;
         }
 
-        public Builder setTunnel1PresharedKey(@Nullable Input<String> tunnel1PresharedKey) {
+        public Builder tunnel1PresharedKey(@Nullable Input<String> tunnel1PresharedKey) {
             this.tunnel1PresharedKey = tunnel1PresharedKey;
             return this;
         }
 
-        public Builder setTunnel1PresharedKey(@Nullable String tunnel1PresharedKey) {
+        public Builder tunnel1PresharedKey(@Nullable String tunnel1PresharedKey) {
             this.tunnel1PresharedKey = Input.ofNullable(tunnel1PresharedKey);
             return this;
         }
 
-        public Builder setTunnel1RekeyFuzzPercentage(@Nullable Input<Integer> tunnel1RekeyFuzzPercentage) {
+        public Builder tunnel1RekeyFuzzPercentage(@Nullable Input<Integer> tunnel1RekeyFuzzPercentage) {
             this.tunnel1RekeyFuzzPercentage = tunnel1RekeyFuzzPercentage;
             return this;
         }
 
-        public Builder setTunnel1RekeyFuzzPercentage(@Nullable Integer tunnel1RekeyFuzzPercentage) {
+        public Builder tunnel1RekeyFuzzPercentage(@Nullable Integer tunnel1RekeyFuzzPercentage) {
             this.tunnel1RekeyFuzzPercentage = Input.ofNullable(tunnel1RekeyFuzzPercentage);
             return this;
         }
 
-        public Builder setTunnel1RekeyMarginTimeSeconds(@Nullable Input<Integer> tunnel1RekeyMarginTimeSeconds) {
+        public Builder tunnel1RekeyMarginTimeSeconds(@Nullable Input<Integer> tunnel1RekeyMarginTimeSeconds) {
             this.tunnel1RekeyMarginTimeSeconds = tunnel1RekeyMarginTimeSeconds;
             return this;
         }
 
-        public Builder setTunnel1RekeyMarginTimeSeconds(@Nullable Integer tunnel1RekeyMarginTimeSeconds) {
+        public Builder tunnel1RekeyMarginTimeSeconds(@Nullable Integer tunnel1RekeyMarginTimeSeconds) {
             this.tunnel1RekeyMarginTimeSeconds = Input.ofNullable(tunnel1RekeyMarginTimeSeconds);
             return this;
         }
 
-        public Builder setTunnel1ReplayWindowSize(@Nullable Input<Integer> tunnel1ReplayWindowSize) {
+        public Builder tunnel1ReplayWindowSize(@Nullable Input<Integer> tunnel1ReplayWindowSize) {
             this.tunnel1ReplayWindowSize = tunnel1ReplayWindowSize;
             return this;
         }
 
-        public Builder setTunnel1ReplayWindowSize(@Nullable Integer tunnel1ReplayWindowSize) {
+        public Builder tunnel1ReplayWindowSize(@Nullable Integer tunnel1ReplayWindowSize) {
             this.tunnel1ReplayWindowSize = Input.ofNullable(tunnel1ReplayWindowSize);
             return this;
         }
 
-        public Builder setTunnel1StartupAction(@Nullable Input<String> tunnel1StartupAction) {
+        public Builder tunnel1StartupAction(@Nullable Input<String> tunnel1StartupAction) {
             this.tunnel1StartupAction = tunnel1StartupAction;
             return this;
         }
 
-        public Builder setTunnel1StartupAction(@Nullable String tunnel1StartupAction) {
+        public Builder tunnel1StartupAction(@Nullable String tunnel1StartupAction) {
             this.tunnel1StartupAction = Input.ofNullable(tunnel1StartupAction);
             return this;
         }
 
-        public Builder setTunnel1VgwInsideAddress(@Nullable Input<String> tunnel1VgwInsideAddress) {
+        public Builder tunnel1VgwInsideAddress(@Nullable Input<String> tunnel1VgwInsideAddress) {
             this.tunnel1VgwInsideAddress = tunnel1VgwInsideAddress;
             return this;
         }
 
-        public Builder setTunnel1VgwInsideAddress(@Nullable String tunnel1VgwInsideAddress) {
+        public Builder tunnel1VgwInsideAddress(@Nullable String tunnel1VgwInsideAddress) {
             this.tunnel1VgwInsideAddress = Input.ofNullable(tunnel1VgwInsideAddress);
             return this;
         }
 
-        public Builder setTunnel2Address(@Nullable Input<String> tunnel2Address) {
+        public Builder tunnel2Address(@Nullable Input<String> tunnel2Address) {
             this.tunnel2Address = tunnel2Address;
             return this;
         }
 
-        public Builder setTunnel2Address(@Nullable String tunnel2Address) {
+        public Builder tunnel2Address(@Nullable String tunnel2Address) {
             this.tunnel2Address = Input.ofNullable(tunnel2Address);
             return this;
         }
 
-        public Builder setTunnel2BgpAsn(@Nullable Input<String> tunnel2BgpAsn) {
+        public Builder tunnel2BgpAsn(@Nullable Input<String> tunnel2BgpAsn) {
             this.tunnel2BgpAsn = tunnel2BgpAsn;
             return this;
         }
 
-        public Builder setTunnel2BgpAsn(@Nullable String tunnel2BgpAsn) {
+        public Builder tunnel2BgpAsn(@Nullable String tunnel2BgpAsn) {
             this.tunnel2BgpAsn = Input.ofNullable(tunnel2BgpAsn);
             return this;
         }
 
-        public Builder setTunnel2BgpHoldtime(@Nullable Input<Integer> tunnel2BgpHoldtime) {
+        public Builder tunnel2BgpHoldtime(@Nullable Input<Integer> tunnel2BgpHoldtime) {
             this.tunnel2BgpHoldtime = tunnel2BgpHoldtime;
             return this;
         }
 
-        public Builder setTunnel2BgpHoldtime(@Nullable Integer tunnel2BgpHoldtime) {
+        public Builder tunnel2BgpHoldtime(@Nullable Integer tunnel2BgpHoldtime) {
             this.tunnel2BgpHoldtime = Input.ofNullable(tunnel2BgpHoldtime);
             return this;
         }
 
-        public Builder setTunnel2CgwInsideAddress(@Nullable Input<String> tunnel2CgwInsideAddress) {
+        public Builder tunnel2CgwInsideAddress(@Nullable Input<String> tunnel2CgwInsideAddress) {
             this.tunnel2CgwInsideAddress = tunnel2CgwInsideAddress;
             return this;
         }
 
-        public Builder setTunnel2CgwInsideAddress(@Nullable String tunnel2CgwInsideAddress) {
+        public Builder tunnel2CgwInsideAddress(@Nullable String tunnel2CgwInsideAddress) {
             this.tunnel2CgwInsideAddress = Input.ofNullable(tunnel2CgwInsideAddress);
             return this;
         }
 
-        public Builder setTunnel2DpdTimeoutAction(@Nullable Input<String> tunnel2DpdTimeoutAction) {
+        public Builder tunnel2DpdTimeoutAction(@Nullable Input<String> tunnel2DpdTimeoutAction) {
             this.tunnel2DpdTimeoutAction = tunnel2DpdTimeoutAction;
             return this;
         }
 
-        public Builder setTunnel2DpdTimeoutAction(@Nullable String tunnel2DpdTimeoutAction) {
+        public Builder tunnel2DpdTimeoutAction(@Nullable String tunnel2DpdTimeoutAction) {
             this.tunnel2DpdTimeoutAction = Input.ofNullable(tunnel2DpdTimeoutAction);
             return this;
         }
 
-        public Builder setTunnel2DpdTimeoutSeconds(@Nullable Input<Integer> tunnel2DpdTimeoutSeconds) {
+        public Builder tunnel2DpdTimeoutSeconds(@Nullable Input<Integer> tunnel2DpdTimeoutSeconds) {
             this.tunnel2DpdTimeoutSeconds = tunnel2DpdTimeoutSeconds;
             return this;
         }
 
-        public Builder setTunnel2DpdTimeoutSeconds(@Nullable Integer tunnel2DpdTimeoutSeconds) {
+        public Builder tunnel2DpdTimeoutSeconds(@Nullable Integer tunnel2DpdTimeoutSeconds) {
             this.tunnel2DpdTimeoutSeconds = Input.ofNullable(tunnel2DpdTimeoutSeconds);
             return this;
         }
 
-        public Builder setTunnel2IkeVersions(@Nullable Input<List<String>> tunnel2IkeVersions) {
+        public Builder tunnel2IkeVersions(@Nullable Input<List<String>> tunnel2IkeVersions) {
             this.tunnel2IkeVersions = tunnel2IkeVersions;
             return this;
         }
 
-        public Builder setTunnel2IkeVersions(@Nullable List<String> tunnel2IkeVersions) {
+        public Builder tunnel2IkeVersions(@Nullable List<String> tunnel2IkeVersions) {
             this.tunnel2IkeVersions = Input.ofNullable(tunnel2IkeVersions);
             return this;
         }
 
-        public Builder setTunnel2InsideCidr(@Nullable Input<String> tunnel2InsideCidr) {
+        public Builder tunnel2InsideCidr(@Nullable Input<String> tunnel2InsideCidr) {
             this.tunnel2InsideCidr = tunnel2InsideCidr;
             return this;
         }
 
-        public Builder setTunnel2InsideCidr(@Nullable String tunnel2InsideCidr) {
+        public Builder tunnel2InsideCidr(@Nullable String tunnel2InsideCidr) {
             this.tunnel2InsideCidr = Input.ofNullable(tunnel2InsideCidr);
             return this;
         }
 
-        public Builder setTunnel2InsideIpv6Cidr(@Nullable Input<String> tunnel2InsideIpv6Cidr) {
+        public Builder tunnel2InsideIpv6Cidr(@Nullable Input<String> tunnel2InsideIpv6Cidr) {
             this.tunnel2InsideIpv6Cidr = tunnel2InsideIpv6Cidr;
             return this;
         }
 
-        public Builder setTunnel2InsideIpv6Cidr(@Nullable String tunnel2InsideIpv6Cidr) {
+        public Builder tunnel2InsideIpv6Cidr(@Nullable String tunnel2InsideIpv6Cidr) {
             this.tunnel2InsideIpv6Cidr = Input.ofNullable(tunnel2InsideIpv6Cidr);
             return this;
         }
 
-        public Builder setTunnel2Phase1DhGroupNumbers(@Nullable Input<List<Integer>> tunnel2Phase1DhGroupNumbers) {
+        public Builder tunnel2Phase1DhGroupNumbers(@Nullable Input<List<Integer>> tunnel2Phase1DhGroupNumbers) {
             this.tunnel2Phase1DhGroupNumbers = tunnel2Phase1DhGroupNumbers;
             return this;
         }
 
-        public Builder setTunnel2Phase1DhGroupNumbers(@Nullable List<Integer> tunnel2Phase1DhGroupNumbers) {
+        public Builder tunnel2Phase1DhGroupNumbers(@Nullable List<Integer> tunnel2Phase1DhGroupNumbers) {
             this.tunnel2Phase1DhGroupNumbers = Input.ofNullable(tunnel2Phase1DhGroupNumbers);
             return this;
         }
 
-        public Builder setTunnel2Phase1EncryptionAlgorithms(@Nullable Input<List<String>> tunnel2Phase1EncryptionAlgorithms) {
+        public Builder tunnel2Phase1EncryptionAlgorithms(@Nullable Input<List<String>> tunnel2Phase1EncryptionAlgorithms) {
             this.tunnel2Phase1EncryptionAlgorithms = tunnel2Phase1EncryptionAlgorithms;
             return this;
         }
 
-        public Builder setTunnel2Phase1EncryptionAlgorithms(@Nullable List<String> tunnel2Phase1EncryptionAlgorithms) {
+        public Builder tunnel2Phase1EncryptionAlgorithms(@Nullable List<String> tunnel2Phase1EncryptionAlgorithms) {
             this.tunnel2Phase1EncryptionAlgorithms = Input.ofNullable(tunnel2Phase1EncryptionAlgorithms);
             return this;
         }
 
-        public Builder setTunnel2Phase1IntegrityAlgorithms(@Nullable Input<List<String>> tunnel2Phase1IntegrityAlgorithms) {
+        public Builder tunnel2Phase1IntegrityAlgorithms(@Nullable Input<List<String>> tunnel2Phase1IntegrityAlgorithms) {
             this.tunnel2Phase1IntegrityAlgorithms = tunnel2Phase1IntegrityAlgorithms;
             return this;
         }
 
-        public Builder setTunnel2Phase1IntegrityAlgorithms(@Nullable List<String> tunnel2Phase1IntegrityAlgorithms) {
+        public Builder tunnel2Phase1IntegrityAlgorithms(@Nullable List<String> tunnel2Phase1IntegrityAlgorithms) {
             this.tunnel2Phase1IntegrityAlgorithms = Input.ofNullable(tunnel2Phase1IntegrityAlgorithms);
             return this;
         }
 
-        public Builder setTunnel2Phase1LifetimeSeconds(@Nullable Input<Integer> tunnel2Phase1LifetimeSeconds) {
+        public Builder tunnel2Phase1LifetimeSeconds(@Nullable Input<Integer> tunnel2Phase1LifetimeSeconds) {
             this.tunnel2Phase1LifetimeSeconds = tunnel2Phase1LifetimeSeconds;
             return this;
         }
 
-        public Builder setTunnel2Phase1LifetimeSeconds(@Nullable Integer tunnel2Phase1LifetimeSeconds) {
+        public Builder tunnel2Phase1LifetimeSeconds(@Nullable Integer tunnel2Phase1LifetimeSeconds) {
             this.tunnel2Phase1LifetimeSeconds = Input.ofNullable(tunnel2Phase1LifetimeSeconds);
             return this;
         }
 
-        public Builder setTunnel2Phase2DhGroupNumbers(@Nullable Input<List<Integer>> tunnel2Phase2DhGroupNumbers) {
+        public Builder tunnel2Phase2DhGroupNumbers(@Nullable Input<List<Integer>> tunnel2Phase2DhGroupNumbers) {
             this.tunnel2Phase2DhGroupNumbers = tunnel2Phase2DhGroupNumbers;
             return this;
         }
 
-        public Builder setTunnel2Phase2DhGroupNumbers(@Nullable List<Integer> tunnel2Phase2DhGroupNumbers) {
+        public Builder tunnel2Phase2DhGroupNumbers(@Nullable List<Integer> tunnel2Phase2DhGroupNumbers) {
             this.tunnel2Phase2DhGroupNumbers = Input.ofNullable(tunnel2Phase2DhGroupNumbers);
             return this;
         }
 
-        public Builder setTunnel2Phase2EncryptionAlgorithms(@Nullable Input<List<String>> tunnel2Phase2EncryptionAlgorithms) {
+        public Builder tunnel2Phase2EncryptionAlgorithms(@Nullable Input<List<String>> tunnel2Phase2EncryptionAlgorithms) {
             this.tunnel2Phase2EncryptionAlgorithms = tunnel2Phase2EncryptionAlgorithms;
             return this;
         }
 
-        public Builder setTunnel2Phase2EncryptionAlgorithms(@Nullable List<String> tunnel2Phase2EncryptionAlgorithms) {
+        public Builder tunnel2Phase2EncryptionAlgorithms(@Nullable List<String> tunnel2Phase2EncryptionAlgorithms) {
             this.tunnel2Phase2EncryptionAlgorithms = Input.ofNullable(tunnel2Phase2EncryptionAlgorithms);
             return this;
         }
 
-        public Builder setTunnel2Phase2IntegrityAlgorithms(@Nullable Input<List<String>> tunnel2Phase2IntegrityAlgorithms) {
+        public Builder tunnel2Phase2IntegrityAlgorithms(@Nullable Input<List<String>> tunnel2Phase2IntegrityAlgorithms) {
             this.tunnel2Phase2IntegrityAlgorithms = tunnel2Phase2IntegrityAlgorithms;
             return this;
         }
 
-        public Builder setTunnel2Phase2IntegrityAlgorithms(@Nullable List<String> tunnel2Phase2IntegrityAlgorithms) {
+        public Builder tunnel2Phase2IntegrityAlgorithms(@Nullable List<String> tunnel2Phase2IntegrityAlgorithms) {
             this.tunnel2Phase2IntegrityAlgorithms = Input.ofNullable(tunnel2Phase2IntegrityAlgorithms);
             return this;
         }
 
-        public Builder setTunnel2Phase2LifetimeSeconds(@Nullable Input<Integer> tunnel2Phase2LifetimeSeconds) {
+        public Builder tunnel2Phase2LifetimeSeconds(@Nullable Input<Integer> tunnel2Phase2LifetimeSeconds) {
             this.tunnel2Phase2LifetimeSeconds = tunnel2Phase2LifetimeSeconds;
             return this;
         }
 
-        public Builder setTunnel2Phase2LifetimeSeconds(@Nullable Integer tunnel2Phase2LifetimeSeconds) {
+        public Builder tunnel2Phase2LifetimeSeconds(@Nullable Integer tunnel2Phase2LifetimeSeconds) {
             this.tunnel2Phase2LifetimeSeconds = Input.ofNullable(tunnel2Phase2LifetimeSeconds);
             return this;
         }
 
-        public Builder setTunnel2PresharedKey(@Nullable Input<String> tunnel2PresharedKey) {
+        public Builder tunnel2PresharedKey(@Nullable Input<String> tunnel2PresharedKey) {
             this.tunnel2PresharedKey = tunnel2PresharedKey;
             return this;
         }
 
-        public Builder setTunnel2PresharedKey(@Nullable String tunnel2PresharedKey) {
+        public Builder tunnel2PresharedKey(@Nullable String tunnel2PresharedKey) {
             this.tunnel2PresharedKey = Input.ofNullable(tunnel2PresharedKey);
             return this;
         }
 
-        public Builder setTunnel2RekeyFuzzPercentage(@Nullable Input<Integer> tunnel2RekeyFuzzPercentage) {
+        public Builder tunnel2RekeyFuzzPercentage(@Nullable Input<Integer> tunnel2RekeyFuzzPercentage) {
             this.tunnel2RekeyFuzzPercentage = tunnel2RekeyFuzzPercentage;
             return this;
         }
 
-        public Builder setTunnel2RekeyFuzzPercentage(@Nullable Integer tunnel2RekeyFuzzPercentage) {
+        public Builder tunnel2RekeyFuzzPercentage(@Nullable Integer tunnel2RekeyFuzzPercentage) {
             this.tunnel2RekeyFuzzPercentage = Input.ofNullable(tunnel2RekeyFuzzPercentage);
             return this;
         }
 
-        public Builder setTunnel2RekeyMarginTimeSeconds(@Nullable Input<Integer> tunnel2RekeyMarginTimeSeconds) {
+        public Builder tunnel2RekeyMarginTimeSeconds(@Nullable Input<Integer> tunnel2RekeyMarginTimeSeconds) {
             this.tunnel2RekeyMarginTimeSeconds = tunnel2RekeyMarginTimeSeconds;
             return this;
         }
 
-        public Builder setTunnel2RekeyMarginTimeSeconds(@Nullable Integer tunnel2RekeyMarginTimeSeconds) {
+        public Builder tunnel2RekeyMarginTimeSeconds(@Nullable Integer tunnel2RekeyMarginTimeSeconds) {
             this.tunnel2RekeyMarginTimeSeconds = Input.ofNullable(tunnel2RekeyMarginTimeSeconds);
             return this;
         }
 
-        public Builder setTunnel2ReplayWindowSize(@Nullable Input<Integer> tunnel2ReplayWindowSize) {
+        public Builder tunnel2ReplayWindowSize(@Nullable Input<Integer> tunnel2ReplayWindowSize) {
             this.tunnel2ReplayWindowSize = tunnel2ReplayWindowSize;
             return this;
         }
 
-        public Builder setTunnel2ReplayWindowSize(@Nullable Integer tunnel2ReplayWindowSize) {
+        public Builder tunnel2ReplayWindowSize(@Nullable Integer tunnel2ReplayWindowSize) {
             this.tunnel2ReplayWindowSize = Input.ofNullable(tunnel2ReplayWindowSize);
             return this;
         }
 
-        public Builder setTunnel2StartupAction(@Nullable Input<String> tunnel2StartupAction) {
+        public Builder tunnel2StartupAction(@Nullable Input<String> tunnel2StartupAction) {
             this.tunnel2StartupAction = tunnel2StartupAction;
             return this;
         }
 
-        public Builder setTunnel2StartupAction(@Nullable String tunnel2StartupAction) {
+        public Builder tunnel2StartupAction(@Nullable String tunnel2StartupAction) {
             this.tunnel2StartupAction = Input.ofNullable(tunnel2StartupAction);
             return this;
         }
 
-        public Builder setTunnel2VgwInsideAddress(@Nullable Input<String> tunnel2VgwInsideAddress) {
+        public Builder tunnel2VgwInsideAddress(@Nullable Input<String> tunnel2VgwInsideAddress) {
             this.tunnel2VgwInsideAddress = tunnel2VgwInsideAddress;
             return this;
         }
 
-        public Builder setTunnel2VgwInsideAddress(@Nullable String tunnel2VgwInsideAddress) {
+        public Builder tunnel2VgwInsideAddress(@Nullable String tunnel2VgwInsideAddress) {
             this.tunnel2VgwInsideAddress = Input.ofNullable(tunnel2VgwInsideAddress);
             return this;
         }
 
-        public Builder setTunnelInsideIpVersion(@Nullable Input<String> tunnelInsideIpVersion) {
+        public Builder tunnelInsideIpVersion(@Nullable Input<String> tunnelInsideIpVersion) {
             this.tunnelInsideIpVersion = tunnelInsideIpVersion;
             return this;
         }
 
-        public Builder setTunnelInsideIpVersion(@Nullable String tunnelInsideIpVersion) {
+        public Builder tunnelInsideIpVersion(@Nullable String tunnelInsideIpVersion) {
             this.tunnelInsideIpVersion = Input.ofNullable(tunnelInsideIpVersion);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVgwTelemetries(@Nullable Input<List<VpnConnectionVgwTelemetryGetArgs>> vgwTelemetries) {
+        public Builder vgwTelemetries(@Nullable Input<List<VpnConnectionVgwTelemetryGetArgs>> vgwTelemetries) {
             this.vgwTelemetries = vgwTelemetries;
             return this;
         }
 
-        public Builder setVgwTelemetries(@Nullable List<VpnConnectionVgwTelemetryGetArgs> vgwTelemetries) {
+        public Builder vgwTelemetries(@Nullable List<VpnConnectionVgwTelemetryGetArgs> vgwTelemetries) {
             this.vgwTelemetries = Input.ofNullable(vgwTelemetries);
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable String vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
             return this;
         }

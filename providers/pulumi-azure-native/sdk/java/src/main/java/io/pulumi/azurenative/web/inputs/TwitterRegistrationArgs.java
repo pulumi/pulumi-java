@@ -77,22 +77,22 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
     	      this.consumerSecretSettingName = defaults.consumerSecretSettingName;
         }
 
-        public Builder setConsumerKey(@Nullable Input<String> consumerKey) {
+        public Builder consumerKey(@Nullable Input<String> consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
-        public Builder setConsumerKey(@Nullable String consumerKey) {
+        public Builder consumerKey(@Nullable String consumerKey) {
             this.consumerKey = Input.ofNullable(consumerKey);
             return this;
         }
 
-        public Builder setConsumerSecretSettingName(@Nullable Input<String> consumerSecretSettingName) {
+        public Builder consumerSecretSettingName(@Nullable Input<String> consumerSecretSettingName) {
             this.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }
 
-        public Builder setConsumerSecretSettingName(@Nullable String consumerSecretSettingName) {
+        public Builder consumerSecretSettingName(@Nullable String consumerSecretSettingName) {
             this.consumerSecretSettingName = Input.ofNullable(consumerSecretSettingName);
             return this;
         }

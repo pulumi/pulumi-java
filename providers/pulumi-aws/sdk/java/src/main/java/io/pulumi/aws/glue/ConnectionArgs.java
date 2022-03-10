@@ -169,82 +169,82 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Input<Map<String,String>> connectionProperties) {
+        public Builder connectionProperties(@Nullable Input<Map<String,String>> connectionProperties) {
             this.connectionProperties = connectionProperties;
             return this;
         }
 
-        public Builder setConnectionProperties(@Nullable Map<String,String> connectionProperties) {
+        public Builder connectionProperties(@Nullable Map<String,String> connectionProperties) {
             this.connectionProperties = Input.ofNullable(connectionProperties);
             return this;
         }
 
-        public Builder setConnectionType(@Nullable Input<String> connectionType) {
+        public Builder connectionType(@Nullable Input<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
-        public Builder setConnectionType(@Nullable String connectionType) {
+        public Builder connectionType(@Nullable String connectionType) {
             this.connectionType = Input.ofNullable(connectionType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMatchCriterias(@Nullable Input<List<String>> matchCriterias) {
+        public Builder matchCriterias(@Nullable Input<List<String>> matchCriterias) {
             this.matchCriterias = matchCriterias;
             return this;
         }
 
-        public Builder setMatchCriterias(@Nullable List<String> matchCriterias) {
+        public Builder matchCriterias(@Nullable List<String> matchCriterias) {
             this.matchCriterias = Input.ofNullable(matchCriterias);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPhysicalConnectionRequirements(@Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements) {
+        public Builder physicalConnectionRequirements(@Nullable Input<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements) {
             this.physicalConnectionRequirements = physicalConnectionRequirements;
             return this;
         }
 
-        public Builder setPhysicalConnectionRequirements(@Nullable ConnectionPhysicalConnectionRequirementsArgs physicalConnectionRequirements) {
+        public Builder physicalConnectionRequirements(@Nullable ConnectionPhysicalConnectionRequirementsArgs physicalConnectionRequirements) {
             this.physicalConnectionRequirements = Input.ofNullable(physicalConnectionRequirements);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

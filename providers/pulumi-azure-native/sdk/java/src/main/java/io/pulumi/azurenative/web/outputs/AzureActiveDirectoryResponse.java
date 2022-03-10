@@ -122,27 +122,27 @@ public final class AzureActiveDirectoryResponse {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setIsAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
+        public Builder isAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
             this.isAutoProvisioned = isAutoProvisioned;
             return this;
         }
 
-        public Builder setLogin(@Nullable AzureActiveDirectoryLoginResponse login) {
+        public Builder login(@Nullable AzureActiveDirectoryLoginResponse login) {
             this.login = login;
             return this;
         }
 
-        public Builder setRegistration(@Nullable AzureActiveDirectoryRegistrationResponse registration) {
+        public Builder registration(@Nullable AzureActiveDirectoryRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setValidation(@Nullable AzureActiveDirectoryValidationResponse validation) {
+        public Builder validation(@Nullable AzureActiveDirectoryValidationResponse validation) {
             this.validation = validation;
             return this;
         }

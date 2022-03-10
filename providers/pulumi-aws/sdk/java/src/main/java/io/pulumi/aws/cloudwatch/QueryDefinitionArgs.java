@@ -87,32 +87,32 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.queryString = defaults.queryString;
         }
 
-        public Builder setLogGroupNames(@Nullable Input<List<String>> logGroupNames) {
+        public Builder logGroupNames(@Nullable Input<List<String>> logGroupNames) {
             this.logGroupNames = logGroupNames;
             return this;
         }
 
-        public Builder setLogGroupNames(@Nullable List<String> logGroupNames) {
+        public Builder logGroupNames(@Nullable List<String> logGroupNames) {
             this.logGroupNames = Input.ofNullable(logGroupNames);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQueryString(Input<String> queryString) {
+        public Builder queryString(Input<String> queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
-        public Builder setQueryString(String queryString) {
+        public Builder queryString(String queryString) {
             this.queryString = Input.of(Objects.requireNonNull(queryString));
             return this;
         }

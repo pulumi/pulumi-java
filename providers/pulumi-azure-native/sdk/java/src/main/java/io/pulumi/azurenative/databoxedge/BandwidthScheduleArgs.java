@@ -154,72 +154,72 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.stop = defaults.stop;
         }
 
-        public Builder setDays(Input<List<Either<String,DayOfWeek>>> days) {
+        public Builder days(Input<List<Either<String,DayOfWeek>>> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setDays(List<Either<String,DayOfWeek>> days) {
+        public Builder days(List<Either<String,DayOfWeek>> days) {
             this.days = Input.of(Objects.requireNonNull(days));
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRateInMbps(Input<Integer> rateInMbps) {
+        public Builder rateInMbps(Input<Integer> rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
 
-        public Builder setRateInMbps(Integer rateInMbps) {
+        public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Input.of(Objects.requireNonNull(rateInMbps));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStart(Input<String> start) {
+        public Builder start(Input<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Input.of(Objects.requireNonNull(start));
             return this;
         }
 
-        public Builder setStop(Input<String> stop) {
+        public Builder stop(Input<String> stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
 
-        public Builder setStop(String stop) {
+        public Builder stop(String stop) {
             this.stop = Input.of(Objects.requireNonNull(stop));
             return this;
         }

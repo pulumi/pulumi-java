@@ -51,12 +51,12 @@ public final class GetAppBlockResult {
     	      this.createdTime = defaults.createdTime;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }

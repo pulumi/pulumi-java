@@ -101,22 +101,22 @@ public final class RuleGroupActivatedRule {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(RuleGroupActivatedRuleAction action) {
+        public Builder action(RuleGroupActivatedRuleAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

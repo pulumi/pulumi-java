@@ -65,12 +65,12 @@ public final class EventFilterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

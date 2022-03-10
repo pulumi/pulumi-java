@@ -217,112 +217,112 @@ public final class ScanConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userAgent = defaults.userAgent;
         }
 
-        public Builder setAuthentication(@Nullable Input<AuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<AuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable AuthenticationArgs authentication) {
+        public Builder authentication(@Nullable AuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBlacklistPatterns(@Nullable Input<List<String>> blacklistPatterns) {
+        public Builder blacklistPatterns(@Nullable Input<List<String>> blacklistPatterns) {
             this.blacklistPatterns = blacklistPatterns;
             return this;
         }
 
-        public Builder setBlacklistPatterns(@Nullable List<String> blacklistPatterns) {
+        public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
             this.blacklistPatterns = Input.ofNullable(blacklistPatterns);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLatestRun(@Nullable Input<ScanRunArgs> latestRun) {
+        public Builder latestRun(@Nullable Input<ScanRunArgs> latestRun) {
             this.latestRun = latestRun;
             return this;
         }
 
-        public Builder setLatestRun(@Nullable ScanRunArgs latestRun) {
+        public Builder latestRun(@Nullable ScanRunArgs latestRun) {
             this.latestRun = Input.ofNullable(latestRun);
             return this;
         }
 
-        public Builder setMaxQps(@Nullable Input<Integer> maxQps) {
+        public Builder maxQps(@Nullable Input<Integer> maxQps) {
             this.maxQps = maxQps;
             return this;
         }
 
-        public Builder setMaxQps(@Nullable Integer maxQps) {
+        public Builder maxQps(@Nullable Integer maxQps) {
             this.maxQps = Input.ofNullable(maxQps);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<ScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<ScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable ScheduleArgs schedule) {
+        public Builder schedule(@Nullable ScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartingUrls(Input<List<String>> startingUrls) {
+        public Builder startingUrls(Input<List<String>> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
 
-        public Builder setStartingUrls(List<String> startingUrls) {
+        public Builder startingUrls(List<String> startingUrls) {
             this.startingUrls = Input.of(Objects.requireNonNull(startingUrls));
             return this;
         }
 
-        public Builder setTargetPlatforms(@Nullable Input<List<ScanConfigTargetPlatformsItem>> targetPlatforms) {
+        public Builder targetPlatforms(@Nullable Input<List<ScanConfigTargetPlatformsItem>> targetPlatforms) {
             this.targetPlatforms = targetPlatforms;
             return this;
         }
 
-        public Builder setTargetPlatforms(@Nullable List<ScanConfigTargetPlatformsItem> targetPlatforms) {
+        public Builder targetPlatforms(@Nullable List<ScanConfigTargetPlatformsItem> targetPlatforms) {
             this.targetPlatforms = Input.ofNullable(targetPlatforms);
             return this;
         }
 
-        public Builder setUserAgent(@Nullable Input<ScanConfigUserAgent> userAgent) {
+        public Builder userAgent(@Nullable Input<ScanConfigUserAgent> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
 
-        public Builder setUserAgent(@Nullable ScanConfigUserAgent userAgent) {
+        public Builder userAgent(@Nullable ScanConfigUserAgent userAgent) {
             this.userAgent = Input.ofNullable(userAgent);
             return this;
         }

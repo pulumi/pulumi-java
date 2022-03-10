@@ -98,22 +98,22 @@ public final class GetAnalysisResult {
     	      this.requestTime = defaults.requestTime;
         }
 
-        public Builder setAnalysisResult(GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult) {
+        public Builder analysisResult(GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult) {
             this.analysisResult = Objects.requireNonNull(analysisResult);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequestTime(String requestTime) {
+        public Builder requestTime(String requestTime) {
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
         }

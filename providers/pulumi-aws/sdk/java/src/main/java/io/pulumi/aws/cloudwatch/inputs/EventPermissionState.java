@@ -119,52 +119,52 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
     	      this.statementId = defaults.statementId;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<EventPermissionConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<EventPermissionConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable EventPermissionConditionGetArgs condition) {
+        public Builder condition(@Nullable EventPermissionConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setEventBusName(@Nullable Input<String> eventBusName) {
+        public Builder eventBusName(@Nullable Input<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
 
-        public Builder setEventBusName(@Nullable String eventBusName) {
+        public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Input.ofNullable(eventBusName);
             return this;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }
 
-        public Builder setStatementId(@Nullable Input<String> statementId) {
+        public Builder statementId(@Nullable Input<String> statementId) {
             this.statementId = statementId;
             return this;
         }
 
-        public Builder setStatementId(@Nullable String statementId) {
+        public Builder statementId(@Nullable String statementId) {
             this.statementId = Input.ofNullable(statementId);
             return this;
         }

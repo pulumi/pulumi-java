@@ -86,32 +86,32 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
     	      this.ownerAccountId = defaults.ownerAccountId;
         }
 
-        public Builder setAmazonSideAsn(@Nullable Input<String> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Input<String> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
-        public Builder setAmazonSideAsn(@Nullable String amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable String amazonSideAsn) {
             this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerAccountId(@Nullable Input<String> ownerAccountId) {
+        public Builder ownerAccountId(@Nullable Input<String> ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
 
-        public Builder setOwnerAccountId(@Nullable String ownerAccountId) {
+        public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = Input.ofNullable(ownerAccountId);
             return this;
         }

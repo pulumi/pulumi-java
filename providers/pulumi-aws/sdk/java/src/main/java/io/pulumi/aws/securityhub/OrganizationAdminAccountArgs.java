@@ -52,12 +52,12 @@ public final class OrganizationAdminAccountArgs extends io.pulumi.resources.Reso
     	      this.adminAccountId = defaults.adminAccountId;
         }
 
-        public Builder setAdminAccountId(Input<String> adminAccountId) {
+        public Builder adminAccountId(Input<String> adminAccountId) {
             this.adminAccountId = Objects.requireNonNull(adminAccountId);
             return this;
         }
 
-        public Builder setAdminAccountId(String adminAccountId) {
+        public Builder adminAccountId(String adminAccountId) {
             this.adminAccountId = Input.of(Objects.requireNonNull(adminAccountId));
             return this;
         }

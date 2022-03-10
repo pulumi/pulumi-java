@@ -88,32 +88,32 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
     	      this.useStageCache = defaults.useStageCache;
         }
 
-        public Builder setPercentTraffic(@Nullable Input<Double> percentTraffic) {
+        public Builder percentTraffic(@Nullable Input<Double> percentTraffic) {
             this.percentTraffic = percentTraffic;
             return this;
         }
 
-        public Builder setPercentTraffic(@Nullable Double percentTraffic) {
+        public Builder percentTraffic(@Nullable Double percentTraffic) {
             this.percentTraffic = Input.ofNullable(percentTraffic);
             return this;
         }
 
-        public Builder setStageVariableOverrides(@Nullable Input<Object> stageVariableOverrides) {
+        public Builder stageVariableOverrides(@Nullable Input<Object> stageVariableOverrides) {
             this.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
 
-        public Builder setStageVariableOverrides(@Nullable Object stageVariableOverrides) {
+        public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
             this.stageVariableOverrides = Input.ofNullable(stageVariableOverrides);
             return this;
         }
 
-        public Builder setUseStageCache(@Nullable Input<Boolean> useStageCache) {
+        public Builder useStageCache(@Nullable Input<Boolean> useStageCache) {
             this.useStageCache = useStageCache;
             return this;
         }
 
-        public Builder setUseStageCache(@Nullable Boolean useStageCache) {
+        public Builder useStageCache(@Nullable Boolean useStageCache) {
             this.useStageCache = Input.ofNullable(useStageCache);
             return this;
         }

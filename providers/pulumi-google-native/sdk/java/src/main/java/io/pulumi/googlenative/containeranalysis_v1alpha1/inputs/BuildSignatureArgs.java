@@ -107,42 +107,42 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<BuildSignatureKeyType> keyType) {
+        public Builder keyType(@Nullable Input<BuildSignatureKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable BuildSignatureKeyType keyType) {
+        public Builder keyType(@Nullable BuildSignatureKeyType keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
 
-        public Builder setSignature(@Nullable Input<String> signature) {
+        public Builder signature(@Nullable Input<String> signature) {
             this.signature = signature;
             return this;
         }
 
-        public Builder setSignature(@Nullable String signature) {
+        public Builder signature(@Nullable String signature) {
             this.signature = Input.ofNullable(signature);
             return this;
         }

@@ -127,27 +127,27 @@ public final class GetInstanceTemplateScheduling {
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder setAutomaticRestart(Boolean automaticRestart) {
+        public Builder automaticRestart(Boolean automaticRestart) {
             this.automaticRestart = Objects.requireNonNull(automaticRestart);
             return this;
         }
 
-        public Builder setMinNodeCpus(Integer minNodeCpus) {
+        public Builder minNodeCpus(Integer minNodeCpus) {
             this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
             return this;
         }
 
-        public Builder setNodeAffinities(List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities) {
+        public Builder nodeAffinities(List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities) {
             this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
             return this;
         }
 
-        public Builder setOnHostMaintenance(String onHostMaintenance) {
+        public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }

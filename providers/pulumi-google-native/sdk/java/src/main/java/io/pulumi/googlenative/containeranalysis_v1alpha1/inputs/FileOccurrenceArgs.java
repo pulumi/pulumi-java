@@ -172,82 +172,82 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.notice = defaults.notice;
         }
 
-        public Builder setAttributions(@Nullable Input<List<String>> attributions) {
+        public Builder attributions(@Nullable Input<List<String>> attributions) {
             this.attributions = attributions;
             return this;
         }
 
-        public Builder setAttributions(@Nullable List<String> attributions) {
+        public Builder attributions(@Nullable List<String> attributions) {
             this.attributions = Input.ofNullable(attributions);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setContributors(@Nullable Input<List<String>> contributors) {
+        public Builder contributors(@Nullable Input<List<String>> contributors) {
             this.contributors = contributors;
             return this;
         }
 
-        public Builder setContributors(@Nullable List<String> contributors) {
+        public Builder contributors(@Nullable List<String> contributors) {
             this.contributors = Input.ofNullable(contributors);
             return this;
         }
 
-        public Builder setCopyright(@Nullable Input<String> copyright) {
+        public Builder copyright(@Nullable Input<String> copyright) {
             this.copyright = copyright;
             return this;
         }
 
-        public Builder setCopyright(@Nullable String copyright) {
+        public Builder copyright(@Nullable String copyright) {
             this.copyright = Input.ofNullable(copyright);
             return this;
         }
 
-        public Builder setFilesLicenseInfo(@Nullable Input<List<String>> filesLicenseInfo) {
+        public Builder filesLicenseInfo(@Nullable Input<List<String>> filesLicenseInfo) {
             this.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
 
-        public Builder setFilesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
+        public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
             this.filesLicenseInfo = Input.ofNullable(filesLicenseInfo);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLicenseConcluded(@Nullable Input<LicenseArgs> licenseConcluded) {
+        public Builder licenseConcluded(@Nullable Input<LicenseArgs> licenseConcluded) {
             this.licenseConcluded = licenseConcluded;
             return this;
         }
 
-        public Builder setLicenseConcluded(@Nullable LicenseArgs licenseConcluded) {
+        public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
             this.licenseConcluded = Input.ofNullable(licenseConcluded);
             return this;
         }
 
-        public Builder setNotice(@Nullable Input<String> notice) {
+        public Builder notice(@Nullable Input<String> notice) {
             this.notice = notice;
             return this;
         }
 
-        public Builder setNotice(@Nullable String notice) {
+        public Builder notice(@Nullable String notice) {
             this.notice = Input.ofNullable(notice);
             return this;
         }

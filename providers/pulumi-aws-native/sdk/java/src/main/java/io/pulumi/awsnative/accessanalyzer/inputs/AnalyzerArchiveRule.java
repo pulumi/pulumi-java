@@ -70,12 +70,12 @@ public final class AnalyzerArchiveRule extends io.pulumi.resources.InvokeArgs {
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setFilter(List<AnalyzerFilter> filter) {
+        public Builder filter(List<AnalyzerFilter> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }

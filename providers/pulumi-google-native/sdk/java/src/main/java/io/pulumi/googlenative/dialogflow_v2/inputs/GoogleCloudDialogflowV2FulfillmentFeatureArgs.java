@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2FulfillmentFeatureArgs extends io.pulu
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
+        public Builder type(@Nullable Input<GoogleCloudDialogflowV2FulfillmentFeatureType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable GoogleCloudDialogflowV2FulfillmentFeatureType type) {
+        public Builder type(@Nullable GoogleCloudDialogflowV2FulfillmentFeatureType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

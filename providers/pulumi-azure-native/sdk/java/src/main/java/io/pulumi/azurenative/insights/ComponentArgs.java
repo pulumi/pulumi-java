@@ -271,142 +271,142 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationType(Input<Either<String,ApplicationType>> applicationType) {
+        public Builder applicationType(Input<Either<String,ApplicationType>> applicationType) {
             this.applicationType = Objects.requireNonNull(applicationType);
             return this;
         }
 
-        public Builder setApplicationType(Either<String,ApplicationType> applicationType) {
+        public Builder applicationType(Either<String,ApplicationType> applicationType) {
             this.applicationType = Input.of(Objects.requireNonNull(applicationType));
             return this;
         }
 
-        public Builder setDisableIpMasking(@Nullable Input<Boolean> disableIpMasking) {
+        public Builder disableIpMasking(@Nullable Input<Boolean> disableIpMasking) {
             this.disableIpMasking = disableIpMasking;
             return this;
         }
 
-        public Builder setDisableIpMasking(@Nullable Boolean disableIpMasking) {
+        public Builder disableIpMasking(@Nullable Boolean disableIpMasking) {
             this.disableIpMasking = Input.ofNullable(disableIpMasking);
             return this;
         }
 
-        public Builder setFlowType(@Nullable Input<Either<String,FlowType>> flowType) {
+        public Builder flowType(@Nullable Input<Either<String,FlowType>> flowType) {
             this.flowType = flowType;
             return this;
         }
 
-        public Builder setFlowType(@Nullable Either<String,FlowType> flowType) {
+        public Builder flowType(@Nullable Either<String,FlowType> flowType) {
             this.flowType = Input.ofNullable(flowType);
             return this;
         }
 
-        public Builder setHockeyAppId(@Nullable Input<String> hockeyAppId) {
+        public Builder hockeyAppId(@Nullable Input<String> hockeyAppId) {
             this.hockeyAppId = hockeyAppId;
             return this;
         }
 
-        public Builder setHockeyAppId(@Nullable String hockeyAppId) {
+        public Builder hockeyAppId(@Nullable String hockeyAppId) {
             this.hockeyAppId = Input.ofNullable(hockeyAppId);
             return this;
         }
 
-        public Builder setImmediatePurgeDataOn30Days(@Nullable Input<Boolean> immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Input<Boolean> immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
 
-        public Builder setImmediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = Input.ofNullable(immediatePurgeDataOn30Days);
             return this;
         }
 
-        public Builder setIngestionMode(@Nullable Input<Either<String,IngestionMode>> ingestionMode) {
+        public Builder ingestionMode(@Nullable Input<Either<String,IngestionMode>> ingestionMode) {
             this.ingestionMode = ingestionMode;
             return this;
         }
 
-        public Builder setIngestionMode(@Nullable Either<String,IngestionMode> ingestionMode) {
+        public Builder ingestionMode(@Nullable Either<String,IngestionMode> ingestionMode) {
             this.ingestionMode = Input.ofNullable(ingestionMode);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRequestSource(@Nullable Input<Either<String,RequestSource>> requestSource) {
+        public Builder requestSource(@Nullable Input<Either<String,RequestSource>> requestSource) {
             this.requestSource = requestSource;
             return this;
         }
 
-        public Builder setRequestSource(@Nullable Either<String,RequestSource> requestSource) {
+        public Builder requestSource(@Nullable Either<String,RequestSource> requestSource) {
             this.requestSource = Input.ofNullable(requestSource);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Input.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Input<Double> samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Input<Double> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Double samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Double samplingPercentage) {
             this.samplingPercentage = Input.ofNullable(samplingPercentage);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

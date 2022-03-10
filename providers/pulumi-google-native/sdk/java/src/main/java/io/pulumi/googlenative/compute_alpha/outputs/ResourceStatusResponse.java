@@ -50,12 +50,12 @@ public final class ResourceStatusResponse {
     	      this.upcomingMaintenance = defaults.upcomingMaintenance;
         }
 
-        public Builder setScheduling(ResourceStatusSchedulingResponse scheduling) {
+        public Builder scheduling(ResourceStatusSchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setUpcomingMaintenance(ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
+        public Builder upcomingMaintenance(ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
             this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
             return this;
         }

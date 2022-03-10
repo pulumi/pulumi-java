@@ -70,22 +70,22 @@ public final class BotAssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lexBot = defaults.lexBot;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setLexBot(Input<BotAssociationLexBotArgs> lexBot) {
+        public Builder lexBot(Input<BotAssociationLexBotArgs> lexBot) {
             this.lexBot = Objects.requireNonNull(lexBot);
             return this;
         }
 
-        public Builder setLexBot(BotAssociationLexBotArgs lexBot) {
+        public Builder lexBot(BotAssociationLexBotArgs lexBot) {
             this.lexBot = Input.of(Objects.requireNonNull(lexBot));
             return this;
         }

@@ -69,22 +69,22 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setInstance(@Nullable NetworkInsightsAnalysisAnalysisComponent instance) {
+        public Builder instance(@Nullable NetworkInsightsAnalysisAnalysisComponent instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

@@ -188,92 +188,92 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgreementNumber(@Nullable Input<String> agreementNumber) {
+        public Builder agreementNumber(@Nullable Input<String> agreementNumber) {
             this.agreementNumber = agreementNumber;
             return this;
         }
 
-        public Builder setAgreementNumber(@Nullable String agreementNumber) {
+        public Builder agreementNumber(@Nullable String agreementNumber) {
             this.agreementNumber = Input.ofNullable(agreementNumber);
             return this;
         }
 
-        public Builder setInstalledServerNumber(@Nullable Input<Integer> installedServerNumber) {
+        public Builder installedServerNumber(@Nullable Input<Integer> installedServerNumber) {
             this.installedServerNumber = installedServerNumber;
             return this;
         }
 
-        public Builder setInstalledServerNumber(@Nullable Integer installedServerNumber) {
+        public Builder installedServerNumber(@Nullable Integer installedServerNumber) {
             this.installedServerNumber = Input.ofNullable(installedServerNumber);
             return this;
         }
 
-        public Builder setIsEligible(@Nullable Input<Boolean> isEligible) {
+        public Builder isEligible(@Nullable Input<Boolean> isEligible) {
             this.isEligible = isEligible;
             return this;
         }
 
-        public Builder setIsEligible(@Nullable Boolean isEligible) {
+        public Builder isEligible(@Nullable Boolean isEligible) {
             this.isEligible = Input.ofNullable(isEligible);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMultipleActivationKeyName(@Nullable Input<String> multipleActivationKeyName) {
+        public Builder multipleActivationKeyName(@Nullable Input<String> multipleActivationKeyName) {
             this.multipleActivationKeyName = multipleActivationKeyName;
             return this;
         }
 
-        public Builder setMultipleActivationKeyName(@Nullable String multipleActivationKeyName) {
+        public Builder multipleActivationKeyName(@Nullable String multipleActivationKeyName) {
             this.multipleActivationKeyName = Input.ofNullable(multipleActivationKeyName);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<Either<String,OsType>> osType) {
+        public Builder osType(@Nullable Input<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable Either<String,OsType> osType) {
+        public Builder osType(@Nullable Either<String,OsType> osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSupportType(@Nullable Input<Either<String,SupportType>> supportType) {
+        public Builder supportType(@Nullable Input<Either<String,SupportType>> supportType) {
             this.supportType = supportType;
             return this;
         }
 
-        public Builder setSupportType(@Nullable Either<String,SupportType> supportType) {
+        public Builder supportType(@Nullable Either<String,SupportType> supportType) {
             this.supportType = Input.ofNullable(supportType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

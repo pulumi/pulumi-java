@@ -155,72 +155,72 @@ public final class InstanceFailoverGroupArgs extends io.pulumi.resources.Resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFailoverGroupName(@Nullable Input<String> failoverGroupName) {
+        public Builder failoverGroupName(@Nullable Input<String> failoverGroupName) {
             this.failoverGroupName = failoverGroupName;
             return this;
         }
 
-        public Builder setFailoverGroupName(@Nullable String failoverGroupName) {
+        public Builder failoverGroupName(@Nullable String failoverGroupName) {
             this.failoverGroupName = Input.ofNullable(failoverGroupName);
             return this;
         }
 
-        public Builder setLocationName(Input<String> locationName) {
+        public Builder locationName(Input<String> locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
 
-        public Builder setLocationName(String locationName) {
+        public Builder locationName(String locationName) {
             this.locationName = Input.of(Objects.requireNonNull(locationName));
             return this;
         }
 
-        public Builder setManagedInstancePairs(Input<List<ManagedInstancePairInfoArgs>> managedInstancePairs) {
+        public Builder managedInstancePairs(Input<List<ManagedInstancePairInfoArgs>> managedInstancePairs) {
             this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs);
             return this;
         }
 
-        public Builder setManagedInstancePairs(List<ManagedInstancePairInfoArgs> managedInstancePairs) {
+        public Builder managedInstancePairs(List<ManagedInstancePairInfoArgs> managedInstancePairs) {
             this.managedInstancePairs = Input.of(Objects.requireNonNull(managedInstancePairs));
             return this;
         }
 
-        public Builder setPartnerRegions(Input<List<PartnerRegionInfoArgs>> partnerRegions) {
+        public Builder partnerRegions(Input<List<PartnerRegionInfoArgs>> partnerRegions) {
             this.partnerRegions = Objects.requireNonNull(partnerRegions);
             return this;
         }
 
-        public Builder setPartnerRegions(List<PartnerRegionInfoArgs> partnerRegions) {
+        public Builder partnerRegions(List<PartnerRegionInfoArgs> partnerRegions) {
             this.partnerRegions = Input.of(Objects.requireNonNull(partnerRegions));
             return this;
         }
 
-        public Builder setReadOnlyEndpoint(@Nullable Input<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable Input<InstanceFailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
-        public Builder setReadOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
             this.readOnlyEndpoint = Input.ofNullable(readOnlyEndpoint);
             return this;
         }
 
-        public Builder setReadWriteEndpoint(Input<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
+        public Builder readWriteEndpoint(Input<InstanceFailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
 
-        public Builder setReadWriteEndpoint(InstanceFailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
+        public Builder readWriteEndpoint(InstanceFailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
             this.readWriteEndpoint = Input.of(Objects.requireNonNull(readWriteEndpoint));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

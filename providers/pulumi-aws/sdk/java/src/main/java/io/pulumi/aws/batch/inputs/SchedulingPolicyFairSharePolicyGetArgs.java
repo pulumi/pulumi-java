@@ -84,32 +84,32 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
     	      this.shareDistributions = defaults.shareDistributions;
         }
 
-        public Builder setComputeReservation(@Nullable Input<Integer> computeReservation) {
+        public Builder computeReservation(@Nullable Input<Integer> computeReservation) {
             this.computeReservation = computeReservation;
             return this;
         }
 
-        public Builder setComputeReservation(@Nullable Integer computeReservation) {
+        public Builder computeReservation(@Nullable Integer computeReservation) {
             this.computeReservation = Input.ofNullable(computeReservation);
             return this;
         }
 
-        public Builder setShareDecaySeconds(@Nullable Input<Integer> shareDecaySeconds) {
+        public Builder shareDecaySeconds(@Nullable Input<Integer> shareDecaySeconds) {
             this.shareDecaySeconds = shareDecaySeconds;
             return this;
         }
 
-        public Builder setShareDecaySeconds(@Nullable Integer shareDecaySeconds) {
+        public Builder shareDecaySeconds(@Nullable Integer shareDecaySeconds) {
             this.shareDecaySeconds = Input.ofNullable(shareDecaySeconds);
             return this;
         }
 
-        public Builder setShareDistributions(@Nullable Input<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> shareDistributions) {
+        public Builder shareDistributions(@Nullable Input<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> shareDistributions) {
             this.shareDistributions = shareDistributions;
             return this;
         }
 
-        public Builder setShareDistributions(@Nullable List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs> shareDistributions) {
+        public Builder shareDistributions(@Nullable List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs> shareDistributions) {
             this.shareDistributions = Input.ofNullable(shareDistributions);
             return this;
         }

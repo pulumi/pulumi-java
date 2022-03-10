@@ -103,42 +103,42 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setFabricName(@Nullable Input<String> fabricName) {
+        public Builder fabricName(@Nullable Input<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
-        public Builder setFabricName(@Nullable String fabricName) {
+        public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = Input.ofNullable(fabricName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<FabricCreationInputPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<FabricCreationInputPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable FabricCreationInputPropertiesArgs properties) {
+        public Builder properties(@Nullable FabricCreationInputPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

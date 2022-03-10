@@ -199,102 +199,102 @@ public final class SqlDWTableDataSetMappingArgs extends io.pulumi.resources.Reso
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDataSetId(Input<String> dataSetId) {
+        public Builder dataSetId(Input<String> dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
 
-        public Builder setDataSetId(String dataSetId) {
+        public Builder dataSetId(String dataSetId) {
             this.dataSetId = Input.of(Objects.requireNonNull(dataSetId));
             return this;
         }
 
-        public Builder setDataSetMappingName(@Nullable Input<String> dataSetMappingName) {
+        public Builder dataSetMappingName(@Nullable Input<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
 
-        public Builder setDataSetMappingName(@Nullable String dataSetMappingName) {
+        public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
             this.dataSetMappingName = Input.ofNullable(dataSetMappingName);
             return this;
         }
 
-        public Builder setDataWarehouseName(Input<String> dataWarehouseName) {
+        public Builder dataWarehouseName(Input<String> dataWarehouseName) {
             this.dataWarehouseName = Objects.requireNonNull(dataWarehouseName);
             return this;
         }
 
-        public Builder setDataWarehouseName(String dataWarehouseName) {
+        public Builder dataWarehouseName(String dataWarehouseName) {
             this.dataWarehouseName = Input.of(Objects.requireNonNull(dataWarehouseName));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchemaName(Input<String> schemaName) {
+        public Builder schemaName(Input<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Input.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder setShareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
-        public Builder setShareSubscriptionName(String shareSubscriptionName) {
+        public Builder shareSubscriptionName(String shareSubscriptionName) {
             this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
 
-        public Builder setSqlServerResourceId(Input<String> sqlServerResourceId) {
+        public Builder sqlServerResourceId(Input<String> sqlServerResourceId) {
             this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
             return this;
         }
 
-        public Builder setSqlServerResourceId(String sqlServerResourceId) {
+        public Builder sqlServerResourceId(String sqlServerResourceId) {
             this.sqlServerResourceId = Input.of(Objects.requireNonNull(sqlServerResourceId));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

@@ -107,42 +107,42 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     	      this.timeTaken = defaults.timeTaken;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setTimeInterval(@Nullable Input<String> timeInterval) {
+        public Builder timeInterval(@Nullable Input<String> timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
 
-        public Builder setTimeInterval(@Nullable String timeInterval) {
+        public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = Input.ofNullable(timeInterval);
             return this;
         }
 
-        public Builder setTimeTaken(@Nullable Input<String> timeTaken) {
+        public Builder timeTaken(@Nullable Input<String> timeTaken) {
             this.timeTaken = timeTaken;
             return this;
         }
 
-        public Builder setTimeTaken(@Nullable String timeTaken) {
+        public Builder timeTaken(@Nullable String timeTaken) {
             this.timeTaken = Input.ofNullable(timeTaken);
             return this;
         }

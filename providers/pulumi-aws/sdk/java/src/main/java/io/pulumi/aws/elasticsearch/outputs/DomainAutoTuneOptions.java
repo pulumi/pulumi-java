@@ -85,17 +85,17 @@ public final class DomainAutoTuneOptions {
     	      this.rollbackOnDisable = defaults.rollbackOnDisable;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setMaintenanceSchedules(@Nullable List<DomainAutoTuneOptionsMaintenanceSchedule> maintenanceSchedules) {
+        public Builder maintenanceSchedules(@Nullable List<DomainAutoTuneOptionsMaintenanceSchedule> maintenanceSchedules) {
             this.maintenanceSchedules = maintenanceSchedules;
             return this;
         }
 
-        public Builder setRollbackOnDisable(@Nullable String rollbackOnDisable) {
+        public Builder rollbackOnDisable(@Nullable String rollbackOnDisable) {
             this.rollbackOnDisable = rollbackOnDisable;
             return this;
         }

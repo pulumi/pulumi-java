@@ -104,42 +104,42 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder setLocation(@Nullable Input<Either<String,Location>> location) {
+        public Builder location(@Nullable Input<Either<String,Location>> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable Either<String,Location> location) {
+        public Builder location(@Nullable Either<String,Location> location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRegistrationName(@Nullable Input<String> registrationName) {
+        public Builder registrationName(@Nullable Input<String> registrationName) {
             this.registrationName = registrationName;
             return this;
         }
 
-        public Builder setRegistrationName(@Nullable String registrationName) {
+        public Builder registrationName(@Nullable String registrationName) {
             this.registrationName = Input.ofNullable(registrationName);
             return this;
         }
 
-        public Builder setRegistrationToken(Input<String> registrationToken) {
+        public Builder registrationToken(Input<String> registrationToken) {
             this.registrationToken = Objects.requireNonNull(registrationToken);
             return this;
         }
 
-        public Builder setRegistrationToken(String registrationToken) {
+        public Builder registrationToken(String registrationToken) {
             this.registrationToken = Input.of(Objects.requireNonNull(registrationToken));
             return this;
         }
 
-        public Builder setResourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Input<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
             return this;
         }

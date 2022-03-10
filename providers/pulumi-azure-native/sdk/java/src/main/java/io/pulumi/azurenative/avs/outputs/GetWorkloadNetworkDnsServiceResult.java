@@ -213,57 +213,57 @@ public final class GetWorkloadNetworkDnsServiceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultDnsZone(@Nullable String defaultDnsZone) {
+        public Builder defaultDnsZone(@Nullable String defaultDnsZone) {
             this.defaultDnsZone = defaultDnsZone;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDnsServiceIp(@Nullable String dnsServiceIp) {
+        public Builder dnsServiceIp(@Nullable String dnsServiceIp) {
             this.dnsServiceIp = dnsServiceIp;
             return this;
         }
 
-        public Builder setFqdnZones(@Nullable List<String> fqdnZones) {
+        public Builder fqdnZones(@Nullable List<String> fqdnZones) {
             this.fqdnZones = fqdnZones;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

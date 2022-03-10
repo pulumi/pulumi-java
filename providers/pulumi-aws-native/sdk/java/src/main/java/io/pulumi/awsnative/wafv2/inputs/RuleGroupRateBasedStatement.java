@@ -89,22 +89,22 @@ public final class RuleGroupRateBasedStatement extends io.pulumi.resources.Invok
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
+        public Builder aggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable RuleGroupStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable RuleGroupStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }

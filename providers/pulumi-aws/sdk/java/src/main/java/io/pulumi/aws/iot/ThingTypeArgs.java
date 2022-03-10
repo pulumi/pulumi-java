@@ -105,42 +105,42 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDeprecated(@Nullable Input<Boolean> deprecated) {
+        public Builder deprecated(@Nullable Input<Boolean> deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
-        public Builder setDeprecated(@Nullable Boolean deprecated) {
+        public Builder deprecated(@Nullable Boolean deprecated) {
             this.deprecated = Input.ofNullable(deprecated);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ThingTypePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ThingTypePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ThingTypePropertiesArgs properties) {
+        public Builder properties(@Nullable ThingTypePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

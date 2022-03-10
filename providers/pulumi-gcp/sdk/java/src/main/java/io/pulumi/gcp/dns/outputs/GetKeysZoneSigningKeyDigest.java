@@ -67,12 +67,12 @@ public final class GetKeysZoneSigningKeyDigest {
     	      this.type = defaults.type;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

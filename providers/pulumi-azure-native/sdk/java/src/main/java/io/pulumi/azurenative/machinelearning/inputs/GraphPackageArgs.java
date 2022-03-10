@@ -95,32 +95,32 @@ public final class GraphPackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setEdges(@Nullable Input<List<GraphEdgeArgs>> edges) {
+        public Builder edges(@Nullable Input<List<GraphEdgeArgs>> edges) {
             this.edges = edges;
             return this;
         }
 
-        public Builder setEdges(@Nullable List<GraphEdgeArgs> edges) {
+        public Builder edges(@Nullable List<GraphEdgeArgs> edges) {
             this.edges = Input.ofNullable(edges);
             return this;
         }
 
-        public Builder setGraphParameters(@Nullable Input<Map<String,GraphParameterArgs>> graphParameters) {
+        public Builder graphParameters(@Nullable Input<Map<String,GraphParameterArgs>> graphParameters) {
             this.graphParameters = graphParameters;
             return this;
         }
 
-        public Builder setGraphParameters(@Nullable Map<String,GraphParameterArgs> graphParameters) {
+        public Builder graphParameters(@Nullable Map<String,GraphParameterArgs> graphParameters) {
             this.graphParameters = Input.ofNullable(graphParameters);
             return this;
         }
 
-        public Builder setNodes(@Nullable Input<Map<String,GraphNodeArgs>> nodes) {
+        public Builder nodes(@Nullable Input<Map<String,GraphNodeArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
 
-        public Builder setNodes(@Nullable Map<String,GraphNodeArgs> nodes) {
+        public Builder nodes(@Nullable Map<String,GraphNodeArgs> nodes) {
             this.nodes = Input.ofNullable(nodes);
             return this;
         }

@@ -67,22 +67,22 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueFilter = defaults.valueFilter;
         }
 
-        public Builder setCompositeFilter(@Nullable Input<CompositeFilterArgs> compositeFilter) {
+        public Builder compositeFilter(@Nullable Input<CompositeFilterArgs> compositeFilter) {
             this.compositeFilter = compositeFilter;
             return this;
         }
 
-        public Builder setCompositeFilter(@Nullable CompositeFilterArgs compositeFilter) {
+        public Builder compositeFilter(@Nullable CompositeFilterArgs compositeFilter) {
             this.compositeFilter = Input.ofNullable(compositeFilter);
             return this;
         }
 
-        public Builder setValueFilter(@Nullable Input<ValueFilterArgs> valueFilter) {
+        public Builder valueFilter(@Nullable Input<ValueFilterArgs> valueFilter) {
             this.valueFilter = valueFilter;
             return this;
         }
 
-        public Builder setValueFilter(@Nullable ValueFilterArgs valueFilter) {
+        public Builder valueFilter(@Nullable ValueFilterArgs valueFilter) {
             this.valueFilter = Input.ofNullable(valueFilter);
             return this;
         }

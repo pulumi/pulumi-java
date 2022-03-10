@@ -122,52 +122,52 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reportSetting = defaults.reportSetting;
         }
 
-        public Builder setReportDeliveryChannel(Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel) {
+        public Builder reportDeliveryChannel(Input<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel) {
             this.reportDeliveryChannel = Objects.requireNonNull(reportDeliveryChannel);
             return this;
         }
 
-        public Builder setReportDeliveryChannel(ReportDeliveryChannelPropertiesArgs reportDeliveryChannel) {
+        public Builder reportDeliveryChannel(ReportDeliveryChannelPropertiesArgs reportDeliveryChannel) {
             this.reportDeliveryChannel = Input.of(Objects.requireNonNull(reportDeliveryChannel));
             return this;
         }
 
-        public Builder setReportPlanDescription(@Nullable Input<String> reportPlanDescription) {
+        public Builder reportPlanDescription(@Nullable Input<String> reportPlanDescription) {
             this.reportPlanDescription = reportPlanDescription;
             return this;
         }
 
-        public Builder setReportPlanDescription(@Nullable String reportPlanDescription) {
+        public Builder reportPlanDescription(@Nullable String reportPlanDescription) {
             this.reportPlanDescription = Input.ofNullable(reportPlanDescription);
             return this;
         }
 
-        public Builder setReportPlanName(@Nullable Input<String> reportPlanName) {
+        public Builder reportPlanName(@Nullable Input<String> reportPlanName) {
             this.reportPlanName = reportPlanName;
             return this;
         }
 
-        public Builder setReportPlanName(@Nullable String reportPlanName) {
+        public Builder reportPlanName(@Nullable String reportPlanName) {
             this.reportPlanName = Input.ofNullable(reportPlanName);
             return this;
         }
 
-        public Builder setReportPlanTags(@Nullable Input<List<ReportPlanTagArgs>> reportPlanTags) {
+        public Builder reportPlanTags(@Nullable Input<List<ReportPlanTagArgs>> reportPlanTags) {
             this.reportPlanTags = reportPlanTags;
             return this;
         }
 
-        public Builder setReportPlanTags(@Nullable List<ReportPlanTagArgs> reportPlanTags) {
+        public Builder reportPlanTags(@Nullable List<ReportPlanTagArgs> reportPlanTags) {
             this.reportPlanTags = Input.ofNullable(reportPlanTags);
             return this;
         }
 
-        public Builder setReportSetting(Input<ReportSettingPropertiesArgs> reportSetting) {
+        public Builder reportSetting(Input<ReportSettingPropertiesArgs> reportSetting) {
             this.reportSetting = Objects.requireNonNull(reportSetting);
             return this;
         }
 
-        public Builder setReportSetting(ReportSettingPropertiesArgs reportSetting) {
+        public Builder reportSetting(ReportSettingPropertiesArgs reportSetting) {
             this.reportSetting = Input.of(Objects.requireNonNull(reportSetting));
             return this;
         }

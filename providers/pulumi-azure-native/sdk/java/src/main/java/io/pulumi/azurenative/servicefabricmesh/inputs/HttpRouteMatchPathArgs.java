@@ -92,32 +92,32 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     	      this.value = defaults.value;
         }
 
-        public Builder setRewrite(@Nullable Input<String> rewrite) {
+        public Builder rewrite(@Nullable Input<String> rewrite) {
             this.rewrite = rewrite;
             return this;
         }
 
-        public Builder setRewrite(@Nullable String rewrite) {
+        public Builder rewrite(@Nullable String rewrite) {
             this.rewrite = Input.ofNullable(rewrite);
             return this;
         }
 
-        public Builder setType(Input<Either<String,PathMatchType>> type) {
+        public Builder type(Input<Either<String,PathMatchType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,PathMatchType> type) {
+        public Builder type(Either<String,PathMatchType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

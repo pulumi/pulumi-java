@@ -230,62 +230,62 @@ public final class GetScheduledTriggerResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRecurrenceInterval(String recurrenceInterval) {
+        public Builder recurrenceInterval(String recurrenceInterval) {
             this.recurrenceInterval = Objects.requireNonNull(recurrenceInterval);
             return this;
         }
 
-        public Builder setSynchronizationMode(@Nullable String synchronizationMode) {
+        public Builder synchronizationMode(@Nullable String synchronizationMode) {
             this.synchronizationMode = synchronizationMode;
             return this;
         }
 
-        public Builder setSynchronizationTime(String synchronizationTime) {
+        public Builder synchronizationTime(String synchronizationTime) {
             this.synchronizationTime = Objects.requireNonNull(synchronizationTime);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTriggerStatus(String triggerStatus) {
+        public Builder triggerStatus(String triggerStatus) {
             this.triggerStatus = Objects.requireNonNull(triggerStatus);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

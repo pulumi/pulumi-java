@@ -84,17 +84,17 @@ public final class EventConnectionAuthParametersInvocationHttpParametersBody {
     	      this.value = defaults.value;
         }
 
-        public Builder setIsValueSecret(@Nullable Boolean isValueSecret) {
+        public Builder isValueSecret(@Nullable Boolean isValueSecret) {
             this.isValueSecret = isValueSecret;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

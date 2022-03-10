@@ -349,192 +349,192 @@ public final class AppServicePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerTierName = defaults.workerTierName;
         }
 
-        public Builder setFreeOfferExpirationTime(@Nullable Input<String> freeOfferExpirationTime) {
+        public Builder freeOfferExpirationTime(@Nullable Input<String> freeOfferExpirationTime) {
             this.freeOfferExpirationTime = freeOfferExpirationTime;
             return this;
         }
 
-        public Builder setFreeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
+        public Builder freeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
             this.freeOfferExpirationTime = Input.ofNullable(freeOfferExpirationTime);
             return this;
         }
 
-        public Builder setHostingEnvironmentProfile(@Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
+        public Builder hostingEnvironmentProfile(@Nullable Input<HostingEnvironmentProfileArgs> hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
 
-        public Builder setHostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
+        public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileArgs hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = Input.ofNullable(hostingEnvironmentProfile);
             return this;
         }
 
-        public Builder setHyperV(@Nullable Input<Boolean> hyperV) {
+        public Builder hyperV(@Nullable Input<Boolean> hyperV) {
             this.hyperV = hyperV;
             return this;
         }
 
-        public Builder setHyperV(@Nullable Boolean hyperV) {
+        public Builder hyperV(@Nullable Boolean hyperV) {
             this.hyperV = Input.ofNullable(hyperV);
             return this;
         }
 
-        public Builder setIsSpot(@Nullable Input<Boolean> isSpot) {
+        public Builder isSpot(@Nullable Input<Boolean> isSpot) {
             this.isSpot = isSpot;
             return this;
         }
 
-        public Builder setIsSpot(@Nullable Boolean isSpot) {
+        public Builder isSpot(@Nullable Boolean isSpot) {
             this.isSpot = Input.ofNullable(isSpot);
             return this;
         }
 
-        public Builder setIsXenon(@Nullable Input<Boolean> isXenon) {
+        public Builder isXenon(@Nullable Input<Boolean> isXenon) {
             this.isXenon = isXenon;
             return this;
         }
 
-        public Builder setIsXenon(@Nullable Boolean isXenon) {
+        public Builder isXenon(@Nullable Boolean isXenon) {
             this.isXenon = Input.ofNullable(isXenon);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setKubeEnvironmentProfile(@Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile) {
+        public Builder kubeEnvironmentProfile(@Nullable Input<KubeEnvironmentProfileArgs> kubeEnvironmentProfile) {
             this.kubeEnvironmentProfile = kubeEnvironmentProfile;
             return this;
         }
 
-        public Builder setKubeEnvironmentProfile(@Nullable KubeEnvironmentProfileArgs kubeEnvironmentProfile) {
+        public Builder kubeEnvironmentProfile(@Nullable KubeEnvironmentProfileArgs kubeEnvironmentProfile) {
             this.kubeEnvironmentProfile = Input.ofNullable(kubeEnvironmentProfile);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaximumElasticWorkerCount(@Nullable Input<Integer> maximumElasticWorkerCount) {
+        public Builder maximumElasticWorkerCount(@Nullable Input<Integer> maximumElasticWorkerCount) {
             this.maximumElasticWorkerCount = maximumElasticWorkerCount;
             return this;
         }
 
-        public Builder setMaximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
+        public Builder maximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
             this.maximumElasticWorkerCount = Input.ofNullable(maximumElasticWorkerCount);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPerSiteScaling(@Nullable Input<Boolean> perSiteScaling) {
+        public Builder perSiteScaling(@Nullable Input<Boolean> perSiteScaling) {
             this.perSiteScaling = perSiteScaling;
             return this;
         }
 
-        public Builder setPerSiteScaling(@Nullable Boolean perSiteScaling) {
+        public Builder perSiteScaling(@Nullable Boolean perSiteScaling) {
             this.perSiteScaling = Input.ofNullable(perSiteScaling);
             return this;
         }
 
-        public Builder setReserved(@Nullable Input<Boolean> reserved) {
+        public Builder reserved(@Nullable Input<Boolean> reserved) {
             this.reserved = reserved;
             return this;
         }
 
-        public Builder setReserved(@Nullable Boolean reserved) {
+        public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = Input.ofNullable(reserved);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuDescriptionArgs> sku) {
+        public Builder sku(@Nullable Input<SkuDescriptionArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuDescriptionArgs sku) {
+        public Builder sku(@Nullable SkuDescriptionArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSpotExpirationTime(@Nullable Input<String> spotExpirationTime) {
+        public Builder spotExpirationTime(@Nullable Input<String> spotExpirationTime) {
             this.spotExpirationTime = spotExpirationTime;
             return this;
         }
 
-        public Builder setSpotExpirationTime(@Nullable String spotExpirationTime) {
+        public Builder spotExpirationTime(@Nullable String spotExpirationTime) {
             this.spotExpirationTime = Input.ofNullable(spotExpirationTime);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetWorkerCount(@Nullable Input<Integer> targetWorkerCount) {
+        public Builder targetWorkerCount(@Nullable Input<Integer> targetWorkerCount) {
             this.targetWorkerCount = targetWorkerCount;
             return this;
         }
 
-        public Builder setTargetWorkerCount(@Nullable Integer targetWorkerCount) {
+        public Builder targetWorkerCount(@Nullable Integer targetWorkerCount) {
             this.targetWorkerCount = Input.ofNullable(targetWorkerCount);
             return this;
         }
 
-        public Builder setTargetWorkerSizeId(@Nullable Input<Integer> targetWorkerSizeId) {
+        public Builder targetWorkerSizeId(@Nullable Input<Integer> targetWorkerSizeId) {
             this.targetWorkerSizeId = targetWorkerSizeId;
             return this;
         }
 
-        public Builder setTargetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
+        public Builder targetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
             this.targetWorkerSizeId = Input.ofNullable(targetWorkerSizeId);
             return this;
         }
 
-        public Builder setWorkerTierName(@Nullable Input<String> workerTierName) {
+        public Builder workerTierName(@Nullable Input<String> workerTierName) {
             this.workerTierName = workerTierName;
             return this;
         }
 
-        public Builder setWorkerTierName(@Nullable String workerTierName) {
+        public Builder workerTierName(@Nullable String workerTierName) {
             this.workerTierName = Input.ofNullable(workerTierName);
             return this;
         }

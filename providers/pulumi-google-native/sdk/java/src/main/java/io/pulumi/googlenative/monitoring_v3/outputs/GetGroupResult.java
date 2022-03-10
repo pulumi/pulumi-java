@@ -114,27 +114,27 @@ public final class GetGroupResult {
     	      this.parentName = defaults.parentName;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setIsCluster(Boolean isCluster) {
+        public Builder isCluster(Boolean isCluster) {
             this.isCluster = Objects.requireNonNull(isCluster);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParentName(String parentName) {
+        public Builder parentName(String parentName) {
             this.parentName = Objects.requireNonNull(parentName);
             return this;
         }

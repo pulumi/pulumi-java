@@ -97,22 +97,22 @@ public final class LocationPreferenceResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setFollowGaeApplication(String followGaeApplication) {
+        public Builder followGaeApplication(String followGaeApplication) {
             this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSecondaryZone(String secondaryZone) {
+        public Builder secondaryZone(String secondaryZone) {
             this.secondaryZone = Objects.requireNonNull(secondaryZone);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

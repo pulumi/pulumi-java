@@ -50,7 +50,7 @@ public final class EventSourceMappingFilterCriteriaFilter {
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }

@@ -53,12 +53,12 @@ public final class FleetOnDemandOptionsArgs extends io.pulumi.resources.Resource
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder setAllocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Input.ofNullable(allocationStrategy);
             return this;
         }

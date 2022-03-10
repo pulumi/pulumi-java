@@ -361,192 +361,192 @@ public final class WebServicePropertiesForGraphArgs extends io.pulumi.resources.
     	      this.title = defaults.title;
         }
 
-        public Builder setAssets(@Nullable Input<Map<String,AssetItemArgs>> assets) {
+        public Builder assets(@Nullable Input<Map<String,AssetItemArgs>> assets) {
             this.assets = assets;
             return this;
         }
 
-        public Builder setAssets(@Nullable Map<String,AssetItemArgs> assets) {
+        public Builder assets(@Nullable Map<String,AssetItemArgs> assets) {
             this.assets = Input.ofNullable(assets);
             return this;
         }
 
-        public Builder setCommitmentPlan(@Nullable Input<CommitmentPlanArgs> commitmentPlan) {
+        public Builder commitmentPlan(@Nullable Input<CommitmentPlanArgs> commitmentPlan) {
             this.commitmentPlan = commitmentPlan;
             return this;
         }
 
-        public Builder setCommitmentPlan(@Nullable CommitmentPlanArgs commitmentPlan) {
+        public Builder commitmentPlan(@Nullable CommitmentPlanArgs commitmentPlan) {
             this.commitmentPlan = Input.ofNullable(commitmentPlan);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable Input<DiagnosticsConfigurationArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Input<DiagnosticsConfigurationArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable DiagnosticsConfigurationArgs diagnostics) {
+        public Builder diagnostics(@Nullable DiagnosticsConfigurationArgs diagnostics) {
             this.diagnostics = Input.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder setExampleRequest(@Nullable Input<ExampleRequestArgs> exampleRequest) {
+        public Builder exampleRequest(@Nullable Input<ExampleRequestArgs> exampleRequest) {
             this.exampleRequest = exampleRequest;
             return this;
         }
 
-        public Builder setExampleRequest(@Nullable ExampleRequestArgs exampleRequest) {
+        public Builder exampleRequest(@Nullable ExampleRequestArgs exampleRequest) {
             this.exampleRequest = Input.ofNullable(exampleRequest);
             return this;
         }
 
-        public Builder setExposeSampleData(@Nullable Input<Boolean> exposeSampleData) {
+        public Builder exposeSampleData(@Nullable Input<Boolean> exposeSampleData) {
             this.exposeSampleData = exposeSampleData;
             return this;
         }
 
-        public Builder setExposeSampleData(@Nullable Boolean exposeSampleData) {
+        public Builder exposeSampleData(@Nullable Boolean exposeSampleData) {
             this.exposeSampleData = Input.ofNullable(exposeSampleData);
             return this;
         }
 
-        public Builder setInput(@Nullable Input<ServiceInputOutputSpecificationArgs> input) {
+        public Builder input(@Nullable Input<ServiceInputOutputSpecificationArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable ServiceInputOutputSpecificationArgs input) {
+        public Builder input(@Nullable ServiceInputOutputSpecificationArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<WebServiceKeysArgs> keys) {
+        public Builder keys(@Nullable Input<WebServiceKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable WebServiceKeysArgs keys) {
+        public Builder keys(@Nullable WebServiceKeysArgs keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setMachineLearningWorkspace(@Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace) {
+        public Builder machineLearningWorkspace(@Nullable Input<MachineLearningWorkspaceArgs> machineLearningWorkspace) {
             this.machineLearningWorkspace = machineLearningWorkspace;
             return this;
         }
 
-        public Builder setMachineLearningWorkspace(@Nullable MachineLearningWorkspaceArgs machineLearningWorkspace) {
+        public Builder machineLearningWorkspace(@Nullable MachineLearningWorkspaceArgs machineLearningWorkspace) {
             this.machineLearningWorkspace = Input.ofNullable(machineLearningWorkspace);
             return this;
         }
 
-        public Builder setOutput(@Nullable Input<ServiceInputOutputSpecificationArgs> output) {
+        public Builder output(@Nullable Input<ServiceInputOutputSpecificationArgs> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setOutput(@Nullable ServiceInputOutputSpecificationArgs output) {
+        public Builder output(@Nullable ServiceInputOutputSpecificationArgs output) {
             this.output = Input.ofNullable(output);
             return this;
         }
 
-        public Builder set$package(@Nullable Input<GraphPackageArgs> $package) {
+        public Builder $package(@Nullable Input<GraphPackageArgs> $package) {
             this.$package = $package;
             return this;
         }
 
-        public Builder set$package(@Nullable GraphPackageArgs $package) {
+        public Builder $package(@Nullable GraphPackageArgs $package) {
             this.$package = Input.ofNullable($package);
             return this;
         }
 
-        public Builder setPackageType(Input<String> packageType) {
+        public Builder packageType(Input<String> packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Input.of(Objects.requireNonNull(packageType));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,WebServiceParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,WebServiceParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPayloadsInBlobStorage(@Nullable Input<Boolean> payloadsInBlobStorage) {
+        public Builder payloadsInBlobStorage(@Nullable Input<Boolean> payloadsInBlobStorage) {
             this.payloadsInBlobStorage = payloadsInBlobStorage;
             return this;
         }
 
-        public Builder setPayloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
+        public Builder payloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
             this.payloadsInBlobStorage = Input.ofNullable(payloadsInBlobStorage);
             return this;
         }
 
-        public Builder setPayloadsLocation(@Nullable Input<BlobLocationArgs> payloadsLocation) {
+        public Builder payloadsLocation(@Nullable Input<BlobLocationArgs> payloadsLocation) {
             this.payloadsLocation = payloadsLocation;
             return this;
         }
 
-        public Builder setPayloadsLocation(@Nullable BlobLocationArgs payloadsLocation) {
+        public Builder payloadsLocation(@Nullable BlobLocationArgs payloadsLocation) {
             this.payloadsLocation = Input.ofNullable(payloadsLocation);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setRealtimeConfiguration(@Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration) {
+        public Builder realtimeConfiguration(@Nullable Input<RealtimeConfigurationArgs> realtimeConfiguration) {
             this.realtimeConfiguration = realtimeConfiguration;
             return this;
         }
 
-        public Builder setRealtimeConfiguration(@Nullable RealtimeConfigurationArgs realtimeConfiguration) {
+        public Builder realtimeConfiguration(@Nullable RealtimeConfigurationArgs realtimeConfiguration) {
             this.realtimeConfiguration = Input.ofNullable(realtimeConfiguration);
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable Input<StorageAccountArgs> storageAccount) {
+        public Builder storageAccount(@Nullable Input<StorageAccountArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable StorageAccountArgs storageAccount) {
+        public Builder storageAccount(@Nullable StorageAccountArgs storageAccount) {
             this.storageAccount = Input.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

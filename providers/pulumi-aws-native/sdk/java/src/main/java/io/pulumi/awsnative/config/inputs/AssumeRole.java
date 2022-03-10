@@ -173,42 +173,42 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
     	      this.transitiveTagKeys = defaults.transitiveTagKeys;
         }
 
-        public Builder setDurationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicyArns(@Nullable List<String> policyArns) {
+        public Builder policyArns(@Nullable List<String> policyArns) {
             this.policyArns = policyArns;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSessionName(@Nullable String sessionName) {
+        public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = sessionName;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
+        public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }

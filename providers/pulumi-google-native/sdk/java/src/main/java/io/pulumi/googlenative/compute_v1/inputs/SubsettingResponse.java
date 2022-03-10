@@ -51,7 +51,7 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }

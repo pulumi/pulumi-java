@@ -72,12 +72,12 @@ public final class PullMessageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

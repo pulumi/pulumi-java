@@ -65,12 +65,12 @@ public final class AttachedVolume {
     	      this.name = defaults.name;
         }
 
-        public Builder setDevicePath(String devicePath) {
+        public Builder devicePath(String devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

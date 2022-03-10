@@ -121,52 +121,52 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     	      this.timeInWeek = defaults.timeInWeek;
         }
 
-        public Builder setConfigName(@Nullable Input<String> configName) {
+        public Builder configName(@Nullable Input<String> configName) {
             this.configName = configName;
             return this;
         }
 
-        public Builder setConfigName(@Nullable String configName) {
+        public Builder configName(@Nullable String configName) {
             this.configName = Input.ofNullable(configName);
             return this;
         }
 
-        public Builder setNotAllowedTime(@Nullable Input<List<TimeSpanArgs>> notAllowedTime) {
+        public Builder notAllowedTime(@Nullable Input<List<TimeSpanArgs>> notAllowedTime) {
             this.notAllowedTime = notAllowedTime;
             return this;
         }
 
-        public Builder setNotAllowedTime(@Nullable List<TimeSpanArgs> notAllowedTime) {
+        public Builder notAllowedTime(@Nullable List<TimeSpanArgs> notAllowedTime) {
             this.notAllowedTime = Input.ofNullable(notAllowedTime);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setTimeInWeek(@Nullable Input<List<TimeInWeekArgs>> timeInWeek) {
+        public Builder timeInWeek(@Nullable Input<List<TimeInWeekArgs>> timeInWeek) {
             this.timeInWeek = timeInWeek;
             return this;
         }
 
-        public Builder setTimeInWeek(@Nullable List<TimeInWeekArgs> timeInWeek) {
+        public Builder timeInWeek(@Nullable List<TimeInWeekArgs> timeInWeek) {
             this.timeInWeek = Input.ofNullable(timeInWeek);
             return this;
         }

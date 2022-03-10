@@ -53,12 +53,12 @@ public final class MigrateProjectTagsArgs extends io.pulumi.resources.ResourceAr
     	      this.additionalProperties = defaults.additionalProperties;
         }
 
-        public Builder setAdditionalProperties(@Nullable Input<String> additionalProperties) {
+        public Builder additionalProperties(@Nullable Input<String> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
-        public Builder setAdditionalProperties(@Nullable String additionalProperties) {
+        public Builder additionalProperties(@Nullable String additionalProperties) {
             this.additionalProperties = Input.ofNullable(additionalProperties);
             return this;
         }

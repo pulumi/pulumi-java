@@ -186,92 +186,92 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Input<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder setComponents(Input<List<ImageRecipeComponentArgs>> components) {
+        public Builder components(Input<List<ImageRecipeComponentArgs>> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
-        public Builder setComponents(List<ImageRecipeComponentArgs> components) {
+        public Builder components(List<ImageRecipeComponentArgs> components) {
             this.components = Input.of(Objects.requireNonNull(components));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentImage(Input<String> parentImage) {
+        public Builder parentImage(Input<String> parentImage) {
             this.parentImage = Objects.requireNonNull(parentImage);
             return this;
         }
 
-        public Builder setParentImage(String parentImage) {
+        public Builder parentImage(String parentImage) {
             this.parentImage = Input.of(Objects.requireNonNull(parentImage));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserDataBase64(@Nullable Input<String> userDataBase64) {
+        public Builder userDataBase64(@Nullable Input<String> userDataBase64) {
             this.userDataBase64 = userDataBase64;
             return this;
         }
 
-        public Builder setUserDataBase64(@Nullable String userDataBase64) {
+        public Builder userDataBase64(@Nullable String userDataBase64) {
             this.userDataBase64 = Input.ofNullable(userDataBase64);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }

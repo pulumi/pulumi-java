@@ -109,42 +109,42 @@ public final class SqlIpConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder setAuthorizedNetworks(@Nullable Input<List<SqlAclEntryArgs>> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable Input<List<SqlAclEntryArgs>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
-        public Builder setAuthorizedNetworks(@Nullable List<SqlAclEntryArgs> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable List<SqlAclEntryArgs> authorizedNetworks) {
             this.authorizedNetworks = Input.ofNullable(authorizedNetworks);
             return this;
         }
 
-        public Builder setEnableIpv4(@Nullable Input<Boolean> enableIpv4) {
+        public Builder enableIpv4(@Nullable Input<Boolean> enableIpv4) {
             this.enableIpv4 = enableIpv4;
             return this;
         }
 
-        public Builder setEnableIpv4(@Nullable Boolean enableIpv4) {
+        public Builder enableIpv4(@Nullable Boolean enableIpv4) {
             this.enableIpv4 = Input.ofNullable(enableIpv4);
             return this;
         }
 
-        public Builder setPrivateNetwork(@Nullable Input<String> privateNetwork) {
+        public Builder privateNetwork(@Nullable Input<String> privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
 
-        public Builder setPrivateNetwork(@Nullable String privateNetwork) {
+        public Builder privateNetwork(@Nullable String privateNetwork) {
             this.privateNetwork = Input.ofNullable(privateNetwork);
             return this;
         }
 
-        public Builder setRequireSsl(@Nullable Input<Boolean> requireSsl) {
+        public Builder requireSsl(@Nullable Input<Boolean> requireSsl) {
             this.requireSsl = requireSsl;
             return this;
         }
 
-        public Builder setRequireSsl(@Nullable Boolean requireSsl) {
+        public Builder requireSsl(@Nullable Boolean requireSsl) {
             this.requireSsl = Input.ofNullable(requireSsl);
             return this;
         }

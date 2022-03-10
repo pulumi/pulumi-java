@@ -76,22 +76,22 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
     	      this.matches = defaults.matches;
         }
 
-        public Builder setMatchQuantifier(@Nullable Input<RestMatchQuantifier> matchQuantifier) {
+        public Builder matchQuantifier(@Nullable Input<RestMatchQuantifier> matchQuantifier) {
             this.matchQuantifier = matchQuantifier;
             return this;
         }
 
-        public Builder setMatchQuantifier(@Nullable RestMatchQuantifier matchQuantifier) {
+        public Builder matchQuantifier(@Nullable RestMatchQuantifier matchQuantifier) {
             this.matchQuantifier = Input.ofNullable(matchQuantifier);
             return this;
         }
 
-        public Builder setMatches(@Nullable Input<List<String>> matches) {
+        public Builder matches(@Nullable Input<List<String>> matches) {
             this.matches = matches;
             return this;
         }
 
-        public Builder setMatches(@Nullable List<String> matches) {
+        public Builder matches(@Nullable List<String> matches) {
             this.matches = Input.ofNullable(matches);
             return this;
         }

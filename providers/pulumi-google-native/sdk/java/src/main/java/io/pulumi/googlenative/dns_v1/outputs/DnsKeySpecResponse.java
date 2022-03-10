@@ -90,22 +90,22 @@ public final class DnsKeySpecResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setKeyLength(Integer keyLength) {
+        public Builder keyLength(Integer keyLength) {
             this.keyLength = Objects.requireNonNull(keyLength);
             return this;
         }
 
-        public Builder setKeyType(String keyType) {
+        public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

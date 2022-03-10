@@ -93,37 +93,37 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
     	      this.privateLinkServiceName = defaults.privateLinkServiceName;
         }
 
-        public Builder setApplicationHostUrl(@Nullable String applicationHostUrl) {
+        public Builder applicationHostUrl(@Nullable String applicationHostUrl) {
             this.applicationHostUrl = applicationHostUrl;
             return this;
         }
 
-        public Builder setApplicationServicePath(@Nullable String applicationServicePath) {
+        public Builder applicationServicePath(@Nullable String applicationServicePath) {
             this.applicationServicePath = applicationServicePath;
             return this;
         }
 
-        public Builder setClientNumber(@Nullable String clientNumber) {
+        public Builder clientNumber(@Nullable String clientNumber) {
             this.clientNumber = clientNumber;
             return this;
         }
 
-        public Builder setLogonLanguage(@Nullable String logonLanguage) {
+        public Builder logonLanguage(@Nullable String logonLanguage) {
             this.logonLanguage = logonLanguage;
             return this;
         }
 
-        public Builder setOAuthProperties(@Nullable ConnectorProfileOAuthProperties oAuthProperties) {
+        public Builder oAuthProperties(@Nullable ConnectorProfileOAuthProperties oAuthProperties) {
             this.oAuthProperties = oAuthProperties;
             return this;
         }
 
-        public Builder setPortNumber(@Nullable Integer portNumber) {
+        public Builder portNumber(@Nullable Integer portNumber) {
             this.portNumber = portNumber;
             return this;
         }
 
-        public Builder setPrivateLinkServiceName(@Nullable String privateLinkServiceName) {
+        public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }

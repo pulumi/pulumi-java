@@ -100,42 +100,42 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setIdentifier(Input<String> identifier) {
+        public Builder identifier(Input<String> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setIdentifier(String identifier) {
+        public Builder identifier(String identifier) {
             this.identifier = Input.of(Objects.requireNonNull(identifier));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<ResourceServerScopeArgs>> scopes) {
+        public Builder scopes(@Nullable Input<List<ResourceServerScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<ResourceServerScopeArgs> scopes) {
+        public Builder scopes(@Nullable List<ResourceServerScopeArgs> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
 
-        public Builder setUserPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Input<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
             return this;
         }

@@ -155,62 +155,62 @@ public final class AlertPolicyConditionArgs extends io.pulumi.resources.Resource
     	      this.name = defaults.name;
         }
 
-        public Builder setConditionAbsent(@Nullable Input<AlertPolicyConditionConditionAbsentArgs> conditionAbsent) {
+        public Builder conditionAbsent(@Nullable Input<AlertPolicyConditionConditionAbsentArgs> conditionAbsent) {
             this.conditionAbsent = conditionAbsent;
             return this;
         }
 
-        public Builder setConditionAbsent(@Nullable AlertPolicyConditionConditionAbsentArgs conditionAbsent) {
+        public Builder conditionAbsent(@Nullable AlertPolicyConditionConditionAbsentArgs conditionAbsent) {
             this.conditionAbsent = Input.ofNullable(conditionAbsent);
             return this;
         }
 
-        public Builder setConditionMatchedLog(@Nullable Input<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog) {
+        public Builder conditionMatchedLog(@Nullable Input<AlertPolicyConditionConditionMatchedLogArgs> conditionMatchedLog) {
             this.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
 
-        public Builder setConditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLogArgs conditionMatchedLog) {
+        public Builder conditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLogArgs conditionMatchedLog) {
             this.conditionMatchedLog = Input.ofNullable(conditionMatchedLog);
             return this;
         }
 
-        public Builder setConditionMonitoringQueryLanguage(@Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage) {
+        public Builder conditionMonitoringQueryLanguage(@Nullable Input<AlertPolicyConditionConditionMonitoringQueryLanguageArgs> conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
 
-        public Builder setConditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageArgs conditionMonitoringQueryLanguage) {
+        public Builder conditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageArgs conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = Input.ofNullable(conditionMonitoringQueryLanguage);
             return this;
         }
 
-        public Builder setConditionThreshold(@Nullable Input<AlertPolicyConditionConditionThresholdArgs> conditionThreshold) {
+        public Builder conditionThreshold(@Nullable Input<AlertPolicyConditionConditionThresholdArgs> conditionThreshold) {
             this.conditionThreshold = conditionThreshold;
             return this;
         }
 
-        public Builder setConditionThreshold(@Nullable AlertPolicyConditionConditionThresholdArgs conditionThreshold) {
+        public Builder conditionThreshold(@Nullable AlertPolicyConditionConditionThresholdArgs conditionThreshold) {
             this.conditionThreshold = Input.ofNullable(conditionThreshold);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -53,12 +53,12 @@ public final class BotGrammarSlotTypeSettingArgs extends io.pulumi.resources.Res
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(@Nullable Input<BotGrammarSlotTypeSourceArgs> source) {
+        public Builder source(@Nullable Input<BotGrammarSlotTypeSourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable BotGrammarSlotTypeSourceArgs source) {
+        public Builder source(@Nullable BotGrammarSlotTypeSourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }

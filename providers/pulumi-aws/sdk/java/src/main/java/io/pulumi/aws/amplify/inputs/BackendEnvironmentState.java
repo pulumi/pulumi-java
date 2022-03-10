@@ -118,52 +118,52 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDeploymentArtifacts(@Nullable Input<String> deploymentArtifacts) {
+        public Builder deploymentArtifacts(@Nullable Input<String> deploymentArtifacts) {
             this.deploymentArtifacts = deploymentArtifacts;
             return this;
         }
 
-        public Builder setDeploymentArtifacts(@Nullable String deploymentArtifacts) {
+        public Builder deploymentArtifacts(@Nullable String deploymentArtifacts) {
             this.deploymentArtifacts = Input.ofNullable(deploymentArtifacts);
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable Input<String> environmentName) {
+        public Builder environmentName(@Nullable Input<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable String environmentName) {
+        public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Input.ofNullable(environmentName);
             return this;
         }
 
-        public Builder setStackName(@Nullable Input<String> stackName) {
+        public Builder stackName(@Nullable Input<String> stackName) {
             this.stackName = stackName;
             return this;
         }
 
-        public Builder setStackName(@Nullable String stackName) {
+        public Builder stackName(@Nullable String stackName) {
             this.stackName = Input.ofNullable(stackName);
             return this;
         }

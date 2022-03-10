@@ -213,57 +213,57 @@ public final class GetFavoriteResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = config;
             return this;
         }
 
-        public Builder setFavoriteId(String favoriteId) {
+        public Builder favoriteId(String favoriteId) {
             this.favoriteId = Objects.requireNonNull(favoriteId);
             return this;
         }
 
-        public Builder setFavoriteType(@Nullable String favoriteType) {
+        public Builder favoriteType(@Nullable String favoriteType) {
             this.favoriteType = favoriteType;
             return this;
         }
 
-        public Builder setIsGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
+        public Builder isGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
             this.isGeneratedFromTemplate = isGeneratedFromTemplate;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeModified(String timeModified) {
+        public Builder timeModified(String timeModified) {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

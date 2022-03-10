@@ -166,82 +166,82 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setCss(@Nullable Input<String> css) {
+        public Builder css(@Nullable Input<String> css) {
             this.css = css;
             return this;
         }
 
-        public Builder setCss(@Nullable String css) {
+        public Builder css(@Nullable String css) {
             this.css = Input.ofNullable(css);
             return this;
         }
 
-        public Builder setCssVersion(@Nullable Input<String> cssVersion) {
+        public Builder cssVersion(@Nullable Input<String> cssVersion) {
             this.cssVersion = cssVersion;
             return this;
         }
 
-        public Builder setCssVersion(@Nullable String cssVersion) {
+        public Builder cssVersion(@Nullable String cssVersion) {
             this.cssVersion = Input.ofNullable(cssVersion);
             return this;
         }
 
-        public Builder setImageFile(@Nullable Input<String> imageFile) {
+        public Builder imageFile(@Nullable Input<String> imageFile) {
             this.imageFile = imageFile;
             return this;
         }
 
-        public Builder setImageFile(@Nullable String imageFile) {
+        public Builder imageFile(@Nullable String imageFile) {
             this.imageFile = Input.ofNullable(imageFile);
             return this;
         }
 
-        public Builder setImageUrl(@Nullable Input<String> imageUrl) {
+        public Builder imageUrl(@Nullable Input<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-        public Builder setImageUrl(@Nullable String imageUrl) {
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = Input.ofNullable(imageUrl);
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable Input<String> lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Input<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable String lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = Input.ofNullable(lastModifiedDate);
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Input<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable String userPoolId) {
+        public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Input.ofNullable(userPoolId);
             return this;
         }

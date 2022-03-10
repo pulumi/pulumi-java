@@ -52,12 +52,12 @@ public final class LaunchTemplateHibernationOptionsArgs extends io.pulumi.resour
     	      this.configured = defaults.configured;
         }
 
-        public Builder setConfigured(Input<Boolean> configured) {
+        public Builder configured(Input<Boolean> configured) {
             this.configured = Objects.requireNonNull(configured);
             return this;
         }
 
-        public Builder setConfigured(Boolean configured) {
+        public Builder configured(Boolean configured) {
             this.configured = Input.of(Objects.requireNonNull(configured));
             return this;
         }

@@ -128,62 +128,62 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBaseImage(@Nullable Input<String> baseImage) {
+        public Builder baseImage(@Nullable Input<String> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
 
-        public Builder setBaseImage(@Nullable String baseImage) {
+        public Builder baseImage(@Nullable String baseImage) {
             this.baseImage = Input.ofNullable(baseImage);
             return this;
         }
 
-        public Builder setContainerImage(@Nullable Input<String> containerImage) {
+        public Builder containerImage(@Nullable Input<String> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
-        public Builder setContainerImage(@Nullable String containerImage) {
+        public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = Input.ofNullable(containerImage);
             return this;
         }
 
-        public Builder setImageArn(@Nullable Input<String> imageArn) {
+        public Builder imageArn(@Nullable Input<String> imageArn) {
             this.imageArn = imageArn;
             return this;
         }
 
-        public Builder setImageArn(@Nullable String imageArn) {
+        public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = Input.ofNullable(imageArn);
             return this;
         }
 
-        public Builder setImageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Input<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = Input.ofNullable(imageName);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

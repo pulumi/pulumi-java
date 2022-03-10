@@ -205,102 +205,102 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.users = defaults.users;
         }
 
-        public Builder setAdmins(@Nullable Input<List<PrincipalsArgs>> admins) {
+        public Builder admins(@Nullable Input<List<PrincipalsArgs>> admins) {
             this.admins = admins;
             return this;
         }
 
-        public Builder setAdmins(@Nullable List<PrincipalsArgs> admins) {
+        public Builder admins(@Nullable List<PrincipalsArgs> admins) {
             this.admins = Input.ofNullable(admins);
             return this;
         }
 
-        public Builder setCatalogName(@Nullable Input<String> catalogName) {
+        public Builder catalogName(@Nullable Input<String> catalogName) {
             this.catalogName = catalogName;
             return this;
         }
 
-        public Builder setCatalogName(@Nullable String catalogName) {
+        public Builder catalogName(@Nullable String catalogName) {
             this.catalogName = Input.ofNullable(catalogName);
             return this;
         }
 
-        public Builder setEnableAutomaticUnitAdjustment(@Nullable Input<Boolean> enableAutomaticUnitAdjustment) {
+        public Builder enableAutomaticUnitAdjustment(@Nullable Input<Boolean> enableAutomaticUnitAdjustment) {
             this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
             return this;
         }
 
-        public Builder setEnableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
+        public Builder enableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
             this.enableAutomaticUnitAdjustment = Input.ofNullable(enableAutomaticUnitAdjustment);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<Either<String,SkuType>> sku) {
+        public Builder sku(@Nullable Input<Either<String,SkuType>> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable Either<String,SkuType> sku) {
+        public Builder sku(@Nullable Either<String,SkuType> sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSuccessfullyProvisioned(@Nullable Input<Boolean> successfullyProvisioned) {
+        public Builder successfullyProvisioned(@Nullable Input<Boolean> successfullyProvisioned) {
             this.successfullyProvisioned = successfullyProvisioned;
             return this;
         }
 
-        public Builder setSuccessfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
+        public Builder successfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
             this.successfullyProvisioned = Input.ofNullable(successfullyProvisioned);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUnits(@Nullable Input<Integer> units) {
+        public Builder units(@Nullable Input<Integer> units) {
             this.units = units;
             return this;
         }
 
-        public Builder setUnits(@Nullable Integer units) {
+        public Builder units(@Nullable Integer units) {
             this.units = Input.ofNullable(units);
             return this;
         }
 
-        public Builder setUsers(@Nullable Input<List<PrincipalsArgs>> users) {
+        public Builder users(@Nullable Input<List<PrincipalsArgs>> users) {
             this.users = users;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<PrincipalsArgs> users) {
+        public Builder users(@Nullable List<PrincipalsArgs> users) {
             this.users = Input.ofNullable(users);
             return this;
         }

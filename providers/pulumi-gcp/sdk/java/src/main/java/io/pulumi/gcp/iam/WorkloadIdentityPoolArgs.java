@@ -124,52 +124,52 @@ public final class WorkloadIdentityPoolArgs extends io.pulumi.resources.Resource
     	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolId(Input<String> workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(Input<String> workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolId(String workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Input.of(Objects.requireNonNull(workloadIdentityPoolId));
             return this;
         }

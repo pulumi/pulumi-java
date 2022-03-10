@@ -108,42 +108,42 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
     	      this.ntpServer = defaults.ntpServer;
         }
 
-        public Builder setDnsSearchDomain(@Nullable Input<String> dnsSearchDomain) {
+        public Builder dnsSearchDomain(@Nullable Input<String> dnsSearchDomain) {
             this.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
 
-        public Builder setDnsSearchDomain(@Nullable String dnsSearchDomain) {
+        public Builder dnsSearchDomain(@Nullable String dnsSearchDomain) {
             this.dnsSearchDomain = Input.ofNullable(dnsSearchDomain);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setMtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Input<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Input.ofNullable(mtu);
             return this;
         }
 
-        public Builder setNtpServer(@Nullable Input<String> ntpServer) {
+        public Builder ntpServer(@Nullable Input<String> ntpServer) {
             this.ntpServer = ntpServer;
             return this;
         }
 
-        public Builder setNtpServer(@Nullable String ntpServer) {
+        public Builder ntpServer(@Nullable String ntpServer) {
             this.ntpServer = Input.ofNullable(ntpServer);
             return this;
         }

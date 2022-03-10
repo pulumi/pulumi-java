@@ -196,52 +196,52 @@ public final class ProjectSecondaryArtifact {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactIdentifier(String artifactIdentifier) {
+        public Builder artifactIdentifier(String artifactIdentifier) {
             this.artifactIdentifier = Objects.requireNonNull(artifactIdentifier);
             return this;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable String bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespaceType(@Nullable String namespaceType) {
+        public Builder namespaceType(@Nullable String namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
 
-        public Builder setOverrideArtifactName(@Nullable Boolean overrideArtifactName) {
+        public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
             this.overrideArtifactName = overrideArtifactName;
             return this;
         }
 
-        public Builder setPackaging(@Nullable String packaging) {
+        public Builder packaging(@Nullable String packaging) {
             this.packaging = packaging;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

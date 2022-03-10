@@ -49,7 +49,7 @@ public final class LocationNFSOnPremConfig {
     	      this.agentArns = defaults.agentArns;
         }
 
-        public Builder setAgentArns(List<String> agentArns) {
+        public Builder agentArns(List<String> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }

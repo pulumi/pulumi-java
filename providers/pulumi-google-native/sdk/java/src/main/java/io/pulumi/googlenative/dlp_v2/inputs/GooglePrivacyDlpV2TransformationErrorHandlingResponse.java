@@ -73,12 +73,12 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse extends
     	      this.throwError = defaults.throwError;
         }
 
-        public Builder setLeaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed) {
+        public Builder leaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed) {
             this.leaveUntransformed = Objects.requireNonNull(leaveUntransformed);
             return this;
         }
 
-        public Builder setThrowError(GooglePrivacyDlpV2ThrowErrorResponse throwError) {
+        public Builder throwError(GooglePrivacyDlpV2ThrowErrorResponse throwError) {
             this.throwError = Objects.requireNonNull(throwError);
             return this;
         }

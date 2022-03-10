@@ -316,87 +316,87 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     	      this.workerZone = defaults.workerZone;
         }
 
-        public Builder setClusterManagerApiService(String clusterManagerApiService) {
+        public Builder clusterManagerApiService(String clusterManagerApiService) {
             this.clusterManagerApiService = Objects.requireNonNull(clusterManagerApiService);
             return this;
         }
 
-        public Builder setDataset(String dataset) {
+        public Builder dataset(String dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDebugOptions(DebugOptionsResponse debugOptions) {
+        public Builder debugOptions(DebugOptionsResponse debugOptions) {
             this.debugOptions = Objects.requireNonNull(debugOptions);
             return this;
         }
 
-        public Builder setExperiments(List<String> experiments) {
+        public Builder experiments(List<String> experiments) {
             this.experiments = Objects.requireNonNull(experiments);
             return this;
         }
 
-        public Builder setFlexResourceSchedulingGoal(String flexResourceSchedulingGoal) {
+        public Builder flexResourceSchedulingGoal(String flexResourceSchedulingGoal) {
             this.flexResourceSchedulingGoal = Objects.requireNonNull(flexResourceSchedulingGoal);
             return this;
         }
 
-        public Builder setInternalExperiments(Map<String,String> internalExperiments) {
+        public Builder internalExperiments(Map<String,String> internalExperiments) {
             this.internalExperiments = Objects.requireNonNull(internalExperiments);
             return this;
         }
 
-        public Builder setSdkPipelineOptions(Map<String,String> sdkPipelineOptions) {
+        public Builder sdkPipelineOptions(Map<String,String> sdkPipelineOptions) {
             this.sdkPipelineOptions = Objects.requireNonNull(sdkPipelineOptions);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setServiceKmsKeyName(String serviceKmsKeyName) {
+        public Builder serviceKmsKeyName(String serviceKmsKeyName) {
             this.serviceKmsKeyName = Objects.requireNonNull(serviceKmsKeyName);
             return this;
         }
 
-        public Builder setServiceOptions(List<String> serviceOptions) {
+        public Builder serviceOptions(List<String> serviceOptions) {
             this.serviceOptions = Objects.requireNonNull(serviceOptions);
             return this;
         }
 
-        public Builder setShuffleMode(String shuffleMode) {
+        public Builder shuffleMode(String shuffleMode) {
             this.shuffleMode = Objects.requireNonNull(shuffleMode);
             return this;
         }
 
-        public Builder setTempStoragePrefix(String tempStoragePrefix) {
+        public Builder tempStoragePrefix(String tempStoragePrefix) {
             this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
             return this;
         }
 
-        public Builder setUserAgent(Map<String,String> userAgent) {
+        public Builder userAgent(Map<String,String> userAgent) {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
         }
 
-        public Builder setVersion(Map<String,String> version) {
+        public Builder version(Map<String,String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setWorkerPools(List<WorkerPoolResponse> workerPools) {
+        public Builder workerPools(List<WorkerPoolResponse> workerPools) {
             this.workerPools = Objects.requireNonNull(workerPools);
             return this;
         }
 
-        public Builder setWorkerRegion(String workerRegion) {
+        public Builder workerRegion(String workerRegion) {
             this.workerRegion = Objects.requireNonNull(workerRegion);
             return this;
         }
 
-        public Builder setWorkerZone(String workerZone) {
+        public Builder workerZone(String workerZone) {
             this.workerZone = Objects.requireNonNull(workerZone);
             return this;
         }

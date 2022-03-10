@@ -48,7 +48,7 @@ public final class UniformShardingResponse {
     	      this.numShards = defaults.numShards;
         }
 
-        public Builder setNumShards(Integer numShards) {
+        public Builder numShards(Integer numShards) {
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }

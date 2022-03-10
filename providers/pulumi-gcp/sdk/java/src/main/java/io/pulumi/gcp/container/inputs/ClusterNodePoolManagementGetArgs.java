@@ -62,22 +62,22 @@ public final class ClusterNodePoolManagementGetArgs extends io.pulumi.resources.
     	      this.autoUpgrade = defaults.autoUpgrade;
         }
 
-        public Builder setAutoRepair(@Nullable Input<Boolean> autoRepair) {
+        public Builder autoRepair(@Nullable Input<Boolean> autoRepair) {
             this.autoRepair = autoRepair;
             return this;
         }
 
-        public Builder setAutoRepair(@Nullable Boolean autoRepair) {
+        public Builder autoRepair(@Nullable Boolean autoRepair) {
             this.autoRepair = Input.ofNullable(autoRepair);
             return this;
         }
 
-        public Builder setAutoUpgrade(@Nullable Input<Boolean> autoUpgrade) {
+        public Builder autoUpgrade(@Nullable Input<Boolean> autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
 
-        public Builder setAutoUpgrade(@Nullable Boolean autoUpgrade) {
+        public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
             this.autoUpgrade = Input.ofNullable(autoUpgrade);
             return this;
         }

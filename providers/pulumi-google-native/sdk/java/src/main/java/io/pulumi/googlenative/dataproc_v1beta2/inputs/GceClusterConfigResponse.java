@@ -238,62 +238,62 @@ public final class GceClusterConfigResponse extends io.pulumi.resources.InvokeAr
     	      this.zoneUri = defaults.zoneUri;
         }
 
-        public Builder setInternalIpOnly(Boolean internalIpOnly) {
+        public Builder internalIpOnly(Boolean internalIpOnly) {
             this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setNodeGroupAffinity(NodeGroupAffinityResponse nodeGroupAffinity) {
+        public Builder nodeGroupAffinity(NodeGroupAffinityResponse nodeGroupAffinity) {
             this.nodeGroupAffinity = Objects.requireNonNull(nodeGroupAffinity);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setReservationAffinity(ReservationAffinityResponse reservationAffinity) {
+        public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setServiceAccountScopes(List<String> serviceAccountScopes) {
+        public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
             this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setSubnetworkUri(String subnetworkUri) {
+        public Builder subnetworkUri(String subnetworkUri) {
             this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setZoneUri(String zoneUri) {
+        public Builder zoneUri(String zoneUri) {
             this.zoneUri = Objects.requireNonNull(zoneUri);
             return this;
         }

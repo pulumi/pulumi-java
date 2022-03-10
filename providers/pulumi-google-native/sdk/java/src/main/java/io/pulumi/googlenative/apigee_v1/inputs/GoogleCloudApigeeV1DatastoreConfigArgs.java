@@ -122,52 +122,52 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setDatasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Input<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Input.ofNullable(datasetName);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable Input<String> tablePrefix) {
+        public Builder tablePrefix(@Nullable Input<String> tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable String tablePrefix) {
+        public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = Input.ofNullable(tablePrefix);
             return this;
         }

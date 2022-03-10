@@ -62,12 +62,12 @@ public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAgentPoolId(String agentPoolId) {
+        public Builder agentPoolId(String agentPoolId) {
             this.agentPoolId = Objects.requireNonNull(agentPoolId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

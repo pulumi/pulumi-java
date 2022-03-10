@@ -75,12 +75,12 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
     	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
         }
 
-        public Builder setPrivateEndpoint(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
+        public Builder privateEndpoint(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }

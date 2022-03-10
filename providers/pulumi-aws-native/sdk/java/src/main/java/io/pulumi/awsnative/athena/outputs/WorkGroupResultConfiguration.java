@@ -52,12 +52,12 @@ public final class WorkGroupResultConfiguration {
     	      this.outputLocation = defaults.outputLocation;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }

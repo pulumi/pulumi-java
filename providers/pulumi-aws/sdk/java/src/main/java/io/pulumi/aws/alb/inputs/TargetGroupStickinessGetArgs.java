@@ -104,42 +104,42 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setCookieDuration(@Nullable Input<Integer> cookieDuration) {
+        public Builder cookieDuration(@Nullable Input<Integer> cookieDuration) {
             this.cookieDuration = cookieDuration;
             return this;
         }
 
-        public Builder setCookieDuration(@Nullable Integer cookieDuration) {
+        public Builder cookieDuration(@Nullable Integer cookieDuration) {
             this.cookieDuration = Input.ofNullable(cookieDuration);
             return this;
         }
 
-        public Builder setCookieName(@Nullable Input<String> cookieName) {
+        public Builder cookieName(@Nullable Input<String> cookieName) {
             this.cookieName = cookieName;
             return this;
         }
 
-        public Builder setCookieName(@Nullable String cookieName) {
+        public Builder cookieName(@Nullable String cookieName) {
             this.cookieName = Input.ofNullable(cookieName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

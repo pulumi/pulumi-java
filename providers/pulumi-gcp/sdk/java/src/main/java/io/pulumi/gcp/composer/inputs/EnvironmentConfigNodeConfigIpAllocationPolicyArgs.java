@@ -99,52 +99,52 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicyArgs extends io.
     	      this.useIpAliases = defaults.useIpAliases;
         }
 
-        public Builder setClusterIpv4CidrBlock(@Nullable Input<String> clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(@Nullable Input<String> clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setClusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Input.ofNullable(clusterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(@Nullable Input<String> clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(@Nullable Input<String> clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Input.ofNullable(clusterSecondaryRangeName);
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(@Nullable Input<String> servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(@Nullable Input<String> servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Input.ofNullable(servicesIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(@Nullable Input<String> servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(@Nullable Input<String> servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Input.ofNullable(servicesSecondaryRangeName);
             return this;
         }
 
-        public Builder setUseIpAliases(@Nullable Input<Boolean> useIpAliases) {
+        public Builder useIpAliases(@Nullable Input<Boolean> useIpAliases) {
             this.useIpAliases = useIpAliases;
             return this;
         }
 
-        public Builder setUseIpAliases(@Nullable Boolean useIpAliases) {
+        public Builder useIpAliases(@Nullable Boolean useIpAliases) {
             this.useIpAliases = Input.ofNullable(useIpAliases);
             return this;
         }

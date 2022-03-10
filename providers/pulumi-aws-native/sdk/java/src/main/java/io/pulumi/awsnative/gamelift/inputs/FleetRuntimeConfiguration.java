@@ -96,17 +96,17 @@ public final class FleetRuntimeConfiguration extends io.pulumi.resources.InvokeA
     	      this.serverProcesses = defaults.serverProcesses;
         }
 
-        public Builder setGameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
+        public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
             this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
 
-        public Builder setMaxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
+        public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
             this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
 
-        public Builder setServerProcesses(@Nullable List<FleetServerProcess> serverProcesses) {
+        public Builder serverProcesses(@Nullable List<FleetServerProcess> serverProcesses) {
             this.serverProcesses = serverProcesses;
             return this;
         }

@@ -118,27 +118,27 @@ public final class CustomRuleResponse {
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setMatchConditions(List<MatchConditionResponse> matchConditions) {
+        public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }

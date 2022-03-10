@@ -84,17 +84,17 @@ public final class GetConfigurationArgs extends io.pulumi.resources.InvokeArgs {
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }

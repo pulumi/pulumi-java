@@ -88,32 +88,32 @@ public final class EventTargetHttpTargetArgs extends io.pulumi.resources.Resourc
     	      this.queryStringParameters = defaults.queryStringParameters;
         }
 
-        public Builder setHeaderParameters(@Nullable Input<Map<String,String>> headerParameters) {
+        public Builder headerParameters(@Nullable Input<Map<String,String>> headerParameters) {
             this.headerParameters = headerParameters;
             return this;
         }
 
-        public Builder setHeaderParameters(@Nullable Map<String,String> headerParameters) {
+        public Builder headerParameters(@Nullable Map<String,String> headerParameters) {
             this.headerParameters = Input.ofNullable(headerParameters);
             return this;
         }
 
-        public Builder setPathParameterValues(@Nullable Input<List<String>> pathParameterValues) {
+        public Builder pathParameterValues(@Nullable Input<List<String>> pathParameterValues) {
             this.pathParameterValues = pathParameterValues;
             return this;
         }
 
-        public Builder setPathParameterValues(@Nullable List<String> pathParameterValues) {
+        public Builder pathParameterValues(@Nullable List<String> pathParameterValues) {
             this.pathParameterValues = Input.ofNullable(pathParameterValues);
             return this;
         }
 
-        public Builder setQueryStringParameters(@Nullable Input<Map<String,String>> queryStringParameters) {
+        public Builder queryStringParameters(@Nullable Input<Map<String,String>> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
         }
 
-        public Builder setQueryStringParameters(@Nullable Map<String,String> queryStringParameters) {
+        public Builder queryStringParameters(@Nullable Map<String,String> queryStringParameters) {
             this.queryStringParameters = Input.ofNullable(queryStringParameters);
             return this;
         }

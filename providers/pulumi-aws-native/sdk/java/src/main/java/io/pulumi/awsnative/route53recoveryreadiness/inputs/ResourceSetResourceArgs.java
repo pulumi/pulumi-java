@@ -104,42 +104,42 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setComponentId(@Nullable Input<String> componentId) {
+        public Builder componentId(@Nullable Input<String> componentId) {
             this.componentId = componentId;
             return this;
         }
 
-        public Builder setComponentId(@Nullable String componentId) {
+        public Builder componentId(@Nullable String componentId) {
             this.componentId = Input.ofNullable(componentId);
             return this;
         }
 
-        public Builder setDnsTargetResource(@Nullable Input<ResourceSetDNSTargetResourceArgs> dnsTargetResource) {
+        public Builder dnsTargetResource(@Nullable Input<ResourceSetDNSTargetResourceArgs> dnsTargetResource) {
             this.dnsTargetResource = dnsTargetResource;
             return this;
         }
 
-        public Builder setDnsTargetResource(@Nullable ResourceSetDNSTargetResourceArgs dnsTargetResource) {
+        public Builder dnsTargetResource(@Nullable ResourceSetDNSTargetResourceArgs dnsTargetResource) {
             this.dnsTargetResource = Input.ofNullable(dnsTargetResource);
             return this;
         }
 
-        public Builder setReadinessScopes(@Nullable Input<List<String>> readinessScopes) {
+        public Builder readinessScopes(@Nullable Input<List<String>> readinessScopes) {
             this.readinessScopes = readinessScopes;
             return this;
         }
 
-        public Builder setReadinessScopes(@Nullable List<String> readinessScopes) {
+        public Builder readinessScopes(@Nullable List<String> readinessScopes) {
             this.readinessScopes = Input.ofNullable(readinessScopes);
             return this;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }

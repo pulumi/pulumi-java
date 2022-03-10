@@ -68,12 +68,12 @@ public final class KeyVaultPropertiesResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKey(@Nullable KeyPropertiesResponse key) {
+        public Builder key(@Nullable KeyPropertiesResponse key) {
             this.key = key;
             return this;
         }

@@ -212,57 +212,57 @@ public final class GetEndpointPolicyResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAuthorizationPolicy(String authorizationPolicy) {
+        public Builder authorizationPolicy(String authorizationPolicy) {
             this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
             return this;
         }
 
-        public Builder setClientTlsPolicy(String clientTlsPolicy) {
+        public Builder clientTlsPolicy(String clientTlsPolicy) {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndpointMatcher(EndpointMatcherResponse endpointMatcher) {
+        public Builder endpointMatcher(EndpointMatcherResponse endpointMatcher) {
             this.endpointMatcher = Objects.requireNonNull(endpointMatcher);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServerTlsPolicy(String serverTlsPolicy) {
+        public Builder serverTlsPolicy(String serverTlsPolicy) {
             this.serverTlsPolicy = Objects.requireNonNull(serverTlsPolicy);
             return this;
         }
 
-        public Builder setTrafficPortSelector(TrafficPortSelectorResponse trafficPortSelector) {
+        public Builder trafficPortSelector(TrafficPortSelectorResponse trafficPortSelector) {
             this.trafficPortSelector = Objects.requireNonNull(trafficPortSelector);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

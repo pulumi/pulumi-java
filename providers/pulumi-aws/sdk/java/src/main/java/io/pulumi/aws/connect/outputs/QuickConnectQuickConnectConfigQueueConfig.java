@@ -65,12 +65,12 @@ public final class QuickConnectQuickConnectConfigQueueConfig {
     	      this.queueId = defaults.queueId;
         }
 
-        public Builder setContactFlowId(String contactFlowId) {
+        public Builder contactFlowId(String contactFlowId) {
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
 
-        public Builder setQueueId(String queueId) {
+        public Builder queueId(String queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }

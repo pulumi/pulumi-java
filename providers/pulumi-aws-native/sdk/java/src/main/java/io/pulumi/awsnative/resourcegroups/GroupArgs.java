@@ -122,62 +122,62 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConfiguration(@Nullable Input<List<GroupConfigurationItemArgs>> configuration) {
+        public Builder configuration(@Nullable Input<List<GroupConfigurationItemArgs>> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable List<GroupConfigurationItemArgs> configuration) {
+        public Builder configuration(@Nullable List<GroupConfigurationItemArgs> configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceQuery(@Nullable Input<GroupResourceQueryArgs> resourceQuery) {
+        public Builder resourceQuery(@Nullable Input<GroupResourceQueryArgs> resourceQuery) {
             this.resourceQuery = resourceQuery;
             return this;
         }
 
-        public Builder setResourceQuery(@Nullable GroupResourceQueryArgs resourceQuery) {
+        public Builder resourceQuery(@Nullable GroupResourceQueryArgs resourceQuery) {
             this.resourceQuery = Input.ofNullable(resourceQuery);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<GroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<GroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GroupTagArgs> tags) {
+        public Builder tags(@Nullable List<GroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

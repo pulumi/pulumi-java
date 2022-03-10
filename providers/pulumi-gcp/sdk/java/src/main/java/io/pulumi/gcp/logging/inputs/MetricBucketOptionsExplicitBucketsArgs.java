@@ -53,12 +53,12 @@ public final class MetricBucketOptionsExplicitBucketsArgs extends io.pulumi.reso
     	      this.bounds = defaults.bounds;
         }
 
-        public Builder setBounds(Input<List<Double>> bounds) {
+        public Builder bounds(Input<List<Double>> bounds) {
             this.bounds = Objects.requireNonNull(bounds);
             return this;
         }
 
-        public Builder setBounds(List<Double> bounds) {
+        public Builder bounds(List<Double> bounds) {
             this.bounds = Input.of(Objects.requireNonNull(bounds));
             return this;
         }

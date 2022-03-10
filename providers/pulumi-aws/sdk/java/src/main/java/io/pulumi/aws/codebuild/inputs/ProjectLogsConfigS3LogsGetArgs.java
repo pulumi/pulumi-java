@@ -103,42 +103,42 @@ public final class ProjectLogsConfigS3LogsGetArgs extends io.pulumi.resources.Re
     	      this.status = defaults.status;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable Input<String> bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable Input<String> bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable String bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = Input.ofNullable(bucketOwnerAccess);
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = Input.ofNullable(encryptionDisabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

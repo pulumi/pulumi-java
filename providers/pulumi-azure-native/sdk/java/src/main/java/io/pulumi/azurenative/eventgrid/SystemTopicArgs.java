@@ -152,72 +152,72 @@ public final class SystemTopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicType = defaults.topicType;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityInfoArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityInfoArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityInfoArgs identity) {
+        public Builder identity(@Nullable IdentityInfoArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setSystemTopicName(@Nullable Input<String> systemTopicName) {
+        public Builder systemTopicName(@Nullable Input<String> systemTopicName) {
             this.systemTopicName = systemTopicName;
             return this;
         }
 
-        public Builder setSystemTopicName(@Nullable String systemTopicName) {
+        public Builder systemTopicName(@Nullable String systemTopicName) {
             this.systemTopicName = Input.ofNullable(systemTopicName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTopicType(@Nullable Input<String> topicType) {
+        public Builder topicType(@Nullable Input<String> topicType) {
             this.topicType = topicType;
             return this;
         }
 
-        public Builder setTopicType(@Nullable String topicType) {
+        public Builder topicType(@Nullable String topicType) {
             this.topicType = Input.ofNullable(topicType);
             return this;
         }

@@ -178,82 +178,82 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInputPorts(@Nullable Input<Map<String,InputPortArgs>> inputPorts) {
+        public Builder inputPorts(@Nullable Input<Map<String,InputPortArgs>> inputPorts) {
             this.inputPorts = inputPorts;
             return this;
         }
 
-        public Builder setInputPorts(@Nullable Map<String,InputPortArgs> inputPorts) {
+        public Builder inputPorts(@Nullable Map<String,InputPortArgs> inputPorts) {
             this.inputPorts = Input.ofNullable(inputPorts);
             return this;
         }
 
-        public Builder setLocationInfo(Input<BlobLocationArgs> locationInfo) {
+        public Builder locationInfo(Input<BlobLocationArgs> locationInfo) {
             this.locationInfo = Objects.requireNonNull(locationInfo);
             return this;
         }
 
-        public Builder setLocationInfo(BlobLocationArgs locationInfo) {
+        public Builder locationInfo(BlobLocationArgs locationInfo) {
             this.locationInfo = Input.of(Objects.requireNonNull(locationInfo));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOutputPorts(@Nullable Input<Map<String,OutputPortArgs>> outputPorts) {
+        public Builder outputPorts(@Nullable Input<Map<String,OutputPortArgs>> outputPorts) {
             this.outputPorts = outputPorts;
             return this;
         }
 
-        public Builder setOutputPorts(@Nullable Map<String,OutputPortArgs> outputPorts) {
+        public Builder outputPorts(@Nullable Map<String,OutputPortArgs> outputPorts) {
             this.outputPorts = Input.ofNullable(outputPorts);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ModuleAssetParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ModuleAssetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setType(Input<Either<String,AssetType>> type) {
+        public Builder type(Input<Either<String,AssetType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,AssetType> type) {
+        public Builder type(Either<String,AssetType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

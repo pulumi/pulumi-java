@@ -49,7 +49,7 @@ public final class ListAssetStreamingLocatorsResult {
     	      this.streamingLocators = defaults.streamingLocators;
         }
 
-        public Builder setStreamingLocators(List<AssetStreamingLocatorResponse> streamingLocators) {
+        public Builder streamingLocators(List<AssetStreamingLocatorResponse> streamingLocators) {
             this.streamingLocators = Objects.requireNonNull(streamingLocators);
             return this;
         }

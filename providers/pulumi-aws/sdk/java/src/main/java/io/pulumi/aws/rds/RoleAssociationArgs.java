@@ -85,32 +85,32 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDbInstanceIdentifier(Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(Input<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Objects.requireNonNull(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Input.of(Objects.requireNonNull(dbInstanceIdentifier));
             return this;
         }
 
-        public Builder setFeatureName(Input<String> featureName) {
+        public Builder featureName(Input<String> featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
-        public Builder setFeatureName(String featureName) {
+        public Builder featureName(String featureName) {
             this.featureName = Input.of(Objects.requireNonNull(featureName));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

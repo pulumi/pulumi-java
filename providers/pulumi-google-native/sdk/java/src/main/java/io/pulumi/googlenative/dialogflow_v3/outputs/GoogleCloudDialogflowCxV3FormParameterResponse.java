@@ -148,37 +148,37 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse {
     	      this.required = defaults.required;
         }
 
-        public Builder setDefaultValue(Object defaultValue) {
+        public Builder defaultValue(Object defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setFillBehavior(GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior) {
+        public Builder fillBehavior(GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior) {
             this.fillBehavior = Objects.requireNonNull(fillBehavior);
             return this;
         }
 
-        public Builder setIsList(Boolean isList) {
+        public Builder isList(Boolean isList) {
             this.isList = Objects.requireNonNull(isList);
             return this;
         }
 
-        public Builder setRedact(Boolean redact) {
+        public Builder redact(Boolean redact) {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }
 
-        public Builder setRequired(Boolean required) {
+        public Builder required(Boolean required) {
             this.required = Objects.requireNonNull(required);
             return this;
         }

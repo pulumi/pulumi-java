@@ -176,82 +176,82 @@ public final class StatefulSetSpecArgs extends io.pulumi.resources.ResourceArgs 
     	      this.volumeClaimTemplates = defaults.volumeClaimTemplates;
         }
 
-        public Builder setPodManagementPolicy(@Nullable Input<String> podManagementPolicy) {
+        public Builder podManagementPolicy(@Nullable Input<String> podManagementPolicy) {
             this.podManagementPolicy = podManagementPolicy;
             return this;
         }
 
-        public Builder setPodManagementPolicy(@Nullable String podManagementPolicy) {
+        public Builder podManagementPolicy(@Nullable String podManagementPolicy) {
             this.podManagementPolicy = Input.ofNullable(podManagementPolicy);
             return this;
         }
 
-        public Builder setReplicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Input<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Input.ofNullable(replicas);
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Input<Integer> revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Input<Integer> revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = Input.ofNullable(revisionHistoryLimit);
             return this;
         }
 
-        public Builder setSelector(Input<LabelSelectorArgs> selector) {
+        public Builder selector(Input<LabelSelectorArgs> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSelector(LabelSelectorArgs selector) {
+        public Builder selector(LabelSelectorArgs selector) {
             this.selector = Input.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTemplate(Input<PodTemplateSpecArgs> template) {
+        public Builder template(Input<PodTemplateSpecArgs> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpecArgs template) {
+        public Builder template(PodTemplateSpecArgs template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }
 
-        public Builder setUpdateStrategy(@Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy) {
+        public Builder updateStrategy(@Nullable Input<StatefulSetUpdateStrategyArgs> updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
 
-        public Builder setUpdateStrategy(@Nullable StatefulSetUpdateStrategyArgs updateStrategy) {
+        public Builder updateStrategy(@Nullable StatefulSetUpdateStrategyArgs updateStrategy) {
             this.updateStrategy = Input.ofNullable(updateStrategy);
             return this;
         }
 
-        public Builder setVolumeClaimTemplates(@Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
+        public Builder volumeClaimTemplates(@Nullable Input<List<PersistentVolumeClaimArgs>> volumeClaimTemplates) {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }
 
-        public Builder setVolumeClaimTemplates(@Nullable List<PersistentVolumeClaimArgs> volumeClaimTemplates) {
+        public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaimArgs> volumeClaimTemplates) {
             this.volumeClaimTemplates = Input.ofNullable(volumeClaimTemplates);
             return this;
         }

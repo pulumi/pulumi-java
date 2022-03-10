@@ -71,22 +71,22 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder setClientConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig) {
+        public Builder clientConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig) {
             this.clientConfig = clientConfig;
             return this;
         }
 
-        public Builder setClientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfigArgs clientConfig) {
+        public Builder clientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfigArgs clientConfig) {
             this.clientConfig = Input.ofNullable(clientConfig);
             return this;
         }
 
-        public Builder setOutputConfig(Input<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig) {
+        public Builder outputConfig(Input<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
-        public Builder setOutputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfigArgs outputConfig) {
+        public Builder outputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfigArgs outputConfig) {
             this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
             return this;
         }

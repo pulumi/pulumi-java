@@ -63,22 +63,22 @@ public final class GlobalTableSSESpecificationArgs extends io.pulumi.resources.R
     	      this.sSEType = defaults.sSEType;
         }
 
-        public Builder setSSEEnabled(Input<Boolean> sSEEnabled) {
+        public Builder sSEEnabled(Input<Boolean> sSEEnabled) {
             this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
             return this;
         }
 
-        public Builder setSSEEnabled(Boolean sSEEnabled) {
+        public Builder sSEEnabled(Boolean sSEEnabled) {
             this.sSEEnabled = Input.of(Objects.requireNonNull(sSEEnabled));
             return this;
         }
 
-        public Builder setSSEType(@Nullable Input<String> sSEType) {
+        public Builder sSEType(@Nullable Input<String> sSEType) {
             this.sSEType = sSEType;
             return this;
         }
 
-        public Builder setSSEType(@Nullable String sSEType) {
+        public Builder sSEType(@Nullable String sSEType) {
             this.sSEType = Input.ofNullable(sSEType);
             return this;
         }

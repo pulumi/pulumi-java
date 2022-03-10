@@ -62,17 +62,17 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
     	      this.thirdPartyProviderAuthorization = defaults.thirdPartyProviderAuthorization;
         }
 
-        public Builder setProviderAuthentication(@Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication) {
+        public Builder providerAuthentication(@Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
 
-        public Builder setProviderAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
 
-        public Builder setThirdPartyProviderAuthorization(@Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
+        public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }

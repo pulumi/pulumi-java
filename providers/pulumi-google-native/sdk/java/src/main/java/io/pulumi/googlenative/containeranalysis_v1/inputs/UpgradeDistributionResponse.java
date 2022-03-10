@@ -105,22 +105,22 @@ public final class UpgradeDistributionResponse extends io.pulumi.resources.Invok
     	      this.severity = defaults.severity;
         }
 
-        public Builder setClassification(String classification) {
+        public Builder classification(String classification) {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setCve(List<String> cve) {
+        public Builder cve(List<String> cve) {
             this.cve = Objects.requireNonNull(cve);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }

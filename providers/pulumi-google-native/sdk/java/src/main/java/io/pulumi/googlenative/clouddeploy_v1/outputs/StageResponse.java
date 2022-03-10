@@ -66,12 +66,12 @@ public final class StageResponse {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setProfiles(List<String> profiles) {
+        public Builder profiles(List<String> profiles) {
             this.profiles = Objects.requireNonNull(profiles);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }

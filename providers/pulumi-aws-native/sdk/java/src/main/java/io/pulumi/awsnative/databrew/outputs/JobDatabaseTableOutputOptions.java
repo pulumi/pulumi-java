@@ -52,12 +52,12 @@ public final class JobDatabaseTableOutputOptions {
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable JobS3Location tempDirectory) {
+        public Builder tempDirectory(@Nullable JobS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }

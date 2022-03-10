@@ -184,47 +184,47 @@ public final class ApiPortalPropertiesResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setGatewayIds(@Nullable List<String> gatewayIds) {
+        public Builder gatewayIds(@Nullable List<String> gatewayIds) {
             this.gatewayIds = gatewayIds;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setInstances(List<ApiPortalInstanceResponse> instances) {
+        public Builder instances(List<ApiPortalInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder set$public(@Nullable Boolean $public) {
+        public Builder $public(@Nullable Boolean $public) {
             this.$public = $public;
             return this;
         }
 
-        public Builder setResourceRequests(ApiPortalResourceRequestsResponse resourceRequests) {
+        public Builder resourceRequests(ApiPortalResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
 
-        public Builder setSourceUrls(@Nullable List<String> sourceUrls) {
+        public Builder sourceUrls(@Nullable List<String> sourceUrls) {
             this.sourceUrls = sourceUrls;
             return this;
         }
 
-        public Builder setSsoProperties(@Nullable SsoPropertiesResponse ssoProperties) {
+        public Builder ssoProperties(@Nullable SsoPropertiesResponse ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

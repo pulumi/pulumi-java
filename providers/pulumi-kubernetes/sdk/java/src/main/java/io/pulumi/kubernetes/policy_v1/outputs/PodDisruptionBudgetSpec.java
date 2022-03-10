@@ -86,17 +86,17 @@ public final class PodDisruptionBudgetSpec {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setMaxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
-        public Builder setMinAvailable(@Nullable Either<Integer,String> minAvailable) {
+        public Builder minAvailable(@Nullable Either<Integer,String> minAvailable) {
             this.minAvailable = minAvailable;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }

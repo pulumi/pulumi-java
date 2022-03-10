@@ -115,52 +115,52 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setFunctionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Input<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
-        public Builder setFunctionName(@Nullable String functionName) {
+        public Builder functionName(@Nullable String functionName) {
             this.functionName = Input.ofNullable(functionName);
             return this;
         }
 
-        public Builder setInput(@Nullable Input<String> input) {
+        public Builder input(@Nullable Input<String> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable String input) {
+        public Builder input(@Nullable String input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setQualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Input<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
-        public Builder setQualifier(@Nullable String qualifier) {
+        public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Input.ofNullable(qualifier);
             return this;
         }
 
-        public Builder setResult(@Nullable Input<String> result) {
+        public Builder result(@Nullable Input<String> result) {
             this.result = result;
             return this;
         }
 
-        public Builder setResult(@Nullable String result) {
+        public Builder result(@Nullable String result) {
             this.result = Input.ofNullable(result);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable Map<String,String> triggers) {
+        public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }

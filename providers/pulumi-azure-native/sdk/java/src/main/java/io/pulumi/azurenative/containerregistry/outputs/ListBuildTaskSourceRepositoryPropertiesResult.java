@@ -101,22 +101,22 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
     	      this.sourceControlType = defaults.sourceControlType;
         }
 
-        public Builder setIsCommitTriggerEnabled(@Nullable Boolean isCommitTriggerEnabled) {
+        public Builder isCommitTriggerEnabled(@Nullable Boolean isCommitTriggerEnabled) {
             this.isCommitTriggerEnabled = isCommitTriggerEnabled;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSourceControlAuthProperties(@Nullable SourceControlAuthInfoResponse sourceControlAuthProperties) {
+        public Builder sourceControlAuthProperties(@Nullable SourceControlAuthInfoResponse sourceControlAuthProperties) {
             this.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
 
-        public Builder setSourceControlType(String sourceControlType) {
+        public Builder sourceControlType(String sourceControlType) {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }

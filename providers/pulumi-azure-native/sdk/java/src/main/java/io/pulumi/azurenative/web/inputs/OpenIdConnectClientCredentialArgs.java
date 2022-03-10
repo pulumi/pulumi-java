@@ -75,22 +75,22 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
     	      this.method = defaults.method;
         }
 
-        public Builder setClientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable String clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = Input.ofNullable(clientSecretSettingName);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<ClientCredentialMethod> method) {
+        public Builder method(@Nullable Input<ClientCredentialMethod> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable ClientCredentialMethod method) {
+        public Builder method(@Nullable ClientCredentialMethod method) {
             this.method = Input.ofNullable(method);
             return this;
         }

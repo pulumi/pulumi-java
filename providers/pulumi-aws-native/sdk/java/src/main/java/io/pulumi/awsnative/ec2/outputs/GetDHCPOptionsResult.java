@@ -61,12 +61,12 @@ public final class GetDHCPOptionsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDhcpOptionsId(@Nullable String dhcpOptionsId) {
+        public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DHCPOptionsTag> tags) {
+        public Builder tags(@Nullable List<DHCPOptionsTag> tags) {
             this.tags = tags;
             return this;
         }

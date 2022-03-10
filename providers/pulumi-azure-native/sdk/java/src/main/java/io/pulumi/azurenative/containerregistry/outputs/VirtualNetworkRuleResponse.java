@@ -67,12 +67,12 @@ public final class VirtualNetworkRuleResponse {
     	      this.virtualNetworkResourceId = defaults.virtualNetworkResourceId;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setVirtualNetworkResourceId(String virtualNetworkResourceId) {
+        public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
         }

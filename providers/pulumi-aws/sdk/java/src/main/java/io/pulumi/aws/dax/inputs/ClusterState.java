@@ -383,202 +383,202 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Input.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder setClusterAddress(@Nullable Input<String> clusterAddress) {
+        public Builder clusterAddress(@Nullable Input<String> clusterAddress) {
             this.clusterAddress = clusterAddress;
             return this;
         }
 
-        public Builder setClusterAddress(@Nullable String clusterAddress) {
+        public Builder clusterAddress(@Nullable String clusterAddress) {
             this.clusterAddress = Input.ofNullable(clusterAddress);
             return this;
         }
 
-        public Builder setClusterEndpointEncryptionType(@Nullable Input<String> clusterEndpointEncryptionType) {
+        public Builder clusterEndpointEncryptionType(@Nullable Input<String> clusterEndpointEncryptionType) {
             this.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
             return this;
         }
 
-        public Builder setClusterEndpointEncryptionType(@Nullable String clusterEndpointEncryptionType) {
+        public Builder clusterEndpointEncryptionType(@Nullable String clusterEndpointEncryptionType) {
             this.clusterEndpointEncryptionType = Input.ofNullable(clusterEndpointEncryptionType);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setConfigurationEndpoint(@Nullable Input<String> configurationEndpoint) {
+        public Builder configurationEndpoint(@Nullable Input<String> configurationEndpoint) {
             this.configurationEndpoint = configurationEndpoint;
             return this;
         }
 
-        public Builder setConfigurationEndpoint(@Nullable String configurationEndpoint) {
+        public Builder configurationEndpoint(@Nullable String configurationEndpoint) {
             this.configurationEndpoint = Input.ofNullable(configurationEndpoint);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable String iamRoleArn) {
+        public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Input.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<String> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable String maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder setNodeType(@Nullable Input<String> nodeType) {
+        public Builder nodeType(@Nullable Input<String> nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = Input.ofNullable(nodeType);
             return this;
         }
 
-        public Builder setNodes(@Nullable Input<List<ClusterNodeGetArgs>> nodes) {
+        public Builder nodes(@Nullable Input<List<ClusterNodeGetArgs>> nodes) {
             this.nodes = nodes;
             return this;
         }
 
-        public Builder setNodes(@Nullable List<ClusterNodeGetArgs> nodes) {
+        public Builder nodes(@Nullable List<ClusterNodeGetArgs> nodes) {
             this.nodes = Input.ofNullable(nodes);
             return this;
         }
 
-        public Builder setNotificationTopicArn(@Nullable Input<String> notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable Input<String> notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
-        public Builder setNotificationTopicArn(@Nullable String notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
             this.notificationTopicArn = Input.ofNullable(notificationTopicArn);
             return this;
         }
 
-        public Builder setParameterGroupName(@Nullable Input<String> parameterGroupName) {
+        public Builder parameterGroupName(@Nullable Input<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
-        public Builder setParameterGroupName(@Nullable String parameterGroupName) {
+        public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = Input.ofNullable(parameterGroupName);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setReplicationFactor(@Nullable Input<Integer> replicationFactor) {
+        public Builder replicationFactor(@Nullable Input<Integer> replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
 
-        public Builder setReplicationFactor(@Nullable Integer replicationFactor) {
+        public Builder replicationFactor(@Nullable Integer replicationFactor) {
             this.replicationFactor = Input.ofNullable(replicationFactor);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable Input<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable Input<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
             return this;
         }
 
-        public Builder setServerSideEncryption(@Nullable ClusterServerSideEncryptionGetArgs serverSideEncryption) {
+        public Builder serverSideEncryption(@Nullable ClusterServerSideEncryptionGetArgs serverSideEncryption) {
             this.serverSideEncryption = Input.ofNullable(serverSideEncryption);
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable Input<String> subnetGroupName) {
+        public Builder subnetGroupName(@Nullable Input<String> subnetGroupName) {
             this.subnetGroupName = subnetGroupName;
             return this;
         }
 
-        public Builder setSubnetGroupName(@Nullable String subnetGroupName) {
+        public Builder subnetGroupName(@Nullable String subnetGroupName) {
             this.subnetGroupName = Input.ofNullable(subnetGroupName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

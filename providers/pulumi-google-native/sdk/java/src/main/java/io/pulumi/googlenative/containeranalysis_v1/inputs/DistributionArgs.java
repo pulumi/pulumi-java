@@ -140,62 +140,62 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setArchitecture(@Nullable Input<DistributionArchitecture> architecture) {
+        public Builder architecture(@Nullable Input<DistributionArchitecture> architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setArchitecture(@Nullable DistributionArchitecture architecture) {
+        public Builder architecture(@Nullable DistributionArchitecture architecture) {
             this.architecture = Input.ofNullable(architecture);
             return this;
         }
 
-        public Builder setCpeUri(Input<String> cpeUri) {
+        public Builder cpeUri(Input<String> cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Input.of(Objects.requireNonNull(cpeUri));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLatestVersion(@Nullable Input<VersionArgs> latestVersion) {
+        public Builder latestVersion(@Nullable Input<VersionArgs> latestVersion) {
             this.latestVersion = latestVersion;
             return this;
         }
 
-        public Builder setLatestVersion(@Nullable VersionArgs latestVersion) {
+        public Builder latestVersion(@Nullable VersionArgs latestVersion) {
             this.latestVersion = Input.ofNullable(latestVersion);
             return this;
         }
 
-        public Builder setMaintainer(@Nullable Input<String> maintainer) {
+        public Builder maintainer(@Nullable Input<String> maintainer) {
             this.maintainer = maintainer;
             return this;
         }
 
-        public Builder setMaintainer(@Nullable String maintainer) {
+        public Builder maintainer(@Nullable String maintainer) {
             this.maintainer = Input.ofNullable(maintainer);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

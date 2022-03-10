@@ -176,82 +176,82 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = Input.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable Input<List<SubResourceArgs>> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable Input<List<SubResourceArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
             this.applicationSecurityGroups = Input.ofNullable(applicationSecurityGroups);
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = Input.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPrimary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Input<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = Input.ofNullable(primary);
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable Input<Either<String,IPVersions>> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Input<Either<String,IPVersions>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable Either<String,IPVersions> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Either<String,IPVersions> privateIPAddressVersion) {
             this.privateIPAddressVersion = Input.ofNullable(privateIPAddressVersion);
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable Input<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = Input.ofNullable(publicIPAddressConfiguration);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubResourceArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubResourceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubResourceArgs subnet) {
+        public Builder subnet(@Nullable SubResourceArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

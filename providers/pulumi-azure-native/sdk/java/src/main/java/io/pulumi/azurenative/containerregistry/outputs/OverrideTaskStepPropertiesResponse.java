@@ -136,32 +136,32 @@ public final class OverrideTaskStepPropertiesResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setArguments(@Nullable List<ArgumentResponse> arguments) {
+        public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setFile(@Nullable String file) {
+        public Builder file(@Nullable String file) {
             this.file = file;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setUpdateTriggerToken(@Nullable String updateTriggerToken) {
+        public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             this.updateTriggerToken = updateTriggerToken;
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueResponse> values) {
+        public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }

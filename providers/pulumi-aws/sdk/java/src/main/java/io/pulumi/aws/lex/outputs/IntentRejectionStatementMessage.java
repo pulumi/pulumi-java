@@ -86,17 +86,17 @@ public final class IntentRejectionStatementMessage {
     	      this.groupNumber = defaults.groupNumber;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setGroupNumber(@Nullable Integer groupNumber) {
+        public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = groupNumber;
             return this;
         }

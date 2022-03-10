@@ -180,47 +180,47 @@ public final class GetIncidentRelationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelatedResourceId(String relatedResourceId) {
+        public Builder relatedResourceId(String relatedResourceId) {
             this.relatedResourceId = Objects.requireNonNull(relatedResourceId);
             return this;
         }
 
-        public Builder setRelatedResourceKind(String relatedResourceKind) {
+        public Builder relatedResourceKind(String relatedResourceKind) {
             this.relatedResourceKind = Objects.requireNonNull(relatedResourceKind);
             return this;
         }
 
-        public Builder setRelatedResourceName(String relatedResourceName) {
+        public Builder relatedResourceName(String relatedResourceName) {
             this.relatedResourceName = Objects.requireNonNull(relatedResourceName);
             return this;
         }
 
-        public Builder setRelatedResourceType(String relatedResourceType) {
+        public Builder relatedResourceType(String relatedResourceType) {
             this.relatedResourceType = Objects.requireNonNull(relatedResourceType);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

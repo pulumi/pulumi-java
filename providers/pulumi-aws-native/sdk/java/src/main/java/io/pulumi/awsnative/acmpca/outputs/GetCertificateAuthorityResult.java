@@ -94,22 +94,22 @@ public final class GetCertificateAuthorityResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable String certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
-        public Builder setRevocationConfiguration(@Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CertificateAuthorityTag> tags) {
+        public Builder tags(@Nullable List<CertificateAuthorityTag> tags) {
             this.tags = tags;
             return this;
         }

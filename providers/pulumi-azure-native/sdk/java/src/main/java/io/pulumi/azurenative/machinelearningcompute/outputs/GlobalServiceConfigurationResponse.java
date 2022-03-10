@@ -102,22 +102,22 @@ public final class GlobalServiceConfigurationResponse {
     	      this.ssl = defaults.ssl;
         }
 
-        public Builder setAutoScale(@Nullable AutoScaleConfigurationResponse autoScale) {
+        public Builder autoScale(@Nullable AutoScaleConfigurationResponse autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setServiceAuth(@Nullable ServiceAuthConfigurationResponse serviceAuth) {
+        public Builder serviceAuth(@Nullable ServiceAuthConfigurationResponse serviceAuth) {
             this.serviceAuth = serviceAuth;
             return this;
         }
 
-        public Builder setSsl(@Nullable SslConfigurationResponse ssl) {
+        public Builder ssl(@Nullable SslConfigurationResponse ssl) {
             this.ssl = ssl;
             return this;
         }

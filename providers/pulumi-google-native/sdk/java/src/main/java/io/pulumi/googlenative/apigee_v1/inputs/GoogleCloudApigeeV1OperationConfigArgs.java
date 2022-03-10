@@ -110,42 +110,42 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends io.pulumi.reso
     	      this.quota = defaults.quota;
         }
 
-        public Builder setApiSource(Input<String> apiSource) {
+        public Builder apiSource(Input<String> apiSource) {
             this.apiSource = Objects.requireNonNull(apiSource);
             return this;
         }
 
-        public Builder setApiSource(String apiSource) {
+        public Builder apiSource(String apiSource) {
             this.apiSource = Input.of(Objects.requireNonNull(apiSource));
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setOperations(@Nullable Input<List<GoogleCloudApigeeV1OperationArgs>> operations) {
+        public Builder operations(@Nullable Input<List<GoogleCloudApigeeV1OperationArgs>> operations) {
             this.operations = operations;
             return this;
         }
 
-        public Builder setOperations(@Nullable List<GoogleCloudApigeeV1OperationArgs> operations) {
+        public Builder operations(@Nullable List<GoogleCloudApigeeV1OperationArgs> operations) {
             this.operations = Input.ofNullable(operations);
             return this;
         }
 
-        public Builder setQuota(@Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota) {
+        public Builder quota(@Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
 
-        public Builder setQuota(@Nullable GoogleCloudApigeeV1QuotaArgs quota) {
+        public Builder quota(@Nullable GoogleCloudApigeeV1QuotaArgs quota) {
             this.quota = Input.ofNullable(quota);
             return this;
         }

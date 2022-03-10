@@ -229,62 +229,62 @@ public final class GetTransferJobResult {
     	      this.transferSpec = defaults.transferSpec;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDeletionTime(String deletionTime) {
+        public Builder deletionTime(String deletionTime) {
             this.deletionTime = Objects.requireNonNull(deletionTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLastModificationTime(String lastModificationTime) {
+        public Builder lastModificationTime(String lastModificationTime) {
             this.lastModificationTime = Objects.requireNonNull(lastModificationTime);
             return this;
         }
 
-        public Builder setLatestOperationName(String latestOperationName) {
+        public Builder latestOperationName(String latestOperationName) {
             this.latestOperationName = Objects.requireNonNull(latestOperationName);
             return this;
         }
 
-        public Builder setLoggingConfig(LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationConfig(NotificationConfigResponse notificationConfig) {
+        public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSchedule(ScheduleResponse schedule) {
+        public Builder schedule(ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTransferSpec(TransferSpecResponse transferSpec) {
+        public Builder transferSpec(TransferSpecResponse transferSpec) {
             this.transferSpec = Objects.requireNonNull(transferSpec);
             return this;
         }

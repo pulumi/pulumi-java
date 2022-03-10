@@ -84,17 +84,17 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.notificationType = defaults.notificationType;
         }
 
-        public Builder setNotificationArn(@Nullable String notificationArn) {
+        public Builder notificationArn(@Nullable String notificationArn) {
             this.notificationArn = notificationArn;
             return this;
         }
 
-        public Builder setNotificationEvents(@Nullable List<String> notificationEvents) {
+        public Builder notificationEvents(@Nullable List<String> notificationEvents) {
             this.notificationEvents = notificationEvents;
             return this;
         }
 
-        public Builder setNotificationType(@Nullable String notificationType) {
+        public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = notificationType;
             return this;
         }

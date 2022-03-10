@@ -156,72 +156,72 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     	      this.vmExtensionStatusMessage = defaults.vmExtensionStatusMessage;
         }
 
-        public Builder setArtifactId(@Nullable Input<String> artifactId) {
+        public Builder artifactId(@Nullable Input<String> artifactId) {
             this.artifactId = artifactId;
             return this;
         }
 
-        public Builder setArtifactId(@Nullable String artifactId) {
+        public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = Input.ofNullable(artifactId);
             return this;
         }
 
-        public Builder setArtifactTitle(@Nullable Input<String> artifactTitle) {
+        public Builder artifactTitle(@Nullable Input<String> artifactTitle) {
             this.artifactTitle = artifactTitle;
             return this;
         }
 
-        public Builder setArtifactTitle(@Nullable String artifactTitle) {
+        public Builder artifactTitle(@Nullable String artifactTitle) {
             this.artifactTitle = Input.ofNullable(artifactTitle);
             return this;
         }
 
-        public Builder setDeploymentStatusMessage(@Nullable Input<String> deploymentStatusMessage) {
+        public Builder deploymentStatusMessage(@Nullable Input<String> deploymentStatusMessage) {
             this.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
 
-        public Builder setDeploymentStatusMessage(@Nullable String deploymentStatusMessage) {
+        public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
             this.deploymentStatusMessage = Input.ofNullable(deploymentStatusMessage);
             return this;
         }
 
-        public Builder setInstallTime(@Nullable Input<String> installTime) {
+        public Builder installTime(@Nullable Input<String> installTime) {
             this.installTime = installTime;
             return this;
         }
 
-        public Builder setInstallTime(@Nullable String installTime) {
+        public Builder installTime(@Nullable String installTime) {
             this.installTime = Input.ofNullable(installTime);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<ArtifactParameterPropertiesArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<ArtifactParameterPropertiesArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ArtifactParameterPropertiesArgs> parameters) {
+        public Builder parameters(@Nullable List<ArtifactParameterPropertiesArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setVmExtensionStatusMessage(@Nullable Input<String> vmExtensionStatusMessage) {
+        public Builder vmExtensionStatusMessage(@Nullable Input<String> vmExtensionStatusMessage) {
             this.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
         }
 
-        public Builder setVmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
+        public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
             this.vmExtensionStatusMessage = Input.ofNullable(vmExtensionStatusMessage);
             return this;
         }

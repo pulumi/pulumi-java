@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setStatus(GoogleRpcStatusResponse status) {
+        public Builder status(GoogleRpcStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTime(String time) {
+        public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

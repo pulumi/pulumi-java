@@ -50,7 +50,7 @@ public final class GetRepositoryAssociationResult {
     	      this.associationArn = defaults.associationArn;
         }
 
-        public Builder setAssociationArn(@Nullable String associationArn) {
+        public Builder associationArn(@Nullable String associationArn) {
             this.associationArn = associationArn;
             return this;
         }

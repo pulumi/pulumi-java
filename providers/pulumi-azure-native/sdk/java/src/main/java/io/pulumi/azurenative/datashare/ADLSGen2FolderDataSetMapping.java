@@ -251,7 +251,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
     private static ADLSGen2FolderDataSetMappingArgs makeArgs(ADLSGen2FolderDataSetMappingArgs args) {
         var builder = args == null ? ADLSGen2FolderDataSetMappingArgs.builder() : ADLSGen2FolderDataSetMappingArgs.builder(args);
         return builder
-            .setKind("AdlsGen2Folder")
+            .kind("AdlsGen2Folder")
             .build();
     }
 

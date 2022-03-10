@@ -151,72 +151,72 @@ public final class DefaultAdminRuleArgs extends io.pulumi.resources.ResourceArgs
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setConfigurationName(Input<String> configurationName) {
+        public Builder configurationName(Input<String> configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Input.of(Objects.requireNonNull(configurationName));
             return this;
         }
 
-        public Builder setFlag(@Nullable Input<String> flag) {
+        public Builder flag(@Nullable Input<String> flag) {
             this.flag = flag;
             return this;
         }
 
-        public Builder setFlag(@Nullable String flag) {
+        public Builder flag(@Nullable String flag) {
             this.flag = Input.ofNullable(flag);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setNetworkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Input<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleCollectionName(Input<String> ruleCollectionName) {
+        public Builder ruleCollectionName(Input<String> ruleCollectionName) {
             this.ruleCollectionName = Objects.requireNonNull(ruleCollectionName);
             return this;
         }
 
-        public Builder setRuleCollectionName(String ruleCollectionName) {
+        public Builder ruleCollectionName(String ruleCollectionName) {
             this.ruleCollectionName = Input.of(Objects.requireNonNull(ruleCollectionName));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }

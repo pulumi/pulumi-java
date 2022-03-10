@@ -121,37 +121,37 @@ public final class GetRepositoryResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setImageScanningConfiguration(@Nullable RepositoryImageScanningConfiguration imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfiguration imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
 
-        public Builder setImageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
+        public Builder imageTagMutability(@Nullable RepositoryImageTagMutability imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
 
-        public Builder setLifecyclePolicy(@Nullable RepositoryLifecyclePolicy lifecyclePolicy) {
+        public Builder lifecyclePolicy(@Nullable RepositoryLifecyclePolicy lifecyclePolicy) {
             this.lifecyclePolicy = lifecyclePolicy;
             return this;
         }
 
-        public Builder setRepositoryPolicyText(@Nullable Object repositoryPolicyText) {
+        public Builder repositoryPolicyText(@Nullable Object repositoryPolicyText) {
             this.repositoryPolicyText = repositoryPolicyText;
             return this;
         }
 
-        public Builder setRepositoryUri(@Nullable String repositoryUri) {
+        public Builder repositoryUri(@Nullable String repositoryUri) {
             this.repositoryUri = repositoryUri;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RepositoryTag> tags) {
+        public Builder tags(@Nullable List<RepositoryTag> tags) {
             this.tags = tags;
             return this;
         }

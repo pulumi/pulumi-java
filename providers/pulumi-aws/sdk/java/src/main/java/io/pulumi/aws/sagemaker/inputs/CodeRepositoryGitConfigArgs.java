@@ -86,32 +86,32 @@ public final class CodeRepositoryGitConfigArgs extends io.pulumi.resources.Resou
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setRepositoryUrl(Input<String> repositoryUrl) {
+        public Builder repositoryUrl(Input<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Input.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
 
-        public Builder setSecretArn(@Nullable Input<String> secretArn) {
+        public Builder secretArn(@Nullable Input<String> secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = Input.ofNullable(secretArn);
             return this;
         }

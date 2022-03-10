@@ -282,152 +282,152 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setBackupRetention(@Nullable Input<Boolean> backupRetention) {
+        public Builder backupRetention(@Nullable Input<Boolean> backupRetention) {
             this.backupRetention = backupRetention;
             return this;
         }
 
-        public Builder setBackupRetention(@Nullable Boolean backupRetention) {
+        public Builder backupRetention(@Nullable Boolean backupRetention) {
             this.backupRetention = Input.ofNullable(backupRetention);
             return this;
         }
 
-        public Builder setCaCertificateIdentifier(@Nullable Input<String> caCertificateIdentifier) {
+        public Builder caCertificateIdentifier(@Nullable Input<String> caCertificateIdentifier) {
             this.caCertificateIdentifier = caCertificateIdentifier;
             return this;
         }
 
-        public Builder setCaCertificateIdentifier(@Nullable String caCertificateIdentifier) {
+        public Builder caCertificateIdentifier(@Nullable String caCertificateIdentifier) {
             this.caCertificateIdentifier = Input.ofNullable(caCertificateIdentifier);
             return this;
         }
 
-        public Builder setMasterDatabaseName(Input<String> masterDatabaseName) {
+        public Builder masterDatabaseName(Input<String> masterDatabaseName) {
             this.masterDatabaseName = Objects.requireNonNull(masterDatabaseName);
             return this;
         }
 
-        public Builder setMasterDatabaseName(String masterDatabaseName) {
+        public Builder masterDatabaseName(String masterDatabaseName) {
             this.masterDatabaseName = Input.of(Objects.requireNonNull(masterDatabaseName));
             return this;
         }
 
-        public Builder setMasterUserPassword(@Nullable Input<String> masterUserPassword) {
+        public Builder masterUserPassword(@Nullable Input<String> masterUserPassword) {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
 
-        public Builder setMasterUserPassword(@Nullable String masterUserPassword) {
+        public Builder masterUserPassword(@Nullable String masterUserPassword) {
             this.masterUserPassword = Input.ofNullable(masterUserPassword);
             return this;
         }
 
-        public Builder setMasterUsername(Input<String> masterUsername) {
+        public Builder masterUsername(Input<String> masterUsername) {
             this.masterUsername = Objects.requireNonNull(masterUsername);
             return this;
         }
 
-        public Builder setMasterUsername(String masterUsername) {
+        public Builder masterUsername(String masterUsername) {
             this.masterUsername = Input.of(Objects.requireNonNull(masterUsername));
             return this;
         }
 
-        public Builder setPreferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable Input<String> preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
-        public Builder setPreferredBackupWindow(@Nullable String preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = Input.ofNullable(preferredBackupWindow);
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable Input<String> preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Input.ofNullable(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder setRelationalDatabaseBlueprintId(Input<String> relationalDatabaseBlueprintId) {
+        public Builder relationalDatabaseBlueprintId(Input<String> relationalDatabaseBlueprintId) {
             this.relationalDatabaseBlueprintId = Objects.requireNonNull(relationalDatabaseBlueprintId);
             return this;
         }
 
-        public Builder setRelationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
+        public Builder relationalDatabaseBlueprintId(String relationalDatabaseBlueprintId) {
             this.relationalDatabaseBlueprintId = Input.of(Objects.requireNonNull(relationalDatabaseBlueprintId));
             return this;
         }
 
-        public Builder setRelationalDatabaseBundleId(Input<String> relationalDatabaseBundleId) {
+        public Builder relationalDatabaseBundleId(Input<String> relationalDatabaseBundleId) {
             this.relationalDatabaseBundleId = Objects.requireNonNull(relationalDatabaseBundleId);
             return this;
         }
 
-        public Builder setRelationalDatabaseBundleId(String relationalDatabaseBundleId) {
+        public Builder relationalDatabaseBundleId(String relationalDatabaseBundleId) {
             this.relationalDatabaseBundleId = Input.of(Objects.requireNonNull(relationalDatabaseBundleId));
             return this;
         }
 
-        public Builder setRelationalDatabaseName(Input<String> relationalDatabaseName) {
+        public Builder relationalDatabaseName(Input<String> relationalDatabaseName) {
             this.relationalDatabaseName = Objects.requireNonNull(relationalDatabaseName);
             return this;
         }
 
-        public Builder setRelationalDatabaseName(String relationalDatabaseName) {
+        public Builder relationalDatabaseName(String relationalDatabaseName) {
             this.relationalDatabaseName = Input.of(Objects.requireNonNull(relationalDatabaseName));
             return this;
         }
 
-        public Builder setRelationalDatabaseParameters(@Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters) {
+        public Builder relationalDatabaseParameters(@Nullable Input<List<DatabaseRelationalDatabaseParameterArgs>> relationalDatabaseParameters) {
             this.relationalDatabaseParameters = relationalDatabaseParameters;
             return this;
         }
 
-        public Builder setRelationalDatabaseParameters(@Nullable List<DatabaseRelationalDatabaseParameterArgs> relationalDatabaseParameters) {
+        public Builder relationalDatabaseParameters(@Nullable List<DatabaseRelationalDatabaseParameterArgs> relationalDatabaseParameters) {
             this.relationalDatabaseParameters = Input.ofNullable(relationalDatabaseParameters);
             return this;
         }
 
-        public Builder setRotateMasterUserPassword(@Nullable Input<Boolean> rotateMasterUserPassword) {
+        public Builder rotateMasterUserPassword(@Nullable Input<Boolean> rotateMasterUserPassword) {
             this.rotateMasterUserPassword = rotateMasterUserPassword;
             return this;
         }
 
-        public Builder setRotateMasterUserPassword(@Nullable Boolean rotateMasterUserPassword) {
+        public Builder rotateMasterUserPassword(@Nullable Boolean rotateMasterUserPassword) {
             this.rotateMasterUserPassword = Input.ofNullable(rotateMasterUserPassword);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DatabaseTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DatabaseTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatabaseTagArgs> tags) {
+        public Builder tags(@Nullable List<DatabaseTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

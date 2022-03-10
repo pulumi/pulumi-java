@@ -66,12 +66,12 @@ public final class ContactChannelTargetInfo {
     	      this.retryIntervalInMinutes = defaults.retryIntervalInMinutes;
         }
 
-        public Builder setChannelId(String channelId) {
+        public Builder channelId(String channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
 
-        public Builder setRetryIntervalInMinutes(Integer retryIntervalInMinutes) {
+        public Builder retryIntervalInMinutes(Integer retryIntervalInMinutes) {
             this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
             return this;
         }

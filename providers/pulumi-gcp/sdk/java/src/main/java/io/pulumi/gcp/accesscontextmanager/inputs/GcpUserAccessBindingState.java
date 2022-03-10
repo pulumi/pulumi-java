@@ -104,42 +104,42 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setAccessLevels(@Nullable Input<String> accessLevels) {
+        public Builder accessLevels(@Nullable Input<String> accessLevels) {
             this.accessLevels = accessLevels;
             return this;
         }
 
-        public Builder setAccessLevels(@Nullable String accessLevels) {
+        public Builder accessLevels(@Nullable String accessLevels) {
             this.accessLevels = Input.ofNullable(accessLevels);
             return this;
         }
 
-        public Builder setGroupKey(@Nullable Input<String> groupKey) {
+        public Builder groupKey(@Nullable Input<String> groupKey) {
             this.groupKey = groupKey;
             return this;
         }
 
-        public Builder setGroupKey(@Nullable String groupKey) {
+        public Builder groupKey(@Nullable String groupKey) {
             this.groupKey = Input.ofNullable(groupKey);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(@Nullable Input<String> organizationId) {
+        public Builder organizationId(@Nullable Input<String> organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
-        public Builder setOrganizationId(@Nullable String organizationId) {
+        public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = Input.ofNullable(organizationId);
             return this;
         }

@@ -65,12 +65,12 @@ public final class ImageRawDiskResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

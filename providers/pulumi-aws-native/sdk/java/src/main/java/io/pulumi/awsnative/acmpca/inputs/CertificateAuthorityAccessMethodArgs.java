@@ -66,22 +66,22 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
     	      this.customObjectIdentifier = defaults.customObjectIdentifier;
         }
 
-        public Builder setAccessMethodType(@Nullable Input<String> accessMethodType) {
+        public Builder accessMethodType(@Nullable Input<String> accessMethodType) {
             this.accessMethodType = accessMethodType;
             return this;
         }
 
-        public Builder setAccessMethodType(@Nullable String accessMethodType) {
+        public Builder accessMethodType(@Nullable String accessMethodType) {
             this.accessMethodType = Input.ofNullable(accessMethodType);
             return this;
         }
 
-        public Builder setCustomObjectIdentifier(@Nullable Input<String> customObjectIdentifier) {
+        public Builder customObjectIdentifier(@Nullable Input<String> customObjectIdentifier) {
             this.customObjectIdentifier = customObjectIdentifier;
             return this;
         }
 
-        public Builder setCustomObjectIdentifier(@Nullable String customObjectIdentifier) {
+        public Builder customObjectIdentifier(@Nullable String customObjectIdentifier) {
             this.customObjectIdentifier = Input.ofNullable(customObjectIdentifier);
             return this;
         }

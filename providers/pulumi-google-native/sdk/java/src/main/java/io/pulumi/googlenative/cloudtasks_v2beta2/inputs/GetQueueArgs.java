@@ -86,22 +86,22 @@ public final class GetQueueArgs extends io.pulumi.resources.InvokeArgs {
     	      this.readMask = defaults.readMask;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setQueueId(String queueId) {
+        public Builder queueId(String queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }
 
-        public Builder setReadMask(@Nullable String readMask) {
+        public Builder readMask(@Nullable String readMask) {
             this.readMask = readMask;
             return this;
         }

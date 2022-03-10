@@ -127,52 +127,52 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     	      this.validation = defaults.validation;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIsAutoProvisioned(@Nullable Input<Boolean> isAutoProvisioned) {
+        public Builder isAutoProvisioned(@Nullable Input<Boolean> isAutoProvisioned) {
             this.isAutoProvisioned = isAutoProvisioned;
             return this;
         }
 
-        public Builder setIsAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
+        public Builder isAutoProvisioned(@Nullable Boolean isAutoProvisioned) {
             this.isAutoProvisioned = Input.ofNullable(isAutoProvisioned);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<AzureActiveDirectoryLoginArgs> login) {
+        public Builder login(@Nullable Input<AzureActiveDirectoryLoginArgs> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable AzureActiveDirectoryLoginArgs login) {
+        public Builder login(@Nullable AzureActiveDirectoryLoginArgs login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setRegistration(@Nullable Input<AzureActiveDirectoryRegistrationArgs> registration) {
+        public Builder registration(@Nullable Input<AzureActiveDirectoryRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setRegistration(@Nullable AzureActiveDirectoryRegistrationArgs registration) {
+        public Builder registration(@Nullable AzureActiveDirectoryRegistrationArgs registration) {
             this.registration = Input.ofNullable(registration);
             return this;
         }
 
-        public Builder setValidation(@Nullable Input<AzureActiveDirectoryValidationArgs> validation) {
+        public Builder validation(@Nullable Input<AzureActiveDirectoryValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidation(@Nullable AzureActiveDirectoryValidationArgs validation) {
+        public Builder validation(@Nullable AzureActiveDirectoryValidationArgs validation) {
             this.validation = Input.ofNullable(validation);
             return this;
         }

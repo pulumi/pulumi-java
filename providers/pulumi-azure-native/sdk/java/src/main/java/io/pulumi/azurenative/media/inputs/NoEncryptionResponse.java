@@ -57,7 +57,7 @@ public final class NoEncryptionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }

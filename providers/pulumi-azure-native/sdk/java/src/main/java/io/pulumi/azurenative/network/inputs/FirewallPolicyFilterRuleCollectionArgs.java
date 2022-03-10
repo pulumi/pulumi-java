@@ -130,52 +130,52 @@ public final class FirewallPolicyFilterRuleCollectionArgs extends io.pulumi.reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder setAction(@Nullable Input<FirewallPolicyFilterRuleCollectionActionArgs> action) {
+        public Builder action(@Nullable Input<FirewallPolicyFilterRuleCollectionActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyFilterRuleCollectionActionArgs action) {
+        public Builder action(@Nullable FirewallPolicyFilterRuleCollectionActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setRuleCollectionType(Input<String> ruleCollectionType) {
+        public Builder ruleCollectionType(Input<String> ruleCollectionType) {
             this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
             return this;
         }
 
-        public Builder setRuleCollectionType(String ruleCollectionType) {
+        public Builder ruleCollectionType(String ruleCollectionType) {
             this.ruleCollectionType = Input.of(Objects.requireNonNull(ruleCollectionType));
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<Object>> rules) {
+        public Builder rules(@Nullable Input<List<Object>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<Object> rules) {
+        public Builder rules(@Nullable List<Object> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

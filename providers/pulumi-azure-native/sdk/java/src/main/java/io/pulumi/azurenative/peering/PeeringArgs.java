@@ -188,92 +188,92 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDirect(@Nullable Input<PeeringPropertiesDirectArgs> direct) {
+        public Builder direct(@Nullable Input<PeeringPropertiesDirectArgs> direct) {
             this.direct = direct;
             return this;
         }
 
-        public Builder setDirect(@Nullable PeeringPropertiesDirectArgs direct) {
+        public Builder direct(@Nullable PeeringPropertiesDirectArgs direct) {
             this.direct = Input.ofNullable(direct);
             return this;
         }
 
-        public Builder setExchange(@Nullable Input<PeeringPropertiesExchangeArgs> exchange) {
+        public Builder exchange(@Nullable Input<PeeringPropertiesExchangeArgs> exchange) {
             this.exchange = exchange;
             return this;
         }
 
-        public Builder setExchange(@Nullable PeeringPropertiesExchangeArgs exchange) {
+        public Builder exchange(@Nullable PeeringPropertiesExchangeArgs exchange) {
             this.exchange = Input.ofNullable(exchange);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,Kind>> kind) {
+        public Builder kind(Input<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,Kind> kind) {
+        public Builder kind(Either<String,Kind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable Input<String> peeringLocation) {
+        public Builder peeringLocation(@Nullable Input<String> peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable String peeringLocation) {
+        public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = Input.ofNullable(peeringLocation);
             return this;
         }
 
-        public Builder setPeeringName(@Nullable Input<String> peeringName) {
+        public Builder peeringName(@Nullable Input<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
-        public Builder setPeeringName(@Nullable String peeringName) {
+        public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Input.ofNullable(peeringName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<PeeringSkuArgs> sku) {
+        public Builder sku(Input<PeeringSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(PeeringSkuArgs sku) {
+        public Builder sku(PeeringSkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

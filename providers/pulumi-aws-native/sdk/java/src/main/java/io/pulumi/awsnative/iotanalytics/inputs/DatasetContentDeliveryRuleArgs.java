@@ -63,22 +63,22 @@ public final class DatasetContentDeliveryRuleArgs extends io.pulumi.resources.Re
     	      this.entryName = defaults.entryName;
         }
 
-        public Builder setDestination(Input<DatasetContentDeliveryRuleDestinationArgs> destination) {
+        public Builder destination(Input<DatasetContentDeliveryRuleDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(DatasetContentDeliveryRuleDestinationArgs destination) {
+        public Builder destination(DatasetContentDeliveryRuleDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setEntryName(@Nullable Input<String> entryName) {
+        public Builder entryName(@Nullable Input<String> entryName) {
             this.entryName = entryName;
             return this;
         }
 
-        public Builder setEntryName(@Nullable String entryName) {
+        public Builder entryName(@Nullable String entryName) {
             this.entryName = Input.ofNullable(entryName);
             return this;
         }

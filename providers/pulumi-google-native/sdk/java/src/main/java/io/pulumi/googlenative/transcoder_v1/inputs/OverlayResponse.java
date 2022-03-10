@@ -74,12 +74,12 @@ public final class OverlayResponse extends io.pulumi.resources.InvokeArgs {
     	      this.image = defaults.image;
         }
 
-        public Builder setAnimations(List<AnimationResponse> animations) {
+        public Builder animations(List<AnimationResponse> animations) {
             this.animations = Objects.requireNonNull(animations);
             return this;
         }
 
-        public Builder setImage(ImageResponse image) {
+        public Builder image(ImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }

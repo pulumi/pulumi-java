@@ -89,32 +89,32 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     	      this.providers = defaults.providers;
         }
 
-        public Builder setEventLogs(@Nullable Input<List<EventLogConfigurationArgs>> eventLogs) {
+        public Builder eventLogs(@Nullable Input<List<EventLogConfigurationArgs>> eventLogs) {
             this.eventLogs = eventLogs;
             return this;
         }
 
-        public Builder setEventLogs(@Nullable List<EventLogConfigurationArgs> eventLogs) {
+        public Builder eventLogs(@Nullable List<EventLogConfigurationArgs> eventLogs) {
             this.eventLogs = Input.ofNullable(eventLogs);
             return this;
         }
 
-        public Builder setPerfCounters(@Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters) {
+        public Builder perfCounters(@Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters) {
             this.perfCounters = perfCounters;
             return this;
         }
 
-        public Builder setPerfCounters(@Nullable List<PerformanceCounterConfigurationArgs> perfCounters) {
+        public Builder perfCounters(@Nullable List<PerformanceCounterConfigurationArgs> perfCounters) {
             this.perfCounters = Input.ofNullable(perfCounters);
             return this;
         }
 
-        public Builder setProviders(@Nullable Input<List<EtwProviderConfigurationArgs>> providers) {
+        public Builder providers(@Nullable Input<List<EtwProviderConfigurationArgs>> providers) {
             this.providers = providers;
             return this;
         }
 
-        public Builder setProviders(@Nullable List<EtwProviderConfigurationArgs> providers) {
+        public Builder providers(@Nullable List<EtwProviderConfigurationArgs> providers) {
             this.providers = Input.ofNullable(providers);
             return this;
         }

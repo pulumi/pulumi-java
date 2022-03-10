@@ -92,32 +92,32 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
     	      this.enableResourceConsumptionMetering = defaults.enableResourceConsumptionMetering;
         }
 
-        public Builder setBigqueryDestination(Input<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(Input<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setBigqueryDestination(ClusterResourceUsageExportConfigBigqueryDestinationArgs bigqueryDestination) {
+        public Builder bigqueryDestination(ClusterResourceUsageExportConfigBigqueryDestinationArgs bigqueryDestination) {
             this.bigqueryDestination = Input.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(@Nullable Input<Boolean> enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(@Nullable Input<Boolean> enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Input.ofNullable(enableNetworkEgressMetering);
             return this;
         }
 
-        public Builder setEnableResourceConsumptionMetering(@Nullable Input<Boolean> enableResourceConsumptionMetering) {
+        public Builder enableResourceConsumptionMetering(@Nullable Input<Boolean> enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
         }
 
-        public Builder setEnableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
+        public Builder enableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = Input.ofNullable(enableResourceConsumptionMetering);
             return this;
         }

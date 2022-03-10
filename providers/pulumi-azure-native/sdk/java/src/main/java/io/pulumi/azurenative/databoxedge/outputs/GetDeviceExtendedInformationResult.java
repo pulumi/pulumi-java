@@ -228,62 +228,62 @@ public final class GetDeviceExtendedInformationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setChannelIntegrityKeyName(@Nullable String channelIntegrityKeyName) {
+        public Builder channelIntegrityKeyName(@Nullable String channelIntegrityKeyName) {
             this.channelIntegrityKeyName = channelIntegrityKeyName;
             return this;
         }
 
-        public Builder setChannelIntegrityKeyVersion(@Nullable String channelIntegrityKeyVersion) {
+        public Builder channelIntegrityKeyVersion(@Nullable String channelIntegrityKeyVersion) {
             this.channelIntegrityKeyVersion = channelIntegrityKeyVersion;
             return this;
         }
 
-        public Builder setClientSecretStoreId(@Nullable String clientSecretStoreId) {
+        public Builder clientSecretStoreId(@Nullable String clientSecretStoreId) {
             this.clientSecretStoreId = clientSecretStoreId;
             return this;
         }
 
-        public Builder setClientSecretStoreUrl(@Nullable String clientSecretStoreUrl) {
+        public Builder clientSecretStoreUrl(@Nullable String clientSecretStoreUrl) {
             this.clientSecretStoreUrl = clientSecretStoreUrl;
             return this;
         }
 
-        public Builder setDeviceSecrets(DeviceSecretsResponse deviceSecrets) {
+        public Builder deviceSecrets(DeviceSecretsResponse deviceSecrets) {
             this.deviceSecrets = Objects.requireNonNull(deviceSecrets);
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
+        public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyVaultSyncStatus(@Nullable String keyVaultSyncStatus) {
+        public Builder keyVaultSyncStatus(@Nullable String keyVaultSyncStatus) {
             this.keyVaultSyncStatus = keyVaultSyncStatus;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceKey(String resourceKey) {
+        public Builder resourceKey(String resourceKey) {
             this.resourceKey = Objects.requireNonNull(resourceKey);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

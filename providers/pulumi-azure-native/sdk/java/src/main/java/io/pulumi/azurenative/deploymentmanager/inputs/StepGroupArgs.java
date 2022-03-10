@@ -124,52 +124,52 @@ public final class StepGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.preDeploymentSteps = defaults.preDeploymentSteps;
         }
 
-        public Builder setDependsOnStepGroups(@Nullable Input<List<String>> dependsOnStepGroups) {
+        public Builder dependsOnStepGroups(@Nullable Input<List<String>> dependsOnStepGroups) {
             this.dependsOnStepGroups = dependsOnStepGroups;
             return this;
         }
 
-        public Builder setDependsOnStepGroups(@Nullable List<String> dependsOnStepGroups) {
+        public Builder dependsOnStepGroups(@Nullable List<String> dependsOnStepGroups) {
             this.dependsOnStepGroups = Input.ofNullable(dependsOnStepGroups);
             return this;
         }
 
-        public Builder setDeploymentTargetId(Input<String> deploymentTargetId) {
+        public Builder deploymentTargetId(Input<String> deploymentTargetId) {
             this.deploymentTargetId = Objects.requireNonNull(deploymentTargetId);
             return this;
         }
 
-        public Builder setDeploymentTargetId(String deploymentTargetId) {
+        public Builder deploymentTargetId(String deploymentTargetId) {
             this.deploymentTargetId = Input.of(Objects.requireNonNull(deploymentTargetId));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPostDeploymentSteps(@Nullable Input<List<PrePostStepArgs>> postDeploymentSteps) {
+        public Builder postDeploymentSteps(@Nullable Input<List<PrePostStepArgs>> postDeploymentSteps) {
             this.postDeploymentSteps = postDeploymentSteps;
             return this;
         }
 
-        public Builder setPostDeploymentSteps(@Nullable List<PrePostStepArgs> postDeploymentSteps) {
+        public Builder postDeploymentSteps(@Nullable List<PrePostStepArgs> postDeploymentSteps) {
             this.postDeploymentSteps = Input.ofNullable(postDeploymentSteps);
             return this;
         }
 
-        public Builder setPreDeploymentSteps(@Nullable Input<List<PrePostStepArgs>> preDeploymentSteps) {
+        public Builder preDeploymentSteps(@Nullable Input<List<PrePostStepArgs>> preDeploymentSteps) {
             this.preDeploymentSteps = preDeploymentSteps;
             return this;
         }
 
-        public Builder setPreDeploymentSteps(@Nullable List<PrePostStepArgs> preDeploymentSteps) {
+        public Builder preDeploymentSteps(@Nullable List<PrePostStepArgs> preDeploymentSteps) {
             this.preDeploymentSteps = Input.ofNullable(preDeploymentSteps);
             return this;
         }

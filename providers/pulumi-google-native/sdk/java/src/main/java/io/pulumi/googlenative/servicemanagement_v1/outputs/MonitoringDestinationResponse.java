@@ -66,12 +66,12 @@ public final class MonitoringDestinationResponse {
     	      this.monitoredResource = defaults.monitoredResource;
         }
 
-        public Builder setMetrics(List<String> metrics) {
+        public Builder metrics(List<String> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setMonitoredResource(String monitoredResource) {
+        public Builder monitoredResource(String monitoredResource) {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }

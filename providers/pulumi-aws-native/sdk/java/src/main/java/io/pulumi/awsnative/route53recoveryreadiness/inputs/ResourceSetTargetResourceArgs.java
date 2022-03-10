@@ -67,22 +67,22 @@ public final class ResourceSetTargetResourceArgs extends io.pulumi.resources.Res
     	      this.r53Resource = defaults.r53Resource;
         }
 
-        public Builder setNLBResource(@Nullable Input<ResourceSetNLBResourceArgs> nLBResource) {
+        public Builder nLBResource(@Nullable Input<ResourceSetNLBResourceArgs> nLBResource) {
             this.nLBResource = nLBResource;
             return this;
         }
 
-        public Builder setNLBResource(@Nullable ResourceSetNLBResourceArgs nLBResource) {
+        public Builder nLBResource(@Nullable ResourceSetNLBResourceArgs nLBResource) {
             this.nLBResource = Input.ofNullable(nLBResource);
             return this;
         }
 
-        public Builder setR53Resource(@Nullable Input<ResourceSetR53ResourceRecordArgs> r53Resource) {
+        public Builder r53Resource(@Nullable Input<ResourceSetR53ResourceRecordArgs> r53Resource) {
             this.r53Resource = r53Resource;
             return this;
         }
 
-        public Builder setR53Resource(@Nullable ResourceSetR53ResourceRecordArgs r53Resource) {
+        public Builder r53Resource(@Nullable ResourceSetR53ResourceRecordArgs r53Resource) {
             this.r53Resource = Input.ofNullable(r53Resource);
             return this;
         }

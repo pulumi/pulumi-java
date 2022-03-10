@@ -130,32 +130,32 @@ public final class KubernetesMetadataResponse {
     	      this.vcpuCount = defaults.vcpuCount;
         }
 
-        public Builder setKubernetesApiServerVersion(String kubernetesApiServerVersion) {
+        public Builder kubernetesApiServerVersion(String kubernetesApiServerVersion) {
             this.kubernetesApiServerVersion = Objects.requireNonNull(kubernetesApiServerVersion);
             return this;
         }
 
-        public Builder setMemoryMb(Integer memoryMb) {
+        public Builder memoryMb(Integer memoryMb) {
             this.memoryMb = Objects.requireNonNull(memoryMb);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setNodeProviderId(String nodeProviderId) {
+        public Builder nodeProviderId(String nodeProviderId) {
             this.nodeProviderId = Objects.requireNonNull(nodeProviderId);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVcpuCount(Integer vcpuCount) {
+        public Builder vcpuCount(Integer vcpuCount) {
             this.vcpuCount = Objects.requireNonNull(vcpuCount);
             return this;
         }

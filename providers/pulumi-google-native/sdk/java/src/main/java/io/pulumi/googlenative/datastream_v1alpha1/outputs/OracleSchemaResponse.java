@@ -67,12 +67,12 @@ public final class OracleSchemaResponse {
     	      this.schemaName = defaults.schemaName;
         }
 
-        public Builder setOracleTables(List<OracleTableResponse> oracleTables) {
+        public Builder oracleTables(List<OracleTableResponse> oracleTables) {
             this.oracleTables = Objects.requireNonNull(oracleTables);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }

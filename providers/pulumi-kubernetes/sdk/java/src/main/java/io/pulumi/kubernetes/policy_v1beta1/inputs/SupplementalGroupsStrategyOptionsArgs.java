@@ -76,22 +76,22 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRanges(@Nullable Input<List<IDRangeArgs>> ranges) {
+        public Builder ranges(@Nullable Input<List<IDRangeArgs>> ranges) {
             this.ranges = ranges;
             return this;
         }
 
-        public Builder setRanges(@Nullable List<IDRangeArgs> ranges) {
+        public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
             this.ranges = Input.ofNullable(ranges);
             return this;
         }
 
-        public Builder setRule(@Nullable Input<String> rule) {
+        public Builder rule(@Nullable Input<String> rule) {
             this.rule = rule;
             return this;
         }
 
-        public Builder setRule(@Nullable String rule) {
+        public Builder rule(@Nullable String rule) {
             this.rule = Input.ofNullable(rule);
             return this;
         }

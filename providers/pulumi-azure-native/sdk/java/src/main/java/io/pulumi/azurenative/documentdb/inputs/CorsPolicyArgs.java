@@ -123,52 +123,52 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxAgeInSeconds = defaults.maxAgeInSeconds;
         }
 
-        public Builder setAllowedHeaders(@Nullable Input<String> allowedHeaders) {
+        public Builder allowedHeaders(@Nullable Input<String> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
 
-        public Builder setAllowedHeaders(@Nullable String allowedHeaders) {
+        public Builder allowedHeaders(@Nullable String allowedHeaders) {
             this.allowedHeaders = Input.ofNullable(allowedHeaders);
             return this;
         }
 
-        public Builder setAllowedMethods(@Nullable Input<String> allowedMethods) {
+        public Builder allowedMethods(@Nullable Input<String> allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
 
-        public Builder setAllowedMethods(@Nullable String allowedMethods) {
+        public Builder allowedMethods(@Nullable String allowedMethods) {
             this.allowedMethods = Input.ofNullable(allowedMethods);
             return this;
         }
 
-        public Builder setAllowedOrigins(Input<String> allowedOrigins) {
+        public Builder allowedOrigins(Input<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
 
-        public Builder setAllowedOrigins(String allowedOrigins) {
+        public Builder allowedOrigins(String allowedOrigins) {
             this.allowedOrigins = Input.of(Objects.requireNonNull(allowedOrigins));
             return this;
         }
 
-        public Builder setExposedHeaders(@Nullable Input<String> exposedHeaders) {
+        public Builder exposedHeaders(@Nullable Input<String> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
 
-        public Builder setExposedHeaders(@Nullable String exposedHeaders) {
+        public Builder exposedHeaders(@Nullable String exposedHeaders) {
             this.exposedHeaders = Input.ofNullable(exposedHeaders);
             return this;
         }
 
-        public Builder setMaxAgeInSeconds(@Nullable Input<Double> maxAgeInSeconds) {
+        public Builder maxAgeInSeconds(@Nullable Input<Double> maxAgeInSeconds) {
             this.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }
 
-        public Builder setMaxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
+        public Builder maxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
             this.maxAgeInSeconds = Input.ofNullable(maxAgeInSeconds);
             return this;
         }

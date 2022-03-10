@@ -111,62 +111,62 @@ public final class PackageVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updatedLatestPatchVersion = defaults.updatedLatestPatchVersion;
         }
 
-        public Builder setMarkLatest(@Nullable Input<Boolean> markLatest) {
+        public Builder markLatest(@Nullable Input<Boolean> markLatest) {
             this.markLatest = markLatest;
             return this;
         }
 
-        public Builder setMarkLatest(@Nullable Boolean markLatest) {
+        public Builder markLatest(@Nullable Boolean markLatest) {
             this.markLatest = Input.ofNullable(markLatest);
             return this;
         }
 
-        public Builder setOwnerAccount(@Nullable Input<String> ownerAccount) {
+        public Builder ownerAccount(@Nullable Input<String> ownerAccount) {
             this.ownerAccount = ownerAccount;
             return this;
         }
 
-        public Builder setOwnerAccount(@Nullable String ownerAccount) {
+        public Builder ownerAccount(@Nullable String ownerAccount) {
             this.ownerAccount = Input.ofNullable(ownerAccount);
             return this;
         }
 
-        public Builder setPackageId(Input<String> packageId) {
+        public Builder packageId(Input<String> packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
 
-        public Builder setPackageId(String packageId) {
+        public Builder packageId(String packageId) {
             this.packageId = Input.of(Objects.requireNonNull(packageId));
             return this;
         }
 
-        public Builder setPackageVersion(Input<String> packageVersion) {
+        public Builder packageVersion(Input<String> packageVersion) {
             this.packageVersion = Objects.requireNonNull(packageVersion);
             return this;
         }
 
-        public Builder setPackageVersion(String packageVersion) {
+        public Builder packageVersion(String packageVersion) {
             this.packageVersion = Input.of(Objects.requireNonNull(packageVersion));
             return this;
         }
 
-        public Builder setPatchVersion(Input<String> patchVersion) {
+        public Builder patchVersion(Input<String> patchVersion) {
             this.patchVersion = Objects.requireNonNull(patchVersion);
             return this;
         }
 
-        public Builder setPatchVersion(String patchVersion) {
+        public Builder patchVersion(String patchVersion) {
             this.patchVersion = Input.of(Objects.requireNonNull(patchVersion));
             return this;
         }
 
-        public Builder setUpdatedLatestPatchVersion(@Nullable Input<String> updatedLatestPatchVersion) {
+        public Builder updatedLatestPatchVersion(@Nullable Input<String> updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
         }
 
-        public Builder setUpdatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
+        public Builder updatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = Input.ofNullable(updatedLatestPatchVersion);
             return this;
         }

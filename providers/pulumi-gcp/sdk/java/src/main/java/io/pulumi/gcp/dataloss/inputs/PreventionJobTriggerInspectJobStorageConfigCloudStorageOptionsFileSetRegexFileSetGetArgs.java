@@ -91,32 +91,32 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     	      this.includeRegexes = defaults.includeRegexes;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setExcludeRegexes(@Nullable Input<List<String>> excludeRegexes) {
+        public Builder excludeRegexes(@Nullable Input<List<String>> excludeRegexes) {
             this.excludeRegexes = excludeRegexes;
             return this;
         }
 
-        public Builder setExcludeRegexes(@Nullable List<String> excludeRegexes) {
+        public Builder excludeRegexes(@Nullable List<String> excludeRegexes) {
             this.excludeRegexes = Input.ofNullable(excludeRegexes);
             return this;
         }
 
-        public Builder setIncludeRegexes(@Nullable Input<List<String>> includeRegexes) {
+        public Builder includeRegexes(@Nullable Input<List<String>> includeRegexes) {
             this.includeRegexes = includeRegexes;
             return this;
         }
 
-        public Builder setIncludeRegexes(@Nullable List<String> includeRegexes) {
+        public Builder includeRegexes(@Nullable List<String> includeRegexes) {
             this.includeRegexes = Input.ofNullable(includeRegexes);
             return this;
         }

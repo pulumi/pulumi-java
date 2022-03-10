@@ -83,17 +83,17 @@ public final class CurrentJobDetailsResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

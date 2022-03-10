@@ -123,52 +123,52 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
     	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
         }
 
-        public Builder setAdditionalLatencyMilliseconds(@Nullable Input<Integer> additionalLatencyMilliseconds) {
+        public Builder additionalLatencyMilliseconds(@Nullable Input<Integer> additionalLatencyMilliseconds) {
             this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
             return this;
         }
 
-        public Builder setAdditionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
+        public Builder additionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
             this.additionalLatencyMilliseconds = Input.ofNullable(additionalLatencyMilliseconds);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Input<Integer> sampleSize) {
+        public Builder sampleSize(@Nullable Input<Integer> sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Integer sampleSize) {
+        public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = Input.ofNullable(sampleSize);
             return this;
         }
 
-        public Builder setSuccessfulSamplesRequired(@Nullable Input<Integer> successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Input<Integer> successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
 
-        public Builder setSuccessfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             this.successfulSamplesRequired = Input.ofNullable(successfulSamplesRequired);
             return this;
         }

@@ -72,12 +72,12 @@ public final class AttachedDiskResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }

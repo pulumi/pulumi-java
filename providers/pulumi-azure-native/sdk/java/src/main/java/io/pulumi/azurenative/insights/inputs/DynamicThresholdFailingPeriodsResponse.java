@@ -72,12 +72,12 @@ public final class DynamicThresholdFailingPeriodsResponse extends io.pulumi.reso
     	      this.numberOfEvaluationPeriods = defaults.numberOfEvaluationPeriods;
         }
 
-        public Builder setMinFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
+        public Builder minFailingPeriodsToAlert(Double minFailingPeriodsToAlert) {
             this.minFailingPeriodsToAlert = Objects.requireNonNull(minFailingPeriodsToAlert);
             return this;
         }
 
-        public Builder setNumberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
+        public Builder numberOfEvaluationPeriods(Double numberOfEvaluationPeriods) {
             this.numberOfEvaluationPeriods = Objects.requireNonNull(numberOfEvaluationPeriods);
             return this;
         }

@@ -58,7 +58,7 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.p
     	      this.allowedPorts = defaults.allowedPorts;
         }
 
-        public Builder setAllowedPorts(@Nullable List<PortResponse> allowedPorts) {
+        public Builder allowedPorts(@Nullable List<PortResponse> allowedPorts) {
             this.allowedPorts = allowedPorts;
             return this;
         }

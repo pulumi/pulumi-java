@@ -152,72 +152,72 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setEnabledRegionSelection(@Nullable Input<Boolean> enabledRegionSelection) {
+        public Builder enabledRegionSelection(@Nullable Input<Boolean> enabledRegionSelection) {
             this.enabledRegionSelection = enabledRegionSelection;
             return this;
         }
 
-        public Builder setEnabledRegionSelection(@Nullable Boolean enabledRegionSelection) {
+        public Builder enabledRegionSelection(@Nullable Boolean enabledRegionSelection) {
             this.enabledRegionSelection = Input.ofNullable(enabledRegionSelection);
             return this;
         }
 
-        public Builder setLabAccountName(@Nullable Input<String> labAccountName) {
+        public Builder labAccountName(@Nullable Input<String> labAccountName) {
             this.labAccountName = labAccountName;
             return this;
         }
 
-        public Builder setLabAccountName(@Nullable String labAccountName) {
+        public Builder labAccountName(@Nullable String labAccountName) {
             this.labAccountName = Input.ofNullable(labAccountName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable String uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
             return this;
         }

@@ -101,22 +101,22 @@ public final class GetDicomStoreResult {
     	      this.streamConfigs = defaults.streamConfigs;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationConfig(NotificationConfigResponse notificationConfig) {
+        public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
 
-        public Builder setStreamConfigs(List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
+        public Builder streamConfigs(List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
             this.streamConfigs = Objects.requireNonNull(streamConfigs);
             return this;
         }

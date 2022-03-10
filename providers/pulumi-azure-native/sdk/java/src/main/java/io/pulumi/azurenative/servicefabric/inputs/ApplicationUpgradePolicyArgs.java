@@ -143,62 +143,62 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     	      this.upgradeReplicaSetCheckTimeout = defaults.upgradeReplicaSetCheckTimeout;
         }
 
-        public Builder setApplicationHealthPolicy(@Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy) {
+        public Builder applicationHealthPolicy(@Nullable Input<ArmApplicationHealthPolicyArgs> applicationHealthPolicy) {
             this.applicationHealthPolicy = applicationHealthPolicy;
             return this;
         }
 
-        public Builder setApplicationHealthPolicy(@Nullable ArmApplicationHealthPolicyArgs applicationHealthPolicy) {
+        public Builder applicationHealthPolicy(@Nullable ArmApplicationHealthPolicyArgs applicationHealthPolicy) {
             this.applicationHealthPolicy = Input.ofNullable(applicationHealthPolicy);
             return this;
         }
 
-        public Builder setForceRestart(@Nullable Input<Boolean> forceRestart) {
+        public Builder forceRestart(@Nullable Input<Boolean> forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
 
-        public Builder setForceRestart(@Nullable Boolean forceRestart) {
+        public Builder forceRestart(@Nullable Boolean forceRestart) {
             this.forceRestart = Input.ofNullable(forceRestart);
             return this;
         }
 
-        public Builder setRecreateApplication(@Nullable Input<Boolean> recreateApplication) {
+        public Builder recreateApplication(@Nullable Input<Boolean> recreateApplication) {
             this.recreateApplication = recreateApplication;
             return this;
         }
 
-        public Builder setRecreateApplication(@Nullable Boolean recreateApplication) {
+        public Builder recreateApplication(@Nullable Boolean recreateApplication) {
             this.recreateApplication = Input.ofNullable(recreateApplication);
             return this;
         }
 
-        public Builder setRollingUpgradeMonitoringPolicy(@Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy) {
+        public Builder rollingUpgradeMonitoringPolicy(@Nullable Input<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy) {
             this.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
             return this;
         }
 
-        public Builder setRollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyArgs rollingUpgradeMonitoringPolicy) {
+        public Builder rollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyArgs rollingUpgradeMonitoringPolicy) {
             this.rollingUpgradeMonitoringPolicy = Input.ofNullable(rollingUpgradeMonitoringPolicy);
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode) {
+        public Builder upgradeMode(@Nullable Input<Either<String,RollingUpgradeMode>> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable Either<String,RollingUpgradeMode> upgradeMode) {
+        public Builder upgradeMode(@Nullable Either<String,RollingUpgradeMode> upgradeMode) {
             this.upgradeMode = Input.ofNullable(upgradeMode);
             return this;
         }
 
-        public Builder setUpgradeReplicaSetCheckTimeout(@Nullable Input<String> upgradeReplicaSetCheckTimeout) {
+        public Builder upgradeReplicaSetCheckTimeout(@Nullable Input<String> upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }
 
-        public Builder setUpgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
+        public Builder upgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = Input.ofNullable(upgradeReplicaSetCheckTimeout);
             return this;
         }

@@ -76,17 +76,17 @@ public final class CapacityProviderAutoScalingGroupProvider extends io.pulumi.re
     	      this.managedTerminationProtection = defaults.managedTerminationProtection;
         }
 
-        public Builder setAutoScalingGroupArn(String autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(String autoScalingGroupArn) {
             this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
             return this;
         }
 
-        public Builder setManagedScaling(@Nullable CapacityProviderManagedScaling managedScaling) {
+        public Builder managedScaling(@Nullable CapacityProviderManagedScaling managedScaling) {
             this.managedScaling = managedScaling;
             return this;
         }
 
-        public Builder setManagedTerminationProtection(@Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
+        public Builder managedTerminationProtection(@Nullable CapacityProviderAutoScalingGroupProviderManagedTerminationProtection managedTerminationProtection) {
             this.managedTerminationProtection = managedTerminationProtection;
             return this;
         }

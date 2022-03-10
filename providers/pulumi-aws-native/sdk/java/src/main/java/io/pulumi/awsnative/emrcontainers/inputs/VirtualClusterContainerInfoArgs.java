@@ -48,12 +48,12 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
     	      this.eksInfo = defaults.eksInfo;
         }
 
-        public Builder setEksInfo(Input<VirtualClusterEksInfoArgs> eksInfo) {
+        public Builder eksInfo(Input<VirtualClusterEksInfoArgs> eksInfo) {
             this.eksInfo = Objects.requireNonNull(eksInfo);
             return this;
         }
 
-        public Builder setEksInfo(VirtualClusterEksInfoArgs eksInfo) {
+        public Builder eksInfo(VirtualClusterEksInfoArgs eksInfo) {
             this.eksInfo = Input.of(Objects.requireNonNull(eksInfo));
             return this;
         }

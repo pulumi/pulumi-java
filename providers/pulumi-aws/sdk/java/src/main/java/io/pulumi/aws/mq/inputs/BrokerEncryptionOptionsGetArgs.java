@@ -71,22 +71,22 @@ public final class BrokerEncryptionOptionsGetArgs extends io.pulumi.resources.Re
     	      this.useAwsOwnedKey = defaults.useAwsOwnedKey;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setUseAwsOwnedKey(@Nullable Input<Boolean> useAwsOwnedKey) {
+        public Builder useAwsOwnedKey(@Nullable Input<Boolean> useAwsOwnedKey) {
             this.useAwsOwnedKey = useAwsOwnedKey;
             return this;
         }
 
-        public Builder setUseAwsOwnedKey(@Nullable Boolean useAwsOwnedKey) {
+        public Builder useAwsOwnedKey(@Nullable Boolean useAwsOwnedKey) {
             this.useAwsOwnedKey = Input.ofNullable(useAwsOwnedKey);
             return this;
         }

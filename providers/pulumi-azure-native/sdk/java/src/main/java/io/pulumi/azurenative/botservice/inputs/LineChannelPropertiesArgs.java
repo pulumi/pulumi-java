@@ -57,12 +57,12 @@ public final class LineChannelPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.lineRegistrations = defaults.lineRegistrations;
         }
 
-        public Builder setLineRegistrations(Input<List<LineRegistrationArgs>> lineRegistrations) {
+        public Builder lineRegistrations(Input<List<LineRegistrationArgs>> lineRegistrations) {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }
 
-        public Builder setLineRegistrations(List<LineRegistrationArgs> lineRegistrations) {
+        public Builder lineRegistrations(List<LineRegistrationArgs> lineRegistrations) {
             this.lineRegistrations = Input.of(Objects.requireNonNull(lineRegistrations));
             return this;
         }

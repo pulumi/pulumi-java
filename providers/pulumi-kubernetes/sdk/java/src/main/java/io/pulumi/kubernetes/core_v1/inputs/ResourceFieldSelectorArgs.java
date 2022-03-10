@@ -90,32 +90,32 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
     	      this.resource = defaults.resource;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setDivisor(@Nullable Input<String> divisor) {
+        public Builder divisor(@Nullable Input<String> divisor) {
             this.divisor = divisor;
             return this;
         }
 
-        public Builder setDivisor(@Nullable String divisor) {
+        public Builder divisor(@Nullable String divisor) {
             this.divisor = Input.ofNullable(divisor);
             return this;
         }
 
-        public Builder setResource(Input<String> resource) {
+        public Builder resource(Input<String> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }

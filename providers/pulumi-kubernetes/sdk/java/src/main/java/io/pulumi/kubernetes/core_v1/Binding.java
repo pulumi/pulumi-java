@@ -125,8 +125,8 @@ public class Binding extends io.pulumi.resources.CustomResource {
     private static BindingArgs makeArgs(BindingArgs args) {
         var builder = args == null ? BindingArgs.builder() : BindingArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Binding")
+            .apiVersion("v1")
+            .kind("Binding")
             .build();
     }
 

@@ -65,12 +65,12 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
     	      this.metric = defaults.metric;
         }
 
-        public Builder setGoal(String goal) {
+        public Builder goal(String goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }

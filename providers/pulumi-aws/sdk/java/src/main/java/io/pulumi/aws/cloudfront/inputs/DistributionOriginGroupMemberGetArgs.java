@@ -52,12 +52,12 @@ public final class DistributionOriginGroupMemberGetArgs extends io.pulumi.resour
     	      this.originId = defaults.originId;
         }
 
-        public Builder setOriginId(Input<String> originId) {
+        public Builder originId(Input<String> originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Input.of(Objects.requireNonNull(originId));
             return this;
         }

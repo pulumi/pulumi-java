@@ -69,12 +69,12 @@ public final class TrailAdvancedEventSelector {
     	      this.name = defaults.name;
         }
 
-        public Builder setFieldSelectors(List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors) {
+        public Builder fieldSelectors(List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors) {
             this.fieldSelectors = Objects.requireNonNull(fieldSelectors);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

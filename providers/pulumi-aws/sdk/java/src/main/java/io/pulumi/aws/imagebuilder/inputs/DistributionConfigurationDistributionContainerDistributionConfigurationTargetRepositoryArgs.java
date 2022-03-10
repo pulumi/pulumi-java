@@ -69,22 +69,22 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.service = defaults.service;
         }
 
-        public Builder setRepositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Input<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
             return this;
         }
 
-        public Builder setService(Input<String> service) {
+        public Builder service(Input<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }

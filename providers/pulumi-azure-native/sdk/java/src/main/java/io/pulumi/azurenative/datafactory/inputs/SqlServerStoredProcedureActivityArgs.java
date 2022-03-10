@@ -195,92 +195,92 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setStoredProcedureName(Input<Object> storedProcedureName) {
+        public Builder storedProcedureName(Input<Object> storedProcedureName) {
             this.storedProcedureName = Objects.requireNonNull(storedProcedureName);
             return this;
         }
 
-        public Builder setStoredProcedureName(Object storedProcedureName) {
+        public Builder storedProcedureName(Object storedProcedureName) {
             this.storedProcedureName = Input.of(Objects.requireNonNull(storedProcedureName));
             return this;
         }
 
-        public Builder setStoredProcedureParameters(@Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
-        public Builder setStoredProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
             this.storedProcedureParameters = Input.ofNullable(storedProcedureParameters);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

@@ -135,32 +135,32 @@ public final class PatchDeploymentPatchConfigZypper {
     	      this.withUpdate = defaults.withUpdate;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setExcludes(@Nullable List<String> excludes) {
+        public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExclusivePatches(@Nullable List<String> exclusivePatches) {
+        public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }
 
-        public Builder setSeverities(@Nullable List<String> severities) {
+        public Builder severities(@Nullable List<String> severities) {
             this.severities = severities;
             return this;
         }
 
-        public Builder setWithOptional(@Nullable Boolean withOptional) {
+        public Builder withOptional(@Nullable Boolean withOptional) {
             this.withOptional = withOptional;
             return this;
         }
 
-        public Builder setWithUpdate(@Nullable Boolean withUpdate) {
+        public Builder withUpdate(@Nullable Boolean withUpdate) {
             this.withUpdate = withUpdate;
             return this;
         }

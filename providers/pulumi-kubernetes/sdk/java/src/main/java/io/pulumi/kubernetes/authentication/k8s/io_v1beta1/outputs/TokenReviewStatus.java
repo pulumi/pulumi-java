@@ -102,22 +102,22 @@ public final class TokenReviewStatus {
     	      this.user = defaults.user;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setAuthenticated(@Nullable Boolean authenticated) {
+        public Builder authenticated(@Nullable Boolean authenticated) {
             this.authenticated = authenticated;
             return this;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
 
-        public Builder setUser(@Nullable UserInfo user) {
+        public Builder user(@Nullable UserInfo user) {
             this.user = user;
             return this;
         }

@@ -62,22 +62,22 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder setSupportedPolicy(@Nullable Input<String> supportedPolicy) {
+        public Builder supportedPolicy(@Nullable Input<String> supportedPolicy) {
             this.supportedPolicy = supportedPolicy;
             return this;
         }
 
-        public Builder setSupportedPolicy(@Nullable String supportedPolicy) {
+        public Builder supportedPolicy(@Nullable String supportedPolicy) {
             this.supportedPolicy = Input.ofNullable(supportedPolicy);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

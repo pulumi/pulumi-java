@@ -50,12 +50,12 @@ public final class NetworkInterfacePrivateIpAddressSpecification {
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder setPrimary(Boolean primary) {
+        public Builder primary(Boolean primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }

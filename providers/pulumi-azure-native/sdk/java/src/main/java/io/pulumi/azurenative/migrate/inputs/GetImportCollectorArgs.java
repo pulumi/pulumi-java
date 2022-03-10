@@ -84,17 +84,17 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setImportCollectorName(String importCollectorName) {
+        public Builder importCollectorName(String importCollectorName) {
             this.importCollectorName = Objects.requireNonNull(importCollectorName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

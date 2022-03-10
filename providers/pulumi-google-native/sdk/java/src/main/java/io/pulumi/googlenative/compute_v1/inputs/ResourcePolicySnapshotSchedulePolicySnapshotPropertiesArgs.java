@@ -109,42 +109,42 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     	      this.storageLocations = defaults.storageLocations;
         }
 
-        public Builder setChainName(@Nullable Input<String> chainName) {
+        public Builder chainName(@Nullable Input<String> chainName) {
             this.chainName = chainName;
             return this;
         }
 
-        public Builder setChainName(@Nullable String chainName) {
+        public Builder chainName(@Nullable String chainName) {
             this.chainName = Input.ofNullable(chainName);
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Input<Boolean> guestFlush) {
+        public Builder guestFlush(@Nullable Input<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Boolean guestFlush) {
+        public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Input.ofNullable(guestFlush);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable Input<List<String>> storageLocations) {
+        public Builder storageLocations(@Nullable Input<List<String>> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable List<String> storageLocations) {
+        public Builder storageLocations(@Nullable List<String> storageLocations) {
             this.storageLocations = Input.ofNullable(storageLocations);
             return this;
         }

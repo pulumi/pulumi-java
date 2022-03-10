@@ -76,22 +76,22 @@ public final class AutoscaleScheduleArgs extends io.pulumi.resources.ResourceArg
     	      this.timeAndCapacity = defaults.timeAndCapacity;
         }
 
-        public Builder setDays(@Nullable Input<List<DaysOfWeek>> days) {
+        public Builder days(@Nullable Input<List<DaysOfWeek>> days) {
             this.days = days;
             return this;
         }
 
-        public Builder setDays(@Nullable List<DaysOfWeek> days) {
+        public Builder days(@Nullable List<DaysOfWeek> days) {
             this.days = Input.ofNullable(days);
             return this;
         }
 
-        public Builder setTimeAndCapacity(@Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
+        public Builder timeAndCapacity(@Nullable Input<AutoscaleTimeAndCapacityArgs> timeAndCapacity) {
             this.timeAndCapacity = timeAndCapacity;
             return this;
         }
 
-        public Builder setTimeAndCapacity(@Nullable AutoscaleTimeAndCapacityArgs timeAndCapacity) {
+        public Builder timeAndCapacity(@Nullable AutoscaleTimeAndCapacityArgs timeAndCapacity) {
             this.timeAndCapacity = Input.ofNullable(timeAndCapacity);
             return this;
         }

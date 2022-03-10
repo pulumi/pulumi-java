@@ -50,7 +50,7 @@ public final class StorageClassificationMappingPropertiesResponse {
     	      this.targetStorageClassificationId = defaults.targetStorageClassificationId;
         }
 
-        public Builder setTargetStorageClassificationId(@Nullable String targetStorageClassificationId) {
+        public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
             this.targetStorageClassificationId = targetStorageClassificationId;
             return this;
         }

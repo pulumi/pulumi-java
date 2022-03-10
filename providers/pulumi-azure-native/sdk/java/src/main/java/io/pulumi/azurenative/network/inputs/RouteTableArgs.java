@@ -126,52 +126,52 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDisableBgpRoutePropagation(@Nullable Input<Boolean> disableBgpRoutePropagation) {
+        public Builder disableBgpRoutePropagation(@Nullable Input<Boolean> disableBgpRoutePropagation) {
             this.disableBgpRoutePropagation = disableBgpRoutePropagation;
             return this;
         }
 
-        public Builder setDisableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
+        public Builder disableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
             this.disableBgpRoutePropagation = Input.ofNullable(disableBgpRoutePropagation);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<List<RouteArgs>> routes) {
+        public Builder routes(@Nullable Input<List<RouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<RouteArgs> routes) {
+        public Builder routes(@Nullable List<RouteArgs> routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

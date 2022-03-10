@@ -133,32 +133,32 @@ public final class WorkflowTriggerRecurrenceResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setSchedule(@Nullable RecurrenceScheduleResponse schedule) {
+        public Builder schedule(@Nullable RecurrenceScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

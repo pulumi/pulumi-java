@@ -91,32 +91,32 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
     	      this.versionedExpr = defaults.versionedExpr;
         }
 
-        public Builder setConfig(Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config) {
+        public Builder config(Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(OrganizationSecurityPolicyRuleMatchConfigGetArgs config) {
+        public Builder config(OrganizationSecurityPolicyRuleMatchConfigGetArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setVersionedExpr(@Nullable Input<String> versionedExpr) {
+        public Builder versionedExpr(@Nullable Input<String> versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
         }
 
-        public Builder setVersionedExpr(@Nullable String versionedExpr) {
+        public Builder versionedExpr(@Nullable String versionedExpr) {
             this.versionedExpr = Input.ofNullable(versionedExpr);
             return this;
         }

@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setParameters(List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
+        public Builder parameters(List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

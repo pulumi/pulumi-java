@@ -89,32 +89,32 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
     	      this.selectorMatchOperator = defaults.selectorMatchOperator;
         }
 
-        public Builder setMatchVariable(Input<String> matchVariable) {
+        public Builder matchVariable(Input<String> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
-        public Builder setMatchVariable(String matchVariable) {
+        public Builder matchVariable(String matchVariable) {
             this.matchVariable = Input.of(Objects.requireNonNull(matchVariable));
             return this;
         }
 
-        public Builder setSelector(Input<String> selector) {
+        public Builder selector(Input<String> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Input.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder setSelectorMatchOperator(Input<String> selectorMatchOperator) {
+        public Builder selectorMatchOperator(Input<String> selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
 
-        public Builder setSelectorMatchOperator(String selectorMatchOperator) {
+        public Builder selectorMatchOperator(String selectorMatchOperator) {
             this.selectorMatchOperator = Input.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
         }

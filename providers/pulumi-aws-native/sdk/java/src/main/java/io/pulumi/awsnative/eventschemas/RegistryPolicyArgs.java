@@ -75,32 +75,32 @@ public final class RegistryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setPolicy(Input<Object> policy) {
+        public Builder policy(Input<Object> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(Object policy) {
+        public Builder policy(Object policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setRevisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Input<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
-        public Builder setRevisionId(@Nullable String revisionId) {
+        public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }

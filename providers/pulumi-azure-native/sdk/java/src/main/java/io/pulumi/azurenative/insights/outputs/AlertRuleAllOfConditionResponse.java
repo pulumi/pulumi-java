@@ -49,7 +49,7 @@ public final class AlertRuleAllOfConditionResponse {
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder setAllOf(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
+        public Builder allOf(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }

@@ -89,42 +89,42 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.priority = defaults.priority;
         }
 
-        public Builder setActions(Input<List<ListenerRuleActionArgs>> actions) {
+        public Builder actions(Input<List<ListenerRuleActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<ListenerRuleActionArgs> actions) {
+        public Builder actions(List<ListenerRuleActionArgs> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setConditions(Input<List<ListenerRuleRuleConditionArgs>> conditions) {
+        public Builder conditions(Input<List<ListenerRuleRuleConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConditions(List<ListenerRuleRuleConditionArgs> conditions) {
+        public Builder conditions(List<ListenerRuleRuleConditionArgs> conditions) {
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder setListenerArn(Input<String> listenerArn) {
+        public Builder listenerArn(Input<String> listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }
 
-        public Builder setListenerArn(String listenerArn) {
+        public Builder listenerArn(String listenerArn) {
             this.listenerArn = Input.of(Objects.requireNonNull(listenerArn));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }

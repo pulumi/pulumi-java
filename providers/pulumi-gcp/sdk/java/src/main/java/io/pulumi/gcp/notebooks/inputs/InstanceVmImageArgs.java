@@ -87,32 +87,32 @@ public final class InstanceVmImageArgs extends io.pulumi.resources.ResourceArgs 
     	      this.project = defaults.project;
         }
 
-        public Builder setImageFamily(@Nullable Input<String> imageFamily) {
+        public Builder imageFamily(@Nullable Input<String> imageFamily) {
             this.imageFamily = imageFamily;
             return this;
         }
 
-        public Builder setImageFamily(@Nullable String imageFamily) {
+        public Builder imageFamily(@Nullable String imageFamily) {
             this.imageFamily = Input.ofNullable(imageFamily);
             return this;
         }
 
-        public Builder setImageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Input<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = Input.ofNullable(imageName);
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }

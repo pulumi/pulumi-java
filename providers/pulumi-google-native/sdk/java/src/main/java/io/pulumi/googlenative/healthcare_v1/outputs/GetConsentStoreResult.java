@@ -99,22 +99,22 @@ public final class GetConsentStoreResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDefaultConsentTtl(String defaultConsentTtl) {
+        public Builder defaultConsentTtl(String defaultConsentTtl) {
             this.defaultConsentTtl = Objects.requireNonNull(defaultConsentTtl);
             return this;
         }
 
-        public Builder setEnableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
+        public Builder enableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = Objects.requireNonNull(enableConsentCreateOnUpdate);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

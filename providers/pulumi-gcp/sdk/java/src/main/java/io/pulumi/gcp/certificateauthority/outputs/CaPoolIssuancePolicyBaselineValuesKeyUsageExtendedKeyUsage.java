@@ -131,32 +131,32 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage {
     	      this.timeStamping = defaults.timeStamping;
         }
 
-        public Builder setClientAuth(@Nullable Boolean clientAuth) {
+        public Builder clientAuth(@Nullable Boolean clientAuth) {
             this.clientAuth = clientAuth;
             return this;
         }
 
-        public Builder setCodeSigning(@Nullable Boolean codeSigning) {
+        public Builder codeSigning(@Nullable Boolean codeSigning) {
             this.codeSigning = codeSigning;
             return this;
         }
 
-        public Builder setEmailProtection(@Nullable Boolean emailProtection) {
+        public Builder emailProtection(@Nullable Boolean emailProtection) {
             this.emailProtection = emailProtection;
             return this;
         }
 
-        public Builder setOcspSigning(@Nullable Boolean ocspSigning) {
+        public Builder ocspSigning(@Nullable Boolean ocspSigning) {
             this.ocspSigning = ocspSigning;
             return this;
         }
 
-        public Builder setServerAuth(@Nullable Boolean serverAuth) {
+        public Builder serverAuth(@Nullable Boolean serverAuth) {
             this.serverAuth = serverAuth;
             return this;
         }
 
-        public Builder setTimeStamping(@Nullable Boolean timeStamping) {
+        public Builder timeStamping(@Nullable Boolean timeStamping) {
             this.timeStamping = timeStamping;
             return this;
         }

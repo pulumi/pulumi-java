@@ -90,17 +90,17 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
     	      this.enableNetworkEgressMetering = defaults.enableNetworkEgressMetering;
         }
 
-        public Builder setBigqueryDestination(BigQueryDestinationResponse bigqueryDestination) {
+        public Builder bigqueryDestination(BigQueryDestinationResponse bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setConsumptionMeteringConfig(ConsumptionMeteringConfigResponse consumptionMeteringConfig) {
+        public Builder consumptionMeteringConfig(ConsumptionMeteringConfigResponse consumptionMeteringConfig) {
             this.consumptionMeteringConfig = Objects.requireNonNull(consumptionMeteringConfig);
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }

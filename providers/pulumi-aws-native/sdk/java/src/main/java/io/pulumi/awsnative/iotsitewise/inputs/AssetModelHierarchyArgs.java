@@ -89,32 +89,32 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder setChildAssetModelId(Input<String> childAssetModelId) {
+        public Builder childAssetModelId(Input<String> childAssetModelId) {
             this.childAssetModelId = Objects.requireNonNull(childAssetModelId);
             return this;
         }
 
-        public Builder setChildAssetModelId(String childAssetModelId) {
+        public Builder childAssetModelId(String childAssetModelId) {
             this.childAssetModelId = Input.of(Objects.requireNonNull(childAssetModelId));
             return this;
         }
 
-        public Builder setLogicalId(Input<String> logicalId) {
+        public Builder logicalId(Input<String> logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
-        public Builder setLogicalId(String logicalId) {
+        public Builder logicalId(String logicalId) {
             this.logicalId = Input.of(Objects.requireNonNull(logicalId));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

@@ -100,22 +100,22 @@ public final class EndpointAddress {
     	      this.targetRef = defaults.targetRef;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setIp(String ip) {
+        public Builder ip(String ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setTargetRef(@Nullable ObjectReference targetRef) {
+        public Builder targetRef(@Nullable ObjectReference targetRef) {
             this.targetRef = targetRef;
             return this;
         }

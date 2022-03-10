@@ -222,122 +222,122 @@ public final class EndpointPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthorizationPolicy(@Nullable Input<String> authorizationPolicy) {
+        public Builder authorizationPolicy(@Nullable Input<String> authorizationPolicy) {
             this.authorizationPolicy = authorizationPolicy;
             return this;
         }
 
-        public Builder setAuthorizationPolicy(@Nullable String authorizationPolicy) {
+        public Builder authorizationPolicy(@Nullable String authorizationPolicy) {
             this.authorizationPolicy = Input.ofNullable(authorizationPolicy);
             return this;
         }
 
-        public Builder setClientTlsPolicy(@Nullable Input<String> clientTlsPolicy) {
+        public Builder clientTlsPolicy(@Nullable Input<String> clientTlsPolicy) {
             this.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
 
-        public Builder setClientTlsPolicy(@Nullable String clientTlsPolicy) {
+        public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
             this.clientTlsPolicy = Input.ofNullable(clientTlsPolicy);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndpointMatcher(Input<EndpointMatcherArgs> endpointMatcher) {
+        public Builder endpointMatcher(Input<EndpointMatcherArgs> endpointMatcher) {
             this.endpointMatcher = Objects.requireNonNull(endpointMatcher);
             return this;
         }
 
-        public Builder setEndpointMatcher(EndpointMatcherArgs endpointMatcher) {
+        public Builder endpointMatcher(EndpointMatcherArgs endpointMatcher) {
             this.endpointMatcher = Input.of(Objects.requireNonNull(endpointMatcher));
             return this;
         }
 
-        public Builder setEndpointPolicyId(Input<String> endpointPolicyId) {
+        public Builder endpointPolicyId(Input<String> endpointPolicyId) {
             this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId);
             return this;
         }
 
-        public Builder setEndpointPolicyId(String endpointPolicyId) {
+        public Builder endpointPolicyId(String endpointPolicyId) {
             this.endpointPolicyId = Input.of(Objects.requireNonNull(endpointPolicyId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServerTlsPolicy(@Nullable Input<String> serverTlsPolicy) {
+        public Builder serverTlsPolicy(@Nullable Input<String> serverTlsPolicy) {
             this.serverTlsPolicy = serverTlsPolicy;
             return this;
         }
 
-        public Builder setServerTlsPolicy(@Nullable String serverTlsPolicy) {
+        public Builder serverTlsPolicy(@Nullable String serverTlsPolicy) {
             this.serverTlsPolicy = Input.ofNullable(serverTlsPolicy);
             return this;
         }
 
-        public Builder setTrafficPortSelector(@Nullable Input<TrafficPortSelectorArgs> trafficPortSelector) {
+        public Builder trafficPortSelector(@Nullable Input<TrafficPortSelectorArgs> trafficPortSelector) {
             this.trafficPortSelector = trafficPortSelector;
             return this;
         }
 
-        public Builder setTrafficPortSelector(@Nullable TrafficPortSelectorArgs trafficPortSelector) {
+        public Builder trafficPortSelector(@Nullable TrafficPortSelectorArgs trafficPortSelector) {
             this.trafficPortSelector = Input.ofNullable(trafficPortSelector);
             return this;
         }
 
-        public Builder setType(Input<EndpointPolicyType> type) {
+        public Builder type(Input<EndpointPolicyType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(EndpointPolicyType type) {
+        public Builder type(EndpointPolicyType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -50,7 +50,7 @@ public final class SessionAffinityConfig {
     	      this.clientIP = defaults.clientIP;
         }
 
-        public Builder setClientIP(@Nullable ClientIPConfig clientIP) {
+        public Builder clientIP(@Nullable ClientIPConfig clientIP) {
             this.clientIP = clientIP;
             return this;
         }

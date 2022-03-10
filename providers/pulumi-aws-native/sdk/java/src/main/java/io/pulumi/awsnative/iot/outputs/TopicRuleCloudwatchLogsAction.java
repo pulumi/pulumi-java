@@ -49,12 +49,12 @@ public final class TopicRuleCloudwatchLogsAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

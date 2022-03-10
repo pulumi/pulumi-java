@@ -101,22 +101,22 @@ public final class CmdkeySetupResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(SecureStringResponse password) {
+        public Builder password(SecureStringResponse password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setTargetName(Object targetName) {
+        public Builder targetName(Object targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(Object userName) {
+        public Builder userName(Object userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

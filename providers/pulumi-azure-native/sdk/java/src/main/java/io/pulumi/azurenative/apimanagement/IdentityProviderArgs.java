@@ -249,132 +249,132 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedTenants(@Nullable Input<List<String>> allowedTenants) {
+        public Builder allowedTenants(@Nullable Input<List<String>> allowedTenants) {
             this.allowedTenants = allowedTenants;
             return this;
         }
 
-        public Builder setAllowedTenants(@Nullable List<String> allowedTenants) {
+        public Builder allowedTenants(@Nullable List<String> allowedTenants) {
             this.allowedTenants = Input.ofNullable(allowedTenants);
             return this;
         }
 
-        public Builder setAuthority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Input<String> authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = Input.ofNullable(authority);
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Input<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder setIdentityProviderName(@Nullable Input<String> identityProviderName) {
+        public Builder identityProviderName(@Nullable Input<String> identityProviderName) {
             this.identityProviderName = identityProviderName;
             return this;
         }
 
-        public Builder setIdentityProviderName(@Nullable String identityProviderName) {
+        public Builder identityProviderName(@Nullable String identityProviderName) {
             this.identityProviderName = Input.ofNullable(identityProviderName);
             return this;
         }
 
-        public Builder setPasswordResetPolicyName(@Nullable Input<String> passwordResetPolicyName) {
+        public Builder passwordResetPolicyName(@Nullable Input<String> passwordResetPolicyName) {
             this.passwordResetPolicyName = passwordResetPolicyName;
             return this;
         }
 
-        public Builder setPasswordResetPolicyName(@Nullable String passwordResetPolicyName) {
+        public Builder passwordResetPolicyName(@Nullable String passwordResetPolicyName) {
             this.passwordResetPolicyName = Input.ofNullable(passwordResetPolicyName);
             return this;
         }
 
-        public Builder setProfileEditingPolicyName(@Nullable Input<String> profileEditingPolicyName) {
+        public Builder profileEditingPolicyName(@Nullable Input<String> profileEditingPolicyName) {
             this.profileEditingPolicyName = profileEditingPolicyName;
             return this;
         }
 
-        public Builder setProfileEditingPolicyName(@Nullable String profileEditingPolicyName) {
+        public Builder profileEditingPolicyName(@Nullable String profileEditingPolicyName) {
             this.profileEditingPolicyName = Input.ofNullable(profileEditingPolicyName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSigninPolicyName(@Nullable Input<String> signinPolicyName) {
+        public Builder signinPolicyName(@Nullable Input<String> signinPolicyName) {
             this.signinPolicyName = signinPolicyName;
             return this;
         }
 
-        public Builder setSigninPolicyName(@Nullable String signinPolicyName) {
+        public Builder signinPolicyName(@Nullable String signinPolicyName) {
             this.signinPolicyName = Input.ofNullable(signinPolicyName);
             return this;
         }
 
-        public Builder setSigninTenant(@Nullable Input<String> signinTenant) {
+        public Builder signinTenant(@Nullable Input<String> signinTenant) {
             this.signinTenant = signinTenant;
             return this;
         }
 
-        public Builder setSigninTenant(@Nullable String signinTenant) {
+        public Builder signinTenant(@Nullable String signinTenant) {
             this.signinTenant = Input.ofNullable(signinTenant);
             return this;
         }
 
-        public Builder setSignupPolicyName(@Nullable Input<String> signupPolicyName) {
+        public Builder signupPolicyName(@Nullable Input<String> signupPolicyName) {
             this.signupPolicyName = signupPolicyName;
             return this;
         }
 
-        public Builder setSignupPolicyName(@Nullable String signupPolicyName) {
+        public Builder signupPolicyName(@Nullable String signupPolicyName) {
             this.signupPolicyName = Input.ofNullable(signupPolicyName);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,IdentityProviderType>> type) {
+        public Builder type(@Nullable Input<Either<String,IdentityProviderType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,IdentityProviderType> type) {
+        public Builder type(@Nullable Either<String,IdentityProviderType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

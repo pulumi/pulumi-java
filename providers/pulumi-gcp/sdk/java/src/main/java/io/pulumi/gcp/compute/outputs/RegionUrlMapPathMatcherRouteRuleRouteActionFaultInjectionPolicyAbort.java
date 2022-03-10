@@ -74,12 +74,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setHttpStatus(@Nullable Integer httpStatus) {
+        public Builder httpStatus(@Nullable Integer httpStatus) {
             this.httpStatus = httpStatus;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Double percentage) {
+        public Builder percentage(@Nullable Double percentage) {
             this.percentage = percentage;
             return this;
         }

@@ -63,22 +63,22 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setEndpointType(@Nullable Input<ApplicationApiGatewayEndpointType> endpointType) {
+        public Builder endpointType(@Nullable Input<ApplicationApiGatewayEndpointType> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setEndpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
+        public Builder endpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
             this.endpointType = Input.ofNullable(endpointType);
             return this;
         }
 
-        public Builder setStageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Input<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }

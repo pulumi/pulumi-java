@@ -92,32 +92,32 @@ public final class ClusterClusterConfigMasterConfigDiskConfigGetArgs extends io.
     	      this.numLocalSsds = defaults.numLocalSsds;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Input<Integer> bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Input.ofNullable(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable Input<String> bootDiskType) {
+        public Builder bootDiskType(@Nullable Input<String> bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable String bootDiskType) {
+        public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = Input.ofNullable(bootDiskType);
             return this;
         }
 
-        public Builder setNumLocalSsds(@Nullable Input<Integer> numLocalSsds) {
+        public Builder numLocalSsds(@Nullable Input<Integer> numLocalSsds) {
             this.numLocalSsds = numLocalSsds;
             return this;
         }
 
-        public Builder setNumLocalSsds(@Nullable Integer numLocalSsds) {
+        public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
             this.numLocalSsds = Input.ofNullable(numLocalSsds);
             return this;
         }

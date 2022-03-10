@@ -100,22 +100,22 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAssessmentName(String assessmentName) {
+        public Builder assessmentName(String assessmentName) {
             this.assessmentName = Objects.requireNonNull(assessmentName);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

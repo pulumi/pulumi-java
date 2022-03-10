@@ -53,12 +53,12 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.ingestionSettingName = defaults.ingestionSettingName;
         }
 
-        public Builder setIngestionSettingName(@Nullable Input<String> ingestionSettingName) {
+        public Builder ingestionSettingName(@Nullable Input<String> ingestionSettingName) {
             this.ingestionSettingName = ingestionSettingName;
             return this;
         }
 
-        public Builder setIngestionSettingName(@Nullable String ingestionSettingName) {
+        public Builder ingestionSettingName(@Nullable String ingestionSettingName) {
             this.ingestionSettingName = Input.ofNullable(ingestionSettingName);
             return this;
         }

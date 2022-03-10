@@ -193,92 +193,92 @@ public final class MonitorConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.toleratedNumberOfFailures = defaults.toleratedNumberOfFailures;
         }
 
-        public Builder setCustomHeaders(@Nullable Input<List<MonitorConfigCustomHeadersArgs>> customHeaders) {
+        public Builder customHeaders(@Nullable Input<List<MonitorConfigCustomHeadersArgs>> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable List<MonitorConfigCustomHeadersArgs> customHeaders) {
+        public Builder customHeaders(@Nullable List<MonitorConfigCustomHeadersArgs> customHeaders) {
             this.customHeaders = Input.ofNullable(customHeaders);
             return this;
         }
 
-        public Builder setExpectedStatusCodeRanges(@Nullable Input<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges) {
+        public Builder expectedStatusCodeRanges(@Nullable Input<List<MonitorConfigExpectedStatusCodeRangesArgs>> expectedStatusCodeRanges) {
             this.expectedStatusCodeRanges = expectedStatusCodeRanges;
             return this;
         }
 
-        public Builder setExpectedStatusCodeRanges(@Nullable List<MonitorConfigExpectedStatusCodeRangesArgs> expectedStatusCodeRanges) {
+        public Builder expectedStatusCodeRanges(@Nullable List<MonitorConfigExpectedStatusCodeRangesArgs> expectedStatusCodeRanges) {
             this.expectedStatusCodeRanges = Input.ofNullable(expectedStatusCodeRanges);
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Input<Double> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Input<Double> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Double intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Double intervalInSeconds) {
             this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Double> port) {
+        public Builder port(@Nullable Input<Double> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Double port) {
+        public Builder port(@Nullable Double port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProfileMonitorStatus(@Nullable Input<Either<String,ProfileMonitorStatus>> profileMonitorStatus) {
+        public Builder profileMonitorStatus(@Nullable Input<Either<String,ProfileMonitorStatus>> profileMonitorStatus) {
             this.profileMonitorStatus = profileMonitorStatus;
             return this;
         }
 
-        public Builder setProfileMonitorStatus(@Nullable Either<String,ProfileMonitorStatus> profileMonitorStatus) {
+        public Builder profileMonitorStatus(@Nullable Either<String,ProfileMonitorStatus> profileMonitorStatus) {
             this.profileMonitorStatus = Input.ofNullable(profileMonitorStatus);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,MonitorProtocol>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,MonitorProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,MonitorProtocol> protocol) {
+        public Builder protocol(@Nullable Either<String,MonitorProtocol> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Double timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder setToleratedNumberOfFailures(@Nullable Input<Double> toleratedNumberOfFailures) {
+        public Builder toleratedNumberOfFailures(@Nullable Input<Double> toleratedNumberOfFailures) {
             this.toleratedNumberOfFailures = toleratedNumberOfFailures;
             return this;
         }
 
-        public Builder setToleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
+        public Builder toleratedNumberOfFailures(@Nullable Double toleratedNumberOfFailures) {
             this.toleratedNumberOfFailures = Input.ofNullable(toleratedNumberOfFailures);
             return this;
         }

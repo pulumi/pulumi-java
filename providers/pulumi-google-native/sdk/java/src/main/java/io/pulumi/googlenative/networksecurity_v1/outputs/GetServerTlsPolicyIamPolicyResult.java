@@ -101,22 +101,22 @@ public final class GetServerTlsPolicyIamPolicyResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(List<GoogleIamV1AuditConfigResponse> auditConfigs) {
+        public Builder auditConfigs(List<GoogleIamV1AuditConfigResponse> auditConfigs) {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(List<GoogleIamV1BindingResponse> bindings) {
+        public Builder bindings(List<GoogleIamV1BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

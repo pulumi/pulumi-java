@@ -50,7 +50,7 @@ public final class GetStudioSessionMappingResult {
     	      this.sessionPolicyArn = defaults.sessionPolicyArn;
         }
 
-        public Builder setSessionPolicyArn(@Nullable String sessionPolicyArn) {
+        public Builder sessionPolicyArn(@Nullable String sessionPolicyArn) {
             this.sessionPolicyArn = sessionPolicyArn;
             return this;
         }

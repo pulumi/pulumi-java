@@ -225,62 +225,62 @@ public final class GetLocationHDFSResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentArns(@Nullable List<String> agentArns) {
+        public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable LocationHDFSAuthenticationType authenticationType) {
+        public Builder authenticationType(@Nullable LocationHDFSAuthenticationType authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setBlockSize(@Nullable Integer blockSize) {
+        public Builder blockSize(@Nullable Integer blockSize) {
             this.blockSize = blockSize;
             return this;
         }
 
-        public Builder setKerberosPrincipal(@Nullable String kerberosPrincipal) {
+        public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
             this.kerberosPrincipal = kerberosPrincipal;
             return this;
         }
 
-        public Builder setKmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
+        public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
             this.kmsKeyProviderUri = kmsKeyProviderUri;
             return this;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setNameNodes(@Nullable List<LocationHDFSNameNode> nameNodes) {
+        public Builder nameNodes(@Nullable List<LocationHDFSNameNode> nameNodes) {
             this.nameNodes = nameNodes;
             return this;
         }
 
-        public Builder setQopConfiguration(@Nullable LocationHDFSQopConfiguration qopConfiguration) {
+        public Builder qopConfiguration(@Nullable LocationHDFSQopConfiguration qopConfiguration) {
             this.qopConfiguration = qopConfiguration;
             return this;
         }
 
-        public Builder setReplicationFactor(@Nullable Integer replicationFactor) {
+        public Builder replicationFactor(@Nullable Integer replicationFactor) {
             this.replicationFactor = replicationFactor;
             return this;
         }
 
-        public Builder setSimpleUser(@Nullable String simpleUser) {
+        public Builder simpleUser(@Nullable String simpleUser) {
             this.simpleUser = simpleUser;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationHDFSTag> tags) {
+        public Builder tags(@Nullable List<LocationHDFSTag> tags) {
             this.tags = tags;
             return this;
         }

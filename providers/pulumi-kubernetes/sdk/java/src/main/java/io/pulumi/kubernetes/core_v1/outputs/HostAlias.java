@@ -68,12 +68,12 @@ public final class HostAlias {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setHostnames(@Nullable List<String> hostnames) {
+        public Builder hostnames(@Nullable List<String> hostnames) {
             this.hostnames = hostnames;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }

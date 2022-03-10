@@ -123,32 +123,32 @@ public final class DirectoryConnectSettings {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setConnectIps(@Nullable List<String> connectIps) {
+        public Builder connectIps(@Nullable List<String> connectIps) {
             this.connectIps = connectIps;
             return this;
         }
 
-        public Builder setCustomerDnsIps(List<String> customerDnsIps) {
+        public Builder customerDnsIps(List<String> customerDnsIps) {
             this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
             return this;
         }
 
-        public Builder setCustomerUsername(String customerUsername) {
+        public Builder customerUsername(String customerUsername) {
             this.customerUsername = Objects.requireNonNull(customerUsername);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

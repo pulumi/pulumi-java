@@ -42,7 +42,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     	      this.obectIds = defaults.obectIds;
         }
 
-        public Builder setObectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
+        public Builder obectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
             this.obectIds = obectIds;
             return this;
         }

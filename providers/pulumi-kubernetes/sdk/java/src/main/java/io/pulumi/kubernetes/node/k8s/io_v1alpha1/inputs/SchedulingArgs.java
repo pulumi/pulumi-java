@@ -77,22 +77,22 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tolerations = defaults.tolerations;
         }
 
-        public Builder setNodeSelector(@Nullable Input<Map<String,String>> nodeSelector) {
+        public Builder nodeSelector(@Nullable Input<Map<String,String>> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
 
-        public Builder setNodeSelector(@Nullable Map<String,String> nodeSelector) {
+        public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
             this.nodeSelector = Input.ofNullable(nodeSelector);
             return this;
         }
 
-        public Builder setTolerations(@Nullable Input<List<TolerationArgs>> tolerations) {
+        public Builder tolerations(@Nullable Input<List<TolerationArgs>> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
 
-        public Builder setTolerations(@Nullable List<TolerationArgs> tolerations) {
+        public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
             this.tolerations = Input.ofNullable(tolerations);
             return this;
         }

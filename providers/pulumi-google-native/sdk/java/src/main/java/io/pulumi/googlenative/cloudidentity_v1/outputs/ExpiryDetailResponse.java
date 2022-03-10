@@ -48,7 +48,7 @@ public final class ExpiryDetailResponse {
     	      this.expireTime = defaults.expireTime;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }

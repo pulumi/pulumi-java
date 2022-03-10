@@ -165,72 +165,72 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     	      this.thresholdRules = defaults.thresholdRules;
         }
 
-        public Builder setAllUpdatesRule(@Nullable Input<BudgetAllUpdatesRuleGetArgs> allUpdatesRule) {
+        public Builder allUpdatesRule(@Nullable Input<BudgetAllUpdatesRuleGetArgs> allUpdatesRule) {
             this.allUpdatesRule = allUpdatesRule;
             return this;
         }
 
-        public Builder setAllUpdatesRule(@Nullable BudgetAllUpdatesRuleGetArgs allUpdatesRule) {
+        public Builder allUpdatesRule(@Nullable BudgetAllUpdatesRuleGetArgs allUpdatesRule) {
             this.allUpdatesRule = Input.ofNullable(allUpdatesRule);
             return this;
         }
 
-        public Builder setAmount(@Nullable Input<BudgetAmountGetArgs> amount) {
+        public Builder amount(@Nullable Input<BudgetAmountGetArgs> amount) {
             this.amount = amount;
             return this;
         }
 
-        public Builder setAmount(@Nullable BudgetAmountGetArgs amount) {
+        public Builder amount(@Nullable BudgetAmountGetArgs amount) {
             this.amount = Input.ofNullable(amount);
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable Input<String> billingAccount) {
+        public Builder billingAccount(@Nullable Input<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Input.ofNullable(billingAccount);
             return this;
         }
 
-        public Builder setBudgetFilter(@Nullable Input<BudgetBudgetFilterGetArgs> budgetFilter) {
+        public Builder budgetFilter(@Nullable Input<BudgetBudgetFilterGetArgs> budgetFilter) {
             this.budgetFilter = budgetFilter;
             return this;
         }
 
-        public Builder setBudgetFilter(@Nullable BudgetBudgetFilterGetArgs budgetFilter) {
+        public Builder budgetFilter(@Nullable BudgetBudgetFilterGetArgs budgetFilter) {
             this.budgetFilter = Input.ofNullable(budgetFilter);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setThresholdRules(@Nullable Input<List<BudgetThresholdRuleGetArgs>> thresholdRules) {
+        public Builder thresholdRules(@Nullable Input<List<BudgetThresholdRuleGetArgs>> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
 
-        public Builder setThresholdRules(@Nullable List<BudgetThresholdRuleGetArgs> thresholdRules) {
+        public Builder thresholdRules(@Nullable List<BudgetThresholdRuleGetArgs> thresholdRules) {
             this.thresholdRules = Input.ofNullable(thresholdRules);
             return this;
         }

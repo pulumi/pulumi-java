@@ -86,17 +86,17 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setMonitorName(String monitorName) {
+        public Builder monitorName(String monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

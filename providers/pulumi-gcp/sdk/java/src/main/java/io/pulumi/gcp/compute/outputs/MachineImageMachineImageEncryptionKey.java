@@ -107,22 +107,22 @@ public final class MachineImageMachineImageEncryptionKey {
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setSha256(@Nullable String sha256) {
+        public Builder sha256(@Nullable String sha256) {
             this.sha256 = sha256;
             return this;
         }

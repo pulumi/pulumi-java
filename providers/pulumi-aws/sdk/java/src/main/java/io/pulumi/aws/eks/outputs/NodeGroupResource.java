@@ -69,12 +69,12 @@ public final class NodeGroupResource {
     	      this.remoteAccessSecurityGroupId = defaults.remoteAccessSecurityGroupId;
         }
 
-        public Builder setAutoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups) {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
-        public Builder setRemoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
+        public Builder remoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
             this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
             return this;
         }

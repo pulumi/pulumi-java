@@ -107,42 +107,42 @@ public final class DeviceGatewayConfigGetArgs extends io.pulumi.resources.Resour
     	      this.lastAccessedGatewayTime = defaults.lastAccessedGatewayTime;
         }
 
-        public Builder setGatewayAuthMethod(@Nullable Input<String> gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable Input<String> gatewayAuthMethod) {
             this.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
-        public Builder setGatewayAuthMethod(@Nullable String gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable String gatewayAuthMethod) {
             this.gatewayAuthMethod = Input.ofNullable(gatewayAuthMethod);
             return this;
         }
 
-        public Builder setGatewayType(@Nullable Input<String> gatewayType) {
+        public Builder gatewayType(@Nullable Input<String> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
-        public Builder setGatewayType(@Nullable String gatewayType) {
+        public Builder gatewayType(@Nullable String gatewayType) {
             this.gatewayType = Input.ofNullable(gatewayType);
             return this;
         }
 
-        public Builder setLastAccessedGatewayId(@Nullable Input<String> lastAccessedGatewayId) {
+        public Builder lastAccessedGatewayId(@Nullable Input<String> lastAccessedGatewayId) {
             this.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
 
-        public Builder setLastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
+        public Builder lastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
             this.lastAccessedGatewayId = Input.ofNullable(lastAccessedGatewayId);
             return this;
         }
 
-        public Builder setLastAccessedGatewayTime(@Nullable Input<String> lastAccessedGatewayTime) {
+        public Builder lastAccessedGatewayTime(@Nullable Input<String> lastAccessedGatewayTime) {
             this.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }
 
-        public Builder setLastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
+        public Builder lastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
             this.lastAccessedGatewayTime = Input.ofNullable(lastAccessedGatewayTime);
             return this;
         }

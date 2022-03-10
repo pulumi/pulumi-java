@@ -76,22 +76,22 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
     	      this.limits = defaults.limits;
         }
 
-        public Builder setCpuIdle(@Nullable Input<Boolean> cpuIdle) {
+        public Builder cpuIdle(@Nullable Input<Boolean> cpuIdle) {
             this.cpuIdle = cpuIdle;
             return this;
         }
 
-        public Builder setCpuIdle(@Nullable Boolean cpuIdle) {
+        public Builder cpuIdle(@Nullable Boolean cpuIdle) {
             this.cpuIdle = Input.ofNullable(cpuIdle);
             return this;
         }
 
-        public Builder setLimits(@Nullable Input<Map<String,String>> limits) {
+        public Builder limits(@Nullable Input<Map<String,String>> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable Map<String,String> limits) {
+        public Builder limits(@Nullable Map<String,String> limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }

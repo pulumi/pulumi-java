@@ -48,7 +48,7 @@ public final class NodeInfoResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

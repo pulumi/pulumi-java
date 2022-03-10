@@ -55,7 +55,7 @@ public final class HostedZoneQueryLoggingConfig extends io.pulumi.resources.Invo
     	      this.cloudWatchLogsLogGroupArn = defaults.cloudWatchLogsLogGroupArn;
         }
 
-        public Builder setCloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
+        public Builder cloudWatchLogsLogGroupArn(String cloudWatchLogsLogGroupArn) {
             this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
             return this;
         }

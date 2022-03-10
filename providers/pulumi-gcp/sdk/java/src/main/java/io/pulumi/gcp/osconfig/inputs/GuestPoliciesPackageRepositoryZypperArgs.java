@@ -104,42 +104,42 @@ public final class GuestPoliciesPackageRepositoryZypperArgs extends io.pulumi.re
     	      this.id = defaults.id;
         }
 
-        public Builder setBaseUrl(Input<String> baseUrl) {
+        public Builder baseUrl(Input<String> baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
 
-        public Builder setBaseUrl(String baseUrl) {
+        public Builder baseUrl(String baseUrl) {
             this.baseUrl = Input.of(Objects.requireNonNull(baseUrl));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGpgKeys(@Nullable Input<List<String>> gpgKeys) {
+        public Builder gpgKeys(@Nullable Input<List<String>> gpgKeys) {
             this.gpgKeys = gpgKeys;
             return this;
         }
 
-        public Builder setGpgKeys(@Nullable List<String> gpgKeys) {
+        public Builder gpgKeys(@Nullable List<String> gpgKeys) {
             this.gpgKeys = Input.ofNullable(gpgKeys);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }

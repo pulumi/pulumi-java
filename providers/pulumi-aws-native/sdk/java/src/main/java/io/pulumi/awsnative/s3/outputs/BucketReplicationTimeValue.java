@@ -40,7 +40,7 @@ public final class BucketReplicationTimeValue {
     	      this.minutes = defaults.minutes;
         }
 
-        public Builder setMinutes(Integer minutes) {
+        public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }

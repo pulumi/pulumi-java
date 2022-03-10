@@ -52,12 +52,12 @@ public final class AzureClusterControlPlaneDatabaseEncryptionGetArgs extends io.
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder setKeyId(Input<String> keyId) {
+        public Builder keyId(Input<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Input.of(Objects.requireNonNull(keyId));
             return this;
         }

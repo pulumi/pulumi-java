@@ -48,7 +48,7 @@ public final class AnomalyDetectorConfig {
     	      this.anomalyDetectorFrequency = defaults.anomalyDetectorFrequency;
         }
 
-        public Builder setAnomalyDetectorFrequency(AnomalyDetectorFrequency anomalyDetectorFrequency) {
+        public Builder anomalyDetectorFrequency(AnomalyDetectorFrequency anomalyDetectorFrequency) {
             this.anomalyDetectorFrequency = Objects.requireNonNull(anomalyDetectorFrequency);
             return this;
         }

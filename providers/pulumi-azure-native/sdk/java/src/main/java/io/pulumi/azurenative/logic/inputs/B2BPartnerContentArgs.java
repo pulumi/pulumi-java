@@ -58,12 +58,12 @@ public final class B2BPartnerContentArgs extends io.pulumi.resources.ResourceArg
     	      this.businessIdentities = defaults.businessIdentities;
         }
 
-        public Builder setBusinessIdentities(@Nullable Input<List<BusinessIdentityArgs>> businessIdentities) {
+        public Builder businessIdentities(@Nullable Input<List<BusinessIdentityArgs>> businessIdentities) {
             this.businessIdentities = businessIdentities;
             return this;
         }
 
-        public Builder setBusinessIdentities(@Nullable List<BusinessIdentityArgs> businessIdentities) {
+        public Builder businessIdentities(@Nullable List<BusinessIdentityArgs> businessIdentities) {
             this.businessIdentities = Input.ofNullable(businessIdentities);
             return this;
         }

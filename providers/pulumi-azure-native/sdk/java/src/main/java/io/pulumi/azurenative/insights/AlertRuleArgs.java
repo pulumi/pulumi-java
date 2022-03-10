@@ -224,112 +224,112 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAction(@Nullable Input<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action) {
+        public Builder action(@Nullable Input<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Either<RuleEmailActionArgs,RuleWebhookActionArgs> action) {
+        public Builder action(@Nullable Either<RuleEmailActionArgs,RuleWebhookActionArgs> action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setActions(@Nullable Input<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions) {
+        public Builder actions(@Nullable Input<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> actions) {
+        public Builder actions(@Nullable List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setCondition(Input<Object> condition) {
+        public Builder condition(Input<Object> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setCondition(Object condition) {
+        public Builder condition(Object condition) {
             this.condition = Input.of(Objects.requireNonNull(condition));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -66,12 +66,12 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
     	      this.usageWithinTimeRange = defaults.usageWithinTimeRange;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUsageWithinTimeRange(Map<String,String> usageWithinTimeRange) {
+        public Builder usageWithinTimeRange(Map<String,String> usageWithinTimeRange) {
             this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
             return this;
         }

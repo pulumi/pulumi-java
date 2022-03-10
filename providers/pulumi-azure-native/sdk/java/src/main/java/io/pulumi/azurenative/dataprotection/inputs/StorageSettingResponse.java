@@ -74,12 +74,12 @@ public final class StorageSettingResponse extends io.pulumi.resources.InvokeArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setDatastoreType(@Nullable String datastoreType) {
+        public Builder datastoreType(@Nullable String datastoreType) {
             this.datastoreType = datastoreType;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

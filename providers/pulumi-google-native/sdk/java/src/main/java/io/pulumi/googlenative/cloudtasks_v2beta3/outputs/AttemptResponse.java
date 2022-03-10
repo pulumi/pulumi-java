@@ -98,22 +98,22 @@ public final class AttemptResponse {
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setDispatchTime(String dispatchTime) {
+        public Builder dispatchTime(String dispatchTime) {
             this.dispatchTime = Objects.requireNonNull(dispatchTime);
             return this;
         }
 
-        public Builder setResponseStatus(StatusResponse responseStatus) {
+        public Builder responseStatus(StatusResponse responseStatus) {
             this.responseStatus = Objects.requireNonNull(responseStatus);
             return this;
         }
 
-        public Builder setResponseTime(String responseTime) {
+        public Builder responseTime(String responseTime) {
             this.responseTime = Objects.requireNonNull(responseTime);
             return this;
         }
 
-        public Builder setScheduleTime(String scheduleTime) {
+        public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }

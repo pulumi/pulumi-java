@@ -124,27 +124,27 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setTrafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
+        public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
-        public Builder setWorkspaceRegion(@Nullable String workspaceRegion) {
+        public Builder workspaceRegion(@Nullable String workspaceRegion) {
             this.workspaceRegion = workspaceRegion;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

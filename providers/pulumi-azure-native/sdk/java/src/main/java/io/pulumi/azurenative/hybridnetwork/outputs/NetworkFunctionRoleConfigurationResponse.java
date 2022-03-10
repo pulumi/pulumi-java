@@ -185,47 +185,47 @@ public final class NetworkFunctionRoleConfigurationResponse {
     	      this.virtualMachineSize = defaults.virtualMachineSize;
         }
 
-        public Builder setCustomProfile(@Nullable CustomProfileResponse customProfile) {
+        public Builder customProfile(@Nullable CustomProfileResponse customProfile) {
             this.customProfile = customProfile;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OsProfileResponse osProfile) {
+        public Builder osProfile(@Nullable OsProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleType(@Nullable String roleType) {
+        public Builder roleType(@Nullable String roleType) {
             this.roleType = roleType;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setUserDataParameters(@Nullable Object userDataParameters) {
+        public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
 
-        public Builder setUserDataTemplate(@Nullable Object userDataTemplate) {
+        public Builder userDataTemplate(@Nullable Object userDataTemplate) {
             this.userDataTemplate = userDataTemplate;
             return this;
         }
 
-        public Builder setVirtualMachineSize(@Nullable String virtualMachineSize) {
+        public Builder virtualMachineSize(@Nullable String virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }

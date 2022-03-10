@@ -60,12 +60,12 @@ public final class FrameworkControlInputParameter extends io.pulumi.resources.In
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setParameterName(String parameterName) {
+        public Builder parameterName(String parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
-        public Builder setParameterValue(String parameterValue) {
+        public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }

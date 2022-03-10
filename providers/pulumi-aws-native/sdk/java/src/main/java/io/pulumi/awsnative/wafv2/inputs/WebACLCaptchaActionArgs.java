@@ -53,12 +53,12 @@ public final class WebACLCaptchaActionArgs extends io.pulumi.resources.ResourceA
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling) {
+        public Builder customRequestHandling(@Nullable Input<WebACLCustomRequestHandlingArgs> customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }
 
-        public Builder setCustomRequestHandling(@Nullable WebACLCustomRequestHandlingArgs customRequestHandling) {
+        public Builder customRequestHandling(@Nullable WebACLCustomRequestHandlingArgs customRequestHandling) {
             this.customRequestHandling = Input.ofNullable(customRequestHandling);
             return this;
         }

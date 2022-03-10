@@ -151,37 +151,37 @@ public final class GetLocationObjectStorageResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessKey(@Nullable String accessKey) {
+        public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setAgentArns(@Nullable List<String> agentArns) {
+        public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setServerPort(@Nullable Integer serverPort) {
+        public Builder serverPort(@Nullable Integer serverPort) {
             this.serverPort = serverPort;
             return this;
         }
 
-        public Builder setServerProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
+        public Builder serverProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
             this.serverProtocol = serverProtocol;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationObjectStorageTag> tags) {
+        public Builder tags(@Nullable List<LocationObjectStorageTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -156,82 +156,82 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setDatabaseId(@Nullable Input<String> databaseId) {
+        public Builder databaseId(@Nullable Input<String> databaseId) {
             this.databaseId = databaseId;
             return this;
         }
 
-        public Builder setDatabaseId(@Nullable String databaseId) {
+        public Builder databaseId(@Nullable String databaseId) {
             this.databaseId = Input.ofNullable(databaseId);
             return this;
         }
 
-        public Builder setDatabaseUrl(@Nullable Input<String> databaseUrl) {
+        public Builder databaseUrl(@Nullable Input<String> databaseUrl) {
             this.databaseUrl = databaseUrl;
             return this;
         }
 
-        public Builder setDatabaseUrl(@Nullable String databaseUrl) {
+        public Builder databaseUrl(@Nullable String databaseUrl) {
             this.databaseUrl = Input.ofNullable(databaseUrl);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<InstanceState> state) {
+        public Builder state(@Nullable Input<InstanceState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable InstanceState state) {
+        public Builder state(@Nullable InstanceState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setType(@Nullable Input<InstanceType> type) {
+        public Builder type(@Nullable Input<InstanceType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable InstanceType type) {
+        public Builder type(@Nullable InstanceType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

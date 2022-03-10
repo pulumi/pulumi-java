@@ -119,52 +119,52 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAwsServiceName(Input<String> awsServiceName) {
+        public Builder awsServiceName(Input<String> awsServiceName) {
             this.awsServiceName = Objects.requireNonNull(awsServiceName);
             return this;
         }
 
-        public Builder setAwsServiceName(String awsServiceName) {
+        public Builder awsServiceName(String awsServiceName) {
             this.awsServiceName = Input.of(Objects.requireNonNull(awsServiceName));
             return this;
         }
 
-        public Builder setCustomSuffix(@Nullable Input<String> customSuffix) {
+        public Builder customSuffix(@Nullable Input<String> customSuffix) {
             this.customSuffix = customSuffix;
             return this;
         }
 
-        public Builder setCustomSuffix(@Nullable String customSuffix) {
+        public Builder customSuffix(@Nullable String customSuffix) {
             this.customSuffix = Input.ofNullable(customSuffix);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

@@ -50,12 +50,12 @@ public final class BackupPlanAdvancedBackupSettingResourceType {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setBackupOptions(Object backupOptions) {
+        public Builder backupOptions(Object backupOptions) {
             this.backupOptions = Objects.requireNonNull(backupOptions);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

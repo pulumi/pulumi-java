@@ -69,12 +69,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.commonCharactersToIgnore = defaults.commonCharactersToIgnore;
         }
 
-        public Builder setCharactersToSkip(@Nullable String charactersToSkip) {
+        public Builder charactersToSkip(@Nullable String charactersToSkip) {
             this.charactersToSkip = charactersToSkip;
             return this;
         }
 
-        public Builder setCommonCharactersToIgnore(@Nullable String commonCharactersToIgnore) {
+        public Builder commonCharactersToIgnore(@Nullable String commonCharactersToIgnore) {
             this.commonCharactersToIgnore = commonCharactersToIgnore;
             return this;
         }

@@ -74,12 +74,12 @@ public final class GitHubActionCodeConfigurationResponse extends io.pulumi.resou
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setRuntimeStack(@Nullable String runtimeStack) {
+        public Builder runtimeStack(@Nullable String runtimeStack) {
             this.runtimeStack = runtimeStack;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }

@@ -63,12 +63,12 @@ public final class ClusterClusterConfigEndpointConfig {
     	      this.httpPorts = defaults.httpPorts;
         }
 
-        public Builder setEnableHttpPortAccess(Boolean enableHttpPortAccess) {
+        public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
             this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
             return this;
         }
 
-        public Builder setHttpPorts(@Nullable Map<String,Object> httpPorts) {
+        public Builder httpPorts(@Nullable Map<String,Object> httpPorts) {
             this.httpPorts = httpPorts;
             return this;
         }

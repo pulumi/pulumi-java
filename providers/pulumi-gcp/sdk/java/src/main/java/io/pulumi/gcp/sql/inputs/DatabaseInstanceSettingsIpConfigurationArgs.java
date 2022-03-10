@@ -123,52 +123,52 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder setAllocatedIpRange(@Nullable Input<String> allocatedIpRange) {
+        public Builder allocatedIpRange(@Nullable Input<String> allocatedIpRange) {
             this.allocatedIpRange = allocatedIpRange;
             return this;
         }
 
-        public Builder setAllocatedIpRange(@Nullable String allocatedIpRange) {
+        public Builder allocatedIpRange(@Nullable String allocatedIpRange) {
             this.allocatedIpRange = Input.ofNullable(allocatedIpRange);
             return this;
         }
 
-        public Builder setAuthorizedNetworks(@Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable Input<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
-        public Builder setAuthorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs> authorizedNetworks) {
             this.authorizedNetworks = Input.ofNullable(authorizedNetworks);
             return this;
         }
 
-        public Builder setIpv4Enabled(@Nullable Input<Boolean> ipv4Enabled) {
+        public Builder ipv4Enabled(@Nullable Input<Boolean> ipv4Enabled) {
             this.ipv4Enabled = ipv4Enabled;
             return this;
         }
 
-        public Builder setIpv4Enabled(@Nullable Boolean ipv4Enabled) {
+        public Builder ipv4Enabled(@Nullable Boolean ipv4Enabled) {
             this.ipv4Enabled = Input.ofNullable(ipv4Enabled);
             return this;
         }
 
-        public Builder setPrivateNetwork(@Nullable Input<String> privateNetwork) {
+        public Builder privateNetwork(@Nullable Input<String> privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
 
-        public Builder setPrivateNetwork(@Nullable String privateNetwork) {
+        public Builder privateNetwork(@Nullable String privateNetwork) {
             this.privateNetwork = Input.ofNullable(privateNetwork);
             return this;
         }
 
-        public Builder setRequireSsl(@Nullable Input<Boolean> requireSsl) {
+        public Builder requireSsl(@Nullable Input<Boolean> requireSsl) {
             this.requireSsl = requireSsl;
             return this;
         }
 
-        public Builder setRequireSsl(@Nullable Boolean requireSsl) {
+        public Builder requireSsl(@Nullable Boolean requireSsl) {
             this.requireSsl = Input.ofNullable(requireSsl);
             return this;
         }

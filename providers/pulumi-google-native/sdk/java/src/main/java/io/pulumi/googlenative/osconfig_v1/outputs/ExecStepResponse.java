@@ -65,12 +65,12 @@ public final class ExecStepResponse {
     	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
         }
 
-        public Builder setLinuxExecStepConfig(ExecStepConfigResponse linuxExecStepConfig) {
+        public Builder linuxExecStepConfig(ExecStepConfigResponse linuxExecStepConfig) {
             this.linuxExecStepConfig = Objects.requireNonNull(linuxExecStepConfig);
             return this;
         }
 
-        public Builder setWindowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
+        public Builder windowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
             this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
             return this;
         }

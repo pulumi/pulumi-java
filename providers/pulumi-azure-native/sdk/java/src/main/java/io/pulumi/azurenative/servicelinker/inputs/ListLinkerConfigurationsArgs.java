@@ -68,12 +68,12 @@ public final class ListLinkerConfigurationsArgs extends io.pulumi.resources.Invo
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setLinkerName(String linkerName) {
+        public Builder linkerName(String linkerName) {
             this.linkerName = Objects.requireNonNull(linkerName);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

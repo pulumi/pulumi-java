@@ -265,142 +265,142 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddonsConfig(@Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig) {
+        public Builder addonsConfig(@Nullable Input<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig) {
             this.addonsConfig = addonsConfig;
             return this;
         }
 
-        public Builder setAddonsConfig(@Nullable GoogleCloudApigeeV1AddonsConfigArgs addonsConfig) {
+        public Builder addonsConfig(@Nullable GoogleCloudApigeeV1AddonsConfigArgs addonsConfig) {
             this.addonsConfig = Input.ofNullable(addonsConfig);
             return this;
         }
 
-        public Builder setAnalyticsRegion(Input<String> analyticsRegion) {
+        public Builder analyticsRegion(Input<String> analyticsRegion) {
             this.analyticsRegion = Objects.requireNonNull(analyticsRegion);
             return this;
         }
 
-        public Builder setAnalyticsRegion(String analyticsRegion) {
+        public Builder analyticsRegion(String analyticsRegion) {
             this.analyticsRegion = Input.of(Objects.requireNonNull(analyticsRegion));
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<List<String>> attributes) {
+        public Builder attributes(@Nullable Input<List<String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<String> attributes) {
+        public Builder attributes(@Nullable List<String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable Input<String> authorizedNetwork) {
             this.authorizedNetwork = authorizedNetwork;
             return this;
         }
 
-        public Builder setAuthorizedNetwork(@Nullable String authorizedNetwork) {
+        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
             this.authorizedNetwork = Input.ofNullable(authorizedNetwork);
             return this;
         }
 
-        public Builder setBillingType(@Nullable Input<OrganizationBillingType> billingType) {
+        public Builder billingType(@Nullable Input<OrganizationBillingType> billingType) {
             this.billingType = billingType;
             return this;
         }
 
-        public Builder setBillingType(@Nullable OrganizationBillingType billingType) {
+        public Builder billingType(@Nullable OrganizationBillingType billingType) {
             this.billingType = Input.ofNullable(billingType);
             return this;
         }
 
-        public Builder setCustomerName(@Nullable Input<String> customerName) {
+        public Builder customerName(@Nullable Input<String> customerName) {
             this.customerName = customerName;
             return this;
         }
 
-        public Builder setCustomerName(@Nullable String customerName) {
+        public Builder customerName(@Nullable String customerName) {
             this.customerName = Input.ofNullable(customerName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setPortalDisabled(@Nullable Input<Boolean> portalDisabled) {
+        public Builder portalDisabled(@Nullable Input<Boolean> portalDisabled) {
             this.portalDisabled = portalDisabled;
             return this;
         }
 
-        public Builder setPortalDisabled(@Nullable Boolean portalDisabled) {
+        public Builder portalDisabled(@Nullable Boolean portalDisabled) {
             this.portalDisabled = Input.ofNullable(portalDisabled);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<GoogleCloudApigeeV1PropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
+        public Builder properties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setRuntimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable Input<String> runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
 
-        public Builder setRuntimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Input.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
 
-        public Builder setRuntimeType(Input<OrganizationRuntimeType> runtimeType) {
+        public Builder runtimeType(Input<OrganizationRuntimeType> runtimeType) {
             this.runtimeType = Objects.requireNonNull(runtimeType);
             return this;
         }
 
-        public Builder setRuntimeType(OrganizationRuntimeType runtimeType) {
+        public Builder runtimeType(OrganizationRuntimeType runtimeType) {
             this.runtimeType = Input.of(Objects.requireNonNull(runtimeType));
             return this;
         }
 
-        public Builder setType(@Nullable Input<OrganizationType> type) {
+        public Builder type(@Nullable Input<OrganizationType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable OrganizationType type) {
+        public Builder type(@Nullable OrganizationType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

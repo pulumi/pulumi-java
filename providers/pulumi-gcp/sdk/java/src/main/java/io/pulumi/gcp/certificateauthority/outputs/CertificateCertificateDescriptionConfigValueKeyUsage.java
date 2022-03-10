@@ -91,17 +91,17 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsage {
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder setBaseKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages) {
+        public Builder baseKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage> baseKeyUsages) {
             this.baseKeyUsages = baseKeyUsages;
             return this;
         }
 
-        public Builder setExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages) {
+        public Builder extendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsage> extendedKeyUsages) {
             this.extendedKeyUsages = extendedKeyUsages;
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }

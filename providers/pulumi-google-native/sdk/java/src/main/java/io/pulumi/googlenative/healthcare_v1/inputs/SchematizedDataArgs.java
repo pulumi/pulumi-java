@@ -74,22 +74,22 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
     	      this.error = defaults.error;
         }
 
-        public Builder setData(@Nullable Input<String> data) {
+        public Builder data(@Nullable Input<String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = Input.ofNullable(data);
             return this;
         }
 
-        public Builder setError(@Nullable Input<String> error) {
+        public Builder error(@Nullable Input<String> error) {
             this.error = error;
             return this;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = Input.ofNullable(error);
             return this;
         }

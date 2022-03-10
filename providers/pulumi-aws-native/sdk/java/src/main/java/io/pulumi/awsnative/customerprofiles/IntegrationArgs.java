@@ -134,62 +134,62 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setFlowDefinition(@Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition) {
+        public Builder flowDefinition(@Nullable Input<IntegrationFlowDefinitionArgs> flowDefinition) {
             this.flowDefinition = flowDefinition;
             return this;
         }
 
-        public Builder setFlowDefinition(@Nullable IntegrationFlowDefinitionArgs flowDefinition) {
+        public Builder flowDefinition(@Nullable IntegrationFlowDefinitionArgs flowDefinition) {
             this.flowDefinition = Input.ofNullable(flowDefinition);
             return this;
         }
 
-        public Builder setObjectTypeName(@Nullable Input<String> objectTypeName) {
+        public Builder objectTypeName(@Nullable Input<String> objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
 
-        public Builder setObjectTypeName(@Nullable String objectTypeName) {
+        public Builder objectTypeName(@Nullable String objectTypeName) {
             this.objectTypeName = Input.ofNullable(objectTypeName);
             return this;
         }
 
-        public Builder setObjectTypeNames(@Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
+        public Builder objectTypeNames(@Nullable Input<List<IntegrationObjectTypeMappingArgs>> objectTypeNames) {
             this.objectTypeNames = objectTypeNames;
             return this;
         }
 
-        public Builder setObjectTypeNames(@Nullable List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
+        public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMappingArgs> objectTypeNames) {
             this.objectTypeNames = Input.ofNullable(objectTypeNames);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<IntegrationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<IntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IntegrationTagArgs> tags) {
+        public Builder tags(@Nullable List<IntegrationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

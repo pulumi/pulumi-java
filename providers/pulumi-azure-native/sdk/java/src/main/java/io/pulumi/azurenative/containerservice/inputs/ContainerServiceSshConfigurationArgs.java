@@ -57,12 +57,12 @@ public final class ContainerServiceSshConfigurationArgs extends io.pulumi.resour
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setPublicKeys(Input<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(Input<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
 
-        public Builder setPublicKeys(List<ContainerServiceSshPublicKeyArgs> publicKeys) {
+        public Builder publicKeys(List<ContainerServiceSshPublicKeyArgs> publicKeys) {
             this.publicKeys = Input.of(Objects.requireNonNull(publicKeys));
             return this;
         }

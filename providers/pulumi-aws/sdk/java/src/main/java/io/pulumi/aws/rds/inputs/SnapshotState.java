@@ -369,212 +369,212 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAllocatedStorage(@Nullable Input<Integer> allocatedStorage) {
+        public Builder allocatedStorage(@Nullable Input<Integer> allocatedStorage) {
             this.allocatedStorage = allocatedStorage;
             return this;
         }
 
-        public Builder setAllocatedStorage(@Nullable Integer allocatedStorage) {
+        public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
             this.allocatedStorage = Input.ofNullable(allocatedStorage);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder setDbSnapshotArn(@Nullable Input<String> dbSnapshotArn) {
+        public Builder dbSnapshotArn(@Nullable Input<String> dbSnapshotArn) {
             this.dbSnapshotArn = dbSnapshotArn;
             return this;
         }
 
-        public Builder setDbSnapshotArn(@Nullable String dbSnapshotArn) {
+        public Builder dbSnapshotArn(@Nullable String dbSnapshotArn) {
             this.dbSnapshotArn = Input.ofNullable(dbSnapshotArn);
             return this;
         }
 
-        public Builder setDbSnapshotIdentifier(@Nullable Input<String> dbSnapshotIdentifier) {
+        public Builder dbSnapshotIdentifier(@Nullable Input<String> dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = dbSnapshotIdentifier;
             return this;
         }
 
-        public Builder setDbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
+        public Builder dbSnapshotIdentifier(@Nullable String dbSnapshotIdentifier) {
             this.dbSnapshotIdentifier = Input.ofNullable(dbSnapshotIdentifier);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setEngine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Input<String> engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = Input.ofNullable(engine);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Input<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setIops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Input<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = Input.ofNullable(iops);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLicenseModel(@Nullable Input<String> licenseModel) {
+        public Builder licenseModel(@Nullable Input<String> licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
 
-        public Builder setLicenseModel(@Nullable String licenseModel) {
+        public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = Input.ofNullable(licenseModel);
             return this;
         }
 
-        public Builder setOptionGroupName(@Nullable Input<String> optionGroupName) {
+        public Builder optionGroupName(@Nullable Input<String> optionGroupName) {
             this.optionGroupName = optionGroupName;
             return this;
         }
 
-        public Builder setOptionGroupName(@Nullable String optionGroupName) {
+        public Builder optionGroupName(@Nullable String optionGroupName) {
             this.optionGroupName = Input.ofNullable(optionGroupName);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setSnapshotType(@Nullable Input<String> snapshotType) {
+        public Builder snapshotType(@Nullable Input<String> snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
 
-        public Builder setSnapshotType(@Nullable String snapshotType) {
+        public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = Input.ofNullable(snapshotType);
             return this;
         }
 
-        public Builder setSourceDbSnapshotIdentifier(@Nullable Input<String> sourceDbSnapshotIdentifier) {
+        public Builder sourceDbSnapshotIdentifier(@Nullable Input<String> sourceDbSnapshotIdentifier) {
             this.sourceDbSnapshotIdentifier = sourceDbSnapshotIdentifier;
             return this;
         }
 
-        public Builder setSourceDbSnapshotIdentifier(@Nullable String sourceDbSnapshotIdentifier) {
+        public Builder sourceDbSnapshotIdentifier(@Nullable String sourceDbSnapshotIdentifier) {
             this.sourceDbSnapshotIdentifier = Input.ofNullable(sourceDbSnapshotIdentifier);
             return this;
         }
 
-        public Builder setSourceRegion(@Nullable Input<String> sourceRegion) {
+        public Builder sourceRegion(@Nullable Input<String> sourceRegion) {
             this.sourceRegion = sourceRegion;
             return this;
         }
 
-        public Builder setSourceRegion(@Nullable String sourceRegion) {
+        public Builder sourceRegion(@Nullable String sourceRegion) {
             this.sourceRegion = Input.ofNullable(sourceRegion);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

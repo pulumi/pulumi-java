@@ -70,22 +70,22 @@ public final class SelectionCondition {
     	      this.stringNotLikes = defaults.stringNotLikes;
         }
 
-        public Builder setStringEquals(@Nullable List<SelectionConditionStringEqual> stringEquals) {
+        public Builder stringEquals(@Nullable List<SelectionConditionStringEqual> stringEquals) {
             this.stringEquals = stringEquals;
             return this;
         }
 
-        public Builder setStringLikes(@Nullable List<SelectionConditionStringLike> stringLikes) {
+        public Builder stringLikes(@Nullable List<SelectionConditionStringLike> stringLikes) {
             this.stringLikes = stringLikes;
             return this;
         }
 
-        public Builder setStringNotEquals(@Nullable List<SelectionConditionStringNotEqual> stringNotEquals) {
+        public Builder stringNotEquals(@Nullable List<SelectionConditionStringNotEqual> stringNotEquals) {
             this.stringNotEquals = stringNotEquals;
             return this;
         }
 
-        public Builder setStringNotLikes(@Nullable List<SelectionConditionStringNotLike> stringNotLikes) {
+        public Builder stringNotLikes(@Nullable List<SelectionConditionStringNotLike> stringNotLikes) {
             this.stringNotLikes = stringNotLikes;
             return this;
         }

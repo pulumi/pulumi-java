@@ -55,7 +55,7 @@ public final class ReplicaResponse extends io.pulumi.resources.InvokeArgs {
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

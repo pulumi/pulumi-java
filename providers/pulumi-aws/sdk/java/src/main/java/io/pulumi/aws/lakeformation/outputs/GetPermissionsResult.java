@@ -145,52 +145,52 @@ public final class GetPermissionsResult {
     	      this.tableWithColumns = defaults.tableWithColumns;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogResource(@Nullable Boolean catalogResource) {
+        public Builder catalogResource(@Nullable Boolean catalogResource) {
             this.catalogResource = catalogResource;
             return this;
         }
 
-        public Builder setDataLocation(GetPermissionsDataLocation dataLocation) {
+        public Builder dataLocation(GetPermissionsDataLocation dataLocation) {
             this.dataLocation = Objects.requireNonNull(dataLocation);
             return this;
         }
 
-        public Builder setDatabase(GetPermissionsDatabase database) {
+        public Builder database(GetPermissionsDatabase database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissionsWithGrantOptions(List<String> permissionsWithGrantOptions) {
+        public Builder permissionsWithGrantOptions(List<String> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = Objects.requireNonNull(permissionsWithGrantOptions);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setTable(GetPermissionsTable table) {
+        public Builder table(GetPermissionsTable table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
-        public Builder setTableWithColumns(GetPermissionsTableWithColumns tableWithColumns) {
+        public Builder tableWithColumns(GetPermissionsTableWithColumns tableWithColumns) {
             this.tableWithColumns = Objects.requireNonNull(tableWithColumns);
             return this;
         }

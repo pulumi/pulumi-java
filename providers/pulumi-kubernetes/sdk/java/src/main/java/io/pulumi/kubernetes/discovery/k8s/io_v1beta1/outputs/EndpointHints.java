@@ -50,7 +50,7 @@ public final class EndpointHints {
     	      this.forZones = defaults.forZones;
         }
 
-        public Builder setForZones(@Nullable List<ForZone> forZones) {
+        public Builder forZones(@Nullable List<ForZone> forZones) {
             this.forZones = forZones;
             return this;
         }

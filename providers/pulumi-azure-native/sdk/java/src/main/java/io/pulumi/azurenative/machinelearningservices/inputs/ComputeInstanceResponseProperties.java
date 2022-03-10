@@ -260,67 +260,67 @@ public final class ComputeInstanceResponseProperties extends io.pulumi.resources
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setApplicationSharingPolicy(@Nullable String applicationSharingPolicy) {
+        public Builder applicationSharingPolicy(@Nullable String applicationSharingPolicy) {
             this.applicationSharingPolicy = applicationSharingPolicy;
             return this;
         }
 
-        public Builder setApplications(List<ComputeInstanceApplicationResponse> applications) {
+        public Builder applications(List<ComputeInstanceApplicationResponse> applications) {
             this.applications = Objects.requireNonNull(applications);
             return this;
         }
 
-        public Builder setComputeInstanceAuthorizationType(@Nullable String computeInstanceAuthorizationType) {
+        public Builder computeInstanceAuthorizationType(@Nullable String computeInstanceAuthorizationType) {
             this.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
         }
 
-        public Builder setConnectivityEndpoints(ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints) {
+        public Builder connectivityEndpoints(ComputeInstanceConnectivityEndpointsResponse connectivityEndpoints) {
             this.connectivityEndpoints = Objects.requireNonNull(connectivityEndpoints);
             return this;
         }
 
-        public Builder setCreatedBy(ComputeInstanceCreatedByResponse createdBy) {
+        public Builder createdBy(ComputeInstanceCreatedByResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setErrors(List<MachineLearningServiceErrorResponse> errors) {
+        public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setLastOperation(ComputeInstanceLastOperationResponse lastOperation) {
+        public Builder lastOperation(ComputeInstanceLastOperationResponse lastOperation) {
             this.lastOperation = Objects.requireNonNull(lastOperation);
             return this;
         }
 
-        public Builder setPersonalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings) {
+        public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsResponse personalComputeInstanceSettings) {
             this.personalComputeInstanceSettings = personalComputeInstanceSettings;
             return this;
         }
 
-        public Builder setSetupScripts(@Nullable SetupScriptsResponse setupScripts) {
+        public Builder setupScripts(@Nullable SetupScriptsResponse setupScripts) {
             this.setupScripts = setupScripts;
             return this;
         }
 
-        public Builder setSshSettings(@Nullable ComputeInstanceSshSettingsResponse sshSettings) {
+        public Builder sshSettings(@Nullable ComputeInstanceSshSettingsResponse sshSettings) {
             this.sshSettings = sshSettings;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubnet(@Nullable ResourceIdResponse subnet) {
+        public Builder subnet(@Nullable ResourceIdResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

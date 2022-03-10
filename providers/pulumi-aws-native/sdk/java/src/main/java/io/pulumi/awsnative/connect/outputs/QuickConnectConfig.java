@@ -70,22 +70,22 @@ public final class QuickConnectConfig {
     	      this.userConfig = defaults.userConfig;
         }
 
-        public Builder setPhoneConfig(@Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig) {
+        public Builder phoneConfig(@Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig) {
             this.phoneConfig = phoneConfig;
             return this;
         }
 
-        public Builder setQueueConfig(@Nullable QuickConnectQueueQuickConnectConfig queueConfig) {
+        public Builder queueConfig(@Nullable QuickConnectQueueQuickConnectConfig queueConfig) {
             this.queueConfig = queueConfig;
             return this;
         }
 
-        public Builder setQuickConnectType(QuickConnectType quickConnectType) {
+        public Builder quickConnectType(QuickConnectType quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
 
-        public Builder setUserConfig(@Nullable QuickConnectUserQuickConnectConfig userConfig) {
+        public Builder userConfig(@Nullable QuickConnectUserQuickConnectConfig userConfig) {
             this.userConfig = userConfig;
             return this;
         }

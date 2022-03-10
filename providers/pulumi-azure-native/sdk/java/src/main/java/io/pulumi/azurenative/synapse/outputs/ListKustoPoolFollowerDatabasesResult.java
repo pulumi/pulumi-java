@@ -50,7 +50,7 @@ public final class ListKustoPoolFollowerDatabasesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
+        public Builder value(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
             this.value = value;
             return this;
         }

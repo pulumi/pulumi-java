@@ -106,42 +106,42 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setGatewayCapabilitySummaries(@Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries) {
+        public Builder gatewayCapabilitySummaries(@Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries) {
             this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
 
-        public Builder setGatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
+        public Builder gatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
             this.gatewayCapabilitySummaries = Input.ofNullable(gatewayCapabilitySummaries);
             return this;
         }
 
-        public Builder setGatewayName(@Nullable Input<String> gatewayName) {
+        public Builder gatewayName(@Nullable Input<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
-        public Builder setGatewayName(@Nullable String gatewayName) {
+        public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = Input.ofNullable(gatewayName);
             return this;
         }
 
-        public Builder setGatewayPlatform(Input<GatewayPlatformArgs> gatewayPlatform) {
+        public Builder gatewayPlatform(Input<GatewayPlatformArgs> gatewayPlatform) {
             this.gatewayPlatform = Objects.requireNonNull(gatewayPlatform);
             return this;
         }
 
-        public Builder setGatewayPlatform(GatewayPlatformArgs gatewayPlatform) {
+        public Builder gatewayPlatform(GatewayPlatformArgs gatewayPlatform) {
             this.gatewayPlatform = Input.of(Objects.requireNonNull(gatewayPlatform));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<GatewayTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<GatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GatewayTagArgs> tags) {
+        public Builder tags(@Nullable List<GatewayTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

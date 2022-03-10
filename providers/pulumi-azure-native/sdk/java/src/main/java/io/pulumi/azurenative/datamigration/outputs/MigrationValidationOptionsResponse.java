@@ -83,17 +83,17 @@ public final class MigrationValidationOptionsResponse {
     	      this.enableSchemaValidation = defaults.enableSchemaValidation;
         }
 
-        public Builder setEnableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
+        public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
             this.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
 
-        public Builder setEnableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
+        public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
 
-        public Builder setEnableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
+        public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
         }

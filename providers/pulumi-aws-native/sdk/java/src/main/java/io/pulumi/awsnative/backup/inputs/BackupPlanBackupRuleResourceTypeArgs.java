@@ -152,92 +152,92 @@ public final class BackupPlanBackupRuleResourceTypeArgs extends io.pulumi.resour
     	      this.targetBackupVault = defaults.targetBackupVault;
         }
 
-        public Builder setCompletionWindowMinutes(@Nullable Input<Double> completionWindowMinutes) {
+        public Builder completionWindowMinutes(@Nullable Input<Double> completionWindowMinutes) {
             this.completionWindowMinutes = completionWindowMinutes;
             return this;
         }
 
-        public Builder setCompletionWindowMinutes(@Nullable Double completionWindowMinutes) {
+        public Builder completionWindowMinutes(@Nullable Double completionWindowMinutes) {
             this.completionWindowMinutes = Input.ofNullable(completionWindowMinutes);
             return this;
         }
 
-        public Builder setCopyActions(@Nullable Input<List<BackupPlanCopyActionResourceTypeArgs>> copyActions) {
+        public Builder copyActions(@Nullable Input<List<BackupPlanCopyActionResourceTypeArgs>> copyActions) {
             this.copyActions = copyActions;
             return this;
         }
 
-        public Builder setCopyActions(@Nullable List<BackupPlanCopyActionResourceTypeArgs> copyActions) {
+        public Builder copyActions(@Nullable List<BackupPlanCopyActionResourceTypeArgs> copyActions) {
             this.copyActions = Input.ofNullable(copyActions);
             return this;
         }
 
-        public Builder setEnableContinuousBackup(@Nullable Input<Boolean> enableContinuousBackup) {
+        public Builder enableContinuousBackup(@Nullable Input<Boolean> enableContinuousBackup) {
             this.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
 
-        public Builder setEnableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
+        public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
             this.enableContinuousBackup = Input.ofNullable(enableContinuousBackup);
             return this;
         }
 
-        public Builder setLifecycle(@Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Input<BackupPlanLifecycleResourceTypeArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
+        public Builder lifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
             this.lifecycle = Input.ofNullable(lifecycle);
             return this;
         }
 
-        public Builder setRecoveryPointTags(@Nullable Input<Object> recoveryPointTags) {
+        public Builder recoveryPointTags(@Nullable Input<Object> recoveryPointTags) {
             this.recoveryPointTags = recoveryPointTags;
             return this;
         }
 
-        public Builder setRecoveryPointTags(@Nullable Object recoveryPointTags) {
+        public Builder recoveryPointTags(@Nullable Object recoveryPointTags) {
             this.recoveryPointTags = Input.ofNullable(recoveryPointTags);
             return this;
         }
 
-        public Builder setRuleName(Input<String> ruleName) {
+        public Builder ruleName(Input<String> ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Input.of(Objects.requireNonNull(ruleName));
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable Input<String> scheduleExpression) {
+        public Builder scheduleExpression(@Nullable Input<String> scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable String scheduleExpression) {
+        public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = Input.ofNullable(scheduleExpression);
             return this;
         }
 
-        public Builder setStartWindowMinutes(@Nullable Input<Double> startWindowMinutes) {
+        public Builder startWindowMinutes(@Nullable Input<Double> startWindowMinutes) {
             this.startWindowMinutes = startWindowMinutes;
             return this;
         }
 
-        public Builder setStartWindowMinutes(@Nullable Double startWindowMinutes) {
+        public Builder startWindowMinutes(@Nullable Double startWindowMinutes) {
             this.startWindowMinutes = Input.ofNullable(startWindowMinutes);
             return this;
         }
 
-        public Builder setTargetBackupVault(Input<String> targetBackupVault) {
+        public Builder targetBackupVault(Input<String> targetBackupVault) {
             this.targetBackupVault = Objects.requireNonNull(targetBackupVault);
             return this;
         }
 
-        public Builder setTargetBackupVault(String targetBackupVault) {
+        public Builder targetBackupVault(String targetBackupVault) {
             this.targetBackupVault = Input.of(Objects.requireNonNull(targetBackupVault));
             return this;
         }

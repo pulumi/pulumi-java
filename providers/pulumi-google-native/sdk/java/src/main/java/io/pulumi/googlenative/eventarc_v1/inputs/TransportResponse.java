@@ -55,7 +55,7 @@ public final class TransportResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pubsub = defaults.pubsub;
         }
 
-        public Builder setPubsub(PubsubResponse pubsub) {
+        public Builder pubsub(PubsubResponse pubsub) {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }

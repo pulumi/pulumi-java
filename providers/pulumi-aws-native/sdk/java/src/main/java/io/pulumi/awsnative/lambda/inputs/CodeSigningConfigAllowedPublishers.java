@@ -56,7 +56,7 @@ public final class CodeSigningConfigAllowedPublishers extends io.pulumi.resource
     	      this.signingProfileVersionArns = defaults.signingProfileVersionArns;
         }
 
-        public Builder setSigningProfileVersionArns(List<String> signingProfileVersionArns) {
+        public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
             this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
             return this;
         }

@@ -126,8 +126,8 @@ public class PodList extends io.pulumi.resources.CustomResource {
     private static PodListArgs makeArgs(PodListArgs args) {
         var builder = args == null ? PodListArgs.builder() : PodListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("PodList")
+            .apiVersion("v1")
+            .kind("PodList")
             .build();
     }
 

@@ -60,17 +60,17 @@ public final class GetPublicKeyResult {
     	      this.publicKeyConfig = defaults.publicKeyConfig;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPublicKeyConfig(@Nullable PublicKeyConfig publicKeyConfig) {
+        public Builder publicKeyConfig(@Nullable PublicKeyConfig publicKeyConfig) {
             this.publicKeyConfig = publicKeyConfig;
             return this;
         }

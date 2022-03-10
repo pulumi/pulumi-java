@@ -51,7 +51,7 @@ public final class GetTenantConfigurationArgs extends io.pulumi.resources.Invoke
     	      this.configurationName = defaults.configurationName;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }

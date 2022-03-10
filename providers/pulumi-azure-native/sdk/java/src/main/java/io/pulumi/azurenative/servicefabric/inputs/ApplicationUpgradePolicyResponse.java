@@ -141,32 +141,32 @@ public final class ApplicationUpgradePolicyResponse extends io.pulumi.resources.
     	      this.upgradeReplicaSetCheckTimeout = defaults.upgradeReplicaSetCheckTimeout;
         }
 
-        public Builder setApplicationHealthPolicy(@Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy) {
+        public Builder applicationHealthPolicy(@Nullable ArmApplicationHealthPolicyResponse applicationHealthPolicy) {
             this.applicationHealthPolicy = applicationHealthPolicy;
             return this;
         }
 
-        public Builder setForceRestart(@Nullable Boolean forceRestart) {
+        public Builder forceRestart(@Nullable Boolean forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
 
-        public Builder setRecreateApplication(@Nullable Boolean recreateApplication) {
+        public Builder recreateApplication(@Nullable Boolean recreateApplication) {
             this.recreateApplication = recreateApplication;
             return this;
         }
 
-        public Builder setRollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy) {
+        public Builder rollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyResponse rollingUpgradeMonitoringPolicy) {
             this.rollingUpgradeMonitoringPolicy = rollingUpgradeMonitoringPolicy;
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable String upgradeMode) {
+        public Builder upgradeMode(@Nullable String upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
-        public Builder setUpgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
+        public Builder upgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;
         }

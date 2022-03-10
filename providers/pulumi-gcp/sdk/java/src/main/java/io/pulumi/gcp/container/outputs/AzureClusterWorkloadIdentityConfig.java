@@ -59,17 +59,17 @@ public final class AzureClusterWorkloadIdentityConfig {
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setIdentityProvider(@Nullable String identityProvider) {
+        public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
-        public Builder setIssuerUri(@Nullable String issuerUri) {
+        public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
 
-        public Builder setWorkloadPool(@Nullable String workloadPool) {
+        public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }

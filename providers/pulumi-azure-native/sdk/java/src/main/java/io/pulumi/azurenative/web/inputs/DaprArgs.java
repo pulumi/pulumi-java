@@ -110,42 +110,42 @@ public final class DaprArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setAppPort(@Nullable Input<Integer> appPort) {
+        public Builder appPort(@Nullable Input<Integer> appPort) {
             this.appPort = appPort;
             return this;
         }
 
-        public Builder setAppPort(@Nullable Integer appPort) {
+        public Builder appPort(@Nullable Integer appPort) {
             this.appPort = Input.ofNullable(appPort);
             return this;
         }
 
-        public Builder setComponents(@Nullable Input<List<DaprComponentArgs>> components) {
+        public Builder components(@Nullable Input<List<DaprComponentArgs>> components) {
             this.components = components;
             return this;
         }
 
-        public Builder setComponents(@Nullable List<DaprComponentArgs> components) {
+        public Builder components(@Nullable List<DaprComponentArgs> components) {
             this.components = Input.ofNullable(components);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }

@@ -50,7 +50,7 @@ public final class AccountEncryptionResponse {
     	      this.keySource = defaults.keySource;
         }
 
-        public Builder setKeySource(@Nullable String keySource) {
+        public Builder keySource(@Nullable String keySource) {
             this.keySource = keySource;
             return this;
         }

@@ -159,42 +159,42 @@ public final class GetIPAMResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIpamId(@Nullable String ipamId) {
+        public Builder ipamId(@Nullable String ipamId) {
             this.ipamId = ipamId;
             return this;
         }
 
-        public Builder setOperatingRegions(@Nullable List<IPAMIpamOperatingRegion> operatingRegions) {
+        public Builder operatingRegions(@Nullable List<IPAMIpamOperatingRegion> operatingRegions) {
             this.operatingRegions = operatingRegions;
             return this;
         }
 
-        public Builder setPrivateDefaultScopeId(@Nullable String privateDefaultScopeId) {
+        public Builder privateDefaultScopeId(@Nullable String privateDefaultScopeId) {
             this.privateDefaultScopeId = privateDefaultScopeId;
             return this;
         }
 
-        public Builder setPublicDefaultScopeId(@Nullable String publicDefaultScopeId) {
+        public Builder publicDefaultScopeId(@Nullable String publicDefaultScopeId) {
             this.publicDefaultScopeId = publicDefaultScopeId;
             return this;
         }
 
-        public Builder setScopeCount(@Nullable Integer scopeCount) {
+        public Builder scopeCount(@Nullable Integer scopeCount) {
             this.scopeCount = scopeCount;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IPAMTag> tags) {
+        public Builder tags(@Nullable List<IPAMTag> tags) {
             this.tags = tags;
             return this;
         }

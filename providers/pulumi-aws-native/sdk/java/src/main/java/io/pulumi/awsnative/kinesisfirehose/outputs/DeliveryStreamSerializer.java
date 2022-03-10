@@ -52,12 +52,12 @@ public final class DeliveryStreamSerializer {
     	      this.parquetSerDe = defaults.parquetSerDe;
         }
 
-        public Builder setOrcSerDe(@Nullable DeliveryStreamOrcSerDe orcSerDe) {
+        public Builder orcSerDe(@Nullable DeliveryStreamOrcSerDe orcSerDe) {
             this.orcSerDe = orcSerDe;
             return this;
         }
 
-        public Builder setParquetSerDe(@Nullable DeliveryStreamParquetSerDe parquetSerDe) {
+        public Builder parquetSerDe(@Nullable DeliveryStreamParquetSerDe parquetSerDe) {
             this.parquetSerDe = parquetSerDe;
             return this;
         }

@@ -69,22 +69,22 @@ public final class InviteAccepterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.masterAccountId = defaults.masterAccountId;
         }
 
-        public Builder setDetectorId(Input<String> detectorId) {
+        public Builder detectorId(Input<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
-        public Builder setDetectorId(String detectorId) {
+        public Builder detectorId(String detectorId) {
             this.detectorId = Input.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder setMasterAccountId(Input<String> masterAccountId) {
+        public Builder masterAccountId(Input<String> masterAccountId) {
             this.masterAccountId = Objects.requireNonNull(masterAccountId);
             return this;
         }
 
-        public Builder setMasterAccountId(String masterAccountId) {
+        public Builder masterAccountId(String masterAccountId) {
             this.masterAccountId = Input.of(Objects.requireNonNull(masterAccountId));
             return this;
         }

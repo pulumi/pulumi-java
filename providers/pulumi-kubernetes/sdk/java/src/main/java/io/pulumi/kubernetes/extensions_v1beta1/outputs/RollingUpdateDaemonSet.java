@@ -52,7 +52,7 @@ public final class RollingUpdateDaemonSet {
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder setMaxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }

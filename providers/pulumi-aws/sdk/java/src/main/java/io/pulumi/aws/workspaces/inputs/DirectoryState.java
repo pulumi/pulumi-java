@@ -299,162 +299,162 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setCustomerUserName(@Nullable Input<String> customerUserName) {
+        public Builder customerUserName(@Nullable Input<String> customerUserName) {
             this.customerUserName = customerUserName;
             return this;
         }
 
-        public Builder setCustomerUserName(@Nullable String customerUserName) {
+        public Builder customerUserName(@Nullable String customerUserName) {
             this.customerUserName = Input.ofNullable(customerUserName);
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setDirectoryName(@Nullable Input<String> directoryName) {
+        public Builder directoryName(@Nullable Input<String> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
-        public Builder setDirectoryName(@Nullable String directoryName) {
+        public Builder directoryName(@Nullable String directoryName) {
             this.directoryName = Input.ofNullable(directoryName);
             return this;
         }
 
-        public Builder setDirectoryType(@Nullable Input<String> directoryType) {
+        public Builder directoryType(@Nullable Input<String> directoryType) {
             this.directoryType = directoryType;
             return this;
         }
 
-        public Builder setDirectoryType(@Nullable String directoryType) {
+        public Builder directoryType(@Nullable String directoryType) {
             this.directoryType = Input.ofNullable(directoryType);
             return this;
         }
 
-        public Builder setDnsIpAddresses(@Nullable Input<List<String>> dnsIpAddresses) {
+        public Builder dnsIpAddresses(@Nullable Input<List<String>> dnsIpAddresses) {
             this.dnsIpAddresses = dnsIpAddresses;
             return this;
         }
 
-        public Builder setDnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
+        public Builder dnsIpAddresses(@Nullable List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Input.ofNullable(dnsIpAddresses);
             return this;
         }
 
-        public Builder setIamRoleId(@Nullable Input<String> iamRoleId) {
+        public Builder iamRoleId(@Nullable Input<String> iamRoleId) {
             this.iamRoleId = iamRoleId;
             return this;
         }
 
-        public Builder setIamRoleId(@Nullable String iamRoleId) {
+        public Builder iamRoleId(@Nullable String iamRoleId) {
             this.iamRoleId = Input.ofNullable(iamRoleId);
             return this;
         }
 
-        public Builder setIpGroupIds(@Nullable Input<List<String>> ipGroupIds) {
+        public Builder ipGroupIds(@Nullable Input<List<String>> ipGroupIds) {
             this.ipGroupIds = ipGroupIds;
             return this;
         }
 
-        public Builder setIpGroupIds(@Nullable List<String> ipGroupIds) {
+        public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
             this.ipGroupIds = Input.ofNullable(ipGroupIds);
             return this;
         }
 
-        public Builder setRegistrationCode(@Nullable Input<String> registrationCode) {
+        public Builder registrationCode(@Nullable Input<String> registrationCode) {
             this.registrationCode = registrationCode;
             return this;
         }
 
-        public Builder setRegistrationCode(@Nullable String registrationCode) {
+        public Builder registrationCode(@Nullable String registrationCode) {
             this.registrationCode = Input.ofNullable(registrationCode);
             return this;
         }
 
-        public Builder setSelfServicePermissions(@Nullable Input<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
+        public Builder selfServicePermissions(@Nullable Input<DirectorySelfServicePermissionsGetArgs> selfServicePermissions) {
             this.selfServicePermissions = selfServicePermissions;
             return this;
         }
 
-        public Builder setSelfServicePermissions(@Nullable DirectorySelfServicePermissionsGetArgs selfServicePermissions) {
+        public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsGetArgs selfServicePermissions) {
             this.selfServicePermissions = Input.ofNullable(selfServicePermissions);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setWorkspaceAccessProperties(@Nullable Input<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(@Nullable Input<DirectoryWorkspaceAccessPropertiesGetArgs> workspaceAccessProperties) {
             this.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
 
-        public Builder setWorkspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesGetArgs workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesGetArgs workspaceAccessProperties) {
             this.workspaceAccessProperties = Input.ofNullable(workspaceAccessProperties);
             return this;
         }
 
-        public Builder setWorkspaceCreationProperties(@Nullable Input<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(@Nullable Input<DirectoryWorkspaceCreationPropertiesGetArgs> workspaceCreationProperties) {
             this.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
 
-        public Builder setWorkspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesGetArgs workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesGetArgs workspaceCreationProperties) {
             this.workspaceCreationProperties = Input.ofNullable(workspaceCreationProperties);
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(@Nullable Input<String> workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(@Nullable Input<String> workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = workspaceSecurityGroupId;
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Input.ofNullable(workspaceSecurityGroupId);
             return this;
         }

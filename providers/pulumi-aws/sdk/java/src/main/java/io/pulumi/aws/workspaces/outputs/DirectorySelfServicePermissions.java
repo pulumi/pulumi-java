@@ -115,27 +115,27 @@ public final class DirectorySelfServicePermissions {
     	      this.switchRunningMode = defaults.switchRunningMode;
         }
 
-        public Builder setChangeComputeType(@Nullable Boolean changeComputeType) {
+        public Builder changeComputeType(@Nullable Boolean changeComputeType) {
             this.changeComputeType = changeComputeType;
             return this;
         }
 
-        public Builder setIncreaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
+        public Builder increaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
             this.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
 
-        public Builder setRebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
+        public Builder rebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
             this.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
 
-        public Builder setRestartWorkspace(@Nullable Boolean restartWorkspace) {
+        public Builder restartWorkspace(@Nullable Boolean restartWorkspace) {
             this.restartWorkspace = restartWorkspace;
             return this;
         }
 
-        public Builder setSwitchRunningMode(@Nullable Boolean switchRunningMode) {
+        public Builder switchRunningMode(@Nullable Boolean switchRunningMode) {
             this.switchRunningMode = switchRunningMode;
             return this;
         }

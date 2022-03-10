@@ -84,22 +84,22 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
     	      this.sampleGcsFileSpecs = defaults.sampleGcsFileSpecs;
         }
 
-        public Builder setFilePatterns(Input<List<String>> filePatterns) {
+        public Builder filePatterns(Input<List<String>> filePatterns) {
             this.filePatterns = Objects.requireNonNull(filePatterns);
             return this;
         }
 
-        public Builder setFilePatterns(List<String> filePatterns) {
+        public Builder filePatterns(List<String> filePatterns) {
             this.filePatterns = Input.of(Objects.requireNonNull(filePatterns));
             return this;
         }
 
-        public Builder setSampleGcsFileSpecs(@Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
+        public Builder sampleGcsFileSpecs(@Nullable Input<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs) {
             this.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
 
-        public Builder setSampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpecArgs> sampleGcsFileSpecs) {
+        public Builder sampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpecArgs> sampleGcsFileSpecs) {
             this.sampleGcsFileSpecs = Input.ofNullable(sampleGcsFileSpecs);
             return this;
         }

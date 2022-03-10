@@ -53,12 +53,12 @@ public final class AwsClusterAuthorizationArgs extends io.pulumi.resources.Resou
     	      this.adminUsers = defaults.adminUsers;
         }
 
-        public Builder setAdminUsers(Input<List<AwsClusterAuthorizationAdminUserArgs>> adminUsers) {
+        public Builder adminUsers(Input<List<AwsClusterAuthorizationAdminUserArgs>> adminUsers) {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
 
-        public Builder setAdminUsers(List<AwsClusterAuthorizationAdminUserArgs> adminUsers) {
+        public Builder adminUsers(List<AwsClusterAuthorizationAdminUserArgs> adminUsers) {
             this.adminUsers = Input.of(Objects.requireNonNull(adminUsers));
             return this;
         }

@@ -52,7 +52,7 @@ public final class InputAttribute {
     	      this.jsonPath = defaults.jsonPath;
         }
 
-        public Builder setJsonPath(String jsonPath) {
+        public Builder jsonPath(String jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }

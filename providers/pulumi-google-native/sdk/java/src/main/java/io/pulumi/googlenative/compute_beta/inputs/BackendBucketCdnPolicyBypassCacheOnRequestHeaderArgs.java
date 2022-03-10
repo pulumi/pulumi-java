@@ -57,12 +57,12 @@ public final class BackendBucketCdnPolicyBypassCacheOnRequestHeaderArgs extends 
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setHeaderName(@Nullable Input<String> headerName) {
+        public Builder headerName(@Nullable Input<String> headerName) {
             this.headerName = headerName;
             return this;
         }
 
-        public Builder setHeaderName(@Nullable String headerName) {
+        public Builder headerName(@Nullable String headerName) {
             this.headerName = Input.ofNullable(headerName);
             return this;
         }

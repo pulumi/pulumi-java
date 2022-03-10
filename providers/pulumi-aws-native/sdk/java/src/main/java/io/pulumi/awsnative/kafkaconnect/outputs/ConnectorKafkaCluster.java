@@ -40,7 +40,7 @@ public final class ConnectorKafkaCluster {
     	      this.apacheKafkaCluster = defaults.apacheKafkaCluster;
         }
 
-        public Builder setApacheKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
+        public Builder apacheKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
             this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
             return this;
         }

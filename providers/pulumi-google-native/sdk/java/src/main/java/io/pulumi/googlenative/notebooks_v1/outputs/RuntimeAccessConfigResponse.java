@@ -81,17 +81,17 @@ public final class RuntimeAccessConfigResponse {
     	      this.runtimeOwner = defaults.runtimeOwner;
         }
 
-        public Builder setAccessType(String accessType) {
+        public Builder accessType(String accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
-        public Builder setProxyUri(String proxyUri) {
+        public Builder proxyUri(String proxyUri) {
             this.proxyUri = Objects.requireNonNull(proxyUri);
             return this;
         }
 
-        public Builder setRuntimeOwner(String runtimeOwner) {
+        public Builder runtimeOwner(String runtimeOwner) {
             this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
             return this;
         }

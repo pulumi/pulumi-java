@@ -85,17 +85,17 @@ public final class ServiceSourceConfigurationCodeRepository {
     	      this.sourceCodeVersion = defaults.sourceCodeVersion;
         }
 
-        public Builder setCodeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration) {
+        public Builder codeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
+        public Builder sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }

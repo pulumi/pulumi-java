@@ -87,32 +87,32 @@ public final class DatasetAccessViewGetArgs extends io.pulumi.resources.Resource
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder setTableId(Input<String> tableId) {
+        public Builder tableId(Input<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }

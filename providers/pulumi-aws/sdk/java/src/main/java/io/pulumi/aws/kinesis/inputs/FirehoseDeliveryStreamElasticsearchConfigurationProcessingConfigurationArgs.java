@@ -72,22 +72,22 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     	      this.processors = defaults.processors;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setProcessors(@Nullable Input<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs>> processors) {
+        public Builder processors(@Nullable Input<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs>> processors) {
             this.processors = processors;
             return this;
         }
 
-        public Builder setProcessors(@Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs> processors) {
+        public Builder processors(@Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs> processors) {
             this.processors = Input.ofNullable(processors);
             return this;
         }

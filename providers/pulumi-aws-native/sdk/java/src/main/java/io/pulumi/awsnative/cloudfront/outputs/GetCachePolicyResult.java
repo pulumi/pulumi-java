@@ -60,17 +60,17 @@ public final class GetCachePolicyResult {
     	      this.lastModifiedTime = defaults.lastModifiedTime;
         }
 
-        public Builder setCachePolicyConfig(@Nullable CachePolicyConfig cachePolicyConfig) {
+        public Builder cachePolicyConfig(@Nullable CachePolicyConfig cachePolicyConfig) {
             this.cachePolicyConfig = cachePolicyConfig;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }

@@ -55,7 +55,7 @@ public final class MqttConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.mqttEnabledState = defaults.mqttEnabledState;
         }
 
-        public Builder setMqttEnabledState(String mqttEnabledState) {
+        public Builder mqttEnabledState(String mqttEnabledState) {
             this.mqttEnabledState = Objects.requireNonNull(mqttEnabledState);
             return this;
         }

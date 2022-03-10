@@ -437,122 +437,122 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
     	      this.zones = defaults.zones;
         }
 
-        public Builder setDdosSettings(@Nullable DdosSettingsResponse ddosSettings) {
+        public Builder ddosSettings(@Nullable DdosSettingsResponse ddosSettings) {
             this.ddosSettings = ddosSettings;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable PublicIPAddressDnsSettingsResponse dnsSettings) {
+        public Builder dnsSettings(@Nullable PublicIPAddressDnsSettingsResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpConfiguration(IPConfigurationResponse ipConfiguration) {
+        public Builder ipConfiguration(IPConfigurationResponse ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
 
-        public Builder setIpTags(@Nullable List<IpTagResponse> ipTags) {
+        public Builder ipTags(@Nullable List<IpTagResponse> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
 
-        public Builder setLinkedPublicIPAddress(@Nullable PublicIPAddressResponse linkedPublicIPAddress) {
+        public Builder linkedPublicIPAddress(@Nullable PublicIPAddressResponse linkedPublicIPAddress) {
             this.linkedPublicIPAddress = linkedPublicIPAddress;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMigrationPhase(@Nullable String migrationPhase) {
+        public Builder migrationPhase(@Nullable String migrationPhase) {
             this.migrationPhase = migrationPhase;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNatGateway(@Nullable NatGatewayResponse natGateway) {
+        public Builder natGateway(@Nullable NatGatewayResponse natGateway) {
             this.natGateway = natGateway;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIPAddressVersion(@Nullable String publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
-        public Builder setPublicIPAllocationMethod(@Nullable String publicIPAllocationMethod) {
+        public Builder publicIPAllocationMethod(@Nullable String publicIPAllocationMethod) {
             this.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
 
-        public Builder setPublicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setServicePublicIPAddress(@Nullable PublicIPAddressResponse servicePublicIPAddress) {
+        public Builder servicePublicIPAddress(@Nullable PublicIPAddressResponse servicePublicIPAddress) {
             this.servicePublicIPAddress = servicePublicIPAddress;
             return this;
         }
 
-        public Builder setSku(@Nullable PublicIPAddressSkuResponse sku) {
+        public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

@@ -649,362 +649,362 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Input<Integer> activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Input<Integer> activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Input.ofNullable(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder setAffinity(@Nullable Input<AffinityArgs> affinity) {
+        public Builder affinity(@Nullable Input<AffinityArgs> affinity) {
             this.affinity = affinity;
             return this;
         }
 
-        public Builder setAffinity(@Nullable AffinityArgs affinity) {
+        public Builder affinity(@Nullable AffinityArgs affinity) {
             this.affinity = Input.ofNullable(affinity);
             return this;
         }
 
-        public Builder setAutomountServiceAccountToken(@Nullable Input<Boolean> automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Input<Boolean> automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
-        public Builder setAutomountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = Input.ofNullable(automountServiceAccountToken);
             return this;
         }
 
-        public Builder setContainers(Input<List<ContainerArgs>> containers) {
+        public Builder containers(Input<List<ContainerArgs>> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setContainers(List<ContainerArgs> containers) {
+        public Builder containers(List<ContainerArgs> containers) {
             this.containers = Input.of(Objects.requireNonNull(containers));
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable Input<PodDNSConfigArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Input<PodDNSConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable PodDNSConfigArgs dnsConfig) {
+        public Builder dnsConfig(@Nullable PodDNSConfigArgs dnsConfig) {
             this.dnsConfig = Input.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder setDnsPolicy(@Nullable Input<String> dnsPolicy) {
+        public Builder dnsPolicy(@Nullable Input<String> dnsPolicy) {
             this.dnsPolicy = dnsPolicy;
             return this;
         }
 
-        public Builder setDnsPolicy(@Nullable String dnsPolicy) {
+        public Builder dnsPolicy(@Nullable String dnsPolicy) {
             this.dnsPolicy = Input.ofNullable(dnsPolicy);
             return this;
         }
 
-        public Builder setEnableServiceLinks(@Nullable Input<Boolean> enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Input<Boolean> enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
-        public Builder setEnableServiceLinks(@Nullable Boolean enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
             this.enableServiceLinks = Input.ofNullable(enableServiceLinks);
             return this;
         }
 
-        public Builder setEphemeralContainers(@Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers) {
+        public Builder ephemeralContainers(@Nullable Input<List<EphemeralContainerArgs>> ephemeralContainers) {
             this.ephemeralContainers = ephemeralContainers;
             return this;
         }
 
-        public Builder setEphemeralContainers(@Nullable List<EphemeralContainerArgs> ephemeralContainers) {
+        public Builder ephemeralContainers(@Nullable List<EphemeralContainerArgs> ephemeralContainers) {
             this.ephemeralContainers = Input.ofNullable(ephemeralContainers);
             return this;
         }
 
-        public Builder setHostAliases(@Nullable Input<List<HostAliasArgs>> hostAliases) {
+        public Builder hostAliases(@Nullable Input<List<HostAliasArgs>> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
         }
 
-        public Builder setHostAliases(@Nullable List<HostAliasArgs> hostAliases) {
+        public Builder hostAliases(@Nullable List<HostAliasArgs> hostAliases) {
             this.hostAliases = Input.ofNullable(hostAliases);
             return this;
         }
 
-        public Builder setHostIPC(@Nullable Input<Boolean> hostIPC) {
+        public Builder hostIPC(@Nullable Input<Boolean> hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
 
-        public Builder setHostIPC(@Nullable Boolean hostIPC) {
+        public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = Input.ofNullable(hostIPC);
             return this;
         }
 
-        public Builder setHostNetwork(@Nullable Input<Boolean> hostNetwork) {
+        public Builder hostNetwork(@Nullable Input<Boolean> hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
 
-        public Builder setHostNetwork(@Nullable Boolean hostNetwork) {
+        public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = Input.ofNullable(hostNetwork);
             return this;
         }
 
-        public Builder setHostPID(@Nullable Input<Boolean> hostPID) {
+        public Builder hostPID(@Nullable Input<Boolean> hostPID) {
             this.hostPID = hostPID;
             return this;
         }
 
-        public Builder setHostPID(@Nullable Boolean hostPID) {
+        public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = Input.ofNullable(hostPID);
             return this;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
             this.imagePullSecrets = Input.ofNullable(imagePullSecrets);
             return this;
         }
 
-        public Builder setInitContainers(@Nullable Input<List<ContainerArgs>> initContainers) {
+        public Builder initContainers(@Nullable Input<List<ContainerArgs>> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
 
-        public Builder setInitContainers(@Nullable List<ContainerArgs> initContainers) {
+        public Builder initContainers(@Nullable List<ContainerArgs> initContainers) {
             this.initContainers = Input.ofNullable(initContainers);
             return this;
         }
 
-        public Builder setNodeName(@Nullable Input<String> nodeName) {
+        public Builder nodeName(@Nullable Input<String> nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = Input.ofNullable(nodeName);
             return this;
         }
 
-        public Builder setNodeSelector(@Nullable Input<Map<String,String>> nodeSelector) {
+        public Builder nodeSelector(@Nullable Input<Map<String,String>> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
 
-        public Builder setNodeSelector(@Nullable Map<String,String> nodeSelector) {
+        public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
             this.nodeSelector = Input.ofNullable(nodeSelector);
             return this;
         }
 
-        public Builder setOs(@Nullable Input<PodOSArgs> os) {
+        public Builder os(@Nullable Input<PodOSArgs> os) {
             this.os = os;
             return this;
         }
 
-        public Builder setOs(@Nullable PodOSArgs os) {
+        public Builder os(@Nullable PodOSArgs os) {
             this.os = Input.ofNullable(os);
             return this;
         }
 
-        public Builder setOverhead(@Nullable Input<Map<String,String>> overhead) {
+        public Builder overhead(@Nullable Input<Map<String,String>> overhead) {
             this.overhead = overhead;
             return this;
         }
 
-        public Builder setOverhead(@Nullable Map<String,String> overhead) {
+        public Builder overhead(@Nullable Map<String,String> overhead) {
             this.overhead = Input.ofNullable(overhead);
             return this;
         }
 
-        public Builder setPreemptionPolicy(@Nullable Input<String> preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable Input<String> preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
-        public Builder setPreemptionPolicy(@Nullable String preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = Input.ofNullable(preemptionPolicy);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setPriorityClassName(@Nullable Input<String> priorityClassName) {
+        public Builder priorityClassName(@Nullable Input<String> priorityClassName) {
             this.priorityClassName = priorityClassName;
             return this;
         }
 
-        public Builder setPriorityClassName(@Nullable String priorityClassName) {
+        public Builder priorityClassName(@Nullable String priorityClassName) {
             this.priorityClassName = Input.ofNullable(priorityClassName);
             return this;
         }
 
-        public Builder setReadinessGates(@Nullable Input<List<PodReadinessGateArgs>> readinessGates) {
+        public Builder readinessGates(@Nullable Input<List<PodReadinessGateArgs>> readinessGates) {
             this.readinessGates = readinessGates;
             return this;
         }
 
-        public Builder setReadinessGates(@Nullable List<PodReadinessGateArgs> readinessGates) {
+        public Builder readinessGates(@Nullable List<PodReadinessGateArgs> readinessGates) {
             this.readinessGates = Input.ofNullable(readinessGates);
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable Input<String> restartPolicy) {
+        public Builder restartPolicy(@Nullable Input<String> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable String restartPolicy) {
+        public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = Input.ofNullable(restartPolicy);
             return this;
         }
 
-        public Builder setRuntimeClassName(@Nullable Input<String> runtimeClassName) {
+        public Builder runtimeClassName(@Nullable Input<String> runtimeClassName) {
             this.runtimeClassName = runtimeClassName;
             return this;
         }
 
-        public Builder setRuntimeClassName(@Nullable String runtimeClassName) {
+        public Builder runtimeClassName(@Nullable String runtimeClassName) {
             this.runtimeClassName = Input.ofNullable(runtimeClassName);
             return this;
         }
 
-        public Builder setSchedulerName(@Nullable Input<String> schedulerName) {
+        public Builder schedulerName(@Nullable Input<String> schedulerName) {
             this.schedulerName = schedulerName;
             return this;
         }
 
-        public Builder setSchedulerName(@Nullable String schedulerName) {
+        public Builder schedulerName(@Nullable String schedulerName) {
             this.schedulerName = Input.ofNullable(schedulerName);
             return this;
         }
 
-        public Builder setSecurityContext(@Nullable Input<PodSecurityContextArgs> securityContext) {
+        public Builder securityContext(@Nullable Input<PodSecurityContextArgs> securityContext) {
             this.securityContext = securityContext;
             return this;
         }
 
-        public Builder setSecurityContext(@Nullable PodSecurityContextArgs securityContext) {
+        public Builder securityContext(@Nullable PodSecurityContextArgs securityContext) {
             this.securityContext = Input.ofNullable(securityContext);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Input.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder setSetHostnameAsFQDN(@Nullable Input<Boolean> setHostnameAsFQDN) {
+        public Builder setHostnameAsFQDN(@Nullable Input<Boolean> setHostnameAsFQDN) {
             this.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
 
-        public Builder setSetHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
+        public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
             this.setHostnameAsFQDN = Input.ofNullable(setHostnameAsFQDN);
             return this;
         }
 
-        public Builder setShareProcessNamespace(@Nullable Input<Boolean> shareProcessNamespace) {
+        public Builder shareProcessNamespace(@Nullable Input<Boolean> shareProcessNamespace) {
             this.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
 
-        public Builder setShareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
+        public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
             this.shareProcessNamespace = Input.ofNullable(shareProcessNamespace);
             return this;
         }
 
-        public Builder setSubdomain(@Nullable Input<String> subdomain) {
+        public Builder subdomain(@Nullable Input<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
-        public Builder setSubdomain(@Nullable String subdomain) {
+        public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = Input.ofNullable(subdomain);
             return this;
         }
 
-        public Builder setTerminationGracePeriodSeconds(@Nullable Input<Integer> terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(@Nullable Input<Integer> terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
-        public Builder setTerminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = Input.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
 
-        public Builder setTolerations(@Nullable Input<List<TolerationArgs>> tolerations) {
+        public Builder tolerations(@Nullable Input<List<TolerationArgs>> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
 
-        public Builder setTolerations(@Nullable List<TolerationArgs> tolerations) {
+        public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
             this.tolerations = Input.ofNullable(tolerations);
             return this;
         }
 
-        public Builder setTopologySpreadConstraints(@Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints) {
+        public Builder topologySpreadConstraints(@Nullable Input<List<TopologySpreadConstraintArgs>> topologySpreadConstraints) {
             this.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
 
-        public Builder setTopologySpreadConstraints(@Nullable List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
+        public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
             this.topologySpreadConstraints = Input.ofNullable(topologySpreadConstraints);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

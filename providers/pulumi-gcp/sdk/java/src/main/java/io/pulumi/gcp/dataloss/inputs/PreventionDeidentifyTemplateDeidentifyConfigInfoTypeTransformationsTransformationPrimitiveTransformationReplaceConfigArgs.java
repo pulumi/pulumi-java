@@ -53,12 +53,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.newValue = defaults.newValue;
         }
 
-        public Builder setNewValue(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs> newValue) {
+        public Builder newValue(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs> newValue) {
             this.newValue = Objects.requireNonNull(newValue);
             return this;
         }
 
-        public Builder setNewValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs newValue) {
+        public Builder newValue(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueArgs newValue) {
             this.newValue = Input.of(Objects.requireNonNull(newValue));
             return this;
         }

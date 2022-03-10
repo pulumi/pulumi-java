@@ -71,22 +71,22 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
     	      this.preferredAvailabilityZones = defaults.preferredAvailabilityZones;
         }
 
-        public Builder setNodeGroupId(@Nullable Input<String> nodeGroupId) {
+        public Builder nodeGroupId(@Nullable Input<String> nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
             return this;
         }
 
-        public Builder setNodeGroupId(@Nullable String nodeGroupId) {
+        public Builder nodeGroupId(@Nullable String nodeGroupId) {
             this.nodeGroupId = Input.ofNullable(nodeGroupId);
             return this;
         }
 
-        public Builder setPreferredAvailabilityZones(@Nullable Input<List<String>> preferredAvailabilityZones) {
+        public Builder preferredAvailabilityZones(@Nullable Input<List<String>> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }
 
-        public Builder setPreferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
+        public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = Input.ofNullable(preferredAvailabilityZones);
             return this;
         }

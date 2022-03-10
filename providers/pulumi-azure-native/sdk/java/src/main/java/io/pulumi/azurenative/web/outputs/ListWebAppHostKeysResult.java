@@ -84,17 +84,17 @@ public final class ListWebAppHostKeysResult {
     	      this.systemKeys = defaults.systemKeys;
         }
 
-        public Builder setFunctionKeys(@Nullable Map<String,String> functionKeys) {
+        public Builder functionKeys(@Nullable Map<String,String> functionKeys) {
             this.functionKeys = functionKeys;
             return this;
         }
 
-        public Builder setMasterKey(@Nullable String masterKey) {
+        public Builder masterKey(@Nullable String masterKey) {
             this.masterKey = masterKey;
             return this;
         }
 
-        public Builder setSystemKeys(@Nullable Map<String,String> systemKeys) {
+        public Builder systemKeys(@Nullable Map<String,String> systemKeys) {
             this.systemKeys = systemKeys;
             return this;
         }

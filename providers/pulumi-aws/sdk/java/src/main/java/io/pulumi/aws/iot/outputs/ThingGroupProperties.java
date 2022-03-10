@@ -68,12 +68,12 @@ public final class ThingGroupProperties {
     	      this.description = defaults.description;
         }
 
-        public Builder setAttributePayload(@Nullable ThingGroupPropertiesAttributePayload attributePayload) {
+        public Builder attributePayload(@Nullable ThingGroupPropertiesAttributePayload attributePayload) {
             this.attributePayload = attributePayload;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

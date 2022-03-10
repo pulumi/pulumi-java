@@ -84,17 +84,17 @@ public final class DistributionConfigurationLaunchTemplateConfiguration {
     	      this.setDefaultVersion = defaults.setDefaultVersion;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setLaunchTemplateId(@Nullable String launchTemplateId) {
+        public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
-        public Builder setSetDefaultVersion(@Nullable Boolean setDefaultVersion) {
+        public Builder setDefaultVersion(@Nullable Boolean setDefaultVersion) {
             this.setDefaultVersion = setDefaultVersion;
             return this;
         }

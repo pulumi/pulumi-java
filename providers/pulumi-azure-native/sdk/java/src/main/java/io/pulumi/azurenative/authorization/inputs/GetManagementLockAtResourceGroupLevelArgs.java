@@ -68,12 +68,12 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.r
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setLockName(String lockName) {
+        public Builder lockName(String lockName) {
             this.lockName = Objects.requireNonNull(lockName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

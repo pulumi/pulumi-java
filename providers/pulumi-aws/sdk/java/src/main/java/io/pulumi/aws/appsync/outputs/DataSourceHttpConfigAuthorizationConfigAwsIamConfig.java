@@ -67,12 +67,12 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfig {
     	      this.signingServiceName = defaults.signingServiceName;
         }
 
-        public Builder setSigningRegion(@Nullable String signingRegion) {
+        public Builder signingRegion(@Nullable String signingRegion) {
             this.signingRegion = signingRegion;
             return this;
         }
 
-        public Builder setSigningServiceName(@Nullable String signingServiceName) {
+        public Builder signingServiceName(@Nullable String signingServiceName) {
             this.signingServiceName = signingServiceName;
             return this;
         }

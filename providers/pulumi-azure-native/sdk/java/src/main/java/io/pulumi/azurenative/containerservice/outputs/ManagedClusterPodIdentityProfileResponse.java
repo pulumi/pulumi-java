@@ -102,22 +102,22 @@ public final class ManagedClusterPodIdentityProfileResponse {
     	      this.userAssignedIdentityExceptions = defaults.userAssignedIdentityExceptions;
         }
 
-        public Builder setAllowNetworkPluginKubenet(@Nullable Boolean allowNetworkPluginKubenet) {
+        public Builder allowNetworkPluginKubenet(@Nullable Boolean allowNetworkPluginKubenet) {
             this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
-        public Builder setUserAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
+        public Builder userAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
             this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }

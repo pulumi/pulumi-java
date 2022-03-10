@@ -58,12 +58,12 @@ public final class ManagedZonePeeringConfigResponse {
     	      this.targetNetwork = defaults.targetNetwork;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setTargetNetwork(ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
+        public Builder targetNetwork(ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }

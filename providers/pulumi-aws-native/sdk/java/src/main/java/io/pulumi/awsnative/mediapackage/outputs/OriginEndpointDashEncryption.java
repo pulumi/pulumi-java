@@ -60,12 +60,12 @@ public final class OriginEndpointDashEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

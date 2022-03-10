@@ -57,7 +57,7 @@ public final class EnabledConfigResponse extends io.pulumi.resources.InvokeArgs 
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

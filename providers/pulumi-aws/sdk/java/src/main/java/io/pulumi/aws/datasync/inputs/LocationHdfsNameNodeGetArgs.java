@@ -70,22 +70,22 @@ public final class LocationHdfsNameNodeGetArgs extends io.pulumi.resources.Resou
     	      this.port = defaults.port;
         }
 
-        public Builder setHostname(Input<String> hostname) {
+        public Builder hostname(Input<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Input.of(Objects.requireNonNull(hostname));
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }

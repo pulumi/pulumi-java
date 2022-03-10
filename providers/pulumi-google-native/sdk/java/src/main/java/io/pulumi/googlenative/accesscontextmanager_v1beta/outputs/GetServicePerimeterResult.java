@@ -114,27 +114,27 @@ public final class GetServicePerimeterResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPerimeterType(String perimeterType) {
+        public Builder perimeterType(String perimeterType) {
             this.perimeterType = Objects.requireNonNull(perimeterType);
             return this;
         }
 
-        public Builder setStatus(ServicePerimeterConfigResponse status) {
+        public Builder status(ServicePerimeterConfigResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

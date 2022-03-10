@@ -140,8 +140,8 @@ public class TokenRequest extends io.pulumi.resources.CustomResource {
     private static TokenRequestArgs makeArgs(TokenRequestArgs args) {
         var builder = args == null ? TokenRequestArgs.builder() : TokenRequestArgs.builder(args);
         return builder
-            .setApiVersion("authentication.k8s.io/v1")
-            .setKind("TokenRequest")
+            .apiVersion("authentication.k8s.io/v1")
+            .kind("TokenRequest")
             .build();
     }
 

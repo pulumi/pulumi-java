@@ -107,42 +107,42 @@ public final class InitialStateConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.pk = defaults.pk;
         }
 
-        public Builder setDbs(@Nullable Input<List<FileContentBufferArgs>> dbs) {
+        public Builder dbs(@Nullable Input<List<FileContentBufferArgs>> dbs) {
             this.dbs = dbs;
             return this;
         }
 
-        public Builder setDbs(@Nullable List<FileContentBufferArgs> dbs) {
+        public Builder dbs(@Nullable List<FileContentBufferArgs> dbs) {
             this.dbs = Input.ofNullable(dbs);
             return this;
         }
 
-        public Builder setDbxs(@Nullable Input<List<FileContentBufferArgs>> dbxs) {
+        public Builder dbxs(@Nullable Input<List<FileContentBufferArgs>> dbxs) {
             this.dbxs = dbxs;
             return this;
         }
 
-        public Builder setDbxs(@Nullable List<FileContentBufferArgs> dbxs) {
+        public Builder dbxs(@Nullable List<FileContentBufferArgs> dbxs) {
             this.dbxs = Input.ofNullable(dbxs);
             return this;
         }
 
-        public Builder setKeks(@Nullable Input<List<FileContentBufferArgs>> keks) {
+        public Builder keks(@Nullable Input<List<FileContentBufferArgs>> keks) {
             this.keks = keks;
             return this;
         }
 
-        public Builder setKeks(@Nullable List<FileContentBufferArgs> keks) {
+        public Builder keks(@Nullable List<FileContentBufferArgs> keks) {
             this.keks = Input.ofNullable(keks);
             return this;
         }
 
-        public Builder setPk(@Nullable Input<FileContentBufferArgs> pk) {
+        public Builder pk(@Nullable Input<FileContentBufferArgs> pk) {
             this.pk = pk;
             return this;
         }
 
-        public Builder setPk(@Nullable FileContentBufferArgs pk) {
+        public Builder pk(@Nullable FileContentBufferArgs pk) {
             this.pk = Input.ofNullable(pk);
             return this;
         }

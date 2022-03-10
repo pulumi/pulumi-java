@@ -69,12 +69,12 @@ public final class ListConnectionKeysResult {
     	      this.parameterValues = defaults.parameterValues;
         }
 
-        public Builder setConnectionKey(@Nullable String connectionKey) {
+        public Builder connectionKey(@Nullable String connectionKey) {
             this.connectionKey = connectionKey;
             return this;
         }
 
-        public Builder setParameterValues(@Nullable Map<String,Object> parameterValues) {
+        public Builder parameterValues(@Nullable Map<String,Object> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }

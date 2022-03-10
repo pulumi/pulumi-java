@@ -51,7 +51,7 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse ex
     	      this.dailyMaintenanceWindow = defaults.dailyMaintenanceWindow;
         }
 
-        public Builder setDailyMaintenanceWindow(ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
             return this;
         }

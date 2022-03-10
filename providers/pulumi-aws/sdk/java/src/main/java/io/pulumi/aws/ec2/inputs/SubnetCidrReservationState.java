@@ -118,52 +118,52 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setReservationType(@Nullable Input<String> reservationType) {
+        public Builder reservationType(@Nullable Input<String> reservationType) {
             this.reservationType = reservationType;
             return this;
         }
 
-        public Builder setReservationType(@Nullable String reservationType) {
+        public Builder reservationType(@Nullable String reservationType) {
             this.reservationType = Input.ofNullable(reservationType);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

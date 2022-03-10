@@ -212,57 +212,57 @@ public final class ExpressRouteLinkResponse {
     	      this.routerName = defaults.routerName;
         }
 
-        public Builder setAdminState(@Nullable String adminState) {
+        public Builder adminState(@Nullable String adminState) {
             this.adminState = adminState;
             return this;
         }
 
-        public Builder setConnectorType(String connectorType) {
+        public Builder connectorType(String connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInterfaceName(String interfaceName) {
+        public Builder interfaceName(String interfaceName) {
             this.interfaceName = Objects.requireNonNull(interfaceName);
             return this;
         }
 
-        public Builder setMacSecConfig(@Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig) {
+        public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig) {
             this.macSecConfig = macSecConfig;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPatchPanelId(String patchPanelId) {
+        public Builder patchPanelId(String patchPanelId) {
             this.patchPanelId = Objects.requireNonNull(patchPanelId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRackId(String rackId) {
+        public Builder rackId(String rackId) {
             this.rackId = Objects.requireNonNull(rackId);
             return this;
         }
 
-        public Builder setRouterName(String routerName) {
+        public Builder routerName(String routerName) {
             this.routerName = Objects.requireNonNull(routerName);
             return this;
         }

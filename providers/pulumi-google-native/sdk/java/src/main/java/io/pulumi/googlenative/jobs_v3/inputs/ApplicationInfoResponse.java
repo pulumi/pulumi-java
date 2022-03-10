@@ -89,17 +89,17 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
     	      this.uris = defaults.uris;
         }
 
-        public Builder setEmails(List<String> emails) {
+        public Builder emails(List<String> emails) {
             this.emails = Objects.requireNonNull(emails);
             return this;
         }
 
-        public Builder setInstruction(String instruction) {
+        public Builder instruction(String instruction) {
             this.instruction = Objects.requireNonNull(instruction);
             return this;
         }
 
-        public Builder setUris(List<String> uris) {
+        public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }

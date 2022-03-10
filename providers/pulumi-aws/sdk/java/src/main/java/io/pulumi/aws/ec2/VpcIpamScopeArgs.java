@@ -83,32 +83,32 @@ public final class VpcIpamScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpamId(Input<String> ipamId) {
+        public Builder ipamId(Input<String> ipamId) {
             this.ipamId = Objects.requireNonNull(ipamId);
             return this;
         }
 
-        public Builder setIpamId(String ipamId) {
+        public Builder ipamId(String ipamId) {
             this.ipamId = Input.of(Objects.requireNonNull(ipamId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

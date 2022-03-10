@@ -222,112 +222,112 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessLogSettings(@Nullable Input<StageAccessLogSettingsArgs> accessLogSettings) {
+        public Builder accessLogSettings(@Nullable Input<StageAccessLogSettingsArgs> accessLogSettings) {
             this.accessLogSettings = accessLogSettings;
             return this;
         }
 
-        public Builder setAccessLogSettings(@Nullable StageAccessLogSettingsArgs accessLogSettings) {
+        public Builder accessLogSettings(@Nullable StageAccessLogSettingsArgs accessLogSettings) {
             this.accessLogSettings = Input.ofNullable(accessLogSettings);
             return this;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setAutoDeploy(@Nullable Input<Boolean> autoDeploy) {
+        public Builder autoDeploy(@Nullable Input<Boolean> autoDeploy) {
             this.autoDeploy = autoDeploy;
             return this;
         }
 
-        public Builder setAutoDeploy(@Nullable Boolean autoDeploy) {
+        public Builder autoDeploy(@Nullable Boolean autoDeploy) {
             this.autoDeploy = Input.ofNullable(autoDeploy);
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Input.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder setDefaultRouteSettings(@Nullable Input<StageDefaultRouteSettingsArgs> defaultRouteSettings) {
+        public Builder defaultRouteSettings(@Nullable Input<StageDefaultRouteSettingsArgs> defaultRouteSettings) {
             this.defaultRouteSettings = defaultRouteSettings;
             return this;
         }
 
-        public Builder setDefaultRouteSettings(@Nullable StageDefaultRouteSettingsArgs defaultRouteSettings) {
+        public Builder defaultRouteSettings(@Nullable StageDefaultRouteSettingsArgs defaultRouteSettings) {
             this.defaultRouteSettings = Input.ofNullable(defaultRouteSettings);
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable Input<String> deploymentId) {
+        public Builder deploymentId(@Nullable Input<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = Input.ofNullable(deploymentId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRouteSettings(@Nullable Input<List<StageRouteSettingArgs>> routeSettings) {
+        public Builder routeSettings(@Nullable Input<List<StageRouteSettingArgs>> routeSettings) {
             this.routeSettings = routeSettings;
             return this;
         }
 
-        public Builder setRouteSettings(@Nullable List<StageRouteSettingArgs> routeSettings) {
+        public Builder routeSettings(@Nullable List<StageRouteSettingArgs> routeSettings) {
             this.routeSettings = Input.ofNullable(routeSettings);
             return this;
         }
 
-        public Builder setStageVariables(@Nullable Input<Map<String,String>> stageVariables) {
+        public Builder stageVariables(@Nullable Input<Map<String,String>> stageVariables) {
             this.stageVariables = stageVariables;
             return this;
         }
 
-        public Builder setStageVariables(@Nullable Map<String,String> stageVariables) {
+        public Builder stageVariables(@Nullable Map<String,String> stageVariables) {
             this.stageVariables = Input.ofNullable(stageVariables);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -124,72 +124,72 @@ public final class TagTemplateIamBindingState extends io.pulumi.resources.Resour
     	      this.tagTemplate = defaults.tagTemplate;
         }
 
-        public Builder setCondition(@Nullable Input<TagTemplateIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<TagTemplateIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable TagTemplateIamBindingConditionGetArgs condition) {
+        public Builder condition(@Nullable TagTemplateIamBindingConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setMembers(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Input<List<String>> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = Input.ofNullable(members);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setTagTemplate(@Nullable Input<String> tagTemplate) {
+        public Builder tagTemplate(@Nullable Input<String> tagTemplate) {
             this.tagTemplate = tagTemplate;
             return this;
         }
 
-        public Builder setTagTemplate(@Nullable String tagTemplate) {
+        public Builder tagTemplate(@Nullable String tagTemplate) {
             this.tagTemplate = Input.ofNullable(tagTemplate);
             return this;
         }

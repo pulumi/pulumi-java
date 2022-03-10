@@ -107,42 +107,42 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setEndpoints(Input<String> endpoints) {
+        public Builder endpoints(Input<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setEndpoints(String endpoints) {
+        public Builder endpoints(String endpoints) {
             this.endpoints = Input.of(Objects.requireNonNull(endpoints));
             return this;
         }
 
-        public Builder setEndpointsNamespace(@Nullable Input<String> endpointsNamespace) {
+        public Builder endpointsNamespace(@Nullable Input<String> endpointsNamespace) {
             this.endpointsNamespace = endpointsNamespace;
             return this;
         }
 
-        public Builder setEndpointsNamespace(@Nullable String endpointsNamespace) {
+        public Builder endpointsNamespace(@Nullable String endpointsNamespace) {
             this.endpointsNamespace = Input.ofNullable(endpointsNamespace);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }

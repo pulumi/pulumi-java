@@ -336,92 +336,92 @@ public final class IotHubPropertiesResponse {
     	      this.storageEndpoints = defaults.storageEndpoints;
         }
 
-        public Builder setAuthorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
-        public Builder setCloudToDevice(@Nullable CloudToDevicePropertiesResponse cloudToDevice) {
+        public Builder cloudToDevice(@Nullable CloudToDevicePropertiesResponse cloudToDevice) {
             this.cloudToDevice = cloudToDevice;
             return this;
         }
 
-        public Builder setComments(@Nullable String comments) {
+        public Builder comments(@Nullable String comments) {
             this.comments = comments;
             return this;
         }
 
-        public Builder setEnableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
+        public Builder enableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
             this.enableFileUploadNotifications = enableFileUploadNotifications;
             return this;
         }
 
-        public Builder setEventHubEndpoints(@Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints) {
+        public Builder eventHubEndpoints(@Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints) {
             this.eventHubEndpoints = eventHubEndpoints;
             return this;
         }
 
-        public Builder setFeatures(@Nullable String features) {
+        public Builder features(@Nullable String features) {
             this.features = features;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setIpFilterRules(@Nullable List<IpFilterRuleResponse> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable List<IpFilterRuleResponse> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
 
-        public Builder setLocations(List<IotHubLocationDescriptionResponse> locations) {
+        public Builder locations(List<IotHubLocationDescriptionResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setMessagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints) {
+        public Builder messagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints) {
             this.messagingEndpoints = messagingEndpoints;
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable String minTlsVersion) {
+        public Builder minTlsVersion(@Nullable String minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
-        public Builder setNetworkRuleSets(@Nullable NetworkRuleSetPropertiesResponse networkRuleSets) {
+        public Builder networkRuleSets(@Nullable NetworkRuleSetPropertiesResponse networkRuleSets) {
             this.networkRuleSets = networkRuleSets;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setRouting(@Nullable RoutingPropertiesResponse routing) {
+        public Builder routing(@Nullable RoutingPropertiesResponse routing) {
             this.routing = routing;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageEndpoints(@Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
+        public Builder storageEndpoints(@Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
             this.storageEndpoints = storageEndpoints;
             return this;
         }

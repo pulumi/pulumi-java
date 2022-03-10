@@ -69,12 +69,12 @@ public final class GetParameterGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setARN(@Nullable String aRN) {
+        public Builder aRN(@Nullable String aRN) {
             this.aRN = aRN;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ParameterGroupTag> tags) {
+        public Builder tags(@Nullable List<ParameterGroupTag> tags) {
             this.tags = tags;
             return this;
         }

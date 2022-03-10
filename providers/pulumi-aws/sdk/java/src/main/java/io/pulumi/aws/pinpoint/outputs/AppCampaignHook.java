@@ -83,17 +83,17 @@ public final class AppCampaignHook {
     	      this.webUrl = defaults.webUrl;
         }
 
-        public Builder setLambdaFunctionName(@Nullable String lambdaFunctionName) {
+        public Builder lambdaFunctionName(@Nullable String lambdaFunctionName) {
             this.lambdaFunctionName = lambdaFunctionName;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setWebUrl(@Nullable String webUrl) {
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }

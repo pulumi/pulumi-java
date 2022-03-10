@@ -63,22 +63,22 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     	      this.foo = defaults.foo;
         }
 
-        public Builder setBar(@Nullable Input<Integer> bar) {
+        public Builder bar(@Nullable Input<Integer> bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setBar(@Nullable Integer bar) {
+        public Builder bar(@Nullable Integer bar) {
             this.bar = Input.ofNullable(bar);
             return this;
         }
 
-        public Builder setFoo(Input<String> foo) {
+        public Builder foo(Input<String> foo) {
             this.foo = Objects.requireNonNull(foo);
             return this;
         }
 
-        public Builder setFoo(String foo) {
+        public Builder foo(String foo) {
             this.foo = Input.of(Objects.requireNonNull(foo));
             return this;
         }

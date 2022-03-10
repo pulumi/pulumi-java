@@ -129,32 +129,32 @@ public final class ExtendedKeyUsageOptionsResponse {
     	      this.timeStamping = defaults.timeStamping;
         }
 
-        public Builder setClientAuth(Boolean clientAuth) {
+        public Builder clientAuth(Boolean clientAuth) {
             this.clientAuth = Objects.requireNonNull(clientAuth);
             return this;
         }
 
-        public Builder setCodeSigning(Boolean codeSigning) {
+        public Builder codeSigning(Boolean codeSigning) {
             this.codeSigning = Objects.requireNonNull(codeSigning);
             return this;
         }
 
-        public Builder setEmailProtection(Boolean emailProtection) {
+        public Builder emailProtection(Boolean emailProtection) {
             this.emailProtection = Objects.requireNonNull(emailProtection);
             return this;
         }
 
-        public Builder setOcspSigning(Boolean ocspSigning) {
+        public Builder ocspSigning(Boolean ocspSigning) {
             this.ocspSigning = Objects.requireNonNull(ocspSigning);
             return this;
         }
 
-        public Builder setServerAuth(Boolean serverAuth) {
+        public Builder serverAuth(Boolean serverAuth) {
             this.serverAuth = Objects.requireNonNull(serverAuth);
             return this;
         }
 
-        public Builder setTimeStamping(Boolean timeStamping) {
+        public Builder timeStamping(Boolean timeStamping) {
             this.timeStamping = Objects.requireNonNull(timeStamping);
             return this;
         }

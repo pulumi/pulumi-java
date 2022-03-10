@@ -120,52 +120,52 @@ public final class InstanceDetailsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdministration(@Nullable Input<DFPInstanceAdministratorsArgs> administration) {
+        public Builder administration(@Nullable Input<DFPInstanceAdministratorsArgs> administration) {
             this.administration = administration;
             return this;
         }
 
-        public Builder setAdministration(@Nullable DFPInstanceAdministratorsArgs administration) {
+        public Builder administration(@Nullable DFPInstanceAdministratorsArgs administration) {
             this.administration = Input.ofNullable(administration);
             return this;
         }
 
-        public Builder setInstanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Input<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Input.ofNullable(instanceName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

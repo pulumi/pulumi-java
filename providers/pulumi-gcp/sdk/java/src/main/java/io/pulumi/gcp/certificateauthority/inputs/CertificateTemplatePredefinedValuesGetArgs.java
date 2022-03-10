@@ -123,52 +123,52 @@ public final class CertificateTemplatePredefinedValuesGetArgs extends io.pulumi.
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(@Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Input<List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs> additionalExtensions) {
             this.additionalExtensions = Input.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable Input<List<String>> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = Input.ofNullable(aiaOcspServers);
             return this;
         }
 
-        public Builder setCaOptions(@Nullable Input<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions) {
+        public Builder caOptions(@Nullable Input<CertificateTemplatePredefinedValuesCaOptionsGetArgs> caOptions) {
             this.caOptions = caOptions;
             return this;
         }
 
-        public Builder setCaOptions(@Nullable CertificateTemplatePredefinedValuesCaOptionsGetArgs caOptions) {
+        public Builder caOptions(@Nullable CertificateTemplatePredefinedValuesCaOptionsGetArgs caOptions) {
             this.caOptions = Input.ofNullable(caOptions);
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable Input<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage) {
+        public Builder keyUsage(@Nullable Input<CertificateTemplatePredefinedValuesKeyUsageGetArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageGetArgs keyUsage) {
+        public Builder keyUsage(@Nullable CertificateTemplatePredefinedValuesKeyUsageGetArgs keyUsage) {
             this.keyUsage = Input.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds) {
+        public Builder policyIds(@Nullable Input<List<CertificateTemplatePredefinedValuesPolicyIdGetArgs>> policyIds) {
             this.policyIds = policyIds;
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyIdGetArgs> policyIds) {
+        public Builder policyIds(@Nullable List<CertificateTemplatePredefinedValuesPolicyIdGetArgs> policyIds) {
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }

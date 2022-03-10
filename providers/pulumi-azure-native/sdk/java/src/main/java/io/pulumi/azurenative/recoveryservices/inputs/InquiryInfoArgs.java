@@ -78,22 +78,22 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setInquiryDetails(@Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails) {
+        public Builder inquiryDetails(@Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails) {
             this.inquiryDetails = inquiryDetails;
             return this;
         }
 
-        public Builder setInquiryDetails(@Nullable List<WorkloadInquiryDetailsArgs> inquiryDetails) {
+        public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsArgs> inquiryDetails) {
             this.inquiryDetails = Input.ofNullable(inquiryDetails);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

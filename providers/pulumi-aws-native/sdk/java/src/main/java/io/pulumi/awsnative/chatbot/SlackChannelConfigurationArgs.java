@@ -168,82 +168,82 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     	      this.userRoleRequired = defaults.userRoleRequired;
         }
 
-        public Builder setConfigurationName(Input<String> configurationName) {
+        public Builder configurationName(Input<String> configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Input.of(Objects.requireNonNull(configurationName));
             return this;
         }
 
-        public Builder setGuardrailPolicies(@Nullable Input<List<String>> guardrailPolicies) {
+        public Builder guardrailPolicies(@Nullable Input<List<String>> guardrailPolicies) {
             this.guardrailPolicies = guardrailPolicies;
             return this;
         }
 
-        public Builder setGuardrailPolicies(@Nullable List<String> guardrailPolicies) {
+        public Builder guardrailPolicies(@Nullable List<String> guardrailPolicies) {
             this.guardrailPolicies = Input.ofNullable(guardrailPolicies);
             return this;
         }
 
-        public Builder setIamRoleArn(Input<String> iamRoleArn) {
+        public Builder iamRoleArn(Input<String> iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
-        public Builder setIamRoleArn(String iamRoleArn) {
+        public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Input.of(Objects.requireNonNull(iamRoleArn));
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Input<String> loggingLevel) {
+        public Builder loggingLevel(@Nullable Input<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Input.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder setSlackChannelId(Input<String> slackChannelId) {
+        public Builder slackChannelId(Input<String> slackChannelId) {
             this.slackChannelId = Objects.requireNonNull(slackChannelId);
             return this;
         }
 
-        public Builder setSlackChannelId(String slackChannelId) {
+        public Builder slackChannelId(String slackChannelId) {
             this.slackChannelId = Input.of(Objects.requireNonNull(slackChannelId));
             return this;
         }
 
-        public Builder setSlackWorkspaceId(Input<String> slackWorkspaceId) {
+        public Builder slackWorkspaceId(Input<String> slackWorkspaceId) {
             this.slackWorkspaceId = Objects.requireNonNull(slackWorkspaceId);
             return this;
         }
 
-        public Builder setSlackWorkspaceId(String slackWorkspaceId) {
+        public Builder slackWorkspaceId(String slackWorkspaceId) {
             this.slackWorkspaceId = Input.of(Objects.requireNonNull(slackWorkspaceId));
             return this;
         }
 
-        public Builder setSnsTopicArns(@Nullable Input<List<String>> snsTopicArns) {
+        public Builder snsTopicArns(@Nullable Input<List<String>> snsTopicArns) {
             this.snsTopicArns = snsTopicArns;
             return this;
         }
 
-        public Builder setSnsTopicArns(@Nullable List<String> snsTopicArns) {
+        public Builder snsTopicArns(@Nullable List<String> snsTopicArns) {
             this.snsTopicArns = Input.ofNullable(snsTopicArns);
             return this;
         }
 
-        public Builder setUserRoleRequired(@Nullable Input<Boolean> userRoleRequired) {
+        public Builder userRoleRequired(@Nullable Input<Boolean> userRoleRequired) {
             this.userRoleRequired = userRoleRequired;
             return this;
         }
 
-        public Builder setUserRoleRequired(@Nullable Boolean userRoleRequired) {
+        public Builder userRoleRequired(@Nullable Boolean userRoleRequired) {
             this.userRoleRequired = Input.ofNullable(userRoleRequired);
             return this;
         }

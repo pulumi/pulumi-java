@@ -128,52 +128,52 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(Input<Either<String,ActionType>> action) {
+        public Builder action(Input<Either<String,ActionType>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(Either<String,ActionType> action) {
+        public Builder action(Either<String,ActionType> action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,CustomRuleEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,CustomRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setMatchConditions(Input<List<MatchConditionArgs>> matchConditions) {
+        public Builder matchConditions(Input<List<MatchConditionArgs>> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
-        public Builder setMatchConditions(List<MatchConditionArgs> matchConditions) {
+        public Builder matchConditions(List<MatchConditionArgs> matchConditions) {
             this.matchConditions = Input.of(Objects.requireNonNull(matchConditions));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }

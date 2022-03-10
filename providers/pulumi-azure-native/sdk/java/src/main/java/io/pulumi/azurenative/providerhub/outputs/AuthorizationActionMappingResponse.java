@@ -51,12 +51,12 @@ public final class AuthorizationActionMappingResponse {
     	      this.original = defaults.original;
         }
 
-        public Builder setDesired(@Nullable String desired) {
+        public Builder desired(@Nullable String desired) {
             this.desired = desired;
             return this;
         }
 
-        public Builder setOriginal(@Nullable String original) {
+        public Builder original(@Nullable String original) {
             this.original = original;
             return this;
         }

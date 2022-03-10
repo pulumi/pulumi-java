@@ -207,102 +207,102 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder setAccelerators(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs>> accelerators) {
+        public Builder accelerators(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setAccelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs> accelerators) {
+        public Builder accelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs> accelerators) {
             this.accelerators = Input.ofNullable(accelerators);
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs diskConfig) {
+        public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs diskConfig) {
             this.diskConfig = Input.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable Input<List<String>> instanceNames) {
+        public Builder instanceNames(@Nullable Input<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable List<String> instanceNames) {
+        public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = Input.ofNullable(instanceNames);
             return this;
         }
 
-        public Builder setIsPreemptible(@Nullable Input<Boolean> isPreemptible) {
+        public Builder isPreemptible(@Nullable Input<Boolean> isPreemptible) {
             this.isPreemptible = isPreemptible;
             return this;
         }
 
-        public Builder setIsPreemptible(@Nullable Boolean isPreemptible) {
+        public Builder isPreemptible(@Nullable Boolean isPreemptible) {
             this.isPreemptible = Input.ofNullable(isPreemptible);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setManagedGroupConfigs(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs>> managedGroupConfigs) {
+        public Builder managedGroupConfigs(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs>> managedGroupConfigs) {
             this.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
 
-        public Builder setManagedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs> managedGroupConfigs) {
+        public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs> managedGroupConfigs) {
             this.managedGroupConfigs = Input.ofNullable(managedGroupConfigs);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Input<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Input.ofNullable(numInstances);
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable Input<String> preemptibility) {
+        public Builder preemptibility(@Nullable Input<String> preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable String preemptibility) {
+        public Builder preemptibility(@Nullable String preemptibility) {
             this.preemptibility = Input.ofNullable(preemptibility);
             return this;
         }

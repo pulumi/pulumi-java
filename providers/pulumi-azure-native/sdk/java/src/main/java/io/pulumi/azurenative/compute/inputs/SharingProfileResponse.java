@@ -76,12 +76,12 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setGroups(List<SharingProfileGroupResponse> groups) {
+        public Builder groups(List<SharingProfileGroupResponse> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }

@@ -72,22 +72,22 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDashboardJson(Input<String> dashboardJson) {
+        public Builder dashboardJson(Input<String> dashboardJson) {
             this.dashboardJson = Objects.requireNonNull(dashboardJson);
             return this;
         }
 
-        public Builder setDashboardJson(String dashboardJson) {
+        public Builder dashboardJson(String dashboardJson) {
             this.dashboardJson = Input.of(Objects.requireNonNull(dashboardJson));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

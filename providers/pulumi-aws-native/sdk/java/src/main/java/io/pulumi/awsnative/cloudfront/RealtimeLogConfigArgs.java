@@ -89,42 +89,42 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setEndPoints(Input<List<RealtimeLogConfigEndPointArgs>> endPoints) {
+        public Builder endPoints(Input<List<RealtimeLogConfigEndPointArgs>> endPoints) {
             this.endPoints = Objects.requireNonNull(endPoints);
             return this;
         }
 
-        public Builder setEndPoints(List<RealtimeLogConfigEndPointArgs> endPoints) {
+        public Builder endPoints(List<RealtimeLogConfigEndPointArgs> endPoints) {
             this.endPoints = Input.of(Objects.requireNonNull(endPoints));
             return this;
         }
 
-        public Builder setFields(Input<List<String>> fields) {
+        public Builder fields(Input<List<String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(List<String> fields) {
+        public Builder fields(List<String> fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSamplingRate(Input<Double> samplingRate) {
+        public Builder samplingRate(Input<Double> samplingRate) {
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
         }
 
-        public Builder setSamplingRate(Double samplingRate) {
+        public Builder samplingRate(Double samplingRate) {
             this.samplingRate = Input.of(Objects.requireNonNull(samplingRate));
             return this;
         }

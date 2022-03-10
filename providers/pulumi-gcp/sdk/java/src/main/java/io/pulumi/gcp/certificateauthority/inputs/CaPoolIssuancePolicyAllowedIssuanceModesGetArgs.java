@@ -69,22 +69,22 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
     	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
         }
 
-        public Builder setAllowConfigBasedIssuance(Input<Boolean> allowConfigBasedIssuance) {
+        public Builder allowConfigBasedIssuance(Input<Boolean> allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
             return this;
         }
 
-        public Builder setAllowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
+        public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = Input.of(Objects.requireNonNull(allowConfigBasedIssuance));
             return this;
         }
 
-        public Builder setAllowCsrBasedIssuance(Input<Boolean> allowCsrBasedIssuance) {
+        public Builder allowCsrBasedIssuance(Input<Boolean> allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }
 
-        public Builder setAllowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
+        public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Input.of(Objects.requireNonNull(allowCsrBasedIssuance));
             return this;
         }

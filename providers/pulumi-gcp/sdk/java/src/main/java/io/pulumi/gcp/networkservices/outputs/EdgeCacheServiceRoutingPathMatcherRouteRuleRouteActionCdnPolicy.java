@@ -256,47 +256,47 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     	      this.signedRequestMode = defaults.signedRequestMode;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy cacheKeyPolicy) {
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
 
-        public Builder setCacheMode(@Nullable String cacheMode) {
+        public Builder cacheMode(@Nullable String cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
 
-        public Builder setClientTtl(@Nullable String clientTtl) {
+        public Builder clientTtl(@Nullable String clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable String defaultTtl) {
+        public Builder defaultTtl(@Nullable String defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable String maxTtl) {
+        public Builder maxTtl(@Nullable String maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Boolean negativeCaching) {
+        public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
 
-        public Builder setNegativeCachingPolicy(@Nullable Map<String,String> negativeCachingPolicy) {
+        public Builder negativeCachingPolicy(@Nullable Map<String,String> negativeCachingPolicy) {
             this.negativeCachingPolicy = negativeCachingPolicy;
             return this;
         }
 
-        public Builder setSignedRequestKeyset(@Nullable String signedRequestKeyset) {
+        public Builder signedRequestKeyset(@Nullable String signedRequestKeyset) {
             this.signedRequestKeyset = signedRequestKeyset;
             return this;
         }
 
-        public Builder setSignedRequestMode(@Nullable String signedRequestMode) {
+        public Builder signedRequestMode(@Nullable String signedRequestMode) {
             this.signedRequestMode = signedRequestMode;
             return this;
         }

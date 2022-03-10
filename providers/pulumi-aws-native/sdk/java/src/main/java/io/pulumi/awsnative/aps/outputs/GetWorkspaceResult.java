@@ -133,32 +133,32 @@ public final class GetWorkspaceResult {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setAlertManagerDefinition(@Nullable String alertManagerDefinition) {
+        public Builder alertManagerDefinition(@Nullable String alertManagerDefinition) {
             this.alertManagerDefinition = alertManagerDefinition;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setPrometheusEndpoint(@Nullable String prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable String prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WorkspaceTag> tags) {
+        public Builder tags(@Nullable List<WorkspaceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

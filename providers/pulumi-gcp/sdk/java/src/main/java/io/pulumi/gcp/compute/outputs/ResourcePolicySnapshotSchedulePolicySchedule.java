@@ -91,17 +91,17 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule) {
+        public Builder dailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setHourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule) {
+        public Builder hourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
+        public Builder weeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }

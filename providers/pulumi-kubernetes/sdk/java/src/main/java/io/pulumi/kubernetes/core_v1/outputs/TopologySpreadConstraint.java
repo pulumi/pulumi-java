@@ -115,22 +115,22 @@ public final class TopologySpreadConstraint {
     	      this.whenUnsatisfiable = defaults.whenUnsatisfiable;
         }
 
-        public Builder setLabelSelector(@Nullable LabelSelector labelSelector) {
+        public Builder labelSelector(@Nullable LabelSelector labelSelector) {
             this.labelSelector = labelSelector;
             return this;
         }
 
-        public Builder setMaxSkew(Integer maxSkew) {
+        public Builder maxSkew(Integer maxSkew) {
             this.maxSkew = Objects.requireNonNull(maxSkew);
             return this;
         }
 
-        public Builder setTopologyKey(String topologyKey) {
+        public Builder topologyKey(String topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
 
-        public Builder setWhenUnsatisfiable(String whenUnsatisfiable) {
+        public Builder whenUnsatisfiable(String whenUnsatisfiable) {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
         }

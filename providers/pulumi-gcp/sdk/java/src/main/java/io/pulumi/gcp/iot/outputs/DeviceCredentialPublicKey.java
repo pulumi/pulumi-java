@@ -67,12 +67,12 @@ public final class DeviceCredentialPublicKey {
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

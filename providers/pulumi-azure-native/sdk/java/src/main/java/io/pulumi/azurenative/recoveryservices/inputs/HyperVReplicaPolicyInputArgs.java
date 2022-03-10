@@ -220,112 +220,112 @@ public final class HyperVReplicaPolicyInputArgs extends io.pulumi.resources.Reso
     	      this.replicationPort = defaults.replicationPort;
         }
 
-        public Builder setAllowedAuthenticationType(@Nullable Input<Integer> allowedAuthenticationType) {
+        public Builder allowedAuthenticationType(@Nullable Input<Integer> allowedAuthenticationType) {
             this.allowedAuthenticationType = allowedAuthenticationType;
             return this;
         }
 
-        public Builder setAllowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
+        public Builder allowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
             this.allowedAuthenticationType = Input.ofNullable(allowedAuthenticationType);
             return this;
         }
 
-        public Builder setApplicationConsistentSnapshotFrequencyInHours(@Nullable Input<Integer> applicationConsistentSnapshotFrequencyInHours) {
+        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Input<Integer> applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
-        public Builder setApplicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
+        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = Input.ofNullable(applicationConsistentSnapshotFrequencyInHours);
             return this;
         }
 
-        public Builder setCompression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Input<String> compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = Input.ofNullable(compression);
             return this;
         }
 
-        public Builder setInitialReplicationMethod(@Nullable Input<String> initialReplicationMethod) {
+        public Builder initialReplicationMethod(@Nullable Input<String> initialReplicationMethod) {
             this.initialReplicationMethod = initialReplicationMethod;
             return this;
         }
 
-        public Builder setInitialReplicationMethod(@Nullable String initialReplicationMethod) {
+        public Builder initialReplicationMethod(@Nullable String initialReplicationMethod) {
             this.initialReplicationMethod = Input.ofNullable(initialReplicationMethod);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setOfflineReplicationExportPath(@Nullable Input<String> offlineReplicationExportPath) {
+        public Builder offlineReplicationExportPath(@Nullable Input<String> offlineReplicationExportPath) {
             this.offlineReplicationExportPath = offlineReplicationExportPath;
             return this;
         }
 
-        public Builder setOfflineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
+        public Builder offlineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
             this.offlineReplicationExportPath = Input.ofNullable(offlineReplicationExportPath);
             return this;
         }
 
-        public Builder setOfflineReplicationImportPath(@Nullable Input<String> offlineReplicationImportPath) {
+        public Builder offlineReplicationImportPath(@Nullable Input<String> offlineReplicationImportPath) {
             this.offlineReplicationImportPath = offlineReplicationImportPath;
             return this;
         }
 
-        public Builder setOfflineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
+        public Builder offlineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
             this.offlineReplicationImportPath = Input.ofNullable(offlineReplicationImportPath);
             return this;
         }
 
-        public Builder setOnlineReplicationStartTime(@Nullable Input<String> onlineReplicationStartTime) {
+        public Builder onlineReplicationStartTime(@Nullable Input<String> onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
-        public Builder setOnlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
+        public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = Input.ofNullable(onlineReplicationStartTime);
             return this;
         }
 
-        public Builder setRecoveryPoints(@Nullable Input<Integer> recoveryPoints) {
+        public Builder recoveryPoints(@Nullable Input<Integer> recoveryPoints) {
             this.recoveryPoints = recoveryPoints;
             return this;
         }
 
-        public Builder setRecoveryPoints(@Nullable Integer recoveryPoints) {
+        public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
             this.recoveryPoints = Input.ofNullable(recoveryPoints);
             return this;
         }
 
-        public Builder setReplicaDeletion(@Nullable Input<String> replicaDeletion) {
+        public Builder replicaDeletion(@Nullable Input<String> replicaDeletion) {
             this.replicaDeletion = replicaDeletion;
             return this;
         }
 
-        public Builder setReplicaDeletion(@Nullable String replicaDeletion) {
+        public Builder replicaDeletion(@Nullable String replicaDeletion) {
             this.replicaDeletion = Input.ofNullable(replicaDeletion);
             return this;
         }
 
-        public Builder setReplicationPort(@Nullable Input<Integer> replicationPort) {
+        public Builder replicationPort(@Nullable Input<Integer> replicationPort) {
             this.replicationPort = replicationPort;
             return this;
         }
 
-        public Builder setReplicationPort(@Nullable Integer replicationPort) {
+        public Builder replicationPort(@Nullable Integer replicationPort) {
             this.replicationPort = Input.ofNullable(replicationPort);
             return this;
         }

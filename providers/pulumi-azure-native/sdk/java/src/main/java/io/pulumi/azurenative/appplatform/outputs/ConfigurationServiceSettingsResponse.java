@@ -50,7 +50,7 @@ public final class ConfigurationServiceSettingsResponse {
     	      this.gitProperty = defaults.gitProperty;
         }
 
-        public Builder setGitProperty(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
+        public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
             this.gitProperty = gitProperty;
             return this;
         }

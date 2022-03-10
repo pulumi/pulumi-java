@@ -102,42 +102,42 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncDatabaseId = defaults.syncDatabaseId;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setSyncAgentName(@Nullable Input<String> syncAgentName) {
+        public Builder syncAgentName(@Nullable Input<String> syncAgentName) {
             this.syncAgentName = syncAgentName;
             return this;
         }
 
-        public Builder setSyncAgentName(@Nullable String syncAgentName) {
+        public Builder syncAgentName(@Nullable String syncAgentName) {
             this.syncAgentName = Input.ofNullable(syncAgentName);
             return this;
         }
 
-        public Builder setSyncDatabaseId(@Nullable Input<String> syncDatabaseId) {
+        public Builder syncDatabaseId(@Nullable Input<String> syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
 
-        public Builder setSyncDatabaseId(@Nullable String syncDatabaseId) {
+        public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
             this.syncDatabaseId = Input.ofNullable(syncDatabaseId);
             return this;
         }

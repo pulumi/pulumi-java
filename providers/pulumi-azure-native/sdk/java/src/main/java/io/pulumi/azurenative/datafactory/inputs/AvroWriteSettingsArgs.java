@@ -124,52 +124,52 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setFileNamePrefix(@Nullable Input<Object> fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Input<Object> fileNamePrefix) {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
-        public Builder setFileNamePrefix(@Nullable Object fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             this.fileNamePrefix = Input.ofNullable(fileNamePrefix);
             return this;
         }
 
-        public Builder setMaxRowsPerFile(@Nullable Input<Object> maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Input<Object> maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
-        public Builder setMaxRowsPerFile(@Nullable Object maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = Input.ofNullable(maxRowsPerFile);
             return this;
         }
 
-        public Builder setRecordName(@Nullable Input<String> recordName) {
+        public Builder recordName(@Nullable Input<String> recordName) {
             this.recordName = recordName;
             return this;
         }
 
-        public Builder setRecordName(@Nullable String recordName) {
+        public Builder recordName(@Nullable String recordName) {
             this.recordName = Input.ofNullable(recordName);
             return this;
         }
 
-        public Builder setRecordNamespace(@Nullable Input<String> recordNamespace) {
+        public Builder recordNamespace(@Nullable Input<String> recordNamespace) {
             this.recordNamespace = recordNamespace;
             return this;
         }
 
-        public Builder setRecordNamespace(@Nullable String recordNamespace) {
+        public Builder recordNamespace(@Nullable String recordNamespace) {
             this.recordNamespace = Input.ofNullable(recordNamespace);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

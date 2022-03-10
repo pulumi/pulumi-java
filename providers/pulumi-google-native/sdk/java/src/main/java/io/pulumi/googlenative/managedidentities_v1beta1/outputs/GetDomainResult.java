@@ -245,67 +245,67 @@ public final class GetDomainResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAdmin(String admin) {
+        public Builder admin(String admin) {
             this.admin = Objects.requireNonNull(admin);
             return this;
         }
 
-        public Builder setAuditLogsEnabled(Boolean auditLogsEnabled) {
+        public Builder auditLogsEnabled(Boolean auditLogsEnabled) {
             this.auditLogsEnabled = Objects.requireNonNull(auditLogsEnabled);
             return this;
         }
 
-        public Builder setAuthorizedNetworks(List<String> authorizedNetworks) {
+        public Builder authorizedNetworks(List<String> authorizedNetworks) {
             this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLocations(List<String> locations) {
+        public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReservedIpRange(String reservedIpRange) {
+        public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
 
-        public Builder setTrusts(List<TrustResponse> trusts) {
+        public Builder trusts(List<TrustResponse> trusts) {
             this.trusts = Objects.requireNonNull(trusts);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

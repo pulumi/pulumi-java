@@ -55,7 +55,7 @@ public final class MaintenanceExclusionOptionsResponse extends io.pulumi.resourc
     	      this.scope = defaults.scope;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

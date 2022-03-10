@@ -50,7 +50,7 @@ public final class ApplicationFeatureSettings {
     	      this.splitHealthChecks = defaults.splitHealthChecks;
         }
 
-        public Builder setSplitHealthChecks(Boolean splitHealthChecks) {
+        public Builder splitHealthChecks(Boolean splitHealthChecks) {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }

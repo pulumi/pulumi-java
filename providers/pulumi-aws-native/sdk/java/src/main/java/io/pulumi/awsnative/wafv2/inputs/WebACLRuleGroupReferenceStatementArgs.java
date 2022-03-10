@@ -64,22 +64,22 @@ public final class WebACLRuleGroupReferenceStatementArgs extends io.pulumi.resou
     	      this.excludedRules = defaults.excludedRules;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder setExcludedRules(@Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules) {
+        public Builder excludedRules(@Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
             this.excludedRules = Input.ofNullable(excludedRules);
             return this;
         }

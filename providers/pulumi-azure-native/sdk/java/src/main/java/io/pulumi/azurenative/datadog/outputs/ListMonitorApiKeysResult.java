@@ -69,12 +69,12 @@ public final class ListMonitorApiKeysResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<DatadogApiKeyResponse> value) {
+        public Builder value(@Nullable List<DatadogApiKeyResponse> value) {
             this.value = value;
             return this;
         }

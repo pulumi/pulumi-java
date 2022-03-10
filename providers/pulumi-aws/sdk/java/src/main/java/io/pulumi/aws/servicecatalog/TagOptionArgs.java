@@ -87,32 +87,32 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setActive(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Input<Boolean> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = Input.ofNullable(active);
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

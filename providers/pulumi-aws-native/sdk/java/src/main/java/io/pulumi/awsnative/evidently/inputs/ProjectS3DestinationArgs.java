@@ -62,22 +62,22 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }

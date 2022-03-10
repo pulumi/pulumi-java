@@ -189,92 +189,92 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setApis(@Nullable Input<List<ServiceApiGetArgs>> apis) {
+        public Builder apis(@Nullable Input<List<ServiceApiGetArgs>> apis) {
             this.apis = apis;
             return this;
         }
 
-        public Builder setApis(@Nullable List<ServiceApiGetArgs> apis) {
+        public Builder apis(@Nullable List<ServiceApiGetArgs> apis) {
             this.apis = Input.ofNullable(apis);
             return this;
         }
 
-        public Builder setConfigId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Input<String> configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = Input.ofNullable(configId);
             return this;
         }
 
-        public Builder setDnsAddress(@Nullable Input<String> dnsAddress) {
+        public Builder dnsAddress(@Nullable Input<String> dnsAddress) {
             this.dnsAddress = dnsAddress;
             return this;
         }
 
-        public Builder setDnsAddress(@Nullable String dnsAddress) {
+        public Builder dnsAddress(@Nullable String dnsAddress) {
             this.dnsAddress = Input.ofNullable(dnsAddress);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<ServiceEndpointGetArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<ServiceEndpointGetArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<ServiceEndpointGetArgs> endpoints) {
+        public Builder endpoints(@Nullable List<ServiceEndpointGetArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setGrpcConfig(@Nullable Input<String> grpcConfig) {
+        public Builder grpcConfig(@Nullable Input<String> grpcConfig) {
             this.grpcConfig = grpcConfig;
             return this;
         }
 
-        public Builder setGrpcConfig(@Nullable String grpcConfig) {
+        public Builder grpcConfig(@Nullable String grpcConfig) {
             this.grpcConfig = Input.ofNullable(grpcConfig);
             return this;
         }
 
-        public Builder setOpenapiConfig(@Nullable Input<String> openapiConfig) {
+        public Builder openapiConfig(@Nullable Input<String> openapiConfig) {
             this.openapiConfig = openapiConfig;
             return this;
         }
 
-        public Builder setOpenapiConfig(@Nullable String openapiConfig) {
+        public Builder openapiConfig(@Nullable String openapiConfig) {
             this.openapiConfig = Input.ofNullable(openapiConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProtocOutputBase64(@Nullable Input<String> protocOutputBase64) {
+        public Builder protocOutputBase64(@Nullable Input<String> protocOutputBase64) {
             this.protocOutputBase64 = protocOutputBase64;
             return this;
         }
 
-        public Builder setProtocOutputBase64(@Nullable String protocOutputBase64) {
+        public Builder protocOutputBase64(@Nullable String protocOutputBase64) {
             this.protocOutputBase64 = Input.ofNullable(protocOutputBase64);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }

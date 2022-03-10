@@ -300,142 +300,142 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stackType = defaults.stackType;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpCidrRange(Input<String> ipCidrRange) {
+        public Builder ipCidrRange(Input<String> ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Input.of(Objects.requireNonNull(ipCidrRange));
             return this;
         }
 
-        public Builder setIpv6AccessType(@Nullable Input<String> ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable Input<String> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
-        public Builder setIpv6AccessType(@Nullable String ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
             this.ipv6AccessType = Input.ofNullable(ipv6AccessType);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<SubnetworkLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<SubnetworkLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
+        public Builder logConfig(@Nullable SubnetworkLogConfigArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(Input<String> network) {
+        public Builder network(Input<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setPrivateIpGoogleAccess(@Nullable Input<Boolean> privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(@Nullable Input<Boolean> privateIpGoogleAccess) {
             this.privateIpGoogleAccess = privateIpGoogleAccess;
             return this;
         }
 
-        public Builder setPrivateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
+        public Builder privateIpGoogleAccess(@Nullable Boolean privateIpGoogleAccess) {
             this.privateIpGoogleAccess = Input.ofNullable(privateIpGoogleAccess);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable Input<String> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Input<String> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPurpose(@Nullable Input<String> purpose) {
+        public Builder purpose(@Nullable Input<String> purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setPurpose(@Nullable String purpose) {
+        public Builder purpose(@Nullable String purpose) {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setSecondaryIpRanges(@Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable Input<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges) {
             this.secondaryIpRanges = secondaryIpRanges;
             return this;
         }
 
-        public Builder setSecondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
+        public Builder secondaryIpRanges(@Nullable List<SubnetworkSecondaryIpRangeArgs> secondaryIpRanges) {
             this.secondaryIpRanges = Input.ofNullable(secondaryIpRanges);
             return this;
         }
 
-        public Builder setStackType(@Nullable Input<String> stackType) {
+        public Builder stackType(@Nullable Input<String> stackType) {
             this.stackType = stackType;
             return this;
         }
 
-        public Builder setStackType(@Nullable String stackType) {
+        public Builder stackType(@Nullable String stackType) {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }

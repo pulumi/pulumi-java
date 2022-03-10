@@ -118,27 +118,27 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
     	      this.state = defaults.state;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setFile(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file) {
+        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

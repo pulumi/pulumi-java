@@ -73,22 +73,22 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerGetArgs exte
     	      this.ipv4Address = defaults.ipv4Address;
         }
 
-        public Builder setForwardingPath(@Nullable Input<String> forwardingPath) {
+        public Builder forwardingPath(@Nullable Input<String> forwardingPath) {
             this.forwardingPath = forwardingPath;
             return this;
         }
 
-        public Builder setForwardingPath(@Nullable String forwardingPath) {
+        public Builder forwardingPath(@Nullable String forwardingPath) {
             this.forwardingPath = Input.ofNullable(forwardingPath);
             return this;
         }
 
-        public Builder setIpv4Address(Input<String> ipv4Address) {
+        public Builder ipv4Address(Input<String> ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
 
-        public Builder setIpv4Address(String ipv4Address) {
+        public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Input.of(Objects.requireNonNull(ipv4Address));
             return this;
         }

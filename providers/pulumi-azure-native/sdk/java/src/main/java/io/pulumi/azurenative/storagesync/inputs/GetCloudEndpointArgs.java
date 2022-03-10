@@ -100,22 +100,22 @@ public final class GetCloudEndpointArgs extends io.pulumi.resources.InvokeArgs {
     	      this.syncGroupName = defaults.syncGroupName;
         }
 
-        public Builder setCloudEndpointName(String cloudEndpointName) {
+        public Builder cloudEndpointName(String cloudEndpointName) {
             this.cloudEndpointName = Objects.requireNonNull(cloudEndpointName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(String storageSyncServiceName) {
+        public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
-        public Builder setSyncGroupName(String syncGroupName) {
+        public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }

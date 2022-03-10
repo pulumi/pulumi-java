@@ -232,122 +232,122 @@ public final class WebAppHybridConnectionArgs extends io.pulumi.resources.Resour
     	      this.serviceBusSuffix = defaults.serviceBusSuffix;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRelayArmUri(@Nullable Input<String> relayArmUri) {
+        public Builder relayArmUri(@Nullable Input<String> relayArmUri) {
             this.relayArmUri = relayArmUri;
             return this;
         }
 
-        public Builder setRelayArmUri(@Nullable String relayArmUri) {
+        public Builder relayArmUri(@Nullable String relayArmUri) {
             this.relayArmUri = Input.ofNullable(relayArmUri);
             return this;
         }
 
-        public Builder setRelayName(@Nullable Input<String> relayName) {
+        public Builder relayName(@Nullable Input<String> relayName) {
             this.relayName = relayName;
             return this;
         }
 
-        public Builder setRelayName(@Nullable String relayName) {
+        public Builder relayName(@Nullable String relayName) {
             this.relayName = Input.ofNullable(relayName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSendKeyName(@Nullable Input<String> sendKeyName) {
+        public Builder sendKeyName(@Nullable Input<String> sendKeyName) {
             this.sendKeyName = sendKeyName;
             return this;
         }
 
-        public Builder setSendKeyName(@Nullable String sendKeyName) {
+        public Builder sendKeyName(@Nullable String sendKeyName) {
             this.sendKeyName = Input.ofNullable(sendKeyName);
             return this;
         }
 
-        public Builder setSendKeyValue(@Nullable Input<String> sendKeyValue) {
+        public Builder sendKeyValue(@Nullable Input<String> sendKeyValue) {
             this.sendKeyValue = sendKeyValue;
             return this;
         }
 
-        public Builder setSendKeyValue(@Nullable String sendKeyValue) {
+        public Builder sendKeyValue(@Nullable String sendKeyValue) {
             this.sendKeyValue = Input.ofNullable(sendKeyValue);
             return this;
         }
 
-        public Builder setServiceBusNamespace(@Nullable Input<String> serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable Input<String> serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
-        public Builder setServiceBusNamespace(@Nullable String serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = Input.ofNullable(serviceBusNamespace);
             return this;
         }
 
-        public Builder setServiceBusSuffix(@Nullable Input<String> serviceBusSuffix) {
+        public Builder serviceBusSuffix(@Nullable Input<String> serviceBusSuffix) {
             this.serviceBusSuffix = serviceBusSuffix;
             return this;
         }
 
-        public Builder setServiceBusSuffix(@Nullable String serviceBusSuffix) {
+        public Builder serviceBusSuffix(@Nullable String serviceBusSuffix) {
             this.serviceBusSuffix = Input.ofNullable(serviceBusSuffix);
             return this;
         }

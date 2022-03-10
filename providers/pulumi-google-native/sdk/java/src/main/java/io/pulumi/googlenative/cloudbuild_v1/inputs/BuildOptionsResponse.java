@@ -252,67 +252,67 @@ public final class BuildOptionsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDynamicSubstitutions(Boolean dynamicSubstitutions) {
+        public Builder dynamicSubstitutions(Boolean dynamicSubstitutions) {
             this.dynamicSubstitutions = Objects.requireNonNull(dynamicSubstitutions);
             return this;
         }
 
-        public Builder setEnv(List<String> env) {
+        public Builder env(List<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setLogStreamingOption(String logStreamingOption) {
+        public Builder logStreamingOption(String logStreamingOption) {
             this.logStreamingOption = Objects.requireNonNull(logStreamingOption);
             return this;
         }
 
-        public Builder setLogging(String logging) {
+        public Builder logging(String logging) {
             this.logging = Objects.requireNonNull(logging);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setPool(PoolOptionResponse pool) {
+        public Builder pool(PoolOptionResponse pool) {
             this.pool = Objects.requireNonNull(pool);
             return this;
         }
 
-        public Builder setRequestedVerifyOption(String requestedVerifyOption) {
+        public Builder requestedVerifyOption(String requestedVerifyOption) {
             this.requestedVerifyOption = Objects.requireNonNull(requestedVerifyOption);
             return this;
         }
 
-        public Builder setSecretEnv(List<String> secretEnv) {
+        public Builder secretEnv(List<String> secretEnv) {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }
 
-        public Builder setSourceProvenanceHash(List<String> sourceProvenanceHash) {
+        public Builder sourceProvenanceHash(List<String> sourceProvenanceHash) {
             this.sourceProvenanceHash = Objects.requireNonNull(sourceProvenanceHash);
             return this;
         }
 
-        public Builder setSubstitutionOption(String substitutionOption) {
+        public Builder substitutionOption(String substitutionOption) {
             this.substitutionOption = Objects.requireNonNull(substitutionOption);
             return this;
         }
 
-        public Builder setVolumes(List<VolumeResponse> volumes) {
+        public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
 
-        public Builder setWorkerPool(String workerPool) {
+        public Builder workerPool(String workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }

@@ -116,27 +116,27 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder setCloudWatchEncryptionEnabled(@Nullable Boolean cloudWatchEncryptionEnabled) {
+        public Builder cloudWatchEncryptionEnabled(@Nullable Boolean cloudWatchEncryptionEnabled) {
             this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
             return this;
         }
 
-        public Builder setCloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
+        public Builder cloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
             this.cloudWatchLogGroupName = cloudWatchLogGroupName;
             return this;
         }
 
-        public Builder setS3BucketEncryptionEnabled(@Nullable Boolean s3BucketEncryptionEnabled) {
+        public Builder s3BucketEncryptionEnabled(@Nullable Boolean s3BucketEncryptionEnabled) {
             this.s3BucketEncryptionEnabled = s3BucketEncryptionEnabled;
             return this;
         }
 
-        public Builder setS3BucketName(@Nullable String s3BucketName) {
+        public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }

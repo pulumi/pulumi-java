@@ -63,12 +63,12 @@ public final class GlobalTableSSESpecification extends io.pulumi.resources.Invok
     	      this.sSEType = defaults.sSEType;
         }
 
-        public Builder setSSEEnabled(Boolean sSEEnabled) {
+        public Builder sSEEnabled(Boolean sSEEnabled) {
             this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
             return this;
         }
 
-        public Builder setSSEType(@Nullable String sSEType) {
+        public Builder sSEType(@Nullable String sSEType) {
             this.sSEType = sSEType;
             return this;
         }

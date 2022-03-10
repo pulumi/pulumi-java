@@ -72,22 +72,22 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
     	      this.project = defaults.project;
         }
 
-        public Builder setNetworkTier(@Nullable Input<String> networkTier) {
+        public Builder networkTier(@Nullable Input<String> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable String networkTier) {
+        public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = Input.ofNullable(networkTier);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

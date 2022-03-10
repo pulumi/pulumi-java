@@ -86,17 +86,17 @@ public final class ConfigMapProjection {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setItems(@Nullable List<KeyToPath> items) {
+        public Builder items(@Nullable List<KeyToPath> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

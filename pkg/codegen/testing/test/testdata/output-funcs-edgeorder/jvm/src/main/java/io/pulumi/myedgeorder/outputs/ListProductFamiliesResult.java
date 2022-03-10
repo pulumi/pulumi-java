@@ -69,12 +69,12 @@ public final class ListProductFamiliesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(List<ProductFamilyResponse> value) {
+        public Builder value(List<ProductFamilyResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

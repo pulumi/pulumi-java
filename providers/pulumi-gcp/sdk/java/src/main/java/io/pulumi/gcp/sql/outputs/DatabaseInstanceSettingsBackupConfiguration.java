@@ -154,37 +154,37 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
     	      this.transactionLogRetentionDays = defaults.transactionLogRetentionDays;
         }
 
-        public Builder setBackupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings) {
+        public Builder backupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings) {
             this.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
 
-        public Builder setBinaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
+        public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
             this.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTransactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
+        public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }

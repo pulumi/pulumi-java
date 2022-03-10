@@ -229,62 +229,62 @@ public final class GetSqlVirtualMachineGroupResult {
     	      this.wsfcDomainProfile = defaults.wsfcDomainProfile;
         }
 
-        public Builder setClusterConfiguration(String clusterConfiguration) {
+        public Builder clusterConfiguration(String clusterConfiguration) {
             this.clusterConfiguration = Objects.requireNonNull(clusterConfiguration);
             return this;
         }
 
-        public Builder setClusterManagerType(String clusterManagerType) {
+        public Builder clusterManagerType(String clusterManagerType) {
             this.clusterManagerType = Objects.requireNonNull(clusterManagerType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScaleType(String scaleType) {
+        public Builder scaleType(String scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
 
-        public Builder setSqlImageOffer(@Nullable String sqlImageOffer) {
+        public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
 
-        public Builder setSqlImageSku(@Nullable String sqlImageSku) {
+        public Builder sqlImageSku(@Nullable String sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWsfcDomainProfile(@Nullable WsfcDomainProfileResponse wsfcDomainProfile) {
+        public Builder wsfcDomainProfile(@Nullable WsfcDomainProfileResponse wsfcDomainProfile) {
             this.wsfcDomainProfile = wsfcDomainProfile;
             return this;
         }

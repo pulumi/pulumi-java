@@ -91,32 +91,32 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
     	      this.referenceType = defaults.referenceType;
         }
 
-        public Builder setJobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Input<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setReferenceType(Input<String> referenceType) {
+        public Builder referenceType(Input<String> referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }
 
-        public Builder setReferenceType(String referenceType) {
+        public Builder referenceType(String referenceType) {
             this.referenceType = Input.of(Objects.requireNonNull(referenceType));
             return this;
         }

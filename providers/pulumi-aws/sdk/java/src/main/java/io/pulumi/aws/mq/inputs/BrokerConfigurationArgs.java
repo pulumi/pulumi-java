@@ -71,22 +71,22 @@ public final class BrokerConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.revision = defaults.revision;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Input<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }

@@ -197,52 +197,52 @@ public final class GetJobTriggerResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setErrors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
+        public Builder errors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInspectJob(GooglePrivacyDlpV2InspectJobConfigResponse inspectJob) {
+        public Builder inspectJob(GooglePrivacyDlpV2InspectJobConfigResponse inspectJob) {
             this.inspectJob = Objects.requireNonNull(inspectJob);
             return this;
         }
 
-        public Builder setLastRunTime(String lastRunTime) {
+        public Builder lastRunTime(String lastRunTime) {
             this.lastRunTime = Objects.requireNonNull(lastRunTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTriggers(List<GooglePrivacyDlpV2TriggerResponse> triggers) {
+        public Builder triggers(List<GooglePrivacyDlpV2TriggerResponse> triggers) {
             this.triggers = Objects.requireNonNull(triggers);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

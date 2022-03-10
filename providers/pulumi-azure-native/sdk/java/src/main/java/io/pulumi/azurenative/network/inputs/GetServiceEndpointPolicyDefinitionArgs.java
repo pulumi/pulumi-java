@@ -84,17 +84,17 @@ public final class GetServiceEndpointPolicyDefinitionArgs extends io.pulumi.reso
     	      this.serviceEndpointPolicyName = defaults.serviceEndpointPolicyName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceEndpointPolicyDefinitionName(String serviceEndpointPolicyDefinitionName) {
+        public Builder serviceEndpointPolicyDefinitionName(String serviceEndpointPolicyDefinitionName) {
             this.serviceEndpointPolicyDefinitionName = Objects.requireNonNull(serviceEndpointPolicyDefinitionName);
             return this;
         }
 
-        public Builder setServiceEndpointPolicyName(String serviceEndpointPolicyName) {
+        public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
             this.serviceEndpointPolicyName = Objects.requireNonNull(serviceEndpointPolicyName);
             return this;
         }

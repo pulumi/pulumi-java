@@ -56,7 +56,7 @@ public final class TrafficPercentStrategyResponse extends io.pulumi.resources.In
     	      this.percentages = defaults.percentages;
         }
 
-        public Builder setPercentages(Map<String,String> percentages) {
+        public Builder percentages(Map<String,String> percentages) {
             this.percentages = Objects.requireNonNull(percentages);
             return this;
         }

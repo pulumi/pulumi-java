@@ -73,12 +73,12 @@ public final class ForecastSpendResponse extends io.pulumi.resources.InvokeArgs 
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAmount(Double amount) {
+        public Builder amount(Double amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }

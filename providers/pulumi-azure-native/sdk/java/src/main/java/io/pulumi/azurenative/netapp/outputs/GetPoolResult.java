@@ -229,62 +229,62 @@ public final class GetPoolResult {
     	      this.utilizedThroughputMibps = defaults.utilizedThroughputMibps;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPoolId(String poolId) {
+        public Builder poolId(String poolId) {
             this.poolId = Objects.requireNonNull(poolId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setQosType(@Nullable String qosType) {
+        public Builder qosType(@Nullable String qosType) {
             this.qosType = qosType;
             return this;
         }
 
-        public Builder setServiceLevel(String serviceLevel) {
+        public Builder serviceLevel(String serviceLevel) {
             this.serviceLevel = Objects.requireNonNull(serviceLevel);
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTotalThroughputMibps(Double totalThroughputMibps) {
+        public Builder totalThroughputMibps(Double totalThroughputMibps) {
             this.totalThroughputMibps = Objects.requireNonNull(totalThroughputMibps);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUtilizedThroughputMibps(Double utilizedThroughputMibps) {
+        public Builder utilizedThroughputMibps(Double utilizedThroughputMibps) {
             this.utilizedThroughputMibps = Objects.requireNonNull(utilizedThroughputMibps);
             return this;
         }

@@ -446,127 +446,127 @@ public final class GetEndpointResult {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder setContentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
 
-        public Builder setDefaultOriginGroup(@Nullable ResourceReferenceResponse defaultOriginGroup) {
+        public Builder defaultOriginGroup(@Nullable ResourceReferenceResponse defaultOriginGroup) {
             this.defaultOriginGroup = defaultOriginGroup;
             return this;
         }
 
-        public Builder setDeliveryPolicy(@Nullable EndpointPropertiesUpdateParametersResponseDeliveryPolicy deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable EndpointPropertiesUpdateParametersResponseDeliveryPolicy deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
 
-        public Builder setGeoFilters(@Nullable List<GeoFilterResponse> geoFilters) {
+        public Builder geoFilters(@Nullable List<GeoFilterResponse> geoFilters) {
             this.geoFilters = geoFilters;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
 
-        public Builder setIsHttpAllowed(@Nullable Boolean isHttpAllowed) {
+        public Builder isHttpAllowed(@Nullable Boolean isHttpAllowed) {
             this.isHttpAllowed = isHttpAllowed;
             return this;
         }
 
-        public Builder setIsHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
+        public Builder isHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
             this.isHttpsAllowed = isHttpsAllowed;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptimizationType(@Nullable String optimizationType) {
+        public Builder optimizationType(@Nullable String optimizationType) {
             this.optimizationType = optimizationType;
             return this;
         }
 
-        public Builder setOriginGroups(@Nullable List<DeepCreatedOriginGroupResponse> originGroups) {
+        public Builder originGroups(@Nullable List<DeepCreatedOriginGroupResponse> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable String originHostHeader) {
+        public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
-        public Builder setOriginPath(@Nullable String originPath) {
+        public Builder originPath(@Nullable String originPath) {
             this.originPath = originPath;
             return this;
         }
 
-        public Builder setOrigins(List<DeepCreatedOriginResponse> origins) {
+        public Builder origins(List<DeepCreatedOriginResponse> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
 
-        public Builder setProbePath(@Nullable String probePath) {
+        public Builder probePath(@Nullable String probePath) {
             this.probePath = probePath;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setQueryStringCachingBehavior(@Nullable String queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable String queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrlSigningKeys(@Nullable List<UrlSigningKeyResponse> urlSigningKeys) {
+        public Builder urlSigningKeys(@Nullable List<UrlSigningKeyResponse> urlSigningKeys) {
             this.urlSigningKeys = urlSigningKeys;
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }

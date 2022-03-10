@@ -55,7 +55,7 @@ public final class VirtualMachineHealthStatusResponse extends io.pulumi.resource
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(InstanceViewStatusResponse status) {
+        public Builder status(InstanceViewStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

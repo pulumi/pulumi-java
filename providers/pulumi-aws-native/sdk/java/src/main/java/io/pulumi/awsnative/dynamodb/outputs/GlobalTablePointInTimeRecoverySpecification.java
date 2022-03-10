@@ -42,7 +42,7 @@ public final class GlobalTablePointInTimeRecoverySpecification {
     	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }

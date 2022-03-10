@@ -110,32 +110,32 @@ public final class GetEnvironmentConfigSoftwareConfig extends io.pulumi.resource
     	      this.schedulerCount = defaults.schedulerCount;
         }
 
-        public Builder setAirflowConfigOverrides(Map<String,String> airflowConfigOverrides) {
+        public Builder airflowConfigOverrides(Map<String,String> airflowConfigOverrides) {
             this.airflowConfigOverrides = Objects.requireNonNull(airflowConfigOverrides);
             return this;
         }
 
-        public Builder setEnvVariables(Map<String,String> envVariables) {
+        public Builder envVariables(Map<String,String> envVariables) {
             this.envVariables = Objects.requireNonNull(envVariables);
             return this;
         }
 
-        public Builder setImageVersion(String imageVersion) {
+        public Builder imageVersion(String imageVersion) {
             this.imageVersion = Objects.requireNonNull(imageVersion);
             return this;
         }
 
-        public Builder setPypiPackages(Map<String,String> pypiPackages) {
+        public Builder pypiPackages(Map<String,String> pypiPackages) {
             this.pypiPackages = Objects.requireNonNull(pypiPackages);
             return this;
         }
 
-        public Builder setPythonVersion(String pythonVersion) {
+        public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
 
-        public Builder setSchedulerCount(Integer schedulerCount) {
+        public Builder schedulerCount(Integer schedulerCount) {
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
         }

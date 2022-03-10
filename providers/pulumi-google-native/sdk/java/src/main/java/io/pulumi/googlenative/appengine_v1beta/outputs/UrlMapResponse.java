@@ -164,42 +164,42 @@ public final class UrlMapResponse {
     	      this.urlRegex = defaults.urlRegex;
         }
 
-        public Builder setApiEndpoint(ApiEndpointHandlerResponse apiEndpoint) {
+        public Builder apiEndpoint(ApiEndpointHandlerResponse apiEndpoint) {
             this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
             return this;
         }
 
-        public Builder setAuthFailAction(String authFailAction) {
+        public Builder authFailAction(String authFailAction) {
             this.authFailAction = Objects.requireNonNull(authFailAction);
             return this;
         }
 
-        public Builder setLogin(String login) {
+        public Builder login(String login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
 
-        public Builder setRedirectHttpResponseCode(String redirectHttpResponseCode) {
+        public Builder redirectHttpResponseCode(String redirectHttpResponseCode) {
             this.redirectHttpResponseCode = Objects.requireNonNull(redirectHttpResponseCode);
             return this;
         }
 
-        public Builder setScript(ScriptHandlerResponse script) {
+        public Builder script(ScriptHandlerResponse script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setSecurityLevel(String securityLevel) {
+        public Builder securityLevel(String securityLevel) {
             this.securityLevel = Objects.requireNonNull(securityLevel);
             return this;
         }
 
-        public Builder setStaticFiles(StaticFilesHandlerResponse staticFiles) {
+        public Builder staticFiles(StaticFilesHandlerResponse staticFiles) {
             this.staticFiles = Objects.requireNonNull(staticFiles);
             return this;
         }
 
-        public Builder setUrlRegex(String urlRegex) {
+        public Builder urlRegex(String urlRegex) {
             this.urlRegex = Objects.requireNonNull(urlRegex);
             return this;
         }

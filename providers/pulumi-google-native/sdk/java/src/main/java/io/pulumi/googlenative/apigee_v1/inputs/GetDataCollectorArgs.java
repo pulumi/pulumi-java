@@ -60,12 +60,12 @@ public final class GetDataCollectorArgs extends io.pulumi.resources.InvokeArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setDatacollectorId(String datacollectorId) {
+        public Builder datacollectorId(String datacollectorId) {
             this.datacollectorId = Objects.requireNonNull(datacollectorId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

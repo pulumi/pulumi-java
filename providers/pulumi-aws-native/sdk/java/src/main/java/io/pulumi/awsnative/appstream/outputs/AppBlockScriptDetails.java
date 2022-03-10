@@ -69,22 +69,22 @@ public final class AppBlockScriptDetails {
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setExecutableParameters(@Nullable String executableParameters) {
+        public Builder executableParameters(@Nullable String executableParameters) {
             this.executableParameters = executableParameters;
             return this;
         }
 
-        public Builder setExecutablePath(String executablePath) {
+        public Builder executablePath(String executablePath) {
             this.executablePath = Objects.requireNonNull(executablePath);
             return this;
         }
 
-        public Builder setScriptS3Location(AppBlockS3Location scriptS3Location) {
+        public Builder scriptS3Location(AppBlockS3Location scriptS3Location) {
             this.scriptS3Location = Objects.requireNonNull(scriptS3Location);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }

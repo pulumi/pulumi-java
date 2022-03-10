@@ -147,37 +147,37 @@ public final class TrailAdvancedEventSelectorFieldSelector {
     	      this.startsWiths = defaults.startsWiths;
         }
 
-        public Builder setEndsWiths(@Nullable List<String> endsWiths) {
+        public Builder endsWiths(@Nullable List<String> endsWiths) {
             this.endsWiths = endsWiths;
             return this;
         }
 
-        public Builder setEquals(@Nullable List<String> equals) {
+        public Builder equals(@Nullable List<String> equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setNotEndsWiths(@Nullable List<String> notEndsWiths) {
+        public Builder notEndsWiths(@Nullable List<String> notEndsWiths) {
             this.notEndsWiths = notEndsWiths;
             return this;
         }
 
-        public Builder setNotEquals(@Nullable List<String> notEquals) {
+        public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
 
-        public Builder setNotStartsWiths(@Nullable List<String> notStartsWiths) {
+        public Builder notStartsWiths(@Nullable List<String> notStartsWiths) {
             this.notStartsWiths = notStartsWiths;
             return this;
         }
 
-        public Builder setStartsWiths(@Nullable List<String> startsWiths) {
+        public Builder startsWiths(@Nullable List<String> startsWiths) {
             this.startsWiths = startsWiths;
             return this;
         }

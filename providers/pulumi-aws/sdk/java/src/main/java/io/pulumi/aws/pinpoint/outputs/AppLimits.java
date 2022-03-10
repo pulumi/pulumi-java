@@ -99,22 +99,22 @@ public final class AppLimits {
     	      this.total = defaults.total;
         }
 
-        public Builder setDaily(@Nullable Integer daily) {
+        public Builder daily(@Nullable Integer daily) {
             this.daily = daily;
             return this;
         }
 
-        public Builder setMaximumDuration(@Nullable Integer maximumDuration) {
+        public Builder maximumDuration(@Nullable Integer maximumDuration) {
             this.maximumDuration = maximumDuration;
             return this;
         }
 
-        public Builder setMessagesPerSecond(@Nullable Integer messagesPerSecond) {
+        public Builder messagesPerSecond(@Nullable Integer messagesPerSecond) {
             this.messagesPerSecond = messagesPerSecond;
             return this;
         }
 
-        public Builder setTotal(@Nullable Integer total) {
+        public Builder total(@Nullable Integer total) {
             this.total = total;
             return this;
         }

@@ -119,52 +119,52 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setCustomerManagedKey(@Nullable Input<Boolean> customerManagedKey) {
+        public Builder customerManagedKey(@Nullable Input<Boolean> customerManagedKey) {
             this.customerManagedKey = customerManagedKey;
             return this;
         }
 
-        public Builder setCustomerManagedKey(@Nullable Boolean customerManagedKey) {
+        public Builder customerManagedKey(@Nullable Boolean customerManagedKey) {
             this.customerManagedKey = Input.ofNullable(customerManagedKey);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSentinelOnboardingStateName(@Nullable Input<String> sentinelOnboardingStateName) {
+        public Builder sentinelOnboardingStateName(@Nullable Input<String> sentinelOnboardingStateName) {
             this.sentinelOnboardingStateName = sentinelOnboardingStateName;
             return this;
         }
 
-        public Builder setSentinelOnboardingStateName(@Nullable String sentinelOnboardingStateName) {
+        public Builder sentinelOnboardingStateName(@Nullable String sentinelOnboardingStateName) {
             this.sentinelOnboardingStateName = Input.ofNullable(sentinelOnboardingStateName);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

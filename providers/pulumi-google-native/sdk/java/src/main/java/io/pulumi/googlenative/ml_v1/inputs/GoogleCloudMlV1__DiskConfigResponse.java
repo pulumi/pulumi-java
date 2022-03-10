@@ -73,12 +73,12 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends io.pulumi.resourc
     	      this.bootDiskType = defaults.bootDiskType;
         }
 
-        public Builder setBootDiskSizeGb(Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setBootDiskType(String bootDiskType) {
+        public Builder bootDiskType(String bootDiskType) {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }

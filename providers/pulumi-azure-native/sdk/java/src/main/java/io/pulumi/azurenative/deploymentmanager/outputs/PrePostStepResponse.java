@@ -48,7 +48,7 @@ public final class PrePostStepResponse {
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }

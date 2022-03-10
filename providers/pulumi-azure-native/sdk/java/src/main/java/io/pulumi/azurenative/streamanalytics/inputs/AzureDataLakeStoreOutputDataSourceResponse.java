@@ -187,47 +187,47 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setDateFormat(@Nullable String dateFormat) {
+        public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
-        public Builder setFilePathPrefix(@Nullable String filePathPrefix) {
+        public Builder filePathPrefix(@Nullable String filePathPrefix) {
             this.filePathPrefix = filePathPrefix;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTimeFormat(@Nullable String timeFormat) {
+        public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
 
-        public Builder setTokenUserDisplayName(@Nullable String tokenUserDisplayName) {
+        public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
-        public Builder setTokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
+        public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

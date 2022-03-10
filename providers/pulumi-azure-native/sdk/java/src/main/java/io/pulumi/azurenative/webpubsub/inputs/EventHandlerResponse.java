@@ -113,22 +113,22 @@ public final class EventHandlerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.userEventPattern = defaults.userEventPattern;
         }
 
-        public Builder setAuth(@Nullable UpstreamAuthSettingsResponse auth) {
+        public Builder auth(@Nullable UpstreamAuthSettingsResponse auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setSystemEvents(@Nullable List<String> systemEvents) {
+        public Builder systemEvents(@Nullable List<String> systemEvents) {
             this.systemEvents = systemEvents;
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
-        public Builder setUserEventPattern(@Nullable String userEventPattern) {
+        public Builder userEventPattern(@Nullable String userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
         }

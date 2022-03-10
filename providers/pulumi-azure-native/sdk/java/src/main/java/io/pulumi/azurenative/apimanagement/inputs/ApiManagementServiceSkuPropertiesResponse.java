@@ -73,12 +73,12 @@ public final class ApiManagementServiceSkuPropertiesResponse extends io.pulumi.r
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(Integer capacity) {
+        public Builder capacity(Integer capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -50,7 +50,7 @@ public final class SharedPublicIpAddressConfigurationResponse {
     	      this.inboundNatRules = defaults.inboundNatRules;
         }
 
-        public Builder setInboundNatRules(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
+        public Builder inboundNatRules(@Nullable List<InboundNatRuleResponse> inboundNatRules) {
             this.inboundNatRules = inboundNatRules;
             return this;
         }

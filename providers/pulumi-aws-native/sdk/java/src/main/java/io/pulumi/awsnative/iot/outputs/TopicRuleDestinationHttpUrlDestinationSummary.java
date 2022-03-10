@@ -42,7 +42,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummary {
     	      this.confirmationUrl = defaults.confirmationUrl;
         }
 
-        public Builder setConfirmationUrl(@Nullable String confirmationUrl) {
+        public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }

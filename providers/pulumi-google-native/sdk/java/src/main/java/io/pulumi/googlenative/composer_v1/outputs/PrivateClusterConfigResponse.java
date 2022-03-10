@@ -82,17 +82,17 @@ public final class PrivateClusterConfigResponse {
     	      this.masterIpv4ReservedRange = defaults.masterIpv4ReservedRange;
         }
 
-        public Builder setEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setMasterIpv4ReservedRange(String masterIpv4ReservedRange) {
+        public Builder masterIpv4ReservedRange(String masterIpv4ReservedRange) {
             this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
             return this;
         }

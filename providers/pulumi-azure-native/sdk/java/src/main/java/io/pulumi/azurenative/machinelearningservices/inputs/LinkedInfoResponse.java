@@ -90,17 +90,17 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.origin = defaults.origin;
         }
 
-        public Builder setLinkedId(@Nullable String linkedId) {
+        public Builder linkedId(@Nullable String linkedId) {
             this.linkedId = linkedId;
             return this;
         }
 
-        public Builder setLinkedResourceName(@Nullable String linkedResourceName) {
+        public Builder linkedResourceName(@Nullable String linkedResourceName) {
             this.linkedResourceName = linkedResourceName;
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = origin;
             return this;
         }

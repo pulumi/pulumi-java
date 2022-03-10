@@ -99,22 +99,22 @@ public final class FileShareConfigResponse {
     	      this.sourceBackup = defaults.sourceBackup;
         }
 
-        public Builder setCapacityGb(String capacityGb) {
+        public Builder capacityGb(String capacityGb) {
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNfsExportOptions(List<NfsExportOptionsResponse> nfsExportOptions) {
+        public Builder nfsExportOptions(List<NfsExportOptionsResponse> nfsExportOptions) {
             this.nfsExportOptions = Objects.requireNonNull(nfsExportOptions);
             return this;
         }
 
-        public Builder setSourceBackup(String sourceBackup) {
+        public Builder sourceBackup(String sourceBackup) {
             this.sourceBackup = Objects.requireNonNull(sourceBackup);
             return this;
         }

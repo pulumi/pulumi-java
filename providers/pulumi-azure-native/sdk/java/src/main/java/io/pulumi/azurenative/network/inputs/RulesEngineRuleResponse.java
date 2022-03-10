@@ -126,27 +126,27 @@ public final class RulesEngineRuleResponse extends io.pulumi.resources.InvokeArg
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(RulesEngineActionResponse action) {
+        public Builder action(RulesEngineActionResponse action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setMatchConditions(@Nullable List<RulesEngineMatchConditionResponse> matchConditions) {
+        public Builder matchConditions(@Nullable List<RulesEngineMatchConditionResponse> matchConditions) {
             this.matchConditions = matchConditions;
             return this;
         }
 
-        public Builder setMatchProcessingBehavior(@Nullable String matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable String matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }

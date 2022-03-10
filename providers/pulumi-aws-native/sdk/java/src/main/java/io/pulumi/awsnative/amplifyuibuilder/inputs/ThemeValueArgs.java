@@ -64,22 +64,22 @@ public final class ThemeValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setChildren(@Nullable Input<List<ThemeValuesArgs>> children) {
+        public Builder children(@Nullable Input<List<ThemeValuesArgs>> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setChildren(@Nullable List<ThemeValuesArgs> children) {
+        public Builder children(@Nullable List<ThemeValuesArgs> children) {
             this.children = Input.ofNullable(children);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

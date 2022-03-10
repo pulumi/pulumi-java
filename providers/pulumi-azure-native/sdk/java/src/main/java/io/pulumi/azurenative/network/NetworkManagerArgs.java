@@ -187,92 +187,92 @@ public final class NetworkManagerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkManagerName(@Nullable Input<String> networkManagerName) {
+        public Builder networkManagerName(@Nullable Input<String> networkManagerName) {
             this.networkManagerName = networkManagerName;
             return this;
         }
 
-        public Builder setNetworkManagerName(@Nullable String networkManagerName) {
+        public Builder networkManagerName(@Nullable String networkManagerName) {
             this.networkManagerName = Input.ofNullable(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerScopeAccesses(@Nullable Input<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses) {
+        public Builder networkManagerScopeAccesses(@Nullable Input<List<Either<String,ConfigurationType>>> networkManagerScopeAccesses) {
             this.networkManagerScopeAccesses = networkManagerScopeAccesses;
             return this;
         }
 
-        public Builder setNetworkManagerScopeAccesses(@Nullable List<Either<String,ConfigurationType>> networkManagerScopeAccesses) {
+        public Builder networkManagerScopeAccesses(@Nullable List<Either<String,ConfigurationType>> networkManagerScopeAccesses) {
             this.networkManagerScopeAccesses = Input.ofNullable(networkManagerScopeAccesses);
             return this;
         }
 
-        public Builder setNetworkManagerScopes(@Nullable Input<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes) {
+        public Builder networkManagerScopes(@Nullable Input<NetworkManagerPropertiesNetworkManagerScopesArgs> networkManagerScopes) {
             this.networkManagerScopes = networkManagerScopes;
             return this;
         }
 
-        public Builder setNetworkManagerScopes(@Nullable NetworkManagerPropertiesNetworkManagerScopesArgs networkManagerScopes) {
+        public Builder networkManagerScopes(@Nullable NetworkManagerPropertiesNetworkManagerScopesArgs networkManagerScopes) {
             this.networkManagerScopes = Input.ofNullable(networkManagerScopes);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

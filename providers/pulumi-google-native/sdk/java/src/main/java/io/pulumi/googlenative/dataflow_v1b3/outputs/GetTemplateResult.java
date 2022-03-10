@@ -100,22 +100,22 @@ public final class GetTemplateResult {
     	      this.templateType = defaults.templateType;
         }
 
-        public Builder setMetadata(TemplateMetadataResponse metadata) {
+        public Builder metadata(TemplateMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setRuntimeMetadata(RuntimeMetadataResponse runtimeMetadata) {
+        public Builder runtimeMetadata(RuntimeMetadataResponse runtimeMetadata) {
             this.runtimeMetadata = Objects.requireNonNull(runtimeMetadata);
             return this;
         }
 
-        public Builder setStatus(StatusResponse status) {
+        public Builder status(StatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTemplateType(String templateType) {
+        public Builder templateType(String templateType) {
             this.templateType = Objects.requireNonNull(templateType);
             return this;
         }

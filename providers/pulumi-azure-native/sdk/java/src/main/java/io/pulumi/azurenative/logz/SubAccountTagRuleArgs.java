@@ -115,52 +115,52 @@ public final class SubAccountTagRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.subAccountName = defaults.subAccountName;
         }
 
-        public Builder setMonitorName(Input<String> monitorName) {
+        public Builder monitorName(Input<String> monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
-        public Builder setMonitorName(String monitorName) {
+        public Builder monitorName(String monitorName) {
             this.monitorName = Input.of(Objects.requireNonNull(monitorName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<MonitoringTagRulesPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<MonitoringTagRulesPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable MonitoringTagRulesPropertiesArgs properties) {
+        public Builder properties(@Nullable MonitoringTagRulesPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleSetName(@Nullable Input<String> ruleSetName) {
+        public Builder ruleSetName(@Nullable Input<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
 
-        public Builder setRuleSetName(@Nullable String ruleSetName) {
+        public Builder ruleSetName(@Nullable String ruleSetName) {
             this.ruleSetName = Input.ofNullable(ruleSetName);
             return this;
         }
 
-        public Builder setSubAccountName(Input<String> subAccountName) {
+        public Builder subAccountName(Input<String> subAccountName) {
             this.subAccountName = Objects.requireNonNull(subAccountName);
             return this;
         }
 
-        public Builder setSubAccountName(String subAccountName) {
+        public Builder subAccountName(String subAccountName) {
             this.subAccountName = Input.of(Objects.requireNonNull(subAccountName));
             return this;
         }

@@ -93,32 +93,32 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportPreferences = defaults.transportPreferences;
         }
 
-        public Builder setEncryptionPreferences(@Nullable Input<EncryptionPreferencesArgs> encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable Input<EncryptionPreferencesArgs> encryptionPreferences) {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
-        public Builder setEncryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
             this.encryptionPreferences = Input.ofNullable(encryptionPreferences);
             return this;
         }
 
-        public Builder setPreferredDataCenterRegion(@Nullable Input<List<String>> preferredDataCenterRegion) {
+        public Builder preferredDataCenterRegion(@Nullable Input<List<String>> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
 
-        public Builder setPreferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
+        public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = Input.ofNullable(preferredDataCenterRegion);
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable Input<TransportPreferencesArgs> transportPreferences) {
+        public Builder transportPreferences(@Nullable Input<TransportPreferencesArgs> transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
+        public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
             this.transportPreferences = Input.ofNullable(transportPreferences);
             return this;
         }

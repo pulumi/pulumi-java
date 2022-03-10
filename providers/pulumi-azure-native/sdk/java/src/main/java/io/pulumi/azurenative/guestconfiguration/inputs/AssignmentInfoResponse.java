@@ -75,12 +75,12 @@ public final class AssignmentInfoResponse extends io.pulumi.resources.InvokeArgs
     	      this.name = defaults.name;
         }
 
-        public Builder setConfiguration(@Nullable ConfigurationInfoResponse configuration) {
+        public Builder configuration(@Nullable ConfigurationInfoResponse configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -87,22 +87,22 @@ public final class SpotFleetBlockDeviceMapping extends io.pulumi.resources.Invok
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setEbs(@Nullable SpotFleetEbsBlockDevice ebs) {
+        public Builder ebs(@Nullable SpotFleetEbsBlockDevice ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable String noDevice) {
+        public Builder noDevice(@Nullable String noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
         }

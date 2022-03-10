@@ -125,27 +125,27 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
     	      this.zip = defaults.zip;
         }
 
-        public Builder setBuild(BuildInfoResponse build) {
+        public Builder build(BuildInfoResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
 
-        public Builder setCloudBuildOptions(CloudBuildOptionsResponse cloudBuildOptions) {
+        public Builder cloudBuildOptions(CloudBuildOptionsResponse cloudBuildOptions) {
             this.cloudBuildOptions = Objects.requireNonNull(cloudBuildOptions);
             return this;
         }
 
-        public Builder setContainer(ContainerInfoResponse container) {
+        public Builder container(ContainerInfoResponse container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setFiles(Map<String,String> files) {
+        public Builder files(Map<String,String> files) {
             this.files = Objects.requireNonNull(files);
             return this;
         }
 
-        public Builder setZip(ZipInfoResponse zip) {
+        public Builder zip(ZipInfoResponse zip) {
             this.zip = Objects.requireNonNull(zip);
             return this;
         }

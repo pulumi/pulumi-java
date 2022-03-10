@@ -101,22 +101,22 @@ public final class GitHubActionConfigurationResponse {
     	      this.isLinux = defaults.isLinux;
         }
 
-        public Builder setCodeConfiguration(@Nullable GitHubActionCodeConfigurationResponse codeConfiguration) {
+        public Builder codeConfiguration(@Nullable GitHubActionCodeConfigurationResponse codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setContainerConfiguration(@Nullable GitHubActionContainerConfigurationResponse containerConfiguration) {
+        public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationResponse containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
-        public Builder setGenerateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
+        public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
             this.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
 
-        public Builder setIsLinux(@Nullable Boolean isLinux) {
+        public Builder isLinux(@Nullable Boolean isLinux) {
             this.isLinux = isLinux;
             return this;
         }

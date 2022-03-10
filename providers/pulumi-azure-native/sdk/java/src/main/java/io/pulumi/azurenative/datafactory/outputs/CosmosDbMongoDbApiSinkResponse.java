@@ -166,42 +166,42 @@ public final class CosmosDbMongoDbApiSinkResponse {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Object writeBehavior) {
+        public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }

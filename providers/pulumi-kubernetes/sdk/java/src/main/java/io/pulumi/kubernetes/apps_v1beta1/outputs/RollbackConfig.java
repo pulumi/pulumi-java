@@ -50,7 +50,7 @@ public final class RollbackConfig {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = revision;
             return this;
         }

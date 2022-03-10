@@ -161,72 +161,72 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
     	      this.text = defaults.text;
         }
 
-        public Builder setConversationSuccess(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> conversationSuccess) {
+        public Builder conversationSuccess(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> conversationSuccess) {
             this.conversationSuccess = conversationSuccess;
             return this;
         }
 
-        public Builder setConversationSuccess(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs conversationSuccess) {
+        public Builder conversationSuccess(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs conversationSuccess) {
             this.conversationSuccess = Input.ofNullable(conversationSuccess);
             return this;
         }
 
-        public Builder setLiveAgentHandoff(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff) {
+        public Builder liveAgentHandoff(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff) {
             this.liveAgentHandoff = liveAgentHandoff;
             return this;
         }
 
-        public Builder setLiveAgentHandoff(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs liveAgentHandoff) {
+        public Builder liveAgentHandoff(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs liveAgentHandoff) {
             this.liveAgentHandoff = Input.ofNullable(liveAgentHandoff);
             return this;
         }
 
-        public Builder setOutputAudioText(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText) {
+        public Builder outputAudioText(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText) {
             this.outputAudioText = outputAudioText;
             return this;
         }
 
-        public Builder setOutputAudioText(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs outputAudioText) {
+        public Builder outputAudioText(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs outputAudioText) {
             this.outputAudioText = Input.ofNullable(outputAudioText);
             return this;
         }
 
-        public Builder setPayload(@Nullable Input<Map<String,String>> payload) {
+        public Builder payload(@Nullable Input<Map<String,String>> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable Map<String,String> payload) {
+        public Builder payload(@Nullable Map<String,String> payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }
 
-        public Builder setPlayAudio(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio) {
+        public Builder playAudio(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio) {
             this.playAudio = playAudio;
             return this;
         }
 
-        public Builder setPlayAudio(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs playAudio) {
+        public Builder playAudio(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs playAudio) {
             this.playAudio = Input.ofNullable(playAudio);
             return this;
         }
 
-        public Builder setTelephonyTransferCall(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall) {
+        public Builder telephonyTransferCall(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall) {
             this.telephonyTransferCall = telephonyTransferCall;
             return this;
         }
 
-        public Builder setTelephonyTransferCall(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs telephonyTransferCall) {
+        public Builder telephonyTransferCall(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs telephonyTransferCall) {
             this.telephonyTransferCall = Input.ofNullable(telephonyTransferCall);
             return this;
         }
 
-        public Builder setText(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text) {
+        public Builder text(@Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs text) {
+        public Builder text(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs text) {
             this.text = Input.ofNullable(text);
             return this;
         }

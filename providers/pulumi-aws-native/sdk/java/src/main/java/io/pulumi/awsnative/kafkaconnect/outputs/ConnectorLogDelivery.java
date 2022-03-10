@@ -40,7 +40,7 @@ public final class ConnectorLogDelivery {
     	      this.workerLogDelivery = defaults.workerLogDelivery;
         }
 
-        public Builder setWorkerLogDelivery(ConnectorWorkerLogDelivery workerLogDelivery) {
+        public Builder workerLogDelivery(ConnectorWorkerLogDelivery workerLogDelivery) {
             this.workerLogDelivery = Objects.requireNonNull(workerLogDelivery);
             return this;
         }

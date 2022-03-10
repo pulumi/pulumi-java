@@ -78,22 +78,22 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hourSlots = defaults.hourSlots;
         }
 
-        public Builder setDay(@Nullable Input<Either<String,WeekDay>> day) {
+        public Builder day(@Nullable Input<Either<String,WeekDay>> day) {
             this.day = day;
             return this;
         }
 
-        public Builder setDay(@Nullable Either<String,WeekDay> day) {
+        public Builder day(@Nullable Either<String,WeekDay> day) {
             this.day = Input.ofNullable(day);
             return this;
         }
 
-        public Builder setHourSlots(@Nullable Input<List<Integer>> hourSlots) {
+        public Builder hourSlots(@Nullable Input<List<Integer>> hourSlots) {
             this.hourSlots = hourSlots;
             return this;
         }
 
-        public Builder setHourSlots(@Nullable List<Integer> hourSlots) {
+        public Builder hourSlots(@Nullable List<Integer> hourSlots) {
             this.hourSlots = Input.ofNullable(hourSlots);
             return this;
         }

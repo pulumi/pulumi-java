@@ -116,52 +116,52 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceRange = defaults.sourceRange;
         }
 
-        public Builder setAction(@Nullable Input<IngressRuleAction> action) {
+        public Builder action(@Nullable Input<IngressRuleAction> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable IngressRuleAction action) {
+        public Builder action(@Nullable IngressRuleAction action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setSourceRange(@Nullable Input<String> sourceRange) {
+        public Builder sourceRange(@Nullable Input<String> sourceRange) {
             this.sourceRange = sourceRange;
             return this;
         }
 
-        public Builder setSourceRange(@Nullable String sourceRange) {
+        public Builder sourceRange(@Nullable String sourceRange) {
             this.sourceRange = Input.ofNullable(sourceRange);
             return this;
         }

@@ -72,12 +72,12 @@ public final class DataSetIngestionWaitPolicy {
     	      this.waitForSpiceIngestion = defaults.waitForSpiceIngestion;
         }
 
-        public Builder setIngestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
+        public Builder ingestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
             this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
             return this;
         }
 
-        public Builder setWaitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
+        public Builder waitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
             this.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }

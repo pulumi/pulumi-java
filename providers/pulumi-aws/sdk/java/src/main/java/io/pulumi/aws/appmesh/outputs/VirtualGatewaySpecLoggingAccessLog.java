@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecLoggingAccessLog {
     	      this.file = defaults.file;
         }
 
-        public Builder setFile(@Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
+        public Builder file(@Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
             this.file = file;
             return this;
         }

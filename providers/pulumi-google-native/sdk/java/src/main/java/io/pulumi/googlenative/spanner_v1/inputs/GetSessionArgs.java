@@ -86,22 +86,22 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sessionId = defaults.sessionId;
         }
 
-        public Builder setDatabaseId(String databaseId) {
+        public Builder databaseId(String databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSessionId(String sessionId) {
+        public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }

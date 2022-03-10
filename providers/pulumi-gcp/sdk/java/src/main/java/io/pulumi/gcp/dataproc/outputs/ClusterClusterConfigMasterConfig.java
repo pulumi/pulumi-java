@@ -157,37 +157,37 @@ public final class ClusterClusterConfigMasterConfig {
     	      this.numInstances = defaults.numInstances;
         }
 
-        public Builder setAccelerators(@Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators) {
+        public Builder accelerators(@Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig) {
+        public Builder diskConfig(@Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setImageUri(@Nullable String imageUri) {
+        public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable List<String> instanceNames) {
+        public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
         }

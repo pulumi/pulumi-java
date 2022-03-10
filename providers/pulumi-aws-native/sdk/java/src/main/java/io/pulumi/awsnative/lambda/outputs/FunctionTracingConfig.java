@@ -50,7 +50,7 @@ public final class FunctionTracingConfig {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(@Nullable FunctionTracingConfigMode mode) {
+        public Builder mode(@Nullable FunctionTracingConfigMode mode) {
             this.mode = mode;
             return this;
         }

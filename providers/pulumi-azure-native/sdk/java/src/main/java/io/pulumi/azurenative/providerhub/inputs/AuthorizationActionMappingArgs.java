@@ -62,22 +62,22 @@ public final class AuthorizationActionMappingArgs extends io.pulumi.resources.Re
     	      this.original = defaults.original;
         }
 
-        public Builder setDesired(@Nullable Input<String> desired) {
+        public Builder desired(@Nullable Input<String> desired) {
             this.desired = desired;
             return this;
         }
 
-        public Builder setDesired(@Nullable String desired) {
+        public Builder desired(@Nullable String desired) {
             this.desired = Input.ofNullable(desired);
             return this;
         }
 
-        public Builder setOriginal(@Nullable Input<String> original) {
+        public Builder original(@Nullable Input<String> original) {
             this.original = original;
             return this;
         }
 
-        public Builder setOriginal(@Nullable String original) {
+        public Builder original(@Nullable String original) {
             this.original = Input.ofNullable(original);
             return this;
         }

@@ -165,82 +165,82 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     	      this.userInfoEndpoint = defaults.userInfoEndpoint;
         }
 
-        public Builder setAuthorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Input<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder setIssuer(Input<String> issuer) {
+        public Builder issuer(Input<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Input.of(Objects.requireNonNull(issuer));
             return this;
         }
 
-        public Builder setJwksUri(Input<String> jwksUri) {
+        public Builder jwksUri(Input<String> jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
 
-        public Builder setJwksUri(String jwksUri) {
+        public Builder jwksUri(String jwksUri) {
             this.jwksUri = Input.of(Objects.requireNonNull(jwksUri));
             return this;
         }
 
-        public Builder setLogoutEndpoint(Input<String> logoutEndpoint) {
+        public Builder logoutEndpoint(Input<String> logoutEndpoint) {
             this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint);
             return this;
         }
 
-        public Builder setLogoutEndpoint(String logoutEndpoint) {
+        public Builder logoutEndpoint(String logoutEndpoint) {
             this.logoutEndpoint = Input.of(Objects.requireNonNull(logoutEndpoint));
             return this;
         }
 
-        public Builder setTokenEndpoint(Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(Input<String> tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
 
-        public Builder setTokenEndpoint(String tokenEndpoint) {
+        public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Input.of(Objects.requireNonNull(tokenEndpoint));
             return this;
         }
 
-        public Builder setUserInfoEndpoint(Input<String> userInfoEndpoint) {
+        public Builder userInfoEndpoint(Input<String> userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
 
-        public Builder setUserInfoEndpoint(String userInfoEndpoint) {
+        public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Input.of(Objects.requireNonNull(userInfoEndpoint));
             return this;
         }

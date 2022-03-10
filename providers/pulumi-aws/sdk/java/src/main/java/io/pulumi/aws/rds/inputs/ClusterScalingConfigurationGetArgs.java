@@ -120,52 +120,52 @@ public final class ClusterScalingConfigurationGetArgs extends io.pulumi.resource
     	      this.timeoutAction = defaults.timeoutAction;
         }
 
-        public Builder setAutoPause(@Nullable Input<Boolean> autoPause) {
+        public Builder autoPause(@Nullable Input<Boolean> autoPause) {
             this.autoPause = autoPause;
             return this;
         }
 
-        public Builder setAutoPause(@Nullable Boolean autoPause) {
+        public Builder autoPause(@Nullable Boolean autoPause) {
             this.autoPause = Input.ofNullable(autoPause);
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = Input.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Input<Integer> minCapacity) {
+        public Builder minCapacity(@Nullable Input<Integer> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Integer minCapacity) {
+        public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = Input.ofNullable(minCapacity);
             return this;
         }
 
-        public Builder setSecondsUntilAutoPause(@Nullable Input<Integer> secondsUntilAutoPause) {
+        public Builder secondsUntilAutoPause(@Nullable Input<Integer> secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;
             return this;
         }
 
-        public Builder setSecondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
+        public Builder secondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
             this.secondsUntilAutoPause = Input.ofNullable(secondsUntilAutoPause);
             return this;
         }
 
-        public Builder setTimeoutAction(@Nullable Input<String> timeoutAction) {
+        public Builder timeoutAction(@Nullable Input<String> timeoutAction) {
             this.timeoutAction = timeoutAction;
             return this;
         }
 
-        public Builder setTimeoutAction(@Nullable String timeoutAction) {
+        public Builder timeoutAction(@Nullable String timeoutAction) {
             this.timeoutAction = Input.ofNullable(timeoutAction);
             return this;
         }

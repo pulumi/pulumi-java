@@ -50,7 +50,7 @@ public final class CrawlerRecrawlPolicy {
     	      this.recrawlBehavior = defaults.recrawlBehavior;
         }
 
-        public Builder setRecrawlBehavior(@Nullable String recrawlBehavior) {
+        public Builder recrawlBehavior(@Nullable String recrawlBehavior) {
             this.recrawlBehavior = recrawlBehavior;
             return this;
         }

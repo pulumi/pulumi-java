@@ -75,22 +75,22 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(@Nullable Input<B2CResourceSKUName> name) {
+        public Builder name(@Nullable Input<B2CResourceSKUName> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable B2CResourceSKUName name) {
+        public Builder name(@Nullable B2CResourceSKUName name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<B2CResourceSKUTier> tier) {
+        public Builder tier(@Nullable Input<B2CResourceSKUTier> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable B2CResourceSKUTier tier) {
+        public Builder tier(@Nullable B2CResourceSKUTier tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

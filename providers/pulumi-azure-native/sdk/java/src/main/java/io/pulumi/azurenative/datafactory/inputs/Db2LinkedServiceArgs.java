@@ -276,142 +276,142 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     	      this.username = defaults.username;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Either<String,Db2AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Either<String,Db2AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Either<String,Db2AuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Either<String,Db2AuthenticationType> authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setCertificateCommonName(@Nullable Input<Object> certificateCommonName) {
+        public Builder certificateCommonName(@Nullable Input<Object> certificateCommonName) {
             this.certificateCommonName = certificateCommonName;
             return this;
         }
 
-        public Builder setCertificateCommonName(@Nullable Object certificateCommonName) {
+        public Builder certificateCommonName(@Nullable Object certificateCommonName) {
             this.certificateCommonName = Input.ofNullable(certificateCommonName);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Input<Object> connectionString) {
+        public Builder connectionString(@Nullable Input<Object> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Object connectionString) {
+        public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<Object> database) {
+        public Builder database(@Nullable Input<Object> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable Object database) {
+        public Builder database(@Nullable Object database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setPackageCollection(@Nullable Input<Object> packageCollection) {
+        public Builder packageCollection(@Nullable Input<Object> packageCollection) {
             this.packageCollection = packageCollection;
             return this;
         }
 
-        public Builder setPackageCollection(@Nullable Object packageCollection) {
+        public Builder packageCollection(@Nullable Object packageCollection) {
             this.packageCollection = Input.ofNullable(packageCollection);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setServer(@Nullable Input<Object> server) {
+        public Builder server(@Nullable Input<Object> server) {
             this.server = server;
             return this;
         }
 
-        public Builder setServer(@Nullable Object server) {
+        public Builder server(@Nullable Object server) {
             this.server = Input.ofNullable(server);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Input<Object> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = Input.ofNullable(username);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetArtifactArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceScope = defaults.resourceScope;
         }
 
-        public Builder setArtifactName(String artifactName) {
+        public Builder artifactName(String artifactName) {
             this.artifactName = Objects.requireNonNull(artifactName);
             return this;
         }
 
-        public Builder setBlueprintName(String blueprintName) {
+        public Builder blueprintName(String blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }

@@ -323,172 +323,172 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreationData(Input<CreationDataArgs> creationData) {
+        public Builder creationData(Input<CreationDataArgs> creationData) {
             this.creationData = Objects.requireNonNull(creationData);
             return this;
         }
 
-        public Builder setCreationData(CreationDataArgs creationData) {
+        public Builder creationData(CreationDataArgs creationData) {
             this.creationData = Input.of(Objects.requireNonNull(creationData));
             return this;
         }
 
-        public Builder setDiskAccessId(@Nullable Input<String> diskAccessId) {
+        public Builder diskAccessId(@Nullable Input<String> diskAccessId) {
             this.diskAccessId = diskAccessId;
             return this;
         }
 
-        public Builder setDiskAccessId(@Nullable String diskAccessId) {
+        public Builder diskAccessId(@Nullable String diskAccessId) {
             this.diskAccessId = Input.ofNullable(diskAccessId);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Input<Integer> diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Input<Integer> diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = Input.ofNullable(diskSizeGB);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionArgs encryption) {
+        public Builder encryption(@Nullable EncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setEncryptionSettingsCollection(@Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
+        public Builder encryptionSettingsCollection(@Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection) {
             this.encryptionSettingsCollection = encryptionSettingsCollection;
             return this;
         }
 
-        public Builder setEncryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
+        public Builder encryptionSettingsCollection(@Nullable EncryptionSettingsCollectionArgs encryptionSettingsCollection) {
             this.encryptionSettingsCollection = Input.ofNullable(encryptionSettingsCollection);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Either<String,HyperVGeneration> hyperVGeneration) {
             this.hyperVGeneration = Input.ofNullable(hyperVGeneration);
             return this;
         }
 
-        public Builder setIncremental(@Nullable Input<Boolean> incremental) {
+        public Builder incremental(@Nullable Input<Boolean> incremental) {
             this.incremental = incremental;
             return this;
         }
 
-        public Builder setIncremental(@Nullable Boolean incremental) {
+        public Builder incremental(@Nullable Boolean incremental) {
             this.incremental = Input.ofNullable(incremental);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkAccessPolicy(@Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
+        public Builder networkAccessPolicy(@Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy) {
             this.networkAccessPolicy = networkAccessPolicy;
             return this;
         }
 
-        public Builder setNetworkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
+        public Builder networkAccessPolicy(@Nullable Either<String,NetworkAccessPolicy> networkAccessPolicy) {
             this.networkAccessPolicy = Input.ofNullable(networkAccessPolicy);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<OperatingSystemTypes> osType) {
+        public Builder osType(@Nullable Input<OperatingSystemTypes> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable OperatingSystemTypes osType) {
+        public Builder osType(@Nullable OperatingSystemTypes osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setPurchasePlan(@Nullable Input<PurchasePlanArgs> purchasePlan) {
+        public Builder purchasePlan(@Nullable Input<PurchasePlanArgs> purchasePlan) {
             this.purchasePlan = purchasePlan;
             return this;
         }
 
-        public Builder setPurchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
+        public Builder purchasePlan(@Nullable PurchasePlanArgs purchasePlan) {
             this.purchasePlan = Input.ofNullable(purchasePlan);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SnapshotSkuArgs> sku) {
+        public Builder sku(@Nullable Input<SnapshotSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SnapshotSkuArgs sku) {
+        public Builder sku(@Nullable SnapshotSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable Input<String> snapshotName) {
+        public Builder snapshotName(@Nullable Input<String> snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable String snapshotName) {
+        public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = Input.ofNullable(snapshotName);
             return this;
         }
 
-        public Builder setSupportsHibernation(@Nullable Input<Boolean> supportsHibernation) {
+        public Builder supportsHibernation(@Nullable Input<Boolean> supportsHibernation) {
             this.supportsHibernation = supportsHibernation;
             return this;
         }
 
-        public Builder setSupportsHibernation(@Nullable Boolean supportsHibernation) {
+        public Builder supportsHibernation(@Nullable Boolean supportsHibernation) {
             this.supportsHibernation = Input.ofNullable(supportsHibernation);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

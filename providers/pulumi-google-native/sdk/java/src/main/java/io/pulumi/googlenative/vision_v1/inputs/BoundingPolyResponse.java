@@ -74,12 +74,12 @@ public final class BoundingPolyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.vertices = defaults.vertices;
         }
 
-        public Builder setNormalizedVertices(List<NormalizedVertexResponse> normalizedVertices) {
+        public Builder normalizedVertices(List<NormalizedVertexResponse> normalizedVertices) {
             this.normalizedVertices = Objects.requireNonNull(normalizedVertices);
             return this;
         }
 
-        public Builder setVertices(List<VertexResponse> vertices) {
+        public Builder vertices(List<VertexResponse> vertices) {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }

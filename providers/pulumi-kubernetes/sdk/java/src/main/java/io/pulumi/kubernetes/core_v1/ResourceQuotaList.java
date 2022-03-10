@@ -126,8 +126,8 @@ public class ResourceQuotaList extends io.pulumi.resources.CustomResource {
     private static ResourceQuotaListArgs makeArgs(ResourceQuotaListArgs args) {
         var builder = args == null ? ResourceQuotaListArgs.builder() : ResourceQuotaListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("ResourceQuotaList")
+            .apiVersion("v1")
+            .kind("ResourceQuotaList")
             .build();
     }
 

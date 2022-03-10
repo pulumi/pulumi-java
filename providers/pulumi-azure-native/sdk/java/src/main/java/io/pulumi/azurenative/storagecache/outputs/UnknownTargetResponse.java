@@ -50,7 +50,7 @@ public final class UnknownTargetResponse {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
         }

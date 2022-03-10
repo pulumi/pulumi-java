@@ -116,52 +116,52 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder setLogzOrganizationProperties(@Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties) {
+        public Builder logzOrganizationProperties(@Nullable Input<LogzOrganizationPropertiesArgs> logzOrganizationProperties) {
             this.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
 
-        public Builder setLogzOrganizationProperties(@Nullable LogzOrganizationPropertiesArgs logzOrganizationProperties) {
+        public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesArgs logzOrganizationProperties) {
             this.logzOrganizationProperties = Input.ofNullable(logzOrganizationProperties);
             return this;
         }
 
-        public Builder setMarketplaceSubscriptionStatus(@Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
+        public Builder marketplaceSubscriptionStatus(@Nullable Input<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
 
-        public Builder setMarketplaceSubscriptionStatus(@Nullable Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
+        public Builder marketplaceSubscriptionStatus(@Nullable Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = Input.ofNullable(marketplaceSubscriptionStatus);
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Input.ofNullable(monitoringStatus);
             return this;
         }
 
-        public Builder setPlanData(@Nullable Input<PlanDataArgs> planData) {
+        public Builder planData(@Nullable Input<PlanDataArgs> planData) {
             this.planData = planData;
             return this;
         }
 
-        public Builder setPlanData(@Nullable PlanDataArgs planData) {
+        public Builder planData(@Nullable PlanDataArgs planData) {
             this.planData = Input.ofNullable(planData);
             return this;
         }
 
-        public Builder setUserInfo(@Nullable Input<UserInfoArgs> userInfo) {
+        public Builder userInfo(@Nullable Input<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
 
-        public Builder setUserInfo(@Nullable UserInfoArgs userInfo) {
+        public Builder userInfo(@Nullable UserInfoArgs userInfo) {
             this.userInfo = Input.ofNullable(userInfo);
             return this;
         }

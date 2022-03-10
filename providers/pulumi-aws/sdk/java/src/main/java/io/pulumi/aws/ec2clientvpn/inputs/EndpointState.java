@@ -267,142 +267,142 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuthenticationOptions(@Nullable Input<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions) {
+        public Builder authenticationOptions(@Nullable Input<List<EndpointAuthenticationOptionGetArgs>> authenticationOptions) {
             this.authenticationOptions = authenticationOptions;
             return this;
         }
 
-        public Builder setAuthenticationOptions(@Nullable List<EndpointAuthenticationOptionGetArgs> authenticationOptions) {
+        public Builder authenticationOptions(@Nullable List<EndpointAuthenticationOptionGetArgs> authenticationOptions) {
             this.authenticationOptions = Input.ofNullable(authenticationOptions);
             return this;
         }
 
-        public Builder setClientCidrBlock(@Nullable Input<String> clientCidrBlock) {
+        public Builder clientCidrBlock(@Nullable Input<String> clientCidrBlock) {
             this.clientCidrBlock = clientCidrBlock;
             return this;
         }
 
-        public Builder setClientCidrBlock(@Nullable String clientCidrBlock) {
+        public Builder clientCidrBlock(@Nullable String clientCidrBlock) {
             this.clientCidrBlock = Input.ofNullable(clientCidrBlock);
             return this;
         }
 
-        public Builder setConnectionLogOptions(@Nullable Input<EndpointConnectionLogOptionsGetArgs> connectionLogOptions) {
+        public Builder connectionLogOptions(@Nullable Input<EndpointConnectionLogOptionsGetArgs> connectionLogOptions) {
             this.connectionLogOptions = connectionLogOptions;
             return this;
         }
 
-        public Builder setConnectionLogOptions(@Nullable EndpointConnectionLogOptionsGetArgs connectionLogOptions) {
+        public Builder connectionLogOptions(@Nullable EndpointConnectionLogOptionsGetArgs connectionLogOptions) {
             this.connectionLogOptions = Input.ofNullable(connectionLogOptions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setSelfServicePortal(@Nullable Input<String> selfServicePortal) {
+        public Builder selfServicePortal(@Nullable Input<String> selfServicePortal) {
             this.selfServicePortal = selfServicePortal;
             return this;
         }
 
-        public Builder setSelfServicePortal(@Nullable String selfServicePortal) {
+        public Builder selfServicePortal(@Nullable String selfServicePortal) {
             this.selfServicePortal = Input.ofNullable(selfServicePortal);
             return this;
         }
 
-        public Builder setServerCertificateArn(@Nullable Input<String> serverCertificateArn) {
+        public Builder serverCertificateArn(@Nullable Input<String> serverCertificateArn) {
             this.serverCertificateArn = serverCertificateArn;
             return this;
         }
 
-        public Builder setServerCertificateArn(@Nullable String serverCertificateArn) {
+        public Builder serverCertificateArn(@Nullable String serverCertificateArn) {
             this.serverCertificateArn = Input.ofNullable(serverCertificateArn);
             return this;
         }
 
-        public Builder setSplitTunnel(@Nullable Input<Boolean> splitTunnel) {
+        public Builder splitTunnel(@Nullable Input<Boolean> splitTunnel) {
             this.splitTunnel = splitTunnel;
             return this;
         }
 
-        public Builder setSplitTunnel(@Nullable Boolean splitTunnel) {
+        public Builder splitTunnel(@Nullable Boolean splitTunnel) {
             this.splitTunnel = Input.ofNullable(splitTunnel);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable Input<String> transportProtocol) {
+        public Builder transportProtocol(@Nullable Input<String> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable String transportProtocol) {
+        public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = Input.ofNullable(transportProtocol);
             return this;
         }

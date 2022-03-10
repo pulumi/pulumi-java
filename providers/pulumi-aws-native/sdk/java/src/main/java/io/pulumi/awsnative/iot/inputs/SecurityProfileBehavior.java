@@ -117,27 +117,27 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
     	      this.suppressAlerts = defaults.suppressAlerts;
         }
 
-        public Builder setCriteria(@Nullable SecurityProfileBehaviorCriteria criteria) {
+        public Builder criteria(@Nullable SecurityProfileBehaviorCriteria criteria) {
             this.criteria = criteria;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
+        public Builder metricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSuppressAlerts(@Nullable Boolean suppressAlerts) {
+        public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
             this.suppressAlerts = suppressAlerts;
             return this;
         }

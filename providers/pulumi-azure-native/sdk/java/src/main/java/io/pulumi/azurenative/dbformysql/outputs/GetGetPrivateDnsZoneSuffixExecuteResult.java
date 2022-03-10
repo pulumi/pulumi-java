@@ -50,7 +50,7 @@ public final class GetGetPrivateDnsZoneSuffixExecuteResult {
     	      this.privateDnsZoneSuffix = defaults.privateDnsZoneSuffix;
         }
 
-        public Builder setPrivateDnsZoneSuffix(@Nullable String privateDnsZoneSuffix) {
+        public Builder privateDnsZoneSuffix(@Nullable String privateDnsZoneSuffix) {
             this.privateDnsZoneSuffix = privateDnsZoneSuffix;
             return this;
         }

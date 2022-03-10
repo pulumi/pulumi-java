@@ -115,27 +115,27 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setGcsPath(String gcsPath) {
+        public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }
 
-        public Builder setLaunchParameters(GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters) {
+        public Builder launchParameters(GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters) {
             this.launchParameters = Objects.requireNonNull(launchParameters);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setValidateOnly(Boolean validateOnly) {
+        public Builder validateOnly(Boolean validateOnly) {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }

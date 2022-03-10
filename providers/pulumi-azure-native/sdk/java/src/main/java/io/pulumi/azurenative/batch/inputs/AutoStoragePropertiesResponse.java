@@ -72,12 +72,12 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setLastKeySync(String lastKeySync) {
+        public Builder lastKeySync(String lastKeySync) {
             this.lastKeySync = Objects.requireNonNull(lastKeySync);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

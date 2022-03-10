@@ -125,37 +125,37 @@ public final class CloudFormationProvisionedProductProvisioningPreferences exten
     	      this.stackSetRegions = defaults.stackSetRegions;
         }
 
-        public Builder setStackSetAccounts(@Nullable List<String> stackSetAccounts) {
+        public Builder stackSetAccounts(@Nullable List<String> stackSetAccounts) {
             this.stackSetAccounts = stackSetAccounts;
             return this;
         }
 
-        public Builder setStackSetFailureToleranceCount(@Nullable Integer stackSetFailureToleranceCount) {
+        public Builder stackSetFailureToleranceCount(@Nullable Integer stackSetFailureToleranceCount) {
             this.stackSetFailureToleranceCount = stackSetFailureToleranceCount;
             return this;
         }
 
-        public Builder setStackSetFailureTolerancePercentage(@Nullable Integer stackSetFailureTolerancePercentage) {
+        public Builder stackSetFailureTolerancePercentage(@Nullable Integer stackSetFailureTolerancePercentage) {
             this.stackSetFailureTolerancePercentage = stackSetFailureTolerancePercentage;
             return this;
         }
 
-        public Builder setStackSetMaxConcurrencyCount(@Nullable Integer stackSetMaxConcurrencyCount) {
+        public Builder stackSetMaxConcurrencyCount(@Nullable Integer stackSetMaxConcurrencyCount) {
             this.stackSetMaxConcurrencyCount = stackSetMaxConcurrencyCount;
             return this;
         }
 
-        public Builder setStackSetMaxConcurrencyPercentage(@Nullable Integer stackSetMaxConcurrencyPercentage) {
+        public Builder stackSetMaxConcurrencyPercentage(@Nullable Integer stackSetMaxConcurrencyPercentage) {
             this.stackSetMaxConcurrencyPercentage = stackSetMaxConcurrencyPercentage;
             return this;
         }
 
-        public Builder setStackSetOperationType(@Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType) {
+        public Builder stackSetOperationType(@Nullable CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType stackSetOperationType) {
             this.stackSetOperationType = stackSetOperationType;
             return this;
         }
 
-        public Builder setStackSetRegions(@Nullable List<String> stackSetRegions) {
+        public Builder stackSetRegions(@Nullable List<String> stackSetRegions) {
             this.stackSetRegions = stackSetRegions;
             return this;
         }

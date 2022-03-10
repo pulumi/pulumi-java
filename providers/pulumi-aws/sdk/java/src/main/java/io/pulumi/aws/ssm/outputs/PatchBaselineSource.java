@@ -82,17 +82,17 @@ public final class PatchBaselineSource {
     	      this.products = defaults.products;
         }
 
-        public Builder setConfiguration(String configuration) {
+        public Builder configuration(String configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProducts(List<String> products) {
+        public Builder products(List<String> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }

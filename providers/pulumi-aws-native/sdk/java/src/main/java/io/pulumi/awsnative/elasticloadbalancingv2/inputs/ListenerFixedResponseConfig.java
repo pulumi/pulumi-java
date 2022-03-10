@@ -74,17 +74,17 @@ public final class ListenerFixedResponseConfig extends io.pulumi.resources.Invok
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setMessageBody(@Nullable String messageBody) {
+        public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = messageBody;
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

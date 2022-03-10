@@ -90,32 +90,32 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
     	      this.usages = defaults.usages;
         }
 
-        public Builder setLogs(@Nullable Input<String> logs) {
+        public Builder logs(@Nullable Input<String> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setLogs(@Nullable String logs) {
+        public Builder logs(@Nullable String logs) {
             this.logs = Input.ofNullable(logs);
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<String> metrics) {
+        public Builder metrics(@Nullable Input<String> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable String metrics) {
+        public Builder metrics(@Nullable String metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setUsages(@Nullable Input<String> usages) {
+        public Builder usages(@Nullable Input<String> usages) {
             this.usages = usages;
             return this;
         }
 
-        public Builder setUsages(@Nullable String usages) {
+        public Builder usages(@Nullable String usages) {
             this.usages = Input.ofNullable(usages);
             return this;
         }

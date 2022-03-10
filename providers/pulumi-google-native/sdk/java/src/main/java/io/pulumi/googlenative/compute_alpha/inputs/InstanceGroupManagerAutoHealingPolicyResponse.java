@@ -115,27 +115,27 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     	      this.updateInstances = defaults.updateInstances;
         }
 
-        public Builder setAutoHealingTriggers(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers) {
+        public Builder autoHealingTriggers(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers) {
             this.autoHealingTriggers = Objects.requireNonNull(autoHealingTriggers);
             return this;
         }
 
-        public Builder setHealthCheck(String healthCheck) {
+        public Builder healthCheck(String healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
-        public Builder setInitialDelaySec(Integer initialDelaySec) {
+        public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
 
-        public Builder setMaxUnavailable(FixedOrPercentResponse maxUnavailable) {
+        public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
 
-        public Builder setUpdateInstances(String updateInstances) {
+        public Builder updateInstances(String updateInstances) {
             this.updateInstances = Objects.requireNonNull(updateInstances);
             return this;
         }

@@ -67,12 +67,12 @@ public final class ReportRecurrencePeriodResponse {
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(String from) {
+        public Builder from(String from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
-        public Builder setTo(@Nullable String to) {
+        public Builder to(@Nullable String to) {
             this.to = to;
             return this;
         }

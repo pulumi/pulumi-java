@@ -60,17 +60,17 @@ public final class ServiceDeploymentConfiguration {
     	      this.minimumHealthyPercent = defaults.minimumHealthyPercent;
         }
 
-        public Builder setDeploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreaker deploymentCircuitBreaker) {
             this.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
 
-        public Builder setMaximumPercent(@Nullable Integer maximumPercent) {
+        public Builder maximumPercent(@Nullable Integer maximumPercent) {
             this.maximumPercent = maximumPercent;
             return this;
         }
 
-        public Builder setMinimumHealthyPercent(@Nullable Integer minimumHealthyPercent) {
+        public Builder minimumHealthyPercent(@Nullable Integer minimumHealthyPercent) {
             this.minimumHealthyPercent = minimumHealthyPercent;
             return this;
         }

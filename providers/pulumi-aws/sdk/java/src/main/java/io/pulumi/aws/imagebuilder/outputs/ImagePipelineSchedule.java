@@ -67,12 +67,12 @@ public final class ImagePipelineSchedule {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setPipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
+        public Builder pipelineExecutionStartCondition(@Nullable String pipelineExecutionStartCondition) {
             this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

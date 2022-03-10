@@ -56,12 +56,12 @@ public final class TemplateSourceTemplateArgs extends io.pulumi.resources.Resour
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }

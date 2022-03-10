@@ -168,82 +168,82 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setConditionalMembership(@Nullable Input<String> conditionalMembership) {
+        public Builder conditionalMembership(@Nullable Input<String> conditionalMembership) {
             this.conditionalMembership = conditionalMembership;
             return this;
         }
 
-        public Builder setConditionalMembership(@Nullable String conditionalMembership) {
+        public Builder conditionalMembership(@Nullable String conditionalMembership) {
             this.conditionalMembership = Input.ofNullable(conditionalMembership);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGroupMembers(@Nullable Input<List<GroupMembersItemArgs>> groupMembers) {
+        public Builder groupMembers(@Nullable Input<List<GroupMembersItemArgs>> groupMembers) {
             this.groupMembers = groupMembers;
             return this;
         }
 
-        public Builder setGroupMembers(@Nullable List<GroupMembersItemArgs> groupMembers) {
+        public Builder groupMembers(@Nullable List<GroupMembersItemArgs> groupMembers) {
             this.groupMembers = Input.ofNullable(groupMembers);
             return this;
         }
 
-        public Builder setMemberType(@Nullable Input<String> memberType) {
+        public Builder memberType(@Nullable Input<String> memberType) {
             this.memberType = memberType;
             return this;
         }
 
-        public Builder setMemberType(@Nullable String memberType) {
+        public Builder memberType(@Nullable String memberType) {
             this.memberType = Input.ofNullable(memberType);
             return this;
         }
 
-        public Builder setNetworkGroupName(@Nullable Input<String> networkGroupName) {
+        public Builder networkGroupName(@Nullable Input<String> networkGroupName) {
             this.networkGroupName = networkGroupName;
             return this;
         }
 
-        public Builder setNetworkGroupName(@Nullable String networkGroupName) {
+        public Builder networkGroupName(@Nullable String networkGroupName) {
             this.networkGroupName = Input.ofNullable(networkGroupName);
             return this;
         }
 
-        public Builder setNetworkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Input<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

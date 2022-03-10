@@ -91,32 +91,32 @@ public final class BucketNoncurrentVersionTransitionArgs extends io.pulumi.resou
     	      this.transitionInDays = defaults.transitionInDays;
         }
 
-        public Builder setNewerNoncurrentVersions(@Nullable Input<Integer> newerNoncurrentVersions) {
+        public Builder newerNoncurrentVersions(@Nullable Input<Integer> newerNoncurrentVersions) {
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
-        public Builder setNewerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
+        public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             this.newerNoncurrentVersions = Input.ofNullable(newerNoncurrentVersions);
             return this;
         }
 
-        public Builder setStorageClass(Input<BucketNoncurrentVersionTransitionStorageClass> storageClass) {
+        public Builder storageClass(Input<BucketNoncurrentVersionTransitionStorageClass> storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setStorageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
+        public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
             this.storageClass = Input.of(Objects.requireNonNull(storageClass));
             return this;
         }
 
-        public Builder setTransitionInDays(Input<Integer> transitionInDays) {
+        public Builder transitionInDays(Input<Integer> transitionInDays) {
             this.transitionInDays = Objects.requireNonNull(transitionInDays);
             return this;
         }
 
-        public Builder setTransitionInDays(Integer transitionInDays) {
+        public Builder transitionInDays(Integer transitionInDays) {
             this.transitionInDays = Input.of(Objects.requireNonNull(transitionInDays));
             return this;
         }

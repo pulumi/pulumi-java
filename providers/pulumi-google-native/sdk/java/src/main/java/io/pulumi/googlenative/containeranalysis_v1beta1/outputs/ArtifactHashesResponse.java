@@ -40,7 +40,7 @@ public final class ArtifactHashesResponse {
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setSha256(String sha256) {
+        public Builder sha256(String sha256) {
             this.sha256 = Objects.requireNonNull(sha256);
             return this;
         }

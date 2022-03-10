@@ -74,12 +74,12 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
     	      this.operationConfigs = defaults.operationConfigs;
         }
 
-        public Builder setOperationConfigType(String operationConfigType) {
+        public Builder operationConfigType(String operationConfigType) {
             this.operationConfigType = Objects.requireNonNull(operationConfigType);
             return this;
         }
 
-        public Builder setOperationConfigs(List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
+        public Builder operationConfigs(List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }

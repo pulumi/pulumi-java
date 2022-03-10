@@ -67,12 +67,12 @@ public final class BatchOutputConfigurationResponse {
     	      this.outputAction = defaults.outputAction;
         }
 
-        public Builder setAppendRowFileName(@Nullable String appendRowFileName) {
+        public Builder appendRowFileName(@Nullable String appendRowFileName) {
             this.appendRowFileName = appendRowFileName;
             return this;
         }
 
-        public Builder setOutputAction(@Nullable String outputAction) {
+        public Builder outputAction(@Nullable String outputAction) {
             this.outputAction = outputAction;
             return this;
         }

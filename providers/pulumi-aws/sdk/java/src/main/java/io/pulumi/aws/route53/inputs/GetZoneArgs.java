@@ -137,32 +137,32 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrivateZone(@Nullable Boolean privateZone) {
+        public Builder privateZone(@Nullable Boolean privateZone) {
             this.privateZone = privateZone;
             return this;
         }
 
-        public Builder setResourceRecordSetCount(@Nullable Integer resourceRecordSetCount) {
+        public Builder resourceRecordSetCount(@Nullable Integer resourceRecordSetCount) {
             this.resourceRecordSetCount = resourceRecordSetCount;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setZoneId(@Nullable String zoneId) {
+        public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = zoneId;
             return this;
         }

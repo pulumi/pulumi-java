@@ -91,32 +91,32 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     	      this.target = defaults.target;
         }
 
-        public Builder setContentType(@Nullable Input<ObjectTypeFieldContentType> contentType) {
+        public Builder contentType(@Nullable Input<ObjectTypeFieldContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable ObjectTypeFieldContentType contentType) {
+        public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

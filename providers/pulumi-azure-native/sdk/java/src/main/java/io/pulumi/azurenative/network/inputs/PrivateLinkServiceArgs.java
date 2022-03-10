@@ -210,102 +210,102 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setAutoApproval(@Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval) {
+        public Builder autoApproval(@Nullable Input<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval) {
             this.autoApproval = autoApproval;
             return this;
         }
 
-        public Builder setAutoApproval(@Nullable PrivateLinkServicePropertiesAutoApprovalArgs autoApproval) {
+        public Builder autoApproval(@Nullable PrivateLinkServicePropertiesAutoApprovalArgs autoApproval) {
             this.autoApproval = Input.ofNullable(autoApproval);
             return this;
         }
 
-        public Builder setEnableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
 
-        public Builder setEnableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Input.ofNullable(enableProxyProtocol);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setFqdns(@Nullable Input<List<String>> fqdns) {
+        public Builder fqdns(@Nullable Input<List<String>> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
 
-        public Builder setFqdns(@Nullable List<String> fqdns) {
+        public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = Input.ofNullable(fqdns);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Input<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationArgs> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Input.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder setLoadBalancerFrontendIpConfigurations(@Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations) {
+        public Builder loadBalancerFrontendIpConfigurations(@Nullable Input<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations) {
             this.loadBalancerFrontendIpConfigurations = loadBalancerFrontendIpConfigurations;
             return this;
         }
 
-        public Builder setLoadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationArgs> loadBalancerFrontendIpConfigurations) {
+        public Builder loadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationArgs> loadBalancerFrontendIpConfigurations) {
             this.loadBalancerFrontendIpConfigurations = Input.ofNullable(loadBalancerFrontendIpConfigurations);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVisibility(@Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
+        public Builder visibility(@Nullable Input<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
             this.visibility = visibility;
             return this;
         }
 
-        public Builder setVisibility(@Nullable PrivateLinkServicePropertiesVisibilityArgs visibility) {
+        public Builder visibility(@Nullable PrivateLinkServicePropertiesVisibilityArgs visibility) {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }

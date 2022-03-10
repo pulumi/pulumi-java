@@ -69,12 +69,12 @@ public final class AttestationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
         }
 
-        public Builder setGenericSignedAttestation(GenericSignedAttestationResponse genericSignedAttestation) {
+        public Builder genericSignedAttestation(GenericSignedAttestationResponse genericSignedAttestation) {
             this.genericSignedAttestation = Objects.requireNonNull(genericSignedAttestation);
             return this;
         }
 
-        public Builder setPgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
+        public Builder pgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
             this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
             return this;
         }

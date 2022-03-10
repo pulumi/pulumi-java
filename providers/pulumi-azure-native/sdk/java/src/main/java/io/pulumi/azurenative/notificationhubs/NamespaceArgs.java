@@ -330,182 +330,182 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setCritical(@Nullable Input<Boolean> critical) {
+        public Builder critical(@Nullable Input<Boolean> critical) {
             this.critical = critical;
             return this;
         }
 
-        public Builder setCritical(@Nullable Boolean critical) {
+        public Builder critical(@Nullable Boolean critical) {
             this.critical = Input.ofNullable(critical);
             return this;
         }
 
-        public Builder setDataCenter(@Nullable Input<String> dataCenter) {
+        public Builder dataCenter(@Nullable Input<String> dataCenter) {
             this.dataCenter = dataCenter;
             return this;
         }
 
-        public Builder setDataCenter(@Nullable String dataCenter) {
+        public Builder dataCenter(@Nullable String dataCenter) {
             this.dataCenter = Input.ofNullable(dataCenter);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespaceName(@Nullable Input<String> namespaceName) {
+        public Builder namespaceName(@Nullable Input<String> namespaceName) {
             this.namespaceName = namespaceName;
             return this;
         }
 
-        public Builder setNamespaceName(@Nullable String namespaceName) {
+        public Builder namespaceName(@Nullable String namespaceName) {
             this.namespaceName = Input.ofNullable(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceType(@Nullable Input<NamespaceType> namespaceType) {
+        public Builder namespaceType(@Nullable Input<NamespaceType> namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
 
-        public Builder setNamespaceType(@Nullable NamespaceType namespaceType) {
+        public Builder namespaceType(@Nullable NamespaceType namespaceType) {
             this.namespaceType = Input.ofNullable(namespaceType);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScaleUnit(@Nullable Input<String> scaleUnit) {
+        public Builder scaleUnit(@Nullable Input<String> scaleUnit) {
             this.scaleUnit = scaleUnit;
             return this;
         }
 
-        public Builder setScaleUnit(@Nullable String scaleUnit) {
+        public Builder scaleUnit(@Nullable String scaleUnit) {
             this.scaleUnit = Input.ofNullable(scaleUnit);
             return this;
         }
 
-        public Builder setServiceBusEndpoint(@Nullable Input<String> serviceBusEndpoint) {
+        public Builder serviceBusEndpoint(@Nullable Input<String> serviceBusEndpoint) {
             this.serviceBusEndpoint = serviceBusEndpoint;
             return this;
         }
 
-        public Builder setServiceBusEndpoint(@Nullable String serviceBusEndpoint) {
+        public Builder serviceBusEndpoint(@Nullable String serviceBusEndpoint) {
             this.serviceBusEndpoint = Input.ofNullable(serviceBusEndpoint);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable Input<String> updatedAt) {
+        public Builder updatedAt(@Nullable Input<String> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable String updatedAt) {
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = Input.ofNullable(updatedAt);
             return this;
         }

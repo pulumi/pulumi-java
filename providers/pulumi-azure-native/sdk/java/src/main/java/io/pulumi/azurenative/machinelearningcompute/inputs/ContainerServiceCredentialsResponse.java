@@ -89,17 +89,17 @@ public final class ContainerServiceCredentialsResponse extends io.pulumi.resourc
     	      this.servicePrincipalConfiguration = defaults.servicePrincipalConfiguration;
         }
 
-        public Builder setAcsKubeConfig(String acsKubeConfig) {
+        public Builder acsKubeConfig(String acsKubeConfig) {
             this.acsKubeConfig = Objects.requireNonNull(acsKubeConfig);
             return this;
         }
 
-        public Builder setImagePullSecretName(String imagePullSecretName) {
+        public Builder imagePullSecretName(String imagePullSecretName) {
             this.imagePullSecretName = Objects.requireNonNull(imagePullSecretName);
             return this;
         }
 
-        public Builder setServicePrincipalConfiguration(ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
+        public Builder servicePrincipalConfiguration(ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
             this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration);
             return this;
         }

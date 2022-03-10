@@ -443,127 +443,127 @@ public final class GetLabResult {
     	      this.vmCreationResourceGroup = defaults.vmCreationResourceGroup;
         }
 
-        public Builder setAnnouncement(@Nullable LabAnnouncementPropertiesResponse announcement) {
+        public Builder announcement(@Nullable LabAnnouncementPropertiesResponse announcement) {
             this.announcement = announcement;
             return this;
         }
 
-        public Builder setArtifactsStorageAccount(String artifactsStorageAccount) {
+        public Builder artifactsStorageAccount(String artifactsStorageAccount) {
             this.artifactsStorageAccount = Objects.requireNonNull(artifactsStorageAccount);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDefaultPremiumStorageAccount(String defaultPremiumStorageAccount) {
+        public Builder defaultPremiumStorageAccount(String defaultPremiumStorageAccount) {
             this.defaultPremiumStorageAccount = Objects.requireNonNull(defaultPremiumStorageAccount);
             return this;
         }
 
-        public Builder setDefaultStorageAccount(String defaultStorageAccount) {
+        public Builder defaultStorageAccount(String defaultStorageAccount) {
             this.defaultStorageAccount = Objects.requireNonNull(defaultStorageAccount);
             return this;
         }
 
-        public Builder setEnvironmentPermission(@Nullable String environmentPermission) {
+        public Builder environmentPermission(@Nullable String environmentPermission) {
             this.environmentPermission = environmentPermission;
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Map<String,String> extendedProperties) {
+        public Builder extendedProperties(@Nullable Map<String,String> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabStorageType(@Nullable String labStorageType) {
+        public Builder labStorageType(@Nullable String labStorageType) {
             this.labStorageType = labStorageType;
             return this;
         }
 
-        public Builder setLoadBalancerId(String loadBalancerId) {
+        public Builder loadBalancerId(String loadBalancerId) {
             this.loadBalancerId = Objects.requireNonNull(loadBalancerId);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
+        public Builder mandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
             this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
             return this;
         }
 
-        public Builder setMandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
+        public Builder mandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
             this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkSecurityGroupId(String networkSecurityGroupId) {
+        public Builder networkSecurityGroupId(String networkSecurityGroupId) {
             this.networkSecurityGroupId = Objects.requireNonNull(networkSecurityGroupId);
             return this;
         }
 
-        public Builder setPremiumDataDiskStorageAccount(String premiumDataDiskStorageAccount) {
+        public Builder premiumDataDiskStorageAccount(String premiumDataDiskStorageAccount) {
             this.premiumDataDiskStorageAccount = Objects.requireNonNull(premiumDataDiskStorageAccount);
             return this;
         }
 
-        public Builder setPremiumDataDisks(@Nullable String premiumDataDisks) {
+        public Builder premiumDataDisks(@Nullable String premiumDataDisks) {
             this.premiumDataDisks = premiumDataDisks;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIpId(String publicIpId) {
+        public Builder publicIpId(String publicIpId) {
             this.publicIpId = Objects.requireNonNull(publicIpId);
             return this;
         }
 
-        public Builder setSupport(@Nullable LabSupportPropertiesResponse support) {
+        public Builder support(@Nullable LabSupportPropertiesResponse support) {
             this.support = support;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
-        public Builder setVmCreationResourceGroup(String vmCreationResourceGroup) {
+        public Builder vmCreationResourceGroup(String vmCreationResourceGroup) {
             this.vmCreationResourceGroup = Objects.requireNonNull(vmCreationResourceGroup);
             return this;
         }

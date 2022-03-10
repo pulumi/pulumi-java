@@ -84,17 +84,17 @@ public final class GetHoursOfOperationConfig {
     	      this.startTimes = defaults.startTimes;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setEndTimes(List<GetHoursOfOperationConfigEndTime> endTimes) {
+        public Builder endTimes(List<GetHoursOfOperationConfigEndTime> endTimes) {
             this.endTimes = Objects.requireNonNull(endTimes);
             return this;
         }
 
-        public Builder setStartTimes(List<GetHoursOfOperationConfigStartTime> startTimes) {
+        public Builder startTimes(List<GetHoursOfOperationConfigStartTime> startTimes) {
             this.startTimes = Objects.requireNonNull(startTimes);
             return this;
         }

@@ -147,62 +147,62 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
     	      this.openIdIssuer = defaults.openIdIssuer;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecretCertificateIssuer(@Nullable Input<String> clientSecretCertificateIssuer) {
+        public Builder clientSecretCertificateIssuer(@Nullable Input<String> clientSecretCertificateIssuer) {
             this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
             return this;
         }
 
-        public Builder setClientSecretCertificateIssuer(@Nullable String clientSecretCertificateIssuer) {
+        public Builder clientSecretCertificateIssuer(@Nullable String clientSecretCertificateIssuer) {
             this.clientSecretCertificateIssuer = Input.ofNullable(clientSecretCertificateIssuer);
             return this;
         }
 
-        public Builder setClientSecretCertificateSubjectAlternativeName(@Nullable Input<String> clientSecretCertificateSubjectAlternativeName) {
+        public Builder clientSecretCertificateSubjectAlternativeName(@Nullable Input<String> clientSecretCertificateSubjectAlternativeName) {
             this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;
             return this;
         }
 
-        public Builder setClientSecretCertificateSubjectAlternativeName(@Nullable String clientSecretCertificateSubjectAlternativeName) {
+        public Builder clientSecretCertificateSubjectAlternativeName(@Nullable String clientSecretCertificateSubjectAlternativeName) {
             this.clientSecretCertificateSubjectAlternativeName = Input.ofNullable(clientSecretCertificateSubjectAlternativeName);
             return this;
         }
 
-        public Builder setClientSecretCertificateThumbprint(@Nullable Input<String> clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable Input<String> clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
 
-        public Builder setClientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = Input.ofNullable(clientSecretCertificateThumbprint);
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable String clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = Input.ofNullable(clientSecretSettingName);
             return this;
         }
 
-        public Builder setOpenIdIssuer(@Nullable Input<String> openIdIssuer) {
+        public Builder openIdIssuer(@Nullable Input<String> openIdIssuer) {
             this.openIdIssuer = openIdIssuer;
             return this;
         }
 
-        public Builder setOpenIdIssuer(@Nullable String openIdIssuer) {
+        public Builder openIdIssuer(@Nullable String openIdIssuer) {
             this.openIdIssuer = Input.ofNullable(openIdIssuer);
             return this;
         }

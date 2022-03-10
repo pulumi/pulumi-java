@@ -48,7 +48,7 @@ public final class FirstQualityResponse {
     	      this.bitrate = defaults.bitrate;
         }
 
-        public Builder setBitrate(Integer bitrate) {
+        public Builder bitrate(Integer bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }

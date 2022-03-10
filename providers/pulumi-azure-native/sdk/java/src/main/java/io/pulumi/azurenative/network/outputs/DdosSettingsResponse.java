@@ -85,17 +85,17 @@ public final class DdosSettingsResponse {
     	      this.protectionCoverage = defaults.protectionCoverage;
         }
 
-        public Builder setDdosCustomPolicy(@Nullable SubResourceResponse ddosCustomPolicy) {
+        public Builder ddosCustomPolicy(@Nullable SubResourceResponse ddosCustomPolicy) {
             this.ddosCustomPolicy = ddosCustomPolicy;
             return this;
         }
 
-        public Builder setProtectedIP(@Nullable Boolean protectedIP) {
+        public Builder protectedIP(@Nullable Boolean protectedIP) {
             this.protectedIP = protectedIP;
             return this;
         }
 
-        public Builder setProtectionCoverage(@Nullable String protectionCoverage) {
+        public Builder protectionCoverage(@Nullable String protectionCoverage) {
             this.protectionCoverage = protectionCoverage;
             return this;
         }

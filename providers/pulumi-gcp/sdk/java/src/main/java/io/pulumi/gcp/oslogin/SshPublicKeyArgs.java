@@ -102,42 +102,42 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder setExpirationTimeUsec(@Nullable Input<String> expirationTimeUsec) {
+        public Builder expirationTimeUsec(@Nullable Input<String> expirationTimeUsec) {
             this.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
 
-        public Builder setExpirationTimeUsec(@Nullable String expirationTimeUsec) {
+        public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
             this.expirationTimeUsec = Input.ofNullable(expirationTimeUsec);
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUser(Input<String> user) {
+        public Builder user(Input<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }

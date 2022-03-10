@@ -50,7 +50,7 @@ public final class GetAccessPointPolicyResult {
     	      this.policyDocument = defaults.policyDocument;
         }
 
-        public Builder setPolicyDocument(@Nullable Object policyDocument) {
+        public Builder policyDocument(@Nullable Object policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }

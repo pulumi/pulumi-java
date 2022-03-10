@@ -101,22 +101,22 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
     	      this.reverseOrder = defaults.reverseOrder;
         }
 
-        public Builder setCharactersToIgnore(List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore) {
+        public Builder charactersToIgnore(List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore) {
             this.charactersToIgnore = Objects.requireNonNull(charactersToIgnore);
             return this;
         }
 
-        public Builder setMaskingCharacter(String maskingCharacter) {
+        public Builder maskingCharacter(String maskingCharacter) {
             this.maskingCharacter = Objects.requireNonNull(maskingCharacter);
             return this;
         }
 
-        public Builder setNumberToMask(Integer numberToMask) {
+        public Builder numberToMask(Integer numberToMask) {
             this.numberToMask = Objects.requireNonNull(numberToMask);
             return this;
         }
 
-        public Builder setReverseOrder(Boolean reverseOrder) {
+        public Builder reverseOrder(Boolean reverseOrder) {
             this.reverseOrder = Objects.requireNonNull(reverseOrder);
             return this;
         }

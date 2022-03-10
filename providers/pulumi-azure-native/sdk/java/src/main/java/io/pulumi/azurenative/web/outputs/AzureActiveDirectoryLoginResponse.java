@@ -71,12 +71,12 @@ public final class AzureActiveDirectoryLoginResponse {
     	      this.loginParameters = defaults.loginParameters;
         }
 
-        public Builder setDisableWWWAuthenticate(@Nullable Boolean disableWWWAuthenticate) {
+        public Builder disableWWWAuthenticate(@Nullable Boolean disableWWWAuthenticate) {
             this.disableWWWAuthenticate = disableWWWAuthenticate;
             return this;
         }
 
-        public Builder setLoginParameters(@Nullable List<String> loginParameters) {
+        public Builder loginParameters(@Nullable List<String> loginParameters) {
             this.loginParameters = loginParameters;
             return this;
         }

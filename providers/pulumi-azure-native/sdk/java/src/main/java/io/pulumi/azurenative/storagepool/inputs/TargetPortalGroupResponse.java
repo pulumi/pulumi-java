@@ -141,32 +141,32 @@ public final class TargetPortalGroupResponse extends io.pulumi.resources.InvokeA
     	      this.tag = defaults.tag;
         }
 
-        public Builder setAcls(List<AclResponse> acls) {
+        public Builder acls(List<AclResponse> acls) {
             this.acls = Objects.requireNonNull(acls);
             return this;
         }
 
-        public Builder setAttributes(AttributesResponse attributes) {
+        public Builder attributes(AttributesResponse attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setEndpoints(List<String> endpoints) {
+        public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setLuns(List<IscsiLunResponse> luns) {
+        public Builder luns(List<IscsiLunResponse> luns) {
             this.luns = Objects.requireNonNull(luns);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setTag(Integer tag) {
+        public Builder tag(Integer tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

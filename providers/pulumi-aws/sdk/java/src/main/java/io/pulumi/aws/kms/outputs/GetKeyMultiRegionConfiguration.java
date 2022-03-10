@@ -60,17 +60,17 @@ public final class GetKeyMultiRegionConfiguration {
     	      this.replicaKeys = defaults.replicaKeys;
         }
 
-        public Builder setMultiRegionKeyType(String multiRegionKeyType) {
+        public Builder multiRegionKeyType(String multiRegionKeyType) {
             this.multiRegionKeyType = Objects.requireNonNull(multiRegionKeyType);
             return this;
         }
 
-        public Builder setPrimaryKeys(List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys) {
+        public Builder primaryKeys(List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys) {
             this.primaryKeys = Objects.requireNonNull(primaryKeys);
             return this;
         }
 
-        public Builder setReplicaKeys(List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
+        public Builder replicaKeys(List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
             this.replicaKeys = Objects.requireNonNull(replicaKeys);
             return this;
         }

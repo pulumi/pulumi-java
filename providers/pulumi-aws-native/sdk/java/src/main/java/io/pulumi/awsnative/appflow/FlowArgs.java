@@ -172,82 +172,82 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggerConfig = defaults.triggerConfig;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationFlowConfigList(Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
+        public Builder destinationFlowConfigList(Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
             this.destinationFlowConfigList = Objects.requireNonNull(destinationFlowConfigList);
             return this;
         }
 
-        public Builder setDestinationFlowConfigList(List<FlowDestinationFlowConfigArgs> destinationFlowConfigList) {
+        public Builder destinationFlowConfigList(List<FlowDestinationFlowConfigArgs> destinationFlowConfigList) {
             this.destinationFlowConfigList = Input.of(Objects.requireNonNull(destinationFlowConfigList));
             return this;
         }
 
-        public Builder setFlowName(@Nullable Input<String> flowName) {
+        public Builder flowName(@Nullable Input<String> flowName) {
             this.flowName = flowName;
             return this;
         }
 
-        public Builder setFlowName(@Nullable String flowName) {
+        public Builder flowName(@Nullable String flowName) {
             this.flowName = Input.ofNullable(flowName);
             return this;
         }
 
-        public Builder setKMSArn(@Nullable Input<String> kMSArn) {
+        public Builder kMSArn(@Nullable Input<String> kMSArn) {
             this.kMSArn = kMSArn;
             return this;
         }
 
-        public Builder setKMSArn(@Nullable String kMSArn) {
+        public Builder kMSArn(@Nullable String kMSArn) {
             this.kMSArn = Input.ofNullable(kMSArn);
             return this;
         }
 
-        public Builder setSourceFlowConfig(Input<FlowSourceFlowConfigArgs> sourceFlowConfig) {
+        public Builder sourceFlowConfig(Input<FlowSourceFlowConfigArgs> sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
 
-        public Builder setSourceFlowConfig(FlowSourceFlowConfigArgs sourceFlowConfig) {
+        public Builder sourceFlowConfig(FlowSourceFlowConfigArgs sourceFlowConfig) {
             this.sourceFlowConfig = Input.of(Objects.requireNonNull(sourceFlowConfig));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FlowTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FlowTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FlowTagArgs> tags) {
+        public Builder tags(@Nullable List<FlowTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTasks(Input<List<FlowTaskArgs>> tasks) {
+        public Builder tasks(Input<List<FlowTaskArgs>> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
 
-        public Builder setTasks(List<FlowTaskArgs> tasks) {
+        public Builder tasks(List<FlowTaskArgs> tasks) {
             this.tasks = Input.of(Objects.requireNonNull(tasks));
             return this;
         }
 
-        public Builder setTriggerConfig(Input<FlowTriggerConfigArgs> triggerConfig) {
+        public Builder triggerConfig(Input<FlowTriggerConfigArgs> triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }
 
-        public Builder setTriggerConfig(FlowTriggerConfigArgs triggerConfig) {
+        public Builder triggerConfig(FlowTriggerConfigArgs triggerConfig) {
             this.triggerConfig = Input.of(Objects.requireNonNull(triggerConfig));
             return this;
         }

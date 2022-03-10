@@ -106,22 +106,22 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
     	      this.trackingMode = defaults.trackingMode;
         }
 
-        public Builder setConnectionPersistenceOnUnhealthyBackends(String connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(String connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
 
-        public Builder setEnableStrongAffinity(Boolean enableStrongAffinity) {
+        public Builder enableStrongAffinity(Boolean enableStrongAffinity) {
             this.enableStrongAffinity = Objects.requireNonNull(enableStrongAffinity);
             return this;
         }
 
-        public Builder setIdleTimeoutSec(Integer idleTimeoutSec) {
+        public Builder idleTimeoutSec(Integer idleTimeoutSec) {
             this.idleTimeoutSec = Objects.requireNonNull(idleTimeoutSec);
             return this;
         }
 
-        public Builder setTrackingMode(String trackingMode) {
+        public Builder trackingMode(String trackingMode) {
             this.trackingMode = Objects.requireNonNull(trackingMode);
             return this;
         }

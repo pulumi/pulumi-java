@@ -57,7 +57,7 @@ public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.In
     	      this.bytes = defaults.bytes;
         }
 
-        public Builder setBytes(@Nullable Integer bytes) {
+        public Builder bytes(@Nullable Integer bytes) {
             this.bytes = bytes;
             return this;
         }

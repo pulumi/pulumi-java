@@ -126,37 +126,37 @@ public final class GetServiceResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setHealthCheckConfiguration(@Nullable ServiceHealthCheckConfiguration healthCheckConfiguration) {
+        public Builder healthCheckConfiguration(@Nullable ServiceHealthCheckConfiguration healthCheckConfiguration) {
             this.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
 
-        public Builder setInstanceConfiguration(@Nullable ServiceInstanceConfiguration instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable ServiceInstanceConfiguration instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
 
-        public Builder setServiceArn(@Nullable String serviceArn) {
+        public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
 
-        public Builder setServiceId(@Nullable String serviceId) {
+        public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
-        public Builder setServiceUrl(@Nullable String serviceUrl) {
+        public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
 
-        public Builder setSourceConfiguration(@Nullable ServiceSourceConfiguration sourceConfiguration) {
+        public Builder sourceConfiguration(@Nullable ServiceSourceConfiguration sourceConfiguration) {
             this.sourceConfiguration = sourceConfiguration;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

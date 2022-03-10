@@ -137,62 +137,62 @@ public final class DomainAssociationState extends io.pulumi.resources.ResourceAr
     	      this.waitForVerification = defaults.waitForVerification;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificateVerificationDnsRecord(@Nullable Input<String> certificateVerificationDnsRecord) {
+        public Builder certificateVerificationDnsRecord(@Nullable Input<String> certificateVerificationDnsRecord) {
             this.certificateVerificationDnsRecord = certificateVerificationDnsRecord;
             return this;
         }
 
-        public Builder setCertificateVerificationDnsRecord(@Nullable String certificateVerificationDnsRecord) {
+        public Builder certificateVerificationDnsRecord(@Nullable String certificateVerificationDnsRecord) {
             this.certificateVerificationDnsRecord = Input.ofNullable(certificateVerificationDnsRecord);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setSubDomains(@Nullable Input<List<DomainAssociationSubDomainGetArgs>> subDomains) {
+        public Builder subDomains(@Nullable Input<List<DomainAssociationSubDomainGetArgs>> subDomains) {
             this.subDomains = subDomains;
             return this;
         }
 
-        public Builder setSubDomains(@Nullable List<DomainAssociationSubDomainGetArgs> subDomains) {
+        public Builder subDomains(@Nullable List<DomainAssociationSubDomainGetArgs> subDomains) {
             this.subDomains = Input.ofNullable(subDomains);
             return this;
         }
 
-        public Builder setWaitForVerification(@Nullable Input<Boolean> waitForVerification) {
+        public Builder waitForVerification(@Nullable Input<Boolean> waitForVerification) {
             this.waitForVerification = waitForVerification;
             return this;
         }
 
-        public Builder setWaitForVerification(@Nullable Boolean waitForVerification) {
+        public Builder waitForVerification(@Nullable Boolean waitForVerification) {
             this.waitForVerification = Input.ofNullable(waitForVerification);
             return this;
         }

@@ -73,22 +73,22 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
     	      this.terminationWaitTimeInMinutes = defaults.terminationWaitTimeInMinutes;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setTerminationWaitTimeInMinutes(@Nullable Input<Integer> terminationWaitTimeInMinutes) {
+        public Builder terminationWaitTimeInMinutes(@Nullable Input<Integer> terminationWaitTimeInMinutes) {
             this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
             return this;
         }
 
-        public Builder setTerminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
+        public Builder terminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
             this.terminationWaitTimeInMinutes = Input.ofNullable(terminationWaitTimeInMinutes);
             return this;
         }

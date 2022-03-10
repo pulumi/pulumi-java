@@ -67,12 +67,12 @@ public final class ListBatchEndpointKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

@@ -224,112 +224,112 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder setAllowPrivilegeEscalation(@Nullable Input<Boolean> allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Input<Boolean> allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
 
-        public Builder setAllowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = Input.ofNullable(allowPrivilegeEscalation);
             return this;
         }
 
-        public Builder setCapabilities(@Nullable Input<CapabilitiesArgs> capabilities) {
+        public Builder capabilities(@Nullable Input<CapabilitiesArgs> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable CapabilitiesArgs capabilities) {
+        public Builder capabilities(@Nullable CapabilitiesArgs capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Input<Boolean> privileged) {
+        public Builder privileged(@Nullable Input<Boolean> privileged) {
             this.privileged = privileged;
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Boolean privileged) {
+        public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = Input.ofNullable(privileged);
             return this;
         }
 
-        public Builder setProcMount(@Nullable Input<String> procMount) {
+        public Builder procMount(@Nullable Input<String> procMount) {
             this.procMount = procMount;
             return this;
         }
 
-        public Builder setProcMount(@Nullable String procMount) {
+        public Builder procMount(@Nullable String procMount) {
             this.procMount = Input.ofNullable(procMount);
             return this;
         }
 
-        public Builder setReadOnlyRootFilesystem(@Nullable Input<Boolean> readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Input<Boolean> readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
 
-        public Builder setReadOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = Input.ofNullable(readOnlyRootFilesystem);
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Input<Integer> runAsGroup) {
+        public Builder runAsGroup(@Nullable Input<Integer> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Integer runAsGroup) {
+        public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = Input.ofNullable(runAsGroup);
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Input<Boolean> runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Input<Boolean> runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Boolean runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = Input.ofNullable(runAsNonRoot);
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Input<Integer> runAsUser) {
+        public Builder runAsUser(@Nullable Input<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Integer runAsUser) {
+        public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = Input.ofNullable(runAsUser);
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
             this.seLinuxOptions = Input.ofNullable(seLinuxOptions);
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable Input<SeccompProfileArgs> seccompProfile) {
+        public Builder seccompProfile(@Nullable Input<SeccompProfileArgs> seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
+        public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
             this.seccompProfile = Input.ofNullable(seccompProfile);
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
+        public Builder windowsOptions(@Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
+        public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
             this.windowsOptions = Input.ofNullable(windowsOptions);
             return this;
         }

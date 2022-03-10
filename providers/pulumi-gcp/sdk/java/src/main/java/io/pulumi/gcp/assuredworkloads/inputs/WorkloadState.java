@@ -236,122 +236,122 @@ public final class WorkloadState extends io.pulumi.resources.ResourceArgs {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setBillingAccount(@Nullable Input<String> billingAccount) {
+        public Builder billingAccount(@Nullable Input<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Input.ofNullable(billingAccount);
             return this;
         }
 
-        public Builder setComplianceRegime(@Nullable Input<String> complianceRegime) {
+        public Builder complianceRegime(@Nullable Input<String> complianceRegime) {
             this.complianceRegime = complianceRegime;
             return this;
         }
 
-        public Builder setComplianceRegime(@Nullable String complianceRegime) {
+        public Builder complianceRegime(@Nullable String complianceRegime) {
             this.complianceRegime = Input.ofNullable(complianceRegime);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setKmsSettings(@Nullable Input<WorkloadKmsSettingsGetArgs> kmsSettings) {
+        public Builder kmsSettings(@Nullable Input<WorkloadKmsSettingsGetArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
 
-        public Builder setKmsSettings(@Nullable WorkloadKmsSettingsGetArgs kmsSettings) {
+        public Builder kmsSettings(@Nullable WorkloadKmsSettingsGetArgs kmsSettings) {
             this.kmsSettings = Input.ofNullable(kmsSettings);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Input<String> organization) {
             this.organization = organization;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = Input.ofNullable(organization);
             return this;
         }
 
-        public Builder setProvisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
 
-        public Builder setProvisionedResourcesParent(@Nullable String provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
             this.provisionedResourcesParent = Input.ofNullable(provisionedResourcesParent);
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable Input<List<WorkloadResourceSettingGetArgs>> resourceSettings) {
+        public Builder resourceSettings(@Nullable Input<List<WorkloadResourceSettingGetArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable List<WorkloadResourceSettingGetArgs> resourceSettings) {
+        public Builder resourceSettings(@Nullable List<WorkloadResourceSettingGetArgs> resourceSettings) {
             this.resourceSettings = Input.ofNullable(resourceSettings);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<WorkloadResourceGetArgs>> resources) {
+        public Builder resources(@Nullable Input<List<WorkloadResourceGetArgs>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<WorkloadResourceGetArgs> resources) {
+        public Builder resources(@Nullable List<WorkloadResourceGetArgs> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }

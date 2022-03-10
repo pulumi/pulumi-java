@@ -82,22 +82,22 @@ public final class GetTensorflowVersionsResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setVersions(List<String> versions) {
+        public Builder versions(List<String> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

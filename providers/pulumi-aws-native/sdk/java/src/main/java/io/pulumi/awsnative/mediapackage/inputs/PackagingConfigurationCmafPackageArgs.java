@@ -102,42 +102,42 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
         }
 
-        public Builder setEncryption(@Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationCmafEncryptionArgs encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationCmafEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setHlsManifests(Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
+        public Builder hlsManifests(Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
 
-        public Builder setHlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
+        public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
             this.hlsManifests = Input.of(Objects.requireNonNull(hlsManifests));
             return this;
         }
 
-        public Builder setIncludeEncoderConfigurationInSegments(@Nullable Input<Boolean> includeEncoderConfigurationInSegments) {
+        public Builder includeEncoderConfigurationInSegments(@Nullable Input<Boolean> includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
 
-        public Builder setIncludeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
+        public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = Input.ofNullable(includeEncoderConfigurationInSegments);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }

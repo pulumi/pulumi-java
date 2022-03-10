@@ -42,7 +42,7 @@ public final class ListenerCertificate {
     	      this.certificateArn = defaults.certificateArn;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }

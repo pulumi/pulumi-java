@@ -41,7 +41,7 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsS
     	      this.realms = defaults.realms;
         }
 
-        public Builder setRealms(List<String> realms) {
+        public Builder realms(List<String> realms) {
             this.realms = Objects.requireNonNull(realms);
             return this;
         }

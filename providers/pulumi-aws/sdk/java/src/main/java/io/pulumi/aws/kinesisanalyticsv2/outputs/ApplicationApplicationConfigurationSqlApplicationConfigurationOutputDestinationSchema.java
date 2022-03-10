@@ -48,7 +48,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setRecordFormatType(String recordFormatType) {
+        public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }

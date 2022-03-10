@@ -100,22 +100,22 @@ public final class GetApplicationPackageArgs extends io.pulumi.resources.InvokeA
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVersionName(String versionName) {
+        public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }

@@ -51,12 +51,12 @@ public final class EnvironmentLastUpdatedError {
     	      this.errorMessage = defaults.errorMessage;
         }
 
-        public Builder setErrorCode(@Nullable String errorCode) {
+        public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }

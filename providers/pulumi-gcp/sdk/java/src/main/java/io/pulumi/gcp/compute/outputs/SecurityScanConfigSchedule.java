@@ -72,12 +72,12 @@ public final class SecurityScanConfigSchedule {
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setIntervalDurationDays(Integer intervalDurationDays) {
+        public Builder intervalDurationDays(Integer intervalDurationDays) {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
 
-        public Builder setScheduleTime(@Nullable String scheduleTime) {
+        public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }

@@ -219,57 +219,57 @@ public final class GetEventChannelResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDestination(@Nullable EventChannelDestinationResponse destination) {
+        public Builder destination(@Nullable EventChannelDestinationResponse destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setExpirationTimeIfNotActivatedUtc(@Nullable String expirationTimeIfNotActivatedUtc) {
+        public Builder expirationTimeIfNotActivatedUtc(@Nullable String expirationTimeIfNotActivatedUtc) {
             this.expirationTimeIfNotActivatedUtc = expirationTimeIfNotActivatedUtc;
             return this;
         }
 
-        public Builder setFilter(@Nullable EventChannelFilterResponse filter) {
+        public Builder filter(@Nullable EventChannelFilterResponse filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerTopicFriendlyDescription(@Nullable String partnerTopicFriendlyDescription) {
+        public Builder partnerTopicFriendlyDescription(@Nullable String partnerTopicFriendlyDescription) {
             this.partnerTopicFriendlyDescription = partnerTopicFriendlyDescription;
             return this;
         }
 
-        public Builder setPartnerTopicReadinessState(String partnerTopicReadinessState) {
+        public Builder partnerTopicReadinessState(String partnerTopicReadinessState) {
             this.partnerTopicReadinessState = Objects.requireNonNull(partnerTopicReadinessState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSource(@Nullable EventChannelSourceResponse source) {
+        public Builder source(@Nullable EventChannelSourceResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -72,12 +72,12 @@ public final class WarningResponse extends io.pulumi.resources.InvokeArgs {
     	      this.text = defaults.text;
         }
 
-        public Builder setPriority(String priority) {
+        public Builder priority(String priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

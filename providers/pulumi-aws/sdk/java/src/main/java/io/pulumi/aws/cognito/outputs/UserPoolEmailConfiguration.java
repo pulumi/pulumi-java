@@ -115,27 +115,27 @@ public final class UserPoolEmailConfiguration {
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder setConfigurationSet(@Nullable String configurationSet) {
+        public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
-        public Builder setEmailSendingAccount(@Nullable String emailSendingAccount) {
+        public Builder emailSendingAccount(@Nullable String emailSendingAccount) {
             this.emailSendingAccount = emailSendingAccount;
             return this;
         }
 
-        public Builder setFromEmailAddress(@Nullable String fromEmailAddress) {
+        public Builder fromEmailAddress(@Nullable String fromEmailAddress) {
             this.fromEmailAddress = fromEmailAddress;
             return this;
         }
 
-        public Builder setReplyToEmailAddress(@Nullable String replyToEmailAddress) {
+        public Builder replyToEmailAddress(@Nullable String replyToEmailAddress) {
             this.replyToEmailAddress = replyToEmailAddress;
             return this;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }

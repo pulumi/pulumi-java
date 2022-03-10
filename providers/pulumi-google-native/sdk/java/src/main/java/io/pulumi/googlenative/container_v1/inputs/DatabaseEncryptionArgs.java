@@ -75,22 +75,22 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
     	      this.state = defaults.state;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setState(@Nullable Input<DatabaseEncryptionState> state) {
+        public Builder state(@Nullable Input<DatabaseEncryptionState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable DatabaseEncryptionState state) {
+        public Builder state(@Nullable DatabaseEncryptionState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

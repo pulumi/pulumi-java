@@ -75,27 +75,27 @@ public final class PipelineDeviceRegistryEnrich {
     	      this.thingName = defaults.thingName;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setThingName(String thingName) {
+        public Builder thingName(String thingName) {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }

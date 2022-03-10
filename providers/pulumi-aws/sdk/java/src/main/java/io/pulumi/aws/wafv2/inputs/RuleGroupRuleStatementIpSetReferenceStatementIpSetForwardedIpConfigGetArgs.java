@@ -85,32 +85,32 @@ public final class RuleGroupRuleStatementIpSetReferenceStatementIpSetForwardedIp
     	      this.position = defaults.position;
         }
 
-        public Builder setFallbackBehavior(Input<String> fallbackBehavior) {
+        public Builder fallbackBehavior(Input<String> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setFallbackBehavior(String fallbackBehavior) {
+        public Builder fallbackBehavior(String fallbackBehavior) {
             this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setPosition(Input<String> position) {
+        public Builder position(Input<String> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(String position) {
+        public Builder position(String position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }

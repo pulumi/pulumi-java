@@ -88,17 +88,17 @@ public final class PackagingConfigurationHlsEncryption extends io.pulumi.resourc
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
+        public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
-        public Builder setSpekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

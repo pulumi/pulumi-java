@@ -49,7 +49,7 @@ public final class GetClusterIdentity {
     	      this.oidcs = defaults.oidcs;
         }
 
-        public Builder setOidcs(List<GetClusterIdentityOidc> oidcs) {
+        public Builder oidcs(List<GetClusterIdentityOidc> oidcs) {
             this.oidcs = Objects.requireNonNull(oidcs);
             return this;
         }

@@ -135,32 +135,32 @@ public final class VaultPropertiesResponse {
     	      this.upgradeDetails = defaults.upgradeDetails;
         }
 
-        public Builder setEncryption(@Nullable VaultPropertiesResponseEncryption encryption) {
+        public Builder encryption(@Nullable VaultPropertiesResponseEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionVaultPropertiesResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPrivateEndpointStateForBackup(String privateEndpointStateForBackup) {
+        public Builder privateEndpointStateForBackup(String privateEndpointStateForBackup) {
             this.privateEndpointStateForBackup = Objects.requireNonNull(privateEndpointStateForBackup);
             return this;
         }
 
-        public Builder setPrivateEndpointStateForSiteRecovery(String privateEndpointStateForSiteRecovery) {
+        public Builder privateEndpointStateForSiteRecovery(String privateEndpointStateForSiteRecovery) {
             this.privateEndpointStateForSiteRecovery = Objects.requireNonNull(privateEndpointStateForSiteRecovery);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setUpgradeDetails(@Nullable UpgradeDetailsResponse upgradeDetails) {
+        public Builder upgradeDetails(@Nullable UpgradeDetailsResponse upgradeDetails) {
             this.upgradeDetails = upgradeDetails;
             return this;
         }

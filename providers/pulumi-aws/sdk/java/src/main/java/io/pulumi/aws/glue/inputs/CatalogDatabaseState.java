@@ -152,72 +152,72 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
     	      this.targetDatabase = defaults.targetDatabase;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLocationUri(@Nullable Input<String> locationUri) {
+        public Builder locationUri(@Nullable Input<String> locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = Input.ofNullable(locationUri);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setTargetDatabase(@Nullable Input<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
+        public Builder targetDatabase(@Nullable Input<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
 
-        public Builder setTargetDatabase(@Nullable CatalogDatabaseTargetDatabaseGetArgs targetDatabase) {
+        public Builder targetDatabase(@Nullable CatalogDatabaseTargetDatabaseGetArgs targetDatabase) {
             this.targetDatabase = Input.ofNullable(targetDatabase);
             return this;
         }

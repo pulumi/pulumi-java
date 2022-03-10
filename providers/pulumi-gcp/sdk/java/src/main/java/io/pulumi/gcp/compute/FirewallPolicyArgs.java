@@ -86,32 +86,32 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setShortName(Input<String> shortName) {
+        public Builder shortName(Input<String> shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
 
-        public Builder setShortName(String shortName) {
+        public Builder shortName(String shortName) {
             this.shortName = Input.of(Objects.requireNonNull(shortName));
             return this;
         }

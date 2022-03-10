@@ -156,82 +156,82 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setContainerImage(@Nullable Input<ContainerImageArgs> containerImage) {
+        public Builder containerImage(@Nullable Input<ContainerImageArgs> containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
-        public Builder setContainerImage(@Nullable ContainerImageArgs containerImage) {
+        public Builder containerImage(@Nullable ContainerImageArgs containerImage) {
             this.containerImage = Input.ofNullable(containerImage);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPostStartupScript(@Nullable Input<String> postStartupScript) {
+        public Builder postStartupScript(@Nullable Input<String> postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }
 
-        public Builder setPostStartupScript(@Nullable String postStartupScript) {
+        public Builder postStartupScript(@Nullable String postStartupScript) {
             this.postStartupScript = Input.ofNullable(postStartupScript);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setVmImage(@Nullable Input<VmImageArgs> vmImage) {
+        public Builder vmImage(@Nullable Input<VmImageArgs> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
-        public Builder setVmImage(@Nullable VmImageArgs vmImage) {
+        public Builder vmImage(@Nullable VmImageArgs vmImage) {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }

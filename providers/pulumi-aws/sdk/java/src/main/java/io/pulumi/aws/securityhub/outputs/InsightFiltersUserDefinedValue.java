@@ -81,17 +81,17 @@ public final class InsightFiltersUserDefinedValue {
     	      this.value = defaults.value;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

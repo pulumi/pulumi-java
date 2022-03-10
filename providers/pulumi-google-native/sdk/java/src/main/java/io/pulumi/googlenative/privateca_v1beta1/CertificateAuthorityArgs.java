@@ -254,142 +254,142 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificateAuthorityId(Input<String> certificateAuthorityId) {
+        public Builder certificateAuthorityId(Input<String> certificateAuthorityId) {
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
 
-        public Builder setCertificateAuthorityId(String certificateAuthorityId) {
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
             this.certificateAuthorityId = Input.of(Objects.requireNonNull(certificateAuthorityId));
             return this;
         }
 
-        public Builder setCertificatePolicy(@Nullable Input<CertificateAuthorityPolicyArgs> certificatePolicy) {
+        public Builder certificatePolicy(@Nullable Input<CertificateAuthorityPolicyArgs> certificatePolicy) {
             this.certificatePolicy = certificatePolicy;
             return this;
         }
 
-        public Builder setCertificatePolicy(@Nullable CertificateAuthorityPolicyArgs certificatePolicy) {
+        public Builder certificatePolicy(@Nullable CertificateAuthorityPolicyArgs certificatePolicy) {
             this.certificatePolicy = Input.ofNullable(certificatePolicy);
             return this;
         }
 
-        public Builder setConfig(Input<CertificateConfigArgs> config) {
+        public Builder config(Input<CertificateConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(CertificateConfigArgs config) {
+        public Builder config(CertificateConfigArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setGcsBucket(@Nullable Input<String> gcsBucket) {
+        public Builder gcsBucket(@Nullable Input<String> gcsBucket) {
             this.gcsBucket = gcsBucket;
             return this;
         }
 
-        public Builder setGcsBucket(@Nullable String gcsBucket) {
+        public Builder gcsBucket(@Nullable String gcsBucket) {
             this.gcsBucket = Input.ofNullable(gcsBucket);
             return this;
         }
 
-        public Builder setIssuingOptions(@Nullable Input<IssuingOptionsArgs> issuingOptions) {
+        public Builder issuingOptions(@Nullable Input<IssuingOptionsArgs> issuingOptions) {
             this.issuingOptions = issuingOptions;
             return this;
         }
 
-        public Builder setIssuingOptions(@Nullable IssuingOptionsArgs issuingOptions) {
+        public Builder issuingOptions(@Nullable IssuingOptionsArgs issuingOptions) {
             this.issuingOptions = Input.ofNullable(issuingOptions);
             return this;
         }
 
-        public Builder setKeySpec(Input<KeyVersionSpecArgs> keySpec) {
+        public Builder keySpec(Input<KeyVersionSpecArgs> keySpec) {
             this.keySpec = Objects.requireNonNull(keySpec);
             return this;
         }
 
-        public Builder setKeySpec(KeyVersionSpecArgs keySpec) {
+        public Builder keySpec(KeyVersionSpecArgs keySpec) {
             this.keySpec = Input.of(Objects.requireNonNull(keySpec));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifetime(Input<String> lifetime) {
+        public Builder lifetime(Input<String> lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
 
-        public Builder setLifetime(String lifetime) {
+        public Builder lifetime(String lifetime) {
             this.lifetime = Input.of(Objects.requireNonNull(lifetime));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSubordinateConfig(@Nullable Input<SubordinateConfigArgs> subordinateConfig) {
+        public Builder subordinateConfig(@Nullable Input<SubordinateConfigArgs> subordinateConfig) {
             this.subordinateConfig = subordinateConfig;
             return this;
         }
 
-        public Builder setSubordinateConfig(@Nullable SubordinateConfigArgs subordinateConfig) {
+        public Builder subordinateConfig(@Nullable SubordinateConfigArgs subordinateConfig) {
             this.subordinateConfig = Input.ofNullable(subordinateConfig);
             return this;
         }
 
-        public Builder setTier(Input<CertificateAuthorityTier> tier) {
+        public Builder tier(Input<CertificateAuthorityTier> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(CertificateAuthorityTier tier) {
+        public Builder tier(CertificateAuthorityTier tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
 
-        public Builder setType(Input<CertificateAuthorityType> type) {
+        public Builder type(Input<CertificateAuthorityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(CertificateAuthorityType type) {
+        public Builder type(CertificateAuthorityType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

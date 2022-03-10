@@ -74,22 +74,22 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     	      this.startDate = defaults.startDate;
         }
 
-        public Builder setEndDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Input<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = Input.ofNullable(endDate);
             return this;
         }
 
-        public Builder setStartDate(Input<String> startDate) {
+        public Builder startDate(Input<String> startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
 
-        public Builder setStartDate(String startDate) {
+        public Builder startDate(String startDate) {
             this.startDate = Input.of(Objects.requireNonNull(startDate));
             return this;
         }

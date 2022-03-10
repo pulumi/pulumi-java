@@ -51,7 +51,7 @@ public final class GetResiliencyPolicyArgs extends io.pulumi.resources.InvokeArg
     	      this.policyArn = defaults.policyArn;
         }
 
-        public Builder setPolicyArn(String policyArn) {
+        public Builder policyArn(String policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }

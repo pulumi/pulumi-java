@@ -56,7 +56,7 @@ public final class FilterTrackSelectionResponse extends io.pulumi.resources.Invo
     	      this.trackSelections = defaults.trackSelections;
         }
 
-        public Builder setTrackSelections(List<FilterTrackPropertyConditionResponse> trackSelections) {
+        public Builder trackSelections(List<FilterTrackPropertyConditionResponse> trackSelections) {
             this.trackSelections = Objects.requireNonNull(trackSelections);
             return this;
         }

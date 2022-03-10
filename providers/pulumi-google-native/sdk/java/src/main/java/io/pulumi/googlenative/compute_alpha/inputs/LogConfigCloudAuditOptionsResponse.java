@@ -73,12 +73,12 @@ public final class LogConfigCloudAuditOptionsResponse extends io.pulumi.resource
     	      this.logName = defaults.logName;
         }
 
-        public Builder setAuthorizationLoggingOptions(AuthorizationLoggingOptionsResponse authorizationLoggingOptions) {
+        public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsResponse authorizationLoggingOptions) {
             this.authorizationLoggingOptions = Objects.requireNonNull(authorizationLoggingOptions);
             return this;
         }
 
-        public Builder setLogName(String logName) {
+        public Builder logName(String logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }

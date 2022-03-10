@@ -126,27 +126,27 @@ public final class UserProfileUserSettings extends io.pulumi.resources.InvokeArg
     	      this.sharingSettings = defaults.sharingSettings;
         }
 
-        public Builder setExecutionRole(@Nullable String executionRole) {
+        public Builder executionRole(@Nullable String executionRole) {
             this.executionRole = executionRole;
             return this;
         }
 
-        public Builder setJupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
-        public Builder setKernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSharingSettings(@Nullable UserProfileSharingSettings sharingSettings) {
+        public Builder sharingSettings(@Nullable UserProfileSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }

@@ -148,37 +148,37 @@ public final class ParameterMetadataResponse {
     	      this.regexes = defaults.regexes;
         }
 
-        public Builder setCustomMetadata(Map<String,String> customMetadata) {
+        public Builder customMetadata(Map<String,String> customMetadata) {
             this.customMetadata = Objects.requireNonNull(customMetadata);
             return this;
         }
 
-        public Builder setHelpText(String helpText) {
+        public Builder helpText(String helpText) {
             this.helpText = Objects.requireNonNull(helpText);
             return this;
         }
 
-        public Builder setIsOptional(Boolean isOptional) {
+        public Builder isOptional(Boolean isOptional) {
             this.isOptional = Objects.requireNonNull(isOptional);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParamType(String paramType) {
+        public Builder paramType(String paramType) {
             this.paramType = Objects.requireNonNull(paramType);
             return this;
         }
 
-        public Builder setRegexes(List<String> regexes) {
+        public Builder regexes(List<String> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }

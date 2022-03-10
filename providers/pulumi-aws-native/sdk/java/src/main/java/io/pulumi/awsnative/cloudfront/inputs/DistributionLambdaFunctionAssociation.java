@@ -75,17 +75,17 @@ public final class DistributionLambdaFunctionAssociation extends io.pulumi.resou
     	      this.lambdaFunctionARN = defaults.lambdaFunctionARN;
         }
 
-        public Builder setEventType(@Nullable String eventType) {
+        public Builder eventType(@Nullable String eventType) {
             this.eventType = eventType;
             return this;
         }
 
-        public Builder setIncludeBody(@Nullable Boolean includeBody) {
+        public Builder includeBody(@Nullable Boolean includeBody) {
             this.includeBody = includeBody;
             return this;
         }
 
-        public Builder setLambdaFunctionARN(@Nullable String lambdaFunctionARN) {
+        public Builder lambdaFunctionARN(@Nullable String lambdaFunctionARN) {
             this.lambdaFunctionARN = lambdaFunctionARN;
             return this;
         }

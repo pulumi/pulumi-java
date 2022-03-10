@@ -161,37 +161,37 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder setAllowCredentials(@Nullable Boolean allowCredentials) {
+        public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
-        public Builder setAllowHeaders(@Nullable List<String> allowHeaders) {
+        public Builder allowHeaders(@Nullable List<String> allowHeaders) {
             this.allowHeaders = allowHeaders;
             return this;
         }
 
-        public Builder setAllowMethods(@Nullable List<String> allowMethods) {
+        public Builder allowMethods(@Nullable List<String> allowMethods) {
             this.allowMethods = allowMethods;
             return this;
         }
 
-        public Builder setAllowOrigins(@Nullable List<String> allowOrigins) {
+        public Builder allowOrigins(@Nullable List<String> allowOrigins) {
             this.allowOrigins = allowOrigins;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setExposeHeaders(@Nullable List<String> exposeHeaders) {
+        public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
 
-        public Builder setMaxAge(String maxAge) {
+        public Builder maxAge(String maxAge) {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }

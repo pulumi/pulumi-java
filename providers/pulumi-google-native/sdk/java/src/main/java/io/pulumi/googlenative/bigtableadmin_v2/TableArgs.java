@@ -146,72 +146,72 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setColumnFamilies(@Nullable Input<Map<String,String>> columnFamilies) {
+        public Builder columnFamilies(@Nullable Input<Map<String,String>> columnFamilies) {
             this.columnFamilies = columnFamilies;
             return this;
         }
 
-        public Builder setColumnFamilies(@Nullable Map<String,String> columnFamilies) {
+        public Builder columnFamilies(@Nullable Map<String,String> columnFamilies) {
             this.columnFamilies = Input.ofNullable(columnFamilies);
             return this;
         }
 
-        public Builder setGranularity(@Nullable Input<TableGranularity> granularity) {
+        public Builder granularity(@Nullable Input<TableGranularity> granularity) {
             this.granularity = granularity;
             return this;
         }
 
-        public Builder setGranularity(@Nullable TableGranularity granularity) {
+        public Builder granularity(@Nullable TableGranularity granularity) {
             this.granularity = Input.ofNullable(granularity);
             return this;
         }
 
-        public Builder setInitialSplits(@Nullable Input<List<SplitArgs>> initialSplits) {
+        public Builder initialSplits(@Nullable Input<List<SplitArgs>> initialSplits) {
             this.initialSplits = initialSplits;
             return this;
         }
 
-        public Builder setInitialSplits(@Nullable List<SplitArgs> initialSplits) {
+        public Builder initialSplits(@Nullable List<SplitArgs> initialSplits) {
             this.initialSplits = Input.ofNullable(initialSplits);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTableId(Input<String> tableId) {
+        public Builder tableId(Input<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }

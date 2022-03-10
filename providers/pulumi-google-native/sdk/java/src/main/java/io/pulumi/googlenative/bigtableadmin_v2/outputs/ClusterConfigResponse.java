@@ -48,7 +48,7 @@ public final class ClusterConfigResponse {
     	      this.clusterAutoscalingConfig = defaults.clusterAutoscalingConfig;
         }
 
-        public Builder setClusterAutoscalingConfig(ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
+        public Builder clusterAutoscalingConfig(ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
             this.clusterAutoscalingConfig = Objects.requireNonNull(clusterAutoscalingConfig);
             return this;
         }

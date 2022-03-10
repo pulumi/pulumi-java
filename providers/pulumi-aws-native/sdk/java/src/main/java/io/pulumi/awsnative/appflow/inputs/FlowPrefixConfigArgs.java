@@ -63,22 +63,22 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.prefixType = defaults.prefixType;
         }
 
-        public Builder setPrefixFormat(@Nullable Input<FlowPrefixFormat> prefixFormat) {
+        public Builder prefixFormat(@Nullable Input<FlowPrefixFormat> prefixFormat) {
             this.prefixFormat = prefixFormat;
             return this;
         }
 
-        public Builder setPrefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
+        public Builder prefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
             this.prefixFormat = Input.ofNullable(prefixFormat);
             return this;
         }
 
-        public Builder setPrefixType(@Nullable Input<FlowPrefixType> prefixType) {
+        public Builder prefixType(@Nullable Input<FlowPrefixType> prefixType) {
             this.prefixType = prefixType;
             return this;
         }
 
-        public Builder setPrefixType(@Nullable FlowPrefixType prefixType) {
+        public Builder prefixType(@Nullable FlowPrefixType prefixType) {
             this.prefixType = Input.ofNullable(prefixType);
             return this;
         }

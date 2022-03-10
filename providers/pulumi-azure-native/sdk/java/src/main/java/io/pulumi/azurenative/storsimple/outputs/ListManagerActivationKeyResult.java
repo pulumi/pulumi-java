@@ -48,7 +48,7 @@ public final class ListManagerActivationKeyResult {
     	      this.activationKey = defaults.activationKey;
         }
 
-        public Builder setActivationKey(String activationKey) {
+        public Builder activationKey(String activationKey) {
             this.activationKey = Objects.requireNonNull(activationKey);
             return this;
         }

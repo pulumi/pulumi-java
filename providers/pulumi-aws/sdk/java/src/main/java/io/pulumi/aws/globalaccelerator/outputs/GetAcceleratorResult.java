@@ -126,52 +126,52 @@ public final class GetAcceleratorResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAttributes(List<GetAcceleratorAttribute> attributes) {
+        public Builder attributes(List<GetAcceleratorAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddressType(String ipAddressType) {
+        public Builder ipAddressType(String ipAddressType) {
             this.ipAddressType = Objects.requireNonNull(ipAddressType);
             return this;
         }
 
-        public Builder setIpSets(List<GetAcceleratorIpSet> ipSets) {
+        public Builder ipSets(List<GetAcceleratorIpSet> ipSets) {
             this.ipSets = Objects.requireNonNull(ipSets);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

@@ -67,12 +67,12 @@ public final class TextStreamResponse {
     	      this.mapping = defaults.mapping;
         }
 
-        public Builder setCodec(String codec) {
+        public Builder codec(String codec) {
             this.codec = Objects.requireNonNull(codec);
             return this;
         }
 
-        public Builder setMapping(List<TextMappingResponse> mapping) {
+        public Builder mapping(List<TextMappingResponse> mapping) {
             this.mapping = Objects.requireNonNull(mapping);
             return this;
         }

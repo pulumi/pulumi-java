@@ -205,102 +205,102 @@ public final class FirewallPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     	      this.srcSecureTags = defaults.srcSecureTags;
         }
 
-        public Builder setDestAddressGroups(@Nullable Input<List<String>> destAddressGroups) {
+        public Builder destAddressGroups(@Nullable Input<List<String>> destAddressGroups) {
             this.destAddressGroups = destAddressGroups;
             return this;
         }
 
-        public Builder setDestAddressGroups(@Nullable List<String> destAddressGroups) {
+        public Builder destAddressGroups(@Nullable List<String> destAddressGroups) {
             this.destAddressGroups = Input.ofNullable(destAddressGroups);
             return this;
         }
 
-        public Builder setDestFqdns(@Nullable Input<List<String>> destFqdns) {
+        public Builder destFqdns(@Nullable Input<List<String>> destFqdns) {
             this.destFqdns = destFqdns;
             return this;
         }
 
-        public Builder setDestFqdns(@Nullable List<String> destFqdns) {
+        public Builder destFqdns(@Nullable List<String> destFqdns) {
             this.destFqdns = Input.ofNullable(destFqdns);
             return this;
         }
 
-        public Builder setDestIpRanges(@Nullable Input<List<String>> destIpRanges) {
+        public Builder destIpRanges(@Nullable Input<List<String>> destIpRanges) {
             this.destIpRanges = destIpRanges;
             return this;
         }
 
-        public Builder setDestIpRanges(@Nullable List<String> destIpRanges) {
+        public Builder destIpRanges(@Nullable List<String> destIpRanges) {
             this.destIpRanges = Input.ofNullable(destIpRanges);
             return this;
         }
 
-        public Builder setDestRegionCodes(@Nullable Input<List<String>> destRegionCodes) {
+        public Builder destRegionCodes(@Nullable Input<List<String>> destRegionCodes) {
             this.destRegionCodes = destRegionCodes;
             return this;
         }
 
-        public Builder setDestRegionCodes(@Nullable List<String> destRegionCodes) {
+        public Builder destRegionCodes(@Nullable List<String> destRegionCodes) {
             this.destRegionCodes = Input.ofNullable(destRegionCodes);
             return this;
         }
 
-        public Builder setLayer4Configs(@Nullable Input<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs) {
+        public Builder layer4Configs(@Nullable Input<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs) {
             this.layer4Configs = layer4Configs;
             return this;
         }
 
-        public Builder setLayer4Configs(@Nullable List<FirewallPolicyRuleMatcherLayer4ConfigArgs> layer4Configs) {
+        public Builder layer4Configs(@Nullable List<FirewallPolicyRuleMatcherLayer4ConfigArgs> layer4Configs) {
             this.layer4Configs = Input.ofNullable(layer4Configs);
             return this;
         }
 
-        public Builder setSrcAddressGroups(@Nullable Input<List<String>> srcAddressGroups) {
+        public Builder srcAddressGroups(@Nullable Input<List<String>> srcAddressGroups) {
             this.srcAddressGroups = srcAddressGroups;
             return this;
         }
 
-        public Builder setSrcAddressGroups(@Nullable List<String> srcAddressGroups) {
+        public Builder srcAddressGroups(@Nullable List<String> srcAddressGroups) {
             this.srcAddressGroups = Input.ofNullable(srcAddressGroups);
             return this;
         }
 
-        public Builder setSrcFqdns(@Nullable Input<List<String>> srcFqdns) {
+        public Builder srcFqdns(@Nullable Input<List<String>> srcFqdns) {
             this.srcFqdns = srcFqdns;
             return this;
         }
 
-        public Builder setSrcFqdns(@Nullable List<String> srcFqdns) {
+        public Builder srcFqdns(@Nullable List<String> srcFqdns) {
             this.srcFqdns = Input.ofNullable(srcFqdns);
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable Input<List<String>> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable List<String> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = Input.ofNullable(srcIpRanges);
             return this;
         }
 
-        public Builder setSrcRegionCodes(@Nullable Input<List<String>> srcRegionCodes) {
+        public Builder srcRegionCodes(@Nullable Input<List<String>> srcRegionCodes) {
             this.srcRegionCodes = srcRegionCodes;
             return this;
         }
 
-        public Builder setSrcRegionCodes(@Nullable List<String> srcRegionCodes) {
+        public Builder srcRegionCodes(@Nullable List<String> srcRegionCodes) {
             this.srcRegionCodes = Input.ofNullable(srcRegionCodes);
             return this;
         }
 
-        public Builder setSrcSecureTags(@Nullable Input<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags) {
+        public Builder srcSecureTags(@Nullable Input<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags) {
             this.srcSecureTags = srcSecureTags;
             return this;
         }
 
-        public Builder setSrcSecureTags(@Nullable List<FirewallPolicyRuleSecureTagArgs> srcSecureTags) {
+        public Builder srcSecureTags(@Nullable List<FirewallPolicyRuleSecureTagArgs> srcSecureTags) {
             this.srcSecureTags = Input.ofNullable(srcSecureTags);
             return this;
         }

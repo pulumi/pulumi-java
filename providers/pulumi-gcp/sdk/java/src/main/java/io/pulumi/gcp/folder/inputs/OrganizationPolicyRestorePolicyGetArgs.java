@@ -52,12 +52,12 @@ public final class OrganizationPolicyRestorePolicyGetArgs extends io.pulumi.reso
     	      this.$default = defaults.$default;
         }
 
-        public Builder set$default(Input<Boolean> $default) {
+        public Builder $default(Input<Boolean> $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
-        public Builder set$default(Boolean $default) {
+        public Builder $default(Boolean $default) {
             this.$default = Input.of(Objects.requireNonNull($default));
             return this;
         }

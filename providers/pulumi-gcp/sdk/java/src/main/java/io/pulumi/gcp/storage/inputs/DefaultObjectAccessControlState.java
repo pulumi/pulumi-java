@@ -194,92 +194,92 @@ public final class DefaultObjectAccessControlState extends io.pulumi.resources.R
     	      this.role = defaults.role;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setEntity(@Nullable Input<String> entity) {
+        public Builder entity(@Nullable Input<String> entity) {
             this.entity = entity;
             return this;
         }
 
-        public Builder setEntity(@Nullable String entity) {
+        public Builder entity(@Nullable String entity) {
             this.entity = Input.ofNullable(entity);
             return this;
         }
 
-        public Builder setEntityId(@Nullable Input<String> entityId) {
+        public Builder entityId(@Nullable Input<String> entityId) {
             this.entityId = entityId;
             return this;
         }
 
-        public Builder setEntityId(@Nullable String entityId) {
+        public Builder entityId(@Nullable String entityId) {
             this.entityId = Input.ofNullable(entityId);
             return this;
         }
 
-        public Builder setGeneration(@Nullable Input<Integer> generation) {
+        public Builder generation(@Nullable Input<Integer> generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setGeneration(@Nullable Integer generation) {
+        public Builder generation(@Nullable Integer generation) {
             this.generation = Input.ofNullable(generation);
             return this;
         }
 
-        public Builder setObject(@Nullable Input<String> object) {
+        public Builder object(@Nullable Input<String> object) {
             this.object = object;
             return this;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = Input.ofNullable(object);
             return this;
         }
 
-        public Builder setProjectTeams(@Nullable Input<List<DefaultObjectAccessControlProjectTeamGetArgs>> projectTeams) {
+        public Builder projectTeams(@Nullable Input<List<DefaultObjectAccessControlProjectTeamGetArgs>> projectTeams) {
             this.projectTeams = projectTeams;
             return this;
         }
 
-        public Builder setProjectTeams(@Nullable List<DefaultObjectAccessControlProjectTeamGetArgs> projectTeams) {
+        public Builder projectTeams(@Nullable List<DefaultObjectAccessControlProjectTeamGetArgs> projectTeams) {
             this.projectTeams = Input.ofNullable(projectTeams);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }

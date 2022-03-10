@@ -48,7 +48,7 @@ public final class ClusterLoggingInfo {
     	      this.brokerLogs = defaults.brokerLogs;
         }
 
-        public Builder setBrokerLogs(ClusterLoggingInfoBrokerLogs brokerLogs) {
+        public Builder brokerLogs(ClusterLoggingInfoBrokerLogs brokerLogs) {
             this.brokerLogs = Objects.requireNonNull(brokerLogs);
             return this;
         }

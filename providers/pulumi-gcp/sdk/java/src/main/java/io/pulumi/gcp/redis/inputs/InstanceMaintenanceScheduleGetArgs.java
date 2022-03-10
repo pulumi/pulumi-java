@@ -96,32 +96,32 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setScheduleDeadlineTime(@Nullable Input<String> scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(@Nullable Input<String> scheduleDeadlineTime) {
             this.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
 
-        public Builder setScheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Input.ofNullable(scheduleDeadlineTime);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

@@ -103,22 +103,22 @@ public final class AzureKeyVaultSecretReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSecretName(Object secretName) {
+        public Builder secretName(Object secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable Object secretVersion) {
+        public Builder secretVersion(@Nullable Object secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setStore(LinkedServiceReferenceResponse store) {
+        public Builder store(LinkedServiceReferenceResponse store) {
             this.store = Objects.requireNonNull(store);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

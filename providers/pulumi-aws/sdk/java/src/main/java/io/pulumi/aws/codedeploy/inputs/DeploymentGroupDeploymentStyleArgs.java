@@ -70,22 +70,22 @@ public final class DeploymentGroupDeploymentStyleArgs extends io.pulumi.resource
     	      this.deploymentType = defaults.deploymentType;
         }
 
-        public Builder setDeploymentOption(@Nullable Input<String> deploymentOption) {
+        public Builder deploymentOption(@Nullable Input<String> deploymentOption) {
             this.deploymentOption = deploymentOption;
             return this;
         }
 
-        public Builder setDeploymentOption(@Nullable String deploymentOption) {
+        public Builder deploymentOption(@Nullable String deploymentOption) {
             this.deploymentOption = Input.ofNullable(deploymentOption);
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable Input<String> deploymentType) {
+        public Builder deploymentType(@Nullable Input<String> deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = Input.ofNullable(deploymentType);
             return this;
         }

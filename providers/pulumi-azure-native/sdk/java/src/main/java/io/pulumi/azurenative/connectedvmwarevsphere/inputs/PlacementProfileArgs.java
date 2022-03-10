@@ -106,42 +106,42 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourcePoolId = defaults.resourcePoolId;
         }
 
-        public Builder setClusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Input<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Input.ofNullable(clusterId);
             return this;
         }
 
-        public Builder setDatastoreId(@Nullable Input<String> datastoreId) {
+        public Builder datastoreId(@Nullable Input<String> datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
-        public Builder setDatastoreId(@Nullable String datastoreId) {
+        public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = Input.ofNullable(datastoreId);
             return this;
         }
 
-        public Builder setHostId(@Nullable Input<String> hostId) {
+        public Builder hostId(@Nullable Input<String> hostId) {
             this.hostId = hostId;
             return this;
         }
 
-        public Builder setHostId(@Nullable String hostId) {
+        public Builder hostId(@Nullable String hostId) {
             this.hostId = Input.ofNullable(hostId);
             return this;
         }
 
-        public Builder setResourcePoolId(@Nullable Input<String> resourcePoolId) {
+        public Builder resourcePoolId(@Nullable Input<String> resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
 
-        public Builder setResourcePoolId(@Nullable String resourcePoolId) {
+        public Builder resourcePoolId(@Nullable String resourcePoolId) {
             this.resourcePoolId = Input.ofNullable(resourcePoolId);
             return this;
         }

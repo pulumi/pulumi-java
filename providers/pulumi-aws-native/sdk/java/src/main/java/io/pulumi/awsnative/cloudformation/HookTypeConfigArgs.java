@@ -105,42 +105,42 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setConfiguration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Input<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable String configuration) {
+        public Builder configuration(@Nullable String configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setConfigurationAlias(@Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias) {
+        public Builder configurationAlias(@Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias) {
             this.configurationAlias = configurationAlias;
             return this;
         }
 
-        public Builder setConfigurationAlias(@Nullable HookTypeConfigConfigurationAlias configurationAlias) {
+        public Builder configurationAlias(@Nullable HookTypeConfigConfigurationAlias configurationAlias) {
             this.configurationAlias = Input.ofNullable(configurationAlias);
             return this;
         }
 
-        public Builder setTypeArn(@Nullable Input<String> typeArn) {
+        public Builder typeArn(@Nullable Input<String> typeArn) {
             this.typeArn = typeArn;
             return this;
         }
 
-        public Builder setTypeArn(@Nullable String typeArn) {
+        public Builder typeArn(@Nullable String typeArn) {
             this.typeArn = Input.ofNullable(typeArn);
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }

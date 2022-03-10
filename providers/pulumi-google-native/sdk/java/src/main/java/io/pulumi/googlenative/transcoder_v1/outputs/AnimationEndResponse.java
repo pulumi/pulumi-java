@@ -48,7 +48,7 @@ public final class AnimationEndResponse {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }

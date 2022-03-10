@@ -132,32 +132,32 @@ public final class GetLifecycleHookResult {
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setDefaultResult(@Nullable String defaultResult) {
+        public Builder defaultResult(@Nullable String defaultResult) {
             this.defaultResult = defaultResult;
             return this;
         }
 
-        public Builder setHeartbeatTimeout(@Nullable Integer heartbeatTimeout) {
+        public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
 
-        public Builder setLifecycleTransition(@Nullable String lifecycleTransition) {
+        public Builder lifecycleTransition(@Nullable String lifecycleTransition) {
             this.lifecycleTransition = lifecycleTransition;
             return this;
         }
 
-        public Builder setNotificationMetadata(@Nullable String notificationMetadata) {
+        public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
 
-        public Builder setNotificationTargetARN(@Nullable String notificationTargetARN) {
+        public Builder notificationTargetARN(@Nullable String notificationTargetARN) {
             this.notificationTargetARN = notificationTargetARN;
             return this;
         }
 
-        public Builder setRoleARN(@Nullable String roleARN) {
+        public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = roleARN;
             return this;
         }

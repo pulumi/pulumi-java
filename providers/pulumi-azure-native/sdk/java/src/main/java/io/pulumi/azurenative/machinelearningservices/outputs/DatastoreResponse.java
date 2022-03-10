@@ -261,82 +261,82 @@ public final class DatastoreResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAzureDataLakeSection(@Nullable AzureDataLakeSectionResponse azureDataLakeSection) {
+        public Builder azureDataLakeSection(@Nullable AzureDataLakeSectionResponse azureDataLakeSection) {
             this.azureDataLakeSection = azureDataLakeSection;
             return this;
         }
 
-        public Builder setAzureMySqlSection(@Nullable AzureMySqlSectionResponse azureMySqlSection) {
+        public Builder azureMySqlSection(@Nullable AzureMySqlSectionResponse azureMySqlSection) {
             this.azureMySqlSection = azureMySqlSection;
             return this;
         }
 
-        public Builder setAzurePostgreSqlSection(@Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection) {
+        public Builder azurePostgreSqlSection(@Nullable AzurePostgreSqlSectionResponse azurePostgreSqlSection) {
             this.azurePostgreSqlSection = azurePostgreSqlSection;
             return this;
         }
 
-        public Builder setAzureSqlDatabaseSection(@Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection) {
+        public Builder azureSqlDatabaseSection(@Nullable AzureSqlDatabaseSectionResponse azureSqlDatabaseSection) {
             this.azureSqlDatabaseSection = azureSqlDatabaseSection;
             return this;
         }
 
-        public Builder setAzureStorageSection(@Nullable AzureStorageSectionResponse azureStorageSection) {
+        public Builder azureStorageSection(@Nullable AzureStorageSectionResponse azureStorageSection) {
             this.azureStorageSection = azureStorageSection;
             return this;
         }
 
-        public Builder setCreatedBy(UserInfoResponse createdBy) {
+        public Builder createdBy(UserInfoResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDataStoreType(@Nullable String dataStoreType) {
+        public Builder dataStoreType(@Nullable String dataStoreType) {
             this.dataStoreType = dataStoreType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGlusterFsSection(@Nullable GlusterFsSectionResponse glusterFsSection) {
+        public Builder glusterFsSection(@Nullable GlusterFsSectionResponse glusterFsSection) {
             this.glusterFsSection = glusterFsSection;
             return this;
         }
 
-        public Builder setHasBeenValidated(@Nullable Boolean hasBeenValidated) {
+        public Builder hasBeenValidated(@Nullable Boolean hasBeenValidated) {
             this.hasBeenValidated = hasBeenValidated;
             return this;
         }
 
-        public Builder setLinkedInfo(@Nullable LinkedInfoResponse linkedInfo) {
+        public Builder linkedInfo(@Nullable LinkedInfoResponse linkedInfo) {
             this.linkedInfo = linkedInfo;
             return this;
         }
 
-        public Builder setModifiedBy(UserInfoResponse modifiedBy) {
+        public Builder modifiedBy(UserInfoResponse modifiedBy) {
             this.modifiedBy = Objects.requireNonNull(modifiedBy);
             return this;
         }
 
-        public Builder setModifiedTime(String modifiedTime) {
+        public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

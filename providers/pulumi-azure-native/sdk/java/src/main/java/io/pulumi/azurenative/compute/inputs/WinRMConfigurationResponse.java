@@ -58,7 +58,7 @@ public final class WinRMConfigurationResponse extends io.pulumi.resources.Invoke
     	      this.listeners = defaults.listeners;
         }
 
-        public Builder setListeners(@Nullable List<WinRMListenerResponse> listeners) {
+        public Builder listeners(@Nullable List<WinRMListenerResponse> listeners) {
             this.listeners = listeners;
             return this;
         }

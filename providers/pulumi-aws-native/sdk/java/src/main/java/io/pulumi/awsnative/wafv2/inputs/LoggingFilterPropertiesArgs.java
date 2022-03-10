@@ -75,22 +75,22 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
     	      this.filters = defaults.filters;
         }
 
-        public Builder setDefaultBehavior(Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior) {
+        public Builder defaultBehavior(Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
-        public Builder setDefaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
+        public Builder defaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
             this.defaultBehavior = Input.of(Objects.requireNonNull(defaultBehavior));
             return this;
         }
 
-        public Builder setFilters(Input<List<LoggingConfigurationFilterArgs>> filters) {
+        public Builder filters(Input<List<LoggingConfigurationFilterArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setFilters(List<LoggingConfigurationFilterArgs> filters) {
+        public Builder filters(List<LoggingConfigurationFilterArgs> filters) {
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }

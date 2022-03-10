@@ -161,72 +161,72 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     	      this.registrationStatus = defaults.registrationStatus;
         }
 
-        public Builder setBackupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
+        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Input.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder setContainerType(Input<String> containerType) {
+        public Builder containerType(Input<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Input.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder setExtendedInformation(@Nullable Input<GenericContainerExtendedInfoArgs> extendedInformation) {
+        public Builder extendedInformation(@Nullable Input<GenericContainerExtendedInfoArgs> extendedInformation) {
             this.extendedInformation = extendedInformation;
             return this;
         }
 
-        public Builder setExtendedInformation(@Nullable GenericContainerExtendedInfoArgs extendedInformation) {
+        public Builder extendedInformation(@Nullable GenericContainerExtendedInfoArgs extendedInformation) {
             this.extendedInformation = Input.ofNullable(extendedInformation);
             return this;
         }
 
-        public Builder setFabricName(@Nullable Input<String> fabricName) {
+        public Builder fabricName(@Nullable Input<String> fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
-        public Builder setFabricName(@Nullable String fabricName) {
+        public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = Input.ofNullable(fabricName);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Input<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = Input.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable String registrationStatus) {
+        public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = Input.ofNullable(registrationStatus);
             return this;
         }

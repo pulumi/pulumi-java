@@ -74,22 +74,22 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.weekDayOfMonth = defaults.weekDayOfMonth;
         }
 
-        public Builder setMonthDay(Input<Integer> monthDay) {
+        public Builder monthDay(Input<Integer> monthDay) {
             this.monthDay = Objects.requireNonNull(monthDay);
             return this;
         }
 
-        public Builder setMonthDay(Integer monthDay) {
+        public Builder monthDay(Integer monthDay) {
             this.monthDay = Input.of(Objects.requireNonNull(monthDay));
             return this;
         }
 
-        public Builder setWeekDayOfMonth(Input<WeekDayOfMonthArgs> weekDayOfMonth) {
+        public Builder weekDayOfMonth(Input<WeekDayOfMonthArgs> weekDayOfMonth) {
             this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
             return this;
         }
 
-        public Builder setWeekDayOfMonth(WeekDayOfMonthArgs weekDayOfMonth) {
+        public Builder weekDayOfMonth(WeekDayOfMonthArgs weekDayOfMonth) {
             this.weekDayOfMonth = Input.of(Objects.requireNonNull(weekDayOfMonth));
             return this;
         }

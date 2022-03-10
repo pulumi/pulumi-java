@@ -87,32 +87,32 @@ public final class ClusterConfigurationExecuteCommandConfigurationArgs extends i
     	      this.logging = defaults.logging;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLogConfiguration(@Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs> logConfiguration) {
+        public Builder logConfiguration(@Nullable Input<ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs> logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
 
-        public Builder setLogConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs logConfiguration) {
+        public Builder logConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationLogConfigurationArgs logConfiguration) {
             this.logConfiguration = Input.ofNullable(logConfiguration);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<String> logging) {
+        public Builder logging(@Nullable Input<String> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable String logging) {
+        public Builder logging(@Nullable String logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }

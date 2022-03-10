@@ -66,12 +66,12 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
     	      this.testingScore = defaults.testingScore;
         }
 
-        public Builder setTestingChallenge(String testingChallenge) {
+        public Builder testingChallenge(String testingChallenge) {
             this.testingChallenge = Objects.requireNonNull(testingChallenge);
             return this;
         }
 
-        public Builder setTestingScore(Double testingScore) {
+        public Builder testingScore(Double testingScore) {
             this.testingScore = Objects.requireNonNull(testingScore);
             return this;
         }

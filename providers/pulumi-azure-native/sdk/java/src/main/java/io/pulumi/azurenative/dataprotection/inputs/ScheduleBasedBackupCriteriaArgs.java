@@ -163,72 +163,72 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
     	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
         }
 
-        public Builder setAbsoluteCriteria(@Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria) {
+        public Builder absoluteCriteria(@Nullable Input<List<Either<String,AbsoluteMarker>>> absoluteCriteria) {
             this.absoluteCriteria = absoluteCriteria;
             return this;
         }
 
-        public Builder setAbsoluteCriteria(@Nullable List<Either<String,AbsoluteMarker>> absoluteCriteria) {
+        public Builder absoluteCriteria(@Nullable List<Either<String,AbsoluteMarker>> absoluteCriteria) {
             this.absoluteCriteria = Input.ofNullable(absoluteCriteria);
             return this;
         }
 
-        public Builder setDaysOfMonth(@Nullable Input<List<DayArgs>> daysOfMonth) {
+        public Builder daysOfMonth(@Nullable Input<List<DayArgs>> daysOfMonth) {
             this.daysOfMonth = daysOfMonth;
             return this;
         }
 
-        public Builder setDaysOfMonth(@Nullable List<DayArgs> daysOfMonth) {
+        public Builder daysOfMonth(@Nullable List<DayArgs> daysOfMonth) {
             this.daysOfMonth = Input.ofNullable(daysOfMonth);
             return this;
         }
 
-        public Builder setDaysOfTheWeek(@Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek) {
+        public Builder daysOfTheWeek(@Nullable Input<List<Either<String,DayOfWeek>>> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
-        public Builder setDaysOfTheWeek(@Nullable List<Either<String,DayOfWeek>> daysOfTheWeek) {
+        public Builder daysOfTheWeek(@Nullable List<Either<String,DayOfWeek>> daysOfTheWeek) {
             this.daysOfTheWeek = Input.ofNullable(daysOfTheWeek);
             return this;
         }
 
-        public Builder setMonthsOfYear(@Nullable Input<List<Either<String,Month>>> monthsOfYear) {
+        public Builder monthsOfYear(@Nullable Input<List<Either<String,Month>>> monthsOfYear) {
             this.monthsOfYear = monthsOfYear;
             return this;
         }
 
-        public Builder setMonthsOfYear(@Nullable List<Either<String,Month>> monthsOfYear) {
+        public Builder monthsOfYear(@Nullable List<Either<String,Month>> monthsOfYear) {
             this.monthsOfYear = Input.ofNullable(monthsOfYear);
             return this;
         }
 
-        public Builder setObjectType(Input<String> objectType) {
+        public Builder objectType(Input<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder setScheduleTimes(@Nullable Input<List<String>> scheduleTimes) {
+        public Builder scheduleTimes(@Nullable Input<List<String>> scheduleTimes) {
             this.scheduleTimes = scheduleTimes;
             return this;
         }
 
-        public Builder setScheduleTimes(@Nullable List<String> scheduleTimes) {
+        public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
             this.scheduleTimes = Input.ofNullable(scheduleTimes);
             return this;
         }
 
-        public Builder setWeeksOfTheMonth(@Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
+        public Builder weeksOfTheMonth(@Nullable Input<List<Either<String,WeekNumber>>> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
 
-        public Builder setWeeksOfTheMonth(@Nullable List<Either<String,WeekNumber>> weeksOfTheMonth) {
+        public Builder weeksOfTheMonth(@Nullable List<Either<String,WeekNumber>> weeksOfTheMonth) {
             this.weeksOfTheMonth = Input.ofNullable(weeksOfTheMonth);
             return this;
         }

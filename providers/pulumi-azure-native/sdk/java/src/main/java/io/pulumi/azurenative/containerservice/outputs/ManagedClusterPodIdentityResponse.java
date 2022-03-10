@@ -125,32 +125,32 @@ public final class ManagedClusterPodIdentityResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setBindingSelector(@Nullable String bindingSelector) {
+        public Builder bindingSelector(@Nullable String bindingSelector) {
             this.bindingSelector = bindingSelector;
             return this;
         }
 
-        public Builder setIdentity(UserAssignedIdentityResponse identity) {
+        public Builder identity(UserAssignedIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setProvisioningInfo(ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo) {
+        public Builder provisioningInfo(ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo) {
             this.provisioningInfo = Objects.requireNonNull(provisioningInfo);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

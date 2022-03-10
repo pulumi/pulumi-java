@@ -52,12 +52,12 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
     	      this.number = defaults.number;
         }
 
-        public Builder setNumber(Input<Integer> number) {
+        public Builder number(Input<Integer> number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Input.of(Objects.requireNonNull(number));
             return this;
         }

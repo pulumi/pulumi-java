@@ -85,17 +85,17 @@ public final class PredictionDistributionDefinitionResponse {
     	      this.totalPositives = defaults.totalPositives;
         }
 
-        public Builder setDistributions(@Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions) {
+        public Builder distributions(@Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions) {
             this.distributions = distributions;
             return this;
         }
 
-        public Builder setTotalNegatives(@Nullable Double totalNegatives) {
+        public Builder totalNegatives(@Nullable Double totalNegatives) {
             this.totalNegatives = totalNegatives;
             return this;
         }
 
-        public Builder setTotalPositives(@Nullable Double totalPositives) {
+        public Builder totalPositives(@Nullable Double totalPositives) {
             this.totalPositives = totalPositives;
             return this;
         }

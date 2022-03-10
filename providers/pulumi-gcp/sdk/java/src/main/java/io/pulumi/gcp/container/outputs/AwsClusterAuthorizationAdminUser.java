@@ -48,7 +48,7 @@ public final class AwsClusterAuthorizationAdminUser {
     	      this.username = defaults.username;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

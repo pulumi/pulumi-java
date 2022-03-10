@@ -81,17 +81,17 @@ public final class SkippedDetailResponse {
     	      this.incompatibleDevice = defaults.incompatibleDevice;
         }
 
-        public Builder setIncompatibleAppVersion(Boolean incompatibleAppVersion) {
+        public Builder incompatibleAppVersion(Boolean incompatibleAppVersion) {
             this.incompatibleAppVersion = Objects.requireNonNull(incompatibleAppVersion);
             return this;
         }
 
-        public Builder setIncompatibleArchitecture(Boolean incompatibleArchitecture) {
+        public Builder incompatibleArchitecture(Boolean incompatibleArchitecture) {
             this.incompatibleArchitecture = Objects.requireNonNull(incompatibleArchitecture);
             return this;
         }
 
-        public Builder setIncompatibleDevice(Boolean incompatibleDevice) {
+        public Builder incompatibleDevice(Boolean incompatibleDevice) {
             this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice);
             return this;
         }

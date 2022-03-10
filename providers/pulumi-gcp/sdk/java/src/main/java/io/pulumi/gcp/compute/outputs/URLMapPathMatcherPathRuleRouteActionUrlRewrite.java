@@ -75,12 +75,12 @@ public final class URLMapPathMatcherPathRuleRouteActionUrlRewrite {
     	      this.pathPrefixRewrite = defaults.pathPrefixRewrite;
         }
 
-        public Builder setHostRewrite(@Nullable String hostRewrite) {
+        public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = hostRewrite;
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }

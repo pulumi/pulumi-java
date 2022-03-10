@@ -70,22 +70,22 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
     	      this.transformType = defaults.transformType;
         }
 
-        public Builder setFindMatchesParameters(Input<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters) {
+        public Builder findMatchesParameters(Input<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters) {
             this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters);
             return this;
         }
 
-        public Builder setFindMatchesParameters(MLTransformParametersFindMatchesParametersGetArgs findMatchesParameters) {
+        public Builder findMatchesParameters(MLTransformParametersFindMatchesParametersGetArgs findMatchesParameters) {
             this.findMatchesParameters = Input.of(Objects.requireNonNull(findMatchesParameters));
             return this;
         }
 
-        public Builder setTransformType(Input<String> transformType) {
+        public Builder transformType(Input<String> transformType) {
             this.transformType = Objects.requireNonNull(transformType);
             return this;
         }
 
-        public Builder setTransformType(String transformType) {
+        public Builder transformType(String transformType) {
             this.transformType = Input.of(Objects.requireNonNull(transformType));
             return this;
         }

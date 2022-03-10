@@ -108,42 +108,42 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setLaunchParameter(Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter) {
+        public Builder launchParameter(Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter) {
             this.launchParameter = Objects.requireNonNull(launchParameter);
             return this;
         }
 
-        public Builder setLaunchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs launchParameter) {
+        public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs launchParameter) {
             this.launchParameter = Input.of(Objects.requireNonNull(launchParameter));
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<Boolean> validateOnly) {
+        public Builder validateOnly(@Nullable Input<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Boolean validateOnly) {
+        public Builder validateOnly(@Nullable Boolean validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

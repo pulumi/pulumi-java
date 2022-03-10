@@ -119,52 +119,52 @@ public final class OriginEndpointCmafPackageArgs extends io.pulumi.resources.Res
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setEncryption(@Nullable Input<OriginEndpointCmafEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<OriginEndpointCmafEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointCmafEncryptionArgs encryption) {
+        public Builder encryption(@Nullable OriginEndpointCmafEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setHlsManifests(@Nullable Input<List<OriginEndpointHlsManifestArgs>> hlsManifests) {
+        public Builder hlsManifests(@Nullable Input<List<OriginEndpointHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = hlsManifests;
             return this;
         }
 
-        public Builder setHlsManifests(@Nullable List<OriginEndpointHlsManifestArgs> hlsManifests) {
+        public Builder hlsManifests(@Nullable List<OriginEndpointHlsManifestArgs> hlsManifests) {
             this.hlsManifests = Input.ofNullable(hlsManifests);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
 
-        public Builder setSegmentPrefix(@Nullable Input<String> segmentPrefix) {
+        public Builder segmentPrefix(@Nullable Input<String> segmentPrefix) {
             this.segmentPrefix = segmentPrefix;
             return this;
         }
 
-        public Builder setSegmentPrefix(@Nullable String segmentPrefix) {
+        public Builder segmentPrefix(@Nullable String segmentPrefix) {
             this.segmentPrefix = Input.ofNullable(segmentPrefix);
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }

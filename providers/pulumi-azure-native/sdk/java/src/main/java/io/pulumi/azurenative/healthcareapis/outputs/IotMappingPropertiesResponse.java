@@ -50,7 +50,7 @@ public final class IotMappingPropertiesResponse {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(@Nullable Object content) {
+        public Builder content(@Nullable Object content) {
             this.content = content;
             return this;
         }

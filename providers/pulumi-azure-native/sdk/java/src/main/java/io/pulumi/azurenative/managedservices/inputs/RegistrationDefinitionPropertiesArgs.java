@@ -108,42 +108,42 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
     	      this.registrationDefinitionName = defaults.registrationDefinitionName;
         }
 
-        public Builder setAuthorizations(Input<List<AuthorizationArgs>> authorizations) {
+        public Builder authorizations(Input<List<AuthorizationArgs>> authorizations) {
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
 
-        public Builder setAuthorizations(List<AuthorizationArgs> authorizations) {
+        public Builder authorizations(List<AuthorizationArgs> authorizations) {
             this.authorizations = Input.of(Objects.requireNonNull(authorizations));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setManagedByTenantId(Input<String> managedByTenantId) {
+        public Builder managedByTenantId(Input<String> managedByTenantId) {
             this.managedByTenantId = Objects.requireNonNull(managedByTenantId);
             return this;
         }
 
-        public Builder setManagedByTenantId(String managedByTenantId) {
+        public Builder managedByTenantId(String managedByTenantId) {
             this.managedByTenantId = Input.of(Objects.requireNonNull(managedByTenantId));
             return this;
         }
 
-        public Builder setRegistrationDefinitionName(@Nullable Input<String> registrationDefinitionName) {
+        public Builder registrationDefinitionName(@Nullable Input<String> registrationDefinitionName) {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
 
-        public Builder setRegistrationDefinitionName(@Nullable String registrationDefinitionName) {
+        public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             this.registrationDefinitionName = Input.ofNullable(registrationDefinitionName);
             return this;
         }

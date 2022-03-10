@@ -65,12 +65,12 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatementStateme
     	      this.scope = defaults.scope;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

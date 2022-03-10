@@ -189,92 +189,92 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEncryption(@Nullable Input<PropertiesEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<PropertiesEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable PropertiesEncryptionArgs encryption) {
+        public Builder encryption(@Nullable PropertiesEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setEnterprisePolicyName(@Nullable Input<String> enterprisePolicyName) {
+        public Builder enterprisePolicyName(@Nullable Input<String> enterprisePolicyName) {
             this.enterprisePolicyName = enterprisePolicyName;
             return this;
         }
 
-        public Builder setEnterprisePolicyName(@Nullable String enterprisePolicyName) {
+        public Builder enterprisePolicyName(@Nullable String enterprisePolicyName) {
             this.enterprisePolicyName = Input.ofNullable(enterprisePolicyName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<EnterprisePolicyIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<EnterprisePolicyIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EnterprisePolicyIdentityArgs identity) {
+        public Builder identity(@Nullable EnterprisePolicyIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,EnterprisePolicyKind>> kind) {
+        public Builder kind(Input<Either<String,EnterprisePolicyKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,EnterprisePolicyKind> kind) {
+        public Builder kind(Either<String,EnterprisePolicyKind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLockbox(@Nullable Input<PropertiesLockboxArgs> lockbox) {
+        public Builder lockbox(@Nullable Input<PropertiesLockboxArgs> lockbox) {
             this.lockbox = lockbox;
             return this;
         }
 
-        public Builder setLockbox(@Nullable PropertiesLockboxArgs lockbox) {
+        public Builder lockbox(@Nullable PropertiesLockboxArgs lockbox) {
             this.lockbox = Input.ofNullable(lockbox);
             return this;
         }
 
-        public Builder setNetworkInjection(@Nullable Input<PropertiesNetworkInjectionArgs> networkInjection) {
+        public Builder networkInjection(@Nullable Input<PropertiesNetworkInjectionArgs> networkInjection) {
             this.networkInjection = networkInjection;
             return this;
         }
 
-        public Builder setNetworkInjection(@Nullable PropertiesNetworkInjectionArgs networkInjection) {
+        public Builder networkInjection(@Nullable PropertiesNetworkInjectionArgs networkInjection) {
             this.networkInjection = Input.ofNullable(networkInjection);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

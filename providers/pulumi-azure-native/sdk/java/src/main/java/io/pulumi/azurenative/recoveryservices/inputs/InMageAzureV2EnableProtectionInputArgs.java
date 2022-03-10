@@ -383,212 +383,212 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
     	      this.targetVmSize = defaults.targetVmSize;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = Input.ofNullable(diskEncryptionSetId);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<Either<String,DiskAccountType>> diskType) {
+        public Builder diskType(@Nullable Input<Either<String,DiskAccountType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable Either<String,DiskAccountType> diskType) {
+        public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setDisksToInclude(@Nullable Input<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude) {
+        public Builder disksToInclude(@Nullable Input<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude) {
             this.disksToInclude = disksToInclude;
             return this;
         }
 
-        public Builder setDisksToInclude(@Nullable List<InMageAzureV2DiskInputDetailsArgs> disksToInclude) {
+        public Builder disksToInclude(@Nullable List<InMageAzureV2DiskInputDetailsArgs> disksToInclude) {
             this.disksToInclude = Input.ofNullable(disksToInclude);
             return this;
         }
 
-        public Builder setEnableRdpOnTargetOption(@Nullable Input<String> enableRdpOnTargetOption) {
+        public Builder enableRdpOnTargetOption(@Nullable Input<String> enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
 
-        public Builder setEnableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
+        public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = Input.ofNullable(enableRdpOnTargetOption);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setLogStorageAccountId(@Nullable Input<String> logStorageAccountId) {
+        public Builder logStorageAccountId(@Nullable Input<String> logStorageAccountId) {
             this.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
-        public Builder setLogStorageAccountId(@Nullable String logStorageAccountId) {
+        public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
             this.logStorageAccountId = Input.ofNullable(logStorageAccountId);
             return this;
         }
 
-        public Builder setMasterTargetId(@Nullable Input<String> masterTargetId) {
+        public Builder masterTargetId(@Nullable Input<String> masterTargetId) {
             this.masterTargetId = masterTargetId;
             return this;
         }
 
-        public Builder setMasterTargetId(@Nullable String masterTargetId) {
+        public Builder masterTargetId(@Nullable String masterTargetId) {
             this.masterTargetId = Input.ofNullable(masterTargetId);
             return this;
         }
 
-        public Builder setMultiVmGroupId(@Nullable Input<String> multiVmGroupId) {
+        public Builder multiVmGroupId(@Nullable Input<String> multiVmGroupId) {
             this.multiVmGroupId = multiVmGroupId;
             return this;
         }
 
-        public Builder setMultiVmGroupId(@Nullable String multiVmGroupId) {
+        public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             this.multiVmGroupId = Input.ofNullable(multiVmGroupId);
             return this;
         }
 
-        public Builder setMultiVmGroupName(@Nullable Input<String> multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable Input<String> multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
-        public Builder setMultiVmGroupName(@Nullable String multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = Input.ofNullable(multiVmGroupName);
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable Input<String> processServerId) {
+        public Builder processServerId(@Nullable Input<String> processServerId) {
             this.processServerId = processServerId;
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable String processServerId) {
+        public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = Input.ofNullable(processServerId);
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable Input<String> runAsAccountId) {
+        public Builder runAsAccountId(@Nullable Input<String> runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable String runAsAccountId) {
+        public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = Input.ofNullable(runAsAccountId);
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Input.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Input.ofNullable(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable Input<String> targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable Input<String> targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = Input.ofNullable(targetAvailabilityZone);
             return this;
         }
 
-        public Builder setTargetAzureNetworkId(@Nullable Input<String> targetAzureNetworkId) {
+        public Builder targetAzureNetworkId(@Nullable Input<String> targetAzureNetworkId) {
             this.targetAzureNetworkId = targetAzureNetworkId;
             return this;
         }
 
-        public Builder setTargetAzureNetworkId(@Nullable String targetAzureNetworkId) {
+        public Builder targetAzureNetworkId(@Nullable String targetAzureNetworkId) {
             this.targetAzureNetworkId = Input.ofNullable(targetAzureNetworkId);
             return this;
         }
 
-        public Builder setTargetAzureSubnetId(@Nullable Input<String> targetAzureSubnetId) {
+        public Builder targetAzureSubnetId(@Nullable Input<String> targetAzureSubnetId) {
             this.targetAzureSubnetId = targetAzureSubnetId;
             return this;
         }
 
-        public Builder setTargetAzureSubnetId(@Nullable String targetAzureSubnetId) {
+        public Builder targetAzureSubnetId(@Nullable String targetAzureSubnetId) {
             this.targetAzureSubnetId = Input.ofNullable(targetAzureSubnetId);
             return this;
         }
 
-        public Builder setTargetAzureV1ResourceGroupId(@Nullable Input<String> targetAzureV1ResourceGroupId) {
+        public Builder targetAzureV1ResourceGroupId(@Nullable Input<String> targetAzureV1ResourceGroupId) {
             this.targetAzureV1ResourceGroupId = targetAzureV1ResourceGroupId;
             return this;
         }
 
-        public Builder setTargetAzureV1ResourceGroupId(@Nullable String targetAzureV1ResourceGroupId) {
+        public Builder targetAzureV1ResourceGroupId(@Nullable String targetAzureV1ResourceGroupId) {
             this.targetAzureV1ResourceGroupId = Input.ofNullable(targetAzureV1ResourceGroupId);
             return this;
         }
 
-        public Builder setTargetAzureV2ResourceGroupId(@Nullable Input<String> targetAzureV2ResourceGroupId) {
+        public Builder targetAzureV2ResourceGroupId(@Nullable Input<String> targetAzureV2ResourceGroupId) {
             this.targetAzureV2ResourceGroupId = targetAzureV2ResourceGroupId;
             return this;
         }
 
-        public Builder setTargetAzureV2ResourceGroupId(@Nullable String targetAzureV2ResourceGroupId) {
+        public Builder targetAzureV2ResourceGroupId(@Nullable String targetAzureV2ResourceGroupId) {
             this.targetAzureV2ResourceGroupId = Input.ofNullable(targetAzureV2ResourceGroupId);
             return this;
         }
 
-        public Builder setTargetAzureVmName(@Nullable Input<String> targetAzureVmName) {
+        public Builder targetAzureVmName(@Nullable Input<String> targetAzureVmName) {
             this.targetAzureVmName = targetAzureVmName;
             return this;
         }
 
-        public Builder setTargetAzureVmName(@Nullable String targetAzureVmName) {
+        public Builder targetAzureVmName(@Nullable String targetAzureVmName) {
             this.targetAzureVmName = Input.ofNullable(targetAzureVmName);
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable Input<String> targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable Input<String> targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = Input.ofNullable(targetProximityPlacementGroupId);
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable Input<String> targetVmSize) {
+        public Builder targetVmSize(@Nullable Input<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable String targetVmSize) {
+        public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = Input.ofNullable(targetVmSize);
             return this;
         }

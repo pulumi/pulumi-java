@@ -159,72 +159,72 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     	      this.webAccessUris = defaults.webAccessUris;
         }
 
-        public Builder setAllMetrics(@Nullable Input<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics) {
+        public Builder allMetrics(@Nullable Input<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics) {
             this.allMetrics = allMetrics;
             return this;
         }
 
-        public Builder setAllMetrics(@Nullable List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> allMetrics) {
+        public Builder allMetrics(@Nullable List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> allMetrics) {
             this.allMetrics = Input.ofNullable(allMetrics);
             return this;
         }
 
-        public Builder setBuiltInAlgorithmOutput(@Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput) {
+        public Builder builtInAlgorithmOutput(@Nullable Input<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
 
-        public Builder setBuiltInAlgorithmOutput(@Nullable GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
+        public Builder builtInAlgorithmOutput(@Nullable GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = Input.ofNullable(builtInAlgorithmOutput);
             return this;
         }
 
-        public Builder setFinalMetric(@Nullable Input<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric) {
+        public Builder finalMetric(@Nullable Input<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric) {
             this.finalMetric = finalMetric;
             return this;
         }
 
-        public Builder setFinalMetric(@Nullable GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs finalMetric) {
+        public Builder finalMetric(@Nullable GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs finalMetric) {
             this.finalMetric = Input.ofNullable(finalMetric);
             return this;
         }
 
-        public Builder setHyperparameters(@Nullable Input<Map<String,String>> hyperparameters) {
+        public Builder hyperparameters(@Nullable Input<Map<String,String>> hyperparameters) {
             this.hyperparameters = hyperparameters;
             return this;
         }
 
-        public Builder setHyperparameters(@Nullable Map<String,String> hyperparameters) {
+        public Builder hyperparameters(@Nullable Map<String,String> hyperparameters) {
             this.hyperparameters = Input.ofNullable(hyperparameters);
             return this;
         }
 
-        public Builder setIsTrialStoppedEarly(@Nullable Input<Boolean> isTrialStoppedEarly) {
+        public Builder isTrialStoppedEarly(@Nullable Input<Boolean> isTrialStoppedEarly) {
             this.isTrialStoppedEarly = isTrialStoppedEarly;
             return this;
         }
 
-        public Builder setIsTrialStoppedEarly(@Nullable Boolean isTrialStoppedEarly) {
+        public Builder isTrialStoppedEarly(@Nullable Boolean isTrialStoppedEarly) {
             this.isTrialStoppedEarly = Input.ofNullable(isTrialStoppedEarly);
             return this;
         }
 
-        public Builder setTrialId(@Nullable Input<String> trialId) {
+        public Builder trialId(@Nullable Input<String> trialId) {
             this.trialId = trialId;
             return this;
         }
 
-        public Builder setTrialId(@Nullable String trialId) {
+        public Builder trialId(@Nullable String trialId) {
             this.trialId = Input.ofNullable(trialId);
             return this;
         }
 
-        public Builder setWebAccessUris(@Nullable Input<Map<String,String>> webAccessUris) {
+        public Builder webAccessUris(@Nullable Input<Map<String,String>> webAccessUris) {
             this.webAccessUris = webAccessUris;
             return this;
         }
 
-        public Builder setWebAccessUris(@Nullable Map<String,String> webAccessUris) {
+        public Builder webAccessUris(@Nullable Map<String,String> webAccessUris) {
             this.webAccessUris = Input.ofNullable(webAccessUris);
             return this;
         }

@@ -68,12 +68,12 @@ public final class DeliveryRuleRequestSchemeConditionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(RequestSchemeMatchConditionParametersResponse parameters) {
+        public Builder parameters(RequestSchemeMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

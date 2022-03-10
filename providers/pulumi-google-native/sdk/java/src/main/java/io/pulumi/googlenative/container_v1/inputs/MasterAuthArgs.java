@@ -91,32 +91,32 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setClientCertificateConfig(@Nullable Input<ClientCertificateConfigArgs> clientCertificateConfig) {
+        public Builder clientCertificateConfig(@Nullable Input<ClientCertificateConfigArgs> clientCertificateConfig) {
             this.clientCertificateConfig = clientCertificateConfig;
             return this;
         }
 
-        public Builder setClientCertificateConfig(@Nullable ClientCertificateConfigArgs clientCertificateConfig) {
+        public Builder clientCertificateConfig(@Nullable ClientCertificateConfigArgs clientCertificateConfig) {
             this.clientCertificateConfig = Input.ofNullable(clientCertificateConfig);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

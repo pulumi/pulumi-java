@@ -68,12 +68,12 @@ public final class GetIntegrationArgs extends io.pulumi.resources.InvokeArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

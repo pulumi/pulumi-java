@@ -72,22 +72,22 @@ public final class RegistryScanningConfigurationArgs extends io.pulumi.resources
     	      this.scanType = defaults.scanType;
         }
 
-        public Builder setRules(@Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<RegistryScanningConfigurationRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RegistryScanningConfigurationRuleArgs> rules) {
+        public Builder rules(@Nullable List<RegistryScanningConfigurationRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setScanType(Input<String> scanType) {
+        public Builder scanType(Input<String> scanType) {
             this.scanType = Objects.requireNonNull(scanType);
             return this;
         }
 
-        public Builder setScanType(String scanType) {
+        public Builder scanType(String scanType) {
             this.scanType = Input.of(Objects.requireNonNull(scanType));
             return this;
         }

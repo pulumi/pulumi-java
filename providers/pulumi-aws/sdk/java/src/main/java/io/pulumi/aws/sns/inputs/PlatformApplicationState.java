@@ -230,122 +230,122 @@ public final class PlatformApplicationState extends io.pulumi.resources.Resource
     	      this.successFeedbackSampleRate = defaults.successFeedbackSampleRate;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEventDeliveryFailureTopicArn(@Nullable Input<String> eventDeliveryFailureTopicArn) {
+        public Builder eventDeliveryFailureTopicArn(@Nullable Input<String> eventDeliveryFailureTopicArn) {
             this.eventDeliveryFailureTopicArn = eventDeliveryFailureTopicArn;
             return this;
         }
 
-        public Builder setEventDeliveryFailureTopicArn(@Nullable String eventDeliveryFailureTopicArn) {
+        public Builder eventDeliveryFailureTopicArn(@Nullable String eventDeliveryFailureTopicArn) {
             this.eventDeliveryFailureTopicArn = Input.ofNullable(eventDeliveryFailureTopicArn);
             return this;
         }
 
-        public Builder setEventEndpointCreatedTopicArn(@Nullable Input<String> eventEndpointCreatedTopicArn) {
+        public Builder eventEndpointCreatedTopicArn(@Nullable Input<String> eventEndpointCreatedTopicArn) {
             this.eventEndpointCreatedTopicArn = eventEndpointCreatedTopicArn;
             return this;
         }
 
-        public Builder setEventEndpointCreatedTopicArn(@Nullable String eventEndpointCreatedTopicArn) {
+        public Builder eventEndpointCreatedTopicArn(@Nullable String eventEndpointCreatedTopicArn) {
             this.eventEndpointCreatedTopicArn = Input.ofNullable(eventEndpointCreatedTopicArn);
             return this;
         }
 
-        public Builder setEventEndpointDeletedTopicArn(@Nullable Input<String> eventEndpointDeletedTopicArn) {
+        public Builder eventEndpointDeletedTopicArn(@Nullable Input<String> eventEndpointDeletedTopicArn) {
             this.eventEndpointDeletedTopicArn = eventEndpointDeletedTopicArn;
             return this;
         }
 
-        public Builder setEventEndpointDeletedTopicArn(@Nullable String eventEndpointDeletedTopicArn) {
+        public Builder eventEndpointDeletedTopicArn(@Nullable String eventEndpointDeletedTopicArn) {
             this.eventEndpointDeletedTopicArn = Input.ofNullable(eventEndpointDeletedTopicArn);
             return this;
         }
 
-        public Builder setEventEndpointUpdatedTopicArn(@Nullable Input<String> eventEndpointUpdatedTopicArn) {
+        public Builder eventEndpointUpdatedTopicArn(@Nullable Input<String> eventEndpointUpdatedTopicArn) {
             this.eventEndpointUpdatedTopicArn = eventEndpointUpdatedTopicArn;
             return this;
         }
 
-        public Builder setEventEndpointUpdatedTopicArn(@Nullable String eventEndpointUpdatedTopicArn) {
+        public Builder eventEndpointUpdatedTopicArn(@Nullable String eventEndpointUpdatedTopicArn) {
             this.eventEndpointUpdatedTopicArn = Input.ofNullable(eventEndpointUpdatedTopicArn);
             return this;
         }
 
-        public Builder setFailureFeedbackRoleArn(@Nullable Input<String> failureFeedbackRoleArn) {
+        public Builder failureFeedbackRoleArn(@Nullable Input<String> failureFeedbackRoleArn) {
             this.failureFeedbackRoleArn = failureFeedbackRoleArn;
             return this;
         }
 
-        public Builder setFailureFeedbackRoleArn(@Nullable String failureFeedbackRoleArn) {
+        public Builder failureFeedbackRoleArn(@Nullable String failureFeedbackRoleArn) {
             this.failureFeedbackRoleArn = Input.ofNullable(failureFeedbackRoleArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Input<String> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setPlatformCredential(@Nullable Input<String> platformCredential) {
+        public Builder platformCredential(@Nullable Input<String> platformCredential) {
             this.platformCredential = platformCredential;
             return this;
         }
 
-        public Builder setPlatformCredential(@Nullable String platformCredential) {
+        public Builder platformCredential(@Nullable String platformCredential) {
             this.platformCredential = Input.ofNullable(platformCredential);
             return this;
         }
 
-        public Builder setPlatformPrincipal(@Nullable Input<String> platformPrincipal) {
+        public Builder platformPrincipal(@Nullable Input<String> platformPrincipal) {
             this.platformPrincipal = platformPrincipal;
             return this;
         }
 
-        public Builder setPlatformPrincipal(@Nullable String platformPrincipal) {
+        public Builder platformPrincipal(@Nullable String platformPrincipal) {
             this.platformPrincipal = Input.ofNullable(platformPrincipal);
             return this;
         }
 
-        public Builder setSuccessFeedbackRoleArn(@Nullable Input<String> successFeedbackRoleArn) {
+        public Builder successFeedbackRoleArn(@Nullable Input<String> successFeedbackRoleArn) {
             this.successFeedbackRoleArn = successFeedbackRoleArn;
             return this;
         }
 
-        public Builder setSuccessFeedbackRoleArn(@Nullable String successFeedbackRoleArn) {
+        public Builder successFeedbackRoleArn(@Nullable String successFeedbackRoleArn) {
             this.successFeedbackRoleArn = Input.ofNullable(successFeedbackRoleArn);
             return this;
         }
 
-        public Builder setSuccessFeedbackSampleRate(@Nullable Input<String> successFeedbackSampleRate) {
+        public Builder successFeedbackSampleRate(@Nullable Input<String> successFeedbackSampleRate) {
             this.successFeedbackSampleRate = successFeedbackSampleRate;
             return this;
         }
 
-        public Builder setSuccessFeedbackSampleRate(@Nullable String successFeedbackSampleRate) {
+        public Builder successFeedbackSampleRate(@Nullable String successFeedbackSampleRate) {
             this.successFeedbackSampleRate = Input.ofNullable(successFeedbackSampleRate);
             return this;
         }

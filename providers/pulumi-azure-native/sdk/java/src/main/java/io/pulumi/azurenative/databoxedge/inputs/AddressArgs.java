@@ -154,72 +154,72 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setAddressLine1(@Nullable Input<String> addressLine1) {
+        public Builder addressLine1(@Nullable Input<String> addressLine1) {
             this.addressLine1 = addressLine1;
             return this;
         }
 
-        public Builder setAddressLine1(@Nullable String addressLine1) {
+        public Builder addressLine1(@Nullable String addressLine1) {
             this.addressLine1 = Input.ofNullable(addressLine1);
             return this;
         }
 
-        public Builder setAddressLine2(@Nullable Input<String> addressLine2) {
+        public Builder addressLine2(@Nullable Input<String> addressLine2) {
             this.addressLine2 = addressLine2;
             return this;
         }
 
-        public Builder setAddressLine2(@Nullable String addressLine2) {
+        public Builder addressLine2(@Nullable String addressLine2) {
             this.addressLine2 = Input.ofNullable(addressLine2);
             return this;
         }
 
-        public Builder setAddressLine3(@Nullable Input<String> addressLine3) {
+        public Builder addressLine3(@Nullable Input<String> addressLine3) {
             this.addressLine3 = addressLine3;
             return this;
         }
 
-        public Builder setAddressLine3(@Nullable String addressLine3) {
+        public Builder addressLine3(@Nullable String addressLine3) {
             this.addressLine3 = Input.ofNullable(addressLine3);
             return this;
         }
 
-        public Builder setCity(@Nullable Input<String> city) {
+        public Builder city(@Nullable Input<String> city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = Input.ofNullable(city);
             return this;
         }
 
-        public Builder setCountry(Input<String> country) {
+        public Builder country(Input<String> country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
 
-        public Builder setCountry(String country) {
+        public Builder country(String country) {
             this.country = Input.of(Objects.requireNonNull(country));
             return this;
         }
 
-        public Builder setPostalCode(@Nullable Input<String> postalCode) {
+        public Builder postalCode(@Nullable Input<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Input.ofNullable(postalCode);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

@@ -220,107 +220,107 @@ public final class MethodState extends io.pulumi.resources.ResourceArgs {
     	      this.restApi = defaults.restApi;
         }
 
-        public Builder setApiKeyRequired(@Nullable Input<Boolean> apiKeyRequired) {
+        public Builder apiKeyRequired(@Nullable Input<Boolean> apiKeyRequired) {
             this.apiKeyRequired = apiKeyRequired;
             return this;
         }
 
-        public Builder setApiKeyRequired(@Nullable Boolean apiKeyRequired) {
+        public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
             this.apiKeyRequired = Input.ofNullable(apiKeyRequired);
             return this;
         }
 
-        public Builder setAuthorization(@Nullable Input<String> authorization) {
+        public Builder authorization(@Nullable Input<String> authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable String authorization) {
+        public Builder authorization(@Nullable String authorization) {
             this.authorization = Input.ofNullable(authorization);
             return this;
         }
 
-        public Builder setAuthorizationScopes(@Nullable Input<List<String>> authorizationScopes) {
+        public Builder authorizationScopes(@Nullable Input<List<String>> authorizationScopes) {
             this.authorizationScopes = authorizationScopes;
             return this;
         }
 
-        public Builder setAuthorizationScopes(@Nullable List<String> authorizationScopes) {
+        public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
             this.authorizationScopes = Input.ofNullable(authorizationScopes);
             return this;
         }
 
-        public Builder setAuthorizerId(@Nullable Input<String> authorizerId) {
+        public Builder authorizerId(@Nullable Input<String> authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
 
-        public Builder setAuthorizerId(@Nullable String authorizerId) {
+        public Builder authorizerId(@Nullable String authorizerId) {
             this.authorizerId = Input.ofNullable(authorizerId);
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Input<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Input.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder setOperationName(@Nullable Input<String> operationName) {
+        public Builder operationName(@Nullable Input<String> operationName) {
             this.operationName = operationName;
             return this;
         }
 
-        public Builder setOperationName(@Nullable String operationName) {
+        public Builder operationName(@Nullable String operationName) {
             this.operationName = Input.ofNullable(operationName);
             return this;
         }
 
-        public Builder setRequestModels(@Nullable Input<Map<String,String>> requestModels) {
+        public Builder requestModels(@Nullable Input<Map<String,String>> requestModels) {
             this.requestModels = requestModels;
             return this;
         }
 
-        public Builder setRequestModels(@Nullable Map<String,String> requestModels) {
+        public Builder requestModels(@Nullable Map<String,String> requestModels) {
             this.requestModels = Input.ofNullable(requestModels);
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Input<Map<String,Boolean>> requestParameters) {
+        public Builder requestParameters(@Nullable Input<Map<String,Boolean>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Map<String,Boolean> requestParameters) {
+        public Builder requestParameters(@Nullable Map<String,Boolean> requestParameters) {
             this.requestParameters = Input.ofNullable(requestParameters);
             return this;
         }
 
-        public Builder setRequestValidatorId(@Nullable Input<String> requestValidatorId) {
+        public Builder requestValidatorId(@Nullable Input<String> requestValidatorId) {
             this.requestValidatorId = requestValidatorId;
             return this;
         }
 
-        public Builder setRequestValidatorId(@Nullable String requestValidatorId) {
+        public Builder requestValidatorId(@Nullable String requestValidatorId) {
             this.requestValidatorId = Input.ofNullable(requestValidatorId);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setRestApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Input<String> restApi) {
             this.restApi = restApi;
             return this;
         }

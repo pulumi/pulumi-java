@@ -110,42 +110,42 @@ public final class ApplicationGatewayRewriteRuleArgs extends io.pulumi.resources
     	      this.ruleSequence = defaults.ruleSequence;
         }
 
-        public Builder setActionSet(@Nullable Input<ApplicationGatewayRewriteRuleActionSetArgs> actionSet) {
+        public Builder actionSet(@Nullable Input<ApplicationGatewayRewriteRuleActionSetArgs> actionSet) {
             this.actionSet = actionSet;
             return this;
         }
 
-        public Builder setActionSet(@Nullable ApplicationGatewayRewriteRuleActionSetArgs actionSet) {
+        public Builder actionSet(@Nullable ApplicationGatewayRewriteRuleActionSetArgs actionSet) {
             this.actionSet = Input.ofNullable(actionSet);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<ApplicationGatewayRewriteRuleConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ApplicationGatewayRewriteRuleConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleSequence(@Nullable Input<Integer> ruleSequence) {
+        public Builder ruleSequence(@Nullable Input<Integer> ruleSequence) {
             this.ruleSequence = ruleSequence;
             return this;
         }
 
-        public Builder setRuleSequence(@Nullable Integer ruleSequence) {
+        public Builder ruleSequence(@Nullable Integer ruleSequence) {
             this.ruleSequence = Input.ofNullable(ruleSequence);
             return this;
         }

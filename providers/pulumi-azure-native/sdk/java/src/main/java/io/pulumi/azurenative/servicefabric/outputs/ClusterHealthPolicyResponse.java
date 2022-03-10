@@ -110,17 +110,17 @@ public final class ClusterHealthPolicyResponse {
     	      this.maxPercentUnhealthyNodes = defaults.maxPercentUnhealthyNodes;
         }
 
-        public Builder setApplicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies) {
+        public Builder applicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies) {
             this.applicationHealthPolicies = applicationHealthPolicies;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
+        public Builder maxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
             this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
+        public Builder maxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
         }

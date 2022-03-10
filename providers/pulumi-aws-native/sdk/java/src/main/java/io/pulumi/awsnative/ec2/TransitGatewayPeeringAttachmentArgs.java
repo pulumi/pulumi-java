@@ -137,62 +137,62 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setOptions(@Nullable Input<TransitGatewayPeeringAttachmentOptionsArgs> options) {
+        public Builder options(@Nullable Input<TransitGatewayPeeringAttachmentOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable TransitGatewayPeeringAttachmentOptionsArgs options) {
+        public Builder options(@Nullable TransitGatewayPeeringAttachmentOptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setPeerAccountId(Input<String> peerAccountId) {
+        public Builder peerAccountId(Input<String> peerAccountId) {
             this.peerAccountId = Objects.requireNonNull(peerAccountId);
             return this;
         }
 
-        public Builder setPeerAccountId(String peerAccountId) {
+        public Builder peerAccountId(String peerAccountId) {
             this.peerAccountId = Input.of(Objects.requireNonNull(peerAccountId));
             return this;
         }
 
-        public Builder setPeerRegion(Input<String> peerRegion) {
+        public Builder peerRegion(Input<String> peerRegion) {
             this.peerRegion = Objects.requireNonNull(peerRegion);
             return this;
         }
 
-        public Builder setPeerRegion(String peerRegion) {
+        public Builder peerRegion(String peerRegion) {
             this.peerRegion = Input.of(Objects.requireNonNull(peerRegion));
             return this;
         }
 
-        public Builder setPeerTransitGatewayId(Input<String> peerTransitGatewayId) {
+        public Builder peerTransitGatewayId(Input<String> peerTransitGatewayId) {
             this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
             return this;
         }
 
-        public Builder setPeerTransitGatewayId(String peerTransitGatewayId) {
+        public Builder peerTransitGatewayId(String peerTransitGatewayId) {
             this.peerTransitGatewayId = Input.of(Objects.requireNonNull(peerTransitGatewayId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TransitGatewayPeeringAttachmentTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TransitGatewayPeeringAttachmentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayPeeringAttachmentTagArgs> tags) {
+        public Builder tags(@Nullable List<TransitGatewayPeeringAttachmentTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(Input<String> transitGatewayId) {
+        public Builder transitGatewayId(Input<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }

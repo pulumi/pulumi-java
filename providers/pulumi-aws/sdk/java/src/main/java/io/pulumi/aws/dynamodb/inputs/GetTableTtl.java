@@ -61,12 +61,12 @@ public final class GetTableTtl extends io.pulumi.resources.InvokeArgs {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

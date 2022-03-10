@@ -129,52 +129,52 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     	      this.relativeUri = defaults.relativeUri;
         }
 
-        public Builder setAppEngineRouting(@Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting) {
+        public Builder appEngineRouting(@Nullable Input<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting) {
             this.appEngineRouting = appEngineRouting;
             return this;
         }
 
-        public Builder setAppEngineRouting(@Nullable JobAppEngineHttpTargetAppEngineRoutingArgs appEngineRouting) {
+        public Builder appEngineRouting(@Nullable JobAppEngineHttpTargetAppEngineRoutingArgs appEngineRouting) {
             this.appEngineRouting = Input.ofNullable(appEngineRouting);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Input<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Input<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Input.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder setRelativeUri(Input<String> relativeUri) {
+        public Builder relativeUri(Input<String> relativeUri) {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
 
-        public Builder setRelativeUri(String relativeUri) {
+        public Builder relativeUri(String relativeUri) {
             this.relativeUri = Input.of(Objects.requireNonNull(relativeUri));
             return this;
         }

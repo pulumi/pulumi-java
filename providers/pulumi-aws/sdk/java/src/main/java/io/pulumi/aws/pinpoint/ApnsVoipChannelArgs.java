@@ -186,92 +186,92 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tokenKeyId = defaults.tokenKeyId;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setBundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Input<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Input.ofNullable(bundleId);
             return this;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setDefaultAuthenticationMethod(@Nullable Input<String> defaultAuthenticationMethod) {
+        public Builder defaultAuthenticationMethod(@Nullable Input<String> defaultAuthenticationMethod) {
             this.defaultAuthenticationMethod = defaultAuthenticationMethod;
             return this;
         }
 
-        public Builder setDefaultAuthenticationMethod(@Nullable String defaultAuthenticationMethod) {
+        public Builder defaultAuthenticationMethod(@Nullable String defaultAuthenticationMethod) {
             this.defaultAuthenticationMethod = Input.ofNullable(defaultAuthenticationMethod);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setTeamId(@Nullable Input<String> teamId) {
+        public Builder teamId(@Nullable Input<String> teamId) {
             this.teamId = teamId;
             return this;
         }
 
-        public Builder setTeamId(@Nullable String teamId) {
+        public Builder teamId(@Nullable String teamId) {
             this.teamId = Input.ofNullable(teamId);
             return this;
         }
 
-        public Builder setTokenKey(@Nullable Input<String> tokenKey) {
+        public Builder tokenKey(@Nullable Input<String> tokenKey) {
             this.tokenKey = tokenKey;
             return this;
         }
 
-        public Builder setTokenKey(@Nullable String tokenKey) {
+        public Builder tokenKey(@Nullable String tokenKey) {
             this.tokenKey = Input.ofNullable(tokenKey);
             return this;
         }
 
-        public Builder setTokenKeyId(@Nullable Input<String> tokenKeyId) {
+        public Builder tokenKeyId(@Nullable Input<String> tokenKeyId) {
             this.tokenKeyId = tokenKeyId;
             return this;
         }
 
-        public Builder setTokenKeyId(@Nullable String tokenKeyId) {
+        public Builder tokenKeyId(@Nullable String tokenKeyId) {
             this.tokenKeyId = Input.ofNullable(tokenKeyId);
             return this;
         }

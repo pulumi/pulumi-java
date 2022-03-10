@@ -74,12 +74,12 @@ public final class ApplicationGatewayCustomErrorResponse extends io.pulumi.resou
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setCustomErrorPageUrl(@Nullable String customErrorPageUrl) {
+        public Builder customErrorPageUrl(@Nullable String customErrorPageUrl) {
             this.customErrorPageUrl = customErrorPageUrl;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }

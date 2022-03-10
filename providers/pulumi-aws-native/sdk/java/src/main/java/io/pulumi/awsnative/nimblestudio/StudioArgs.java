@@ -128,62 +128,62 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userRoleArn = defaults.userRoleArn;
         }
 
-        public Builder setAdminRoleArn(Input<String> adminRoleArn) {
+        public Builder adminRoleArn(Input<String> adminRoleArn) {
             this.adminRoleArn = Objects.requireNonNull(adminRoleArn);
             return this;
         }
 
-        public Builder setAdminRoleArn(String adminRoleArn) {
+        public Builder adminRoleArn(String adminRoleArn) {
             this.adminRoleArn = Input.of(Objects.requireNonNull(adminRoleArn));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setStudioEncryptionConfiguration(@Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration) {
+        public Builder studioEncryptionConfiguration(@Nullable Input<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration) {
             this.studioEncryptionConfiguration = studioEncryptionConfiguration;
             return this;
         }
 
-        public Builder setStudioEncryptionConfiguration(@Nullable StudioEncryptionConfigurationArgs studioEncryptionConfiguration) {
+        public Builder studioEncryptionConfiguration(@Nullable StudioEncryptionConfigurationArgs studioEncryptionConfiguration) {
             this.studioEncryptionConfiguration = Input.ofNullable(studioEncryptionConfiguration);
             return this;
         }
 
-        public Builder setStudioName(@Nullable Input<String> studioName) {
+        public Builder studioName(@Nullable Input<String> studioName) {
             this.studioName = studioName;
             return this;
         }
 
-        public Builder setStudioName(@Nullable String studioName) {
+        public Builder studioName(@Nullable String studioName) {
             this.studioName = Input.ofNullable(studioName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<StudioTagsArgs> tags) {
+        public Builder tags(@Nullable Input<StudioTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable StudioTagsArgs tags) {
+        public Builder tags(@Nullable StudioTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserRoleArn(Input<String> userRoleArn) {
+        public Builder userRoleArn(Input<String> userRoleArn) {
             this.userRoleArn = Objects.requireNonNull(userRoleArn);
             return this;
         }
 
-        public Builder setUserRoleArn(String userRoleArn) {
+        public Builder userRoleArn(String userRoleArn) {
             this.userRoleArn = Input.of(Objects.requireNonNull(userRoleArn));
             return this;
         }

@@ -75,17 +75,17 @@ public final class GetGroupsResult {
     	      this.parent = defaults.parent;
         }
 
-        public Builder setGroups(List<GetGroupsGroup> groups) {
+        public Builder groups(List<GetGroupsGroup> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }

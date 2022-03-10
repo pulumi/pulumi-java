@@ -100,22 +100,22 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
     	      this.staticMemberName = defaults.staticMemberName;
         }
 
-        public Builder setNetworkGroupName(String networkGroupName) {
+        public Builder networkGroupName(String networkGroupName) {
             this.networkGroupName = Objects.requireNonNull(networkGroupName);
             return this;
         }
 
-        public Builder setNetworkManagerName(String networkManagerName) {
+        public Builder networkManagerName(String networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStaticMemberName(String staticMemberName) {
+        public Builder staticMemberName(String staticMemberName) {
             this.staticMemberName = Objects.requireNonNull(staticMemberName);
             return this;
         }

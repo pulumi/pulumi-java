@@ -143,62 +143,62 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
     	      this.pad = defaults.pad;
         }
 
-        public Builder setAudio(@Nullable Input<AudioArgs> audio) {
+        public Builder audio(@Nullable Input<AudioArgs> audio) {
             this.audio = audio;
             return this;
         }
 
-        public Builder setAudio(@Nullable AudioArgs audio) {
+        public Builder audio(@Nullable AudioArgs audio) {
             this.audio = Input.ofNullable(audio);
             return this;
         }
 
-        public Builder setColor(@Nullable Input<ColorArgs> color) {
+        public Builder color(@Nullable Input<ColorArgs> color) {
             this.color = color;
             return this;
         }
 
-        public Builder setColor(@Nullable ColorArgs color) {
+        public Builder color(@Nullable ColorArgs color) {
             this.color = Input.ofNullable(color);
             return this;
         }
 
-        public Builder setCrop(@Nullable Input<CropArgs> crop) {
+        public Builder crop(@Nullable Input<CropArgs> crop) {
             this.crop = crop;
             return this;
         }
 
-        public Builder setCrop(@Nullable CropArgs crop) {
+        public Builder crop(@Nullable CropArgs crop) {
             this.crop = Input.ofNullable(crop);
             return this;
         }
 
-        public Builder setDeblock(@Nullable Input<DeblockArgs> deblock) {
+        public Builder deblock(@Nullable Input<DeblockArgs> deblock) {
             this.deblock = deblock;
             return this;
         }
 
-        public Builder setDeblock(@Nullable DeblockArgs deblock) {
+        public Builder deblock(@Nullable DeblockArgs deblock) {
             this.deblock = Input.ofNullable(deblock);
             return this;
         }
 
-        public Builder setDenoise(@Nullable Input<DenoiseArgs> denoise) {
+        public Builder denoise(@Nullable Input<DenoiseArgs> denoise) {
             this.denoise = denoise;
             return this;
         }
 
-        public Builder setDenoise(@Nullable DenoiseArgs denoise) {
+        public Builder denoise(@Nullable DenoiseArgs denoise) {
             this.denoise = Input.ofNullable(denoise);
             return this;
         }
 
-        public Builder setPad(@Nullable Input<PadArgs> pad) {
+        public Builder pad(@Nullable Input<PadArgs> pad) {
             this.pad = pad;
             return this;
         }
 
-        public Builder setPad(@Nullable PadArgs pad) {
+        public Builder pad(@Nullable PadArgs pad) {
             this.pad = Input.ofNullable(pad);
             return this;
         }

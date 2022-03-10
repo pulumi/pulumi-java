@@ -143,62 +143,62 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslConfiguration = defaults.sslConfiguration;
         }
 
-        public Builder setAgentCount(@Nullable Input<Integer> agentCount) {
+        public Builder agentCount(@Nullable Input<Integer> agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
-        public Builder setAgentCount(@Nullable Integer agentCount) {
+        public Builder agentCount(@Nullable Integer agentCount) {
             this.agentCount = Input.ofNullable(agentCount);
             return this;
         }
 
-        public Builder setAgentVmSize(@Nullable Input<String> agentVmSize) {
+        public Builder agentVmSize(@Nullable Input<String> agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
 
-        public Builder setAgentVmSize(@Nullable String agentVmSize) {
+        public Builder agentVmSize(@Nullable String agentVmSize) {
             this.agentVmSize = Input.ofNullable(agentVmSize);
             return this;
         }
 
-        public Builder setAksNetworkingConfiguration(@Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration) {
+        public Builder aksNetworkingConfiguration(@Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
 
-        public Builder setAksNetworkingConfiguration(@Nullable AksNetworkingConfigurationArgs aksNetworkingConfiguration) {
+        public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationArgs aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = Input.ofNullable(aksNetworkingConfiguration);
             return this;
         }
 
-        public Builder setClusterFqdn(@Nullable Input<String> clusterFqdn) {
+        public Builder clusterFqdn(@Nullable Input<String> clusterFqdn) {
             this.clusterFqdn = clusterFqdn;
             return this;
         }
 
-        public Builder setClusterFqdn(@Nullable String clusterFqdn) {
+        public Builder clusterFqdn(@Nullable String clusterFqdn) {
             this.clusterFqdn = Input.ofNullable(clusterFqdn);
             return this;
         }
 
-        public Builder setClusterPurpose(@Nullable Input<Either<String,ClusterPurpose>> clusterPurpose) {
+        public Builder clusterPurpose(@Nullable Input<Either<String,ClusterPurpose>> clusterPurpose) {
             this.clusterPurpose = clusterPurpose;
             return this;
         }
 
-        public Builder setClusterPurpose(@Nullable Either<String,ClusterPurpose> clusterPurpose) {
+        public Builder clusterPurpose(@Nullable Either<String,ClusterPurpose> clusterPurpose) {
             this.clusterPurpose = Input.ofNullable(clusterPurpose);
             return this;
         }
 
-        public Builder setSslConfiguration(@Nullable Input<SslConfigurationArgs> sslConfiguration) {
+        public Builder sslConfiguration(@Nullable Input<SslConfigurationArgs> sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
 
-        public Builder setSslConfiguration(@Nullable SslConfigurationArgs sslConfiguration) {
+        public Builder sslConfiguration(@Nullable SslConfigurationArgs sslConfiguration) {
             this.sslConfiguration = Input.ofNullable(sslConfiguration);
             return this;
         }

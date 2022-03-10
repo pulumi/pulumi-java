@@ -87,17 +87,17 @@ public final class DomainResourceSpec extends io.pulumi.resources.InvokeArgs {
     	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
         }
 
-        public Builder setInstanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
+        public Builder instanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setSageMakerImageArn(@Nullable String sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
-        public Builder setSageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }

@@ -49,7 +49,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

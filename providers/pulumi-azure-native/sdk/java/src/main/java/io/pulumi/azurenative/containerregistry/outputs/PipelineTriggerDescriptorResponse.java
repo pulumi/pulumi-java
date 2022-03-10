@@ -50,7 +50,7 @@ public final class PipelineTriggerDescriptorResponse {
     	      this.sourceTrigger = defaults.sourceTrigger;
         }
 
-        public Builder setSourceTrigger(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
+        public Builder sourceTrigger(@Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
             this.sourceTrigger = sourceTrigger;
             return this;
         }

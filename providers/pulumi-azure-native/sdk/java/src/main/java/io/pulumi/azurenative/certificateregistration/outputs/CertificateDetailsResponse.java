@@ -178,47 +178,47 @@ public final class CertificateDetailsResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setNotAfter(String notAfter) {
+        public Builder notAfter(String notAfter) {
             this.notAfter = Objects.requireNonNull(notAfter);
             return this;
         }
 
-        public Builder setNotBefore(String notBefore) {
+        public Builder notBefore(String notBefore) {
             this.notBefore = Objects.requireNonNull(notBefore);
             return this;
         }
 
-        public Builder setRawData(String rawData) {
+        public Builder rawData(String rawData) {
             this.rawData = Objects.requireNonNull(rawData);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setSignatureAlgorithm(String signatureAlgorithm) {
+        public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

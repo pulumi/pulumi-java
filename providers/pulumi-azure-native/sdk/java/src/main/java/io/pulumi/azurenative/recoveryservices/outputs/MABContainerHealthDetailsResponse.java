@@ -101,22 +101,22 @@ public final class MABContainerHealthDetailsResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = code;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setRecommendations(@Nullable List<String> recommendations) {
+        public Builder recommendations(@Nullable List<String> recommendations) {
             this.recommendations = recommendations;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

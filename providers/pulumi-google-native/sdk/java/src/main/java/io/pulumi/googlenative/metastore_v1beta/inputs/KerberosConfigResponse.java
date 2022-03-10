@@ -89,17 +89,17 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     	      this.principal = defaults.principal;
         }
 
-        public Builder setKeytab(SecretResponse keytab) {
+        public Builder keytab(SecretResponse keytab) {
             this.keytab = Objects.requireNonNull(keytab);
             return this;
         }
 
-        public Builder setKrb5ConfigGcsUri(String krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }

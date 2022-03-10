@@ -73,12 +73,12 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends io.pulu
     	      this.samplingPercentage = defaults.samplingPercentage;
         }
 
-        public Builder setBigqueryTableName(String bigqueryTableName) {
+        public Builder bigqueryTableName(String bigqueryTableName) {
             this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName);
             return this;
         }
 
-        public Builder setSamplingPercentage(Double samplingPercentage) {
+        public Builder samplingPercentage(Double samplingPercentage) {
             this.samplingPercentage = Objects.requireNonNull(samplingPercentage);
             return this;
         }

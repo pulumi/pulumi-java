@@ -55,7 +55,7 @@ public final class StreamModeDetails extends io.pulumi.resources.InvokeArgs {
     	      this.streamMode = defaults.streamMode;
         }
 
-        public Builder setStreamMode(StreamModeDetailsStreamMode streamMode) {
+        public Builder streamMode(StreamModeDetailsStreamMode streamMode) {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }

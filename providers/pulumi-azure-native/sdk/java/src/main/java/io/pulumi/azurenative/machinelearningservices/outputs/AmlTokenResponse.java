@@ -50,7 +50,7 @@ public final class AmlTokenResponse {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }

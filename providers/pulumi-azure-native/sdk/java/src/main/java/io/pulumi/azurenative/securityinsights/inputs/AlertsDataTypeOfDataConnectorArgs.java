@@ -57,12 +57,12 @@ public final class AlertsDataTypeOfDataConnectorArgs extends io.pulumi.resources
     	      this.alerts = defaults.alerts;
         }
 
-        public Builder setAlerts(@Nullable Input<DataConnectorDataTypeCommonArgs> alerts) {
+        public Builder alerts(@Nullable Input<DataConnectorDataTypeCommonArgs> alerts) {
             this.alerts = alerts;
             return this;
         }
 
-        public Builder setAlerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
+        public Builder alerts(@Nullable DataConnectorDataTypeCommonArgs alerts) {
             this.alerts = Input.ofNullable(alerts);
             return this;
         }

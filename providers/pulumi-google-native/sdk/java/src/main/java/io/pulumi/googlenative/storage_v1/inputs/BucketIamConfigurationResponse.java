@@ -90,17 +90,17 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
     	      this.uniformBucketLevelAccess = defaults.uniformBucketLevelAccess;
         }
 
-        public Builder setBucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly) {
+        public Builder bucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly) {
             this.bucketPolicyOnly = Objects.requireNonNull(bucketPolicyOnly);
             return this;
         }
 
-        public Builder setPublicAccessPrevention(String publicAccessPrevention) {
+        public Builder publicAccessPrevention(String publicAccessPrevention) {
             this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
             return this;
         }
 
-        public Builder setUniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
         }

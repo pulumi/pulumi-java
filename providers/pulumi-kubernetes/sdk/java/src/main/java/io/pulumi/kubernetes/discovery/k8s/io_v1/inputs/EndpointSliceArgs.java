@@ -147,62 +147,62 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setAddressType(Input<String> addressType) {
+        public Builder addressType(Input<String> addressType) {
             this.addressType = Objects.requireNonNull(addressType);
             return this;
         }
 
-        public Builder setAddressType(String addressType) {
+        public Builder addressType(String addressType) {
             this.addressType = Input.of(Objects.requireNonNull(addressType));
             return this;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setEndpoints(Input<List<EndpointArgs>> endpoints) {
+        public Builder endpoints(Input<List<EndpointArgs>> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setEndpoints(List<EndpointArgs> endpoints) {
+        public Builder endpoints(List<EndpointArgs> endpoints) {
             this.endpoints = Input.of(Objects.requireNonNull(endpoints));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<EndpointPortArgs>> ports) {
+        public Builder ports(@Nullable Input<List<EndpointPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<EndpointPortArgs> ports) {
+        public Builder ports(@Nullable List<EndpointPortArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }

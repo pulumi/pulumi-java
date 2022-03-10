@@ -68,12 +68,12 @@ public final class RuntimeClassStrategyOptions {
     	      this.defaultRuntimeClassName = defaults.defaultRuntimeClassName;
         }
 
-        public Builder setAllowedRuntimeClassNames(List<String> allowedRuntimeClassNames) {
+        public Builder allowedRuntimeClassNames(List<String> allowedRuntimeClassNames) {
             this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames);
             return this;
         }
 
-        public Builder setDefaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
+        public Builder defaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
             this.defaultRuntimeClassName = defaultRuntimeClassName;
             return this;
         }

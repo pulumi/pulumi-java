@@ -48,7 +48,7 @@ public final class SpotFleetTargetGroupsConfig extends io.pulumi.resources.Invok
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setTargetGroups(List<SpotFleetTargetGroup> targetGroups) {
+        public Builder targetGroups(List<SpotFleetTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }

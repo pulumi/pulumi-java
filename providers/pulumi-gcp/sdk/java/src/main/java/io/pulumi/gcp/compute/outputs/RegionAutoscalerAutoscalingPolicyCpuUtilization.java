@@ -76,12 +76,12 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilization {
     	      this.target = defaults.target;
         }
 
-        public Builder setPredictiveMethod(@Nullable String predictiveMethod) {
+        public Builder predictiveMethod(@Nullable String predictiveMethod) {
             this.predictiveMethod = predictiveMethod;
             return this;
         }
 
-        public Builder setTarget(Double target) {
+        public Builder target(Double target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

@@ -50,7 +50,7 @@ public final class AddressSpaceResponse {
     	      this.addressPrefixes = defaults.addressPrefixes;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }

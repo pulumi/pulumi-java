@@ -155,72 +155,72 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     	      this.time = defaults.time;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setFieldsType(@Nullable Input<String> fieldsType) {
+        public Builder fieldsType(@Nullable Input<String> fieldsType) {
             this.fieldsType = fieldsType;
             return this;
         }
 
-        public Builder setFieldsType(@Nullable String fieldsType) {
+        public Builder fieldsType(@Nullable String fieldsType) {
             this.fieldsType = Input.ofNullable(fieldsType);
             return this;
         }
 
-        public Builder setFieldsV1(@Nullable Input<JsonElement> fieldsV1) {
+        public Builder fieldsV1(@Nullable Input<JsonElement> fieldsV1) {
             this.fieldsV1 = fieldsV1;
             return this;
         }
 
-        public Builder setFieldsV1(@Nullable JsonElement fieldsV1) {
+        public Builder fieldsV1(@Nullable JsonElement fieldsV1) {
             this.fieldsV1 = Input.ofNullable(fieldsV1);
             return this;
         }
 
-        public Builder setManager(@Nullable Input<String> manager) {
+        public Builder manager(@Nullable Input<String> manager) {
             this.manager = manager;
             return this;
         }
 
-        public Builder setManager(@Nullable String manager) {
+        public Builder manager(@Nullable String manager) {
             this.manager = Input.ofNullable(manager);
             return this;
         }
 
-        public Builder setOperation(@Nullable Input<String> operation) {
+        public Builder operation(@Nullable Input<String> operation) {
             this.operation = operation;
             return this;
         }
 
-        public Builder setOperation(@Nullable String operation) {
+        public Builder operation(@Nullable String operation) {
             this.operation = Input.ofNullable(operation);
             return this;
         }
 
-        public Builder setSubresource(@Nullable Input<String> subresource) {
+        public Builder subresource(@Nullable Input<String> subresource) {
             this.subresource = subresource;
             return this;
         }
 
-        public Builder setSubresource(@Nullable String subresource) {
+        public Builder subresource(@Nullable String subresource) {
             this.subresource = Input.ofNullable(subresource);
             return this;
         }
 
-        public Builder setTime(@Nullable Input<String> time) {
+        public Builder time(@Nullable Input<String> time) {
             this.time = time;
             return this;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = Input.ofNullable(time);
             return this;
         }

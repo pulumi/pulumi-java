@@ -113,62 +113,62 @@ public final class InAppTemplateInAppMessageContentArgs extends io.pulumi.resour
     	      this.secondaryBtn = defaults.secondaryBtn;
         }
 
-        public Builder setBackgroundColor(@Nullable Input<String> backgroundColor) {
+        public Builder backgroundColor(@Nullable Input<String> backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
-        public Builder setBackgroundColor(@Nullable String backgroundColor) {
+        public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = Input.ofNullable(backgroundColor);
             return this;
         }
 
-        public Builder setBodyConfig(@Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig) {
+        public Builder bodyConfig(@Nullable Input<InAppTemplateBodyConfigArgs> bodyConfig) {
             this.bodyConfig = bodyConfig;
             return this;
         }
 
-        public Builder setBodyConfig(@Nullable InAppTemplateBodyConfigArgs bodyConfig) {
+        public Builder bodyConfig(@Nullable InAppTemplateBodyConfigArgs bodyConfig) {
             this.bodyConfig = Input.ofNullable(bodyConfig);
             return this;
         }
 
-        public Builder setHeaderConfig(@Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig) {
+        public Builder headerConfig(@Nullable Input<InAppTemplateHeaderConfigArgs> headerConfig) {
             this.headerConfig = headerConfig;
             return this;
         }
 
-        public Builder setHeaderConfig(@Nullable InAppTemplateHeaderConfigArgs headerConfig) {
+        public Builder headerConfig(@Nullable InAppTemplateHeaderConfigArgs headerConfig) {
             this.headerConfig = Input.ofNullable(headerConfig);
             return this;
         }
 
-        public Builder setImageUrl(@Nullable Input<String> imageUrl) {
+        public Builder imageUrl(@Nullable Input<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-        public Builder setImageUrl(@Nullable String imageUrl) {
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = Input.ofNullable(imageUrl);
             return this;
         }
 
-        public Builder setPrimaryBtn(@Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn) {
+        public Builder primaryBtn(@Nullable Input<InAppTemplateButtonConfigArgs> primaryBtn) {
             this.primaryBtn = primaryBtn;
             return this;
         }
 
-        public Builder setPrimaryBtn(@Nullable InAppTemplateButtonConfigArgs primaryBtn) {
+        public Builder primaryBtn(@Nullable InAppTemplateButtonConfigArgs primaryBtn) {
             this.primaryBtn = Input.ofNullable(primaryBtn);
             return this;
         }
 
-        public Builder setSecondaryBtn(@Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn) {
+        public Builder secondaryBtn(@Nullable Input<InAppTemplateButtonConfigArgs> secondaryBtn) {
             this.secondaryBtn = secondaryBtn;
             return this;
         }
 
-        public Builder setSecondaryBtn(@Nullable InAppTemplateButtonConfigArgs secondaryBtn) {
+        public Builder secondaryBtn(@Nullable InAppTemplateButtonConfigArgs secondaryBtn) {
             this.secondaryBtn = Input.ofNullable(secondaryBtn);
             return this;
         }

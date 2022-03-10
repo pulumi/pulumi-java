@@ -51,7 +51,7 @@ public final class GetTransitGatewayMulticastDomainArgs extends io.pulumi.resour
     	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }

@@ -180,92 +180,92 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.version = defaults.version;
         }
 
-        public Builder setDagTimeout(@Nullable Input<String> dagTimeout) {
+        public Builder dagTimeout(@Nullable Input<String> dagTimeout) {
             this.dagTimeout = dagTimeout;
             return this;
         }
 
-        public Builder setDagTimeout(@Nullable String dagTimeout) {
+        public Builder dagTimeout(@Nullable String dagTimeout) {
             this.dagTimeout = Input.ofNullable(dagTimeout);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setJobs(Input<List<OrderedJobArgs>> jobs) {
+        public Builder jobs(Input<List<OrderedJobArgs>> jobs) {
             this.jobs = Objects.requireNonNull(jobs);
             return this;
         }
 
-        public Builder setJobs(List<OrderedJobArgs> jobs) {
+        public Builder jobs(List<OrderedJobArgs> jobs) {
             this.jobs = Input.of(Objects.requireNonNull(jobs));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<TemplateParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<TemplateParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<TemplateParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<TemplateParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPlacement(Input<WorkflowTemplatePlacementArgs> placement) {
+        public Builder placement(Input<WorkflowTemplatePlacementArgs> placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
 
-        public Builder setPlacement(WorkflowTemplatePlacementArgs placement) {
+        public Builder placement(WorkflowTemplatePlacementArgs placement) {
             this.placement = Input.of(Objects.requireNonNull(placement));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

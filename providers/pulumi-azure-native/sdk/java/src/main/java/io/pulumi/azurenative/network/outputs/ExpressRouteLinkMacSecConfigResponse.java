@@ -99,22 +99,22 @@ public final class ExpressRouteLinkMacSecConfigResponse {
     	      this.sciState = defaults.sciState;
         }
 
-        public Builder setCakSecretIdentifier(@Nullable String cakSecretIdentifier) {
+        public Builder cakSecretIdentifier(@Nullable String cakSecretIdentifier) {
             this.cakSecretIdentifier = cakSecretIdentifier;
             return this;
         }
 
-        public Builder setCipher(@Nullable String cipher) {
+        public Builder cipher(@Nullable String cipher) {
             this.cipher = cipher;
             return this;
         }
 
-        public Builder setCknSecretIdentifier(@Nullable String cknSecretIdentifier) {
+        public Builder cknSecretIdentifier(@Nullable String cknSecretIdentifier) {
             this.cknSecretIdentifier = cknSecretIdentifier;
             return this;
         }
 
-        public Builder setSciState(@Nullable String sciState) {
+        public Builder sciState(@Nullable String sciState) {
             this.sciState = sciState;
             return this;
         }

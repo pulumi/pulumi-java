@@ -187,122 +187,122 @@ public final class CloudFormationProvisionedProductArgs extends io.pulumi.resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<CloudFormationProvisionedProductAcceptLanguage> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
+        public Builder acceptLanguage(@Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setNotificationArns(@Nullable Input<List<String>> notificationArns) {
+        public Builder notificationArns(@Nullable Input<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
 
-        public Builder setNotificationArns(@Nullable List<String> notificationArns) {
+        public Builder notificationArns(@Nullable List<String> notificationArns) {
             this.notificationArns = Input.ofNullable(notificationArns);
             return this;
         }
 
-        public Builder setPathId(@Nullable Input<String> pathId) {
+        public Builder pathId(@Nullable Input<String> pathId) {
             this.pathId = pathId;
             return this;
         }
 
-        public Builder setPathId(@Nullable String pathId) {
+        public Builder pathId(@Nullable String pathId) {
             this.pathId = Input.ofNullable(pathId);
             return this;
         }
 
-        public Builder setPathName(@Nullable Input<String> pathName) {
+        public Builder pathName(@Nullable Input<String> pathName) {
             this.pathName = pathName;
             return this;
         }
 
-        public Builder setPathName(@Nullable String pathName) {
+        public Builder pathName(@Nullable String pathName) {
             this.pathName = Input.ofNullable(pathName);
             return this;
         }
 
-        public Builder setProductId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Input<String> productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = Input.ofNullable(productId);
             return this;
         }
 
-        public Builder setProductName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Input<String> productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = Input.ofNullable(productName);
             return this;
         }
 
-        public Builder setProvisionedProductName(@Nullable Input<String> provisionedProductName) {
+        public Builder provisionedProductName(@Nullable Input<String> provisionedProductName) {
             this.provisionedProductName = provisionedProductName;
             return this;
         }
 
-        public Builder setProvisionedProductName(@Nullable String provisionedProductName) {
+        public Builder provisionedProductName(@Nullable String provisionedProductName) {
             this.provisionedProductName = Input.ofNullable(provisionedProductName);
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable Input<String> provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable Input<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable String provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = Input.ofNullable(provisioningArtifactId);
             return this;
         }
 
-        public Builder setProvisioningArtifactName(@Nullable Input<String> provisioningArtifactName) {
+        public Builder provisioningArtifactName(@Nullable Input<String> provisioningArtifactName) {
             this.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
 
-        public Builder setProvisioningArtifactName(@Nullable String provisioningArtifactName) {
+        public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
             this.provisioningArtifactName = Input.ofNullable(provisioningArtifactName);
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable Input<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable Input<List<CloudFormationProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable List<CloudFormationProvisionedProductProvisioningParameterArgs> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable List<CloudFormationProvisionedProductProvisioningParameterArgs> provisioningParameters) {
             this.provisioningParameters = Input.ofNullable(provisioningParameters);
             return this;
         }
 
-        public Builder setProvisioningPreferences(@Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences) {
+        public Builder provisioningPreferences(@Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesArgs> provisioningPreferences) {
             this.provisioningPreferences = provisioningPreferences;
             return this;
         }
 
-        public Builder setProvisioningPreferences(@Nullable CloudFormationProvisionedProductProvisioningPreferencesArgs provisioningPreferences) {
+        public Builder provisioningPreferences(@Nullable CloudFormationProvisionedProductProvisioningPreferencesArgs provisioningPreferences) {
             this.provisioningPreferences = Input.ofNullable(provisioningPreferences);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<CloudFormationProvisionedProductTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<CloudFormationProvisionedProductTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CloudFormationProvisionedProductTagArgs> tags) {
+        public Builder tags(@Nullable List<CloudFormationProvisionedProductTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

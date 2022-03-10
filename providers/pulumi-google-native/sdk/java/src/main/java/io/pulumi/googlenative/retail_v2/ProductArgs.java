@@ -622,372 +622,372 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setAudience(@Nullable Input<GoogleCloudRetailV2AudienceArgs> audience) {
+        public Builder audience(@Nullable Input<GoogleCloudRetailV2AudienceArgs> audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAudience(@Nullable GoogleCloudRetailV2AudienceArgs audience) {
+        public Builder audience(@Nullable GoogleCloudRetailV2AudienceArgs audience) {
             this.audience = Input.ofNullable(audience);
             return this;
         }
 
-        public Builder setAvailability(@Nullable Input<ProductAvailability> availability) {
+        public Builder availability(@Nullable Input<ProductAvailability> availability) {
             this.availability = availability;
             return this;
         }
 
-        public Builder setAvailability(@Nullable ProductAvailability availability) {
+        public Builder availability(@Nullable ProductAvailability availability) {
             this.availability = Input.ofNullable(availability);
             return this;
         }
 
-        public Builder setAvailableQuantity(@Nullable Input<Integer> availableQuantity) {
+        public Builder availableQuantity(@Nullable Input<Integer> availableQuantity) {
             this.availableQuantity = availableQuantity;
             return this;
         }
 
-        public Builder setAvailableQuantity(@Nullable Integer availableQuantity) {
+        public Builder availableQuantity(@Nullable Integer availableQuantity) {
             this.availableQuantity = Input.ofNullable(availableQuantity);
             return this;
         }
 
-        public Builder setAvailableTime(@Nullable Input<String> availableTime) {
+        public Builder availableTime(@Nullable Input<String> availableTime) {
             this.availableTime = availableTime;
             return this;
         }
 
-        public Builder setAvailableTime(@Nullable String availableTime) {
+        public Builder availableTime(@Nullable String availableTime) {
             this.availableTime = Input.ofNullable(availableTime);
             return this;
         }
 
-        public Builder setBranchId(Input<String> branchId) {
+        public Builder branchId(Input<String> branchId) {
             this.branchId = Objects.requireNonNull(branchId);
             return this;
         }
 
-        public Builder setBranchId(String branchId) {
+        public Builder branchId(String branchId) {
             this.branchId = Input.of(Objects.requireNonNull(branchId));
             return this;
         }
 
-        public Builder setBrands(@Nullable Input<List<String>> brands) {
+        public Builder brands(@Nullable Input<List<String>> brands) {
             this.brands = brands;
             return this;
         }
 
-        public Builder setBrands(@Nullable List<String> brands) {
+        public Builder brands(@Nullable List<String> brands) {
             this.brands = Input.ofNullable(brands);
             return this;
         }
 
-        public Builder setCatalogId(Input<String> catalogId) {
+        public Builder catalogId(Input<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Input.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder setCategories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Input<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = Input.ofNullable(categories);
             return this;
         }
 
-        public Builder setCollectionMemberIds(@Nullable Input<List<String>> collectionMemberIds) {
+        public Builder collectionMemberIds(@Nullable Input<List<String>> collectionMemberIds) {
             this.collectionMemberIds = collectionMemberIds;
             return this;
         }
 
-        public Builder setCollectionMemberIds(@Nullable List<String> collectionMemberIds) {
+        public Builder collectionMemberIds(@Nullable List<String> collectionMemberIds) {
             this.collectionMemberIds = Input.ofNullable(collectionMemberIds);
             return this;
         }
 
-        public Builder setColorInfo(@Nullable Input<GoogleCloudRetailV2ColorInfoArgs> colorInfo) {
+        public Builder colorInfo(@Nullable Input<GoogleCloudRetailV2ColorInfoArgs> colorInfo) {
             this.colorInfo = colorInfo;
             return this;
         }
 
-        public Builder setColorInfo(@Nullable GoogleCloudRetailV2ColorInfoArgs colorInfo) {
+        public Builder colorInfo(@Nullable GoogleCloudRetailV2ColorInfoArgs colorInfo) {
             this.colorInfo = Input.ofNullable(colorInfo);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<String>> conditions) {
+        public Builder conditions(@Nullable Input<List<String>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<String> conditions) {
+        public Builder conditions(@Nullable List<String> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setFulfillmentInfo(@Nullable Input<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo) {
+        public Builder fulfillmentInfo(@Nullable Input<List<GoogleCloudRetailV2FulfillmentInfoArgs>> fulfillmentInfo) {
             this.fulfillmentInfo = fulfillmentInfo;
             return this;
         }
 
-        public Builder setFulfillmentInfo(@Nullable List<GoogleCloudRetailV2FulfillmentInfoArgs> fulfillmentInfo) {
+        public Builder fulfillmentInfo(@Nullable List<GoogleCloudRetailV2FulfillmentInfoArgs> fulfillmentInfo) {
             this.fulfillmentInfo = Input.ofNullable(fulfillmentInfo);
             return this;
         }
 
-        public Builder setGtin(@Nullable Input<String> gtin) {
+        public Builder gtin(@Nullable Input<String> gtin) {
             this.gtin = gtin;
             return this;
         }
 
-        public Builder setGtin(@Nullable String gtin) {
+        public Builder gtin(@Nullable String gtin) {
             this.gtin = Input.ofNullable(gtin);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setImages(@Nullable Input<List<GoogleCloudRetailV2ImageArgs>> images) {
+        public Builder images(@Nullable Input<List<GoogleCloudRetailV2ImageArgs>> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setImages(@Nullable List<GoogleCloudRetailV2ImageArgs> images) {
+        public Builder images(@Nullable List<GoogleCloudRetailV2ImageArgs> images) {
             this.images = Input.ofNullable(images);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaterials(@Nullable Input<List<String>> materials) {
+        public Builder materials(@Nullable Input<List<String>> materials) {
             this.materials = materials;
             return this;
         }
 
-        public Builder setMaterials(@Nullable List<String> materials) {
+        public Builder materials(@Nullable List<String> materials) {
             this.materials = Input.ofNullable(materials);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPatterns(@Nullable Input<List<String>> patterns) {
+        public Builder patterns(@Nullable Input<List<String>> patterns) {
             this.patterns = patterns;
             return this;
         }
 
-        public Builder setPatterns(@Nullable List<String> patterns) {
+        public Builder patterns(@Nullable List<String> patterns) {
             this.patterns = Input.ofNullable(patterns);
             return this;
         }
 
-        public Builder setPriceInfo(@Nullable Input<GoogleCloudRetailV2PriceInfoArgs> priceInfo) {
+        public Builder priceInfo(@Nullable Input<GoogleCloudRetailV2PriceInfoArgs> priceInfo) {
             this.priceInfo = priceInfo;
             return this;
         }
 
-        public Builder setPriceInfo(@Nullable GoogleCloudRetailV2PriceInfoArgs priceInfo) {
+        public Builder priceInfo(@Nullable GoogleCloudRetailV2PriceInfoArgs priceInfo) {
             this.priceInfo = Input.ofNullable(priceInfo);
             return this;
         }
 
-        public Builder setPrimaryProductId(@Nullable Input<String> primaryProductId) {
+        public Builder primaryProductId(@Nullable Input<String> primaryProductId) {
             this.primaryProductId = primaryProductId;
             return this;
         }
 
-        public Builder setPrimaryProductId(@Nullable String primaryProductId) {
+        public Builder primaryProductId(@Nullable String primaryProductId) {
             this.primaryProductId = Input.ofNullable(primaryProductId);
             return this;
         }
 
-        public Builder setProductId(Input<String> productId) {
+        public Builder productId(Input<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Input.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPromotions(@Nullable Input<List<GoogleCloudRetailV2PromotionArgs>> promotions) {
+        public Builder promotions(@Nullable Input<List<GoogleCloudRetailV2PromotionArgs>> promotions) {
             this.promotions = promotions;
             return this;
         }
 
-        public Builder setPromotions(@Nullable List<GoogleCloudRetailV2PromotionArgs> promotions) {
+        public Builder promotions(@Nullable List<GoogleCloudRetailV2PromotionArgs> promotions) {
             this.promotions = Input.ofNullable(promotions);
             return this;
         }
 
-        public Builder setPublishTime(@Nullable Input<String> publishTime) {
+        public Builder publishTime(@Nullable Input<String> publishTime) {
             this.publishTime = publishTime;
             return this;
         }
 
-        public Builder setPublishTime(@Nullable String publishTime) {
+        public Builder publishTime(@Nullable String publishTime) {
             this.publishTime = Input.ofNullable(publishTime);
             return this;
         }
 
-        public Builder setRating(@Nullable Input<GoogleCloudRetailV2RatingArgs> rating) {
+        public Builder rating(@Nullable Input<GoogleCloudRetailV2RatingArgs> rating) {
             this.rating = rating;
             return this;
         }
 
-        public Builder setRating(@Nullable GoogleCloudRetailV2RatingArgs rating) {
+        public Builder rating(@Nullable GoogleCloudRetailV2RatingArgs rating) {
             this.rating = Input.ofNullable(rating);
             return this;
         }
 
-        public Builder setRetrievableFields(@Nullable Input<String> retrievableFields) {
+        public Builder retrievableFields(@Nullable Input<String> retrievableFields) {
             this.retrievableFields = retrievableFields;
             return this;
         }
 
-        public Builder setRetrievableFields(@Nullable String retrievableFields) {
+        public Builder retrievableFields(@Nullable String retrievableFields) {
             this.retrievableFields = Input.ofNullable(retrievableFields);
             return this;
         }
 
-        public Builder setSizes(@Nullable Input<List<String>> sizes) {
+        public Builder sizes(@Nullable Input<List<String>> sizes) {
             this.sizes = sizes;
             return this;
         }
 
-        public Builder setSizes(@Nullable List<String> sizes) {
+        public Builder sizes(@Nullable List<String> sizes) {
             this.sizes = Input.ofNullable(sizes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Input<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable String ttl) {
+        public Builder ttl(@Nullable String ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
 
-        public Builder setType(@Nullable Input<ProductType> type) {
+        public Builder type(@Nullable Input<ProductType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ProductType type) {
+        public Builder type(@Nullable ProductType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

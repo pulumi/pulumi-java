@@ -42,7 +42,7 @@ public final class GetLoggingConfigurationResult {
     	      this.loggingConfiguration = defaults.loggingConfiguration;
         }
 
-        public Builder setLoggingConfiguration(@Nullable LoggingConfiguration loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable LoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }

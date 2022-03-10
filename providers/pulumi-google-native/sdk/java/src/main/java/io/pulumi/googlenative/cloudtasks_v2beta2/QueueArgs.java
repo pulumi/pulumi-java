@@ -178,92 +178,92 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tombstoneTtl = defaults.tombstoneTtl;
         }
 
-        public Builder setAppEngineHttpTarget(@Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(@Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget) {
             this.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
 
-        public Builder setAppEngineHttpTarget(@Nullable AppEngineHttpTargetArgs appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(@Nullable AppEngineHttpTargetArgs appEngineHttpTarget) {
             this.appEngineHttpTarget = Input.ofNullable(appEngineHttpTarget);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPullTarget(@Nullable Input<PullTargetArgs> pullTarget) {
+        public Builder pullTarget(@Nullable Input<PullTargetArgs> pullTarget) {
             this.pullTarget = pullTarget;
             return this;
         }
 
-        public Builder setPullTarget(@Nullable PullTargetArgs pullTarget) {
+        public Builder pullTarget(@Nullable PullTargetArgs pullTarget) {
             this.pullTarget = Input.ofNullable(pullTarget);
             return this;
         }
 
-        public Builder setRateLimits(@Nullable Input<RateLimitsArgs> rateLimits) {
+        public Builder rateLimits(@Nullable Input<RateLimitsArgs> rateLimits) {
             this.rateLimits = rateLimits;
             return this;
         }
 
-        public Builder setRateLimits(@Nullable RateLimitsArgs rateLimits) {
+        public Builder rateLimits(@Nullable RateLimitsArgs rateLimits) {
             this.rateLimits = Input.ofNullable(rateLimits);
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable Input<RetryConfigArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Input<RetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable RetryConfigArgs retryConfig) {
+        public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
             this.retryConfig = Input.ofNullable(retryConfig);
             return this;
         }
 
-        public Builder setTaskTtl(@Nullable Input<String> taskTtl) {
+        public Builder taskTtl(@Nullable Input<String> taskTtl) {
             this.taskTtl = taskTtl;
             return this;
         }
 
-        public Builder setTaskTtl(@Nullable String taskTtl) {
+        public Builder taskTtl(@Nullable String taskTtl) {
             this.taskTtl = Input.ofNullable(taskTtl);
             return this;
         }
 
-        public Builder setTombstoneTtl(@Nullable Input<String> tombstoneTtl) {
+        public Builder tombstoneTtl(@Nullable Input<String> tombstoneTtl) {
             this.tombstoneTtl = tombstoneTtl;
             return this;
         }
 
-        public Builder setTombstoneTtl(@Nullable String tombstoneTtl) {
+        public Builder tombstoneTtl(@Nullable String tombstoneTtl) {
             this.tombstoneTtl = Input.ofNullable(tombstoneTtl);
             return this;
         }

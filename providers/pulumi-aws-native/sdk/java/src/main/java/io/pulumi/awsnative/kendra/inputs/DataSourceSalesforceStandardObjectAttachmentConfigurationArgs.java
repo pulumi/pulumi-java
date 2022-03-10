@@ -64,22 +64,22 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
     	      this.fieldMappings = defaults.fieldMappings;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Input.ofNullable(documentTitleFieldName);
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }

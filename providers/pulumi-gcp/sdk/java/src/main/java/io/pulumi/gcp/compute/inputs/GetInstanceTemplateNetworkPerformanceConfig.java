@@ -51,7 +51,7 @@ public final class GetInstanceTemplateNetworkPerformanceConfig extends io.pulumi
     	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
         }
 
-        public Builder setTotalEgressBandwidthTier(String totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }

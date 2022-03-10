@@ -100,22 +100,22 @@ public final class EndpointPort {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setAppProtocol(@Nullable String appProtocol) {
+        public Builder appProtocol(@Nullable String appProtocol) {
             this.appProtocol = appProtocol;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

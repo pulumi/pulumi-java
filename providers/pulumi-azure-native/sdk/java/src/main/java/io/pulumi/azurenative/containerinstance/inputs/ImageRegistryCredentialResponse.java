@@ -90,17 +90,17 @@ public final class ImageRegistryCredentialResponse extends io.pulumi.resources.I
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServer(String server) {
+        public Builder server(String server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

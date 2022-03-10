@@ -136,72 +136,72 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
     	      this.vpcPeeringConfig = defaults.vpcPeeringConfig;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrivateConnectionId(Input<String> privateConnectionId) {
+        public Builder privateConnectionId(Input<String> privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
 
-        public Builder setPrivateConnectionId(String privateConnectionId) {
+        public Builder privateConnectionId(String privateConnectionId) {
             this.privateConnectionId = Input.of(Objects.requireNonNull(privateConnectionId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setVpcPeeringConfig(@Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig) {
+        public Builder vpcPeeringConfig(@Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig) {
             this.vpcPeeringConfig = vpcPeeringConfig;
             return this;
         }
 
-        public Builder setVpcPeeringConfig(@Nullable VpcPeeringConfigArgs vpcPeeringConfig) {
+        public Builder vpcPeeringConfig(@Nullable VpcPeeringConfigArgs vpcPeeringConfig) {
             this.vpcPeeringConfig = Input.ofNullable(vpcPeeringConfig);
             return this;
         }

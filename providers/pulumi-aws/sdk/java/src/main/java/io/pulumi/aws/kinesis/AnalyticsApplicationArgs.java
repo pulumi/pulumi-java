@@ -192,92 +192,92 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder setCode(@Nullable Input<String> code) {
+        public Builder code(@Nullable Input<String> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<AnalyticsApplicationInputsArgs> inputs) {
+        public Builder inputs(@Nullable Input<AnalyticsApplicationInputsArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable AnalyticsApplicationInputsArgs inputs) {
+        public Builder inputs(@Nullable AnalyticsApplicationInputsArgs inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<AnalyticsApplicationOutputArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<AnalyticsApplicationOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<AnalyticsApplicationOutputArgs> outputs) {
+        public Builder outputs(@Nullable List<AnalyticsApplicationOutputArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setReferenceDataSources(@Nullable Input<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources) {
+        public Builder referenceDataSources(@Nullable Input<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources) {
             this.referenceDataSources = referenceDataSources;
             return this;
         }
 
-        public Builder setReferenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
+        public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
             this.referenceDataSources = Input.ofNullable(referenceDataSources);
             return this;
         }
 
-        public Builder setStartApplication(@Nullable Input<Boolean> startApplication) {
+        public Builder startApplication(@Nullable Input<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
 
-        public Builder setStartApplication(@Nullable Boolean startApplication) {
+        public Builder startApplication(@Nullable Boolean startApplication) {
             this.startApplication = Input.ofNullable(startApplication);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

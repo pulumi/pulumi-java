@@ -185,102 +185,102 @@ public final class FutureReservationArgs extends io.pulumi.resources.ResourceArg
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setShareSettings(@Nullable Input<ShareSettingsArgs> shareSettings) {
+        public Builder shareSettings(@Nullable Input<ShareSettingsArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
 
-        public Builder setShareSettings(@Nullable ShareSettingsArgs shareSettings) {
+        public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
             this.shareSettings = Input.ofNullable(shareSettings);
             return this;
         }
 
-        public Builder setSpecificSkuProperties(@Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties) {
+        public Builder specificSkuProperties(@Nullable Input<FutureReservationSpecificSKUPropertiesArgs> specificSkuProperties) {
             this.specificSkuProperties = specificSkuProperties;
             return this;
         }
 
-        public Builder setSpecificSkuProperties(@Nullable FutureReservationSpecificSKUPropertiesArgs specificSkuProperties) {
+        public Builder specificSkuProperties(@Nullable FutureReservationSpecificSKUPropertiesArgs specificSkuProperties) {
             this.specificSkuProperties = Input.ofNullable(specificSkuProperties);
             return this;
         }
 
-        public Builder setTimeWindow(@Nullable Input<FutureReservationTimeWindowArgs> timeWindow) {
+        public Builder timeWindow(@Nullable Input<FutureReservationTimeWindowArgs> timeWindow) {
             this.timeWindow = timeWindow;
             return this;
         }
 
-        public Builder setTimeWindow(@Nullable FutureReservationTimeWindowArgs timeWindow) {
+        public Builder timeWindow(@Nullable FutureReservationTimeWindowArgs timeWindow) {
             this.timeWindow = Input.ofNullable(timeWindow);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

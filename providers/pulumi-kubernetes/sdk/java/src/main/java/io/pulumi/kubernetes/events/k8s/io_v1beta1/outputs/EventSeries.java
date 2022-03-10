@@ -84,17 +84,17 @@ public final class EventSeries {
     	      this.state = defaults.state;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setLastObservedTime(String lastObservedTime) {
+        public Builder lastObservedTime(String lastObservedTime) {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

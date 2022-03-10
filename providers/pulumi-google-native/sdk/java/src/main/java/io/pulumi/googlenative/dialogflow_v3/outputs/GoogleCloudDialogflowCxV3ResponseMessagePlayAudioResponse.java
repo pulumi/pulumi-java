@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse {
     	      this.audioUri = defaults.audioUri;
         }
 
-        public Builder setAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder setAudioUri(String audioUri) {
+        public Builder audioUri(String audioUri) {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }

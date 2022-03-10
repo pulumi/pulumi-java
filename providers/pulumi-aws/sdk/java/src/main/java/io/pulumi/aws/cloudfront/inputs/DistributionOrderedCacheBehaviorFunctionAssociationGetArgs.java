@@ -70,22 +70,22 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationGetArgs ex
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder setEventType(Input<String> eventType) {
+        public Builder eventType(Input<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Input.of(Objects.requireNonNull(eventType));
             return this;
         }
 
-        public Builder setFunctionArn(Input<String> functionArn) {
+        public Builder functionArn(Input<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Input.of(Objects.requireNonNull(functionArn));
             return this;
         }

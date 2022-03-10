@@ -40,7 +40,7 @@ public final class DistributionOriginGroupFailoverCriteria {
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder setStatusCodes(DistributionStatusCodes statusCodes) {
+        public Builder statusCodes(DistributionStatusCodes statusCodes) {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }

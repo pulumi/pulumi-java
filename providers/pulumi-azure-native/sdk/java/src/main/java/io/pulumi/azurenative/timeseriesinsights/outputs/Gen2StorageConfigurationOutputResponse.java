@@ -48,7 +48,7 @@ public final class Gen2StorageConfigurationOutputResponse {
     	      this.accountName = defaults.accountName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }

@@ -124,27 +124,27 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
     	      this.state = defaults.state;
         }
 
-        public Builder setMicrosoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
-        public Builder setPrimaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setRouteFilter(@Nullable SubResourceResponse routeFilter) {
+        public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
 
-        public Builder setSecondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

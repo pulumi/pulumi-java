@@ -102,42 +102,42 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
     	      this.lastStopped = defaults.lastStopped;
         }
 
-        public Builder setCreated(@Nullable Input<String> created) {
+        public Builder created(@Nullable Input<String> created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = Input.ofNullable(created);
             return this;
         }
 
-        public Builder setLastModified(@Nullable Input<String> lastModified) {
+        public Builder lastModified(@Nullable Input<String> lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
-        public Builder setLastModified(@Nullable String lastModified) {
+        public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = Input.ofNullable(lastModified);
             return this;
         }
 
-        public Builder setLastStarted(@Nullable Input<String> lastStarted) {
+        public Builder lastStarted(@Nullable Input<String> lastStarted) {
             this.lastStarted = lastStarted;
             return this;
         }
 
-        public Builder setLastStarted(@Nullable String lastStarted) {
+        public Builder lastStarted(@Nullable String lastStarted) {
             this.lastStarted = Input.ofNullable(lastStarted);
             return this;
         }
 
-        public Builder setLastStopped(@Nullable Input<String> lastStopped) {
+        public Builder lastStopped(@Nullable Input<String> lastStopped) {
             this.lastStopped = lastStopped;
             return this;
         }
 
-        public Builder setLastStopped(@Nullable String lastStopped) {
+        public Builder lastStopped(@Nullable String lastStopped) {
             this.lastStopped = Input.ofNullable(lastStopped);
             return this;
         }

@@ -90,32 +90,32 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
     	      this.suffix = defaults.suffix;
         }
 
-        public Builder setAccessKey(Input<String> accessKey) {
+        public Builder accessKey(Input<String> accessKey) {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
 
-        public Builder setAccessKey(String accessKey) {
+        public Builder accessKey(String accessKey) {
             this.accessKey = Input.of(Objects.requireNonNull(accessKey));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSuffix(@Nullable Input<String> suffix) {
+        public Builder suffix(@Nullable Input<String> suffix) {
             this.suffix = suffix;
             return this;
         }
 
-        public Builder setSuffix(@Nullable String suffix) {
+        public Builder suffix(@Nullable String suffix) {
             this.suffix = Input.ofNullable(suffix);
             return this;
         }

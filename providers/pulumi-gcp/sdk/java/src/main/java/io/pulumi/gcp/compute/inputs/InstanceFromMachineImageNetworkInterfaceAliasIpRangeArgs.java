@@ -62,22 +62,22 @@ public final class InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs exte
     	      this.subnetworkRangeName = defaults.subnetworkRangeName;
         }
 
-        public Builder setIpCidrRange(Input<String> ipCidrRange) {
+        public Builder ipCidrRange(Input<String> ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Input.of(Objects.requireNonNull(ipCidrRange));
             return this;
         }
 
-        public Builder setSubnetworkRangeName(@Nullable Input<String> subnetworkRangeName) {
+        public Builder subnetworkRangeName(@Nullable Input<String> subnetworkRangeName) {
             this.subnetworkRangeName = subnetworkRangeName;
             return this;
         }
 
-        public Builder setSubnetworkRangeName(@Nullable String subnetworkRangeName) {
+        public Builder subnetworkRangeName(@Nullable String subnetworkRangeName) {
             this.subnetworkRangeName = Input.ofNullable(subnetworkRangeName);
             return this;
         }

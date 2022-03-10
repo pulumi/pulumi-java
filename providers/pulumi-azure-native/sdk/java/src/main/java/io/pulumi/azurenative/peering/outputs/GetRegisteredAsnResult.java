@@ -132,32 +132,32 @@ public final class GetRegisteredAsnResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAsn(@Nullable Integer asn) {
+        public Builder asn(@Nullable Integer asn) {
             this.asn = asn;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeringServicePrefixKey(String peeringServicePrefixKey) {
+        public Builder peeringServicePrefixKey(String peeringServicePrefixKey) {
             this.peeringServicePrefixKey = Objects.requireNonNull(peeringServicePrefixKey);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

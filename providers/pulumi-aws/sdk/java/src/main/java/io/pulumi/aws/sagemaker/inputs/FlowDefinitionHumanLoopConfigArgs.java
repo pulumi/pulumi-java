@@ -185,92 +185,92 @@ public final class FlowDefinitionHumanLoopConfigArgs extends io.pulumi.resources
     	      this.workteamArn = defaults.workteamArn;
         }
 
-        public Builder setHumanTaskUiArn(Input<String> humanTaskUiArn) {
+        public Builder humanTaskUiArn(Input<String> humanTaskUiArn) {
             this.humanTaskUiArn = Objects.requireNonNull(humanTaskUiArn);
             return this;
         }
 
-        public Builder setHumanTaskUiArn(String humanTaskUiArn) {
+        public Builder humanTaskUiArn(String humanTaskUiArn) {
             this.humanTaskUiArn = Input.of(Objects.requireNonNull(humanTaskUiArn));
             return this;
         }
 
-        public Builder setPublicWorkforceTaskPrice(@Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice) {
+        public Builder publicWorkforceTaskPrice(@Nullable Input<FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs> publicWorkforceTaskPrice) {
             this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
             return this;
         }
 
-        public Builder setPublicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs publicWorkforceTaskPrice) {
+        public Builder publicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceArgs publicWorkforceTaskPrice) {
             this.publicWorkforceTaskPrice = Input.ofNullable(publicWorkforceTaskPrice);
             return this;
         }
 
-        public Builder setTaskAvailabilityLifetimeInSeconds(@Nullable Input<Integer> taskAvailabilityLifetimeInSeconds) {
+        public Builder taskAvailabilityLifetimeInSeconds(@Nullable Input<Integer> taskAvailabilityLifetimeInSeconds) {
             this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;
             return this;
         }
 
-        public Builder setTaskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
+        public Builder taskAvailabilityLifetimeInSeconds(@Nullable Integer taskAvailabilityLifetimeInSeconds) {
             this.taskAvailabilityLifetimeInSeconds = Input.ofNullable(taskAvailabilityLifetimeInSeconds);
             return this;
         }
 
-        public Builder setTaskCount(Input<Integer> taskCount) {
+        public Builder taskCount(Input<Integer> taskCount) {
             this.taskCount = Objects.requireNonNull(taskCount);
             return this;
         }
 
-        public Builder setTaskCount(Integer taskCount) {
+        public Builder taskCount(Integer taskCount) {
             this.taskCount = Input.of(Objects.requireNonNull(taskCount));
             return this;
         }
 
-        public Builder setTaskDescription(Input<String> taskDescription) {
+        public Builder taskDescription(Input<String> taskDescription) {
             this.taskDescription = Objects.requireNonNull(taskDescription);
             return this;
         }
 
-        public Builder setTaskDescription(String taskDescription) {
+        public Builder taskDescription(String taskDescription) {
             this.taskDescription = Input.of(Objects.requireNonNull(taskDescription));
             return this;
         }
 
-        public Builder setTaskKeywords(@Nullable Input<List<String>> taskKeywords) {
+        public Builder taskKeywords(@Nullable Input<List<String>> taskKeywords) {
             this.taskKeywords = taskKeywords;
             return this;
         }
 
-        public Builder setTaskKeywords(@Nullable List<String> taskKeywords) {
+        public Builder taskKeywords(@Nullable List<String> taskKeywords) {
             this.taskKeywords = Input.ofNullable(taskKeywords);
             return this;
         }
 
-        public Builder setTaskTimeLimitInSeconds(@Nullable Input<Integer> taskTimeLimitInSeconds) {
+        public Builder taskTimeLimitInSeconds(@Nullable Input<Integer> taskTimeLimitInSeconds) {
             this.taskTimeLimitInSeconds = taskTimeLimitInSeconds;
             return this;
         }
 
-        public Builder setTaskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
+        public Builder taskTimeLimitInSeconds(@Nullable Integer taskTimeLimitInSeconds) {
             this.taskTimeLimitInSeconds = Input.ofNullable(taskTimeLimitInSeconds);
             return this;
         }
 
-        public Builder setTaskTitle(Input<String> taskTitle) {
+        public Builder taskTitle(Input<String> taskTitle) {
             this.taskTitle = Objects.requireNonNull(taskTitle);
             return this;
         }
 
-        public Builder setTaskTitle(String taskTitle) {
+        public Builder taskTitle(String taskTitle) {
             this.taskTitle = Input.of(Objects.requireNonNull(taskTitle));
             return this;
         }
 
-        public Builder setWorkteamArn(Input<String> workteamArn) {
+        public Builder workteamArn(Input<String> workteamArn) {
             this.workteamArn = Objects.requireNonNull(workteamArn);
             return this;
         }
 
-        public Builder setWorkteamArn(String workteamArn) {
+        public Builder workteamArn(String workteamArn) {
             this.workteamArn = Input.of(Objects.requireNonNull(workteamArn));
             return this;
         }

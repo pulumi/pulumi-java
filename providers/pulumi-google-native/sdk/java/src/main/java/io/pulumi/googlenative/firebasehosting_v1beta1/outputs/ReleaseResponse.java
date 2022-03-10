@@ -131,32 +131,32 @@ public final class ReleaseResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReleaseTime(String releaseTime) {
+        public Builder releaseTime(String releaseTime) {
             this.releaseTime = Objects.requireNonNull(releaseTime);
             return this;
         }
 
-        public Builder setReleaseUser(ActingUserResponse releaseUser) {
+        public Builder releaseUser(ActingUserResponse releaseUser) {
             this.releaseUser = Objects.requireNonNull(releaseUser);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(VersionResponse version) {
+        public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

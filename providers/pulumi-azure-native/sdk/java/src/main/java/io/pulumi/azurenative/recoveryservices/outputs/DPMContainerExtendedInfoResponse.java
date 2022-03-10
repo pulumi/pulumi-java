@@ -50,7 +50,7 @@ public final class DPMContainerExtendedInfoResponse {
     	      this.lastRefreshedAt = defaults.lastRefreshedAt;
         }
 
-        public Builder setLastRefreshedAt(@Nullable String lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }

@@ -108,42 +108,42 @@ public final class FlowOutputEncryptionArgs extends io.pulumi.resources.Resource
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setAlgorithm(@Nullable Input<FlowOutputEncryptionAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Input<FlowOutputEncryptionAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setAlgorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
+        public Builder algorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
             this.algorithm = Input.ofNullable(algorithm);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<FlowOutputEncryptionKeyType> keyType) {
+        public Builder keyType(@Nullable Input<FlowOutputEncryptionKeyType> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable FlowOutputEncryptionKeyType keyType) {
+        public Builder keyType(@Nullable FlowOutputEncryptionKeyType keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSecretArn(Input<String> secretArn) {
+        public Builder secretArn(Input<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }

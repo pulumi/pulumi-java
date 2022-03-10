@@ -74,22 +74,22 @@ public final class KeyEncryptionKeyInfoArgs extends io.pulumi.resources.Resource
     	      this.keyVaultResourceArmId = defaults.keyVaultResourceArmId;
         }
 
-        public Builder setKeyIdentifier(@Nullable Input<String> keyIdentifier) {
+        public Builder keyIdentifier(@Nullable Input<String> keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
 
-        public Builder setKeyIdentifier(@Nullable String keyIdentifier) {
+        public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = Input.ofNullable(keyIdentifier);
             return this;
         }
 
-        public Builder setKeyVaultResourceArmId(@Nullable Input<String> keyVaultResourceArmId) {
+        public Builder keyVaultResourceArmId(@Nullable Input<String> keyVaultResourceArmId) {
             this.keyVaultResourceArmId = keyVaultResourceArmId;
             return this;
         }
 
-        public Builder setKeyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
+        public Builder keyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
             this.keyVaultResourceArmId = Input.ofNullable(keyVaultResourceArmId);
             return this;
         }

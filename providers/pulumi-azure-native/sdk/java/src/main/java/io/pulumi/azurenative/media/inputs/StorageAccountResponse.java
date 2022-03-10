@@ -74,12 +74,12 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

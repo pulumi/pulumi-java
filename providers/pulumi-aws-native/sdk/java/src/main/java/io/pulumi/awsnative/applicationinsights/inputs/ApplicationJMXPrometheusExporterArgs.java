@@ -90,32 +90,32 @@ public final class ApplicationJMXPrometheusExporterArgs extends io.pulumi.resour
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder setHostPort(@Nullable Input<String> hostPort) {
+        public Builder hostPort(@Nullable Input<String> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
-        public Builder setHostPort(@Nullable String hostPort) {
+        public Builder hostPort(@Nullable String hostPort) {
             this.hostPort = Input.ofNullable(hostPort);
             return this;
         }
 
-        public Builder setJMXURL(@Nullable Input<String> jMXURL) {
+        public Builder jMXURL(@Nullable Input<String> jMXURL) {
             this.jMXURL = jMXURL;
             return this;
         }
 
-        public Builder setJMXURL(@Nullable String jMXURL) {
+        public Builder jMXURL(@Nullable String jMXURL) {
             this.jMXURL = Input.ofNullable(jMXURL);
             return this;
         }
 
-        public Builder setPrometheusPort(@Nullable Input<String> prometheusPort) {
+        public Builder prometheusPort(@Nullable Input<String> prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }
 
-        public Builder setPrometheusPort(@Nullable String prometheusPort) {
+        public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = Input.ofNullable(prometheusPort);
             return this;
         }

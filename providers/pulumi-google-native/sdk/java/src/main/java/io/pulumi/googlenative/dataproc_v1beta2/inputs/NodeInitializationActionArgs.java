@@ -74,22 +74,22 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
     	      this.executionTimeout = defaults.executionTimeout;
         }
 
-        public Builder setExecutableFile(Input<String> executableFile) {
+        public Builder executableFile(Input<String> executableFile) {
             this.executableFile = Objects.requireNonNull(executableFile);
             return this;
         }
 
-        public Builder setExecutableFile(String executableFile) {
+        public Builder executableFile(String executableFile) {
             this.executableFile = Input.of(Objects.requireNonNull(executableFile));
             return this;
         }
 
-        public Builder setExecutionTimeout(@Nullable Input<String> executionTimeout) {
+        public Builder executionTimeout(@Nullable Input<String> executionTimeout) {
             this.executionTimeout = executionTimeout;
             return this;
         }
 
-        public Builder setExecutionTimeout(@Nullable String executionTimeout) {
+        public Builder executionTimeout(@Nullable String executionTimeout) {
             this.executionTimeout = Input.ofNullable(executionTimeout);
             return this;
         }

@@ -58,7 +58,7 @@ public final class TxtRecordResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<String> value) {
+        public Builder value(@Nullable List<String> value) {
             this.value = value;
             return this;
         }

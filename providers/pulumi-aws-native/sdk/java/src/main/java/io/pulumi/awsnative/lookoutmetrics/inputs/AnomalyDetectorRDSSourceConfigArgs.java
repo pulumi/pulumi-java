@@ -135,82 +135,82 @@ public final class AnomalyDetectorRDSSourceConfigArgs extends io.pulumi.resource
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setDBInstanceIdentifier(Input<String> dBInstanceIdentifier) {
+        public Builder dBInstanceIdentifier(Input<String> dBInstanceIdentifier) {
             this.dBInstanceIdentifier = Objects.requireNonNull(dBInstanceIdentifier);
             return this;
         }
 
-        public Builder setDBInstanceIdentifier(String dBInstanceIdentifier) {
+        public Builder dBInstanceIdentifier(String dBInstanceIdentifier) {
             this.dBInstanceIdentifier = Input.of(Objects.requireNonNull(dBInstanceIdentifier));
             return this;
         }
 
-        public Builder setDatabaseHost(Input<String> databaseHost) {
+        public Builder databaseHost(Input<String> databaseHost) {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
 
-        public Builder setDatabaseHost(String databaseHost) {
+        public Builder databaseHost(String databaseHost) {
             this.databaseHost = Input.of(Objects.requireNonNull(databaseHost));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDatabasePort(Input<Integer> databasePort) {
+        public Builder databasePort(Input<Integer> databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
 
-        public Builder setDatabasePort(Integer databasePort) {
+        public Builder databasePort(Integer databasePort) {
             this.databasePort = Input.of(Objects.requireNonNull(databasePort));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSecretManagerArn(Input<String> secretManagerArn) {
+        public Builder secretManagerArn(Input<String> secretManagerArn) {
             this.secretManagerArn = Objects.requireNonNull(secretManagerArn);
             return this;
         }
 
-        public Builder setSecretManagerArn(String secretManagerArn) {
+        public Builder secretManagerArn(String secretManagerArn) {
             this.secretManagerArn = Input.of(Objects.requireNonNull(secretManagerArn));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder setVpcConfiguration(Input<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(Input<AnomalyDetectorVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = Objects.requireNonNull(vpcConfiguration);
             return this;
         }
 
-        public Builder setVpcConfiguration(AnomalyDetectorVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(AnomalyDetectorVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.of(Objects.requireNonNull(vpcConfiguration));
             return this;
         }

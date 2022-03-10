@@ -53,12 +53,12 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
     	      this.splitHealthChecks = defaults.splitHealthChecks;
         }
 
-        public Builder setSplitHealthChecks(Input<Boolean> splitHealthChecks) {
+        public Builder splitHealthChecks(Input<Boolean> splitHealthChecks) {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }
 
-        public Builder setSplitHealthChecks(Boolean splitHealthChecks) {
+        public Builder splitHealthChecks(Boolean splitHealthChecks) {
             this.splitHealthChecks = Input.of(Objects.requireNonNull(splitHealthChecks));
             return this;
         }

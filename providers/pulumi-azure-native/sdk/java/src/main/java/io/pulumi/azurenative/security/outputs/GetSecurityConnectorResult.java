@@ -235,62 +235,62 @@ public final class GetSecurityConnectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCloudName(@Nullable String cloudName) {
+        public Builder cloudName(@Nullable String cloudName) {
             this.cloudName = cloudName;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setHierarchyIdentifier(@Nullable String hierarchyIdentifier) {
+        public Builder hierarchyIdentifier(@Nullable String hierarchyIdentifier) {
             this.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOfferings(@Nullable List<Object> offerings) {
+        public Builder offerings(@Nullable List<Object> offerings) {
             this.offerings = offerings;
             return this;
         }
 
-        public Builder setOrganizationalData(@Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData) {
+        public Builder organizationalData(@Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData) {
             this.organizationalData = organizationalData;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

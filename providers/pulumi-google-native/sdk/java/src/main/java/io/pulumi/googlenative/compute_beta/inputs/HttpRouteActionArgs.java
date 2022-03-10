@@ -173,82 +173,82 @@ public final class HttpRouteActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder setCorsPolicy(@Nullable Input<CorsPolicyArgs> corsPolicy) {
+        public Builder corsPolicy(@Nullable Input<CorsPolicyArgs> corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
 
-        public Builder setCorsPolicy(@Nullable CorsPolicyArgs corsPolicy) {
+        public Builder corsPolicy(@Nullable CorsPolicyArgs corsPolicy) {
             this.corsPolicy = Input.ofNullable(corsPolicy);
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable Input<HttpFaultInjectionArgs> faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable HttpFaultInjectionArgs faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable HttpFaultInjectionArgs faultInjectionPolicy) {
             this.faultInjectionPolicy = Input.ofNullable(faultInjectionPolicy);
             return this;
         }
 
-        public Builder setMaxStreamDuration(@Nullable Input<DurationArgs> maxStreamDuration) {
+        public Builder maxStreamDuration(@Nullable Input<DurationArgs> maxStreamDuration) {
             this.maxStreamDuration = maxStreamDuration;
             return this;
         }
 
-        public Builder setMaxStreamDuration(@Nullable DurationArgs maxStreamDuration) {
+        public Builder maxStreamDuration(@Nullable DurationArgs maxStreamDuration) {
             this.maxStreamDuration = Input.ofNullable(maxStreamDuration);
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable Input<RequestMirrorPolicyArgs> requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable RequestMirrorPolicyArgs requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable RequestMirrorPolicyArgs requestMirrorPolicy) {
             this.requestMirrorPolicy = Input.ofNullable(requestMirrorPolicy);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<HttpRetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<HttpRetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable HttpRetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable HttpRetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<DurationArgs> timeout) {
+        public Builder timeout(@Nullable Input<DurationArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable DurationArgs timeout) {
+        public Builder timeout(@Nullable DurationArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable Input<UrlRewriteArgs> urlRewrite) {
+        public Builder urlRewrite(@Nullable Input<UrlRewriteArgs> urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable UrlRewriteArgs urlRewrite) {
+        public Builder urlRewrite(@Nullable UrlRewriteArgs urlRewrite) {
             this.urlRewrite = Input.ofNullable(urlRewrite);
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable Input<List<WeightedBackendServiceArgs>> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable List<WeightedBackendServiceArgs> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable List<WeightedBackendServiceArgs> weightedBackendServices) {
             this.weightedBackendServices = Input.ofNullable(weightedBackendServices);
             return this;
         }

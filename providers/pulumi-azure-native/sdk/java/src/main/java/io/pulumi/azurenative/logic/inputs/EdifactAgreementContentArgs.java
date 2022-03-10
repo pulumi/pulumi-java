@@ -73,22 +73,22 @@ public final class EdifactAgreementContentArgs extends io.pulumi.resources.Resou
     	      this.sendAgreement = defaults.sendAgreement;
         }
 
-        public Builder setReceiveAgreement(Input<EdifactOneWayAgreementArgs> receiveAgreement) {
+        public Builder receiveAgreement(Input<EdifactOneWayAgreementArgs> receiveAgreement) {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
 
-        public Builder setReceiveAgreement(EdifactOneWayAgreementArgs receiveAgreement) {
+        public Builder receiveAgreement(EdifactOneWayAgreementArgs receiveAgreement) {
             this.receiveAgreement = Input.of(Objects.requireNonNull(receiveAgreement));
             return this;
         }
 
-        public Builder setSendAgreement(Input<EdifactOneWayAgreementArgs> sendAgreement) {
+        public Builder sendAgreement(Input<EdifactOneWayAgreementArgs> sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
 
-        public Builder setSendAgreement(EdifactOneWayAgreementArgs sendAgreement) {
+        public Builder sendAgreement(EdifactOneWayAgreementArgs sendAgreement) {
             this.sendAgreement = Input.of(Objects.requireNonNull(sendAgreement));
             return this;
         }

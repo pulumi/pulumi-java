@@ -42,7 +42,7 @@ public final class StackSetInstanceDeploymentTargets {
     	      this.organizationalUnitIds = defaults.organizationalUnitIds;
         }
 
-        public Builder setOrganizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }

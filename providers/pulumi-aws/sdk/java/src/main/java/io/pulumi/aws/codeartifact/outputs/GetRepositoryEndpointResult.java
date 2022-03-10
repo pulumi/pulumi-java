@@ -97,32 +97,32 @@ public final class GetRepositoryEndpointResult {
     	      this.repositoryEndpoint = defaults.repositoryEndpoint;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomainOwner(String domainOwner) {
+        public Builder domainOwner(String domainOwner) {
             this.domainOwner = Objects.requireNonNull(domainOwner);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setRepositoryEndpoint(String repositoryEndpoint) {
+        public Builder repositoryEndpoint(String repositoryEndpoint) {
             this.repositoryEndpoint = Objects.requireNonNull(repositoryEndpoint);
             return this;
         }

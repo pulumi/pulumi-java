@@ -109,42 +109,42 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setTriggerOperation(@Nullable Input<Either<String,TriggerOperation>> triggerOperation) {
+        public Builder triggerOperation(@Nullable Input<Either<String,TriggerOperation>> triggerOperation) {
             this.triggerOperation = triggerOperation;
             return this;
         }
 
-        public Builder setTriggerOperation(@Nullable Either<String,TriggerOperation> triggerOperation) {
+        public Builder triggerOperation(@Nullable Either<String,TriggerOperation> triggerOperation) {
             this.triggerOperation = Input.ofNullable(triggerOperation);
             return this;
         }
 
-        public Builder setTriggerType(@Nullable Input<Either<String,TriggerType>> triggerType) {
+        public Builder triggerType(@Nullable Input<Either<String,TriggerType>> triggerType) {
             this.triggerType = triggerType;
             return this;
         }
 
-        public Builder setTriggerType(@Nullable Either<String,TriggerType> triggerType) {
+        public Builder triggerType(@Nullable Either<String,TriggerType> triggerType) {
             this.triggerType = Input.ofNullable(triggerType);
             return this;
         }

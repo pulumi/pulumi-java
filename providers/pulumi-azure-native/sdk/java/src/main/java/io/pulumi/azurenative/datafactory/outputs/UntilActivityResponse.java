@@ -207,42 +207,42 @@ public final class UntilActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setActivities(List<Object> activities) {
+        public Builder activities(List<Object> activities) {
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpression(ExpressionResponse expression) {
+        public Builder expression(ExpressionResponse expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Object timeout) {
+        public Builder timeout(@Nullable Object timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

@@ -203,102 +203,102 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setDefaultLimit(@Nullable Input<String> defaultLimit) {
+        public Builder defaultLimit(@Nullable Input<String> defaultLimit) {
             this.defaultLimit = defaultLimit;
             return this;
         }
 
-        public Builder setDefaultLimit(@Nullable String defaultLimit) {
+        public Builder defaultLimit(@Nullable String defaultLimit) {
             this.defaultLimit = Input.ofNullable(defaultLimit);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDuration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Input<String> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setFreeTier(@Nullable Input<String> freeTier) {
+        public Builder freeTier(@Nullable Input<String> freeTier) {
             this.freeTier = freeTier;
             return this;
         }
 
-        public Builder setFreeTier(@Nullable String freeTier) {
+        public Builder freeTier(@Nullable String freeTier) {
             this.freeTier = Input.ofNullable(freeTier);
             return this;
         }
 
-        public Builder setMaxLimit(@Nullable Input<String> maxLimit) {
+        public Builder maxLimit(@Nullable Input<String> maxLimit) {
             this.maxLimit = maxLimit;
             return this;
         }
 
-        public Builder setMaxLimit(@Nullable String maxLimit) {
+        public Builder maxLimit(@Nullable String maxLimit) {
             this.maxLimit = Input.ofNullable(maxLimit);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Input<String> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<Map<String,String>> values) {
+        public Builder values(@Nullable Input<Map<String,String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable Map<String,String> values) {
+        public Builder values(@Nullable Map<String,String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

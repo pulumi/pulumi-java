@@ -52,12 +52,12 @@ public final class AlertAction {
     	      this.sNSConfiguration = defaults.sNSConfiguration;
         }
 
-        public Builder setLambdaConfiguration(@Nullable AlertLambdaConfiguration lambdaConfiguration) {
+        public Builder lambdaConfiguration(@Nullable AlertLambdaConfiguration lambdaConfiguration) {
             this.lambdaConfiguration = lambdaConfiguration;
             return this;
         }
 
-        public Builder setSNSConfiguration(@Nullable AlertSNSConfiguration sNSConfiguration) {
+        public Builder sNSConfiguration(@Nullable AlertSNSConfiguration sNSConfiguration) {
             this.sNSConfiguration = sNSConfiguration;
             return this;
         }

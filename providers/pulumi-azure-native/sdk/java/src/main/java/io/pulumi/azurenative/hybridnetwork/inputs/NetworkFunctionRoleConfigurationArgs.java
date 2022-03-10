@@ -195,92 +195,92 @@ public final class NetworkFunctionRoleConfigurationArgs extends io.pulumi.resour
     	      this.virtualMachineSize = defaults.virtualMachineSize;
         }
 
-        public Builder setCustomProfile(@Nullable Input<CustomProfileArgs> customProfile) {
+        public Builder customProfile(@Nullable Input<CustomProfileArgs> customProfile) {
             this.customProfile = customProfile;
             return this;
         }
 
-        public Builder setCustomProfile(@Nullable CustomProfileArgs customProfile) {
+        public Builder customProfile(@Nullable CustomProfileArgs customProfile) {
             this.customProfile = Input.ofNullable(customProfile);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<OsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OsProfileArgs osProfile) {
+        public Builder osProfile(@Nullable OsProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setRoleType(@Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType) {
+        public Builder roleType(@Nullable Input<Either<String,NetworkFunctionRoleConfigurationType>> roleType) {
             this.roleType = roleType;
             return this;
         }
 
-        public Builder setRoleType(@Nullable Either<String,NetworkFunctionRoleConfigurationType> roleType) {
+        public Builder roleType(@Nullable Either<String,NetworkFunctionRoleConfigurationType> roleType) {
             this.roleType = Input.ofNullable(roleType);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setUserDataParameters(@Nullable Input<Object> userDataParameters) {
+        public Builder userDataParameters(@Nullable Input<Object> userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }
 
-        public Builder setUserDataParameters(@Nullable Object userDataParameters) {
+        public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = Input.ofNullable(userDataParameters);
             return this;
         }
 
-        public Builder setUserDataTemplate(@Nullable Input<Object> userDataTemplate) {
+        public Builder userDataTemplate(@Nullable Input<Object> userDataTemplate) {
             this.userDataTemplate = userDataTemplate;
             return this;
         }
 
-        public Builder setUserDataTemplate(@Nullable Object userDataTemplate) {
+        public Builder userDataTemplate(@Nullable Object userDataTemplate) {
             this.userDataTemplate = Input.ofNullable(userDataTemplate);
             return this;
         }
 
-        public Builder setVirtualMachineSize(@Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize) {
+        public Builder virtualMachineSize(@Nullable Input<Either<String,VirtualMachineSizeTypes>> virtualMachineSize) {
             this.virtualMachineSize = virtualMachineSize;
             return this;
         }
 
-        public Builder setVirtualMachineSize(@Nullable Either<String,VirtualMachineSizeTypes> virtualMachineSize) {
+        public Builder virtualMachineSize(@Nullable Either<String,VirtualMachineSizeTypes> virtualMachineSize) {
             this.virtualMachineSize = Input.ofNullable(virtualMachineSize);
             return this;
         }

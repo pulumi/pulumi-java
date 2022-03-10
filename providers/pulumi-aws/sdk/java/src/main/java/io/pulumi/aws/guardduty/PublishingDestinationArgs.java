@@ -102,42 +102,42 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setDestinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Input<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
             return this;
         }
 
-        public Builder setDestinationType(@Nullable Input<String> destinationType) {
+        public Builder destinationType(@Nullable Input<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
-        public Builder setDestinationType(@Nullable String destinationType) {
+        public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = Input.ofNullable(destinationType);
             return this;
         }
 
-        public Builder setDetectorId(Input<String> detectorId) {
+        public Builder detectorId(Input<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
-        public Builder setDetectorId(String detectorId) {
+        public Builder detectorId(String detectorId) {
             this.detectorId = Input.of(Objects.requireNonNull(detectorId));
             return this;
         }
 
-        public Builder setKmsKeyArn(Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(Input<String> kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Input.of(Objects.requireNonNull(kmsKeyArn));
             return this;
         }

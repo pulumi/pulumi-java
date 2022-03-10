@@ -68,12 +68,12 @@ public final class GetFrontDoorArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFrontDoorName(String frontDoorName) {
+        public Builder frontDoorName(String frontDoorName) {
             this.frontDoorName = Objects.requireNonNull(frontDoorName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -70,22 +70,22 @@ public final class ConnectionOAuthParameters {
     	      this.oAuthHttpParameters = defaults.oAuthHttpParameters;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setClientParameters(ConnectionClientParameters clientParameters) {
+        public Builder clientParameters(ConnectionClientParameters clientParameters) {
             this.clientParameters = Objects.requireNonNull(clientParameters);
             return this;
         }
 
-        public Builder setHttpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
+        public Builder httpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setOAuthHttpParameters(@Nullable ConnectionHttpParameters oAuthHttpParameters) {
+        public Builder oAuthHttpParameters(@Nullable ConnectionHttpParameters oAuthHttpParameters) {
             this.oAuthHttpParameters = oAuthHttpParameters;
             return this;
         }

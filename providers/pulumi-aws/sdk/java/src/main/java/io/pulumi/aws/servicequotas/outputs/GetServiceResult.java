@@ -73,17 +73,17 @@ public final class GetServiceResult {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setServiceCode(String serviceCode) {
+        public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

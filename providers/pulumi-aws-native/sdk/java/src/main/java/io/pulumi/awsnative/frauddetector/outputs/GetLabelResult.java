@@ -117,27 +117,27 @@ public final class GetLabelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LabelTag> tags) {
+        public Builder tags(@Nullable List<LabelTag> tags) {
             this.tags = tags;
             return this;
         }

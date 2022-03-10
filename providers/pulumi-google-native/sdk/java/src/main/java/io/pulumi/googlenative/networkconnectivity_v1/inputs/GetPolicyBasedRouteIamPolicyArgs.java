@@ -74,17 +74,17 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends io.pulumi.resources.
     	      this.project = defaults.project;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setPolicyBasedRouteId(String policyBasedRouteId) {
+        public Builder policyBasedRouteId(String policyBasedRouteId) {
             this.policyBasedRouteId = Objects.requireNonNull(policyBasedRouteId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

@@ -73,12 +73,12 @@ public final class RequestBasedSliResponse extends io.pulumi.resources.InvokeArg
     	      this.goodTotalRatio = defaults.goodTotalRatio;
         }
 
-        public Builder setDistributionCut(DistributionCutResponse distributionCut) {
+        public Builder distributionCut(DistributionCutResponse distributionCut) {
             this.distributionCut = Objects.requireNonNull(distributionCut);
             return this;
         }
 
-        public Builder setGoodTotalRatio(TimeSeriesRatioResponse goodTotalRatio) {
+        public Builder goodTotalRatio(TimeSeriesRatioResponse goodTotalRatio) {
             this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio);
             return this;
         }

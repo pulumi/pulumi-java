@@ -67,12 +67,12 @@ public final class ResourceSetResponse {
     	      this.vmResourceId = defaults.vmResourceId;
         }
 
-        public Builder setResourceSettingId(@Nullable String resourceSettingId) {
+        public Builder resourceSettingId(@Nullable String resourceSettingId) {
             this.resourceSettingId = resourceSettingId;
             return this;
         }
 
-        public Builder setVmResourceId(@Nullable String vmResourceId) {
+        public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }

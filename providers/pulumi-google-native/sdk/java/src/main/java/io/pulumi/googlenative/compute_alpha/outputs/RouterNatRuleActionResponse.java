@@ -98,22 +98,22 @@ public final class RouterNatRuleActionResponse {
     	      this.sourceNatDrainRanges = defaults.sourceNatDrainRanges;
         }
 
-        public Builder setSourceNatActiveIps(List<String> sourceNatActiveIps) {
+        public Builder sourceNatActiveIps(List<String> sourceNatActiveIps) {
             this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
             return this;
         }
 
-        public Builder setSourceNatActiveRanges(List<String> sourceNatActiveRanges) {
+        public Builder sourceNatActiveRanges(List<String> sourceNatActiveRanges) {
             this.sourceNatActiveRanges = Objects.requireNonNull(sourceNatActiveRanges);
             return this;
         }
 
-        public Builder setSourceNatDrainIps(List<String> sourceNatDrainIps) {
+        public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
             this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
             return this;
         }
 
-        public Builder setSourceNatDrainRanges(List<String> sourceNatDrainRanges) {
+        public Builder sourceNatDrainRanges(List<String> sourceNatDrainRanges) {
             this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges);
             return this;
         }

@@ -53,12 +53,12 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     	      this.graphArn = defaults.graphArn;
         }
 
-        public Builder setGraphArn(@Nullable Input<String> graphArn) {
+        public Builder graphArn(@Nullable Input<String> graphArn) {
             this.graphArn = graphArn;
             return this;
         }
 
-        public Builder setGraphArn(@Nullable String graphArn) {
+        public Builder graphArn(@Nullable String graphArn) {
             this.graphArn = Input.ofNullable(graphArn);
             return this;
         }

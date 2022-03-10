@@ -57,12 +57,12 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
     	      this.overview = defaults.overview;
         }
 
-        public Builder setOverview(@Nullable Input<String> overview) {
+        public Builder overview(@Nullable Input<String> overview) {
             this.overview = overview;
             return this;
         }
 
-        public Builder setOverview(@Nullable String overview) {
+        public Builder overview(@Nullable String overview) {
             this.overview = Input.ofNullable(overview);
             return this;
         }

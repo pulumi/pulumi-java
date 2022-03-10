@@ -71,22 +71,22 @@ public final class FunctionEventInvokeConfigDestinationConfigGetArgs extends io.
     	      this.onSuccess = defaults.onSuccess;
         }
 
-        public Builder setOnFailure(@Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure) {
+        public Builder onFailure(@Nullable Input<FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs> onFailure) {
             this.onFailure = onFailure;
             return this;
         }
 
-        public Builder setOnFailure(@Nullable FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs onFailure) {
+        public Builder onFailure(@Nullable FunctionEventInvokeConfigDestinationConfigOnFailureGetArgs onFailure) {
             this.onFailure = Input.ofNullable(onFailure);
             return this;
         }
 
-        public Builder setOnSuccess(@Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess) {
+        public Builder onSuccess(@Nullable Input<FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs> onSuccess) {
             this.onSuccess = onSuccess;
             return this;
         }
 
-        public Builder setOnSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs onSuccess) {
+        public Builder onSuccess(@Nullable FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs onSuccess) {
             this.onSuccess = Input.ofNullable(onSuccess);
             return this;
         }

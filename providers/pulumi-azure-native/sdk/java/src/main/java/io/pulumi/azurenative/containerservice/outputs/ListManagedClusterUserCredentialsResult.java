@@ -49,7 +49,7 @@ public final class ListManagedClusterUserCredentialsResult {
     	      this.kubeconfigs = defaults.kubeconfigs;
         }
 
-        public Builder setKubeconfigs(List<CredentialResultResponse> kubeconfigs) {
+        public Builder kubeconfigs(List<CredentialResultResponse> kubeconfigs) {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }

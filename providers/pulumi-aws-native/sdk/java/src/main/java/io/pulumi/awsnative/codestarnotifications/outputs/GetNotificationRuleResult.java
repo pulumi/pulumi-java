@@ -111,47 +111,47 @@ public final class GetNotificationRuleResult {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setDetailType(@Nullable NotificationRuleDetailType detailType) {
+        public Builder detailType(@Nullable NotificationRuleDetailType detailType) {
             this.detailType = detailType;
             return this;
         }
 
-        public Builder setEventTypeId(@Nullable String eventTypeId) {
+        public Builder eventTypeId(@Nullable String eventTypeId) {
             this.eventTypeId = eventTypeId;
             return this;
         }
 
-        public Builder setEventTypeIds(@Nullable List<String> eventTypeIds) {
+        public Builder eventTypeIds(@Nullable List<String> eventTypeIds) {
             this.eventTypeIds = eventTypeIds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatus(@Nullable NotificationRuleStatus status) {
+        public Builder status(@Nullable NotificationRuleStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTargetAddress(@Nullable String targetAddress) {
+        public Builder targetAddress(@Nullable String targetAddress) {
             this.targetAddress = targetAddress;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<NotificationRuleTarget> targets) {
+        public Builder targets(@Nullable List<NotificationRuleTarget> targets) {
             this.targets = targets;
             return this;
         }

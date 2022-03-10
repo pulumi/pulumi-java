@@ -89,17 +89,17 @@ public final class NotificationChannelSensitiveLabels {
     	      this.serviceKey = defaults.serviceKey;
         }
 
-        public Builder setAuthToken(@Nullable String authToken) {
+        public Builder authToken(@Nullable String authToken) {
             this.authToken = authToken;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServiceKey(@Nullable String serviceKey) {
+        public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }

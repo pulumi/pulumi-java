@@ -92,32 +92,32 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     	      this.status = defaults.status;
         }
 
-        public Builder setActionsRequired(@Nullable Input<String> actionsRequired) {
+        public Builder actionsRequired(@Nullable Input<String> actionsRequired) {
             this.actionsRequired = actionsRequired;
             return this;
         }
 
-        public Builder setActionsRequired(@Nullable String actionsRequired) {
+        public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = Input.ofNullable(actionsRequired);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,Status>> status) {
+        public Builder status(@Nullable Input<Either<String,Status>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,Status> status) {
+        public Builder status(@Nullable Either<String,Status> status) {
             this.status = Input.ofNullable(status);
             return this;
         }

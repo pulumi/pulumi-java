@@ -69,12 +69,12 @@ public final class ContainerImage {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Integer sizeBytes) {
+        public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }

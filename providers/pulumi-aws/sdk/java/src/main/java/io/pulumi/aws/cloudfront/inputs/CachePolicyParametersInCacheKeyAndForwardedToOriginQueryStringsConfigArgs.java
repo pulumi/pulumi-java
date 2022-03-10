@@ -71,22 +71,22 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setQueryStringBehavior(Input<String> queryStringBehavior) {
+        public Builder queryStringBehavior(Input<String> queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
-        public Builder setQueryStringBehavior(String queryStringBehavior) {
+        public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Input.of(Objects.requireNonNull(queryStringBehavior));
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings) {
+        public Builder queryStrings(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs queryStrings) {
+        public Builder queryStrings(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs queryStrings) {
             this.queryStrings = Input.ofNullable(queryStrings);
             return this;
         }

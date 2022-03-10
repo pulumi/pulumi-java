@@ -91,32 +91,32 @@ public final class BrandArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportEmail = defaults.supportEmail;
         }
 
-        public Builder setApplicationTitle(Input<String> applicationTitle) {
+        public Builder applicationTitle(Input<String> applicationTitle) {
             this.applicationTitle = Objects.requireNonNull(applicationTitle);
             return this;
         }
 
-        public Builder setApplicationTitle(String applicationTitle) {
+        public Builder applicationTitle(String applicationTitle) {
             this.applicationTitle = Input.of(Objects.requireNonNull(applicationTitle));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSupportEmail(Input<String> supportEmail) {
+        public Builder supportEmail(Input<String> supportEmail) {
             this.supportEmail = Objects.requireNonNull(supportEmail);
             return this;
         }
 
-        public Builder setSupportEmail(String supportEmail) {
+        public Builder supportEmail(String supportEmail) {
             this.supportEmail = Input.of(Objects.requireNonNull(supportEmail));
             return this;
         }

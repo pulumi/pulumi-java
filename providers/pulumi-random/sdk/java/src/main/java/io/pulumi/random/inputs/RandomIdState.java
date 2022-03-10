@@ -153,72 +153,72 @@ public final class RandomIdState extends io.pulumi.resources.ResourceArgs {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setB64Std(@Nullable Input<String> b64Std) {
+        public Builder b64Std(@Nullable Input<String> b64Std) {
             this.b64Std = b64Std;
             return this;
         }
 
-        public Builder setB64Std(@Nullable String b64Std) {
+        public Builder b64Std(@Nullable String b64Std) {
             this.b64Std = Input.ofNullable(b64Std);
             return this;
         }
 
-        public Builder setB64Url(@Nullable Input<String> b64Url) {
+        public Builder b64Url(@Nullable Input<String> b64Url) {
             this.b64Url = b64Url;
             return this;
         }
 
-        public Builder setB64Url(@Nullable String b64Url) {
+        public Builder b64Url(@Nullable String b64Url) {
             this.b64Url = Input.ofNullable(b64Url);
             return this;
         }
 
-        public Builder setByteLength(@Nullable Input<Integer> byteLength) {
+        public Builder byteLength(@Nullable Input<Integer> byteLength) {
             this.byteLength = byteLength;
             return this;
         }
 
-        public Builder setByteLength(@Nullable Integer byteLength) {
+        public Builder byteLength(@Nullable Integer byteLength) {
             this.byteLength = Input.ofNullable(byteLength);
             return this;
         }
 
-        public Builder setDec(@Nullable Input<String> dec) {
+        public Builder dec(@Nullable Input<String> dec) {
             this.dec = dec;
             return this;
         }
 
-        public Builder setDec(@Nullable String dec) {
+        public Builder dec(@Nullable String dec) {
             this.dec = Input.ofNullable(dec);
             return this;
         }
 
-        public Builder setHex(@Nullable Input<String> hex) {
+        public Builder hex(@Nullable Input<String> hex) {
             this.hex = hex;
             return this;
         }
 
-        public Builder setHex(@Nullable String hex) {
+        public Builder hex(@Nullable String hex) {
             this.hex = Input.ofNullable(hex);
             return this;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }

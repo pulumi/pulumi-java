@@ -48,7 +48,7 @@ public final class ToolExecutionStepResponse {
     	      this.toolExecution = defaults.toolExecution;
         }
 
-        public Builder setToolExecution(ToolExecutionResponse toolExecution) {
+        public Builder toolExecution(ToolExecutionResponse toolExecution) {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }

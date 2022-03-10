@@ -105,42 +105,42 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetA
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs> apt) {
+        public Builder apt(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs> apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setApt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs apt) {
+        public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptGetArgs apt) {
             this.apt = Input.ofNullable(apt);
             return this;
         }
 
-        public Builder setGoo(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs> goo) {
+        public Builder goo(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs> goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setGoo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs goo) {
+        public Builder goo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooGetArgs goo) {
             this.goo = Input.ofNullable(goo);
             return this;
         }
 
-        public Builder setYum(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs> yum) {
+        public Builder yum(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs> yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setYum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs yum) {
+        public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumGetArgs yum) {
             this.yum = Input.ofNullable(yum);
             return this;
         }
 
-        public Builder setZypper(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs> zypper) {
+        public Builder zypper(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
-        public Builder setZypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs zypper) {
+        public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperGetArgs zypper) {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }

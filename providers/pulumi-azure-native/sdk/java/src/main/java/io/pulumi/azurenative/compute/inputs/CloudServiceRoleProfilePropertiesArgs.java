@@ -75,22 +75,22 @@ public final class CloudServiceRoleProfilePropertiesArgs extends io.pulumi.resou
     	      this.sku = defaults.sku;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<CloudServiceRoleSkuArgs> sku) {
+        public Builder sku(@Nullable Input<CloudServiceRoleSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable CloudServiceRoleSkuArgs sku) {
+        public Builder sku(@Nullable CloudServiceRoleSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }

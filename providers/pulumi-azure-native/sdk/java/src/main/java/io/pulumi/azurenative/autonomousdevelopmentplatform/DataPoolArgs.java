@@ -104,42 +104,42 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setDataPoolName(@Nullable Input<String> dataPoolName) {
+        public Builder dataPoolName(@Nullable Input<String> dataPoolName) {
             this.dataPoolName = dataPoolName;
             return this;
         }
 
-        public Builder setDataPoolName(@Nullable String dataPoolName) {
+        public Builder dataPoolName(@Nullable String dataPoolName) {
             this.dataPoolName = Input.ofNullable(dataPoolName);
             return this;
         }
 
-        public Builder setLocations(Input<List<DataPoolLocationArgs>> locations) {
+        public Builder locations(Input<List<DataPoolLocationArgs>> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setLocations(List<DataPoolLocationArgs> locations) {
+        public Builder locations(List<DataPoolLocationArgs> locations) {
             this.locations = Input.of(Objects.requireNonNull(locations));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

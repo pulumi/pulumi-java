@@ -49,12 +49,12 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.projectName = defaults.projectName;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }

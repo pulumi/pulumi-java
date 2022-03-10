@@ -108,22 +108,22 @@ public final class AuthorityConfigX509ConfigCaOptions {
     	      this.zeroMaxIssuerPathLength = defaults.zeroMaxIssuerPathLength;
         }
 
-        public Builder setIsCa(Boolean isCa) {
+        public Builder isCa(Boolean isCa) {
             this.isCa = Objects.requireNonNull(isCa);
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
 
-        public Builder setNonCa(@Nullable Boolean nonCa) {
+        public Builder nonCa(@Nullable Boolean nonCa) {
             this.nonCa = nonCa;
             return this;
         }
 
-        public Builder setZeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
+        public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }

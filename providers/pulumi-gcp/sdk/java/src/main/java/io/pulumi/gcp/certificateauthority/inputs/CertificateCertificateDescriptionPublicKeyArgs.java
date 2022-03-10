@@ -71,22 +71,22 @@ public final class CertificateCertificateDescriptionPublicKeyArgs extends io.pul
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(@Nullable Input<String> format) {
+        public Builder format(@Nullable Input<String> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }

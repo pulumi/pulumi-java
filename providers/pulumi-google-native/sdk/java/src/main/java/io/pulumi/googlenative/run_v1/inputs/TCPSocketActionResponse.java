@@ -73,12 +73,12 @@ public final class TCPSocketActionResponse extends io.pulumi.resources.InvokeArg
     	      this.port = defaults.port;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

@@ -145,67 +145,67 @@ public final class GetPolicyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setExcludeMap(@Nullable PolicyIEMap excludeMap) {
+        public Builder excludeMap(@Nullable PolicyIEMap excludeMap) {
             this.excludeMap = excludeMap;
             return this;
         }
 
-        public Builder setExcludeResourceTags(@Nullable Boolean excludeResourceTags) {
+        public Builder excludeResourceTags(@Nullable Boolean excludeResourceTags) {
             this.excludeResourceTags = excludeResourceTags;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIncludeMap(@Nullable PolicyIEMap includeMap) {
+        public Builder includeMap(@Nullable PolicyIEMap includeMap) {
             this.includeMap = includeMap;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setRemediationEnabled(@Nullable Boolean remediationEnabled) {
+        public Builder remediationEnabled(@Nullable Boolean remediationEnabled) {
             this.remediationEnabled = remediationEnabled;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable List<PolicyResourceTag> resourceTags) {
+        public Builder resourceTags(@Nullable List<PolicyResourceTag> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceTypeList(@Nullable List<String> resourceTypeList) {
+        public Builder resourceTypeList(@Nullable List<String> resourceTypeList) {
             this.resourceTypeList = resourceTypeList;
             return this;
         }
 
-        public Builder setResourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
+        public Builder resourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
             this.resourcesCleanUp = resourcesCleanUp;
             return this;
         }
 
-        public Builder setSecurityServicePolicyData(@Nullable SecurityServicePolicyDataProperties securityServicePolicyData) {
+        public Builder securityServicePolicyData(@Nullable SecurityServicePolicyDataProperties securityServicePolicyData) {
             this.securityServicePolicyData = securityServicePolicyData;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PolicyTag> tags) {
+        public Builder tags(@Nullable List<PolicyTag> tags) {
             this.tags = tags;
             return this;
         }

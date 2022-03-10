@@ -287,82 +287,82 @@ public final class GetDirectoryResult {
     	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setCustomerUserName(String customerUserName) {
+        public Builder customerUserName(String customerUserName) {
             this.customerUserName = Objects.requireNonNull(customerUserName);
             return this;
         }
 
-        public Builder setDirectoryId(String directoryId) {
+        public Builder directoryId(String directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
-        public Builder setDirectoryName(String directoryName) {
+        public Builder directoryName(String directoryName) {
             this.directoryName = Objects.requireNonNull(directoryName);
             return this;
         }
 
-        public Builder setDirectoryType(String directoryType) {
+        public Builder directoryType(String directoryType) {
             this.directoryType = Objects.requireNonNull(directoryType);
             return this;
         }
 
-        public Builder setDnsIpAddresses(List<String> dnsIpAddresses) {
+        public Builder dnsIpAddresses(List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Objects.requireNonNull(dnsIpAddresses);
             return this;
         }
 
-        public Builder setIamRoleId(String iamRoleId) {
+        public Builder iamRoleId(String iamRoleId) {
             this.iamRoleId = Objects.requireNonNull(iamRoleId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpGroupIds(List<String> ipGroupIds) {
+        public Builder ipGroupIds(List<String> ipGroupIds) {
             this.ipGroupIds = Objects.requireNonNull(ipGroupIds);
             return this;
         }
 
-        public Builder setRegistrationCode(String registrationCode) {
+        public Builder registrationCode(String registrationCode) {
             this.registrationCode = Objects.requireNonNull(registrationCode);
             return this;
         }
 
-        public Builder setSelfServicePermissions(List<GetDirectorySelfServicePermission> selfServicePermissions) {
+        public Builder selfServicePermissions(List<GetDirectorySelfServicePermission> selfServicePermissions) {
             this.selfServicePermissions = Objects.requireNonNull(selfServicePermissions);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWorkspaceAccessProperties(List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties) {
             this.workspaceAccessProperties = Objects.requireNonNull(workspaceAccessProperties);
             return this;
         }
 
-        public Builder setWorkspaceCreationProperties(List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties) {
             this.workspaceCreationProperties = Objects.requireNonNull(workspaceCreationProperties);
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(String workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
             return this;
         }

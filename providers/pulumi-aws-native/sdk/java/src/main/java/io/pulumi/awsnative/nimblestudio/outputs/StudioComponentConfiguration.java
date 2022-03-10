@@ -70,22 +70,22 @@ public final class StudioComponentConfiguration {
     	      this.sharedFileSystemConfiguration = defaults.sharedFileSystemConfiguration;
         }
 
-        public Builder setActiveDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
 
-        public Builder setComputeFarmConfiguration(@Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration) {
+        public Builder computeFarmConfiguration(@Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration) {
             this.computeFarmConfiguration = computeFarmConfiguration;
             return this;
         }
 
-        public Builder setLicenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration) {
+        public Builder licenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration) {
             this.licenseServiceConfiguration = licenseServiceConfiguration;
             return this;
         }
 
-        public Builder setSharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
+        public Builder sharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }

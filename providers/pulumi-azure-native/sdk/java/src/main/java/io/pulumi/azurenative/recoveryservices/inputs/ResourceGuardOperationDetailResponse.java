@@ -62,12 +62,12 @@ public final class ResourceGuardOperationDetailResponse extends io.pulumi.resour
     	      this.vaultCriticalOperation = defaults.vaultCriticalOperation;
         }
 
-        public Builder setDefaultResourceRequest(@Nullable String defaultResourceRequest) {
+        public Builder defaultResourceRequest(@Nullable String defaultResourceRequest) {
             this.defaultResourceRequest = defaultResourceRequest;
             return this;
         }
 
-        public Builder setVaultCriticalOperation(@Nullable String vaultCriticalOperation) {
+        public Builder vaultCriticalOperation(@Nullable String vaultCriticalOperation) {
             this.vaultCriticalOperation = vaultCriticalOperation;
             return this;
         }

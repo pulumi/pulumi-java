@@ -67,12 +67,12 @@ public final class CertificateAuthorityOcspConfiguration extends io.pulumi.resou
     	      this.ocspCustomCname = defaults.ocspCustomCname;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setOcspCustomCname(@Nullable String ocspCustomCname) {
+        public Builder ocspCustomCname(@Nullable String ocspCustomCname) {
             this.ocspCustomCname = ocspCustomCname;
             return this;
         }

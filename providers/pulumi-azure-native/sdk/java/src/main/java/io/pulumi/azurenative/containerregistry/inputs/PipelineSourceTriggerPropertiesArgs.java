@@ -54,12 +54,12 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(Input<Either<String,TriggerStatus>> status) {
+        public Builder status(Input<Either<String,TriggerStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(Either<String,TriggerStatus> status) {
+        public Builder status(Either<String,TriggerStatus> status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

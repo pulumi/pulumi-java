@@ -152,82 +152,82 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setBehavior(@Nullable Input<ResponsePolicyRuleBehavior> behavior) {
+        public Builder behavior(@Nullable Input<ResponsePolicyRuleBehavior> behavior) {
             this.behavior = behavior;
             return this;
         }
 
-        public Builder setBehavior(@Nullable ResponsePolicyRuleBehavior behavior) {
+        public Builder behavior(@Nullable ResponsePolicyRuleBehavior behavior) {
             this.behavior = Input.ofNullable(behavior);
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Input.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocalData(@Nullable Input<ResponsePolicyRuleLocalDataArgs> localData) {
+        public Builder localData(@Nullable Input<ResponsePolicyRuleLocalDataArgs> localData) {
             this.localData = localData;
             return this;
         }
 
-        public Builder setLocalData(@Nullable ResponsePolicyRuleLocalDataArgs localData) {
+        public Builder localData(@Nullable ResponsePolicyRuleLocalDataArgs localData) {
             this.localData = Input.ofNullable(localData);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResponsePolicy(Input<String> responsePolicy) {
+        public Builder responsePolicy(Input<String> responsePolicy) {
             this.responsePolicy = Objects.requireNonNull(responsePolicy);
             return this;
         }
 
-        public Builder setResponsePolicy(String responsePolicy) {
+        public Builder responsePolicy(String responsePolicy) {
             this.responsePolicy = Input.of(Objects.requireNonNull(responsePolicy));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }

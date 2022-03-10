@@ -75,22 +75,22 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends io.
     	      this.uid = defaults.uid;
         }
 
-        public Builder setProjectRepoId(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId) {
+        public Builder projectRepoId(@Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId) {
             this.projectRepoId = projectRepoId;
             return this;
         }
 
-        public Builder setProjectRepoId(@Nullable GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs projectRepoId) {
+        public Builder projectRepoId(@Nullable GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs projectRepoId) {
             this.projectRepoId = Input.ofNullable(projectRepoId);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

@@ -62,12 +62,12 @@ public final class RuleGroupRuleVariables extends io.pulumi.resources.InvokeArgs
     	      this.portSets = defaults.portSets;
         }
 
-        public Builder setIPSets(@Nullable Object iPSets) {
+        public Builder iPSets(@Nullable Object iPSets) {
             this.iPSets = iPSets;
             return this;
         }
 
-        public Builder setPortSets(@Nullable Object portSets) {
+        public Builder portSets(@Nullable Object portSets) {
             this.portSets = portSets;
             return this;
         }

@@ -92,17 +92,17 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
     	      this.uefiSettings = defaults.uefiSettings;
         }
 
-        public Builder setEncryptionAtHost(@Nullable Boolean encryptionAtHost) {
+        public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
-        public Builder setSecurityType(@Nullable String securityType) {
+        public Builder securityType(@Nullable String securityType) {
             this.securityType = securityType;
             return this;
         }
 
-        public Builder setUefiSettings(@Nullable UefiSettingsResponse uefiSettings) {
+        public Builder uefiSettings(@Nullable UefiSettingsResponse uefiSettings) {
             this.uefiSettings = uefiSettings;
             return this;
         }

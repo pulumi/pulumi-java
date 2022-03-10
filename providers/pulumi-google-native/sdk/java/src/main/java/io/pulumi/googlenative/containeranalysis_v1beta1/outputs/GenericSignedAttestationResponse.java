@@ -83,17 +83,17 @@ public final class GenericSignedAttestationResponse {
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setSerializedPayload(String serializedPayload) {
+        public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
-        public Builder setSignatures(List<SignatureResponse> signatures) {
+        public Builder signatures(List<SignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }

@@ -74,22 +74,22 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(Input<PublicKeyFormat> format) {
+        public Builder format(Input<PublicKeyFormat> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(PublicKeyFormat format) {
+        public Builder format(PublicKeyFormat format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }

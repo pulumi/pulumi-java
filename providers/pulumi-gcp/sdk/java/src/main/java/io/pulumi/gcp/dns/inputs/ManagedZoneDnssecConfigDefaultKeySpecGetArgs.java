@@ -110,42 +110,42 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecGetArgs extends io.pulum
     	      this.kind = defaults.kind;
         }
 
-        public Builder setAlgorithm(@Nullable Input<String> algorithm) {
+        public Builder algorithm(@Nullable Input<String> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = Input.ofNullable(algorithm);
             return this;
         }
 
-        public Builder setKeyLength(@Nullable Input<Integer> keyLength) {
+        public Builder keyLength(@Nullable Input<Integer> keyLength) {
             this.keyLength = keyLength;
             return this;
         }
 
-        public Builder setKeyLength(@Nullable Integer keyLength) {
+        public Builder keyLength(@Nullable Integer keyLength) {
             this.keyLength = Input.ofNullable(keyLength);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Input<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }

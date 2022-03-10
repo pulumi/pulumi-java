@@ -74,12 +74,12 @@ public final class TlsValidationOptionsResponse extends io.pulumi.resources.Invo
     	      this.ignoreSignature = defaults.ignoreSignature;
         }
 
-        public Builder setIgnoreHostname(@Nullable String ignoreHostname) {
+        public Builder ignoreHostname(@Nullable String ignoreHostname) {
             this.ignoreHostname = ignoreHostname;
             return this;
         }
 
-        public Builder setIgnoreSignature(@Nullable String ignoreSignature) {
+        public Builder ignoreSignature(@Nullable String ignoreSignature) {
             this.ignoreSignature = ignoreSignature;
             return this;
         }

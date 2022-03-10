@@ -132,32 +132,32 @@ public final class StepOperationInfoResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setCorrelationId(String correlationId) {
+        public Builder correlationId(String correlationId) {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
 
-        public Builder setDeploymentName(String deploymentName) {
+        public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(@Nullable CloudErrorBodyResponse error) {
+        public Builder error(@Nullable CloudErrorBodyResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

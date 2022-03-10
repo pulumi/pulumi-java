@@ -130,32 +130,32 @@ public final class ScriptStackFrameResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setEndColumn(Integer endColumn) {
+        public Builder endColumn(Integer endColumn) {
             this.endColumn = Objects.requireNonNull(endColumn);
             return this;
         }
 
-        public Builder setEndLine(Integer endLine) {
+        public Builder endLine(Integer endLine) {
             this.endLine = Objects.requireNonNull(endLine);
             return this;
         }
 
-        public Builder setProcedureId(String procedureId) {
+        public Builder procedureId(String procedureId) {
             this.procedureId = Objects.requireNonNull(procedureId);
             return this;
         }
 
-        public Builder setStartColumn(Integer startColumn) {
+        public Builder startColumn(Integer startColumn) {
             this.startColumn = Objects.requireNonNull(startColumn);
             return this;
         }
 
-        public Builder setStartLine(Integer startLine) {
+        public Builder startLine(Integer startLine) {
             this.startLine = Objects.requireNonNull(startLine);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

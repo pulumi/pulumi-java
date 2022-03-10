@@ -92,32 +92,32 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeserializer(@Nullable Input<Object> deserializer) {
+        public Builder deserializer(@Nullable Input<Object> deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setDeserializer(@Nullable Object deserializer) {
+        public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = Input.ofNullable(deserializer);
             return this;
         }
 
-        public Builder setSerializer(@Nullable Input<Object> serializer) {
+        public Builder serializer(@Nullable Input<Object> serializer) {
             this.serializer = serializer;
             return this;
         }
 
-        public Builder setSerializer(@Nullable Object serializer) {
+        public Builder serializer(@Nullable Object serializer) {
             this.serializer = Input.ofNullable(serializer);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

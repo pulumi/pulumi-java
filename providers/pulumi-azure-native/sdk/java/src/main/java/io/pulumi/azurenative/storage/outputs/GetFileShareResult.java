@@ -327,92 +327,92 @@ public final class GetFileShareResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAccessTier(@Nullable String accessTier) {
+        public Builder accessTier(@Nullable String accessTier) {
             this.accessTier = accessTier;
             return this;
         }
 
-        public Builder setAccessTierChangeTime(String accessTierChangeTime) {
+        public Builder accessTierChangeTime(String accessTierChangeTime) {
             this.accessTierChangeTime = Objects.requireNonNull(accessTierChangeTime);
             return this;
         }
 
-        public Builder setAccessTierStatus(String accessTierStatus) {
+        public Builder accessTierStatus(String accessTierStatus) {
             this.accessTierStatus = Objects.requireNonNull(accessTierStatus);
             return this;
         }
 
-        public Builder setDeleted(Boolean deleted) {
+        public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
 
-        public Builder setDeletedTime(String deletedTime) {
+        public Builder deletedTime(String deletedTime) {
             this.deletedTime = Objects.requireNonNull(deletedTime);
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable String enabledProtocols) {
+        public Builder enabledProtocols(@Nullable String enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRemainingRetentionDays(Integer remainingRetentionDays) {
+        public Builder remainingRetentionDays(Integer remainingRetentionDays) {
             this.remainingRetentionDays = Objects.requireNonNull(remainingRetentionDays);
             return this;
         }
 
-        public Builder setRootSquash(@Nullable String rootSquash) {
+        public Builder rootSquash(@Nullable String rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
 
-        public Builder setShareQuota(@Nullable Integer shareQuota) {
+        public Builder shareQuota(@Nullable Integer shareQuota) {
             this.shareQuota = shareQuota;
             return this;
         }
 
-        public Builder setShareUsageBytes(Double shareUsageBytes) {
+        public Builder shareUsageBytes(Double shareUsageBytes) {
             this.shareUsageBytes = Objects.requireNonNull(shareUsageBytes);
             return this;
         }
 
-        public Builder setSnapshotTime(String snapshotTime) {
+        public Builder snapshotTime(String snapshotTime) {
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

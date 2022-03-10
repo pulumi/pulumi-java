@@ -68,12 +68,12 @@ public final class GetCloudFormationTypeLoggingConfig extends io.pulumi.resource
     	      this.logRoleArn = defaults.logRoleArn;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setLogRoleArn(String logRoleArn) {
+        public Builder logRoleArn(String logRoleArn) {
             this.logRoleArn = Objects.requireNonNull(logRoleArn);
             return this;
         }

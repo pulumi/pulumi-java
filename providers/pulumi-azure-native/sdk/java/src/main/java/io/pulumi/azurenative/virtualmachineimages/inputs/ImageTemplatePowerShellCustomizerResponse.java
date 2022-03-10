@@ -174,42 +174,42 @@ public final class ImageTemplatePowerShellCustomizerResponse extends io.pulumi.r
     	      this.validExitCodes = defaults.validExitCodes;
         }
 
-        public Builder setInline(@Nullable List<String> inline) {
+        public Builder inline(@Nullable List<String> inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRunAsSystem(@Nullable Boolean runAsSystem) {
+        public Builder runAsSystem(@Nullable Boolean runAsSystem) {
             this.runAsSystem = runAsSystem;
             return this;
         }
 
-        public Builder setRunElevated(@Nullable Boolean runElevated) {
+        public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = runElevated;
             return this;
         }
 
-        public Builder setScriptUri(@Nullable String scriptUri) {
+        public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable String sha256Checksum) {
+        public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidExitCodes(@Nullable List<Integer> validExitCodes) {
+        public Builder validExitCodes(@Nullable List<Integer> validExitCodes) {
             this.validExitCodes = validExitCodes;
             return this;
         }

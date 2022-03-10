@@ -101,22 +101,22 @@ public final class SourceContextResponse {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setCloudRepo(CloudRepoSourceContextResponse cloudRepo) {
+        public Builder cloudRepo(CloudRepoSourceContextResponse cloudRepo) {
             this.cloudRepo = Objects.requireNonNull(cloudRepo);
             return this;
         }
 
-        public Builder setGerrit(GerritSourceContextResponse gerrit) {
+        public Builder gerrit(GerritSourceContextResponse gerrit) {
             this.gerrit = Objects.requireNonNull(gerrit);
             return this;
         }
 
-        public Builder setGit(GitSourceContextResponse git) {
+        public Builder git(GitSourceContextResponse git) {
             this.git = Objects.requireNonNull(git);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

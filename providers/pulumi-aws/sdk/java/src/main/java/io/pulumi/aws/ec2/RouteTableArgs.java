@@ -105,42 +105,42 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setPropagatingVgws(@Nullable Input<List<String>> propagatingVgws) {
+        public Builder propagatingVgws(@Nullable Input<List<String>> propagatingVgws) {
             this.propagatingVgws = propagatingVgws;
             return this;
         }
 
-        public Builder setPropagatingVgws(@Nullable List<String> propagatingVgws) {
+        public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
             this.propagatingVgws = Input.ofNullable(propagatingVgws);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<List<RouteTableRouteArgs>> routes) {
+        public Builder routes(@Nullable Input<List<RouteTableRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<RouteTableRouteArgs> routes) {
+        public Builder routes(@Nullable List<RouteTableRouteArgs> routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

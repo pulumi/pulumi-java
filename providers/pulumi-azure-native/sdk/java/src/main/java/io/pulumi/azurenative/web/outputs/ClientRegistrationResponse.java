@@ -67,12 +67,12 @@ public final class ClientRegistrationResponse {
     	      this.clientSecretSettingName = defaults.clientSecretSettingName;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable String clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }

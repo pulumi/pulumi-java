@@ -50,7 +50,7 @@ public final class GetGlobalClusterResult {
     	      this.deletionProtection = defaults.deletionProtection;
         }
 
-        public Builder setDeletionProtection(@Nullable Boolean deletionProtection) {
+        public Builder deletionProtection(@Nullable Boolean deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }

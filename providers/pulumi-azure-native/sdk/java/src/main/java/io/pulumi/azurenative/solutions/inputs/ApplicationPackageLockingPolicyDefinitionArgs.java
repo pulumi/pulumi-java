@@ -75,22 +75,22 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
     	      this.allowedDataActions = defaults.allowedDataActions;
         }
 
-        public Builder setAllowedActions(@Nullable Input<List<String>> allowedActions) {
+        public Builder allowedActions(@Nullable Input<List<String>> allowedActions) {
             this.allowedActions = allowedActions;
             return this;
         }
 
-        public Builder setAllowedActions(@Nullable List<String> allowedActions) {
+        public Builder allowedActions(@Nullable List<String> allowedActions) {
             this.allowedActions = Input.ofNullable(allowedActions);
             return this;
         }
 
-        public Builder setAllowedDataActions(@Nullable Input<List<String>> allowedDataActions) {
+        public Builder allowedDataActions(@Nullable Input<List<String>> allowedDataActions) {
             this.allowedDataActions = allowedDataActions;
             return this;
         }
 
-        public Builder setAllowedDataActions(@Nullable List<String> allowedDataActions) {
+        public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
             this.allowedDataActions = Input.ofNullable(allowedDataActions);
             return this;
         }

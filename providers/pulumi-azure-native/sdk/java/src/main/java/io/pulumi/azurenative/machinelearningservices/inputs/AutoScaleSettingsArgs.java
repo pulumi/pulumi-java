@@ -119,52 +119,52 @@ public final class AutoScaleSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.targetUtilizationPercentage = defaults.targetUtilizationPercentage;
         }
 
-        public Builder setMaxInstances(@Nullable Input<Integer> maxInstances) {
+        public Builder maxInstances(@Nullable Input<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
-        public Builder setMaxInstances(@Nullable Integer maxInstances) {
+        public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Input.ofNullable(maxInstances);
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Input<Integer> minInstances) {
+        public Builder minInstances(@Nullable Input<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Integer minInstances) {
+        public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Input.ofNullable(minInstances);
             return this;
         }
 
-        public Builder setPollingInterval(@Nullable Input<String> pollingInterval) {
+        public Builder pollingInterval(@Nullable Input<String> pollingInterval) {
             this.pollingInterval = pollingInterval;
             return this;
         }
 
-        public Builder setPollingInterval(@Nullable String pollingInterval) {
+        public Builder pollingInterval(@Nullable String pollingInterval) {
             this.pollingInterval = Input.ofNullable(pollingInterval);
             return this;
         }
 
-        public Builder setScaleType(Input<String> scaleType) {
+        public Builder scaleType(Input<String> scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
 
-        public Builder setScaleType(String scaleType) {
+        public Builder scaleType(String scaleType) {
             this.scaleType = Input.of(Objects.requireNonNull(scaleType));
             return this;
         }
 
-        public Builder setTargetUtilizationPercentage(@Nullable Input<Integer> targetUtilizationPercentage) {
+        public Builder targetUtilizationPercentage(@Nullable Input<Integer> targetUtilizationPercentage) {
             this.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
         }
 
-        public Builder setTargetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
+        public Builder targetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
             this.targetUtilizationPercentage = Input.ofNullable(targetUtilizationPercentage);
             return this;
         }

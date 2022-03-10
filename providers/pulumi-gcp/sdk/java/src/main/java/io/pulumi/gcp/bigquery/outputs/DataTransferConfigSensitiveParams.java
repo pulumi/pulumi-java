@@ -50,7 +50,7 @@ public final class DataTransferConfigSensitiveParams {
     	      this.secretAccessKey = defaults.secretAccessKey;
         }
 
-        public Builder setSecretAccessKey(String secretAccessKey) {
+        public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }

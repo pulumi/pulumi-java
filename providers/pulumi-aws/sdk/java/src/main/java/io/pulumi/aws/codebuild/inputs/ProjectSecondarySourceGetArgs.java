@@ -208,102 +208,102 @@ public final class ProjectSecondarySourceGetArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setAuth(@Nullable Input<ProjectSecondarySourceAuthGetArgs> auth) {
+        public Builder auth(@Nullable Input<ProjectSecondarySourceAuthGetArgs> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable ProjectSecondarySourceAuthGetArgs auth) {
+        public Builder auth(@Nullable ProjectSecondarySourceAuthGetArgs auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setBuildStatusConfig(@Nullable Input<ProjectSecondarySourceBuildStatusConfigGetArgs> buildStatusConfig) {
+        public Builder buildStatusConfig(@Nullable Input<ProjectSecondarySourceBuildStatusConfigGetArgs> buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
 
-        public Builder setBuildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfigGetArgs buildStatusConfig) {
+        public Builder buildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfigGetArgs buildStatusConfig) {
             this.buildStatusConfig = Input.ofNullable(buildStatusConfig);
             return this;
         }
 
-        public Builder setBuildspec(@Nullable Input<String> buildspec) {
+        public Builder buildspec(@Nullable Input<String> buildspec) {
             this.buildspec = buildspec;
             return this;
         }
 
-        public Builder setBuildspec(@Nullable String buildspec) {
+        public Builder buildspec(@Nullable String buildspec) {
             this.buildspec = Input.ofNullable(buildspec);
             return this;
         }
 
-        public Builder setGitCloneDepth(@Nullable Input<Integer> gitCloneDepth) {
+        public Builder gitCloneDepth(@Nullable Input<Integer> gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
 
-        public Builder setGitCloneDepth(@Nullable Integer gitCloneDepth) {
+        public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
             this.gitCloneDepth = Input.ofNullable(gitCloneDepth);
             return this;
         }
 
-        public Builder setGitSubmodulesConfig(@Nullable Input<ProjectSecondarySourceGitSubmodulesConfigGetArgs> gitSubmodulesConfig) {
+        public Builder gitSubmodulesConfig(@Nullable Input<ProjectSecondarySourceGitSubmodulesConfigGetArgs> gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
 
-        public Builder setGitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfigGetArgs gitSubmodulesConfig) {
+        public Builder gitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfigGetArgs gitSubmodulesConfig) {
             this.gitSubmodulesConfig = Input.ofNullable(gitSubmodulesConfig);
             return this;
         }
 
-        public Builder setInsecureSsl(@Nullable Input<Boolean> insecureSsl) {
+        public Builder insecureSsl(@Nullable Input<Boolean> insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
 
-        public Builder setInsecureSsl(@Nullable Boolean insecureSsl) {
+        public Builder insecureSsl(@Nullable Boolean insecureSsl) {
             this.insecureSsl = Input.ofNullable(insecureSsl);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setReportBuildStatus(@Nullable Input<Boolean> reportBuildStatus) {
+        public Builder reportBuildStatus(@Nullable Input<Boolean> reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
 
-        public Builder setReportBuildStatus(@Nullable Boolean reportBuildStatus) {
+        public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
             this.reportBuildStatus = Input.ofNullable(reportBuildStatus);
             return this;
         }
 
-        public Builder setSourceIdentifier(Input<String> sourceIdentifier) {
+        public Builder sourceIdentifier(Input<String> sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
 
-        public Builder setSourceIdentifier(String sourceIdentifier) {
+        public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Input.of(Objects.requireNonNull(sourceIdentifier));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

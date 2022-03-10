@@ -106,42 +106,42 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs ex
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs> certificate) {
+        public Builder certificate(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs certificate) {
+        public Builder certificate(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateGetArgs certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setEnforce(@Nullable Input<Boolean> enforce) {
+        public Builder enforce(@Nullable Input<Boolean> enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setEnforce(@Nullable Boolean enforce) {
+        public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = Input.ofNullable(enforce);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<Integer>> ports) {
+        public Builder ports(@Nullable Input<List<Integer>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<Integer> ports) {
+        public Builder ports(@Nullable List<Integer> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }
 
-        public Builder setValidation(Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs> validation) {
+        public Builder validation(Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs> validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }
 
-        public Builder setValidation(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs validation) {
+        public Builder validation(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationGetArgs validation) {
             this.validation = Input.of(Objects.requireNonNull(validation));
             return this;
         }

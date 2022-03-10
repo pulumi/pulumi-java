@@ -284,152 +284,152 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
     	      this.sshKnownHostsContents = defaults.sshKnownHostsContents;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setClusterResourceName(Input<String> clusterResourceName) {
+        public Builder clusterResourceName(Input<String> clusterResourceName) {
             this.clusterResourceName = Objects.requireNonNull(clusterResourceName);
             return this;
         }
 
-        public Builder setClusterResourceName(String clusterResourceName) {
+        public Builder clusterResourceName(String clusterResourceName) {
             this.clusterResourceName = Input.of(Objects.requireNonNull(clusterResourceName));
             return this;
         }
 
-        public Builder setClusterRp(Input<String> clusterRp) {
+        public Builder clusterRp(Input<String> clusterRp) {
             this.clusterRp = Objects.requireNonNull(clusterRp);
             return this;
         }
 
-        public Builder setClusterRp(String clusterRp) {
+        public Builder clusterRp(String clusterRp) {
             this.clusterRp = Input.of(Objects.requireNonNull(clusterRp));
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Input<Map<String,String>> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Input<Map<String,String>> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = Input.ofNullable(configurationProtectedSettings);
             return this;
         }
 
-        public Builder setEnableHelmOperator(@Nullable Input<Boolean> enableHelmOperator) {
+        public Builder enableHelmOperator(@Nullable Input<Boolean> enableHelmOperator) {
             this.enableHelmOperator = enableHelmOperator;
             return this;
         }
 
-        public Builder setEnableHelmOperator(@Nullable Boolean enableHelmOperator) {
+        public Builder enableHelmOperator(@Nullable Boolean enableHelmOperator) {
             this.enableHelmOperator = Input.ofNullable(enableHelmOperator);
             return this;
         }
 
-        public Builder setHelmOperatorProperties(@Nullable Input<HelmOperatorPropertiesArgs> helmOperatorProperties) {
+        public Builder helmOperatorProperties(@Nullable Input<HelmOperatorPropertiesArgs> helmOperatorProperties) {
             this.helmOperatorProperties = helmOperatorProperties;
             return this;
         }
 
-        public Builder setHelmOperatorProperties(@Nullable HelmOperatorPropertiesArgs helmOperatorProperties) {
+        public Builder helmOperatorProperties(@Nullable HelmOperatorPropertiesArgs helmOperatorProperties) {
             this.helmOperatorProperties = Input.ofNullable(helmOperatorProperties);
             return this;
         }
 
-        public Builder setOperatorInstanceName(@Nullable Input<String> operatorInstanceName) {
+        public Builder operatorInstanceName(@Nullable Input<String> operatorInstanceName) {
             this.operatorInstanceName = operatorInstanceName;
             return this;
         }
 
-        public Builder setOperatorInstanceName(@Nullable String operatorInstanceName) {
+        public Builder operatorInstanceName(@Nullable String operatorInstanceName) {
             this.operatorInstanceName = Input.ofNullable(operatorInstanceName);
             return this;
         }
 
-        public Builder setOperatorNamespace(@Nullable Input<String> operatorNamespace) {
+        public Builder operatorNamespace(@Nullable Input<String> operatorNamespace) {
             this.operatorNamespace = operatorNamespace;
             return this;
         }
 
-        public Builder setOperatorNamespace(@Nullable String operatorNamespace) {
+        public Builder operatorNamespace(@Nullable String operatorNamespace) {
             this.operatorNamespace = Input.ofNullable(operatorNamespace);
             return this;
         }
 
-        public Builder setOperatorParams(@Nullable Input<String> operatorParams) {
+        public Builder operatorParams(@Nullable Input<String> operatorParams) {
             this.operatorParams = operatorParams;
             return this;
         }
 
-        public Builder setOperatorParams(@Nullable String operatorParams) {
+        public Builder operatorParams(@Nullable String operatorParams) {
             this.operatorParams = Input.ofNullable(operatorParams);
             return this;
         }
 
-        public Builder setOperatorScope(@Nullable Input<Either<String,OperatorScopeType>> operatorScope) {
+        public Builder operatorScope(@Nullable Input<Either<String,OperatorScopeType>> operatorScope) {
             this.operatorScope = operatorScope;
             return this;
         }
 
-        public Builder setOperatorScope(@Nullable Either<String,OperatorScopeType> operatorScope) {
+        public Builder operatorScope(@Nullable Either<String,OperatorScopeType> operatorScope) {
             this.operatorScope = Input.ofNullable(operatorScope);
             return this;
         }
 
-        public Builder setOperatorType(@Nullable Input<Either<String,OperatorType>> operatorType) {
+        public Builder operatorType(@Nullable Input<Either<String,OperatorType>> operatorType) {
             this.operatorType = operatorType;
             return this;
         }
 
-        public Builder setOperatorType(@Nullable Either<String,OperatorType> operatorType) {
+        public Builder operatorType(@Nullable Either<String,OperatorType> operatorType) {
             this.operatorType = Input.ofNullable(operatorType);
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable Input<String> repositoryUrl) {
+        public Builder repositoryUrl(@Nullable Input<String> repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable String repositoryUrl) {
+        public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = Input.ofNullable(repositoryUrl);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSourceControlConfigurationName(@Nullable Input<String> sourceControlConfigurationName) {
+        public Builder sourceControlConfigurationName(@Nullable Input<String> sourceControlConfigurationName) {
             this.sourceControlConfigurationName = sourceControlConfigurationName;
             return this;
         }
 
-        public Builder setSourceControlConfigurationName(@Nullable String sourceControlConfigurationName) {
+        public Builder sourceControlConfigurationName(@Nullable String sourceControlConfigurationName) {
             this.sourceControlConfigurationName = Input.ofNullable(sourceControlConfigurationName);
             return this;
         }
 
-        public Builder setSshKnownHostsContents(@Nullable Input<String> sshKnownHostsContents) {
+        public Builder sshKnownHostsContents(@Nullable Input<String> sshKnownHostsContents) {
             this.sshKnownHostsContents = sshKnownHostsContents;
             return this;
         }
 
-        public Builder setSshKnownHostsContents(@Nullable String sshKnownHostsContents) {
+        public Builder sshKnownHostsContents(@Nullable String sshKnownHostsContents) {
             this.sshKnownHostsContents = Input.ofNullable(sshKnownHostsContents);
             return this;
         }

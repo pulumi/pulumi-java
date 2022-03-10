@@ -87,32 +87,32 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs 
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigGetArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setS3OutputPath(Input<String> s3OutputPath) {
+        public Builder s3OutputPath(Input<String> s3OutputPath) {
             this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
             return this;
         }
 
-        public Builder setS3OutputPath(String s3OutputPath) {
+        public Builder s3OutputPath(String s3OutputPath) {
             this.s3OutputPath = Input.of(Objects.requireNonNull(s3OutputPath));
             return this;
         }

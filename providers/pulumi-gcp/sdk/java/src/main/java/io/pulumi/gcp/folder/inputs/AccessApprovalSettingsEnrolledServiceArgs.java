@@ -94,22 +94,22 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
     	      this.enrollmentLevel = defaults.enrollmentLevel;
         }
 
-        public Builder setCloudProduct(Input<String> cloudProduct) {
+        public Builder cloudProduct(Input<String> cloudProduct) {
             this.cloudProduct = Objects.requireNonNull(cloudProduct);
             return this;
         }
 
-        public Builder setCloudProduct(String cloudProduct) {
+        public Builder cloudProduct(String cloudProduct) {
             this.cloudProduct = Input.of(Objects.requireNonNull(cloudProduct));
             return this;
         }
 
-        public Builder setEnrollmentLevel(@Nullable Input<String> enrollmentLevel) {
+        public Builder enrollmentLevel(@Nullable Input<String> enrollmentLevel) {
             this.enrollmentLevel = enrollmentLevel;
             return this;
         }
 
-        public Builder setEnrollmentLevel(@Nullable String enrollmentLevel) {
+        public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
             this.enrollmentLevel = Input.ofNullable(enrollmentLevel);
             return this;
         }

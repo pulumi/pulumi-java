@@ -42,7 +42,7 @@ public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions {
     	      this.resourceCreationBegin = defaults.resourceCreationBegin;
         }
 
-        public Builder setResourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
+        public Builder resourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin) {
             this.resourceCreationBegin = resourceCreationBegin;
             return this;
         }

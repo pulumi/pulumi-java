@@ -74,17 +74,17 @@ public final class GetLocationsResult {
     	      this.project = defaults.project;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocations(List<String> locations) {
+        public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

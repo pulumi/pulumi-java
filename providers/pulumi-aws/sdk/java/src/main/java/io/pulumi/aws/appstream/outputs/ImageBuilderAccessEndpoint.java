@@ -67,12 +67,12 @@ public final class ImageBuilderAccessEndpoint {
     	      this.vpceId = defaults.vpceId;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setVpceId(@Nullable String vpceId) {
+        public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = vpceId;
             return this;
         }

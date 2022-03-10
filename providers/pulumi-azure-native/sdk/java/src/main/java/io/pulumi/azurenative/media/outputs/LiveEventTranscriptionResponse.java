@@ -86,17 +86,17 @@ public final class LiveEventTranscriptionResponse {
     	      this.outputTranscriptionTrack = defaults.outputTranscriptionTrack;
         }
 
-        public Builder setInputTrackSelection(@Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection) {
+        public Builder inputTrackSelection(@Nullable List<LiveEventInputTrackSelectionResponse> inputTrackSelection) {
             this.inputTrackSelection = inputTrackSelection;
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
 
-        public Builder setOutputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
+        public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackResponse outputTranscriptionTrack) {
             this.outputTranscriptionTrack = outputTranscriptionTrack;
             return this;
         }

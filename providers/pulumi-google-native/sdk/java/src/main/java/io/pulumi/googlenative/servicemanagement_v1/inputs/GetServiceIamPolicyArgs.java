@@ -47,7 +47,7 @@ public final class GetServiceIamPolicyArgs extends io.pulumi.resources.InvokeArg
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }

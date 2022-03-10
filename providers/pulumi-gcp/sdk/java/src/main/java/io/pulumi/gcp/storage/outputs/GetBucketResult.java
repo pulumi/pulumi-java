@@ -211,102 +211,102 @@ public final class GetBucketResult {
     	      this.websites = defaults.websites;
         }
 
-        public Builder setCors(List<GetBucketCor> cors) {
+        public Builder cors(List<GetBucketCor> cors) {
             this.cors = Objects.requireNonNull(cors);
             return this;
         }
 
-        public Builder setDefaultEventBasedHold(Boolean defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(Boolean defaultEventBasedHold) {
             this.defaultEventBasedHold = Objects.requireNonNull(defaultEventBasedHold);
             return this;
         }
 
-        public Builder setEncryptions(List<GetBucketEncryption> encryptions) {
+        public Builder encryptions(List<GetBucketEncryption> encryptions) {
             this.encryptions = Objects.requireNonNull(encryptions);
             return this;
         }
 
-        public Builder setForceDestroy(Boolean forceDestroy) {
+        public Builder forceDestroy(Boolean forceDestroy) {
             this.forceDestroy = Objects.requireNonNull(forceDestroy);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLifecycleRules(List<GetBucketLifecycleRule> lifecycleRules) {
+        public Builder lifecycleRules(List<GetBucketLifecycleRule> lifecycleRules) {
             this.lifecycleRules = Objects.requireNonNull(lifecycleRules);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLoggings(List<GetBucketLogging> loggings) {
+        public Builder loggings(List<GetBucketLogging> loggings) {
             this.loggings = Objects.requireNonNull(loggings);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setPublicAccessPrevention(String publicAccessPrevention) {
+        public Builder publicAccessPrevention(String publicAccessPrevention) {
             this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
             return this;
         }
 
-        public Builder setRequesterPays(Boolean requesterPays) {
+        public Builder requesterPays(Boolean requesterPays) {
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
         }
 
-        public Builder setRetentionPolicies(List<GetBucketRetentionPolicy> retentionPolicies) {
+        public Builder retentionPolicies(List<GetBucketRetentionPolicy> retentionPolicies) {
             this.retentionPolicies = Objects.requireNonNull(retentionPolicies);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setUniformBucketLevelAccess(Boolean uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(Boolean uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setVersionings(List<GetBucketVersioning> versionings) {
+        public Builder versionings(List<GetBucketVersioning> versionings) {
             this.versionings = Objects.requireNonNull(versionings);
             return this;
         }
 
-        public Builder setWebsites(List<GetBucketWebsite> websites) {
+        public Builder websites(List<GetBucketWebsite> websites) {
             this.websites = Objects.requireNonNull(websites);
             return this;
         }

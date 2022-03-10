@@ -185,92 +185,92 @@ public final class VolumeContainerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.volumeContainerName = defaults.volumeContainerName;
         }
 
-        public Builder setBandWidthRateInMbps(@Nullable Input<Integer> bandWidthRateInMbps) {
+        public Builder bandWidthRateInMbps(@Nullable Input<Integer> bandWidthRateInMbps) {
             this.bandWidthRateInMbps = bandWidthRateInMbps;
             return this;
         }
 
-        public Builder setBandWidthRateInMbps(@Nullable Integer bandWidthRateInMbps) {
+        public Builder bandWidthRateInMbps(@Nullable Integer bandWidthRateInMbps) {
             this.bandWidthRateInMbps = Input.ofNullable(bandWidthRateInMbps);
             return this;
         }
 
-        public Builder setBandwidthSettingId(@Nullable Input<String> bandwidthSettingId) {
+        public Builder bandwidthSettingId(@Nullable Input<String> bandwidthSettingId) {
             this.bandwidthSettingId = bandwidthSettingId;
             return this;
         }
 
-        public Builder setBandwidthSettingId(@Nullable String bandwidthSettingId) {
+        public Builder bandwidthSettingId(@Nullable String bandwidthSettingId) {
             this.bandwidthSettingId = Input.ofNullable(bandwidthSettingId);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable Input<AsymmetricEncryptedSecretArgs> encryptionKey) {
+        public Builder encryptionKey(@Nullable Input<AsymmetricEncryptedSecretArgs> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable AsymmetricEncryptedSecretArgs encryptionKey) {
+        public Builder encryptionKey(@Nullable AsymmetricEncryptedSecretArgs encryptionKey) {
             this.encryptionKey = Input.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(Input<String> storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(Input<String> storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(String storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Input.of(Objects.requireNonNull(storageAccountCredentialId));
             return this;
         }
 
-        public Builder setVolumeContainerName(@Nullable Input<String> volumeContainerName) {
+        public Builder volumeContainerName(@Nullable Input<String> volumeContainerName) {
             this.volumeContainerName = volumeContainerName;
             return this;
         }
 
-        public Builder setVolumeContainerName(@Nullable String volumeContainerName) {
+        public Builder volumeContainerName(@Nullable String volumeContainerName) {
             this.volumeContainerName = Input.ofNullable(volumeContainerName);
             return this;
         }

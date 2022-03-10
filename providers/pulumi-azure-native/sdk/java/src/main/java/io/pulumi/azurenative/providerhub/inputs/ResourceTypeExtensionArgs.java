@@ -77,32 +77,32 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setEndpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Input<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Input.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder setExtensionCategories(@Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories) {
+        public Builder extensionCategories(@Nullable Input<List<Either<String,ExtensionCategory>>> extensionCategories) {
             this.extensionCategories = extensionCategories;
             return this;
         }
 
-        public Builder setExtensionCategories(@Nullable List<Either<String,ExtensionCategory>> extensionCategories) {
+        public Builder extensionCategories(@Nullable List<Either<String,ExtensionCategory>> extensionCategories) {
             this.extensionCategories = Input.ofNullable(extensionCategories);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

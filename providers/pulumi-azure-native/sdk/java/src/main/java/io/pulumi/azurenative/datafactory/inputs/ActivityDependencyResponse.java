@@ -73,12 +73,12 @@ public final class ActivityDependencyResponse extends io.pulumi.resources.Invoke
     	      this.dependencyConditions = defaults.dependencyConditions;
         }
 
-        public Builder setActivity(String activity) {
+        public Builder activity(String activity) {
             this.activity = Objects.requireNonNull(activity);
             return this;
         }
 
-        public Builder setDependencyConditions(List<String> dependencyConditions) {
+        public Builder dependencyConditions(List<String> dependencyConditions) {
             this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
             return this;
         }

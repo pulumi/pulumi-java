@@ -51,7 +51,7 @@ public final class GetAccessPointPolicyArgs extends io.pulumi.resources.InvokeAr
     	      this.objectLambdaAccessPoint = defaults.objectLambdaAccessPoint;
         }
 
-        public Builder setObjectLambdaAccessPoint(String objectLambdaAccessPoint) {
+        public Builder objectLambdaAccessPoint(String objectLambdaAccessPoint) {
             this.objectLambdaAccessPoint = Objects.requireNonNull(objectLambdaAccessPoint);
             return this;
         }

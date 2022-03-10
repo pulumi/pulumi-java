@@ -122,27 +122,27 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
     	      this.type = defaults.type;
         }
 
-        public Builder setConfidenceInterval(GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval) {
+        public Builder confidenceInterval(GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval) {
             this.confidenceInterval = Objects.requireNonNull(confidenceInterval);
             return this;
         }
 
-        public Builder setCount(Double count) {
+        public Builder count(Double count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setCountType(String countType) {
+        public Builder countType(String countType) {
             this.countType = Objects.requireNonNull(countType);
             return this;
         }
 
-        public Builder setRatio(Double ratio) {
+        public Builder ratio(Double ratio) {
             this.ratio = Objects.requireNonNull(ratio);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

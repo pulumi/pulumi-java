@@ -89,17 +89,17 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setExponent(String exponent) {
+        public Builder exponent(String exponent) {
             this.exponent = Objects.requireNonNull(exponent);
             return this;
         }
 
-        public Builder setModulus(String modulus) {
+        public Builder modulus(String modulus) {
             this.modulus = Objects.requireNonNull(modulus);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

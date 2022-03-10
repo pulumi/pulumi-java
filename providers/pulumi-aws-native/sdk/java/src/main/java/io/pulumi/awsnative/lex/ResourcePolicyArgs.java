@@ -62,22 +62,22 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setPolicy(Input<ResourcePolicyPolicyArgs> policy) {
+        public Builder policy(Input<ResourcePolicyPolicyArgs> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(ResourcePolicyPolicyArgs policy) {
+        public Builder policy(ResourcePolicyPolicyArgs policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }

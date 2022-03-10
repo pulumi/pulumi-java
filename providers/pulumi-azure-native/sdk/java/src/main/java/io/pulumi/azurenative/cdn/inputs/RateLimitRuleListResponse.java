@@ -58,7 +58,7 @@ public final class RateLimitRuleListResponse extends io.pulumi.resources.InvokeA
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<RateLimitRuleResponse> rules) {
+        public Builder rules(@Nullable List<RateLimitRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

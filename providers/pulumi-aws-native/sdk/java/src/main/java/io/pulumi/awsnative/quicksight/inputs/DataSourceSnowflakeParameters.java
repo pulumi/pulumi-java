@@ -88,17 +88,17 @@ public final class DataSourceSnowflakeParameters extends io.pulumi.resources.Inv
     	      this.warehouse = defaults.warehouse;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setWarehouse(String warehouse) {
+        public Builder warehouse(String warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }

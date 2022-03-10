@@ -81,17 +81,17 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setEnv(String env) {
+        public Builder env(String env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

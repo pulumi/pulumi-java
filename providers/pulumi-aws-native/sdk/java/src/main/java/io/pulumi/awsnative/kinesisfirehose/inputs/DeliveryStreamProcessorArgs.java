@@ -64,22 +64,22 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<DeliveryStreamProcessorParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<DeliveryStreamProcessorParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<DeliveryStreamProcessorParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setType(Input<DeliveryStreamProcessorType> type) {
+        public Builder type(Input<DeliveryStreamProcessorType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(DeliveryStreamProcessorType type) {
+        public Builder type(DeliveryStreamProcessorType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

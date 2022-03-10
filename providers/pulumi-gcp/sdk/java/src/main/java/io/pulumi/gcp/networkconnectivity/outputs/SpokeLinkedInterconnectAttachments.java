@@ -67,12 +67,12 @@ public final class SpokeLinkedInterconnectAttachments {
     	      this.uris = defaults.uris;
         }
 
-        public Builder setSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
 
-        public Builder setUris(List<String> uris) {
+        public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }

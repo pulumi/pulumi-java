@@ -118,8 +118,8 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
     private static CustomResourceDefinitionListArgs makeArgs(CustomResourceDefinitionListArgs args) {
         var builder = args == null ? CustomResourceDefinitionListArgs.builder() : CustomResourceDefinitionListArgs.builder(args);
         return builder
-            .setApiVersion("apiextensions.k8s.io/v1beta1")
-            .setKind("CustomResourceDefinitionList")
+            .apiVersion("apiextensions.k8s.io/v1beta1")
+            .kind("CustomResourceDefinitionList")
             .build();
     }
 

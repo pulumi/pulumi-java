@@ -69,22 +69,22 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setLicenseConfigurationArn(Input<String> licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(Input<String> licenseConfigurationArn) {
             this.licenseConfigurationArn = Objects.requireNonNull(licenseConfigurationArn);
             return this;
         }
 
-        public Builder setLicenseConfigurationArn(String licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(String licenseConfigurationArn) {
             this.licenseConfigurationArn = Input.of(Objects.requireNonNull(licenseConfigurationArn));
             return this;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }

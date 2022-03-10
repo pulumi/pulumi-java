@@ -94,32 +94,32 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
     	      this.minMaxGradient = defaults.minMaxGradient;
         }
 
-        public Builder setColors(@Nullable Input<List<String>> colors) {
+        public Builder colors(@Nullable Input<List<String>> colors) {
             this.colors = colors;
             return this;
         }
 
-        public Builder setColors(@Nullable List<String> colors) {
+        public Builder colors(@Nullable List<String> colors) {
             this.colors = Input.ofNullable(colors);
             return this;
         }
 
-        public Builder setEmptyFillColor(@Nullable Input<String> emptyFillColor) {
+        public Builder emptyFillColor(@Nullable Input<String> emptyFillColor) {
             this.emptyFillColor = emptyFillColor;
             return this;
         }
 
-        public Builder setEmptyFillColor(@Nullable String emptyFillColor) {
+        public Builder emptyFillColor(@Nullable String emptyFillColor) {
             this.emptyFillColor = Input.ofNullable(emptyFillColor);
             return this;
         }
 
-        public Builder setMinMaxGradient(@Nullable Input<List<String>> minMaxGradient) {
+        public Builder minMaxGradient(@Nullable Input<List<String>> minMaxGradient) {
             this.minMaxGradient = minMaxGradient;
             return this;
         }
 
-        public Builder setMinMaxGradient(@Nullable List<String> minMaxGradient) {
+        public Builder minMaxGradient(@Nullable List<String> minMaxGradient) {
             this.minMaxGradient = Input.ofNullable(minMaxGradient);
             return this;
         }

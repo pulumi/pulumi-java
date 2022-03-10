@@ -82,17 +82,17 @@ public final class VolumeResponse {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSizeGb(Double sizeGb) {
+        public Builder sizeGb(Double sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }

@@ -187,92 +187,92 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.webSettings = defaults.webSettings;
         }
 
-        public Builder setAndroidSettings(@Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings) {
+        public Builder androidSettings(@Nullable Input<EnterpriseKeyAndroidSettingsGetArgs> androidSettings) {
             this.androidSettings = androidSettings;
             return this;
         }
 
-        public Builder setAndroidSettings(@Nullable EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
+        public Builder androidSettings(@Nullable EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
             this.androidSettings = Input.ofNullable(androidSettings);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIosSettings(@Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
+        public Builder iosSettings(@Nullable Input<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
             this.iosSettings = iosSettings;
             return this;
         }
 
-        public Builder setIosSettings(@Nullable EnterpriseKeyIosSettingsGetArgs iosSettings) {
+        public Builder iosSettings(@Nullable EnterpriseKeyIosSettingsGetArgs iosSettings) {
             this.iosSettings = Input.ofNullable(iosSettings);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTestingOptions(@Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
+        public Builder testingOptions(@Nullable Input<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
             this.testingOptions = testingOptions;
             return this;
         }
 
-        public Builder setTestingOptions(@Nullable EnterpriseKeyTestingOptionsGetArgs testingOptions) {
+        public Builder testingOptions(@Nullable EnterpriseKeyTestingOptionsGetArgs testingOptions) {
             this.testingOptions = Input.ofNullable(testingOptions);
             return this;
         }
 
-        public Builder setWebSettings(@Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings) {
+        public Builder webSettings(@Nullable Input<EnterpriseKeyWebSettingsGetArgs> webSettings) {
             this.webSettings = webSettings;
             return this;
         }
 
-        public Builder setWebSettings(@Nullable EnterpriseKeyWebSettingsGetArgs webSettings) {
+        public Builder webSettings(@Nullable EnterpriseKeyWebSettingsGetArgs webSettings) {
             this.webSettings = Input.ofNullable(webSettings);
             return this;
         }

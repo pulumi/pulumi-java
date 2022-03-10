@@ -74,12 +74,12 @@ public final class DeinterlaceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.parity = defaults.parity;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setParity(@Nullable String parity) {
+        public Builder parity(@Nullable String parity) {
             this.parity = parity;
             return this;
         }

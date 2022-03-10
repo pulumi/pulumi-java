@@ -103,22 +103,22 @@ public final class IngressSpec {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setDefaultBackend(@Nullable IngressBackend defaultBackend) {
+        public Builder defaultBackend(@Nullable IngressBackend defaultBackend) {
             this.defaultBackend = defaultBackend;
             return this;
         }
 
-        public Builder setIngressClassName(@Nullable String ingressClassName) {
+        public Builder ingressClassName(@Nullable String ingressClassName) {
             this.ingressClassName = ingressClassName;
             return this;
         }
 
-        public Builder setRules(@Nullable List<IngressRule> rules) {
+        public Builder rules(@Nullable List<IngressRule> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setTls(@Nullable List<IngressTLS> tls) {
+        public Builder tls(@Nullable List<IngressTLS> tls) {
             this.tls = tls;
             return this;
         }

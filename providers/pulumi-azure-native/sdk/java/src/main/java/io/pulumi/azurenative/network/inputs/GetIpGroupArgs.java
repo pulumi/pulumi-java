@@ -86,17 +86,17 @@ public final class GetIpGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setIpGroupsName(String ipGroupsName) {
+        public Builder ipGroupsName(String ipGroupsName) {
             this.ipGroupsName = Objects.requireNonNull(ipGroupsName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

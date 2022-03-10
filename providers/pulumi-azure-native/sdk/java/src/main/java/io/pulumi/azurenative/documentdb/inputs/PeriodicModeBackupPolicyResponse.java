@@ -76,12 +76,12 @@ public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder setPeriodicModeProperties(@Nullable PeriodicModePropertiesResponse periodicModeProperties) {
+        public Builder periodicModeProperties(@Nullable PeriodicModePropertiesResponse periodicModeProperties) {
             this.periodicModeProperties = periodicModeProperties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

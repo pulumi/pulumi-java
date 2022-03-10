@@ -107,42 +107,42 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setAverageUtilization(@Nullable Input<Integer> averageUtilization) {
+        public Builder averageUtilization(@Nullable Input<Integer> averageUtilization) {
             this.averageUtilization = averageUtilization;
             return this;
         }
 
-        public Builder setAverageUtilization(@Nullable Integer averageUtilization) {
+        public Builder averageUtilization(@Nullable Integer averageUtilization) {
             this.averageUtilization = Input.ofNullable(averageUtilization);
             return this;
         }
 
-        public Builder setAverageValue(@Nullable Input<String> averageValue) {
+        public Builder averageValue(@Nullable Input<String> averageValue) {
             this.averageValue = averageValue;
             return this;
         }
 
-        public Builder setAverageValue(@Nullable String averageValue) {
+        public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = Input.ofNullable(averageValue);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

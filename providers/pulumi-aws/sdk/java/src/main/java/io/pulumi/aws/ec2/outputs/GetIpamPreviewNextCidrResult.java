@@ -93,27 +93,27 @@ public final class GetIpamPreviewNextCidrResult {
     	      this.netmaskLength = defaults.netmaskLength;
         }
 
-        public Builder setCidr(String cidr) {
+        public Builder cidr(String cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
-        public Builder setDisallowedCidrs(@Nullable List<String> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpamPoolId(String ipamPoolId) {
+        public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Integer netmaskLength) {
+        public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }

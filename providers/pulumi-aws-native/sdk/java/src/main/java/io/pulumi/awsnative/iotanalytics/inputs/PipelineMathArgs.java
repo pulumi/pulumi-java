@@ -86,42 +86,42 @@ public final class PipelineMathArgs extends io.pulumi.resources.ResourceArgs {
     	      this.next = defaults.next;
         }
 
-        public Builder setAttribute(Input<String> attribute) {
+        public Builder attribute(Input<String> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Input.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder setMath(Input<String> math) {
+        public Builder math(Input<String> math) {
             this.math = Objects.requireNonNull(math);
             return this;
         }
 
-        public Builder setMath(String math) {
+        public Builder math(String math) {
             this.math = Input.of(Objects.requireNonNull(math));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNext(@Nullable Input<String> next) {
+        public Builder next(@Nullable Input<String> next) {
             this.next = next;
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = Input.ofNullable(next);
             return this;
         }

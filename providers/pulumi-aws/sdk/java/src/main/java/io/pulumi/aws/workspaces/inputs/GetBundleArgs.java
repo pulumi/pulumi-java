@@ -86,17 +86,17 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.owner = defaults.owner;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }

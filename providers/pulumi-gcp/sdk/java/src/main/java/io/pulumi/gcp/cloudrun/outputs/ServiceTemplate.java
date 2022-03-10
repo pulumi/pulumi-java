@@ -74,12 +74,12 @@ public final class ServiceTemplate {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(@Nullable ServiceTemplateMetadata metadata) {
+        public Builder metadata(@Nullable ServiceTemplateMetadata metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable ServiceTemplateSpec spec) {
+        public Builder spec(@Nullable ServiceTemplateSpec spec) {
             this.spec = spec;
             return this;
         }

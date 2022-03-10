@@ -190,92 +190,92 @@ public final class HostnameConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificate(@Nullable Input<CertificateInformationArgs> certificate) {
+        public Builder certificate(@Nullable Input<CertificateInformationArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable CertificateInformationArgs certificate) {
+        public Builder certificate(@Nullable CertificateInformationArgs certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCertificatePassword(@Nullable Input<String> certificatePassword) {
+        public Builder certificatePassword(@Nullable Input<String> certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
 
-        public Builder setCertificatePassword(@Nullable String certificatePassword) {
+        public Builder certificatePassword(@Nullable String certificatePassword) {
             this.certificatePassword = Input.ofNullable(certificatePassword);
             return this;
         }
 
-        public Builder setDefaultSslBinding(@Nullable Input<Boolean> defaultSslBinding) {
+        public Builder defaultSslBinding(@Nullable Input<Boolean> defaultSslBinding) {
             this.defaultSslBinding = defaultSslBinding;
             return this;
         }
 
-        public Builder setDefaultSslBinding(@Nullable Boolean defaultSslBinding) {
+        public Builder defaultSslBinding(@Nullable Boolean defaultSslBinding) {
             this.defaultSslBinding = Input.ofNullable(defaultSslBinding);
             return this;
         }
 
-        public Builder setEncodedCertificate(@Nullable Input<String> encodedCertificate) {
+        public Builder encodedCertificate(@Nullable Input<String> encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
 
-        public Builder setEncodedCertificate(@Nullable String encodedCertificate) {
+        public Builder encodedCertificate(@Nullable String encodedCertificate) {
             this.encodedCertificate = Input.ofNullable(encodedCertificate);
             return this;
         }
 
-        public Builder setHostName(Input<String> hostName) {
+        public Builder hostName(Input<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Input.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder setIdentityClientId(@Nullable Input<String> identityClientId) {
+        public Builder identityClientId(@Nullable Input<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = Input.ofNullable(identityClientId);
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Input.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder setNegotiateClientCertificate(@Nullable Input<Boolean> negotiateClientCertificate) {
+        public Builder negotiateClientCertificate(@Nullable Input<Boolean> negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
 
-        public Builder setNegotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
+        public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = Input.ofNullable(negotiateClientCertificate);
             return this;
         }
 
-        public Builder setType(Input<Either<String,HostnameType>> type) {
+        public Builder type(Input<Either<String,HostnameType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,HostnameType> type) {
+        public Builder type(Either<String,HostnameType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

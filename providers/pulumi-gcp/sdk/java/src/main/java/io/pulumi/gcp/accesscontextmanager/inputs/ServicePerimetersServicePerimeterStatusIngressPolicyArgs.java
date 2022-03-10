@@ -75,22 +75,22 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyArgs exte
     	      this.ingressTo = defaults.ingressTo;
         }
 
-        public Builder setIngressFrom(@Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs> ingressFrom) {
+        public Builder ingressFrom(@Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs> ingressFrom) {
             this.ingressFrom = ingressFrom;
             return this;
         }
 
-        public Builder setIngressFrom(@Nullable ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs ingressFrom) {
+        public Builder ingressFrom(@Nullable ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromArgs ingressFrom) {
             this.ingressFrom = Input.ofNullable(ingressFrom);
             return this;
         }
 
-        public Builder setIngressTo(@Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToArgs> ingressTo) {
+        public Builder ingressTo(@Nullable Input<ServicePerimetersServicePerimeterStatusIngressPolicyIngressToArgs> ingressTo) {
             this.ingressTo = ingressTo;
             return this;
         }
 
-        public Builder setIngressTo(@Nullable ServicePerimetersServicePerimeterStatusIngressPolicyIngressToArgs ingressTo) {
+        public Builder ingressTo(@Nullable ServicePerimetersServicePerimeterStatusIngressPolicyIngressToArgs ingressTo) {
             this.ingressTo = Input.ofNullable(ingressTo);
             return this;
         }

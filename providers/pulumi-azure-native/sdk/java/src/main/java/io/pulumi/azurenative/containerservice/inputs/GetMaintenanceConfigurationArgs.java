@@ -84,17 +84,17 @@ public final class GetMaintenanceConfigurationArgs extends io.pulumi.resources.I
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setConfigName(String configName) {
+        public Builder configName(String configName) {
             this.configName = Objects.requireNonNull(configName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }

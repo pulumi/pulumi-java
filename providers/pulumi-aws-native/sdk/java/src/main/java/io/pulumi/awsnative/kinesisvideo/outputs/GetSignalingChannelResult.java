@@ -103,22 +103,22 @@ public final class GetSignalingChannelResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setMessageTtlSeconds(@Nullable Integer messageTtlSeconds) {
+        public Builder messageTtlSeconds(@Nullable Integer messageTtlSeconds) {
             this.messageTtlSeconds = messageTtlSeconds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SignalingChannelTag> tags) {
+        public Builder tags(@Nullable List<SignalingChannelTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable SignalingChannelType type) {
+        public Builder type(@Nullable SignalingChannelType type) {
             this.type = type;
             return this;
         }

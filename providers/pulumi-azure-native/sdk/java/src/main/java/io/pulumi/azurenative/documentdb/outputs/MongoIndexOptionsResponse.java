@@ -68,12 +68,12 @@ public final class MongoIndexOptionsResponse {
     	      this.unique = defaults.unique;
         }
 
-        public Builder setExpireAfterSeconds(@Nullable Integer expireAfterSeconds) {
+        public Builder expireAfterSeconds(@Nullable Integer expireAfterSeconds) {
             this.expireAfterSeconds = expireAfterSeconds;
             return this;
         }
 
-        public Builder setUnique(@Nullable Boolean unique) {
+        public Builder unique(@Nullable Boolean unique) {
             this.unique = unique;
             return this;
         }

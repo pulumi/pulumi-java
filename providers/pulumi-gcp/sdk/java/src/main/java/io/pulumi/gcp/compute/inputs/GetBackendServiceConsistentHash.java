@@ -75,17 +75,17 @@ public final class GetBackendServiceConsistentHash extends io.pulumi.resources.I
     	      this.minimumRingSize = defaults.minimumRingSize;
         }
 
-        public Builder setHttpCookies(List<GetBackendServiceConsistentHashHttpCooky> httpCookies) {
+        public Builder httpCookies(List<GetBackendServiceConsistentHashHttpCooky> httpCookies) {
             this.httpCookies = Objects.requireNonNull(httpCookies);
             return this;
         }
 
-        public Builder setHttpHeaderName(String httpHeaderName) {
+        public Builder httpHeaderName(String httpHeaderName) {
             this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
             return this;
         }
 
-        public Builder setMinimumRingSize(Integer minimumRingSize) {
+        public Builder minimumRingSize(Integer minimumRingSize) {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }

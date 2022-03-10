@@ -67,12 +67,12 @@ public final class TableEncryptionSpecification extends io.pulumi.resources.Invo
     	      this.kmsKeyIdentifier = defaults.kmsKeyIdentifier;
         }
 
-        public Builder setEncryptionType(TableEncryptionType encryptionType) {
+        public Builder encryptionType(TableEncryptionType encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setKmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
+        public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }

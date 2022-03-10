@@ -68,12 +68,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setInventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters) {
+        public Builder inventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters) {
             this.inventoryFilters = inventoryFilters;
             return this;
         }
 
-        public Builder setResources(List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
+        public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }

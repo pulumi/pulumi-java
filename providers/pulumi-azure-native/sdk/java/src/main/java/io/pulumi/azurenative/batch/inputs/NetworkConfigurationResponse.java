@@ -92,17 +92,17 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setEndpointConfiguration(@Nullable PoolEndpointConfigurationResponse endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationResponse endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

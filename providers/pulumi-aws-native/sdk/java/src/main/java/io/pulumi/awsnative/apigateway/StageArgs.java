@@ -269,142 +269,142 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setAccessLogSetting(@Nullable Input<StageAccessLogSettingArgs> accessLogSetting) {
+        public Builder accessLogSetting(@Nullable Input<StageAccessLogSettingArgs> accessLogSetting) {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
 
-        public Builder setAccessLogSetting(@Nullable StageAccessLogSettingArgs accessLogSetting) {
+        public Builder accessLogSetting(@Nullable StageAccessLogSettingArgs accessLogSetting) {
             this.accessLogSetting = Input.ofNullable(accessLogSetting);
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = Input.ofNullable(cacheClusterEnabled);
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable Input<String> cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable Input<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable String cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = Input.ofNullable(cacheClusterSize);
             return this;
         }
 
-        public Builder setCanarySetting(@Nullable Input<StageCanarySettingArgs> canarySetting) {
+        public Builder canarySetting(@Nullable Input<StageCanarySettingArgs> canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
 
-        public Builder setCanarySetting(@Nullable StageCanarySettingArgs canarySetting) {
+        public Builder canarySetting(@Nullable StageCanarySettingArgs canarySetting) {
             this.canarySetting = Input.ofNullable(canarySetting);
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Input.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable Input<String> deploymentId) {
+        public Builder deploymentId(@Nullable Input<String> deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = Input.ofNullable(deploymentId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable Input<String> documentationVersion) {
+        public Builder documentationVersion(@Nullable Input<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable String documentationVersion) {
+        public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = Input.ofNullable(documentationVersion);
             return this;
         }
 
-        public Builder setMethodSettings(@Nullable Input<List<StageMethodSettingArgs>> methodSettings) {
+        public Builder methodSettings(@Nullable Input<List<StageMethodSettingArgs>> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
 
-        public Builder setMethodSettings(@Nullable List<StageMethodSettingArgs> methodSettings) {
+        public Builder methodSettings(@Nullable List<StageMethodSettingArgs> methodSettings) {
             this.methodSettings = Input.ofNullable(methodSettings);
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder setStageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Input<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StageTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StageTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StageTagArgs> tags) {
+        public Builder tags(@Nullable List<StageTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTracingEnabled(@Nullable Input<Boolean> tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Input<Boolean> tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
 
-        public Builder setTracingEnabled(@Nullable Boolean tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = Input.ofNullable(tracingEnabled);
             return this;
         }
 
-        public Builder setVariables(@Nullable Input<Object> variables) {
+        public Builder variables(@Nullable Input<Object> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable Object variables) {
+        public Builder variables(@Nullable Object variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }

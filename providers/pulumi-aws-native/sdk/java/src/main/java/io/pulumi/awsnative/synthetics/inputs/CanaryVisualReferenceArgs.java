@@ -72,22 +72,22 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
     	      this.baseScreenshots = defaults.baseScreenshots;
         }
 
-        public Builder setBaseCanaryRunId(Input<String> baseCanaryRunId) {
+        public Builder baseCanaryRunId(Input<String> baseCanaryRunId) {
             this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId);
             return this;
         }
 
-        public Builder setBaseCanaryRunId(String baseCanaryRunId) {
+        public Builder baseCanaryRunId(String baseCanaryRunId) {
             this.baseCanaryRunId = Input.of(Objects.requireNonNull(baseCanaryRunId));
             return this;
         }
 
-        public Builder setBaseScreenshots(@Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots) {
+        public Builder baseScreenshots(@Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots) {
             this.baseScreenshots = baseScreenshots;
             return this;
         }
 
-        public Builder setBaseScreenshots(@Nullable List<CanaryBaseScreenshotArgs> baseScreenshots) {
+        public Builder baseScreenshots(@Nullable List<CanaryBaseScreenshotArgs> baseScreenshots) {
             this.baseScreenshots = Input.ofNullable(baseScreenshots);
             return this;
         }

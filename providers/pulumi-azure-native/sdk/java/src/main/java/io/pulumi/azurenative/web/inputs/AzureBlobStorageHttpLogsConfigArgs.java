@@ -94,32 +94,32 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Input.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder setSasUrl(@Nullable Input<String> sasUrl) {
+        public Builder sasUrl(@Nullable Input<String> sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }
 
-        public Builder setSasUrl(@Nullable String sasUrl) {
+        public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = Input.ofNullable(sasUrl);
             return this;
         }

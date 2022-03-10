@@ -102,22 +102,22 @@ public final class GetGatewayResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setGatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries) {
+        public Builder gatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries) {
             this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setGatewayName(@Nullable String gatewayName) {
+        public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GatewayTag> tags) {
+        public Builder tags(@Nullable List<GatewayTag> tags) {
             this.tags = tags;
             return this;
         }

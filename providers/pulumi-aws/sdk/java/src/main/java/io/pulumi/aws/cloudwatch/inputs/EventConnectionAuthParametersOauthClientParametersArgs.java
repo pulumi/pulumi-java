@@ -69,22 +69,22 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Input<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
             return this;
         }

@@ -93,17 +93,17 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder setNetworkApiVersion(@Nullable String networkApiVersion) {
+        public Builder networkApiVersion(@Nullable String networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }

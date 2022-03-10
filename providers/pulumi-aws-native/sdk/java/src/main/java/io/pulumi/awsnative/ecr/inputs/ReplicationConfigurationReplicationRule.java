@@ -76,12 +76,12 @@ public final class ReplicationConfigurationReplicationRule extends io.pulumi.res
     	      this.repositoryFilters = defaults.repositoryFilters;
         }
 
-        public Builder setDestinations(List<ReplicationConfigurationReplicationDestination> destinations) {
+        public Builder destinations(List<ReplicationConfigurationReplicationDestination> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setRepositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
+        public Builder repositoryFilters(@Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
             this.repositoryFilters = repositoryFilters;
             return this;
         }

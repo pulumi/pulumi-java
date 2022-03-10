@@ -170,82 +170,82 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
     	      this.project = defaults.project;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIdentityConstraints(@Nullable Input<CertificateTemplateIdentityConstraintsArgs> identityConstraints) {
+        public Builder identityConstraints(@Nullable Input<CertificateTemplateIdentityConstraintsArgs> identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
 
-        public Builder setIdentityConstraints(@Nullable CertificateTemplateIdentityConstraintsArgs identityConstraints) {
+        public Builder identityConstraints(@Nullable CertificateTemplateIdentityConstraintsArgs identityConstraints) {
             this.identityConstraints = Input.ofNullable(identityConstraints);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPassthroughExtensions(@Nullable Input<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable Input<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions) {
             this.passthroughExtensions = passthroughExtensions;
             return this;
         }
 
-        public Builder setPassthroughExtensions(@Nullable CertificateTemplatePassthroughExtensionsArgs passthroughExtensions) {
+        public Builder passthroughExtensions(@Nullable CertificateTemplatePassthroughExtensionsArgs passthroughExtensions) {
             this.passthroughExtensions = Input.ofNullable(passthroughExtensions);
             return this;
         }
 
-        public Builder setPredefinedValues(@Nullable Input<CertificateTemplatePredefinedValuesArgs> predefinedValues) {
+        public Builder predefinedValues(@Nullable Input<CertificateTemplatePredefinedValuesArgs> predefinedValues) {
             this.predefinedValues = predefinedValues;
             return this;
         }
 
-        public Builder setPredefinedValues(@Nullable CertificateTemplatePredefinedValuesArgs predefinedValues) {
+        public Builder predefinedValues(@Nullable CertificateTemplatePredefinedValuesArgs predefinedValues) {
             this.predefinedValues = Input.ofNullable(predefinedValues);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

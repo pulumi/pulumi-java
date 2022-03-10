@@ -61,12 +61,12 @@ public final class GetRecipeResult {
     	      this.steps = defaults.steps;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSteps(@Nullable List<RecipeStep> steps) {
+        public Builder steps(@Nullable List<RecipeStep> steps) {
             this.steps = steps;
             return this;
         }

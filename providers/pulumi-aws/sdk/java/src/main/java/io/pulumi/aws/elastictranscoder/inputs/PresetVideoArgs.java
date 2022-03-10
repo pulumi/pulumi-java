@@ -246,132 +246,132 @@ public final class PresetVideoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sizingPolicy = defaults.sizingPolicy;
         }
 
-        public Builder setAspectRatio(@Nullable Input<String> aspectRatio) {
+        public Builder aspectRatio(@Nullable Input<String> aspectRatio) {
             this.aspectRatio = aspectRatio;
             return this;
         }
 
-        public Builder setAspectRatio(@Nullable String aspectRatio) {
+        public Builder aspectRatio(@Nullable String aspectRatio) {
             this.aspectRatio = Input.ofNullable(aspectRatio);
             return this;
         }
 
-        public Builder setBitRate(@Nullable Input<String> bitRate) {
+        public Builder bitRate(@Nullable Input<String> bitRate) {
             this.bitRate = bitRate;
             return this;
         }
 
-        public Builder setBitRate(@Nullable String bitRate) {
+        public Builder bitRate(@Nullable String bitRate) {
             this.bitRate = Input.ofNullable(bitRate);
             return this;
         }
 
-        public Builder setCodec(@Nullable Input<String> codec) {
+        public Builder codec(@Nullable Input<String> codec) {
             this.codec = codec;
             return this;
         }
 
-        public Builder setCodec(@Nullable String codec) {
+        public Builder codec(@Nullable String codec) {
             this.codec = Input.ofNullable(codec);
             return this;
         }
 
-        public Builder setDisplayAspectRatio(@Nullable Input<String> displayAspectRatio) {
+        public Builder displayAspectRatio(@Nullable Input<String> displayAspectRatio) {
             this.displayAspectRatio = displayAspectRatio;
             return this;
         }
 
-        public Builder setDisplayAspectRatio(@Nullable String displayAspectRatio) {
+        public Builder displayAspectRatio(@Nullable String displayAspectRatio) {
             this.displayAspectRatio = Input.ofNullable(displayAspectRatio);
             return this;
         }
 
-        public Builder setFixedGop(@Nullable Input<String> fixedGop) {
+        public Builder fixedGop(@Nullable Input<String> fixedGop) {
             this.fixedGop = fixedGop;
             return this;
         }
 
-        public Builder setFixedGop(@Nullable String fixedGop) {
+        public Builder fixedGop(@Nullable String fixedGop) {
             this.fixedGop = Input.ofNullable(fixedGop);
             return this;
         }
 
-        public Builder setFrameRate(@Nullable Input<String> frameRate) {
+        public Builder frameRate(@Nullable Input<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
-        public Builder setFrameRate(@Nullable String frameRate) {
+        public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = Input.ofNullable(frameRate);
             return this;
         }
 
-        public Builder setKeyframesMaxDist(@Nullable Input<String> keyframesMaxDist) {
+        public Builder keyframesMaxDist(@Nullable Input<String> keyframesMaxDist) {
             this.keyframesMaxDist = keyframesMaxDist;
             return this;
         }
 
-        public Builder setKeyframesMaxDist(@Nullable String keyframesMaxDist) {
+        public Builder keyframesMaxDist(@Nullable String keyframesMaxDist) {
             this.keyframesMaxDist = Input.ofNullable(keyframesMaxDist);
             return this;
         }
 
-        public Builder setMaxFrameRate(@Nullable Input<String> maxFrameRate) {
+        public Builder maxFrameRate(@Nullable Input<String> maxFrameRate) {
             this.maxFrameRate = maxFrameRate;
             return this;
         }
 
-        public Builder setMaxFrameRate(@Nullable String maxFrameRate) {
+        public Builder maxFrameRate(@Nullable String maxFrameRate) {
             this.maxFrameRate = Input.ofNullable(maxFrameRate);
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable Input<String> maxHeight) {
+        public Builder maxHeight(@Nullable Input<String> maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable String maxHeight) {
+        public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = Input.ofNullable(maxHeight);
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable Input<String> maxWidth) {
+        public Builder maxWidth(@Nullable Input<String> maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable String maxWidth) {
+        public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = Input.ofNullable(maxWidth);
             return this;
         }
 
-        public Builder setPaddingPolicy(@Nullable Input<String> paddingPolicy) {
+        public Builder paddingPolicy(@Nullable Input<String> paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
 
-        public Builder setPaddingPolicy(@Nullable String paddingPolicy) {
+        public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = Input.ofNullable(paddingPolicy);
             return this;
         }
 
-        public Builder setResolution(@Nullable Input<String> resolution) {
+        public Builder resolution(@Nullable Input<String> resolution) {
             this.resolution = resolution;
             return this;
         }
 
-        public Builder setResolution(@Nullable String resolution) {
+        public Builder resolution(@Nullable String resolution) {
             this.resolution = Input.ofNullable(resolution);
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable Input<String> sizingPolicy) {
+        public Builder sizingPolicy(@Nullable Input<String> sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable String sizingPolicy) {
+        public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = Input.ofNullable(sizingPolicy);
             return this;
         }

@@ -69,22 +69,22 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setPolicy(Input<String> policy) {
+        public Builder policy(Input<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }

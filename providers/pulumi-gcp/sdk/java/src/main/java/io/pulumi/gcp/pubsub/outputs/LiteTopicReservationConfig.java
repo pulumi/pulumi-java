@@ -50,7 +50,7 @@ public final class LiteTopicReservationConfig {
     	      this.throughputReservation = defaults.throughputReservation;
         }
 
-        public Builder setThroughputReservation(@Nullable String throughputReservation) {
+        public Builder throughputReservation(@Nullable String throughputReservation) {
             this.throughputReservation = throughputReservation;
             return this;
         }

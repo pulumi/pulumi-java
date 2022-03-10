@@ -113,27 +113,27 @@ public final class VMSSVMInfoResponse {
     	      this.vmResourceId = defaults.vmResourceId;
         }
 
-        public Builder setComplianceStatus(String complianceStatus) {
+        public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setLastComplianceChecked(String lastComplianceChecked) {
+        public Builder lastComplianceChecked(String lastComplianceChecked) {
             this.lastComplianceChecked = Objects.requireNonNull(lastComplianceChecked);
             return this;
         }
 
-        public Builder setLatestReportId(String latestReportId) {
+        public Builder latestReportId(String latestReportId) {
             this.latestReportId = Objects.requireNonNull(latestReportId);
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
 
-        public Builder setVmResourceId(String vmResourceId) {
+        public Builder vmResourceId(String vmResourceId) {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
         }

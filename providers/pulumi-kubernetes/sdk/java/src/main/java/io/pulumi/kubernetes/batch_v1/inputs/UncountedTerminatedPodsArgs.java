@@ -75,22 +75,22 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder setFailed(@Nullable Input<List<String>> failed) {
+        public Builder failed(@Nullable Input<List<String>> failed) {
             this.failed = failed;
             return this;
         }
 
-        public Builder setFailed(@Nullable List<String> failed) {
+        public Builder failed(@Nullable List<String> failed) {
             this.failed = Input.ofNullable(failed);
             return this;
         }
 
-        public Builder setSucceeded(@Nullable Input<List<String>> succeeded) {
+        public Builder succeeded(@Nullable Input<List<String>> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
-        public Builder setSucceeded(@Nullable List<String> succeeded) {
+        public Builder succeeded(@Nullable List<String> succeeded) {
             this.succeeded = Input.ofNullable(succeeded);
             return this;
         }

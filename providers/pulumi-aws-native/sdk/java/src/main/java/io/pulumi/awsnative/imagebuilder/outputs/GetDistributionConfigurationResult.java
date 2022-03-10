@@ -102,22 +102,22 @@ public final class GetDistributionConfigurationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDistributions(@Nullable List<DistributionConfigurationDistribution> distributions) {
+        public Builder distributions(@Nullable List<DistributionConfigurationDistribution> distributions) {
             this.distributions = distributions;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }

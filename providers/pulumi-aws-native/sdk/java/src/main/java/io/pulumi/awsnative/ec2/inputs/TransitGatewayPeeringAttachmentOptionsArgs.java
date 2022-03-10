@@ -53,12 +53,12 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
     	      this.dynamicRouting = defaults.dynamicRouting;
         }
 
-        public Builder setDynamicRouting(@Nullable Input<String> dynamicRouting) {
+        public Builder dynamicRouting(@Nullable Input<String> dynamicRouting) {
             this.dynamicRouting = dynamicRouting;
             return this;
         }
 
-        public Builder setDynamicRouting(@Nullable String dynamicRouting) {
+        public Builder dynamicRouting(@Nullable String dynamicRouting) {
             this.dynamicRouting = Input.ofNullable(dynamicRouting);
             return this;
         }

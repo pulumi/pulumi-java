@@ -67,12 +67,12 @@ public final class PatchDeploymentRolloutDisruptionBudget {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixed(@Nullable Integer fixed) {
+        public Builder fixed(@Nullable Integer fixed) {
             this.fixed = fixed;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Integer percentage) {
+        public Builder percentage(@Nullable Integer percentage) {
             this.percentage = percentage;
             return this;
         }

@@ -72,22 +72,22 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
     	      this.spotSpecifications = defaults.spotSpecifications;
         }
 
-        public Builder setOnDemandSpecifications(@Nullable Input<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications) {
+        public Builder onDemandSpecifications(@Nullable Input<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications) {
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
 
-        public Builder setOnDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
+        public Builder onDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
             this.onDemandSpecifications = Input.ofNullable(onDemandSpecifications);
             return this;
         }
 
-        public Builder setSpotSpecifications(@Nullable Input<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
+        public Builder spotSpecifications(@Nullable Input<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }
 
-        public Builder setSpotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
+        public Builder spotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
             this.spotSpecifications = Input.ofNullable(spotSpecifications);
             return this;
         }

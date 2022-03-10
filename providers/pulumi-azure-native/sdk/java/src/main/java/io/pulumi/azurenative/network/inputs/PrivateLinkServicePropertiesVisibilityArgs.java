@@ -58,12 +58,12 @@ public final class PrivateLinkServicePropertiesVisibilityArgs extends io.pulumi.
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setSubscriptions(@Nullable Input<List<String>> subscriptions) {
+        public Builder subscriptions(@Nullable Input<List<String>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = Input.ofNullable(subscriptions);
             return this;
         }

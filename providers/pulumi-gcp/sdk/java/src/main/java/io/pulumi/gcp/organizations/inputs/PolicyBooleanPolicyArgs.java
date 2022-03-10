@@ -52,12 +52,12 @@ public final class PolicyBooleanPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.enforced = defaults.enforced;
         }
 
-        public Builder setEnforced(Input<Boolean> enforced) {
+        public Builder enforced(Input<Boolean> enforced) {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }
 
-        public Builder setEnforced(Boolean enforced) {
+        public Builder enforced(Boolean enforced) {
             this.enforced = Input.of(Objects.requireNonNull(enforced));
             return this;
         }

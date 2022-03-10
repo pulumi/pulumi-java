@@ -202,102 +202,102 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     	      this.rdbStorageConnectionString = defaults.rdbStorageConnectionString;
         }
 
-        public Builder setAofStorageConnectionString0(@Nullable Input<String> aofStorageConnectionString0) {
+        public Builder aofStorageConnectionString0(@Nullable Input<String> aofStorageConnectionString0) {
             this.aofStorageConnectionString0 = aofStorageConnectionString0;
             return this;
         }
 
-        public Builder setAofStorageConnectionString0(@Nullable String aofStorageConnectionString0) {
+        public Builder aofStorageConnectionString0(@Nullable String aofStorageConnectionString0) {
             this.aofStorageConnectionString0 = Input.ofNullable(aofStorageConnectionString0);
             return this;
         }
 
-        public Builder setAofStorageConnectionString1(@Nullable Input<String> aofStorageConnectionString1) {
+        public Builder aofStorageConnectionString1(@Nullable Input<String> aofStorageConnectionString1) {
             this.aofStorageConnectionString1 = aofStorageConnectionString1;
             return this;
         }
 
-        public Builder setAofStorageConnectionString1(@Nullable String aofStorageConnectionString1) {
+        public Builder aofStorageConnectionString1(@Nullable String aofStorageConnectionString1) {
             this.aofStorageConnectionString1 = Input.ofNullable(aofStorageConnectionString1);
             return this;
         }
 
-        public Builder setMaxfragmentationmemoryReserved(@Nullable Input<String> maxfragmentationmemoryReserved) {
+        public Builder maxfragmentationmemoryReserved(@Nullable Input<String> maxfragmentationmemoryReserved) {
             this.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
             return this;
         }
 
-        public Builder setMaxfragmentationmemoryReserved(@Nullable String maxfragmentationmemoryReserved) {
+        public Builder maxfragmentationmemoryReserved(@Nullable String maxfragmentationmemoryReserved) {
             this.maxfragmentationmemoryReserved = Input.ofNullable(maxfragmentationmemoryReserved);
             return this;
         }
 
-        public Builder setMaxmemoryDelta(@Nullable Input<String> maxmemoryDelta) {
+        public Builder maxmemoryDelta(@Nullable Input<String> maxmemoryDelta) {
             this.maxmemoryDelta = maxmemoryDelta;
             return this;
         }
 
-        public Builder setMaxmemoryDelta(@Nullable String maxmemoryDelta) {
+        public Builder maxmemoryDelta(@Nullable String maxmemoryDelta) {
             this.maxmemoryDelta = Input.ofNullable(maxmemoryDelta);
             return this;
         }
 
-        public Builder setMaxmemoryPolicy(@Nullable Input<String> maxmemoryPolicy) {
+        public Builder maxmemoryPolicy(@Nullable Input<String> maxmemoryPolicy) {
             this.maxmemoryPolicy = maxmemoryPolicy;
             return this;
         }
 
-        public Builder setMaxmemoryPolicy(@Nullable String maxmemoryPolicy) {
+        public Builder maxmemoryPolicy(@Nullable String maxmemoryPolicy) {
             this.maxmemoryPolicy = Input.ofNullable(maxmemoryPolicy);
             return this;
         }
 
-        public Builder setMaxmemoryReserved(@Nullable Input<String> maxmemoryReserved) {
+        public Builder maxmemoryReserved(@Nullable Input<String> maxmemoryReserved) {
             this.maxmemoryReserved = maxmemoryReserved;
             return this;
         }
 
-        public Builder setMaxmemoryReserved(@Nullable String maxmemoryReserved) {
+        public Builder maxmemoryReserved(@Nullable String maxmemoryReserved) {
             this.maxmemoryReserved = Input.ofNullable(maxmemoryReserved);
             return this;
         }
 
-        public Builder setRdbBackupEnabled(@Nullable Input<String> rdbBackupEnabled) {
+        public Builder rdbBackupEnabled(@Nullable Input<String> rdbBackupEnabled) {
             this.rdbBackupEnabled = rdbBackupEnabled;
             return this;
         }
 
-        public Builder setRdbBackupEnabled(@Nullable String rdbBackupEnabled) {
+        public Builder rdbBackupEnabled(@Nullable String rdbBackupEnabled) {
             this.rdbBackupEnabled = Input.ofNullable(rdbBackupEnabled);
             return this;
         }
 
-        public Builder setRdbBackupFrequency(@Nullable Input<String> rdbBackupFrequency) {
+        public Builder rdbBackupFrequency(@Nullable Input<String> rdbBackupFrequency) {
             this.rdbBackupFrequency = rdbBackupFrequency;
             return this;
         }
 
-        public Builder setRdbBackupFrequency(@Nullable String rdbBackupFrequency) {
+        public Builder rdbBackupFrequency(@Nullable String rdbBackupFrequency) {
             this.rdbBackupFrequency = Input.ofNullable(rdbBackupFrequency);
             return this;
         }
 
-        public Builder setRdbBackupMaxSnapshotCount(@Nullable Input<String> rdbBackupMaxSnapshotCount) {
+        public Builder rdbBackupMaxSnapshotCount(@Nullable Input<String> rdbBackupMaxSnapshotCount) {
             this.rdbBackupMaxSnapshotCount = rdbBackupMaxSnapshotCount;
             return this;
         }
 
-        public Builder setRdbBackupMaxSnapshotCount(@Nullable String rdbBackupMaxSnapshotCount) {
+        public Builder rdbBackupMaxSnapshotCount(@Nullable String rdbBackupMaxSnapshotCount) {
             this.rdbBackupMaxSnapshotCount = Input.ofNullable(rdbBackupMaxSnapshotCount);
             return this;
         }
 
-        public Builder setRdbStorageConnectionString(@Nullable Input<String> rdbStorageConnectionString) {
+        public Builder rdbStorageConnectionString(@Nullable Input<String> rdbStorageConnectionString) {
             this.rdbStorageConnectionString = rdbStorageConnectionString;
             return this;
         }
 
-        public Builder setRdbStorageConnectionString(@Nullable String rdbStorageConnectionString) {
+        public Builder rdbStorageConnectionString(@Nullable String rdbStorageConnectionString) {
             this.rdbStorageConnectionString = Input.ofNullable(rdbStorageConnectionString);
             return this;
         }

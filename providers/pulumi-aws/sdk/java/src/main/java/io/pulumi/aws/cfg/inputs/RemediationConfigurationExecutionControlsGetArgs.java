@@ -53,12 +53,12 @@ public final class RemediationConfigurationExecutionControlsGetArgs extends io.p
     	      this.ssmControls = defaults.ssmControls;
         }
 
-        public Builder setSsmControls(@Nullable Input<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls) {
+        public Builder ssmControls(@Nullable Input<RemediationConfigurationExecutionControlsSsmControlsGetArgs> ssmControls) {
             this.ssmControls = ssmControls;
             return this;
         }
 
-        public Builder setSsmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsGetArgs ssmControls) {
+        public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsGetArgs ssmControls) {
             this.ssmControls = Input.ofNullable(ssmControls);
             return this;
         }

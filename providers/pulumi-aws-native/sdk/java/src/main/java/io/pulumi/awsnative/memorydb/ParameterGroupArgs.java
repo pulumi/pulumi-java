@@ -121,52 +121,52 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFamily(Input<String> family) {
+        public Builder family(Input<String> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Input.of(Objects.requireNonNull(family));
             return this;
         }
 
-        public Builder setParameterGroupName(@Nullable Input<String> parameterGroupName) {
+        public Builder parameterGroupName(@Nullable Input<String> parameterGroupName) {
             this.parameterGroupName = parameterGroupName;
             return this;
         }
 
-        public Builder setParameterGroupName(@Nullable String parameterGroupName) {
+        public Builder parameterGroupName(@Nullable String parameterGroupName) {
             this.parameterGroupName = Input.ofNullable(parameterGroupName);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Input<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ParameterGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ParameterGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ParameterGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<ParameterGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

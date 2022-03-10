@@ -51,12 +51,12 @@ public final class ResourceDataSyncAwsOrganizationsSource {
     	      this.organizationalUnits = defaults.organizationalUnits;
         }
 
-        public Builder setOrganizationSourceType(String organizationSourceType) {
+        public Builder organizationSourceType(String organizationSourceType) {
             this.organizationSourceType = Objects.requireNonNull(organizationSourceType);
             return this;
         }
 
-        public Builder setOrganizationalUnits(@Nullable List<String> organizationalUnits) {
+        public Builder organizationalUnits(@Nullable List<String> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
             return this;
         }

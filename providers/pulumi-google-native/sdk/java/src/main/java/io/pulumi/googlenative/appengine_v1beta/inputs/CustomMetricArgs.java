@@ -123,52 +123,52 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setMetricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Input<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
-        public Builder setMetricName(@Nullable String metricName) {
+        public Builder metricName(@Nullable String metricName) {
             this.metricName = Input.ofNullable(metricName);
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Input.ofNullable(singleInstanceAssignment);
             return this;
         }
 
-        public Builder setTargetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Input<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
-        public Builder setTargetType(@Nullable String targetType) {
+        public Builder targetType(@Nullable String targetType) {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Input<Double> targetUtilization) {
+        public Builder targetUtilization(@Nullable Input<Double> targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Double targetUtilization) {
+        public Builder targetUtilization(@Nullable Double targetUtilization) {
             this.targetUtilization = Input.ofNullable(targetUtilization);
             return this;
         }

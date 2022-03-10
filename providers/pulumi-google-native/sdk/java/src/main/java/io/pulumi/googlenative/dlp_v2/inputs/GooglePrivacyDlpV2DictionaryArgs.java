@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setCloudStoragePath(@Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath) {
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
-        public Builder setCloudStoragePath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs cloudStoragePath) {
             this.cloudStoragePath = Input.ofNullable(cloudStoragePath);
             return this;
         }
 
-        public Builder setWordList(@Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList) {
+        public Builder wordList(@Nullable Input<GooglePrivacyDlpV2WordListArgs> wordList) {
             this.wordList = wordList;
             return this;
         }
 
-        public Builder setWordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
+        public Builder wordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
             this.wordList = Input.ofNullable(wordList);
             return this;
         }

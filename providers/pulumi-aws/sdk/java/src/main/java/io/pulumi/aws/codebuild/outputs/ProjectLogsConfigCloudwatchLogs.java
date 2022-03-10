@@ -83,17 +83,17 @@ public final class ProjectLogsConfigCloudwatchLogs {
     	      this.streamName = defaults.streamName;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStreamName(@Nullable String streamName) {
+        public Builder streamName(@Nullable String streamName) {
             this.streamName = streamName;
             return this;
         }

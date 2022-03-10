@@ -89,32 +89,32 @@ public final class VoiceConnectorOrganizationState extends io.pulumi.resources.R
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<List<VoiceConnectorOrganizationRouteGetArgs>> routes) {
+        public Builder routes(@Nullable Input<List<VoiceConnectorOrganizationRouteGetArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<VoiceConnectorOrganizationRouteGetArgs> routes) {
+        public Builder routes(@Nullable List<VoiceConnectorOrganizationRouteGetArgs> routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }
 
-        public Builder setVoiceConnectorId(@Nullable Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(@Nullable Input<String> voiceConnectorId) {
             this.voiceConnectorId = voiceConnectorId;
             return this;
         }
 
-        public Builder setVoiceConnectorId(@Nullable String voiceConnectorId) {
+        public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
             this.voiceConnectorId = Input.ofNullable(voiceConnectorId);
             return this;
         }

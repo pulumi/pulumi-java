@@ -105,22 +105,22 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
     	      this.settings = defaults.settings;
         }
 
-        public Builder setCloudSqlId(String cloudSqlId) {
+        public Builder cloudSqlId(String cloudSqlId) {
             this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
             return this;
         }
 
-        public Builder setPrivateIp(String privateIp) {
+        public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
 
-        public Builder setPublicIp(String publicIp) {
+        public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }
 
-        public Builder setSettings(CloudSqlSettingsResponse settings) {
+        public Builder settings(CloudSqlSettingsResponse settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }

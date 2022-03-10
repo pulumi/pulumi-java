@@ -85,17 +85,17 @@ public final class SqlElasticPoolResourceSettingsResponse {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable String zoneRedundant) {
+        public Builder zoneRedundant(@Nullable String zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }

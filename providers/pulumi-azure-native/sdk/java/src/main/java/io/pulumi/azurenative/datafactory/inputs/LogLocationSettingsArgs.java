@@ -75,22 +75,22 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.path = defaults.path;
         }
 
-        public Builder setLinkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder setPath(@Nullable Input<Object> path) {
+        public Builder path(@Nullable Input<Object> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = Input.ofNullable(path);
             return this;
         }

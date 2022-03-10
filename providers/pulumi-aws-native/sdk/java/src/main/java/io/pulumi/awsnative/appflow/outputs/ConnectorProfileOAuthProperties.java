@@ -60,17 +60,17 @@ public final class ConnectorProfileOAuthProperties {
     	      this.tokenUrl = defaults.tokenUrl;
         }
 
-        public Builder setAuthCodeUrl(@Nullable String authCodeUrl) {
+        public Builder authCodeUrl(@Nullable String authCodeUrl) {
             this.authCodeUrl = authCodeUrl;
             return this;
         }
 
-        public Builder setOAuthScopes(@Nullable List<String> oAuthScopes) {
+        public Builder oAuthScopes(@Nullable List<String> oAuthScopes) {
             this.oAuthScopes = oAuthScopes;
             return this;
         }
 
-        public Builder setTokenUrl(@Nullable String tokenUrl) {
+        public Builder tokenUrl(@Nullable String tokenUrl) {
             this.tokenUrl = tokenUrl;
             return this;
         }

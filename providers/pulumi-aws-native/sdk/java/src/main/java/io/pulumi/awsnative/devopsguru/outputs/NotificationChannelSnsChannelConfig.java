@@ -42,7 +42,7 @@ public final class NotificationChannelSnsChannelConfig {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
         }

@@ -65,12 +65,12 @@ public final class CertHttpChallengeResponse {
     	      this.token = defaults.token;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

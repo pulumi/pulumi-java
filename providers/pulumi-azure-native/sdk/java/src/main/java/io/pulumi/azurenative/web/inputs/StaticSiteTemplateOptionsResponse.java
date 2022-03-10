@@ -123,27 +123,27 @@ public final class StaticSiteTemplateOptionsResponse extends io.pulumi.resources
     	      this.templateRepositoryUrl = defaults.templateRepositoryUrl;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsPrivate(@Nullable Boolean isPrivate) {
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setTemplateRepositoryUrl(@Nullable String templateRepositoryUrl) {
+        public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }

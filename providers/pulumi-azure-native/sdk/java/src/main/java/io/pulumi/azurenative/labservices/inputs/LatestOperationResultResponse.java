@@ -136,32 +136,32 @@ public final class LatestOperationResultResponse extends io.pulumi.resources.Inv
     	      this.status = defaults.status;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setOperationUrl(String operationUrl) {
+        public Builder operationUrl(String operationUrl) {
             this.operationUrl = Objects.requireNonNull(operationUrl);
             return this;
         }
 
-        public Builder setRequestUri(String requestUri) {
+        public Builder requestUri(String requestUri) {
             this.requestUri = Objects.requireNonNull(requestUri);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -114,42 +114,42 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     	      this.resourceLimits = defaults.resourceLimits;
         }
 
-        public Builder setAutoProvisioningDefaults(@Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults) {
+        public Builder autoProvisioningDefaults(@Nullable Input<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults) {
             this.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
 
-        public Builder setAutoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs autoProvisioningDefaults) {
+        public Builder autoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs autoProvisioningDefaults) {
             this.autoProvisioningDefaults = Input.ofNullable(autoProvisioningDefaults);
             return this;
         }
 
-        public Builder setAutoscalingProfile(@Nullable Input<String> autoscalingProfile) {
+        public Builder autoscalingProfile(@Nullable Input<String> autoscalingProfile) {
             this.autoscalingProfile = autoscalingProfile;
             return this;
         }
 
-        public Builder setAutoscalingProfile(@Nullable String autoscalingProfile) {
+        public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
             this.autoscalingProfile = Input.ofNullable(autoscalingProfile);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setResourceLimits(@Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
+        public Builder resourceLimits(@Nullable Input<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
             this.resourceLimits = resourceLimits;
             return this;
         }
 
-        public Builder setResourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimitGetArgs> resourceLimits) {
+        public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimitGetArgs> resourceLimits) {
             this.resourceLimits = Input.ofNullable(resourceLimits);
             return this;
         }

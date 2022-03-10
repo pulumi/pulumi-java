@@ -66,12 +66,12 @@ public final class SingleClusterRoutingResponse {
     	      this.clusterId = defaults.clusterId;
         }
 
-        public Builder setAllowTransactionalWrites(Boolean allowTransactionalWrites) {
+        public Builder allowTransactionalWrites(Boolean allowTransactionalWrites) {
             this.allowTransactionalWrites = Objects.requireNonNull(allowTransactionalWrites);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }

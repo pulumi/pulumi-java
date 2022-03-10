@@ -88,32 +88,32 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends io.pulumi.reso
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setGeneration(@Nullable Input<String> generation) {
+        public Builder generation(@Nullable Input<String> generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setGeneration(@Nullable String generation) {
+        public Builder generation(@Nullable String generation) {
             this.generation = Input.ofNullable(generation);
             return this;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }

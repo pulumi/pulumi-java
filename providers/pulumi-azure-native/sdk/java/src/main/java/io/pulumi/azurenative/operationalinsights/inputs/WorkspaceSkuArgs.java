@@ -77,22 +77,22 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacityReservationLevel(@Nullable Input<Integer> capacityReservationLevel) {
+        public Builder capacityReservationLevel(@Nullable Input<Integer> capacityReservationLevel) {
             this.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
 
-        public Builder setCapacityReservationLevel(@Nullable Integer capacityReservationLevel) {
+        public Builder capacityReservationLevel(@Nullable Integer capacityReservationLevel) {
             this.capacityReservationLevel = Input.ofNullable(capacityReservationLevel);
             return this;
         }
 
-        public Builder setName(Input<Either<String,WorkspaceSkuNameEnum>> name) {
+        public Builder name(Input<Either<String,WorkspaceSkuNameEnum>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,WorkspaceSkuNameEnum> name) {
+        public Builder name(Either<String,WorkspaceSkuNameEnum> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

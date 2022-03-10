@@ -68,12 +68,12 @@ public final class GetMultipleActivationKeyArgs extends io.pulumi.resources.Invo
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setMultipleActivationKeyName(String multipleActivationKeyName) {
+        public Builder multipleActivationKeyName(String multipleActivationKeyName) {
             this.multipleActivationKeyName = Objects.requireNonNull(multipleActivationKeyName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

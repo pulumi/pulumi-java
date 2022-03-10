@@ -128,52 +128,52 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(Input<RulesEngineActionArgs> action) {
+        public Builder action(Input<RulesEngineActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(RulesEngineActionArgs action) {
+        public Builder action(RulesEngineActionArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setMatchConditions(@Nullable Input<List<RulesEngineMatchConditionArgs>> matchConditions) {
+        public Builder matchConditions(@Nullable Input<List<RulesEngineMatchConditionArgs>> matchConditions) {
             this.matchConditions = matchConditions;
             return this;
         }
 
-        public Builder setMatchConditions(@Nullable List<RulesEngineMatchConditionArgs> matchConditions) {
+        public Builder matchConditions(@Nullable List<RulesEngineMatchConditionArgs> matchConditions) {
             this.matchConditions = Input.ofNullable(matchConditions);
             return this;
         }
 
-        public Builder setMatchProcessingBehavior(@Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
-        public Builder setMatchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
             this.matchProcessingBehavior = Input.ofNullable(matchProcessingBehavior);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }

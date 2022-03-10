@@ -52,7 +52,7 @@ public final class CloudConnectorsResponse extends io.pulumi.resources.InvokeArg
     	      this.awsExternalId = defaults.awsExternalId;
         }
 
-        public Builder setAwsExternalId(String awsExternalId) {
+        public Builder awsExternalId(String awsExternalId) {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }

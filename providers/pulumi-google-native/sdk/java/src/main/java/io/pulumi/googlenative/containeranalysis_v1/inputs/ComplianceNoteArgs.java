@@ -149,72 +149,72 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCisBenchmark(@Nullable Input<CisBenchmarkArgs> cisBenchmark) {
+        public Builder cisBenchmark(@Nullable Input<CisBenchmarkArgs> cisBenchmark) {
             this.cisBenchmark = cisBenchmark;
             return this;
         }
 
-        public Builder setCisBenchmark(@Nullable CisBenchmarkArgs cisBenchmark) {
+        public Builder cisBenchmark(@Nullable CisBenchmarkArgs cisBenchmark) {
             this.cisBenchmark = Input.ofNullable(cisBenchmark);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRationale(@Nullable Input<String> rationale) {
+        public Builder rationale(@Nullable Input<String> rationale) {
             this.rationale = rationale;
             return this;
         }
 
-        public Builder setRationale(@Nullable String rationale) {
+        public Builder rationale(@Nullable String rationale) {
             this.rationale = Input.ofNullable(rationale);
             return this;
         }
 
-        public Builder setRemediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Input<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
-        public Builder setRemediation(@Nullable String remediation) {
+        public Builder remediation(@Nullable String remediation) {
             this.remediation = Input.ofNullable(remediation);
             return this;
         }
 
-        public Builder setScanInstructions(@Nullable Input<String> scanInstructions) {
+        public Builder scanInstructions(@Nullable Input<String> scanInstructions) {
             this.scanInstructions = scanInstructions;
             return this;
         }
 
-        public Builder setScanInstructions(@Nullable String scanInstructions) {
+        public Builder scanInstructions(@Nullable String scanInstructions) {
             this.scanInstructions = Input.ofNullable(scanInstructions);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<List<ComplianceVersionArgs>> version) {
+        public Builder version(@Nullable Input<List<ComplianceVersionArgs>> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable List<ComplianceVersionArgs> version) {
+        public Builder version(@Nullable List<ComplianceVersionArgs> version) {
             this.version = Input.ofNullable(version);
             return this;
         }

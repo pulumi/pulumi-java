@@ -215,57 +215,57 @@ public final class GetPrivateStoreCollectionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllSubscriptions(@Nullable Boolean allSubscriptions) {
+        public Builder allSubscriptions(@Nullable Boolean allSubscriptions) {
             this.allSubscriptions = allSubscriptions;
             return this;
         }
 
-        public Builder setClaim(@Nullable String claim) {
+        public Builder claim(@Nullable String claim) {
             this.claim = claim;
             return this;
         }
 
-        public Builder setCollectionId(String collectionId) {
+        public Builder collectionId(String collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
 
-        public Builder setCollectionName(@Nullable String collectionName) {
+        public Builder collectionName(@Nullable String collectionName) {
             this.collectionName = collectionName;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberOfOffers(Double numberOfOffers) {
+        public Builder numberOfOffers(Double numberOfOffers) {
             this.numberOfOffers = Objects.requireNonNull(numberOfOffers);
             return this;
         }
 
-        public Builder setSubscriptionsList(@Nullable List<String> subscriptionsList) {
+        public Builder subscriptionsList(@Nullable List<String> subscriptionsList) {
             this.subscriptionsList = subscriptionsList;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -50,7 +50,7 @@ public final class EncryptionPreferencesResponse {
     	      this.doubleEncryptionStatus = defaults.doubleEncryptionStatus;
         }
 
-        public Builder setDoubleEncryptionStatus(@Nullable String doubleEncryptionStatus) {
+        public Builder doubleEncryptionStatus(@Nullable String doubleEncryptionStatus) {
             this.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
         }

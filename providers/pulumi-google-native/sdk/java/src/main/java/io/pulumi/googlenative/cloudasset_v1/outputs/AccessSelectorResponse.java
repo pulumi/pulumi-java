@@ -66,12 +66,12 @@ public final class AccessSelectorResponse {
     	      this.roles = defaults.roles;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setRoles(List<String> roles) {
+        public Builder roles(List<String> roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }

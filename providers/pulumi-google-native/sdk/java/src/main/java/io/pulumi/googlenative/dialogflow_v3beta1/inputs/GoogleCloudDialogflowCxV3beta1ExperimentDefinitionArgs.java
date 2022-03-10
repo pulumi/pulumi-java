@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
     	      this.versionVariants = defaults.versionVariants;
         }
 
-        public Builder setCondition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Input<String> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setVersionVariants(@Nullable Input<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants) {
+        public Builder versionVariants(@Nullable Input<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants) {
             this.versionVariants = versionVariants;
             return this;
         }
 
-        public Builder setVersionVariants(@Nullable GoogleCloudDialogflowCxV3beta1VersionVariantsArgs versionVariants) {
+        public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3beta1VersionVariantsArgs versionVariants) {
             this.versionVariants = Input.ofNullable(versionVariants);
             return this;
         }

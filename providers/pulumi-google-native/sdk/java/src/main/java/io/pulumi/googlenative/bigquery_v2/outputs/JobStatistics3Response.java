@@ -113,27 +113,27 @@ public final class JobStatistics3Response {
     	      this.outputRows = defaults.outputRows;
         }
 
-        public Builder setBadRecords(String badRecords) {
+        public Builder badRecords(String badRecords) {
             this.badRecords = Objects.requireNonNull(badRecords);
             return this;
         }
 
-        public Builder setInputFileBytes(String inputFileBytes) {
+        public Builder inputFileBytes(String inputFileBytes) {
             this.inputFileBytes = Objects.requireNonNull(inputFileBytes);
             return this;
         }
 
-        public Builder setInputFiles(String inputFiles) {
+        public Builder inputFiles(String inputFiles) {
             this.inputFiles = Objects.requireNonNull(inputFiles);
             return this;
         }
 
-        public Builder setOutputBytes(String outputBytes) {
+        public Builder outputBytes(String outputBytes) {
             this.outputBytes = Objects.requireNonNull(outputBytes);
             return this;
         }
 
-        public Builder setOutputRows(String outputRows) {
+        public Builder outputRows(String outputRows) {
             this.outputRows = Objects.requireNonNull(outputRows);
             return this;
         }

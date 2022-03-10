@@ -95,32 +95,32 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
     	      this.ipRules = defaults.ipRules;
         }
 
-        public Builder setApplyToBuiltInEventHubEndpoint(Input<Boolean> applyToBuiltInEventHubEndpoint) {
+        public Builder applyToBuiltInEventHubEndpoint(Input<Boolean> applyToBuiltInEventHubEndpoint) {
             this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
             return this;
         }
 
-        public Builder setApplyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
+        public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
             this.applyToBuiltInEventHubEndpoint = Input.of(Objects.requireNonNull(applyToBuiltInEventHubEndpoint));
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable Input<Either<String,DefaultAction>> defaultAction) {
+        public Builder defaultAction(@Nullable Input<Either<String,DefaultAction>> defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
+        public Builder defaultAction(@Nullable Either<String,DefaultAction> defaultAction) {
             this.defaultAction = Input.ofNullable(defaultAction);
             return this;
         }
 
-        public Builder setIpRules(Input<List<NetworkRuleSetIpRuleArgs>> ipRules) {
+        public Builder ipRules(Input<List<NetworkRuleSetIpRuleArgs>> ipRules) {
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }
 
-        public Builder setIpRules(List<NetworkRuleSetIpRuleArgs> ipRules) {
+        public Builder ipRules(List<NetworkRuleSetIpRuleArgs> ipRules) {
             this.ipRules = Input.of(Objects.requireNonNull(ipRules));
             return this;
         }

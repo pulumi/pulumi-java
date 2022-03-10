@@ -52,12 +52,12 @@ public final class GatewayRouteSpecHttp2RouteActionGetArgs extends io.pulumi.res
     	      this.target = defaults.target;
         }
 
-        public Builder setTarget(Input<GatewayRouteSpecHttp2RouteActionTargetGetArgs> target) {
+        public Builder target(Input<GatewayRouteSpecHttp2RouteActionTargetGetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(GatewayRouteSpecHttp2RouteActionTargetGetArgs target) {
+        public Builder target(GatewayRouteSpecHttp2RouteActionTargetGetArgs target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

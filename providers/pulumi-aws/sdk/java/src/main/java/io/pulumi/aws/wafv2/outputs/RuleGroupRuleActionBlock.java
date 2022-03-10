@@ -50,7 +50,7 @@ public final class RuleGroupRuleActionBlock {
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable RuleGroupRuleActionBlockCustomResponse customResponse) {
+        public Builder customResponse(@Nullable RuleGroupRuleActionBlockCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
         }

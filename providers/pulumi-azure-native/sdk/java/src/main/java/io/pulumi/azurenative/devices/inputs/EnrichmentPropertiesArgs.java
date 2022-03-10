@@ -90,32 +90,32 @@ public final class EnrichmentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder setEndpointNames(Input<List<String>> endpointNames) {
+        public Builder endpointNames(Input<List<String>> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
 
-        public Builder setEndpointNames(List<String> endpointNames) {
+        public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Input.of(Objects.requireNonNull(endpointNames));
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

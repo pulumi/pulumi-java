@@ -50,7 +50,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<GatewayRouteResponse> value) {
+        public Builder value(@Nullable List<GatewayRouteResponse> value) {
             this.value = value;
             return this;
         }

@@ -107,22 +107,22 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder setDestinationContainer(String destinationContainer) {
+        public Builder destinationContainer(String destinationContainer) {
             this.destinationContainer = Objects.requireNonNull(destinationContainer);
             return this;
         }
 
-        public Builder setFilters(@Nullable ObjectReplicationPolicyFilterResponse filters) {
+        public Builder filters(@Nullable ObjectReplicationPolicyFilterResponse filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setSourceContainer(String sourceContainer) {
+        public Builder sourceContainer(String sourceContainer) {
             this.sourceContainer = Objects.requireNonNull(sourceContainer);
             return this;
         }

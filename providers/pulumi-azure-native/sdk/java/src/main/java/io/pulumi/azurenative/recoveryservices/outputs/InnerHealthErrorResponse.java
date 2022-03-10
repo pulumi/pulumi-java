@@ -227,62 +227,62 @@ public final class InnerHealthErrorResponse {
     	      this.summaryMessage = defaults.summaryMessage;
         }
 
-        public Builder setCreationTimeUtc(@Nullable String creationTimeUtc) {
+        public Builder creationTimeUtc(@Nullable String creationTimeUtc) {
             this.creationTimeUtc = creationTimeUtc;
             return this;
         }
 
-        public Builder setEntityId(@Nullable String entityId) {
+        public Builder entityId(@Nullable String entityId) {
             this.entityId = entityId;
             return this;
         }
 
-        public Builder setErrorCategory(@Nullable String errorCategory) {
+        public Builder errorCategory(@Nullable String errorCategory) {
             this.errorCategory = errorCategory;
             return this;
         }
 
-        public Builder setErrorCode(@Nullable String errorCode) {
+        public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorLevel(@Nullable String errorLevel) {
+        public Builder errorLevel(@Nullable String errorLevel) {
             this.errorLevel = errorLevel;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setErrorSource(@Nullable String errorSource) {
+        public Builder errorSource(@Nullable String errorSource) {
             this.errorSource = errorSource;
             return this;
         }
 
-        public Builder setErrorType(@Nullable String errorType) {
+        public Builder errorType(@Nullable String errorType) {
             this.errorType = errorType;
             return this;
         }
 
-        public Builder setPossibleCauses(@Nullable String possibleCauses) {
+        public Builder possibleCauses(@Nullable String possibleCauses) {
             this.possibleCauses = possibleCauses;
             return this;
         }
 
-        public Builder setRecommendedAction(@Nullable String recommendedAction) {
+        public Builder recommendedAction(@Nullable String recommendedAction) {
             this.recommendedAction = recommendedAction;
             return this;
         }
 
-        public Builder setRecoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
+        public Builder recoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
             this.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
             return this;
         }
 
-        public Builder setSummaryMessage(@Nullable String summaryMessage) {
+        public Builder summaryMessage(@Nullable String summaryMessage) {
             this.summaryMessage = summaryMessage;
             return this;
         }

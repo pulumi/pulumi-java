@@ -48,7 +48,7 @@ public final class ClusterOpenMonitoringPrometheusNodeExporter {
     	      this.enabledInBroker = defaults.enabledInBroker;
         }
 
-        public Builder setEnabledInBroker(Boolean enabledInBroker) {
+        public Builder enabledInBroker(Boolean enabledInBroker) {
             this.enabledInBroker = Objects.requireNonNull(enabledInBroker);
             return this;
         }

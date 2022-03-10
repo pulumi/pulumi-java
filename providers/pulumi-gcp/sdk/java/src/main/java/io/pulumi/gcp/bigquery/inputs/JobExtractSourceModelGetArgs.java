@@ -85,32 +85,32 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setModelId(Input<String> modelId) {
+        public Builder modelId(Input<String> modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
 
-        public Builder setModelId(String modelId) {
+        public Builder modelId(String modelId) {
             this.modelId = Input.of(Objects.requireNonNull(modelId));
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }

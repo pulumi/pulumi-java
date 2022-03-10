@@ -72,12 +72,12 @@ public final class GraphParameterLinkResponse extends io.pulumi.resources.Invoke
     	      this.parameterKey = defaults.parameterKey;
         }
 
-        public Builder setNodeId(String nodeId) {
+        public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
 
-        public Builder setParameterKey(String parameterKey) {
+        public Builder parameterKey(String parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
     	      this.securityPolicyName = defaults.securityPolicyName;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSecurityPolicyName(String securityPolicyName) {
+        public Builder securityPolicyName(String securityPolicyName) {
             this.securityPolicyName = Objects.requireNonNull(securityPolicyName);
             return this;
         }

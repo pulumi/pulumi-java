@@ -42,7 +42,7 @@ public final class ContainerMountBindOptions {
     	      this.propagation = defaults.propagation;
         }
 
-        public Builder setPropagation(@Nullable String propagation) {
+        public Builder propagation(@Nullable String propagation) {
             this.propagation = propagation;
             return this;
         }

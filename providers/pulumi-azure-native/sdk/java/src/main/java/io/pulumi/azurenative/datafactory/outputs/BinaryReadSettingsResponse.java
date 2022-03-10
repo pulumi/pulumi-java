@@ -73,12 +73,12 @@ public final class BinaryReadSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCompressionProperties(@Nullable Object compressionProperties) {
+        public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

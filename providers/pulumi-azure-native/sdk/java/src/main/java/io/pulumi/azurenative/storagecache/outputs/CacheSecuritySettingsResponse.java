@@ -50,7 +50,7 @@ public final class CacheSecuritySettingsResponse {
     	      this.accessPolicies = defaults.accessPolicies;
         }
 
-        public Builder setAccessPolicies(@Nullable List<NfsAccessPolicyResponse> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<NfsAccessPolicyResponse> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }

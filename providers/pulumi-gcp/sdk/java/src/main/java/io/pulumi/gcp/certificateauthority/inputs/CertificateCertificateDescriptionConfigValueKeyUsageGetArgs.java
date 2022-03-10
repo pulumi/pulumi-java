@@ -92,32 +92,32 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
     	      this.unknownExtendedKeyUsages = defaults.unknownExtendedKeyUsages;
         }
 
-        public Builder setBaseKeyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages) {
+        public Builder baseKeyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages) {
             this.baseKeyUsages = baseKeyUsages;
             return this;
         }
 
-        public Builder setBaseKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs> baseKeyUsages) {
+        public Builder baseKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs> baseKeyUsages) {
             this.baseKeyUsages = Input.ofNullable(baseKeyUsages);
             return this;
         }
 
-        public Builder setExtendedKeyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages) {
+        public Builder extendedKeyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages) {
             this.extendedKeyUsages = extendedKeyUsages;
             return this;
         }
 
-        public Builder setExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsages) {
+        public Builder extendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsages) {
             this.extendedKeyUsages = Input.ofNullable(extendedKeyUsages);
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
-        public Builder setUnknownExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
+        public Builder unknownExtendedKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs> unknownExtendedKeyUsages) {
             this.unknownExtendedKeyUsages = Input.ofNullable(unknownExtendedKeyUsages);
             return this;
         }

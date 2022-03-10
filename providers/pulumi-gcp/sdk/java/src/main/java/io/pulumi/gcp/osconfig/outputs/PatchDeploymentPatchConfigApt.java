@@ -90,17 +90,17 @@ public final class PatchDeploymentPatchConfigApt {
     	      this.type = defaults.type;
         }
 
-        public Builder setExcludes(@Nullable List<String> excludes) {
+        public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExclusivePackages(@Nullable List<String> exclusivePackages) {
+        public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

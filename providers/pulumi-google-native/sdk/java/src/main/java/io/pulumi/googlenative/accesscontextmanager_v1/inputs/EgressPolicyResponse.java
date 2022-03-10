@@ -73,12 +73,12 @@ public final class EgressPolicyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.egressTo = defaults.egressTo;
         }
 
-        public Builder setEgressFrom(EgressFromResponse egressFrom) {
+        public Builder egressFrom(EgressFromResponse egressFrom) {
             this.egressFrom = Objects.requireNonNull(egressFrom);
             return this;
         }
 
-        public Builder setEgressTo(EgressToResponse egressTo) {
+        public Builder egressTo(EgressToResponse egressTo) {
             this.egressTo = Objects.requireNonNull(egressTo);
             return this;
         }

@@ -73,12 +73,12 @@ public final class RatioPartResponse extends io.pulumi.resources.InvokeArgs {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setAggregation(AggregationResponse aggregation) {
+        public Builder aggregation(AggregationResponse aggregation) {
             this.aggregation = Objects.requireNonNull(aggregation);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

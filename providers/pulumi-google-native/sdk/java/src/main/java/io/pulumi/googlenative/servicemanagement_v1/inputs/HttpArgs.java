@@ -76,22 +76,22 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setFullyDecodeReservedExpansion(@Nullable Input<Boolean> fullyDecodeReservedExpansion) {
+        public Builder fullyDecodeReservedExpansion(@Nullable Input<Boolean> fullyDecodeReservedExpansion) {
             this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
             return this;
         }
 
-        public Builder setFullyDecodeReservedExpansion(@Nullable Boolean fullyDecodeReservedExpansion) {
+        public Builder fullyDecodeReservedExpansion(@Nullable Boolean fullyDecodeReservedExpansion) {
             this.fullyDecodeReservedExpansion = Input.ofNullable(fullyDecodeReservedExpansion);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<HttpRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<HttpRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<HttpRuleArgs> rules) {
+        public Builder rules(@Nullable List<HttpRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

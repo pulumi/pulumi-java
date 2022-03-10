@@ -52,12 +52,12 @@ public final class TemplateSourceEntity {
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder setSourceAnalysis(@Nullable TemplateSourceAnalysis sourceAnalysis) {
+        public Builder sourceAnalysis(@Nullable TemplateSourceAnalysis sourceAnalysis) {
             this.sourceAnalysis = sourceAnalysis;
             return this;
         }
 
-        public Builder setSourceTemplate(@Nullable TemplateSourceTemplate sourceTemplate) {
+        public Builder sourceTemplate(@Nullable TemplateSourceTemplate sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }

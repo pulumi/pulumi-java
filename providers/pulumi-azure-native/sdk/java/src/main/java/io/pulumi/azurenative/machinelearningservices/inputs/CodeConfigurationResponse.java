@@ -74,12 +74,12 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
     	      this.scoringScript = defaults.scoringScript;
         }
 
-        public Builder setCodeId(@Nullable String codeId) {
+        public Builder codeId(@Nullable String codeId) {
             this.codeId = codeId;
             return this;
         }
 
-        public Builder setScoringScript(String scoringScript) {
+        public Builder scoringScript(String scoringScript) {
             this.scoringScript = Objects.requireNonNull(scoringScript);
             return this;
         }

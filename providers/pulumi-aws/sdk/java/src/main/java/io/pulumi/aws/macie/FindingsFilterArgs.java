@@ -149,72 +149,72 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFindingCriteria(Input<FindingsFilterFindingCriteriaArgs> findingCriteria) {
+        public Builder findingCriteria(Input<FindingsFilterFindingCriteriaArgs> findingCriteria) {
             this.findingCriteria = Objects.requireNonNull(findingCriteria);
             return this;
         }
 
-        public Builder setFindingCriteria(FindingsFilterFindingCriteriaArgs findingCriteria) {
+        public Builder findingCriteria(FindingsFilterFindingCriteriaArgs findingCriteria) {
             this.findingCriteria = Input.of(Objects.requireNonNull(findingCriteria));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPosition(@Nullable Input<Integer> position) {
+        public Builder position(@Nullable Input<Integer> position) {
             this.position = position;
             return this;
         }
 
-        public Builder setPosition(@Nullable Integer position) {
+        public Builder position(@Nullable Integer position) {
             this.position = Input.ofNullable(position);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

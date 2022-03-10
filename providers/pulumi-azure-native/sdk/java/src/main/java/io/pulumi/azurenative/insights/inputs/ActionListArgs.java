@@ -58,12 +58,12 @@ public final class ActionListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.actionGroups = defaults.actionGroups;
         }
 
-        public Builder setActionGroups(@Nullable Input<List<ActionGroupArgs>> actionGroups) {
+        public Builder actionGroups(@Nullable Input<List<ActionGroupArgs>> actionGroups) {
             this.actionGroups = actionGroups;
             return this;
         }
 
-        public Builder setActionGroups(@Nullable List<ActionGroupArgs> actionGroups) {
+        public Builder actionGroups(@Nullable List<ActionGroupArgs> actionGroups) {
             this.actionGroups = Input.ofNullable(actionGroups);
             return this;
         }

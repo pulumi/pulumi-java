@@ -163,42 +163,42 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputMigrationL
     	      this.targetServerVersion = defaults.targetServerVersion;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSourceServer(String sourceServer) {
+        public Builder sourceServer(String sourceServer) {
             this.sourceServer = Objects.requireNonNull(sourceServer);
             return this;
         }
 
-        public Builder setSourceServerVersion(String sourceServerVersion) {
+        public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setTargetServer(String targetServer) {
+        public Builder targetServer(String targetServer) {
             this.targetServer = Objects.requireNonNull(targetServer);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }

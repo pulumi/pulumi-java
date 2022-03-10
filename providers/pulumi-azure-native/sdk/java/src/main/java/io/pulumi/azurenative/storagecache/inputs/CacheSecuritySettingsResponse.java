@@ -58,7 +58,7 @@ public final class CacheSecuritySettingsResponse extends io.pulumi.resources.Inv
     	      this.accessPolicies = defaults.accessPolicies;
         }
 
-        public Builder setAccessPolicies(@Nullable List<NfsAccessPolicyResponse> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<NfsAccessPolicyResponse> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }

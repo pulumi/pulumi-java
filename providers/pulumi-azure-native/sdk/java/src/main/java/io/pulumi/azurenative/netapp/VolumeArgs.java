@@ -443,252 +443,252 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setBackupId(@Nullable Input<String> backupId) {
+        public Builder backupId(@Nullable Input<String> backupId) {
             this.backupId = backupId;
             return this;
         }
 
-        public Builder setBackupId(@Nullable String backupId) {
+        public Builder backupId(@Nullable String backupId) {
             this.backupId = Input.ofNullable(backupId);
             return this;
         }
 
-        public Builder setCreationToken(Input<String> creationToken) {
+        public Builder creationToken(Input<String> creationToken) {
             this.creationToken = Objects.requireNonNull(creationToken);
             return this;
         }
 
-        public Builder setCreationToken(String creationToken) {
+        public Builder creationToken(String creationToken) {
             this.creationToken = Input.of(Objects.requireNonNull(creationToken));
             return this;
         }
 
-        public Builder setDataProtection(@Nullable Input<VolumePropertiesDataProtectionArgs> dataProtection) {
+        public Builder dataProtection(@Nullable Input<VolumePropertiesDataProtectionArgs> dataProtection) {
             this.dataProtection = dataProtection;
             return this;
         }
 
-        public Builder setDataProtection(@Nullable VolumePropertiesDataProtectionArgs dataProtection) {
+        public Builder dataProtection(@Nullable VolumePropertiesDataProtectionArgs dataProtection) {
             this.dataProtection = Input.ofNullable(dataProtection);
             return this;
         }
 
-        public Builder setEncryptionKeySource(@Nullable Input<String> encryptionKeySource) {
+        public Builder encryptionKeySource(@Nullable Input<String> encryptionKeySource) {
             this.encryptionKeySource = encryptionKeySource;
             return this;
         }
 
-        public Builder setEncryptionKeySource(@Nullable String encryptionKeySource) {
+        public Builder encryptionKeySource(@Nullable String encryptionKeySource) {
             this.encryptionKeySource = Input.ofNullable(encryptionKeySource);
             return this;
         }
 
-        public Builder setExportPolicy(@Nullable Input<VolumePropertiesExportPolicyArgs> exportPolicy) {
+        public Builder exportPolicy(@Nullable Input<VolumePropertiesExportPolicyArgs> exportPolicy) {
             this.exportPolicy = exportPolicy;
             return this;
         }
 
-        public Builder setExportPolicy(@Nullable VolumePropertiesExportPolicyArgs exportPolicy) {
+        public Builder exportPolicy(@Nullable VolumePropertiesExportPolicyArgs exportPolicy) {
             this.exportPolicy = Input.ofNullable(exportPolicy);
             return this;
         }
 
-        public Builder setIsRestoring(@Nullable Input<Boolean> isRestoring) {
+        public Builder isRestoring(@Nullable Input<Boolean> isRestoring) {
             this.isRestoring = isRestoring;
             return this;
         }
 
-        public Builder setIsRestoring(@Nullable Boolean isRestoring) {
+        public Builder isRestoring(@Nullable Boolean isRestoring) {
             this.isRestoring = Input.ofNullable(isRestoring);
             return this;
         }
 
-        public Builder setKerberosEnabled(@Nullable Input<Boolean> kerberosEnabled) {
+        public Builder kerberosEnabled(@Nullable Input<Boolean> kerberosEnabled) {
             this.kerberosEnabled = kerberosEnabled;
             return this;
         }
 
-        public Builder setKerberosEnabled(@Nullable Boolean kerberosEnabled) {
+        public Builder kerberosEnabled(@Nullable Boolean kerberosEnabled) {
             this.kerberosEnabled = Input.ofNullable(kerberosEnabled);
             return this;
         }
 
-        public Builder setLdapEnabled(@Nullable Input<Boolean> ldapEnabled) {
+        public Builder ldapEnabled(@Nullable Input<Boolean> ldapEnabled) {
             this.ldapEnabled = ldapEnabled;
             return this;
         }
 
-        public Builder setLdapEnabled(@Nullable Boolean ldapEnabled) {
+        public Builder ldapEnabled(@Nullable Boolean ldapEnabled) {
             this.ldapEnabled = Input.ofNullable(ldapEnabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPoolName(Input<String> poolName) {
+        public Builder poolName(Input<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
-        public Builder setPoolName(String poolName) {
+        public Builder poolName(String poolName) {
             this.poolName = Input.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder setProtocolTypes(@Nullable Input<List<String>> protocolTypes) {
+        public Builder protocolTypes(@Nullable Input<List<String>> protocolTypes) {
             this.protocolTypes = protocolTypes;
             return this;
         }
 
-        public Builder setProtocolTypes(@Nullable List<String> protocolTypes) {
+        public Builder protocolTypes(@Nullable List<String> protocolTypes) {
             this.protocolTypes = Input.ofNullable(protocolTypes);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSecurityStyle(@Nullable Input<Either<String,SecurityStyle>> securityStyle) {
+        public Builder securityStyle(@Nullable Input<Either<String,SecurityStyle>> securityStyle) {
             this.securityStyle = securityStyle;
             return this;
         }
 
-        public Builder setSecurityStyle(@Nullable Either<String,SecurityStyle> securityStyle) {
+        public Builder securityStyle(@Nullable Either<String,SecurityStyle> securityStyle) {
             this.securityStyle = Input.ofNullable(securityStyle);
             return this;
         }
 
-        public Builder setServiceLevel(@Nullable Input<Either<String,ServiceLevel>> serviceLevel) {
+        public Builder serviceLevel(@Nullable Input<Either<String,ServiceLevel>> serviceLevel) {
             this.serviceLevel = serviceLevel;
             return this;
         }
 
-        public Builder setServiceLevel(@Nullable Either<String,ServiceLevel> serviceLevel) {
+        public Builder serviceLevel(@Nullable Either<String,ServiceLevel> serviceLevel) {
             this.serviceLevel = Input.ofNullable(serviceLevel);
             return this;
         }
 
-        public Builder setSmbContinuouslyAvailable(@Nullable Input<Boolean> smbContinuouslyAvailable) {
+        public Builder smbContinuouslyAvailable(@Nullable Input<Boolean> smbContinuouslyAvailable) {
             this.smbContinuouslyAvailable = smbContinuouslyAvailable;
             return this;
         }
 
-        public Builder setSmbContinuouslyAvailable(@Nullable Boolean smbContinuouslyAvailable) {
+        public Builder smbContinuouslyAvailable(@Nullable Boolean smbContinuouslyAvailable) {
             this.smbContinuouslyAvailable = Input.ofNullable(smbContinuouslyAvailable);
             return this;
         }
 
-        public Builder setSmbEncryption(@Nullable Input<Boolean> smbEncryption) {
+        public Builder smbEncryption(@Nullable Input<Boolean> smbEncryption) {
             this.smbEncryption = smbEncryption;
             return this;
         }
 
-        public Builder setSmbEncryption(@Nullable Boolean smbEncryption) {
+        public Builder smbEncryption(@Nullable Boolean smbEncryption) {
             this.smbEncryption = Input.ofNullable(smbEncryption);
             return this;
         }
 
-        public Builder setSnapshotDirectoryVisible(@Nullable Input<Boolean> snapshotDirectoryVisible) {
+        public Builder snapshotDirectoryVisible(@Nullable Input<Boolean> snapshotDirectoryVisible) {
             this.snapshotDirectoryVisible = snapshotDirectoryVisible;
             return this;
         }
 
-        public Builder setSnapshotDirectoryVisible(@Nullable Boolean snapshotDirectoryVisible) {
+        public Builder snapshotDirectoryVisible(@Nullable Boolean snapshotDirectoryVisible) {
             this.snapshotDirectoryVisible = Input.ofNullable(snapshotDirectoryVisible);
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Input<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Input.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThroughputMibps(@Nullable Input<Double> throughputMibps) {
+        public Builder throughputMibps(@Nullable Input<Double> throughputMibps) {
             this.throughputMibps = throughputMibps;
             return this;
         }
 
-        public Builder setThroughputMibps(@Nullable Double throughputMibps) {
+        public Builder throughputMibps(@Nullable Double throughputMibps) {
             this.throughputMibps = Input.ofNullable(throughputMibps);
             return this;
         }
 
-        public Builder setUsageThreshold(Input<Double> usageThreshold) {
+        public Builder usageThreshold(Input<Double> usageThreshold) {
             this.usageThreshold = Objects.requireNonNull(usageThreshold);
             return this;
         }
 
-        public Builder setUsageThreshold(Double usageThreshold) {
+        public Builder usageThreshold(Double usageThreshold) {
             this.usageThreshold = Input.of(Objects.requireNonNull(usageThreshold));
             return this;
         }
 
-        public Builder setVolumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Input<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

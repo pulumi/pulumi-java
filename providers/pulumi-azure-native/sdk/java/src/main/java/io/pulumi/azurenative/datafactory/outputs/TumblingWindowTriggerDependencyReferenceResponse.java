@@ -102,22 +102,22 @@ public final class TumblingWindowTriggerDependencyReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setOffset(@Nullable String offset) {
+        public Builder offset(@Nullable String offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setReferenceTrigger(TriggerReferenceResponse referenceTrigger) {
+        public Builder referenceTrigger(TriggerReferenceResponse referenceTrigger) {
             this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

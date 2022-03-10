@@ -83,17 +83,17 @@ public final class DevicePoolRule {
     	      this.value = defaults.value;
         }
 
-        public Builder setAttribute(@Nullable String attribute) {
+        public Builder attribute(@Nullable String attribute) {
             this.attribute = attribute;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

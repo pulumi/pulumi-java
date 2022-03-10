@@ -41,7 +41,7 @@ public final class GetSsmParameterListResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<String> value) {
+        public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

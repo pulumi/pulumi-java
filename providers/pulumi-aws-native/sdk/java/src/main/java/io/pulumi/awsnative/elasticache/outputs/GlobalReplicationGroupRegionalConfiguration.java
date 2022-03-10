@@ -85,17 +85,17 @@ public final class GlobalReplicationGroupRegionalConfiguration {
     	      this.reshardingConfigurations = defaults.reshardingConfigurations;
         }
 
-        public Builder setReplicationGroupId(@Nullable String replicationGroupId) {
+        public Builder replicationGroupId(@Nullable String replicationGroupId) {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
 
-        public Builder setReplicationGroupRegion(@Nullable String replicationGroupRegion) {
+        public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
-        public Builder setReshardingConfigurations(@Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations) {
+        public Builder reshardingConfigurations(@Nullable List<GlobalReplicationGroupReshardingConfiguration> reshardingConfigurations) {
             this.reshardingConfigurations = reshardingConfigurations;
             return this;
         }

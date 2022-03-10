@@ -58,12 +58,12 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesArgs exte
     	      this.cases = defaults.cases;
         }
 
-        public Builder setCases(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases) {
+        public Builder cases(@Nullable Input<List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs>> cases) {
             this.cases = cases;
             return this;
         }
 
-        public Builder setCases(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs> cases) {
+        public Builder cases(@Nullable List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseArgs> cases) {
             this.cases = Input.ofNullable(cases);
             return this;
         }

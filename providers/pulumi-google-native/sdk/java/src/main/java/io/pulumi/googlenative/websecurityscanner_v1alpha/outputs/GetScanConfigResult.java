@@ -198,52 +198,52 @@ public final class GetScanConfigResult {
     	      this.userAgent = defaults.userAgent;
         }
 
-        public Builder setAuthentication(AuthenticationResponse authentication) {
+        public Builder authentication(AuthenticationResponse authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setBlacklistPatterns(List<String> blacklistPatterns) {
+        public Builder blacklistPatterns(List<String> blacklistPatterns) {
             this.blacklistPatterns = Objects.requireNonNull(blacklistPatterns);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLatestRun(ScanRunResponse latestRun) {
+        public Builder latestRun(ScanRunResponse latestRun) {
             this.latestRun = Objects.requireNonNull(latestRun);
             return this;
         }
 
-        public Builder setMaxQps(Integer maxQps) {
+        public Builder maxQps(Integer maxQps) {
             this.maxQps = Objects.requireNonNull(maxQps);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedule(ScheduleResponse schedule) {
+        public Builder schedule(ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setStartingUrls(List<String> startingUrls) {
+        public Builder startingUrls(List<String> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
 
-        public Builder setTargetPlatforms(List<String> targetPlatforms) {
+        public Builder targetPlatforms(List<String> targetPlatforms) {
             this.targetPlatforms = Objects.requireNonNull(targetPlatforms);
             return this;
         }
 
-        public Builder setUserAgent(String userAgent) {
+        public Builder userAgent(String userAgent) {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
         }

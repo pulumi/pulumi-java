@@ -112,52 +112,52 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
     	      this.versioned = defaults.versioned;
         }
 
-        public Builder setDeltaSyncConfig(@Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig) {
+        public Builder deltaSyncConfig(@Nullable Input<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig) {
             this.deltaSyncConfig = deltaSyncConfig;
             return this;
         }
 
-        public Builder setDeltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfigGetArgs deltaSyncConfig) {
+        public Builder deltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfigGetArgs deltaSyncConfig) {
             this.deltaSyncConfig = Input.ofNullable(deltaSyncConfig);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder setUseCallerCredentials(@Nullable Input<Boolean> useCallerCredentials) {
+        public Builder useCallerCredentials(@Nullable Input<Boolean> useCallerCredentials) {
             this.useCallerCredentials = useCallerCredentials;
             return this;
         }
 
-        public Builder setUseCallerCredentials(@Nullable Boolean useCallerCredentials) {
+        public Builder useCallerCredentials(@Nullable Boolean useCallerCredentials) {
             this.useCallerCredentials = Input.ofNullable(useCallerCredentials);
             return this;
         }
 
-        public Builder setVersioned(@Nullable Input<Boolean> versioned) {
+        public Builder versioned(@Nullable Input<Boolean> versioned) {
             this.versioned = versioned;
             return this;
         }
 
-        public Builder setVersioned(@Nullable Boolean versioned) {
+        public Builder versioned(@Nullable Boolean versioned) {
             this.versioned = Input.ofNullable(versioned);
             return this;
         }

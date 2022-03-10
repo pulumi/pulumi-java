@@ -56,12 +56,12 @@ public final class BucketSseKmsEncryptedObjectsArgs extends io.pulumi.resources.
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(Input<BucketSseKmsEncryptedObjectsStatus> status) {
+        public Builder status(Input<BucketSseKmsEncryptedObjectsStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(BucketSseKmsEncryptedObjectsStatus status) {
+        public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

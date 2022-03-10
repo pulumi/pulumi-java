@@ -68,12 +68,12 @@ public final class AliasPathMetadataResponse extends io.pulumi.resources.InvokeA
     	      this.type = defaults.type;
         }
 
-        public Builder setAttributes(String attributes) {
+        public Builder attributes(String attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

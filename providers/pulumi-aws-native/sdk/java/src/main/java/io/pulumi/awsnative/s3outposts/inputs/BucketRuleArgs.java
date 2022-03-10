@@ -138,62 +138,62 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = Input.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Input<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Input.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Input<Integer> expirationInDays) {
+        public Builder expirationInDays(@Nullable Input<Integer> expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = Input.ofNullable(expirationInDays);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketRuleFilterPropertiesArgs> filter) {
+        public Builder filter(@Nullable Input<BucketRuleFilterPropertiesArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketRuleFilterPropertiesArgs filter) {
+        public Builder filter(@Nullable BucketRuleFilterPropertiesArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<BucketRuleStatus> status) {
+        public Builder status(@Nullable Input<BucketRuleStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable BucketRuleStatus status) {
+        public Builder status(@Nullable BucketRuleStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

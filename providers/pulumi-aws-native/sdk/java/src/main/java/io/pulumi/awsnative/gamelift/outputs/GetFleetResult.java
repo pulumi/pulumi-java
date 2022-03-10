@@ -230,62 +230,62 @@ public final class GetFleetResult {
     	      this.runtimeConfiguration = defaults.runtimeConfiguration;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDesiredEC2Instances(@Nullable Integer desiredEC2Instances) {
+        public Builder desiredEC2Instances(@Nullable Integer desiredEC2Instances) {
             this.desiredEC2Instances = desiredEC2Instances;
             return this;
         }
 
-        public Builder setEC2InboundPermissions(@Nullable List<FleetIpPermission> eC2InboundPermissions) {
+        public Builder eC2InboundPermissions(@Nullable List<FleetIpPermission> eC2InboundPermissions) {
             this.eC2InboundPermissions = eC2InboundPermissions;
             return this;
         }
 
-        public Builder setFleetId(@Nullable String fleetId) {
+        public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = fleetId;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<FleetLocationConfiguration> locations) {
+        public Builder locations(@Nullable List<FleetLocationConfiguration> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Integer maxSize) {
+        public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMetricGroups(@Nullable List<String> metricGroups) {
+        public Builder metricGroups(@Nullable List<String> metricGroups) {
             this.metricGroups = metricGroups;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNewGameSessionProtectionPolicy(@Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy) {
+        public Builder newGameSessionProtectionPolicy(@Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
 
-        public Builder setResourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
 
-        public Builder setRuntimeConfiguration(@Nullable FleetRuntimeConfiguration runtimeConfiguration) {
+        public Builder runtimeConfiguration(@Nullable FleetRuntimeConfiguration runtimeConfiguration) {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }

@@ -203,52 +203,52 @@ public final class ListTaskRunDetailsResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityPropertiesResponse identity) {
+        public Builder identity(@Nullable IdentityPropertiesResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRunRequest(@Nullable Object runRequest) {
+        public Builder runRequest(@Nullable Object runRequest) {
             this.runRequest = runRequest;
             return this;
         }
 
-        public Builder setRunResult(RunResponse runResult) {
+        public Builder runResult(RunResponse runResult) {
             this.runResult = Objects.requireNonNull(runResult);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

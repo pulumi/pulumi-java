@@ -71,22 +71,22 @@ public final class ComponentVersionLambdaContainerParams {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setDevices(@Nullable List<ComponentVersionLambdaDeviceMount> devices) {
+        public Builder devices(@Nullable List<ComponentVersionLambdaDeviceMount> devices) {
             this.devices = devices;
             return this;
         }
 
-        public Builder setMemorySizeInKB(@Nullable Integer memorySizeInKB) {
+        public Builder memorySizeInKB(@Nullable Integer memorySizeInKB) {
             this.memorySizeInKB = memorySizeInKB;
             return this;
         }
 
-        public Builder setMountROSysfs(@Nullable Boolean mountROSysfs) {
+        public Builder mountROSysfs(@Nullable Boolean mountROSysfs) {
             this.mountROSysfs = mountROSysfs;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<ComponentVersionLambdaVolumeMount> volumes) {
+        public Builder volumes(@Nullable List<ComponentVersionLambdaVolumeMount> volumes) {
             this.volumes = volumes;
             return this;
         }

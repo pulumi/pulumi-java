@@ -73,12 +73,12 @@ public final class RouterNatLogConfigResponse extends io.pulumi.resources.Invoke
     	      this.filter = defaults.filter;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

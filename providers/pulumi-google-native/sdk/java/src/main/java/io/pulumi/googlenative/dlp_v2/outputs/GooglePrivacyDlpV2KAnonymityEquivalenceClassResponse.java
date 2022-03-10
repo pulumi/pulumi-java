@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
     	      this.quasiIdsValues = defaults.quasiIdsValues;
         }
 
-        public Builder setEquivalenceClassSize(String equivalenceClassSize) {
+        public Builder equivalenceClassSize(String equivalenceClassSize) {
             this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
             return this;
         }
 
-        public Builder setQuasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }

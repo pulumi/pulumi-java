@@ -120,27 +120,27 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
     	      this.useDotAsDecimalSeparator = defaults.useDotAsDecimalSeparator;
         }
 
-        public Builder setCreateEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
+        public Builder createEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
             this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators);
             return this;
         }
 
-        public Builder setMaskSecurityInfo(Boolean maskSecurityInfo) {
+        public Builder maskSecurityInfo(Boolean maskSecurityInfo) {
             this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo);
             return this;
         }
 
-        public Builder setPreserveInterchange(Boolean preserveInterchange) {
+        public Builder preserveInterchange(Boolean preserveInterchange) {
             this.preserveInterchange = Objects.requireNonNull(preserveInterchange);
             return this;
         }
 
-        public Builder setSuspendInterchangeOnError(Boolean suspendInterchangeOnError) {
+        public Builder suspendInterchangeOnError(Boolean suspendInterchangeOnError) {
             this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError);
             return this;
         }
 
-        public Builder setUseDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
+        public Builder useDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }

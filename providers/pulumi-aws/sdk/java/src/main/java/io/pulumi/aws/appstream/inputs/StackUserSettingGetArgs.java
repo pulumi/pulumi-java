@@ -69,22 +69,22 @@ public final class StackUserSettingGetArgs extends io.pulumi.resources.ResourceA
     	      this.permission = defaults.permission;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setPermission(Input<String> permission) {
+        public Builder permission(Input<String> permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }
 
-        public Builder setPermission(String permission) {
+        public Builder permission(String permission) {
             this.permission = Input.of(Objects.requireNonNull(permission));
             return this;
         }

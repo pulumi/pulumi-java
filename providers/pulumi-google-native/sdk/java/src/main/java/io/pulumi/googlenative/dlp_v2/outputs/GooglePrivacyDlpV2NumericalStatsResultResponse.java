@@ -82,17 +82,17 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
     	      this.quantileValues = defaults.quantileValues;
         }
 
-        public Builder setMaxValue(GooglePrivacyDlpV2ValueResponse maxValue) {
+        public Builder maxValue(GooglePrivacyDlpV2ValueResponse maxValue) {
             this.maxValue = Objects.requireNonNull(maxValue);
             return this;
         }
 
-        public Builder setMinValue(GooglePrivacyDlpV2ValueResponse minValue) {
+        public Builder minValue(GooglePrivacyDlpV2ValueResponse minValue) {
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }
 
-        public Builder setQuantileValues(List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
+        public Builder quantileValues(List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
             this.quantileValues = Objects.requireNonNull(quantileValues);
             return this;
         }

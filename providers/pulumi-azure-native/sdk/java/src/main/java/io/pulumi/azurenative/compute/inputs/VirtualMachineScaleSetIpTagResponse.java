@@ -74,12 +74,12 @@ public final class VirtualMachineScaleSetIpTagResponse extends io.pulumi.resourc
     	      this.tag = defaults.tag;
         }
 
-        public Builder setIpTagType(@Nullable String ipTagType) {
+        public Builder ipTagType(@Nullable String ipTagType) {
             this.ipTagType = ipTagType;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

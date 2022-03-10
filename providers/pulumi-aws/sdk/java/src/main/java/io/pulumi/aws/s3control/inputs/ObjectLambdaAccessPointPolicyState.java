@@ -99,42 +99,42 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
     	      this.policy = defaults.policy;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setHasPublicAccessPolicy(@Nullable Input<Boolean> hasPublicAccessPolicy) {
+        public Builder hasPublicAccessPolicy(@Nullable Input<Boolean> hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
 
-        public Builder setHasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
+        public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = Input.ofNullable(hasPublicAccessPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }

@@ -191,47 +191,47 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
     	      this.sqlDataPath = defaults.sqlDataPath;
         }
 
-        public Builder setAdditionalProperties(@Nullable Map<String,Object> additionalProperties) {
+        public Builder additionalProperties(@Nullable Map<String,Object> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
-        public Builder setAzureFilePath(String azureFilePath) {
+        public Builder azureFilePath(String azureFilePath) {
             this.azureFilePath = Objects.requireNonNull(azureFilePath);
             return this;
         }
 
-        public Builder setDatastoreName(String datastoreName) {
+        public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
-        public Builder setHttpUrl(String httpUrl) {
+        public Builder httpUrl(String httpUrl) {
             this.httpUrl = Objects.requireNonNull(httpUrl);
             return this;
         }
 
-        public Builder setPartitionFormat(String partitionFormat) {
+        public Builder partitionFormat(String partitionFormat) {
             this.partitionFormat = Objects.requireNonNull(partitionFormat);
             return this;
         }
 
-        public Builder setPartitionFormatIgnoreError(Boolean partitionFormatIgnoreError) {
+        public Builder partitionFormatIgnoreError(Boolean partitionFormatIgnoreError) {
             this.partitionFormatIgnoreError = Objects.requireNonNull(partitionFormatIgnoreError);
             return this;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setRelativePath(String relativePath) {
+        public Builder relativePath(String relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
 
-        public Builder setSqlDataPath(@Nullable DatasetResponseSqlDataPath sqlDataPath) {
+        public Builder sqlDataPath(@Nullable DatasetResponseSqlDataPath sqlDataPath) {
             this.sqlDataPath = sqlDataPath;
             return this;
         }

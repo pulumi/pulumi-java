@@ -105,42 +105,42 @@ public final class ViewDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userDefinedFunctionResources = defaults.userDefinedFunctionResources;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setUseExplicitColumnNames(@Nullable Input<Boolean> useExplicitColumnNames) {
+        public Builder useExplicitColumnNames(@Nullable Input<Boolean> useExplicitColumnNames) {
             this.useExplicitColumnNames = useExplicitColumnNames;
             return this;
         }
 
-        public Builder setUseExplicitColumnNames(@Nullable Boolean useExplicitColumnNames) {
+        public Builder useExplicitColumnNames(@Nullable Boolean useExplicitColumnNames) {
             this.useExplicitColumnNames = Input.ofNullable(useExplicitColumnNames);
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Input<Boolean> useLegacySql) {
+        public Builder useLegacySql(@Nullable Input<Boolean> useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Boolean useLegacySql) {
+        public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = Input.ofNullable(useLegacySql);
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable Input<List<UserDefinedFunctionResourceArgs>> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable List<UserDefinedFunctionResourceArgs> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Input.ofNullable(userDefinedFunctionResources);
             return this;
         }

@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3AudioInputResponse {
     	      this.config = defaults.config;
         }
 
-        public Builder setAudio(String audio) {
+        public Builder audio(String audio) {
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
 
-        public Builder setConfig(GoogleCloudDialogflowCxV3InputAudioConfigResponse config) {
+        public Builder config(GoogleCloudDialogflowCxV3InputAudioConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }

@@ -170,82 +170,82 @@ public final class GitHubEnterpriseSecretsArgs extends io.pulumi.resources.Resou
     	      this.webhookSecretVersionName = defaults.webhookSecretVersionName;
         }
 
-        public Builder setOauthClientIdName(@Nullable Input<String> oauthClientIdName) {
+        public Builder oauthClientIdName(@Nullable Input<String> oauthClientIdName) {
             this.oauthClientIdName = oauthClientIdName;
             return this;
         }
 
-        public Builder setOauthClientIdName(@Nullable String oauthClientIdName) {
+        public Builder oauthClientIdName(@Nullable String oauthClientIdName) {
             this.oauthClientIdName = Input.ofNullable(oauthClientIdName);
             return this;
         }
 
-        public Builder setOauthClientIdVersionName(@Nullable Input<String> oauthClientIdVersionName) {
+        public Builder oauthClientIdVersionName(@Nullable Input<String> oauthClientIdVersionName) {
             this.oauthClientIdVersionName = oauthClientIdVersionName;
             return this;
         }
 
-        public Builder setOauthClientIdVersionName(@Nullable String oauthClientIdVersionName) {
+        public Builder oauthClientIdVersionName(@Nullable String oauthClientIdVersionName) {
             this.oauthClientIdVersionName = Input.ofNullable(oauthClientIdVersionName);
             return this;
         }
 
-        public Builder setOauthSecretName(@Nullable Input<String> oauthSecretName) {
+        public Builder oauthSecretName(@Nullable Input<String> oauthSecretName) {
             this.oauthSecretName = oauthSecretName;
             return this;
         }
 
-        public Builder setOauthSecretName(@Nullable String oauthSecretName) {
+        public Builder oauthSecretName(@Nullable String oauthSecretName) {
             this.oauthSecretName = Input.ofNullable(oauthSecretName);
             return this;
         }
 
-        public Builder setOauthSecretVersionName(@Nullable Input<String> oauthSecretVersionName) {
+        public Builder oauthSecretVersionName(@Nullable Input<String> oauthSecretVersionName) {
             this.oauthSecretVersionName = oauthSecretVersionName;
             return this;
         }
 
-        public Builder setOauthSecretVersionName(@Nullable String oauthSecretVersionName) {
+        public Builder oauthSecretVersionName(@Nullable String oauthSecretVersionName) {
             this.oauthSecretVersionName = Input.ofNullable(oauthSecretVersionName);
             return this;
         }
 
-        public Builder setPrivateKeyName(@Nullable Input<String> privateKeyName) {
+        public Builder privateKeyName(@Nullable Input<String> privateKeyName) {
             this.privateKeyName = privateKeyName;
             return this;
         }
 
-        public Builder setPrivateKeyName(@Nullable String privateKeyName) {
+        public Builder privateKeyName(@Nullable String privateKeyName) {
             this.privateKeyName = Input.ofNullable(privateKeyName);
             return this;
         }
 
-        public Builder setPrivateKeyVersionName(@Nullable Input<String> privateKeyVersionName) {
+        public Builder privateKeyVersionName(@Nullable Input<String> privateKeyVersionName) {
             this.privateKeyVersionName = privateKeyVersionName;
             return this;
         }
 
-        public Builder setPrivateKeyVersionName(@Nullable String privateKeyVersionName) {
+        public Builder privateKeyVersionName(@Nullable String privateKeyVersionName) {
             this.privateKeyVersionName = Input.ofNullable(privateKeyVersionName);
             return this;
         }
 
-        public Builder setWebhookSecretName(@Nullable Input<String> webhookSecretName) {
+        public Builder webhookSecretName(@Nullable Input<String> webhookSecretName) {
             this.webhookSecretName = webhookSecretName;
             return this;
         }
 
-        public Builder setWebhookSecretName(@Nullable String webhookSecretName) {
+        public Builder webhookSecretName(@Nullable String webhookSecretName) {
             this.webhookSecretName = Input.ofNullable(webhookSecretName);
             return this;
         }
 
-        public Builder setWebhookSecretVersionName(@Nullable Input<String> webhookSecretVersionName) {
+        public Builder webhookSecretVersionName(@Nullable Input<String> webhookSecretVersionName) {
             this.webhookSecretVersionName = webhookSecretVersionName;
             return this;
         }
 
-        public Builder setWebhookSecretVersionName(@Nullable String webhookSecretVersionName) {
+        public Builder webhookSecretVersionName(@Nullable String webhookSecretVersionName) {
             this.webhookSecretVersionName = Input.ofNullable(webhookSecretVersionName);
             return this;
         }

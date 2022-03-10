@@ -118,52 +118,52 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder setConsumerGroupName(@Nullable Input<String> consumerGroupName) {
+        public Builder consumerGroupName(@Nullable Input<String> consumerGroupName) {
             this.consumerGroupName = consumerGroupName;
             return this;
         }
 
-        public Builder setConsumerGroupName(@Nullable String consumerGroupName) {
+        public Builder consumerGroupName(@Nullable String consumerGroupName) {
             this.consumerGroupName = Input.ofNullable(consumerGroupName);
             return this;
         }
 
-        public Builder setEventHubName(Input<String> eventHubName) {
+        public Builder eventHubName(Input<String> eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
 
-        public Builder setEventHubName(String eventHubName) {
+        public Builder eventHubName(String eventHubName) {
             this.eventHubName = Input.of(Objects.requireNonNull(eventHubName));
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setUserMetadata(@Nullable Input<String> userMetadata) {
+        public Builder userMetadata(@Nullable Input<String> userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }
 
-        public Builder setUserMetadata(@Nullable String userMetadata) {
+        public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = Input.ofNullable(userMetadata);
             return this;
         }

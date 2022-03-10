@@ -188,92 +188,92 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setPlan(@Nullable Input<Either<String,TablePlanEnum>> plan) {
+        public Builder plan(@Nullable Input<Either<String,TablePlanEnum>> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable Either<String,TablePlanEnum> plan) {
+        public Builder plan(@Nullable Either<String,TablePlanEnum> plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestoredLogs(@Nullable Input<RestoredLogsArgs> restoredLogs) {
+        public Builder restoredLogs(@Nullable Input<RestoredLogsArgs> restoredLogs) {
             this.restoredLogs = restoredLogs;
             return this;
         }
 
-        public Builder setRestoredLogs(@Nullable RestoredLogsArgs restoredLogs) {
+        public Builder restoredLogs(@Nullable RestoredLogsArgs restoredLogs) {
             this.restoredLogs = Input.ofNullable(restoredLogs);
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = Input.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<SchemaArgs> schema) {
+        public Builder schema(@Nullable Input<SchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable SchemaArgs schema) {
+        public Builder schema(@Nullable SchemaArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setSearchResults(@Nullable Input<SearchResultsArgs> searchResults) {
+        public Builder searchResults(@Nullable Input<SearchResultsArgs> searchResults) {
             this.searchResults = searchResults;
             return this;
         }
 
-        public Builder setSearchResults(@Nullable SearchResultsArgs searchResults) {
+        public Builder searchResults(@Nullable SearchResultsArgs searchResults) {
             this.searchResults = Input.ofNullable(searchResults);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
 
-        public Builder setTotalRetentionInDays(@Nullable Input<Integer> totalRetentionInDays) {
+        public Builder totalRetentionInDays(@Nullable Input<Integer> totalRetentionInDays) {
             this.totalRetentionInDays = totalRetentionInDays;
             return this;
         }
 
-        public Builder setTotalRetentionInDays(@Nullable Integer totalRetentionInDays) {
+        public Builder totalRetentionInDays(@Nullable Integer totalRetentionInDays) {
             this.totalRetentionInDays = Input.ofNullable(totalRetentionInDays);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

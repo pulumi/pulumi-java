@@ -268,132 +268,132 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDuration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Input<String> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setInstanceFilter(@Nullable Input<PatchDeploymentInstanceFilterGetArgs> instanceFilter) {
+        public Builder instanceFilter(@Nullable Input<PatchDeploymentInstanceFilterGetArgs> instanceFilter) {
             this.instanceFilter = instanceFilter;
             return this;
         }
 
-        public Builder setInstanceFilter(@Nullable PatchDeploymentInstanceFilterGetArgs instanceFilter) {
+        public Builder instanceFilter(@Nullable PatchDeploymentInstanceFilterGetArgs instanceFilter) {
             this.instanceFilter = Input.ofNullable(instanceFilter);
             return this;
         }
 
-        public Builder setLastExecuteTime(@Nullable Input<String> lastExecuteTime) {
+        public Builder lastExecuteTime(@Nullable Input<String> lastExecuteTime) {
             this.lastExecuteTime = lastExecuteTime;
             return this;
         }
 
-        public Builder setLastExecuteTime(@Nullable String lastExecuteTime) {
+        public Builder lastExecuteTime(@Nullable String lastExecuteTime) {
             this.lastExecuteTime = Input.ofNullable(lastExecuteTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOneTimeSchedule(@Nullable Input<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule) {
+        public Builder oneTimeSchedule(@Nullable Input<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule) {
             this.oneTimeSchedule = oneTimeSchedule;
             return this;
         }
 
-        public Builder setOneTimeSchedule(@Nullable PatchDeploymentOneTimeScheduleGetArgs oneTimeSchedule) {
+        public Builder oneTimeSchedule(@Nullable PatchDeploymentOneTimeScheduleGetArgs oneTimeSchedule) {
             this.oneTimeSchedule = Input.ofNullable(oneTimeSchedule);
             return this;
         }
 
-        public Builder setPatchConfig(@Nullable Input<PatchDeploymentPatchConfigGetArgs> patchConfig) {
+        public Builder patchConfig(@Nullable Input<PatchDeploymentPatchConfigGetArgs> patchConfig) {
             this.patchConfig = patchConfig;
             return this;
         }
 
-        public Builder setPatchConfig(@Nullable PatchDeploymentPatchConfigGetArgs patchConfig) {
+        public Builder patchConfig(@Nullable PatchDeploymentPatchConfigGetArgs patchConfig) {
             this.patchConfig = Input.ofNullable(patchConfig);
             return this;
         }
 
-        public Builder setPatchDeploymentId(@Nullable Input<String> patchDeploymentId) {
+        public Builder patchDeploymentId(@Nullable Input<String> patchDeploymentId) {
             this.patchDeploymentId = patchDeploymentId;
             return this;
         }
 
-        public Builder setPatchDeploymentId(@Nullable String patchDeploymentId) {
+        public Builder patchDeploymentId(@Nullable String patchDeploymentId) {
             this.patchDeploymentId = Input.ofNullable(patchDeploymentId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRecurringSchedule(@Nullable Input<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule) {
+        public Builder recurringSchedule(@Nullable Input<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule) {
             this.recurringSchedule = recurringSchedule;
             return this;
         }
 
-        public Builder setRecurringSchedule(@Nullable PatchDeploymentRecurringScheduleGetArgs recurringSchedule) {
+        public Builder recurringSchedule(@Nullable PatchDeploymentRecurringScheduleGetArgs recurringSchedule) {
             this.recurringSchedule = Input.ofNullable(recurringSchedule);
             return this;
         }
 
-        public Builder setRollout(@Nullable Input<PatchDeploymentRolloutGetArgs> rollout) {
+        public Builder rollout(@Nullable Input<PatchDeploymentRolloutGetArgs> rollout) {
             this.rollout = rollout;
             return this;
         }
 
-        public Builder setRollout(@Nullable PatchDeploymentRolloutGetArgs rollout) {
+        public Builder rollout(@Nullable PatchDeploymentRolloutGetArgs rollout) {
             this.rollout = Input.ofNullable(rollout);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

@@ -214,102 +214,102 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setAuthorizerCredentialsArn(@Nullable Input<String> authorizerCredentialsArn) {
+        public Builder authorizerCredentialsArn(@Nullable Input<String> authorizerCredentialsArn) {
             this.authorizerCredentialsArn = authorizerCredentialsArn;
             return this;
         }
 
-        public Builder setAuthorizerCredentialsArn(@Nullable String authorizerCredentialsArn) {
+        public Builder authorizerCredentialsArn(@Nullable String authorizerCredentialsArn) {
             this.authorizerCredentialsArn = Input.ofNullable(authorizerCredentialsArn);
             return this;
         }
 
-        public Builder setAuthorizerPayloadFormatVersion(@Nullable Input<String> authorizerPayloadFormatVersion) {
+        public Builder authorizerPayloadFormatVersion(@Nullable Input<String> authorizerPayloadFormatVersion) {
             this.authorizerPayloadFormatVersion = authorizerPayloadFormatVersion;
             return this;
         }
 
-        public Builder setAuthorizerPayloadFormatVersion(@Nullable String authorizerPayloadFormatVersion) {
+        public Builder authorizerPayloadFormatVersion(@Nullable String authorizerPayloadFormatVersion) {
             this.authorizerPayloadFormatVersion = Input.ofNullable(authorizerPayloadFormatVersion);
             return this;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Input<Integer> authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Input<Integer> authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = Input.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
 
-        public Builder setAuthorizerType(Input<String> authorizerType) {
+        public Builder authorizerType(Input<String> authorizerType) {
             this.authorizerType = Objects.requireNonNull(authorizerType);
             return this;
         }
 
-        public Builder setAuthorizerType(String authorizerType) {
+        public Builder authorizerType(String authorizerType) {
             this.authorizerType = Input.of(Objects.requireNonNull(authorizerType));
             return this;
         }
 
-        public Builder setAuthorizerUri(@Nullable Input<String> authorizerUri) {
+        public Builder authorizerUri(@Nullable Input<String> authorizerUri) {
             this.authorizerUri = authorizerUri;
             return this;
         }
 
-        public Builder setAuthorizerUri(@Nullable String authorizerUri) {
+        public Builder authorizerUri(@Nullable String authorizerUri) {
             this.authorizerUri = Input.ofNullable(authorizerUri);
             return this;
         }
 
-        public Builder setEnableSimpleResponses(@Nullable Input<Boolean> enableSimpleResponses) {
+        public Builder enableSimpleResponses(@Nullable Input<Boolean> enableSimpleResponses) {
             this.enableSimpleResponses = enableSimpleResponses;
             return this;
         }
 
-        public Builder setEnableSimpleResponses(@Nullable Boolean enableSimpleResponses) {
+        public Builder enableSimpleResponses(@Nullable Boolean enableSimpleResponses) {
             this.enableSimpleResponses = Input.ofNullable(enableSimpleResponses);
             return this;
         }
 
-        public Builder setIdentitySources(@Nullable Input<List<String>> identitySources) {
+        public Builder identitySources(@Nullable Input<List<String>> identitySources) {
             this.identitySources = identitySources;
             return this;
         }
 
-        public Builder setIdentitySources(@Nullable List<String> identitySources) {
+        public Builder identitySources(@Nullable List<String> identitySources) {
             this.identitySources = Input.ofNullable(identitySources);
             return this;
         }
 
-        public Builder setJwtConfiguration(@Nullable Input<AuthorizerJwtConfigurationArgs> jwtConfiguration) {
+        public Builder jwtConfiguration(@Nullable Input<AuthorizerJwtConfigurationArgs> jwtConfiguration) {
             this.jwtConfiguration = jwtConfiguration;
             return this;
         }
 
-        public Builder setJwtConfiguration(@Nullable AuthorizerJwtConfigurationArgs jwtConfiguration) {
+        public Builder jwtConfiguration(@Nullable AuthorizerJwtConfigurationArgs jwtConfiguration) {
             this.jwtConfiguration = Input.ofNullable(jwtConfiguration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

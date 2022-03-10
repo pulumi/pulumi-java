@@ -41,7 +41,7 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration {
     	      this.siteMaps = defaults.siteMaps;
         }
 
-        public Builder setSiteMaps(List<String> siteMaps) {
+        public Builder siteMaps(List<String> siteMaps) {
             this.siteMaps = Objects.requireNonNull(siteMaps);
             return this;
         }

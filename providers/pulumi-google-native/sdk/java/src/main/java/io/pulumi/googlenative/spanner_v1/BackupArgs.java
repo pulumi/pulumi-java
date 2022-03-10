@@ -162,92 +162,92 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionTime = defaults.versionTime;
         }
 
-        public Builder setBackupId(Input<String> backupId) {
+        public Builder backupId(Input<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
-        public Builder setBackupId(String backupId) {
+        public Builder backupId(String backupId) {
             this.backupId = Input.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setEncryptionConfigEncryptionType(Input<String> encryptionConfigEncryptionType) {
+        public Builder encryptionConfigEncryptionType(Input<String> encryptionConfigEncryptionType) {
             this.encryptionConfigEncryptionType = Objects.requireNonNull(encryptionConfigEncryptionType);
             return this;
         }
 
-        public Builder setEncryptionConfigEncryptionType(String encryptionConfigEncryptionType) {
+        public Builder encryptionConfigEncryptionType(String encryptionConfigEncryptionType) {
             this.encryptionConfigEncryptionType = Input.of(Objects.requireNonNull(encryptionConfigEncryptionType));
             return this;
         }
 
-        public Builder setEncryptionConfigKmsKeyName(@Nullable Input<String> encryptionConfigKmsKeyName) {
+        public Builder encryptionConfigKmsKeyName(@Nullable Input<String> encryptionConfigKmsKeyName) {
             this.encryptionConfigKmsKeyName = encryptionConfigKmsKeyName;
             return this;
         }
 
-        public Builder setEncryptionConfigKmsKeyName(@Nullable String encryptionConfigKmsKeyName) {
+        public Builder encryptionConfigKmsKeyName(@Nullable String encryptionConfigKmsKeyName) {
             this.encryptionConfigKmsKeyName = Input.ofNullable(encryptionConfigKmsKeyName);
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setVersionTime(@Nullable Input<String> versionTime) {
+        public Builder versionTime(@Nullable Input<String> versionTime) {
             this.versionTime = versionTime;
             return this;
         }
 
-        public Builder setVersionTime(@Nullable String versionTime) {
+        public Builder versionTime(@Nullable String versionTime) {
             this.versionTime = Input.ofNullable(versionTime);
             return this;
         }

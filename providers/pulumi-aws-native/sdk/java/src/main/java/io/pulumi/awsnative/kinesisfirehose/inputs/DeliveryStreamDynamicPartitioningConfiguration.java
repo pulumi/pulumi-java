@@ -63,12 +63,12 @@ public final class DeliveryStreamDynamicPartitioningConfiguration extends io.pul
     	      this.retryOptions = defaults.retryOptions;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamRetryOptions retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }

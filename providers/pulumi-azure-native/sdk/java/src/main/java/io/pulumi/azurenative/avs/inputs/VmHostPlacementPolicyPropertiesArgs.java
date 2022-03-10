@@ -143,62 +143,62 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
     	      this.vmMembers = defaults.vmMembers;
         }
 
-        public Builder setAffinityType(Input<Either<String,AffinityType>> affinityType) {
+        public Builder affinityType(Input<Either<String,AffinityType>> affinityType) {
             this.affinityType = Objects.requireNonNull(affinityType);
             return this;
         }
 
-        public Builder setAffinityType(Either<String,AffinityType> affinityType) {
+        public Builder affinityType(Either<String,AffinityType> affinityType) {
             this.affinityType = Input.of(Objects.requireNonNull(affinityType));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHostMembers(Input<List<String>> hostMembers) {
+        public Builder hostMembers(Input<List<String>> hostMembers) {
             this.hostMembers = Objects.requireNonNull(hostMembers);
             return this;
         }
 
-        public Builder setHostMembers(List<String> hostMembers) {
+        public Builder hostMembers(List<String> hostMembers) {
             this.hostMembers = Input.of(Objects.requireNonNull(hostMembers));
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,PlacementPolicyState>> state) {
+        public Builder state(@Nullable Input<Either<String,PlacementPolicyState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,PlacementPolicyState> state) {
+        public Builder state(@Nullable Either<String,PlacementPolicyState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVmMembers(Input<List<String>> vmMembers) {
+        public Builder vmMembers(Input<List<String>> vmMembers) {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
 
-        public Builder setVmMembers(List<String> vmMembers) {
+        public Builder vmMembers(List<String> vmMembers) {
             this.vmMembers = Input.of(Objects.requireNonNull(vmMembers));
             return this;
         }

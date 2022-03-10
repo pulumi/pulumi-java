@@ -107,42 +107,42 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     	      this.webTestId = defaults.webTestId;
         }
 
-        public Builder setComponentId(Input<String> componentId) {
+        public Builder componentId(Input<String> componentId) {
             this.componentId = Objects.requireNonNull(componentId);
             return this;
         }
 
-        public Builder setComponentId(String componentId) {
+        public Builder componentId(String componentId) {
             this.componentId = Input.of(Objects.requireNonNull(componentId));
             return this;
         }
 
-        public Builder setFailedLocationCount(Input<Double> failedLocationCount) {
+        public Builder failedLocationCount(Input<Double> failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
 
-        public Builder setFailedLocationCount(Double failedLocationCount) {
+        public Builder failedLocationCount(Double failedLocationCount) {
             this.failedLocationCount = Input.of(Objects.requireNonNull(failedLocationCount));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setWebTestId(Input<String> webTestId) {
+        public Builder webTestId(Input<String> webTestId) {
             this.webTestId = Objects.requireNonNull(webTestId);
             return this;
         }
 
-        public Builder setWebTestId(String webTestId) {
+        public Builder webTestId(String webTestId) {
             this.webTestId = Input.of(Objects.requireNonNull(webTestId));
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetControlPanelArgs extends io.pulumi.resources.InvokeArgs {
     	      this.controlPanelArn = defaults.controlPanelArn;
         }
 
-        public Builder setControlPanelArn(String controlPanelArn) {
+        public Builder controlPanelArn(String controlPanelArn) {
             this.controlPanelArn = Objects.requireNonNull(controlPanelArn);
             return this;
         }

@@ -119,52 +119,52 @@ public final class PeeringAttachmentArgs extends io.pulumi.resources.ResourceArg
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setPeerAccountId(@Nullable Input<String> peerAccountId) {
+        public Builder peerAccountId(@Nullable Input<String> peerAccountId) {
             this.peerAccountId = peerAccountId;
             return this;
         }
 
-        public Builder setPeerAccountId(@Nullable String peerAccountId) {
+        public Builder peerAccountId(@Nullable String peerAccountId) {
             this.peerAccountId = Input.ofNullable(peerAccountId);
             return this;
         }
 
-        public Builder setPeerRegion(Input<String> peerRegion) {
+        public Builder peerRegion(Input<String> peerRegion) {
             this.peerRegion = Objects.requireNonNull(peerRegion);
             return this;
         }
 
-        public Builder setPeerRegion(String peerRegion) {
+        public Builder peerRegion(String peerRegion) {
             this.peerRegion = Input.of(Objects.requireNonNull(peerRegion));
             return this;
         }
 
-        public Builder setPeerTransitGatewayId(Input<String> peerTransitGatewayId) {
+        public Builder peerTransitGatewayId(Input<String> peerTransitGatewayId) {
             this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
             return this;
         }
 
-        public Builder setPeerTransitGatewayId(String peerTransitGatewayId) {
+        public Builder peerTransitGatewayId(String peerTransitGatewayId) {
             this.peerTransitGatewayId = Input.of(Objects.requireNonNull(peerTransitGatewayId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(Input<String> transitGatewayId) {
+        public Builder transitGatewayId(Input<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }

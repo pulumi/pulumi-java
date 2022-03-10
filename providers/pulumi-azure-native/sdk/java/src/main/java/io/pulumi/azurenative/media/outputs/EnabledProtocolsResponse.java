@@ -97,22 +97,22 @@ public final class EnabledProtocolsResponse {
     	      this.smoothStreaming = defaults.smoothStreaming;
         }
 
-        public Builder setDash(Boolean dash) {
+        public Builder dash(Boolean dash) {
             this.dash = Objects.requireNonNull(dash);
             return this;
         }
 
-        public Builder setDownload(Boolean download) {
+        public Builder download(Boolean download) {
             this.download = Objects.requireNonNull(download);
             return this;
         }
 
-        public Builder setHls(Boolean hls) {
+        public Builder hls(Boolean hls) {
             this.hls = Objects.requireNonNull(hls);
             return this;
         }
 
-        public Builder setSmoothStreaming(Boolean smoothStreaming) {
+        public Builder smoothStreaming(Boolean smoothStreaming) {
             this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
             return this;
         }

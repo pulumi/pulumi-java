@@ -98,22 +98,22 @@ public final class MoveCollectionPropertiesResponse {
     	      this.targetRegion = defaults.targetRegion;
         }
 
-        public Builder setErrors(MoveCollectionPropertiesResponseErrors errors) {
+        public Builder errors(MoveCollectionPropertiesResponseErrors errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceRegion(String sourceRegion) {
+        public Builder sourceRegion(String sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
 
-        public Builder setTargetRegion(String targetRegion) {
+        public Builder targetRegion(String targetRegion) {
             this.targetRegion = Objects.requireNonNull(targetRegion);
             return this;
         }

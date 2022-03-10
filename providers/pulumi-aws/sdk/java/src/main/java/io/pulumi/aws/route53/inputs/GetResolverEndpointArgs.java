@@ -74,12 +74,12 @@ public final class GetResolverEndpointArgs extends io.pulumi.resources.InvokeArg
     	      this.resolverEndpointId = defaults.resolverEndpointId;
         }
 
-        public Builder setFilters(@Nullable List<GetResolverEndpointFilter> filters) {
+        public Builder filters(@Nullable List<GetResolverEndpointFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }

@@ -53,12 +53,12 @@ public final class CertificateAuthorityCsrExtensions {
     	      this.subjectInformationAccess = defaults.subjectInformationAccess;
         }
 
-        public Builder setKeyUsage(@Nullable CertificateAuthorityKeyUsage keyUsage) {
+        public Builder keyUsage(@Nullable CertificateAuthorityKeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setSubjectInformationAccess(@Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess) {
+        public Builder subjectInformationAccess(@Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess) {
             this.subjectInformationAccess = subjectInformationAccess;
             return this;
         }

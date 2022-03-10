@@ -115,12 +115,12 @@ public final class ValidationRule {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setRule(String rule) {
+        public Builder rule(String rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

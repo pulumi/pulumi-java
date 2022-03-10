@@ -103,42 +103,42 @@ public final class ReceiptRuleLambdaActionArgs extends io.pulumi.resources.Resou
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setFunctionArn(Input<String> functionArn) {
+        public Builder functionArn(Input<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Input.of(Objects.requireNonNull(functionArn));
             return this;
         }
 
-        public Builder setInvocationType(@Nullable Input<String> invocationType) {
+        public Builder invocationType(@Nullable Input<String> invocationType) {
             this.invocationType = invocationType;
             return this;
         }
 
-        public Builder setInvocationType(@Nullable String invocationType) {
+        public Builder invocationType(@Nullable String invocationType) {
             this.invocationType = Input.ofNullable(invocationType);
             return this;
         }
 
-        public Builder setPosition(Input<Integer> position) {
+        public Builder position(Input<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder setTopicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Input<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Input.ofNullable(topicArn);
             return this;
         }

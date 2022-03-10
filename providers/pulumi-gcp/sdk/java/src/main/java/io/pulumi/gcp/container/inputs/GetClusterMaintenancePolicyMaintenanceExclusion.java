@@ -72,17 +72,17 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion extends io.pu
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setExclusionName(String exclusionName) {
+        public Builder exclusionName(String exclusionName) {
             this.exclusionName = Objects.requireNonNull(exclusionName);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

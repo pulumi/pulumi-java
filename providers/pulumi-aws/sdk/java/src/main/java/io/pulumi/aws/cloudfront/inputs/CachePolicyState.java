@@ -152,72 +152,72 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.parametersInCacheKeyAndForwardedToOrigin = defaults.parametersInCacheKeyAndForwardedToOrigin;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Input.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Input<Integer> maxTtl) {
+        public Builder maxTtl(@Nullable Input<Integer> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Integer maxTtl) {
+        public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = Input.ofNullable(maxTtl);
             return this;
         }
 
-        public Builder setMinTtl(@Nullable Input<Integer> minTtl) {
+        public Builder minTtl(@Nullable Input<Integer> minTtl) {
             this.minTtl = minTtl;
             return this;
         }
 
-        public Builder setMinTtl(@Nullable Integer minTtl) {
+        public Builder minTtl(@Nullable Integer minTtl) {
             this.minTtl = Input.ofNullable(minTtl);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParametersInCacheKeyAndForwardedToOrigin(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = parametersInCacheKeyAndForwardedToOrigin;
             return this;
         }
 
-        public Builder setParametersInCacheKeyAndForwardedToOrigin(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Input.ofNullable(parametersInCacheKeyAndForwardedToOrigin);
             return this;
         }

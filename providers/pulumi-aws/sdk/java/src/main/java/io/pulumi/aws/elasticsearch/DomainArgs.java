@@ -303,157 +303,157 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcOptions = defaults.vpcOptions;
         }
 
-        public Builder setAccessPolicies(@Nullable Input<String> accessPolicies) {
+        public Builder accessPolicies(@Nullable Input<String> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setAdvancedOptions(@Nullable Input<Map<String,String>> advancedOptions) {
+        public Builder advancedOptions(@Nullable Input<Map<String,String>> advancedOptions) {
             this.advancedOptions = advancedOptions;
             return this;
         }
 
-        public Builder setAdvancedOptions(@Nullable Map<String,String> advancedOptions) {
+        public Builder advancedOptions(@Nullable Map<String,String> advancedOptions) {
             this.advancedOptions = Input.ofNullable(advancedOptions);
             return this;
         }
 
-        public Builder setAdvancedSecurityOptions(@Nullable Input<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions) {
+        public Builder advancedSecurityOptions(@Nullable Input<DomainAdvancedSecurityOptionsArgs> advancedSecurityOptions) {
             this.advancedSecurityOptions = advancedSecurityOptions;
             return this;
         }
 
-        public Builder setAdvancedSecurityOptions(@Nullable DomainAdvancedSecurityOptionsArgs advancedSecurityOptions) {
+        public Builder advancedSecurityOptions(@Nullable DomainAdvancedSecurityOptionsArgs advancedSecurityOptions) {
             this.advancedSecurityOptions = Input.ofNullable(advancedSecurityOptions);
             return this;
         }
 
-        public Builder setAutoTuneOptions(@Nullable Input<DomainAutoTuneOptionsArgs> autoTuneOptions) {
+        public Builder autoTuneOptions(@Nullable Input<DomainAutoTuneOptionsArgs> autoTuneOptions) {
             this.autoTuneOptions = autoTuneOptions;
             return this;
         }
 
-        public Builder setAutoTuneOptions(@Nullable DomainAutoTuneOptionsArgs autoTuneOptions) {
+        public Builder autoTuneOptions(@Nullable DomainAutoTuneOptionsArgs autoTuneOptions) {
             this.autoTuneOptions = Input.ofNullable(autoTuneOptions);
             return this;
         }
 
-        public Builder setClusterConfig(@Nullable Input<DomainClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(@Nullable Input<DomainClusterConfigArgs> clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
 
-        public Builder setClusterConfig(@Nullable DomainClusterConfigArgs clusterConfig) {
+        public Builder clusterConfig(@Nullable DomainClusterConfigArgs clusterConfig) {
             this.clusterConfig = Input.ofNullable(clusterConfig);
             return this;
         }
 
-        public Builder setCognitoOptions(@Nullable Input<DomainCognitoOptionsArgs> cognitoOptions) {
+        public Builder cognitoOptions(@Nullable Input<DomainCognitoOptionsArgs> cognitoOptions) {
             this.cognitoOptions = cognitoOptions;
             return this;
         }
 
-        public Builder setCognitoOptions(@Nullable DomainCognitoOptionsArgs cognitoOptions) {
+        public Builder cognitoOptions(@Nullable DomainCognitoOptionsArgs cognitoOptions) {
             this.cognitoOptions = Input.ofNullable(cognitoOptions);
             return this;
         }
 
-        public Builder setDomainEndpointOptions(@Nullable Input<DomainDomainEndpointOptionsArgs> domainEndpointOptions) {
+        public Builder domainEndpointOptions(@Nullable Input<DomainDomainEndpointOptionsArgs> domainEndpointOptions) {
             this.domainEndpointOptions = domainEndpointOptions;
             return this;
         }
 
-        public Builder setDomainEndpointOptions(@Nullable DomainDomainEndpointOptionsArgs domainEndpointOptions) {
+        public Builder domainEndpointOptions(@Nullable DomainDomainEndpointOptionsArgs domainEndpointOptions) {
             this.domainEndpointOptions = Input.ofNullable(domainEndpointOptions);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setEbsOptions(@Nullable Input<DomainEbsOptionsArgs> ebsOptions) {
+        public Builder ebsOptions(@Nullable Input<DomainEbsOptionsArgs> ebsOptions) {
             this.ebsOptions = ebsOptions;
             return this;
         }
 
-        public Builder setEbsOptions(@Nullable DomainEbsOptionsArgs ebsOptions) {
+        public Builder ebsOptions(@Nullable DomainEbsOptionsArgs ebsOptions) {
             this.ebsOptions = Input.ofNullable(ebsOptions);
             return this;
         }
 
-        public Builder setElasticsearchVersion(@Nullable Input<String> elasticsearchVersion) {
+        public Builder elasticsearchVersion(@Nullable Input<String> elasticsearchVersion) {
             this.elasticsearchVersion = elasticsearchVersion;
             return this;
         }
 
-        public Builder setElasticsearchVersion(@Nullable String elasticsearchVersion) {
+        public Builder elasticsearchVersion(@Nullable String elasticsearchVersion) {
             this.elasticsearchVersion = Input.ofNullable(elasticsearchVersion);
             return this;
         }
 
-        public Builder setEncryptAtRest(@Nullable Input<DomainEncryptAtRestArgs> encryptAtRest) {
+        public Builder encryptAtRest(@Nullable Input<DomainEncryptAtRestArgs> encryptAtRest) {
             this.encryptAtRest = encryptAtRest;
             return this;
         }
 
-        public Builder setEncryptAtRest(@Nullable DomainEncryptAtRestArgs encryptAtRest) {
+        public Builder encryptAtRest(@Nullable DomainEncryptAtRestArgs encryptAtRest) {
             this.encryptAtRest = Input.ofNullable(encryptAtRest);
             return this;
         }
 
-        public Builder setLogPublishingOptions(@Nullable Input<List<DomainLogPublishingOptionArgs>> logPublishingOptions) {
+        public Builder logPublishingOptions(@Nullable Input<List<DomainLogPublishingOptionArgs>> logPublishingOptions) {
             this.logPublishingOptions = logPublishingOptions;
             return this;
         }
 
-        public Builder setLogPublishingOptions(@Nullable List<DomainLogPublishingOptionArgs> logPublishingOptions) {
+        public Builder logPublishingOptions(@Nullable List<DomainLogPublishingOptionArgs> logPublishingOptions) {
             this.logPublishingOptions = Input.ofNullable(logPublishingOptions);
             return this;
         }
 
-        public Builder setNodeToNodeEncryption(@Nullable Input<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption) {
+        public Builder nodeToNodeEncryption(@Nullable Input<DomainNodeToNodeEncryptionArgs> nodeToNodeEncryption) {
             this.nodeToNodeEncryption = nodeToNodeEncryption;
             return this;
         }
 
-        public Builder setNodeToNodeEncryption(@Nullable DomainNodeToNodeEncryptionArgs nodeToNodeEncryption) {
+        public Builder nodeToNodeEncryption(@Nullable DomainNodeToNodeEncryptionArgs nodeToNodeEncryption) {
             this.nodeToNodeEncryption = Input.ofNullable(nodeToNodeEncryption);
             return this;
         }
 
-        public Builder setSnapshotOptions(@Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions) {
+        public Builder snapshotOptions(@Nullable Input<DomainSnapshotOptionsArgs> snapshotOptions) {
             this.snapshotOptions = snapshotOptions;
             return this;
         }
 
-        public Builder setSnapshotOptions(@Nullable DomainSnapshotOptionsArgs snapshotOptions) {
+        public Builder snapshotOptions(@Nullable DomainSnapshotOptionsArgs snapshotOptions) {
             this.snapshotOptions = Input.ofNullable(snapshotOptions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcOptions(@Nullable Input<DomainVpcOptionsArgs> vpcOptions) {
+        public Builder vpcOptions(@Nullable Input<DomainVpcOptionsArgs> vpcOptions) {
             this.vpcOptions = vpcOptions;
             return this;
         }
 
-        public Builder setVpcOptions(@Nullable DomainVpcOptionsArgs vpcOptions) {
+        public Builder vpcOptions(@Nullable DomainVpcOptionsArgs vpcOptions) {
             this.vpcOptions = Input.ofNullable(vpcOptions);
             return this;
         }

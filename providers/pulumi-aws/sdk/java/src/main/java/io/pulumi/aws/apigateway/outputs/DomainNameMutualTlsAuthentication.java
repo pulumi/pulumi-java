@@ -69,12 +69,12 @@ public final class DomainNameMutualTlsAuthentication {
     	      this.truststoreVersion = defaults.truststoreVersion;
         }
 
-        public Builder setTruststoreUri(String truststoreUri) {
+        public Builder truststoreUri(String truststoreUri) {
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }
 
-        public Builder setTruststoreVersion(@Nullable String truststoreVersion) {
+        public Builder truststoreVersion(@Nullable String truststoreVersion) {
             this.truststoreVersion = truststoreVersion;
             return this;
         }

@@ -75,22 +75,22 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setMaxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Input.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

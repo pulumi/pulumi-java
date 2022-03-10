@@ -50,7 +50,7 @@ public final class NetworkProfileResponse {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }

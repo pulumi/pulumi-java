@@ -74,12 +74,12 @@ public final class NetAppVolumeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.nfsProviderIp = defaults.nfsProviderIp;
         }
 
-        public Builder setNfsFilePath(@Nullable String nfsFilePath) {
+        public Builder nfsFilePath(@Nullable String nfsFilePath) {
             this.nfsFilePath = nfsFilePath;
             return this;
         }
 
-        public Builder setNfsProviderIp(@Nullable String nfsProviderIp) {
+        public Builder nfsProviderIp(@Nullable String nfsProviderIp) {
             this.nfsProviderIp = nfsProviderIp;
             return this;
         }

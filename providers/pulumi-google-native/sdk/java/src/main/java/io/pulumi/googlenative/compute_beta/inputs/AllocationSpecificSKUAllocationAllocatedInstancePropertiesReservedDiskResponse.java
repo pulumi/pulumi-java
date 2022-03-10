@@ -68,12 +68,12 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }

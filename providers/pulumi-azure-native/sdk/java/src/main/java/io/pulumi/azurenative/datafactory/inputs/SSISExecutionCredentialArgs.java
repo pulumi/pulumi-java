@@ -90,32 +90,32 @@ public final class SSISExecutionCredentialArgs extends io.pulumi.resources.Resou
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDomain(Input<Object> domain) {
+        public Builder domain(Input<Object> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(Object domain) {
+        public Builder domain(Object domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setPassword(Input<SecureStringArgs> password) {
+        public Builder password(Input<SecureStringArgs> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(SecureStringArgs password) {
+        public Builder password(SecureStringArgs password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setUserName(Input<Object> userName) {
+        public Builder userName(Input<Object> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(Object userName) {
+        public Builder userName(Object userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

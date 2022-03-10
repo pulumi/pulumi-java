@@ -190,92 +190,92 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlsTestedCount = defaults.urlsTestedCount;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setExecutionState(@Nullable Input<ScanRunExecutionState> executionState) {
+        public Builder executionState(@Nullable Input<ScanRunExecutionState> executionState) {
             this.executionState = executionState;
             return this;
         }
 
-        public Builder setExecutionState(@Nullable ScanRunExecutionState executionState) {
+        public Builder executionState(@Nullable ScanRunExecutionState executionState) {
             this.executionState = Input.ofNullable(executionState);
             return this;
         }
 
-        public Builder setHasVulnerabilities(@Nullable Input<Boolean> hasVulnerabilities) {
+        public Builder hasVulnerabilities(@Nullable Input<Boolean> hasVulnerabilities) {
             this.hasVulnerabilities = hasVulnerabilities;
             return this;
         }
 
-        public Builder setHasVulnerabilities(@Nullable Boolean hasVulnerabilities) {
+        public Builder hasVulnerabilities(@Nullable Boolean hasVulnerabilities) {
             this.hasVulnerabilities = Input.ofNullable(hasVulnerabilities);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProgressPercent(@Nullable Input<Integer> progressPercent) {
+        public Builder progressPercent(@Nullable Input<Integer> progressPercent) {
             this.progressPercent = progressPercent;
             return this;
         }
 
-        public Builder setProgressPercent(@Nullable Integer progressPercent) {
+        public Builder progressPercent(@Nullable Integer progressPercent) {
             this.progressPercent = Input.ofNullable(progressPercent);
             return this;
         }
 
-        public Builder setResultState(@Nullable Input<ScanRunResultState> resultState) {
+        public Builder resultState(@Nullable Input<ScanRunResultState> resultState) {
             this.resultState = resultState;
             return this;
         }
 
-        public Builder setResultState(@Nullable ScanRunResultState resultState) {
+        public Builder resultState(@Nullable ScanRunResultState resultState) {
             this.resultState = Input.ofNullable(resultState);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setUrlsCrawledCount(@Nullable Input<String> urlsCrawledCount) {
+        public Builder urlsCrawledCount(@Nullable Input<String> urlsCrawledCount) {
             this.urlsCrawledCount = urlsCrawledCount;
             return this;
         }
 
-        public Builder setUrlsCrawledCount(@Nullable String urlsCrawledCount) {
+        public Builder urlsCrawledCount(@Nullable String urlsCrawledCount) {
             this.urlsCrawledCount = Input.ofNullable(urlsCrawledCount);
             return this;
         }
 
-        public Builder setUrlsTestedCount(@Nullable Input<String> urlsTestedCount) {
+        public Builder urlsTestedCount(@Nullable Input<String> urlsTestedCount) {
             this.urlsTestedCount = urlsTestedCount;
             return this;
         }
 
-        public Builder setUrlsTestedCount(@Nullable String urlsTestedCount) {
+        public Builder urlsTestedCount(@Nullable String urlsTestedCount) {
             this.urlsTestedCount = Input.ofNullable(urlsTestedCount);
             return this;
         }

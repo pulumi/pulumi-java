@@ -74,22 +74,22 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
     	      this.email = defaults.email;
         }
 
-        public Builder setDesignation(@Nullable Input<String> designation) {
+        public Builder designation(@Nullable Input<String> designation) {
             this.designation = designation;
             return this;
         }
 
-        public Builder setDesignation(@Nullable String designation) {
+        public Builder designation(@Nullable String designation) {
             this.designation = Input.ofNullable(designation);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }

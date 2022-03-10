@@ -84,17 +84,17 @@ public final class RepoResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setBranches(@Nullable List<String> branches) {
+        public Builder branches(@Nullable List<String> branches) {
             this.branches = branches;
             return this;
         }
 
-        public Builder setFullName(@Nullable String fullName) {
+        public Builder fullName(@Nullable String fullName) {
             this.fullName = fullName;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

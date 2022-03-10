@@ -67,12 +67,12 @@ public final class ListStorageAccountSasTokensResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<SasTokenInformationResponse> value) {
+        public Builder value(List<SasTokenInformationResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

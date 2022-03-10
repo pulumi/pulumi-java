@@ -91,32 +91,32 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     	      this.thumbnailUri = defaults.thumbnailUri;
         }
 
-        public Builder setFileUri(Input<String> fileUri) {
+        public Builder fileUri(Input<String> fileUri) {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
 
-        public Builder setFileUri(String fileUri) {
+        public Builder fileUri(String fileUri) {
             this.fileUri = Input.of(Objects.requireNonNull(fileUri));
             return this;
         }
 
-        public Builder setHeight(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height) {
+        public Builder height(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight> height) {
             this.height = height;
             return this;
         }
 
-        public Builder setHeight(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight height) {
+        public Builder height(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeight height) {
             this.height = Input.ofNullable(height);
             return this;
         }
 
-        public Builder setThumbnailUri(@Nullable Input<String> thumbnailUri) {
+        public Builder thumbnailUri(@Nullable Input<String> thumbnailUri) {
             this.thumbnailUri = thumbnailUri;
             return this;
         }
 
-        public Builder setThumbnailUri(@Nullable String thumbnailUri) {
+        public Builder thumbnailUri(@Nullable String thumbnailUri) {
             this.thumbnailUri = Input.ofNullable(thumbnailUri);
             return this;
         }

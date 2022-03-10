@@ -98,22 +98,22 @@ public final class ProgressMetricsResponse {
     	      this.totalDatapointCount = defaults.totalDatapointCount;
         }
 
-        public Builder setCompletedDatapointCount(Double completedDatapointCount) {
+        public Builder completedDatapointCount(Double completedDatapointCount) {
             this.completedDatapointCount = Objects.requireNonNull(completedDatapointCount);
             return this;
         }
 
-        public Builder setIncrementalDatasetLastRefreshTime(String incrementalDatasetLastRefreshTime) {
+        public Builder incrementalDatasetLastRefreshTime(String incrementalDatasetLastRefreshTime) {
             this.incrementalDatasetLastRefreshTime = Objects.requireNonNull(incrementalDatasetLastRefreshTime);
             return this;
         }
 
-        public Builder setSkippedDatapointCount(Double skippedDatapointCount) {
+        public Builder skippedDatapointCount(Double skippedDatapointCount) {
             this.skippedDatapointCount = Objects.requireNonNull(skippedDatapointCount);
             return this;
         }
 
-        public Builder setTotalDatapointCount(Double totalDatapointCount) {
+        public Builder totalDatapointCount(Double totalDatapointCount) {
             this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount);
             return this;
         }

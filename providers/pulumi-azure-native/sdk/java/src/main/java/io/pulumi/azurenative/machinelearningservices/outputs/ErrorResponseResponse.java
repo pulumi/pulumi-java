@@ -83,17 +83,17 @@ public final class ErrorResponseResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDetails(List<ErrorDetailResponse> details) {
+        public Builder details(List<ErrorDetailResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

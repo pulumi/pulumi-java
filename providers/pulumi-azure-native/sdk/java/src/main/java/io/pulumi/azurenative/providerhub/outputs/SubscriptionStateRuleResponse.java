@@ -52,12 +52,12 @@ public final class SubscriptionStateRuleResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAllowedActions(@Nullable List<String> allowedActions) {
+        public Builder allowedActions(@Nullable List<String> allowedActions) {
             this.allowedActions = allowedActions;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -58,12 +58,12 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
     	      this.ignoreTerms = defaults.ignoreTerms;
         }
 
-        public Builder setIgnoreTerms(@Nullable Input<List<String>> ignoreTerms) {
+        public Builder ignoreTerms(@Nullable Input<List<String>> ignoreTerms) {
             this.ignoreTerms = ignoreTerms;
             return this;
         }
 
-        public Builder setIgnoreTerms(@Nullable List<String> ignoreTerms) {
+        public Builder ignoreTerms(@Nullable List<String> ignoreTerms) {
             this.ignoreTerms = Input.ofNullable(ignoreTerms);
             return this;
         }

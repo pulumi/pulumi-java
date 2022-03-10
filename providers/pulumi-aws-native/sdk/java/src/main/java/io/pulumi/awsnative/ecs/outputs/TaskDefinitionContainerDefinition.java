@@ -415,197 +415,197 @@ public final class TaskDefinitionContainerDefinition {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<TaskDefinitionContainerDependency> dependsOn) {
+        public Builder dependsOn(@Nullable List<TaskDefinitionContainerDependency> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDisableNetworking(@Nullable Boolean disableNetworking) {
+        public Builder disableNetworking(@Nullable Boolean disableNetworking) {
             this.disableNetworking = disableNetworking;
             return this;
         }
 
-        public Builder setDnsSearchDomains(@Nullable List<String> dnsSearchDomains) {
+        public Builder dnsSearchDomains(@Nullable List<String> dnsSearchDomains) {
             this.dnsSearchDomains = dnsSearchDomains;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDockerLabels(@Nullable Object dockerLabels) {
+        public Builder dockerLabels(@Nullable Object dockerLabels) {
             this.dockerLabels = dockerLabels;
             return this;
         }
 
-        public Builder setDockerSecurityOptions(@Nullable List<String> dockerSecurityOptions) {
+        public Builder dockerSecurityOptions(@Nullable List<String> dockerSecurityOptions) {
             this.dockerSecurityOptions = dockerSecurityOptions;
             return this;
         }
 
-        public Builder setEntryPoint(@Nullable List<String> entryPoint) {
+        public Builder entryPoint(@Nullable List<String> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable List<TaskDefinitionKeyValuePair> environment) {
+        public Builder environment(@Nullable List<TaskDefinitionKeyValuePair> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironmentFiles(@Nullable List<TaskDefinitionEnvironmentFile> environmentFiles) {
+        public Builder environmentFiles(@Nullable List<TaskDefinitionEnvironmentFile> environmentFiles) {
             this.environmentFiles = environmentFiles;
             return this;
         }
 
-        public Builder setEssential(@Nullable Boolean essential) {
+        public Builder essential(@Nullable Boolean essential) {
             this.essential = essential;
             return this;
         }
 
-        public Builder setExtraHosts(@Nullable List<TaskDefinitionHostEntry> extraHosts) {
+        public Builder extraHosts(@Nullable List<TaskDefinitionHostEntry> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
 
-        public Builder setFirelensConfiguration(@Nullable TaskDefinitionFirelensConfiguration firelensConfiguration) {
+        public Builder firelensConfiguration(@Nullable TaskDefinitionFirelensConfiguration firelensConfiguration) {
             this.firelensConfiguration = firelensConfiguration;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable TaskDefinitionHealthCheck healthCheck) {
+        public Builder healthCheck(@Nullable TaskDefinitionHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setInteractive(@Nullable Boolean interactive) {
+        public Builder interactive(@Nullable Boolean interactive) {
             this.interactive = interactive;
             return this;
         }
 
-        public Builder setLinks(@Nullable List<String> links) {
+        public Builder links(@Nullable List<String> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLinuxParameters(@Nullable TaskDefinitionLinuxParameters linuxParameters) {
+        public Builder linuxParameters(@Nullable TaskDefinitionLinuxParameters linuxParameters) {
             this.linuxParameters = linuxParameters;
             return this;
         }
 
-        public Builder setLogConfiguration(@Nullable TaskDefinitionLogConfiguration logConfiguration) {
+        public Builder logConfiguration(@Nullable TaskDefinitionLogConfiguration logConfiguration) {
             this.logConfiguration = logConfiguration;
             return this;
         }
 
-        public Builder setMemory(@Nullable Integer memory) {
+        public Builder memory(@Nullable Integer memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemoryReservation(@Nullable Integer memoryReservation) {
+        public Builder memoryReservation(@Nullable Integer memoryReservation) {
             this.memoryReservation = memoryReservation;
             return this;
         }
 
-        public Builder setMountPoints(@Nullable List<TaskDefinitionMountPoint> mountPoints) {
+        public Builder mountPoints(@Nullable List<TaskDefinitionMountPoint> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPortMappings(@Nullable List<TaskDefinitionPortMapping> portMappings) {
+        public Builder portMappings(@Nullable List<TaskDefinitionPortMapping> portMappings) {
             this.portMappings = portMappings;
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Boolean privileged) {
+        public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = privileged;
             return this;
         }
 
-        public Builder setPseudoTerminal(@Nullable Boolean pseudoTerminal) {
+        public Builder pseudoTerminal(@Nullable Boolean pseudoTerminal) {
             this.pseudoTerminal = pseudoTerminal;
             return this;
         }
 
-        public Builder setReadonlyRootFilesystem(@Nullable Boolean readonlyRootFilesystem) {
+        public Builder readonlyRootFilesystem(@Nullable Boolean readonlyRootFilesystem) {
             this.readonlyRootFilesystem = readonlyRootFilesystem;
             return this;
         }
 
-        public Builder setRepositoryCredentials(@Nullable TaskDefinitionRepositoryCredentials repositoryCredentials) {
+        public Builder repositoryCredentials(@Nullable TaskDefinitionRepositoryCredentials repositoryCredentials) {
             this.repositoryCredentials = repositoryCredentials;
             return this;
         }
 
-        public Builder setResourceRequirements(@Nullable List<TaskDefinitionResourceRequirement> resourceRequirements) {
+        public Builder resourceRequirements(@Nullable List<TaskDefinitionResourceRequirement> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<TaskDefinitionSecret> secrets) {
+        public Builder secrets(@Nullable List<TaskDefinitionSecret> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setStartTimeout(@Nullable Integer startTimeout) {
+        public Builder startTimeout(@Nullable Integer startTimeout) {
             this.startTimeout = startTimeout;
             return this;
         }
 
-        public Builder setStopTimeout(@Nullable Integer stopTimeout) {
+        public Builder stopTimeout(@Nullable Integer stopTimeout) {
             this.stopTimeout = stopTimeout;
             return this;
         }
 
-        public Builder setSystemControls(@Nullable List<TaskDefinitionSystemControl> systemControls) {
+        public Builder systemControls(@Nullable List<TaskDefinitionSystemControl> systemControls) {
             this.systemControls = systemControls;
             return this;
         }
 
-        public Builder setUlimits(@Nullable List<TaskDefinitionUlimit> ulimits) {
+        public Builder ulimits(@Nullable List<TaskDefinitionUlimit> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }
 
-        public Builder setVolumesFrom(@Nullable List<TaskDefinitionVolumeFrom> volumesFrom) {
+        public Builder volumesFrom(@Nullable List<TaskDefinitionVolumeFrom> volumesFrom) {
             this.volumesFrom = volumesFrom;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }

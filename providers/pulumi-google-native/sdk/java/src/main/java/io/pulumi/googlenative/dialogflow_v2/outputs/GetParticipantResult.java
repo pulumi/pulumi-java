@@ -98,22 +98,22 @@ public final class GetParticipantResult {
     	      this.sipRecordingMediaLabel = defaults.sipRecordingMediaLabel;
         }
 
-        public Builder setDocumentsMetadataFilters(Map<String,String> documentsMetadataFilters) {
+        public Builder documentsMetadataFilters(Map<String,String> documentsMetadataFilters) {
             this.documentsMetadataFilters = Objects.requireNonNull(documentsMetadataFilters);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setSipRecordingMediaLabel(String sipRecordingMediaLabel) {
+        public Builder sipRecordingMediaLabel(String sipRecordingMediaLabel) {
             this.sipRecordingMediaLabel = Objects.requireNonNull(sipRecordingMediaLabel);
             return this;
         }

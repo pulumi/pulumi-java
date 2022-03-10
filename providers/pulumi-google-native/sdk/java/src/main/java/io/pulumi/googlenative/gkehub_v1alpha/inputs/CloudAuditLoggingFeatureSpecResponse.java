@@ -56,7 +56,7 @@ public final class CloudAuditLoggingFeatureSpecResponse extends io.pulumi.resour
     	      this.allowlistedServiceAccounts = defaults.allowlistedServiceAccounts;
         }
 
-        public Builder setAllowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
+        public Builder allowlistedServiceAccounts(List<String> allowlistedServiceAccounts) {
             this.allowlistedServiceAccounts = Objects.requireNonNull(allowlistedServiceAccounts);
             return this;
         }

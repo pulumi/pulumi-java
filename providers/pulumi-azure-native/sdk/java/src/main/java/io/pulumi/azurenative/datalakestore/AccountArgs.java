@@ -290,152 +290,152 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setDefaultGroup(@Nullable Input<String> defaultGroup) {
+        public Builder defaultGroup(@Nullable Input<String> defaultGroup) {
             this.defaultGroup = defaultGroup;
             return this;
         }
 
-        public Builder setDefaultGroup(@Nullable String defaultGroup) {
+        public Builder defaultGroup(@Nullable String defaultGroup) {
             this.defaultGroup = Input.ofNullable(defaultGroup);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setEncryptionState(@Nullable Input<EncryptionState> encryptionState) {
+        public Builder encryptionState(@Nullable Input<EncryptionState> encryptionState) {
             this.encryptionState = encryptionState;
             return this;
         }
 
-        public Builder setEncryptionState(@Nullable EncryptionState encryptionState) {
+        public Builder encryptionState(@Nullable EncryptionState encryptionState) {
             this.encryptionState = Input.ofNullable(encryptionState);
             return this;
         }
 
-        public Builder setFirewallAllowAzureIps(@Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
+        public Builder firewallAllowAzureIps(@Nullable Input<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
             this.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
 
-        public Builder setFirewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
+        public Builder firewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
             this.firewallAllowAzureIps = Input.ofNullable(firewallAllowAzureIps);
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
+        public Builder firewallRules(@Nullable Input<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
+        public Builder firewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
             this.firewallRules = Input.ofNullable(firewallRules);
             return this;
         }
 
-        public Builder setFirewallState(@Nullable Input<FirewallState> firewallState) {
+        public Builder firewallState(@Nullable Input<FirewallState> firewallState) {
             this.firewallState = firewallState;
             return this;
         }
 
-        public Builder setFirewallState(@Nullable FirewallState firewallState) {
+        public Builder firewallState(@Nullable FirewallState firewallState) {
             this.firewallState = Input.ofNullable(firewallState);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<EncryptionIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<EncryptionIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EncryptionIdentityArgs identity) {
+        public Builder identity(@Nullable EncryptionIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNewTier(@Nullable Input<TierType> newTier) {
+        public Builder newTier(@Nullable Input<TierType> newTier) {
             this.newTier = newTier;
             return this;
         }
 
-        public Builder setNewTier(@Nullable TierType newTier) {
+        public Builder newTier(@Nullable TierType newTier) {
             this.newTier = Input.ofNullable(newTier);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrustedIdProviderState(@Nullable Input<TrustedIdProviderState> trustedIdProviderState) {
+        public Builder trustedIdProviderState(@Nullable Input<TrustedIdProviderState> trustedIdProviderState) {
             this.trustedIdProviderState = trustedIdProviderState;
             return this;
         }
 
-        public Builder setTrustedIdProviderState(@Nullable TrustedIdProviderState trustedIdProviderState) {
+        public Builder trustedIdProviderState(@Nullable TrustedIdProviderState trustedIdProviderState) {
             this.trustedIdProviderState = Input.ofNullable(trustedIdProviderState);
             return this;
         }
 
-        public Builder setTrustedIdProviders(@Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders) {
+        public Builder trustedIdProviders(@Nullable Input<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders) {
             this.trustedIdProviders = trustedIdProviders;
             return this;
         }
 
-        public Builder setTrustedIdProviders(@Nullable List<CreateTrustedIdProviderWithAccountParametersArgs> trustedIdProviders) {
+        public Builder trustedIdProviders(@Nullable List<CreateTrustedIdProviderWithAccountParametersArgs> trustedIdProviders) {
             this.trustedIdProviders = Input.ofNullable(trustedIdProviders);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Input<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<CreateVirtualNetworkRuleWithAccountParametersArgs> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<CreateVirtualNetworkRuleWithAccountParametersArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }

@@ -74,22 +74,22 @@ public final class ContentKeyPolicyX509CertificateTokenKeyArgs extends io.pulumi
     	      this.rawBody = defaults.rawBody;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setRawBody(Input<String> rawBody) {
+        public Builder rawBody(Input<String> rawBody) {
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }
 
-        public Builder setRawBody(String rawBody) {
+        public Builder rawBody(String rawBody) {
             this.rawBody = Input.of(Objects.requireNonNull(rawBody));
             return this;
         }

@@ -58,12 +58,12 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesArgs extends io.pulumi.reso
     	      this.infoTypes = defaults.infoTypes;
         }
 
-        public Builder setInfoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
+        public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
             this.infoTypes = Input.ofNullable(infoTypes);
             return this;
         }

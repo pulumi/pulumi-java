@@ -50,7 +50,7 @@ public final class ResolverPipelineConfig {
     	      this.functions = defaults.functions;
         }
 
-        public Builder setFunctions(@Nullable List<String> functions) {
+        public Builder functions(@Nullable List<String> functions) {
             this.functions = functions;
             return this;
         }

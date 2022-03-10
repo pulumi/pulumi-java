@@ -54,7 +54,7 @@ public final class AccessLevelsAccessLevelCustom {
     	      this.expr = defaults.expr;
         }
 
-        public Builder setExpr(AccessLevelsAccessLevelCustomExpr expr) {
+        public Builder expr(AccessLevelsAccessLevelCustomExpr expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }

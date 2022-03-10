@@ -68,12 +68,12 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
     	      this.weekOrdinal = defaults.weekOrdinal;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setWeekOrdinal(Integer weekOrdinal) {
+        public Builder weekOrdinal(Integer weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }

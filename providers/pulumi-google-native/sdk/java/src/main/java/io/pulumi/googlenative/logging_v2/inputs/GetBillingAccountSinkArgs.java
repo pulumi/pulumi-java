@@ -60,12 +60,12 @@ public final class GetBillingAccountSinkArgs extends io.pulumi.resources.InvokeA
     	      this.sinkId = defaults.sinkId;
         }
 
-        public Builder setBillingAccountId(String billingAccountId) {
+        public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
-        public Builder setSinkId(String sinkId) {
+        public Builder sinkId(String sinkId) {
             this.sinkId = Objects.requireNonNull(sinkId);
             return this;
         }

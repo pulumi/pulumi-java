@@ -89,42 +89,42 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TestGridProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TestGridProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TestGridProjectTagArgs> tags) {
+        public Builder tags(@Nullable List<TestGridProjectTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<TestGridProjectVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable TestGridProjectVpcConfigArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable TestGridProjectVpcConfigArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }

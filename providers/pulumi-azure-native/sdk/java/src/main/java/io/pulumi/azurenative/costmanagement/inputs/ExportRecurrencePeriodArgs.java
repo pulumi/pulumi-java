@@ -74,22 +74,22 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(Input<String> from) {
+        public Builder from(Input<String> from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
-        public Builder setFrom(String from) {
+        public Builder from(String from) {
             this.from = Input.of(Objects.requireNonNull(from));
             return this;
         }
 
-        public Builder setTo(@Nullable Input<String> to) {
+        public Builder to(@Nullable Input<String> to) {
             this.to = to;
             return this;
         }
 
-        public Builder setTo(@Nullable String to) {
+        public Builder to(@Nullable String to) {
             this.to = Input.ofNullable(to);
             return this;
         }

@@ -116,27 +116,27 @@ public final class AzureFunctionReceiverResponse {
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder setFunctionAppResourceId(String functionAppResourceId) {
+        public Builder functionAppResourceId(String functionAppResourceId) {
             this.functionAppResourceId = Objects.requireNonNull(functionAppResourceId);
             return this;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setHttpTriggerUrl(String httpTriggerUrl) {
+        public Builder httpTriggerUrl(String httpTriggerUrl) {
             this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }

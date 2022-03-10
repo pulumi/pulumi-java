@@ -74,22 +74,22 @@ public final class DocumentNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spdxVersion = defaults.spdxVersion;
         }
 
-        public Builder setDataLicence(@Nullable Input<String> dataLicence) {
+        public Builder dataLicence(@Nullable Input<String> dataLicence) {
             this.dataLicence = dataLicence;
             return this;
         }
 
-        public Builder setDataLicence(@Nullable String dataLicence) {
+        public Builder dataLicence(@Nullable String dataLicence) {
             this.dataLicence = Input.ofNullable(dataLicence);
             return this;
         }
 
-        public Builder setSpdxVersion(@Nullable Input<String> spdxVersion) {
+        public Builder spdxVersion(@Nullable Input<String> spdxVersion) {
             this.spdxVersion = spdxVersion;
             return this;
         }
 
-        public Builder setSpdxVersion(@Nullable String spdxVersion) {
+        public Builder spdxVersion(@Nullable String spdxVersion) {
             this.spdxVersion = Input.ofNullable(spdxVersion);
             return this;
         }

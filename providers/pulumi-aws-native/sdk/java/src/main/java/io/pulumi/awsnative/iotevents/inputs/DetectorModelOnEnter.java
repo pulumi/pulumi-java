@@ -58,7 +58,7 @@ public final class DetectorModelOnEnter extends io.pulumi.resources.InvokeArgs {
     	      this.events = defaults.events;
         }
 
-        public Builder setEvents(@Nullable List<DetectorModelEvent> events) {
+        public Builder events(@Nullable List<DetectorModelEvent> events) {
             this.events = events;
             return this;
         }

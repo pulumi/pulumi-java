@@ -76,12 +76,12 @@ public final class AppImageConfigKernelGatewayImageConfig extends io.pulumi.reso
     	      this.kernelSpecs = defaults.kernelSpecs;
         }
 
-        public Builder setFileSystemConfig(@Nullable AppImageConfigFileSystemConfig fileSystemConfig) {
+        public Builder fileSystemConfig(@Nullable AppImageConfigFileSystemConfig fileSystemConfig) {
             this.fileSystemConfig = fileSystemConfig;
             return this;
         }
 
-        public Builder setKernelSpecs(List<AppImageConfigKernelSpec> kernelSpecs) {
+        public Builder kernelSpecs(List<AppImageConfigKernelSpec> kernelSpecs) {
             this.kernelSpecs = Objects.requireNonNull(kernelSpecs);
             return this;
         }

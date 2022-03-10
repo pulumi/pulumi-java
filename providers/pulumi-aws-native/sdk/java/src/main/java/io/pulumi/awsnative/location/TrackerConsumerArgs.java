@@ -61,22 +61,22 @@ public final class TrackerConsumerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.trackerName = defaults.trackerName;
         }
 
-        public Builder setConsumerArn(Input<String> consumerArn) {
+        public Builder consumerArn(Input<String> consumerArn) {
             this.consumerArn = Objects.requireNonNull(consumerArn);
             return this;
         }
 
-        public Builder setConsumerArn(String consumerArn) {
+        public Builder consumerArn(String consumerArn) {
             this.consumerArn = Input.of(Objects.requireNonNull(consumerArn));
             return this;
         }
 
-        public Builder setTrackerName(Input<String> trackerName) {
+        public Builder trackerName(Input<String> trackerName) {
             this.trackerName = Objects.requireNonNull(trackerName);
             return this;
         }
 
-        public Builder setTrackerName(String trackerName) {
+        public Builder trackerName(String trackerName) {
             this.trackerName = Input.of(Objects.requireNonNull(trackerName));
             return this;
         }

@@ -203,102 +203,102 @@ public final class CognitiveServicesAccountApiPropertiesArgs extends io.pulumi.r
     	      this.websiteName = defaults.websiteName;
         }
 
-        public Builder setAadClientId(@Nullable Input<String> aadClientId) {
+        public Builder aadClientId(@Nullable Input<String> aadClientId) {
             this.aadClientId = aadClientId;
             return this;
         }
 
-        public Builder setAadClientId(@Nullable String aadClientId) {
+        public Builder aadClientId(@Nullable String aadClientId) {
             this.aadClientId = Input.ofNullable(aadClientId);
             return this;
         }
 
-        public Builder setAadTenantId(@Nullable Input<String> aadTenantId) {
+        public Builder aadTenantId(@Nullable Input<String> aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
 
-        public Builder setAadTenantId(@Nullable String aadTenantId) {
+        public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = Input.ofNullable(aadTenantId);
             return this;
         }
 
-        public Builder setEventHubConnectionString(@Nullable Input<String> eventHubConnectionString) {
+        public Builder eventHubConnectionString(@Nullable Input<String> eventHubConnectionString) {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
 
-        public Builder setEventHubConnectionString(@Nullable String eventHubConnectionString) {
+        public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             this.eventHubConnectionString = Input.ofNullable(eventHubConnectionString);
             return this;
         }
 
-        public Builder setQnaAzureSearchEndpointId(@Nullable Input<String> qnaAzureSearchEndpointId) {
+        public Builder qnaAzureSearchEndpointId(@Nullable Input<String> qnaAzureSearchEndpointId) {
             this.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
             return this;
         }
 
-        public Builder setQnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
+        public Builder qnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
             this.qnaAzureSearchEndpointId = Input.ofNullable(qnaAzureSearchEndpointId);
             return this;
         }
 
-        public Builder setQnaAzureSearchEndpointKey(@Nullable Input<String> qnaAzureSearchEndpointKey) {
+        public Builder qnaAzureSearchEndpointKey(@Nullable Input<String> qnaAzureSearchEndpointKey) {
             this.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
             return this;
         }
 
-        public Builder setQnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
+        public Builder qnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
             this.qnaAzureSearchEndpointKey = Input.ofNullable(qnaAzureSearchEndpointKey);
             return this;
         }
 
-        public Builder setQnaRuntimeEndpoint(@Nullable Input<String> qnaRuntimeEndpoint) {
+        public Builder qnaRuntimeEndpoint(@Nullable Input<String> qnaRuntimeEndpoint) {
             this.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
             return this;
         }
 
-        public Builder setQnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
+        public Builder qnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
             this.qnaRuntimeEndpoint = Input.ofNullable(qnaRuntimeEndpoint);
             return this;
         }
 
-        public Builder setStatisticsEnabled(@Nullable Input<Boolean> statisticsEnabled) {
+        public Builder statisticsEnabled(@Nullable Input<Boolean> statisticsEnabled) {
             this.statisticsEnabled = statisticsEnabled;
             return this;
         }
 
-        public Builder setStatisticsEnabled(@Nullable Boolean statisticsEnabled) {
+        public Builder statisticsEnabled(@Nullable Boolean statisticsEnabled) {
             this.statisticsEnabled = Input.ofNullable(statisticsEnabled);
             return this;
         }
 
-        public Builder setStorageAccountConnectionString(@Nullable Input<String> storageAccountConnectionString) {
+        public Builder storageAccountConnectionString(@Nullable Input<String> storageAccountConnectionString) {
             this.storageAccountConnectionString = storageAccountConnectionString;
             return this;
         }
 
-        public Builder setStorageAccountConnectionString(@Nullable String storageAccountConnectionString) {
+        public Builder storageAccountConnectionString(@Nullable String storageAccountConnectionString) {
             this.storageAccountConnectionString = Input.ofNullable(storageAccountConnectionString);
             return this;
         }
 
-        public Builder setSuperUser(@Nullable Input<String> superUser) {
+        public Builder superUser(@Nullable Input<String> superUser) {
             this.superUser = superUser;
             return this;
         }
 
-        public Builder setSuperUser(@Nullable String superUser) {
+        public Builder superUser(@Nullable String superUser) {
             this.superUser = Input.ofNullable(superUser);
             return this;
         }
 
-        public Builder setWebsiteName(@Nullable Input<String> websiteName) {
+        public Builder websiteName(@Nullable Input<String> websiteName) {
             this.websiteName = websiteName;
             return this;
         }
 
-        public Builder setWebsiteName(@Nullable String websiteName) {
+        public Builder websiteName(@Nullable String websiteName) {
             this.websiteName = Input.ofNullable(websiteName);
             return this;
         }

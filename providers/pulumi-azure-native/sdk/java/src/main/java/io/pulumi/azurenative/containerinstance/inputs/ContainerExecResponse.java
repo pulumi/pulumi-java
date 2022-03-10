@@ -58,7 +58,7 @@ public final class ContainerExecResponse extends io.pulumi.resources.InvokeArgs 
     	      this.command = defaults.command;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }

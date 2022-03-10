@@ -146,72 +146,72 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(@Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
-        public Builder setAuditConfigs(@Nullable List<GoogleIamV1AuditConfigArgs> auditConfigs) {
+        public Builder auditConfigs(@Nullable List<GoogleIamV1AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Input.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(@Nullable Input<List<GoogleIamV1BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Input<List<GoogleIamV1BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
-        public Builder setBindings(@Nullable List<GoogleIamV1BindingArgs> bindings) {
+        public Builder bindings(@Nullable List<GoogleIamV1BindingArgs> bindings) {
             this.bindings = Input.ofNullable(bindings);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Input<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable String updateMask) {
+        public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Input.ofNullable(updateMask);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

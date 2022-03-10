@@ -235,102 +235,102 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
     	      this.useExplicitDryRunSpec = defaults.useExplicitDryRunSpec;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setPerimeterType(@Nullable Input<String> perimeterType) {
+        public Builder perimeterType(@Nullable Input<String> perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
 
-        public Builder setPerimeterType(@Nullable String perimeterType) {
+        public Builder perimeterType(@Nullable String perimeterType) {
             this.perimeterType = Input.ofNullable(perimeterType);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<ServicePerimeterSpecGetArgs> spec) {
+        public Builder spec(@Nullable Input<ServicePerimeterSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable ServicePerimeterSpecGetArgs spec) {
+        public Builder spec(@Nullable ServicePerimeterSpecGetArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<ServicePerimeterStatusGetArgs> status) {
+        public Builder status(@Nullable Input<ServicePerimeterStatusGetArgs> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable ServicePerimeterStatusGetArgs status) {
+        public Builder status(@Nullable ServicePerimeterStatusGetArgs status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setUseExplicitDryRunSpec(@Nullable Input<Boolean> useExplicitDryRunSpec) {
+        public Builder useExplicitDryRunSpec(@Nullable Input<Boolean> useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
 
-        public Builder setUseExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
+        public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = Input.ofNullable(useExplicitDryRunSpec);
             return this;
         }

@@ -184,92 +184,92 @@ public final class WebAppVnetConnectionSlotArgs extends io.pulumi.resources.Reso
     	      this.vnetResourceId = defaults.vnetResourceId;
         }
 
-        public Builder setCertBlob(@Nullable Input<String> certBlob) {
+        public Builder certBlob(@Nullable Input<String> certBlob) {
             this.certBlob = certBlob;
             return this;
         }
 
-        public Builder setCertBlob(@Nullable String certBlob) {
+        public Builder certBlob(@Nullable String certBlob) {
             this.certBlob = Input.ofNullable(certBlob);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable Input<String> dnsServers) {
+        public Builder dnsServers(@Nullable Input<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable String dnsServers) {
+        public Builder dnsServers(@Nullable String dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setIsSwift(@Nullable Input<Boolean> isSwift) {
+        public Builder isSwift(@Nullable Input<Boolean> isSwift) {
             this.isSwift = isSwift;
             return this;
         }
 
-        public Builder setIsSwift(@Nullable Boolean isSwift) {
+        public Builder isSwift(@Nullable Boolean isSwift) {
             this.isSwift = Input.ofNullable(isSwift);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSlot(Input<String> slot) {
+        public Builder slot(Input<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
 
-        public Builder setVnetName(@Nullable Input<String> vnetName) {
+        public Builder vnetName(@Nullable Input<String> vnetName) {
             this.vnetName = vnetName;
             return this;
         }
 
-        public Builder setVnetName(@Nullable String vnetName) {
+        public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = Input.ofNullable(vnetName);
             return this;
         }
 
-        public Builder setVnetResourceId(@Nullable Input<String> vnetResourceId) {
+        public Builder vnetResourceId(@Nullable Input<String> vnetResourceId) {
             this.vnetResourceId = vnetResourceId;
             return this;
         }
 
-        public Builder setVnetResourceId(@Nullable String vnetResourceId) {
+        public Builder vnetResourceId(@Nullable String vnetResourceId) {
             this.vnetResourceId = Input.ofNullable(vnetResourceId);
             return this;
         }

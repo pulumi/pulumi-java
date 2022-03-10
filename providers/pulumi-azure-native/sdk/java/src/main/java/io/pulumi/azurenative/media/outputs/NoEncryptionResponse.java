@@ -50,7 +50,7 @@ public final class NoEncryptionResponse {
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }

@@ -100,22 +100,22 @@ public final class EventTargetBatchTarget {
     	      this.jobName = defaults.jobName;
         }
 
-        public Builder setArraySize(@Nullable Integer arraySize) {
+        public Builder arraySize(@Nullable Integer arraySize) {
             this.arraySize = arraySize;
             return this;
         }
 
-        public Builder setJobAttempts(@Nullable Integer jobAttempts) {
+        public Builder jobAttempts(@Nullable Integer jobAttempts) {
             this.jobAttempts = jobAttempts;
             return this;
         }
 
-        public Builder setJobDefinition(String jobDefinition) {
+        public Builder jobDefinition(String jobDefinition) {
             this.jobDefinition = Objects.requireNonNull(jobDefinition);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }

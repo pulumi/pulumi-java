@@ -69,12 +69,12 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
     	      this.processors = defaults.processors;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setProcessors(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor> processors) {
+        public Builder processors(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor> processors) {
             this.processors = processors;
             return this;
         }

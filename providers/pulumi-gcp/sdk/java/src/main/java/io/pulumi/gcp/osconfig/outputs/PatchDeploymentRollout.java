@@ -78,12 +78,12 @@ public final class PatchDeploymentRollout {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setDisruptionBudget(PatchDeploymentRolloutDisruptionBudget disruptionBudget) {
+        public Builder disruptionBudget(PatchDeploymentRolloutDisruptionBudget disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

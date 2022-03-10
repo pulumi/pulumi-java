@@ -153,72 +153,72 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setBandwidth(Input<LinkBandwidthArgs> bandwidth) {
+        public Builder bandwidth(Input<LinkBandwidthArgs> bandwidth) {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
 
-        public Builder setBandwidth(LinkBandwidthArgs bandwidth) {
+        public Builder bandwidth(LinkBandwidthArgs bandwidth) {
             this.bandwidth = Input.of(Objects.requireNonNull(bandwidth));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Input<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder setProvider(@Nullable Input<String> provider) {
+        public Builder provider(@Nullable Input<String> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable String provider) {
+        public Builder provider(@Nullable String provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }
 
-        public Builder setSiteId(Input<String> siteId) {
+        public Builder siteId(Input<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Input.of(Objects.requireNonNull(siteId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<LinkTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<LinkTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LinkTagArgs> tags) {
+        public Builder tags(@Nullable List<LinkTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

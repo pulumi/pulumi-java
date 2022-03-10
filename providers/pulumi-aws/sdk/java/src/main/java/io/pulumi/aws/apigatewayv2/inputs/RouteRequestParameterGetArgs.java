@@ -70,22 +70,22 @@ public final class RouteRequestParameterGetArgs extends io.pulumi.resources.Reso
     	      this.required = defaults.required;
         }
 
-        public Builder setRequestParameterKey(Input<String> requestParameterKey) {
+        public Builder requestParameterKey(Input<String> requestParameterKey) {
             this.requestParameterKey = Objects.requireNonNull(requestParameterKey);
             return this;
         }
 
-        public Builder setRequestParameterKey(String requestParameterKey) {
+        public Builder requestParameterKey(String requestParameterKey) {
             this.requestParameterKey = Input.of(Objects.requireNonNull(requestParameterKey));
             return this;
         }
 
-        public Builder setRequired(Input<Boolean> required) {
+        public Builder required(Input<Boolean> required) {
             this.required = Objects.requireNonNull(required);
             return this;
         }
 
-        public Builder setRequired(Boolean required) {
+        public Builder required(Boolean required) {
             this.required = Input.of(Objects.requireNonNull(required));
             return this;
         }

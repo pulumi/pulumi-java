@@ -41,7 +41,7 @@ public final class BucketS3KeyFilter {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<BucketFilterRule> rules) {
+        public Builder rules(List<BucketFilterRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

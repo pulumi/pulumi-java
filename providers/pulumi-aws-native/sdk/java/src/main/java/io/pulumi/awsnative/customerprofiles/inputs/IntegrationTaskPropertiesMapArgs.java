@@ -62,22 +62,22 @@ public final class IntegrationTaskPropertiesMapArgs extends io.pulumi.resources.
     	      this.property = defaults.property;
         }
 
-        public Builder setOperatorPropertyKey(Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey) {
+        public Builder operatorPropertyKey(Input<IntegrationOperatorPropertiesKeys> operatorPropertyKey) {
             this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey);
             return this;
         }
 
-        public Builder setOperatorPropertyKey(IntegrationOperatorPropertiesKeys operatorPropertyKey) {
+        public Builder operatorPropertyKey(IntegrationOperatorPropertiesKeys operatorPropertyKey) {
             this.operatorPropertyKey = Input.of(Objects.requireNonNull(operatorPropertyKey));
             return this;
         }
 
-        public Builder setProperty(Input<String> property) {
+        public Builder property(Input<String> property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Input.of(Objects.requireNonNull(property));
             return this;
         }

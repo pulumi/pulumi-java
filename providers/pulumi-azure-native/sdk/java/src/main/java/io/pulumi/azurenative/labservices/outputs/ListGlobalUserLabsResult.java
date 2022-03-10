@@ -50,7 +50,7 @@ public final class ListGlobalUserLabsResult {
     	      this.labs = defaults.labs;
         }
 
-        public Builder setLabs(@Nullable List<LabDetailsResponse> labs) {
+        public Builder labs(@Nullable List<LabDetailsResponse> labs) {
             this.labs = labs;
             return this;
         }

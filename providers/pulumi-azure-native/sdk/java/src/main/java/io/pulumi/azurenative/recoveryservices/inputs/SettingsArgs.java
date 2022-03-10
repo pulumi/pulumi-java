@@ -92,32 +92,32 @@ public final class SettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setIsCompression(@Nullable Input<Boolean> isCompression) {
+        public Builder isCompression(@Nullable Input<Boolean> isCompression) {
             this.isCompression = isCompression;
             return this;
         }
 
-        public Builder setIsCompression(@Nullable Boolean isCompression) {
+        public Builder isCompression(@Nullable Boolean isCompression) {
             this.isCompression = Input.ofNullable(isCompression);
             return this;
         }
 
-        public Builder setIssqlcompression(@Nullable Input<Boolean> issqlcompression) {
+        public Builder issqlcompression(@Nullable Input<Boolean> issqlcompression) {
             this.issqlcompression = issqlcompression;
             return this;
         }
 
-        public Builder setIssqlcompression(@Nullable Boolean issqlcompression) {
+        public Builder issqlcompression(@Nullable Boolean issqlcompression) {
             this.issqlcompression = Input.ofNullable(issqlcompression);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

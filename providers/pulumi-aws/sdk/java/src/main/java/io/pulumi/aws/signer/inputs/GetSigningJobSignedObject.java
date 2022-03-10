@@ -48,7 +48,7 @@ public final class GetSigningJobSignedObject extends io.pulumi.resources.InvokeA
     	      this.s3s = defaults.s3s;
         }
 
-        public Builder setS3s(List<GetSigningJobSignedObjectS3> s3s) {
+        public Builder s3s(List<GetSigningJobSignedObjectS3> s3s) {
             this.s3s = Objects.requireNonNull(s3s);
             return this;
         }

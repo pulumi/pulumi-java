@@ -85,17 +85,17 @@ public final class TaskSetNetworkConfiguration {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setAssignPublicIp(@Nullable Boolean assignPublicIp) {
+        public Builder assignPublicIp(@Nullable Boolean assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }

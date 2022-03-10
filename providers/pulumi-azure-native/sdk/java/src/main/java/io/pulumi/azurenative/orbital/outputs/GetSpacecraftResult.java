@@ -263,72 +263,72 @@ public final class GetSpacecraftResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthorizationStatus(String authorizationStatus) {
+        public Builder authorizationStatus(String authorizationStatus) {
             this.authorizationStatus = Objects.requireNonNull(authorizationStatus);
             return this;
         }
 
-        public Builder setAuthorizationStatusExtended(String authorizationStatusExtended) {
+        public Builder authorizationStatusExtended(String authorizationStatusExtended) {
             this.authorizationStatusExtended = Objects.requireNonNull(authorizationStatusExtended);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinks(@Nullable List<SpacecraftLinkResponse> links) {
+        public Builder links(@Nullable List<SpacecraftLinkResponse> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNoradId(String noradId) {
+        public Builder noradId(String noradId) {
             this.noradId = Objects.requireNonNull(noradId);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTitleLine(@Nullable String titleLine) {
+        public Builder titleLine(@Nullable String titleLine) {
             this.titleLine = titleLine;
             return this;
         }
 
-        public Builder setTleLine1(@Nullable String tleLine1) {
+        public Builder tleLine1(@Nullable String tleLine1) {
             this.tleLine1 = tleLine1;
             return this;
         }
 
-        public Builder setTleLine2(@Nullable String tleLine2) {
+        public Builder tleLine2(@Nullable String tleLine2) {
             this.tleLine2 = tleLine2;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

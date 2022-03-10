@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigArgs extends io.pulu
     	      this.speechModelVariant = defaults.speechModelVariant;
         }
 
-        public Builder setSpeechModelVariant(@Nullable Input<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
+        public Builder speechModelVariant(@Nullable Input<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
             this.speechModelVariant = speechModelVariant;
             return this;
         }
 
-        public Builder setSpeechModelVariant(@Nullable GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant speechModelVariant) {
+        public Builder speechModelVariant(@Nullable GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant speechModelVariant) {
             this.speechModelVariant = Input.ofNullable(speechModelVariant);
             return this;
         }

@@ -185,92 +185,92 @@ public final class KustoPoolAttachedDatabaseConfigurationArgs extends io.pulumi.
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(@Nullable Input<String> attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(@Nullable Input<String> attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
             return this;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Input.ofNullable(attachedDatabaseConfigurationName);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDefaultPrincipalsModificationKind(Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
+        public Builder defaultPrincipalsModificationKind(Input<Either<String,DefaultPrincipalsModificationKind>> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Objects.requireNonNull(defaultPrincipalsModificationKind);
             return this;
         }
 
-        public Builder setDefaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
+        public Builder defaultPrincipalsModificationKind(Either<String,DefaultPrincipalsModificationKind> defaultPrincipalsModificationKind) {
             this.defaultPrincipalsModificationKind = Input.of(Objects.requireNonNull(defaultPrincipalsModificationKind));
             return this;
         }
 
-        public Builder setKustoPoolName(Input<String> kustoPoolName) {
+        public Builder kustoPoolName(Input<String> kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
 
-        public Builder setKustoPoolName(String kustoPoolName) {
+        public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Input.of(Objects.requireNonNull(kustoPoolName));
             return this;
         }
 
-        public Builder setKustoPoolResourceId(Input<String> kustoPoolResourceId) {
+        public Builder kustoPoolResourceId(Input<String> kustoPoolResourceId) {
             this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
             return this;
         }
 
-        public Builder setKustoPoolResourceId(String kustoPoolResourceId) {
+        public Builder kustoPoolResourceId(String kustoPoolResourceId) {
             this.kustoPoolResourceId = Input.of(Objects.requireNonNull(kustoPoolResourceId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTableLevelSharingProperties(@Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
+        public Builder tableLevelSharingProperties(@Nullable Input<TableLevelSharingPropertiesArgs> tableLevelSharingProperties) {
             this.tableLevelSharingProperties = tableLevelSharingProperties;
             return this;
         }
 
-        public Builder setTableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
+        public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
             this.tableLevelSharingProperties = Input.ofNullable(tableLevelSharingProperties);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

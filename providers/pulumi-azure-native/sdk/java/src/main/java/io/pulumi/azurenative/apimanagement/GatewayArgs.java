@@ -119,52 +119,52 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGatewayId(@Nullable Input<String> gatewayId) {
+        public Builder gatewayId(@Nullable Input<String> gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = Input.ofNullable(gatewayId);
             return this;
         }
 
-        public Builder setLocationData(@Nullable Input<ResourceLocationDataContractArgs> locationData) {
+        public Builder locationData(@Nullable Input<ResourceLocationDataContractArgs> locationData) {
             this.locationData = locationData;
             return this;
         }
 
-        public Builder setLocationData(@Nullable ResourceLocationDataContractArgs locationData) {
+        public Builder locationData(@Nullable ResourceLocationDataContractArgs locationData) {
             this.locationData = Input.ofNullable(locationData);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

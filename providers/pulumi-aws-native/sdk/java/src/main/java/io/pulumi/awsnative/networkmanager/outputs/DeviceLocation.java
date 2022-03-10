@@ -83,17 +83,17 @@ public final class DeviceLocation {
     	      this.longitude = defaults.longitude;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setLatitude(@Nullable String latitude) {
+        public Builder latitude(@Nullable String latitude) {
             this.latitude = latitude;
             return this;
         }
 
-        public Builder setLongitude(@Nullable String longitude) {
+        public Builder longitude(@Nullable String longitude) {
             this.longitude = longitude;
             return this;
         }

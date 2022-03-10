@@ -120,52 +120,52 @@ public final class LocationFsxLustreArgs extends io.pulumi.resources.ResourceArg
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setFsxFilesystemArn(Input<String> fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(Input<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn);
             return this;
         }
 
-        public Builder setFsxFilesystemArn(String fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(String fsxFilesystemArn) {
             this.fsxFilesystemArn = Input.of(Objects.requireNonNull(fsxFilesystemArn));
             return this;
         }
 
-        public Builder setSecurityGroupArns(Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(Input<List<String>> securityGroupArns) {
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
 
-        public Builder setSecurityGroupArns(List<String> securityGroupArns) {
+        public Builder securityGroupArns(List<String> securityGroupArns) {
             this.securityGroupArns = Input.of(Objects.requireNonNull(securityGroupArns));
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

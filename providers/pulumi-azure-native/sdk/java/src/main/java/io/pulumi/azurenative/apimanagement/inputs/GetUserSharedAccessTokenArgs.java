@@ -117,27 +117,27 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
     	      this.userId = defaults.userId;
         }
 
-        public Builder setExpiry(String expiry) {
+        public Builder expiry(String expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
 
-        public Builder setKeyType(KeyType keyType) {
+        public Builder keyType(KeyType keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

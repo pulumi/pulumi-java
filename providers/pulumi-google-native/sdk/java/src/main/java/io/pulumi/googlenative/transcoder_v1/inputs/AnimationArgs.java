@@ -92,32 +92,32 @@ public final class AnimationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.animationStatic = defaults.animationStatic;
         }
 
-        public Builder setAnimationEnd(@Nullable Input<AnimationEndArgs> animationEnd) {
+        public Builder animationEnd(@Nullable Input<AnimationEndArgs> animationEnd) {
             this.animationEnd = animationEnd;
             return this;
         }
 
-        public Builder setAnimationEnd(@Nullable AnimationEndArgs animationEnd) {
+        public Builder animationEnd(@Nullable AnimationEndArgs animationEnd) {
             this.animationEnd = Input.ofNullable(animationEnd);
             return this;
         }
 
-        public Builder setAnimationFade(@Nullable Input<AnimationFadeArgs> animationFade) {
+        public Builder animationFade(@Nullable Input<AnimationFadeArgs> animationFade) {
             this.animationFade = animationFade;
             return this;
         }
 
-        public Builder setAnimationFade(@Nullable AnimationFadeArgs animationFade) {
+        public Builder animationFade(@Nullable AnimationFadeArgs animationFade) {
             this.animationFade = Input.ofNullable(animationFade);
             return this;
         }
 
-        public Builder setAnimationStatic(@Nullable Input<AnimationStaticArgs> animationStatic) {
+        public Builder animationStatic(@Nullable Input<AnimationStaticArgs> animationStatic) {
             this.animationStatic = animationStatic;
             return this;
         }
 
-        public Builder setAnimationStatic(@Nullable AnimationStaticArgs animationStatic) {
+        public Builder animationStatic(@Nullable AnimationStaticArgs animationStatic) {
             this.animationStatic = Input.ofNullable(animationStatic);
             return this;
         }

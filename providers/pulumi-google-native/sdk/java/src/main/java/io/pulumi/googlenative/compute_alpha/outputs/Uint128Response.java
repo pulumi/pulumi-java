@@ -49,12 +49,12 @@ public final class Uint128Response {
     	      this.low = defaults.low;
         }
 
-        public Builder setHigh(String high) {
+        public Builder high(String high) {
             this.high = Objects.requireNonNull(high);
             return this;
         }
 
-        public Builder setLow(String low) {
+        public Builder low(String low) {
             this.low = Objects.requireNonNull(low);
             return this;
         }

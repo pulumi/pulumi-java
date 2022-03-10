@@ -120,52 +120,52 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webServiceName = defaults.webServiceName;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(Input<WebServicePropertiesForGraphArgs> properties) {
+        public Builder properties(Input<WebServicePropertiesForGraphArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(WebServicePropertiesForGraphArgs properties) {
+        public Builder properties(WebServicePropertiesForGraphArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWebServiceName(@Nullable Input<String> webServiceName) {
+        public Builder webServiceName(@Nullable Input<String> webServiceName) {
             this.webServiceName = webServiceName;
             return this;
         }
 
-        public Builder setWebServiceName(@Nullable String webServiceName) {
+        public Builder webServiceName(@Nullable String webServiceName) {
             this.webServiceName = Input.ofNullable(webServiceName);
             return this;
         }

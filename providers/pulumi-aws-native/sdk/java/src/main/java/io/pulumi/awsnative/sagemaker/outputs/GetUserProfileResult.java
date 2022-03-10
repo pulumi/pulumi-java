@@ -68,12 +68,12 @@ public final class GetUserProfileResult {
     	      this.userSettings = defaults.userSettings;
         }
 
-        public Builder setUserProfileArn(@Nullable String userProfileArn) {
+        public Builder userProfileArn(@Nullable String userProfileArn) {
             this.userProfileArn = userProfileArn;
             return this;
         }
 
-        public Builder setUserSettings(@Nullable UserProfileUserSettings userSettings) {
+        public Builder userSettings(@Nullable UserProfileUserSettings userSettings) {
             this.userSettings = userSettings;
             return this;
         }

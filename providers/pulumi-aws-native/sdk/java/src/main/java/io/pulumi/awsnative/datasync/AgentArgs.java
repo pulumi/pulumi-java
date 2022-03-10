@@ -136,62 +136,62 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcEndpointId = defaults.vpcEndpointId;
         }
 
-        public Builder setActivationKey(Input<String> activationKey) {
+        public Builder activationKey(Input<String> activationKey) {
             this.activationKey = Objects.requireNonNull(activationKey);
             return this;
         }
 
-        public Builder setActivationKey(String activationKey) {
+        public Builder activationKey(String activationKey) {
             this.activationKey = Input.of(Objects.requireNonNull(activationKey));
             return this;
         }
 
-        public Builder setAgentName(@Nullable Input<String> agentName) {
+        public Builder agentName(@Nullable Input<String> agentName) {
             this.agentName = agentName;
             return this;
         }
 
-        public Builder setAgentName(@Nullable String agentName) {
+        public Builder agentName(@Nullable String agentName) {
             this.agentName = Input.ofNullable(agentName);
             return this;
         }
 
-        public Builder setSecurityGroupArns(@Nullable Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(@Nullable Input<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
 
-        public Builder setSecurityGroupArns(@Nullable List<String> securityGroupArns) {
+        public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
             this.securityGroupArns = Input.ofNullable(securityGroupArns);
             return this;
         }
 
-        public Builder setSubnetArns(@Nullable Input<List<String>> subnetArns) {
+        public Builder subnetArns(@Nullable Input<List<String>> subnetArns) {
             this.subnetArns = subnetArns;
             return this;
         }
 
-        public Builder setSubnetArns(@Nullable List<String> subnetArns) {
+        public Builder subnetArns(@Nullable List<String> subnetArns) {
             this.subnetArns = Input.ofNullable(subnetArns);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AgentTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AgentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AgentTagArgs> tags) {
+        public Builder tags(@Nullable List<AgentTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
             return this;
         }

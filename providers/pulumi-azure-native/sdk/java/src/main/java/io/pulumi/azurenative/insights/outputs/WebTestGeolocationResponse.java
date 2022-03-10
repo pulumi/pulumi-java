@@ -50,7 +50,7 @@ public final class WebTestGeolocationResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }

@@ -105,42 +105,42 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Input<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<SiteLocationArgs> location) {
+        public Builder location(@Nullable Input<SiteLocationArgs> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable SiteLocationArgs location) {
+        public Builder location(@Nullable SiteLocationArgs location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SiteTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SiteTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SiteTagArgs> tags) {
+        public Builder tags(@Nullable List<SiteTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

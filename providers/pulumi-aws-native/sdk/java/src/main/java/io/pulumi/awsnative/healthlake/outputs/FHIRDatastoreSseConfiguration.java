@@ -40,7 +40,7 @@ public final class FHIRDatastoreSseConfiguration {
     	      this.kmsEncryptionConfig = defaults.kmsEncryptionConfig;
         }
 
-        public Builder setKmsEncryptionConfig(FHIRDatastoreKmsEncryptionConfig kmsEncryptionConfig) {
+        public Builder kmsEncryptionConfig(FHIRDatastoreKmsEncryptionConfig kmsEncryptionConfig) {
             this.kmsEncryptionConfig = Objects.requireNonNull(kmsEncryptionConfig);
             return this;
         }

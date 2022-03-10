@@ -83,17 +83,17 @@ public final class NetworkProfileResponse {
     	      this.vnetId = defaults.vnetId;
         }
 
-        public Builder setPeerVnetId(@Nullable String peerVnetId) {
+        public Builder peerVnetId(@Nullable String peerVnetId) {
             this.peerVnetId = peerVnetId;
             return this;
         }
 
-        public Builder setVnetCidr(@Nullable String vnetCidr) {
+        public Builder vnetCidr(@Nullable String vnetCidr) {
             this.vnetCidr = vnetCidr;
             return this;
         }
 
-        public Builder setVnetId(@Nullable String vnetId) {
+        public Builder vnetId(@Nullable String vnetId) {
             this.vnetId = vnetId;
             return this;
         }

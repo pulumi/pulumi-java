@@ -91,32 +91,32 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
     	      this.agreementKeys = defaults.agreementKeys;
         }
 
-        public Builder setAgreedAt(@Nullable Input<String> agreedAt) {
+        public Builder agreedAt(@Nullable Input<String> agreedAt) {
             this.agreedAt = agreedAt;
             return this;
         }
 
-        public Builder setAgreedAt(@Nullable String agreedAt) {
+        public Builder agreedAt(@Nullable String agreedAt) {
             this.agreedAt = Input.ofNullable(agreedAt);
             return this;
         }
 
-        public Builder setAgreedBy(@Nullable Input<String> agreedBy) {
+        public Builder agreedBy(@Nullable Input<String> agreedBy) {
             this.agreedBy = agreedBy;
             return this;
         }
 
-        public Builder setAgreedBy(@Nullable String agreedBy) {
+        public Builder agreedBy(@Nullable String agreedBy) {
             this.agreedBy = Input.ofNullable(agreedBy);
             return this;
         }
 
-        public Builder setAgreementKeys(@Nullable Input<List<String>> agreementKeys) {
+        public Builder agreementKeys(@Nullable Input<List<String>> agreementKeys) {
             this.agreementKeys = agreementKeys;
             return this;
         }
 
-        public Builder setAgreementKeys(@Nullable List<String> agreementKeys) {
+        public Builder agreementKeys(@Nullable List<String> agreementKeys) {
             this.agreementKeys = Input.ofNullable(agreementKeys);
             return this;
         }

@@ -71,22 +71,22 @@ public final class ServiceCodeConfigurationArgs extends io.pulumi.resources.Reso
     	      this.configurationSource = defaults.configurationSource;
         }
 
-        public Builder setCodeConfigurationValues(@Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable Input<ServiceCodeConfigurationValuesArgs> codeConfigurationValues) {
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
 
-        public Builder setCodeConfigurationValues(@Nullable ServiceCodeConfigurationValuesArgs codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable ServiceCodeConfigurationValuesArgs codeConfigurationValues) {
             this.codeConfigurationValues = Input.ofNullable(codeConfigurationValues);
             return this;
         }
 
-        public Builder setConfigurationSource(Input<ServiceCodeConfigurationConfigurationSource> configurationSource) {
+        public Builder configurationSource(Input<ServiceCodeConfigurationConfigurationSource> configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
 
-        public Builder setConfigurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
+        public Builder configurationSource(ServiceCodeConfigurationConfigurationSource configurationSource) {
             this.configurationSource = Input.of(Objects.requireNonNull(configurationSource));
             return this;
         }

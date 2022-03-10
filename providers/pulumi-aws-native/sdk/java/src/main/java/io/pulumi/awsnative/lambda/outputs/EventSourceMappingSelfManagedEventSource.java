@@ -50,7 +50,7 @@ public final class EventSourceMappingSelfManagedEventSource {
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder setEndpoints(@Nullable EventSourceMappingEndpoints endpoints) {
+        public Builder endpoints(@Nullable EventSourceMappingEndpoints endpoints) {
             this.endpoints = endpoints;
             return this;
         }

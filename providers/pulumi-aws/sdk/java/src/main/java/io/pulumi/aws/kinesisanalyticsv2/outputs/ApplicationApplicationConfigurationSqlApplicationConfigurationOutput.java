@@ -127,32 +127,32 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.outputId = defaults.outputId;
         }
 
-        public Builder setDestinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema) {
+        public Builder destinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema destinationSchema) {
             this.destinationSchema = Objects.requireNonNull(destinationSchema);
             return this;
         }
 
-        public Builder setKinesisFirehoseOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput) {
+        public Builder kinesisFirehoseOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput kinesisFirehoseOutput) {
             this.kinesisFirehoseOutput = kinesisFirehoseOutput;
             return this;
         }
 
-        public Builder setKinesisStreamsOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput) {
+        public Builder kinesisStreamsOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput kinesisStreamsOutput) {
             this.kinesisStreamsOutput = kinesisStreamsOutput;
             return this;
         }
 
-        public Builder setLambdaOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput) {
+        public Builder lambdaOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput lambdaOutput) {
             this.lambdaOutput = lambdaOutput;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputId(@Nullable String outputId) {
+        public Builder outputId(@Nullable String outputId) {
             this.outputId = outputId;
             return this;
         }

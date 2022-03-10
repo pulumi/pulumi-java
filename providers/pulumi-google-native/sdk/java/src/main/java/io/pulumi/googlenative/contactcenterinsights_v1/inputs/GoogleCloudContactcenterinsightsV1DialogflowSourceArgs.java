@@ -57,12 +57,12 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
     	      this.audioUri = defaults.audioUri;
         }
 
-        public Builder setAudioUri(@Nullable Input<String> audioUri) {
+        public Builder audioUri(@Nullable Input<String> audioUri) {
             this.audioUri = audioUri;
             return this;
         }
 
-        public Builder setAudioUri(@Nullable String audioUri) {
+        public Builder audioUri(@Nullable String audioUri) {
             this.audioUri = Input.ofNullable(audioUri);
             return this;
         }

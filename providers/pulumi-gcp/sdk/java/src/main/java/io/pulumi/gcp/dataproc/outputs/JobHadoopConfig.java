@@ -158,42 +158,42 @@ public final class JobHadoopConfig {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setArchiveUris(@Nullable List<String> archiveUris) {
+        public Builder archiveUris(@Nullable List<String> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setFileUris(@Nullable List<String> fileUris) {
+        public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable JobHadoopConfigLoggingConfig loggingConfig) {
+        public Builder loggingConfig(@Nullable JobHadoopConfigLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setMainClass(@Nullable String mainClass) {
+        public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = mainClass;
             return this;
         }
 
-        public Builder setMainJarFileUri(@Nullable String mainJarFileUri) {
+        public Builder mainJarFileUri(@Nullable String mainJarFileUri) {
             this.mainJarFileUri = mainJarFileUri;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }

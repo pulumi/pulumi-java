@@ -71,22 +71,22 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
     	      this.none = defaults.none;
         }
 
-        public Builder setCount(@Nullable Input<WebAclRuleOverrideActionCountArgs> count) {
+        public Builder count(@Nullable Input<WebAclRuleOverrideActionCountArgs> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable WebAclRuleOverrideActionCountArgs count) {
+        public Builder count(@Nullable WebAclRuleOverrideActionCountArgs count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setNone(@Nullable Input<WebAclRuleOverrideActionNoneArgs> none) {
+        public Builder none(@Nullable Input<WebAclRuleOverrideActionNoneArgs> none) {
             this.none = none;
             return this;
         }
 
-        public Builder setNone(@Nullable WebAclRuleOverrideActionNoneArgs none) {
+        public Builder none(@Nullable WebAclRuleOverrideActionNoneArgs none) {
             this.none = Input.ofNullable(none);
             return this;
         }

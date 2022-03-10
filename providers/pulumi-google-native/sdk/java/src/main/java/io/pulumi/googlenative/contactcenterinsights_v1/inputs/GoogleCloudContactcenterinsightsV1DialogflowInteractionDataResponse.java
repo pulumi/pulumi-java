@@ -73,12 +73,12 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     	      this.dialogflowIntentId = defaults.dialogflowIntentId;
         }
 
-        public Builder setConfidence(Double confidence) {
+        public Builder confidence(Double confidence) {
             this.confidence = Objects.requireNonNull(confidence);
             return this;
         }
 
-        public Builder setDialogflowIntentId(String dialogflowIntentId) {
+        public Builder dialogflowIntentId(String dialogflowIntentId) {
             this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
             return this;
         }

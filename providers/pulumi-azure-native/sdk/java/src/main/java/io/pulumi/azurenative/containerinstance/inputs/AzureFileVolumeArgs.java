@@ -107,42 +107,42 @@ public final class AzureFileVolumeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setShareName(Input<String> shareName) {
+        public Builder shareName(Input<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Input.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder setStorageAccountKey(@Nullable Input<String> storageAccountKey) {
+        public Builder storageAccountKey(@Nullable Input<String> storageAccountKey) {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
 
-        public Builder setStorageAccountKey(@Nullable String storageAccountKey) {
+        public Builder storageAccountKey(@Nullable String storageAccountKey) {
             this.storageAccountKey = Input.ofNullable(storageAccountKey);
             return this;
         }
 
-        public Builder setStorageAccountName(Input<String> storageAccountName) {
+        public Builder storageAccountName(Input<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
-        public Builder setStorageAccountName(String storageAccountName) {
+        public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Input.of(Objects.requireNonNull(storageAccountName));
             return this;
         }

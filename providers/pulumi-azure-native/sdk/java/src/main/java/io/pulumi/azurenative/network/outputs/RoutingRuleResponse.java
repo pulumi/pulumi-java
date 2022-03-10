@@ -217,57 +217,57 @@ public final class RoutingRuleResponse {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder setAcceptedProtocols(@Nullable List<String> acceptedProtocols) {
+        public Builder acceptedProtocols(@Nullable List<String> acceptedProtocols) {
             this.acceptedProtocols = acceptedProtocols;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setFrontendEndpoints(@Nullable List<SubResourceResponse> frontendEndpoints) {
+        public Builder frontendEndpoints(@Nullable List<SubResourceResponse> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable List<String> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setRouteConfiguration(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration) {
+        public Builder routeConfiguration(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration) {
             this.routeConfiguration = routeConfiguration;
             return this;
         }
 
-        public Builder setRulesEngine(@Nullable SubResourceResponse rulesEngine) {
+        public Builder rulesEngine(@Nullable SubResourceResponse rulesEngine) {
             this.rulesEngine = rulesEngine;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }

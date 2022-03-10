@@ -200,102 +200,102 @@ public final class WebAppSourceControlArgs extends io.pulumi.resources.ResourceA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setDeploymentRollbackEnabled(@Nullable Input<Boolean> deploymentRollbackEnabled) {
+        public Builder deploymentRollbackEnabled(@Nullable Input<Boolean> deploymentRollbackEnabled) {
             this.deploymentRollbackEnabled = deploymentRollbackEnabled;
             return this;
         }
 
-        public Builder setDeploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
+        public Builder deploymentRollbackEnabled(@Nullable Boolean deploymentRollbackEnabled) {
             this.deploymentRollbackEnabled = Input.ofNullable(deploymentRollbackEnabled);
             return this;
         }
 
-        public Builder setGitHubActionConfiguration(@Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration) {
+        public Builder gitHubActionConfiguration(@Nullable Input<GitHubActionConfigurationArgs> gitHubActionConfiguration) {
             this.gitHubActionConfiguration = gitHubActionConfiguration;
             return this;
         }
 
-        public Builder setGitHubActionConfiguration(@Nullable GitHubActionConfigurationArgs gitHubActionConfiguration) {
+        public Builder gitHubActionConfiguration(@Nullable GitHubActionConfigurationArgs gitHubActionConfiguration) {
             this.gitHubActionConfiguration = Input.ofNullable(gitHubActionConfiguration);
             return this;
         }
 
-        public Builder setIsGitHubAction(@Nullable Input<Boolean> isGitHubAction) {
+        public Builder isGitHubAction(@Nullable Input<Boolean> isGitHubAction) {
             this.isGitHubAction = isGitHubAction;
             return this;
         }
 
-        public Builder setIsGitHubAction(@Nullable Boolean isGitHubAction) {
+        public Builder isGitHubAction(@Nullable Boolean isGitHubAction) {
             this.isGitHubAction = Input.ofNullable(isGitHubAction);
             return this;
         }
 
-        public Builder setIsManualIntegration(@Nullable Input<Boolean> isManualIntegration) {
+        public Builder isManualIntegration(@Nullable Input<Boolean> isManualIntegration) {
             this.isManualIntegration = isManualIntegration;
             return this;
         }
 
-        public Builder setIsManualIntegration(@Nullable Boolean isManualIntegration) {
+        public Builder isManualIntegration(@Nullable Boolean isManualIntegration) {
             this.isManualIntegration = Input.ofNullable(isManualIntegration);
             return this;
         }
 
-        public Builder setIsMercurial(@Nullable Input<Boolean> isMercurial) {
+        public Builder isMercurial(@Nullable Input<Boolean> isMercurial) {
             this.isMercurial = isMercurial;
             return this;
         }
 
-        public Builder setIsMercurial(@Nullable Boolean isMercurial) {
+        public Builder isMercurial(@Nullable Boolean isMercurial) {
             this.isMercurial = Input.ofNullable(isMercurial);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRepoUrl(@Nullable Input<String> repoUrl) {
+        public Builder repoUrl(@Nullable Input<String> repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
 
-        public Builder setRepoUrl(@Nullable String repoUrl) {
+        public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = Input.ofNullable(repoUrl);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

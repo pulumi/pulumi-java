@@ -73,12 +73,12 @@ public final class AuthorityKeySpec {
     	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setCloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }

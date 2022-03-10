@@ -53,12 +53,12 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
     	      this.redirectSiteKey = defaults.redirectSiteKey;
         }
 
-        public Builder setRedirectSiteKey(@Nullable Input<String> redirectSiteKey) {
+        public Builder redirectSiteKey(@Nullable Input<String> redirectSiteKey) {
             this.redirectSiteKey = redirectSiteKey;
             return this;
         }
 
-        public Builder setRedirectSiteKey(@Nullable String redirectSiteKey) {
+        public Builder redirectSiteKey(@Nullable String redirectSiteKey) {
             this.redirectSiteKey = Input.ofNullable(redirectSiteKey);
             return this;
         }

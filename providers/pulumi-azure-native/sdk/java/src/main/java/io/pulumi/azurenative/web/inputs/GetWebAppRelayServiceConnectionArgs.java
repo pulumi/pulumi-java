@@ -84,17 +84,17 @@ public final class GetWebAppRelayServiceConnectionArgs extends io.pulumi.resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setEntityName(String entityName) {
+        public Builder entityName(String entityName) {
             this.entityName = Objects.requireNonNull(entityName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

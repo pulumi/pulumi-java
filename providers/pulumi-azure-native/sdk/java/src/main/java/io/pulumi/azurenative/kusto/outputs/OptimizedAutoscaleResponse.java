@@ -98,22 +98,22 @@ public final class OptimizedAutoscaleResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setMaximum(Integer maximum) {
+        public Builder maximum(Integer maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
-        public Builder setMinimum(Integer minimum) {
+        public Builder minimum(Integer minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

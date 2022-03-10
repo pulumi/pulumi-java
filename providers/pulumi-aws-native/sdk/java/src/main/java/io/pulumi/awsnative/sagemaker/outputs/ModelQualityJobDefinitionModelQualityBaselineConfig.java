@@ -52,12 +52,12 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfig {
     	      this.constraintsResource = defaults.constraintsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable ModelQualityJobDefinitionConstraintsResource constraintsResource) {
+        public Builder constraintsResource(@Nullable ModelQualityJobDefinitionConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }

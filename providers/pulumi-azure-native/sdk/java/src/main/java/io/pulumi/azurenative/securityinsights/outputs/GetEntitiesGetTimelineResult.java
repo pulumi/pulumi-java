@@ -72,12 +72,12 @@ public final class GetEntitiesGetTimelineResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setMetaData(@Nullable TimelineResultsMetadataResponse metaData) {
+        public Builder metaData(@Nullable TimelineResultsMetadataResponse metaData) {
             this.metaData = metaData;
             return this;
         }
 
-        public Builder setValue(@Nullable List<Object> value) {
+        public Builder value(@Nullable List<Object> value) {
             this.value = value;
             return this;
         }

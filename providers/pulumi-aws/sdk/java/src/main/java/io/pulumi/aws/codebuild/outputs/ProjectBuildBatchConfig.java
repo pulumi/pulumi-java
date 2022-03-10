@@ -102,22 +102,22 @@ public final class ProjectBuildBatchConfig {
     	      this.timeoutInMins = defaults.timeoutInMins;
         }
 
-        public Builder setCombineArtifacts(@Nullable Boolean combineArtifacts) {
+        public Builder combineArtifacts(@Nullable Boolean combineArtifacts) {
             this.combineArtifacts = combineArtifacts;
             return this;
         }
 
-        public Builder setRestrictions(@Nullable ProjectBuildBatchConfigRestrictions restrictions) {
+        public Builder restrictions(@Nullable ProjectBuildBatchConfigRestrictions restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setTimeoutInMins(@Nullable Integer timeoutInMins) {
+        public Builder timeoutInMins(@Nullable Integer timeoutInMins) {
             this.timeoutInMins = timeoutInMins;
             return this;
         }

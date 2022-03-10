@@ -62,22 +62,22 @@ public final class BucketReplicationTimeArgs extends io.pulumi.resources.Resourc
     	      this.time = defaults.time;
         }
 
-        public Builder setStatus(Input<BucketReplicationTimeStatus> status) {
+        public Builder status(Input<BucketReplicationTimeStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(BucketReplicationTimeStatus status) {
+        public Builder status(BucketReplicationTimeStatus status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder setTime(Input<BucketReplicationTimeValueArgs> time) {
+        public Builder time(Input<BucketReplicationTimeValueArgs> time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }
 
-        public Builder setTime(BucketReplicationTimeValueArgs time) {
+        public Builder time(BucketReplicationTimeValueArgs time) {
             this.time = Input.of(Objects.requireNonNull(time));
             return this;
         }

@@ -114,62 +114,62 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSetupScriptDetails(Input<AppBlockScriptDetailsArgs> setupScriptDetails) {
+        public Builder setupScriptDetails(Input<AppBlockScriptDetailsArgs> setupScriptDetails) {
             this.setupScriptDetails = Objects.requireNonNull(setupScriptDetails);
             return this;
         }
 
-        public Builder setSetupScriptDetails(AppBlockScriptDetailsArgs setupScriptDetails) {
+        public Builder setupScriptDetails(AppBlockScriptDetailsArgs setupScriptDetails) {
             this.setupScriptDetails = Input.of(Objects.requireNonNull(setupScriptDetails));
             return this;
         }
 
-        public Builder setSourceS3Location(Input<AppBlockS3LocationArgs> sourceS3Location) {
+        public Builder sourceS3Location(Input<AppBlockS3LocationArgs> sourceS3Location) {
             this.sourceS3Location = Objects.requireNonNull(sourceS3Location);
             return this;
         }
 
-        public Builder setSourceS3Location(AppBlockS3LocationArgs sourceS3Location) {
+        public Builder sourceS3Location(AppBlockS3LocationArgs sourceS3Location) {
             this.sourceS3Location = Input.of(Objects.requireNonNull(sourceS3Location));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AppBlockTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AppBlockTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppBlockTagArgs> tags) {
+        public Builder tags(@Nullable List<AppBlockTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

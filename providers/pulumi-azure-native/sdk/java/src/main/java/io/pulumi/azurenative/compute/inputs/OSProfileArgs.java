@@ -191,92 +191,92 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder setAdminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Input<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Input.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Input<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Input.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder setAllowExtensionOperations(@Nullable Input<Boolean> allowExtensionOperations) {
+        public Builder allowExtensionOperations(@Nullable Input<Boolean> allowExtensionOperations) {
             this.allowExtensionOperations = allowExtensionOperations;
             return this;
         }
 
-        public Builder setAllowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
+        public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
             this.allowExtensionOperations = Input.ofNullable(allowExtensionOperations);
             return this;
         }
 
-        public Builder setComputerName(@Nullable Input<String> computerName) {
+        public Builder computerName(@Nullable Input<String> computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = Input.ofNullable(computerName);
             return this;
         }
 
-        public Builder setCustomData(@Nullable Input<String> customData) {
+        public Builder customData(@Nullable Input<String> customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = Input.ofNullable(customData);
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable Input<LinuxConfigurationArgs> linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
             this.linuxConfiguration = Input.ofNullable(linuxConfiguration);
             return this;
         }
 
-        public Builder setRequireGuestProvisionSignal(@Nullable Input<Boolean> requireGuestProvisionSignal) {
+        public Builder requireGuestProvisionSignal(@Nullable Input<Boolean> requireGuestProvisionSignal) {
             this.requireGuestProvisionSignal = requireGuestProvisionSignal;
             return this;
         }
 
-        public Builder setRequireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
+        public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
             this.requireGuestProvisionSignal = Input.ofNullable(requireGuestProvisionSignal);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<List<VaultSecretGroupArgs>> secrets) {
+        public Builder secrets(@Nullable Input<List<VaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<VaultSecretGroupArgs> secrets) {
+        public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable Input<WindowsConfigurationArgs> windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
             this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
             return this;
         }

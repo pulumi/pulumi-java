@@ -53,12 +53,12 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration {
     	      this.webCrawlerMode = defaults.webCrawlerMode;
         }
 
-        public Builder setSeedUrls(List<String> seedUrls) {
+        public Builder seedUrls(List<String> seedUrls) {
             this.seedUrls = Objects.requireNonNull(seedUrls);
             return this;
         }
 
-        public Builder setWebCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
+        public Builder webCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
             this.webCrawlerMode = webCrawlerMode;
             return this;
         }

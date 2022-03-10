@@ -49,7 +49,7 @@ public final class ListAccountKeysResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<KeyDescriptionResponse> value) {
+        public Builder value(List<KeyDescriptionResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

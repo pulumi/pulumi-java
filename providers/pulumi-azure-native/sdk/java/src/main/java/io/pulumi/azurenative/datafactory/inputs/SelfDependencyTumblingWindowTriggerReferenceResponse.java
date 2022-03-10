@@ -91,17 +91,17 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse extends 
     	      this.type = defaults.type;
         }
 
-        public Builder setOffset(String offset) {
+        public Builder offset(String offset) {
             this.offset = Objects.requireNonNull(offset);
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

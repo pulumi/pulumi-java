@@ -76,22 +76,22 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
         }
 
-        public Builder setGroupIds(@Nullable Input<List<String>> groupIds) {
+        public Builder groupIds(@Nullable Input<List<String>> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-        public Builder setGroupIds(@Nullable List<String> groupIds) {
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = Input.ofNullable(groupIds);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = Input.of(Objects.requireNonNull(privateLinkServiceConnectionState));
             return this;
         }

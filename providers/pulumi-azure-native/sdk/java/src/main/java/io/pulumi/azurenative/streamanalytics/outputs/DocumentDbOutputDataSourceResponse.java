@@ -149,37 +149,37 @@ public final class DocumentDbOutputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setCollectionNamePattern(@Nullable String collectionNamePattern) {
+        public Builder collectionNamePattern(@Nullable String collectionNamePattern) {
             this.collectionNamePattern = collectionNamePattern;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDocumentId(@Nullable String documentId) {
+        public Builder documentId(@Nullable String documentId) {
             this.documentId = documentId;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -65,22 +65,22 @@ public final class EndpointGroupPortOverrideArgs extends io.pulumi.resources.Res
     	      this.listenerPort = defaults.listenerPort;
         }
 
-        public Builder setEndpointPort(Input<Integer> endpointPort) {
+        public Builder endpointPort(Input<Integer> endpointPort) {
             this.endpointPort = Objects.requireNonNull(endpointPort);
             return this;
         }
 
-        public Builder setEndpointPort(Integer endpointPort) {
+        public Builder endpointPort(Integer endpointPort) {
             this.endpointPort = Input.of(Objects.requireNonNull(endpointPort));
             return this;
         }
 
-        public Builder setListenerPort(Input<Integer> listenerPort) {
+        public Builder listenerPort(Input<Integer> listenerPort) {
             this.listenerPort = Objects.requireNonNull(listenerPort);
             return this;
         }
 
-        public Builder setListenerPort(Integer listenerPort) {
+        public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = Input.of(Objects.requireNonNull(listenerPort));
             return this;
         }

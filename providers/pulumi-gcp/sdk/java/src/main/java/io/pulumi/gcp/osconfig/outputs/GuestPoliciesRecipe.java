@@ -163,32 +163,32 @@ public final class GuestPoliciesRecipe {
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifacts(@Nullable List<GuestPoliciesRecipeArtifact> artifacts) {
+        public Builder artifacts(@Nullable List<GuestPoliciesRecipeArtifact> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setDesiredState(@Nullable String desiredState) {
+        public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setInstallSteps(@Nullable List<GuestPoliciesRecipeInstallStep> installSteps) {
+        public Builder installSteps(@Nullable List<GuestPoliciesRecipeInstallStep> installSteps) {
             this.installSteps = installSteps;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateSteps(@Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps) {
+        public Builder updateSteps(@Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps) {
             this.updateSteps = updateSteps;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

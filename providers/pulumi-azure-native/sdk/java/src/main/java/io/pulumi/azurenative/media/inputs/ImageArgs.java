@@ -174,82 +174,82 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncMode = defaults.syncMode;
         }
 
-        public Builder setKeyFrameInterval(@Nullable Input<String> keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable Input<String> keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
-        public Builder setKeyFrameInterval(@Nullable String keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = Input.ofNullable(keyFrameInterval);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setRange(@Nullable Input<String> range) {
+        public Builder range(@Nullable Input<String> range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRange(@Nullable String range) {
+        public Builder range(@Nullable String range) {
             this.range = Input.ofNullable(range);
             return this;
         }
 
-        public Builder setStart(Input<String> start) {
+        public Builder start(Input<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Input.of(Objects.requireNonNull(start));
             return this;
         }
 
-        public Builder setStep(@Nullable Input<String> step) {
+        public Builder step(@Nullable Input<String> step) {
             this.step = step;
             return this;
         }
 
-        public Builder setStep(@Nullable String step) {
+        public Builder step(@Nullable String step) {
             this.step = Input.ofNullable(step);
             return this;
         }
 
-        public Builder setStretchMode(@Nullable Input<Either<String,StretchMode>> stretchMode) {
+        public Builder stretchMode(@Nullable Input<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
-        public Builder setStretchMode(@Nullable Either<String,StretchMode> stretchMode) {
+        public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
             this.stretchMode = Input.ofNullable(stretchMode);
             return this;
         }
 
-        public Builder setSyncMode(@Nullable Input<Either<String,VideoSyncMode>> syncMode) {
+        public Builder syncMode(@Nullable Input<Either<String,VideoSyncMode>> syncMode) {
             this.syncMode = syncMode;
             return this;
         }
 
-        public Builder setSyncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
+        public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
             this.syncMode = Input.ofNullable(syncMode);
             return this;
         }

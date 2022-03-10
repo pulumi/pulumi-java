@@ -59,17 +59,17 @@ public final class PipelineFilter {
     	      this.next = defaults.next;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

@@ -89,17 +89,17 @@ public final class WindowsUpdateSettingsResponse extends io.pulumi.resources.Inv
     	      this.exclusivePatches = defaults.exclusivePatches;
         }
 
-        public Builder setClassifications(List<String> classifications) {
+        public Builder classifications(List<String> classifications) {
             this.classifications = Objects.requireNonNull(classifications);
             return this;
         }
 
-        public Builder setExcludes(List<String> excludes) {
+        public Builder excludes(List<String> excludes) {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
 
-        public Builder setExclusivePatches(List<String> exclusivePatches) {
+        public Builder exclusivePatches(List<String> exclusivePatches) {
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }

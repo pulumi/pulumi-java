@@ -48,7 +48,7 @@ public final class GatewayRouteSpecHttp2RouteAction {
     	      this.target = defaults.target;
         }
 
-        public Builder setTarget(GatewayRouteSpecHttp2RouteActionTarget target) {
+        public Builder target(GatewayRouteSpecHttp2RouteActionTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

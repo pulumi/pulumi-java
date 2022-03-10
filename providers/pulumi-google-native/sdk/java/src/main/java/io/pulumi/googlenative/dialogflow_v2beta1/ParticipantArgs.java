@@ -140,72 +140,72 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.role = defaults.role;
         }
 
-        public Builder setConversationId(Input<String> conversationId) {
+        public Builder conversationId(Input<String> conversationId) {
             this.conversationId = Objects.requireNonNull(conversationId);
             return this;
         }
 
-        public Builder setConversationId(String conversationId) {
+        public Builder conversationId(String conversationId) {
             this.conversationId = Input.of(Objects.requireNonNull(conversationId));
             return this;
         }
 
-        public Builder setDocumentsMetadataFilters(@Nullable Input<Map<String,String>> documentsMetadataFilters) {
+        public Builder documentsMetadataFilters(@Nullable Input<Map<String,String>> documentsMetadataFilters) {
             this.documentsMetadataFilters = documentsMetadataFilters;
             return this;
         }
 
-        public Builder setDocumentsMetadataFilters(@Nullable Map<String,String> documentsMetadataFilters) {
+        public Builder documentsMetadataFilters(@Nullable Map<String,String> documentsMetadataFilters) {
             this.documentsMetadataFilters = Input.ofNullable(documentsMetadataFilters);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setObfuscatedExternalUserId(@Nullable Input<String> obfuscatedExternalUserId) {
+        public Builder obfuscatedExternalUserId(@Nullable Input<String> obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = obfuscatedExternalUserId;
             return this;
         }
 
-        public Builder setObfuscatedExternalUserId(@Nullable String obfuscatedExternalUserId) {
+        public Builder obfuscatedExternalUserId(@Nullable String obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = Input.ofNullable(obfuscatedExternalUserId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<ParticipantRole> role) {
+        public Builder role(@Nullable Input<ParticipantRole> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable ParticipantRole role) {
+        public Builder role(@Nullable ParticipantRole role) {
             this.role = Input.ofNullable(role);
             return this;
         }

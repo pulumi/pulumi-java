@@ -123,52 +123,52 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.yPos = defaults.yPos;
         }
 
-        public Builder setHeight(@Nullable Input<Integer> height) {
+        public Builder height(@Nullable Input<Integer> height) {
             this.height = height;
             return this;
         }
 
-        public Builder setHeight(@Nullable Integer height) {
+        public Builder height(@Nullable Integer height) {
             this.height = Input.ofNullable(height);
             return this;
         }
 
-        public Builder setWidget(@Nullable Input<WidgetArgs> widget) {
+        public Builder widget(@Nullable Input<WidgetArgs> widget) {
             this.widget = widget;
             return this;
         }
 
-        public Builder setWidget(@Nullable WidgetArgs widget) {
+        public Builder widget(@Nullable WidgetArgs widget) {
             this.widget = Input.ofNullable(widget);
             return this;
         }
 
-        public Builder setWidth(@Nullable Input<Integer> width) {
+        public Builder width(@Nullable Input<Integer> width) {
             this.width = width;
             return this;
         }
 
-        public Builder setWidth(@Nullable Integer width) {
+        public Builder width(@Nullable Integer width) {
             this.width = Input.ofNullable(width);
             return this;
         }
 
-        public Builder setXPos(@Nullable Input<Integer> xPos) {
+        public Builder xPos(@Nullable Input<Integer> xPos) {
             this.xPos = xPos;
             return this;
         }
 
-        public Builder setXPos(@Nullable Integer xPos) {
+        public Builder xPos(@Nullable Integer xPos) {
             this.xPos = Input.ofNullable(xPos);
             return this;
         }
 
-        public Builder setYPos(@Nullable Input<Integer> yPos) {
+        public Builder yPos(@Nullable Input<Integer> yPos) {
             this.yPos = yPos;
             return this;
         }
 
-        public Builder setYPos(@Nullable Integer yPos) {
+        public Builder yPos(@Nullable Integer yPos) {
             this.yPos = Input.ofNullable(yPos);
             return this;
         }

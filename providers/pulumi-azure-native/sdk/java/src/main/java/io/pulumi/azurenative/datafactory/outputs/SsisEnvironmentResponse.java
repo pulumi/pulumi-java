@@ -136,32 +136,32 @@ public final class SsisEnvironmentResponse {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolderId(@Nullable Double folderId) {
+        public Builder folderId(@Nullable Double folderId) {
             this.folderId = folderId;
             return this;
         }
 
-        public Builder setId(@Nullable Double id) {
+        public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVariables(@Nullable List<SsisVariableResponse> variables) {
+        public Builder variables(@Nullable List<SsisVariableResponse> variables) {
             this.variables = variables;
             return this;
         }

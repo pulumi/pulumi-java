@@ -308,97 +308,97 @@ public final class GetEngineVersionResult {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder setDefaultCharacterSet(String defaultCharacterSet) {
+        public Builder defaultCharacterSet(String defaultCharacterSet) {
             this.defaultCharacterSet = Objects.requireNonNull(defaultCharacterSet);
             return this;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setEngineDescription(String engineDescription) {
+        public Builder engineDescription(String engineDescription) {
             this.engineDescription = Objects.requireNonNull(engineDescription);
             return this;
         }
 
-        public Builder setExportableLogTypes(List<String> exportableLogTypes) {
+        public Builder exportableLogTypes(List<String> exportableLogTypes) {
             this.exportableLogTypes = Objects.requireNonNull(exportableLogTypes);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParameterGroupFamily(String parameterGroupFamily) {
+        public Builder parameterGroupFamily(String parameterGroupFamily) {
             this.parameterGroupFamily = Objects.requireNonNull(parameterGroupFamily);
             return this;
         }
 
-        public Builder setPreferredVersions(@Nullable List<String> preferredVersions) {
+        public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             this.preferredVersions = preferredVersions;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSupportedCharacterSets(List<String> supportedCharacterSets) {
+        public Builder supportedCharacterSets(List<String> supportedCharacterSets) {
             this.supportedCharacterSets = Objects.requireNonNull(supportedCharacterSets);
             return this;
         }
 
-        public Builder setSupportedFeatureNames(List<String> supportedFeatureNames) {
+        public Builder supportedFeatureNames(List<String> supportedFeatureNames) {
             this.supportedFeatureNames = Objects.requireNonNull(supportedFeatureNames);
             return this;
         }
 
-        public Builder setSupportedModes(List<String> supportedModes) {
+        public Builder supportedModes(List<String> supportedModes) {
             this.supportedModes = Objects.requireNonNull(supportedModes);
             return this;
         }
 
-        public Builder setSupportedTimezones(List<String> supportedTimezones) {
+        public Builder supportedTimezones(List<String> supportedTimezones) {
             this.supportedTimezones = Objects.requireNonNull(supportedTimezones);
             return this;
         }
 
-        public Builder setSupportsGlobalDatabases(Boolean supportsGlobalDatabases) {
+        public Builder supportsGlobalDatabases(Boolean supportsGlobalDatabases) {
             this.supportsGlobalDatabases = Objects.requireNonNull(supportsGlobalDatabases);
             return this;
         }
 
-        public Builder setSupportsLogExportsToCloudwatch(Boolean supportsLogExportsToCloudwatch) {
+        public Builder supportsLogExportsToCloudwatch(Boolean supportsLogExportsToCloudwatch) {
             this.supportsLogExportsToCloudwatch = Objects.requireNonNull(supportsLogExportsToCloudwatch);
             return this;
         }
 
-        public Builder setSupportsParallelQuery(Boolean supportsParallelQuery) {
+        public Builder supportsParallelQuery(Boolean supportsParallelQuery) {
             this.supportsParallelQuery = Objects.requireNonNull(supportsParallelQuery);
             return this;
         }
 
-        public Builder setSupportsReadReplica(Boolean supportsReadReplica) {
+        public Builder supportsReadReplica(Boolean supportsReadReplica) {
             this.supportsReadReplica = Objects.requireNonNull(supportsReadReplica);
             return this;
         }
 
-        public Builder setValidUpgradeTargets(List<String> validUpgradeTargets) {
+        public Builder validUpgradeTargets(List<String> validUpgradeTargets) {
             this.validUpgradeTargets = Objects.requireNonNull(validUpgradeTargets);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionDescription(String versionDescription) {
+        public Builder versionDescription(String versionDescription) {
             this.versionDescription = Objects.requireNonNull(versionDescription);
             return this;
         }

@@ -57,12 +57,12 @@ public final class LiveEventPreviewAccessControlArgs extends io.pulumi.resources
     	      this.ip = defaults.ip;
         }
 
-        public Builder setIp(@Nullable Input<IPAccessControlArgs> ip) {
+        public Builder ip(@Nullable Input<IPAccessControlArgs> ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setIp(@Nullable IPAccessControlArgs ip) {
+        public Builder ip(@Nullable IPAccessControlArgs ip) {
             this.ip = Input.ofNullable(ip);
             return this;
         }

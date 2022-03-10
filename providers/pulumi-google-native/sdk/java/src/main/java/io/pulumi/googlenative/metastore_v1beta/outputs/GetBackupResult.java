@@ -147,37 +147,37 @@ public final class GetBackupResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestoringServices(List<String> restoringServices) {
+        public Builder restoringServices(List<String> restoringServices) {
             this.restoringServices = Objects.requireNonNull(restoringServices);
             return this;
         }
 
-        public Builder setServiceRevision(ServiceResponse serviceRevision) {
+        public Builder serviceRevision(ServiceResponse serviceRevision) {
             this.serviceRevision = Objects.requireNonNull(serviceRevision);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

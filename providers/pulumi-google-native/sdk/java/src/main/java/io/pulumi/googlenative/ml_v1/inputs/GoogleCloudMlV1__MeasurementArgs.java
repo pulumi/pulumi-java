@@ -76,22 +76,22 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
     	      this.stepCount = defaults.stepCount;
         }
 
-        public Builder setMetrics(@Nullable Input<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<GoogleCloudMlV1_Measurement_MetricArgs> metrics) {
+        public Builder metrics(@Nullable List<GoogleCloudMlV1_Measurement_MetricArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setStepCount(@Nullable Input<String> stepCount) {
+        public Builder stepCount(@Nullable Input<String> stepCount) {
             this.stepCount = stepCount;
             return this;
         }
 
-        public Builder setStepCount(@Nullable String stepCount) {
+        public Builder stepCount(@Nullable String stepCount) {
             this.stepCount = Input.ofNullable(stepCount);
             return this;
         }

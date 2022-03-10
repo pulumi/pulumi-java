@@ -92,17 +92,17 @@ public final class HdfsLocationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

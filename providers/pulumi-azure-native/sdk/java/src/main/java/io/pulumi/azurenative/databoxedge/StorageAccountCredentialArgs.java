@@ -218,112 +218,112 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccountKey(@Nullable Input<AsymmetricEncryptedSecretArgs> accountKey) {
+        public Builder accountKey(@Nullable Input<AsymmetricEncryptedSecretArgs> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable AsymmetricEncryptedSecretArgs accountKey) {
+        public Builder accountKey(@Nullable AsymmetricEncryptedSecretArgs accountKey) {
             this.accountKey = Input.ofNullable(accountKey);
             return this;
         }
 
-        public Builder setAccountType(Input<Either<String,AccountType>> accountType) {
+        public Builder accountType(Input<Either<String,AccountType>> accountType) {
             this.accountType = Objects.requireNonNull(accountType);
             return this;
         }
 
-        public Builder setAccountType(Either<String,AccountType> accountType) {
+        public Builder accountType(Either<String,AccountType> accountType) {
             this.accountType = Input.of(Objects.requireNonNull(accountType));
             return this;
         }
 
-        public Builder setAlias(Input<String> alias) {
+        public Builder alias(Input<String> alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Input.of(Objects.requireNonNull(alias));
             return this;
         }
 
-        public Builder setBlobDomainName(@Nullable Input<String> blobDomainName) {
+        public Builder blobDomainName(@Nullable Input<String> blobDomainName) {
             this.blobDomainName = blobDomainName;
             return this;
         }
 
-        public Builder setBlobDomainName(@Nullable String blobDomainName) {
+        public Builder blobDomainName(@Nullable String blobDomainName) {
             this.blobDomainName = Input.ofNullable(blobDomainName);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Input<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSslStatus(Input<Either<String,SSLStatus>> sslStatus) {
+        public Builder sslStatus(Input<Either<String,SSLStatus>> sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
 
-        public Builder setSslStatus(Either<String,SSLStatus> sslStatus) {
+        public Builder sslStatus(Either<String,SSLStatus> sslStatus) {
             this.sslStatus = Input.of(Objects.requireNonNull(sslStatus));
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Input.ofNullable(storageAccountId);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

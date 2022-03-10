@@ -194,92 +194,92 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueElicitationPrompt = defaults.valueElicitationPrompt;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable Input<String> responseCard) {
+        public Builder responseCard(@Nullable Input<String> responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = Input.ofNullable(responseCard);
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable Input<List<String>> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable Input<List<String>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<String> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
             this.sampleUtterances = Input.ofNullable(sampleUtterances);
             return this;
         }
 
-        public Builder setSlotConstraint(Input<String> slotConstraint) {
+        public Builder slotConstraint(Input<String> slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
 
-        public Builder setSlotConstraint(String slotConstraint) {
+        public Builder slotConstraint(String slotConstraint) {
             this.slotConstraint = Input.of(Objects.requireNonNull(slotConstraint));
             return this;
         }
 
-        public Builder setSlotType(Input<String> slotType) {
+        public Builder slotType(Input<String> slotType) {
             this.slotType = Objects.requireNonNull(slotType);
             return this;
         }
 
-        public Builder setSlotType(String slotType) {
+        public Builder slotType(String slotType) {
             this.slotType = Input.of(Objects.requireNonNull(slotType));
             return this;
         }
 
-        public Builder setSlotTypeVersion(@Nullable Input<String> slotTypeVersion) {
+        public Builder slotTypeVersion(@Nullable Input<String> slotTypeVersion) {
             this.slotTypeVersion = slotTypeVersion;
             return this;
         }
 
-        public Builder setSlotTypeVersion(@Nullable String slotTypeVersion) {
+        public Builder slotTypeVersion(@Nullable String slotTypeVersion) {
             this.slotTypeVersion = Input.ofNullable(slotTypeVersion);
             return this;
         }
 
-        public Builder setValueElicitationPrompt(@Nullable Input<IntentSlotValueElicitationPromptArgs> valueElicitationPrompt) {
+        public Builder valueElicitationPrompt(@Nullable Input<IntentSlotValueElicitationPromptArgs> valueElicitationPrompt) {
             this.valueElicitationPrompt = valueElicitationPrompt;
             return this;
         }
 
-        public Builder setValueElicitationPrompt(@Nullable IntentSlotValueElicitationPromptArgs valueElicitationPrompt) {
+        public Builder valueElicitationPrompt(@Nullable IntentSlotValueElicitationPromptArgs valueElicitationPrompt) {
             this.valueElicitationPrompt = Input.ofNullable(valueElicitationPrompt);
             return this;
         }

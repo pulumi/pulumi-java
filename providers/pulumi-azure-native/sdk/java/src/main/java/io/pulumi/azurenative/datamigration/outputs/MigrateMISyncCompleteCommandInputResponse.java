@@ -48,7 +48,7 @@ public final class MigrateMISyncCompleteCommandInputResponse {
     	      this.sourceDatabaseName = defaults.sourceDatabaseName;
         }
 
-        public Builder setSourceDatabaseName(String sourceDatabaseName) {
+        public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }

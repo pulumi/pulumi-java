@@ -75,32 +75,32 @@ public final class ServiceTaskSpecContainerSpecDnsConfigArgs extends io.pulumi.r
     	      this.searches = defaults.searches;
         }
 
-        public Builder setNameservers(Input<List<String>> nameservers) {
+        public Builder nameservers(Input<List<String>> nameservers) {
             this.nameservers = Objects.requireNonNull(nameservers);
             return this;
         }
 
-        public Builder setNameservers(List<String> nameservers) {
+        public Builder nameservers(List<String> nameservers) {
             this.nameservers = Input.of(Objects.requireNonNull(nameservers));
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<String>> options) {
+        public Builder options(@Nullable Input<List<String>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<String> options) {
+        public Builder options(@Nullable List<String> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSearches(@Nullable Input<List<String>> searches) {
+        public Builder searches(@Nullable Input<List<String>> searches) {
             this.searches = searches;
             return this;
         }
 
-        public Builder setSearches(@Nullable List<String> searches) {
+        public Builder searches(@Nullable List<String> searches) {
             this.searches = Input.ofNullable(searches);
             return this;
         }

@@ -71,22 +71,22 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
     	      this.testingScore = defaults.testingScore;
         }
 
-        public Builder setTestingChallenge(@Nullable Input<String> testingChallenge) {
+        public Builder testingChallenge(@Nullable Input<String> testingChallenge) {
             this.testingChallenge = testingChallenge;
             return this;
         }
 
-        public Builder setTestingChallenge(@Nullable String testingChallenge) {
+        public Builder testingChallenge(@Nullable String testingChallenge) {
             this.testingChallenge = Input.ofNullable(testingChallenge);
             return this;
         }
 
-        public Builder setTestingScore(@Nullable Input<Double> testingScore) {
+        public Builder testingScore(@Nullable Input<Double> testingScore) {
             this.testingScore = testingScore;
             return this;
         }
 
-        public Builder setTestingScore(@Nullable Double testingScore) {
+        public Builder testingScore(@Nullable Double testingScore) {
             this.testingScore = Input.ofNullable(testingScore);
             return this;
         }

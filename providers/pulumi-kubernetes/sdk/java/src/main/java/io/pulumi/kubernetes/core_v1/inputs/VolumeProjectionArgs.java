@@ -109,42 +109,42 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
     	      this.serviceAccountToken = defaults.serviceAccountToken;
         }
 
-        public Builder setConfigMap(@Nullable Input<ConfigMapProjectionArgs> configMap) {
+        public Builder configMap(@Nullable Input<ConfigMapProjectionArgs> configMap) {
             this.configMap = configMap;
             return this;
         }
 
-        public Builder setConfigMap(@Nullable ConfigMapProjectionArgs configMap) {
+        public Builder configMap(@Nullable ConfigMapProjectionArgs configMap) {
             this.configMap = Input.ofNullable(configMap);
             return this;
         }
 
-        public Builder setDownwardAPI(@Nullable Input<DownwardAPIProjectionArgs> downwardAPI) {
+        public Builder downwardAPI(@Nullable Input<DownwardAPIProjectionArgs> downwardAPI) {
             this.downwardAPI = downwardAPI;
             return this;
         }
 
-        public Builder setDownwardAPI(@Nullable DownwardAPIProjectionArgs downwardAPI) {
+        public Builder downwardAPI(@Nullable DownwardAPIProjectionArgs downwardAPI) {
             this.downwardAPI = Input.ofNullable(downwardAPI);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<SecretProjectionArgs> secret) {
+        public Builder secret(@Nullable Input<SecretProjectionArgs> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable SecretProjectionArgs secret) {
+        public Builder secret(@Nullable SecretProjectionArgs secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setServiceAccountToken(@Nullable Input<ServiceAccountTokenProjectionArgs> serviceAccountToken) {
+        public Builder serviceAccountToken(@Nullable Input<ServiceAccountTokenProjectionArgs> serviceAccountToken) {
             this.serviceAccountToken = serviceAccountToken;
             return this;
         }
 
-        public Builder setServiceAccountToken(@Nullable ServiceAccountTokenProjectionArgs serviceAccountToken) {
+        public Builder serviceAccountToken(@Nullable ServiceAccountTokenProjectionArgs serviceAccountToken) {
             this.serviceAccountToken = Input.ofNullable(serviceAccountToken);
             return this;
         }

@@ -292,77 +292,77 @@ public final class WebActivityResponse extends io.pulumi.resources.InvokeArgs {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setAuthentication(@Nullable WebActivityAuthenticationResponse authentication) {
+        public Builder authentication(@Nullable WebActivityAuthenticationResponse authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setBody(@Nullable Object body) {
+        public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDatasets(@Nullable List<DatasetReferenceResponse> datasets) {
+        public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
             this.datasets = datasets;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Object headers) {
+        public Builder headers(@Nullable Object headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
+        public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

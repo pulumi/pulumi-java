@@ -67,22 +67,22 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<FleetTagsArgs> tags) {
+        public Builder tags(@Nullable Input<FleetTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable FleetTagsArgs tags) {
+        public Builder tags(@Nullable FleetTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

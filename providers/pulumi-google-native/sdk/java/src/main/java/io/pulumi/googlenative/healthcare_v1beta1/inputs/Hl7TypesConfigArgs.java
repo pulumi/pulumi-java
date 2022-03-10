@@ -76,22 +76,22 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setType(@Nullable Input<List<TypeArgs>> type) {
+        public Builder type(@Nullable Input<List<TypeArgs>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable List<TypeArgs> type) {
+        public Builder type(@Nullable List<TypeArgs> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<List<VersionSourceArgs>> version) {
+        public Builder version(@Nullable Input<List<VersionSourceArgs>> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable List<VersionSourceArgs> version) {
+        public Builder version(@Nullable List<VersionSourceArgs> version) {
             this.version = Input.ofNullable(version);
             return this;
         }

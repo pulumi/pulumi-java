@@ -63,22 +63,22 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
     	      this.fileCompression = defaults.fileCompression;
         }
 
-        public Builder setCharset(@Nullable Input<String> charset) {
+        public Builder charset(@Nullable Input<String> charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = Input.ofNullable(charset);
             return this;
         }
 
-        public Builder setFileCompression(@Nullable Input<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression) {
+        public Builder fileCompression(@Nullable Input<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression) {
             this.fileCompression = fileCompression;
             return this;
         }
 
-        public Builder setFileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
+        public Builder fileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
             this.fileCompression = Input.ofNullable(fileCompression);
             return this;
         }

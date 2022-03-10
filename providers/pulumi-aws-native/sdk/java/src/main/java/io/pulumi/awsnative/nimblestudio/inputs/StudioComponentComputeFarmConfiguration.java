@@ -74,12 +74,12 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setActiveDirectoryUser(@Nullable String activeDirectoryUser) {
+        public Builder activeDirectoryUser(@Nullable String activeDirectoryUser) {
             this.activeDirectoryUser = activeDirectoryUser;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }

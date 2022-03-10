@@ -202,102 +202,102 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
     	      this.storageEndpoint = defaults.storageEndpoint;
         }
 
-        public Builder setDisabledAlerts(@Nullable Input<List<String>> disabledAlerts) {
+        public Builder disabledAlerts(@Nullable Input<List<String>> disabledAlerts) {
             this.disabledAlerts = disabledAlerts;
             return this;
         }
 
-        public Builder setDisabledAlerts(@Nullable List<String> disabledAlerts) {
+        public Builder disabledAlerts(@Nullable List<String> disabledAlerts) {
             this.disabledAlerts = Input.ofNullable(disabledAlerts);
             return this;
         }
 
-        public Builder setEmailAccountAdmins(@Nullable Input<Boolean> emailAccountAdmins) {
+        public Builder emailAccountAdmins(@Nullable Input<Boolean> emailAccountAdmins) {
             this.emailAccountAdmins = emailAccountAdmins;
             return this;
         }
 
-        public Builder setEmailAccountAdmins(@Nullable Boolean emailAccountAdmins) {
+        public Builder emailAccountAdmins(@Nullable Boolean emailAccountAdmins) {
             this.emailAccountAdmins = Input.ofNullable(emailAccountAdmins);
             return this;
         }
 
-        public Builder setEmailAddresses(@Nullable Input<List<String>> emailAddresses) {
+        public Builder emailAddresses(@Nullable Input<List<String>> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
 
-        public Builder setEmailAddresses(@Nullable List<String> emailAddresses) {
+        public Builder emailAddresses(@Nullable List<String> emailAddresses) {
             this.emailAddresses = Input.ofNullable(emailAddresses);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
 
-        public Builder setSecurityAlertPolicyName(@Nullable Input<String> securityAlertPolicyName) {
+        public Builder securityAlertPolicyName(@Nullable Input<String> securityAlertPolicyName) {
             this.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
 
-        public Builder setSecurityAlertPolicyName(@Nullable String securityAlertPolicyName) {
+        public Builder securityAlertPolicyName(@Nullable String securityAlertPolicyName) {
             this.securityAlertPolicyName = Input.ofNullable(securityAlertPolicyName);
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setState(Input<ServerSecurityAlertPolicyState> state) {
+        public Builder state(Input<ServerSecurityAlertPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(ServerSecurityAlertPolicyState state) {
+        public Builder state(ServerSecurityAlertPolicyState state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder setStorageAccountAccessKey(@Nullable Input<String> storageAccountAccessKey) {
+        public Builder storageAccountAccessKey(@Nullable Input<String> storageAccountAccessKey) {
             this.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
 
-        public Builder setStorageAccountAccessKey(@Nullable String storageAccountAccessKey) {
+        public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
             this.storageAccountAccessKey = Input.ofNullable(storageAccountAccessKey);
             return this;
         }
 
-        public Builder setStorageEndpoint(@Nullable Input<String> storageEndpoint) {
+        public Builder storageEndpoint(@Nullable Input<String> storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
 
-        public Builder setStorageEndpoint(@Nullable String storageEndpoint) {
+        public Builder storageEndpoint(@Nullable String storageEndpoint) {
             this.storageEndpoint = Input.ofNullable(storageEndpoint);
             return this;
         }

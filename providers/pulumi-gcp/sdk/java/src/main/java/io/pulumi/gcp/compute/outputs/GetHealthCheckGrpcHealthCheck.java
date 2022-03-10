@@ -66,22 +66,22 @@ public final class GetHealthCheckGrpcHealthCheck {
     	      this.portSpecification = defaults.portSpecification;
         }
 
-        public Builder setGrpcServiceName(String grpcServiceName) {
+        public Builder grpcServiceName(String grpcServiceName) {
             this.grpcServiceName = Objects.requireNonNull(grpcServiceName);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setPortSpecification(String portSpecification) {
+        public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }

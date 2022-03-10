@@ -74,32 +74,32 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
     	      this.validationRequired = defaults.validationRequired;
         }
 
-        public Builder setCrossResourceGroupMoveEnabled(@Nullable Input<Boolean> crossResourceGroupMoveEnabled) {
+        public Builder crossResourceGroupMoveEnabled(@Nullable Input<Boolean> crossResourceGroupMoveEnabled) {
             this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
             return this;
         }
 
-        public Builder setCrossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
+        public Builder crossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
             this.crossResourceGroupMoveEnabled = Input.ofNullable(crossResourceGroupMoveEnabled);
             return this;
         }
 
-        public Builder setCrossSubscriptionMoveEnabled(@Nullable Input<Boolean> crossSubscriptionMoveEnabled) {
+        public Builder crossSubscriptionMoveEnabled(@Nullable Input<Boolean> crossSubscriptionMoveEnabled) {
             this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
             return this;
         }
 
-        public Builder setCrossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
+        public Builder crossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
             this.crossSubscriptionMoveEnabled = Input.ofNullable(crossSubscriptionMoveEnabled);
             return this;
         }
 
-        public Builder setValidationRequired(@Nullable Input<Boolean> validationRequired) {
+        public Builder validationRequired(@Nullable Input<Boolean> validationRequired) {
             this.validationRequired = validationRequired;
             return this;
         }
 
-        public Builder setValidationRequired(@Nullable Boolean validationRequired) {
+        public Builder validationRequired(@Nullable Boolean validationRequired) {
             this.validationRequired = Input.ofNullable(validationRequired);
             return this;
         }

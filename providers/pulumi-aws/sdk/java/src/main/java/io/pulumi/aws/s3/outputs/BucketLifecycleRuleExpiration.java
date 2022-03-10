@@ -85,17 +85,17 @@ public final class BucketLifecycleRuleExpiration {
     	      this.expiredObjectDeleteMarker = defaults.expiredObjectDeleteMarker;
         }
 
-        public Builder setDate(@Nullable String date) {
+        public Builder date(@Nullable String date) {
             this.date = date;
             return this;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }
 
-        public Builder setExpiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }

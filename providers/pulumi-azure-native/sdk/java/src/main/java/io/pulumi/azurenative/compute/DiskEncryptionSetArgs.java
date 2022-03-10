@@ -172,82 +172,82 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActiveKey(@Nullable Input<KeyForDiskEncryptionSetArgs> activeKey) {
+        public Builder activeKey(@Nullable Input<KeyForDiskEncryptionSetArgs> activeKey) {
             this.activeKey = activeKey;
             return this;
         }
 
-        public Builder setActiveKey(@Nullable KeyForDiskEncryptionSetArgs activeKey) {
+        public Builder activeKey(@Nullable KeyForDiskEncryptionSetArgs activeKey) {
             this.activeKey = Input.ofNullable(activeKey);
             return this;
         }
 
-        public Builder setDiskEncryptionSetName(@Nullable Input<String> diskEncryptionSetName) {
+        public Builder diskEncryptionSetName(@Nullable Input<String> diskEncryptionSetName) {
             this.diskEncryptionSetName = diskEncryptionSetName;
             return this;
         }
 
-        public Builder setDiskEncryptionSetName(@Nullable String diskEncryptionSetName) {
+        public Builder diskEncryptionSetName(@Nullable String diskEncryptionSetName) {
             this.diskEncryptionSetName = Input.ofNullable(diskEncryptionSetName);
             return this;
         }
 
-        public Builder setEncryptionType(@Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType) {
+        public Builder encryptionType(@Nullable Input<Either<String,DiskEncryptionSetType>> encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
-        public Builder setEncryptionType(@Nullable Either<String,DiskEncryptionSetType> encryptionType) {
+        public Builder encryptionType(@Nullable Either<String,DiskEncryptionSetType> encryptionType) {
             this.encryptionType = Input.ofNullable(encryptionType);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<EncryptionSetIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<EncryptionSetIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EncryptionSetIdentityArgs identity) {
+        public Builder identity(@Nullable EncryptionSetIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRotationToLatestKeyVersionEnabled(@Nullable Input<Boolean> rotationToLatestKeyVersionEnabled) {
+        public Builder rotationToLatestKeyVersionEnabled(@Nullable Input<Boolean> rotationToLatestKeyVersionEnabled) {
             this.rotationToLatestKeyVersionEnabled = rotationToLatestKeyVersionEnabled;
             return this;
         }
 
-        public Builder setRotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
+        public Builder rotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
             this.rotationToLatestKeyVersionEnabled = Input.ofNullable(rotationToLatestKeyVersionEnabled);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

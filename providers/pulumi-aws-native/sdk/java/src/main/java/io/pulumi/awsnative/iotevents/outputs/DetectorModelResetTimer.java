@@ -48,7 +48,7 @@ public final class DetectorModelResetTimer {
     	      this.timerName = defaults.timerName;
         }
 
-        public Builder setTimerName(String timerName) {
+        public Builder timerName(String timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }

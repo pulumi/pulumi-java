@@ -86,27 +86,27 @@ public final class GetMitigationActionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActionParams(@Nullable MitigationActionActionParams actionParams) {
+        public Builder actionParams(@Nullable MitigationActionActionParams actionParams) {
             this.actionParams = actionParams;
             return this;
         }
 
-        public Builder setMitigationActionArn(@Nullable String mitigationActionArn) {
+        public Builder mitigationActionArn(@Nullable String mitigationActionArn) {
             this.mitigationActionArn = mitigationActionArn;
             return this;
         }
 
-        public Builder setMitigationActionId(@Nullable String mitigationActionId) {
+        public Builder mitigationActionId(@Nullable String mitigationActionId) {
             this.mitigationActionId = mitigationActionId;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MitigationActionTag> tags) {
+        public Builder tags(@Nullable List<MitigationActionTag> tags) {
             this.tags = tags;
             return this;
         }

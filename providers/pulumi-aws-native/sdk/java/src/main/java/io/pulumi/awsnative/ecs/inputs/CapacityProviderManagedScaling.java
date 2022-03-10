@@ -103,27 +103,27 @@ public final class CapacityProviderManagedScaling extends io.pulumi.resources.In
     	      this.targetCapacity = defaults.targetCapacity;
         }
 
-        public Builder setInstanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
+        public Builder instanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
             this.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
 
-        public Builder setMaximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
+        public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
             this.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
 
-        public Builder setMinimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
+        public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
             this.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
 
-        public Builder setStatus(@Nullable CapacityProviderManagedScalingStatus status) {
+        public Builder status(@Nullable CapacityProviderManagedScalingStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTargetCapacity(@Nullable Integer targetCapacity) {
+        public Builder targetCapacity(@Nullable Integer targetCapacity) {
             this.targetCapacity = targetCapacity;
             return this;
         }

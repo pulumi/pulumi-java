@@ -52,12 +52,12 @@ public final class RecordWeightedRoutingPolicyArgs extends io.pulumi.resources.R
     	      this.weight = defaults.weight;
         }
 
-        public Builder setWeight(Input<Integer> weight) {
+        public Builder weight(Input<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }

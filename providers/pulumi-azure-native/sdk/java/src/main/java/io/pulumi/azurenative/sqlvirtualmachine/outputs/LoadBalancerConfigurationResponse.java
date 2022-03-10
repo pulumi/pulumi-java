@@ -118,27 +118,27 @@ public final class LoadBalancerConfigurationResponse {
     	      this.sqlVirtualMachineInstances = defaults.sqlVirtualMachineInstances;
         }
 
-        public Builder setLoadBalancerResourceId(@Nullable String loadBalancerResourceId) {
+        public Builder loadBalancerResourceId(@Nullable String loadBalancerResourceId) {
             this.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable PrivateIPAddressResponse privateIpAddress) {
+        public Builder privateIpAddress(@Nullable PrivateIPAddressResponse privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setProbePort(@Nullable Integer probePort) {
+        public Builder probePort(@Nullable Integer probePort) {
             this.probePort = probePort;
             return this;
         }
 
-        public Builder setPublicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
+        public Builder publicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
             this.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
 
-        public Builder setSqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
+        public Builder sqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
             this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }

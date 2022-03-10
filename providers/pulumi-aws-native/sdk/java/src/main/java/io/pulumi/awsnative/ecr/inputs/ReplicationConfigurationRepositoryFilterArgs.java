@@ -66,22 +66,22 @@ public final class ReplicationConfigurationRepositoryFilterArgs extends io.pulum
     	      this.filterType = defaults.filterType;
         }
 
-        public Builder setFilter(Input<String> filter) {
+        public Builder filter(Input<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder setFilterType(Input<ReplicationConfigurationFilterType> filterType) {
+        public Builder filterType(Input<ReplicationConfigurationFilterType> filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
         }
 
-        public Builder setFilterType(ReplicationConfigurationFilterType filterType) {
+        public Builder filterType(ReplicationConfigurationFilterType filterType) {
             this.filterType = Input.of(Objects.requireNonNull(filterType));
             return this;
         }

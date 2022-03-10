@@ -66,12 +66,12 @@ public final class ApplicationSubComponentTypeConfiguration {
     	      this.subComponentType = defaults.subComponentType;
         }
 
-        public Builder setSubComponentConfigurationDetails(ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails) {
+        public Builder subComponentConfigurationDetails(ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails) {
             this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails);
             return this;
         }
 
-        public Builder setSubComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
+        public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
             this.subComponentType = Objects.requireNonNull(subComponentType);
             return this;
         }

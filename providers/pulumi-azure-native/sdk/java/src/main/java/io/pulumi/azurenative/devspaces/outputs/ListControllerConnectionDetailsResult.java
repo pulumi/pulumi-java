@@ -50,7 +50,7 @@ public final class ListControllerConnectionDetailsResult {
     	      this.connectionDetailsList = defaults.connectionDetailsList;
         }
 
-        public Builder setConnectionDetailsList(@Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
+        public Builder connectionDetailsList(@Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
             this.connectionDetailsList = connectionDetailsList;
             return this;
         }

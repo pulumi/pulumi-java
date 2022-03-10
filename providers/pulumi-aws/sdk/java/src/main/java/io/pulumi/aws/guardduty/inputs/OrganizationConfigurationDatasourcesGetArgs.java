@@ -53,12 +53,12 @@ public final class OrganizationConfigurationDatasourcesGetArgs extends io.pulumi
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder setS3Logs(@Nullable Input<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
+        public Builder s3Logs(@Nullable Input<OrganizationConfigurationDatasourcesS3LogsGetArgs> s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }
 
-        public Builder setS3Logs(@Nullable OrganizationConfigurationDatasourcesS3LogsGetArgs s3Logs) {
+        public Builder s3Logs(@Nullable OrganizationConfigurationDatasourcesS3LogsGetArgs s3Logs) {
             this.s3Logs = Input.ofNullable(s3Logs);
             return this;
         }

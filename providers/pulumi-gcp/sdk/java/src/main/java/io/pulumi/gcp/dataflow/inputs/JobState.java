@@ -400,222 +400,222 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdditionalExperiments(@Nullable Input<List<String>> additionalExperiments) {
+        public Builder additionalExperiments(@Nullable Input<List<String>> additionalExperiments) {
             this.additionalExperiments = additionalExperiments;
             return this;
         }
 
-        public Builder setAdditionalExperiments(@Nullable List<String> additionalExperiments) {
+        public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
             this.additionalExperiments = Input.ofNullable(additionalExperiments);
             return this;
         }
 
-        public Builder setEnableStreamingEngine(@Nullable Input<Boolean> enableStreamingEngine) {
+        public Builder enableStreamingEngine(@Nullable Input<Boolean> enableStreamingEngine) {
             this.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
 
-        public Builder setEnableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
+        public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
             this.enableStreamingEngine = Input.ofNullable(enableStreamingEngine);
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable Input<String> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Input<String> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable String ipConfiguration) {
+        public Builder ipConfiguration(@Nullable String ipConfiguration) {
             this.ipConfiguration = Input.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder setJobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Input<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,Object>> labels) {
+        public Builder labels(@Nullable Input<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,Object> labels) {
+        public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Input<Integer> maxWorkers) {
+        public Builder maxWorkers(@Nullable Input<Integer> maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Integer maxWorkers) {
+        public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = Input.ofNullable(maxWorkers);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setOnDelete(@Nullable Input<String> onDelete) {
+        public Builder onDelete(@Nullable Input<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
 
-        public Builder setOnDelete(@Nullable String onDelete) {
+        public Builder onDelete(@Nullable String onDelete) {
             this.onDelete = Input.ofNullable(onDelete);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder setTempGcsLocation(@Nullable Input<String> tempGcsLocation) {
+        public Builder tempGcsLocation(@Nullable Input<String> tempGcsLocation) {
             this.tempGcsLocation = tempGcsLocation;
             return this;
         }
 
-        public Builder setTempGcsLocation(@Nullable String tempGcsLocation) {
+        public Builder tempGcsLocation(@Nullable String tempGcsLocation) {
             this.tempGcsLocation = Input.ofNullable(tempGcsLocation);
             return this;
         }
 
-        public Builder setTemplateGcsPath(@Nullable Input<String> templateGcsPath) {
+        public Builder templateGcsPath(@Nullable Input<String> templateGcsPath) {
             this.templateGcsPath = templateGcsPath;
             return this;
         }
 
-        public Builder setTemplateGcsPath(@Nullable String templateGcsPath) {
+        public Builder templateGcsPath(@Nullable String templateGcsPath) {
             this.templateGcsPath = Input.ofNullable(templateGcsPath);
             return this;
         }
 
-        public Builder setTransformNameMapping(@Nullable Input<Map<String,Object>> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Input<Map<String,Object>> transformNameMapping) {
             this.transformNameMapping = transformNameMapping;
             return this;
         }
 
-        public Builder setTransformNameMapping(@Nullable Map<String,Object> transformNameMapping) {
+        public Builder transformNameMapping(@Nullable Map<String,Object> transformNameMapping) {
             this.transformNameMapping = Input.ofNullable(transformNameMapping);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

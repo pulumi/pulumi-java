@@ -90,32 +90,32 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
     	      this.s3ObjectKey = defaults.s3ObjectKey;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setS3BucketName(Input<String> s3BucketName) {
+        public Builder s3BucketName(Input<String> s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Input.of(Objects.requireNonNull(s3BucketName));
             return this;
         }
 
-        public Builder setS3ObjectKey(Input<String> s3ObjectKey) {
+        public Builder s3ObjectKey(Input<String> s3ObjectKey) {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }
 
-        public Builder setS3ObjectKey(String s3ObjectKey) {
+        public Builder s3ObjectKey(String s3ObjectKey) {
             this.s3ObjectKey = Input.of(Objects.requireNonNull(s3ObjectKey));
             return this;
         }

@@ -68,12 +68,12 @@ public final class WebServiceParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setCertificateThumbprint(@Nullable String certificateThumbprint) {
+        public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

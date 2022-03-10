@@ -51,12 +51,12 @@ public final class TaskDefinitionInferenceAccelerator {
     	      this.deviceType = defaults.deviceType;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceType(@Nullable String deviceType) {
+        public Builder deviceType(@Nullable String deviceType) {
             this.deviceType = deviceType;
             return this;
         }

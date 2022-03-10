@@ -100,22 +100,22 @@ public final class ExecStepConfigResponse {
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedSuccessCodes(List<Integer> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(List<Integer> allowedSuccessCodes) {
             this.allowedSuccessCodes = Objects.requireNonNull(allowedSuccessCodes);
             return this;
         }
 
-        public Builder setGcsObject(GcsObjectResponse gcsObject) {
+        public Builder gcsObject(GcsObjectResponse gcsObject) {
             this.gcsObject = Objects.requireNonNull(gcsObject);
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }

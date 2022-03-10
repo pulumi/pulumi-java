@@ -89,17 +89,17 @@ public final class TableMaterializedView {
     	      this.refreshIntervalMs = defaults.refreshIntervalMs;
         }
 
-        public Builder setEnableRefresh(@Nullable Boolean enableRefresh) {
+        public Builder enableRefresh(@Nullable Boolean enableRefresh) {
             this.enableRefresh = enableRefresh;
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setRefreshIntervalMs(@Nullable Integer refreshIntervalMs) {
+        public Builder refreshIntervalMs(@Nullable Integer refreshIntervalMs) {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
         }

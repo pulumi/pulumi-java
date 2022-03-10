@@ -52,7 +52,7 @@ public final class CertificateCertificateDescriptionConfigValue {
     	      this.keyUsages = defaults.keyUsages;
         }
 
-        public Builder setKeyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages) {
+        public Builder keyUsages(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages) {
             this.keyUsages = keyUsages;
             return this;
         }

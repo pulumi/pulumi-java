@@ -85,32 +85,32 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setFirstExecutionFrom(Input<String> firstExecutionFrom) {
+        public Builder firstExecutionFrom(Input<String> firstExecutionFrom) {
             this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom);
             return this;
         }
 
-        public Builder setFirstExecutionFrom(String firstExecutionFrom) {
+        public Builder firstExecutionFrom(String firstExecutionFrom) {
             this.firstExecutionFrom = Input.of(Objects.requireNonNull(firstExecutionFrom));
             return this;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
 
-        public Builder setScheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Input<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }

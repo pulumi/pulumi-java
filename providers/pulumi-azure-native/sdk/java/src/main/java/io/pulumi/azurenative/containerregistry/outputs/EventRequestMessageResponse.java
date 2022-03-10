@@ -117,27 +117,27 @@ public final class EventRequestMessageResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setContent(@Nullable EventContentResponse content) {
+        public Builder content(@Nullable EventContentResponse content) {
             this.content = content;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setRequestUri(@Nullable String requestUri) {
+        public Builder requestUri(@Nullable String requestUri) {
             this.requestUri = requestUri;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

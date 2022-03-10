@@ -50,7 +50,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
     	      this.realms = defaults.realms;
         }
 
-        public Builder setRealms(@Nullable List<String> realms) {
+        public Builder realms(@Nullable List<String> realms) {
             this.realms = realms;
             return this;
         }

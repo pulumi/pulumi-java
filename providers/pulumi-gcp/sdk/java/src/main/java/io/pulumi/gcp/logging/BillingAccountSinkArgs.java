@@ -174,82 +174,82 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     	      this.name = defaults.name;
         }
 
-        public Builder setBigqueryOptions(@Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable Input<BillingAccountSinkBigqueryOptionsArgs> bigqueryOptions) {
             this.bigqueryOptions = bigqueryOptions;
             return this;
         }
 
-        public Builder setBigqueryOptions(@Nullable BillingAccountSinkBigqueryOptionsArgs bigqueryOptions) {
+        public Builder bigqueryOptions(@Nullable BillingAccountSinkBigqueryOptionsArgs bigqueryOptions) {
             this.bigqueryOptions = Input.ofNullable(bigqueryOptions);
             return this;
         }
 
-        public Builder setBillingAccount(Input<String> billingAccount) {
+        public Builder billingAccount(Input<String> billingAccount) {
             this.billingAccount = Objects.requireNonNull(billingAccount);
             return this;
         }
 
-        public Builder setBillingAccount(String billingAccount) {
+        public Builder billingAccount(String billingAccount) {
             this.billingAccount = Input.of(Objects.requireNonNull(billingAccount));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setExclusions(@Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Input<List<BillingAccountSinkExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<BillingAccountSinkExclusionArgs> exclusions) {
+        public Builder exclusions(@Nullable List<BillingAccountSinkExclusionArgs> exclusions) {
             this.exclusions = Input.ofNullable(exclusions);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

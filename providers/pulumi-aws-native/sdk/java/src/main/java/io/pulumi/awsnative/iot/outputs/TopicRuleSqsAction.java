@@ -60,17 +60,17 @@ public final class TopicRuleSqsAction {
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder setQueueUrl(String queueUrl) {
+        public Builder queueUrl(String queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setUseBase64(@Nullable Boolean useBase64) {
+        public Builder useBase64(@Nullable Boolean useBase64) {
             this.useBase64 = useBase64;
             return this;
         }

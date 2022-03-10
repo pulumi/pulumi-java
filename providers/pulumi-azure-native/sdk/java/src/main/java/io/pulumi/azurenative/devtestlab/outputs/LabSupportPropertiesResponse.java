@@ -67,12 +67,12 @@ public final class LabSupportPropertiesResponse {
     	      this.markdown = defaults.markdown;
         }
 
-        public Builder setEnabled(@Nullable String enabled) {
+        public Builder enabled(@Nullable String enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setMarkdown(@Nullable String markdown) {
+        public Builder markdown(@Nullable String markdown) {
             this.markdown = markdown;
             return this;
         }

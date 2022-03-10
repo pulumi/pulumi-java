@@ -58,12 +58,12 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.podFixed = defaults.podFixed;
         }
 
-        public Builder setPodFixed(@Nullable Input<Map<String,String>> podFixed) {
+        public Builder podFixed(@Nullable Input<Map<String,String>> podFixed) {
             this.podFixed = podFixed;
             return this;
         }
 
-        public Builder setPodFixed(@Nullable Map<String,String> podFixed) {
+        public Builder podFixed(@Nullable Map<String,String> podFixed) {
             this.podFixed = Input.ofNullable(podFixed);
             return this;
         }

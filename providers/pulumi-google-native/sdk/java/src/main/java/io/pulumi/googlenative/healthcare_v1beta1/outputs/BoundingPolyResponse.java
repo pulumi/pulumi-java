@@ -67,12 +67,12 @@ public final class BoundingPolyResponse {
     	      this.vertices = defaults.vertices;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setVertices(List<VertexResponse> vertices) {
+        public Builder vertices(List<VertexResponse> vertices) {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }

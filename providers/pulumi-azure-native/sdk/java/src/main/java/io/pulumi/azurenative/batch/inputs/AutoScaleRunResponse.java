@@ -79,17 +79,17 @@ public final class AutoScaleRunResponse extends io.pulumi.resources.InvokeArgs {
     	      this.results = defaults.results;
         }
 
-        public Builder setError(@Nullable AutoScaleRunErrorResponse error) {
+        public Builder error(@Nullable AutoScaleRunErrorResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setEvaluationTime(String evaluationTime) {
+        public Builder evaluationTime(String evaluationTime) {
             this.evaluationTime = Objects.requireNonNull(evaluationTime);
             return this;
         }
 
-        public Builder setResults(@Nullable String results) {
+        public Builder results(@Nullable String results) {
             this.results = results;
             return this;
         }

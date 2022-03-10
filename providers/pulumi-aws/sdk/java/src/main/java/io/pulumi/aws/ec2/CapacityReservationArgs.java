@@ -237,122 +237,122 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder setAvailabilityZone(Input<String> availabilityZone) {
+        public Builder availabilityZone(Input<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Input.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Input.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder setEndDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Input<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = Input.ofNullable(endDate);
             return this;
         }
 
-        public Builder setEndDateType(@Nullable Input<String> endDateType) {
+        public Builder endDateType(@Nullable Input<String> endDateType) {
             this.endDateType = endDateType;
             return this;
         }
 
-        public Builder setEndDateType(@Nullable String endDateType) {
+        public Builder endDateType(@Nullable String endDateType) {
             this.endDateType = Input.ofNullable(endDateType);
             return this;
         }
 
-        public Builder setEphemeralStorage(@Nullable Input<Boolean> ephemeralStorage) {
+        public Builder ephemeralStorage(@Nullable Input<Boolean> ephemeralStorage) {
             this.ephemeralStorage = ephemeralStorage;
             return this;
         }
 
-        public Builder setEphemeralStorage(@Nullable Boolean ephemeralStorage) {
+        public Builder ephemeralStorage(@Nullable Boolean ephemeralStorage) {
             this.ephemeralStorage = Input.ofNullable(ephemeralStorage);
             return this;
         }
 
-        public Builder setInstanceCount(Input<Integer> instanceCount) {
+        public Builder instanceCount(Input<Integer> instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
 
-        public Builder setInstanceCount(Integer instanceCount) {
+        public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Input.of(Objects.requireNonNull(instanceCount));
             return this;
         }
 
-        public Builder setInstanceMatchCriteria(@Nullable Input<String> instanceMatchCriteria) {
+        public Builder instanceMatchCriteria(@Nullable Input<String> instanceMatchCriteria) {
             this.instanceMatchCriteria = instanceMatchCriteria;
             return this;
         }
 
-        public Builder setInstanceMatchCriteria(@Nullable String instanceMatchCriteria) {
+        public Builder instanceMatchCriteria(@Nullable String instanceMatchCriteria) {
             this.instanceMatchCriteria = Input.ofNullable(instanceMatchCriteria);
             return this;
         }
 
-        public Builder setInstancePlatform(Input<Either<String,InstancePlatform>> instancePlatform) {
+        public Builder instancePlatform(Input<Either<String,InstancePlatform>> instancePlatform) {
             this.instancePlatform = Objects.requireNonNull(instancePlatform);
             return this;
         }
 
-        public Builder setInstancePlatform(Either<String,InstancePlatform> instancePlatform) {
+        public Builder instancePlatform(Either<String,InstancePlatform> instancePlatform) {
             this.instancePlatform = Input.of(Objects.requireNonNull(instancePlatform));
             return this;
         }
 
-        public Builder setInstanceType(Input<Either<String,InstanceType>> instanceType) {
+        public Builder instanceType(Input<Either<String,InstanceType>> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(Either<String,InstanceType> instanceType) {
+        public Builder instanceType(Either<String,InstanceType> instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Input<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable String outpostArn) {
+        public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Input.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTenancy(@Nullable Input<Either<String,Tenancy>> tenancy) {
+        public Builder tenancy(@Nullable Input<Either<String,Tenancy>> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
-        public Builder setTenancy(@Nullable Either<String,Tenancy> tenancy) {
+        public Builder tenancy(@Nullable Either<String,Tenancy> tenancy) {
             this.tenancy = Input.ofNullable(tenancy);
             return this;
         }

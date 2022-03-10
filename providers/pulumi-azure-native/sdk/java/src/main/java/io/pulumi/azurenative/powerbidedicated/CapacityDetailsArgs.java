@@ -172,82 +172,82 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdministration(@Nullable Input<DedicatedCapacityAdministratorsArgs> administration) {
+        public Builder administration(@Nullable Input<DedicatedCapacityAdministratorsArgs> administration) {
             this.administration = administration;
             return this;
         }
 
-        public Builder setAdministration(@Nullable DedicatedCapacityAdministratorsArgs administration) {
+        public Builder administration(@Nullable DedicatedCapacityAdministratorsArgs administration) {
             this.administration = Input.ofNullable(administration);
             return this;
         }
 
-        public Builder setDedicatedCapacityName(@Nullable Input<String> dedicatedCapacityName) {
+        public Builder dedicatedCapacityName(@Nullable Input<String> dedicatedCapacityName) {
             this.dedicatedCapacityName = dedicatedCapacityName;
             return this;
         }
 
-        public Builder setDedicatedCapacityName(@Nullable String dedicatedCapacityName) {
+        public Builder dedicatedCapacityName(@Nullable String dedicatedCapacityName) {
             this.dedicatedCapacityName = Input.ofNullable(dedicatedCapacityName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,Mode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,Mode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,Mode> mode) {
+        public Builder mode(@Nullable Either<String,Mode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<CapacitySkuArgs> sku) {
+        public Builder sku(Input<CapacitySkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(CapacitySkuArgs sku) {
+        public Builder sku(CapacitySkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setSystemData(@Nullable Input<SystemDataArgs> systemData) {
+        public Builder systemData(@Nullable Input<SystemDataArgs> systemData) {
             this.systemData = systemData;
             return this;
         }
 
-        public Builder setSystemData(@Nullable SystemDataArgs systemData) {
+        public Builder systemData(@Nullable SystemDataArgs systemData) {
             this.systemData = Input.ofNullable(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

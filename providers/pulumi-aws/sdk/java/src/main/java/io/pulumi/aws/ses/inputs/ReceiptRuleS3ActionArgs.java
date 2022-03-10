@@ -119,52 +119,52 @@ public final class ReceiptRuleS3ActionArgs extends io.pulumi.resources.ResourceA
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable Input<String> objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable Input<String> objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable String objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = Input.ofNullable(objectKeyPrefix);
             return this;
         }
 
-        public Builder setPosition(Input<Integer> position) {
+        public Builder position(Input<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder setTopicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Input<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Input.ofNullable(topicArn);
             return this;
         }

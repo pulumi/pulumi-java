@@ -141,62 +141,62 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setCauses(@Nullable Input<List<StatusCauseArgs>> causes) {
+        public Builder causes(@Nullable Input<List<StatusCauseArgs>> causes) {
             this.causes = causes;
             return this;
         }
 
-        public Builder setCauses(@Nullable List<StatusCauseArgs> causes) {
+        public Builder causes(@Nullable List<StatusCauseArgs> causes) {
             this.causes = Input.ofNullable(causes);
             return this;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRetryAfterSeconds(@Nullable Input<Integer> retryAfterSeconds) {
+        public Builder retryAfterSeconds(@Nullable Input<Integer> retryAfterSeconds) {
             this.retryAfterSeconds = retryAfterSeconds;
             return this;
         }
 
-        public Builder setRetryAfterSeconds(@Nullable Integer retryAfterSeconds) {
+        public Builder retryAfterSeconds(@Nullable Integer retryAfterSeconds) {
             this.retryAfterSeconds = Input.ofNullable(retryAfterSeconds);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

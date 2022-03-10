@@ -427,122 +427,122 @@ public final class GetStreamingJobResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCompatibilityLevel(@Nullable String compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable String compatibilityLevel) {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDataLocale(@Nullable String dataLocale) {
+        public Builder dataLocale(@Nullable String dataLocale) {
             this.dataLocale = dataLocale;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setEventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
+        public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
             return this;
         }
 
-        public Builder setEventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
+        public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
             return this;
         }
 
-        public Builder setEventsOutOfOrderPolicy(@Nullable String eventsOutOfOrderPolicy) {
+        public Builder eventsOutOfOrderPolicy(@Nullable String eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
             return this;
         }
 
-        public Builder setFunctions(@Nullable List<FunctionResponse> functions) {
+        public Builder functions(@Nullable List<FunctionResponse> functions) {
             this.functions = functions;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInputs(@Nullable List<InputResponse> inputs) {
+        public Builder inputs(@Nullable List<InputResponse> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
-        public Builder setJobState(String jobState) {
+        public Builder jobState(String jobState) {
             this.jobState = Objects.requireNonNull(jobState);
             return this;
         }
 
-        public Builder setLastOutputEventTime(String lastOutputEventTime) {
+        public Builder lastOutputEventTime(String lastOutputEventTime) {
             this.lastOutputEventTime = Objects.requireNonNull(lastOutputEventTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputErrorPolicy(@Nullable String outputErrorPolicy) {
+        public Builder outputErrorPolicy(@Nullable String outputErrorPolicy) {
             this.outputErrorPolicy = outputErrorPolicy;
             return this;
         }
 
-        public Builder setOutputStartMode(@Nullable String outputStartMode) {
+        public Builder outputStartMode(@Nullable String outputStartMode) {
             this.outputStartMode = outputStartMode;
             return this;
         }
 
-        public Builder setOutputStartTime(@Nullable String outputStartTime) {
+        public Builder outputStartTime(@Nullable String outputStartTime) {
             this.outputStartTime = outputStartTime;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<OutputResponse> outputs) {
+        public Builder outputs(@Nullable List<OutputResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransformation(@Nullable TransformationResponse transformation) {
+        public Builder transformation(@Nullable TransformationResponse transformation) {
             this.transformation = transformation;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

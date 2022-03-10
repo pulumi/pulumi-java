@@ -131,32 +131,32 @@ public final class DiskResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setMountPoint(String mountPoint) {
+        public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(Boolean readOnly) {
+        public Builder readOnly(Boolean readOnly) {
             this.readOnly = Objects.requireNonNull(readOnly);
             return this;
         }
 
-        public Builder setSizeGb(Integer sizeGb) {
+        public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

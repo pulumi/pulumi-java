@@ -49,12 +49,12 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
     	      this.confirmationUrl = defaults.confirmationUrl;
         }
 
-        public Builder setConfirmationUrl(@Nullable Input<String> confirmationUrl) {
+        public Builder confirmationUrl(@Nullable Input<String> confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
 
-        public Builder setConfirmationUrl(@Nullable String confirmationUrl) {
+        public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = Input.ofNullable(confirmationUrl);
             return this;
         }

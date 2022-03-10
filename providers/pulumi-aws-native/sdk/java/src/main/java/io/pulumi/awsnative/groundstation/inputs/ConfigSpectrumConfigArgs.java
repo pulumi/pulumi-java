@@ -76,32 +76,32 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setBandwidth(@Nullable Input<ConfigFrequencyBandwidthArgs> bandwidth) {
+        public Builder bandwidth(@Nullable Input<ConfigFrequencyBandwidthArgs> bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
-        public Builder setBandwidth(@Nullable ConfigFrequencyBandwidthArgs bandwidth) {
+        public Builder bandwidth(@Nullable ConfigFrequencyBandwidthArgs bandwidth) {
             this.bandwidth = Input.ofNullable(bandwidth);
             return this;
         }
 
-        public Builder setCenterFrequency(@Nullable Input<ConfigFrequencyArgs> centerFrequency) {
+        public Builder centerFrequency(@Nullable Input<ConfigFrequencyArgs> centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
 
-        public Builder setCenterFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
+        public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
             this.centerFrequency = Input.ofNullable(centerFrequency);
             return this;
         }
 
-        public Builder setPolarization(@Nullable Input<ConfigPolarization> polarization) {
+        public Builder polarization(@Nullable Input<ConfigPolarization> polarization) {
             this.polarization = polarization;
             return this;
         }
 
-        public Builder setPolarization(@Nullable ConfigPolarization polarization) {
+        public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = Input.ofNullable(polarization);
             return this;
         }

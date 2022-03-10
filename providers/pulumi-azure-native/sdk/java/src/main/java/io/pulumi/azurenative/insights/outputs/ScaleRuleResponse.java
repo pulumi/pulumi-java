@@ -66,12 +66,12 @@ public final class ScaleRuleResponse {
     	      this.scaleAction = defaults.scaleAction;
         }
 
-        public Builder setMetricTrigger(MetricTriggerResponse metricTrigger) {
+        public Builder metricTrigger(MetricTriggerResponse metricTrigger) {
             this.metricTrigger = Objects.requireNonNull(metricTrigger);
             return this;
         }
 
-        public Builder setScaleAction(ScaleActionResponse scaleAction) {
+        public Builder scaleAction(ScaleActionResponse scaleAction) {
             this.scaleAction = Objects.requireNonNull(scaleAction);
             return this;
         }

@@ -149,37 +149,37 @@ public final class ManagedClusterAADProfileResponse {
     	      this.tenantID = defaults.tenantID;
         }
 
-        public Builder setAdminGroupObjectIDs(@Nullable List<String> adminGroupObjectIDs) {
+        public Builder adminGroupObjectIDs(@Nullable List<String> adminGroupObjectIDs) {
             this.adminGroupObjectIDs = adminGroupObjectIDs;
             return this;
         }
 
-        public Builder setClientAppID(@Nullable String clientAppID) {
+        public Builder clientAppID(@Nullable String clientAppID) {
             this.clientAppID = clientAppID;
             return this;
         }
 
-        public Builder setEnableAzureRBAC(@Nullable Boolean enableAzureRBAC) {
+        public Builder enableAzureRBAC(@Nullable Boolean enableAzureRBAC) {
             this.enableAzureRBAC = enableAzureRBAC;
             return this;
         }
 
-        public Builder setManaged(@Nullable Boolean managed) {
+        public Builder managed(@Nullable Boolean managed) {
             this.managed = managed;
             return this;
         }
 
-        public Builder setServerAppID(@Nullable String serverAppID) {
+        public Builder serverAppID(@Nullable String serverAppID) {
             this.serverAppID = serverAppID;
             return this;
         }
 
-        public Builder setServerAppSecret(@Nullable String serverAppSecret) {
+        public Builder serverAppSecret(@Nullable String serverAppSecret) {
             this.serverAppSecret = serverAppSecret;
             return this;
         }
 
-        public Builder setTenantID(@Nullable String tenantID) {
+        public Builder tenantID(@Nullable String tenantID) {
             this.tenantID = tenantID;
             return this;
         }

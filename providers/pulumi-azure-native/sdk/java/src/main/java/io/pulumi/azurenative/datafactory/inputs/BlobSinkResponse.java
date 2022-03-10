@@ -238,62 +238,62 @@ public final class BlobSinkResponse extends io.pulumi.resources.InvokeArgs {
     	      this.writeBatchTimeout = defaults.writeBatchTimeout;
         }
 
-        public Builder setBlobWriterAddHeader(@Nullable Object blobWriterAddHeader) {
+        public Builder blobWriterAddHeader(@Nullable Object blobWriterAddHeader) {
             this.blobWriterAddHeader = blobWriterAddHeader;
             return this;
         }
 
-        public Builder setBlobWriterDateTimeFormat(@Nullable Object blobWriterDateTimeFormat) {
+        public Builder blobWriterDateTimeFormat(@Nullable Object blobWriterDateTimeFormat) {
             this.blobWriterDateTimeFormat = blobWriterDateTimeFormat;
             return this;
         }
 
-        public Builder setBlobWriterOverwriteFiles(@Nullable Object blobWriterOverwriteFiles) {
+        public Builder blobWriterOverwriteFiles(@Nullable Object blobWriterOverwriteFiles) {
             this.blobWriterOverwriteFiles = blobWriterOverwriteFiles;
             return this;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMetadata(@Nullable List<MetadataItemResponse> metadata) {
+        public Builder metadata(@Nullable List<MetadataItemResponse> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }

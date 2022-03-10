@@ -184,92 +184,92 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAssetSizeBytes(@Nullable Input<Integer> assetSizeBytes) {
+        public Builder assetSizeBytes(@Nullable Input<Integer> assetSizeBytes) {
             this.assetSizeBytes = assetSizeBytes;
             return this;
         }
 
-        public Builder setAssetSizeBytes(@Nullable Integer assetSizeBytes) {
+        public Builder assetSizeBytes(@Nullable Integer assetSizeBytes) {
             this.assetSizeBytes = Input.ofNullable(assetSizeBytes);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Input.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setRepositoryCount(@Nullable Input<Integer> repositoryCount) {
+        public Builder repositoryCount(@Nullable Input<Integer> repositoryCount) {
             this.repositoryCount = repositoryCount;
             return this;
         }
 
-        public Builder setRepositoryCount(@Nullable Integer repositoryCount) {
+        public Builder repositoryCount(@Nullable Integer repositoryCount) {
             this.repositoryCount = Input.ofNullable(repositoryCount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

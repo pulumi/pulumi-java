@@ -144,62 +144,62 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder setMatchValue(Input<List<String>> matchValue) {
+        public Builder matchValue(Input<List<String>> matchValue) {
             this.matchValue = Objects.requireNonNull(matchValue);
             return this;
         }
 
-        public Builder setMatchValue(List<String> matchValue) {
+        public Builder matchValue(List<String> matchValue) {
             this.matchValue = Input.of(Objects.requireNonNull(matchValue));
             return this;
         }
 
-        public Builder setMatchVariable(Input<Either<String,FrontDoorMatchVariable>> matchVariable) {
+        public Builder matchVariable(Input<Either<String,FrontDoorMatchVariable>> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
-        public Builder setMatchVariable(Either<String,FrontDoorMatchVariable> matchVariable) {
+        public Builder matchVariable(Either<String,FrontDoorMatchVariable> matchVariable) {
             this.matchVariable = Input.of(Objects.requireNonNull(matchVariable));
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Input<Boolean> negateCondition) {
+        public Builder negateCondition(@Nullable Input<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = Input.ofNullable(negateCondition);
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,Operator>> operator) {
+        public Builder operator(Input<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,Operator> operator) {
+        public Builder operator(Either<String,Operator> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Input<String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setTransforms(@Nullable Input<List<Either<String,TransformType>>> transforms) {
+        public Builder transforms(@Nullable Input<List<Either<String,TransformType>>> transforms) {
             this.transforms = transforms;
             return this;
         }
 
-        public Builder setTransforms(@Nullable List<Either<String,TransformType>> transforms) {
+        public Builder transforms(@Nullable List<Either<String,TransformType>> transforms) {
             this.transforms = Input.ofNullable(transforms);
             return this;
         }

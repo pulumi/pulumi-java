@@ -60,17 +60,17 @@ public final class DataSourceDynamodbConfigDeltaSyncConfig {
     	      this.deltaSyncTableTtl = defaults.deltaSyncTableTtl;
         }
 
-        public Builder setBaseTableTtl(@Nullable Integer baseTableTtl) {
+        public Builder baseTableTtl(@Nullable Integer baseTableTtl) {
             this.baseTableTtl = baseTableTtl;
             return this;
         }
 
-        public Builder setDeltaSyncTableName(String deltaSyncTableName) {
+        public Builder deltaSyncTableName(String deltaSyncTableName) {
             this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName);
             return this;
         }
 
-        public Builder setDeltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
+        public Builder deltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
             this.deltaSyncTableTtl = deltaSyncTableTtl;
             return this;
         }

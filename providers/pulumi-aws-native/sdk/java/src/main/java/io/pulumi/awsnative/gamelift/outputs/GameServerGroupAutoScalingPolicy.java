@@ -52,12 +52,12 @@ public final class GameServerGroupAutoScalingPolicy {
     	      this.targetTrackingConfiguration = defaults.targetTrackingConfiguration;
         }
 
-        public Builder setEstimatedInstanceWarmup(@Nullable Double estimatedInstanceWarmup) {
+        public Builder estimatedInstanceWarmup(@Nullable Double estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
 
-        public Builder setTargetTrackingConfiguration(GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
+        public Builder targetTrackingConfiguration(GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
             this.targetTrackingConfiguration = Objects.requireNonNull(targetTrackingConfiguration);
             return this;
         }

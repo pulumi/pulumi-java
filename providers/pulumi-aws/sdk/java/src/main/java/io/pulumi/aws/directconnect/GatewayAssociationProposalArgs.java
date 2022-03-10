@@ -103,42 +103,42 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
     	      this.dxGatewayOwnerAccountId = defaults.dxGatewayOwnerAccountId;
         }
 
-        public Builder setAllowedPrefixes(@Nullable Input<List<String>> allowedPrefixes) {
+        public Builder allowedPrefixes(@Nullable Input<List<String>> allowedPrefixes) {
             this.allowedPrefixes = allowedPrefixes;
             return this;
         }
 
-        public Builder setAllowedPrefixes(@Nullable List<String> allowedPrefixes) {
+        public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
             this.allowedPrefixes = Input.ofNullable(allowedPrefixes);
             return this;
         }
 
-        public Builder setAssociatedGatewayId(Input<String> associatedGatewayId) {
+        public Builder associatedGatewayId(Input<String> associatedGatewayId) {
             this.associatedGatewayId = Objects.requireNonNull(associatedGatewayId);
             return this;
         }
 
-        public Builder setAssociatedGatewayId(String associatedGatewayId) {
+        public Builder associatedGatewayId(String associatedGatewayId) {
             this.associatedGatewayId = Input.of(Objects.requireNonNull(associatedGatewayId));
             return this;
         }
 
-        public Builder setDxGatewayId(Input<String> dxGatewayId) {
+        public Builder dxGatewayId(Input<String> dxGatewayId) {
             this.dxGatewayId = Objects.requireNonNull(dxGatewayId);
             return this;
         }
 
-        public Builder setDxGatewayId(String dxGatewayId) {
+        public Builder dxGatewayId(String dxGatewayId) {
             this.dxGatewayId = Input.of(Objects.requireNonNull(dxGatewayId));
             return this;
         }
 
-        public Builder setDxGatewayOwnerAccountId(Input<String> dxGatewayOwnerAccountId) {
+        public Builder dxGatewayOwnerAccountId(Input<String> dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = Objects.requireNonNull(dxGatewayOwnerAccountId);
             return this;
         }
 
-        public Builder setDxGatewayOwnerAccountId(String dxGatewayOwnerAccountId) {
+        public Builder dxGatewayOwnerAccountId(String dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = Input.of(Objects.requireNonNull(dxGatewayOwnerAccountId));
             return this;
         }

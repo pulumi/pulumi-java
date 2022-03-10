@@ -106,22 +106,22 @@ public final class MongoDbCursorMethodsPropertiesResponse extends io.pulumi.reso
     	      this.sort = defaults.sort;
         }
 
-        public Builder setLimit(@Nullable Object limit) {
+        public Builder limit(@Nullable Object limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setProject(@Nullable Object project) {
+        public Builder project(@Nullable Object project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSkip(@Nullable Object skip) {
+        public Builder skip(@Nullable Object skip) {
             this.skip = skip;
             return this;
         }
 
-        public Builder setSort(@Nullable Object sort) {
+        public Builder sort(@Nullable Object sort) {
             this.sort = sort;
             return this;
         }

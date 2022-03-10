@@ -70,12 +70,12 @@ public final class BranchResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setActions(List<Object> actions) {
+        public Builder actions(List<Object> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

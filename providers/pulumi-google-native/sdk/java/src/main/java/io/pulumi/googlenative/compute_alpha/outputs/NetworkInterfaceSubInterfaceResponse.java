@@ -90,22 +90,22 @@ public final class NetworkInterfaceSubInterfaceResponse {
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setIpAllocationMode(String ipAllocationMode) {
+        public Builder ipAllocationMode(String ipAllocationMode) {
             this.ipAllocationMode = Objects.requireNonNull(ipAllocationMode);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setVlan(Integer vlan) {
+        public Builder vlan(Integer vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }

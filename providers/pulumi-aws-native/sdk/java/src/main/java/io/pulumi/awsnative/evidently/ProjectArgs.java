@@ -93,42 +93,42 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDataDelivery(@Nullable Input<ProjectDataDeliveryObjectArgs> dataDelivery) {
+        public Builder dataDelivery(@Nullable Input<ProjectDataDeliveryObjectArgs> dataDelivery) {
             this.dataDelivery = dataDelivery;
             return this;
         }
 
-        public Builder setDataDelivery(@Nullable ProjectDataDeliveryObjectArgs dataDelivery) {
+        public Builder dataDelivery(@Nullable ProjectDataDeliveryObjectArgs dataDelivery) {
             this.dataDelivery = Input.ofNullable(dataDelivery);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTagArgs> tags) {
+        public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

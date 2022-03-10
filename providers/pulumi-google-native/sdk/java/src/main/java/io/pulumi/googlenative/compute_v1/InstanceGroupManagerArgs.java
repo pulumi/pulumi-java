@@ -274,152 +274,152 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies) {
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable List<InstanceGroupManagerAutoHealingPolicyArgs> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable List<InstanceGroupManagerAutoHealingPolicyArgs> autoHealingPolicies) {
             this.autoHealingPolicies = Input.ofNullable(autoHealingPolicies);
             return this;
         }
 
-        public Builder setBaseInstanceName(@Nullable Input<String> baseInstanceName) {
+        public Builder baseInstanceName(@Nullable Input<String> baseInstanceName) {
             this.baseInstanceName = baseInstanceName;
             return this;
         }
 
-        public Builder setBaseInstanceName(@Nullable String baseInstanceName) {
+        public Builder baseInstanceName(@Nullable String baseInstanceName) {
             this.baseInstanceName = Input.ofNullable(baseInstanceName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDistributionPolicy(@Nullable Input<DistributionPolicyArgs> distributionPolicy) {
+        public Builder distributionPolicy(@Nullable Input<DistributionPolicyArgs> distributionPolicy) {
             this.distributionPolicy = distributionPolicy;
             return this;
         }
 
-        public Builder setDistributionPolicy(@Nullable DistributionPolicyArgs distributionPolicy) {
+        public Builder distributionPolicy(@Nullable DistributionPolicyArgs distributionPolicy) {
             this.distributionPolicy = Input.ofNullable(distributionPolicy);
             return this;
         }
 
-        public Builder setInstanceTemplate(@Nullable Input<String> instanceTemplate) {
+        public Builder instanceTemplate(@Nullable Input<String> instanceTemplate) {
             this.instanceTemplate = instanceTemplate;
             return this;
         }
 
-        public Builder setInstanceTemplate(@Nullable String instanceTemplate) {
+        public Builder instanceTemplate(@Nullable String instanceTemplate) {
             this.instanceTemplate = Input.ofNullable(instanceTemplate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable Input<List<NamedPortArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Input<List<NamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable List<NamedPortArgs> namedPorts) {
+        public Builder namedPorts(@Nullable List<NamedPortArgs> namedPorts) {
             this.namedPorts = Input.ofNullable(namedPorts);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setStatefulPolicy(@Nullable Input<StatefulPolicyArgs> statefulPolicy) {
+        public Builder statefulPolicy(@Nullable Input<StatefulPolicyArgs> statefulPolicy) {
             this.statefulPolicy = statefulPolicy;
             return this;
         }
 
-        public Builder setStatefulPolicy(@Nullable StatefulPolicyArgs statefulPolicy) {
+        public Builder statefulPolicy(@Nullable StatefulPolicyArgs statefulPolicy) {
             this.statefulPolicy = Input.ofNullable(statefulPolicy);
             return this;
         }
 
-        public Builder setTargetPools(@Nullable Input<List<String>> targetPools) {
+        public Builder targetPools(@Nullable Input<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
 
-        public Builder setTargetPools(@Nullable List<String> targetPools) {
+        public Builder targetPools(@Nullable List<String> targetPools) {
             this.targetPools = Input.ofNullable(targetPools);
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Input<Integer> targetSize) {
+        public Builder targetSize(@Nullable Input<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Integer targetSize) {
+        public Builder targetSize(@Nullable Integer targetSize) {
             this.targetSize = Input.ofNullable(targetSize);
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
+        public Builder updatePolicy(@Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
+        public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             this.updatePolicy = Input.ofNullable(updatePolicy);
             return this;
         }
 
-        public Builder setVersions(@Nullable Input<List<InstanceGroupManagerVersionArgs>> versions) {
+        public Builder versions(@Nullable Input<List<InstanceGroupManagerVersionArgs>> versions) {
             this.versions = versions;
             return this;
         }
 
-        public Builder setVersions(@Nullable List<InstanceGroupManagerVersionArgs> versions) {
+        public Builder versions(@Nullable List<InstanceGroupManagerVersionArgs> versions) {
             this.versions = Input.ofNullable(versions);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

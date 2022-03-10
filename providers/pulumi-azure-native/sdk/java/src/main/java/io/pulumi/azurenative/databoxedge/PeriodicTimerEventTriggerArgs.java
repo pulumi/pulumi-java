@@ -153,72 +153,72 @@ public final class PeriodicTimerEventTriggerArgs extends io.pulumi.resources.Res
     	      this.sourceInfo = defaults.sourceInfo;
         }
 
-        public Builder setCustomContextTag(@Nullable Input<String> customContextTag) {
+        public Builder customContextTag(@Nullable Input<String> customContextTag) {
             this.customContextTag = customContextTag;
             return this;
         }
 
-        public Builder setCustomContextTag(@Nullable String customContextTag) {
+        public Builder customContextTag(@Nullable String customContextTag) {
             this.customContextTag = Input.ofNullable(customContextTag);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSinkInfo(Input<RoleSinkInfoArgs> sinkInfo) {
+        public Builder sinkInfo(Input<RoleSinkInfoArgs> sinkInfo) {
             this.sinkInfo = Objects.requireNonNull(sinkInfo);
             return this;
         }
 
-        public Builder setSinkInfo(RoleSinkInfoArgs sinkInfo) {
+        public Builder sinkInfo(RoleSinkInfoArgs sinkInfo) {
             this.sinkInfo = Input.of(Objects.requireNonNull(sinkInfo));
             return this;
         }
 
-        public Builder setSourceInfo(Input<PeriodicTimerSourceInfoArgs> sourceInfo) {
+        public Builder sourceInfo(Input<PeriodicTimerSourceInfoArgs> sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
 
-        public Builder setSourceInfo(PeriodicTimerSourceInfoArgs sourceInfo) {
+        public Builder sourceInfo(PeriodicTimerSourceInfoArgs sourceInfo) {
             this.sourceInfo = Input.of(Objects.requireNonNull(sourceInfo));
             return this;
         }

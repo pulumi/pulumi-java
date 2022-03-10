@@ -88,32 +88,32 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setData(@Nullable Input<String> data) {
+        public Builder data(@Nullable Input<String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = Input.ofNullable(data);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<SecretLabelGetArgs>> labels) {
+        public Builder labels(@Nullable Input<List<SecretLabelGetArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<SecretLabelGetArgs> labels) {
+        public Builder labels(@Nullable List<SecretLabelGetArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

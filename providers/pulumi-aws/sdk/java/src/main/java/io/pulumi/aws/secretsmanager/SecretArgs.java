@@ -230,112 +230,112 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setForceOverwriteReplicaSecret(@Nullable Input<Boolean> forceOverwriteReplicaSecret) {
+        public Builder forceOverwriteReplicaSecret(@Nullable Input<Boolean> forceOverwriteReplicaSecret) {
             this.forceOverwriteReplicaSecret = forceOverwriteReplicaSecret;
             return this;
         }
 
-        public Builder setForceOverwriteReplicaSecret(@Nullable Boolean forceOverwriteReplicaSecret) {
+        public Builder forceOverwriteReplicaSecret(@Nullable Boolean forceOverwriteReplicaSecret) {
             this.forceOverwriteReplicaSecret = Input.ofNullable(forceOverwriteReplicaSecret);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setRecoveryWindowInDays(@Nullable Input<Integer> recoveryWindowInDays) {
+        public Builder recoveryWindowInDays(@Nullable Input<Integer> recoveryWindowInDays) {
             this.recoveryWindowInDays = recoveryWindowInDays;
             return this;
         }
 
-        public Builder setRecoveryWindowInDays(@Nullable Integer recoveryWindowInDays) {
+        public Builder recoveryWindowInDays(@Nullable Integer recoveryWindowInDays) {
             this.recoveryWindowInDays = Input.ofNullable(recoveryWindowInDays);
             return this;
         }
 
-        public Builder setReplicas(@Nullable Input<List<SecretReplicaArgs>> replicas) {
+        public Builder replicas(@Nullable Input<List<SecretReplicaArgs>> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable List<SecretReplicaArgs> replicas) {
+        public Builder replicas(@Nullable List<SecretReplicaArgs> replicas) {
             this.replicas = Input.ofNullable(replicas);
             return this;
         }
 
-        public Builder setRotationLambdaArn(@Nullable Input<String> rotationLambdaArn) {
+        public Builder rotationLambdaArn(@Nullable Input<String> rotationLambdaArn) {
             this.rotationLambdaArn = rotationLambdaArn;
             return this;
         }
 
-        public Builder setRotationLambdaArn(@Nullable String rotationLambdaArn) {
+        public Builder rotationLambdaArn(@Nullable String rotationLambdaArn) {
             this.rotationLambdaArn = Input.ofNullable(rotationLambdaArn);
             return this;
         }
 
-        public Builder setRotationRules(@Nullable Input<SecretRotationRulesArgs> rotationRules) {
+        public Builder rotationRules(@Nullable Input<SecretRotationRulesArgs> rotationRules) {
             this.rotationRules = rotationRules;
             return this;
         }
 
-        public Builder setRotationRules(@Nullable SecretRotationRulesArgs rotationRules) {
+        public Builder rotationRules(@Nullable SecretRotationRulesArgs rotationRules) {
             this.rotationRules = Input.ofNullable(rotationRules);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -49,12 +49,12 @@ public final class DeliveryStreamHttpEndpointCommonAttribute {
     	      this.attributeValue = defaults.attributeValue;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setAttributeValue(String attributeValue) {
+        public Builder attributeValue(String attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }

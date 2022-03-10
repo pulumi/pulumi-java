@@ -61,22 +61,22 @@ public final class DomainSubDomainSettingArgs extends io.pulumi.resources.Resour
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBranchName(Input<String> branchName) {
+        public Builder branchName(Input<String> branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Input.of(Objects.requireNonNull(branchName));
             return this;
         }
 
-        public Builder setPrefix(Input<String> prefix) {
+        public Builder prefix(Input<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Input.of(Objects.requireNonNull(prefix));
             return this;
         }

@@ -214,112 +214,112 @@ public final class OriginEndpointHlsPackageArgs extends io.pulumi.resources.Reso
     	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
         }
 
-        public Builder setAdMarkers(@Nullable Input<OriginEndpointHlsPackageAdMarkers> adMarkers) {
+        public Builder adMarkers(@Nullable Input<OriginEndpointHlsPackageAdMarkers> adMarkers) {
             this.adMarkers = adMarkers;
             return this;
         }
 
-        public Builder setAdMarkers(@Nullable OriginEndpointHlsPackageAdMarkers adMarkers) {
+        public Builder adMarkers(@Nullable OriginEndpointHlsPackageAdMarkers adMarkers) {
             this.adMarkers = Input.ofNullable(adMarkers);
             return this;
         }
 
-        public Builder setAdTriggers(@Nullable Input<List<OriginEndpointHlsPackageAdTriggersItem>> adTriggers) {
+        public Builder adTriggers(@Nullable Input<List<OriginEndpointHlsPackageAdTriggersItem>> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
 
-        public Builder setAdTriggers(@Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers) {
+        public Builder adTriggers(@Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers) {
             this.adTriggers = Input.ofNullable(adTriggers);
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = Input.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<OriginEndpointHlsEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<OriginEndpointHlsEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointHlsEncryptionArgs encryption) {
+        public Builder encryption(@Nullable OriginEndpointHlsEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Input<Boolean> includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Input<Boolean> includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = Input.ofNullable(includeIframeOnlyStream);
             return this;
         }
 
-        public Builder setPlaylistType(@Nullable Input<OriginEndpointHlsPackagePlaylistType> playlistType) {
+        public Builder playlistType(@Nullable Input<OriginEndpointHlsPackagePlaylistType> playlistType) {
             this.playlistType = playlistType;
             return this;
         }
 
-        public Builder setPlaylistType(@Nullable OriginEndpointHlsPackagePlaylistType playlistType) {
+        public Builder playlistType(@Nullable OriginEndpointHlsPackagePlaylistType playlistType) {
             this.playlistType = Input.ofNullable(playlistType);
             return this;
         }
 
-        public Builder setPlaylistWindowSeconds(@Nullable Input<Integer> playlistWindowSeconds) {
+        public Builder playlistWindowSeconds(@Nullable Input<Integer> playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
 
-        public Builder setPlaylistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
+        public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = Input.ofNullable(playlistWindowSeconds);
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Input<Integer> programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Input<Integer> programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = Input.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }
 
-        public Builder setUseAudioRenditionGroup(@Nullable Input<Boolean> useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Input<Boolean> useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
 
-        public Builder setUseAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = Input.ofNullable(useAudioRenditionGroup);
             return this;
         }

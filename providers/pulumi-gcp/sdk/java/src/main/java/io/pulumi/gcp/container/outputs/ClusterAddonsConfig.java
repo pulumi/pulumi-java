@@ -242,52 +242,52 @@ public final class ClusterAddonsConfig {
     	      this.networkPolicyConfig = defaults.networkPolicyConfig;
         }
 
-        public Builder setCloudrunConfig(@Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig) {
+        public Builder cloudrunConfig(@Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig) {
             this.cloudrunConfig = cloudrunConfig;
             return this;
         }
 
-        public Builder setConfigConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig) {
+        public Builder configConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig) {
             this.configConnectorConfig = configConnectorConfig;
             return this;
         }
 
-        public Builder setDnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig) {
+        public Builder dnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig) {
             this.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
 
-        public Builder setHorizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
 
-        public Builder setHttpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing) {
+        public Builder httpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing) {
             this.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
 
-        public Builder setIstioConfig(@Nullable ClusterAddonsConfigIstioConfig istioConfig) {
+        public Builder istioConfig(@Nullable ClusterAddonsConfigIstioConfig istioConfig) {
             this.istioConfig = istioConfig;
             return this;
         }
 
-        public Builder setKalmConfig(@Nullable ClusterAddonsConfigKalmConfig kalmConfig) {
+        public Builder kalmConfig(@Nullable ClusterAddonsConfigKalmConfig kalmConfig) {
             this.kalmConfig = kalmConfig;
             return this;
         }
 
-        public Builder setNetworkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
+        public Builder networkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }

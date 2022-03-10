@@ -136,62 +136,62 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setAppName(Input<String> appName) {
+        public Builder appName(Input<String> appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Input.of(Objects.requireNonNull(appName));
             return this;
         }
 
-        public Builder setDeploymentName(@Nullable Input<String> deploymentName) {
+        public Builder deploymentName(@Nullable Input<String> deploymentName) {
             this.deploymentName = deploymentName;
             return this;
         }
 
-        public Builder setDeploymentName(@Nullable String deploymentName) {
+        public Builder deploymentName(@Nullable String deploymentName) {
             this.deploymentName = Input.ofNullable(deploymentName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<DeploymentResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<DeploymentResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable DeploymentResourcePropertiesArgs properties) {
+        public Builder properties(@Nullable DeploymentResourcePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }

@@ -75,22 +75,22 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.regularFile = defaults.regularFile;
         }
 
-        public Builder setObbFile(@Nullable Input<ObbFileArgs> obbFile) {
+        public Builder obbFile(@Nullable Input<ObbFileArgs> obbFile) {
             this.obbFile = obbFile;
             return this;
         }
 
-        public Builder setObbFile(@Nullable ObbFileArgs obbFile) {
+        public Builder obbFile(@Nullable ObbFileArgs obbFile) {
             this.obbFile = Input.ofNullable(obbFile);
             return this;
         }
 
-        public Builder setRegularFile(@Nullable Input<RegularFileArgs> regularFile) {
+        public Builder regularFile(@Nullable Input<RegularFileArgs> regularFile) {
             this.regularFile = regularFile;
             return this;
         }
 
-        public Builder setRegularFile(@Nullable RegularFileArgs regularFile) {
+        public Builder regularFile(@Nullable RegularFileArgs regularFile) {
             this.regularFile = Input.ofNullable(regularFile);
             return this;
         }

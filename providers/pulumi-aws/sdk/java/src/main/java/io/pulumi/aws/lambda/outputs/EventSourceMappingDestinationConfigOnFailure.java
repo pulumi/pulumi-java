@@ -48,7 +48,7 @@ public final class EventSourceMappingDestinationConfigOnFailure {
     	      this.destinationArn = defaults.destinationArn;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }

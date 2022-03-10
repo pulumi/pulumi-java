@@ -57,12 +57,12 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(@Nullable Input<LocationNFSMountOptionsVersion> version) {
+        public Builder version(@Nullable Input<LocationNFSMountOptionsVersion> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable LocationNFSMountOptionsVersion version) {
+        public Builder version(@Nullable LocationNFSMountOptionsVersion version) {
             this.version = Input.ofNullable(version);
             return this;
         }

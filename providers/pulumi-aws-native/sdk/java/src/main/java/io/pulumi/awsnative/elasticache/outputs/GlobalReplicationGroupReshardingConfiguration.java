@@ -68,12 +68,12 @@ public final class GlobalReplicationGroupReshardingConfiguration {
     	      this.preferredAvailabilityZones = defaults.preferredAvailabilityZones;
         }
 
-        public Builder setNodeGroupId(@Nullable String nodeGroupId) {
+        public Builder nodeGroupId(@Nullable String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
             return this;
         }
 
-        public Builder setPreferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
+        public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }

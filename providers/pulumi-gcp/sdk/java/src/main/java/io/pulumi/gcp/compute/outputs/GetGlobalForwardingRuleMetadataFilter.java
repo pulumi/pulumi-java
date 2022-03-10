@@ -51,12 +51,12 @@ public final class GetGlobalForwardingRuleMetadataFilter {
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder setFilterLabels(List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels) {
+        public Builder filterLabels(List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels) {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
 
-        public Builder setFilterMatchCriteria(String filterMatchCriteria) {
+        public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }

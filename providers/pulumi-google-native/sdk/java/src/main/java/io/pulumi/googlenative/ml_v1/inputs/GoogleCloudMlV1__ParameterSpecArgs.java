@@ -158,72 +158,72 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder setCategoricalValues(@Nullable Input<List<String>> categoricalValues) {
+        public Builder categoricalValues(@Nullable Input<List<String>> categoricalValues) {
             this.categoricalValues = categoricalValues;
             return this;
         }
 
-        public Builder setCategoricalValues(@Nullable List<String> categoricalValues) {
+        public Builder categoricalValues(@Nullable List<String> categoricalValues) {
             this.categoricalValues = Input.ofNullable(categoricalValues);
             return this;
         }
 
-        public Builder setDiscreteValues(@Nullable Input<List<Double>> discreteValues) {
+        public Builder discreteValues(@Nullable Input<List<Double>> discreteValues) {
             this.discreteValues = discreteValues;
             return this;
         }
 
-        public Builder setDiscreteValues(@Nullable List<Double> discreteValues) {
+        public Builder discreteValues(@Nullable List<Double> discreteValues) {
             this.discreteValues = Input.ofNullable(discreteValues);
             return this;
         }
 
-        public Builder setMaxValue(@Nullable Input<Double> maxValue) {
+        public Builder maxValue(@Nullable Input<Double> maxValue) {
             this.maxValue = maxValue;
             return this;
         }
 
-        public Builder setMaxValue(@Nullable Double maxValue) {
+        public Builder maxValue(@Nullable Double maxValue) {
             this.maxValue = Input.ofNullable(maxValue);
             return this;
         }
 
-        public Builder setMinValue(@Nullable Input<Double> minValue) {
+        public Builder minValue(@Nullable Input<Double> minValue) {
             this.minValue = minValue;
             return this;
         }
 
-        public Builder setMinValue(@Nullable Double minValue) {
+        public Builder minValue(@Nullable Double minValue) {
             this.minValue = Input.ofNullable(minValue);
             return this;
         }
 
-        public Builder setParameterName(Input<String> parameterName) {
+        public Builder parameterName(Input<String> parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
-        public Builder setParameterName(String parameterName) {
+        public Builder parameterName(String parameterName) {
             this.parameterName = Input.of(Objects.requireNonNull(parameterName));
             return this;
         }
 
-        public Builder setScaleType(@Nullable Input<GoogleCloudMlV1__ParameterSpecScaleType> scaleType) {
+        public Builder scaleType(@Nullable Input<GoogleCloudMlV1__ParameterSpecScaleType> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
-        public Builder setScaleType(@Nullable GoogleCloudMlV1__ParameterSpecScaleType scaleType) {
+        public Builder scaleType(@Nullable GoogleCloudMlV1__ParameterSpecScaleType scaleType) {
             this.scaleType = Input.ofNullable(scaleType);
             return this;
         }
 
-        public Builder setType(Input<GoogleCloudMlV1__ParameterSpecType> type) {
+        public Builder type(Input<GoogleCloudMlV1__ParameterSpecType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(GoogleCloudMlV1__ParameterSpecType type) {
+        public Builder type(GoogleCloudMlV1__ParameterSpecType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

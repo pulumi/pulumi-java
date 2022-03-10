@@ -52,12 +52,12 @@ public final class ModelQualityJobDefinitionMonitoringOutputArgs extends io.pulu
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder setS3Output(Input<ModelQualityJobDefinitionS3OutputArgs> s3Output) {
+        public Builder s3Output(Input<ModelQualityJobDefinitionS3OutputArgs> s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }
 
-        public Builder setS3Output(ModelQualityJobDefinitionS3OutputArgs s3Output) {
+        public Builder s3Output(ModelQualityJobDefinitionS3OutputArgs s3Output) {
             this.s3Output = Input.of(Objects.requireNonNull(s3Output));
             return this;
         }

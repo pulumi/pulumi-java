@@ -171,82 +171,82 @@ public final class InventoryState extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<InventoryDestinationGetArgs> destination) {
+        public Builder destination(@Nullable Input<InventoryDestinationGetArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable InventoryDestinationGetArgs destination) {
+        public Builder destination(@Nullable InventoryDestinationGetArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<InventoryFilterGetArgs> filter) {
+        public Builder filter(@Nullable Input<InventoryFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable InventoryFilterGetArgs filter) {
+        public Builder filter(@Nullable InventoryFilterGetArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setIncludedObjectVersions(@Nullable Input<String> includedObjectVersions) {
+        public Builder includedObjectVersions(@Nullable Input<String> includedObjectVersions) {
             this.includedObjectVersions = includedObjectVersions;
             return this;
         }
 
-        public Builder setIncludedObjectVersions(@Nullable String includedObjectVersions) {
+        public Builder includedObjectVersions(@Nullable String includedObjectVersions) {
             this.includedObjectVersions = Input.ofNullable(includedObjectVersions);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptionalFields(@Nullable Input<List<String>> optionalFields) {
+        public Builder optionalFields(@Nullable Input<List<String>> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
 
-        public Builder setOptionalFields(@Nullable List<String> optionalFields) {
+        public Builder optionalFields(@Nullable List<String> optionalFields) {
             this.optionalFields = Input.ofNullable(optionalFields);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<InventoryScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Input<InventoryScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable InventoryScheduleGetArgs schedule) {
+        public Builder schedule(@Nullable InventoryScheduleGetArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }

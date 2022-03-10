@@ -92,32 +92,32 @@ public final class RoutingConfigurationArgs extends io.pulumi.resources.Resource
     	      this.vnetRoutes = defaults.vnetRoutes;
         }
 
-        public Builder setAssociatedRouteTable(@Nullable Input<SubResourceArgs> associatedRouteTable) {
+        public Builder associatedRouteTable(@Nullable Input<SubResourceArgs> associatedRouteTable) {
             this.associatedRouteTable = associatedRouteTable;
             return this;
         }
 
-        public Builder setAssociatedRouteTable(@Nullable SubResourceArgs associatedRouteTable) {
+        public Builder associatedRouteTable(@Nullable SubResourceArgs associatedRouteTable) {
             this.associatedRouteTable = Input.ofNullable(associatedRouteTable);
             return this;
         }
 
-        public Builder setPropagatedRouteTables(@Nullable Input<PropagatedRouteTableArgs> propagatedRouteTables) {
+        public Builder propagatedRouteTables(@Nullable Input<PropagatedRouteTableArgs> propagatedRouteTables) {
             this.propagatedRouteTables = propagatedRouteTables;
             return this;
         }
 
-        public Builder setPropagatedRouteTables(@Nullable PropagatedRouteTableArgs propagatedRouteTables) {
+        public Builder propagatedRouteTables(@Nullable PropagatedRouteTableArgs propagatedRouteTables) {
             this.propagatedRouteTables = Input.ofNullable(propagatedRouteTables);
             return this;
         }
 
-        public Builder setVnetRoutes(@Nullable Input<VnetRouteArgs> vnetRoutes) {
+        public Builder vnetRoutes(@Nullable Input<VnetRouteArgs> vnetRoutes) {
             this.vnetRoutes = vnetRoutes;
             return this;
         }
 
-        public Builder setVnetRoutes(@Nullable VnetRouteArgs vnetRoutes) {
+        public Builder vnetRoutes(@Nullable VnetRouteArgs vnetRoutes) {
             this.vnetRoutes = Input.ofNullable(vnetRoutes);
             return this;
         }

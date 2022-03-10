@@ -413,232 +413,232 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setElasticsearchSettings(@Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings) {
+        public Builder elasticsearchSettings(@Nullable Input<EndpointElasticsearchSettingsGetArgs> elasticsearchSettings) {
             this.elasticsearchSettings = elasticsearchSettings;
             return this;
         }
 
-        public Builder setElasticsearchSettings(@Nullable EndpointElasticsearchSettingsGetArgs elasticsearchSettings) {
+        public Builder elasticsearchSettings(@Nullable EndpointElasticsearchSettingsGetArgs elasticsearchSettings) {
             this.elasticsearchSettings = Input.ofNullable(elasticsearchSettings);
             return this;
         }
 
-        public Builder setEndpointArn(@Nullable Input<String> endpointArn) {
+        public Builder endpointArn(@Nullable Input<String> endpointArn) {
             this.endpointArn = endpointArn;
             return this;
         }
 
-        public Builder setEndpointArn(@Nullable String endpointArn) {
+        public Builder endpointArn(@Nullable String endpointArn) {
             this.endpointArn = Input.ofNullable(endpointArn);
             return this;
         }
 
-        public Builder setEndpointId(@Nullable Input<String> endpointId) {
+        public Builder endpointId(@Nullable Input<String> endpointId) {
             this.endpointId = endpointId;
             return this;
         }
 
-        public Builder setEndpointId(@Nullable String endpointId) {
+        public Builder endpointId(@Nullable String endpointId) {
             this.endpointId = Input.ofNullable(endpointId);
             return this;
         }
 
-        public Builder setEndpointType(@Nullable Input<String> endpointType) {
+        public Builder endpointType(@Nullable Input<String> endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setEndpointType(@Nullable String endpointType) {
+        public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = Input.ofNullable(endpointType);
             return this;
         }
 
-        public Builder setEngineName(@Nullable Input<String> engineName) {
+        public Builder engineName(@Nullable Input<String> engineName) {
             this.engineName = engineName;
             return this;
         }
 
-        public Builder setEngineName(@Nullable String engineName) {
+        public Builder engineName(@Nullable String engineName) {
             this.engineName = Input.ofNullable(engineName);
             return this;
         }
 
-        public Builder setExtraConnectionAttributes(@Nullable Input<String> extraConnectionAttributes) {
+        public Builder extraConnectionAttributes(@Nullable Input<String> extraConnectionAttributes) {
             this.extraConnectionAttributes = extraConnectionAttributes;
             return this;
         }
 
-        public Builder setExtraConnectionAttributes(@Nullable String extraConnectionAttributes) {
+        public Builder extraConnectionAttributes(@Nullable String extraConnectionAttributes) {
             this.extraConnectionAttributes = Input.ofNullable(extraConnectionAttributes);
             return this;
         }
 
-        public Builder setKafkaSettings(@Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings) {
+        public Builder kafkaSettings(@Nullable Input<EndpointKafkaSettingsGetArgs> kafkaSettings) {
             this.kafkaSettings = kafkaSettings;
             return this;
         }
 
-        public Builder setKafkaSettings(@Nullable EndpointKafkaSettingsGetArgs kafkaSettings) {
+        public Builder kafkaSettings(@Nullable EndpointKafkaSettingsGetArgs kafkaSettings) {
             this.kafkaSettings = Input.ofNullable(kafkaSettings);
             return this;
         }
 
-        public Builder setKinesisSettings(@Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings) {
+        public Builder kinesisSettings(@Nullable Input<EndpointKinesisSettingsGetArgs> kinesisSettings) {
             this.kinesisSettings = kinesisSettings;
             return this;
         }
 
-        public Builder setKinesisSettings(@Nullable EndpointKinesisSettingsGetArgs kinesisSettings) {
+        public Builder kinesisSettings(@Nullable EndpointKinesisSettingsGetArgs kinesisSettings) {
             this.kinesisSettings = Input.ofNullable(kinesisSettings);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setMongodbSettings(@Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings) {
+        public Builder mongodbSettings(@Nullable Input<EndpointMongodbSettingsGetArgs> mongodbSettings) {
             this.mongodbSettings = mongodbSettings;
             return this;
         }
 
-        public Builder setMongodbSettings(@Nullable EndpointMongodbSettingsGetArgs mongodbSettings) {
+        public Builder mongodbSettings(@Nullable EndpointMongodbSettingsGetArgs mongodbSettings) {
             this.mongodbSettings = Input.ofNullable(mongodbSettings);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setS3Settings(@Nullable Input<EndpointS3SettingsGetArgs> s3Settings) {
+        public Builder s3Settings(@Nullable Input<EndpointS3SettingsGetArgs> s3Settings) {
             this.s3Settings = s3Settings;
             return this;
         }
 
-        public Builder setS3Settings(@Nullable EndpointS3SettingsGetArgs s3Settings) {
+        public Builder s3Settings(@Nullable EndpointS3SettingsGetArgs s3Settings) {
             this.s3Settings = Input.ofNullable(s3Settings);
             return this;
         }
 
-        public Builder setSecretsManagerAccessRoleArn(@Nullable Input<String> secretsManagerAccessRoleArn) {
+        public Builder secretsManagerAccessRoleArn(@Nullable Input<String> secretsManagerAccessRoleArn) {
             this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
             return this;
         }
 
-        public Builder setSecretsManagerAccessRoleArn(@Nullable String secretsManagerAccessRoleArn) {
+        public Builder secretsManagerAccessRoleArn(@Nullable String secretsManagerAccessRoleArn) {
             this.secretsManagerAccessRoleArn = Input.ofNullable(secretsManagerAccessRoleArn);
             return this;
         }
 
-        public Builder setSecretsManagerArn(@Nullable Input<String> secretsManagerArn) {
+        public Builder secretsManagerArn(@Nullable Input<String> secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
 
-        public Builder setSecretsManagerArn(@Nullable String secretsManagerArn) {
+        public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
             this.secretsManagerArn = Input.ofNullable(secretsManagerArn);
             return this;
         }
 
-        public Builder setServerName(@Nullable Input<String> serverName) {
+        public Builder serverName(@Nullable Input<String> serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = Input.ofNullable(serverName);
             return this;
         }
 
-        public Builder setServiceAccessRole(@Nullable Input<String> serviceAccessRole) {
+        public Builder serviceAccessRole(@Nullable Input<String> serviceAccessRole) {
             this.serviceAccessRole = serviceAccessRole;
             return this;
         }
 
-        public Builder setServiceAccessRole(@Nullable String serviceAccessRole) {
+        public Builder serviceAccessRole(@Nullable String serviceAccessRole) {
             this.serviceAccessRole = Input.ofNullable(serviceAccessRole);
             return this;
         }
 
-        public Builder setSslMode(@Nullable Input<String> sslMode) {
+        public Builder sslMode(@Nullable Input<String> sslMode) {
             this.sslMode = sslMode;
             return this;
         }
 
-        public Builder setSslMode(@Nullable String sslMode) {
+        public Builder sslMode(@Nullable String sslMode) {
             this.sslMode = Input.ofNullable(sslMode);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

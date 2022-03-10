@@ -133,32 +133,32 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHub(@Nullable ResourceIdResponse hub) {
+        public Builder hub(@Nullable ResourceIdResponse hub) {
             this.hub = hub;
             return this;
         }
 
-        public Builder setMesh(@Nullable List<ResourceIdResponse> mesh) {
+        public Builder mesh(@Nullable List<ResourceIdResponse> mesh) {
             this.mesh = mesh;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSpokes(@Nullable List<ResourceIdResponse> spokes) {
+        public Builder spokes(@Nullable List<ResourceIdResponse> spokes) {
             this.spokes = spokes;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

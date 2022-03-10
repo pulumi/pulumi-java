@@ -70,22 +70,22 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
     	      this.sourceInstanceName = defaults.sourceInstanceName;
         }
 
-        public Builder setPointInTime(@Nullable Input<String> pointInTime) {
+        public Builder pointInTime(@Nullable Input<String> pointInTime) {
             this.pointInTime = pointInTime;
             return this;
         }
 
-        public Builder setPointInTime(@Nullable String pointInTime) {
+        public Builder pointInTime(@Nullable String pointInTime) {
             this.pointInTime = Input.ofNullable(pointInTime);
             return this;
         }
 
-        public Builder setSourceInstanceName(Input<String> sourceInstanceName) {
+        public Builder sourceInstanceName(Input<String> sourceInstanceName) {
             this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
             return this;
         }
 
-        public Builder setSourceInstanceName(String sourceInstanceName) {
+        public Builder sourceInstanceName(String sourceInstanceName) {
             this.sourceInstanceName = Input.of(Objects.requireNonNull(sourceInstanceName));
             return this;
         }

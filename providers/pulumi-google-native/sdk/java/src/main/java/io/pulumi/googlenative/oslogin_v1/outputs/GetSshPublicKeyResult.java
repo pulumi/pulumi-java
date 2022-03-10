@@ -97,22 +97,22 @@ public final class GetSshPublicKeyResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setExpirationTimeUsec(String expirationTimeUsec) {
+        public Builder expirationTimeUsec(String expirationTimeUsec) {
             this.expirationTimeUsec = Objects.requireNonNull(expirationTimeUsec);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

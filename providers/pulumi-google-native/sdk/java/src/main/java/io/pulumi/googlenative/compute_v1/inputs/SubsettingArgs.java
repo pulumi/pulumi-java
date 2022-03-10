@@ -53,12 +53,12 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(@Nullable Input<SubsettingPolicy> policy) {
+        public Builder policy(@Nullable Input<SubsettingPolicy> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable SubsettingPolicy policy) {
+        public Builder policy(@Nullable SubsettingPolicy policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }

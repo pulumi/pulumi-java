@@ -98,22 +98,22 @@ public final class BastionShareableLinkResponse {
     	      this.vm = defaults.vm;
         }
 
-        public Builder setBsl(String bsl) {
+        public Builder bsl(String bsl) {
             this.bsl = Objects.requireNonNull(bsl);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setVm(VMResponse vm) {
+        public Builder vm(VMResponse vm) {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }

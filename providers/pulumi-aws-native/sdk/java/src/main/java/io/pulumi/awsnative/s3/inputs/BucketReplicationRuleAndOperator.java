@@ -64,12 +64,12 @@ public final class BucketReplicationRuleAndOperator extends io.pulumi.resources.
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }

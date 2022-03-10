@@ -92,32 +92,32 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder setIdentity(@Nullable Input<EncryptionPropertiesIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<EncryptionPropertiesIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EncryptionPropertiesIdentityArgs identity) {
+        public Builder identity(@Nullable EncryptionPropertiesIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKeySource(@Nullable Input<EncryptionKeySourceType> keySource) {
+        public Builder keySource(@Nullable Input<EncryptionKeySourceType> keySource) {
             this.keySource = keySource;
             return this;
         }
 
-        public Builder setKeySource(@Nullable EncryptionKeySourceType keySource) {
+        public Builder keySource(@Nullable EncryptionKeySourceType keySource) {
             this.keySource = Input.ofNullable(keySource);
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }

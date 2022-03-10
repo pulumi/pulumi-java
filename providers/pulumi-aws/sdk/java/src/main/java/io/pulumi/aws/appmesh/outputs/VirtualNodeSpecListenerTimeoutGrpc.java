@@ -68,12 +68,12 @@ public final class VirtualNodeSpecListenerTimeoutGrpc {
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder setIdle(@Nullable VirtualNodeSpecListenerTimeoutGrpcIdle idle) {
+        public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutGrpcIdle idle) {
             this.idle = idle;
             return this;
         }
 
-        public Builder setPerRequest(@Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest) {
+        public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest) {
             this.perRequest = perRequest;
             return this;
         }

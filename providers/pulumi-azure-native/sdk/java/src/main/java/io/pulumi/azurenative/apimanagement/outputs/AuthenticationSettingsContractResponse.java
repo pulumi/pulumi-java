@@ -68,12 +68,12 @@ public final class AuthenticationSettingsContractResponse {
     	      this.openid = defaults.openid;
         }
 
-        public Builder setOAuth2(@Nullable OAuth2AuthenticationSettingsContractResponse oAuth2) {
+        public Builder oAuth2(@Nullable OAuth2AuthenticationSettingsContractResponse oAuth2) {
             this.oAuth2 = oAuth2;
             return this;
         }
 
-        public Builder setOpenid(@Nullable OpenIdAuthenticationSettingsContractResponse openid) {
+        public Builder openid(@Nullable OpenIdAuthenticationSettingsContractResponse openid) {
             this.openid = openid;
             return this;
         }

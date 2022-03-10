@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs ex
     	      this.reply = defaults.reply;
         }
 
-        public Builder setAction(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action) {
+        public Builder action(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs action) {
+        public Builder action(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setReply(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply) {
+        public Builder reply(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs> reply) {
             this.reply = reply;
             return this;
         }
 
-        public Builder setReply(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs reply) {
+        public Builder reply(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArgs reply) {
             this.reply = Input.ofNullable(reply);
             return this;
         }

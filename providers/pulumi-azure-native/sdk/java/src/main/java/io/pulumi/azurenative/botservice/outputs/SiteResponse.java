@@ -245,67 +245,67 @@ public final class SiteResponse {
     	      this.trustedOrigins = defaults.trustedOrigins;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setIsBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
+        public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
             this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
+        public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
             this.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
 
-        public Builder setIsTokenEnabled(@Nullable Boolean isTokenEnabled) {
+        public Builder isTokenEnabled(@Nullable Boolean isTokenEnabled) {
             this.isTokenEnabled = isTokenEnabled;
             return this;
         }
 
-        public Builder setIsV1Enabled(Boolean isV1Enabled) {
+        public Builder isV1Enabled(Boolean isV1Enabled) {
             this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
             return this;
         }
 
-        public Builder setIsV3Enabled(Boolean isV3Enabled) {
+        public Builder isV3Enabled(Boolean isV3Enabled) {
             this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
             return this;
         }
 
-        public Builder setIsWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
+        public Builder isWebchatPreviewEnabled(Boolean isWebchatPreviewEnabled) {
             this.isWebchatPreviewEnabled = Objects.requireNonNull(isWebchatPreviewEnabled);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey2(String key2) {
+        public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setSiteName(String siteName) {
+        public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
 
-        public Builder setTrustedOrigins(@Nullable List<String> trustedOrigins) {
+        public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
             this.trustedOrigins = trustedOrigins;
             return this;
         }

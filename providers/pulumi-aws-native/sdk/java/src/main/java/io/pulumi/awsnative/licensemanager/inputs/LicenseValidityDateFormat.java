@@ -68,12 +68,12 @@ public final class LicenseValidityDateFormat extends io.pulumi.resources.InvokeA
     	      this.end = defaults.end;
         }
 
-        public Builder setBegin(String begin) {
+        public Builder begin(String begin) {
             this.begin = Objects.requireNonNull(begin);
             return this;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }

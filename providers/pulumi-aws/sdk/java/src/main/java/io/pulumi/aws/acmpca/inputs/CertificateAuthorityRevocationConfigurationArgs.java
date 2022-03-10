@@ -53,12 +53,12 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
     	      this.crlConfiguration = defaults.crlConfiguration;
         }
 
-        public Builder setCrlConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration) {
+        public Builder crlConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration) {
             this.crlConfiguration = crlConfiguration;
             return this;
         }
 
-        public Builder setCrlConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfigurationArgs crlConfiguration) {
+        public Builder crlConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfigurationArgs crlConfiguration) {
             this.crlConfiguration = Input.ofNullable(crlConfiguration);
             return this;
         }

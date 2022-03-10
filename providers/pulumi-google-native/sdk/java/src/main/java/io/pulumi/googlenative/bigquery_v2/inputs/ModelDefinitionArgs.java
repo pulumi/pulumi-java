@@ -72,22 +72,22 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.trainingRuns = defaults.trainingRuns;
         }
 
-        public Builder setModelOptions(@Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions) {
+        public Builder modelOptions(@Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions) {
             this.modelOptions = modelOptions;
             return this;
         }
 
-        public Builder setModelOptions(@Nullable ModelDefinitionModelOptionsArgs modelOptions) {
+        public Builder modelOptions(@Nullable ModelDefinitionModelOptionsArgs modelOptions) {
             this.modelOptions = Input.ofNullable(modelOptions);
             return this;
         }
 
-        public Builder setTrainingRuns(@Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns) {
+        public Builder trainingRuns(@Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns) {
             this.trainingRuns = trainingRuns;
             return this;
         }
 
-        public Builder setTrainingRuns(@Nullable List<BqmlTrainingRunArgs> trainingRuns) {
+        public Builder trainingRuns(@Nullable List<BqmlTrainingRunArgs> trainingRuns) {
             this.trainingRuns = Input.ofNullable(trainingRuns);
             return this;
         }

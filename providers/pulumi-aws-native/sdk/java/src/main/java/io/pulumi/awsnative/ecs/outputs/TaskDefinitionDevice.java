@@ -60,17 +60,17 @@ public final class TaskDefinitionDevice {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setContainerPath(@Nullable String containerPath) {
+        public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
-        public Builder setHostPath(@Nullable String hostPath) {
+        public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<String> permissions) {
+        public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = permissions;
             return this;
         }

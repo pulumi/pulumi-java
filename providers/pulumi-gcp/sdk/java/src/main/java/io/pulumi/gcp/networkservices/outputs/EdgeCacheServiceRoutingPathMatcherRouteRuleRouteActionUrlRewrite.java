@@ -103,17 +103,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     	      this.pathTemplateRewrite = defaults.pathTemplateRewrite;
         }
 
-        public Builder setHostRewrite(@Nullable String hostRewrite) {
+        public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = hostRewrite;
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
 
-        public Builder setPathTemplateRewrite(@Nullable String pathTemplateRewrite) {
+        public Builder pathTemplateRewrite(@Nullable String pathTemplateRewrite) {
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
         }

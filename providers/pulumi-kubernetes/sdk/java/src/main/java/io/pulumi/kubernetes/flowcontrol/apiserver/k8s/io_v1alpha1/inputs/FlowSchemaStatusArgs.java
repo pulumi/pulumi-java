@@ -58,12 +58,12 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable Input<List<FlowSchemaConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<FlowSchemaConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<FlowSchemaConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<FlowSchemaConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }

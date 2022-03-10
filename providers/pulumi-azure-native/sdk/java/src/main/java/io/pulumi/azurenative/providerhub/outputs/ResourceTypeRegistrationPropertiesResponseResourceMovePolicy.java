@@ -59,17 +59,17 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
     	      this.validationRequired = defaults.validationRequired;
         }
 
-        public Builder setCrossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
+        public Builder crossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
             this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
             return this;
         }
 
-        public Builder setCrossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
+        public Builder crossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
             this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
             return this;
         }
 
-        public Builder setValidationRequired(@Nullable Boolean validationRequired) {
+        public Builder validationRequired(@Nullable Boolean validationRequired) {
             this.validationRequired = validationRequired;
             return this;
         }

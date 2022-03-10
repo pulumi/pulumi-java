@@ -246,67 +246,67 @@ public final class GetFormulaResult {
     	      this.vm = defaults.vm;
         }
 
-        public Builder setAuthor(String author) {
+        public Builder author(String author) {
             this.author = Objects.requireNonNull(author);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFormulaContent(@Nullable LabVirtualMachineCreationParameterResponse formulaContent) {
+        public Builder formulaContent(@Nullable LabVirtualMachineCreationParameterResponse formulaContent) {
             this.formulaContent = formulaContent;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setVm(@Nullable FormulaPropertiesFromVmResponse vm) {
+        public Builder vm(@Nullable FormulaPropertiesFromVmResponse vm) {
             this.vm = vm;
             return this;
         }

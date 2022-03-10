@@ -137,62 +137,62 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
     	      this.testBaseAccountName = defaults.testBaseAccountName;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestore(@Nullable Input<Boolean> restore) {
+        public Builder restore(@Nullable Input<Boolean> restore) {
             this.restore = restore;
             return this;
         }
 
-        public Builder setRestore(@Nullable Boolean restore) {
+        public Builder restore(@Nullable Boolean restore) {
             this.restore = Input.ofNullable(restore);
             return this;
         }
 
-        public Builder setSku(Input<TestBaseAccountSKUArgs> sku) {
+        public Builder sku(Input<TestBaseAccountSKUArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(TestBaseAccountSKUArgs sku) {
+        public Builder sku(TestBaseAccountSKUArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTestBaseAccountName(@Nullable Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(@Nullable Input<String> testBaseAccountName) {
             this.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
-        public Builder setTestBaseAccountName(@Nullable String testBaseAccountName) {
+        public Builder testBaseAccountName(@Nullable String testBaseAccountName) {
             this.testBaseAccountName = Input.ofNullable(testBaseAccountName);
             return this;
         }

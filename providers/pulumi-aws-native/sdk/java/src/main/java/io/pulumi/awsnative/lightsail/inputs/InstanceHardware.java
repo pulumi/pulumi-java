@@ -92,17 +92,17 @@ public final class InstanceHardware extends io.pulumi.resources.InvokeArgs {
     	      this.ramSizeInGb = defaults.ramSizeInGb;
         }
 
-        public Builder setCpuCount(@Nullable Integer cpuCount) {
+        public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<InstanceDisk> disks) {
+        public Builder disks(@Nullable List<InstanceDisk> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setRamSizeInGb(@Nullable Integer ramSizeInGb) {
+        public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }

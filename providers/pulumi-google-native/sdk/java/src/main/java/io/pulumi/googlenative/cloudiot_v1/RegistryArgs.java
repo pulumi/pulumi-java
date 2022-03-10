@@ -197,102 +197,102 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stateNotificationConfig = defaults.stateNotificationConfig;
         }
 
-        public Builder setCredentials(@Nullable Input<List<RegistryCredentialArgs>> credentials) {
+        public Builder credentials(@Nullable Input<List<RegistryCredentialArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable List<RegistryCredentialArgs> credentials) {
+        public Builder credentials(@Nullable List<RegistryCredentialArgs> credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setEventNotificationConfigs(@Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(@Nullable Input<List<EventNotificationConfigArgs>> eventNotificationConfigs) {
             this.eventNotificationConfigs = eventNotificationConfigs;
             return this;
         }
 
-        public Builder setEventNotificationConfigs(@Nullable List<EventNotificationConfigArgs> eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(@Nullable List<EventNotificationConfigArgs> eventNotificationConfigs) {
             this.eventNotificationConfigs = Input.ofNullable(eventNotificationConfigs);
             return this;
         }
 
-        public Builder setHttpConfig(@Nullable Input<HttpConfigArgs> httpConfig) {
+        public Builder httpConfig(@Nullable Input<HttpConfigArgs> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
 
-        public Builder setHttpConfig(@Nullable HttpConfigArgs httpConfig) {
+        public Builder httpConfig(@Nullable HttpConfigArgs httpConfig) {
             this.httpConfig = Input.ofNullable(httpConfig);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<RegistryLogLevel> logLevel) {
+        public Builder logLevel(@Nullable Input<RegistryLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable RegistryLogLevel logLevel) {
+        public Builder logLevel(@Nullable RegistryLogLevel logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMqttConfig(@Nullable Input<MqttConfigArgs> mqttConfig) {
+        public Builder mqttConfig(@Nullable Input<MqttConfigArgs> mqttConfig) {
             this.mqttConfig = mqttConfig;
             return this;
         }
 
-        public Builder setMqttConfig(@Nullable MqttConfigArgs mqttConfig) {
+        public Builder mqttConfig(@Nullable MqttConfigArgs mqttConfig) {
             this.mqttConfig = Input.ofNullable(mqttConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setStateNotificationConfig(@Nullable Input<StateNotificationConfigArgs> stateNotificationConfig) {
+        public Builder stateNotificationConfig(@Nullable Input<StateNotificationConfigArgs> stateNotificationConfig) {
             this.stateNotificationConfig = stateNotificationConfig;
             return this;
         }
 
-        public Builder setStateNotificationConfig(@Nullable StateNotificationConfigArgs stateNotificationConfig) {
+        public Builder stateNotificationConfig(@Nullable StateNotificationConfigArgs stateNotificationConfig) {
             this.stateNotificationConfig = Input.ofNullable(stateNotificationConfig);
             return this;
         }

@@ -75,12 +75,12 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
     	      this.value = defaults.value;
         }
 
-        public Builder setIsSensitive(@Nullable Boolean isSensitive) {
+        public Builder isSensitive(@Nullable Boolean isSensitive) {
             this.isSensitive = isSensitive;
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

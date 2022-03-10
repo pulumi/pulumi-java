@@ -83,17 +83,17 @@ public final class PushConfigResponse {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setAttributes(Map<String,String> attributes) {
+        public Builder attributes(Map<String,String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setOidcToken(OidcTokenResponse oidcToken) {
+        public Builder oidcToken(OidcTokenResponse oidcToken) {
             this.oidcToken = Objects.requireNonNull(oidcToken);
             return this;
         }
 
-        public Builder setPushEndpoint(String pushEndpoint) {
+        public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }

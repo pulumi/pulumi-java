@@ -90,17 +90,17 @@ public final class ManagementPolicyVersionResponse extends io.pulumi.resources.I
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder setDelete(@Nullable DateAfterCreationResponse delete) {
+        public Builder delete(@Nullable DateAfterCreationResponse delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable DateAfterCreationResponse tierToArchive) {
+        public Builder tierToArchive(@Nullable DateAfterCreationResponse tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
-        public Builder setTierToCool(@Nullable DateAfterCreationResponse tierToCool) {
+        public Builder tierToCool(@Nullable DateAfterCreationResponse tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }

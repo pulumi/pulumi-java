@@ -134,62 +134,62 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
     	      this.vmResourceId = defaults.vmResourceId;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setHybridRunbookWorkerGroupName(Input<String> hybridRunbookWorkerGroupName) {
+        public Builder hybridRunbookWorkerGroupName(Input<String> hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = Objects.requireNonNull(hybridRunbookWorkerGroupName);
             return this;
         }
 
-        public Builder setHybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
+        public Builder hybridRunbookWorkerGroupName(String hybridRunbookWorkerGroupName) {
             this.hybridRunbookWorkerGroupName = Input.of(Objects.requireNonNull(hybridRunbookWorkerGroupName));
             return this;
         }
 
-        public Builder setHybridRunbookWorkerId(@Nullable Input<String> hybridRunbookWorkerId) {
+        public Builder hybridRunbookWorkerId(@Nullable Input<String> hybridRunbookWorkerId) {
             this.hybridRunbookWorkerId = hybridRunbookWorkerId;
             return this;
         }
 
-        public Builder setHybridRunbookWorkerId(@Nullable String hybridRunbookWorkerId) {
+        public Builder hybridRunbookWorkerId(@Nullable String hybridRunbookWorkerId) {
             this.hybridRunbookWorkerId = Input.ofNullable(hybridRunbookWorkerId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVmResourceId(@Nullable Input<String> vmResourceId) {
+        public Builder vmResourceId(@Nullable Input<String> vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }
 
-        public Builder setVmResourceId(@Nullable String vmResourceId) {
+        public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = Input.ofNullable(vmResourceId);
             return this;
         }

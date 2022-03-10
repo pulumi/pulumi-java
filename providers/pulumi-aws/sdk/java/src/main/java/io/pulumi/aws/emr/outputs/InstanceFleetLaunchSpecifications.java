@@ -68,12 +68,12 @@ public final class InstanceFleetLaunchSpecifications {
     	      this.spotSpecifications = defaults.spotSpecifications;
         }
 
-        public Builder setOnDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications) {
+        public Builder onDemandSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications) {
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
 
-        public Builder setSpotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
+        public Builder spotSpecifications(@Nullable List<InstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }

@@ -58,12 +58,12 @@ public final class ServicePlacementPolicyDescriptionArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder setType(Input<Either<String,ServicePlacementPolicyType>> type) {
+        public Builder type(Input<Either<String,ServicePlacementPolicyType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,ServicePlacementPolicyType> type) {
+        public Builder type(Either<String,ServicePlacementPolicyType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

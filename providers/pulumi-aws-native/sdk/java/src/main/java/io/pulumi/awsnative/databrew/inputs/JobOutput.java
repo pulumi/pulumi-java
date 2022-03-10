@@ -116,32 +116,32 @@ public final class JobOutput extends io.pulumi.resources.InvokeArgs {
     	      this.partitionColumns = defaults.partitionColumns;
         }
 
-        public Builder setCompressionFormat(@Nullable JobOutputCompressionFormat compressionFormat) {
+        public Builder compressionFormat(@Nullable JobOutputCompressionFormat compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setFormat(@Nullable JobOutputFormat format) {
+        public Builder format(@Nullable JobOutputFormat format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormatOptions(@Nullable JobOutputFormatOptions formatOptions) {
+        public Builder formatOptions(@Nullable JobOutputFormatOptions formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
 
-        public Builder setLocation(JobS3Location location) {
+        public Builder location(JobS3Location location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setPartitionColumns(@Nullable List<String> partitionColumns) {
+        public Builder partitionColumns(@Nullable List<String> partitionColumns) {
             this.partitionColumns = partitionColumns;
             return this;
         }

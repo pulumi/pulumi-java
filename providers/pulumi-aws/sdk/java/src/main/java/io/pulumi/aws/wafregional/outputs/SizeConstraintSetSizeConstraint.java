@@ -115,22 +115,22 @@ public final class SizeConstraintSetSizeConstraint {
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setComparisonOperator(String comparisonOperator) {
+        public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setFieldToMatch(SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }

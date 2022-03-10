@@ -90,17 +90,17 @@ public final class LibraryRequirementsResponse extends io.pulumi.resources.Invok
     	      this.time = defaults.time;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setFilename(@Nullable String filename) {
+        public Builder filename(@Nullable String filename) {
             this.filename = filename;
             return this;
         }
 
-        public Builder setTime(String time) {
+        public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

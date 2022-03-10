@@ -100,22 +100,22 @@ public final class MetricTarget {
     	      this.value = defaults.value;
         }
 
-        public Builder setAverageUtilization(@Nullable Integer averageUtilization) {
+        public Builder averageUtilization(@Nullable Integer averageUtilization) {
             this.averageUtilization = averageUtilization;
             return this;
         }
 
-        public Builder setAverageValue(@Nullable String averageValue) {
+        public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = averageValue;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

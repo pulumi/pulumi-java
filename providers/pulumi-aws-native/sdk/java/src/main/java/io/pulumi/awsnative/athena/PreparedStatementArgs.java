@@ -102,42 +102,42 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setQueryStatement(Input<String> queryStatement) {
+        public Builder queryStatement(Input<String> queryStatement) {
             this.queryStatement = Objects.requireNonNull(queryStatement);
             return this;
         }
 
-        public Builder setQueryStatement(String queryStatement) {
+        public Builder queryStatement(String queryStatement) {
             this.queryStatement = Input.of(Objects.requireNonNull(queryStatement));
             return this;
         }
 
-        public Builder setStatementName(Input<String> statementName) {
+        public Builder statementName(Input<String> statementName) {
             this.statementName = Objects.requireNonNull(statementName);
             return this;
         }
 
-        public Builder setStatementName(String statementName) {
+        public Builder statementName(String statementName) {
             this.statementName = Input.of(Objects.requireNonNull(statementName));
             return this;
         }
 
-        public Builder setWorkGroup(Input<String> workGroup) {
+        public Builder workGroup(Input<String> workGroup) {
             this.workGroup = Objects.requireNonNull(workGroup);
             return this;
         }
 
-        public Builder setWorkGroup(String workGroup) {
+        public Builder workGroup(String workGroup) {
             this.workGroup = Input.of(Objects.requireNonNull(workGroup));
             return this;
         }

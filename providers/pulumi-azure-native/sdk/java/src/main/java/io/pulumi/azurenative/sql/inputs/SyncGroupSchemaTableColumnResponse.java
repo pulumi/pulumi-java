@@ -90,17 +90,17 @@ public final class SyncGroupSchemaTableColumnResponse extends io.pulumi.resource
     	      this.quotedName = defaults.quotedName;
         }
 
-        public Builder setDataSize(@Nullable String dataSize) {
+        public Builder dataSize(@Nullable String dataSize) {
             this.dataSize = dataSize;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setQuotedName(@Nullable String quotedName) {
+        public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = quotedName;
             return this;
         }

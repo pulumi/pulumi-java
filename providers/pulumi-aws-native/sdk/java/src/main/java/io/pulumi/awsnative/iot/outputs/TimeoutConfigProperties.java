@@ -40,7 +40,7 @@ public final class TimeoutConfigProperties {
     	      this.inProgressTimeoutInMinutes = defaults.inProgressTimeoutInMinutes;
         }
 
-        public Builder setInProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
+        public Builder inProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
             this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
             return this;
         }

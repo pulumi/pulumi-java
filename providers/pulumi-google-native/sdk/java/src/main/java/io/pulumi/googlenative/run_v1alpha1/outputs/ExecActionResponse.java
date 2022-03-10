@@ -49,7 +49,7 @@ public final class ExecActionResponse {
     	      this.command = defaults.command;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }

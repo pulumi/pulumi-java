@@ -100,27 +100,27 @@ public final class GetRolesResult {
     	      this.pathPrefix = defaults.pathPrefix;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(@Nullable String nameRegex) {
             this.nameRegex = nameRegex;
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setPathPrefix(@Nullable String pathPrefix) {
+        public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }

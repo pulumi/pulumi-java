@@ -53,12 +53,12 @@ public final class VirtualServiceSpecGetArgs extends io.pulumi.resources.Resourc
     	      this.provider = defaults.provider;
         }
 
-        public Builder setProvider(@Nullable Input<VirtualServiceSpecProviderGetArgs> provider) {
+        public Builder provider(@Nullable Input<VirtualServiceSpecProviderGetArgs> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable VirtualServiceSpecProviderGetArgs provider) {
+        public Builder provider(@Nullable VirtualServiceSpecProviderGetArgs provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }

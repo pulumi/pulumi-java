@@ -99,22 +99,22 @@ public final class HierarchyInformationResponse {
     	      this.productName = defaults.productName;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setProductFamilyName(@Nullable String productFamilyName) {
+        public Builder productFamilyName(@Nullable String productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
 
-        public Builder setProductLineName(@Nullable String productLineName) {
+        public Builder productLineName(@Nullable String productLineName) {
             this.productLineName = productLineName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }

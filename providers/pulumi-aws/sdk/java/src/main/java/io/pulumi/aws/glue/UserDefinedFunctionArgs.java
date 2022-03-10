@@ -152,72 +152,72 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
     	      this.resourceUris = defaults.resourceUris;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setClassName(Input<String> className) {
+        public Builder className(Input<String> className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
 
-        public Builder setClassName(String className) {
+        public Builder className(String className) {
             this.className = Input.of(Objects.requireNonNull(className));
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerName(Input<String> ownerName) {
+        public Builder ownerName(Input<String> ownerName) {
             this.ownerName = Objects.requireNonNull(ownerName);
             return this;
         }
 
-        public Builder setOwnerName(String ownerName) {
+        public Builder ownerName(String ownerName) {
             this.ownerName = Input.of(Objects.requireNonNull(ownerName));
             return this;
         }
 
-        public Builder setOwnerType(Input<String> ownerType) {
+        public Builder ownerType(Input<String> ownerType) {
             this.ownerType = Objects.requireNonNull(ownerType);
             return this;
         }
 
-        public Builder setOwnerType(String ownerType) {
+        public Builder ownerType(String ownerType) {
             this.ownerType = Input.of(Objects.requireNonNull(ownerType));
             return this;
         }
 
-        public Builder setResourceUris(@Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
+        public Builder resourceUris(@Nullable Input<List<UserDefinedFunctionResourceUriArgs>> resourceUris) {
             this.resourceUris = resourceUris;
             return this;
         }
 
-        public Builder setResourceUris(@Nullable List<UserDefinedFunctionResourceUriArgs> resourceUris) {
+        public Builder resourceUris(@Nullable List<UserDefinedFunctionResourceUriArgs> resourceUris) {
             this.resourceUris = Input.ofNullable(resourceUris);
             return this;
         }

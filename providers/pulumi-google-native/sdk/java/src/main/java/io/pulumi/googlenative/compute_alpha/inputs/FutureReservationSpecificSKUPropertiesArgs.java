@@ -71,22 +71,22 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setInstanceProperties(@Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
+        public Builder instanceProperties(@Nullable Input<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
             this.instanceProperties = instanceProperties;
             return this;
         }
 
-        public Builder setInstanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
+        public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
             this.instanceProperties = Input.ofNullable(instanceProperties);
             return this;
         }
 
-        public Builder setTotalCount(@Nullable Input<String> totalCount) {
+        public Builder totalCount(@Nullable Input<String> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
 
-        public Builder setTotalCount(@Nullable String totalCount) {
+        public Builder totalCount(@Nullable String totalCount) {
             this.totalCount = Input.ofNullable(totalCount);
             return this;
         }

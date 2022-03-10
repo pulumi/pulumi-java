@@ -116,27 +116,27 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setBookmarkId(String bookmarkId) {
+        public Builder bookmarkId(String bookmarkId) {
             this.bookmarkId = Objects.requireNonNull(bookmarkId);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setRelationName(String relationName) {
+        public Builder relationName(String relationName) {
             this.relationName = Objects.requireNonNull(relationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

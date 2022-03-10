@@ -149,37 +149,37 @@ public final class ConnectionMonitorEndpointResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setCoverageLevel(@Nullable String coverageLevel) {
+        public Builder coverageLevel(@Nullable String coverageLevel) {
             this.coverageLevel = coverageLevel;
             return this;
         }
 
-        public Builder setFilter(@Nullable ConnectionMonitorEndpointFilterResponse filter) {
+        public Builder filter(@Nullable ConnectionMonitorEndpointFilterResponse filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setScope(@Nullable ConnectionMonitorEndpointScopeResponse scope) {
+        public Builder scope(@Nullable ConnectionMonitorEndpointScopeResponse scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

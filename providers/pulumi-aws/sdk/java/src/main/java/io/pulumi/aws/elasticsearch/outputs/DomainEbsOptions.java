@@ -101,22 +101,22 @@ public final class DomainEbsOptions {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setEbsEnabled(Boolean ebsEnabled) {
+        public Builder ebsEnabled(Boolean ebsEnabled) {
             this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
         }

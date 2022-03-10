@@ -42,7 +42,7 @@ public final class StateMachineLogDestination {
     	      this.cloudWatchLogsLogGroup = defaults.cloudWatchLogsLogGroup;
         }
 
-        public Builder setCloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
+        public Builder cloudWatchLogsLogGroup(@Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup) {
             this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
         }

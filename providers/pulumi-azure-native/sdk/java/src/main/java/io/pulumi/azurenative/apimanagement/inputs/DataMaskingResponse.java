@@ -71,12 +71,12 @@ public final class DataMaskingResponse extends io.pulumi.resources.InvokeArgs {
     	      this.queryParams = defaults.queryParams;
         }
 
-        public Builder setHeaders(@Nullable List<DataMaskingEntityResponse> headers) {
+        public Builder headers(@Nullable List<DataMaskingEntityResponse> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryParams(@Nullable List<DataMaskingEntityResponse> queryParams) {
+        public Builder queryParams(@Nullable List<DataMaskingEntityResponse> queryParams) {
             this.queryParams = queryParams;
             return this;
         }

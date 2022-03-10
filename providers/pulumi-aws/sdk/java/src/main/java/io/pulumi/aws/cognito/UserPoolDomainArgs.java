@@ -86,32 +86,32 @@ public final class UserPoolDomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setUserPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Input<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
             return this;
         }

@@ -55,7 +55,7 @@ public final class LocalObjectReferenceResponse extends io.pulumi.resources.Invo
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

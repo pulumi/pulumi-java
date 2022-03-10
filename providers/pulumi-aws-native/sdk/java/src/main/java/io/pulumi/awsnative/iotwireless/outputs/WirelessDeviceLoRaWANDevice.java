@@ -95,37 +95,37 @@ public final class WirelessDeviceLoRaWANDevice {
     	      this.serviceProfileId = defaults.serviceProfileId;
         }
 
-        public Builder setAbpV10x(@Nullable WirelessDeviceAbpV10x abpV10x) {
+        public Builder abpV10x(@Nullable WirelessDeviceAbpV10x abpV10x) {
             this.abpV10x = abpV10x;
             return this;
         }
 
-        public Builder setAbpV11(@Nullable WirelessDeviceAbpV11 abpV11) {
+        public Builder abpV11(@Nullable WirelessDeviceAbpV11 abpV11) {
             this.abpV11 = abpV11;
             return this;
         }
 
-        public Builder setDevEui(@Nullable String devEui) {
+        public Builder devEui(@Nullable String devEui) {
             this.devEui = devEui;
             return this;
         }
 
-        public Builder setDeviceProfileId(@Nullable String deviceProfileId) {
+        public Builder deviceProfileId(@Nullable String deviceProfileId) {
             this.deviceProfileId = deviceProfileId;
             return this;
         }
 
-        public Builder setOtaaV10x(@Nullable WirelessDeviceOtaaV10x otaaV10x) {
+        public Builder otaaV10x(@Nullable WirelessDeviceOtaaV10x otaaV10x) {
             this.otaaV10x = otaaV10x;
             return this;
         }
 
-        public Builder setOtaaV11(@Nullable WirelessDeviceOtaaV11 otaaV11) {
+        public Builder otaaV11(@Nullable WirelessDeviceOtaaV11 otaaV11) {
             this.otaaV11 = otaaV11;
             return this;
         }
 
-        public Builder setServiceProfileId(@Nullable String serviceProfileId) {
+        public Builder serviceProfileId(@Nullable String serviceProfileId) {
             this.serviceProfileId = serviceProfileId;
             return this;
         }

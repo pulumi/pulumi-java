@@ -135,62 +135,62 @@ public final class RepositoryCatalogDataGetArgs extends io.pulumi.resources.Reso
     	      this.usageText = defaults.usageText;
         }
 
-        public Builder setAboutText(@Nullable Input<String> aboutText) {
+        public Builder aboutText(@Nullable Input<String> aboutText) {
             this.aboutText = aboutText;
             return this;
         }
 
-        public Builder setAboutText(@Nullable String aboutText) {
+        public Builder aboutText(@Nullable String aboutText) {
             this.aboutText = Input.ofNullable(aboutText);
             return this;
         }
 
-        public Builder setArchitectures(@Nullable Input<List<String>> architectures) {
+        public Builder architectures(@Nullable Input<List<String>> architectures) {
             this.architectures = architectures;
             return this;
         }
 
-        public Builder setArchitectures(@Nullable List<String> architectures) {
+        public Builder architectures(@Nullable List<String> architectures) {
             this.architectures = Input.ofNullable(architectures);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLogoImageBlob(@Nullable Input<String> logoImageBlob) {
+        public Builder logoImageBlob(@Nullable Input<String> logoImageBlob) {
             this.logoImageBlob = logoImageBlob;
             return this;
         }
 
-        public Builder setLogoImageBlob(@Nullable String logoImageBlob) {
+        public Builder logoImageBlob(@Nullable String logoImageBlob) {
             this.logoImageBlob = Input.ofNullable(logoImageBlob);
             return this;
         }
 
-        public Builder setOperatingSystems(@Nullable Input<List<String>> operatingSystems) {
+        public Builder operatingSystems(@Nullable Input<List<String>> operatingSystems) {
             this.operatingSystems = operatingSystems;
             return this;
         }
 
-        public Builder setOperatingSystems(@Nullable List<String> operatingSystems) {
+        public Builder operatingSystems(@Nullable List<String> operatingSystems) {
             this.operatingSystems = Input.ofNullable(operatingSystems);
             return this;
         }
 
-        public Builder setUsageText(@Nullable Input<String> usageText) {
+        public Builder usageText(@Nullable Input<String> usageText) {
             this.usageText = usageText;
             return this;
         }
 
-        public Builder setUsageText(@Nullable String usageText) {
+        public Builder usageText(@Nullable String usageText) {
             this.usageText = Input.ofNullable(usageText);
             return this;
         }

@@ -68,12 +68,12 @@ public final class ClusterOpenMonitoringPrometheus {
     	      this.nodeExporter = defaults.nodeExporter;
         }
 
-        public Builder setJmxExporter(@Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter) {
+        public Builder jmxExporter(@Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter) {
             this.jmxExporter = jmxExporter;
             return this;
         }
 
-        public Builder setNodeExporter(@Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
+        public Builder nodeExporter(@Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
             this.nodeExporter = nodeExporter;
             return this;
         }

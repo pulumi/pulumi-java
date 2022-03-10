@@ -143,32 +143,32 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest extends io.
     	      this.models = defaults.models;
         }
 
-        public Builder setAssets(@Nullable List<ImageAssetResponse> assets) {
+        public Builder assets(@Nullable List<ImageAssetResponse> assets) {
             this.assets = assets;
             return this;
         }
 
-        public Builder setDriverProgram(@Nullable String driverProgram) {
+        public Builder driverProgram(@Nullable String driverProgram) {
             this.driverProgram = driverProgram;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable EnvironmentImageResponseResponseEnvironment environment) {
+        public Builder environment(@Nullable EnvironmentImageResponseResponseEnvironment environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironmentReference(@Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference) {
+        public Builder environmentReference(@Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference) {
             this.environmentReference = environmentReference;
             return this;
         }
 
-        public Builder setModelIds(@Nullable List<String> modelIds) {
+        public Builder modelIds(@Nullable List<String> modelIds) {
             this.modelIds = modelIds;
             return this;
         }
 
-        public Builder setModels(@Nullable List<ModelResponse> models) {
+        public Builder models(@Nullable List<ModelResponse> models) {
             this.models = models;
             return this;
         }

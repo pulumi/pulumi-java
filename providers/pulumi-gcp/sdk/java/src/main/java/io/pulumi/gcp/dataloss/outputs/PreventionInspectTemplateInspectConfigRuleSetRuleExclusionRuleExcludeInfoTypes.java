@@ -51,7 +51,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     	      this.infoTypes = defaults.infoTypes;
         }
 
-        public Builder setInfoTypes(List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> infoTypes) {
+        public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }

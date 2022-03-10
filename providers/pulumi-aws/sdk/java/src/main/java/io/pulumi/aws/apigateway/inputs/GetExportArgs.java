@@ -119,27 +119,27 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setAccepts(@Nullable String accepts) {
+        public Builder accepts(@Nullable String accepts) {
             this.accepts = accepts;
             return this;
         }
 
-        public Builder setExportType(String exportType) {
+        public Builder exportType(String exportType) {
             this.exportType = Objects.requireNonNull(exportType);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }

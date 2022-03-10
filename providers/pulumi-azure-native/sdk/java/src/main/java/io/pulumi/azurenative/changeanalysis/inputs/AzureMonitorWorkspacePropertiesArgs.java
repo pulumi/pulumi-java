@@ -92,32 +92,32 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setIncludeChangeDetails(@Nullable Input<Either<String,ChangeDetailsMode>> includeChangeDetails) {
+        public Builder includeChangeDetails(@Nullable Input<Either<String,ChangeDetailsMode>> includeChangeDetails) {
             this.includeChangeDetails = includeChangeDetails;
             return this;
         }
 
-        public Builder setIncludeChangeDetails(@Nullable Either<String,ChangeDetailsMode> includeChangeDetails) {
+        public Builder includeChangeDetails(@Nullable Either<String,ChangeDetailsMode> includeChangeDetails) {
             this.includeChangeDetails = Input.ofNullable(includeChangeDetails);
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable Input<String> workspaceId) {
+        public Builder workspaceId(@Nullable Input<String> workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = Input.ofNullable(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Input<String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Input<String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = Input.ofNullable(workspaceResourceId);
             return this;
         }

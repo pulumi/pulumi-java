@@ -50,12 +50,12 @@ public final class BudgetsActionActionThreshold {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(BudgetsActionActionThresholdType type) {
+        public Builder type(BudgetsActionActionThresholdType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

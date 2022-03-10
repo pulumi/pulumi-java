@@ -185,92 +185,92 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCategory(@Nullable Input<String> category) {
+        public Builder category(@Nullable Input<String> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setComponents(@Nullable Input<List<StandardComponentPropertiesArgs>> components) {
+        public Builder components(@Nullable Input<List<StandardComponentPropertiesArgs>> components) {
             this.components = components;
             return this;
         }
 
-        public Builder setComponents(@Nullable List<StandardComponentPropertiesArgs> components) {
+        public Builder components(@Nullable List<StandardComponentPropertiesArgs> components) {
             this.components = Input.ofNullable(components);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStandardId(@Nullable Input<String> standardId) {
+        public Builder standardId(@Nullable Input<String> standardId) {
             this.standardId = standardId;
             return this;
         }
 
-        public Builder setStandardId(@Nullable String standardId) {
+        public Builder standardId(@Nullable String standardId) {
             this.standardId = Input.ofNullable(standardId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -74,22 +74,22 @@ public final class CostAllocationProportionArgs extends io.pulumi.resources.Reso
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPercentage(Input<Double> percentage) {
+        public Builder percentage(Input<Double> percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Input.of(Objects.requireNonNull(percentage));
             return this;
         }

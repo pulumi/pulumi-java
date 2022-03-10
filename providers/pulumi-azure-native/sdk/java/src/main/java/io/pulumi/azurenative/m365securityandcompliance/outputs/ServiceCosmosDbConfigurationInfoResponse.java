@@ -68,12 +68,12 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
     	      this.offerThroughput = defaults.offerThroughput;
         }
 
-        public Builder setKeyVaultKeyUri(@Nullable String keyVaultKeyUri) {
+        public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
-        public Builder setOfferThroughput(@Nullable Double offerThroughput) {
+        public Builder offerThroughput(@Nullable Double offerThroughput) {
             this.offerThroughput = offerThroughput;
             return this;
         }

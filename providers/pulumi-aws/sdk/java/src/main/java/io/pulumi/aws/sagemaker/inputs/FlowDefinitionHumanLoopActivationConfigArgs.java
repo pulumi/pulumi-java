@@ -53,12 +53,12 @@ public final class FlowDefinitionHumanLoopActivationConfigArgs extends io.pulumi
     	      this.humanLoopActivationConditionsConfig = defaults.humanLoopActivationConditionsConfig;
         }
 
-        public Builder setHumanLoopActivationConditionsConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
+        public Builder humanLoopActivationConditionsConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs> humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }
 
-        public Builder setHumanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs humanLoopActivationConditionsConfig) {
+        public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigArgs humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = Input.ofNullable(humanLoopActivationConditionsConfig);
             return this;
         }

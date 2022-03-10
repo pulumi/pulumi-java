@@ -48,7 +48,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }

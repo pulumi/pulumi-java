@@ -56,7 +56,7 @@ public final class MTLSPolicyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.clientValidationCa = defaults.clientValidationCa;
         }
 
-        public Builder setClientValidationCa(List<ValidationCAResponse> clientValidationCa) {
+        public Builder clientValidationCa(List<ValidationCAResponse> clientValidationCa) {
             this.clientValidationCa = Objects.requireNonNull(clientValidationCa);
             return this;
         }

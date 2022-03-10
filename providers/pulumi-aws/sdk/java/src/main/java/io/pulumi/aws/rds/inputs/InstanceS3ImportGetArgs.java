@@ -118,52 +118,52 @@ public final class InstanceS3ImportGetArgs extends io.pulumi.resources.ResourceA
     	      this.sourceEngineVersion = defaults.sourceEngineVersion;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Input.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder setIngestionRole(Input<String> ingestionRole) {
+        public Builder ingestionRole(Input<String> ingestionRole) {
             this.ingestionRole = Objects.requireNonNull(ingestionRole);
             return this;
         }
 
-        public Builder setIngestionRole(String ingestionRole) {
+        public Builder ingestionRole(String ingestionRole) {
             this.ingestionRole = Input.of(Objects.requireNonNull(ingestionRole));
             return this;
         }
 
-        public Builder setSourceEngine(Input<String> sourceEngine) {
+        public Builder sourceEngine(Input<String> sourceEngine) {
             this.sourceEngine = Objects.requireNonNull(sourceEngine);
             return this;
         }
 
-        public Builder setSourceEngine(String sourceEngine) {
+        public Builder sourceEngine(String sourceEngine) {
             this.sourceEngine = Input.of(Objects.requireNonNull(sourceEngine));
             return this;
         }
 
-        public Builder setSourceEngineVersion(Input<String> sourceEngineVersion) {
+        public Builder sourceEngineVersion(Input<String> sourceEngineVersion) {
             this.sourceEngineVersion = Objects.requireNonNull(sourceEngineVersion);
             return this;
         }
 
-        public Builder setSourceEngineVersion(String sourceEngineVersion) {
+        public Builder sourceEngineVersion(String sourceEngineVersion) {
             this.sourceEngineVersion = Input.of(Objects.requireNonNull(sourceEngineVersion));
             return this;
         }

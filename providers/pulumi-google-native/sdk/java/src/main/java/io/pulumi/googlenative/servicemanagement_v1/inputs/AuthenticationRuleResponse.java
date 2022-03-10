@@ -108,22 +108,22 @@ public final class AuthenticationRuleResponse extends io.pulumi.resources.Invoke
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAllowWithoutCredential(Boolean allowWithoutCredential) {
+        public Builder allowWithoutCredential(Boolean allowWithoutCredential) {
             this.allowWithoutCredential = Objects.requireNonNull(allowWithoutCredential);
             return this;
         }
 
-        public Builder setOauth(OAuthRequirementsResponse oauth) {
+        public Builder oauth(OAuthRequirementsResponse oauth) {
             this.oauth = Objects.requireNonNull(oauth);
             return this;
         }
 
-        public Builder setRequirements(List<AuthRequirementResponse> requirements) {
+        public Builder requirements(List<AuthRequirementResponse> requirements) {
             this.requirements = Objects.requireNonNull(requirements);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

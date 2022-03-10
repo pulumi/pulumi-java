@@ -50,7 +50,7 @@ public final class DiskSecurityProfileResponse {
     	      this.securityType = defaults.securityType;
         }
 
-        public Builder setSecurityType(@Nullable String securityType) {
+        public Builder securityType(@Nullable String securityType) {
             this.securityType = securityType;
             return this;
         }

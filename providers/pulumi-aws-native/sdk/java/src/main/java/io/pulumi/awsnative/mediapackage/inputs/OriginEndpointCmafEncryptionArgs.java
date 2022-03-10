@@ -88,32 +88,32 @@ public final class OriginEndpointCmafEncryptionArgs extends io.pulumi.resources.
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setConstantInitializationVector(@Nullable Input<String> constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable Input<String> constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = Input.ofNullable(constantInitializationVector);
             return this;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Input<Integer> keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Input<Integer> keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = Input.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }

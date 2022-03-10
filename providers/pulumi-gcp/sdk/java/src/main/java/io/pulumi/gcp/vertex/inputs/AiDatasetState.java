@@ -188,92 +188,92 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEncryptionSpec(@Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
+        public Builder encryptionSpec(@Nullable Input<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
             this.encryptionSpec = encryptionSpec;
             return this;
         }
 
-        public Builder setEncryptionSpec(@Nullable AiDatasetEncryptionSpecGetArgs encryptionSpec) {
+        public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecGetArgs encryptionSpec) {
             this.encryptionSpec = Input.ofNullable(encryptionSpec);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMetadataSchemaUri(@Nullable Input<String> metadataSchemaUri) {
+        public Builder metadataSchemaUri(@Nullable Input<String> metadataSchemaUri) {
             this.metadataSchemaUri = metadataSchemaUri;
             return this;
         }
 
-        public Builder setMetadataSchemaUri(@Nullable String metadataSchemaUri) {
+        public Builder metadataSchemaUri(@Nullable String metadataSchemaUri) {
             this.metadataSchemaUri = Input.ofNullable(metadataSchemaUri);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

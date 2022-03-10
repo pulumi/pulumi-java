@@ -75,22 +75,22 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
     	      this.periodType = defaults.periodType;
         }
 
-        public Builder setDuration(@Nullable Input<Integer> duration) {
+        public Builder duration(@Nullable Input<Integer> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable Integer duration) {
+        public Builder duration(@Nullable Integer duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setPeriodType(@Nullable Input<GoogleCloudChannelV1PeriodPeriodType> periodType) {
+        public Builder periodType(@Nullable Input<GoogleCloudChannelV1PeriodPeriodType> periodType) {
             this.periodType = periodType;
             return this;
         }
 
-        public Builder setPeriodType(@Nullable GoogleCloudChannelV1PeriodPeriodType periodType) {
+        public Builder periodType(@Nullable GoogleCloudChannelV1PeriodPeriodType periodType) {
             this.periodType = Input.ofNullable(periodType);
             return this;
         }

@@ -146,82 +146,82 @@ public final class DatacenterConnectorArgs extends io.pulumi.resources.ResourceA
     	      this.version = defaults.version;
         }
 
-        public Builder setDatacenterConnectorId(Input<String> datacenterConnectorId) {
+        public Builder datacenterConnectorId(Input<String> datacenterConnectorId) {
             this.datacenterConnectorId = Objects.requireNonNull(datacenterConnectorId);
             return this;
         }
 
-        public Builder setDatacenterConnectorId(String datacenterConnectorId) {
+        public Builder datacenterConnectorId(String datacenterConnectorId) {
             this.datacenterConnectorId = Input.of(Objects.requireNonNull(datacenterConnectorId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegistrationId(@Nullable Input<String> registrationId) {
+        public Builder registrationId(@Nullable Input<String> registrationId) {
             this.registrationId = registrationId;
             return this;
         }
 
-        public Builder setRegistrationId(@Nullable String registrationId) {
+        public Builder registrationId(@Nullable String registrationId) {
             this.registrationId = Input.ofNullable(registrationId);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setSourceId(Input<String> sourceId) {
+        public Builder sourceId(Input<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Input.of(Objects.requireNonNull(sourceId));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

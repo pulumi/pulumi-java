@@ -74,12 +74,12 @@ public final class ProductLinkResponse extends io.pulumi.resources.InvokeArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

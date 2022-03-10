@@ -100,22 +100,22 @@ public final class ConnectorCollectionInfoResponse {
     	      this.sourceLastUpdated = defaults.sourceLastUpdated;
         }
 
-        public Builder setError(@Nullable ConnectorCollectionErrorInfoResponse error) {
+        public Builder error(@Nullable ConnectorCollectionErrorInfoResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setLastChecked(String lastChecked) {
+        public Builder lastChecked(String lastChecked) {
             this.lastChecked = Objects.requireNonNull(lastChecked);
             return this;
         }
 
-        public Builder setLastUpdated(String lastUpdated) {
+        public Builder lastUpdated(String lastUpdated) {
             this.lastUpdated = Objects.requireNonNull(lastUpdated);
             return this;
         }
 
-        public Builder setSourceLastUpdated(String sourceLastUpdated) {
+        public Builder sourceLastUpdated(String sourceLastUpdated) {
             this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
             return this;
         }

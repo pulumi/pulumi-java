@@ -125,52 +125,52 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     	      this.webhookUrl = defaults.webhookUrl;
         }
 
-        public Builder setEmailRecipient(@Nullable Input<String> emailRecipient) {
+        public Builder emailRecipient(@Nullable Input<String> emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
 
-        public Builder setEmailRecipient(@Nullable String emailRecipient) {
+        public Builder emailRecipient(@Nullable String emailRecipient) {
             this.emailRecipient = Input.ofNullable(emailRecipient);
             return this;
         }
 
-        public Builder setNotificationLocale(@Nullable Input<String> notificationLocale) {
+        public Builder notificationLocale(@Nullable Input<String> notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
 
-        public Builder setNotificationLocale(@Nullable String notificationLocale) {
+        public Builder notificationLocale(@Nullable String notificationLocale) {
             this.notificationLocale = Input.ofNullable(notificationLocale);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,EnableStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,EnableStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,EnableStatus> status) {
+        public Builder status(@Nullable Either<String,EnableStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTimeInMinutes(@Nullable Input<Integer> timeInMinutes) {
+        public Builder timeInMinutes(@Nullable Input<Integer> timeInMinutes) {
             this.timeInMinutes = timeInMinutes;
             return this;
         }
 
-        public Builder setTimeInMinutes(@Nullable Integer timeInMinutes) {
+        public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
             this.timeInMinutes = Input.ofNullable(timeInMinutes);
             return this;
         }
 
-        public Builder setWebhookUrl(@Nullable Input<String> webhookUrl) {
+        public Builder webhookUrl(@Nullable Input<String> webhookUrl) {
             this.webhookUrl = webhookUrl;
             return this;
         }
 
-        public Builder setWebhookUrl(@Nullable String webhookUrl) {
+        public Builder webhookUrl(@Nullable String webhookUrl) {
             this.webhookUrl = Input.ofNullable(webhookUrl);
             return this;
         }

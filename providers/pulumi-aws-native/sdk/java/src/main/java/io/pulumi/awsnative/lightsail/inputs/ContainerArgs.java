@@ -125,52 +125,52 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<List<ContainerEnvironmentVariableArgs>> environment) {
+        public Builder environment(@Nullable Input<List<ContainerEnvironmentVariableArgs>> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable List<ContainerEnvironmentVariableArgs> environment) {
+        public Builder environment(@Nullable List<ContainerEnvironmentVariableArgs> environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<ContainerPortInfoArgs>> ports) {
+        public Builder ports(@Nullable Input<List<ContainerPortInfoArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ContainerPortInfoArgs> ports) {
+        public Builder ports(@Nullable List<ContainerPortInfoArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }

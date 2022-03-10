@@ -66,12 +66,12 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDaysInCycle(Integer daysInCycle) {
+        public Builder daysInCycle(Integer daysInCycle) {
             this.daysInCycle = Objects.requireNonNull(daysInCycle);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

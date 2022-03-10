@@ -154,72 +154,72 @@ public final class JitRequestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationResourceId(Input<String> applicationResourceId) {
+        public Builder applicationResourceId(Input<String> applicationResourceId) {
             this.applicationResourceId = Objects.requireNonNull(applicationResourceId);
             return this;
         }
 
-        public Builder setApplicationResourceId(String applicationResourceId) {
+        public Builder applicationResourceId(String applicationResourceId) {
             this.applicationResourceId = Input.of(Objects.requireNonNull(applicationResourceId));
             return this;
         }
 
-        public Builder setJitAuthorizationPolicies(Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies) {
+        public Builder jitAuthorizationPolicies(Input<List<JitAuthorizationPoliciesArgs>> jitAuthorizationPolicies) {
             this.jitAuthorizationPolicies = Objects.requireNonNull(jitAuthorizationPolicies);
             return this;
         }
 
-        public Builder setJitAuthorizationPolicies(List<JitAuthorizationPoliciesArgs> jitAuthorizationPolicies) {
+        public Builder jitAuthorizationPolicies(List<JitAuthorizationPoliciesArgs> jitAuthorizationPolicies) {
             this.jitAuthorizationPolicies = Input.of(Objects.requireNonNull(jitAuthorizationPolicies));
             return this;
         }
 
-        public Builder setJitRequestName(@Nullable Input<String> jitRequestName) {
+        public Builder jitRequestName(@Nullable Input<String> jitRequestName) {
             this.jitRequestName = jitRequestName;
             return this;
         }
 
-        public Builder setJitRequestName(@Nullable String jitRequestName) {
+        public Builder jitRequestName(@Nullable String jitRequestName) {
             this.jitRequestName = Input.ofNullable(jitRequestName);
             return this;
         }
 
-        public Builder setJitSchedulingPolicy(Input<JitSchedulingPolicyArgs> jitSchedulingPolicy) {
+        public Builder jitSchedulingPolicy(Input<JitSchedulingPolicyArgs> jitSchedulingPolicy) {
             this.jitSchedulingPolicy = Objects.requireNonNull(jitSchedulingPolicy);
             return this;
         }
 
-        public Builder setJitSchedulingPolicy(JitSchedulingPolicyArgs jitSchedulingPolicy) {
+        public Builder jitSchedulingPolicy(JitSchedulingPolicyArgs jitSchedulingPolicy) {
             this.jitSchedulingPolicy = Input.of(Objects.requireNonNull(jitSchedulingPolicy));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

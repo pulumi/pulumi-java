@@ -61,12 +61,12 @@ public final class BudgetsActionScpActionDefinition extends io.pulumi.resources.
     	      this.targetIds = defaults.targetIds;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setTargetIds(List<String> targetIds) {
+        public Builder targetIds(List<String> targetIds) {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }

@@ -113,27 +113,27 @@ public final class GetSyncGroupResult {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSyncGroupStatus(String syncGroupStatus) {
+        public Builder syncGroupStatus(String syncGroupStatus) {
             this.syncGroupStatus = Objects.requireNonNull(syncGroupStatus);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }

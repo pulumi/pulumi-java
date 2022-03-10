@@ -91,32 +91,32 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs ext
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
+        public Builder resourceType(@Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType resourceType) {
+        public Builder resourceType(@Nullable GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResourceType resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }

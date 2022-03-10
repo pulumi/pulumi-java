@@ -71,22 +71,22 @@ public final class RouteUriPathRouteInput {
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder setActivationState(RouteActivationState activationState) {
+        public Builder activationState(RouteActivationState activationState) {
             this.activationState = Objects.requireNonNull(activationState);
             return this;
         }
 
-        public Builder setIncludeChildPaths(@Nullable Boolean includeChildPaths) {
+        public Builder includeChildPaths(@Nullable Boolean includeChildPaths) {
             this.includeChildPaths = includeChildPaths;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<RouteMethod> methods) {
+        public Builder methods(@Nullable List<RouteMethod> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setSourcePath(@Nullable String sourcePath) {
+        public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }

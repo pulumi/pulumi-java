@@ -74,22 +74,22 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     	      this.widevineTemplate = defaults.widevineTemplate;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setWidevineTemplate(Input<String> widevineTemplate) {
+        public Builder widevineTemplate(Input<String> widevineTemplate) {
             this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
             return this;
         }
 
-        public Builder setWidevineTemplate(String widevineTemplate) {
+        public Builder widevineTemplate(String widevineTemplate) {
             this.widevineTemplate = Input.of(Objects.requireNonNull(widevineTemplate));
             return this;
         }

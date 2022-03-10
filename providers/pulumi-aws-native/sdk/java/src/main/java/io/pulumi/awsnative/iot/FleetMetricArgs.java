@@ -198,102 +198,102 @@ public final class FleetMetricArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAggregationField(@Nullable Input<String> aggregationField) {
+        public Builder aggregationField(@Nullable Input<String> aggregationField) {
             this.aggregationField = aggregationField;
             return this;
         }
 
-        public Builder setAggregationField(@Nullable String aggregationField) {
+        public Builder aggregationField(@Nullable String aggregationField) {
             this.aggregationField = Input.ofNullable(aggregationField);
             return this;
         }
 
-        public Builder setAggregationType(@Nullable Input<FleetMetricAggregationTypeArgs> aggregationType) {
+        public Builder aggregationType(@Nullable Input<FleetMetricAggregationTypeArgs> aggregationType) {
             this.aggregationType = aggregationType;
             return this;
         }
 
-        public Builder setAggregationType(@Nullable FleetMetricAggregationTypeArgs aggregationType) {
+        public Builder aggregationType(@Nullable FleetMetricAggregationTypeArgs aggregationType) {
             this.aggregationType = Input.ofNullable(aggregationType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIndexName(@Nullable Input<String> indexName) {
+        public Builder indexName(@Nullable Input<String> indexName) {
             this.indexName = indexName;
             return this;
         }
 
-        public Builder setIndexName(@Nullable String indexName) {
+        public Builder indexName(@Nullable String indexName) {
             this.indexName = Input.ofNullable(indexName);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setPeriod(@Nullable Input<Integer> period) {
+        public Builder period(@Nullable Input<Integer> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable Integer period) {
+        public Builder period(@Nullable Integer period) {
             this.period = Input.ofNullable(period);
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<String> queryString) {
+        public Builder queryString(@Nullable Input<String> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }
 
-        public Builder setQueryVersion(@Nullable Input<String> queryVersion) {
+        public Builder queryVersion(@Nullable Input<String> queryVersion) {
             this.queryVersion = queryVersion;
             return this;
         }
 
-        public Builder setQueryVersion(@Nullable String queryVersion) {
+        public Builder queryVersion(@Nullable String queryVersion) {
             this.queryVersion = Input.ofNullable(queryVersion);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FleetMetricTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FleetMetricTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FleetMetricTagArgs> tags) {
+        public Builder tags(@Nullable List<FleetMetricTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }

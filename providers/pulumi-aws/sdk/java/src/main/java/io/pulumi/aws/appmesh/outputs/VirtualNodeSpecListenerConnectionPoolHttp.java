@@ -67,12 +67,12 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp {
     	      this.maxPendingRequests = defaults.maxPendingRequests;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxPendingRequests(@Nullable Integer maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }

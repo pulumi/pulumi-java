@@ -48,12 +48,12 @@ public final class FlowTrendmicroSourcePropertiesArgs extends io.pulumi.resource
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }

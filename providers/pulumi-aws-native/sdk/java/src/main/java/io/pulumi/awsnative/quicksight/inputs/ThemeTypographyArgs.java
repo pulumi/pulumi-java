@@ -54,12 +54,12 @@ public final class ThemeTypographyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.fontFamilies = defaults.fontFamilies;
         }
 
-        public Builder setFontFamilies(@Nullable Input<List<ThemeFontArgs>> fontFamilies) {
+        public Builder fontFamilies(@Nullable Input<List<ThemeFontArgs>> fontFamilies) {
             this.fontFamilies = fontFamilies;
             return this;
         }
 
-        public Builder setFontFamilies(@Nullable List<ThemeFontArgs> fontFamilies) {
+        public Builder fontFamilies(@Nullable List<ThemeFontArgs> fontFamilies) {
             this.fontFamilies = Input.ofNullable(fontFamilies);
             return this;
         }

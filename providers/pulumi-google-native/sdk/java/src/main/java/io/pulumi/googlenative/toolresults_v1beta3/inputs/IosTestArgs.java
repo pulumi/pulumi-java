@@ -126,52 +126,52 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testTimeout = defaults.testTimeout;
         }
 
-        public Builder setIosAppInfo(@Nullable Input<IosAppInfoArgs> iosAppInfo) {
+        public Builder iosAppInfo(@Nullable Input<IosAppInfoArgs> iosAppInfo) {
             this.iosAppInfo = iosAppInfo;
             return this;
         }
 
-        public Builder setIosAppInfo(@Nullable IosAppInfoArgs iosAppInfo) {
+        public Builder iosAppInfo(@Nullable IosAppInfoArgs iosAppInfo) {
             this.iosAppInfo = Input.ofNullable(iosAppInfo);
             return this;
         }
 
-        public Builder setIosRoboTest(@Nullable Input<IosRoboTestArgs> iosRoboTest) {
+        public Builder iosRoboTest(@Nullable Input<IosRoboTestArgs> iosRoboTest) {
             this.iosRoboTest = iosRoboTest;
             return this;
         }
 
-        public Builder setIosRoboTest(@Nullable IosRoboTestArgs iosRoboTest) {
+        public Builder iosRoboTest(@Nullable IosRoboTestArgs iosRoboTest) {
             this.iosRoboTest = Input.ofNullable(iosRoboTest);
             return this;
         }
 
-        public Builder setIosTestLoop(@Nullable Input<IosTestLoopArgs> iosTestLoop) {
+        public Builder iosTestLoop(@Nullable Input<IosTestLoopArgs> iosTestLoop) {
             this.iosTestLoop = iosTestLoop;
             return this;
         }
 
-        public Builder setIosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
+        public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
             this.iosTestLoop = Input.ofNullable(iosTestLoop);
             return this;
         }
 
-        public Builder setIosXcTest(@Nullable Input<IosXcTestArgs> iosXcTest) {
+        public Builder iosXcTest(@Nullable Input<IosXcTestArgs> iosXcTest) {
             this.iosXcTest = iosXcTest;
             return this;
         }
 
-        public Builder setIosXcTest(@Nullable IosXcTestArgs iosXcTest) {
+        public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
             this.iosXcTest = Input.ofNullable(iosXcTest);
             return this;
         }
 
-        public Builder setTestTimeout(@Nullable Input<DurationArgs> testTimeout) {
+        public Builder testTimeout(@Nullable Input<DurationArgs> testTimeout) {
             this.testTimeout = testTimeout;
             return this;
         }
 
-        public Builder setTestTimeout(@Nullable DurationArgs testTimeout) {
+        public Builder testTimeout(@Nullable DurationArgs testTimeout) {
             this.testTimeout = Input.ofNullable(testTimeout);
             return this;
         }

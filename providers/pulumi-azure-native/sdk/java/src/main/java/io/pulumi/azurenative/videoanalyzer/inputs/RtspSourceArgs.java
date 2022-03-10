@@ -111,42 +111,42 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndpoint(Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint) {
+        public Builder endpoint(Input<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(Either<TlsEndpointArgs,UnsecuredEndpointArgs> endpoint) {
+        public Builder endpoint(Either<TlsEndpointArgs,UnsecuredEndpointArgs> endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setTransport(@Nullable Input<Either<String,RtspTransport>> transport) {
+        public Builder transport(@Nullable Input<Either<String,RtspTransport>> transport) {
             this.transport = transport;
             return this;
         }
 
-        public Builder setTransport(@Nullable Either<String,RtspTransport> transport) {
+        public Builder transport(@Nullable Either<String,RtspTransport> transport) {
             this.transport = Input.ofNullable(transport);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

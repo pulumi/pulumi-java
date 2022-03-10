@@ -117,47 +117,47 @@ public final class GetApplicationResult {
     	      this.vpcLinkId = defaults.vpcLinkId;
         }
 
-        public Builder setApiGatewayId(@Nullable String apiGatewayId) {
+        public Builder apiGatewayId(@Nullable String apiGatewayId) {
             this.apiGatewayId = apiGatewayId;
             return this;
         }
 
-        public Builder setApplicationIdentifier(@Nullable String applicationIdentifier) {
+        public Builder applicationIdentifier(@Nullable String applicationIdentifier) {
             this.applicationIdentifier = applicationIdentifier;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setNlbArn(@Nullable String nlbArn) {
+        public Builder nlbArn(@Nullable String nlbArn) {
             this.nlbArn = nlbArn;
             return this;
         }
 
-        public Builder setNlbName(@Nullable String nlbName) {
+        public Builder nlbName(@Nullable String nlbName) {
             this.nlbName = nlbName;
             return this;
         }
 
-        public Builder setProxyUrl(@Nullable String proxyUrl) {
+        public Builder proxyUrl(@Nullable String proxyUrl) {
             this.proxyUrl = proxyUrl;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTag> tags) {
+        public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcLinkId(@Nullable String vpcLinkId) {
+        public Builder vpcLinkId(@Nullable String vpcLinkId) {
             this.vpcLinkId = vpcLinkId;
             return this;
         }

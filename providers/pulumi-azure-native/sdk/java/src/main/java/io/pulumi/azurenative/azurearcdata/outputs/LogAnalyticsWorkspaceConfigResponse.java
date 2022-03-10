@@ -50,7 +50,7 @@ public final class LogAnalyticsWorkspaceConfigResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

@@ -49,12 +49,12 @@ public final class ServiceModeReplicatedArgs extends io.pulumi.resources.Resourc
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(@Nullable Input<Integer> replicas) {
+        public Builder replicas(@Nullable Input<Integer> replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = Input.ofNullable(replicas);
             return this;
         }

@@ -143,27 +143,27 @@ public final class BackendServiceCdnPolicyCacheKeyPolicy {
     	      this.queryStringWhitelists = defaults.queryStringWhitelists;
         }
 
-        public Builder setIncludeHost(@Nullable Boolean includeHost) {
+        public Builder includeHost(@Nullable Boolean includeHost) {
             this.includeHost = includeHost;
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Boolean includeProtocol) {
+        public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Boolean includeQueryString) {
+        public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
-        public Builder setQueryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
+        public Builder queryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
             this.queryStringBlacklists = queryStringBlacklists;
             return this;
         }
 
-        public Builder setQueryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
+        public Builder queryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
             this.queryStringWhitelists = queryStringWhitelists;
             return this;
         }

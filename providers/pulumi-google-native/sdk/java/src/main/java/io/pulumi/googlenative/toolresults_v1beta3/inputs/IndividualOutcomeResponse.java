@@ -98,22 +98,22 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setMultistepNumber(Integer multistepNumber) {
+        public Builder multistepNumber(Integer multistepNumber) {
             this.multistepNumber = Objects.requireNonNull(multistepNumber);
             return this;
         }
 
-        public Builder setOutcomeSummary(String outcomeSummary) {
+        public Builder outcomeSummary(String outcomeSummary) {
             this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
             return this;
         }
 
-        public Builder setRunDuration(DurationResponse runDuration) {
+        public Builder runDuration(DurationResponse runDuration) {
             this.runDuration = Objects.requireNonNull(runDuration);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }

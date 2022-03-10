@@ -176,32 +176,32 @@ public final class URLMapDefaultUrlRedirect {
     	      this.stripQuery = defaults.stripQuery;
         }
 
-        public Builder setHostRedirect(@Nullable String hostRedirect) {
+        public Builder hostRedirect(@Nullable String hostRedirect) {
             this.hostRedirect = hostRedirect;
             return this;
         }
 
-        public Builder setHttpsRedirect(@Nullable Boolean httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
-        public Builder setPathRedirect(@Nullable String pathRedirect) {
+        public Builder pathRedirect(@Nullable String pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
 
-        public Builder setPrefixRedirect(@Nullable String prefixRedirect) {
+        public Builder prefixRedirect(@Nullable String prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
 
-        public Builder setRedirectResponseCode(@Nullable String redirectResponseCode) {
+        public Builder redirectResponseCode(@Nullable String redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
 
-        public Builder setStripQuery(Boolean stripQuery) {
+        public Builder stripQuery(Boolean stripQuery) {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }

@@ -156,72 +156,72 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trustedOrigins = defaults.trustedOrigins;
         }
 
-        public Builder setIsBlockUserUploadEnabled(@Nullable Input<Boolean> isBlockUserUploadEnabled) {
+        public Builder isBlockUserUploadEnabled(@Nullable Input<Boolean> isBlockUserUploadEnabled) {
             this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
 
-        public Builder setIsBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
+        public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
             this.isBlockUserUploadEnabled = Input.ofNullable(isBlockUserUploadEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setIsSecureSiteEnabled(@Nullable Input<Boolean> isSecureSiteEnabled) {
+        public Builder isSecureSiteEnabled(@Nullable Input<Boolean> isSecureSiteEnabled) {
             this.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
 
-        public Builder setIsSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
+        public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
             this.isSecureSiteEnabled = Input.ofNullable(isSecureSiteEnabled);
             return this;
         }
 
-        public Builder setIsV1Enabled(Input<Boolean> isV1Enabled) {
+        public Builder isV1Enabled(Input<Boolean> isV1Enabled) {
             this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
             return this;
         }
 
-        public Builder setIsV1Enabled(Boolean isV1Enabled) {
+        public Builder isV1Enabled(Boolean isV1Enabled) {
             this.isV1Enabled = Input.of(Objects.requireNonNull(isV1Enabled));
             return this;
         }
 
-        public Builder setIsV3Enabled(Input<Boolean> isV3Enabled) {
+        public Builder isV3Enabled(Input<Boolean> isV3Enabled) {
             this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
             return this;
         }
 
-        public Builder setIsV3Enabled(Boolean isV3Enabled) {
+        public Builder isV3Enabled(Boolean isV3Enabled) {
             this.isV3Enabled = Input.of(Objects.requireNonNull(isV3Enabled));
             return this;
         }
 
-        public Builder setSiteName(Input<String> siteName) {
+        public Builder siteName(Input<String> siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
 
-        public Builder setSiteName(String siteName) {
+        public Builder siteName(String siteName) {
             this.siteName = Input.of(Objects.requireNonNull(siteName));
             return this;
         }
 
-        public Builder setTrustedOrigins(@Nullable Input<List<String>> trustedOrigins) {
+        public Builder trustedOrigins(@Nullable Input<List<String>> trustedOrigins) {
             this.trustedOrigins = trustedOrigins;
             return this;
         }
 
-        public Builder setTrustedOrigins(@Nullable List<String> trustedOrigins) {
+        public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
             this.trustedOrigins = Input.ofNullable(trustedOrigins);
             return this;
         }

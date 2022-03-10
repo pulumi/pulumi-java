@@ -72,12 +72,12 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
     	      this.message = defaults.message;
         }
 
-        public Builder setCanonicalCode(String canonicalCode) {
+        public Builder canonicalCode(String canonicalCode) {
             this.canonicalCode = Objects.requireNonNull(canonicalCode);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

@@ -136,62 +136,62 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.transactionNodeName = defaults.transactionNodeName;
         }
 
-        public Builder setBlockchainMemberName(Input<String> blockchainMemberName) {
+        public Builder blockchainMemberName(Input<String> blockchainMemberName) {
             this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
             return this;
         }
 
-        public Builder setBlockchainMemberName(String blockchainMemberName) {
+        public Builder blockchainMemberName(String blockchainMemberName) {
             this.blockchainMemberName = Input.of(Objects.requireNonNull(blockchainMemberName));
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable Input<List<FirewallRuleArgs>> firewallRules) {
+        public Builder firewallRules(@Nullable Input<List<FirewallRuleArgs>> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
+        public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
             this.firewallRules = Input.ofNullable(firewallRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTransactionNodeName(@Nullable Input<String> transactionNodeName) {
+        public Builder transactionNodeName(@Nullable Input<String> transactionNodeName) {
             this.transactionNodeName = transactionNodeName;
             return this;
         }
 
-        public Builder setTransactionNodeName(@Nullable String transactionNodeName) {
+        public Builder transactionNodeName(@Nullable String transactionNodeName) {
             this.transactionNodeName = Input.ofNullable(transactionNodeName);
             return this;
         }

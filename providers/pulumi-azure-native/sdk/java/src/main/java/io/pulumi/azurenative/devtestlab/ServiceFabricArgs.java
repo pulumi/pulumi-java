@@ -167,82 +167,82 @@ public final class ServiceFabricArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setExternalServiceFabricId(@Nullable Input<String> externalServiceFabricId) {
+        public Builder externalServiceFabricId(@Nullable Input<String> externalServiceFabricId) {
             this.externalServiceFabricId = externalServiceFabricId;
             return this;
         }
 
-        public Builder setExternalServiceFabricId(@Nullable String externalServiceFabricId) {
+        public Builder externalServiceFabricId(@Nullable String externalServiceFabricId) {
             this.externalServiceFabricId = Input.ofNullable(externalServiceFabricId);
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

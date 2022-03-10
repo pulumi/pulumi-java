@@ -109,42 +109,42 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setImportMethod(@Nullable Input<Either<String,WsdlImportMethod>> importMethod) {
+        public Builder importMethod(@Nullable Input<Either<String,WsdlImportMethod>> importMethod) {
             this.importMethod = importMethod;
             return this;
         }
 
-        public Builder setImportMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
+        public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
             this.importMethod = Input.ofNullable(importMethod);
             return this;
         }
 
-        public Builder setService(@Nullable Input<WsdlServiceArgs> service) {
+        public Builder service(@Nullable Input<WsdlServiceArgs> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable WsdlServiceArgs service) {
+        public Builder service(@Nullable WsdlServiceArgs service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

@@ -74,22 +74,22 @@ public final class CapacityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscribeMibPerSec = defaults.subscribeMibPerSec;
         }
 
-        public Builder setPublishMibPerSec(@Nullable Input<Integer> publishMibPerSec) {
+        public Builder publishMibPerSec(@Nullable Input<Integer> publishMibPerSec) {
             this.publishMibPerSec = publishMibPerSec;
             return this;
         }
 
-        public Builder setPublishMibPerSec(@Nullable Integer publishMibPerSec) {
+        public Builder publishMibPerSec(@Nullable Integer publishMibPerSec) {
             this.publishMibPerSec = Input.ofNullable(publishMibPerSec);
             return this;
         }
 
-        public Builder setSubscribeMibPerSec(@Nullable Input<Integer> subscribeMibPerSec) {
+        public Builder subscribeMibPerSec(@Nullable Input<Integer> subscribeMibPerSec) {
             this.subscribeMibPerSec = subscribeMibPerSec;
             return this;
         }
 
-        public Builder setSubscribeMibPerSec(@Nullable Integer subscribeMibPerSec) {
+        public Builder subscribeMibPerSec(@Nullable Integer subscribeMibPerSec) {
             this.subscribeMibPerSec = Input.ofNullable(subscribeMibPerSec);
             return this;
         }

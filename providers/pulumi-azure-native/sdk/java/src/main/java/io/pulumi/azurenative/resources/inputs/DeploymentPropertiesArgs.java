@@ -176,82 +176,82 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.templateLink = defaults.templateLink;
         }
 
-        public Builder setDebugSetting(@Nullable Input<DebugSettingArgs> debugSetting) {
+        public Builder debugSetting(@Nullable Input<DebugSettingArgs> debugSetting) {
             this.debugSetting = debugSetting;
             return this;
         }
 
-        public Builder setDebugSetting(@Nullable DebugSettingArgs debugSetting) {
+        public Builder debugSetting(@Nullable DebugSettingArgs debugSetting) {
             this.debugSetting = Input.ofNullable(debugSetting);
             return this;
         }
 
-        public Builder setExpressionEvaluationOptions(@Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
+        public Builder expressionEvaluationOptions(@Nullable Input<ExpressionEvaluationOptionsArgs> expressionEvaluationOptions) {
             this.expressionEvaluationOptions = expressionEvaluationOptions;
             return this;
         }
 
-        public Builder setExpressionEvaluationOptions(@Nullable ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
+        public Builder expressionEvaluationOptions(@Nullable ExpressionEvaluationOptionsArgs expressionEvaluationOptions) {
             this.expressionEvaluationOptions = Input.ofNullable(expressionEvaluationOptions);
             return this;
         }
 
-        public Builder setMode(Input<DeploymentMode> mode) {
+        public Builder mode(Input<DeploymentMode> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMode(DeploymentMode mode) {
+        public Builder mode(DeploymentMode mode) {
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder setOnErrorDeployment(@Nullable Input<OnErrorDeploymentArgs> onErrorDeployment) {
+        public Builder onErrorDeployment(@Nullable Input<OnErrorDeploymentArgs> onErrorDeployment) {
             this.onErrorDeployment = onErrorDeployment;
             return this;
         }
 
-        public Builder setOnErrorDeployment(@Nullable OnErrorDeploymentArgs onErrorDeployment) {
+        public Builder onErrorDeployment(@Nullable OnErrorDeploymentArgs onErrorDeployment) {
             this.onErrorDeployment = Input.ofNullable(onErrorDeployment);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Input<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setParametersLink(@Nullable Input<ParametersLinkArgs> parametersLink) {
+        public Builder parametersLink(@Nullable Input<ParametersLinkArgs> parametersLink) {
             this.parametersLink = parametersLink;
             return this;
         }
 
-        public Builder setParametersLink(@Nullable ParametersLinkArgs parametersLink) {
+        public Builder parametersLink(@Nullable ParametersLinkArgs parametersLink) {
             this.parametersLink = Input.ofNullable(parametersLink);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<Object> template) {
+        public Builder template(@Nullable Input<Object> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable Object template) {
+        public Builder template(@Nullable Object template) {
             this.template = Input.ofNullable(template);
             return this;
         }
 
-        public Builder setTemplateLink(@Nullable Input<TemplateLinkArgs> templateLink) {
+        public Builder templateLink(@Nullable Input<TemplateLinkArgs> templateLink) {
             this.templateLink = templateLink;
             return this;
         }
 
-        public Builder setTemplateLink(@Nullable TemplateLinkArgs templateLink) {
+        public Builder templateLink(@Nullable TemplateLinkArgs templateLink) {
             this.templateLink = Input.ofNullable(templateLink);
             return this;
         }

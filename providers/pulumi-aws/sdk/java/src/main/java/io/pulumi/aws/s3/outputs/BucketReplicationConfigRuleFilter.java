@@ -85,17 +85,17 @@ public final class BucketReplicationConfigRuleFilter {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setAnd(@Nullable BucketReplicationConfigRuleFilterAnd and) {
+        public Builder and(@Nullable BucketReplicationConfigRuleFilterAnd and) {
             this.and = and;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setTag(@Nullable BucketReplicationConfigRuleFilterTag tag) {
+        public Builder tag(@Nullable BucketReplicationConfigRuleFilterTag tag) {
             this.tag = tag;
             return this;
         }

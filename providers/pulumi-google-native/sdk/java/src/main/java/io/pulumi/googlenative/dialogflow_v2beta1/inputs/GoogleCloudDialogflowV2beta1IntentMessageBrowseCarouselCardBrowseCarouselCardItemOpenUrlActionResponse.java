@@ -72,12 +72,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     	      this.urlTypeHint = defaults.urlTypeHint;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrlTypeHint(String urlTypeHint) {
+        public Builder urlTypeHint(String urlTypeHint) {
             this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
             return this;
         }

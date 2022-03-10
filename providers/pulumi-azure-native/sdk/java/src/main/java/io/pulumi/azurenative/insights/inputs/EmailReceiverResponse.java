@@ -107,22 +107,22 @@ public final class EmailReceiverResponse extends io.pulumi.resources.InvokeArgs 
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder setEmailAddress(String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }

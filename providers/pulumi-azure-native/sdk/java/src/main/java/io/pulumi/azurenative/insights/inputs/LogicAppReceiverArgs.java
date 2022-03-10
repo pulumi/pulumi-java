@@ -107,42 +107,42 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder setCallbackUrl(Input<String> callbackUrl) {
+        public Builder callbackUrl(Input<String> callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
 
-        public Builder setCallbackUrl(String callbackUrl) {
+        public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Input.of(Objects.requireNonNull(callbackUrl));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Input<Boolean> useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Input<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = Input.ofNullable(useCommonAlertSchema);
             return this;
         }

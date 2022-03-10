@@ -81,17 +81,17 @@ public final class SubnetworkSecondaryRangeResponse {
     	      this.reservedInternalRange = defaults.reservedInternalRange;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setRangeName(String rangeName) {
+        public Builder rangeName(String rangeName) {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }
 
-        public Builder setReservedInternalRange(String reservedInternalRange) {
+        public Builder reservedInternalRange(String reservedInternalRange) {
             this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange);
             return this;
         }

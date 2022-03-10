@@ -246,112 +246,112 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
     	      this.windowsBasedSli = defaults.windowsBasedSli;
         }
 
-        public Builder setBasicSli(@Nullable Input<SloBasicSliGetArgs> basicSli) {
+        public Builder basicSli(@Nullable Input<SloBasicSliGetArgs> basicSli) {
             this.basicSli = basicSli;
             return this;
         }
 
-        public Builder setBasicSli(@Nullable SloBasicSliGetArgs basicSli) {
+        public Builder basicSli(@Nullable SloBasicSliGetArgs basicSli) {
             this.basicSli = Input.ofNullable(basicSli);
             return this;
         }
 
-        public Builder setCalendarPeriod(@Nullable Input<String> calendarPeriod) {
+        public Builder calendarPeriod(@Nullable Input<String> calendarPeriod) {
             this.calendarPeriod = calendarPeriod;
             return this;
         }
 
-        public Builder setCalendarPeriod(@Nullable String calendarPeriod) {
+        public Builder calendarPeriod(@Nullable String calendarPeriod) {
             this.calendarPeriod = Input.ofNullable(calendarPeriod);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGoal(@Nullable Input<Double> goal) {
+        public Builder goal(@Nullable Input<Double> goal) {
             this.goal = goal;
             return this;
         }
 
-        public Builder setGoal(@Nullable Double goal) {
+        public Builder goal(@Nullable Double goal) {
             this.goal = Input.ofNullable(goal);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestBasedSli(@Nullable Input<SloRequestBasedSliGetArgs> requestBasedSli) {
+        public Builder requestBasedSli(@Nullable Input<SloRequestBasedSliGetArgs> requestBasedSli) {
             this.requestBasedSli = requestBasedSli;
             return this;
         }
 
-        public Builder setRequestBasedSli(@Nullable SloRequestBasedSliGetArgs requestBasedSli) {
+        public Builder requestBasedSli(@Nullable SloRequestBasedSliGetArgs requestBasedSli) {
             this.requestBasedSli = Input.ofNullable(requestBasedSli);
             return this;
         }
 
-        public Builder setRollingPeriodDays(@Nullable Input<Integer> rollingPeriodDays) {
+        public Builder rollingPeriodDays(@Nullable Input<Integer> rollingPeriodDays) {
             this.rollingPeriodDays = rollingPeriodDays;
             return this;
         }
 
-        public Builder setRollingPeriodDays(@Nullable Integer rollingPeriodDays) {
+        public Builder rollingPeriodDays(@Nullable Integer rollingPeriodDays) {
             this.rollingPeriodDays = Input.ofNullable(rollingPeriodDays);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setSloId(@Nullable Input<String> sloId) {
+        public Builder sloId(@Nullable Input<String> sloId) {
             this.sloId = sloId;
             return this;
         }
 
-        public Builder setSloId(@Nullable String sloId) {
+        public Builder sloId(@Nullable String sloId) {
             this.sloId = Input.ofNullable(sloId);
             return this;
         }
 
-        public Builder setWindowsBasedSli(@Nullable Input<SloWindowsBasedSliGetArgs> windowsBasedSli) {
+        public Builder windowsBasedSli(@Nullable Input<SloWindowsBasedSliGetArgs> windowsBasedSli) {
             this.windowsBasedSli = windowsBasedSli;
             return this;
         }
 
-        public Builder setWindowsBasedSli(@Nullable SloWindowsBasedSliGetArgs windowsBasedSli) {
+        public Builder windowsBasedSli(@Nullable SloWindowsBasedSliGetArgs windowsBasedSli) {
             this.windowsBasedSli = Input.ofNullable(windowsBasedSli);
             return this;
         }

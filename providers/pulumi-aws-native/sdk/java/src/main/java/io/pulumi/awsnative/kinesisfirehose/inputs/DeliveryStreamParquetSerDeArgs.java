@@ -112,62 +112,62 @@ public final class DeliveryStreamParquetSerDeArgs extends io.pulumi.resources.Re
     	      this.writerVersion = defaults.writerVersion;
         }
 
-        public Builder setBlockSizeBytes(@Nullable Input<Integer> blockSizeBytes) {
+        public Builder blockSizeBytes(@Nullable Input<Integer> blockSizeBytes) {
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
 
-        public Builder setBlockSizeBytes(@Nullable Integer blockSizeBytes) {
+        public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
             this.blockSizeBytes = Input.ofNullable(blockSizeBytes);
             return this;
         }
 
-        public Builder setCompression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Input<String> compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = Input.ofNullable(compression);
             return this;
         }
 
-        public Builder setEnableDictionaryCompression(@Nullable Input<Boolean> enableDictionaryCompression) {
+        public Builder enableDictionaryCompression(@Nullable Input<Boolean> enableDictionaryCompression) {
             this.enableDictionaryCompression = enableDictionaryCompression;
             return this;
         }
 
-        public Builder setEnableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
+        public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
             this.enableDictionaryCompression = Input.ofNullable(enableDictionaryCompression);
             return this;
         }
 
-        public Builder setMaxPaddingBytes(@Nullable Input<Integer> maxPaddingBytes) {
+        public Builder maxPaddingBytes(@Nullable Input<Integer> maxPaddingBytes) {
             this.maxPaddingBytes = maxPaddingBytes;
             return this;
         }
 
-        public Builder setMaxPaddingBytes(@Nullable Integer maxPaddingBytes) {
+        public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
             this.maxPaddingBytes = Input.ofNullable(maxPaddingBytes);
             return this;
         }
 
-        public Builder setPageSizeBytes(@Nullable Input<Integer> pageSizeBytes) {
+        public Builder pageSizeBytes(@Nullable Input<Integer> pageSizeBytes) {
             this.pageSizeBytes = pageSizeBytes;
             return this;
         }
 
-        public Builder setPageSizeBytes(@Nullable Integer pageSizeBytes) {
+        public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
             this.pageSizeBytes = Input.ofNullable(pageSizeBytes);
             return this;
         }
 
-        public Builder setWriterVersion(@Nullable Input<String> writerVersion) {
+        public Builder writerVersion(@Nullable Input<String> writerVersion) {
             this.writerVersion = writerVersion;
             return this;
         }
 
-        public Builder setWriterVersion(@Nullable String writerVersion) {
+        public Builder writerVersion(@Nullable String writerVersion) {
             this.writerVersion = Input.ofNullable(writerVersion);
             return this;
         }

@@ -48,7 +48,7 @@ public final class TransactionInfoResponse {
     	      this.transactionId = defaults.transactionId;
         }
 
-        public Builder setTransactionId(String transactionId) {
+        public Builder transactionId(String transactionId) {
             this.transactionId = Objects.requireNonNull(transactionId);
             return this;
         }

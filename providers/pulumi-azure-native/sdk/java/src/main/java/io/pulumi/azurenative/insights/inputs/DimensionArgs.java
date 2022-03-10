@@ -92,32 +92,32 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,Operator>> operator) {
+        public Builder operator(Input<Either<String,Operator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,Operator> operator) {
+        public Builder operator(Either<String,Operator> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setValues(Input<List<String>> values) {
+        public Builder values(Input<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }

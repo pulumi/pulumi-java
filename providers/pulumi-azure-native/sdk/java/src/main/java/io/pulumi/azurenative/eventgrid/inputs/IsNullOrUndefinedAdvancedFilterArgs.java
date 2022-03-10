@@ -75,22 +75,22 @@ public final class IsNullOrUndefinedAdvancedFilterArgs extends io.pulumi.resourc
     	      this.operatorType = defaults.operatorType;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setOperatorType(Input<String> operatorType) {
+        public Builder operatorType(Input<String> operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Input.of(Objects.requireNonNull(operatorType));
             return this;
         }

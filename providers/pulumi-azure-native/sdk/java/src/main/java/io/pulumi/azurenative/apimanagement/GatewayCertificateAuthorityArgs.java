@@ -119,52 +119,52 @@ public final class GatewayCertificateAuthorityArgs extends io.pulumi.resources.R
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setCertificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Input<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
 
-        public Builder setGatewayId(Input<String> gatewayId) {
+        public Builder gatewayId(Input<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Input.of(Objects.requireNonNull(gatewayId));
             return this;
         }
 
-        public Builder setIsTrusted(@Nullable Input<Boolean> isTrusted) {
+        public Builder isTrusted(@Nullable Input<Boolean> isTrusted) {
             this.isTrusted = isTrusted;
             return this;
         }
 
-        public Builder setIsTrusted(@Nullable Boolean isTrusted) {
+        public Builder isTrusted(@Nullable Boolean isTrusted) {
             this.isTrusted = Input.ofNullable(isTrusted);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

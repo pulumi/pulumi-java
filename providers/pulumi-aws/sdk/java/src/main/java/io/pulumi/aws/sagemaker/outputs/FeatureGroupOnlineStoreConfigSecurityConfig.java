@@ -50,7 +50,7 @@ public final class FeatureGroupOnlineStoreConfigSecurityConfig {
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }

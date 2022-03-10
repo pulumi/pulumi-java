@@ -68,22 +68,22 @@ public final class ComponentChild {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setChildren(@Nullable List<ComponentChild> children) {
+        public Builder children(@Nullable List<ComponentChild> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setComponentType(String componentType) {
+        public Builder componentType(String componentType) {
             this.componentType = Objects.requireNonNull(componentType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(ComponentProperties properties) {
+        public Builder properties(ComponentProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
     	      this.quasiIdsValues = defaults.quasiIdsValues;
         }
 
-        public Builder setEstimatedProbability(Double estimatedProbability) {
+        public Builder estimatedProbability(Double estimatedProbability) {
             this.estimatedProbability = Objects.requireNonNull(estimatedProbability);
             return this;
         }
 
-        public Builder setQuasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }

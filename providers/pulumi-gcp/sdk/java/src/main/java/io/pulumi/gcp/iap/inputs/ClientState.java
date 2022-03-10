@@ -104,42 +104,42 @@ public final class ClientState extends io.pulumi.resources.ResourceArgs {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setBrand(@Nullable Input<String> brand) {
+        public Builder brand(@Nullable Input<String> brand) {
             this.brand = brand;
             return this;
         }
 
-        public Builder setBrand(@Nullable String brand) {
+        public Builder brand(@Nullable String brand) {
             this.brand = Input.ofNullable(brand);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }

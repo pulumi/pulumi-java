@@ -187,47 +187,47 @@ public final class BackupInstanceResponse extends io.pulumi.resources.InvokeArgs
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setCurrentProtectionState(String currentProtectionState) {
+        public Builder currentProtectionState(String currentProtectionState) {
             this.currentProtectionState = Objects.requireNonNull(currentProtectionState);
             return this;
         }
 
-        public Builder setDataSourceInfo(DatasourceResponse dataSourceInfo) {
+        public Builder dataSourceInfo(DatasourceResponse dataSourceInfo) {
             this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
             return this;
         }
 
-        public Builder setDataSourceSetInfo(@Nullable DatasourceSetResponse dataSourceSetInfo) {
+        public Builder dataSourceSetInfo(@Nullable DatasourceSetResponse dataSourceSetInfo) {
             this.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setPolicyInfo(PolicyInfoResponse policyInfo) {
+        public Builder policyInfo(PolicyInfoResponse policyInfo) {
             this.policyInfo = Objects.requireNonNull(policyInfo);
             return this;
         }
 
-        public Builder setProtectionErrorDetails(UserFacingErrorResponse protectionErrorDetails) {
+        public Builder protectionErrorDetails(UserFacingErrorResponse protectionErrorDetails) {
             this.protectionErrorDetails = Objects.requireNonNull(protectionErrorDetails);
             return this;
         }
 
-        public Builder setProtectionStatus(ProtectionStatusDetailsResponse protectionStatus) {
+        public Builder protectionStatus(ProtectionStatusDetailsResponse protectionStatus) {
             this.protectionStatus = Objects.requireNonNull(protectionStatus);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

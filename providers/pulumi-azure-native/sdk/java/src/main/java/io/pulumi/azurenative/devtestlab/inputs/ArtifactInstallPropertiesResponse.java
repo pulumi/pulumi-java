@@ -156,37 +156,37 @@ public final class ArtifactInstallPropertiesResponse extends io.pulumi.resources
     	      this.vmExtensionStatusMessage = defaults.vmExtensionStatusMessage;
         }
 
-        public Builder setArtifactId(@Nullable String artifactId) {
+        public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = artifactId;
             return this;
         }
 
-        public Builder setArtifactTitle(@Nullable String artifactTitle) {
+        public Builder artifactTitle(@Nullable String artifactTitle) {
             this.artifactTitle = artifactTitle;
             return this;
         }
 
-        public Builder setDeploymentStatusMessage(@Nullable String deploymentStatusMessage) {
+        public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
             this.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
 
-        public Builder setInstallTime(@Nullable String installTime) {
+        public Builder installTime(@Nullable String installTime) {
             this.installTime = installTime;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ArtifactParameterPropertiesResponse> parameters) {
+        public Builder parameters(@Nullable List<ArtifactParameterPropertiesResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
+        public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
             this.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
         }

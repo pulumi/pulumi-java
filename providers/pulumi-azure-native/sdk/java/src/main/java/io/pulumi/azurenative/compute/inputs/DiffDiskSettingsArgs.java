@@ -77,22 +77,22 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.placement = defaults.placement;
         }
 
-        public Builder setOption(@Nullable Input<Either<String,DiffDiskOptions>> option) {
+        public Builder option(@Nullable Input<Either<String,DiffDiskOptions>> option) {
             this.option = option;
             return this;
         }
 
-        public Builder setOption(@Nullable Either<String,DiffDiskOptions> option) {
+        public Builder option(@Nullable Either<String,DiffDiskOptions> option) {
             this.option = Input.ofNullable(option);
             return this;
         }
 
-        public Builder setPlacement(@Nullable Input<Either<String,DiffDiskPlacement>> placement) {
+        public Builder placement(@Nullable Input<Either<String,DiffDiskPlacement>> placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setPlacement(@Nullable Either<String,DiffDiskPlacement> placement) {
+        public Builder placement(@Nullable Either<String,DiffDiskPlacement> placement) {
             this.placement = Input.ofNullable(placement);
             return this;
         }

@@ -236,122 +236,122 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setBoolValue(@Nullable Input<Boolean> boolValue) {
+        public Builder boolValue(@Nullable Input<Boolean> boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
-        public Builder setBoolValue(@Nullable Boolean boolValue) {
+        public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Input.ofNullable(boolValue);
             return this;
         }
 
-        public Builder setDurationValue(@Nullable Input<String> durationValue) {
+        public Builder durationValue(@Nullable Input<String> durationValue) {
             this.durationValue = durationValue;
             return this;
         }
 
-        public Builder setDurationValue(@Nullable String durationValue) {
+        public Builder durationValue(@Nullable String durationValue) {
             this.durationValue = Input.ofNullable(durationValue);
             return this;
         }
 
-        public Builder setFloatValue(@Nullable Input<Double> floatValue) {
+        public Builder floatValue(@Nullable Input<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
 
-        public Builder setFloatValue(@Nullable Double floatValue) {
+        public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = Input.ofNullable(floatValue);
             return this;
         }
 
-        public Builder setInt64Value(@Nullable Input<String> int64Value) {
+        public Builder int64Value(@Nullable Input<String> int64Value) {
             this.int64Value = int64Value;
             return this;
         }
 
-        public Builder setInt64Value(@Nullable String int64Value) {
+        public Builder int64Value(@Nullable String int64Value) {
             this.int64Value = Input.ofNullable(int64Value);
             return this;
         }
 
-        public Builder setJavaClassValue(@Nullable Input<String> javaClassValue) {
+        public Builder javaClassValue(@Nullable Input<String> javaClassValue) {
             this.javaClassValue = javaClassValue;
             return this;
         }
 
-        public Builder setJavaClassValue(@Nullable String javaClassValue) {
+        public Builder javaClassValue(@Nullable String javaClassValue) {
             this.javaClassValue = Input.ofNullable(javaClassValue);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setShortStrValue(@Nullable Input<String> shortStrValue) {
+        public Builder shortStrValue(@Nullable Input<String> shortStrValue) {
             this.shortStrValue = shortStrValue;
             return this;
         }
 
-        public Builder setShortStrValue(@Nullable String shortStrValue) {
+        public Builder shortStrValue(@Nullable String shortStrValue) {
             this.shortStrValue = Input.ofNullable(shortStrValue);
             return this;
         }
 
-        public Builder setStrValue(@Nullable Input<String> strValue) {
+        public Builder strValue(@Nullable Input<String> strValue) {
             this.strValue = strValue;
             return this;
         }
 
-        public Builder setStrValue(@Nullable String strValue) {
+        public Builder strValue(@Nullable String strValue) {
             this.strValue = Input.ofNullable(strValue);
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable Input<String> timestampValue) {
+        public Builder timestampValue(@Nullable Input<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable String timestampValue) {
+        public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Input.ofNullable(timestampValue);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

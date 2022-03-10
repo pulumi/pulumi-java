@@ -91,32 +91,32 @@ public final class GlueRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipv6Addresses = defaults.ipv6Addresses;
         }
 
-        public Builder setHostName(Input<String> hostName) {
+        public Builder hostName(Input<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Input.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder setIpv4Addresses(@Nullable Input<List<String>> ipv4Addresses) {
+        public Builder ipv4Addresses(@Nullable Input<List<String>> ipv4Addresses) {
             this.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
-        public Builder setIpv4Addresses(@Nullable List<String> ipv4Addresses) {
+        public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
             this.ipv4Addresses = Input.ofNullable(ipv4Addresses);
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
             return this;
         }

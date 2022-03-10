@@ -106,22 +106,22 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
     	      this.webSshAccess = defaults.webSshAccess;
         }
 
-        public Builder setClientRdpAccess(@Nullable String clientRdpAccess) {
+        public Builder clientRdpAccess(@Nullable String clientRdpAccess) {
             this.clientRdpAccess = clientRdpAccess;
             return this;
         }
 
-        public Builder setClientSshAccess(@Nullable String clientSshAccess) {
+        public Builder clientSshAccess(@Nullable String clientSshAccess) {
             this.clientSshAccess = clientSshAccess;
             return this;
         }
 
-        public Builder setWebRdpAccess(@Nullable String webRdpAccess) {
+        public Builder webRdpAccess(@Nullable String webRdpAccess) {
             this.webRdpAccess = webRdpAccess;
             return this;
         }
 
-        public Builder setWebSshAccess(@Nullable String webSshAccess) {
+        public Builder webSshAccess(@Nullable String webSshAccess) {
             this.webSshAccess = webSshAccess;
             return this;
         }

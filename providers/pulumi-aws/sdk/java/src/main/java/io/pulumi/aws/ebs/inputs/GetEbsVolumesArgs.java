@@ -74,12 +74,12 @@ public final class GetEbsVolumesArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetEbsVolumesFilter> filters) {
+        public Builder filters(@Nullable List<GetEbsVolumesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

@@ -168,82 +168,82 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder setMaxSurgeFixed(@Nullable Input<Integer> maxSurgeFixed) {
+        public Builder maxSurgeFixed(@Nullable Input<Integer> maxSurgeFixed) {
             this.maxSurgeFixed = maxSurgeFixed;
             return this;
         }
 
-        public Builder setMaxSurgeFixed(@Nullable Integer maxSurgeFixed) {
+        public Builder maxSurgeFixed(@Nullable Integer maxSurgeFixed) {
             this.maxSurgeFixed = Input.ofNullable(maxSurgeFixed);
             return this;
         }
 
-        public Builder setMaxSurgePercent(@Nullable Input<Integer> maxSurgePercent) {
+        public Builder maxSurgePercent(@Nullable Input<Integer> maxSurgePercent) {
             this.maxSurgePercent = maxSurgePercent;
             return this;
         }
 
-        public Builder setMaxSurgePercent(@Nullable Integer maxSurgePercent) {
+        public Builder maxSurgePercent(@Nullable Integer maxSurgePercent) {
             this.maxSurgePercent = Input.ofNullable(maxSurgePercent);
             return this;
         }
 
-        public Builder setMaxUnavailableFixed(@Nullable Input<Integer> maxUnavailableFixed) {
+        public Builder maxUnavailableFixed(@Nullable Input<Integer> maxUnavailableFixed) {
             this.maxUnavailableFixed = maxUnavailableFixed;
             return this;
         }
 
-        public Builder setMaxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
+        public Builder maxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
             this.maxUnavailableFixed = Input.ofNullable(maxUnavailableFixed);
             return this;
         }
 
-        public Builder setMaxUnavailablePercent(@Nullable Input<Integer> maxUnavailablePercent) {
+        public Builder maxUnavailablePercent(@Nullable Input<Integer> maxUnavailablePercent) {
             this.maxUnavailablePercent = maxUnavailablePercent;
             return this;
         }
 
-        public Builder setMaxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
+        public Builder maxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
             this.maxUnavailablePercent = Input.ofNullable(maxUnavailablePercent);
             return this;
         }
 
-        public Builder setMinReadySec(@Nullable Input<Integer> minReadySec) {
+        public Builder minReadySec(@Nullable Input<Integer> minReadySec) {
             this.minReadySec = minReadySec;
             return this;
         }
 
-        public Builder setMinReadySec(@Nullable Integer minReadySec) {
+        public Builder minReadySec(@Nullable Integer minReadySec) {
             this.minReadySec = Input.ofNullable(minReadySec);
             return this;
         }
 
-        public Builder setMinimalAction(Input<String> minimalAction) {
+        public Builder minimalAction(Input<String> minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
 
-        public Builder setMinimalAction(String minimalAction) {
+        public Builder minimalAction(String minimalAction) {
             this.minimalAction = Input.of(Objects.requireNonNull(minimalAction));
             return this;
         }
 
-        public Builder setReplacementMethod(@Nullable Input<String> replacementMethod) {
+        public Builder replacementMethod(@Nullable Input<String> replacementMethod) {
             this.replacementMethod = replacementMethod;
             return this;
         }
 
-        public Builder setReplacementMethod(@Nullable String replacementMethod) {
+        public Builder replacementMethod(@Nullable String replacementMethod) {
             this.replacementMethod = Input.ofNullable(replacementMethod);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -75,22 +75,22 @@ public final class SecuritySettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.subjectAltNames = defaults.subjectAltNames;
         }
 
-        public Builder setClientTlsPolicy(@Nullable Input<String> clientTlsPolicy) {
+        public Builder clientTlsPolicy(@Nullable Input<String> clientTlsPolicy) {
             this.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
 
-        public Builder setClientTlsPolicy(@Nullable String clientTlsPolicy) {
+        public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
             this.clientTlsPolicy = Input.ofNullable(clientTlsPolicy);
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable Input<List<String>> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable Input<List<String>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable List<String> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
             this.subjectAltNames = Input.ofNullable(subjectAltNames);
             return this;
         }

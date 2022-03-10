@@ -50,7 +50,7 @@ public final class DistributionOriginS3OriginConfig {
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder setOriginAccessIdentity(String originAccessIdentity) {
+        public Builder originAccessIdentity(String originAccessIdentity) {
             this.originAccessIdentity = Objects.requireNonNull(originAccessIdentity);
             return this;
         }

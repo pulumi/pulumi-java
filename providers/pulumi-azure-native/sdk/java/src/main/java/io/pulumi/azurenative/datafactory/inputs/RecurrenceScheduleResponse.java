@@ -125,27 +125,27 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setHours(@Nullable List<Integer> hours) {
+        public Builder hours(@Nullable List<Integer> hours) {
             this.hours = hours;
             return this;
         }
 
-        public Builder setMinutes(@Nullable List<Integer> minutes) {
+        public Builder minutes(@Nullable List<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setMonthDays(@Nullable List<Integer> monthDays) {
+        public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<String> weekDays) {
+        public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }

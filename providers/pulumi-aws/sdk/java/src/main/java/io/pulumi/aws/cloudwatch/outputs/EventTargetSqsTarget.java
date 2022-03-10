@@ -50,7 +50,7 @@ public final class EventTargetSqsTarget {
     	      this.messageGroupId = defaults.messageGroupId;
         }
 
-        public Builder setMessageGroupId(@Nullable String messageGroupId) {
+        public Builder messageGroupId(@Nullable String messageGroupId) {
             this.messageGroupId = messageGroupId;
             return this;
         }

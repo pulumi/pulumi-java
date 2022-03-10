@@ -53,12 +53,12 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
     	      this.cosmosDb = defaults.cosmosDb;
         }
 
-        public Builder setCosmosDb(@Nullable Input<CosmosDbSettingsArgs> cosmosDb) {
+        public Builder cosmosDb(@Nullable Input<CosmosDbSettingsArgs> cosmosDb) {
             this.cosmosDb = cosmosDb;
             return this;
         }
 
-        public Builder setCosmosDb(@Nullable CosmosDbSettingsArgs cosmosDb) {
+        public Builder cosmosDb(@Nullable CosmosDbSettingsArgs cosmosDb) {
             this.cosmosDb = Input.ofNullable(cosmosDb);
             return this;
         }

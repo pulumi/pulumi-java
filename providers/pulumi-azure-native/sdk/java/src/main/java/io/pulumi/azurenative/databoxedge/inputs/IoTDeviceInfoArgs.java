@@ -107,42 +107,42 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ioTHostHubId = defaults.ioTHostHubId;
         }
 
-        public Builder setAuthentication(@Nullable Input<AuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<AuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable AuthenticationArgs authentication) {
+        public Builder authentication(@Nullable AuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setDeviceId(Input<String> deviceId) {
+        public Builder deviceId(Input<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Input.of(Objects.requireNonNull(deviceId));
             return this;
         }
 
-        public Builder setIoTHostHub(Input<String> ioTHostHub) {
+        public Builder ioTHostHub(Input<String> ioTHostHub) {
             this.ioTHostHub = Objects.requireNonNull(ioTHostHub);
             return this;
         }
 
-        public Builder setIoTHostHub(String ioTHostHub) {
+        public Builder ioTHostHub(String ioTHostHub) {
             this.ioTHostHub = Input.of(Objects.requireNonNull(ioTHostHub));
             return this;
         }
 
-        public Builder setIoTHostHubId(@Nullable Input<String> ioTHostHubId) {
+        public Builder ioTHostHubId(@Nullable Input<String> ioTHostHubId) {
             this.ioTHostHubId = ioTHostHubId;
             return this;
         }
 
-        public Builder setIoTHostHubId(@Nullable String ioTHostHubId) {
+        public Builder ioTHostHubId(@Nullable String ioTHostHubId) {
             this.ioTHostHubId = Input.ofNullable(ioTHostHubId);
             return this;
         }

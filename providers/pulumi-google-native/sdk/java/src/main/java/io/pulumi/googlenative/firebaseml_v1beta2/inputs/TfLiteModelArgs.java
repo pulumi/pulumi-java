@@ -74,22 +74,22 @@ public final class TfLiteModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gcsTfliteUri = defaults.gcsTfliteUri;
         }
 
-        public Builder setAutomlModel(@Nullable Input<String> automlModel) {
+        public Builder automlModel(@Nullable Input<String> automlModel) {
             this.automlModel = automlModel;
             return this;
         }
 
-        public Builder setAutomlModel(@Nullable String automlModel) {
+        public Builder automlModel(@Nullable String automlModel) {
             this.automlModel = Input.ofNullable(automlModel);
             return this;
         }
 
-        public Builder setGcsTfliteUri(@Nullable Input<String> gcsTfliteUri) {
+        public Builder gcsTfliteUri(@Nullable Input<String> gcsTfliteUri) {
             this.gcsTfliteUri = gcsTfliteUri;
             return this;
         }
 
-        public Builder setGcsTfliteUri(@Nullable String gcsTfliteUri) {
+        public Builder gcsTfliteUri(@Nullable String gcsTfliteUri) {
             this.gcsTfliteUri = Input.ofNullable(gcsTfliteUri);
             return this;
         }

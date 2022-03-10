@@ -109,42 +109,42 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     	      this.rangeKey = defaults.rangeKey;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNonKeyAttributes(@Nullable Input<List<String>> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable Input<List<String>> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
-        public Builder setNonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = Input.ofNullable(nonKeyAttributes);
             return this;
         }
 
-        public Builder setProjectionType(Input<String> projectionType) {
+        public Builder projectionType(Input<String> projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
 
-        public Builder setProjectionType(String projectionType) {
+        public Builder projectionType(String projectionType) {
             this.projectionType = Input.of(Objects.requireNonNull(projectionType));
             return this;
         }
 
-        public Builder setRangeKey(Input<String> rangeKey) {
+        public Builder rangeKey(Input<String> rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }
 
-        public Builder setRangeKey(String rangeKey) {
+        public Builder rangeKey(String rangeKey) {
             this.rangeKey = Input.of(Objects.requireNonNull(rangeKey));
             return this;
         }

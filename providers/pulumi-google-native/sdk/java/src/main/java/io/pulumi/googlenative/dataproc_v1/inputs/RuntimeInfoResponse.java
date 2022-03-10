@@ -89,17 +89,17 @@ public final class RuntimeInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.outputUri = defaults.outputUri;
         }
 
-        public Builder setDiagnosticOutputUri(String diagnosticOutputUri) {
+        public Builder diagnosticOutputUri(String diagnosticOutputUri) {
             this.diagnosticOutputUri = Objects.requireNonNull(diagnosticOutputUri);
             return this;
         }
 
-        public Builder setEndpoints(Map<String,String> endpoints) {
+        public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setOutputUri(String outputUri) {
+        public Builder outputUri(String outputUri) {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
         }

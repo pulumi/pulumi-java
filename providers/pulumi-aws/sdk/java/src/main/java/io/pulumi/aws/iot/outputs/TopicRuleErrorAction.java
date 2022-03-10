@@ -169,77 +169,77 @@ public final class TopicRuleErrorAction {
     	      this.stepFunctions = defaults.stepFunctions;
         }
 
-        public Builder setCloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm) {
+        public Builder cloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm) {
             this.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
 
-        public Builder setCloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric) {
+        public Builder cloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric) {
             this.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
 
-        public Builder setDynamodb(@Nullable TopicRuleErrorActionDynamodb dynamodb) {
+        public Builder dynamodb(@Nullable TopicRuleErrorActionDynamodb dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
-        public Builder setDynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2) {
+        public Builder dynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2) {
             this.dynamodbv2 = dynamodbv2;
             return this;
         }
 
-        public Builder setElasticsearch(@Nullable TopicRuleErrorActionElasticsearch elasticsearch) {
+        public Builder elasticsearch(@Nullable TopicRuleErrorActionElasticsearch elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
 
-        public Builder setFirehose(@Nullable TopicRuleErrorActionFirehose firehose) {
+        public Builder firehose(@Nullable TopicRuleErrorActionFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setIotAnalytics(@Nullable TopicRuleErrorActionIotAnalytics iotAnalytics) {
+        public Builder iotAnalytics(@Nullable TopicRuleErrorActionIotAnalytics iotAnalytics) {
             this.iotAnalytics = iotAnalytics;
             return this;
         }
 
-        public Builder setIotEvents(@Nullable TopicRuleErrorActionIotEvents iotEvents) {
+        public Builder iotEvents(@Nullable TopicRuleErrorActionIotEvents iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
 
-        public Builder setKinesis(@Nullable TopicRuleErrorActionKinesis kinesis) {
+        public Builder kinesis(@Nullable TopicRuleErrorActionKinesis kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
-        public Builder setLambda(@Nullable TopicRuleErrorActionLambda lambda) {
+        public Builder lambda(@Nullable TopicRuleErrorActionLambda lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setRepublish(@Nullable TopicRuleErrorActionRepublish republish) {
+        public Builder republish(@Nullable TopicRuleErrorActionRepublish republish) {
             this.republish = republish;
             return this;
         }
 
-        public Builder setS3(@Nullable TopicRuleErrorActionS3 s3) {
+        public Builder s3(@Nullable TopicRuleErrorActionS3 s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setSns(@Nullable TopicRuleErrorActionSns sns) {
+        public Builder sns(@Nullable TopicRuleErrorActionSns sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSqs(@Nullable TopicRuleErrorActionSqs sqs) {
+        public Builder sqs(@Nullable TopicRuleErrorActionSqs sqs) {
             this.sqs = sqs;
             return this;
         }
 
-        public Builder setStepFunctions(@Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
+        public Builder stepFunctions(@Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
             this.stepFunctions = stepFunctions;
             return this;
         }

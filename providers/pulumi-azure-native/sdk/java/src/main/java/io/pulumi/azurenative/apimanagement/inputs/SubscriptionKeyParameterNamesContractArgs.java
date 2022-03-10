@@ -74,22 +74,22 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
     	      this.query = defaults.query;
         }
 
-        public Builder setHeader(@Nullable Input<String> header) {
+        public Builder header(@Nullable Input<String> header) {
             this.header = header;
             return this;
         }
 
-        public Builder setHeader(@Nullable String header) {
+        public Builder header(@Nullable String header) {
             this.header = Input.ofNullable(header);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }

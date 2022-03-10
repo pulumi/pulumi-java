@@ -88,32 +88,32 @@ public final class SubscriptionIAMPolicyArgs extends io.pulumi.resources.Resourc
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSubscription(Input<String> subscription) {
+        public Builder subscription(Input<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
-        public Builder setSubscription(String subscription) {
+        public Builder subscription(String subscription) {
             this.subscription = Input.of(Objects.requireNonNull(subscription));
             return this;
         }

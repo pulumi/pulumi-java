@@ -48,7 +48,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.inputLambdaProcessor = defaults.inputLambdaProcessor;
         }
 
-        public Builder setInputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor) {
+        public Builder inputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor inputLambdaProcessor) {
             this.inputLambdaProcessor = Objects.requireNonNull(inputLambdaProcessor);
             return this;
         }

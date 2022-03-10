@@ -73,12 +73,12 @@ public final class LoggingResponse extends io.pulumi.resources.InvokeArgs {
     	      this.producerDestinations = defaults.producerDestinations;
         }
 
-        public Builder setConsumerDestinations(List<LoggingDestinationResponse> consumerDestinations) {
+        public Builder consumerDestinations(List<LoggingDestinationResponse> consumerDestinations) {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }
 
-        public Builder setProducerDestinations(List<LoggingDestinationResponse> producerDestinations) {
+        public Builder producerDestinations(List<LoggingDestinationResponse> producerDestinations) {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }

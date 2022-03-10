@@ -246,62 +246,62 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
     	      this.x12DelimiterOverrides = defaults.x12DelimiterOverrides;
         }
 
-        public Builder setAcknowledgementSettings(X12AcknowledgementSettingsResponse acknowledgementSettings) {
+        public Builder acknowledgementSettings(X12AcknowledgementSettingsResponse acknowledgementSettings) {
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
 
-        public Builder setEnvelopeOverrides(@Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides) {
+        public Builder envelopeOverrides(@Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
-        public Builder setEnvelopeSettings(X12EnvelopeSettingsResponse envelopeSettings) {
+        public Builder envelopeSettings(X12EnvelopeSettingsResponse envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
 
-        public Builder setFramingSettings(X12FramingSettingsResponse framingSettings) {
+        public Builder framingSettings(X12FramingSettingsResponse framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
 
-        public Builder setMessageFilter(X12MessageFilterResponse messageFilter) {
+        public Builder messageFilter(X12MessageFilterResponse messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
 
-        public Builder setMessageFilterList(@Nullable List<X12MessageIdentifierResponse> messageFilterList) {
+        public Builder messageFilterList(@Nullable List<X12MessageIdentifierResponse> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
 
-        public Builder setProcessingSettings(X12ProcessingSettingsResponse processingSettings) {
+        public Builder processingSettings(X12ProcessingSettingsResponse processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
 
-        public Builder setSchemaReferences(List<X12SchemaReferenceResponse> schemaReferences) {
+        public Builder schemaReferences(List<X12SchemaReferenceResponse> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
 
-        public Builder setSecuritySettings(X12SecuritySettingsResponse securitySettings) {
+        public Builder securitySettings(X12SecuritySettingsResponse securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setValidationOverrides(@Nullable List<X12ValidationOverrideResponse> validationOverrides) {
+        public Builder validationOverrides(@Nullable List<X12ValidationOverrideResponse> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
 
-        public Builder setValidationSettings(X12ValidationSettingsResponse validationSettings) {
+        public Builder validationSettings(X12ValidationSettingsResponse validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
 
-        public Builder setX12DelimiterOverrides(@Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
+        public Builder x12DelimiterOverrides(@Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides) {
             this.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }

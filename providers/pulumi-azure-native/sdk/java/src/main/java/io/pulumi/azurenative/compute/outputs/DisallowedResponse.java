@@ -50,7 +50,7 @@ public final class DisallowedResponse {
     	      this.diskTypes = defaults.diskTypes;
         }
 
-        public Builder setDiskTypes(@Nullable List<String> diskTypes) {
+        public Builder diskTypes(@Nullable List<String> diskTypes) {
             this.diskTypes = diskTypes;
             return this;
         }

@@ -261,72 +261,72 @@ public final class GetApiResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setApiEndpoint(String apiEndpoint) {
+        public Builder apiEndpoint(String apiEndpoint) {
             this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiKeySelectionExpression(String apiKeySelectionExpression) {
+        public Builder apiKeySelectionExpression(String apiKeySelectionExpression) {
             this.apiKeySelectionExpression = Objects.requireNonNull(apiKeySelectionExpression);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCorsConfigurations(List<GetApiCorsConfiguration> corsConfigurations) {
+        public Builder corsConfigurations(List<GetApiCorsConfiguration> corsConfigurations) {
             this.corsConfigurations = Objects.requireNonNull(corsConfigurations);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisableExecuteApiEndpoint(Boolean disableExecuteApiEndpoint) {
+        public Builder disableExecuteApiEndpoint(Boolean disableExecuteApiEndpoint) {
             this.disableExecuteApiEndpoint = Objects.requireNonNull(disableExecuteApiEndpoint);
             return this;
         }
 
-        public Builder setExecutionArn(String executionArn) {
+        public Builder executionArn(String executionArn) {
             this.executionArn = Objects.requireNonNull(executionArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtocolType(String protocolType) {
+        public Builder protocolType(String protocolType) {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
 
-        public Builder setRouteSelectionExpression(String routeSelectionExpression) {
+        public Builder routeSelectionExpression(String routeSelectionExpression) {
             this.routeSelectionExpression = Objects.requireNonNull(routeSelectionExpression);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

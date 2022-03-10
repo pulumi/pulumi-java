@@ -122,52 +122,52 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keepaliveInterval = defaults.keepaliveInterval;
         }
 
-        public Builder setAdvertiseMode(@Nullable Input<RouterBgpAdvertiseMode> advertiseMode) {
+        public Builder advertiseMode(@Nullable Input<RouterBgpAdvertiseMode> advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
-        public Builder setAdvertiseMode(@Nullable RouterBgpAdvertiseMode advertiseMode) {
+        public Builder advertiseMode(@Nullable RouterBgpAdvertiseMode advertiseMode) {
             this.advertiseMode = Input.ofNullable(advertiseMode);
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable Input<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable List<RouterBgpAdvertisedGroupsItem> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable List<RouterBgpAdvertisedGroupsItem> advertisedGroups) {
             this.advertisedGroups = Input.ofNullable(advertisedGroups);
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
             this.advertisedIpRanges = Input.ofNullable(advertisedIpRanges);
             return this;
         }
 
-        public Builder setAsn(@Nullable Input<Integer> asn) {
+        public Builder asn(@Nullable Input<Integer> asn) {
             this.asn = asn;
             return this;
         }
 
-        public Builder setAsn(@Nullable Integer asn) {
+        public Builder asn(@Nullable Integer asn) {
             this.asn = Input.ofNullable(asn);
             return this;
         }
 
-        public Builder setKeepaliveInterval(@Nullable Input<Integer> keepaliveInterval) {
+        public Builder keepaliveInterval(@Nullable Input<Integer> keepaliveInterval) {
             this.keepaliveInterval = keepaliveInterval;
             return this;
         }
 
-        public Builder setKeepaliveInterval(@Nullable Integer keepaliveInterval) {
+        public Builder keepaliveInterval(@Nullable Integer keepaliveInterval) {
             this.keepaliveInterval = Input.ofNullable(keepaliveInterval);
             return this;
         }

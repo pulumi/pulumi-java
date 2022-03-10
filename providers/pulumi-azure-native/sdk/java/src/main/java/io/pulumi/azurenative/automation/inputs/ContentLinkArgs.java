@@ -91,32 +91,32 @@ public final class ContentLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setContentHash(@Nullable Input<ContentHashArgs> contentHash) {
+        public Builder contentHash(@Nullable Input<ContentHashArgs> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
-        public Builder setContentHash(@Nullable ContentHashArgs contentHash) {
+        public Builder contentHash(@Nullable ContentHashArgs contentHash) {
             this.contentHash = Input.ofNullable(contentHash);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

@@ -66,12 +66,12 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     	      this.returnConnectionPasswordEncrypted = defaults.returnConnectionPasswordEncrypted;
         }
 
-        public Builder setAwsKmsKeyId(String awsKmsKeyId) {
+        public Builder awsKmsKeyId(String awsKmsKeyId) {
             this.awsKmsKeyId = Objects.requireNonNull(awsKmsKeyId);
             return this;
         }
 
-        public Builder setReturnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
+        public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
             this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
             return this;
         }

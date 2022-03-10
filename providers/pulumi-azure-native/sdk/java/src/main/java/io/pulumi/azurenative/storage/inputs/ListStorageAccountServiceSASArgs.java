@@ -362,102 +362,102 @@ public final class ListStorageAccountServiceSASArgs extends io.pulumi.resources.
     	      this.sharedAccessStartTime = defaults.sharedAccessStartTime;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setCacheControl(@Nullable String cacheControl) {
+        public Builder cacheControl(@Nullable String cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
 
-        public Builder setCanonicalizedResource(String canonicalizedResource) {
+        public Builder canonicalizedResource(String canonicalizedResource) {
             this.canonicalizedResource = Objects.requireNonNull(canonicalizedResource);
             return this;
         }
 
-        public Builder setContentDisposition(@Nullable String contentDisposition) {
+        public Builder contentDisposition(@Nullable String contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable String contentEncoding) {
+        public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
-        public Builder setContentLanguage(@Nullable String contentLanguage) {
+        public Builder contentLanguage(@Nullable String contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setIPAddressOrRange(@Nullable String iPAddressOrRange) {
+        public Builder iPAddressOrRange(@Nullable String iPAddressOrRange) {
             this.iPAddressOrRange = iPAddressOrRange;
             return this;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setKeyToSign(@Nullable String keyToSign) {
+        public Builder keyToSign(@Nullable String keyToSign) {
             this.keyToSign = keyToSign;
             return this;
         }
 
-        public Builder setPartitionKeyEnd(@Nullable String partitionKeyEnd) {
+        public Builder partitionKeyEnd(@Nullable String partitionKeyEnd) {
             this.partitionKeyEnd = partitionKeyEnd;
             return this;
         }
 
-        public Builder setPartitionKeyStart(@Nullable String partitionKeyStart) {
+        public Builder partitionKeyStart(@Nullable String partitionKeyStart) {
             this.partitionKeyStart = partitionKeyStart;
             return this;
         }
 
-        public Builder setPermissions(@Nullable Either<String,Permissions> permissions) {
+        public Builder permissions(@Nullable Either<String,Permissions> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setProtocols(@Nullable HttpProtocol protocols) {
+        public Builder protocols(@Nullable HttpProtocol protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setResource(@Nullable Either<String,SignedResource> resource) {
+        public Builder resource(@Nullable Either<String,SignedResource> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRowKeyEnd(@Nullable String rowKeyEnd) {
+        public Builder rowKeyEnd(@Nullable String rowKeyEnd) {
             this.rowKeyEnd = rowKeyEnd;
             return this;
         }
 
-        public Builder setRowKeyStart(@Nullable String rowKeyStart) {
+        public Builder rowKeyStart(@Nullable String rowKeyStart) {
             this.rowKeyStart = rowKeyStart;
             return this;
         }
 
-        public Builder setSharedAccessExpiryTime(@Nullable String sharedAccessExpiryTime) {
+        public Builder sharedAccessExpiryTime(@Nullable String sharedAccessExpiryTime) {
             this.sharedAccessExpiryTime = sharedAccessExpiryTime;
             return this;
         }
 
-        public Builder setSharedAccessStartTime(@Nullable String sharedAccessStartTime) {
+        public Builder sharedAccessStartTime(@Nullable String sharedAccessStartTime) {
             this.sharedAccessStartTime = sharedAccessStartTime;
             return this;
         }

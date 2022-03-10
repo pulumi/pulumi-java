@@ -48,7 +48,7 @@ public final class ResourceSelectorResponse {
     	      this.fullResourceName = defaults.fullResourceName;
         }
 
-        public Builder setFullResourceName(String fullResourceName) {
+        public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }

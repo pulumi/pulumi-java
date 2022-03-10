@@ -99,22 +99,22 @@ public final class ServiceResolverResponse {
     	      this.serviceDirectoryService = defaults.serviceDirectoryService;
         }
 
-        public Builder setEndpointFilter(String endpointFilter) {
+        public Builder endpointFilter(String endpointFilter) {
             this.endpointFilter = Objects.requireNonNull(endpointFilter);
             return this;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setServerCertificates(List<CertificateResponse> serverCertificates) {
+        public Builder serverCertificates(List<CertificateResponse> serverCertificates) {
             this.serverCertificates = Objects.requireNonNull(serverCertificates);
             return this;
         }
 
-        public Builder setServiceDirectoryService(String serviceDirectoryService) {
+        public Builder serviceDirectoryService(String serviceDirectoryService) {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }

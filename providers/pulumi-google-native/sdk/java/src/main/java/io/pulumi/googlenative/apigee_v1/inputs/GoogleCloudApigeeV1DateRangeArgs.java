@@ -73,22 +73,22 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(Input<String> end) {
+        public Builder end(Input<String> end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Input.of(Objects.requireNonNull(end));
             return this;
         }
 
-        public Builder setStart(Input<String> start) {
+        public Builder start(Input<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Input.of(Objects.requireNonNull(start));
             return this;
         }

@@ -76,22 +76,22 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
     	      this.retentionTimes = defaults.retentionTimes;
         }
 
-        public Builder setRetentionDuration(@Nullable Input<RetentionDurationArgs> retentionDuration) {
+        public Builder retentionDuration(@Nullable Input<RetentionDurationArgs> retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
-        public Builder setRetentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
+        public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
             this.retentionDuration = Input.ofNullable(retentionDuration);
             return this;
         }
 
-        public Builder setRetentionTimes(@Nullable Input<List<String>> retentionTimes) {
+        public Builder retentionTimes(@Nullable Input<List<String>> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }
 
-        public Builder setRetentionTimes(@Nullable List<String> retentionTimes) {
+        public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = Input.ofNullable(retentionTimes);
             return this;
         }

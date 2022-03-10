@@ -215,57 +215,57 @@ public final class GetTypeProviderResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setCollectionOverrides(List<CollectionOverrideResponse> collectionOverrides) {
+        public Builder collectionOverrides(List<CollectionOverrideResponse> collectionOverrides) {
             this.collectionOverrides = Objects.requireNonNull(collectionOverrides);
             return this;
         }
 
-        public Builder setCredential(CredentialResponse credential) {
+        public Builder credential(CredentialResponse credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setCustomCertificateAuthorityRoots(List<String> customCertificateAuthorityRoots) {
+        public Builder customCertificateAuthorityRoots(List<String> customCertificateAuthorityRoots) {
             this.customCertificateAuthorityRoots = Objects.requireNonNull(customCertificateAuthorityRoots);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescriptorUrl(String descriptorUrl) {
+        public Builder descriptorUrl(String descriptorUrl) {
             this.descriptorUrl = Objects.requireNonNull(descriptorUrl);
             return this;
         }
 
-        public Builder setInsertTime(String insertTime) {
+        public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
 
-        public Builder setLabels(List<TypeProviderLabelEntryResponse> labels) {
+        public Builder labels(List<TypeProviderLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperation(OperationResponse operation) {
+        public Builder operation(OperationResponse operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setOptions(OptionsResponse options) {
+        public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

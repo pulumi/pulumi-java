@@ -186,92 +186,92 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scope = defaults.scope;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setExemptionCategory(Input<Either<String,ExemptionCategory>> exemptionCategory) {
+        public Builder exemptionCategory(Input<Either<String,ExemptionCategory>> exemptionCategory) {
             this.exemptionCategory = Objects.requireNonNull(exemptionCategory);
             return this;
         }
 
-        public Builder setExemptionCategory(Either<String,ExemptionCategory> exemptionCategory) {
+        public Builder exemptionCategory(Either<String,ExemptionCategory> exemptionCategory) {
             this.exemptionCategory = Input.of(Objects.requireNonNull(exemptionCategory));
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable Input<String> expiresOn) {
+        public Builder expiresOn(@Nullable Input<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable String expiresOn) {
+        public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = Input.ofNullable(expiresOn);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPolicyAssignmentId(Input<String> policyAssignmentId) {
+        public Builder policyAssignmentId(Input<String> policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
 
-        public Builder setPolicyAssignmentId(String policyAssignmentId) {
+        public Builder policyAssignmentId(String policyAssignmentId) {
             this.policyAssignmentId = Input.of(Objects.requireNonNull(policyAssignmentId));
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceIds(@Nullable Input<List<String>> policyDefinitionReferenceIds) {
+        public Builder policyDefinitionReferenceIds(@Nullable Input<List<String>> policyDefinitionReferenceIds) {
             this.policyDefinitionReferenceIds = policyDefinitionReferenceIds;
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
+        public Builder policyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
             this.policyDefinitionReferenceIds = Input.ofNullable(policyDefinitionReferenceIds);
             return this;
         }
 
-        public Builder setPolicyExemptionName(@Nullable Input<String> policyExemptionName) {
+        public Builder policyExemptionName(@Nullable Input<String> policyExemptionName) {
             this.policyExemptionName = policyExemptionName;
             return this;
         }
 
-        public Builder setPolicyExemptionName(@Nullable String policyExemptionName) {
+        public Builder policyExemptionName(@Nullable String policyExemptionName) {
             this.policyExemptionName = Input.ofNullable(policyExemptionName);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

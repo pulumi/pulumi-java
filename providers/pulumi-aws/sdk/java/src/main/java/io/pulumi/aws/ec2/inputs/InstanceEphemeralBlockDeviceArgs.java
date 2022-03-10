@@ -87,32 +87,32 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Input<Boolean> noDevice) {
+        public Builder noDevice(@Nullable Input<Boolean> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Boolean noDevice) {
+        public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = Input.ofNullable(noDevice);
             return this;
         }
 
-        public Builder setVirtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Input<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Input.ofNullable(virtualName);
             return this;
         }

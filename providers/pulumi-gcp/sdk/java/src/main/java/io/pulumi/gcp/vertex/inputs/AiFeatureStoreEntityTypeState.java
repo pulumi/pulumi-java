@@ -156,72 +156,72 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setFeaturestore(@Nullable Input<String> featurestore) {
+        public Builder featurestore(@Nullable Input<String> featurestore) {
             this.featurestore = featurestore;
             return this;
         }
 
-        public Builder setFeaturestore(@Nullable String featurestore) {
+        public Builder featurestore(@Nullable String featurestore) {
             this.featurestore = Input.ofNullable(featurestore);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMonitoringConfig(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
+        public Builder monitoringConfig(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
 
-        public Builder setMonitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
+        public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
             this.monitoringConfig = Input.ofNullable(monitoringConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

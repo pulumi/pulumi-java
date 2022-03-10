@@ -84,17 +84,17 @@ public final class AliasRoutingStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setFleetId(@Nullable String fleetId) {
+        public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = fleetId;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setType(AliasRoutingStrategyType type) {
+        public Builder type(AliasRoutingStrategyType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

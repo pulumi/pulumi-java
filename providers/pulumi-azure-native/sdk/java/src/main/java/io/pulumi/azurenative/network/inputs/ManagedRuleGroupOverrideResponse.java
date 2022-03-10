@@ -76,12 +76,12 @@ public final class ManagedRuleGroupOverrideResponse extends io.pulumi.resources.
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRuleGroupName(String ruleGroupName) {
+        public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
-        public Builder setRules(@Nullable List<ManagedRuleOverrideResponse> rules) {
+        public Builder rules(@Nullable List<ManagedRuleOverrideResponse> rules) {
             this.rules = rules;
             return this;
         }

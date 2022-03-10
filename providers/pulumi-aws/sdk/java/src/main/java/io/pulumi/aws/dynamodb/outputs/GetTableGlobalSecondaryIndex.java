@@ -99,37 +99,37 @@ public final class GetTableGlobalSecondaryIndex {
     	      this.writeCapacity = defaults.writeCapacity;
         }
 
-        public Builder setHashKey(String hashKey) {
+        public Builder hashKey(String hashKey) {
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNonKeyAttributes(List<String> nonKeyAttributes) {
+        public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
             this.nonKeyAttributes = Objects.requireNonNull(nonKeyAttributes);
             return this;
         }
 
-        public Builder setProjectionType(String projectionType) {
+        public Builder projectionType(String projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
 
-        public Builder setRangeKey(String rangeKey) {
+        public Builder rangeKey(String rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }
 
-        public Builder setReadCapacity(Integer readCapacity) {
+        public Builder readCapacity(Integer readCapacity) {
             this.readCapacity = Objects.requireNonNull(readCapacity);
             return this;
         }
 
-        public Builder setWriteCapacity(Integer writeCapacity) {
+        public Builder writeCapacity(Integer writeCapacity) {
             this.writeCapacity = Objects.requireNonNull(writeCapacity);
             return this;
         }

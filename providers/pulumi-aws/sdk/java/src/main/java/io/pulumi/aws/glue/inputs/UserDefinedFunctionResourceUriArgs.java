@@ -69,22 +69,22 @@ public final class UserDefinedFunctionResourceUriArgs extends io.pulumi.resource
     	      this.uri = defaults.uri;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }

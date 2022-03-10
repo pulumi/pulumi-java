@@ -87,32 +87,32 @@ public final class JobLoadDestinationTableGetArgs extends io.pulumi.resources.Re
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Input<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
-        public Builder setDatasetId(@Nullable String datasetId) {
+        public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Input.ofNullable(datasetId);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
 
-        public Builder setTableId(Input<String> tableId) {
+        public Builder tableId(Input<String> tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Input.of(Objects.requireNonNull(tableId));
             return this;
         }

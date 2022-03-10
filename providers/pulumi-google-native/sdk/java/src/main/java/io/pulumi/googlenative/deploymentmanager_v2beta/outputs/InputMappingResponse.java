@@ -97,22 +97,22 @@ public final class InputMappingResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMethodMatch(String methodMatch) {
+        public Builder methodMatch(String methodMatch) {
             this.methodMatch = Objects.requireNonNull(methodMatch);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

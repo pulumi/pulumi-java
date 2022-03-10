@@ -76,12 +76,12 @@ public final class IncludedPathResponse extends io.pulumi.resources.InvokeArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setIndexes(@Nullable List<IndexesResponse> indexes) {
+        public Builder indexes(@Nullable List<IndexesResponse> indexes) {
             this.indexes = indexes;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

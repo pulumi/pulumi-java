@@ -91,32 +91,32 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setTimeToRetire(@Nullable Input<String> timeToRetire) {
+        public Builder timeToRetire(@Nullable Input<String> timeToRetire) {
             this.timeToRetire = timeToRetire;
             return this;
         }
 
-        public Builder setTimeToRetire(@Nullable String timeToRetire) {
+        public Builder timeToRetire(@Nullable String timeToRetire) {
             this.timeToRetire = Input.ofNullable(timeToRetire);
             return this;
         }
 
-        public Builder setType(@Nullable Input<IpMappingType> type) {
+        public Builder type(@Nullable Input<IpMappingType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable IpMappingType type) {
+        public Builder type(@Nullable IpMappingType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

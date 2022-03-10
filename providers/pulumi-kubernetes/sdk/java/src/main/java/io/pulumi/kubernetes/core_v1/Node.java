@@ -140,8 +140,8 @@ public class Node extends io.pulumi.resources.CustomResource {
     private static NodeArgs makeArgs(@Nullable NodeArgs args) {
         var builder = args == null ? NodeArgs.builder() : NodeArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Node")
+            .apiVersion("v1")
+            .kind("Node")
             .build();
     }
 

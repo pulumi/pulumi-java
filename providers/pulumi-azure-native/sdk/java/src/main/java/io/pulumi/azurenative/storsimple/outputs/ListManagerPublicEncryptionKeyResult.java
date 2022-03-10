@@ -83,17 +83,17 @@ public final class ListManagerPublicEncryptionKeyResult {
     	      this.valueCertificateThumbprint = defaults.valueCertificateThumbprint;
         }
 
-        public Builder setEncryptionAlgorithm(String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValueCertificateThumbprint(@Nullable String valueCertificateThumbprint) {
+        public Builder valueCertificateThumbprint(@Nullable String valueCertificateThumbprint) {
             this.valueCertificateThumbprint = valueCertificateThumbprint;
             return this;
         }

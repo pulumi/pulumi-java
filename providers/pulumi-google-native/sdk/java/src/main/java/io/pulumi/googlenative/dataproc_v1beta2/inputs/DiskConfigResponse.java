@@ -89,17 +89,17 @@ public final class DiskConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.numLocalSsds = defaults.numLocalSsds;
         }
 
-        public Builder setBootDiskSizeGb(Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setBootDiskType(String bootDiskType) {
+        public Builder bootDiskType(String bootDiskType) {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
 
-        public Builder setNumLocalSsds(Integer numLocalSsds) {
+        public Builder numLocalSsds(Integer numLocalSsds) {
             this.numLocalSsds = Objects.requireNonNull(numLocalSsds);
             return this;
         }

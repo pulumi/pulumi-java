@@ -151,72 +151,72 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     	      this.statusReason = defaults.statusReason;
         }
 
-        public Builder setAllowedSourceAddressPrefix(@Nullable Input<String> allowedSourceAddressPrefix) {
+        public Builder allowedSourceAddressPrefix(@Nullable Input<String> allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
+        public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = Input.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefixes(@Nullable Input<List<String>> allowedSourceAddressPrefixes) {
+        public Builder allowedSourceAddressPrefixes(@Nullable Input<List<String>> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
+        public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = Input.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
 
-        public Builder setEndTimeUtc(Input<String> endTimeUtc) {
+        public Builder endTimeUtc(Input<String> endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
 
-        public Builder setEndTimeUtc(String endTimeUtc) {
+        public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Input.of(Objects.requireNonNull(endTimeUtc));
             return this;
         }
 
-        public Builder setMappedPort(@Nullable Input<Integer> mappedPort) {
+        public Builder mappedPort(@Nullable Input<Integer> mappedPort) {
             this.mappedPort = mappedPort;
             return this;
         }
 
-        public Builder setMappedPort(@Nullable Integer mappedPort) {
+        public Builder mappedPort(@Nullable Integer mappedPort) {
             this.mappedPort = Input.ofNullable(mappedPort);
             return this;
         }
 
-        public Builder setNumber(Input<Integer> number) {
+        public Builder number(Input<Integer> number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Input.of(Objects.requireNonNull(number));
             return this;
         }
 
-        public Builder setStatus(Input<Either<String,Status>> status) {
+        public Builder status(Input<Either<String,Status>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(Either<String,Status> status) {
+        public Builder status(Either<String,Status> status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder setStatusReason(Input<Either<String,StatusReason>> statusReason) {
+        public Builder statusReason(Input<Either<String,StatusReason>> statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
 
-        public Builder setStatusReason(Either<String,StatusReason> statusReason) {
+        public Builder statusReason(Either<String,StatusReason> statusReason) {
             this.statusReason = Input.of(Objects.requireNonNull(statusReason));
             return this;
         }

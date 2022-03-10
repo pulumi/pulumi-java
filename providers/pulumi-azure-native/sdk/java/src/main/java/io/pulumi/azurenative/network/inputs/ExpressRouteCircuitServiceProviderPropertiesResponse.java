@@ -91,17 +91,17 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse extends 
     	      this.serviceProviderName = defaults.serviceProviderName;
         }
 
-        public Builder setBandwidthInMbps(@Nullable Integer bandwidthInMbps) {
+        public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable String peeringLocation) {
+        public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
-        public Builder setServiceProviderName(@Nullable String serviceProviderName) {
+        public Builder serviceProviderName(@Nullable String serviceProviderName) {
             this.serviceProviderName = serviceProviderName;
             return this;
         }

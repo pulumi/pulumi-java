@@ -55,7 +55,7 @@ public final class RuntimeGuestOsFeatureResponse extends io.pulumi.resources.Inv
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

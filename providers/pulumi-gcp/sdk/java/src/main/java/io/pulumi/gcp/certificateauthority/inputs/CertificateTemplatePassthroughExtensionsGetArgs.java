@@ -72,22 +72,22 @@ public final class CertificateTemplatePassthroughExtensionsGetArgs extends io.pu
     	      this.knownExtensions = defaults.knownExtensions;
         }
 
-        public Builder setAdditionalExtensions(@Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable Input<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs>> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtensionGetArgs> additionalExtensions) {
             this.additionalExtensions = Input.ofNullable(additionalExtensions);
             return this;
         }
 
-        public Builder setKnownExtensions(@Nullable Input<List<String>> knownExtensions) {
+        public Builder knownExtensions(@Nullable Input<List<String>> knownExtensions) {
             this.knownExtensions = knownExtensions;
             return this;
         }
 
-        public Builder setKnownExtensions(@Nullable List<String> knownExtensions) {
+        public Builder knownExtensions(@Nullable List<String> knownExtensions) {
             this.knownExtensions = Input.ofNullable(knownExtensions);
             return this;
         }

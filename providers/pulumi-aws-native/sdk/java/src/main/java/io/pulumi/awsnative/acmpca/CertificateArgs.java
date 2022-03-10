@@ -152,72 +152,72 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validityNotBefore = defaults.validityNotBefore;
         }
 
-        public Builder setApiPassthrough(@Nullable Input<CertificateApiPassthroughArgs> apiPassthrough) {
+        public Builder apiPassthrough(@Nullable Input<CertificateApiPassthroughArgs> apiPassthrough) {
             this.apiPassthrough = apiPassthrough;
             return this;
         }
 
-        public Builder setApiPassthrough(@Nullable CertificateApiPassthroughArgs apiPassthrough) {
+        public Builder apiPassthrough(@Nullable CertificateApiPassthroughArgs apiPassthrough) {
             this.apiPassthrough = Input.ofNullable(apiPassthrough);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(Input<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Input.of(Objects.requireNonNull(certificateAuthorityArn));
             return this;
         }
 
-        public Builder setCertificateSigningRequest(Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(Input<String> certificateSigningRequest) {
             this.certificateSigningRequest = Objects.requireNonNull(certificateSigningRequest);
             return this;
         }
 
-        public Builder setCertificateSigningRequest(String certificateSigningRequest) {
+        public Builder certificateSigningRequest(String certificateSigningRequest) {
             this.certificateSigningRequest = Input.of(Objects.requireNonNull(certificateSigningRequest));
             return this;
         }
 
-        public Builder setSigningAlgorithm(Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(Input<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
 
-        public Builder setSigningAlgorithm(String signingAlgorithm) {
+        public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Input.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
 
-        public Builder setTemplateArn(@Nullable Input<String> templateArn) {
+        public Builder templateArn(@Nullable Input<String> templateArn) {
             this.templateArn = templateArn;
             return this;
         }
 
-        public Builder setTemplateArn(@Nullable String templateArn) {
+        public Builder templateArn(@Nullable String templateArn) {
             this.templateArn = Input.ofNullable(templateArn);
             return this;
         }
 
-        public Builder setValidity(Input<CertificateValidityArgs> validity) {
+        public Builder validity(Input<CertificateValidityArgs> validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
 
-        public Builder setValidity(CertificateValidityArgs validity) {
+        public Builder validity(CertificateValidityArgs validity) {
             this.validity = Input.of(Objects.requireNonNull(validity));
             return this;
         }
 
-        public Builder setValidityNotBefore(@Nullable Input<CertificateValidityArgs> validityNotBefore) {
+        public Builder validityNotBefore(@Nullable Input<CertificateValidityArgs> validityNotBefore) {
             this.validityNotBefore = validityNotBefore;
             return this;
         }
 
-        public Builder setValidityNotBefore(@Nullable CertificateValidityArgs validityNotBefore) {
+        public Builder validityNotBefore(@Nullable CertificateValidityArgs validityNotBefore) {
             this.validityNotBefore = Input.ofNullable(validityNotBefore);
             return this;
         }

@@ -75,12 +75,12 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

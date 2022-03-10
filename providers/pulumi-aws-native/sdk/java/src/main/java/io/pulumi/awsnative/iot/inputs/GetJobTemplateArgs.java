@@ -47,7 +47,7 @@ public final class GetJobTemplateArgs extends io.pulumi.resources.InvokeArgs {
     	      this.jobTemplateId = defaults.jobTemplateId;
         }
 
-        public Builder setJobTemplateId(String jobTemplateId) {
+        public Builder jobTemplateId(String jobTemplateId) {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }

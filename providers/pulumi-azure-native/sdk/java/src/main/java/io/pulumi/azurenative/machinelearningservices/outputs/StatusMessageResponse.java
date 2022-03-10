@@ -97,22 +97,22 @@ public final class StatusMessageResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setCreatedTimeUtc(String createdTimeUtc) {
+        public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
 
-        public Builder setLevel(String level) {
+        public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

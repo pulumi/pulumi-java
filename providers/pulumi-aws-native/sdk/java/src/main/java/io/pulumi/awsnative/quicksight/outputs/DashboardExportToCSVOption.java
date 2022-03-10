@@ -42,7 +42,7 @@ public final class DashboardExportToCSVOption {
     	      this.availabilityStatus = defaults.availabilityStatus;
         }
 
-        public Builder setAvailabilityStatus(@Nullable DashboardBehavior availabilityStatus) {
+        public Builder availabilityStatus(@Nullable DashboardBehavior availabilityStatus) {
             this.availabilityStatus = availabilityStatus;
             return this;
         }

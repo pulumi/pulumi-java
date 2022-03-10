@@ -84,17 +84,17 @@ public final class FlowLogDestinationOptions {
     	      this.perHourPartition = defaults.perHourPartition;
         }
 
-        public Builder setFileFormat(@Nullable String fileFormat) {
+        public Builder fileFormat(@Nullable String fileFormat) {
             this.fileFormat = fileFormat;
             return this;
         }
 
-        public Builder setHiveCompatiblePartitions(@Nullable Boolean hiveCompatiblePartitions) {
+        public Builder hiveCompatiblePartitions(@Nullable Boolean hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = hiveCompatiblePartitions;
             return this;
         }
 
-        public Builder setPerHourPartition(@Nullable Boolean perHourPartition) {
+        public Builder perHourPartition(@Nullable Boolean perHourPartition) {
             this.perHourPartition = perHourPartition;
             return this;
         }

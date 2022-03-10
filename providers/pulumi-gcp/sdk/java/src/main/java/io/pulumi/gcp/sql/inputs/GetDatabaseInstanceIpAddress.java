@@ -72,17 +72,17 @@ public final class GetDatabaseInstanceIpAddress extends io.pulumi.resources.Invo
     	      this.type = defaults.type;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setTimeToRetire(String timeToRetire) {
+        public Builder timeToRetire(String timeToRetire) {
             this.timeToRetire = Objects.requireNonNull(timeToRetire);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

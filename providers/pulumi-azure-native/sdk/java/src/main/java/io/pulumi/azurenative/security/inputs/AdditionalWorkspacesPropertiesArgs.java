@@ -94,32 +94,32 @@ public final class AdditionalWorkspacesPropertiesArgs extends io.pulumi.resource
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder setDataTypes(@Nullable Input<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes) {
+        public Builder dataTypes(@Nullable Input<List<Either<String,AdditionalWorkspaceDataType>>> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setDataTypes(@Nullable List<Either<String,AdditionalWorkspaceDataType>> dataTypes) {
+        public Builder dataTypes(@Nullable List<Either<String,AdditionalWorkspaceDataType>> dataTypes) {
             this.dataTypes = Input.ofNullable(dataTypes);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,AdditionalWorkspaceType>> type) {
+        public Builder type(@Nullable Input<Either<String,AdditionalWorkspaceType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,AdditionalWorkspaceType> type) {
+        public Builder type(@Nullable Either<String,AdditionalWorkspaceType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWorkspace(@Nullable Input<String> workspace) {
+        public Builder workspace(@Nullable Input<String> workspace) {
             this.workspace = workspace;
             return this;
         }
 
-        public Builder setWorkspace(@Nullable String workspace) {
+        public Builder workspace(@Nullable String workspace) {
             this.workspace = Input.ofNullable(workspace);
             return this;
         }

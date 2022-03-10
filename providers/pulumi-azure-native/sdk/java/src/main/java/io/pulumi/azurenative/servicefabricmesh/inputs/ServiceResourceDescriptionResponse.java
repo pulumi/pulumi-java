@@ -288,77 +288,77 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
     	      this.unhealthyEvaluation = defaults.unhealthyEvaluation;
         }
 
-        public Builder setAutoScalingPolicies(@Nullable List<AutoScalingPolicyResponse> autoScalingPolicies) {
+        public Builder autoScalingPolicies(@Nullable List<AutoScalingPolicyResponse> autoScalingPolicies) {
             this.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
 
-        public Builder setCodePackages(List<ContainerCodePackagePropertiesResponse> codePackages) {
+        public Builder codePackages(List<ContainerCodePackagePropertiesResponse> codePackages) {
             this.codePackages = Objects.requireNonNull(codePackages);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
+        public Builder diagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setHealthState(String healthState) {
+        public Builder healthState(String healthState) {
             this.healthState = Objects.requireNonNull(healthState);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetworkRefs(@Nullable List<NetworkRefResponse> networkRefs) {
+        public Builder networkRefs(@Nullable List<NetworkRefResponse> networkRefs) {
             this.networkRefs = networkRefs;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(String statusDetails) {
+        public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnhealthyEvaluation(String unhealthyEvaluation) {
+        public Builder unhealthyEvaluation(String unhealthyEvaluation) {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
         }

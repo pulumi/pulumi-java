@@ -73,32 +73,32 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionArgs extends io.p
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(Input<String> endTime) {
+        public Builder endTime(Input<String> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Input.of(Objects.requireNonNull(endTime));
             return this;
         }
 
-        public Builder setExclusionName(Input<String> exclusionName) {
+        public Builder exclusionName(Input<String> exclusionName) {
             this.exclusionName = Objects.requireNonNull(exclusionName);
             return this;
         }
 
-        public Builder setExclusionName(String exclusionName) {
+        public Builder exclusionName(String exclusionName) {
             this.exclusionName = Input.of(Objects.requireNonNull(exclusionName));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

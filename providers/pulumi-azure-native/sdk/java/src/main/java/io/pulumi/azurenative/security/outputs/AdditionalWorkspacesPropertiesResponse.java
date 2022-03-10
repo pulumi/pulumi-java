@@ -84,17 +84,17 @@ public final class AdditionalWorkspacesPropertiesResponse {
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder setDataTypes(@Nullable List<String> dataTypes) {
+        public Builder dataTypes(@Nullable List<String> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setWorkspace(@Nullable String workspace) {
+        public Builder workspace(@Nullable String workspace) {
             this.workspace = workspace;
             return this;
         }

@@ -93,32 +93,32 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends io.pulumi.re
     	      this.timeToLive = defaults.timeToLive;
         }
 
-        public Builder setComputeType(@Nullable Input<Either<String,DataFlowComputeType>> computeType) {
+        public Builder computeType(@Nullable Input<Either<String,DataFlowComputeType>> computeType) {
             this.computeType = computeType;
             return this;
         }
 
-        public Builder setComputeType(@Nullable Either<String,DataFlowComputeType> computeType) {
+        public Builder computeType(@Nullable Either<String,DataFlowComputeType> computeType) {
             this.computeType = Input.ofNullable(computeType);
             return this;
         }
 
-        public Builder setCoreCount(@Nullable Input<Integer> coreCount) {
+        public Builder coreCount(@Nullable Input<Integer> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable Integer coreCount) {
+        public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = Input.ofNullable(coreCount);
             return this;
         }
 
-        public Builder setTimeToLive(@Nullable Input<Integer> timeToLive) {
+        public Builder timeToLive(@Nullable Input<Integer> timeToLive) {
             this.timeToLive = timeToLive;
             return this;
         }
 
-        public Builder setTimeToLive(@Nullable Integer timeToLive) {
+        public Builder timeToLive(@Nullable Integer timeToLive) {
             this.timeToLive = Input.ofNullable(timeToLive);
             return this;
         }

@@ -64,12 +64,12 @@ public final class GetLaunchProfileArgs extends io.pulumi.resources.InvokeArgs {
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setLaunchProfileId(String launchProfileId) {
+        public Builder launchProfileId(String launchProfileId) {
             this.launchProfileId = Objects.requireNonNull(launchProfileId);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }

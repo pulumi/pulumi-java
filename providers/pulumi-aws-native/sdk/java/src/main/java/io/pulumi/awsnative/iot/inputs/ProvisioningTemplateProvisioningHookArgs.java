@@ -62,22 +62,22 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setPayloadVersion(@Nullable Input<String> payloadVersion) {
+        public Builder payloadVersion(@Nullable Input<String> payloadVersion) {
             this.payloadVersion = payloadVersion;
             return this;
         }
 
-        public Builder setPayloadVersion(@Nullable String payloadVersion) {
+        public Builder payloadVersion(@Nullable String payloadVersion) {
             this.payloadVersion = Input.ofNullable(payloadVersion);
             return this;
         }
 
-        public Builder setTargetArn(@Nullable Input<String> targetArn) {
+        public Builder targetArn(@Nullable Input<String> targetArn) {
             this.targetArn = targetArn;
             return this;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = Input.ofNullable(targetArn);
             return this;
         }

@@ -48,7 +48,7 @@ public final class AnalyticsConfigurationStorageClassAnalysis {
     	      this.dataExport = defaults.dataExport;
         }
 
-        public Builder setDataExport(AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
+        public Builder dataExport(AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
             this.dataExport = Objects.requireNonNull(dataExport);
             return this;
         }

@@ -75,12 +75,12 @@ public final class AutomationActionWorkspaceResponse extends io.pulumi.resources
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

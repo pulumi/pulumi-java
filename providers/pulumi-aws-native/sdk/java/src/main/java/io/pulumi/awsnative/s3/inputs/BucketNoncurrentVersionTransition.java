@@ -91,17 +91,17 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
     	      this.transitionInDays = defaults.transitionInDays;
         }
 
-        public Builder setNewerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
+        public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
-        public Builder setStorageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
+        public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setTransitionInDays(Integer transitionInDays) {
+        public Builder transitionInDays(Integer transitionInDays) {
             this.transitionInDays = Objects.requireNonNull(transitionInDays);
             return this;
         }

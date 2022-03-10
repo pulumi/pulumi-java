@@ -72,22 +72,22 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setAutomatic(@Nullable Input<Boolean> automatic) {
+        public Builder automatic(@Nullable Input<Boolean> automatic) {
             this.automatic = automatic;
             return this;
         }
 
-        public Builder setAutomatic(@Nullable Boolean automatic) {
+        public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = Input.ofNullable(automatic);
             return this;
         }
 
-        public Builder setUserManaged(@Nullable Input<SecretReplicationUserManagedArgs> userManaged) {
+        public Builder userManaged(@Nullable Input<SecretReplicationUserManagedArgs> userManaged) {
             this.userManaged = userManaged;
             return this;
         }
 
-        public Builder setUserManaged(@Nullable SecretReplicationUserManagedArgs userManaged) {
+        public Builder userManaged(@Nullable SecretReplicationUserManagedArgs userManaged) {
             this.userManaged = Input.ofNullable(userManaged);
             return this;
         }

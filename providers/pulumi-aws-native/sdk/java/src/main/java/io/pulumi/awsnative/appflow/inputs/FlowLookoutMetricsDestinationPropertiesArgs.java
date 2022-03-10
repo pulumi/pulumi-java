@@ -49,12 +49,12 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(@Nullable Input<String> object) {
+        public Builder object(@Nullable Input<String> object) {
             this.object = object;
             return this;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = Input.ofNullable(object);
             return this;
         }

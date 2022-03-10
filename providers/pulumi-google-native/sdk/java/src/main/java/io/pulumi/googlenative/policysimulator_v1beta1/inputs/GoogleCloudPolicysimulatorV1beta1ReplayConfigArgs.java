@@ -76,22 +76,22 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs extends io.
     	      this.policyOverlay = defaults.policyOverlay;
         }
 
-        public Builder setLogSource(@Nullable Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource) {
+        public Builder logSource(@Nullable Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource> logSource) {
             this.logSource = logSource;
             return this;
         }
 
-        public Builder setLogSource(@Nullable GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource logSource) {
+        public Builder logSource(@Nullable GoogleCloudPolicysimulatorV1beta1ReplayConfigLogSource logSource) {
             this.logSource = Input.ofNullable(logSource);
             return this;
         }
 
-        public Builder setPolicyOverlay(@Nullable Input<Map<String,String>> policyOverlay) {
+        public Builder policyOverlay(@Nullable Input<Map<String,String>> policyOverlay) {
             this.policyOverlay = policyOverlay;
             return this;
         }
 
-        public Builder setPolicyOverlay(@Nullable Map<String,String> policyOverlay) {
+        public Builder policyOverlay(@Nullable Map<String,String> policyOverlay) {
             this.policyOverlay = Input.ofNullable(policyOverlay);
             return this;
         }

@@ -85,17 +85,17 @@ public final class GroupInstanceRefresh {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setPreferences(@Nullable GroupInstanceRefreshPreferences preferences) {
+        public Builder preferences(@Nullable GroupInstanceRefreshPreferences preferences) {
             this.preferences = preferences;
             return this;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setTriggers(@Nullable List<String> triggers) {
+        public Builder triggers(@Nullable List<String> triggers) {
             this.triggers = triggers;
             return this;
         }

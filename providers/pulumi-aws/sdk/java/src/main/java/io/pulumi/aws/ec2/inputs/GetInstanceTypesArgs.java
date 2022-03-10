@@ -54,7 +54,7 @@ public final class GetInstanceTypesArgs extends io.pulumi.resources.InvokeArgs {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<GetInstanceTypesFilter> filters) {
+        public Builder filters(@Nullable List<GetInstanceTypesFilter> filters) {
             this.filters = filters;
             return this;
         }

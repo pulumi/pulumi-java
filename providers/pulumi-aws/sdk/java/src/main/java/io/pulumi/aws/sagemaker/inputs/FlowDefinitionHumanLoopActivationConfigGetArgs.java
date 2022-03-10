@@ -53,12 +53,12 @@ public final class FlowDefinitionHumanLoopActivationConfigGetArgs extends io.pul
     	      this.humanLoopActivationConditionsConfig = defaults.humanLoopActivationConditionsConfig;
         }
 
-        public Builder setHumanLoopActivationConditionsConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig) {
+        public Builder humanLoopActivationConditionsConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs> humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }
 
-        public Builder setHumanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs humanLoopActivationConditionsConfig) {
+        public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfigGetArgs humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = Input.ofNullable(humanLoopActivationConditionsConfig);
             return this;
         }

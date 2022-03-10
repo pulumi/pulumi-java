@@ -92,32 +92,32 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
     	      this.fileSystem = defaults.fileSystem;
         }
 
-        public Builder setAzureBlobStorage(@Nullable Input<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable Input<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
-        public Builder setAzureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigArgs azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigArgs azureBlobStorage) {
             this.azureBlobStorage = Input.ofNullable(azureBlobStorage);
             return this;
         }
 
-        public Builder setAzureTableStorage(@Nullable Input<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage) {
+        public Builder azureTableStorage(@Nullable Input<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage) {
             this.azureTableStorage = azureTableStorage;
             return this;
         }
 
-        public Builder setAzureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigArgs azureTableStorage) {
+        public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigArgs azureTableStorage) {
             this.azureTableStorage = Input.ofNullable(azureTableStorage);
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Input<FileSystemApplicationLogsConfigArgs> fileSystem) {
+        public Builder fileSystem(@Nullable Input<FileSystemApplicationLogsConfigArgs> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable FileSystemApplicationLogsConfigArgs fileSystem) {
+        public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigArgs fileSystem) {
             this.fileSystem = Input.ofNullable(fileSystem);
             return this;
         }

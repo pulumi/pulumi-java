@@ -51,12 +51,12 @@ public final class ThingGroupMetadataRootToParentGroup {
     	      this.groupName = defaults.groupName;
         }
 
-        public Builder setGroupArn(@Nullable String groupArn) {
+        public Builder groupArn(@Nullable String groupArn) {
             this.groupArn = groupArn;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }

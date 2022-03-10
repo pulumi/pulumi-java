@@ -57,12 +57,12 @@ public final class GuestOsFeatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<GuestOsFeatureType> type) {
+        public Builder type(@Nullable Input<GuestOsFeatureType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable GuestOsFeatureType type) {
+        public Builder type(@Nullable GuestOsFeatureType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

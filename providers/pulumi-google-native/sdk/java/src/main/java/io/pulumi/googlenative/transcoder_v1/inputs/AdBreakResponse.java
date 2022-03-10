@@ -55,7 +55,7 @@ public final class AdBreakResponse extends io.pulumi.resources.InvokeArgs {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }

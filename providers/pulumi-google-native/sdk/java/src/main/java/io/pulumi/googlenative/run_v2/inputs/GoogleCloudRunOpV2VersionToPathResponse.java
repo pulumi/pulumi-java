@@ -89,17 +89,17 @@ public final class GoogleCloudRunOpV2VersionToPathResponse extends io.pulumi.res
     	      this.version = defaults.version;
         }
 
-        public Builder setMode(Integer mode) {
+        public Builder mode(Integer mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

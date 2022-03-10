@@ -169,82 +169,82 @@ public final class MediaServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<AccountEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<AccountEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable AccountEncryptionArgs encryption) {
+        public Builder encryption(@Nullable AccountEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<MediaServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<MediaServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable MediaServiceIdentityArgs identity) {
+        public Builder identity(@Nullable MediaServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable Input<List<StorageAccountArgs>> storageAccounts) {
+        public Builder storageAccounts(@Nullable Input<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
+        public Builder storageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
             this.storageAccounts = Input.ofNullable(storageAccounts);
             return this;
         }
 
-        public Builder setStorageAuthentication(@Nullable Input<Either<String,StorageAuthentication>> storageAuthentication) {
+        public Builder storageAuthentication(@Nullable Input<Either<String,StorageAuthentication>> storageAuthentication) {
             this.storageAuthentication = storageAuthentication;
             return this;
         }
 
-        public Builder setStorageAuthentication(@Nullable Either<String,StorageAuthentication> storageAuthentication) {
+        public Builder storageAuthentication(@Nullable Either<String,StorageAuthentication> storageAuthentication) {
             this.storageAuthentication = Input.ofNullable(storageAuthentication);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

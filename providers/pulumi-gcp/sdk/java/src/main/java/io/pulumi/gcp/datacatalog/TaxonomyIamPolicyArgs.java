@@ -100,42 +100,42 @@ public final class TaxonomyIamPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.taxonomy = defaults.taxonomy;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTaxonomy(Input<String> taxonomy) {
+        public Builder taxonomy(Input<String> taxonomy) {
             this.taxonomy = Objects.requireNonNull(taxonomy);
             return this;
         }
 
-        public Builder setTaxonomy(String taxonomy) {
+        public Builder taxonomy(String taxonomy) {
             this.taxonomy = Input.of(Objects.requireNonNull(taxonomy));
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAvailabilitySetName(String availabilitySetName) {
+        public Builder availabilitySetName(String availabilitySetName) {
             this.availabilitySetName = Objects.requireNonNull(availabilitySetName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetLaunchConfigurationArgs extends io.pulumi.resources.Invoke
     	      this.launchConfigurationName = defaults.launchConfigurationName;
         }
 
-        public Builder setLaunchConfigurationName(String launchConfigurationName) {
+        public Builder launchConfigurationName(String launchConfigurationName) {
             this.launchConfigurationName = Objects.requireNonNull(launchConfigurationName);
             return this;
         }

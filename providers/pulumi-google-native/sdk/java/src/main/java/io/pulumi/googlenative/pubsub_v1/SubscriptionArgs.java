@@ -277,152 +277,152 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setAckDeadlineSeconds(@Nullable Input<Integer> ackDeadlineSeconds) {
+        public Builder ackDeadlineSeconds(@Nullable Input<Integer> ackDeadlineSeconds) {
             this.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
 
-        public Builder setAckDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
+        public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
             this.ackDeadlineSeconds = Input.ofNullable(ackDeadlineSeconds);
             return this;
         }
 
-        public Builder setDeadLetterPolicy(@Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy) {
+        public Builder deadLetterPolicy(@Nullable Input<DeadLetterPolicyArgs> deadLetterPolicy) {
             this.deadLetterPolicy = deadLetterPolicy;
             return this;
         }
 
-        public Builder setDeadLetterPolicy(@Nullable DeadLetterPolicyArgs deadLetterPolicy) {
+        public Builder deadLetterPolicy(@Nullable DeadLetterPolicyArgs deadLetterPolicy) {
             this.deadLetterPolicy = Input.ofNullable(deadLetterPolicy);
             return this;
         }
 
-        public Builder setDetached(@Nullable Input<Boolean> detached) {
+        public Builder detached(@Nullable Input<Boolean> detached) {
             this.detached = detached;
             return this;
         }
 
-        public Builder setDetached(@Nullable Boolean detached) {
+        public Builder detached(@Nullable Boolean detached) {
             this.detached = Input.ofNullable(detached);
             return this;
         }
 
-        public Builder setEnableMessageOrdering(@Nullable Input<Boolean> enableMessageOrdering) {
+        public Builder enableMessageOrdering(@Nullable Input<Boolean> enableMessageOrdering) {
             this.enableMessageOrdering = enableMessageOrdering;
             return this;
         }
 
-        public Builder setEnableMessageOrdering(@Nullable Boolean enableMessageOrdering) {
+        public Builder enableMessageOrdering(@Nullable Boolean enableMessageOrdering) {
             this.enableMessageOrdering = Input.ofNullable(enableMessageOrdering);
             return this;
         }
 
-        public Builder setExpirationPolicy(@Nullable Input<ExpirationPolicyArgs> expirationPolicy) {
+        public Builder expirationPolicy(@Nullable Input<ExpirationPolicyArgs> expirationPolicy) {
             this.expirationPolicy = expirationPolicy;
             return this;
         }
 
-        public Builder setExpirationPolicy(@Nullable ExpirationPolicyArgs expirationPolicy) {
+        public Builder expirationPolicy(@Nullable ExpirationPolicyArgs expirationPolicy) {
             this.expirationPolicy = Input.ofNullable(expirationPolicy);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMessageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
-        public Builder setMessageRetentionDuration(@Nullable String messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
             this.messageRetentionDuration = Input.ofNullable(messageRetentionDuration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPushConfig(@Nullable Input<PushConfigArgs> pushConfig) {
+        public Builder pushConfig(@Nullable Input<PushConfigArgs> pushConfig) {
             this.pushConfig = pushConfig;
             return this;
         }
 
-        public Builder setPushConfig(@Nullable PushConfigArgs pushConfig) {
+        public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
             this.pushConfig = Input.ofNullable(pushConfig);
             return this;
         }
 
-        public Builder setRetainAckedMessages(@Nullable Input<Boolean> retainAckedMessages) {
+        public Builder retainAckedMessages(@Nullable Input<Boolean> retainAckedMessages) {
             this.retainAckedMessages = retainAckedMessages;
             return this;
         }
 
-        public Builder setRetainAckedMessages(@Nullable Boolean retainAckedMessages) {
+        public Builder retainAckedMessages(@Nullable Boolean retainAckedMessages) {
             this.retainAckedMessages = Input.ofNullable(retainAckedMessages);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<RetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setSubscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Input<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }

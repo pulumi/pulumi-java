@@ -143,32 +143,32 @@ public final class AzureMachineLearningWebServiceFunctionBindingResponse extends
     	      this.type = defaults.type;
         }
 
-        public Builder setApiKey(@Nullable String apiKey) {
+        public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setInputs(@Nullable AzureMachineLearningWebServiceInputsResponse inputs) {
+        public Builder inputs(@Nullable AzureMachineLearningWebServiceInputsResponse inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs) {
+        public Builder outputs(@Nullable List<AzureMachineLearningWebServiceOutputColumnResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

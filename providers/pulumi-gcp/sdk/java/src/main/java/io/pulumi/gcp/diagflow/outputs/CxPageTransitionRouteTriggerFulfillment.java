@@ -104,22 +104,22 @@ public final class CxPageTransitionRouteTriggerFulfillment {
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setMessages(@Nullable List<CxPageTransitionRouteTriggerFulfillmentMessage> messages) {
+        public Builder messages(@Nullable List<CxPageTransitionRouteTriggerFulfillmentMessage> messages) {
             this.messages = messages;
             return this;
         }
 
-        public Builder setReturnPartialResponses(@Nullable Boolean returnPartialResponses) {
+        public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
             this.returnPartialResponses = returnPartialResponses;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setWebhook(@Nullable String webhook) {
+        public Builder webhook(@Nullable String webhook) {
             this.webhook = webhook;
             return this;
         }

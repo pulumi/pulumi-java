@@ -75,22 +75,22 @@ public final class CloudRunConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.loadBalancerType = defaults.loadBalancerType;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable Input<CloudRunConfigLoadBalancerType> loadBalancerType) {
+        public Builder loadBalancerType(@Nullable Input<CloudRunConfigLoadBalancerType> loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable CloudRunConfigLoadBalancerType loadBalancerType) {
+        public Builder loadBalancerType(@Nullable CloudRunConfigLoadBalancerType loadBalancerType) {
             this.loadBalancerType = Input.ofNullable(loadBalancerType);
             return this;
         }

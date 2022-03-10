@@ -192,92 +192,92 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable Input<ContainerProbeArgs> livenessProbe) {
+        public Builder livenessProbe(@Nullable Input<ContainerProbeArgs> livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable ContainerProbeArgs livenessProbe) {
+        public Builder livenessProbe(@Nullable ContainerProbeArgs livenessProbe) {
             this.livenessProbe = Input.ofNullable(livenessProbe);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<ContainerPortArgs>> ports) {
+        public Builder ports(@Nullable Input<List<ContainerPortArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ContainerPortArgs> ports) {
+        public Builder ports(@Nullable List<ContainerPortArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable Input<ContainerProbeArgs> readinessProbe) {
+        public Builder readinessProbe(@Nullable Input<ContainerProbeArgs> readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable ContainerProbeArgs readinessProbe) {
+        public Builder readinessProbe(@Nullable ContainerProbeArgs readinessProbe) {
             this.readinessProbe = Input.ofNullable(readinessProbe);
             return this;
         }
 
-        public Builder setResources(Input<ResourceRequirementsArgs> resources) {
+        public Builder resources(Input<ResourceRequirementsArgs> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setResources(ResourceRequirementsArgs resources) {
+        public Builder resources(ResourceRequirementsArgs resources) {
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Input<List<VolumeMountArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMountArgs> volumeMounts) {
             this.volumeMounts = Input.ofNullable(volumeMounts);
             return this;
         }

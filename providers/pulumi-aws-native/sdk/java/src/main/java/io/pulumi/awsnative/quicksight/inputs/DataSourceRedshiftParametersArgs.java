@@ -110,42 +110,42 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
     	      this.port = defaults.port;
         }
 
-        public Builder setClusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Input<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Input.ofNullable(clusterId);
             return this;
         }
 
-        public Builder setDatabase(Input<String> database) {
+        public Builder database(Input<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Input.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Double> port) {
+        public Builder port(@Nullable Input<Double> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Double port) {
+        public Builder port(@Nullable Double port) {
             this.port = Input.ofNullable(port);
             return this;
         }

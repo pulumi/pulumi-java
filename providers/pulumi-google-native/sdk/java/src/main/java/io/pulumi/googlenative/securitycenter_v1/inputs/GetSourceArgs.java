@@ -60,12 +60,12 @@ public final class GetSourceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }

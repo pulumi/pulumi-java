@@ -86,32 +86,32 @@ public final class DataSourceWorkDocsConfiguration {
     	      this.useChangeLog = defaults.useChangeLog;
         }
 
-        public Builder setCrawlComments(@Nullable Boolean crawlComments) {
+        public Builder crawlComments(@Nullable Boolean crawlComments) {
             this.crawlComments = crawlComments;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setUseChangeLog(@Nullable Boolean useChangeLog) {
+        public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }

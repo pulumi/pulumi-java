@@ -66,12 +66,12 @@ public final class ConnectorCustomPlugin {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setCustomPluginArn(String customPluginArn) {
+        public Builder customPluginArn(String customPluginArn) {
             this.customPluginArn = Objects.requireNonNull(customPluginArn);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }

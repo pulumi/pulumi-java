@@ -103,22 +103,22 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
     	      this.targetServiceAccount = defaults.targetServiceAccount;
         }
 
-        public Builder setDelegates(@Nullable List<String> delegates) {
+        public Builder delegates(@Nullable List<String> delegates) {
             this.delegates = delegates;
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setTargetServiceAccount(String targetServiceAccount) {
+        public Builder targetServiceAccount(String targetServiceAccount) {
             this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
             return this;
         }

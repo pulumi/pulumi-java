@@ -93,17 +93,17 @@ public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs
     	      this.queueName = defaults.queueName;
         }
 
-        public Builder setAuth(@Nullable List<ScaleRuleAuthResponse> auth) {
+        public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setQueueLength(@Nullable Integer queueLength) {
+        public Builder queueLength(@Nullable Integer queueLength) {
             this.queueLength = queueLength;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }

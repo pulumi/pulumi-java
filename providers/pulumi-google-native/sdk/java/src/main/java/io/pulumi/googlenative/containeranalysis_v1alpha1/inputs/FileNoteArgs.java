@@ -92,32 +92,32 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setChecksum(@Nullable Input<List<String>> checksum) {
+        public Builder checksum(@Nullable Input<List<String>> checksum) {
             this.checksum = checksum;
             return this;
         }
 
-        public Builder setChecksum(@Nullable List<String> checksum) {
+        public Builder checksum(@Nullable List<String> checksum) {
             this.checksum = Input.ofNullable(checksum);
             return this;
         }
 
-        public Builder setFileType(@Nullable Input<FileNoteFileType> fileType) {
+        public Builder fileType(@Nullable Input<FileNoteFileType> fileType) {
             this.fileType = fileType;
             return this;
         }
 
-        public Builder setFileType(@Nullable FileNoteFileType fileType) {
+        public Builder fileType(@Nullable FileNoteFileType fileType) {
             this.fileType = Input.ofNullable(fileType);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

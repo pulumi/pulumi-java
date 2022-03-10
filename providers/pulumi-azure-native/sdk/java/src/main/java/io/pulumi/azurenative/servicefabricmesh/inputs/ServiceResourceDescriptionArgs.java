@@ -178,82 +178,82 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     	      this.replicaCount = defaults.replicaCount;
         }
 
-        public Builder setAutoScalingPolicies(@Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies) {
+        public Builder autoScalingPolicies(@Nullable Input<List<AutoScalingPolicyArgs>> autoScalingPolicies) {
             this.autoScalingPolicies = autoScalingPolicies;
             return this;
         }
 
-        public Builder setAutoScalingPolicies(@Nullable List<AutoScalingPolicyArgs> autoScalingPolicies) {
+        public Builder autoScalingPolicies(@Nullable List<AutoScalingPolicyArgs> autoScalingPolicies) {
             this.autoScalingPolicies = Input.ofNullable(autoScalingPolicies);
             return this;
         }
 
-        public Builder setCodePackages(Input<List<ContainerCodePackagePropertiesArgs>> codePackages) {
+        public Builder codePackages(Input<List<ContainerCodePackagePropertiesArgs>> codePackages) {
             this.codePackages = Objects.requireNonNull(codePackages);
             return this;
         }
 
-        public Builder setCodePackages(List<ContainerCodePackagePropertiesArgs> codePackages) {
+        public Builder codePackages(List<ContainerCodePackagePropertiesArgs> codePackages) {
             this.codePackages = Input.of(Objects.requireNonNull(codePackages));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable Input<DiagnosticsRefArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Input<DiagnosticsRefArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
+        public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
             this.diagnostics = Input.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkRefs(@Nullable Input<List<NetworkRefArgs>> networkRefs) {
+        public Builder networkRefs(@Nullable Input<List<NetworkRefArgs>> networkRefs) {
             this.networkRefs = networkRefs;
             return this;
         }
 
-        public Builder setNetworkRefs(@Nullable List<NetworkRefArgs> networkRefs) {
+        public Builder networkRefs(@Nullable List<NetworkRefArgs> networkRefs) {
             this.networkRefs = Input.ofNullable(networkRefs);
             return this;
         }
 
-        public Builder setOsType(Input<Either<String,OperatingSystemType>> osType) {
+        public Builder osType(Input<Either<String,OperatingSystemType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setOsType(Either<String,OperatingSystemType> osType) {
+        public Builder osType(Either<String,OperatingSystemType> osType) {
             this.osType = Input.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Input.ofNullable(replicaCount);
             return this;
         }

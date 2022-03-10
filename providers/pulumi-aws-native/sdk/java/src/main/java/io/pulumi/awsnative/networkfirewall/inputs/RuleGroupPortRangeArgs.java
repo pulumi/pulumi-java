@@ -61,22 +61,22 @@ public final class RuleGroupPortRangeArgs extends io.pulumi.resources.ResourceAr
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Input<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Input.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder setToPort(Input<Integer> toPort) {
+        public Builder toPort(Input<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Input.of(Objects.requireNonNull(toPort));
             return this;
         }

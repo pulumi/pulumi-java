@@ -51,7 +51,7 @@ public final class GetOrganizationConformancePackArgs extends io.pulumi.resource
     	      this.organizationConformancePackName = defaults.organizationConformancePackName;
         }
 
-        public Builder setOrganizationConformancePackName(String organizationConformancePackName) {
+        public Builder organizationConformancePackName(String organizationConformancePackName) {
             this.organizationConformancePackName = Objects.requireNonNull(organizationConformancePackName);
             return this;
         }

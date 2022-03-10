@@ -50,7 +50,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
     	      this.namespacedGkeDeploymentTarget = defaults.namespacedGkeDeploymentTarget;
         }
 
-        public Builder setNamespacedGkeDeploymentTarget(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
+        public Builder namespacedGkeDeploymentTarget(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
             this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
             return this;
         }

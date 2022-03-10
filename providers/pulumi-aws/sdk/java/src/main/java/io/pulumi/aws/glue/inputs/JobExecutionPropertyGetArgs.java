@@ -53,12 +53,12 @@ public final class JobExecutionPropertyGetArgs extends io.pulumi.resources.Resou
     	      this.maxConcurrentRuns = defaults.maxConcurrentRuns;
         }
 
-        public Builder setMaxConcurrentRuns(@Nullable Input<Integer> maxConcurrentRuns) {
+        public Builder maxConcurrentRuns(@Nullable Input<Integer> maxConcurrentRuns) {
             this.maxConcurrentRuns = maxConcurrentRuns;
             return this;
         }
 
-        public Builder setMaxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
+        public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
             this.maxConcurrentRuns = Input.ofNullable(maxConcurrentRuns);
             return this;
         }

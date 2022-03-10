@@ -70,22 +70,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Input<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Input.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder setToPort(@Nullable Input<Integer> toPort) {
+        public Builder toPort(@Nullable Input<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
 
-        public Builder setToPort(@Nullable Integer toPort) {
+        public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Input.ofNullable(toPort);
             return this;
         }

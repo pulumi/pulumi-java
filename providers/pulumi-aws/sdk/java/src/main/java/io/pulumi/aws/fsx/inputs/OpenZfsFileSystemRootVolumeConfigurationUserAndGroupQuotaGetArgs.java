@@ -82,32 +82,32 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetA
     	      this.type = defaults.type;
         }
 
-        public Builder setId(Input<Integer> id) {
+        public Builder id(Input<Integer> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(Integer id) {
+        public Builder id(Integer id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(Input<Integer> storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(Input<Integer> storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Input.of(Objects.requireNonNull(storageCapacityQuotaGib));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

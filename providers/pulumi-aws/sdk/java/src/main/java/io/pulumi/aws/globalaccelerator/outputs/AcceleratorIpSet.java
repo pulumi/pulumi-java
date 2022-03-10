@@ -68,12 +68,12 @@ public final class AcceleratorIpSet {
     	      this.ipFamily = defaults.ipFamily;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setIpFamily(@Nullable String ipFamily) {
+        public Builder ipFamily(@Nullable String ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }

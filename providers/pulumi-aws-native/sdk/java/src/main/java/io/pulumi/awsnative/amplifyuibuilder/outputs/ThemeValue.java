@@ -53,12 +53,12 @@ public final class ThemeValue {
     	      this.value = defaults.value;
         }
 
-        public Builder setChildren(@Nullable List<ThemeValues> children) {
+        public Builder children(@Nullable List<ThemeValues> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

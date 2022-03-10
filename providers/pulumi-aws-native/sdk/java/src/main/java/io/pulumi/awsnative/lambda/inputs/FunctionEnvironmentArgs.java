@@ -57,12 +57,12 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
     	      this.variables = defaults.variables;
         }
 
-        public Builder setVariables(@Nullable Input<Object> variables) {
+        public Builder variables(@Nullable Input<Object> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable Object variables) {
+        public Builder variables(@Nullable Object variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }

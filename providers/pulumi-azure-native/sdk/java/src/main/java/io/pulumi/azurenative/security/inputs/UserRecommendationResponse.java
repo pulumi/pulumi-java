@@ -74,12 +74,12 @@ public final class UserRecommendationResponse extends io.pulumi.resources.Invoke
     	      this.username = defaults.username;
         }
 
-        public Builder setRecommendationAction(@Nullable String recommendationAction) {
+        public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

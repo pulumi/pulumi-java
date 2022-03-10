@@ -135,57 +135,57 @@ public final class GetNotificationChannelResult {
     	      this.verificationStatus = defaults.verificationStatus;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSensitiveLabels(List<GetNotificationChannelSensitiveLabel> sensitiveLabels) {
+        public Builder sensitiveLabels(List<GetNotificationChannelSensitiveLabel> sensitiveLabels) {
             this.sensitiveLabels = Objects.requireNonNull(sensitiveLabels);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setVerificationStatus(String verificationStatus) {
+        public Builder verificationStatus(String verificationStatus) {
             this.verificationStatus = Objects.requireNonNull(verificationStatus);
             return this;
         }

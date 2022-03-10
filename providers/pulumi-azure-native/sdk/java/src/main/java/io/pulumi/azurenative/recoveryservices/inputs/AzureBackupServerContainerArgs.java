@@ -260,132 +260,132 @@ public final class AzureBackupServerContainerArgs extends io.pulumi.resources.Re
     	      this.upgradeAvailable = defaults.upgradeAvailable;
         }
 
-        public Builder setBackupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
+        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Input.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder setCanReRegister(@Nullable Input<Boolean> canReRegister) {
+        public Builder canReRegister(@Nullable Input<Boolean> canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
 
-        public Builder setCanReRegister(@Nullable Boolean canReRegister) {
+        public Builder canReRegister(@Nullable Boolean canReRegister) {
             this.canReRegister = Input.ofNullable(canReRegister);
             return this;
         }
 
-        public Builder setContainerId(@Nullable Input<String> containerId) {
+        public Builder containerId(@Nullable Input<String> containerId) {
             this.containerId = containerId;
             return this;
         }
 
-        public Builder setContainerId(@Nullable String containerId) {
+        public Builder containerId(@Nullable String containerId) {
             this.containerId = Input.ofNullable(containerId);
             return this;
         }
 
-        public Builder setContainerType(Input<String> containerType) {
+        public Builder containerType(Input<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Input.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder setDpmAgentVersion(@Nullable Input<String> dpmAgentVersion) {
+        public Builder dpmAgentVersion(@Nullable Input<String> dpmAgentVersion) {
             this.dpmAgentVersion = dpmAgentVersion;
             return this;
         }
 
-        public Builder setDpmAgentVersion(@Nullable String dpmAgentVersion) {
+        public Builder dpmAgentVersion(@Nullable String dpmAgentVersion) {
             this.dpmAgentVersion = Input.ofNullable(dpmAgentVersion);
             return this;
         }
 
-        public Builder setDpmServers(@Nullable Input<List<String>> dpmServers) {
+        public Builder dpmServers(@Nullable Input<List<String>> dpmServers) {
             this.dpmServers = dpmServers;
             return this;
         }
 
-        public Builder setDpmServers(@Nullable List<String> dpmServers) {
+        public Builder dpmServers(@Nullable List<String> dpmServers) {
             this.dpmServers = Input.ofNullable(dpmServers);
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable Input<DPMContainerExtendedInfoArgs> extendedInfo) {
+        public Builder extendedInfo(@Nullable Input<DPMContainerExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable DPMContainerExtendedInfoArgs extendedInfo) {
+        public Builder extendedInfo(@Nullable DPMContainerExtendedInfoArgs extendedInfo) {
             this.extendedInfo = Input.ofNullable(extendedInfo);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Input<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = Input.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Input<Double> protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Input<Double> protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Double protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = Input.ofNullable(protectedItemCount);
             return this;
         }
 
-        public Builder setProtectionStatus(@Nullable Input<String> protectionStatus) {
+        public Builder protectionStatus(@Nullable Input<String> protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
 
-        public Builder setProtectionStatus(@Nullable String protectionStatus) {
+        public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = Input.ofNullable(protectionStatus);
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable String registrationStatus) {
+        public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = Input.ofNullable(registrationStatus);
             return this;
         }
 
-        public Builder setUpgradeAvailable(@Nullable Input<Boolean> upgradeAvailable) {
+        public Builder upgradeAvailable(@Nullable Input<Boolean> upgradeAvailable) {
             this.upgradeAvailable = upgradeAvailable;
             return this;
         }
 
-        public Builder setUpgradeAvailable(@Nullable Boolean upgradeAvailable) {
+        public Builder upgradeAvailable(@Nullable Boolean upgradeAvailable) {
             this.upgradeAvailable = Input.ofNullable(upgradeAvailable);
             return this;
         }

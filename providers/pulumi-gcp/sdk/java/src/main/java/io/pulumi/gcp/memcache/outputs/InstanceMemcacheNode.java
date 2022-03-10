@@ -76,27 +76,27 @@ public final class InstanceMemcacheNode {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setNodeId(@Nullable String nodeId) {
+        public Builder nodeId(@Nullable String nodeId) {
             this.nodeId = nodeId;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

@@ -167,7 +167,7 @@ public class AADDataConnector extends io.pulumi.resources.CustomResource {
     private static AADDataConnectorArgs makeArgs(AADDataConnectorArgs args) {
         var builder = args == null ? AADDataConnectorArgs.builder() : AADDataConnectorArgs.builder(args);
         return builder
-            .setKind("AzureActiveDirectory")
+            .kind("AzureActiveDirectory")
             .build();
     }
 

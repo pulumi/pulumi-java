@@ -64,22 +64,22 @@ public final class DataSourceConfluenceAttachmentConfigurationArgs extends io.pu
     	      this.crawlAttachments = defaults.crawlAttachments;
         }
 
-        public Builder setAttachmentFieldMappings(@Nullable Input<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings) {
+        public Builder attachmentFieldMappings(@Nullable Input<List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs>> attachmentFieldMappings) {
             this.attachmentFieldMappings = attachmentFieldMappings;
             return this;
         }
 
-        public Builder setAttachmentFieldMappings(@Nullable List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs> attachmentFieldMappings) {
+        public Builder attachmentFieldMappings(@Nullable List<DataSourceConfluenceAttachmentToIndexFieldMappingArgs> attachmentFieldMappings) {
             this.attachmentFieldMappings = Input.ofNullable(attachmentFieldMappings);
             return this;
         }
 
-        public Builder setCrawlAttachments(@Nullable Input<Boolean> crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Input<Boolean> crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = Input.ofNullable(crawlAttachments);
             return this;
         }

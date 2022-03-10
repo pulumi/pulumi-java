@@ -232,77 +232,77 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDestRange(String destRange) {
+        public Builder destRange(String destRange) {
             this.destRange = Objects.requireNonNull(destRange);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNextHopGateway(String nextHopGateway) {
+        public Builder nextHopGateway(String nextHopGateway) {
             this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
             return this;
         }
 
-        public Builder setNextHopIlb(String nextHopIlb) {
+        public Builder nextHopIlb(String nextHopIlb) {
             this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
             return this;
         }
 
-        public Builder setNextHopInstance(String nextHopInstance) {
+        public Builder nextHopInstance(String nextHopInstance) {
             this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
             return this;
         }
 
-        public Builder setNextHopInstanceZone(String nextHopInstanceZone) {
+        public Builder nextHopInstanceZone(String nextHopInstanceZone) {
             this.nextHopInstanceZone = Objects.requireNonNull(nextHopInstanceZone);
             return this;
         }
 
-        public Builder setNextHopIp(String nextHopIp) {
+        public Builder nextHopIp(String nextHopIp) {
             this.nextHopIp = Objects.requireNonNull(nextHopIp);
             return this;
         }
 
-        public Builder setNextHopNetwork(String nextHopNetwork) {
+        public Builder nextHopNetwork(String nextHopNetwork) {
             this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
             return this;
         }
 
-        public Builder setNextHopVpnTunnel(String nextHopVpnTunnel) {
+        public Builder nextHopVpnTunnel(String nextHopVpnTunnel) {
             this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

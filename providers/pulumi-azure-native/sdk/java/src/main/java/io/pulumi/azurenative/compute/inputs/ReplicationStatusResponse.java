@@ -74,12 +74,12 @@ public final class ReplicationStatusResponse extends io.pulumi.resources.InvokeA
     	      this.summary = defaults.summary;
         }
 
-        public Builder setAggregatedState(String aggregatedState) {
+        public Builder aggregatedState(String aggregatedState) {
             this.aggregatedState = Objects.requireNonNull(aggregatedState);
             return this;
         }
 
-        public Builder setSummary(List<RegionalReplicationStatusResponse> summary) {
+        public Builder summary(List<RegionalReplicationStatusResponse> summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }

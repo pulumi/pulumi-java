@@ -50,7 +50,7 @@ public final class ApiResourceBackendServiceResponse {
     	      this.serviceUrl = defaults.serviceUrl;
         }
 
-        public Builder setServiceUrl(@Nullable String serviceUrl) {
+        public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }

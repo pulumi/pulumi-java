@@ -137,62 +137,62 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userDetail = defaults.userDetail;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOfferDetail(@Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail) {
+        public Builder offerDetail(@Nullable Input<OrganizationResourcePropertiesOfferDetailArgs> offerDetail) {
             this.offerDetail = offerDetail;
             return this;
         }
 
-        public Builder setOfferDetail(@Nullable OrganizationResourcePropertiesOfferDetailArgs offerDetail) {
+        public Builder offerDetail(@Nullable OrganizationResourcePropertiesOfferDetailArgs offerDetail) {
             this.offerDetail = Input.ofNullable(offerDetail);
             return this;
         }
 
-        public Builder setOrganizationName(@Nullable Input<String> organizationName) {
+        public Builder organizationName(@Nullable Input<String> organizationName) {
             this.organizationName = organizationName;
             return this;
         }
 
-        public Builder setOrganizationName(@Nullable String organizationName) {
+        public Builder organizationName(@Nullable String organizationName) {
             this.organizationName = Input.ofNullable(organizationName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserDetail(@Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
+        public Builder userDetail(@Nullable Input<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
             this.userDetail = userDetail;
             return this;
         }
 
-        public Builder setUserDetail(@Nullable OrganizationResourcePropertiesUserDetailArgs userDetail) {
+        public Builder userDetail(@Nullable OrganizationResourcePropertiesUserDetailArgs userDetail) {
             this.userDetail = Input.ofNullable(userDetail);
             return this;
         }

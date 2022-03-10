@@ -266,72 +266,72 @@ public final class GetShareResult {
     	      this.userAccessRights = defaults.userAccessRights;
         }
 
-        public Builder setAccessProtocol(String accessProtocol) {
+        public Builder accessProtocol(String accessProtocol) {
             this.accessProtocol = Objects.requireNonNull(accessProtocol);
             return this;
         }
 
-        public Builder setAzureContainerInfo(@Nullable AzureContainerInfoResponse azureContainerInfo) {
+        public Builder azureContainerInfo(@Nullable AzureContainerInfoResponse azureContainerInfo) {
             this.azureContainerInfo = azureContainerInfo;
             return this;
         }
 
-        public Builder setClientAccessRights(@Nullable List<ClientAccessRightResponse> clientAccessRights) {
+        public Builder clientAccessRights(@Nullable List<ClientAccessRightResponse> clientAccessRights) {
             this.clientAccessRights = clientAccessRights;
             return this;
         }
 
-        public Builder setDataPolicy(@Nullable String dataPolicy) {
+        public Builder dataPolicy(@Nullable String dataPolicy) {
             this.dataPolicy = dataPolicy;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMonitoringStatus(String monitoringStatus) {
+        public Builder monitoringStatus(String monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRefreshDetails(@Nullable RefreshDetailsResponse refreshDetails) {
+        public Builder refreshDetails(@Nullable RefreshDetailsResponse refreshDetails) {
             this.refreshDetails = refreshDetails;
             return this;
         }
 
-        public Builder setShareMappings(List<MountPointMapResponse> shareMappings) {
+        public Builder shareMappings(List<MountPointMapResponse> shareMappings) {
             this.shareMappings = Objects.requireNonNull(shareMappings);
             return this;
         }
 
-        public Builder setShareStatus(String shareStatus) {
+        public Builder shareStatus(String shareStatus) {
             this.shareStatus = Objects.requireNonNull(shareStatus);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserAccessRights(@Nullable List<UserAccessRightResponse> userAccessRights) {
+        public Builder userAccessRights(@Nullable List<UserAccessRightResponse> userAccessRights) {
             this.userAccessRights = userAccessRights;
             return this;
         }

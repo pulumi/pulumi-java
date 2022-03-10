@@ -153,37 +153,37 @@ public final class ServerEndpointSyncActivityStatusResponse extends io.pulumi.re
     	      this.totalItemCount = defaults.totalItemCount;
         }
 
-        public Builder setAppliedBytes(Double appliedBytes) {
+        public Builder appliedBytes(Double appliedBytes) {
             this.appliedBytes = Objects.requireNonNull(appliedBytes);
             return this;
         }
 
-        public Builder setAppliedItemCount(Double appliedItemCount) {
+        public Builder appliedItemCount(Double appliedItemCount) {
             this.appliedItemCount = Objects.requireNonNull(appliedItemCount);
             return this;
         }
 
-        public Builder setPerItemErrorCount(Double perItemErrorCount) {
+        public Builder perItemErrorCount(Double perItemErrorCount) {
             this.perItemErrorCount = Objects.requireNonNull(perItemErrorCount);
             return this;
         }
 
-        public Builder setSyncMode(String syncMode) {
+        public Builder syncMode(String syncMode) {
             this.syncMode = Objects.requireNonNull(syncMode);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
 
-        public Builder setTotalBytes(Double totalBytes) {
+        public Builder totalBytes(Double totalBytes) {
             this.totalBytes = Objects.requireNonNull(totalBytes);
             return this;
         }
 
-        public Builder setTotalItemCount(Double totalItemCount) {
+        public Builder totalItemCount(Double totalItemCount) {
             this.totalItemCount = Objects.requireNonNull(totalItemCount);
             return this;
         }

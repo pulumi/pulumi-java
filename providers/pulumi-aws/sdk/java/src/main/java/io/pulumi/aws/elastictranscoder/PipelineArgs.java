@@ -204,102 +204,102 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thumbnailConfigPermissions = defaults.thumbnailConfigPermissions;
         }
 
-        public Builder setAwsKmsKeyArn(@Nullable Input<String> awsKmsKeyArn) {
+        public Builder awsKmsKeyArn(@Nullable Input<String> awsKmsKeyArn) {
             this.awsKmsKeyArn = awsKmsKeyArn;
             return this;
         }
 
-        public Builder setAwsKmsKeyArn(@Nullable String awsKmsKeyArn) {
+        public Builder awsKmsKeyArn(@Nullable String awsKmsKeyArn) {
             this.awsKmsKeyArn = Input.ofNullable(awsKmsKeyArn);
             return this;
         }
 
-        public Builder setContentConfig(@Nullable Input<PipelineContentConfigArgs> contentConfig) {
+        public Builder contentConfig(@Nullable Input<PipelineContentConfigArgs> contentConfig) {
             this.contentConfig = contentConfig;
             return this;
         }
 
-        public Builder setContentConfig(@Nullable PipelineContentConfigArgs contentConfig) {
+        public Builder contentConfig(@Nullable PipelineContentConfigArgs contentConfig) {
             this.contentConfig = Input.ofNullable(contentConfig);
             return this;
         }
 
-        public Builder setContentConfigPermissions(@Nullable Input<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions) {
+        public Builder contentConfigPermissions(@Nullable Input<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions) {
             this.contentConfigPermissions = contentConfigPermissions;
             return this;
         }
 
-        public Builder setContentConfigPermissions(@Nullable List<PipelineContentConfigPermissionArgs> contentConfigPermissions) {
+        public Builder contentConfigPermissions(@Nullable List<PipelineContentConfigPermissionArgs> contentConfigPermissions) {
             this.contentConfigPermissions = Input.ofNullable(contentConfigPermissions);
             return this;
         }
 
-        public Builder setInputBucket(Input<String> inputBucket) {
+        public Builder inputBucket(Input<String> inputBucket) {
             this.inputBucket = Objects.requireNonNull(inputBucket);
             return this;
         }
 
-        public Builder setInputBucket(String inputBucket) {
+        public Builder inputBucket(String inputBucket) {
             this.inputBucket = Input.of(Objects.requireNonNull(inputBucket));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotifications(@Nullable Input<PipelineNotificationsArgs> notifications) {
+        public Builder notifications(@Nullable Input<PipelineNotificationsArgs> notifications) {
             this.notifications = notifications;
             return this;
         }
 
-        public Builder setNotifications(@Nullable PipelineNotificationsArgs notifications) {
+        public Builder notifications(@Nullable PipelineNotificationsArgs notifications) {
             this.notifications = Input.ofNullable(notifications);
             return this;
         }
 
-        public Builder setOutputBucket(@Nullable Input<String> outputBucket) {
+        public Builder outputBucket(@Nullable Input<String> outputBucket) {
             this.outputBucket = outputBucket;
             return this;
         }
 
-        public Builder setOutputBucket(@Nullable String outputBucket) {
+        public Builder outputBucket(@Nullable String outputBucket) {
             this.outputBucket = Input.ofNullable(outputBucket);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setThumbnailConfig(@Nullable Input<PipelineThumbnailConfigArgs> thumbnailConfig) {
+        public Builder thumbnailConfig(@Nullable Input<PipelineThumbnailConfigArgs> thumbnailConfig) {
             this.thumbnailConfig = thumbnailConfig;
             return this;
         }
 
-        public Builder setThumbnailConfig(@Nullable PipelineThumbnailConfigArgs thumbnailConfig) {
+        public Builder thumbnailConfig(@Nullable PipelineThumbnailConfigArgs thumbnailConfig) {
             this.thumbnailConfig = Input.ofNullable(thumbnailConfig);
             return this;
         }
 
-        public Builder setThumbnailConfigPermissions(@Nullable Input<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
+        public Builder thumbnailConfigPermissions(@Nullable Input<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
             this.thumbnailConfigPermissions = thumbnailConfigPermissions;
             return this;
         }
 
-        public Builder setThumbnailConfigPermissions(@Nullable List<PipelineThumbnailConfigPermissionArgs> thumbnailConfigPermissions) {
+        public Builder thumbnailConfigPermissions(@Nullable List<PipelineThumbnailConfigPermissionArgs> thumbnailConfigPermissions) {
             this.thumbnailConfigPermissions = Input.ofNullable(thumbnailConfigPermissions);
             return this;
         }

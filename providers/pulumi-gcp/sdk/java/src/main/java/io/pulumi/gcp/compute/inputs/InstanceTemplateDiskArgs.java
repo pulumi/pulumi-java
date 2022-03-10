@@ -287,142 +287,142 @@ public final class InstanceTemplateDiskArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Input.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder setBoot(@Nullable Input<Boolean> boot) {
+        public Builder boot(@Nullable Input<Boolean> boot) {
             this.boot = boot;
             return this;
         }
 
-        public Builder setBoot(@Nullable Boolean boot) {
+        public Builder boot(@Nullable Boolean boot) {
             this.boot = Input.ofNullable(boot);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable Input<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Input<InstanceTemplateDiskDiskEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKeyArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKeyArgs diskEncryptionKey) {
             this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder setDiskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Input<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = Input.ofNullable(diskName);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Input<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder set$interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Input<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder set$interface(@Nullable String $interface) {
+        public Builder $interface(@Nullable String $interface) {
             this.$interface = Input.ofNullable($interface);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable Input<String> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Input<String> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable String resourcePolicies) {
+        public Builder resourcePolicies(@Nullable String resourcePolicies) {
             this.resourcePolicies = Input.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setSourceImage(@Nullable Input<String> sourceImage) {
+        public Builder sourceImage(@Nullable Input<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
-        public Builder setSourceImage(@Nullable String sourceImage) {
+        public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = Input.ofNullable(sourceImage);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

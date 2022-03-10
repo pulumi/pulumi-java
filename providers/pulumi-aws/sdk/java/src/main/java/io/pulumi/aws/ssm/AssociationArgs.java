@@ -251,132 +251,132 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setApplyOnlyAtCronInterval(@Nullable Input<Boolean> applyOnlyAtCronInterval) {
+        public Builder applyOnlyAtCronInterval(@Nullable Input<Boolean> applyOnlyAtCronInterval) {
             this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
 
-        public Builder setApplyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
+        public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
             this.applyOnlyAtCronInterval = Input.ofNullable(applyOnlyAtCronInterval);
             return this;
         }
 
-        public Builder setAssociationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Input<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
-        public Builder setAssociationName(@Nullable String associationName) {
+        public Builder associationName(@Nullable String associationName) {
             this.associationName = Input.ofNullable(associationName);
             return this;
         }
 
-        public Builder setAutomationTargetParameterName(@Nullable Input<String> automationTargetParameterName) {
+        public Builder automationTargetParameterName(@Nullable Input<String> automationTargetParameterName) {
             this.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
 
-        public Builder setAutomationTargetParameterName(@Nullable String automationTargetParameterName) {
+        public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
             this.automationTargetParameterName = Input.ofNullable(automationTargetParameterName);
             return this;
         }
 
-        public Builder setComplianceSeverity(@Nullable Input<String> complianceSeverity) {
+        public Builder complianceSeverity(@Nullable Input<String> complianceSeverity) {
             this.complianceSeverity = complianceSeverity;
             return this;
         }
 
-        public Builder setComplianceSeverity(@Nullable String complianceSeverity) {
+        public Builder complianceSeverity(@Nullable String complianceSeverity) {
             this.complianceSeverity = Input.ofNullable(complianceSeverity);
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Input<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Input.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable Input<String> maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Input<String> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable String maxConcurrency) {
+        public Builder maxConcurrency(@Nullable String maxConcurrency) {
             this.maxConcurrency = Input.ofNullable(maxConcurrency);
             return this;
         }
 
-        public Builder setMaxErrors(@Nullable Input<String> maxErrors) {
+        public Builder maxErrors(@Nullable Input<String> maxErrors) {
             this.maxErrors = maxErrors;
             return this;
         }
 
-        public Builder setMaxErrors(@Nullable String maxErrors) {
+        public Builder maxErrors(@Nullable String maxErrors) {
             this.maxErrors = Input.ofNullable(maxErrors);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable Input<AssociationOutputLocationArgs> outputLocation) {
+        public Builder outputLocation(@Nullable Input<AssociationOutputLocationArgs> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable AssociationOutputLocationArgs outputLocation) {
+        public Builder outputLocation(@Nullable AssociationOutputLocationArgs outputLocation) {
             this.outputLocation = Input.ofNullable(outputLocation);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable Input<String> scheduleExpression) {
+        public Builder scheduleExpression(@Nullable Input<String> scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable String scheduleExpression) {
+        public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = Input.ofNullable(scheduleExpression);
             return this;
         }
 
-        public Builder setTargets(@Nullable Input<List<AssociationTargetArgs>> targets) {
+        public Builder targets(@Nullable Input<List<AssociationTargetArgs>> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<AssociationTargetArgs> targets) {
+        public Builder targets(@Nullable List<AssociationTargetArgs> targets) {
             this.targets = Input.ofNullable(targets);
             return this;
         }

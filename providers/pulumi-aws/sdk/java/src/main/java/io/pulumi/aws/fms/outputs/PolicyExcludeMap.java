@@ -67,12 +67,12 @@ public final class PolicyExcludeMap {
     	      this.orgunits = defaults.orgunits;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setOrgunits(@Nullable List<String> orgunits) {
+        public Builder orgunits(@Nullable List<String> orgunits) {
             this.orgunits = orgunits;
             return this;
         }

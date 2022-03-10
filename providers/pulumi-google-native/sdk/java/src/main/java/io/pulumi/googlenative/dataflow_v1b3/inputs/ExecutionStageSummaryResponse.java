@@ -156,37 +156,37 @@ public final class ExecutionStageSummaryResponse extends io.pulumi.resources.Inv
     	      this.prerequisiteStage = defaults.prerequisiteStage;
         }
 
-        public Builder setComponentSource(List<ComponentSourceResponse> componentSource) {
+        public Builder componentSource(List<ComponentSourceResponse> componentSource) {
             this.componentSource = Objects.requireNonNull(componentSource);
             return this;
         }
 
-        public Builder setComponentTransform(List<ComponentTransformResponse> componentTransform) {
+        public Builder componentTransform(List<ComponentTransformResponse> componentTransform) {
             this.componentTransform = Objects.requireNonNull(componentTransform);
             return this;
         }
 
-        public Builder setInputSource(List<StageSourceResponse> inputSource) {
+        public Builder inputSource(List<StageSourceResponse> inputSource) {
             this.inputSource = Objects.requireNonNull(inputSource);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputSource(List<StageSourceResponse> outputSource) {
+        public Builder outputSource(List<StageSourceResponse> outputSource) {
             this.outputSource = Objects.requireNonNull(outputSource);
             return this;
         }
 
-        public Builder setPrerequisiteStage(List<String> prerequisiteStage) {
+        public Builder prerequisiteStage(List<String> prerequisiteStage) {
             this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
             return this;
         }

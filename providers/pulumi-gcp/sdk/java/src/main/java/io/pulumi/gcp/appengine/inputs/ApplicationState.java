@@ -272,142 +272,142 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
     	      this.urlDispatchRules = defaults.urlDispatchRules;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setAuthDomain(@Nullable Input<String> authDomain) {
+        public Builder authDomain(@Nullable Input<String> authDomain) {
             this.authDomain = authDomain;
             return this;
         }
 
-        public Builder setAuthDomain(@Nullable String authDomain) {
+        public Builder authDomain(@Nullable String authDomain) {
             this.authDomain = Input.ofNullable(authDomain);
             return this;
         }
 
-        public Builder setCodeBucket(@Nullable Input<String> codeBucket) {
+        public Builder codeBucket(@Nullable Input<String> codeBucket) {
             this.codeBucket = codeBucket;
             return this;
         }
 
-        public Builder setCodeBucket(@Nullable String codeBucket) {
+        public Builder codeBucket(@Nullable String codeBucket) {
             this.codeBucket = Input.ofNullable(codeBucket);
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable Input<String> databaseType) {
+        public Builder databaseType(@Nullable Input<String> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable String databaseType) {
+        public Builder databaseType(@Nullable String databaseType) {
             this.databaseType = Input.ofNullable(databaseType);
             return this;
         }
 
-        public Builder setDefaultBucket(@Nullable Input<String> defaultBucket) {
+        public Builder defaultBucket(@Nullable Input<String> defaultBucket) {
             this.defaultBucket = defaultBucket;
             return this;
         }
 
-        public Builder setDefaultBucket(@Nullable String defaultBucket) {
+        public Builder defaultBucket(@Nullable String defaultBucket) {
             this.defaultBucket = Input.ofNullable(defaultBucket);
             return this;
         }
 
-        public Builder setDefaultHostname(@Nullable Input<String> defaultHostname) {
+        public Builder defaultHostname(@Nullable Input<String> defaultHostname) {
             this.defaultHostname = defaultHostname;
             return this;
         }
 
-        public Builder setDefaultHostname(@Nullable String defaultHostname) {
+        public Builder defaultHostname(@Nullable String defaultHostname) {
             this.defaultHostname = Input.ofNullable(defaultHostname);
             return this;
         }
 
-        public Builder setFeatureSettings(@Nullable Input<ApplicationFeatureSettingsGetArgs> featureSettings) {
+        public Builder featureSettings(@Nullable Input<ApplicationFeatureSettingsGetArgs> featureSettings) {
             this.featureSettings = featureSettings;
             return this;
         }
 
-        public Builder setFeatureSettings(@Nullable ApplicationFeatureSettingsGetArgs featureSettings) {
+        public Builder featureSettings(@Nullable ApplicationFeatureSettingsGetArgs featureSettings) {
             this.featureSettings = Input.ofNullable(featureSettings);
             return this;
         }
 
-        public Builder setGcrDomain(@Nullable Input<String> gcrDomain) {
+        public Builder gcrDomain(@Nullable Input<String> gcrDomain) {
             this.gcrDomain = gcrDomain;
             return this;
         }
 
-        public Builder setGcrDomain(@Nullable String gcrDomain) {
+        public Builder gcrDomain(@Nullable String gcrDomain) {
             this.gcrDomain = Input.ofNullable(gcrDomain);
             return this;
         }
 
-        public Builder setIap(@Nullable Input<ApplicationIapGetArgs> iap) {
+        public Builder iap(@Nullable Input<ApplicationIapGetArgs> iap) {
             this.iap = iap;
             return this;
         }
 
-        public Builder setIap(@Nullable ApplicationIapGetArgs iap) {
+        public Builder iap(@Nullable ApplicationIapGetArgs iap) {
             this.iap = Input.ofNullable(iap);
             return this;
         }
 
-        public Builder setLocationId(@Nullable Input<String> locationId) {
+        public Builder locationId(@Nullable Input<String> locationId) {
             this.locationId = locationId;
             return this;
         }
 
-        public Builder setLocationId(@Nullable String locationId) {
+        public Builder locationId(@Nullable String locationId) {
             this.locationId = Input.ofNullable(locationId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServingStatus(@Nullable Input<String> servingStatus) {
+        public Builder servingStatus(@Nullable Input<String> servingStatus) {
             this.servingStatus = servingStatus;
             return this;
         }
 
-        public Builder setServingStatus(@Nullable String servingStatus) {
+        public Builder servingStatus(@Nullable String servingStatus) {
             this.servingStatus = Input.ofNullable(servingStatus);
             return this;
         }
 
-        public Builder setUrlDispatchRules(@Nullable Input<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
+        public Builder urlDispatchRules(@Nullable Input<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
             this.urlDispatchRules = urlDispatchRules;
             return this;
         }
 
-        public Builder setUrlDispatchRules(@Nullable List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
+        public Builder urlDispatchRules(@Nullable List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
             this.urlDispatchRules = Input.ofNullable(urlDispatchRules);
             return this;
         }

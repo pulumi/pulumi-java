@@ -255,132 +255,132 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDomainConfigurationType(@Nullable Input<String> domainConfigurationType) {
+        public Builder domainConfigurationType(@Nullable Input<String> domainConfigurationType) {
             this.domainConfigurationType = domainConfigurationType;
             return this;
         }
 
-        public Builder setDomainConfigurationType(@Nullable String domainConfigurationType) {
+        public Builder domainConfigurationType(@Nullable String domainConfigurationType) {
             this.domainConfigurationType = Input.ofNullable(domainConfigurationType);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setDomainSecuritySettings(@Nullable Input<DomainSecuritySettingsArgs> domainSecuritySettings) {
+        public Builder domainSecuritySettings(@Nullable Input<DomainSecuritySettingsArgs> domainSecuritySettings) {
             this.domainSecuritySettings = domainSecuritySettings;
             return this;
         }
 
-        public Builder setDomainSecuritySettings(@Nullable DomainSecuritySettingsArgs domainSecuritySettings) {
+        public Builder domainSecuritySettings(@Nullable DomainSecuritySettingsArgs domainSecuritySettings) {
             this.domainSecuritySettings = Input.ofNullable(domainSecuritySettings);
             return this;
         }
 
-        public Builder setDomainServiceName(@Nullable Input<String> domainServiceName) {
+        public Builder domainServiceName(@Nullable Input<String> domainServiceName) {
             this.domainServiceName = domainServiceName;
             return this;
         }
 
-        public Builder setDomainServiceName(@Nullable String domainServiceName) {
+        public Builder domainServiceName(@Nullable String domainServiceName) {
             this.domainServiceName = Input.ofNullable(domainServiceName);
             return this;
         }
 
-        public Builder setFilteredSync(@Nullable Input<Either<String,FilteredSync>> filteredSync) {
+        public Builder filteredSync(@Nullable Input<Either<String,FilteredSync>> filteredSync) {
             this.filteredSync = filteredSync;
             return this;
         }
 
-        public Builder setFilteredSync(@Nullable Either<String,FilteredSync> filteredSync) {
+        public Builder filteredSync(@Nullable Either<String,FilteredSync> filteredSync) {
             this.filteredSync = Input.ofNullable(filteredSync);
             return this;
         }
 
-        public Builder setLdapsSettings(@Nullable Input<LdapsSettingsArgs> ldapsSettings) {
+        public Builder ldapsSettings(@Nullable Input<LdapsSettingsArgs> ldapsSettings) {
             this.ldapsSettings = ldapsSettings;
             return this;
         }
 
-        public Builder setLdapsSettings(@Nullable LdapsSettingsArgs ldapsSettings) {
+        public Builder ldapsSettings(@Nullable LdapsSettingsArgs ldapsSettings) {
             this.ldapsSettings = Input.ofNullable(ldapsSettings);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNotificationSettings(@Nullable Input<NotificationSettingsArgs> notificationSettings) {
+        public Builder notificationSettings(@Nullable Input<NotificationSettingsArgs> notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
 
-        public Builder setNotificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
+        public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
             this.notificationSettings = Input.ofNullable(notificationSettings);
             return this;
         }
 
-        public Builder setReplicaSets(@Nullable Input<List<ReplicaSetArgs>> replicaSets) {
+        public Builder replicaSets(@Nullable Input<List<ReplicaSetArgs>> replicaSets) {
             this.replicaSets = replicaSets;
             return this;
         }
 
-        public Builder setReplicaSets(@Nullable List<ReplicaSetArgs> replicaSets) {
+        public Builder replicaSets(@Nullable List<ReplicaSetArgs> replicaSets) {
             this.replicaSets = Input.ofNullable(replicaSets);
             return this;
         }
 
-        public Builder setResourceForestSettings(@Nullable Input<ResourceForestSettingsArgs> resourceForestSettings) {
+        public Builder resourceForestSettings(@Nullable Input<ResourceForestSettingsArgs> resourceForestSettings) {
             this.resourceForestSettings = resourceForestSettings;
             return this;
         }
 
-        public Builder setResourceForestSettings(@Nullable ResourceForestSettingsArgs resourceForestSettings) {
+        public Builder resourceForestSettings(@Nullable ResourceForestSettingsArgs resourceForestSettings) {
             this.resourceForestSettings = Input.ofNullable(resourceForestSettings);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Input<String> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

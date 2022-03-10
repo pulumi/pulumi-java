@@ -50,7 +50,7 @@ public final class ComputeProfileResponse {
     	      this.roles = defaults.roles;
         }
 
-        public Builder setRoles(@Nullable List<RoleResponse> roles) {
+        public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }

@@ -305,162 +305,162 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setEnableDiskEncryption(@Nullable Input<Boolean> enableDiskEncryption) {
+        public Builder enableDiskEncryption(@Nullable Input<Boolean> enableDiskEncryption) {
             this.enableDiskEncryption = enableDiskEncryption;
             return this;
         }
 
-        public Builder setEnableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
+        public Builder enableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
             this.enableDiskEncryption = Input.ofNullable(enableDiskEncryption);
             return this;
         }
 
-        public Builder setEnableDoubleEncryption(@Nullable Input<Boolean> enableDoubleEncryption) {
+        public Builder enableDoubleEncryption(@Nullable Input<Boolean> enableDoubleEncryption) {
             this.enableDoubleEncryption = enableDoubleEncryption;
             return this;
         }
 
-        public Builder setEnableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
+        public Builder enableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
             this.enableDoubleEncryption = Input.ofNullable(enableDoubleEncryption);
             return this;
         }
 
-        public Builder setEnablePurge(@Nullable Input<Boolean> enablePurge) {
+        public Builder enablePurge(@Nullable Input<Boolean> enablePurge) {
             this.enablePurge = enablePurge;
             return this;
         }
 
-        public Builder setEnablePurge(@Nullable Boolean enablePurge) {
+        public Builder enablePurge(@Nullable Boolean enablePurge) {
             this.enablePurge = Input.ofNullable(enablePurge);
             return this;
         }
 
-        public Builder setEnableStreamingIngest(@Nullable Input<Boolean> enableStreamingIngest) {
+        public Builder enableStreamingIngest(@Nullable Input<Boolean> enableStreamingIngest) {
             this.enableStreamingIngest = enableStreamingIngest;
             return this;
         }
 
-        public Builder setEnableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
+        public Builder enableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
             this.enableStreamingIngest = Input.ofNullable(enableStreamingIngest);
             return this;
         }
 
-        public Builder setEngineType(@Nullable Input<Either<String,EngineType>> engineType) {
+        public Builder engineType(@Nullable Input<Either<String,EngineType>> engineType) {
             this.engineType = engineType;
             return this;
         }
 
-        public Builder setEngineType(@Nullable Either<String,EngineType> engineType) {
+        public Builder engineType(@Nullable Either<String,EngineType> engineType) {
             this.engineType = Input.ofNullable(engineType);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOptimizedAutoscale(@Nullable Input<OptimizedAutoscaleArgs> optimizedAutoscale) {
+        public Builder optimizedAutoscale(@Nullable Input<OptimizedAutoscaleArgs> optimizedAutoscale) {
             this.optimizedAutoscale = optimizedAutoscale;
             return this;
         }
 
-        public Builder setOptimizedAutoscale(@Nullable OptimizedAutoscaleArgs optimizedAutoscale) {
+        public Builder optimizedAutoscale(@Nullable OptimizedAutoscaleArgs optimizedAutoscale) {
             this.optimizedAutoscale = Input.ofNullable(optimizedAutoscale);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<AzureSkuArgs> sku) {
+        public Builder sku(Input<AzureSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(AzureSkuArgs sku) {
+        public Builder sku(AzureSkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTrustedExternalTenants(@Nullable Input<List<TrustedExternalTenantArgs>> trustedExternalTenants) {
+        public Builder trustedExternalTenants(@Nullable Input<List<TrustedExternalTenantArgs>> trustedExternalTenants) {
             this.trustedExternalTenants = trustedExternalTenants;
             return this;
         }
 
-        public Builder setTrustedExternalTenants(@Nullable List<TrustedExternalTenantArgs> trustedExternalTenants) {
+        public Builder trustedExternalTenants(@Nullable List<TrustedExternalTenantArgs> trustedExternalTenants) {
             this.trustedExternalTenants = Input.ofNullable(trustedExternalTenants);
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = Input.ofNullable(virtualNetworkConfiguration);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

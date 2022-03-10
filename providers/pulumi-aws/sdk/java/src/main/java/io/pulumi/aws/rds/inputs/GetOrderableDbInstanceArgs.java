@@ -312,87 +312,87 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setAvailabilityZoneGroup(@Nullable String availabilityZoneGroup) {
+        public Builder availabilityZoneGroup(@Nullable String availabilityZoneGroup) {
             this.availabilityZoneGroup = availabilityZoneGroup;
             return this;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setInstanceClass(@Nullable String instanceClass) {
+        public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
 
-        public Builder setLicenseModel(@Nullable String licenseModel) {
+        public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
 
-        public Builder setPreferredEngineVersions(@Nullable List<String> preferredEngineVersions) {
+        public Builder preferredEngineVersions(@Nullable List<String> preferredEngineVersions) {
             this.preferredEngineVersions = preferredEngineVersions;
             return this;
         }
 
-        public Builder setPreferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
+        public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
             this.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setSupportsEnhancedMonitoring(@Nullable Boolean supportsEnhancedMonitoring) {
+        public Builder supportsEnhancedMonitoring(@Nullable Boolean supportsEnhancedMonitoring) {
             this.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
             return this;
         }
 
-        public Builder setSupportsGlobalDatabases(@Nullable Boolean supportsGlobalDatabases) {
+        public Builder supportsGlobalDatabases(@Nullable Boolean supportsGlobalDatabases) {
             this.supportsGlobalDatabases = supportsGlobalDatabases;
             return this;
         }
 
-        public Builder setSupportsIamDatabaseAuthentication(@Nullable Boolean supportsIamDatabaseAuthentication) {
+        public Builder supportsIamDatabaseAuthentication(@Nullable Boolean supportsIamDatabaseAuthentication) {
             this.supportsIamDatabaseAuthentication = supportsIamDatabaseAuthentication;
             return this;
         }
 
-        public Builder setSupportsIops(@Nullable Boolean supportsIops) {
+        public Builder supportsIops(@Nullable Boolean supportsIops) {
             this.supportsIops = supportsIops;
             return this;
         }
 
-        public Builder setSupportsKerberosAuthentication(@Nullable Boolean supportsKerberosAuthentication) {
+        public Builder supportsKerberosAuthentication(@Nullable Boolean supportsKerberosAuthentication) {
             this.supportsKerberosAuthentication = supportsKerberosAuthentication;
             return this;
         }
 
-        public Builder setSupportsPerformanceInsights(@Nullable Boolean supportsPerformanceInsights) {
+        public Builder supportsPerformanceInsights(@Nullable Boolean supportsPerformanceInsights) {
             this.supportsPerformanceInsights = supportsPerformanceInsights;
             return this;
         }
 
-        public Builder setSupportsStorageAutoscaling(@Nullable Boolean supportsStorageAutoscaling) {
+        public Builder supportsStorageAutoscaling(@Nullable Boolean supportsStorageAutoscaling) {
             this.supportsStorageAutoscaling = supportsStorageAutoscaling;
             return this;
         }
 
-        public Builder setSupportsStorageEncryption(@Nullable Boolean supportsStorageEncryption) {
+        public Builder supportsStorageEncryption(@Nullable Boolean supportsStorageEncryption) {
             this.supportsStorageEncryption = supportsStorageEncryption;
             return this;
         }
 
-        public Builder setVpc(@Nullable Boolean vpc) {
+        public Builder vpc(@Nullable Boolean vpc) {
             this.vpc = vpc;
             return this;
         }

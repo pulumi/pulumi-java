@@ -139,62 +139,62 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setHealthyThreshold(@Nullable Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Input<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
-        public Builder setHealthyThreshold(@Nullable Integer healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = Input.ofNullable(healthyThreshold);
             return this;
         }
 
-        public Builder setIntervalSeconds(@Nullable Input<Integer> intervalSeconds) {
+        public Builder intervalSeconds(@Nullable Input<Integer> intervalSeconds) {
             this.intervalSeconds = intervalSeconds;
             return this;
         }
 
-        public Builder setIntervalSeconds(@Nullable Integer intervalSeconds) {
+        public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
             this.intervalSeconds = Input.ofNullable(intervalSeconds);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setSuccessCodes(@Nullable Input<String> successCodes) {
+        public Builder successCodes(@Nullable Input<String> successCodes) {
             this.successCodes = successCodes;
             return this;
         }
 
-        public Builder setSuccessCodes(@Nullable String successCodes) {
+        public Builder successCodes(@Nullable String successCodes) {
             this.successCodes = Input.ofNullable(successCodes);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
             return this;
         }

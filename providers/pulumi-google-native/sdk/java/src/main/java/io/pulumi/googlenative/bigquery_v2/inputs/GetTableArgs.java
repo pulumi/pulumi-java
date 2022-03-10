@@ -86,22 +86,22 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSelectedFields(@Nullable String selectedFields) {
+        public Builder selectedFields(@Nullable String selectedFields) {
             this.selectedFields = selectedFields;
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }

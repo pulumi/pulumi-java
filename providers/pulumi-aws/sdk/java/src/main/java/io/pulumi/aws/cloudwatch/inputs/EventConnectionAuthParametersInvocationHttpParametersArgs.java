@@ -89,32 +89,32 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setBodies(@Nullable Input<List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs>> bodies) {
+        public Builder bodies(@Nullable Input<List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs>> bodies) {
             this.bodies = bodies;
             return this;
         }
 
-        public Builder setBodies(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs> bodies) {
+        public Builder bodies(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs> bodies) {
             this.bodies = Input.ofNullable(bodies);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs>> headers) {
+        public Builder headers(@Nullable Input<List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs> headers) {
+        public Builder headers(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable Input<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs>> queryStrings) {
+        public Builder queryStrings(@Nullable Input<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs>> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs> queryStrings) {
+        public Builder queryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs> queryStrings) {
             this.queryStrings = Input.ofNullable(queryStrings);
             return this;
         }

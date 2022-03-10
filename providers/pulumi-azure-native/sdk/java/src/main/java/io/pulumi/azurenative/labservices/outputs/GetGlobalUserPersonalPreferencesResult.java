@@ -68,12 +68,12 @@ public final class GetGlobalUserPersonalPreferencesResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setFavoriteLabResourceIds(@Nullable List<String> favoriteLabResourceIds) {
+        public Builder favoriteLabResourceIds(@Nullable List<String> favoriteLabResourceIds) {
             this.favoriteLabResourceIds = favoriteLabResourceIds;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

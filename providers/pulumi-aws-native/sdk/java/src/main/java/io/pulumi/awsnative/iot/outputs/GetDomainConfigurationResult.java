@@ -89,32 +89,32 @@ public final class GetDomainConfigurationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorizerConfig(@Nullable DomainConfigurationAuthorizerConfig authorizerConfig) {
+        public Builder authorizerConfig(@Nullable DomainConfigurationAuthorizerConfig authorizerConfig) {
             this.authorizerConfig = authorizerConfig;
             return this;
         }
 
-        public Builder setDomainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
+        public Builder domainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
             this.domainConfigurationStatus = domainConfigurationStatus;
             return this;
         }
 
-        public Builder setDomainType(@Nullable DomainConfigurationDomainType domainType) {
+        public Builder domainType(@Nullable DomainConfigurationDomainType domainType) {
             this.domainType = domainType;
             return this;
         }
 
-        public Builder setServerCertificates(@Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates) {
+        public Builder serverCertificates(@Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates) {
             this.serverCertificates = serverCertificates;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainConfigurationTag> tags) {
+        public Builder tags(@Nullable List<DomainConfigurationTag> tags) {
             this.tags = tags;
             return this;
         }

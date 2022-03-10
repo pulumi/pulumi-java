@@ -56,12 +56,12 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.hierarchyInformation = defaults.hierarchyInformation;
         }
 
-        public Builder setHierarchyInformation(Input<HierarchyInformationArgs> hierarchyInformation) {
+        public Builder hierarchyInformation(Input<HierarchyInformationArgs> hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
 
-        public Builder setHierarchyInformation(HierarchyInformationArgs hierarchyInformation) {
+        public Builder hierarchyInformation(HierarchyInformationArgs hierarchyInformation) {
             this.hierarchyInformation = Input.of(Objects.requireNonNull(hierarchyInformation));
             return this;
         }

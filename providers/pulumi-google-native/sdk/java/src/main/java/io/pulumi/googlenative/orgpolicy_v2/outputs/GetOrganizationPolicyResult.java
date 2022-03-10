@@ -66,12 +66,12 @@ public final class GetOrganizationPolicyResult {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSpec(GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
+        public Builder spec(GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }

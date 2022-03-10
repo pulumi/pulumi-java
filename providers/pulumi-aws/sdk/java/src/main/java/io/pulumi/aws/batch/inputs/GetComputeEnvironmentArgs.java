@@ -71,12 +71,12 @@ public final class GetComputeEnvironmentArgs extends io.pulumi.resources.InvokeA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setComputeEnvironmentName(String computeEnvironmentName) {
+        public Builder computeEnvironmentName(String computeEnvironmentName) {
             this.computeEnvironmentName = Objects.requireNonNull(computeEnvironmentName);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

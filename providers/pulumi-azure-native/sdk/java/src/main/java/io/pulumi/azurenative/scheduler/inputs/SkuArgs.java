@@ -53,12 +53,12 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable Input<SkuDefinition> name) {
+        public Builder name(@Nullable Input<SkuDefinition> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable SkuDefinition name) {
+        public Builder name(@Nullable SkuDefinition name) {
             this.name = Input.ofNullable(name);
             return this;
         }

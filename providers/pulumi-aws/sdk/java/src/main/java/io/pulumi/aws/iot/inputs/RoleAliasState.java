@@ -103,42 +103,42 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCredentialDuration(@Nullable Input<Integer> credentialDuration) {
+        public Builder credentialDuration(@Nullable Input<Integer> credentialDuration) {
             this.credentialDuration = credentialDuration;
             return this;
         }
 
-        public Builder setCredentialDuration(@Nullable Integer credentialDuration) {
+        public Builder credentialDuration(@Nullable Integer credentialDuration) {
             this.credentialDuration = Input.ofNullable(credentialDuration);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

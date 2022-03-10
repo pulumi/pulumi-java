@@ -63,12 +63,12 @@ public final class GroupConfigurationParameter extends io.pulumi.resources.Invok
     	      this.values = defaults.values;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

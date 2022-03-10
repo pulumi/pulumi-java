@@ -102,42 +102,42 @@ public final class StreamConsumerState extends io.pulumi.resources.ResourceArgs 
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable Input<String> creationTimestamp) {
+        public Builder creationTimestamp(@Nullable Input<String> creationTimestamp) {
             this.creationTimestamp = creationTimestamp;
             return this;
         }
 
-        public Builder setCreationTimestamp(@Nullable String creationTimestamp) {
+        public Builder creationTimestamp(@Nullable String creationTimestamp) {
             this.creationTimestamp = Input.ofNullable(creationTimestamp);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStreamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Input<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = Input.ofNullable(streamArn);
             return this;
         }

@@ -65,12 +65,12 @@ public final class InstanceNodeConfig {
     	      this.memorySizeMb = defaults.memorySizeMb;
         }
 
-        public Builder setCpuCount(Integer cpuCount) {
+        public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
 
-        public Builder setMemorySizeMb(Integer memorySizeMb) {
+        public Builder memorySizeMb(Integer memorySizeMb) {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }

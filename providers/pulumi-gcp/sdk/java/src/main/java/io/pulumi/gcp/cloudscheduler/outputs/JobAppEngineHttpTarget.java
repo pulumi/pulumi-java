@@ -135,27 +135,27 @@ public final class JobAppEngineHttpTarget {
     	      this.relativeUri = defaults.relativeUri;
         }
 
-        public Builder setAppEngineRouting(@Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting) {
+        public Builder appEngineRouting(@Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting) {
             this.appEngineRouting = appEngineRouting;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setRelativeUri(String relativeUri) {
+        public Builder relativeUri(String relativeUri) {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }

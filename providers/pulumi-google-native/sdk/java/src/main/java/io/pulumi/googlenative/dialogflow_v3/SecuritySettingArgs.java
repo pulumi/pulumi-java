@@ -212,112 +212,112 @@ public final class SecuritySettingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.retentionWindowDays = defaults.retentionWindowDays;
         }
 
-        public Builder setDeidentifyTemplate(@Nullable Input<String> deidentifyTemplate) {
+        public Builder deidentifyTemplate(@Nullable Input<String> deidentifyTemplate) {
             this.deidentifyTemplate = deidentifyTemplate;
             return this;
         }
 
-        public Builder setDeidentifyTemplate(@Nullable String deidentifyTemplate) {
+        public Builder deidentifyTemplate(@Nullable String deidentifyTemplate) {
             this.deidentifyTemplate = Input.ofNullable(deidentifyTemplate);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setInsightsExportSettings(@Nullable Input<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings) {
+        public Builder insightsExportSettings(@Nullable Input<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs> insightsExportSettings) {
             this.insightsExportSettings = insightsExportSettings;
             return this;
         }
 
-        public Builder setInsightsExportSettings(@Nullable GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs insightsExportSettings) {
+        public Builder insightsExportSettings(@Nullable GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs insightsExportSettings) {
             this.insightsExportSettings = Input.ofNullable(insightsExportSettings);
             return this;
         }
 
-        public Builder setInspectTemplate(@Nullable Input<String> inspectTemplate) {
+        public Builder inspectTemplate(@Nullable Input<String> inspectTemplate) {
             this.inspectTemplate = inspectTemplate;
             return this;
         }
 
-        public Builder setInspectTemplate(@Nullable String inspectTemplate) {
+        public Builder inspectTemplate(@Nullable String inspectTemplate) {
             this.inspectTemplate = Input.ofNullable(inspectTemplate);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPurgeDataTypes(@Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes) {
+        public Builder purgeDataTypes(@Nullable Input<List<SecuritySettingPurgeDataTypesItem>> purgeDataTypes) {
             this.purgeDataTypes = purgeDataTypes;
             return this;
         }
 
-        public Builder setPurgeDataTypes(@Nullable List<SecuritySettingPurgeDataTypesItem> purgeDataTypes) {
+        public Builder purgeDataTypes(@Nullable List<SecuritySettingPurgeDataTypesItem> purgeDataTypes) {
             this.purgeDataTypes = Input.ofNullable(purgeDataTypes);
             return this;
         }
 
-        public Builder setRedactionScope(@Nullable Input<SecuritySettingRedactionScope> redactionScope) {
+        public Builder redactionScope(@Nullable Input<SecuritySettingRedactionScope> redactionScope) {
             this.redactionScope = redactionScope;
             return this;
         }
 
-        public Builder setRedactionScope(@Nullable SecuritySettingRedactionScope redactionScope) {
+        public Builder redactionScope(@Nullable SecuritySettingRedactionScope redactionScope) {
             this.redactionScope = Input.ofNullable(redactionScope);
             return this;
         }
 
-        public Builder setRedactionStrategy(@Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy) {
+        public Builder redactionStrategy(@Nullable Input<SecuritySettingRedactionStrategy> redactionStrategy) {
             this.redactionStrategy = redactionStrategy;
             return this;
         }
 
-        public Builder setRedactionStrategy(@Nullable SecuritySettingRedactionStrategy redactionStrategy) {
+        public Builder redactionStrategy(@Nullable SecuritySettingRedactionStrategy redactionStrategy) {
             this.redactionStrategy = Input.ofNullable(redactionStrategy);
             return this;
         }
 
-        public Builder setRetentionWindowDays(@Nullable Input<Integer> retentionWindowDays) {
+        public Builder retentionWindowDays(@Nullable Input<Integer> retentionWindowDays) {
             this.retentionWindowDays = retentionWindowDays;
             return this;
         }
 
-        public Builder setRetentionWindowDays(@Nullable Integer retentionWindowDays) {
+        public Builder retentionWindowDays(@Nullable Integer retentionWindowDays) {
             this.retentionWindowDays = Input.ofNullable(retentionWindowDays);
             return this;
         }

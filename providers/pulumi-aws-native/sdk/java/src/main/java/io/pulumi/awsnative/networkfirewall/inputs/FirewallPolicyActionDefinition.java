@@ -49,7 +49,7 @@ public final class FirewallPolicyActionDefinition extends io.pulumi.resources.In
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder setPublishMetricAction(@Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
+        public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricAction publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
         }

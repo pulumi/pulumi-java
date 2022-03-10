@@ -81,22 +81,22 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setLocalhostProfile(@Nullable Input<String> localhostProfile) {
+        public Builder localhostProfile(@Nullable Input<String> localhostProfile) {
             this.localhostProfile = localhostProfile;
             return this;
         }
 
-        public Builder setLocalhostProfile(@Nullable String localhostProfile) {
+        public Builder localhostProfile(@Nullable String localhostProfile) {
             this.localhostProfile = Input.ofNullable(localhostProfile);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -69,12 +69,12 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfig {
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setMonitoringOutputs(List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
+        public Builder monitoringOutputs(List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }

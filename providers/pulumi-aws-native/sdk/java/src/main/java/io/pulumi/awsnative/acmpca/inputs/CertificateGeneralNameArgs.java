@@ -141,82 +141,82 @@ public final class CertificateGeneralNameArgs extends io.pulumi.resources.Resour
     	      this.uniformResourceIdentifier = defaults.uniformResourceIdentifier;
         }
 
-        public Builder setDirectoryName(@Nullable Input<CertificateSubjectArgs> directoryName) {
+        public Builder directoryName(@Nullable Input<CertificateSubjectArgs> directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
-        public Builder setDirectoryName(@Nullable CertificateSubjectArgs directoryName) {
+        public Builder directoryName(@Nullable CertificateSubjectArgs directoryName) {
             this.directoryName = Input.ofNullable(directoryName);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setEdiPartyName(@Nullable Input<CertificateEdiPartyNameArgs> ediPartyName) {
+        public Builder ediPartyName(@Nullable Input<CertificateEdiPartyNameArgs> ediPartyName) {
             this.ediPartyName = ediPartyName;
             return this;
         }
 
-        public Builder setEdiPartyName(@Nullable CertificateEdiPartyNameArgs ediPartyName) {
+        public Builder ediPartyName(@Nullable CertificateEdiPartyNameArgs ediPartyName) {
             this.ediPartyName = Input.ofNullable(ediPartyName);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setOtherName(@Nullable Input<CertificateOtherNameArgs> otherName) {
+        public Builder otherName(@Nullable Input<CertificateOtherNameArgs> otherName) {
             this.otherName = otherName;
             return this;
         }
 
-        public Builder setOtherName(@Nullable CertificateOtherNameArgs otherName) {
+        public Builder otherName(@Nullable CertificateOtherNameArgs otherName) {
             this.otherName = Input.ofNullable(otherName);
             return this;
         }
 
-        public Builder setRegisteredId(@Nullable Input<String> registeredId) {
+        public Builder registeredId(@Nullable Input<String> registeredId) {
             this.registeredId = registeredId;
             return this;
         }
 
-        public Builder setRegisteredId(@Nullable String registeredId) {
+        public Builder registeredId(@Nullable String registeredId) {
             this.registeredId = Input.ofNullable(registeredId);
             return this;
         }
 
-        public Builder setRfc822Name(@Nullable Input<String> rfc822Name) {
+        public Builder rfc822Name(@Nullable Input<String> rfc822Name) {
             this.rfc822Name = rfc822Name;
             return this;
         }
 
-        public Builder setRfc822Name(@Nullable String rfc822Name) {
+        public Builder rfc822Name(@Nullable String rfc822Name) {
             this.rfc822Name = Input.ofNullable(rfc822Name);
             return this;
         }
 
-        public Builder setUniformResourceIdentifier(@Nullable Input<String> uniformResourceIdentifier) {
+        public Builder uniformResourceIdentifier(@Nullable Input<String> uniformResourceIdentifier) {
             this.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
         }
 
-        public Builder setUniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
+        public Builder uniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
             this.uniformResourceIdentifier = Input.ofNullable(uniformResourceIdentifier);
             return this;
         }

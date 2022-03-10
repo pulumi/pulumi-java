@@ -49,12 +49,12 @@ public final class ConfigTrackingConfigArgs extends io.pulumi.resources.Resource
     	      this.autotrack = defaults.autotrack;
         }
 
-        public Builder setAutotrack(@Nullable Input<ConfigTrackingConfigAutotrack> autotrack) {
+        public Builder autotrack(@Nullable Input<ConfigTrackingConfigAutotrack> autotrack) {
             this.autotrack = autotrack;
             return this;
         }
 
-        public Builder setAutotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
+        public Builder autotrack(@Nullable ConfigTrackingConfigAutotrack autotrack) {
             this.autotrack = Input.ofNullable(autotrack);
             return this;
         }

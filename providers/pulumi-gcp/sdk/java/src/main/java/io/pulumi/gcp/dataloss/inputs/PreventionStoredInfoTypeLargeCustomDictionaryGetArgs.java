@@ -92,32 +92,32 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
     	      this.outputPath = defaults.outputPath;
         }
 
-        public Builder setBigQueryField(@Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> bigQueryField) {
+        public Builder bigQueryField(@Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> bigQueryField) {
             this.bigQueryField = bigQueryField;
             return this;
         }
 
-        public Builder setBigQueryField(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs bigQueryField) {
+        public Builder bigQueryField(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs bigQueryField) {
             this.bigQueryField = Input.ofNullable(bigQueryField);
             return this;
         }
 
-        public Builder setCloudStorageFileSet(@Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> cloudStorageFileSet) {
+        public Builder cloudStorageFileSet(@Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> cloudStorageFileSet) {
             this.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
 
-        public Builder setCloudStorageFileSet(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs cloudStorageFileSet) {
+        public Builder cloudStorageFileSet(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs cloudStorageFileSet) {
             this.cloudStorageFileSet = Input.ofNullable(cloudStorageFileSet);
             return this;
         }
 
-        public Builder setOutputPath(Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> outputPath) {
+        public Builder outputPath(Input<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
 
-        public Builder setOutputPath(PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs outputPath) {
+        public Builder outputPath(PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs outputPath) {
             this.outputPath = Input.of(Objects.requireNonNull(outputPath));
             return this;
         }

@@ -56,12 +56,12 @@ public final class DiscoveryNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.analysisKind = defaults.analysisKind;
         }
 
-        public Builder setAnalysisKind(Input<DiscoveryNoteAnalysisKind> analysisKind) {
+        public Builder analysisKind(Input<DiscoveryNoteAnalysisKind> analysisKind) {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
 
-        public Builder setAnalysisKind(DiscoveryNoteAnalysisKind analysisKind) {
+        public Builder analysisKind(DiscoveryNoteAnalysisKind analysisKind) {
             this.analysisKind = Input.of(Objects.requireNonNull(analysisKind));
             return this;
         }

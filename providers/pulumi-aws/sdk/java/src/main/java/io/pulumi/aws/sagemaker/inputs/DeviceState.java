@@ -99,42 +99,42 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     	      this.deviceFleetName = defaults.deviceFleetName;
         }
 
-        public Builder setAgentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Input<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Input.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDevice(@Nullable Input<DeviceDeviceGetArgs> device) {
+        public Builder device(@Nullable Input<DeviceDeviceGetArgs> device) {
             this.device = device;
             return this;
         }
 
-        public Builder setDevice(@Nullable DeviceDeviceGetArgs device) {
+        public Builder device(@Nullable DeviceDeviceGetArgs device) {
             this.device = Input.ofNullable(device);
             return this;
         }
 
-        public Builder setDeviceFleetName(@Nullable Input<String> deviceFleetName) {
+        public Builder deviceFleetName(@Nullable Input<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
 
-        public Builder setDeviceFleetName(@Nullable String deviceFleetName) {
+        public Builder deviceFleetName(@Nullable String deviceFleetName) {
             this.deviceFleetName = Input.ofNullable(deviceFleetName);
             return this;
         }

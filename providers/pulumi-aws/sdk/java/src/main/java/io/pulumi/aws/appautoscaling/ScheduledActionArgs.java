@@ -183,92 +183,92 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setScalableDimension(Input<String> scalableDimension) {
+        public Builder scalableDimension(Input<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
-        public Builder setScalableDimension(String scalableDimension) {
+        public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Input.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
 
-        public Builder setScalableTargetAction(Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction) {
+        public Builder scalableTargetAction(Input<ScheduledActionScalableTargetActionArgs> scalableTargetAction) {
             this.scalableTargetAction = Objects.requireNonNull(scalableTargetAction);
             return this;
         }
 
-        public Builder setScalableTargetAction(ScheduledActionScalableTargetActionArgs scalableTargetAction) {
+        public Builder scalableTargetAction(ScheduledActionScalableTargetActionArgs scalableTargetAction) {
             this.scalableTargetAction = Input.of(Objects.requireNonNull(scalableTargetAction));
             return this;
         }
 
-        public Builder setSchedule(Input<String> schedule) {
+        public Builder schedule(Input<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder setServiceNamespace(Input<String> serviceNamespace) {
+        public Builder serviceNamespace(Input<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Input.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTimezone(@Nullable Input<String> timezone) {
+        public Builder timezone(@Nullable Input<String> timezone) {
             this.timezone = timezone;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = Input.ofNullable(timezone);
             return this;
         }

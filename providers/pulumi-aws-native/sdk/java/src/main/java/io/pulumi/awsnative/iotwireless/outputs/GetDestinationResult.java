@@ -134,32 +134,32 @@ public final class GetDestinationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setExpressionType(@Nullable DestinationExpressionType expressionType) {
+        public Builder expressionType(@Nullable DestinationExpressionType expressionType) {
             this.expressionType = expressionType;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DestinationTag> tags) {
+        public Builder tags(@Nullable List<DestinationTag> tags) {
             this.tags = tags;
             return this;
         }

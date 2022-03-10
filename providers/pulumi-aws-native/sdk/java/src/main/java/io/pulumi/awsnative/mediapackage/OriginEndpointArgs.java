@@ -235,132 +235,132 @@ public final class OriginEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.whitelist = defaults.whitelist;
         }
 
-        public Builder setAuthorization(@Nullable Input<OriginEndpointAuthorizationArgs> authorization) {
+        public Builder authorization(@Nullable Input<OriginEndpointAuthorizationArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable OriginEndpointAuthorizationArgs authorization) {
+        public Builder authorization(@Nullable OriginEndpointAuthorizationArgs authorization) {
             this.authorization = Input.ofNullable(authorization);
             return this;
         }
 
-        public Builder setChannelId(Input<String> channelId) {
+        public Builder channelId(Input<String> channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
 
-        public Builder setChannelId(String channelId) {
+        public Builder channelId(String channelId) {
             this.channelId = Input.of(Objects.requireNonNull(channelId));
             return this;
         }
 
-        public Builder setCmafPackage(@Nullable Input<OriginEndpointCmafPackageArgs> cmafPackage) {
+        public Builder cmafPackage(@Nullable Input<OriginEndpointCmafPackageArgs> cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
 
-        public Builder setCmafPackage(@Nullable OriginEndpointCmafPackageArgs cmafPackage) {
+        public Builder cmafPackage(@Nullable OriginEndpointCmafPackageArgs cmafPackage) {
             this.cmafPackage = Input.ofNullable(cmafPackage);
             return this;
         }
 
-        public Builder setDashPackage(@Nullable Input<OriginEndpointDashPackageArgs> dashPackage) {
+        public Builder dashPackage(@Nullable Input<OriginEndpointDashPackageArgs> dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
 
-        public Builder setDashPackage(@Nullable OriginEndpointDashPackageArgs dashPackage) {
+        public Builder dashPackage(@Nullable OriginEndpointDashPackageArgs dashPackage) {
             this.dashPackage = Input.ofNullable(dashPackage);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHlsPackage(@Nullable Input<OriginEndpointHlsPackageArgs> hlsPackage) {
+        public Builder hlsPackage(@Nullable Input<OriginEndpointHlsPackageArgs> hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
 
-        public Builder setHlsPackage(@Nullable OriginEndpointHlsPackageArgs hlsPackage) {
+        public Builder hlsPackage(@Nullable OriginEndpointHlsPackageArgs hlsPackage) {
             this.hlsPackage = Input.ofNullable(hlsPackage);
             return this;
         }
 
-        public Builder setManifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Input<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Input.ofNullable(manifestName);
             return this;
         }
 
-        public Builder setMssPackage(@Nullable Input<OriginEndpointMssPackageArgs> mssPackage) {
+        public Builder mssPackage(@Nullable Input<OriginEndpointMssPackageArgs> mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
 
-        public Builder setMssPackage(@Nullable OriginEndpointMssPackageArgs mssPackage) {
+        public Builder mssPackage(@Nullable OriginEndpointMssPackageArgs mssPackage) {
             this.mssPackage = Input.ofNullable(mssPackage);
             return this;
         }
 
-        public Builder setOrigination(@Nullable Input<OriginEndpointOrigination> origination) {
+        public Builder origination(@Nullable Input<OriginEndpointOrigination> origination) {
             this.origination = origination;
             return this;
         }
 
-        public Builder setOrigination(@Nullable OriginEndpointOrigination origination) {
+        public Builder origination(@Nullable OriginEndpointOrigination origination) {
             this.origination = Input.ofNullable(origination);
             return this;
         }
 
-        public Builder setStartoverWindowSeconds(@Nullable Input<Integer> startoverWindowSeconds) {
+        public Builder startoverWindowSeconds(@Nullable Input<Integer> startoverWindowSeconds) {
             this.startoverWindowSeconds = startoverWindowSeconds;
             return this;
         }
 
-        public Builder setStartoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
+        public Builder startoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
             this.startoverWindowSeconds = Input.ofNullable(startoverWindowSeconds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<OriginEndpointTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<OriginEndpointTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<OriginEndpointTagArgs> tags) {
+        public Builder tags(@Nullable List<OriginEndpointTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeDelaySeconds(@Nullable Input<Integer> timeDelaySeconds) {
+        public Builder timeDelaySeconds(@Nullable Input<Integer> timeDelaySeconds) {
             this.timeDelaySeconds = timeDelaySeconds;
             return this;
         }
 
-        public Builder setTimeDelaySeconds(@Nullable Integer timeDelaySeconds) {
+        public Builder timeDelaySeconds(@Nullable Integer timeDelaySeconds) {
             this.timeDelaySeconds = Input.ofNullable(timeDelaySeconds);
             return this;
         }
 
-        public Builder setWhitelist(@Nullable Input<List<String>> whitelist) {
+        public Builder whitelist(@Nullable Input<List<String>> whitelist) {
             this.whitelist = whitelist;
             return this;
         }
 
-        public Builder setWhitelist(@Nullable List<String> whitelist) {
+        public Builder whitelist(@Nullable List<String> whitelist) {
             this.whitelist = Input.ofNullable(whitelist);
             return this;
         }

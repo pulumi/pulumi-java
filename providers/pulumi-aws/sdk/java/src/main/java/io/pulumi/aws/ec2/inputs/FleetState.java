@@ -220,112 +220,112 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setExcessCapacityTerminationPolicy(@Nullable Input<String> excessCapacityTerminationPolicy) {
+        public Builder excessCapacityTerminationPolicy(@Nullable Input<String> excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
 
-        public Builder setExcessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
+        public Builder excessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = Input.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
 
-        public Builder setLaunchTemplateConfig(@Nullable Input<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig) {
+        public Builder launchTemplateConfig(@Nullable Input<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig) {
             this.launchTemplateConfig = launchTemplateConfig;
             return this;
         }
 
-        public Builder setLaunchTemplateConfig(@Nullable FleetLaunchTemplateConfigGetArgs launchTemplateConfig) {
+        public Builder launchTemplateConfig(@Nullable FleetLaunchTemplateConfigGetArgs launchTemplateConfig) {
             this.launchTemplateConfig = Input.ofNullable(launchTemplateConfig);
             return this;
         }
 
-        public Builder setOnDemandOptions(@Nullable Input<FleetOnDemandOptionsGetArgs> onDemandOptions) {
+        public Builder onDemandOptions(@Nullable Input<FleetOnDemandOptionsGetArgs> onDemandOptions) {
             this.onDemandOptions = onDemandOptions;
             return this;
         }
 
-        public Builder setOnDemandOptions(@Nullable FleetOnDemandOptionsGetArgs onDemandOptions) {
+        public Builder onDemandOptions(@Nullable FleetOnDemandOptionsGetArgs onDemandOptions) {
             this.onDemandOptions = Input.ofNullable(onDemandOptions);
             return this;
         }
 
-        public Builder setReplaceUnhealthyInstances(@Nullable Input<Boolean> replaceUnhealthyInstances) {
+        public Builder replaceUnhealthyInstances(@Nullable Input<Boolean> replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
 
-        public Builder setReplaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
+        public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = Input.ofNullable(replaceUnhealthyInstances);
             return this;
         }
 
-        public Builder setSpotOptions(@Nullable Input<FleetSpotOptionsGetArgs> spotOptions) {
+        public Builder spotOptions(@Nullable Input<FleetSpotOptionsGetArgs> spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }
 
-        public Builder setSpotOptions(@Nullable FleetSpotOptionsGetArgs spotOptions) {
+        public Builder spotOptions(@Nullable FleetSpotOptionsGetArgs spotOptions) {
             this.spotOptions = Input.ofNullable(spotOptions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTargetCapacitySpecification(@Nullable Input<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(@Nullable Input<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification) {
             this.targetCapacitySpecification = targetCapacitySpecification;
             return this;
         }
 
-        public Builder setTargetCapacitySpecification(@Nullable FleetTargetCapacitySpecificationGetArgs targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(@Nullable FleetTargetCapacitySpecificationGetArgs targetCapacitySpecification) {
             this.targetCapacitySpecification = Input.ofNullable(targetCapacitySpecification);
             return this;
         }
 
-        public Builder setTerminateInstances(@Nullable Input<Boolean> terminateInstances) {
+        public Builder terminateInstances(@Nullable Input<Boolean> terminateInstances) {
             this.terminateInstances = terminateInstances;
             return this;
         }
 
-        public Builder setTerminateInstances(@Nullable Boolean terminateInstances) {
+        public Builder terminateInstances(@Nullable Boolean terminateInstances) {
             this.terminateInstances = Input.ofNullable(terminateInstances);
             return this;
         }
 
-        public Builder setTerminateInstancesWithExpiration(@Nullable Input<Boolean> terminateInstancesWithExpiration) {
+        public Builder terminateInstancesWithExpiration(@Nullable Input<Boolean> terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
 
-        public Builder setTerminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
+        public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = Input.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

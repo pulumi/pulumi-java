@@ -66,12 +66,12 @@ public final class AccessPointTransformationConfiguration extends io.pulumi.reso
     	      this.contentTransformation = defaults.contentTransformation;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setContentTransformation(Object contentTransformation) {
+        public Builder contentTransformation(Object contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }

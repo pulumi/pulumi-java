@@ -171,42 +171,42 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
     	      this.status = defaults.status;
         }
 
-        public Builder setAssessmentActivityId(String assessmentActivityId) {
+        public Builder assessmentActivityId(String assessmentActivityId) {
             this.assessmentActivityId = Objects.requireNonNull(assessmentActivityId);
             return this;
         }
 
-        public Builder setCriticalAndSecurityPatchCount(Integer criticalAndSecurityPatchCount) {
+        public Builder criticalAndSecurityPatchCount(Integer criticalAndSecurityPatchCount) {
             this.criticalAndSecurityPatchCount = Objects.requireNonNull(criticalAndSecurityPatchCount);
             return this;
         }
 
-        public Builder setError(ApiErrorResponse error) {
+        public Builder error(ApiErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setOtherPatchCount(Integer otherPatchCount) {
+        public Builder otherPatchCount(Integer otherPatchCount) {
             this.otherPatchCount = Objects.requireNonNull(otherPatchCount);
             return this;
         }
 
-        public Builder setRebootPending(Boolean rebootPending) {
+        public Builder rebootPending(Boolean rebootPending) {
             this.rebootPending = Objects.requireNonNull(rebootPending);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

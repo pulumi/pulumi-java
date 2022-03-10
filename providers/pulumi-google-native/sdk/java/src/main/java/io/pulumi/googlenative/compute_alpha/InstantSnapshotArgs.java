@@ -156,82 +156,82 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Input<Boolean> guestFlush) {
+        public Builder guestFlush(@Nullable Input<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Boolean guestFlush) {
+        public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Input.ofNullable(guestFlush);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable String sourceDisk) {
+        public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

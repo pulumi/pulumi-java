@@ -83,32 +83,32 @@ public final class InstanceFromMachineImageAttachedDisk {
     	      this.source = defaults.source;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDiskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
+        public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
 
-        public Builder setDiskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
+        public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

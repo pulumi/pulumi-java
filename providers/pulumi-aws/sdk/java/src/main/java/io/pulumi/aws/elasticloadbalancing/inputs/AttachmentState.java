@@ -70,22 +70,22 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
     	      this.instance = defaults.instance;
         }
 
-        public Builder setElb(@Nullable Input<String> elb) {
+        public Builder elb(@Nullable Input<String> elb) {
             this.elb = elb;
             return this;
         }
 
-        public Builder setElb(@Nullable String elb) {
+        public Builder elb(@Nullable String elb) {
             this.elb = Input.ofNullable(elb);
             return this;
         }
 
-        public Builder setInstance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Input<String> instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = Input.ofNullable(instance);
             return this;
         }

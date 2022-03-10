@@ -72,22 +72,22 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     	      this.contentEncoding = defaults.contentEncoding;
         }
 
-        public Builder setCommonAttributes(@Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> commonAttributes) {
+        public Builder commonAttributes(@Nullable Input<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> commonAttributes) {
             this.commonAttributes = commonAttributes;
             return this;
         }
 
-        public Builder setCommonAttributes(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs> commonAttributes) {
+        public Builder commonAttributes(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs> commonAttributes) {
             this.commonAttributes = Input.ofNullable(commonAttributes);
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable Input<String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Input<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable String contentEncoding) {
+        public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = Input.ofNullable(contentEncoding);
             return this;
         }

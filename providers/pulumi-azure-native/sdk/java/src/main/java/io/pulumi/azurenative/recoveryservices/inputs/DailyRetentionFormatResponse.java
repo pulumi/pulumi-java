@@ -58,7 +58,7 @@ public final class DailyRetentionFormatResponse extends io.pulumi.resources.Invo
     	      this.daysOfTheMonth = defaults.daysOfTheMonth;
         }
 
-        public Builder setDaysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
+        public Builder daysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }

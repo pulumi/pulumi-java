@@ -245,67 +245,67 @@ public final class GetArcSettingResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAggregateState(String aggregateState) {
+        public Builder aggregateState(String aggregateState) {
             this.aggregateState = Objects.requireNonNull(aggregateState);
             return this;
         }
 
-        public Builder setArcInstanceResourceGroup(String arcInstanceResourceGroup) {
+        public Builder arcInstanceResourceGroup(String arcInstanceResourceGroup) {
             this.arcInstanceResourceGroup = Objects.requireNonNull(arcInstanceResourceGroup);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable String createdByType) {
+        public Builder createdByType(@Nullable String createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable String lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPerNodeDetails(List<PerNodeStateResponse> perNodeDetails) {
+        public Builder perNodeDetails(List<PerNodeStateResponse> perNodeDetails) {
             this.perNodeDetails = Objects.requireNonNull(perNodeDetails);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

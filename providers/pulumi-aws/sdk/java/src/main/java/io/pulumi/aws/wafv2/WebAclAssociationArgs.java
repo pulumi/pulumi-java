@@ -69,22 +69,22 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
     	      this.webAclArn = defaults.webAclArn;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder setWebAclArn(Input<String> webAclArn) {
+        public Builder webAclArn(Input<String> webAclArn) {
             this.webAclArn = Objects.requireNonNull(webAclArn);
             return this;
         }
 
-        public Builder setWebAclArn(String webAclArn) {
+        public Builder webAclArn(String webAclArn) {
             this.webAclArn = Input.of(Objects.requireNonNull(webAclArn));
             return this;
         }

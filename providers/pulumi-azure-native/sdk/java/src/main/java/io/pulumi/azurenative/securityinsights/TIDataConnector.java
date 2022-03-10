@@ -181,7 +181,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
     private static TIDataConnectorArgs makeArgs(TIDataConnectorArgs args) {
         var builder = args == null ? TIDataConnectorArgs.builder() : TIDataConnectorArgs.builder(args);
         return builder
-            .setKind("ThreatIntelligence")
+            .kind("ThreatIntelligence")
             .build();
     }
 

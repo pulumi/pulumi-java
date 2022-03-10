@@ -52,12 +52,12 @@ public final class WorkerPoolNetworkConfigGetArgs extends io.pulumi.resources.Re
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder setPeeredNetwork(Input<String> peeredNetwork) {
+        public Builder peeredNetwork(Input<String> peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }

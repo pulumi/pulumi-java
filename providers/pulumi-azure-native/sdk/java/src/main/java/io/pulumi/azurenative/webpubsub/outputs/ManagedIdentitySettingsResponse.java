@@ -52,7 +52,7 @@ public final class ManagedIdentitySettingsResponse {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }

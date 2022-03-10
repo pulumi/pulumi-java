@@ -138,62 +138,62 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outputResourceEdges = defaults.outputResourceEdges;
         }
 
-        public Builder setAnalyzeServiceAccountImpersonation(@Nullable Input<Boolean> analyzeServiceAccountImpersonation) {
+        public Builder analyzeServiceAccountImpersonation(@Nullable Input<Boolean> analyzeServiceAccountImpersonation) {
             this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
             return this;
         }
 
-        public Builder setAnalyzeServiceAccountImpersonation(@Nullable Boolean analyzeServiceAccountImpersonation) {
+        public Builder analyzeServiceAccountImpersonation(@Nullable Boolean analyzeServiceAccountImpersonation) {
             this.analyzeServiceAccountImpersonation = Input.ofNullable(analyzeServiceAccountImpersonation);
             return this;
         }
 
-        public Builder setExpandGroups(@Nullable Input<Boolean> expandGroups) {
+        public Builder expandGroups(@Nullable Input<Boolean> expandGroups) {
             this.expandGroups = expandGroups;
             return this;
         }
 
-        public Builder setExpandGroups(@Nullable Boolean expandGroups) {
+        public Builder expandGroups(@Nullable Boolean expandGroups) {
             this.expandGroups = Input.ofNullable(expandGroups);
             return this;
         }
 
-        public Builder setExpandResources(@Nullable Input<Boolean> expandResources) {
+        public Builder expandResources(@Nullable Input<Boolean> expandResources) {
             this.expandResources = expandResources;
             return this;
         }
 
-        public Builder setExpandResources(@Nullable Boolean expandResources) {
+        public Builder expandResources(@Nullable Boolean expandResources) {
             this.expandResources = Input.ofNullable(expandResources);
             return this;
         }
 
-        public Builder setExpandRoles(@Nullable Input<Boolean> expandRoles) {
+        public Builder expandRoles(@Nullable Input<Boolean> expandRoles) {
             this.expandRoles = expandRoles;
             return this;
         }
 
-        public Builder setExpandRoles(@Nullable Boolean expandRoles) {
+        public Builder expandRoles(@Nullable Boolean expandRoles) {
             this.expandRoles = Input.ofNullable(expandRoles);
             return this;
         }
 
-        public Builder setOutputGroupEdges(@Nullable Input<Boolean> outputGroupEdges) {
+        public Builder outputGroupEdges(@Nullable Input<Boolean> outputGroupEdges) {
             this.outputGroupEdges = outputGroupEdges;
             return this;
         }
 
-        public Builder setOutputGroupEdges(@Nullable Boolean outputGroupEdges) {
+        public Builder outputGroupEdges(@Nullable Boolean outputGroupEdges) {
             this.outputGroupEdges = Input.ofNullable(outputGroupEdges);
             return this;
         }
 
-        public Builder setOutputResourceEdges(@Nullable Input<Boolean> outputResourceEdges) {
+        public Builder outputResourceEdges(@Nullable Input<Boolean> outputResourceEdges) {
             this.outputResourceEdges = outputResourceEdges;
             return this;
         }
 
-        public Builder setOutputResourceEdges(@Nullable Boolean outputResourceEdges) {
+        public Builder outputResourceEdges(@Nullable Boolean outputResourceEdges) {
             this.outputResourceEdges = Input.ofNullable(outputResourceEdges);
             return this;
         }

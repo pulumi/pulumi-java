@@ -240,112 +240,112 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAppEngineHttpTarget(@Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(@Nullable Input<JobAppEngineHttpTargetArgs> appEngineHttpTarget) {
             this.appEngineHttpTarget = appEngineHttpTarget;
             return this;
         }
 
-        public Builder setAppEngineHttpTarget(@Nullable JobAppEngineHttpTargetArgs appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(@Nullable JobAppEngineHttpTargetArgs appEngineHttpTarget) {
             this.appEngineHttpTarget = Input.ofNullable(appEngineHttpTarget);
             return this;
         }
 
-        public Builder setAttemptDeadline(@Nullable Input<String> attemptDeadline) {
+        public Builder attemptDeadline(@Nullable Input<String> attemptDeadline) {
             this.attemptDeadline = attemptDeadline;
             return this;
         }
 
-        public Builder setAttemptDeadline(@Nullable String attemptDeadline) {
+        public Builder attemptDeadline(@Nullable String attemptDeadline) {
             this.attemptDeadline = Input.ofNullable(attemptDeadline);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHttpTarget(@Nullable Input<JobHttpTargetArgs> httpTarget) {
+        public Builder httpTarget(@Nullable Input<JobHttpTargetArgs> httpTarget) {
             this.httpTarget = httpTarget;
             return this;
         }
 
-        public Builder setHttpTarget(@Nullable JobHttpTargetArgs httpTarget) {
+        public Builder httpTarget(@Nullable JobHttpTargetArgs httpTarget) {
             this.httpTarget = Input.ofNullable(httpTarget);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPubsubTarget(@Nullable Input<JobPubsubTargetArgs> pubsubTarget) {
+        public Builder pubsubTarget(@Nullable Input<JobPubsubTargetArgs> pubsubTarget) {
             this.pubsubTarget = pubsubTarget;
             return this;
         }
 
-        public Builder setPubsubTarget(@Nullable JobPubsubTargetArgs pubsubTarget) {
+        public Builder pubsubTarget(@Nullable JobPubsubTargetArgs pubsubTarget) {
             this.pubsubTarget = Input.ofNullable(pubsubTarget);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable Input<JobRetryConfigArgs> retryConfig) {
+        public Builder retryConfig(@Nullable Input<JobRetryConfigArgs> retryConfig) {
             this.retryConfig = retryConfig;
             return this;
         }
 
-        public Builder setRetryConfig(@Nullable JobRetryConfigArgs retryConfig) {
+        public Builder retryConfig(@Nullable JobRetryConfigArgs retryConfig) {
             this.retryConfig = Input.ofNullable(retryConfig);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

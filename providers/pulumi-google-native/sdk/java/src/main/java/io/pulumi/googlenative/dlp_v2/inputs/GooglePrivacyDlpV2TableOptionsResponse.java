@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends io.pulumi.reso
     	      this.identifyingFields = defaults.identifyingFields;
         }
 
-        public Builder setIdentifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
+        public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }

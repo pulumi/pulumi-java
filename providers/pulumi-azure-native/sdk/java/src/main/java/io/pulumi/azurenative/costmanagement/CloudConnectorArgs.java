@@ -184,92 +184,92 @@ public final class CloudConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setBillingModel(@Nullable Input<Either<String,ConnectorBillingModel>> billingModel) {
+        public Builder billingModel(@Nullable Input<Either<String,ConnectorBillingModel>> billingModel) {
             this.billingModel = billingModel;
             return this;
         }
 
-        public Builder setBillingModel(@Nullable Either<String,ConnectorBillingModel> billingModel) {
+        public Builder billingModel(@Nullable Either<String,ConnectorBillingModel> billingModel) {
             this.billingModel = Input.ofNullable(billingModel);
             return this;
         }
 
-        public Builder setConnectorName(@Nullable Input<String> connectorName) {
+        public Builder connectorName(@Nullable Input<String> connectorName) {
             this.connectorName = connectorName;
             return this;
         }
 
-        public Builder setConnectorName(@Nullable String connectorName) {
+        public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = Input.ofNullable(connectorName);
             return this;
         }
 
-        public Builder setCredentialsKey(@Nullable Input<String> credentialsKey) {
+        public Builder credentialsKey(@Nullable Input<String> credentialsKey) {
             this.credentialsKey = credentialsKey;
             return this;
         }
 
-        public Builder setCredentialsKey(@Nullable String credentialsKey) {
+        public Builder credentialsKey(@Nullable String credentialsKey) {
             this.credentialsKey = Input.ofNullable(credentialsKey);
             return this;
         }
 
-        public Builder setCredentialsSecret(@Nullable Input<String> credentialsSecret) {
+        public Builder credentialsSecret(@Nullable Input<String> credentialsSecret) {
             this.credentialsSecret = credentialsSecret;
             return this;
         }
 
-        public Builder setCredentialsSecret(@Nullable String credentialsSecret) {
+        public Builder credentialsSecret(@Nullable String credentialsSecret) {
             this.credentialsSecret = Input.ofNullable(credentialsSecret);
             return this;
         }
 
-        public Builder setDefaultManagementGroupId(@Nullable Input<String> defaultManagementGroupId) {
+        public Builder defaultManagementGroupId(@Nullable Input<String> defaultManagementGroupId) {
             this.defaultManagementGroupId = defaultManagementGroupId;
             return this;
         }
 
-        public Builder setDefaultManagementGroupId(@Nullable String defaultManagementGroupId) {
+        public Builder defaultManagementGroupId(@Nullable String defaultManagementGroupId) {
             this.defaultManagementGroupId = Input.ofNullable(defaultManagementGroupId);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setReportId(@Nullable Input<String> reportId) {
+        public Builder reportId(@Nullable Input<String> reportId) {
             this.reportId = reportId;
             return this;
         }
 
-        public Builder setReportId(@Nullable String reportId) {
+        public Builder reportId(@Nullable String reportId) {
             this.reportId = Input.ofNullable(reportId);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }

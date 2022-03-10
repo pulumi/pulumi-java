@@ -49,12 +49,12 @@ public final class RegionInstanceGroupManagerStatusVersionTargetArgs extends io.
     	      this.isReached = defaults.isReached;
         }
 
-        public Builder setIsReached(@Nullable Input<Boolean> isReached) {
+        public Builder isReached(@Nullable Input<Boolean> isReached) {
             this.isReached = isReached;
             return this;
         }
 
-        public Builder setIsReached(@Nullable Boolean isReached) {
+        public Builder isReached(@Nullable Boolean isReached) {
             this.isReached = Input.ofNullable(isReached);
             return this;
         }

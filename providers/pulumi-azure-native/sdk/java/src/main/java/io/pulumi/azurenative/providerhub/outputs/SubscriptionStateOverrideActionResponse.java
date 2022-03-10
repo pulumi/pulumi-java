@@ -49,12 +49,12 @@ public final class SubscriptionStateOverrideActionResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

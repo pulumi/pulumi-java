@@ -74,22 +74,22 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setKeyData(@Nullable Input<String> keyData) {
+        public Builder keyData(@Nullable Input<String> keyData) {
             this.keyData = keyData;
             return this;
         }
 
-        public Builder setKeyData(@Nullable String keyData) {
+        public Builder keyData(@Nullable String keyData) {
             this.keyData = Input.ofNullable(keyData);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

@@ -67,12 +67,12 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.matchAttributes = defaults.matchAttributes;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setMatchAttributes(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes matchAttributes) {
+        public Builder matchAttributes(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes matchAttributes) {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
         }

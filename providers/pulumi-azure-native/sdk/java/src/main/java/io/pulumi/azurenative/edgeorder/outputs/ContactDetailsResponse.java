@@ -116,27 +116,27 @@ public final class ContactDetailsResponse {
     	      this.phoneExtension = defaults.phoneExtension;
         }
 
-        public Builder setContactName(String contactName) {
+        public Builder contactName(String contactName) {
             this.contactName = Objects.requireNonNull(contactName);
             return this;
         }
 
-        public Builder setEmailList(List<String> emailList) {
+        public Builder emailList(List<String> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
 
-        public Builder setMobile(@Nullable String mobile) {
+        public Builder mobile(@Nullable String mobile) {
             this.mobile = mobile;
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setPhoneExtension(@Nullable String phoneExtension) {
+        public Builder phoneExtension(@Nullable String phoneExtension) {
             this.phoneExtension = phoneExtension;
             return this;
         }

@@ -61,17 +61,17 @@ public final class EnvironmentConfigWorkloadsConfig {
     	      this.worker = defaults.worker;
         }
 
-        public Builder setScheduler(@Nullable EnvironmentConfigWorkloadsConfigScheduler scheduler) {
+        public Builder scheduler(@Nullable EnvironmentConfigWorkloadsConfigScheduler scheduler) {
             this.scheduler = scheduler;
             return this;
         }
 
-        public Builder setWebServer(@Nullable EnvironmentConfigWorkloadsConfigWebServer webServer) {
+        public Builder webServer(@Nullable EnvironmentConfigWorkloadsConfigWebServer webServer) {
             this.webServer = webServer;
             return this;
         }
 
-        public Builder setWorker(@Nullable EnvironmentConfigWorkloadsConfigWorker worker) {
+        public Builder worker(@Nullable EnvironmentConfigWorkloadsConfigWorker worker) {
             this.worker = worker;
             return this;
         }

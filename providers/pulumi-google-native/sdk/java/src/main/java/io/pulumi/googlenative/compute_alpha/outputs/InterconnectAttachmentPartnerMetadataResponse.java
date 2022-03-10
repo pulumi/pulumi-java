@@ -81,17 +81,17 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
     	      this.portalUrl = defaults.portalUrl;
         }
 
-        public Builder setInterconnectName(String interconnectName) {
+        public Builder interconnectName(String interconnectName) {
             this.interconnectName = Objects.requireNonNull(interconnectName);
             return this;
         }
 
-        public Builder setPartnerName(String partnerName) {
+        public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
-        public Builder setPortalUrl(String portalUrl) {
+        public Builder portalUrl(String portalUrl) {
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
         }

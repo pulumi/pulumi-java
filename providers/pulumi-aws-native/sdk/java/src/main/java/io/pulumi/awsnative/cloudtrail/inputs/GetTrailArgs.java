@@ -47,7 +47,7 @@ public final class GetTrailArgs extends io.pulumi.resources.InvokeArgs {
     	      this.trailName = defaults.trailName;
         }
 
-        public Builder setTrailName(String trailName) {
+        public Builder trailName(String trailName) {
             this.trailName = Objects.requireNonNull(trailName);
             return this;
         }

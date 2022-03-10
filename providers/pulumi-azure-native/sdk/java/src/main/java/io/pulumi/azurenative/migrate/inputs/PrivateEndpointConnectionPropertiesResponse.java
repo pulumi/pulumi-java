@@ -92,17 +92,17 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setPrivateEndpoint(ResourceIdResponse privateEndpoint) {
+        public Builder privateEndpoint(ResourceIdResponse privateEndpoint) {
             this.privateEndpoint = Objects.requireNonNull(privateEndpoint);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

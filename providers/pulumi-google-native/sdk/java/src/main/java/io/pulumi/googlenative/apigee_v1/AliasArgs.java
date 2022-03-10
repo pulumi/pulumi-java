@@ -172,102 +172,102 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setData(@Nullable Input<String> data) {
+        public Builder data(@Nullable Input<String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = Input.ofNullable(data);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setExtensions(@Nullable Input<List<Map<String,String>>> extensions) {
+        public Builder extensions(@Nullable Input<List<Map<String,String>>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<Map<String,String>> extensions) {
+        public Builder extensions(@Nullable List<Map<String,String>> extensions) {
             this.extensions = Input.ofNullable(extensions);
             return this;
         }
 
-        public Builder setFormat(Input<String> format) {
+        public Builder format(Input<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setIgnoreExpiryValidation(@Nullable Input<String> ignoreExpiryValidation) {
+        public Builder ignoreExpiryValidation(@Nullable Input<String> ignoreExpiryValidation) {
             this.ignoreExpiryValidation = ignoreExpiryValidation;
             return this;
         }
 
-        public Builder setIgnoreExpiryValidation(@Nullable String ignoreExpiryValidation) {
+        public Builder ignoreExpiryValidation(@Nullable String ignoreExpiryValidation) {
             this.ignoreExpiryValidation = Input.ofNullable(ignoreExpiryValidation);
             return this;
         }
 
-        public Builder setIgnoreNewlineValidation(@Nullable Input<String> ignoreNewlineValidation) {
+        public Builder ignoreNewlineValidation(@Nullable Input<String> ignoreNewlineValidation) {
             this.ignoreNewlineValidation = ignoreNewlineValidation;
             return this;
         }
 
-        public Builder setIgnoreNewlineValidation(@Nullable String ignoreNewlineValidation) {
+        public Builder ignoreNewlineValidation(@Nullable String ignoreNewlineValidation) {
             this.ignoreNewlineValidation = Input.ofNullable(ignoreNewlineValidation);
             return this;
         }
 
-        public Builder setKeystoreId(Input<String> keystoreId) {
+        public Builder keystoreId(Input<String> keystoreId) {
             this.keystoreId = Objects.requireNonNull(keystoreId);
             return this;
         }
 
-        public Builder setKeystoreId(String keystoreId) {
+        public Builder keystoreId(String keystoreId) {
             this.keystoreId = Input.of(Objects.requireNonNull(keystoreId));
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }

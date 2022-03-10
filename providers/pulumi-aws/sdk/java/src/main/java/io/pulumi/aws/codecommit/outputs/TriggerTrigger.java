@@ -116,27 +116,27 @@ public final class TriggerTrigger {
     	      this.name = defaults.name;
         }
 
-        public Builder setBranches(@Nullable List<String> branches) {
+        public Builder branches(@Nullable List<String> branches) {
             this.branches = branches;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

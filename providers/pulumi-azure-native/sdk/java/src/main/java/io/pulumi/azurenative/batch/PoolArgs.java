@@ -352,192 +352,192 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setApplicationLicenses(@Nullable Input<List<String>> applicationLicenses) {
+        public Builder applicationLicenses(@Nullable Input<List<String>> applicationLicenses) {
             this.applicationLicenses = applicationLicenses;
             return this;
         }
 
-        public Builder setApplicationLicenses(@Nullable List<String> applicationLicenses) {
+        public Builder applicationLicenses(@Nullable List<String> applicationLicenses) {
             this.applicationLicenses = Input.ofNullable(applicationLicenses);
             return this;
         }
 
-        public Builder setApplicationPackages(@Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages) {
+        public Builder applicationPackages(@Nullable Input<List<ApplicationPackageReferenceArgs>> applicationPackages) {
             this.applicationPackages = applicationPackages;
             return this;
         }
 
-        public Builder setApplicationPackages(@Nullable List<ApplicationPackageReferenceArgs> applicationPackages) {
+        public Builder applicationPackages(@Nullable List<ApplicationPackageReferenceArgs> applicationPackages) {
             this.applicationPackages = Input.ofNullable(applicationPackages);
             return this;
         }
 
-        public Builder setCertificates(@Nullable Input<List<CertificateReferenceArgs>> certificates) {
+        public Builder certificates(@Nullable Input<List<CertificateReferenceArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setCertificates(@Nullable List<CertificateReferenceArgs> certificates) {
+        public Builder certificates(@Nullable List<CertificateReferenceArgs> certificates) {
             this.certificates = Input.ofNullable(certificates);
             return this;
         }
 
-        public Builder setDeploymentConfiguration(@Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration) {
+        public Builder deploymentConfiguration(@Nullable Input<DeploymentConfigurationArgs> deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
 
-        public Builder setDeploymentConfiguration(@Nullable DeploymentConfigurationArgs deploymentConfiguration) {
+        public Builder deploymentConfiguration(@Nullable DeploymentConfigurationArgs deploymentConfiguration) {
             this.deploymentConfiguration = Input.ofNullable(deploymentConfiguration);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<BatchPoolIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<BatchPoolIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable BatchPoolIdentityArgs identity) {
+        public Builder identity(@Nullable BatchPoolIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setInterNodeCommunication(@Nullable Input<InterNodeCommunicationState> interNodeCommunication) {
+        public Builder interNodeCommunication(@Nullable Input<InterNodeCommunicationState> interNodeCommunication) {
             this.interNodeCommunication = interNodeCommunication;
             return this;
         }
 
-        public Builder setInterNodeCommunication(@Nullable InterNodeCommunicationState interNodeCommunication) {
+        public Builder interNodeCommunication(@Nullable InterNodeCommunicationState interNodeCommunication) {
             this.interNodeCommunication = Input.ofNullable(interNodeCommunication);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<List<MetadataItemArgs>> metadata) {
+        public Builder metadata(@Nullable Input<List<MetadataItemArgs>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable List<MetadataItemArgs> metadata) {
+        public Builder metadata(@Nullable List<MetadataItemArgs> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMountConfiguration(@Nullable Input<List<MountConfigurationArgs>> mountConfiguration) {
+        public Builder mountConfiguration(@Nullable Input<List<MountConfigurationArgs>> mountConfiguration) {
             this.mountConfiguration = mountConfiguration;
             return this;
         }
 
-        public Builder setMountConfiguration(@Nullable List<MountConfigurationArgs> mountConfiguration) {
+        public Builder mountConfiguration(@Nullable List<MountConfigurationArgs> mountConfiguration) {
             this.mountConfiguration = Input.ofNullable(mountConfiguration);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable Input<NetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Input<NetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
+        public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
             this.networkConfiguration = Input.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder setPoolName(@Nullable Input<String> poolName) {
+        public Builder poolName(@Nullable Input<String> poolName) {
             this.poolName = poolName;
             return this;
         }
 
-        public Builder setPoolName(@Nullable String poolName) {
+        public Builder poolName(@Nullable String poolName) {
             this.poolName = Input.ofNullable(poolName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable Input<ScaleSettingsArgs> scaleSettings) {
+        public Builder scaleSettings(@Nullable Input<ScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
+        public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
             this.scaleSettings = Input.ofNullable(scaleSettings);
             return this;
         }
 
-        public Builder setStartTask(@Nullable Input<StartTaskArgs> startTask) {
+        public Builder startTask(@Nullable Input<StartTaskArgs> startTask) {
             this.startTask = startTask;
             return this;
         }
 
-        public Builder setStartTask(@Nullable StartTaskArgs startTask) {
+        public Builder startTask(@Nullable StartTaskArgs startTask) {
             this.startTask = Input.ofNullable(startTask);
             return this;
         }
 
-        public Builder setTaskSchedulingPolicy(@Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy) {
+        public Builder taskSchedulingPolicy(@Nullable Input<TaskSchedulingPolicyArgs> taskSchedulingPolicy) {
             this.taskSchedulingPolicy = taskSchedulingPolicy;
             return this;
         }
 
-        public Builder setTaskSchedulingPolicy(@Nullable TaskSchedulingPolicyArgs taskSchedulingPolicy) {
+        public Builder taskSchedulingPolicy(@Nullable TaskSchedulingPolicyArgs taskSchedulingPolicy) {
             this.taskSchedulingPolicy = Input.ofNullable(taskSchedulingPolicy);
             return this;
         }
 
-        public Builder setTaskSlotsPerNode(@Nullable Input<Integer> taskSlotsPerNode) {
+        public Builder taskSlotsPerNode(@Nullable Input<Integer> taskSlotsPerNode) {
             this.taskSlotsPerNode = taskSlotsPerNode;
             return this;
         }
 
-        public Builder setTaskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
+        public Builder taskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
             this.taskSlotsPerNode = Input.ofNullable(taskSlotsPerNode);
             return this;
         }
 
-        public Builder setUserAccounts(@Nullable Input<List<UserAccountArgs>> userAccounts) {
+        public Builder userAccounts(@Nullable Input<List<UserAccountArgs>> userAccounts) {
             this.userAccounts = userAccounts;
             return this;
         }
 
-        public Builder setUserAccounts(@Nullable List<UserAccountArgs> userAccounts) {
+        public Builder userAccounts(@Nullable List<UserAccountArgs> userAccounts) {
             this.userAccounts = Input.ofNullable(userAccounts);
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }

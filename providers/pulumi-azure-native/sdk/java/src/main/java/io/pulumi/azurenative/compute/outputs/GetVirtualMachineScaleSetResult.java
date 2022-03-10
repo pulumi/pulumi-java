@@ -449,127 +449,127 @@ public final class GetVirtualMachineScaleSetResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable AdditionalCapabilitiesResponse additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesResponse additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAutomaticRepairsPolicy(@Nullable AutomaticRepairsPolicyResponse automaticRepairsPolicy) {
+        public Builder automaticRepairsPolicy(@Nullable AutomaticRepairsPolicyResponse automaticRepairsPolicy) {
             this.automaticRepairsPolicy = automaticRepairsPolicy;
             return this;
         }
 
-        public Builder setDoNotRunExtensionsOnOverprovisionedVMs(@Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs) {
+        public Builder doNotRunExtensionsOnOverprovisionedVMs(@Nullable Boolean doNotRunExtensionsOnOverprovisionedVMs) {
             this.doNotRunExtensionsOnOverprovisionedVMs = doNotRunExtensionsOnOverprovisionedVMs;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setHostGroup(@Nullable SubResourceResponse hostGroup) {
+        public Builder hostGroup(@Nullable SubResourceResponse hostGroup) {
             this.hostGroup = hostGroup;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable VirtualMachineScaleSetIdentityResponse identity) {
+        public Builder identity(@Nullable VirtualMachineScaleSetIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrchestrationMode(@Nullable String orchestrationMode) {
+        public Builder orchestrationMode(@Nullable String orchestrationMode) {
             this.orchestrationMode = orchestrationMode;
             return this;
         }
 
-        public Builder setOverprovision(@Nullable Boolean overprovision) {
+        public Builder overprovision(@Nullable Boolean overprovision) {
             this.overprovision = overprovision;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanResponse plan) {
+        public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
-        public Builder setScaleInPolicy(@Nullable ScaleInPolicyResponse scaleInPolicy) {
+        public Builder scaleInPolicy(@Nullable ScaleInPolicyResponse scaleInPolicy) {
             this.scaleInPolicy = scaleInPolicy;
             return this;
         }
 
-        public Builder setSinglePlacementGroup(@Nullable Boolean singlePlacementGroup) {
+        public Builder singlePlacementGroup(@Nullable Boolean singlePlacementGroup) {
             this.singlePlacementGroup = singlePlacementGroup;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
 
-        public Builder setUpgradePolicy(@Nullable UpgradePolicyResponse upgradePolicy) {
+        public Builder upgradePolicy(@Nullable UpgradePolicyResponse upgradePolicy) {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
 
-        public Builder setVirtualMachineProfile(@Nullable VirtualMachineScaleSetVMProfileResponse virtualMachineProfile) {
+        public Builder virtualMachineProfile(@Nullable VirtualMachineScaleSetVMProfileResponse virtualMachineProfile) {
             this.virtualMachineProfile = virtualMachineProfile;
             return this;
         }
 
-        public Builder setZoneBalance(@Nullable Boolean zoneBalance) {
+        public Builder zoneBalance(@Nullable Boolean zoneBalance) {
             this.zoneBalance = zoneBalance;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

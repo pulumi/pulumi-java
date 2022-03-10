@@ -111,22 +111,22 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setActiveRevisionsMode(@Nullable String activeRevisionsMode) {
+        public Builder activeRevisionsMode(@Nullable String activeRevisionsMode) {
             this.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
 
-        public Builder setIngress(@Nullable IngressResponse ingress) {
+        public Builder ingress(@Nullable IngressResponse ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setRegistries(@Nullable List<RegistryCredentialsResponse> registries) {
+        public Builder registries(@Nullable List<RegistryCredentialsResponse> registries) {
             this.registries = registries;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<SecretResponse> secrets) {
+        public Builder secrets(@Nullable List<SecretResponse> secrets) {
             this.secrets = secrets;
             return this;
         }

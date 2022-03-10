@@ -90,32 +90,32 @@ public final class EncryptionPropertyArgs extends io.pulumi.resources.ResourceAr
     	      this.status = defaults.status;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityForCmkArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityForCmkArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityForCmkArgs identity) {
+        public Builder identity(@Nullable IdentityForCmkArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKeyVaultProperties(Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(Input<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = Objects.requireNonNull(keyVaultProperties);
             return this;
         }
 
-        public Builder setKeyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
+        public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Input.of(Objects.requireNonNull(keyVaultProperties));
             return this;
         }
 
-        public Builder setStatus(Input<Either<String,EncryptionStatus>> status) {
+        public Builder status(Input<Either<String,EncryptionStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(Either<String,EncryptionStatus> status) {
+        public Builder status(Either<String,EncryptionStatus> status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

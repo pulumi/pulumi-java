@@ -114,42 +114,42 @@ public final class InstanceBootDiskInitializeParamsGetArgs extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,Object>> labels) {
+        public Builder labels(@Nullable Input<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,Object> labels) {
+        public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<Integer> size) {
+        public Builder size(@Nullable Input<Integer> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -108,42 +108,42 @@ public final class AlexaChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setChannelName(Input<String> channelName) {
+        public Builder channelName(Input<String> channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Input.of(Objects.requireNonNull(channelName));
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<AlexaChannelPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<AlexaChannelPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable AlexaChannelPropertiesArgs properties) {
+        public Builder properties(@Nullable AlexaChannelPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

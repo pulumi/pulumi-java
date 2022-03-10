@@ -155,72 +155,72 @@ public final class EncryptionScopeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setEncryptionScopeName(@Nullable Input<String> encryptionScopeName) {
+        public Builder encryptionScopeName(@Nullable Input<String> encryptionScopeName) {
             this.encryptionScopeName = encryptionScopeName;
             return this;
         }
 
-        public Builder setEncryptionScopeName(@Nullable String encryptionScopeName) {
+        public Builder encryptionScopeName(@Nullable String encryptionScopeName) {
             this.encryptionScopeName = Input.ofNullable(encryptionScopeName);
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable Input<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Input<EncryptionScopeKeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable EncryptionScopeKeyVaultPropertiesArgs keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable EncryptionScopeKeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Input<Boolean> requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Input<Boolean> requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = Input.ofNullable(requireInfrastructureEncryption);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(@Nullable Input<Either<String,EncryptionScopeSource>> source) {
+        public Builder source(@Nullable Input<Either<String,EncryptionScopeSource>> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable Either<String,EncryptionScopeSource> source) {
+        public Builder source(@Nullable Either<String,EncryptionScopeSource> source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,EncryptionScopeState>> state) {
+        public Builder state(@Nullable Input<Either<String,EncryptionScopeState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,EncryptionScopeState> state) {
+        public Builder state(@Nullable Either<String,EncryptionScopeState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

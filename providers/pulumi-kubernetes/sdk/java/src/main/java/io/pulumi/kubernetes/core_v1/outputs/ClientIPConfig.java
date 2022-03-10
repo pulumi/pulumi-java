@@ -50,7 +50,7 @@ public final class ClientIPConfig {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }

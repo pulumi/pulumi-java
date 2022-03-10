@@ -303,162 +303,162 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerZone = defaults.workerZone;
         }
 
-        public Builder setClusterManagerApiService(@Nullable Input<String> clusterManagerApiService) {
+        public Builder clusterManagerApiService(@Nullable Input<String> clusterManagerApiService) {
             this.clusterManagerApiService = clusterManagerApiService;
             return this;
         }
 
-        public Builder setClusterManagerApiService(@Nullable String clusterManagerApiService) {
+        public Builder clusterManagerApiService(@Nullable String clusterManagerApiService) {
             this.clusterManagerApiService = Input.ofNullable(clusterManagerApiService);
             return this;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setDebugOptions(@Nullable Input<DebugOptionsArgs> debugOptions) {
+        public Builder debugOptions(@Nullable Input<DebugOptionsArgs> debugOptions) {
             this.debugOptions = debugOptions;
             return this;
         }
 
-        public Builder setDebugOptions(@Nullable DebugOptionsArgs debugOptions) {
+        public Builder debugOptions(@Nullable DebugOptionsArgs debugOptions) {
             this.debugOptions = Input.ofNullable(debugOptions);
             return this;
         }
 
-        public Builder setExperiments(@Nullable Input<List<String>> experiments) {
+        public Builder experiments(@Nullable Input<List<String>> experiments) {
             this.experiments = experiments;
             return this;
         }
 
-        public Builder setExperiments(@Nullable List<String> experiments) {
+        public Builder experiments(@Nullable List<String> experiments) {
             this.experiments = Input.ofNullable(experiments);
             return this;
         }
 
-        public Builder setFlexResourceSchedulingGoal(@Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal) {
+        public Builder flexResourceSchedulingGoal(@Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal) {
             this.flexResourceSchedulingGoal = flexResourceSchedulingGoal;
             return this;
         }
 
-        public Builder setFlexResourceSchedulingGoal(@Nullable EnvironmentFlexResourceSchedulingGoal flexResourceSchedulingGoal) {
+        public Builder flexResourceSchedulingGoal(@Nullable EnvironmentFlexResourceSchedulingGoal flexResourceSchedulingGoal) {
             this.flexResourceSchedulingGoal = Input.ofNullable(flexResourceSchedulingGoal);
             return this;
         }
 
-        public Builder setInternalExperiments(@Nullable Input<Map<String,String>> internalExperiments) {
+        public Builder internalExperiments(@Nullable Input<Map<String,String>> internalExperiments) {
             this.internalExperiments = internalExperiments;
             return this;
         }
 
-        public Builder setInternalExperiments(@Nullable Map<String,String> internalExperiments) {
+        public Builder internalExperiments(@Nullable Map<String,String> internalExperiments) {
             this.internalExperiments = Input.ofNullable(internalExperiments);
             return this;
         }
 
-        public Builder setSdkPipelineOptions(@Nullable Input<Map<String,String>> sdkPipelineOptions) {
+        public Builder sdkPipelineOptions(@Nullable Input<Map<String,String>> sdkPipelineOptions) {
             this.sdkPipelineOptions = sdkPipelineOptions;
             return this;
         }
 
-        public Builder setSdkPipelineOptions(@Nullable Map<String,String> sdkPipelineOptions) {
+        public Builder sdkPipelineOptions(@Nullable Map<String,String> sdkPipelineOptions) {
             this.sdkPipelineOptions = Input.ofNullable(sdkPipelineOptions);
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder setServiceKmsKeyName(@Nullable Input<String> serviceKmsKeyName) {
+        public Builder serviceKmsKeyName(@Nullable Input<String> serviceKmsKeyName) {
             this.serviceKmsKeyName = serviceKmsKeyName;
             return this;
         }
 
-        public Builder setServiceKmsKeyName(@Nullable String serviceKmsKeyName) {
+        public Builder serviceKmsKeyName(@Nullable String serviceKmsKeyName) {
             this.serviceKmsKeyName = Input.ofNullable(serviceKmsKeyName);
             return this;
         }
 
-        public Builder setServiceOptions(@Nullable Input<List<String>> serviceOptions) {
+        public Builder serviceOptions(@Nullable Input<List<String>> serviceOptions) {
             this.serviceOptions = serviceOptions;
             return this;
         }
 
-        public Builder setServiceOptions(@Nullable List<String> serviceOptions) {
+        public Builder serviceOptions(@Nullable List<String> serviceOptions) {
             this.serviceOptions = Input.ofNullable(serviceOptions);
             return this;
         }
 
-        public Builder setTempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
-        public Builder setTempStoragePrefix(@Nullable String tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
             this.tempStoragePrefix = Input.ofNullable(tempStoragePrefix);
             return this;
         }
 
-        public Builder setUserAgent(@Nullable Input<Map<String,String>> userAgent) {
+        public Builder userAgent(@Nullable Input<Map<String,String>> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
 
-        public Builder setUserAgent(@Nullable Map<String,String> userAgent) {
+        public Builder userAgent(@Nullable Map<String,String> userAgent) {
             this.userAgent = Input.ofNullable(userAgent);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Map<String,String>> version) {
+        public Builder version(@Nullable Input<Map<String,String>> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Map<String,String> version) {
+        public Builder version(@Nullable Map<String,String> version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setWorkerPools(@Nullable Input<List<WorkerPoolArgs>> workerPools) {
+        public Builder workerPools(@Nullable Input<List<WorkerPoolArgs>> workerPools) {
             this.workerPools = workerPools;
             return this;
         }
 
-        public Builder setWorkerPools(@Nullable List<WorkerPoolArgs> workerPools) {
+        public Builder workerPools(@Nullable List<WorkerPoolArgs> workerPools) {
             this.workerPools = Input.ofNullable(workerPools);
             return this;
         }
 
-        public Builder setWorkerRegion(@Nullable Input<String> workerRegion) {
+        public Builder workerRegion(@Nullable Input<String> workerRegion) {
             this.workerRegion = workerRegion;
             return this;
         }
 
-        public Builder setWorkerRegion(@Nullable String workerRegion) {
+        public Builder workerRegion(@Nullable String workerRegion) {
             this.workerRegion = Input.ofNullable(workerRegion);
             return this;
         }
 
-        public Builder setWorkerZone(@Nullable Input<String> workerZone) {
+        public Builder workerZone(@Nullable Input<String> workerZone) {
             this.workerZone = workerZone;
             return this;
         }
 
-        public Builder setWorkerZone(@Nullable String workerZone) {
+        public Builder workerZone(@Nullable String workerZone) {
             this.workerZone = Input.ofNullable(workerZone);
             return this;
         }

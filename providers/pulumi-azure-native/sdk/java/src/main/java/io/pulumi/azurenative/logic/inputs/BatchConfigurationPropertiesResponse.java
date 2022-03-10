@@ -120,27 +120,27 @@ public final class BatchConfigurationPropertiesResponse extends io.pulumi.resour
     	      this.releaseCriteria = defaults.releaseCriteria;
         }
 
-        public Builder setBatchGroupName(String batchGroupName) {
+        public Builder batchGroupName(String batchGroupName) {
             this.batchGroupName = Objects.requireNonNull(batchGroupName);
             return this;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setReleaseCriteria(BatchReleaseCriteriaResponse releaseCriteria) {
+        public Builder releaseCriteria(BatchReleaseCriteriaResponse releaseCriteria) {
             this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
             return this;
         }

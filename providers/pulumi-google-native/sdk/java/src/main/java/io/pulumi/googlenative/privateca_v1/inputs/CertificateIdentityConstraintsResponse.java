@@ -89,17 +89,17 @@ public final class CertificateIdentityConstraintsResponse extends io.pulumi.reso
     	      this.celExpression = defaults.celExpression;
         }
 
-        public Builder setAllowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
 
-        public Builder setAllowSubjectPassthrough(Boolean allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
 
-        public Builder setCelExpression(ExprResponse celExpression) {
+        public Builder celExpression(ExprResponse celExpression) {
             this.celExpression = Objects.requireNonNull(celExpression);
             return this;
         }

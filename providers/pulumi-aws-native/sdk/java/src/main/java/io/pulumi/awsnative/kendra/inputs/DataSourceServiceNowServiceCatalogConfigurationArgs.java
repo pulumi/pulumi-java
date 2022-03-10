@@ -113,62 +113,62 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
     	      this.includeAttachmentFilePatterns = defaults.includeAttachmentFilePatterns;
         }
 
-        public Builder setCrawlAttachments(@Nullable Input<Boolean> crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Input<Boolean> crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = Input.ofNullable(crawlAttachments);
             return this;
         }
 
-        public Builder setDocumentDataFieldName(Input<String> documentDataFieldName) {
+        public Builder documentDataFieldName(Input<String> documentDataFieldName) {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
 
-        public Builder setDocumentDataFieldName(String documentDataFieldName) {
+        public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Input.of(Objects.requireNonNull(documentDataFieldName));
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Input.ofNullable(documentTitleFieldName);
             return this;
         }
 
-        public Builder setExcludeAttachmentFilePatterns(@Nullable Input<List<String>> excludeAttachmentFilePatterns) {
+        public Builder excludeAttachmentFilePatterns(@Nullable Input<List<String>> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
 
-        public Builder setExcludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
+        public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = Input.ofNullable(excludeAttachmentFilePatterns);
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder setIncludeAttachmentFilePatterns(@Nullable Input<List<String>> includeAttachmentFilePatterns) {
+        public Builder includeAttachmentFilePatterns(@Nullable Input<List<String>> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
 
-        public Builder setIncludeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
+        public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = Input.ofNullable(includeAttachmentFilePatterns);
             return this;
         }

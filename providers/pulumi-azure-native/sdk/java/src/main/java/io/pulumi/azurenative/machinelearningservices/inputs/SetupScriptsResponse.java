@@ -57,7 +57,7 @@ public final class SetupScriptsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.scripts = defaults.scripts;
         }
 
-        public Builder setScripts(@Nullable ScriptsToExecuteResponse scripts) {
+        public Builder scripts(@Nullable ScriptsToExecuteResponse scripts) {
             this.scripts = scripts;
             return this;
         }

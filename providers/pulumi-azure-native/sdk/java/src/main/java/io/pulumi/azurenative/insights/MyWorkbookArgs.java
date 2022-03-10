@@ -282,152 +282,152 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCategory(Input<String> category) {
+        public Builder category(Input<String> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Input.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<MyWorkbookManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<MyWorkbookManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable MyWorkbookManagedIdentityArgs identity) {
+        public Builder identity(@Nullable MyWorkbookManagedIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,Kind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,Kind> kind) {
+        public Builder kind(@Nullable Either<String,Kind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setSerializedData(Input<String> serializedData) {
+        public Builder serializedData(Input<String> serializedData) {
             this.serializedData = Objects.requireNonNull(serializedData);
             return this;
         }
 
-        public Builder setSerializedData(String serializedData) {
+        public Builder serializedData(String serializedData) {
             this.serializedData = Input.of(Objects.requireNonNull(serializedData));
             return this;
         }
 
-        public Builder setSourceId(@Nullable Input<String> sourceId) {
+        public Builder sourceId(@Nullable Input<String> sourceId) {
             this.sourceId = sourceId;
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = Input.ofNullable(sourceId);
             return this;
         }
 
-        public Builder setStorageUri(@Nullable Input<String> storageUri) {
+        public Builder storageUri(@Nullable Input<String> storageUri) {
             this.storageUri = storageUri;
             return this;
         }
 
-        public Builder setStorageUri(@Nullable String storageUri) {
+        public Builder storageUri(@Nullable String storageUri) {
             this.storageUri = Input.ofNullable(storageUri);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

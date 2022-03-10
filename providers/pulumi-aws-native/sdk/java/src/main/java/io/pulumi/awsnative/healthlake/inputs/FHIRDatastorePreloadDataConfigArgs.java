@@ -56,12 +56,12 @@ public final class FHIRDatastorePreloadDataConfigArgs extends io.pulumi.resource
     	      this.preloadDataType = defaults.preloadDataType;
         }
 
-        public Builder setPreloadDataType(Input<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType) {
+        public Builder preloadDataType(Input<FHIRDatastorePreloadDataConfigPreloadDataType> preloadDataType) {
             this.preloadDataType = Objects.requireNonNull(preloadDataType);
             return this;
         }
 
-        public Builder setPreloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
+        public Builder preloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
             this.preloadDataType = Input.of(Objects.requireNonNull(preloadDataType));
             return this;
         }

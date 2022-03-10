@@ -42,7 +42,7 @@ public final class EntryBigqueryTableSpecTableSpec {
     	      this.groupedEntry = defaults.groupedEntry;
         }
 
-        public Builder setGroupedEntry(@Nullable String groupedEntry) {
+        public Builder groupedEntry(@Nullable String groupedEntry) {
             this.groupedEntry = groupedEntry;
             return this;
         }

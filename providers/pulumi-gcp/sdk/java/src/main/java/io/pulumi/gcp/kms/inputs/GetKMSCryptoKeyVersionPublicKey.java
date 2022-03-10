@@ -68,12 +68,12 @@ public final class GetKMSCryptoKeyVersionPublicKey extends io.pulumi.resources.I
     	      this.pem = defaults.pem;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setPem(String pem) {
+        public Builder pem(String pem) {
             this.pem = Objects.requireNonNull(pem);
             return this;
         }

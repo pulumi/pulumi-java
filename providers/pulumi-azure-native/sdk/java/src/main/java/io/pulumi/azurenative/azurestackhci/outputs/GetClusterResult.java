@@ -390,112 +390,112 @@ public final class GetClusterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAadClientId(String aadClientId) {
+        public Builder aadClientId(String aadClientId) {
             this.aadClientId = Objects.requireNonNull(aadClientId);
             return this;
         }
 
-        public Builder setAadTenantId(String aadTenantId) {
+        public Builder aadTenantId(String aadTenantId) {
             this.aadTenantId = Objects.requireNonNull(aadTenantId);
             return this;
         }
 
-        public Builder setBillingModel(String billingModel) {
+        public Builder billingModel(String billingModel) {
             this.billingModel = Objects.requireNonNull(billingModel);
             return this;
         }
 
-        public Builder setCloudId(String cloudId) {
+        public Builder cloudId(String cloudId) {
             this.cloudId = Objects.requireNonNull(cloudId);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedByType(@Nullable String createdByType) {
+        public Builder createdByType(@Nullable String createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastBillingTimestamp(String lastBillingTimestamp) {
+        public Builder lastBillingTimestamp(String lastBillingTimestamp) {
             this.lastBillingTimestamp = Objects.requireNonNull(lastBillingTimestamp);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedByType(@Nullable String lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
-        public Builder setLastSyncTimestamp(String lastSyncTimestamp) {
+        public Builder lastSyncTimestamp(String lastSyncTimestamp) {
             this.lastSyncTimestamp = Objects.requireNonNull(lastSyncTimestamp);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRegistrationTimestamp(String registrationTimestamp) {
+        public Builder registrationTimestamp(String registrationTimestamp) {
             this.registrationTimestamp = Objects.requireNonNull(registrationTimestamp);
             return this;
         }
 
-        public Builder setReportedProperties(@Nullable ClusterReportedPropertiesResponse reportedProperties) {
+        public Builder reportedProperties(@Nullable ClusterReportedPropertiesResponse reportedProperties) {
             this.reportedProperties = reportedProperties;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTrialDaysRemaining(Double trialDaysRemaining) {
+        public Builder trialDaysRemaining(Double trialDaysRemaining) {
             this.trialDaysRemaining = Objects.requireNonNull(trialDaysRemaining);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -212,57 +212,57 @@ public final class GetPartnerResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setEtag(@Nullable Integer etag) {
+        public Builder etag(@Nullable Integer etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setPartnerId(@Nullable String partnerId) {
+        public Builder partnerId(@Nullable String partnerId) {
             this.partnerId = partnerId;
             return this;
         }
 
-        public Builder setPartnerName(@Nullable String partnerName) {
+        public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedTime(@Nullable String updatedTime) {
+        public Builder updatedTime(@Nullable String updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

@@ -59,12 +59,12 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsOsState = defaults.windowsOsState;
         }
 
-        public Builder setWindowsOsState(@Nullable Input<Either<String,WindowsOsState>> windowsOsState) {
+        public Builder windowsOsState(@Nullable Input<Either<String,WindowsOsState>> windowsOsState) {
             this.windowsOsState = windowsOsState;
             return this;
         }
 
-        public Builder setWindowsOsState(@Nullable Either<String,WindowsOsState> windowsOsState) {
+        public Builder windowsOsState(@Nullable Either<String,WindowsOsState> windowsOsState) {
             this.windowsOsState = Input.ofNullable(windowsOsState);
             return this;
         }

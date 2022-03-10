@@ -384,212 +384,212 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDatasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
+        public Builder datasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
             this.datasets = datasets;
             return this;
         }
 
-        public Builder setDatasets(@Nullable List<DatasetReferenceArgs> datasets) {
+        public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
             this.datasets = Input.ofNullable(datasets);
             return this;
         }
 
-        public Builder setDerivedModelIds(@Nullable Input<List<String>> derivedModelIds) {
+        public Builder derivedModelIds(@Nullable Input<List<String>> derivedModelIds) {
             this.derivedModelIds = derivedModelIds;
             return this;
         }
 
-        public Builder setDerivedModelIds(@Nullable List<String> derivedModelIds) {
+        public Builder derivedModelIds(@Nullable List<String> derivedModelIds) {
             this.derivedModelIds = Input.ofNullable(derivedModelIds);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExperimentName(@Nullable Input<String> experimentName) {
+        public Builder experimentName(@Nullable Input<String> experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
-        public Builder setExperimentName(@Nullable String experimentName) {
+        public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = Input.ofNullable(experimentName);
             return this;
         }
 
-        public Builder setFramework(@Nullable Input<String> framework) {
+        public Builder framework(@Nullable Input<String> framework) {
             this.framework = framework;
             return this;
         }
 
-        public Builder setFramework(@Nullable String framework) {
+        public Builder framework(@Nullable String framework) {
             this.framework = Input.ofNullable(framework);
             return this;
         }
 
-        public Builder setFrameworkVersion(@Nullable Input<String> frameworkVersion) {
+        public Builder frameworkVersion(@Nullable Input<String> frameworkVersion) {
             this.frameworkVersion = frameworkVersion;
             return this;
         }
 
-        public Builder setFrameworkVersion(@Nullable String frameworkVersion) {
+        public Builder frameworkVersion(@Nullable String frameworkVersion) {
             this.frameworkVersion = Input.ofNullable(frameworkVersion);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKvTags(@Nullable Input<Map<String,String>> kvTags) {
+        public Builder kvTags(@Nullable Input<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Input.ofNullable(kvTags);
             return this;
         }
 
-        public Builder setMimeType(Input<String> mimeType) {
+        public Builder mimeType(Input<String> mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Input.of(Objects.requireNonNull(mimeType));
             return this;
         }
 
-        public Builder setModifiedTime(@Nullable Input<String> modifiedTime) {
+        public Builder modifiedTime(@Nullable Input<String> modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
 
-        public Builder setModifiedTime(@Nullable String modifiedTime) {
+        public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = Input.ofNullable(modifiedTime);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParentModelId(@Nullable Input<String> parentModelId) {
+        public Builder parentModelId(@Nullable Input<String> parentModelId) {
             this.parentModelId = parentModelId;
             return this;
         }
 
-        public Builder setParentModelId(@Nullable String parentModelId) {
+        public Builder parentModelId(@Nullable String parentModelId) {
             this.parentModelId = Input.ofNullable(parentModelId);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceRequirements(@Nullable Input<ContainerResourceRequirementsArgs> resourceRequirements) {
+        public Builder resourceRequirements(@Nullable Input<ContainerResourceRequirementsArgs> resourceRequirements) {
             this.resourceRequirements = resourceRequirements;
             return this;
         }
 
-        public Builder setResourceRequirements(@Nullable ContainerResourceRequirementsArgs resourceRequirements) {
+        public Builder resourceRequirements(@Nullable ContainerResourceRequirementsArgs resourceRequirements) {
             this.resourceRequirements = Input.ofNullable(resourceRequirements);
             return this;
         }
 
-        public Builder setRunId(@Nullable Input<String> runId) {
+        public Builder runId(@Nullable Input<String> runId) {
             this.runId = runId;
             return this;
         }
 
-        public Builder setRunId(@Nullable String runId) {
+        public Builder runId(@Nullable String runId) {
             this.runId = Input.ofNullable(runId);
             return this;
         }
 
-        public Builder setSampleInputData(@Nullable Input<String> sampleInputData) {
+        public Builder sampleInputData(@Nullable Input<String> sampleInputData) {
             this.sampleInputData = sampleInputData;
             return this;
         }
 
-        public Builder setSampleInputData(@Nullable String sampleInputData) {
+        public Builder sampleInputData(@Nullable String sampleInputData) {
             this.sampleInputData = Input.ofNullable(sampleInputData);
             return this;
         }
 
-        public Builder setSampleOutputData(@Nullable Input<String> sampleOutputData) {
+        public Builder sampleOutputData(@Nullable Input<String> sampleOutputData) {
             this.sampleOutputData = sampleOutputData;
             return this;
         }
 
-        public Builder setSampleOutputData(@Nullable String sampleOutputData) {
+        public Builder sampleOutputData(@Nullable String sampleOutputData) {
             this.sampleOutputData = Input.ofNullable(sampleOutputData);
             return this;
         }
 
-        public Builder setUnpack(@Nullable Input<Boolean> unpack) {
+        public Builder unpack(@Nullable Input<Boolean> unpack) {
             this.unpack = unpack;
             return this;
         }
 
-        public Builder setUnpack(@Nullable Boolean unpack) {
+        public Builder unpack(@Nullable Boolean unpack) {
             this.unpack = Input.ofNullable(unpack);
             return this;
         }
 
-        public Builder setUrl(Input<String> url) {
+        public Builder url(Input<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Double> version) {
+        public Builder version(@Nullable Input<Double> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Double version) {
+        public Builder version(@Nullable Double version) {
             this.version = Input.ofNullable(version);
             return this;
         }

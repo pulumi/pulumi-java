@@ -269,142 +269,142 @@ public final class StaticSiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateProperties = defaults.templateProperties;
         }
 
-        public Builder setAllowConfigFileUpdates(@Nullable Input<Boolean> allowConfigFileUpdates) {
+        public Builder allowConfigFileUpdates(@Nullable Input<Boolean> allowConfigFileUpdates) {
             this.allowConfigFileUpdates = allowConfigFileUpdates;
             return this;
         }
 
-        public Builder setAllowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
+        public Builder allowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
             this.allowConfigFileUpdates = Input.ofNullable(allowConfigFileUpdates);
             return this;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setBuildProperties(@Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties) {
+        public Builder buildProperties(@Nullable Input<StaticSiteBuildPropertiesArgs> buildProperties) {
             this.buildProperties = buildProperties;
             return this;
         }
 
-        public Builder setBuildProperties(@Nullable StaticSiteBuildPropertiesArgs buildProperties) {
+        public Builder buildProperties(@Nullable StaticSiteBuildPropertiesArgs buildProperties) {
             this.buildProperties = Input.ofNullable(buildProperties);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRepositoryToken(@Nullable Input<String> repositoryToken) {
+        public Builder repositoryToken(@Nullable Input<String> repositoryToken) {
             this.repositoryToken = repositoryToken;
             return this;
         }
 
-        public Builder setRepositoryToken(@Nullable String repositoryToken) {
+        public Builder repositoryToken(@Nullable String repositoryToken) {
             this.repositoryToken = Input.ofNullable(repositoryToken);
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable Input<String> repositoryUrl) {
+        public Builder repositoryUrl(@Nullable Input<String> repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable String repositoryUrl) {
+        public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = Input.ofNullable(repositoryUrl);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuDescriptionArgs> sku) {
+        public Builder sku(@Nullable Input<SkuDescriptionArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuDescriptionArgs sku) {
+        public Builder sku(@Nullable SkuDescriptionArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setStagingEnvironmentPolicy(@Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
+        public Builder stagingEnvironmentPolicy(@Nullable Input<StagingEnvironmentPolicy> stagingEnvironmentPolicy) {
             this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
             return this;
         }
 
-        public Builder setStagingEnvironmentPolicy(@Nullable StagingEnvironmentPolicy stagingEnvironmentPolicy) {
+        public Builder stagingEnvironmentPolicy(@Nullable StagingEnvironmentPolicy stagingEnvironmentPolicy) {
             this.stagingEnvironmentPolicy = Input.ofNullable(stagingEnvironmentPolicy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateProperties(@Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties) {
+        public Builder templateProperties(@Nullable Input<StaticSiteTemplateOptionsArgs> templateProperties) {
             this.templateProperties = templateProperties;
             return this;
         }
 
-        public Builder setTemplateProperties(@Nullable StaticSiteTemplateOptionsArgs templateProperties) {
+        public Builder templateProperties(@Nullable StaticSiteTemplateOptionsArgs templateProperties) {
             this.templateProperties = Input.ofNullable(templateProperties);
             return this;
         }

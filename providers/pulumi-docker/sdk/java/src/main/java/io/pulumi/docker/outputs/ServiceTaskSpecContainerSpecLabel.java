@@ -49,12 +49,12 @@ public final class ServiceTaskSpecContainerSpecLabel {
     	      this.value = defaults.value;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

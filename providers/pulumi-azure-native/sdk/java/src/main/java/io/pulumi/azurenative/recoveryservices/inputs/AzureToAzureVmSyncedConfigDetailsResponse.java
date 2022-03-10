@@ -77,12 +77,12 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends io.pulumi.r
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInputEndpoints(@Nullable List<InputEndpointResponse> inputEndpoints) {
+        public Builder inputEndpoints(@Nullable List<InputEndpointResponse> inputEndpoints) {
             this.inputEndpoints = inputEndpoints;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

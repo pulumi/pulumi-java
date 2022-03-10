@@ -69,22 +69,22 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setParameterKey(Input<String> parameterKey) {
+        public Builder parameterKey(Input<String> parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
 
-        public Builder setParameterKey(String parameterKey) {
+        public Builder parameterKey(String parameterKey) {
             this.parameterKey = Input.of(Objects.requireNonNull(parameterKey));
             return this;
         }
 
-        public Builder setParameterValue(Input<String> parameterValue) {
+        public Builder parameterValue(Input<String> parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
 
-        public Builder setParameterValue(String parameterValue) {
+        public Builder parameterValue(String parameterValue) {
             this.parameterValue = Input.of(Objects.requireNonNull(parameterValue));
             return this;
         }

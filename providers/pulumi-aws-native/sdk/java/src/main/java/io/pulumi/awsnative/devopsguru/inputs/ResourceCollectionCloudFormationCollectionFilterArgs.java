@@ -58,12 +58,12 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
     	      this.stackNames = defaults.stackNames;
         }
 
-        public Builder setStackNames(@Nullable Input<List<String>> stackNames) {
+        public Builder stackNames(@Nullable Input<List<String>> stackNames) {
             this.stackNames = stackNames;
             return this;
         }
 
-        public Builder setStackNames(@Nullable List<String> stackNames) {
+        public Builder stackNames(@Nullable List<String> stackNames) {
             this.stackNames = Input.ofNullable(stackNames);
             return this;
         }

@@ -184,47 +184,47 @@ public final class DeploymentSpec {
     	      this.template = defaults.template;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setPaused(@Nullable Boolean paused) {
+        public Builder paused(@Nullable Boolean paused) {
             this.paused = paused;
             return this;
         }
 
-        public Builder setProgressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
+        public Builder progressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
             this.progressDeadlineSeconds = progressDeadlineSeconds;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
-        public Builder setRollbackTo(@Nullable RollbackConfig rollbackTo) {
+        public Builder rollbackTo(@Nullable RollbackConfig rollbackTo) {
             this.rollbackTo = rollbackTo;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setStrategy(@Nullable DeploymentStrategy strategy) {
+        public Builder strategy(@Nullable DeploymentStrategy strategy) {
             this.strategy = strategy;
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpec template) {
+        public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }

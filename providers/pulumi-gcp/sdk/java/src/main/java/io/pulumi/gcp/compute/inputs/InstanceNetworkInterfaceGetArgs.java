@@ -258,122 +258,122 @@ public final class InstanceNetworkInterfaceGetArgs extends io.pulumi.resources.R
     	      this.subnetworkProject = defaults.subnetworkProject;
         }
 
-        public Builder setAccessConfigs(@Nullable Input<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs) {
+        public Builder accessConfigs(@Nullable Input<List<InstanceNetworkInterfaceAccessConfigGetArgs>> accessConfigs) {
             this.accessConfigs = accessConfigs;
             return this;
         }
 
-        public Builder setAccessConfigs(@Nullable List<InstanceNetworkInterfaceAccessConfigGetArgs> accessConfigs) {
+        public Builder accessConfigs(@Nullable List<InstanceNetworkInterfaceAccessConfigGetArgs> accessConfigs) {
             this.accessConfigs = Input.ofNullable(accessConfigs);
             return this;
         }
 
-        public Builder setAliasIpRanges(@Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges) {
+        public Builder aliasIpRanges(@Nullable Input<List<InstanceNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges) {
             this.aliasIpRanges = aliasIpRanges;
             return this;
         }
 
-        public Builder setAliasIpRanges(@Nullable List<InstanceNetworkInterfaceAliasIpRangeGetArgs> aliasIpRanges) {
+        public Builder aliasIpRanges(@Nullable List<InstanceNetworkInterfaceAliasIpRangeGetArgs> aliasIpRanges) {
             this.aliasIpRanges = Input.ofNullable(aliasIpRanges);
             return this;
         }
 
-        public Builder setIpv6AccessConfigs(@Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs) {
+        public Builder ipv6AccessConfigs(@Nullable Input<List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = ipv6AccessConfigs;
             return this;
         }
 
-        public Builder setIpv6AccessConfigs(@Nullable List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs> ipv6AccessConfigs) {
+        public Builder ipv6AccessConfigs(@Nullable List<InstanceNetworkInterfaceIpv6AccessConfigGetArgs> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = Input.ofNullable(ipv6AccessConfigs);
             return this;
         }
 
-        public Builder setIpv6AccessType(@Nullable Input<String> ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable Input<String> ipv6AccessType) {
             this.ipv6AccessType = ipv6AccessType;
             return this;
         }
 
-        public Builder setIpv6AccessType(@Nullable String ipv6AccessType) {
+        public Builder ipv6AccessType(@Nullable String ipv6AccessType) {
             this.ipv6AccessType = Input.ofNullable(ipv6AccessType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkIp(@Nullable Input<String> networkIp) {
+        public Builder networkIp(@Nullable Input<String> networkIp) {
             this.networkIp = networkIp;
             return this;
         }
 
-        public Builder setNetworkIp(@Nullable String networkIp) {
+        public Builder networkIp(@Nullable String networkIp) {
             this.networkIp = Input.ofNullable(networkIp);
             return this;
         }
 
-        public Builder setNicType(@Nullable Input<String> nicType) {
+        public Builder nicType(@Nullable Input<String> nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setNicType(@Nullable String nicType) {
+        public Builder nicType(@Nullable String nicType) {
             this.nicType = Input.ofNullable(nicType);
             return this;
         }
 
-        public Builder setQueueCount(@Nullable Input<Integer> queueCount) {
+        public Builder queueCount(@Nullable Input<Integer> queueCount) {
             this.queueCount = queueCount;
             return this;
         }
 
-        public Builder setQueueCount(@Nullable Integer queueCount) {
+        public Builder queueCount(@Nullable Integer queueCount) {
             this.queueCount = Input.ofNullable(queueCount);
             return this;
         }
 
-        public Builder setStackType(@Nullable Input<String> stackType) {
+        public Builder stackType(@Nullable Input<String> stackType) {
             this.stackType = stackType;
             return this;
         }
 
-        public Builder setStackType(@Nullable String stackType) {
+        public Builder stackType(@Nullable String stackType) {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder setSubnetworkProject(@Nullable Input<String> subnetworkProject) {
+        public Builder subnetworkProject(@Nullable Input<String> subnetworkProject) {
             this.subnetworkProject = subnetworkProject;
             return this;
         }
 
-        public Builder setSubnetworkProject(@Nullable String subnetworkProject) {
+        public Builder subnetworkProject(@Nullable String subnetworkProject) {
             this.subnetworkProject = Input.ofNullable(subnetworkProject);
             return this;
         }

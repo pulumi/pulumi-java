@@ -62,12 +62,12 @@ public final class GetServiceAccountArgs extends io.pulumi.resources.InvokeArgs 
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setServiceAccountId(String serviceAccountId) {
+        public Builder serviceAccountId(String serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }

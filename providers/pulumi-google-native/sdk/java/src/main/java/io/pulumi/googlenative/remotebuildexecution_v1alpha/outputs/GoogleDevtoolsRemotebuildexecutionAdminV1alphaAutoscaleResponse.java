@@ -65,12 +65,12 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder setMaxSize(String maxSize) {
+        public Builder maxSize(String maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
-        public Builder setMinSize(String minSize) {
+        public Builder minSize(String minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }

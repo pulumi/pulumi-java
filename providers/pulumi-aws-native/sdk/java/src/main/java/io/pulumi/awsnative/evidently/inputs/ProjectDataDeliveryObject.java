@@ -67,12 +67,12 @@ public final class ProjectDataDeliveryObject extends io.pulumi.resources.InvokeA
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setLogGroup(@Nullable String logGroup) {
+        public Builder logGroup(@Nullable String logGroup) {
             this.logGroup = logGroup;
             return this;
         }
 
-        public Builder setS3(@Nullable ProjectS3Destination s3) {
+        public Builder s3(@Nullable ProjectS3Destination s3) {
             this.s3 = s3;
             return this;
         }

@@ -98,22 +98,22 @@ public final class RouterBgpPeerBfdResponse {
     	      this.sessionInitializationMode = defaults.sessionInitializationMode;
         }
 
-        public Builder setMinReceiveInterval(Integer minReceiveInterval) {
+        public Builder minReceiveInterval(Integer minReceiveInterval) {
             this.minReceiveInterval = Objects.requireNonNull(minReceiveInterval);
             return this;
         }
 
-        public Builder setMinTransmitInterval(Integer minTransmitInterval) {
+        public Builder minTransmitInterval(Integer minTransmitInterval) {
             this.minTransmitInterval = Objects.requireNonNull(minTransmitInterval);
             return this;
         }
 
-        public Builder setMultiplier(Integer multiplier) {
+        public Builder multiplier(Integer multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
 
-        public Builder setSessionInitializationMode(String sessionInitializationMode) {
+        public Builder sessionInitializationMode(String sessionInitializationMode) {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
         }

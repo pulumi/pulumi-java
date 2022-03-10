@@ -112,52 +112,52 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerPoolId = defaults.workerPoolId;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable NetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable Input<WorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Input<WorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable WorkerConfigArgs workerConfig) {
+        public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }
 
-        public Builder setWorkerPoolId(Input<String> workerPoolId) {
+        public Builder workerPoolId(Input<String> workerPoolId) {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }
 
-        public Builder setWorkerPoolId(String workerPoolId) {
+        public Builder workerPoolId(String workerPoolId) {
             this.workerPoolId = Input.of(Objects.requireNonNull(workerPoolId));
             return this;
         }

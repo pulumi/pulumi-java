@@ -89,17 +89,17 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse extends io
     	      this.includeRegex = defaults.includeRegex;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setExcludeRegex(List<String> excludeRegex) {
+        public Builder excludeRegex(List<String> excludeRegex) {
             this.excludeRegex = Objects.requireNonNull(excludeRegex);
             return this;
         }
 
-        public Builder setIncludeRegex(List<String> includeRegex) {
+        public Builder includeRegex(List<String> includeRegex) {
             this.includeRegex = Objects.requireNonNull(includeRegex);
             return this;
         }

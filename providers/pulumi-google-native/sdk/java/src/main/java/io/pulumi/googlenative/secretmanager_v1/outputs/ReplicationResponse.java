@@ -66,12 +66,12 @@ public final class ReplicationResponse {
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setAutomatic(AutomaticResponse automatic) {
+        public Builder automatic(AutomaticResponse automatic) {
             this.automatic = Objects.requireNonNull(automatic);
             return this;
         }
 
-        public Builder setUserManaged(UserManagedResponse userManaged) {
+        public Builder userManaged(UserManagedResponse userManaged) {
             this.userManaged = Objects.requireNonNull(userManaged);
             return this;
         }

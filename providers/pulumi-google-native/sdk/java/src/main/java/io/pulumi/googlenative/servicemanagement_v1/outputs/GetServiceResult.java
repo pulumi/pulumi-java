@@ -65,12 +65,12 @@ public final class GetServiceResult {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setProducerProjectId(String producerProjectId) {
+        public Builder producerProjectId(String producerProjectId) {
             this.producerProjectId = Objects.requireNonNull(producerProjectId);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

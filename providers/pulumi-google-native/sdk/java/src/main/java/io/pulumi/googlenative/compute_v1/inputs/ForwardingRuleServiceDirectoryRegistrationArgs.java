@@ -90,32 +90,32 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
     	      this.serviceDirectoryRegion = defaults.serviceDirectoryRegion;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setServiceDirectoryRegion(@Nullable Input<String> serviceDirectoryRegion) {
+        public Builder serviceDirectoryRegion(@Nullable Input<String> serviceDirectoryRegion) {
             this.serviceDirectoryRegion = serviceDirectoryRegion;
             return this;
         }
 
-        public Builder setServiceDirectoryRegion(@Nullable String serviceDirectoryRegion) {
+        public Builder serviceDirectoryRegion(@Nullable String serviceDirectoryRegion) {
             this.serviceDirectoryRegion = Input.ofNullable(serviceDirectoryRegion);
             return this;
         }

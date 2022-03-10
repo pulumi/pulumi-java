@@ -150,37 +150,37 @@ public final class NetworkProfileResponse {
     	      this.serviceRuntimeSubnetId = defaults.serviceRuntimeSubnetId;
         }
 
-        public Builder setAppNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
+        public Builder appNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
             this.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
 
-        public Builder setAppSubnetId(@Nullable String appSubnetId) {
+        public Builder appSubnetId(@Nullable String appSubnetId) {
             this.appSubnetId = appSubnetId;
             return this;
         }
 
-        public Builder setOutboundIPs(NetworkProfileResponseOutboundIPs outboundIPs) {
+        public Builder outboundIPs(NetworkProfileResponseOutboundIPs outboundIPs) {
             this.outboundIPs = Objects.requireNonNull(outboundIPs);
             return this;
         }
 
-        public Builder setRequiredTraffics(List<RequiredTrafficResponse> requiredTraffics) {
+        public Builder requiredTraffics(List<RequiredTrafficResponse> requiredTraffics) {
             this.requiredTraffics = Objects.requireNonNull(requiredTraffics);
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setServiceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
+        public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
             this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
 
-        public Builder setServiceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
+        public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
             this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
         }

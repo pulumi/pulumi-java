@@ -50,7 +50,7 @@ public final class AssignedComponentItemResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

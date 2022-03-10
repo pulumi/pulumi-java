@@ -185,47 +185,47 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setBufferInterval(@Nullable Integer bufferInterval) {
+        public Builder bufferInterval(@Nullable Integer bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
 
-        public Builder setBufferSize(@Nullable Integer bufferSize) {
+        public Builder bufferSize(@Nullable Integer bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable String compressionFormat) {
+        public Builder compressionFormat(@Nullable String compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -126,8 +126,8 @@ public class EndpointSliceList extends io.pulumi.resources.CustomResource {
     private static EndpointSliceListArgs makeArgs(EndpointSliceListArgs args) {
         var builder = args == null ? EndpointSliceListArgs.builder() : EndpointSliceListArgs.builder(args);
         return builder
-            .setApiVersion("discovery.k8s.io/v1beta1")
-            .setKind("EndpointSliceList")
+            .apiVersion("discovery.k8s.io/v1beta1")
+            .kind("EndpointSliceList")
             .build();
     }
 

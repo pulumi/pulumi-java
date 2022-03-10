@@ -107,22 +107,22 @@ public final class AzureFileVolumeResponse extends io.pulumi.resources.InvokeArg
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setStorageAccountKey(@Nullable String storageAccountKey) {
+        public Builder storageAccountKey(@Nullable String storageAccountKey) {
             this.storageAccountKey = storageAccountKey;
             return this;
         }
 
-        public Builder setStorageAccountName(String storageAccountName) {
+        public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }

@@ -61,12 +61,12 @@ public final class GetNetworkAclResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkAclTag> tags) {
+        public Builder tags(@Nullable List<NetworkAclTag> tags) {
             this.tags = tags;
             return this;
         }

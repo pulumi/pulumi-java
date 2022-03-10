@@ -140,32 +140,32 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
     	      this.planType = defaults.planType;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setCurrent(@Nullable CommitmentPeriodResponse current) {
+        public Builder current(@Nullable CommitmentPeriodResponse current) {
             this.current = current;
             return this;
         }
 
-        public Builder setHostingModel(@Nullable String hostingModel) {
+        public Builder hostingModel(@Nullable String hostingModel) {
             this.hostingModel = hostingModel;
             return this;
         }
 
-        public Builder setLast(CommitmentPeriodResponse last) {
+        public Builder last(CommitmentPeriodResponse last) {
             this.last = Objects.requireNonNull(last);
             return this;
         }
 
-        public Builder setNext(@Nullable CommitmentPeriodResponse next) {
+        public Builder next(@Nullable CommitmentPeriodResponse next) {
             this.next = next;
             return this;
         }
 
-        public Builder setPlanType(@Nullable String planType) {
+        public Builder planType(@Nullable String planType) {
             this.planType = planType;
             return this;
         }

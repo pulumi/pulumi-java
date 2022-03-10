@@ -52,12 +52,12 @@ public final class OriginRequestPolicyCookiesConfig {
     	      this.cookies = defaults.cookies;
         }
 
-        public Builder setCookieBehavior(String cookieBehavior) {
+        public Builder cookieBehavior(String cookieBehavior) {
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
 
-        public Builder setCookies(@Nullable OriginRequestPolicyCookiesConfigCookies cookies) {
+        public Builder cookies(@Nullable OriginRequestPolicyCookiesConfigCookies cookies) {
             this.cookies = cookies;
             return this;
         }

@@ -245,67 +245,67 @@ public final class ExportExecutionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setError(@Nullable ErrorDetailsResponse error) {
+        public Builder error(@Nullable ErrorDetailsResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setExecutionType(@Nullable String executionType) {
+        public Builder executionType(@Nullable String executionType) {
             this.executionType = executionType;
             return this;
         }
 
-        public Builder setFileName(@Nullable String fileName) {
+        public Builder fileName(@Nullable String fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProcessingEndTime(@Nullable String processingEndTime) {
+        public Builder processingEndTime(@Nullable String processingEndTime) {
             this.processingEndTime = processingEndTime;
             return this;
         }
 
-        public Builder setProcessingStartTime(@Nullable String processingStartTime) {
+        public Builder processingStartTime(@Nullable String processingStartTime) {
             this.processingStartTime = processingStartTime;
             return this;
         }
 
-        public Builder setRunSettings(@Nullable CommonExportPropertiesResponse runSettings) {
+        public Builder runSettings(@Nullable CommonExportPropertiesResponse runSettings) {
             this.runSettings = runSettings;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubmittedBy(@Nullable String submittedBy) {
+        public Builder submittedBy(@Nullable String submittedBy) {
             this.submittedBy = submittedBy;
             return this;
         }
 
-        public Builder setSubmittedTime(@Nullable String submittedTime) {
+        public Builder submittedTime(@Nullable String submittedTime) {
             this.submittedTime = submittedTime;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

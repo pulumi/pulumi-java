@@ -106,42 +106,42 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
     	      this.state = defaults.state;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setShouldFeatureDisplayInPortal(@Nullable Input<Boolean> shouldFeatureDisplayInPortal) {
+        public Builder shouldFeatureDisplayInPortal(@Nullable Input<Boolean> shouldFeatureDisplayInPortal) {
             this.shouldFeatureDisplayInPortal = shouldFeatureDisplayInPortal;
             return this;
         }
 
-        public Builder setShouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
+        public Builder shouldFeatureDisplayInPortal(@Nullable Boolean shouldFeatureDisplayInPortal) {
             this.shouldFeatureDisplayInPortal = Input.ofNullable(shouldFeatureDisplayInPortal);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state) {
+        public Builder state(@Nullable Input<Either<String,SubscriptionFeatureRegistrationState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,SubscriptionFeatureRegistrationState> state) {
+        public Builder state(@Nullable Either<String,SubscriptionFeatureRegistrationState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

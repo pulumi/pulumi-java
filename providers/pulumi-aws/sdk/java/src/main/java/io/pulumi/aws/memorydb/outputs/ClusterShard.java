@@ -104,22 +104,22 @@ public final class ClusterShard {
     	      this.slots = defaults.slots;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNodes(@Nullable List<ClusterShardNode> nodes) {
+        public Builder nodes(@Nullable List<ClusterShardNode> nodes) {
             this.nodes = nodes;
             return this;
         }
 
-        public Builder setNumNodes(@Nullable Integer numNodes) {
+        public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = numNodes;
             return this;
         }
 
-        public Builder setSlots(@Nullable String slots) {
+        public Builder slots(@Nullable String slots) {
             this.slots = slots;
             return this;
         }

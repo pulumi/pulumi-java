@@ -175,112 +175,112 @@ public final class SpotFleetInstanceNetworkInterfaceSpecificationArgs extends io
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Input<Integer> deviceIndex) {
+        public Builder deviceIndex(@Nullable Input<Integer> deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Integer deviceIndex) {
+        public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = Input.ofNullable(deviceIndex);
             return this;
         }
 
-        public Builder setGroups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Input<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = Input.ofNullable(groups);
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Input.ofNullable(ipv6AddressCount);
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable Input<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Input<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<SpotFleetInstanceIpv6AddressArgs> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<SpotFleetInstanceIpv6AddressArgs> ipv6Addresses) {
             this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable Input<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable Input<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecificationArgs> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecificationArgs> privateIpAddresses) {
             this.privateIpAddresses = Input.ofNullable(privateIpAddresses);
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Input<Integer> secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Input<Integer> secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = Input.ofNullable(secondaryPrivateIpAddressCount);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

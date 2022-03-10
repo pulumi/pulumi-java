@@ -88,17 +88,17 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
     	      this.keyVaultResourceId = defaults.keyVaultResourceId;
         }
 
-        public Builder setEncryptionKeyName(String encryptionKeyName) {
+        public Builder encryptionKeyName(String encryptionKeyName) {
             this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
             return this;
         }
 
-        public Builder setEncryptionKeyVersion(String encryptionKeyVersion) {
+        public Builder encryptionKeyVersion(String encryptionKeyVersion) {
             this.encryptionKeyVersion = Objects.requireNonNull(encryptionKeyVersion);
             return this;
         }
 
-        public Builder setKeyVaultResourceId(String keyVaultResourceId) {
+        public Builder keyVaultResourceId(String keyVaultResourceId) {
             this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId);
             return this;
         }

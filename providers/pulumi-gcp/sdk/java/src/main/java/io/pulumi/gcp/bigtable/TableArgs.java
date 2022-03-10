@@ -123,52 +123,52 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.splitKeys = defaults.splitKeys;
         }
 
-        public Builder setColumnFamilies(@Nullable Input<List<TableColumnFamilyArgs>> columnFamilies) {
+        public Builder columnFamilies(@Nullable Input<List<TableColumnFamilyArgs>> columnFamilies) {
             this.columnFamilies = columnFamilies;
             return this;
         }
 
-        public Builder setColumnFamilies(@Nullable List<TableColumnFamilyArgs> columnFamilies) {
+        public Builder columnFamilies(@Nullable List<TableColumnFamilyArgs> columnFamilies) {
             this.columnFamilies = Input.ofNullable(columnFamilies);
             return this;
         }
 
-        public Builder setInstanceName(Input<String> instanceName) {
+        public Builder instanceName(Input<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
-        public Builder setInstanceName(String instanceName) {
+        public Builder instanceName(String instanceName) {
             this.instanceName = Input.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSplitKeys(@Nullable Input<List<String>> splitKeys) {
+        public Builder splitKeys(@Nullable Input<List<String>> splitKeys) {
             this.splitKeys = splitKeys;
             return this;
         }
 
-        public Builder setSplitKeys(@Nullable List<String> splitKeys) {
+        public Builder splitKeys(@Nullable List<String> splitKeys) {
             this.splitKeys = Input.ofNullable(splitKeys);
             return this;
         }

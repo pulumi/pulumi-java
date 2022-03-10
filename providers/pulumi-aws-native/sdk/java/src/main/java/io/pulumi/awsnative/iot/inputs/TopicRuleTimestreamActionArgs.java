@@ -114,62 +114,62 @@ public final class TopicRuleTimestreamActionArgs extends io.pulumi.resources.Res
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setBatchMode(@Nullable Input<Boolean> batchMode) {
+        public Builder batchMode(@Nullable Input<Boolean> batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = Input.ofNullable(batchMode);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDimensions(Input<List<TopicRuleTimestreamDimensionArgs>> dimensions) {
+        public Builder dimensions(Input<List<TopicRuleTimestreamDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setDimensions(List<TopicRuleTimestreamDimensionArgs> dimensions) {
+        public Builder dimensions(List<TopicRuleTimestreamDimensionArgs> dimensions) {
             this.dimensions = Input.of(Objects.requireNonNull(dimensions));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder setTimestamp(@Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp) {
+        public Builder timestamp(@Nullable Input<TopicRuleTimestreamTimestampArgs> timestamp) {
             this.timestamp = timestamp;
             return this;
         }
 
-        public Builder setTimestamp(@Nullable TopicRuleTimestreamTimestampArgs timestamp) {
+        public Builder timestamp(@Nullable TopicRuleTimestreamTimestampArgs timestamp) {
             this.timestamp = Input.ofNullable(timestamp);
             return this;
         }

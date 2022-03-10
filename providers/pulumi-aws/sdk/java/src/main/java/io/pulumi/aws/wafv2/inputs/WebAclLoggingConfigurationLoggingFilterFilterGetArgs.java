@@ -87,32 +87,32 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterGetArgs extends 
     	      this.requirement = defaults.requirement;
         }
 
-        public Builder setBehavior(Input<String> behavior) {
+        public Builder behavior(Input<String> behavior) {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
 
-        public Builder setBehavior(String behavior) {
+        public Builder behavior(String behavior) {
             this.behavior = Input.of(Objects.requireNonNull(behavior));
             return this;
         }
 
-        public Builder setConditions(Input<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions) {
+        public Builder conditions(Input<List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConditions(List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs> conditions) {
+        public Builder conditions(List<WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs> conditions) {
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder setRequirement(Input<String> requirement) {
+        public Builder requirement(Input<String> requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
 
-        public Builder setRequirement(String requirement) {
+        public Builder requirement(String requirement) {
             this.requirement = Input.of(Objects.requireNonNull(requirement));
             return this;
         }

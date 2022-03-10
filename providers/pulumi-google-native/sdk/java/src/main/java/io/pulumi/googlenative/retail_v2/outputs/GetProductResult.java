@@ -556,162 +556,162 @@ public final class GetProductResult {
     	      this.variants = defaults.variants;
         }
 
-        public Builder setAttributes(Map<String,String> attributes) {
+        public Builder attributes(Map<String,String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setAudience(GoogleCloudRetailV2AudienceResponse audience) {
+        public Builder audience(GoogleCloudRetailV2AudienceResponse audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setAvailability(String availability) {
+        public Builder availability(String availability) {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
 
-        public Builder setAvailableQuantity(Integer availableQuantity) {
+        public Builder availableQuantity(Integer availableQuantity) {
             this.availableQuantity = Objects.requireNonNull(availableQuantity);
             return this;
         }
 
-        public Builder setAvailableTime(String availableTime) {
+        public Builder availableTime(String availableTime) {
             this.availableTime = Objects.requireNonNull(availableTime);
             return this;
         }
 
-        public Builder setBrands(List<String> brands) {
+        public Builder brands(List<String> brands) {
             this.brands = Objects.requireNonNull(brands);
             return this;
         }
 
-        public Builder setCategories(List<String> categories) {
+        public Builder categories(List<String> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setCollectionMemberIds(List<String> collectionMemberIds) {
+        public Builder collectionMemberIds(List<String> collectionMemberIds) {
             this.collectionMemberIds = Objects.requireNonNull(collectionMemberIds);
             return this;
         }
 
-        public Builder setColorInfo(GoogleCloudRetailV2ColorInfoResponse colorInfo) {
+        public Builder colorInfo(GoogleCloudRetailV2ColorInfoResponse colorInfo) {
             this.colorInfo = Objects.requireNonNull(colorInfo);
             return this;
         }
 
-        public Builder setConditions(List<String> conditions) {
+        public Builder conditions(List<String> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setFulfillmentInfo(List<GoogleCloudRetailV2FulfillmentInfoResponse> fulfillmentInfo) {
+        public Builder fulfillmentInfo(List<GoogleCloudRetailV2FulfillmentInfoResponse> fulfillmentInfo) {
             this.fulfillmentInfo = Objects.requireNonNull(fulfillmentInfo);
             return this;
         }
 
-        public Builder setGtin(String gtin) {
+        public Builder gtin(String gtin) {
             this.gtin = Objects.requireNonNull(gtin);
             return this;
         }
 
-        public Builder setImages(List<GoogleCloudRetailV2ImageResponse> images) {
+        public Builder images(List<GoogleCloudRetailV2ImageResponse> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setMaterials(List<String> materials) {
+        public Builder materials(List<String> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPatterns(List<String> patterns) {
+        public Builder patterns(List<String> patterns) {
             this.patterns = Objects.requireNonNull(patterns);
             return this;
         }
 
-        public Builder setPriceInfo(GoogleCloudRetailV2PriceInfoResponse priceInfo) {
+        public Builder priceInfo(GoogleCloudRetailV2PriceInfoResponse priceInfo) {
             this.priceInfo = Objects.requireNonNull(priceInfo);
             return this;
         }
 
-        public Builder setPrimaryProductId(String primaryProductId) {
+        public Builder primaryProductId(String primaryProductId) {
             this.primaryProductId = Objects.requireNonNull(primaryProductId);
             return this;
         }
 
-        public Builder setPromotions(List<GoogleCloudRetailV2PromotionResponse> promotions) {
+        public Builder promotions(List<GoogleCloudRetailV2PromotionResponse> promotions) {
             this.promotions = Objects.requireNonNull(promotions);
             return this;
         }
 
-        public Builder setPublishTime(String publishTime) {
+        public Builder publishTime(String publishTime) {
             this.publishTime = Objects.requireNonNull(publishTime);
             return this;
         }
 
-        public Builder setRating(GoogleCloudRetailV2RatingResponse rating) {
+        public Builder rating(GoogleCloudRetailV2RatingResponse rating) {
             this.rating = Objects.requireNonNull(rating);
             return this;
         }
 
-        public Builder setRetrievableFields(String retrievableFields) {
+        public Builder retrievableFields(String retrievableFields) {
             this.retrievableFields = Objects.requireNonNull(retrievableFields);
             return this;
         }
 
-        public Builder setSizes(List<String> sizes) {
+        public Builder sizes(List<String> sizes) {
             this.sizes = Objects.requireNonNull(sizes);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setVariants(List<GoogleCloudRetailV2ProductResponse> variants) {
+        public Builder variants(List<GoogleCloudRetailV2ProductResponse> variants) {
             this.variants = Objects.requireNonNull(variants);
             return this;
         }

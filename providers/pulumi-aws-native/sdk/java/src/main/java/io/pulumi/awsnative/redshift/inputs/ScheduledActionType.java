@@ -76,17 +76,17 @@ public final class ScheduledActionType extends io.pulumi.resources.InvokeArgs {
     	      this.resumeCluster = defaults.resumeCluster;
         }
 
-        public Builder setPauseCluster(@Nullable ScheduledActionPauseClusterMessage pauseCluster) {
+        public Builder pauseCluster(@Nullable ScheduledActionPauseClusterMessage pauseCluster) {
             this.pauseCluster = pauseCluster;
             return this;
         }
 
-        public Builder setResizeCluster(@Nullable ScheduledActionResizeClusterMessage resizeCluster) {
+        public Builder resizeCluster(@Nullable ScheduledActionResizeClusterMessage resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
 
-        public Builder setResumeCluster(@Nullable ScheduledActionResumeClusterMessage resumeCluster) {
+        public Builder resumeCluster(@Nullable ScheduledActionResumeClusterMessage resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
         }

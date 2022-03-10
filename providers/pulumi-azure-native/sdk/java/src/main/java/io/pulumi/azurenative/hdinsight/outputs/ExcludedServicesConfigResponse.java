@@ -67,12 +67,12 @@ public final class ExcludedServicesConfigResponse {
     	      this.excludedServicesList = defaults.excludedServicesList;
         }
 
-        public Builder setExcludedServicesConfigId(@Nullable String excludedServicesConfigId) {
+        public Builder excludedServicesConfigId(@Nullable String excludedServicesConfigId) {
             this.excludedServicesConfigId = excludedServicesConfigId;
             return this;
         }
 
-        public Builder setExcludedServicesList(@Nullable String excludedServicesList) {
+        public Builder excludedServicesList(@Nullable String excludedServicesList) {
             this.excludedServicesList = excludedServicesList;
             return this;
         }

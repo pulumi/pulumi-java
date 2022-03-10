@@ -82,17 +82,17 @@ public final class GetTraceSinkResult {
     	      this.writerIdentity = defaults.writerIdentity;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputConfig(OutputConfigResponse outputConfig) {
+        public Builder outputConfig(OutputConfigResponse outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
-        public Builder setWriterIdentity(String writerIdentity) {
+        public Builder writerIdentity(String writerIdentity) {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
         }

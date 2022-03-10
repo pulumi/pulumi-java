@@ -60,17 +60,17 @@ public final class TopicRuleIotAnalyticsAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

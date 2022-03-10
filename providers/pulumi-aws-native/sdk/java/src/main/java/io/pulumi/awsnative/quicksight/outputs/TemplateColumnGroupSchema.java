@@ -69,12 +69,12 @@ public final class TemplateColumnGroupSchema {
     	      this.name = defaults.name;
         }
 
-        public Builder setColumnGroupColumnSchemaList(@Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList) {
+        public Builder columnGroupColumnSchemaList(@Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList) {
             this.columnGroupColumnSchemaList = columnGroupColumnSchemaList;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

@@ -115,42 +115,42 @@ public final class ClusterUpgradeDeltaHealthPolicyArgs extends io.pulumi.resourc
     	      this.maxPercentUpgradeDomainDeltaUnhealthyNodes = defaults.maxPercentUpgradeDomainDeltaUnhealthyNodes;
         }
 
-        public Builder setApplicationDeltaHealthPolicies(@Nullable Input<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies) {
+        public Builder applicationDeltaHealthPolicies(@Nullable Input<Map<String,ApplicationDeltaHealthPolicyArgs>> applicationDeltaHealthPolicies) {
             this.applicationDeltaHealthPolicies = applicationDeltaHealthPolicies;
             return this;
         }
 
-        public Builder setApplicationDeltaHealthPolicies(@Nullable Map<String,ApplicationDeltaHealthPolicyArgs> applicationDeltaHealthPolicies) {
+        public Builder applicationDeltaHealthPolicies(@Nullable Map<String,ApplicationDeltaHealthPolicyArgs> applicationDeltaHealthPolicies) {
             this.applicationDeltaHealthPolicies = Input.ofNullable(applicationDeltaHealthPolicies);
             return this;
         }
 
-        public Builder setMaxPercentDeltaUnhealthyApplications(Input<Integer> maxPercentDeltaUnhealthyApplications) {
+        public Builder maxPercentDeltaUnhealthyApplications(Input<Integer> maxPercentDeltaUnhealthyApplications) {
             this.maxPercentDeltaUnhealthyApplications = Objects.requireNonNull(maxPercentDeltaUnhealthyApplications);
             return this;
         }
 
-        public Builder setMaxPercentDeltaUnhealthyApplications(Integer maxPercentDeltaUnhealthyApplications) {
+        public Builder maxPercentDeltaUnhealthyApplications(Integer maxPercentDeltaUnhealthyApplications) {
             this.maxPercentDeltaUnhealthyApplications = Input.of(Objects.requireNonNull(maxPercentDeltaUnhealthyApplications));
             return this;
         }
 
-        public Builder setMaxPercentDeltaUnhealthyNodes(Input<Integer> maxPercentDeltaUnhealthyNodes) {
+        public Builder maxPercentDeltaUnhealthyNodes(Input<Integer> maxPercentDeltaUnhealthyNodes) {
             this.maxPercentDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentDeltaUnhealthyNodes);
             return this;
         }
 
-        public Builder setMaxPercentDeltaUnhealthyNodes(Integer maxPercentDeltaUnhealthyNodes) {
+        public Builder maxPercentDeltaUnhealthyNodes(Integer maxPercentDeltaUnhealthyNodes) {
             this.maxPercentDeltaUnhealthyNodes = Input.of(Objects.requireNonNull(maxPercentDeltaUnhealthyNodes));
             return this;
         }
 
-        public Builder setMaxPercentUpgradeDomainDeltaUnhealthyNodes(Input<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes) {
+        public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Input<Integer> maxPercentUpgradeDomainDeltaUnhealthyNodes) {
             this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes);
             return this;
         }
 
-        public Builder setMaxPercentUpgradeDomainDeltaUnhealthyNodes(Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
+        public Builder maxPercentUpgradeDomainDeltaUnhealthyNodes(Integer maxPercentUpgradeDomainDeltaUnhealthyNodes) {
             this.maxPercentUpgradeDomainDeltaUnhealthyNodes = Input.of(Objects.requireNonNull(maxPercentUpgradeDomainDeltaUnhealthyNodes));
             return this;
         }

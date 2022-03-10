@@ -293,122 +293,122 @@ public final class WorkloadIdentityPoolProviderState extends io.pulumi.resources
     	      this.workloadIdentityPoolProviderId = defaults.workloadIdentityPoolProviderId;
         }
 
-        public Builder setAttributeCondition(@Nullable Input<String> attributeCondition) {
+        public Builder attributeCondition(@Nullable Input<String> attributeCondition) {
             this.attributeCondition = attributeCondition;
             return this;
         }
 
-        public Builder setAttributeCondition(@Nullable String attributeCondition) {
+        public Builder attributeCondition(@Nullable String attributeCondition) {
             this.attributeCondition = Input.ofNullable(attributeCondition);
             return this;
         }
 
-        public Builder setAttributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
+        public Builder attributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
             this.attributeMapping = attributeMapping;
             return this;
         }
 
-        public Builder setAttributeMapping(@Nullable Map<String,String> attributeMapping) {
+        public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
             this.attributeMapping = Input.ofNullable(attributeMapping);
             return this;
         }
 
-        public Builder setAws(@Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws) {
+        public Builder aws(@Nullable Input<WorkloadIdentityPoolProviderAwsGetArgs> aws) {
             this.aws = aws;
             return this;
         }
 
-        public Builder setAws(@Nullable WorkloadIdentityPoolProviderAwsGetArgs aws) {
+        public Builder aws(@Nullable WorkloadIdentityPoolProviderAwsGetArgs aws) {
             this.aws = Input.ofNullable(aws);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOidc(@Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc) {
+        public Builder oidc(@Nullable Input<WorkloadIdentityPoolProviderOidcGetArgs> oidc) {
             this.oidc = oidc;
             return this;
         }
 
-        public Builder setOidc(@Nullable WorkloadIdentityPoolProviderOidcGetArgs oidc) {
+        public Builder oidc(@Nullable WorkloadIdentityPoolProviderOidcGetArgs oidc) {
             this.oidc = Input.ofNullable(oidc);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolId(@Nullable Input<String> workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(@Nullable Input<String> workloadIdentityPoolId) {
             this.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolId(@Nullable String workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(@Nullable String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Input.ofNullable(workloadIdentityPoolId);
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolProviderId(@Nullable Input<String> workloadIdentityPoolProviderId) {
+        public Builder workloadIdentityPoolProviderId(@Nullable Input<String> workloadIdentityPoolProviderId) {
             this.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolProviderId(@Nullable String workloadIdentityPoolProviderId) {
+        public Builder workloadIdentityPoolProviderId(@Nullable String workloadIdentityPoolProviderId) {
             this.workloadIdentityPoolProviderId = Input.ofNullable(workloadIdentityPoolProviderId);
             return this;
         }

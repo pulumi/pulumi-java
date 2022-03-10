@@ -171,42 +171,42 @@ public final class FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsRe
     	      this.sourceIpGroups = defaults.sourceIpGroups;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationIpGroups(@Nullable List<String> destinationIpGroups) {
+        public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourceIpGroups(@Nullable List<String> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }

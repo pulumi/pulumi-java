@@ -107,42 +107,42 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.lastKnownGood = defaults.lastKnownGood;
         }
 
-        public Builder setActive(@Nullable Input<NodeConfigSourceArgs> active) {
+        public Builder active(@Nullable Input<NodeConfigSourceArgs> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setActive(@Nullable NodeConfigSourceArgs active) {
+        public Builder active(@Nullable NodeConfigSourceArgs active) {
             this.active = Input.ofNullable(active);
             return this;
         }
 
-        public Builder setAssigned(@Nullable Input<NodeConfigSourceArgs> assigned) {
+        public Builder assigned(@Nullable Input<NodeConfigSourceArgs> assigned) {
             this.assigned = assigned;
             return this;
         }
 
-        public Builder setAssigned(@Nullable NodeConfigSourceArgs assigned) {
+        public Builder assigned(@Nullable NodeConfigSourceArgs assigned) {
             this.assigned = Input.ofNullable(assigned);
             return this;
         }
 
-        public Builder setError(@Nullable Input<String> error) {
+        public Builder error(@Nullable Input<String> error) {
             this.error = error;
             return this;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = Input.ofNullable(error);
             return this;
         }
 
-        public Builder setLastKnownGood(@Nullable Input<NodeConfigSourceArgs> lastKnownGood) {
+        public Builder lastKnownGood(@Nullable Input<NodeConfigSourceArgs> lastKnownGood) {
             this.lastKnownGood = lastKnownGood;
             return this;
         }
 
-        public Builder setLastKnownGood(@Nullable NodeConfigSourceArgs lastKnownGood) {
+        public Builder lastKnownGood(@Nullable NodeConfigSourceArgs lastKnownGood) {
             this.lastKnownGood = Input.ofNullable(lastKnownGood);
             return this;
         }

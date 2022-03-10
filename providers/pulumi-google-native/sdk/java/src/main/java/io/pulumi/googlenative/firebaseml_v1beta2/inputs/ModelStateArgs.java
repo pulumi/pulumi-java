@@ -57,12 +57,12 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.published = defaults.published;
         }
 
-        public Builder setPublished(@Nullable Input<Boolean> published) {
+        public Builder published(@Nullable Input<Boolean> published) {
             this.published = published;
             return this;
         }
 
-        public Builder setPublished(@Nullable Boolean published) {
+        public Builder published(@Nullable Boolean published) {
             this.published = Input.ofNullable(published);
             return this;
         }

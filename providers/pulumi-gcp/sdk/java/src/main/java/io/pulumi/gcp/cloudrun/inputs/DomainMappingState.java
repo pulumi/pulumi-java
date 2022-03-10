@@ -141,62 +141,62 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     	      this.statuses = defaults.statuses;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<DomainMappingMetadataGetArgs> metadata) {
+        public Builder metadata(@Nullable Input<DomainMappingMetadataGetArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable DomainMappingMetadataGetArgs metadata) {
+        public Builder metadata(@Nullable DomainMappingMetadataGetArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<DomainMappingSpecGetArgs> spec) {
+        public Builder spec(@Nullable Input<DomainMappingSpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable DomainMappingSpecGetArgs spec) {
+        public Builder spec(@Nullable DomainMappingSpecGetArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }
 
-        public Builder setStatuses(@Nullable Input<List<DomainMappingStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Input<List<DomainMappingStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<DomainMappingStatusGetArgs> statuses) {
+        public Builder statuses(@Nullable List<DomainMappingStatusGetArgs> statuses) {
             this.statuses = Input.ofNullable(statuses);
             return this;
         }

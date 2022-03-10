@@ -128,52 +128,52 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.services = defaults.services;
         }
 
-        public Builder setEncryptionIdentity(@Nullable Input<EncryptionIdentityArgs> encryptionIdentity) {
+        public Builder encryptionIdentity(@Nullable Input<EncryptionIdentityArgs> encryptionIdentity) {
             this.encryptionIdentity = encryptionIdentity;
             return this;
         }
 
-        public Builder setEncryptionIdentity(@Nullable EncryptionIdentityArgs encryptionIdentity) {
+        public Builder encryptionIdentity(@Nullable EncryptionIdentityArgs encryptionIdentity) {
             this.encryptionIdentity = Input.ofNullable(encryptionIdentity);
             return this;
         }
 
-        public Builder setKeySource(Input<Either<String,KeySource>> keySource) {
+        public Builder keySource(Input<Either<String,KeySource>> keySource) {
             this.keySource = Objects.requireNonNull(keySource);
             return this;
         }
 
-        public Builder setKeySource(Either<String,KeySource> keySource) {
+        public Builder keySource(Either<String,KeySource> keySource) {
             this.keySource = Input.of(Objects.requireNonNull(keySource));
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Input<Boolean> requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Input<Boolean> requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = Input.ofNullable(requireInfrastructureEncryption);
             return this;
         }
 
-        public Builder setServices(@Nullable Input<EncryptionServicesArgs> services) {
+        public Builder services(@Nullable Input<EncryptionServicesArgs> services) {
             this.services = services;
             return this;
         }
 
-        public Builder setServices(@Nullable EncryptionServicesArgs services) {
+        public Builder services(@Nullable EncryptionServicesArgs services) {
             this.services = Input.ofNullable(services);
             return this;
         }

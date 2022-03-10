@@ -365,202 +365,202 @@ public final class H264CodecSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.widthPixels = defaults.widthPixels;
         }
 
-        public Builder setAllowOpenGop(@Nullable Input<Boolean> allowOpenGop) {
+        public Builder allowOpenGop(@Nullable Input<Boolean> allowOpenGop) {
             this.allowOpenGop = allowOpenGop;
             return this;
         }
 
-        public Builder setAllowOpenGop(@Nullable Boolean allowOpenGop) {
+        public Builder allowOpenGop(@Nullable Boolean allowOpenGop) {
             this.allowOpenGop = Input.ofNullable(allowOpenGop);
             return this;
         }
 
-        public Builder setAqStrength(@Nullable Input<Double> aqStrength) {
+        public Builder aqStrength(@Nullable Input<Double> aqStrength) {
             this.aqStrength = aqStrength;
             return this;
         }
 
-        public Builder setAqStrength(@Nullable Double aqStrength) {
+        public Builder aqStrength(@Nullable Double aqStrength) {
             this.aqStrength = Input.ofNullable(aqStrength);
             return this;
         }
 
-        public Builder setBFrameCount(@Nullable Input<Integer> bFrameCount) {
+        public Builder bFrameCount(@Nullable Input<Integer> bFrameCount) {
             this.bFrameCount = bFrameCount;
             return this;
         }
 
-        public Builder setBFrameCount(@Nullable Integer bFrameCount) {
+        public Builder bFrameCount(@Nullable Integer bFrameCount) {
             this.bFrameCount = Input.ofNullable(bFrameCount);
             return this;
         }
 
-        public Builder setBPyramid(@Nullable Input<Boolean> bPyramid) {
+        public Builder bPyramid(@Nullable Input<Boolean> bPyramid) {
             this.bPyramid = bPyramid;
             return this;
         }
 
-        public Builder setBPyramid(@Nullable Boolean bPyramid) {
+        public Builder bPyramid(@Nullable Boolean bPyramid) {
             this.bPyramid = Input.ofNullable(bPyramid);
             return this;
         }
 
-        public Builder setBitrateBps(Input<Integer> bitrateBps) {
+        public Builder bitrateBps(Input<Integer> bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
 
-        public Builder setBitrateBps(Integer bitrateBps) {
+        public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Input.of(Objects.requireNonNull(bitrateBps));
             return this;
         }
 
-        public Builder setCrfLevel(@Nullable Input<Integer> crfLevel) {
+        public Builder crfLevel(@Nullable Input<Integer> crfLevel) {
             this.crfLevel = crfLevel;
             return this;
         }
 
-        public Builder setCrfLevel(@Nullable Integer crfLevel) {
+        public Builder crfLevel(@Nullable Integer crfLevel) {
             this.crfLevel = Input.ofNullable(crfLevel);
             return this;
         }
 
-        public Builder setEnableTwoPass(@Nullable Input<Boolean> enableTwoPass) {
+        public Builder enableTwoPass(@Nullable Input<Boolean> enableTwoPass) {
             this.enableTwoPass = enableTwoPass;
             return this;
         }
 
-        public Builder setEnableTwoPass(@Nullable Boolean enableTwoPass) {
+        public Builder enableTwoPass(@Nullable Boolean enableTwoPass) {
             this.enableTwoPass = Input.ofNullable(enableTwoPass);
             return this;
         }
 
-        public Builder setEntropyCoder(@Nullable Input<String> entropyCoder) {
+        public Builder entropyCoder(@Nullable Input<String> entropyCoder) {
             this.entropyCoder = entropyCoder;
             return this;
         }
 
-        public Builder setEntropyCoder(@Nullable String entropyCoder) {
+        public Builder entropyCoder(@Nullable String entropyCoder) {
             this.entropyCoder = Input.ofNullable(entropyCoder);
             return this;
         }
 
-        public Builder setFrameRate(Input<Double> frameRate) {
+        public Builder frameRate(Input<Double> frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
 
-        public Builder setFrameRate(Double frameRate) {
+        public Builder frameRate(Double frameRate) {
             this.frameRate = Input.of(Objects.requireNonNull(frameRate));
             return this;
         }
 
-        public Builder setGopDuration(@Nullable Input<String> gopDuration) {
+        public Builder gopDuration(@Nullable Input<String> gopDuration) {
             this.gopDuration = gopDuration;
             return this;
         }
 
-        public Builder setGopDuration(@Nullable String gopDuration) {
+        public Builder gopDuration(@Nullable String gopDuration) {
             this.gopDuration = Input.ofNullable(gopDuration);
             return this;
         }
 
-        public Builder setGopFrameCount(@Nullable Input<Integer> gopFrameCount) {
+        public Builder gopFrameCount(@Nullable Input<Integer> gopFrameCount) {
             this.gopFrameCount = gopFrameCount;
             return this;
         }
 
-        public Builder setGopFrameCount(@Nullable Integer gopFrameCount) {
+        public Builder gopFrameCount(@Nullable Integer gopFrameCount) {
             this.gopFrameCount = Input.ofNullable(gopFrameCount);
             return this;
         }
 
-        public Builder setHeightPixels(@Nullable Input<Integer> heightPixels) {
+        public Builder heightPixels(@Nullable Input<Integer> heightPixels) {
             this.heightPixels = heightPixels;
             return this;
         }
 
-        public Builder setHeightPixels(@Nullable Integer heightPixels) {
+        public Builder heightPixels(@Nullable Integer heightPixels) {
             this.heightPixels = Input.ofNullable(heightPixels);
             return this;
         }
 
-        public Builder setPixelFormat(@Nullable Input<String> pixelFormat) {
+        public Builder pixelFormat(@Nullable Input<String> pixelFormat) {
             this.pixelFormat = pixelFormat;
             return this;
         }
 
-        public Builder setPixelFormat(@Nullable String pixelFormat) {
+        public Builder pixelFormat(@Nullable String pixelFormat) {
             this.pixelFormat = Input.ofNullable(pixelFormat);
             return this;
         }
 
-        public Builder setPreset(@Nullable Input<String> preset) {
+        public Builder preset(@Nullable Input<String> preset) {
             this.preset = preset;
             return this;
         }
 
-        public Builder setPreset(@Nullable String preset) {
+        public Builder preset(@Nullable String preset) {
             this.preset = Input.ofNullable(preset);
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<String> profile) {
+        public Builder profile(@Nullable Input<String> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable String profile) {
+        public Builder profile(@Nullable String profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setRateControlMode(@Nullable Input<String> rateControlMode) {
+        public Builder rateControlMode(@Nullable Input<String> rateControlMode) {
             this.rateControlMode = rateControlMode;
             return this;
         }
 
-        public Builder setRateControlMode(@Nullable String rateControlMode) {
+        public Builder rateControlMode(@Nullable String rateControlMode) {
             this.rateControlMode = Input.ofNullable(rateControlMode);
             return this;
         }
 
-        public Builder setTune(@Nullable Input<String> tune) {
+        public Builder tune(@Nullable Input<String> tune) {
             this.tune = tune;
             return this;
         }
 
-        public Builder setTune(@Nullable String tune) {
+        public Builder tune(@Nullable String tune) {
             this.tune = Input.ofNullable(tune);
             return this;
         }
 
-        public Builder setVbvFullnessBits(@Nullable Input<Integer> vbvFullnessBits) {
+        public Builder vbvFullnessBits(@Nullable Input<Integer> vbvFullnessBits) {
             this.vbvFullnessBits = vbvFullnessBits;
             return this;
         }
 
-        public Builder setVbvFullnessBits(@Nullable Integer vbvFullnessBits) {
+        public Builder vbvFullnessBits(@Nullable Integer vbvFullnessBits) {
             this.vbvFullnessBits = Input.ofNullable(vbvFullnessBits);
             return this;
         }
 
-        public Builder setVbvSizeBits(@Nullable Input<Integer> vbvSizeBits) {
+        public Builder vbvSizeBits(@Nullable Input<Integer> vbvSizeBits) {
             this.vbvSizeBits = vbvSizeBits;
             return this;
         }
 
-        public Builder setVbvSizeBits(@Nullable Integer vbvSizeBits) {
+        public Builder vbvSizeBits(@Nullable Integer vbvSizeBits) {
             this.vbvSizeBits = Input.ofNullable(vbvSizeBits);
             return this;
         }
 
-        public Builder setWidthPixels(@Nullable Input<Integer> widthPixels) {
+        public Builder widthPixels(@Nullable Input<Integer> widthPixels) {
             this.widthPixels = widthPixels;
             return this;
         }
 
-        public Builder setWidthPixels(@Nullable Integer widthPixels) {
+        public Builder widthPixels(@Nullable Integer widthPixels) {
             this.widthPixels = Input.ofNullable(widthPixels);
             return this;
         }

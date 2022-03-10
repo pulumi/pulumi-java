@@ -92,32 +92,32 @@ public final class HeaderActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setHeaderActionType(Input<Either<String,HeaderActionType>> headerActionType) {
+        public Builder headerActionType(Input<Either<String,HeaderActionType>> headerActionType) {
             this.headerActionType = Objects.requireNonNull(headerActionType);
             return this;
         }
 
-        public Builder setHeaderActionType(Either<String,HeaderActionType> headerActionType) {
+        public Builder headerActionType(Either<String,HeaderActionType> headerActionType) {
             this.headerActionType = Input.of(Objects.requireNonNull(headerActionType));
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

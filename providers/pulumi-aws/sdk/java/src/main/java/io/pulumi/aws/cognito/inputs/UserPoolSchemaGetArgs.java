@@ -153,72 +153,72 @@ public final class UserPoolSchemaGetArgs extends io.pulumi.resources.ResourceArg
     	      this.stringAttributeConstraints = defaults.stringAttributeConstraints;
         }
 
-        public Builder setAttributeDataType(Input<String> attributeDataType) {
+        public Builder attributeDataType(Input<String> attributeDataType) {
             this.attributeDataType = Objects.requireNonNull(attributeDataType);
             return this;
         }
 
-        public Builder setAttributeDataType(String attributeDataType) {
+        public Builder attributeDataType(String attributeDataType) {
             this.attributeDataType = Input.of(Objects.requireNonNull(attributeDataType));
             return this;
         }
 
-        public Builder setDeveloperOnlyAttribute(@Nullable Input<Boolean> developerOnlyAttribute) {
+        public Builder developerOnlyAttribute(@Nullable Input<Boolean> developerOnlyAttribute) {
             this.developerOnlyAttribute = developerOnlyAttribute;
             return this;
         }
 
-        public Builder setDeveloperOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
+        public Builder developerOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
             this.developerOnlyAttribute = Input.ofNullable(developerOnlyAttribute);
             return this;
         }
 
-        public Builder setMutable(@Nullable Input<Boolean> mutable) {
+        public Builder mutable(@Nullable Input<Boolean> mutable) {
             this.mutable = mutable;
             return this;
         }
 
-        public Builder setMutable(@Nullable Boolean mutable) {
+        public Builder mutable(@Nullable Boolean mutable) {
             this.mutable = Input.ofNullable(mutable);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNumberAttributeConstraints(@Nullable Input<UserPoolSchemaNumberAttributeConstraintsGetArgs> numberAttributeConstraints) {
+        public Builder numberAttributeConstraints(@Nullable Input<UserPoolSchemaNumberAttributeConstraintsGetArgs> numberAttributeConstraints) {
             this.numberAttributeConstraints = numberAttributeConstraints;
             return this;
         }
 
-        public Builder setNumberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraintsGetArgs numberAttributeConstraints) {
+        public Builder numberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraintsGetArgs numberAttributeConstraints) {
             this.numberAttributeConstraints = Input.ofNullable(numberAttributeConstraints);
             return this;
         }
 
-        public Builder setRequired(@Nullable Input<Boolean> required) {
+        public Builder required(@Nullable Input<Boolean> required) {
             this.required = required;
             return this;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = Input.ofNullable(required);
             return this;
         }
 
-        public Builder setStringAttributeConstraints(@Nullable Input<UserPoolSchemaStringAttributeConstraintsGetArgs> stringAttributeConstraints) {
+        public Builder stringAttributeConstraints(@Nullable Input<UserPoolSchemaStringAttributeConstraintsGetArgs> stringAttributeConstraints) {
             this.stringAttributeConstraints = stringAttributeConstraints;
             return this;
         }
 
-        public Builder setStringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraintsGetArgs stringAttributeConstraints) {
+        public Builder stringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraintsGetArgs stringAttributeConstraints) {
             this.stringAttributeConstraints = Input.ofNullable(stringAttributeConstraints);
             return this;
         }

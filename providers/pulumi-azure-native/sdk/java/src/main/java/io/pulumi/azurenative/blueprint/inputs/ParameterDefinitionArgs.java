@@ -142,62 +142,62 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedValues(@Nullable Input<List<Object>> allowedValues) {
+        public Builder allowedValues(@Nullable Input<List<Object>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setAllowedValues(@Nullable List<Object> allowedValues) {
+        public Builder allowedValues(@Nullable List<Object> allowedValues) {
             this.allowedValues = Input.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Input<Object> defaultValue) {
+        public Builder defaultValue(@Nullable Input<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setStrongType(@Nullable Input<String> strongType) {
+        public Builder strongType(@Nullable Input<String> strongType) {
             this.strongType = strongType;
             return this;
         }
 
-        public Builder setStrongType(@Nullable String strongType) {
+        public Builder strongType(@Nullable String strongType) {
             this.strongType = Input.ofNullable(strongType);
             return this;
         }
 
-        public Builder setType(Input<Either<String,TemplateParameterType>> type) {
+        public Builder type(Input<Either<String,TemplateParameterType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,TemplateParameterType> type) {
+        public Builder type(Either<String,TemplateParameterType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

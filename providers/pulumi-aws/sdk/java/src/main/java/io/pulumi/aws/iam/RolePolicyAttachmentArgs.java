@@ -69,17 +69,17 @@ public final class RolePolicyAttachmentArgs extends io.pulumi.resources.Resource
     	      this.role = defaults.role;
         }
 
-        public Builder setPolicyArn(Input<String> policyArn) {
+        public Builder policyArn(Input<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
 
-        public Builder setPolicyArn(String policyArn) {
+        public Builder policyArn(String policyArn) {
             this.policyArn = Input.of(Objects.requireNonNull(policyArn));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

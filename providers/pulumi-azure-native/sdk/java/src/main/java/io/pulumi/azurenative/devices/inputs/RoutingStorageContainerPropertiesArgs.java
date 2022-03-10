@@ -237,122 +237,122 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setBatchFrequencyInSeconds(@Nullable Input<Integer> batchFrequencyInSeconds) {
+        public Builder batchFrequencyInSeconds(@Nullable Input<Integer> batchFrequencyInSeconds) {
             this.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;
         }
 
-        public Builder setBatchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
+        public Builder batchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
             this.batchFrequencyInSeconds = Input.ofNullable(batchFrequencyInSeconds);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Input<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setContainerName(Input<String> containerName) {
+        public Builder containerName(Input<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Input.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Input<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = Input.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder setFileNameFormat(@Nullable Input<String> fileNameFormat) {
+        public Builder fileNameFormat(@Nullable Input<String> fileNameFormat) {
             this.fileNameFormat = fileNameFormat;
             return this;
         }
 
-        public Builder setFileNameFormat(@Nullable String fileNameFormat) {
+        public Builder fileNameFormat(@Nullable String fileNameFormat) {
             this.fileNameFormat = Input.ofNullable(fileNameFormat);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setMaxChunkSizeInBytes(@Nullable Input<Integer> maxChunkSizeInBytes) {
+        public Builder maxChunkSizeInBytes(@Nullable Input<Integer> maxChunkSizeInBytes) {
             this.maxChunkSizeInBytes = maxChunkSizeInBytes;
             return this;
         }
 
-        public Builder setMaxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
+        public Builder maxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
             this.maxChunkSizeInBytes = Input.ofNullable(maxChunkSizeInBytes);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }

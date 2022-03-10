@@ -72,12 +72,12 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse extends io.pulumi
     	      this.version = defaults.version;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

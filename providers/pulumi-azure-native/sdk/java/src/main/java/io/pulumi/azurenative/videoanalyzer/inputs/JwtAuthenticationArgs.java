@@ -128,52 +128,52 @@ public final class JwtAuthenticationArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setAudiences(@Nullable Input<List<String>> audiences) {
+        public Builder audiences(@Nullable Input<List<String>> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = Input.ofNullable(audiences);
             return this;
         }
 
-        public Builder setClaims(@Nullable Input<List<TokenClaimArgs>> claims) {
+        public Builder claims(@Nullable Input<List<TokenClaimArgs>> claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setClaims(@Nullable List<TokenClaimArgs> claims) {
+        public Builder claims(@Nullable List<TokenClaimArgs> claims) {
             this.claims = Input.ofNullable(claims);
             return this;
         }
 
-        public Builder setIssuers(@Nullable Input<List<String>> issuers) {
+        public Builder issuers(@Nullable Input<List<String>> issuers) {
             this.issuers = issuers;
             return this;
         }
 
-        public Builder setIssuers(@Nullable List<String> issuers) {
+        public Builder issuers(@Nullable List<String> issuers) {
             this.issuers = Input.ofNullable(issuers);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys) {
+        public Builder keys(@Nullable Input<List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>>> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>> keys) {
+        public Builder keys(@Nullable List<Either<EccTokenKeyArgs,RsaTokenKeyArgs>> keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

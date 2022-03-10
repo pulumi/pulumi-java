@@ -52,12 +52,12 @@ public final class ServicePlacementConstraint {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setType(ServicePlacementConstraintType type) {
+        public Builder type(ServicePlacementConstraintType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

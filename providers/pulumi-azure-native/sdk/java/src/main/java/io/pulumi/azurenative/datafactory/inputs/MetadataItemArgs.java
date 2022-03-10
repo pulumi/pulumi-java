@@ -74,22 +74,22 @@ public final class MetadataItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable Input<Object> name) {
+        public Builder name(@Nullable Input<Object> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Object name) {
+        public Builder name(@Nullable Object name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Input<Object> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = Input.ofNullable(value);
             return this;
         }

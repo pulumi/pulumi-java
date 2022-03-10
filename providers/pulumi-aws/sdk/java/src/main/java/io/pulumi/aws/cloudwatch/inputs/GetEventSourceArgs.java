@@ -53,7 +53,7 @@ public final class GetEventSourceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }

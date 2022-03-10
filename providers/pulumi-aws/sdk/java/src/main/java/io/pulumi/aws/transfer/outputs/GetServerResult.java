@@ -234,67 +234,67 @@ public final class GetServerResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentityProviderType(String identityProviderType) {
+        public Builder identityProviderType(String identityProviderType) {
             this.identityProviderType = Objects.requireNonNull(identityProviderType);
             return this;
         }
 
-        public Builder setInvocationRole(String invocationRole) {
+        public Builder invocationRole(String invocationRole) {
             this.invocationRole = Objects.requireNonNull(invocationRole);
             return this;
         }
 
-        public Builder setLoggingRole(String loggingRole) {
+        public Builder loggingRole(String loggingRole) {
             this.loggingRole = Objects.requireNonNull(loggingRole);
             return this;
         }
 
-        public Builder setProtocols(List<String> protocols) {
+        public Builder protocols(List<String> protocols) {
             this.protocols = Objects.requireNonNull(protocols);
             return this;
         }
 
-        public Builder setSecurityPolicyName(String securityPolicyName) {
+        public Builder securityPolicyName(String securityPolicyName) {
             this.securityPolicyName = Objects.requireNonNull(securityPolicyName);
             return this;
         }
 
-        public Builder setServerId(String serverId) {
+        public Builder serverId(String serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

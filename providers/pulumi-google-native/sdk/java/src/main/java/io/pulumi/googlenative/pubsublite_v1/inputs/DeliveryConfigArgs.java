@@ -57,12 +57,12 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deliveryRequirement = defaults.deliveryRequirement;
         }
 
-        public Builder setDeliveryRequirement(@Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
+        public Builder deliveryRequirement(@Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
             this.deliveryRequirement = deliveryRequirement;
             return this;
         }
 
-        public Builder setDeliveryRequirement(@Nullable DeliveryConfigDeliveryRequirement deliveryRequirement) {
+        public Builder deliveryRequirement(@Nullable DeliveryConfigDeliveryRequirement deliveryRequirement) {
             this.deliveryRequirement = Input.ofNullable(deliveryRequirement);
             return this;
         }

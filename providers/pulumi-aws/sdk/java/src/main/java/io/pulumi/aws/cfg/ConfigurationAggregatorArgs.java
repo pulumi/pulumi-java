@@ -105,42 +105,42 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountAggregationSource(@Nullable Input<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSource) {
+        public Builder accountAggregationSource(@Nullable Input<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSource) {
             this.accountAggregationSource = accountAggregationSource;
             return this;
         }
 
-        public Builder setAccountAggregationSource(@Nullable ConfigurationAggregatorAccountAggregationSourceArgs accountAggregationSource) {
+        public Builder accountAggregationSource(@Nullable ConfigurationAggregatorAccountAggregationSourceArgs accountAggregationSource) {
             this.accountAggregationSource = Input.ofNullable(accountAggregationSource);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationAggregationSource(@Nullable Input<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource) {
+        public Builder organizationAggregationSource(@Nullable Input<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource) {
             this.organizationAggregationSource = organizationAggregationSource;
             return this;
         }
 
-        public Builder setOrganizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
+        public Builder organizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSourceArgs organizationAggregationSource) {
             this.organizationAggregationSource = Input.ofNullable(organizationAggregationSource);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

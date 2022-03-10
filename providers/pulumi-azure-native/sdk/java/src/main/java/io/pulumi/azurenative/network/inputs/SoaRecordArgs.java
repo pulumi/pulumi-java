@@ -155,72 +155,72 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serialNumber = defaults.serialNumber;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<Double> expireTime) {
+        public Builder expireTime(@Nullable Input<Double> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Double expireTime) {
+        public Builder expireTime(@Nullable Double expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setMinimumTtl(@Nullable Input<Double> minimumTtl) {
+        public Builder minimumTtl(@Nullable Input<Double> minimumTtl) {
             this.minimumTtl = minimumTtl;
             return this;
         }
 
-        public Builder setMinimumTtl(@Nullable Double minimumTtl) {
+        public Builder minimumTtl(@Nullable Double minimumTtl) {
             this.minimumTtl = Input.ofNullable(minimumTtl);
             return this;
         }
 
-        public Builder setRefreshTime(@Nullable Input<Double> refreshTime) {
+        public Builder refreshTime(@Nullable Input<Double> refreshTime) {
             this.refreshTime = refreshTime;
             return this;
         }
 
-        public Builder setRefreshTime(@Nullable Double refreshTime) {
+        public Builder refreshTime(@Nullable Double refreshTime) {
             this.refreshTime = Input.ofNullable(refreshTime);
             return this;
         }
 
-        public Builder setRetryTime(@Nullable Input<Double> retryTime) {
+        public Builder retryTime(@Nullable Input<Double> retryTime) {
             this.retryTime = retryTime;
             return this;
         }
 
-        public Builder setRetryTime(@Nullable Double retryTime) {
+        public Builder retryTime(@Nullable Double retryTime) {
             this.retryTime = Input.ofNullable(retryTime);
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable Input<Double> serialNumber) {
+        public Builder serialNumber(@Nullable Input<Double> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable Double serialNumber) {
+        public Builder serialNumber(@Nullable Double serialNumber) {
             this.serialNumber = Input.ofNullable(serialNumber);
             return this;
         }

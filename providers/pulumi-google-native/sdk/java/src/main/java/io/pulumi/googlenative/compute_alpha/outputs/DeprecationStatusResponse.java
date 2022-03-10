@@ -130,32 +130,32 @@ public final class DeprecationStatusResponse {
     	      this.stateOverride = defaults.stateOverride;
         }
 
-        public Builder setDeleted(String deleted) {
+        public Builder deleted(String deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
 
-        public Builder setDeprecated(String deprecated) {
+        public Builder deprecated(String deprecated) {
             this.deprecated = Objects.requireNonNull(deprecated);
             return this;
         }
 
-        public Builder setObsolete(String obsolete) {
+        public Builder obsolete(String obsolete) {
             this.obsolete = Objects.requireNonNull(obsolete);
             return this;
         }
 
-        public Builder setReplacement(String replacement) {
+        public Builder replacement(String replacement) {
             this.replacement = Objects.requireNonNull(replacement);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateOverride(RolloutPolicyResponse stateOverride) {
+        public Builder stateOverride(RolloutPolicyResponse stateOverride) {
             this.stateOverride = Objects.requireNonNull(stateOverride);
             return this;
         }

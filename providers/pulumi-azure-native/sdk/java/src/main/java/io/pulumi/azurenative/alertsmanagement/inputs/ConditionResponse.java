@@ -75,12 +75,12 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

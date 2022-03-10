@@ -104,42 +104,42 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDeploymentConfig(@Nullable Input<EndpointDeploymentConfigArgs> deploymentConfig) {
+        public Builder deploymentConfig(@Nullable Input<EndpointDeploymentConfigArgs> deploymentConfig) {
             this.deploymentConfig = deploymentConfig;
             return this;
         }
 
-        public Builder setDeploymentConfig(@Nullable EndpointDeploymentConfigArgs deploymentConfig) {
+        public Builder deploymentConfig(@Nullable EndpointDeploymentConfigArgs deploymentConfig) {
             this.deploymentConfig = Input.ofNullable(deploymentConfig);
             return this;
         }
 
-        public Builder setEndpointConfigName(Input<String> endpointConfigName) {
+        public Builder endpointConfigName(Input<String> endpointConfigName) {
             this.endpointConfigName = Objects.requireNonNull(endpointConfigName);
             return this;
         }
 
-        public Builder setEndpointConfigName(String endpointConfigName) {
+        public Builder endpointConfigName(String endpointConfigName) {
             this.endpointConfigName = Input.of(Objects.requireNonNull(endpointConfigName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -88,42 +88,42 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
     	      this.virtualMfaDeviceName = defaults.virtualMfaDeviceName;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<VirtualMFADeviceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<VirtualMFADeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VirtualMFADeviceTagArgs> tags) {
+        public Builder tags(@Nullable List<VirtualMFADeviceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUsers(Input<List<String>> users) {
+        public Builder users(Input<List<String>> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
 
-        public Builder setUsers(List<String> users) {
+        public Builder users(List<String> users) {
             this.users = Input.of(Objects.requireNonNull(users));
             return this;
         }
 
-        public Builder setVirtualMfaDeviceName(@Nullable Input<String> virtualMfaDeviceName) {
+        public Builder virtualMfaDeviceName(@Nullable Input<String> virtualMfaDeviceName) {
             this.virtualMfaDeviceName = virtualMfaDeviceName;
             return this;
         }
 
-        public Builder setVirtualMfaDeviceName(@Nullable String virtualMfaDeviceName) {
+        public Builder virtualMfaDeviceName(@Nullable String virtualMfaDeviceName) {
             this.virtualMfaDeviceName = Input.ofNullable(virtualMfaDeviceName);
             return this;
         }

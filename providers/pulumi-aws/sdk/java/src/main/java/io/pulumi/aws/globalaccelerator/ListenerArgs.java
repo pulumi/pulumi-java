@@ -104,42 +104,42 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setAcceleratorArn(Input<String> acceleratorArn) {
+        public Builder acceleratorArn(Input<String> acceleratorArn) {
             this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
             return this;
         }
 
-        public Builder setAcceleratorArn(String acceleratorArn) {
+        public Builder acceleratorArn(String acceleratorArn) {
             this.acceleratorArn = Input.of(Objects.requireNonNull(acceleratorArn));
             return this;
         }
 
-        public Builder setClientAffinity(@Nullable Input<String> clientAffinity) {
+        public Builder clientAffinity(@Nullable Input<String> clientAffinity) {
             this.clientAffinity = clientAffinity;
             return this;
         }
 
-        public Builder setClientAffinity(@Nullable String clientAffinity) {
+        public Builder clientAffinity(@Nullable String clientAffinity) {
             this.clientAffinity = Input.ofNullable(clientAffinity);
             return this;
         }
 
-        public Builder setPortRanges(Input<List<ListenerPortRangeArgs>> portRanges) {
+        public Builder portRanges(Input<List<ListenerPortRangeArgs>> portRanges) {
             this.portRanges = Objects.requireNonNull(portRanges);
             return this;
         }
 
-        public Builder setPortRanges(List<ListenerPortRangeArgs> portRanges) {
+        public Builder portRanges(List<ListenerPortRangeArgs> portRanges) {
             this.portRanges = Input.of(Objects.requireNonNull(portRanges));
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

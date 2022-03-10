@@ -147,37 +147,37 @@ public final class GetEnvironmentResult {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setContainerImage(ContainerImageResponse containerImage) {
+        public Builder containerImage(ContainerImageResponse containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPostStartupScript(String postStartupScript) {
+        public Builder postStartupScript(String postStartupScript) {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
 
-        public Builder setVmImage(VmImageResponse vmImage) {
+        public Builder vmImage(VmImageResponse vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }

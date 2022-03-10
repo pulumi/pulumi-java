@@ -53,7 +53,7 @@ public final class MigrateProjectResponseTags extends io.pulumi.resources.Invoke
     	      this.additionalProperties = defaults.additionalProperties;
         }
 
-        public Builder setAdditionalProperties(@Nullable String additionalProperties) {
+        public Builder additionalProperties(@Nullable String additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }

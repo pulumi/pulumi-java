@@ -118,52 +118,52 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
     	      this.schema = defaults.schema;
         }
 
-        public Builder setAwsSecretStoreArn(Input<String> awsSecretStoreArn) {
+        public Builder awsSecretStoreArn(Input<String> awsSecretStoreArn) {
             this.awsSecretStoreArn = Objects.requireNonNull(awsSecretStoreArn);
             return this;
         }
 
-        public Builder setAwsSecretStoreArn(String awsSecretStoreArn) {
+        public Builder awsSecretStoreArn(String awsSecretStoreArn) {
             this.awsSecretStoreArn = Input.of(Objects.requireNonNull(awsSecretStoreArn));
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setDbClusterIdentifier(Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(Input<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = Objects.requireNonNull(dbClusterIdentifier);
             return this;
         }
 
-        public Builder setDbClusterIdentifier(String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(String dbClusterIdentifier) {
             this.dbClusterIdentifier = Input.of(Objects.requireNonNull(dbClusterIdentifier));
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }

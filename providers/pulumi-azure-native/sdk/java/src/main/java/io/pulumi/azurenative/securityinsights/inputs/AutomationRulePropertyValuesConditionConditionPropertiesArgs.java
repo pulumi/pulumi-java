@@ -94,32 +94,32 @@ public final class AutomationRulePropertyValuesConditionConditionPropertiesArgs 
     	      this.propertyValues = defaults.propertyValues;
         }
 
-        public Builder setOperator(@Nullable Input<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator) {
+        public Builder operator(@Nullable Input<Either<String,AutomationRulePropertyConditionSupportedOperator>> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable Either<String,AutomationRulePropertyConditionSupportedOperator> operator) {
+        public Builder operator(@Nullable Either<String,AutomationRulePropertyConditionSupportedOperator> operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }
 
-        public Builder setPropertyName(@Nullable Input<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName) {
+        public Builder propertyName(@Nullable Input<Either<String,AutomationRulePropertyConditionSupportedProperty>> propertyName) {
             this.propertyName = propertyName;
             return this;
         }
 
-        public Builder setPropertyName(@Nullable Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
+        public Builder propertyName(@Nullable Either<String,AutomationRulePropertyConditionSupportedProperty> propertyName) {
             this.propertyName = Input.ofNullable(propertyName);
             return this;
         }
 
-        public Builder setPropertyValues(@Nullable Input<List<String>> propertyValues) {
+        public Builder propertyValues(@Nullable Input<List<String>> propertyValues) {
             this.propertyValues = propertyValues;
             return this;
         }
 
-        public Builder setPropertyValues(@Nullable List<String> propertyValues) {
+        public Builder propertyValues(@Nullable List<String> propertyValues) {
             this.propertyValues = Input.ofNullable(propertyValues);
             return this;
         }

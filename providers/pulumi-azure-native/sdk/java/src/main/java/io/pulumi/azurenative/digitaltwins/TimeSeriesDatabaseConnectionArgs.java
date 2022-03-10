@@ -103,42 +103,42 @@ public final class TimeSeriesDatabaseConnectionArgs extends io.pulumi.resources.
     	      this.timeSeriesDatabaseConnectionName = defaults.timeSeriesDatabaseConnectionName;
         }
 
-        public Builder setProperties(@Nullable Input<AzureDataExplorerConnectionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<AzureDataExplorerConnectionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable AzureDataExplorerConnectionPropertiesArgs properties) {
+        public Builder properties(@Nullable AzureDataExplorerConnectionPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setTimeSeriesDatabaseConnectionName(@Nullable Input<String> timeSeriesDatabaseConnectionName) {
+        public Builder timeSeriesDatabaseConnectionName(@Nullable Input<String> timeSeriesDatabaseConnectionName) {
             this.timeSeriesDatabaseConnectionName = timeSeriesDatabaseConnectionName;
             return this;
         }
 
-        public Builder setTimeSeriesDatabaseConnectionName(@Nullable String timeSeriesDatabaseConnectionName) {
+        public Builder timeSeriesDatabaseConnectionName(@Nullable String timeSeriesDatabaseConnectionName) {
             this.timeSeriesDatabaseConnectionName = Input.ofNullable(timeSeriesDatabaseConnectionName);
             return this;
         }

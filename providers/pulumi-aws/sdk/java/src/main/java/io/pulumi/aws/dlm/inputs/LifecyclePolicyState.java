@@ -152,72 +152,72 @@ public final class LifecyclePolicyState extends io.pulumi.resources.ResourceArgs
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable Input<String> executionRoleArn) {
+        public Builder executionRoleArn(@Nullable Input<String> executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = Input.ofNullable(executionRoleArn);
             return this;
         }
 
-        public Builder setPolicyDetails(@Nullable Input<LifecyclePolicyPolicyDetailsGetArgs> policyDetails) {
+        public Builder policyDetails(@Nullable Input<LifecyclePolicyPolicyDetailsGetArgs> policyDetails) {
             this.policyDetails = policyDetails;
             return this;
         }
 
-        public Builder setPolicyDetails(@Nullable LifecyclePolicyPolicyDetailsGetArgs policyDetails) {
+        public Builder policyDetails(@Nullable LifecyclePolicyPolicyDetailsGetArgs policyDetails) {
             this.policyDetails = Input.ofNullable(policyDetails);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

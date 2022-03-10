@@ -164,42 +164,42 @@ public final class GetTransitGatewayMulticastGroupSourceResult {
     	      this.transitGatewayAttachmentId = defaults.transitGatewayAttachmentId;
         }
 
-        public Builder setGroupMember(@Nullable Boolean groupMember) {
+        public Builder groupMember(@Nullable Boolean groupMember) {
             this.groupMember = groupMember;
             return this;
         }
 
-        public Builder setGroupSource(@Nullable Boolean groupSource) {
+        public Builder groupSource(@Nullable Boolean groupSource) {
             this.groupSource = groupSource;
             return this;
         }
 
-        public Builder setMemberType(@Nullable String memberType) {
+        public Builder memberType(@Nullable String memberType) {
             this.memberType = memberType;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }

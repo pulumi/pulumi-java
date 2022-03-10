@@ -72,12 +72,12 @@ public final class BusinessIdentityResponse extends io.pulumi.resources.InvokeAr
     	      this.value = defaults.value;
         }
 
-        public Builder setQualifier(String qualifier) {
+        public Builder qualifier(String qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

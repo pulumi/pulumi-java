@@ -88,32 +88,32 @@ public final class SpotInstanceRequestNetworkInterfaceGetArgs extends io.pulumi.
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Input<Boolean> deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = Input.ofNullable(deleteOnTermination);
             return this;
         }
 
-        public Builder setDeviceIndex(Input<Integer> deviceIndex) {
+        public Builder deviceIndex(Input<Integer> deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Input.of(Objects.requireNonNull(deviceIndex));
             return this;
         }
 
-        public Builder setNetworkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }

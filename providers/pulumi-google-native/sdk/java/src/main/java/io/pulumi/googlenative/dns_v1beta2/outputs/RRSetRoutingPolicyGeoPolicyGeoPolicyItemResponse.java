@@ -82,22 +82,22 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
     	      this.signatureRrdatas = defaults.signatureRrdatas;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setRrdatas(List<String> rrdatas) {
+        public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
 
-        public Builder setSignatureRrdatas(List<String> signatureRrdatas) {
+        public Builder signatureRrdatas(List<String> signatureRrdatas) {
             this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
             return this;
         }

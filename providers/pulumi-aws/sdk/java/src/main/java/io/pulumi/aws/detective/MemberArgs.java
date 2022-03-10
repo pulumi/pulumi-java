@@ -119,52 +119,52 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.message = defaults.message;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Input<Boolean> disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Boolean disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = Input.ofNullable(disableEmailNotification);
             return this;
         }
 
-        public Builder setEmailAddress(Input<String> emailAddress) {
+        public Builder emailAddress(Input<String> emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
-        public Builder setEmailAddress(String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             this.emailAddress = Input.of(Objects.requireNonNull(emailAddress));
             return this;
         }
 
-        public Builder setGraphArn(Input<String> graphArn) {
+        public Builder graphArn(Input<String> graphArn) {
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
 
-        public Builder setGraphArn(String graphArn) {
+        public Builder graphArn(String graphArn) {
             this.graphArn = Input.of(Objects.requireNonNull(graphArn));
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }

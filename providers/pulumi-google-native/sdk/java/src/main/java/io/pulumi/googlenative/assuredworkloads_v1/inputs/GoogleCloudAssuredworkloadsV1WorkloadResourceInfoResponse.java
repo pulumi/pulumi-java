@@ -72,12 +72,12 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

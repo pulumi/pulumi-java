@@ -49,12 +49,12 @@ public final class WirelessDeviceSessionKeysAbpV10x {
     	      this.nwkSKey = defaults.nwkSKey;
         }
 
-        public Builder setAppSKey(String appSKey) {
+        public Builder appSKey(String appSKey) {
             this.appSKey = Objects.requireNonNull(appSKey);
             return this;
         }
 
-        public Builder setNwkSKey(String nwkSKey) {
+        public Builder nwkSKey(String nwkSKey) {
             this.nwkSKey = Objects.requireNonNull(nwkSKey);
             return this;
         }

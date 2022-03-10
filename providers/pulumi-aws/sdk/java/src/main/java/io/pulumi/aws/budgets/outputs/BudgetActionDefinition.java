@@ -85,17 +85,17 @@ public final class BudgetActionDefinition {
     	      this.ssmActionDefinition = defaults.ssmActionDefinition;
         }
 
-        public Builder setIamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinition iamActionDefinition) {
+        public Builder iamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinition iamActionDefinition) {
             this.iamActionDefinition = iamActionDefinition;
             return this;
         }
 
-        public Builder setScpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition) {
+        public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinition scpActionDefinition) {
             this.scpActionDefinition = scpActionDefinition;
             return this;
         }
 
-        public Builder setSsmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition) {
+        public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinition ssmActionDefinition) {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }

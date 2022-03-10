@@ -383,212 +383,212 @@ public final class ACIServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Input<Boolean> appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Input<Boolean> appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = Input.ofNullable(appInsightsEnabled);
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Input<Boolean> authEnabled) {
+        public Builder authEnabled(@Nullable Input<Boolean> authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Boolean authEnabled) {
+        public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = Input.ofNullable(authEnabled);
             return this;
         }
 
-        public Builder setCname(@Nullable Input<String> cname) {
+        public Builder cname(@Nullable Input<String> cname) {
             this.cname = cname;
             return this;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = Input.ofNullable(cname);
             return this;
         }
 
-        public Builder setComputeType(Input<String> computeType) {
+        public Builder computeType(Input<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Input.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
             this.containerResourceRequirements = Input.ofNullable(containerResourceRequirements);
             return this;
         }
 
-        public Builder setDataCollection(@Nullable Input<ACIServiceCreateRequestDataCollectionArgs> dataCollection) {
+        public Builder dataCollection(@Nullable Input<ACIServiceCreateRequestDataCollectionArgs> dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
 
-        public Builder setDataCollection(@Nullable ACIServiceCreateRequestDataCollectionArgs dataCollection) {
+        public Builder dataCollection(@Nullable ACIServiceCreateRequestDataCollectionArgs dataCollection) {
             this.dataCollection = Input.ofNullable(dataCollection);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsNameLabel(@Nullable Input<String> dnsNameLabel) {
+        public Builder dnsNameLabel(@Nullable Input<String> dnsNameLabel) {
             this.dnsNameLabel = dnsNameLabel;
             return this;
         }
 
-        public Builder setDnsNameLabel(@Nullable String dnsNameLabel) {
+        public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
             this.dnsNameLabel = Input.ofNullable(dnsNameLabel);
             return this;
         }
 
-        public Builder setEncryptionProperties(@Nullable Input<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties) {
+        public Builder encryptionProperties(@Nullable Input<ACIServiceCreateRequestEncryptionPropertiesArgs> encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
 
-        public Builder setEncryptionProperties(@Nullable ACIServiceCreateRequestEncryptionPropertiesArgs encryptionProperties) {
+        public Builder encryptionProperties(@Nullable ACIServiceCreateRequestEncryptionPropertiesArgs encryptionProperties) {
             this.encryptionProperties = Input.ofNullable(encryptionProperties);
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             this.environmentImageRequest = Input.ofNullable(environmentImageRequest);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<CreateServiceRequestKeysArgs> keys) {
+        public Builder keys(@Nullable Input<CreateServiceRequestKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable CreateServiceRequestKeysArgs keys) {
+        public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setKvTags(@Nullable Input<Map<String,String>> kvTags) {
+        public Builder kvTags(@Nullable Input<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Input.ofNullable(kvTags);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setSslCertificate(@Nullable Input<String> sslCertificate) {
+        public Builder sslCertificate(@Nullable Input<String> sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
 
-        public Builder setSslCertificate(@Nullable String sslCertificate) {
+        public Builder sslCertificate(@Nullable String sslCertificate) {
             this.sslCertificate = Input.ofNullable(sslCertificate);
             return this;
         }
 
-        public Builder setSslEnabled(@Nullable Input<Boolean> sslEnabled) {
+        public Builder sslEnabled(@Nullable Input<Boolean> sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
 
-        public Builder setSslEnabled(@Nullable Boolean sslEnabled) {
+        public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = Input.ofNullable(sslEnabled);
             return this;
         }
 
-        public Builder setSslKey(@Nullable Input<String> sslKey) {
+        public Builder sslKey(@Nullable Input<String> sslKey) {
             this.sslKey = sslKey;
             return this;
         }
 
-        public Builder setSslKey(@Nullable String sslKey) {
+        public Builder sslKey(@Nullable String sslKey) {
             this.sslKey = Input.ofNullable(sslKey);
             return this;
         }
 
-        public Builder setVnetConfiguration(@Nullable Input<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration) {
+        public Builder vnetConfiguration(@Nullable Input<ACIServiceCreateRequestVnetConfigurationArgs> vnetConfiguration) {
             this.vnetConfiguration = vnetConfiguration;
             return this;
         }
 
-        public Builder setVnetConfiguration(@Nullable ACIServiceCreateRequestVnetConfigurationArgs vnetConfiguration) {
+        public Builder vnetConfiguration(@Nullable ACIServiceCreateRequestVnetConfigurationArgs vnetConfiguration) {
             this.vnetConfiguration = Input.ofNullable(vnetConfiguration);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

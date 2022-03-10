@@ -97,22 +97,22 @@ public final class GatewayConfigResponse {
     	      this.lastAccessedGatewayTime = defaults.lastAccessedGatewayTime;
         }
 
-        public Builder setGatewayAuthMethod(String gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(String gatewayAuthMethod) {
             this.gatewayAuthMethod = Objects.requireNonNull(gatewayAuthMethod);
             return this;
         }
 
-        public Builder setGatewayType(String gatewayType) {
+        public Builder gatewayType(String gatewayType) {
             this.gatewayType = Objects.requireNonNull(gatewayType);
             return this;
         }
 
-        public Builder setLastAccessedGatewayId(String lastAccessedGatewayId) {
+        public Builder lastAccessedGatewayId(String lastAccessedGatewayId) {
             this.lastAccessedGatewayId = Objects.requireNonNull(lastAccessedGatewayId);
             return this;
         }
 
-        public Builder setLastAccessedGatewayTime(String lastAccessedGatewayTime) {
+        public Builder lastAccessedGatewayTime(String lastAccessedGatewayTime) {
             this.lastAccessedGatewayTime = Objects.requireNonNull(lastAccessedGatewayTime);
             return this;
         }

@@ -72,22 +72,22 @@ public final class OrganizationPolicyListPolicyAllowArgs extends io.pulumi.resou
     	      this.values = defaults.values;
         }
 
-        public Builder setAll(@Nullable Input<Boolean> all) {
+        public Builder all(@Nullable Input<Boolean> all) {
             this.all = all;
             return this;
         }
 
-        public Builder setAll(@Nullable Boolean all) {
+        public Builder all(@Nullable Boolean all) {
             this.all = Input.ofNullable(all);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

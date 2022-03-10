@@ -75,22 +75,22 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
     	      this.scaleSettings = defaults.scaleSettings;
         }
 
-        public Builder setModel(@Nullable Input<DeploymentModelArgs> model) {
+        public Builder model(@Nullable Input<DeploymentModelArgs> model) {
             this.model = model;
             return this;
         }
 
-        public Builder setModel(@Nullable DeploymentModelArgs model) {
+        public Builder model(@Nullable DeploymentModelArgs model) {
             this.model = Input.ofNullable(model);
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable Input<DeploymentScaleSettingsArgs> scaleSettings) {
+        public Builder scaleSettings(@Nullable Input<DeploymentScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable DeploymentScaleSettingsArgs scaleSettings) {
+        public Builder scaleSettings(@Nullable DeploymentScaleSettingsArgs scaleSettings) {
             this.scaleSettings = Input.ofNullable(scaleSettings);
             return this;
         }

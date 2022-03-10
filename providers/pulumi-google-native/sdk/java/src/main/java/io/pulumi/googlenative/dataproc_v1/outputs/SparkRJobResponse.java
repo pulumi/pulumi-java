@@ -132,32 +132,32 @@ public final class SparkRJobResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setArchiveUris(List<String> archiveUris) {
+        public Builder archiveUris(List<String> archiveUris) {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFileUris(List<String> fileUris) {
+        public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
 
-        public Builder setLoggingConfig(LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setMainRFileUri(String mainRFileUri) {
+        public Builder mainRFileUri(String mainRFileUri) {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

@@ -184,92 +184,92 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.outboundCallsEnabled = defaults.outboundCallsEnabled;
         }
 
-        public Builder setAutoResolveBestVoicesEnabled(@Nullable Input<Boolean> autoResolveBestVoicesEnabled) {
+        public Builder autoResolveBestVoicesEnabled(@Nullable Input<Boolean> autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
             return this;
         }
 
-        public Builder setAutoResolveBestVoicesEnabled(@Nullable Boolean autoResolveBestVoicesEnabled) {
+        public Builder autoResolveBestVoicesEnabled(@Nullable Boolean autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = Input.ofNullable(autoResolveBestVoicesEnabled);
             return this;
         }
 
-        public Builder setContactFlowLogsEnabled(@Nullable Input<Boolean> contactFlowLogsEnabled) {
+        public Builder contactFlowLogsEnabled(@Nullable Input<Boolean> contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = contactFlowLogsEnabled;
             return this;
         }
 
-        public Builder setContactFlowLogsEnabled(@Nullable Boolean contactFlowLogsEnabled) {
+        public Builder contactFlowLogsEnabled(@Nullable Boolean contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = Input.ofNullable(contactFlowLogsEnabled);
             return this;
         }
 
-        public Builder setContactLensEnabled(@Nullable Input<Boolean> contactLensEnabled) {
+        public Builder contactLensEnabled(@Nullable Input<Boolean> contactLensEnabled) {
             this.contactLensEnabled = contactLensEnabled;
             return this;
         }
 
-        public Builder setContactLensEnabled(@Nullable Boolean contactLensEnabled) {
+        public Builder contactLensEnabled(@Nullable Boolean contactLensEnabled) {
             this.contactLensEnabled = Input.ofNullable(contactLensEnabled);
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setEarlyMediaEnabled(@Nullable Input<Boolean> earlyMediaEnabled) {
+        public Builder earlyMediaEnabled(@Nullable Input<Boolean> earlyMediaEnabled) {
             this.earlyMediaEnabled = earlyMediaEnabled;
             return this;
         }
 
-        public Builder setEarlyMediaEnabled(@Nullable Boolean earlyMediaEnabled) {
+        public Builder earlyMediaEnabled(@Nullable Boolean earlyMediaEnabled) {
             this.earlyMediaEnabled = Input.ofNullable(earlyMediaEnabled);
             return this;
         }
 
-        public Builder setIdentityManagementType(Input<String> identityManagementType) {
+        public Builder identityManagementType(Input<String> identityManagementType) {
             this.identityManagementType = Objects.requireNonNull(identityManagementType);
             return this;
         }
 
-        public Builder setIdentityManagementType(String identityManagementType) {
+        public Builder identityManagementType(String identityManagementType) {
             this.identityManagementType = Input.of(Objects.requireNonNull(identityManagementType));
             return this;
         }
 
-        public Builder setInboundCallsEnabled(Input<Boolean> inboundCallsEnabled) {
+        public Builder inboundCallsEnabled(Input<Boolean> inboundCallsEnabled) {
             this.inboundCallsEnabled = Objects.requireNonNull(inboundCallsEnabled);
             return this;
         }
 
-        public Builder setInboundCallsEnabled(Boolean inboundCallsEnabled) {
+        public Builder inboundCallsEnabled(Boolean inboundCallsEnabled) {
             this.inboundCallsEnabled = Input.of(Objects.requireNonNull(inboundCallsEnabled));
             return this;
         }
 
-        public Builder setInstanceAlias(@Nullable Input<String> instanceAlias) {
+        public Builder instanceAlias(@Nullable Input<String> instanceAlias) {
             this.instanceAlias = instanceAlias;
             return this;
         }
 
-        public Builder setInstanceAlias(@Nullable String instanceAlias) {
+        public Builder instanceAlias(@Nullable String instanceAlias) {
             this.instanceAlias = Input.ofNullable(instanceAlias);
             return this;
         }
 
-        public Builder setOutboundCallsEnabled(Input<Boolean> outboundCallsEnabled) {
+        public Builder outboundCallsEnabled(Input<Boolean> outboundCallsEnabled) {
             this.outboundCallsEnabled = Objects.requireNonNull(outboundCallsEnabled);
             return this;
         }
 
-        public Builder setOutboundCallsEnabled(Boolean outboundCallsEnabled) {
+        public Builder outboundCallsEnabled(Boolean outboundCallsEnabled) {
             this.outboundCallsEnabled = Input.of(Objects.requireNonNull(outboundCallsEnabled));
             return this;
         }

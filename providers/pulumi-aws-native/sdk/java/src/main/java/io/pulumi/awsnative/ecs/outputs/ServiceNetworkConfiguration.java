@@ -42,7 +42,7 @@ public final class ServiceNetworkConfiguration {
     	      this.awsvpcConfiguration = defaults.awsvpcConfiguration;
         }
 
-        public Builder setAwsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
+        public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }

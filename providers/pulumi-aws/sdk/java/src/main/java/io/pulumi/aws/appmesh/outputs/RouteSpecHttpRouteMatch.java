@@ -103,22 +103,22 @@ public final class RouteSpecHttpRouteMatch {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHeaders(@Nullable List<RouteSpecHttpRouteMatchHeader> headers) {
+        public Builder headers(@Nullable List<RouteSpecHttpRouteMatchHeader> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setScheme(@Nullable String scheme) {
+        public Builder scheme(@Nullable String scheme) {
             this.scheme = scheme;
             return this;
         }

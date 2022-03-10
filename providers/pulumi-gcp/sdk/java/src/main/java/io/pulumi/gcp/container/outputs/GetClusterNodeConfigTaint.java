@@ -57,17 +57,17 @@ public final class GetClusterNodeConfigTaint {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(String effect) {
+        public Builder effect(String effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

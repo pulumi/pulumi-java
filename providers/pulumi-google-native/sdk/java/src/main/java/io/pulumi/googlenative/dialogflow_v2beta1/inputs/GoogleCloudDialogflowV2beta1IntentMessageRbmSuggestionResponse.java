@@ -73,12 +73,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
     	      this.reply = defaults.reply;
         }
 
-        public Builder setAction(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action) {
+        public Builder action(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setReply(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
+        public Builder reply(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
             this.reply = Objects.requireNonNull(reply);
             return this;
         }

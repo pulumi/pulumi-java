@@ -73,22 +73,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
     	      this.rules = defaults.rules;
         }
 
-        public Builder setInfoTypes(Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
 
-        public Builder setInfoTypes(List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs> infoTypes) {
+        public Builder infoTypes(List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs> infoTypes) {
             this.infoTypes = Input.of(Objects.requireNonNull(infoTypes));
             return this;
         }
 
-        public Builder setRules(Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules) {
+        public Builder rules(Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs> rules) {
+        public Builder rules(List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }

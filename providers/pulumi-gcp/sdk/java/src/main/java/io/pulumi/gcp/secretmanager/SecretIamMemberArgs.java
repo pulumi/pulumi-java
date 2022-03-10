@@ -110,52 +110,52 @@ public final class SecretIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder setCondition(@Nullable Input<SecretIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<SecretIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable SecretIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable SecretIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setSecretId(Input<String> secretId) {
+        public Builder secretId(Input<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }

@@ -75,22 +75,22 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.primitiveTransformation = defaults.primitiveTransformation;
         }
 
-        public Builder setInfoTypes(@Nullable Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs> infoTypes) {
+        public Builder infoTypes(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationInfoTypeArgs> infoTypes) {
             this.infoTypes = Input.ofNullable(infoTypes);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation) {
+        public Builder primitiveTransformation(Input<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs> primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs primitiveTransformation) {
+        public Builder primitiveTransformation(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationArgs primitiveTransformation) {
             this.primitiveTransformation = Input.of(Objects.requireNonNull(primitiveTransformation));
             return this;
         }

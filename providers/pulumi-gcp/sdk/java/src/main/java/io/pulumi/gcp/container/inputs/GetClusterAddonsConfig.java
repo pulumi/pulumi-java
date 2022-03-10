@@ -166,52 +166,52 @@ public final class GetClusterAddonsConfig extends io.pulumi.resources.InvokeArgs
     	      this.networkPolicyConfigs = defaults.networkPolicyConfigs;
         }
 
-        public Builder setCloudrunConfigs(List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs) {
+        public Builder cloudrunConfigs(List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs) {
             this.cloudrunConfigs = Objects.requireNonNull(cloudrunConfigs);
             return this;
         }
 
-        public Builder setConfigConnectorConfigs(List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs) {
+        public Builder configConnectorConfigs(List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs) {
             this.configConnectorConfigs = Objects.requireNonNull(configConnectorConfigs);
             return this;
         }
 
-        public Builder setDnsCacheConfigs(List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs) {
+        public Builder dnsCacheConfigs(List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs) {
             this.dnsCacheConfigs = Objects.requireNonNull(dnsCacheConfigs);
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfigs(List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs) {
+        public Builder gcePersistentDiskCsiDriverConfigs(List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs) {
             this.gcePersistentDiskCsiDriverConfigs = Objects.requireNonNull(gcePersistentDiskCsiDriverConfigs);
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfigs(List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs) {
+        public Builder gcpFilestoreCsiDriverConfigs(List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs) {
             this.gcpFilestoreCsiDriverConfigs = Objects.requireNonNull(gcpFilestoreCsiDriverConfigs);
             return this;
         }
 
-        public Builder setHorizontalPodAutoscalings(List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings) {
+        public Builder horizontalPodAutoscalings(List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings) {
             this.horizontalPodAutoscalings = Objects.requireNonNull(horizontalPodAutoscalings);
             return this;
         }
 
-        public Builder setHttpLoadBalancings(List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings) {
+        public Builder httpLoadBalancings(List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings) {
             this.httpLoadBalancings = Objects.requireNonNull(httpLoadBalancings);
             return this;
         }
 
-        public Builder setIstioConfigs(List<GetClusterAddonsConfigIstioConfig> istioConfigs) {
+        public Builder istioConfigs(List<GetClusterAddonsConfigIstioConfig> istioConfigs) {
             this.istioConfigs = Objects.requireNonNull(istioConfigs);
             return this;
         }
 
-        public Builder setKalmConfigs(List<GetClusterAddonsConfigKalmConfig> kalmConfigs) {
+        public Builder kalmConfigs(List<GetClusterAddonsConfigKalmConfig> kalmConfigs) {
             this.kalmConfigs = Objects.requireNonNull(kalmConfigs);
             return this;
         }
 
-        public Builder setNetworkPolicyConfigs(List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
+        public Builder networkPolicyConfigs(List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
             this.networkPolicyConfigs = Objects.requireNonNull(networkPolicyConfigs);
             return this;
         }

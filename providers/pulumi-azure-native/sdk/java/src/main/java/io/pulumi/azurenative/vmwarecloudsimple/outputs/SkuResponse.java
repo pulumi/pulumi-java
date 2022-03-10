@@ -115,27 +115,27 @@ public final class SkuResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapacity(@Nullable String capacity) {
+        public Builder capacity(@Nullable String capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

@@ -107,42 +107,42 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     	      this.targetCPUUtilizationPercentage = defaults.targetCPUUtilizationPercentage;
         }
 
-        public Builder setMaxReplicas(Input<Integer> maxReplicas) {
+        public Builder maxReplicas(Input<Integer> maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
-        public Builder setMaxReplicas(Integer maxReplicas) {
+        public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Input.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Input<Integer> minReplicas) {
+        public Builder minReplicas(@Nullable Input<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Input.ofNullable(minReplicas);
             return this;
         }
 
-        public Builder setScaleTargetRef(Input<CrossVersionObjectReferenceArgs> scaleTargetRef) {
+        public Builder scaleTargetRef(Input<CrossVersionObjectReferenceArgs> scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
 
-        public Builder setScaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
+        public Builder scaleTargetRef(CrossVersionObjectReferenceArgs scaleTargetRef) {
             this.scaleTargetRef = Input.of(Objects.requireNonNull(scaleTargetRef));
             return this;
         }
 
-        public Builder setTargetCPUUtilizationPercentage(@Nullable Input<Integer> targetCPUUtilizationPercentage) {
+        public Builder targetCPUUtilizationPercentage(@Nullable Input<Integer> targetCPUUtilizationPercentage) {
             this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
             return this;
         }
 
-        public Builder setTargetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
+        public Builder targetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
             this.targetCPUUtilizationPercentage = Input.ofNullable(targetCPUUtilizationPercentage);
             return this;
         }

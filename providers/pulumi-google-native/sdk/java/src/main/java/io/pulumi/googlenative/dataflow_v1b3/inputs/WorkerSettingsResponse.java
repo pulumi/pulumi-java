@@ -137,32 +137,32 @@ public final class WorkerSettingsResponse extends io.pulumi.resources.InvokeArgs
     	      this.workerId = defaults.workerId;
         }
 
-        public Builder setBaseUrl(String baseUrl) {
+        public Builder baseUrl(String baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
 
-        public Builder setReportingEnabled(Boolean reportingEnabled) {
+        public Builder reportingEnabled(Boolean reportingEnabled) {
             this.reportingEnabled = Objects.requireNonNull(reportingEnabled);
             return this;
         }
 
-        public Builder setServicePath(String servicePath) {
+        public Builder servicePath(String servicePath) {
             this.servicePath = Objects.requireNonNull(servicePath);
             return this;
         }
 
-        public Builder setShuffleServicePath(String shuffleServicePath) {
+        public Builder shuffleServicePath(String shuffleServicePath) {
             this.shuffleServicePath = Objects.requireNonNull(shuffleServicePath);
             return this;
         }
 
-        public Builder setTempStoragePrefix(String tempStoragePrefix) {
+        public Builder tempStoragePrefix(String tempStoragePrefix) {
             this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
             return this;
         }
 
-        public Builder setWorkerId(String workerId) {
+        public Builder workerId(String workerId) {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }

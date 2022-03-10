@@ -239,122 +239,122 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder setAccessControl(@Nullable Input<FlowAccessControlConfigurationArgs> accessControl) {
+        public Builder accessControl(@Nullable Input<FlowAccessControlConfigurationArgs> accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessControl(@Nullable FlowAccessControlConfigurationArgs accessControl) {
+        public Builder accessControl(@Nullable FlowAccessControlConfigurationArgs accessControl) {
             this.accessControl = Input.ofNullable(accessControl);
             return this;
         }
 
-        public Builder setDefinition(@Nullable Input<Object> definition) {
+        public Builder definition(@Nullable Input<Object> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinition(@Nullable Object definition) {
+        public Builder definition(@Nullable Object definition) {
             this.definition = Input.ofNullable(definition);
             return this;
         }
 
-        public Builder setEndpointsConfiguration(@Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable Input<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
-        public Builder setEndpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
             this.endpointsConfiguration = Input.ofNullable(endpointsConfiguration);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setIntegrationAccount(@Nullable Input<ResourceReferenceArgs> integrationAccount) {
+        public Builder integrationAccount(@Nullable Input<ResourceReferenceArgs> integrationAccount) {
             this.integrationAccount = integrationAccount;
             return this;
         }
 
-        public Builder setIntegrationAccount(@Nullable ResourceReferenceArgs integrationAccount) {
+        public Builder integrationAccount(@Nullable ResourceReferenceArgs integrationAccount) {
             this.integrationAccount = Input.ofNullable(integrationAccount);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable Input<ResourceReferenceArgs> integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
             this.integrationServiceEnvironment = Input.ofNullable(integrationServiceEnvironment);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,WorkflowParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,WorkflowParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,WorkflowParameterArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,WorkflowParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,WorkflowState>> state) {
+        public Builder state(@Nullable Input<Either<String,WorkflowState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,WorkflowState> state) {
+        public Builder state(@Nullable Either<String,WorkflowState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkflowName(@Nullable Input<String> workflowName) {
+        public Builder workflowName(@Nullable Input<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
 
-        public Builder setWorkflowName(@Nullable String workflowName) {
+        public Builder workflowName(@Nullable String workflowName) {
             this.workflowName = Input.ofNullable(workflowName);
             return this;
         }

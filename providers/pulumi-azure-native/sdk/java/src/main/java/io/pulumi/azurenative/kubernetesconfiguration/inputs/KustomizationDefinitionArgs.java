@@ -176,82 +176,82 @@ public final class KustomizationDefinitionArgs extends io.pulumi.resources.Resou
     	      this.validation = defaults.validation;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<DependsOnDefinitionArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<DependsOnDefinitionArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<DependsOnDefinitionArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<DependsOnDefinitionArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setForce(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Input<Boolean> force) {
             this.force = force;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = Input.ofNullable(force);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPrune(@Nullable Input<Boolean> prune) {
+        public Builder prune(@Nullable Input<Boolean> prune) {
             this.prune = prune;
             return this;
         }
 
-        public Builder setPrune(@Nullable Boolean prune) {
+        public Builder prune(@Nullable Boolean prune) {
             this.prune = Input.ofNullable(prune);
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Input<Double> retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Input<Double> retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
             this.retryIntervalInSeconds = Input.ofNullable(retryIntervalInSeconds);
             return this;
         }
 
-        public Builder setSyncIntervalInSeconds(@Nullable Input<Double> syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Input<Double> syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
-        public Builder setSyncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = Input.ofNullable(syncIntervalInSeconds);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Double timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder setValidation(@Nullable Input<Either<String,KustomizationValidationType>> validation) {
+        public Builder validation(@Nullable Input<Either<String,KustomizationValidationType>> validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidation(@Nullable Either<String,KustomizationValidationType> validation) {
+        public Builder validation(@Nullable Either<String,KustomizationValidationType> validation) {
             this.validation = Input.ofNullable(validation);
             return this;
         }

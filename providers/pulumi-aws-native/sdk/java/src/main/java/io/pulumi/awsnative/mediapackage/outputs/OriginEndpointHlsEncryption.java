@@ -111,27 +111,27 @@ public final class OriginEndpointHlsEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
+        public Builder encryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
-        public Builder setRepeatExtXKey(@Nullable Boolean repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

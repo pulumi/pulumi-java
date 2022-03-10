@@ -50,7 +50,7 @@ public final class CMKIdentityDefinitionResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }

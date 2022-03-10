@@ -70,12 +70,12 @@ public final class DatabricksResponseProperties extends io.pulumi.resources.Invo
     	      this.workspaceUrl = defaults.workspaceUrl;
         }
 
-        public Builder setDatabricksAccessToken(@Nullable String databricksAccessToken) {
+        public Builder databricksAccessToken(@Nullable String databricksAccessToken) {
             this.databricksAccessToken = databricksAccessToken;
             return this;
         }
 
-        public Builder setWorkspaceUrl(@Nullable String workspaceUrl) {
+        public Builder workspaceUrl(@Nullable String workspaceUrl) {
             this.workspaceUrl = workspaceUrl;
             return this;
         }

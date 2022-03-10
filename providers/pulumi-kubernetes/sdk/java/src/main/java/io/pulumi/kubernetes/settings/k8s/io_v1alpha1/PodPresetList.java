@@ -126,8 +126,8 @@ public class PodPresetList extends io.pulumi.resources.CustomResource {
     private static PodPresetListArgs makeArgs(PodPresetListArgs args) {
         var builder = args == null ? PodPresetListArgs.builder() : PodPresetListArgs.builder(args);
         return builder
-            .setApiVersion("settings.k8s.io/v1alpha1")
-            .setKind("PodPresetList")
+            .apiVersion("settings.k8s.io/v1alpha1")
+            .kind("PodPresetList")
             .build();
     }
 

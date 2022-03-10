@@ -157,72 +157,72 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     	      this.pathRules = defaults.pathRules;
         }
 
-        public Builder setDefaultBackendAddressPool(@Nullable Input<SubResourceArgs> defaultBackendAddressPool) {
+        public Builder defaultBackendAddressPool(@Nullable Input<SubResourceArgs> defaultBackendAddressPool) {
             this.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
 
-        public Builder setDefaultBackendAddressPool(@Nullable SubResourceArgs defaultBackendAddressPool) {
+        public Builder defaultBackendAddressPool(@Nullable SubResourceArgs defaultBackendAddressPool) {
             this.defaultBackendAddressPool = Input.ofNullable(defaultBackendAddressPool);
             return this;
         }
 
-        public Builder setDefaultBackendHttpSettings(@Nullable Input<SubResourceArgs> defaultBackendHttpSettings) {
+        public Builder defaultBackendHttpSettings(@Nullable Input<SubResourceArgs> defaultBackendHttpSettings) {
             this.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
 
-        public Builder setDefaultBackendHttpSettings(@Nullable SubResourceArgs defaultBackendHttpSettings) {
+        public Builder defaultBackendHttpSettings(@Nullable SubResourceArgs defaultBackendHttpSettings) {
             this.defaultBackendHttpSettings = Input.ofNullable(defaultBackendHttpSettings);
             return this;
         }
 
-        public Builder setDefaultRedirectConfiguration(@Nullable Input<SubResourceArgs> defaultRedirectConfiguration) {
+        public Builder defaultRedirectConfiguration(@Nullable Input<SubResourceArgs> defaultRedirectConfiguration) {
             this.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
 
-        public Builder setDefaultRedirectConfiguration(@Nullable SubResourceArgs defaultRedirectConfiguration) {
+        public Builder defaultRedirectConfiguration(@Nullable SubResourceArgs defaultRedirectConfiguration) {
             this.defaultRedirectConfiguration = Input.ofNullable(defaultRedirectConfiguration);
             return this;
         }
 
-        public Builder setDefaultRewriteRuleSet(@Nullable Input<SubResourceArgs> defaultRewriteRuleSet) {
+        public Builder defaultRewriteRuleSet(@Nullable Input<SubResourceArgs> defaultRewriteRuleSet) {
             this.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
 
-        public Builder setDefaultRewriteRuleSet(@Nullable SubResourceArgs defaultRewriteRuleSet) {
+        public Builder defaultRewriteRuleSet(@Nullable SubResourceArgs defaultRewriteRuleSet) {
             this.defaultRewriteRuleSet = Input.ofNullable(defaultRewriteRuleSet);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPathRules(@Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules) {
+        public Builder pathRules(@Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
-        public Builder setPathRules(@Nullable List<ApplicationGatewayPathRuleArgs> pathRules) {
+        public Builder pathRules(@Nullable List<ApplicationGatewayPathRuleArgs> pathRules) {
             this.pathRules = Input.ofNullable(pathRules);
             return this;
         }

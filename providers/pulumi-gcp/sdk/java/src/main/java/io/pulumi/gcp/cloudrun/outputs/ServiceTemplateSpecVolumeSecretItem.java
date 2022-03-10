@@ -98,17 +98,17 @@ public final class ServiceTemplateSpecVolumeSecretItem {
     	      this.path = defaults.path;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

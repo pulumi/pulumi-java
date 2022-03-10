@@ -216,112 +216,112 @@ public final class ListenerRuleActionAuthenticateOidcGetArgs extends io.pulumi.r
     	      this.userInfoEndpoint = defaults.userInfoEndpoint;
         }
 
-        public Builder setAuthenticationRequestExtraParams(@Nullable Input<Map<String,String>> authenticationRequestExtraParams) {
+        public Builder authenticationRequestExtraParams(@Nullable Input<Map<String,String>> authenticationRequestExtraParams) {
             this.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
 
-        public Builder setAuthenticationRequestExtraParams(@Nullable Map<String,String> authenticationRequestExtraParams) {
+        public Builder authenticationRequestExtraParams(@Nullable Map<String,String> authenticationRequestExtraParams) {
             this.authenticationRequestExtraParams = Input.ofNullable(authenticationRequestExtraParams);
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setClientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Input<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder setIssuer(Input<String> issuer) {
+        public Builder issuer(Input<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Input.of(Objects.requireNonNull(issuer));
             return this;
         }
 
-        public Builder setOnUnauthenticatedRequest(@Nullable Input<String> onUnauthenticatedRequest) {
+        public Builder onUnauthenticatedRequest(@Nullable Input<String> onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
 
-        public Builder setOnUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
+        public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = Input.ofNullable(onUnauthenticatedRequest);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setSessionCookieName(@Nullable Input<String> sessionCookieName) {
+        public Builder sessionCookieName(@Nullable Input<String> sessionCookieName) {
             this.sessionCookieName = sessionCookieName;
             return this;
         }
 
-        public Builder setSessionCookieName(@Nullable String sessionCookieName) {
+        public Builder sessionCookieName(@Nullable String sessionCookieName) {
             this.sessionCookieName = Input.ofNullable(sessionCookieName);
             return this;
         }
 
-        public Builder setSessionTimeout(@Nullable Input<Integer> sessionTimeout) {
+        public Builder sessionTimeout(@Nullable Input<Integer> sessionTimeout) {
             this.sessionTimeout = sessionTimeout;
             return this;
         }
 
-        public Builder setSessionTimeout(@Nullable Integer sessionTimeout) {
+        public Builder sessionTimeout(@Nullable Integer sessionTimeout) {
             this.sessionTimeout = Input.ofNullable(sessionTimeout);
             return this;
         }
 
-        public Builder setTokenEndpoint(Input<String> tokenEndpoint) {
+        public Builder tokenEndpoint(Input<String> tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
 
-        public Builder setTokenEndpoint(String tokenEndpoint) {
+        public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Input.of(Objects.requireNonNull(tokenEndpoint));
             return this;
         }
 
-        public Builder setUserInfoEndpoint(Input<String> userInfoEndpoint) {
+        public Builder userInfoEndpoint(Input<String> userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }
 
-        public Builder setUserInfoEndpoint(String userInfoEndpoint) {
+        public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Input.of(Objects.requireNonNull(userInfoEndpoint));
             return this;
         }

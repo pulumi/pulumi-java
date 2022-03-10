@@ -84,22 +84,22 @@ public final class GetClusterCacheNode {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

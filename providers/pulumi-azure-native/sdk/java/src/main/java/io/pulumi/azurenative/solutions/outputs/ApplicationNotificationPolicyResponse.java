@@ -49,7 +49,7 @@ public final class ApplicationNotificationPolicyResponse {
     	      this.notificationEndpoints = defaults.notificationEndpoints;
         }
 
-        public Builder setNotificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
+        public Builder notificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }

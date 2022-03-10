@@ -63,22 +63,22 @@ public final class IndexUserTokenConfigurationArgs extends io.pulumi.resources.R
     	      this.jwtTokenTypeConfiguration = defaults.jwtTokenTypeConfiguration;
         }
 
-        public Builder setJsonTokenTypeConfiguration(@Nullable Input<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration) {
+        public Builder jsonTokenTypeConfiguration(@Nullable Input<IndexJsonTokenTypeConfigurationArgs> jsonTokenTypeConfiguration) {
             this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
             return this;
         }
 
-        public Builder setJsonTokenTypeConfiguration(@Nullable IndexJsonTokenTypeConfigurationArgs jsonTokenTypeConfiguration) {
+        public Builder jsonTokenTypeConfiguration(@Nullable IndexJsonTokenTypeConfigurationArgs jsonTokenTypeConfiguration) {
             this.jsonTokenTypeConfiguration = Input.ofNullable(jsonTokenTypeConfiguration);
             return this;
         }
 
-        public Builder setJwtTokenTypeConfiguration(@Nullable Input<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration) {
+        public Builder jwtTokenTypeConfiguration(@Nullable Input<IndexJwtTokenTypeConfigurationArgs> jwtTokenTypeConfiguration) {
             this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
             return this;
         }
 
-        public Builder setJwtTokenTypeConfiguration(@Nullable IndexJwtTokenTypeConfigurationArgs jwtTokenTypeConfiguration) {
+        public Builder jwtTokenTypeConfiguration(@Nullable IndexJwtTokenTypeConfigurationArgs jwtTokenTypeConfiguration) {
             this.jwtTokenTypeConfiguration = Input.ofNullable(jwtTokenTypeConfiguration);
             return this;
         }

@@ -68,12 +68,12 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
     	      this.state = defaults.state;
         }
 
-        public Builder setRoles(@Nullable List<String> roles) {
+        public Builder roles(@Nullable List<String> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -208,112 +208,112 @@ public final class RouterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setBgp(@Nullable Input<RouterBgpArgs> bgp) {
+        public Builder bgp(@Nullable Input<RouterBgpArgs> bgp) {
             this.bgp = bgp;
             return this;
         }
 
-        public Builder setBgp(@Nullable RouterBgpArgs bgp) {
+        public Builder bgp(@Nullable RouterBgpArgs bgp) {
             this.bgp = Input.ofNullable(bgp);
             return this;
         }
 
-        public Builder setBgpPeers(@Nullable Input<List<RouterBgpPeerArgs>> bgpPeers) {
+        public Builder bgpPeers(@Nullable Input<List<RouterBgpPeerArgs>> bgpPeers) {
             this.bgpPeers = bgpPeers;
             return this;
         }
 
-        public Builder setBgpPeers(@Nullable List<RouterBgpPeerArgs> bgpPeers) {
+        public Builder bgpPeers(@Nullable List<RouterBgpPeerArgs> bgpPeers) {
             this.bgpPeers = Input.ofNullable(bgpPeers);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedInterconnectRouter(@Nullable Input<Boolean> encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(@Nullable Input<Boolean> encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = encryptedInterconnectRouter;
             return this;
         }
 
-        public Builder setEncryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(@Nullable Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Input.ofNullable(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder setInterfaces(@Nullable Input<List<RouterInterfaceArgs>> interfaces) {
+        public Builder interfaces(@Nullable Input<List<RouterInterfaceArgs>> interfaces) {
             this.interfaces = interfaces;
             return this;
         }
 
-        public Builder setInterfaces(@Nullable List<RouterInterfaceArgs> interfaces) {
+        public Builder interfaces(@Nullable List<RouterInterfaceArgs> interfaces) {
             this.interfaces = Input.ofNullable(interfaces);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNats(@Nullable Input<List<RouterNatArgs>> nats) {
+        public Builder nats(@Nullable Input<List<RouterNatArgs>> nats) {
             this.nats = nats;
             return this;
         }
 
-        public Builder setNats(@Nullable List<RouterNatArgs> nats) {
+        public Builder nats(@Nullable List<RouterNatArgs> nats) {
             this.nats = Input.ofNullable(nats);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

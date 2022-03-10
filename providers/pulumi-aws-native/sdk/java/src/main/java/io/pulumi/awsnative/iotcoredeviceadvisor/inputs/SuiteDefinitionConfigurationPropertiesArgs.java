@@ -101,52 +101,52 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
     	      this.suiteDefinitionName = defaults.suiteDefinitionName;
         }
 
-        public Builder setDevicePermissionRoleArn(Input<String> devicePermissionRoleArn) {
+        public Builder devicePermissionRoleArn(Input<String> devicePermissionRoleArn) {
             this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
             return this;
         }
 
-        public Builder setDevicePermissionRoleArn(String devicePermissionRoleArn) {
+        public Builder devicePermissionRoleArn(String devicePermissionRoleArn) {
             this.devicePermissionRoleArn = Input.of(Objects.requireNonNull(devicePermissionRoleArn));
             return this;
         }
 
-        public Builder setDevices(@Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices) {
+        public Builder devices(@Nullable Input<List<SuiteDefinitionDeviceUnderTestArgs>> devices) {
             this.devices = devices;
             return this;
         }
 
-        public Builder setDevices(@Nullable List<SuiteDefinitionDeviceUnderTestArgs> devices) {
+        public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTestArgs> devices) {
             this.devices = Input.ofNullable(devices);
             return this;
         }
 
-        public Builder setIntendedForQualification(@Nullable Input<Boolean> intendedForQualification) {
+        public Builder intendedForQualification(@Nullable Input<Boolean> intendedForQualification) {
             this.intendedForQualification = intendedForQualification;
             return this;
         }
 
-        public Builder setIntendedForQualification(@Nullable Boolean intendedForQualification) {
+        public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
             this.intendedForQualification = Input.ofNullable(intendedForQualification);
             return this;
         }
 
-        public Builder setRootGroup(Input<String> rootGroup) {
+        public Builder rootGroup(Input<String> rootGroup) {
             this.rootGroup = Objects.requireNonNull(rootGroup);
             return this;
         }
 
-        public Builder setRootGroup(String rootGroup) {
+        public Builder rootGroup(String rootGroup) {
             this.rootGroup = Input.of(Objects.requireNonNull(rootGroup));
             return this;
         }
 
-        public Builder setSuiteDefinitionName(@Nullable Input<String> suiteDefinitionName) {
+        public Builder suiteDefinitionName(@Nullable Input<String> suiteDefinitionName) {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
         }
 
-        public Builder setSuiteDefinitionName(@Nullable String suiteDefinitionName) {
+        public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
             this.suiteDefinitionName = Input.ofNullable(suiteDefinitionName);
             return this;
         }

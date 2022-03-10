@@ -50,12 +50,12 @@ public final class FeatureGroupFeatureDefinition {
     	      this.featureType = defaults.featureType;
         }
 
-        public Builder setFeatureName(String featureName) {
+        public Builder featureName(String featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
-        public Builder setFeatureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
+        public Builder featureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
             this.featureType = Objects.requireNonNull(featureType);
             return this;
         }

@@ -57,12 +57,12 @@ public final class ManagementPolicySchemaArgs extends io.pulumi.resources.Resour
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(Input<List<ManagementPolicyRuleArgs>> rules) {
+        public Builder rules(Input<List<ManagementPolicyRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<ManagementPolicyRuleArgs> rules) {
+        public Builder rules(List<ManagementPolicyRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }

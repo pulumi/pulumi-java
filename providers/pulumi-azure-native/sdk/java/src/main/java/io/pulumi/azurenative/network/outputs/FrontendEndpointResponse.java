@@ -214,57 +214,57 @@ public final class FrontendEndpointResponse {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder setCustomHttpsConfiguration(CustomHttpsConfigurationResponse customHttpsConfiguration) {
+        public Builder customHttpsConfiguration(CustomHttpsConfigurationResponse customHttpsConfiguration) {
             this.customHttpsConfiguration = Objects.requireNonNull(customHttpsConfiguration);
             return this;
         }
 
-        public Builder setCustomHttpsProvisioningState(String customHttpsProvisioningState) {
+        public Builder customHttpsProvisioningState(String customHttpsProvisioningState) {
             this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState);
             return this;
         }
 
-        public Builder setCustomHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
+        public Builder customHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
             this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate);
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setSessionAffinityEnabledState(@Nullable String sessionAffinityEnabledState) {
+        public Builder sessionAffinityEnabledState(@Nullable String sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
 
-        public Builder setSessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
+        public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }

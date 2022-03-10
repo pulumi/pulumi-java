@@ -65,12 +65,12 @@ public final class GetExposureControlFeatureValueResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setFeatureName(String featureName) {
+        public Builder featureName(String featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -49,7 +49,7 @@ public final class SensitiveTextAnnotationResponse {
     	      this.details = defaults.details;
         }
 
-        public Builder setDetails(Map<String,String> details) {
+        public Builder details(Map<String,String> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }

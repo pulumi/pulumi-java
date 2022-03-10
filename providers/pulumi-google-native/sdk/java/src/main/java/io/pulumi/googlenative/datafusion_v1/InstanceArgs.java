@@ -338,192 +338,192 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAccelerators(@Nullable Input<List<AcceleratorArgs>> accelerators) {
+        public Builder accelerators(@Nullable Input<List<AcceleratorArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setAccelerators(@Nullable List<AcceleratorArgs> accelerators) {
+        public Builder accelerators(@Nullable List<AcceleratorArgs> accelerators) {
             this.accelerators = Input.ofNullable(accelerators);
             return this;
         }
 
-        public Builder setAvailableVersion(@Nullable Input<List<VersionArgs>> availableVersion) {
+        public Builder availableVersion(@Nullable Input<List<VersionArgs>> availableVersion) {
             this.availableVersion = availableVersion;
             return this;
         }
 
-        public Builder setAvailableVersion(@Nullable List<VersionArgs> availableVersion) {
+        public Builder availableVersion(@Nullable List<VersionArgs> availableVersion) {
             this.availableVersion = Input.ofNullable(availableVersion);
             return this;
         }
 
-        public Builder setCryptoKeyConfig(@Nullable Input<CryptoKeyConfigArgs> cryptoKeyConfig) {
+        public Builder cryptoKeyConfig(@Nullable Input<CryptoKeyConfigArgs> cryptoKeyConfig) {
             this.cryptoKeyConfig = cryptoKeyConfig;
             return this;
         }
 
-        public Builder setCryptoKeyConfig(@Nullable CryptoKeyConfigArgs cryptoKeyConfig) {
+        public Builder cryptoKeyConfig(@Nullable CryptoKeyConfigArgs cryptoKeyConfig) {
             this.cryptoKeyConfig = Input.ofNullable(cryptoKeyConfig);
             return this;
         }
 
-        public Builder setDataprocServiceAccount(@Nullable Input<String> dataprocServiceAccount) {
+        public Builder dataprocServiceAccount(@Nullable Input<String> dataprocServiceAccount) {
             this.dataprocServiceAccount = dataprocServiceAccount;
             return this;
         }
 
-        public Builder setDataprocServiceAccount(@Nullable String dataprocServiceAccount) {
+        public Builder dataprocServiceAccount(@Nullable String dataprocServiceAccount) {
             this.dataprocServiceAccount = Input.ofNullable(dataprocServiceAccount);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnableRbac(@Nullable Input<Boolean> enableRbac) {
+        public Builder enableRbac(@Nullable Input<Boolean> enableRbac) {
             this.enableRbac = enableRbac;
             return this;
         }
 
-        public Builder setEnableRbac(@Nullable Boolean enableRbac) {
+        public Builder enableRbac(@Nullable Boolean enableRbac) {
             this.enableRbac = Input.ofNullable(enableRbac);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }
 
-        public Builder setEnableStackdriverMonitoring(@Nullable Input<Boolean> enableStackdriverMonitoring) {
+        public Builder enableStackdriverMonitoring(@Nullable Input<Boolean> enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = enableStackdriverMonitoring;
             return this;
         }
 
-        public Builder setEnableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
+        public Builder enableStackdriverMonitoring(@Nullable Boolean enableStackdriverMonitoring) {
             this.enableStackdriverMonitoring = Input.ofNullable(enableStackdriverMonitoring);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable NetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<Map<String,String>> options) {
+        public Builder options(@Nullable Input<Map<String,String>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,String> options) {
+        public Builder options(@Nullable Map<String,String> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setPrivateInstance(@Nullable Input<Boolean> privateInstance) {
+        public Builder privateInstance(@Nullable Input<Boolean> privateInstance) {
             this.privateInstance = privateInstance;
             return this;
         }
 
-        public Builder setPrivateInstance(@Nullable Boolean privateInstance) {
+        public Builder privateInstance(@Nullable Boolean privateInstance) {
             this.privateInstance = Input.ofNullable(privateInstance);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setType(Input<InstanceType> type) {
+        public Builder type(Input<InstanceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(InstanceType type) {
+        public Builder type(InstanceType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

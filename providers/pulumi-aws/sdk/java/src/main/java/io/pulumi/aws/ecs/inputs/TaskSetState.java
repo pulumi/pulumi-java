@@ -358,202 +358,202 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
     	      this.waitUntilStableTimeout = defaults.waitUntilStableTimeout;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCapacityProviderStrategies(@Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable Input<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies) {
             this.capacityProviderStrategies = capacityProviderStrategies;
             return this;
         }
 
-        public Builder setCapacityProviderStrategies(@Nullable List<TaskSetCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
+        public Builder capacityProviderStrategies(@Nullable List<TaskSetCapacityProviderStrategyGetArgs> capacityProviderStrategies) {
             this.capacityProviderStrategies = Input.ofNullable(capacityProviderStrategies);
             return this;
         }
 
-        public Builder setCluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Input<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
-        public Builder setCluster(@Nullable String cluster) {
+        public Builder cluster(@Nullable String cluster) {
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Boolean forceDelete) {
+        public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Input.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder setLaunchType(@Nullable Input<String> launchType) {
+        public Builder launchType(@Nullable Input<String> launchType) {
             this.launchType = launchType;
             return this;
         }
 
-        public Builder setLaunchType(@Nullable String launchType) {
+        public Builder launchType(@Nullable String launchType) {
             this.launchType = Input.ofNullable(launchType);
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Input<List<TaskSetLoadBalancerGetArgs>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable List<TaskSetLoadBalancerGetArgs> loadBalancers) {
+        public Builder loadBalancers(@Nullable List<TaskSetLoadBalancerGetArgs> loadBalancers) {
             this.loadBalancers = Input.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Input<TaskSetNetworkConfigurationGetArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable TaskSetNetworkConfigurationGetArgs networkConfiguration) {
+        public Builder networkConfiguration(@Nullable TaskSetNetworkConfigurationGetArgs networkConfiguration) {
             this.networkConfiguration = Input.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Input<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Input.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder setScale(@Nullable Input<TaskSetScaleGetArgs> scale) {
+        public Builder scale(@Nullable Input<TaskSetScaleGetArgs> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable TaskSetScaleGetArgs scale) {
+        public Builder scale(@Nullable TaskSetScaleGetArgs scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setServiceRegistries(@Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable Input<TaskSetServiceRegistriesGetArgs> serviceRegistries) {
             this.serviceRegistries = serviceRegistries;
             return this;
         }
 
-        public Builder setServiceRegistries(@Nullable TaskSetServiceRegistriesGetArgs serviceRegistries) {
+        public Builder serviceRegistries(@Nullable TaskSetServiceRegistriesGetArgs serviceRegistries) {
             this.serviceRegistries = Input.ofNullable(serviceRegistries);
             return this;
         }
 
-        public Builder setStabilityStatus(@Nullable Input<String> stabilityStatus) {
+        public Builder stabilityStatus(@Nullable Input<String> stabilityStatus) {
             this.stabilityStatus = stabilityStatus;
             return this;
         }
 
-        public Builder setStabilityStatus(@Nullable String stabilityStatus) {
+        public Builder stabilityStatus(@Nullable String stabilityStatus) {
             this.stabilityStatus = Input.ofNullable(stabilityStatus);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTaskDefinition(@Nullable Input<String> taskDefinition) {
+        public Builder taskDefinition(@Nullable Input<String> taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }
 
-        public Builder setTaskDefinition(@Nullable String taskDefinition) {
+        public Builder taskDefinition(@Nullable String taskDefinition) {
             this.taskDefinition = Input.ofNullable(taskDefinition);
             return this;
         }
 
-        public Builder setTaskSetId(@Nullable Input<String> taskSetId) {
+        public Builder taskSetId(@Nullable Input<String> taskSetId) {
             this.taskSetId = taskSetId;
             return this;
         }
 
-        public Builder setTaskSetId(@Nullable String taskSetId) {
+        public Builder taskSetId(@Nullable String taskSetId) {
             this.taskSetId = Input.ofNullable(taskSetId);
             return this;
         }
 
-        public Builder setWaitUntilStable(@Nullable Input<Boolean> waitUntilStable) {
+        public Builder waitUntilStable(@Nullable Input<Boolean> waitUntilStable) {
             this.waitUntilStable = waitUntilStable;
             return this;
         }
 
-        public Builder setWaitUntilStable(@Nullable Boolean waitUntilStable) {
+        public Builder waitUntilStable(@Nullable Boolean waitUntilStable) {
             this.waitUntilStable = Input.ofNullable(waitUntilStable);
             return this;
         }
 
-        public Builder setWaitUntilStableTimeout(@Nullable Input<String> waitUntilStableTimeout) {
+        public Builder waitUntilStableTimeout(@Nullable Input<String> waitUntilStableTimeout) {
             this.waitUntilStableTimeout = waitUntilStableTimeout;
             return this;
         }
 
-        public Builder setWaitUntilStableTimeout(@Nullable String waitUntilStableTimeout) {
+        public Builder waitUntilStableTimeout(@Nullable String waitUntilStableTimeout) {
             this.waitUntilStableTimeout = Input.ofNullable(waitUntilStableTimeout);
             return this;
         }

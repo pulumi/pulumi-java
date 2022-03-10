@@ -95,42 +95,42 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.siteId = defaults.siteId;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSiteId(Input<String> siteId) {
+        public Builder siteId(Input<String> siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Input.of(Objects.requireNonNull(siteId));
             return this;
         }

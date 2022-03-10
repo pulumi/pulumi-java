@@ -488,272 +488,272 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usage = defaults.usage;
         }
 
-        public Builder setApis(@Nullable Input<List<ApiArgs>> apis) {
+        public Builder apis(@Nullable Input<List<ApiArgs>> apis) {
             this.apis = apis;
             return this;
         }
 
-        public Builder setApis(@Nullable List<ApiArgs> apis) {
+        public Builder apis(@Nullable List<ApiArgs> apis) {
             this.apis = Input.ofNullable(apis);
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<AuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<AuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable AuthenticationArgs authentication) {
+        public Builder authentication(@Nullable AuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBackend(@Nullable Input<BackendArgs> backend) {
+        public Builder backend(@Nullable Input<BackendArgs> backend) {
             this.backend = backend;
             return this;
         }
 
-        public Builder setBackend(@Nullable BackendArgs backend) {
+        public Builder backend(@Nullable BackendArgs backend) {
             this.backend = Input.ofNullable(backend);
             return this;
         }
 
-        public Builder setBilling(@Nullable Input<BillingArgs> billing) {
+        public Builder billing(@Nullable Input<BillingArgs> billing) {
             this.billing = billing;
             return this;
         }
 
-        public Builder setBilling(@Nullable BillingArgs billing) {
+        public Builder billing(@Nullable BillingArgs billing) {
             this.billing = Input.ofNullable(billing);
             return this;
         }
 
-        public Builder setConfigVersion(@Nullable Input<Integer> configVersion) {
+        public Builder configVersion(@Nullable Input<Integer> configVersion) {
             this.configVersion = configVersion;
             return this;
         }
 
-        public Builder setConfigVersion(@Nullable Integer configVersion) {
+        public Builder configVersion(@Nullable Integer configVersion) {
             this.configVersion = Input.ofNullable(configVersion);
             return this;
         }
 
-        public Builder setContext(@Nullable Input<ContextArgs> context) {
+        public Builder context(@Nullable Input<ContextArgs> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable ContextArgs context) {
+        public Builder context(@Nullable ContextArgs context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setControl(@Nullable Input<ControlArgs> control) {
+        public Builder control(@Nullable Input<ControlArgs> control) {
             this.control = control;
             return this;
         }
 
-        public Builder setControl(@Nullable ControlArgs control) {
+        public Builder control(@Nullable ControlArgs control) {
             this.control = Input.ofNullable(control);
             return this;
         }
 
-        public Builder setCustomError(@Nullable Input<CustomErrorArgs> customError) {
+        public Builder customError(@Nullable Input<CustomErrorArgs> customError) {
             this.customError = customError;
             return this;
         }
 
-        public Builder setCustomError(@Nullable CustomErrorArgs customError) {
+        public Builder customError(@Nullable CustomErrorArgs customError) {
             this.customError = Input.ofNullable(customError);
             return this;
         }
 
-        public Builder setDocumentation(@Nullable Input<DocumentationArgs> documentation) {
+        public Builder documentation(@Nullable Input<DocumentationArgs> documentation) {
             this.documentation = documentation;
             return this;
         }
 
-        public Builder setDocumentation(@Nullable DocumentationArgs documentation) {
+        public Builder documentation(@Nullable DocumentationArgs documentation) {
             this.documentation = Input.ofNullable(documentation);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<EndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<EndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<EndpointArgs> endpoints) {
+        public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setEnums(@Nullable Input<List<EnumArgs>> enums) {
+        public Builder enums(@Nullable Input<List<EnumArgs>> enums) {
             this.enums = enums;
             return this;
         }
 
-        public Builder setEnums(@Nullable List<EnumArgs> enums) {
+        public Builder enums(@Nullable List<EnumArgs> enums) {
             this.enums = Input.ofNullable(enums);
             return this;
         }
 
-        public Builder setHttp(@Nullable Input<HttpArgs> http) {
+        public Builder http(@Nullable Input<HttpArgs> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp(@Nullable HttpArgs http) {
+        public Builder http(@Nullable HttpArgs http) {
             this.http = Input.ofNullable(http);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<LoggingArgs> logging) {
+        public Builder logging(@Nullable Input<LoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable LoggingArgs logging) {
+        public Builder logging(@Nullable LoggingArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setLogs(@Nullable Input<List<LogDescriptorArgs>> logs) {
+        public Builder logs(@Nullable Input<List<LogDescriptorArgs>> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<LogDescriptorArgs> logs) {
+        public Builder logs(@Nullable List<LogDescriptorArgs> logs) {
             this.logs = Input.ofNullable(logs);
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<List<MetricDescriptorArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<MetricDescriptorArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<MetricDescriptorArgs> metrics) {
+        public Builder metrics(@Nullable List<MetricDescriptorArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setMonitoredResources(@Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources) {
+        public Builder monitoredResources(@Nullable Input<List<MonitoredResourceDescriptorArgs>> monitoredResources) {
             this.monitoredResources = monitoredResources;
             return this;
         }
 
-        public Builder setMonitoredResources(@Nullable List<MonitoredResourceDescriptorArgs> monitoredResources) {
+        public Builder monitoredResources(@Nullable List<MonitoredResourceDescriptorArgs> monitoredResources) {
             this.monitoredResources = Input.ofNullable(monitoredResources);
             return this;
         }
 
-        public Builder setMonitoring(@Nullable Input<MonitoringArgs> monitoring) {
+        public Builder monitoring(@Nullable Input<MonitoringArgs> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
-        public Builder setMonitoring(@Nullable MonitoringArgs monitoring) {
+        public Builder monitoring(@Nullable MonitoringArgs monitoring) {
             this.monitoring = Input.ofNullable(monitoring);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProducerProjectId(@Nullable Input<String> producerProjectId) {
+        public Builder producerProjectId(@Nullable Input<String> producerProjectId) {
             this.producerProjectId = producerProjectId;
             return this;
         }
 
-        public Builder setProducerProjectId(@Nullable String producerProjectId) {
+        public Builder producerProjectId(@Nullable String producerProjectId) {
             this.producerProjectId = Input.ofNullable(producerProjectId);
             return this;
         }
 
-        public Builder setQuota(@Nullable Input<QuotaArgs> quota) {
+        public Builder quota(@Nullable Input<QuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
 
-        public Builder setQuota(@Nullable QuotaArgs quota) {
+        public Builder quota(@Nullable QuotaArgs quota) {
             this.quota = Input.ofNullable(quota);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSystemParameters(@Nullable Input<SystemParametersArgs> systemParameters) {
+        public Builder systemParameters(@Nullable Input<SystemParametersArgs> systemParameters) {
             this.systemParameters = systemParameters;
             return this;
         }
 
-        public Builder setSystemParameters(@Nullable SystemParametersArgs systemParameters) {
+        public Builder systemParameters(@Nullable SystemParametersArgs systemParameters) {
             this.systemParameters = Input.ofNullable(systemParameters);
             return this;
         }
 
-        public Builder setSystemTypes(@Nullable Input<List<TypeArgs>> systemTypes) {
+        public Builder systemTypes(@Nullable Input<List<TypeArgs>> systemTypes) {
             this.systemTypes = systemTypes;
             return this;
         }
 
-        public Builder setSystemTypes(@Nullable List<TypeArgs> systemTypes) {
+        public Builder systemTypes(@Nullable List<TypeArgs> systemTypes) {
             this.systemTypes = Input.ofNullable(systemTypes);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setTypes(@Nullable Input<List<TypeArgs>> types) {
+        public Builder types(@Nullable Input<List<TypeArgs>> types) {
             this.types = types;
             return this;
         }
 
-        public Builder setTypes(@Nullable List<TypeArgs> types) {
+        public Builder types(@Nullable List<TypeArgs> types) {
             this.types = Input.ofNullable(types);
             return this;
         }
 
-        public Builder setUsage(@Nullable Input<UsageArgs> usage) {
+        public Builder usage(@Nullable Input<UsageArgs> usage) {
             this.usage = usage;
             return this;
         }
 
-        public Builder setUsage(@Nullable UsageArgs usage) {
+        public Builder usage(@Nullable UsageArgs usage) {
             this.usage = Input.ofNullable(usage);
             return this;
         }

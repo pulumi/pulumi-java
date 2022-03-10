@@ -146,62 +146,62 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
     	      this.resizeStatus = defaults.resizeStatus;
         }
 
-        public Builder setAccessModes(@Nullable Input<List<String>> accessModes) {
+        public Builder accessModes(@Nullable Input<List<String>> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
-        public Builder setAccessModes(@Nullable List<String> accessModes) {
+        public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = Input.ofNullable(accessModes);
             return this;
         }
 
-        public Builder setAllocatedResources(@Nullable Input<Map<String,String>> allocatedResources) {
+        public Builder allocatedResources(@Nullable Input<Map<String,String>> allocatedResources) {
             this.allocatedResources = allocatedResources;
             return this;
         }
 
-        public Builder setAllocatedResources(@Nullable Map<String,String> allocatedResources) {
+        public Builder allocatedResources(@Nullable Map<String,String> allocatedResources) {
             this.allocatedResources = Input.ofNullable(allocatedResources);
             return this;
         }
 
-        public Builder setCapacity(@Nullable Input<Map<String,String>> capacity) {
+        public Builder capacity(@Nullable Input<Map<String,String>> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Map<String,String> capacity) {
+        public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<PersistentVolumeClaimConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<PersistentVolumeClaimConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<PersistentVolumeClaimConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<PersistentVolumeClaimConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setPhase(@Nullable Input<String> phase) {
+        public Builder phase(@Nullable Input<String> phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = Input.ofNullable(phase);
             return this;
         }
 
-        public Builder setResizeStatus(@Nullable Input<String> resizeStatus) {
+        public Builder resizeStatus(@Nullable Input<String> resizeStatus) {
             this.resizeStatus = resizeStatus;
             return this;
         }
 
-        public Builder setResizeStatus(@Nullable String resizeStatus) {
+        public Builder resizeStatus(@Nullable String resizeStatus) {
             this.resizeStatus = Input.ofNullable(resizeStatus);
             return this;
         }

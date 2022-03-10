@@ -78,17 +78,17 @@ public final class GetHealthCheckResult {
     	      this.healthCheckTags = defaults.healthCheckTags;
         }
 
-        public Builder setHealthCheckConfig(@Nullable HealthCheckConfigProperties healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable HealthCheckConfigProperties healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
-        public Builder setHealthCheckId(@Nullable String healthCheckId) {
+        public Builder healthCheckId(@Nullable String healthCheckId) {
             this.healthCheckId = healthCheckId;
             return this;
         }
 
-        public Builder setHealthCheckTags(@Nullable List<HealthCheckTag> healthCheckTags) {
+        public Builder healthCheckTags(@Nullable List<HealthCheckTag> healthCheckTags) {
             this.healthCheckTags = healthCheckTags;
             return this;
         }

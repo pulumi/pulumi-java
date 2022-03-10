@@ -74,22 +74,22 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable Input<String> userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
             return this;
         }

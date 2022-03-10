@@ -71,22 +71,22 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(@Nullable Input<String> headerBehavior) {
+        public Builder headerBehavior(@Nullable Input<String> headerBehavior) {
             this.headerBehavior = headerBehavior;
             return this;
         }
 
-        public Builder setHeaderBehavior(@Nullable String headerBehavior) {
+        public Builder headerBehavior(@Nullable String headerBehavior) {
             this.headerBehavior = Input.ofNullable(headerBehavior);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers) {
+        public Builder headers(@Nullable Input<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs headers) {
+        public Builder headers(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersGetArgs headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }

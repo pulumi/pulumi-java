@@ -57,7 +57,7 @@ public final class MarkdownPartMetadataResponseSettings extends io.pulumi.resour
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(@Nullable MarkdownPartMetadataResponseContent content) {
+        public Builder content(@Nullable MarkdownPartMetadataResponseContent content) {
             this.content = content;
             return this;
         }

@@ -59,12 +59,12 @@ public final class ApplicationCloudwatchLoggingOptions {
     	      this.logStreamArn = defaults.logStreamArn;
         }
 
-        public Builder setCloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
+        public Builder cloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
             this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
             return this;
         }
 
-        public Builder setLogStreamArn(String logStreamArn) {
+        public Builder logStreamArn(String logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }

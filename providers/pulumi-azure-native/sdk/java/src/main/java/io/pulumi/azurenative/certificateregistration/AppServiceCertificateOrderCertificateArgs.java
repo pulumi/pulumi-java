@@ -167,82 +167,82 @@ public final class AppServiceCertificateOrderCertificateArgs extends io.pulumi.r
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCertificateOrderName(Input<String> certificateOrderName) {
+        public Builder certificateOrderName(Input<String> certificateOrderName) {
             this.certificateOrderName = Objects.requireNonNull(certificateOrderName);
             return this;
         }
 
-        public Builder setCertificateOrderName(String certificateOrderName) {
+        public Builder certificateOrderName(String certificateOrderName) {
             this.certificateOrderName = Input.of(Objects.requireNonNull(certificateOrderName));
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Input.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder setKeyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
-        public Builder setKeyVaultSecretName(@Nullable String keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
             this.keyVaultSecretName = Input.ofNullable(keyVaultSecretName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2RecordSuppressionArgs extends io.pulumi.res
     	      this.condition = defaults.condition;
         }
 
-        public Builder setCondition(@Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition) {
+        public Builder condition(@Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
+        public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }

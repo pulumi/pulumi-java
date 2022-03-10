@@ -48,7 +48,7 @@ public final class AiFeatureStoreOnlineServingConfig {
     	      this.fixedNodeCount = defaults.fixedNodeCount;
         }
 
-        public Builder setFixedNodeCount(Integer fixedNodeCount) {
+        public Builder fixedNodeCount(Integer fixedNodeCount) {
             this.fixedNodeCount = Objects.requireNonNull(fixedNodeCount);
             return this;
         }

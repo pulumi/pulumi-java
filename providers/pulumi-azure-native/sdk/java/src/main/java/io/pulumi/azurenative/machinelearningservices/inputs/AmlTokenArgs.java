@@ -57,12 +57,12 @@ public final class AmlTokenArgs extends io.pulumi.resources.ResourceArgs {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentityType(Input<String> identityType) {
+        public Builder identityType(Input<String> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Input.of(Objects.requireNonNull(identityType));
             return this;
         }

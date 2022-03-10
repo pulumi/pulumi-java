@@ -105,42 +105,42 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setRootVolume(@Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume) {
+        public Builder rootVolume(@Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
-        public Builder setRootVolume(@Nullable AzureNodePoolConfigRootVolumeArgs rootVolume) {
+        public Builder rootVolume(@Nullable AzureNodePoolConfigRootVolumeArgs rootVolume) {
             this.rootVolume = Input.ofNullable(rootVolume);
             return this;
         }
 
-        public Builder setSshConfig(Input<AzureNodePoolConfigSshConfigArgs> sshConfig) {
+        public Builder sshConfig(Input<AzureNodePoolConfigSshConfigArgs> sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
 
-        public Builder setSshConfig(AzureNodePoolConfigSshConfigArgs sshConfig) {
+        public Builder sshConfig(AzureNodePoolConfigSshConfigArgs sshConfig) {
             this.sshConfig = Input.of(Objects.requireNonNull(sshConfig));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }

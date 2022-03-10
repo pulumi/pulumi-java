@@ -65,12 +65,12 @@ public final class ExternalProtectionLevelOptionsResponse {
     	      this.externalKeyUri = defaults.externalKeyUri;
         }
 
-        public Builder setEkmConnectionKeyPath(String ekmConnectionKeyPath) {
+        public Builder ekmConnectionKeyPath(String ekmConnectionKeyPath) {
             this.ekmConnectionKeyPath = Objects.requireNonNull(ekmConnectionKeyPath);
             return this;
         }
 
-        public Builder setExternalKeyUri(String externalKeyUri) {
+        public Builder externalKeyUri(String externalKeyUri) {
             this.externalKeyUri = Objects.requireNonNull(externalKeyUri);
             return this;
         }

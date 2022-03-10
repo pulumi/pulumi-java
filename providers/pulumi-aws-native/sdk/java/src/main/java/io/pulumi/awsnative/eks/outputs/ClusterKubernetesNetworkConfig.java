@@ -84,17 +84,17 @@ public final class ClusterKubernetesNetworkConfig {
     	      this.serviceIpv6Cidr = defaults.serviceIpv6Cidr;
         }
 
-        public Builder setIpFamily(@Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily) {
+        public Builder ipFamily(@Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
-        public Builder setServiceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
+        public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
             this.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
 
-        public Builder setServiceIpv6Cidr(@Nullable String serviceIpv6Cidr) {
+        public Builder serviceIpv6Cidr(@Nullable String serviceIpv6Cidr) {
             this.serviceIpv6Cidr = serviceIpv6Cidr;
             return this;
         }

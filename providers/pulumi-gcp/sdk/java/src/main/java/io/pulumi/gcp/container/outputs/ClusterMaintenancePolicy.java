@@ -90,17 +90,17 @@ public final class ClusterMaintenancePolicy {
     	      this.recurringWindow = defaults.recurringWindow;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
+        public Builder maintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
-        public Builder setRecurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
+        public Builder recurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
         }

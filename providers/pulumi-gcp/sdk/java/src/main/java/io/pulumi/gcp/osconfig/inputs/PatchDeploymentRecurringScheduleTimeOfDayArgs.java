@@ -103,42 +103,42 @@ public final class PatchDeploymentRecurringScheduleTimeOfDayArgs extends io.pulu
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setHours(@Nullable Input<Integer> hours) {
+        public Builder hours(@Nullable Input<Integer> hours) {
             this.hours = hours;
             return this;
         }
 
-        public Builder setHours(@Nullable Integer hours) {
+        public Builder hours(@Nullable Integer hours) {
             this.hours = Input.ofNullable(hours);
             return this;
         }
 
-        public Builder setMinutes(@Nullable Input<Integer> minutes) {
+        public Builder minutes(@Nullable Input<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setMinutes(@Nullable Integer minutes) {
+        public Builder minutes(@Nullable Integer minutes) {
             this.minutes = Input.ofNullable(minutes);
             return this;
         }
 
-        public Builder setNanos(@Nullable Input<Integer> nanos) {
+        public Builder nanos(@Nullable Input<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Input.ofNullable(nanos);
             return this;
         }
 
-        public Builder setSeconds(@Nullable Input<Integer> seconds) {
+        public Builder seconds(@Nullable Input<Integer> seconds) {
             this.seconds = seconds;
             return this;
         }
 
-        public Builder setSeconds(@Nullable Integer seconds) {
+        public Builder seconds(@Nullable Integer seconds) {
             this.seconds = Input.ofNullable(seconds);
             return this;
         }

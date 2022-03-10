@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse {
     	      this.intent = defaults.intent;
         }
 
-        public Builder setIntent(String intent) {
+        public Builder intent(String intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }

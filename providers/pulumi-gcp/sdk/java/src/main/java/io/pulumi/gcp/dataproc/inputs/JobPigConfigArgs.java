@@ -152,72 +152,72 @@ public final class JobPigConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scriptVariables = defaults.scriptVariables;
         }
 
-        public Builder setContinueOnFailure(@Nullable Input<Boolean> continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Input<Boolean> continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
 
-        public Builder setContinueOnFailure(@Nullable Boolean continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = Input.ofNullable(continueOnFailure);
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable Input<List<String>> jarFileUris) {
+        public Builder jarFileUris(@Nullable Input<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Input.ofNullable(jarFileUris);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<JobPigConfigLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<JobPigConfigLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable JobPigConfigLoggingConfigArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable JobPigConfigLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable Input<String> queryFileUri) {
+        public Builder queryFileUri(@Nullable Input<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable String queryFileUri) {
+        public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Input.ofNullable(queryFileUri);
             return this;
         }
 
-        public Builder setQueryLists(@Nullable Input<List<String>> queryLists) {
+        public Builder queryLists(@Nullable Input<List<String>> queryLists) {
             this.queryLists = queryLists;
             return this;
         }
 
-        public Builder setQueryLists(@Nullable List<String> queryLists) {
+        public Builder queryLists(@Nullable List<String> queryLists) {
             this.queryLists = Input.ofNullable(queryLists);
             return this;
         }
 
-        public Builder setScriptVariables(@Nullable Input<Map<String,String>> scriptVariables) {
+        public Builder scriptVariables(@Nullable Input<Map<String,String>> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }
 
-        public Builder setScriptVariables(@Nullable Map<String,String> scriptVariables) {
+        public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = Input.ofNullable(scriptVariables);
             return this;
         }

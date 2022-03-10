@@ -116,27 +116,27 @@ public final class WorkspaceFeaturesResponse {
     	      this.immediatePurgeDataOn30Days = defaults.immediatePurgeDataOn30Days;
         }
 
-        public Builder setClusterResourceId(@Nullable String clusterResourceId) {
+        public Builder clusterResourceId(@Nullable String clusterResourceId) {
             this.clusterResourceId = clusterResourceId;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setEnableDataExport(@Nullable Boolean enableDataExport) {
+        public Builder enableDataExport(@Nullable Boolean enableDataExport) {
             this.enableDataExport = enableDataExport;
             return this;
         }
 
-        public Builder setEnableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
+        public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
             this.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
 
-        public Builder setImmediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }

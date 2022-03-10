@@ -154,72 +154,72 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setIdentity(@Nullable Input<QuantumWorkspaceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<QuantumWorkspaceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable QuantumWorkspaceIdentityArgs identity) {
+        public Builder identity(@Nullable QuantumWorkspaceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProviders(@Nullable Input<List<ProviderArgs>> providers) {
+        public Builder providers(@Nullable Input<List<ProviderArgs>> providers) {
             this.providers = providers;
             return this;
         }
 
-        public Builder setProviders(@Nullable List<ProviderArgs> providers) {
+        public Builder providers(@Nullable List<ProviderArgs> providers) {
             this.providers = Input.ofNullable(providers);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable Input<String> storageAccount) {
+        public Builder storageAccount(@Nullable Input<String> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = Input.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Input<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable String workspaceName) {
+        public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }

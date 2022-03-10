@@ -230,62 +230,62 @@ public final class GetApplicationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationArn(@Nullable String applicationArn) {
+        public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder setApplicationCreationDate(@Nullable Integer applicationCreationDate) {
+        public Builder applicationCreationDate(@Nullable Integer applicationCreationDate) {
             this.applicationCreationDate = applicationCreationDate;
             return this;
         }
 
-        public Builder setApplicationDescription(@Nullable String applicationDescription) {
+        public Builder applicationDescription(@Nullable String applicationDescription) {
             this.applicationDescription = applicationDescription;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationLastUpdateDate(@Nullable Integer applicationLastUpdateDate) {
+        public Builder applicationLastUpdateDate(@Nullable Integer applicationLastUpdateDate) {
             this.applicationLastUpdateDate = applicationLastUpdateDate;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationState(@Nullable String applicationState) {
+        public Builder applicationState(@Nullable String applicationState) {
             this.applicationState = applicationState;
             return this;
         }
 
-        public Builder setApplicationUrl(@Nullable String applicationUrl) {
+        public Builder applicationUrl(@Nullable String applicationUrl) {
             this.applicationUrl = applicationUrl;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSsoClientId(@Nullable String ssoClientId) {
+        public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTag> tags) {
+        public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }

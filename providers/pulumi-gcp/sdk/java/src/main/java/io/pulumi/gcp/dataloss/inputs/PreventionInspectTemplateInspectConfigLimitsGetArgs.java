@@ -89,32 +89,32 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends i
     	      this.maxFindingsPerRequest = defaults.maxFindingsPerRequest;
         }
 
-        public Builder setMaxFindingsPerInfoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes) {
+        public Builder maxFindingsPerInfoTypes(@Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes) {
             this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
             return this;
         }
 
-        public Builder setMaxFindingsPerInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs> maxFindingsPerInfoTypes) {
+        public Builder maxFindingsPerInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs> maxFindingsPerInfoTypes) {
             this.maxFindingsPerInfoTypes = Input.ofNullable(maxFindingsPerInfoTypes);
             return this;
         }
 
-        public Builder setMaxFindingsPerItem(Input<Integer> maxFindingsPerItem) {
+        public Builder maxFindingsPerItem(Input<Integer> maxFindingsPerItem) {
             this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
             return this;
         }
 
-        public Builder setMaxFindingsPerItem(Integer maxFindingsPerItem) {
+        public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
             this.maxFindingsPerItem = Input.of(Objects.requireNonNull(maxFindingsPerItem));
             return this;
         }
 
-        public Builder setMaxFindingsPerRequest(Input<Integer> maxFindingsPerRequest) {
+        public Builder maxFindingsPerRequest(Input<Integer> maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
         }
 
-        public Builder setMaxFindingsPerRequest(Integer maxFindingsPerRequest) {
+        public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Input.of(Objects.requireNonNull(maxFindingsPerRequest));
             return this;
         }

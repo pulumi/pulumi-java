@@ -50,7 +50,7 @@ public final class GetIPAMAllocationResult {
     	      this.ipamPoolAllocationId = defaults.ipamPoolAllocationId;
         }
 
-        public Builder setIpamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
+        public Builder ipamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }

@@ -52,12 +52,12 @@ public final class ProviderBatchingArgs {
     	      this.sendAfter = defaults.sendAfter;
         }
 
-        public Builder setEnableBatching(@Nullable Input<Boolean> enableBatching) {
+        public Builder enableBatching(@Nullable Input<Boolean> enableBatching) {
             this.enableBatching = enableBatching;
             return this;
         }
 
-        public Builder setSendAfter(@Nullable Input<String> sendAfter) {
+        public Builder sendAfter(@Nullable Input<String> sendAfter) {
             this.sendAfter = sendAfter;
             return this;
         }

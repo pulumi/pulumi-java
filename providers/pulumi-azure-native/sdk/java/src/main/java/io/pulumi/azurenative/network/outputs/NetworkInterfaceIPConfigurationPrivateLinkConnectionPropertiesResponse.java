@@ -82,17 +82,17 @@ public final class NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertie
     	      this.requiredMemberName = defaults.requiredMemberName;
         }
 
-        public Builder setFqdns(List<String> fqdns) {
+        public Builder fqdns(List<String> fqdns) {
             this.fqdns = Objects.requireNonNull(fqdns);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setRequiredMemberName(String requiredMemberName) {
+        public Builder requiredMemberName(String requiredMemberName) {
             this.requiredMemberName = Objects.requireNonNull(requiredMemberName);
             return this;
         }

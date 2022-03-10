@@ -92,22 +92,22 @@ public final class GetDistributionConfigurationsResult {
     	      this.names = defaults.names;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
+        public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

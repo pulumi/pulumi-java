@@ -100,17 +100,17 @@ public final class CxIntentTrainingPhrase {
     	      this.repeatCount = defaults.repeatCount;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setParts(List<CxIntentTrainingPhrasePart> parts) {
+        public Builder parts(List<CxIntentTrainingPhrasePart> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
-        public Builder setRepeatCount(@Nullable Integer repeatCount) {
+        public Builder repeatCount(@Nullable Integer repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }

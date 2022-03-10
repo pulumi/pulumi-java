@@ -105,42 +105,42 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
     	      this.timeoutInMins = defaults.timeoutInMins;
         }
 
-        public Builder setCombineArtifacts(@Nullable Input<Boolean> combineArtifacts) {
+        public Builder combineArtifacts(@Nullable Input<Boolean> combineArtifacts) {
             this.combineArtifacts = combineArtifacts;
             return this;
         }
 
-        public Builder setCombineArtifacts(@Nullable Boolean combineArtifacts) {
+        public Builder combineArtifacts(@Nullable Boolean combineArtifacts) {
             this.combineArtifacts = Input.ofNullable(combineArtifacts);
             return this;
         }
 
-        public Builder setRestrictions(@Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions) {
+        public Builder restrictions(@Nullable Input<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-        public Builder setRestrictions(@Nullable ProjectBuildBatchConfigRestrictionsGetArgs restrictions) {
+        public Builder restrictions(@Nullable ProjectBuildBatchConfigRestrictionsGetArgs restrictions) {
             this.restrictions = Input.ofNullable(restrictions);
             return this;
         }
 
-        public Builder setServiceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Input<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
             return this;
         }
 
-        public Builder setTimeoutInMins(@Nullable Input<Integer> timeoutInMins) {
+        public Builder timeoutInMins(@Nullable Input<Integer> timeoutInMins) {
             this.timeoutInMins = timeoutInMins;
             return this;
         }
 
-        public Builder setTimeoutInMins(@Nullable Integer timeoutInMins) {
+        public Builder timeoutInMins(@Nullable Integer timeoutInMins) {
             this.timeoutInMins = Input.ofNullable(timeoutInMins);
             return this;
         }

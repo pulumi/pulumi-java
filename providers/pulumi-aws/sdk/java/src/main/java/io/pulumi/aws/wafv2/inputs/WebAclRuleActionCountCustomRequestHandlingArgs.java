@@ -53,12 +53,12 @@ public final class WebAclRuleActionCountCustomRequestHandlingArgs extends io.pul
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder setInsertHeaders(Input<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> insertHeaders) {
+        public Builder insertHeaders(Input<List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs>> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }
 
-        public Builder setInsertHeaders(List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs> insertHeaders) {
+        public Builder insertHeaders(List<WebAclRuleActionCountCustomRequestHandlingInsertHeaderArgs> insertHeaders) {
             this.insertHeaders = Input.of(Objects.requireNonNull(insertHeaders));
             return this;
         }

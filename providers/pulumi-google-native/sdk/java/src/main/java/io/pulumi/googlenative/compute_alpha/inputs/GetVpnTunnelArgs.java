@@ -74,17 +74,17 @@ public final class GetVpnTunnelArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpnTunnel = defaults.vpnTunnel;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setVpnTunnel(String vpnTunnel) {
+        public Builder vpnTunnel(String vpnTunnel) {
             this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
             return this;
         }

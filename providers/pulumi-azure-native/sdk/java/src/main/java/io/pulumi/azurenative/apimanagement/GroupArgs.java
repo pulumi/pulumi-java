@@ -151,72 +151,72 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setGroupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Input<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = Input.ofNullable(groupId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setType(@Nullable Input<GroupType> type) {
+        public Builder type(@Nullable Input<GroupType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable GroupType type) {
+        public Builder type(@Nullable GroupType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

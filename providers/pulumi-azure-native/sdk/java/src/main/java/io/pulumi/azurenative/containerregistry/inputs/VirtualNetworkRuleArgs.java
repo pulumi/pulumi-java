@@ -76,22 +76,22 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.virtualNetworkResourceId = defaults.virtualNetworkResourceId;
         }
 
-        public Builder setAction(@Nullable Input<Either<String,Action>> action) {
+        public Builder action(@Nullable Input<Either<String,Action>> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Either<String,Action> action) {
+        public Builder action(@Nullable Either<String,Action> action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setVirtualNetworkResourceId(Input<String> virtualNetworkResourceId) {
+        public Builder virtualNetworkResourceId(Input<String> virtualNetworkResourceId) {
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
         }
 
-        public Builder setVirtualNetworkResourceId(String virtualNetworkResourceId) {
+        public Builder virtualNetworkResourceId(String virtualNetworkResourceId) {
             this.virtualNetworkResourceId = Input.of(Objects.requireNonNull(virtualNetworkResourceId));
             return this;
         }

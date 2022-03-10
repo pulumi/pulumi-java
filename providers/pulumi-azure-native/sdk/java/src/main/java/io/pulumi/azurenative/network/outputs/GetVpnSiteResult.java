@@ -300,82 +300,82 @@ public final class GetVpnSiteResult {
     	      this.vpnSiteLinks = defaults.vpnSiteLinks;
         }
 
-        public Builder setAddressSpace(@Nullable AddressSpaceResponse addressSpace) {
+        public Builder addressSpace(@Nullable AddressSpaceResponse addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
-        public Builder setBgpProperties(@Nullable BgpSettingsResponse bgpProperties) {
+        public Builder bgpProperties(@Nullable BgpSettingsResponse bgpProperties) {
             this.bgpProperties = bgpProperties;
             return this;
         }
 
-        public Builder setDeviceProperties(@Nullable DevicePropertiesResponse deviceProperties) {
+        public Builder deviceProperties(@Nullable DevicePropertiesResponse deviceProperties) {
             this.deviceProperties = deviceProperties;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIsSecuritySite(@Nullable Boolean isSecuritySite) {
+        public Builder isSecuritySite(@Nullable Boolean isSecuritySite) {
             this.isSecuritySite = isSecuritySite;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setO365Policy(@Nullable O365PolicyPropertiesResponse o365Policy) {
+        public Builder o365Policy(@Nullable O365PolicyPropertiesResponse o365Policy) {
             this.o365Policy = o365Policy;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSiteKey(@Nullable String siteKey) {
+        public Builder siteKey(@Nullable String siteKey) {
             this.siteKey = siteKey;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualWan(@Nullable SubResourceResponse virtualWan) {
+        public Builder virtualWan(@Nullable SubResourceResponse virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
 
-        public Builder setVpnSiteLinks(@Nullable List<VpnSiteLinkResponse> vpnSiteLinks) {
+        public Builder vpnSiteLinks(@Nullable List<VpnSiteLinkResponse> vpnSiteLinks) {
             this.vpnSiteLinks = vpnSiteLinks;
             return this;
         }

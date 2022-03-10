@@ -70,22 +70,22 @@ public final class VpcEndpointDnsEntryArgs extends io.pulumi.resources.ResourceA
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable Input<String> hostedZoneId) {
+        public Builder hostedZoneId(@Nullable Input<String> hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = Input.ofNullable(hostedZoneId);
             return this;
         }

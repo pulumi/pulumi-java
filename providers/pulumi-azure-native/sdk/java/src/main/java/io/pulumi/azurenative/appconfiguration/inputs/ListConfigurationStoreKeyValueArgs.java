@@ -102,22 +102,22 @@ public final class ListConfigurationStoreKeyValueArgs extends io.pulumi.resource
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setConfigStoreName(String configStoreName) {
+        public Builder configStoreName(String configStoreName) {
             this.configStoreName = Objects.requireNonNull(configStoreName);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

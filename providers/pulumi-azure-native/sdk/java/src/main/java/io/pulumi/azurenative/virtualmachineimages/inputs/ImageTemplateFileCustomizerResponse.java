@@ -123,27 +123,27 @@ public final class ImageTemplateFileCustomizerResponse extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable String sha256Checksum) {
+        public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
-        public Builder setSourceUri(@Nullable String sourceUri) {
+        public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

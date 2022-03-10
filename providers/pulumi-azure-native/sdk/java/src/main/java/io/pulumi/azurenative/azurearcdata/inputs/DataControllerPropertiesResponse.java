@@ -172,42 +172,42 @@ public final class DataControllerPropertiesResponse extends io.pulumi.resources.
     	      this.uploadWatermark = defaults.uploadWatermark;
         }
 
-        public Builder setBasicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Object k8sRaw) {
+        public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable String lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig) {
+        public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig) {
             this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
 
-        public Builder setOnPremiseProperty(@Nullable OnPremisePropertyResponse onPremiseProperty) {
+        public Builder onPremiseProperty(@Nullable OnPremisePropertyResponse onPremiseProperty) {
             this.onPremiseProperty = onPremiseProperty;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setUploadServicePrincipal(@Nullable UploadServicePrincipalResponse uploadServicePrincipal) {
+        public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalResponse uploadServicePrincipal) {
             this.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
 
-        public Builder setUploadWatermark(@Nullable UploadWatermarkResponse uploadWatermark) {
+        public Builder uploadWatermark(@Nullable UploadWatermarkResponse uploadWatermark) {
             this.uploadWatermark = uploadWatermark;
             return this;
         }

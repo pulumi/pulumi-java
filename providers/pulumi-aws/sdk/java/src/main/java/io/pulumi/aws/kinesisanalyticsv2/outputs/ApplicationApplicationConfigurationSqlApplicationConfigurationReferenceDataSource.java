@@ -93,22 +93,22 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setReferenceId(@Nullable String referenceId) {
+        public Builder referenceId(@Nullable String referenceId) {
             this.referenceId = referenceId;
             return this;
         }
 
-        public Builder setReferenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema) {
+        public Builder referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema) {
             this.referenceSchema = Objects.requireNonNull(referenceSchema);
             return this;
         }
 
-        public Builder setS3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource) {
+        public Builder s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

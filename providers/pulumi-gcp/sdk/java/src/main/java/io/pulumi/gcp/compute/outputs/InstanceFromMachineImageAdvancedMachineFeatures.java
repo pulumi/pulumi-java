@@ -52,12 +52,12 @@ public final class InstanceFromMachineImageAdvancedMachineFeatures {
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder setEnableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
 
-        public Builder setThreadsPerCore(@Nullable Integer threadsPerCore) {
+        public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }

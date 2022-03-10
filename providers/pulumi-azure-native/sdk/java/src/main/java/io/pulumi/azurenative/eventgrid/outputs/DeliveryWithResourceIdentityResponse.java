@@ -77,12 +77,12 @@ public final class DeliveryWithResourceIdentityResponse {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setDestination(@Nullable Object destination) {
+        public Builder destination(@Nullable Object destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EventSubscriptionIdentityResponse identity) {
+        public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             this.identity = identity;
             return this;
         }

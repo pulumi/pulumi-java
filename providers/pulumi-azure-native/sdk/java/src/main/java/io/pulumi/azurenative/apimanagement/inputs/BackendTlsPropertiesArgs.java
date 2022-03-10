@@ -74,22 +74,22 @@ public final class BackendTlsPropertiesArgs extends io.pulumi.resources.Resource
     	      this.validateCertificateName = defaults.validateCertificateName;
         }
 
-        public Builder setValidateCertificateChain(@Nullable Input<Boolean> validateCertificateChain) {
+        public Builder validateCertificateChain(@Nullable Input<Boolean> validateCertificateChain) {
             this.validateCertificateChain = validateCertificateChain;
             return this;
         }
 
-        public Builder setValidateCertificateChain(@Nullable Boolean validateCertificateChain) {
+        public Builder validateCertificateChain(@Nullable Boolean validateCertificateChain) {
             this.validateCertificateChain = Input.ofNullable(validateCertificateChain);
             return this;
         }
 
-        public Builder setValidateCertificateName(@Nullable Input<Boolean> validateCertificateName) {
+        public Builder validateCertificateName(@Nullable Input<Boolean> validateCertificateName) {
             this.validateCertificateName = validateCertificateName;
             return this;
         }
 
-        public Builder setValidateCertificateName(@Nullable Boolean validateCertificateName) {
+        public Builder validateCertificateName(@Nullable Boolean validateCertificateName) {
             this.validateCertificateName = Input.ofNullable(validateCertificateName);
             return this;
         }

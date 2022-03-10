@@ -97,32 +97,32 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceArg
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBackendService(Input<String> backendService) {
+        public Builder backendService(Input<String> backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Input.of(Objects.requireNonNull(backendService));
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Input<URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs headerAction) {
+        public Builder headerAction(@Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs headerAction) {
             this.headerAction = Input.ofNullable(headerAction);
             return this;
         }
 
-        public Builder setWeight(Input<Integer> weight) {
+        public Builder weight(Input<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }

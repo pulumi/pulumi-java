@@ -69,12 +69,12 @@ public final class FirewallFirewallStatusSyncState {
     	      this.availabilityZone = defaults.availabilityZone;
         }
 
-        public Builder setAttachments(@Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments) {
+        public Builder attachments(@Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments) {
             this.attachments = attachments;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }

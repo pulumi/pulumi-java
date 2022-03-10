@@ -181,47 +181,47 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExternalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
+        public Builder externalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
             this.externalMappings = externalMappings;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInternalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
+        public Builder internalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
             this.internalMappings = internalMappings;
             return this;
         }
 
-        public Builder setIpConfigurationId(@Nullable String ipConfigurationId) {
+        public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
             this.ipConfigurationId = ipConfigurationId;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

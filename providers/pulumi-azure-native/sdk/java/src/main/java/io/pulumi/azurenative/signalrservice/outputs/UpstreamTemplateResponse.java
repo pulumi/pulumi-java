@@ -125,22 +125,22 @@ public final class UpstreamTemplateResponse {
     	      this.urlTemplate = defaults.urlTemplate;
         }
 
-        public Builder setCategoryPattern(@Nullable String categoryPattern) {
+        public Builder categoryPattern(@Nullable String categoryPattern) {
             this.categoryPattern = categoryPattern;
             return this;
         }
 
-        public Builder setEventPattern(@Nullable String eventPattern) {
+        public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
-        public Builder setHubPattern(@Nullable String hubPattern) {
+        public Builder hubPattern(@Nullable String hubPattern) {
             this.hubPattern = hubPattern;
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }

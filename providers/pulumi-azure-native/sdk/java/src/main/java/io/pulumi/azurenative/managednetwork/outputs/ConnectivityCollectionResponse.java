@@ -67,12 +67,12 @@ public final class ConnectivityCollectionResponse {
     	      this.peerings = defaults.peerings;
         }
 
-        public Builder setGroups(List<ManagedNetworkGroupResponse> groups) {
+        public Builder groups(List<ManagedNetworkGroupResponse> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setPeerings(List<ManagedNetworkPeeringPolicyResponse> peerings) {
+        public Builder peerings(List<ManagedNetworkPeeringPolicyResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }

@@ -81,22 +81,22 @@ public final class EphemeralVolumeSourceArgs extends io.pulumi.resources.Resourc
     	      this.volumeClaimTemplate = defaults.volumeClaimTemplate;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setVolumeClaimTemplate(@Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
+        public Builder volumeClaimTemplate(@Nullable Input<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
             this.volumeClaimTemplate = volumeClaimTemplate;
             return this;
         }
 
-        public Builder setVolumeClaimTemplate(@Nullable PersistentVolumeClaimTemplateArgs volumeClaimTemplate) {
+        public Builder volumeClaimTemplate(@Nullable PersistentVolumeClaimTemplateArgs volumeClaimTemplate) {
             this.volumeClaimTemplate = Input.ofNullable(volumeClaimTemplate);
             return this;
         }

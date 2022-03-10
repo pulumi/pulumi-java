@@ -76,22 +76,22 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     	      this.resources = defaults.resources;
         }
 
-        public Builder setProvider(@Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider) {
+        public Builder provider(@Nullable Input<ClusterEncryptionConfigProviderPropertiesArgs> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable ClusterEncryptionConfigProviderPropertiesArgs provider) {
+        public Builder provider(@Nullable ClusterEncryptionConfigProviderPropertiesArgs provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }

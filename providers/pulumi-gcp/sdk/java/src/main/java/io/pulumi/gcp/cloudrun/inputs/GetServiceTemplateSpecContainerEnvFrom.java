@@ -75,17 +75,17 @@ public final class GetServiceTemplateSpecContainerEnvFrom extends io.pulumi.reso
     	      this.secretReves = defaults.secretReves;
         }
 
-        public Builder setConfigMapReves(List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves) {
+        public Builder configMapReves(List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves) {
             this.configMapReves = Objects.requireNonNull(configMapReves);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setSecretReves(List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
+        public Builder secretReves(List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
             this.secretReves = Objects.requireNonNull(secretReves);
             return this;
         }

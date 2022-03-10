@@ -99,22 +99,22 @@ public final class IncidentInfoResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setIncidentId(@Nullable String incidentId) {
+        public Builder incidentId(@Nullable String incidentId) {
             this.incidentId = incidentId;
             return this;
         }
 
-        public Builder setRelationName(@Nullable String relationName) {
+        public Builder relationName(@Nullable String relationName) {
             this.relationName = relationName;
             return this;
         }
 
-        public Builder setSeverity(@Nullable String severity) {
+        public Builder severity(@Nullable String severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetSqlServerInstanceArgs extends io.pulumi.resources.InvokeAr
     	      this.sqlServerInstanceName = defaults.sqlServerInstanceName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSqlServerInstanceName(String sqlServerInstanceName) {
+        public Builder sqlServerInstanceName(String sqlServerInstanceName) {
             this.sqlServerInstanceName = Objects.requireNonNull(sqlServerInstanceName);
             return this;
         }

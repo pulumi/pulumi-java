@@ -94,32 +94,32 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder setClassificationThreshold(@Nullable Input<Double> classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Input<Double> classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
 
-        public Builder setClassificationThreshold(@Nullable Double classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = Input.ofNullable(classificationThreshold);
             return this;
         }
 
-        public Builder setModelTrainingMode(@Nullable Input<String> modelTrainingMode) {
+        public Builder modelTrainingMode(@Nullable Input<String> modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
 
-        public Builder setModelTrainingMode(@Nullable String modelTrainingMode) {
+        public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
             this.modelTrainingMode = Input.ofNullable(modelTrainingMode);
             return this;
         }
 
-        public Builder setModelType(@Nullable Input<String> modelType) {
+        public Builder modelType(@Nullable Input<String> modelType) {
             this.modelType = modelType;
             return this;
         }
 
-        public Builder setModelType(@Nullable String modelType) {
+        public Builder modelType(@Nullable String modelType) {
             this.modelType = Input.ofNullable(modelType);
             return this;
         }

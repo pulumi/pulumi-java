@@ -42,7 +42,7 @@ public final class JobExecutionsRetryConfigProperties {
     	      this.retryCriteriaList = defaults.retryCriteriaList;
         }
 
-        public Builder setRetryCriteriaList(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
+        public Builder retryCriteriaList(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
             this.retryCriteriaList = retryCriteriaList;
             return this;
         }

@@ -48,7 +48,7 @@ public final class AppBundleResponse {
     	      this.bundleLocation = defaults.bundleLocation;
         }
 
-        public Builder setBundleLocation(FileReferenceResponse bundleLocation) {
+        public Builder bundleLocation(FileReferenceResponse bundleLocation) {
             this.bundleLocation = Objects.requireNonNull(bundleLocation);
             return this;
         }

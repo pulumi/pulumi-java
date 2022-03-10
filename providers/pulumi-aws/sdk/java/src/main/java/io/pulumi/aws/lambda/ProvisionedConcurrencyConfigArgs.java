@@ -86,32 +86,32 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder setFunctionName(Input<String> functionName) {
+        public Builder functionName(Input<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Input.of(Objects.requireNonNull(functionName));
             return this;
         }
 
-        public Builder setProvisionedConcurrentExecutions(Input<Integer> provisionedConcurrentExecutions) {
+        public Builder provisionedConcurrentExecutions(Input<Integer> provisionedConcurrentExecutions) {
             this.provisionedConcurrentExecutions = Objects.requireNonNull(provisionedConcurrentExecutions);
             return this;
         }
 
-        public Builder setProvisionedConcurrentExecutions(Integer provisionedConcurrentExecutions) {
+        public Builder provisionedConcurrentExecutions(Integer provisionedConcurrentExecutions) {
             this.provisionedConcurrentExecutions = Input.of(Objects.requireNonNull(provisionedConcurrentExecutions));
             return this;
         }
 
-        public Builder setQualifier(Input<String> qualifier) {
+        public Builder qualifier(Input<String> qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
 
-        public Builder setQualifier(String qualifier) {
+        public Builder qualifier(String qualifier) {
             this.qualifier = Input.of(Objects.requireNonNull(qualifier));
             return this;
         }

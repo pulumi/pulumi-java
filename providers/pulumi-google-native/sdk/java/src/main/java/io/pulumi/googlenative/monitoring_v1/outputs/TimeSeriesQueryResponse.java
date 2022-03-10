@@ -99,22 +99,22 @@ public final class TimeSeriesQueryResponse {
     	      this.unitOverride = defaults.unitOverride;
         }
 
-        public Builder setTimeSeriesFilter(TimeSeriesFilterResponse timeSeriesFilter) {
+        public Builder timeSeriesFilter(TimeSeriesFilterResponse timeSeriesFilter) {
             this.timeSeriesFilter = Objects.requireNonNull(timeSeriesFilter);
             return this;
         }
 
-        public Builder setTimeSeriesFilterRatio(TimeSeriesFilterRatioResponse timeSeriesFilterRatio) {
+        public Builder timeSeriesFilterRatio(TimeSeriesFilterRatioResponse timeSeriesFilterRatio) {
             this.timeSeriesFilterRatio = Objects.requireNonNull(timeSeriesFilterRatio);
             return this;
         }
 
-        public Builder setTimeSeriesQueryLanguage(String timeSeriesQueryLanguage) {
+        public Builder timeSeriesQueryLanguage(String timeSeriesQueryLanguage) {
             this.timeSeriesQueryLanguage = Objects.requireNonNull(timeSeriesQueryLanguage);
             return this;
         }
 
-        public Builder setUnitOverride(String unitOverride) {
+        public Builder unitOverride(String unitOverride) {
             this.unitOverride = Objects.requireNonNull(unitOverride);
             return this;
         }

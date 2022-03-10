@@ -238,122 +238,122 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.scope = defaults.scope;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnforcementMode(@Nullable Input<Either<String,EnforcementMode>> enforcementMode) {
+        public Builder enforcementMode(@Nullable Input<Either<String,EnforcementMode>> enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
 
-        public Builder setEnforcementMode(@Nullable Either<String,EnforcementMode> enforcementMode) {
+        public Builder enforcementMode(@Nullable Either<String,EnforcementMode> enforcementMode) {
             this.enforcementMode = Input.ofNullable(enforcementMode);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNonComplianceMessages(@Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages) {
+        public Builder nonComplianceMessages(@Nullable Input<List<NonComplianceMessageArgs>> nonComplianceMessages) {
             this.nonComplianceMessages = nonComplianceMessages;
             return this;
         }
 
-        public Builder setNonComplianceMessages(@Nullable List<NonComplianceMessageArgs> nonComplianceMessages) {
+        public Builder nonComplianceMessages(@Nullable List<NonComplianceMessageArgs> nonComplianceMessages) {
             this.nonComplianceMessages = Input.ofNullable(nonComplianceMessages);
             return this;
         }
 
-        public Builder setNotScopes(@Nullable Input<List<String>> notScopes) {
+        public Builder notScopes(@Nullable Input<List<String>> notScopes) {
             this.notScopes = notScopes;
             return this;
         }
 
-        public Builder setNotScopes(@Nullable List<String> notScopes) {
+        public Builder notScopes(@Nullable List<String> notScopes) {
             this.notScopes = Input.ofNullable(notScopes);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterValuesValueArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterValuesValueArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPolicyAssignmentName(@Nullable Input<String> policyAssignmentName) {
+        public Builder policyAssignmentName(@Nullable Input<String> policyAssignmentName) {
             this.policyAssignmentName = policyAssignmentName;
             return this;
         }
 
-        public Builder setPolicyAssignmentName(@Nullable String policyAssignmentName) {
+        public Builder policyAssignmentName(@Nullable String policyAssignmentName) {
             this.policyAssignmentName = Input.ofNullable(policyAssignmentName);
             return this;
         }
 
-        public Builder setPolicyDefinitionId(@Nullable Input<String> policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable Input<String> policyDefinitionId) {
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
-        public Builder setPolicyDefinitionId(@Nullable String policyDefinitionId) {
+        public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
             this.policyDefinitionId = Input.ofNullable(policyDefinitionId);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }

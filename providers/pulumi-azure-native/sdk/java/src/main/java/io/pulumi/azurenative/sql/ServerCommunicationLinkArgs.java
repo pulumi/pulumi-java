@@ -102,42 +102,42 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setCommunicationLinkName(@Nullable Input<String> communicationLinkName) {
+        public Builder communicationLinkName(@Nullable Input<String> communicationLinkName) {
             this.communicationLinkName = communicationLinkName;
             return this;
         }
 
-        public Builder setCommunicationLinkName(@Nullable String communicationLinkName) {
+        public Builder communicationLinkName(@Nullable String communicationLinkName) {
             this.communicationLinkName = Input.ofNullable(communicationLinkName);
             return this;
         }
 
-        public Builder setPartnerServer(Input<String> partnerServer) {
+        public Builder partnerServer(Input<String> partnerServer) {
             this.partnerServer = Objects.requireNonNull(partnerServer);
             return this;
         }
 
-        public Builder setPartnerServer(String partnerServer) {
+        public Builder partnerServer(String partnerServer) {
             this.partnerServer = Input.of(Objects.requireNonNull(partnerServer));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

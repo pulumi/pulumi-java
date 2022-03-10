@@ -55,7 +55,7 @@ public final class SparkHistoryServerConfigResponse extends io.pulumi.resources.
     	      this.dataprocCluster = defaults.dataprocCluster;
         }
 
-        public Builder setDataprocCluster(String dataprocCluster) {
+        public Builder dataprocCluster(String dataprocCluster) {
             this.dataprocCluster = Objects.requireNonNull(dataprocCluster);
             return this;
         }

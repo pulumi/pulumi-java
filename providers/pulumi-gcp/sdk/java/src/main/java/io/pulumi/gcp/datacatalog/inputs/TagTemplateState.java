@@ -156,72 +156,72 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
     	      this.tagTemplateId = defaults.tagTemplateId;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<TagTemplateFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Input<List<TagTemplateFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<TagTemplateFieldGetArgs> fields) {
+        public Builder fields(@Nullable List<TagTemplateFieldGetArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Boolean forceDelete) {
+        public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Input.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTagTemplateId(@Nullable Input<String> tagTemplateId) {
+        public Builder tagTemplateId(@Nullable Input<String> tagTemplateId) {
             this.tagTemplateId = tagTemplateId;
             return this;
         }
 
-        public Builder setTagTemplateId(@Nullable String tagTemplateId) {
+        public Builder tagTemplateId(@Nullable String tagTemplateId) {
             this.tagTemplateId = Input.ofNullable(tagTemplateId);
             return this;
         }

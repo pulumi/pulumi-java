@@ -82,17 +82,17 @@ public final class DomainMappingSpecResponse {
     	      this.routeName = defaults.routeName;
         }
 
-        public Builder setCertificateMode(String certificateMode) {
+        public Builder certificateMode(String certificateMode) {
             this.certificateMode = Objects.requireNonNull(certificateMode);
             return this;
         }
 
-        public Builder setForceOverride(Boolean forceOverride) {
+        public Builder forceOverride(Boolean forceOverride) {
             this.forceOverride = Objects.requireNonNull(forceOverride);
             return this;
         }
 
-        public Builder setRouteName(String routeName) {
+        public Builder routeName(String routeName) {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }

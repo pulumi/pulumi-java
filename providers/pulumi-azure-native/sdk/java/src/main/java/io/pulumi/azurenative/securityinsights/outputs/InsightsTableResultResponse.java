@@ -68,12 +68,12 @@ public final class InsightsTableResultResponse {
     	      this.rows = defaults.rows;
         }
 
-        public Builder setColumns(@Nullable List<InsightsTableResultResponseColumns> columns) {
+        public Builder columns(@Nullable List<InsightsTableResultResponseColumns> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setRows(@Nullable List<List<String>> rows) {
+        public Builder rows(@Nullable List<List<String>> rows) {
             this.rows = rows;
             return this;
         }

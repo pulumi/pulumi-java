@@ -76,22 +76,22 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
     	      this.domain = defaults.domain;
         }
 
-        public Builder setDkimTokens(@Nullable Input<List<String>> dkimTokens) {
+        public Builder dkimTokens(@Nullable Input<List<String>> dkimTokens) {
             this.dkimTokens = dkimTokens;
             return this;
         }
 
-        public Builder setDkimTokens(@Nullable List<String> dkimTokens) {
+        public Builder dkimTokens(@Nullable List<String> dkimTokens) {
             this.dkimTokens = Input.ofNullable(dkimTokens);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }

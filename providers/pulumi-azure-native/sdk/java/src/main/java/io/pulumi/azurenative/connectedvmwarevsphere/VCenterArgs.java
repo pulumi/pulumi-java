@@ -186,92 +186,92 @@ public final class VCenterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vcenterName = defaults.vcenterName;
         }
 
-        public Builder setCredentials(@Nullable Input<VICredentialArgs> credentials) {
+        public Builder credentials(@Nullable Input<VICredentialArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable VICredentialArgs credentials) {
+        public Builder credentials(@Nullable VICredentialArgs credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setFqdn(Input<String> fqdn) {
+        public Builder fqdn(Input<String> fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Input.of(Objects.requireNonNull(fqdn));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVcenterName(@Nullable Input<String> vcenterName) {
+        public Builder vcenterName(@Nullable Input<String> vcenterName) {
             this.vcenterName = vcenterName;
             return this;
         }
 
-        public Builder setVcenterName(@Nullable String vcenterName) {
+        public Builder vcenterName(@Nullable String vcenterName) {
             this.vcenterName = Input.ofNullable(vcenterName);
             return this;
         }

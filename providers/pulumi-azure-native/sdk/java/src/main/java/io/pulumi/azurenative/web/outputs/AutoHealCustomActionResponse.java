@@ -67,12 +67,12 @@ public final class AutoHealCustomActionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setExe(@Nullable String exe) {
+        public Builder exe(@Nullable String exe) {
             this.exe = exe;
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }

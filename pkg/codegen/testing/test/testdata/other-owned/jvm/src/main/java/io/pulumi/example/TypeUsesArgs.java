@@ -76,32 +76,32 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.foo = defaults.foo;
         }
 
-        public Builder setBar(@Nullable Input<SomeOtherObjectArgs> bar) {
+        public Builder bar(@Nullable Input<SomeOtherObjectArgs> bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setBar(@Nullable SomeOtherObjectArgs bar) {
+        public Builder bar(@Nullable SomeOtherObjectArgs bar) {
             this.bar = Input.ofNullable(bar);
             return this;
         }
 
-        public Builder setBaz(@Nullable Input<ObjectWithNodeOptionalInputsArgs> baz) {
+        public Builder baz(@Nullable Input<ObjectWithNodeOptionalInputsArgs> baz) {
             this.baz = baz;
             return this;
         }
 
-        public Builder setBaz(@Nullable ObjectWithNodeOptionalInputsArgs baz) {
+        public Builder baz(@Nullable ObjectWithNodeOptionalInputsArgs baz) {
             this.baz = Input.ofNullable(baz);
             return this;
         }
 
-        public Builder setFoo(@Nullable Input<ObjectArgs> foo) {
+        public Builder foo(@Nullable Input<ObjectArgs> foo) {
             this.foo = foo;
             return this;
         }
 
-        public Builder setFoo(@Nullable ObjectArgs foo) {
+        public Builder foo(@Nullable ObjectArgs foo) {
             this.foo = Input.ofNullable(foo);
             return this;
         }

@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3IntentInputResponse extends io.pulum
     	      this.intent = defaults.intent;
         }
 
-        public Builder setIntent(String intent) {
+        public Builder intent(String intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }

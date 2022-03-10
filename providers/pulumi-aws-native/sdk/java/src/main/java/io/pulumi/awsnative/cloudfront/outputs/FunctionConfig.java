@@ -49,12 +49,12 @@ public final class FunctionConfig {
     	      this.runtime = defaults.runtime;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setRuntime(String runtime) {
+        public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }

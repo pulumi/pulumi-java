@@ -191,92 +191,92 @@ public final class KeyRingImportJobState extends io.pulumi.resources.ResourceArg
     	      this.state = defaults.state;
         }
 
-        public Builder setAttestations(@Nullable Input<List<KeyRingImportJobAttestationGetArgs>> attestations) {
+        public Builder attestations(@Nullable Input<List<KeyRingImportJobAttestationGetArgs>> attestations) {
             this.attestations = attestations;
             return this;
         }
 
-        public Builder setAttestations(@Nullable List<KeyRingImportJobAttestationGetArgs> attestations) {
+        public Builder attestations(@Nullable List<KeyRingImportJobAttestationGetArgs> attestations) {
             this.attestations = Input.ofNullable(attestations);
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setImportJobId(@Nullable Input<String> importJobId) {
+        public Builder importJobId(@Nullable Input<String> importJobId) {
             this.importJobId = importJobId;
             return this;
         }
 
-        public Builder setImportJobId(@Nullable String importJobId) {
+        public Builder importJobId(@Nullable String importJobId) {
             this.importJobId = Input.ofNullable(importJobId);
             return this;
         }
 
-        public Builder setImportMethod(@Nullable Input<String> importMethod) {
+        public Builder importMethod(@Nullable Input<String> importMethod) {
             this.importMethod = importMethod;
             return this;
         }
 
-        public Builder setImportMethod(@Nullable String importMethod) {
+        public Builder importMethod(@Nullable String importMethod) {
             this.importMethod = Input.ofNullable(importMethod);
             return this;
         }
 
-        public Builder setKeyRing(@Nullable Input<String> keyRing) {
+        public Builder keyRing(@Nullable Input<String> keyRing) {
             this.keyRing = keyRing;
             return this;
         }
 
-        public Builder setKeyRing(@Nullable String keyRing) {
+        public Builder keyRing(@Nullable String keyRing) {
             this.keyRing = Input.ofNullable(keyRing);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProtectionLevel(@Nullable Input<String> protectionLevel) {
+        public Builder protectionLevel(@Nullable Input<String> protectionLevel) {
             this.protectionLevel = protectionLevel;
             return this;
         }
 
-        public Builder setProtectionLevel(@Nullable String protectionLevel) {
+        public Builder protectionLevel(@Nullable String protectionLevel) {
             this.protectionLevel = Input.ofNullable(protectionLevel);
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable Input<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Input<List<KeyRingImportJobPublicKeyGetArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<KeyRingImportJobPublicKeyGetArgs> publicKeys) {
+        public Builder publicKeys(@Nullable List<KeyRingImportJobPublicKeyGetArgs> publicKeys) {
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

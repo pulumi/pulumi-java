@@ -248,132 +248,132 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCanonicalName(@Nullable Input<String> canonicalName) {
+        public Builder canonicalName(@Nullable Input<String> canonicalName) {
             this.canonicalName = canonicalName;
             return this;
         }
 
-        public Builder setCanonicalName(@Nullable String canonicalName) {
+        public Builder canonicalName(@Nullable String canonicalName) {
             this.canonicalName = Input.ofNullable(canonicalName);
             return this;
         }
 
-        public Builder setDomainValidationMethod(@Nullable Input<String> domainValidationMethod) {
+        public Builder domainValidationMethod(@Nullable Input<String> domainValidationMethod) {
             this.domainValidationMethod = domainValidationMethod;
             return this;
         }
 
-        public Builder setDomainValidationMethod(@Nullable String domainValidationMethod) {
+        public Builder domainValidationMethod(@Nullable String domainValidationMethod) {
             this.domainValidationMethod = Input.ofNullable(domainValidationMethod);
             return this;
         }
 
-        public Builder setHostNames(@Nullable Input<List<String>> hostNames) {
+        public Builder hostNames(@Nullable Input<List<String>> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
 
-        public Builder setHostNames(@Nullable List<String> hostNames) {
+        public Builder hostNames(@Nullable List<String> hostNames) {
             this.hostNames = Input.ofNullable(hostNames);
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = Input.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder setKeyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
-        public Builder setKeyVaultSecretName(@Nullable String keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
             this.keyVaultSecretName = Input.ofNullable(keyVaultSecretName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPfxBlob(@Nullable Input<String> pfxBlob) {
+        public Builder pfxBlob(@Nullable Input<String> pfxBlob) {
             this.pfxBlob = pfxBlob;
             return this;
         }
 
-        public Builder setPfxBlob(@Nullable String pfxBlob) {
+        public Builder pfxBlob(@Nullable String pfxBlob) {
             this.pfxBlob = Input.ofNullable(pfxBlob);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerFarmId(@Nullable Input<String> serverFarmId) {
+        public Builder serverFarmId(@Nullable Input<String> serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
 
-        public Builder setServerFarmId(@Nullable String serverFarmId) {
+        public Builder serverFarmId(@Nullable String serverFarmId) {
             this.serverFarmId = Input.ofNullable(serverFarmId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

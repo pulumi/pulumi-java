@@ -106,52 +106,52 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setPositionalConstraint(Input<RuleGroupPositionalConstraint> positionalConstraint) {
+        public Builder positionalConstraint(Input<RuleGroupPositionalConstraint> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
-        public Builder setPositionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
+        public Builder positionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Input.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
 
-        public Builder setSearchString(@Nullable Input<String> searchString) {
+        public Builder searchString(@Nullable Input<String> searchString) {
             this.searchString = searchString;
             return this;
         }
 
-        public Builder setSearchString(@Nullable String searchString) {
+        public Builder searchString(@Nullable String searchString) {
             this.searchString = Input.ofNullable(searchString);
             return this;
         }
 
-        public Builder setSearchStringBase64(@Nullable Input<String> searchStringBase64) {
+        public Builder searchStringBase64(@Nullable Input<String> searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
 
-        public Builder setSearchStringBase64(@Nullable String searchStringBase64) {
+        public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = Input.ofNullable(searchStringBase64);
             return this;
         }
 
-        public Builder setTextTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }

@@ -110,42 +110,42 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualProperties = defaults.virtualProperties;
         }
 
-        public Builder setAsyncOptions(@Nullable Input<List<AsyncOptionsArgs>> asyncOptions) {
+        public Builder asyncOptions(@Nullable Input<List<AsyncOptionsArgs>> asyncOptions) {
             this.asyncOptions = asyncOptions;
             return this;
         }
 
-        public Builder setAsyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
+        public Builder asyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
             this.asyncOptions = Input.ofNullable(asyncOptions);
             return this;
         }
 
-        public Builder setInputMappings(@Nullable Input<List<InputMappingArgs>> inputMappings) {
+        public Builder inputMappings(@Nullable Input<List<InputMappingArgs>> inputMappings) {
             this.inputMappings = inputMappings;
             return this;
         }
 
-        public Builder setInputMappings(@Nullable List<InputMappingArgs> inputMappings) {
+        public Builder inputMappings(@Nullable List<InputMappingArgs> inputMappings) {
             this.inputMappings = Input.ofNullable(inputMappings);
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable Input<ValidationOptionsArgs> validationOptions) {
+        public Builder validationOptions(@Nullable Input<ValidationOptionsArgs> validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable ValidationOptionsArgs validationOptions) {
+        public Builder validationOptions(@Nullable ValidationOptionsArgs validationOptions) {
             this.validationOptions = Input.ofNullable(validationOptions);
             return this;
         }
 
-        public Builder setVirtualProperties(@Nullable Input<String> virtualProperties) {
+        public Builder virtualProperties(@Nullable Input<String> virtualProperties) {
             this.virtualProperties = virtualProperties;
             return this;
         }
 
-        public Builder setVirtualProperties(@Nullable String virtualProperties) {
+        public Builder virtualProperties(@Nullable String virtualProperties) {
             this.virtualProperties = Input.ofNullable(virtualProperties);
             return this;
         }

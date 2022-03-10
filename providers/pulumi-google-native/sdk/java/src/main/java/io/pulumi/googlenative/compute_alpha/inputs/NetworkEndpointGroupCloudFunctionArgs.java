@@ -74,22 +74,22 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder setFunction(@Nullable Input<String> function) {
+        public Builder function(@Nullable Input<String> function) {
             this.function = function;
             return this;
         }
 
-        public Builder setFunction(@Nullable String function) {
+        public Builder function(@Nullable String function) {
             this.function = Input.ofNullable(function);
             return this;
         }
 
-        public Builder setUrlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Input<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
-        public Builder setUrlMask(@Nullable String urlMask) {
+        public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Input.ofNullable(urlMask);
             return this;
         }

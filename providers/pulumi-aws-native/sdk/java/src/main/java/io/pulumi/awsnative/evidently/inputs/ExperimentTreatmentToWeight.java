@@ -61,12 +61,12 @@ public final class ExperimentTreatmentToWeight extends io.pulumi.resources.Invok
     	      this.treatment = defaults.treatment;
         }
 
-        public Builder setSplitWeight(Integer splitWeight) {
+        public Builder splitWeight(Integer splitWeight) {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
         }
 
-        public Builder setTreatment(String treatment) {
+        public Builder treatment(String treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }

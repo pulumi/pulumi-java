@@ -88,32 +88,32 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.project = defaults.project;
         }
 
-        public Builder setAttestor(Input<String> attestor) {
+        public Builder attestor(Input<String> attestor) {
             this.attestor = Objects.requireNonNull(attestor);
             return this;
         }
 
-        public Builder setAttestor(String attestor) {
+        public Builder attestor(String attestor) {
             this.attestor = Input.of(Objects.requireNonNull(attestor));
             return this;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

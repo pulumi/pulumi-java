@@ -86,32 +86,32 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
     	      this.scoringRoute = defaults.scoringRoute;
         }
 
-        public Builder setLivenessRoute(@Nullable Input<RouteArgs> livenessRoute) {
+        public Builder livenessRoute(@Nullable Input<RouteArgs> livenessRoute) {
             this.livenessRoute = livenessRoute;
             return this;
         }
 
-        public Builder setLivenessRoute(@Nullable RouteArgs livenessRoute) {
+        public Builder livenessRoute(@Nullable RouteArgs livenessRoute) {
             this.livenessRoute = Input.ofNullable(livenessRoute);
             return this;
         }
 
-        public Builder setReadinessRoute(@Nullable Input<RouteArgs> readinessRoute) {
+        public Builder readinessRoute(@Nullable Input<RouteArgs> readinessRoute) {
             this.readinessRoute = readinessRoute;
             return this;
         }
 
-        public Builder setReadinessRoute(@Nullable RouteArgs readinessRoute) {
+        public Builder readinessRoute(@Nullable RouteArgs readinessRoute) {
             this.readinessRoute = Input.ofNullable(readinessRoute);
             return this;
         }
 
-        public Builder setScoringRoute(@Nullable Input<RouteArgs> scoringRoute) {
+        public Builder scoringRoute(@Nullable Input<RouteArgs> scoringRoute) {
             this.scoringRoute = scoringRoute;
             return this;
         }
 
-        public Builder setScoringRoute(@Nullable RouteArgs scoringRoute) {
+        public Builder scoringRoute(@Nullable RouteArgs scoringRoute) {
             this.scoringRoute = Input.ofNullable(scoringRoute);
             return this;
         }

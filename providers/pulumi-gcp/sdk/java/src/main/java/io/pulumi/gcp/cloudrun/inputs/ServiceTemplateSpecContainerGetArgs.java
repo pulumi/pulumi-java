@@ -236,92 +236,92 @@ public final class ServiceTemplateSpecContainerGetArgs extends io.pulumi.resourc
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setCommands(@Nullable Input<List<String>> commands) {
+        public Builder commands(@Nullable Input<List<String>> commands) {
             this.commands = commands;
             return this;
         }
 
-        public Builder setCommands(@Nullable List<String> commands) {
+        public Builder commands(@Nullable List<String> commands) {
             this.commands = Input.ofNullable(commands);
             return this;
         }
 
-        public Builder setEnvFroms(@Nullable Input<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms) {
+        public Builder envFroms(@Nullable Input<List<ServiceTemplateSpecContainerEnvFromGetArgs>> envFroms) {
             this.envFroms = envFroms;
             return this;
         }
 
-        public Builder setEnvFroms(@Nullable List<ServiceTemplateSpecContainerEnvFromGetArgs> envFroms) {
+        public Builder envFroms(@Nullable List<ServiceTemplateSpecContainerEnvFromGetArgs> envFroms) {
             this.envFroms = Input.ofNullable(envFroms);
             return this;
         }
 
-        public Builder setEnvs(@Nullable Input<List<ServiceTemplateSpecContainerEnvGetArgs>> envs) {
+        public Builder envs(@Nullable Input<List<ServiceTemplateSpecContainerEnvGetArgs>> envs) {
             this.envs = envs;
             return this;
         }
 
-        public Builder setEnvs(@Nullable List<ServiceTemplateSpecContainerEnvGetArgs> envs) {
+        public Builder envs(@Nullable List<ServiceTemplateSpecContainerEnvGetArgs> envs) {
             this.envs = Input.ofNullable(envs);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<ServiceTemplateSpecContainerPortGetArgs>> ports) {
+        public Builder ports(@Nullable Input<List<ServiceTemplateSpecContainerPortGetArgs>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ServiceTemplateSpecContainerPortGetArgs> ports) {
+        public Builder ports(@Nullable List<ServiceTemplateSpecContainerPortGetArgs> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<ServiceTemplateSpecContainerResourcesGetArgs> resources) {
+        public Builder resources(@Nullable Input<ServiceTemplateSpecContainerResourcesGetArgs> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable ServiceTemplateSpecContainerResourcesGetArgs resources) {
+        public Builder resources(@Nullable ServiceTemplateSpecContainerResourcesGetArgs resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable Input<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts) {
+        public Builder volumeMounts(@Nullable Input<List<ServiceTemplateSpecContainerVolumeMountGetArgs>> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMountGetArgs> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMountGetArgs> volumeMounts) {
             this.volumeMounts = Input.ofNullable(volumeMounts);
             return this;
         }
 
-        public Builder setWorkingDir(@Nullable Input<String> workingDir) {
+        public Builder workingDir(@Nullable Input<String> workingDir) {
             this.workingDir = workingDir;
             return this;
         }
 
-        public Builder setWorkingDir(@Nullable String workingDir) {
+        public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = Input.ofNullable(workingDir);
             return this;
         }

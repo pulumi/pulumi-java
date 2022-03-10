@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectRespon
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items) {
+        public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

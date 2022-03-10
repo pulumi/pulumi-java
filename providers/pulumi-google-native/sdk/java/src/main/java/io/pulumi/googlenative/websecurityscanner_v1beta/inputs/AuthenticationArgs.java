@@ -92,32 +92,32 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iapCredential = defaults.iapCredential;
         }
 
-        public Builder setCustomAccount(@Nullable Input<CustomAccountArgs> customAccount) {
+        public Builder customAccount(@Nullable Input<CustomAccountArgs> customAccount) {
             this.customAccount = customAccount;
             return this;
         }
 
-        public Builder setCustomAccount(@Nullable CustomAccountArgs customAccount) {
+        public Builder customAccount(@Nullable CustomAccountArgs customAccount) {
             this.customAccount = Input.ofNullable(customAccount);
             return this;
         }
 
-        public Builder setGoogleAccount(@Nullable Input<GoogleAccountArgs> googleAccount) {
+        public Builder googleAccount(@Nullable Input<GoogleAccountArgs> googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }
 
-        public Builder setGoogleAccount(@Nullable GoogleAccountArgs googleAccount) {
+        public Builder googleAccount(@Nullable GoogleAccountArgs googleAccount) {
             this.googleAccount = Input.ofNullable(googleAccount);
             return this;
         }
 
-        public Builder setIapCredential(@Nullable Input<IapCredentialArgs> iapCredential) {
+        public Builder iapCredential(@Nullable Input<IapCredentialArgs> iapCredential) {
             this.iapCredential = iapCredential;
             return this;
         }
 
-        public Builder setIapCredential(@Nullable IapCredentialArgs iapCredential) {
+        public Builder iapCredential(@Nullable IapCredentialArgs iapCredential) {
             this.iapCredential = Input.ofNullable(iapCredential);
             return this;
         }

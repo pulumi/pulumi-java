@@ -134,32 +134,32 @@ public final class BucketCorsRule {
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder setAllowedHeaders(@Nullable List<String> allowedHeaders) {
+        public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
 
-        public Builder setAllowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
+        public Builder allowedMethods(List<BucketCorsRuleAllowedMethodsItem> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
 
-        public Builder setAllowedOrigins(List<String> allowedOrigins) {
+        public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
 
-        public Builder setExposedHeaders(@Nullable List<String> exposedHeaders) {
+        public Builder exposedHeaders(@Nullable List<String> exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Integer maxAge) {
+        public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = maxAge;
             return this;
         }

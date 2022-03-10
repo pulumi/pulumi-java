@@ -104,42 +104,42 @@ public final class ImageRecipeBlockDeviceMappingArgs extends io.pulumi.resources
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setEbs(@Nullable Input<ImageRecipeBlockDeviceMappingEbsArgs> ebs) {
+        public Builder ebs(@Nullable Input<ImageRecipeBlockDeviceMappingEbsArgs> ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setEbs(@Nullable ImageRecipeBlockDeviceMappingEbsArgs ebs) {
+        public Builder ebs(@Nullable ImageRecipeBlockDeviceMappingEbsArgs ebs) {
             this.ebs = Input.ofNullable(ebs);
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Input<Boolean> noDevice) {
+        public Builder noDevice(@Nullable Input<Boolean> noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Boolean noDevice) {
+        public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = Input.ofNullable(noDevice);
             return this;
         }
 
-        public Builder setVirtualName(@Nullable Input<String> virtualName) {
+        public Builder virtualName(@Nullable Input<String> virtualName) {
             this.virtualName = virtualName;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = Input.ofNullable(virtualName);
             return this;
         }

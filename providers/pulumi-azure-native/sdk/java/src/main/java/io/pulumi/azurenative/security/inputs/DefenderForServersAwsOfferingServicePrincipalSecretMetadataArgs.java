@@ -90,32 +90,32 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     	      this.parameterStoreRegion = defaults.parameterStoreRegion;
         }
 
-        public Builder setExpiryDate(@Nullable Input<String> expiryDate) {
+        public Builder expiryDate(@Nullable Input<String> expiryDate) {
             this.expiryDate = expiryDate;
             return this;
         }
 
-        public Builder setExpiryDate(@Nullable String expiryDate) {
+        public Builder expiryDate(@Nullable String expiryDate) {
             this.expiryDate = Input.ofNullable(expiryDate);
             return this;
         }
 
-        public Builder setParameterNameInStore(@Nullable Input<String> parameterNameInStore) {
+        public Builder parameterNameInStore(@Nullable Input<String> parameterNameInStore) {
             this.parameterNameInStore = parameterNameInStore;
             return this;
         }
 
-        public Builder setParameterNameInStore(@Nullable String parameterNameInStore) {
+        public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
             this.parameterNameInStore = Input.ofNullable(parameterNameInStore);
             return this;
         }
 
-        public Builder setParameterStoreRegion(@Nullable Input<String> parameterStoreRegion) {
+        public Builder parameterStoreRegion(@Nullable Input<String> parameterStoreRegion) {
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
         }
 
-        public Builder setParameterStoreRegion(@Nullable String parameterStoreRegion) {
+        public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
             this.parameterStoreRegion = Input.ofNullable(parameterStoreRegion);
             return this;
         }

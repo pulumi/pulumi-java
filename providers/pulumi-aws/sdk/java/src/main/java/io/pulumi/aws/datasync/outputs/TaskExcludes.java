@@ -67,12 +67,12 @@ public final class TaskExcludes {
     	      this.value = defaults.value;
         }
 
-        public Builder setFilterType(@Nullable String filterType) {
+        public Builder filterType(@Nullable String filterType) {
             this.filterType = filterType;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

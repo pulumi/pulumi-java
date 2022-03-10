@@ -51,7 +51,7 @@ public final class GetPolicySetDefinitionArgs extends io.pulumi.resources.Invoke
     	      this.policySetDefinitionName = defaults.policySetDefinitionName;
         }
 
-        public Builder setPolicySetDefinitionName(String policySetDefinitionName) {
+        public Builder policySetDefinitionName(String policySetDefinitionName) {
             this.policySetDefinitionName = Objects.requireNonNull(policySetDefinitionName);
             return this;
         }

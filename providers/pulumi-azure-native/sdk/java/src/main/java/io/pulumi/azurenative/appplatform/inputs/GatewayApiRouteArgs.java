@@ -189,92 +189,92 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFilters(@Nullable Input<List<String>> filters) {
+        public Builder filters(@Nullable Input<List<String>> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<String> filters) {
+        public Builder filters(@Nullable List<String> filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setOrder(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Input<Integer> order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = Input.ofNullable(order);
             return this;
         }
 
-        public Builder setPredicates(@Nullable Input<List<String>> predicates) {
+        public Builder predicates(@Nullable Input<List<String>> predicates) {
             this.predicates = predicates;
             return this;
         }
 
-        public Builder setPredicates(@Nullable List<String> predicates) {
+        public Builder predicates(@Nullable List<String> predicates) {
             this.predicates = Input.ofNullable(predicates);
             return this;
         }
 
-        public Builder setSsoEnabled(@Nullable Input<Boolean> ssoEnabled) {
+        public Builder ssoEnabled(@Nullable Input<Boolean> ssoEnabled) {
             this.ssoEnabled = ssoEnabled;
             return this;
         }
 
-        public Builder setSsoEnabled(@Nullable Boolean ssoEnabled) {
+        public Builder ssoEnabled(@Nullable Boolean ssoEnabled) {
             this.ssoEnabled = Input.ofNullable(ssoEnabled);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setTokenRelay(@Nullable Input<Boolean> tokenRelay) {
+        public Builder tokenRelay(@Nullable Input<Boolean> tokenRelay) {
             this.tokenRelay = tokenRelay;
             return this;
         }
 
-        public Builder setTokenRelay(@Nullable Boolean tokenRelay) {
+        public Builder tokenRelay(@Nullable Boolean tokenRelay) {
             this.tokenRelay = Input.ofNullable(tokenRelay);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

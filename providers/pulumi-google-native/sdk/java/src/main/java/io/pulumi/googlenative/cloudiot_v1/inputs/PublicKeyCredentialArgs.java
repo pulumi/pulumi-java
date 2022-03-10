@@ -75,22 +75,22 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(@Nullable Input<PublicKeyCredentialFormat> format) {
+        public Builder format(@Nullable Input<PublicKeyCredentialFormat> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable PublicKeyCredentialFormat format) {
+        public Builder format(@Nullable PublicKeyCredentialFormat format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }

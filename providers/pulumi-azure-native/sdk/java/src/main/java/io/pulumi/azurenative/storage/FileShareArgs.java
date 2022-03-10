@@ -188,92 +188,92 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareQuota = defaults.shareQuota;
         }
 
-        public Builder setAccessTier(@Nullable Input<Either<String,ShareAccessTier>> accessTier) {
+        public Builder accessTier(@Nullable Input<Either<String,ShareAccessTier>> accessTier) {
             this.accessTier = accessTier;
             return this;
         }
 
-        public Builder setAccessTier(@Nullable Either<String,ShareAccessTier> accessTier) {
+        public Builder accessTier(@Nullable Either<String,ShareAccessTier> accessTier) {
             this.accessTier = Input.ofNullable(accessTier);
             return this;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable Input<Either<String,EnabledProtocols>> enabledProtocols) {
+        public Builder enabledProtocols(@Nullable Input<Either<String,EnabledProtocols>> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable Either<String,EnabledProtocols> enabledProtocols) {
+        public Builder enabledProtocols(@Nullable Either<String,EnabledProtocols> enabledProtocols) {
             this.enabledProtocols = Input.ofNullable(enabledProtocols);
             return this;
         }
 
-        public Builder setExpand(@Nullable Input<String> expand) {
+        public Builder expand(@Nullable Input<String> expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = Input.ofNullable(expand);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRootSquash(@Nullable Input<Either<String,RootSquashType>> rootSquash) {
+        public Builder rootSquash(@Nullable Input<Either<String,RootSquashType>> rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
 
-        public Builder setRootSquash(@Nullable Either<String,RootSquashType> rootSquash) {
+        public Builder rootSquash(@Nullable Either<String,RootSquashType> rootSquash) {
             this.rootSquash = Input.ofNullable(rootSquash);
             return this;
         }
 
-        public Builder setShareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Input<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
-        public Builder setShareName(@Nullable String shareName) {
+        public Builder shareName(@Nullable String shareName) {
             this.shareName = Input.ofNullable(shareName);
             return this;
         }
 
-        public Builder setShareQuota(@Nullable Input<Integer> shareQuota) {
+        public Builder shareQuota(@Nullable Input<Integer> shareQuota) {
             this.shareQuota = shareQuota;
             return this;
         }
 
-        public Builder setShareQuota(@Nullable Integer shareQuota) {
+        public Builder shareQuota(@Nullable Integer shareQuota) {
             this.shareQuota = Input.ofNullable(shareQuota);
             return this;
         }

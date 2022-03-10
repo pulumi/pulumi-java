@@ -87,32 +87,32 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
     	      this.values = defaults.values;
         }
 
-        public Builder setComparator(@Nullable Input<String> comparator) {
+        public Builder comparator(@Nullable Input<String> comparator) {
             this.comparator = comparator;
             return this;
         }
 
-        public Builder setComparator(@Nullable String comparator) {
+        public Builder comparator(@Nullable String comparator) {
             this.comparator = Input.ofNullable(comparator);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

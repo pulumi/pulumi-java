@@ -109,42 +109,42 @@ public final class OSPolicyResourceRepositoryResourceArgs extends io.pulumi.reso
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable Input<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt) {
+        public Builder apt(@Nullable Input<OSPolicyResourceRepositoryResourceAptRepositoryArgs> apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setApt(@Nullable OSPolicyResourceRepositoryResourceAptRepositoryArgs apt) {
+        public Builder apt(@Nullable OSPolicyResourceRepositoryResourceAptRepositoryArgs apt) {
             this.apt = Input.ofNullable(apt);
             return this;
         }
 
-        public Builder setGoo(@Nullable Input<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo) {
+        public Builder goo(@Nullable Input<OSPolicyResourceRepositoryResourceGooRepositoryArgs> goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setGoo(@Nullable OSPolicyResourceRepositoryResourceGooRepositoryArgs goo) {
+        public Builder goo(@Nullable OSPolicyResourceRepositoryResourceGooRepositoryArgs goo) {
             this.goo = Input.ofNullable(goo);
             return this;
         }
 
-        public Builder setYum(@Nullable Input<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum) {
+        public Builder yum(@Nullable Input<OSPolicyResourceRepositoryResourceYumRepositoryArgs> yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setYum(@Nullable OSPolicyResourceRepositoryResourceYumRepositoryArgs yum) {
+        public Builder yum(@Nullable OSPolicyResourceRepositoryResourceYumRepositoryArgs yum) {
             this.yum = Input.ofNullable(yum);
             return this;
         }
 
-        public Builder setZypper(@Nullable Input<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper) {
+        public Builder zypper(@Nullable Input<OSPolicyResourceRepositoryResourceZypperRepositoryArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
-        public Builder setZypper(@Nullable OSPolicyResourceRepositoryResourceZypperRepositoryArgs zypper) {
+        public Builder zypper(@Nullable OSPolicyResourceRepositoryResourceZypperRepositoryArgs zypper) {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }

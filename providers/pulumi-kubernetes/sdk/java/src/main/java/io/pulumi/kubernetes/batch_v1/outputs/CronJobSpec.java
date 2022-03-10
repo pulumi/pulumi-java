@@ -160,37 +160,37 @@ public final class CronJobSpec {
     	      this.suspend = defaults.suspend;
         }
 
-        public Builder setConcurrencyPolicy(@Nullable String concurrencyPolicy) {
+        public Builder concurrencyPolicy(@Nullable String concurrencyPolicy) {
             this.concurrencyPolicy = concurrencyPolicy;
             return this;
         }
 
-        public Builder setFailedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
+        public Builder failedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = failedJobsHistoryLimit;
             return this;
         }
 
-        public Builder setJobTemplate(JobTemplateSpec jobTemplate) {
+        public Builder jobTemplate(JobTemplateSpec jobTemplate) {
             this.jobTemplate = Objects.requireNonNull(jobTemplate);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setStartingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
+        public Builder startingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
             this.startingDeadlineSeconds = startingDeadlineSeconds;
             return this;
         }
 
-        public Builder setSuccessfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
+        public Builder successfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
         }

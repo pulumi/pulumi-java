@@ -106,22 +106,22 @@ public final class ComplianceStatusResponse extends io.pulumi.resources.InvokeAr
     	      this.messageLevel = defaults.messageLevel;
         }
 
-        public Builder setComplianceState(String complianceState) {
+        public Builder complianceState(String complianceState) {
             this.complianceState = Objects.requireNonNull(complianceState);
             return this;
         }
 
-        public Builder setLastConfigApplied(@Nullable String lastConfigApplied) {
+        public Builder lastConfigApplied(@Nullable String lastConfigApplied) {
             this.lastConfigApplied = lastConfigApplied;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessageLevel(@Nullable String messageLevel) {
+        public Builder messageLevel(@Nullable String messageLevel) {
             this.messageLevel = messageLevel;
             return this;
         }

@@ -163,72 +163,72 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     	      this.username = defaults.username;
         }
 
-        public Builder setExtra(@Nullable Input<Map<String,List<String>>> extra) {
+        public Builder extra(@Nullable Input<Map<String,List<String>>> extra) {
             this.extra = extra;
             return this;
         }
 
-        public Builder setExtra(@Nullable Map<String,List<String>> extra) {
+        public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = Input.ofNullable(extra);
             return this;
         }
 
-        public Builder setGroups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Input<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = Input.ofNullable(groups);
             return this;
         }
 
-        public Builder setRequest(Input<String> request) {
+        public Builder request(Input<String> request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setRequest(String request) {
+        public Builder request(String request) {
             this.request = Input.of(Objects.requireNonNull(request));
             return this;
         }
 
-        public Builder setSignerName(@Nullable Input<String> signerName) {
+        public Builder signerName(@Nullable Input<String> signerName) {
             this.signerName = signerName;
             return this;
         }
 
-        public Builder setSignerName(@Nullable String signerName) {
+        public Builder signerName(@Nullable String signerName) {
             this.signerName = Input.ofNullable(signerName);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setUsages(@Nullable Input<List<String>> usages) {
+        public Builder usages(@Nullable Input<List<String>> usages) {
             this.usages = usages;
             return this;
         }
 
-        public Builder setUsages(@Nullable List<String> usages) {
+        public Builder usages(@Nullable List<String> usages) {
             this.usages = Input.ofNullable(usages);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

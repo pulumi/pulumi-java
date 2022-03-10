@@ -105,32 +105,32 @@ public final class ScopedResourceSelectorRequirementArgs extends io.pulumi.resou
     	      this.values = defaults.values;
         }
 
-        public Builder setOperator(Input<String> operator) {
+        public Builder operator(Input<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setScopeName(Input<String> scopeName) {
+        public Builder scopeName(Input<String> scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
 
-        public Builder setScopeName(String scopeName) {
+        public Builder scopeName(String scopeName) {
             this.scopeName = Input.of(Objects.requireNonNull(scopeName));
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

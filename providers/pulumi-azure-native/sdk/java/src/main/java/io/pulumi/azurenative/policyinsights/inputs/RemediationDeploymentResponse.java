@@ -153,37 +153,37 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
     	      this.status = defaults.status;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setError(ErrorDefinitionResponse error) {
+        public Builder error(ErrorDefinitionResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setLastUpdatedOn(String lastUpdatedOn) {
+        public Builder lastUpdatedOn(String lastUpdatedOn) {
             this.lastUpdatedOn = Objects.requireNonNull(lastUpdatedOn);
             return this;
         }
 
-        public Builder setRemediatedResourceId(String remediatedResourceId) {
+        public Builder remediatedResourceId(String remediatedResourceId) {
             this.remediatedResourceId = Objects.requireNonNull(remediatedResourceId);
             return this;
         }
 
-        public Builder setResourceLocation(String resourceLocation) {
+        public Builder resourceLocation(String resourceLocation) {
             this.resourceLocation = Objects.requireNonNull(resourceLocation);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

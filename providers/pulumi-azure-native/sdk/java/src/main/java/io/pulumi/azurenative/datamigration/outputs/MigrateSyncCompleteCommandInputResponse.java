@@ -67,12 +67,12 @@ public final class MigrateSyncCompleteCommandInputResponse {
     	      this.databaseName = defaults.databaseName;
         }
 
-        public Builder setCommitTimeStamp(@Nullable String commitTimeStamp) {
+        public Builder commitTimeStamp(@Nullable String commitTimeStamp) {
             this.commitTimeStamp = commitTimeStamp;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }

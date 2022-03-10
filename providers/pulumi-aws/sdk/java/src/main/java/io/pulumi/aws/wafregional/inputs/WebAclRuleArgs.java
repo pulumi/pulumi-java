@@ -122,52 +122,52 @@ public final class WebAclRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable Input<WebAclRuleActionArgs> action) {
+        public Builder action(@Nullable Input<WebAclRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable WebAclRuleActionArgs action) {
+        public Builder action(@Nullable WebAclRuleActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable Input<WebAclRuleOverrideActionArgs> overrideAction) {
+        public Builder overrideAction(@Nullable Input<WebAclRuleOverrideActionArgs> overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
+        public Builder overrideAction(@Nullable WebAclRuleOverrideActionArgs overrideAction) {
             this.overrideAction = Input.ofNullable(overrideAction);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleId(Input<String> ruleId) {
+        public Builder ruleId(Input<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Input.of(Objects.requireNonNull(ruleId));
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -70,12 +70,12 @@ public final class DeviceCredential {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setPublicKey(DeviceCredentialPublicKey publicKey) {
+        public Builder publicKey(DeviceCredentialPublicKey publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }

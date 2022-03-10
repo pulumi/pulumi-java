@@ -243,162 +243,162 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitions = defaults.transitions;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUploadArgs abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = Input.ofNullable(abortIncompleteMultipartUpload);
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Input<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Input.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Input<Integer> expirationInDays) {
+        public Builder expirationInDays(@Nullable Input<Integer> expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = Input.ofNullable(expirationInDays);
             return this;
         }
 
-        public Builder setExpiredObjectDeleteMarker(@Nullable Input<Boolean> expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Input<Boolean> expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
 
-        public Builder setExpiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = Input.ofNullable(expiredObjectDeleteMarker);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setNoncurrentVersionExpiration(@Nullable Input<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration) {
+        public Builder noncurrentVersionExpiration(@Nullable Input<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpirationArgs noncurrentVersionExpiration) {
+        public Builder noncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpirationArgs noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = Input.ofNullable(noncurrentVersionExpiration);
             return this;
         }
 
-        public Builder setNoncurrentVersionExpirationInDays(@Nullable Input<Integer> noncurrentVersionExpirationInDays) {
+        public Builder noncurrentVersionExpirationInDays(@Nullable Input<Integer> noncurrentVersionExpirationInDays) {
             this.noncurrentVersionExpirationInDays = noncurrentVersionExpirationInDays;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
+        public Builder noncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
             this.noncurrentVersionExpirationInDays = Input.ofNullable(noncurrentVersionExpirationInDays);
             return this;
         }
 
-        public Builder setNoncurrentVersionTransition(@Nullable Input<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition) {
+        public Builder noncurrentVersionTransition(@Nullable Input<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition) {
             this.noncurrentVersionTransition = noncurrentVersionTransition;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransitionArgs noncurrentVersionTransition) {
+        public Builder noncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransitionArgs noncurrentVersionTransition) {
             this.noncurrentVersionTransition = Input.ofNullable(noncurrentVersionTransition);
             return this;
         }
 
-        public Builder setNoncurrentVersionTransitions(@Nullable Input<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions) {
+        public Builder noncurrentVersionTransitions(@Nullable Input<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransitions) {
+        public Builder noncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = Input.ofNullable(noncurrentVersionTransitions);
             return this;
         }
 
-        public Builder setObjectSizeGreaterThan(@Nullable Input<String> objectSizeGreaterThan) {
+        public Builder objectSizeGreaterThan(@Nullable Input<String> objectSizeGreaterThan) {
             this.objectSizeGreaterThan = objectSizeGreaterThan;
             return this;
         }
 
-        public Builder setObjectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
+        public Builder objectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
             this.objectSizeGreaterThan = Input.ofNullable(objectSizeGreaterThan);
             return this;
         }
 
-        public Builder setObjectSizeLessThan(@Nullable Input<String> objectSizeLessThan) {
+        public Builder objectSizeLessThan(@Nullable Input<String> objectSizeLessThan) {
             this.objectSizeLessThan = objectSizeLessThan;
             return this;
         }
 
-        public Builder setObjectSizeLessThan(@Nullable String objectSizeLessThan) {
+        public Builder objectSizeLessThan(@Nullable String objectSizeLessThan) {
             this.objectSizeLessThan = Input.ofNullable(objectSizeLessThan);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setStatus(Input<BucketRuleStatus> status) {
+        public Builder status(Input<BucketRuleStatus> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(BucketRuleStatus status) {
+        public Builder status(BucketRuleStatus status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder setTagFilters(@Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
+        public Builder tagFilters(@Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
             this.tagFilters = Input.ofNullable(tagFilters);
             return this;
         }
 
-        public Builder setTransition(@Nullable Input<BucketTransitionArgs> transition) {
+        public Builder transition(@Nullable Input<BucketTransitionArgs> transition) {
             this.transition = transition;
             return this;
         }
 
-        public Builder setTransition(@Nullable BucketTransitionArgs transition) {
+        public Builder transition(@Nullable BucketTransitionArgs transition) {
             this.transition = Input.ofNullable(transition);
             return this;
         }
 
-        public Builder setTransitions(@Nullable Input<List<BucketTransitionArgs>> transitions) {
+        public Builder transitions(@Nullable Input<List<BucketTransitionArgs>> transitions) {
             this.transitions = transitions;
             return this;
         }
 
-        public Builder setTransitions(@Nullable List<BucketTransitionArgs> transitions) {
+        public Builder transitions(@Nullable List<BucketTransitionArgs> transitions) {
             this.transitions = Input.ofNullable(transitions);
             return this;
         }

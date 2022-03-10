@@ -126,8 +126,8 @@ public class NetworkPolicyList extends io.pulumi.resources.CustomResource {
     private static NetworkPolicyListArgs makeArgs(NetworkPolicyListArgs args) {
         var builder = args == null ? NetworkPolicyListArgs.builder() : NetworkPolicyListArgs.builder(args);
         return builder
-            .setApiVersion("networking.k8s.io/v1")
-            .setKind("NetworkPolicyList")
+            .apiVersion("networking.k8s.io/v1")
+            .kind("NetworkPolicyList")
             .build();
     }
 

@@ -56,12 +56,12 @@ public final class ManagementAssociationPropertiesArgs extends io.pulumi.resourc
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }

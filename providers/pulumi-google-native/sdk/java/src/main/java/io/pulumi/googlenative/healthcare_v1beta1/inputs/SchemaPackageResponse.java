@@ -124,27 +124,27 @@ public final class SchemaPackageResponse extends io.pulumi.resources.InvokeArgs 
     	      this.unexpectedSegmentHandling = defaults.unexpectedSegmentHandling;
         }
 
-        public Builder setIgnoreMinOccurs(Boolean ignoreMinOccurs) {
+        public Builder ignoreMinOccurs(Boolean ignoreMinOccurs) {
             this.ignoreMinOccurs = Objects.requireNonNull(ignoreMinOccurs);
             return this;
         }
 
-        public Builder setSchemas(List<Hl7SchemaConfigResponse> schemas) {
+        public Builder schemas(List<Hl7SchemaConfigResponse> schemas) {
             this.schemas = Objects.requireNonNull(schemas);
             return this;
         }
 
-        public Builder setSchematizedParsingType(String schematizedParsingType) {
+        public Builder schematizedParsingType(String schematizedParsingType) {
             this.schematizedParsingType = Objects.requireNonNull(schematizedParsingType);
             return this;
         }
 
-        public Builder setTypes(List<Hl7TypesConfigResponse> types) {
+        public Builder types(List<Hl7TypesConfigResponse> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
-        public Builder setUnexpectedSegmentHandling(String unexpectedSegmentHandling) {
+        public Builder unexpectedSegmentHandling(String unexpectedSegmentHandling) {
             this.unexpectedSegmentHandling = Objects.requireNonNull(unexpectedSegmentHandling);
             return this;
         }

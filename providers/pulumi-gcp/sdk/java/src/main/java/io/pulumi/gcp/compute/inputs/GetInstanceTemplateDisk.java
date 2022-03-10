@@ -282,72 +282,72 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoDelete(Boolean autoDelete) {
+        public Builder autoDelete(Boolean autoDelete) {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
         }
 
-        public Builder setBoot(Boolean boot) {
+        public Builder boot(Boolean boot) {
             this.boot = Objects.requireNonNull(boot);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDiskEncryptionKeys(List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys) {
+        public Builder diskEncryptionKeys(List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys) {
             this.diskEncryptionKeys = Objects.requireNonNull(diskEncryptionKeys);
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setResourcePolicies(List<String> resourcePolicies) {
+        public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceImage(String sourceImage) {
+        public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

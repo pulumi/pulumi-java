@@ -69,12 +69,12 @@ public final class NetworkPolicyPort {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setPort(@Nullable Either<Integer,String> port) {
+        public Builder port(@Nullable Either<Integer,String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

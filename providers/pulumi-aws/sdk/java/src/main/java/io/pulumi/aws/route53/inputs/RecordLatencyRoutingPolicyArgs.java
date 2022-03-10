@@ -52,12 +52,12 @@ public final class RecordLatencyRoutingPolicyArgs extends io.pulumi.resources.Re
     	      this.region = defaults.region;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }

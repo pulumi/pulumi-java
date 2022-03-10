@@ -77,27 +77,27 @@ public final class NotificationRegistrationResponseProperties {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setIncludedEvents(@Nullable List<String> includedEvents) {
+        public Builder includedEvents(@Nullable List<String> includedEvents) {
             this.includedEvents = includedEvents;
             return this;
         }
 
-        public Builder setMessageScope(@Nullable String messageScope) {
+        public Builder messageScope(@Nullable String messageScope) {
             this.messageScope = messageScope;
             return this;
         }
 
-        public Builder setNotificationEndpoints(@Nullable List<NotificationEndpointResponse> notificationEndpoints) {
+        public Builder notificationEndpoints(@Nullable List<NotificationEndpointResponse> notificationEndpoints) {
             this.notificationEndpoints = notificationEndpoints;
             return this;
         }
 
-        public Builder setNotificationMode(@Nullable String notificationMode) {
+        public Builder notificationMode(@Nullable String notificationMode) {
             this.notificationMode = notificationMode;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }

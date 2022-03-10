@@ -49,12 +49,12 @@ public final class GetBucketWebsite {
     	      this.notFoundPage = defaults.notFoundPage;
         }
 
-        public Builder setMainPageSuffix(String mainPageSuffix) {
+        public Builder mainPageSuffix(String mainPageSuffix) {
             this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix);
             return this;
         }
 
-        public Builder setNotFoundPage(String notFoundPage) {
+        public Builder notFoundPage(String notFoundPage) {
             this.notFoundPage = Objects.requireNonNull(notFoundPage);
             return this;
         }

@@ -501,242 +501,242 @@ public final class BackendServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setAffinityCookieTtlSec(@Nullable Input<Integer> affinityCookieTtlSec) {
+        public Builder affinityCookieTtlSec(@Nullable Input<Integer> affinityCookieTtlSec) {
             this.affinityCookieTtlSec = affinityCookieTtlSec;
             return this;
         }
 
-        public Builder setAffinityCookieTtlSec(@Nullable Integer affinityCookieTtlSec) {
+        public Builder affinityCookieTtlSec(@Nullable Integer affinityCookieTtlSec) {
             this.affinityCookieTtlSec = Input.ofNullable(affinityCookieTtlSec);
             return this;
         }
 
-        public Builder setBackends(@Nullable Input<List<BackendServiceBackendArgs>> backends) {
+        public Builder backends(@Nullable Input<List<BackendServiceBackendArgs>> backends) {
             this.backends = backends;
             return this;
         }
 
-        public Builder setBackends(@Nullable List<BackendServiceBackendArgs> backends) {
+        public Builder backends(@Nullable List<BackendServiceBackendArgs> backends) {
             this.backends = Input.ofNullable(backends);
             return this;
         }
 
-        public Builder setCdnPolicy(@Nullable Input<BackendServiceCdnPolicyArgs> cdnPolicy) {
+        public Builder cdnPolicy(@Nullable Input<BackendServiceCdnPolicyArgs> cdnPolicy) {
             this.cdnPolicy = cdnPolicy;
             return this;
         }
 
-        public Builder setCdnPolicy(@Nullable BackendServiceCdnPolicyArgs cdnPolicy) {
+        public Builder cdnPolicy(@Nullable BackendServiceCdnPolicyArgs cdnPolicy) {
             this.cdnPolicy = Input.ofNullable(cdnPolicy);
             return this;
         }
 
-        public Builder setCircuitBreakers(@Nullable Input<BackendServiceCircuitBreakersArgs> circuitBreakers) {
+        public Builder circuitBreakers(@Nullable Input<BackendServiceCircuitBreakersArgs> circuitBreakers) {
             this.circuitBreakers = circuitBreakers;
             return this;
         }
 
-        public Builder setCircuitBreakers(@Nullable BackendServiceCircuitBreakersArgs circuitBreakers) {
+        public Builder circuitBreakers(@Nullable BackendServiceCircuitBreakersArgs circuitBreakers) {
             this.circuitBreakers = Input.ofNullable(circuitBreakers);
             return this;
         }
 
-        public Builder setConnectionDrainingTimeoutSec(@Nullable Input<Integer> connectionDrainingTimeoutSec) {
+        public Builder connectionDrainingTimeoutSec(@Nullable Input<Integer> connectionDrainingTimeoutSec) {
             this.connectionDrainingTimeoutSec = connectionDrainingTimeoutSec;
             return this;
         }
 
-        public Builder setConnectionDrainingTimeoutSec(@Nullable Integer connectionDrainingTimeoutSec) {
+        public Builder connectionDrainingTimeoutSec(@Nullable Integer connectionDrainingTimeoutSec) {
             this.connectionDrainingTimeoutSec = Input.ofNullable(connectionDrainingTimeoutSec);
             return this;
         }
 
-        public Builder setConsistentHash(@Nullable Input<BackendServiceConsistentHashArgs> consistentHash) {
+        public Builder consistentHash(@Nullable Input<BackendServiceConsistentHashArgs> consistentHash) {
             this.consistentHash = consistentHash;
             return this;
         }
 
-        public Builder setConsistentHash(@Nullable BackendServiceConsistentHashArgs consistentHash) {
+        public Builder consistentHash(@Nullable BackendServiceConsistentHashArgs consistentHash) {
             this.consistentHash = Input.ofNullable(consistentHash);
             return this;
         }
 
-        public Builder setCustomRequestHeaders(@Nullable Input<List<String>> customRequestHeaders) {
+        public Builder customRequestHeaders(@Nullable Input<List<String>> customRequestHeaders) {
             this.customRequestHeaders = customRequestHeaders;
             return this;
         }
 
-        public Builder setCustomRequestHeaders(@Nullable List<String> customRequestHeaders) {
+        public Builder customRequestHeaders(@Nullable List<String> customRequestHeaders) {
             this.customRequestHeaders = Input.ofNullable(customRequestHeaders);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(@Nullable Input<List<String>> customResponseHeaders) {
+        public Builder customResponseHeaders(@Nullable Input<List<String>> customResponseHeaders) {
             this.customResponseHeaders = customResponseHeaders;
             return this;
         }
 
-        public Builder setCustomResponseHeaders(@Nullable List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
             this.customResponseHeaders = Input.ofNullable(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableCdn(@Nullable Input<Boolean> enableCdn) {
+        public Builder enableCdn(@Nullable Input<Boolean> enableCdn) {
             this.enableCdn = enableCdn;
             return this;
         }
 
-        public Builder setEnableCdn(@Nullable Boolean enableCdn) {
+        public Builder enableCdn(@Nullable Boolean enableCdn) {
             this.enableCdn = Input.ofNullable(enableCdn);
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable Input<String> healthChecks) {
+        public Builder healthChecks(@Nullable Input<String> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable String healthChecks) {
+        public Builder healthChecks(@Nullable String healthChecks) {
             this.healthChecks = Input.ofNullable(healthChecks);
             return this;
         }
 
-        public Builder setIap(@Nullable Input<BackendServiceIapArgs> iap) {
+        public Builder iap(@Nullable Input<BackendServiceIapArgs> iap) {
             this.iap = iap;
             return this;
         }
 
-        public Builder setIap(@Nullable BackendServiceIapArgs iap) {
+        public Builder iap(@Nullable BackendServiceIapArgs iap) {
             this.iap = Input.ofNullable(iap);
             return this;
         }
 
-        public Builder setLoadBalancingScheme(@Nullable Input<String> loadBalancingScheme) {
+        public Builder loadBalancingScheme(@Nullable Input<String> loadBalancingScheme) {
             this.loadBalancingScheme = loadBalancingScheme;
             return this;
         }
 
-        public Builder setLoadBalancingScheme(@Nullable String loadBalancingScheme) {
+        public Builder loadBalancingScheme(@Nullable String loadBalancingScheme) {
             this.loadBalancingScheme = Input.ofNullable(loadBalancingScheme);
             return this;
         }
 
-        public Builder setLocalityLbPolicy(@Nullable Input<String> localityLbPolicy) {
+        public Builder localityLbPolicy(@Nullable Input<String> localityLbPolicy) {
             this.localityLbPolicy = localityLbPolicy;
             return this;
         }
 
-        public Builder setLocalityLbPolicy(@Nullable String localityLbPolicy) {
+        public Builder localityLbPolicy(@Nullable String localityLbPolicy) {
             this.localityLbPolicy = Input.ofNullable(localityLbPolicy);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<BackendServiceLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<BackendServiceLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable BackendServiceLogConfigArgs logConfig) {
+        public Builder logConfig(@Nullable BackendServiceLogConfigArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutlierDetection(@Nullable Input<BackendServiceOutlierDetectionArgs> outlierDetection) {
+        public Builder outlierDetection(@Nullable Input<BackendServiceOutlierDetectionArgs> outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
 
-        public Builder setOutlierDetection(@Nullable BackendServiceOutlierDetectionArgs outlierDetection) {
+        public Builder outlierDetection(@Nullable BackendServiceOutlierDetectionArgs outlierDetection) {
             this.outlierDetection = Input.ofNullable(outlierDetection);
             return this;
         }
 
-        public Builder setPortName(@Nullable Input<String> portName) {
+        public Builder portName(@Nullable Input<String> portName) {
             this.portName = portName;
             return this;
         }
 
-        public Builder setPortName(@Nullable String portName) {
+        public Builder portName(@Nullable String portName) {
             this.portName = Input.ofNullable(portName);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable Input<String> securityPolicy) {
+        public Builder securityPolicy(@Nullable Input<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable String securityPolicy) {
+        public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = Input.ofNullable(securityPolicy);
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable Input<BackendServiceSecuritySettingsArgs> securitySettings) {
+        public Builder securitySettings(@Nullable Input<BackendServiceSecuritySettingsArgs> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable BackendServiceSecuritySettingsArgs securitySettings) {
+        public Builder securitySettings(@Nullable BackendServiceSecuritySettingsArgs securitySettings) {
             this.securitySettings = Input.ofNullable(securitySettings);
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable Input<String> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Input<String> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable String sessionAffinity) {
+        public Builder sessionAffinity(@Nullable String sessionAffinity) {
             this.sessionAffinity = Input.ofNullable(sessionAffinity);
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Input<Integer> timeoutSec) {
+        public Builder timeoutSec(@Nullable Input<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Integer timeoutSec) {
+        public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }

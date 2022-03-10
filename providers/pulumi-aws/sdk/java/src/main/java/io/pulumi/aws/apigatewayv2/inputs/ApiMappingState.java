@@ -102,42 +102,42 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
     	      this.stage = defaults.stage;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setApiMappingKey(@Nullable Input<String> apiMappingKey) {
+        public Builder apiMappingKey(@Nullable Input<String> apiMappingKey) {
             this.apiMappingKey = apiMappingKey;
             return this;
         }
 
-        public Builder setApiMappingKey(@Nullable String apiMappingKey) {
+        public Builder apiMappingKey(@Nullable String apiMappingKey) {
             this.apiMappingKey = Input.ofNullable(apiMappingKey);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setStage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Input<String> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }

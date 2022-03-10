@@ -52,12 +52,12 @@ public final class ObjectWithNodeOptionalInputs {
     	      this.foo = defaults.foo;
         }
 
-        public Builder setBar(@Nullable Integer bar) {
+        public Builder bar(@Nullable Integer bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setFoo(String foo) {
+        public Builder foo(String foo) {
             this.foo = Objects.requireNonNull(foo);
             return this;
         }

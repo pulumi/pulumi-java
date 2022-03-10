@@ -197,52 +197,52 @@ public final class DaemonSetStatus {
     	      this.updatedNumberScheduled = defaults.updatedNumberScheduled;
         }
 
-        public Builder setCollisionCount(@Nullable Integer collisionCount) {
+        public Builder collisionCount(@Nullable Integer collisionCount) {
             this.collisionCount = collisionCount;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<DaemonSetCondition> conditions) {
+        public Builder conditions(@Nullable List<DaemonSetCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setCurrentNumberScheduled(Integer currentNumberScheduled) {
+        public Builder currentNumberScheduled(Integer currentNumberScheduled) {
             this.currentNumberScheduled = Objects.requireNonNull(currentNumberScheduled);
             return this;
         }
 
-        public Builder setDesiredNumberScheduled(Integer desiredNumberScheduled) {
+        public Builder desiredNumberScheduled(Integer desiredNumberScheduled) {
             this.desiredNumberScheduled = Objects.requireNonNull(desiredNumberScheduled);
             return this;
         }
 
-        public Builder setNumberAvailable(@Nullable Integer numberAvailable) {
+        public Builder numberAvailable(@Nullable Integer numberAvailable) {
             this.numberAvailable = numberAvailable;
             return this;
         }
 
-        public Builder setNumberMisscheduled(Integer numberMisscheduled) {
+        public Builder numberMisscheduled(Integer numberMisscheduled) {
             this.numberMisscheduled = Objects.requireNonNull(numberMisscheduled);
             return this;
         }
 
-        public Builder setNumberReady(Integer numberReady) {
+        public Builder numberReady(Integer numberReady) {
             this.numberReady = Objects.requireNonNull(numberReady);
             return this;
         }
 
-        public Builder setNumberUnavailable(@Nullable Integer numberUnavailable) {
+        public Builder numberUnavailable(@Nullable Integer numberUnavailable) {
             this.numberUnavailable = numberUnavailable;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setUpdatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
+        public Builder updatedNumberScheduled(@Nullable Integer updatedNumberScheduled) {
             this.updatedNumberScheduled = updatedNumberScheduled;
             return this;
         }

@@ -66,12 +66,12 @@ public final class DeviceCredentialResponse {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setPublicKey(PublicKeyCredentialResponse publicKey) {
+        public Builder publicKey(PublicKeyCredentialResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }

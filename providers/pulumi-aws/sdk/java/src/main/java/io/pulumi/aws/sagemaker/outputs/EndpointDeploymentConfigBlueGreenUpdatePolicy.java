@@ -84,17 +84,17 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicy {
     	      this.trafficRoutingConfiguration = defaults.trafficRoutingConfiguration;
         }
 
-        public Builder setMaximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
+        public Builder maximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
             this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
             return this;
         }
 
-        public Builder setTerminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
+        public Builder terminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
             this.terminationWaitInSeconds = terminationWaitInSeconds;
             return this;
         }
 
-        public Builder setTrafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
+        public Builder trafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration);
             return this;
         }

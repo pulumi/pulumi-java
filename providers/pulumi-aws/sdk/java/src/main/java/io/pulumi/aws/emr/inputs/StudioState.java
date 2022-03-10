@@ -288,162 +288,162 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuthMode(@Nullable Input<String> authMode) {
+        public Builder authMode(@Nullable Input<String> authMode) {
             this.authMode = authMode;
             return this;
         }
 
-        public Builder setAuthMode(@Nullable String authMode) {
+        public Builder authMode(@Nullable String authMode) {
             this.authMode = Input.ofNullable(authMode);
             return this;
         }
 
-        public Builder setDefaultS3Location(@Nullable Input<String> defaultS3Location) {
+        public Builder defaultS3Location(@Nullable Input<String> defaultS3Location) {
             this.defaultS3Location = defaultS3Location;
             return this;
         }
 
-        public Builder setDefaultS3Location(@Nullable String defaultS3Location) {
+        public Builder defaultS3Location(@Nullable String defaultS3Location) {
             this.defaultS3Location = Input.ofNullable(defaultS3Location);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEngineSecurityGroupId(@Nullable Input<String> engineSecurityGroupId) {
+        public Builder engineSecurityGroupId(@Nullable Input<String> engineSecurityGroupId) {
             this.engineSecurityGroupId = engineSecurityGroupId;
             return this;
         }
 
-        public Builder setEngineSecurityGroupId(@Nullable String engineSecurityGroupId) {
+        public Builder engineSecurityGroupId(@Nullable String engineSecurityGroupId) {
             this.engineSecurityGroupId = Input.ofNullable(engineSecurityGroupId);
             return this;
         }
 
-        public Builder setIdpAuthUrl(@Nullable Input<String> idpAuthUrl) {
+        public Builder idpAuthUrl(@Nullable Input<String> idpAuthUrl) {
             this.idpAuthUrl = idpAuthUrl;
             return this;
         }
 
-        public Builder setIdpAuthUrl(@Nullable String idpAuthUrl) {
+        public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
             this.idpAuthUrl = Input.ofNullable(idpAuthUrl);
             return this;
         }
 
-        public Builder setIdpRelayStateParameterName(@Nullable Input<String> idpRelayStateParameterName) {
+        public Builder idpRelayStateParameterName(@Nullable Input<String> idpRelayStateParameterName) {
             this.idpRelayStateParameterName = idpRelayStateParameterName;
             return this;
         }
 
-        public Builder setIdpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
+        public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
             this.idpRelayStateParameterName = Input.ofNullable(idpRelayStateParameterName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setServiceRole(@Nullable Input<String> serviceRole) {
+        public Builder serviceRole(@Nullable Input<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
-        public Builder setServiceRole(@Nullable String serviceRole) {
+        public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Input.ofNullable(serviceRole);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }
 
-        public Builder setUserRole(@Nullable Input<String> userRole) {
+        public Builder userRole(@Nullable Input<String> userRole) {
             this.userRole = userRole;
             return this;
         }
 
-        public Builder setUserRole(@Nullable String userRole) {
+        public Builder userRole(@Nullable String userRole) {
             this.userRole = Input.ofNullable(userRole);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(@Nullable Input<String> workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(@Nullable Input<String> workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = workspaceSecurityGroupId;
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Input.ofNullable(workspaceSecurityGroupId);
             return this;
         }

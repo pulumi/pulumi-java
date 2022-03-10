@@ -78,22 +78,22 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder setType(@Nullable Input<ManagedIdentityType> type) {
+        public Builder type(@Nullable Input<ManagedIdentityType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ManagedIdentityType type) {
+        public Builder type(@Nullable ManagedIdentityType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Input<Map<String,Object>> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }

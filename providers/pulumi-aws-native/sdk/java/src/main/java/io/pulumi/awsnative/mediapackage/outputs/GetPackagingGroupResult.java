@@ -101,22 +101,22 @@ public final class GetPackagingGroupResult {
     	      this.egressAccessLogs = defaults.egressAccessLogs;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable PackagingGroupAuthorization authorization) {
+        public Builder authorization(@Nullable PackagingGroupAuthorization authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setEgressAccessLogs(@Nullable PackagingGroupLogConfiguration egressAccessLogs) {
+        public Builder egressAccessLogs(@Nullable PackagingGroupLogConfiguration egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }

@@ -49,12 +49,12 @@ public final class SomeOtherObjectArgs extends io.pulumi.resources.ResourceArgs 
     	      this.baz = defaults.baz;
         }
 
-        public Builder setBaz(@Nullable Input<String> baz) {
+        public Builder baz(@Nullable Input<String> baz) {
             this.baz = baz;
             return this;
         }
 
-        public Builder setBaz(@Nullable String baz) {
+        public Builder baz(@Nullable String baz) {
             this.baz = Input.ofNullable(baz);
             return this;
         }

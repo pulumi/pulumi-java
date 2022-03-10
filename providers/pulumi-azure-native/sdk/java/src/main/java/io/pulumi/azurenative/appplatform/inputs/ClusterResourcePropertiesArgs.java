@@ -57,12 +57,12 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     	      this.networkProfile = defaults.networkProfile;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }

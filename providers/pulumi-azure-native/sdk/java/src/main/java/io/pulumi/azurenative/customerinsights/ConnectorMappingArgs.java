@@ -202,102 +202,102 @@ public final class ConnectorMappingArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setConnectorName(Input<String> connectorName) {
+        public Builder connectorName(Input<String> connectorName) {
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
 
-        public Builder setConnectorName(String connectorName) {
+        public Builder connectorName(String connectorName) {
             this.connectorName = Input.of(Objects.requireNonNull(connectorName));
             return this;
         }
 
-        public Builder setConnectorType(@Nullable Input<Either<String,ConnectorTypes>> connectorType) {
+        public Builder connectorType(@Nullable Input<Either<String,ConnectorTypes>> connectorType) {
             this.connectorType = connectorType;
             return this;
         }
 
-        public Builder setConnectorType(@Nullable Either<String,ConnectorTypes> connectorType) {
+        public Builder connectorType(@Nullable Either<String,ConnectorTypes> connectorType) {
             this.connectorType = Input.ofNullable(connectorType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEntityType(Input<EntityTypes> entityType) {
+        public Builder entityType(Input<EntityTypes> entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setEntityType(EntityTypes entityType) {
+        public Builder entityType(EntityTypes entityType) {
             this.entityType = Input.of(Objects.requireNonNull(entityType));
             return this;
         }
 
-        public Builder setEntityTypeName(Input<String> entityTypeName) {
+        public Builder entityTypeName(Input<String> entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
 
-        public Builder setEntityTypeName(String entityTypeName) {
+        public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Input.of(Objects.requireNonNull(entityTypeName));
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setMappingName(@Nullable Input<String> mappingName) {
+        public Builder mappingName(@Nullable Input<String> mappingName) {
             this.mappingName = mappingName;
             return this;
         }
 
-        public Builder setMappingName(@Nullable String mappingName) {
+        public Builder mappingName(@Nullable String mappingName) {
             this.mappingName = Input.ofNullable(mappingName);
             return this;
         }
 
-        public Builder setMappingProperties(Input<ConnectorMappingPropertiesArgs> mappingProperties) {
+        public Builder mappingProperties(Input<ConnectorMappingPropertiesArgs> mappingProperties) {
             this.mappingProperties = Objects.requireNonNull(mappingProperties);
             return this;
         }
 
-        public Builder setMappingProperties(ConnectorMappingPropertiesArgs mappingProperties) {
+        public Builder mappingProperties(ConnectorMappingPropertiesArgs mappingProperties) {
             this.mappingProperties = Input.of(Objects.requireNonNull(mappingProperties));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

@@ -140,8 +140,8 @@ public class ResourceQuota extends io.pulumi.resources.CustomResource {
     private static ResourceQuotaArgs makeArgs(@Nullable ResourceQuotaArgs args) {
         var builder = args == null ? ResourceQuotaArgs.builder() : ResourceQuotaArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("ResourceQuota")
+            .apiVersion("v1")
+            .kind("ResourceQuota")
             .build();
     }
 

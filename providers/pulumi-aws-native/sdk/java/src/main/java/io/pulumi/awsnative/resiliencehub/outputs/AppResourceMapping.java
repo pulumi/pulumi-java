@@ -68,22 +68,22 @@ public final class AppResourceMapping {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setLogicalStackName(@Nullable String logicalStackName) {
+        public Builder logicalStackName(@Nullable String logicalStackName) {
             this.logicalStackName = logicalStackName;
             return this;
         }
 
-        public Builder setMappingType(String mappingType) {
+        public Builder mappingType(String mappingType) {
             this.mappingType = Objects.requireNonNull(mappingType);
             return this;
         }
 
-        public Builder setPhysicalResourceId(AppPhysicalResourceId physicalResourceId) {
+        public Builder physicalResourceId(AppPhysicalResourceId physicalResourceId) {
             this.physicalResourceId = Objects.requireNonNull(physicalResourceId);
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }

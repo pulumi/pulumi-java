@@ -69,12 +69,12 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setUserGroups(List<String> userGroups) {
+        public Builder userGroups(List<String> userGroups) {
             this.userGroups = Objects.requireNonNull(userGroups);
             return this;
         }
 
-        public Builder setUserIds(List<String> userIds) {
+        public Builder userIds(List<String> userIds) {
             this.userIds = Objects.requireNonNull(userIds);
             return this;
         }

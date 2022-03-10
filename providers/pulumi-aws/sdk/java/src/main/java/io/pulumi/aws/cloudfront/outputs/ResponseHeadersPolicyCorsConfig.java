@@ -152,37 +152,37 @@ public final class ResponseHeadersPolicyCorsConfig {
     	      this.originOverride = defaults.originOverride;
         }
 
-        public Builder setAccessControlAllowCredentials(Boolean accessControlAllowCredentials) {
+        public Builder accessControlAllowCredentials(Boolean accessControlAllowCredentials) {
             this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
             return this;
         }
 
-        public Builder setAccessControlAllowHeaders(ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders accessControlAllowHeaders) {
+        public Builder accessControlAllowHeaders(ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders accessControlAllowHeaders) {
             this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
             return this;
         }
 
-        public Builder setAccessControlAllowMethods(ResponseHeadersPolicyCorsConfigAccessControlAllowMethods accessControlAllowMethods) {
+        public Builder accessControlAllowMethods(ResponseHeadersPolicyCorsConfigAccessControlAllowMethods accessControlAllowMethods) {
             this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
             return this;
         }
 
-        public Builder setAccessControlAllowOrigins(ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins accessControlAllowOrigins) {
+        public Builder accessControlAllowOrigins(ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins accessControlAllowOrigins) {
             this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
             return this;
         }
 
-        public Builder setAccessControlExposeHeaders(@Nullable ResponseHeadersPolicyCorsConfigAccessControlExposeHeaders accessControlExposeHeaders) {
+        public Builder accessControlExposeHeaders(@Nullable ResponseHeadersPolicyCorsConfigAccessControlExposeHeaders accessControlExposeHeaders) {
             this.accessControlExposeHeaders = accessControlExposeHeaders;
             return this;
         }
 
-        public Builder setAccessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = accessControlMaxAgeSec;
             return this;
         }
 
-        public Builder setOriginOverride(Boolean originOverride) {
+        public Builder originOverride(Boolean originOverride) {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
         }

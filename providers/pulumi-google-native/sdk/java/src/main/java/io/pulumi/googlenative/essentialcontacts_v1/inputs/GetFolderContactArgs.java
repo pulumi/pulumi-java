@@ -60,12 +60,12 @@ public final class GetFolderContactArgs extends io.pulumi.resources.InvokeArgs {
     	      this.folderId = defaults.folderId;
         }
 
-        public Builder setContactId(String contactId) {
+        public Builder contactId(String contactId) {
             this.contactId = Objects.requireNonNull(contactId);
             return this;
         }
 
-        public Builder setFolderId(String folderId) {
+        public Builder folderId(String folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }

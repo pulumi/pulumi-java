@@ -172,82 +172,82 @@ public final class GitRepositoryDefinitionArgs extends io.pulumi.resources.Resou
     	      this.url = defaults.url;
         }
 
-        public Builder setHttpsCAFile(@Nullable Input<String> httpsCAFile) {
+        public Builder httpsCAFile(@Nullable Input<String> httpsCAFile) {
             this.httpsCAFile = httpsCAFile;
             return this;
         }
 
-        public Builder setHttpsCAFile(@Nullable String httpsCAFile) {
+        public Builder httpsCAFile(@Nullable String httpsCAFile) {
             this.httpsCAFile = Input.ofNullable(httpsCAFile);
             return this;
         }
 
-        public Builder setHttpsUser(@Nullable Input<String> httpsUser) {
+        public Builder httpsUser(@Nullable Input<String> httpsUser) {
             this.httpsUser = httpsUser;
             return this;
         }
 
-        public Builder setHttpsUser(@Nullable String httpsUser) {
+        public Builder httpsUser(@Nullable String httpsUser) {
             this.httpsUser = Input.ofNullable(httpsUser);
             return this;
         }
 
-        public Builder setLocalAuthRef(@Nullable Input<String> localAuthRef) {
+        public Builder localAuthRef(@Nullable Input<String> localAuthRef) {
             this.localAuthRef = localAuthRef;
             return this;
         }
 
-        public Builder setLocalAuthRef(@Nullable String localAuthRef) {
+        public Builder localAuthRef(@Nullable String localAuthRef) {
             this.localAuthRef = Input.ofNullable(localAuthRef);
             return this;
         }
 
-        public Builder setRepositoryRef(@Nullable Input<RepositoryRefDefinitionArgs> repositoryRef) {
+        public Builder repositoryRef(@Nullable Input<RepositoryRefDefinitionArgs> repositoryRef) {
             this.repositoryRef = repositoryRef;
             return this;
         }
 
-        public Builder setRepositoryRef(@Nullable RepositoryRefDefinitionArgs repositoryRef) {
+        public Builder repositoryRef(@Nullable RepositoryRefDefinitionArgs repositoryRef) {
             this.repositoryRef = Input.ofNullable(repositoryRef);
             return this;
         }
 
-        public Builder setSshKnownHosts(@Nullable Input<String> sshKnownHosts) {
+        public Builder sshKnownHosts(@Nullable Input<String> sshKnownHosts) {
             this.sshKnownHosts = sshKnownHosts;
             return this;
         }
 
-        public Builder setSshKnownHosts(@Nullable String sshKnownHosts) {
+        public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
             this.sshKnownHosts = Input.ofNullable(sshKnownHosts);
             return this;
         }
 
-        public Builder setSyncIntervalInSeconds(@Nullable Input<Double> syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Input<Double> syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
-        public Builder setSyncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = Input.ofNullable(syncIntervalInSeconds);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Double> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Double timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

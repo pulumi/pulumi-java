@@ -123,52 +123,52 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder set$default(@Nullable Input<Integer> $default) {
+        public Builder $default(@Nullable Input<Integer> $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder set$default(@Nullable Integer $default) {
+        public Builder $default(@Nullable Integer $default) {
             this.$default = Input.ofNullable($default);
             return this;
         }
 
-        public Builder setElasticMaximum(@Nullable Input<Integer> elasticMaximum) {
+        public Builder elasticMaximum(@Nullable Input<Integer> elasticMaximum) {
             this.elasticMaximum = elasticMaximum;
             return this;
         }
 
-        public Builder setElasticMaximum(@Nullable Integer elasticMaximum) {
+        public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
             this.elasticMaximum = Input.ofNullable(elasticMaximum);
             return this;
         }
 
-        public Builder setMaximum(@Nullable Input<Integer> maximum) {
+        public Builder maximum(@Nullable Input<Integer> maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMaximum(@Nullable Integer maximum) {
+        public Builder maximum(@Nullable Integer maximum) {
             this.maximum = Input.ofNullable(maximum);
             return this;
         }
 
-        public Builder setMinimum(@Nullable Input<Integer> minimum) {
+        public Builder minimum(@Nullable Input<Integer> minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setMinimum(@Nullable Integer minimum) {
+        public Builder minimum(@Nullable Integer minimum) {
             this.minimum = Input.ofNullable(minimum);
             return this;
         }
 
-        public Builder setScaleType(@Nullable Input<String> scaleType) {
+        public Builder scaleType(@Nullable Input<String> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
-        public Builder setScaleType(@Nullable String scaleType) {
+        public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = Input.ofNullable(scaleType);
             return this;
         }

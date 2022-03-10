@@ -151,72 +151,72 @@ public final class TrailAdvancedEventSelectorFieldSelectorArgs extends io.pulumi
     	      this.startsWiths = defaults.startsWiths;
         }
 
-        public Builder setEndsWiths(@Nullable Input<List<String>> endsWiths) {
+        public Builder endsWiths(@Nullable Input<List<String>> endsWiths) {
             this.endsWiths = endsWiths;
             return this;
         }
 
-        public Builder setEndsWiths(@Nullable List<String> endsWiths) {
+        public Builder endsWiths(@Nullable List<String> endsWiths) {
             this.endsWiths = Input.ofNullable(endsWiths);
             return this;
         }
 
-        public Builder setEquals(@Nullable Input<List<String>> equals) {
+        public Builder equals(@Nullable Input<List<String>> equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setEquals(@Nullable List<String> equals) {
+        public Builder equals(@Nullable List<String> equals) {
             this.equals = Input.ofNullable(equals);
             return this;
         }
 
-        public Builder setField(Input<String> field) {
+        public Builder field(Input<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Input.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder setNotEndsWiths(@Nullable Input<List<String>> notEndsWiths) {
+        public Builder notEndsWiths(@Nullable Input<List<String>> notEndsWiths) {
             this.notEndsWiths = notEndsWiths;
             return this;
         }
 
-        public Builder setNotEndsWiths(@Nullable List<String> notEndsWiths) {
+        public Builder notEndsWiths(@Nullable List<String> notEndsWiths) {
             this.notEndsWiths = Input.ofNullable(notEndsWiths);
             return this;
         }
 
-        public Builder setNotEquals(@Nullable Input<List<String>> notEquals) {
+        public Builder notEquals(@Nullable Input<List<String>> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
 
-        public Builder setNotEquals(@Nullable List<String> notEquals) {
+        public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = Input.ofNullable(notEquals);
             return this;
         }
 
-        public Builder setNotStartsWiths(@Nullable Input<List<String>> notStartsWiths) {
+        public Builder notStartsWiths(@Nullable Input<List<String>> notStartsWiths) {
             this.notStartsWiths = notStartsWiths;
             return this;
         }
 
-        public Builder setNotStartsWiths(@Nullable List<String> notStartsWiths) {
+        public Builder notStartsWiths(@Nullable List<String> notStartsWiths) {
             this.notStartsWiths = Input.ofNullable(notStartsWiths);
             return this;
         }
 
-        public Builder setStartsWiths(@Nullable Input<List<String>> startsWiths) {
+        public Builder startsWiths(@Nullable Input<List<String>> startsWiths) {
             this.startsWiths = startsWiths;
             return this;
         }
 
-        public Builder setStartsWiths(@Nullable List<String> startsWiths) {
+        public Builder startsWiths(@Nullable List<String> startsWiths) {
             this.startsWiths = Input.ofNullable(startsWiths);
             return this;
         }

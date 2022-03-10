@@ -66,22 +66,22 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }

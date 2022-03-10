@@ -60,12 +60,12 @@ public final class ConnectionApiKeyAuthParameters extends io.pulumi.resources.In
     	      this.apiKeyValue = defaults.apiKeyValue;
         }
 
-        public Builder setApiKeyName(String apiKeyName) {
+        public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = Objects.requireNonNull(apiKeyName);
             return this;
         }
 
-        public Builder setApiKeyValue(String apiKeyValue) {
+        public Builder apiKeyValue(String apiKeyValue) {
             this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
             return this;
         }

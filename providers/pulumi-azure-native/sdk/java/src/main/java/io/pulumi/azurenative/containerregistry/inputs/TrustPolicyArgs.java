@@ -77,22 +77,22 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,PolicyStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,PolicyStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,PolicyStatus> status) {
+        public Builder status(@Nullable Either<String,PolicyStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,TrustPolicyType>> type) {
+        public Builder type(@Nullable Input<Either<String,TrustPolicyType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,TrustPolicyType> type) {
+        public Builder type(@Nullable Either<String,TrustPolicyType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

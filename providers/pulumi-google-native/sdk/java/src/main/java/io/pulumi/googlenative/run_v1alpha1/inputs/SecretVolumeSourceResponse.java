@@ -108,22 +108,22 @@ public final class SecretVolumeSourceResponse extends io.pulumi.resources.Invoke
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(Integer defaultMode) {
+        public Builder defaultMode(Integer defaultMode) {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
 
-        public Builder setItems(List<KeyToPathResponse> items) {
+        public Builder items(List<KeyToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }

@@ -66,12 +66,12 @@ public final class DicomServiceAuthenticationConfigurationResponse {
     	      this.authority = defaults.authority;
         }
 
-        public Builder setAudiences(List<String> audiences) {
+        public Builder audiences(List<String> audiences) {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
 
-        public Builder setAuthority(String authority) {
+        public Builder authority(String authority) {
             this.authority = Objects.requireNonNull(authority);
             return this;
         }

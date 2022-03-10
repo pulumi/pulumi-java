@@ -125,27 +125,27 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
+        public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
             this.computeProperties = computeProperties;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSsisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
+        public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
             this.ssisProperties = ssisProperties;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

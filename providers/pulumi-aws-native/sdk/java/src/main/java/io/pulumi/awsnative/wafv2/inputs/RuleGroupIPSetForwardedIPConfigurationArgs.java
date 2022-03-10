@@ -75,32 +75,32 @@ public final class RuleGroupIPSetForwardedIPConfigurationArgs extends io.pulumi.
     	      this.position = defaults.position;
         }
 
-        public Builder setFallbackBehavior(Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
+        public Builder fallbackBehavior(Input<RuleGroupIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setFallbackBehavior(RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
+        public Builder fallbackBehavior(RuleGroupIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Input.of(Objects.requireNonNull(fallbackBehavior));
             return this;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }
 
-        public Builder setPosition(Input<RuleGroupIPSetForwardedIPConfigurationPosition> position) {
+        public Builder position(Input<RuleGroupIPSetForwardedIPConfigurationPosition> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(RuleGroupIPSetForwardedIPConfigurationPosition position) {
+        public Builder position(RuleGroupIPSetForwardedIPConfigurationPosition position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }

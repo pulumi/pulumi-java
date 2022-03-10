@@ -244,67 +244,67 @@ public final class GetWorkspaceResult {
     	      this.workspaceType = defaults.workspaceType;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyVaultIdentifierId(@Nullable String keyVaultIdentifierId) {
+        public Builder keyVaultIdentifierId(@Nullable String keyVaultIdentifierId) {
             this.keyVaultIdentifierId = keyVaultIdentifierId;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwnerEmail(String ownerEmail) {
+        public Builder ownerEmail(String ownerEmail) {
             this.ownerEmail = Objects.requireNonNull(ownerEmail);
             return this;
         }
 
-        public Builder setStudioEndpoint(String studioEndpoint) {
+        public Builder studioEndpoint(String studioEndpoint) {
             this.studioEndpoint = Objects.requireNonNull(studioEndpoint);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserStorageAccountId(String userStorageAccountId) {
+        public Builder userStorageAccountId(String userStorageAccountId) {
             this.userStorageAccountId = Objects.requireNonNull(userStorageAccountId);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceState(String workspaceState) {
+        public Builder workspaceState(String workspaceState) {
             this.workspaceState = Objects.requireNonNull(workspaceState);
             return this;
         }
 
-        public Builder setWorkspaceType(String workspaceType) {
+        public Builder workspaceType(String workspaceType) {
             this.workspaceType = Objects.requireNonNull(workspaceType);
             return this;
         }

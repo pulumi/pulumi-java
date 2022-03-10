@@ -75,12 +75,12 @@ public final class EncryptionSettingsElementResponse extends io.pulumi.resources
     	      this.keyEncryptionKey = defaults.keyEncryptionKey;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable KeyVaultAndSecretReferenceResponse diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable KeyVaultAndKeyReferenceResponse keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }

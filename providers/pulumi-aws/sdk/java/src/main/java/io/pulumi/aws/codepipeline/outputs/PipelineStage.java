@@ -67,12 +67,12 @@ public final class PipelineStage {
     	      this.name = defaults.name;
         }
 
-        public Builder setActions(List<PipelineStageAction> actions) {
+        public Builder actions(List<PipelineStageAction> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

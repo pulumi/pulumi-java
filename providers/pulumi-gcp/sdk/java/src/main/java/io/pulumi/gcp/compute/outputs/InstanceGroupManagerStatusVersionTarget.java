@@ -42,7 +42,7 @@ public final class InstanceGroupManagerStatusVersionTarget {
     	      this.isReached = defaults.isReached;
         }
 
-        public Builder setIsReached(@Nullable Boolean isReached) {
+        public Builder isReached(@Nullable Boolean isReached) {
             this.isReached = isReached;
             return this;
         }

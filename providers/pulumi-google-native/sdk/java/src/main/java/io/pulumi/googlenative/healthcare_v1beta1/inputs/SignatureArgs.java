@@ -108,42 +108,42 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setImage(@Nullable Input<ImageArgs> image) {
+        public Builder image(@Nullable Input<ImageArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable ImageArgs image) {
+        public Builder image(@Nullable ImageArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setSignatureTime(@Nullable Input<String> signatureTime) {
+        public Builder signatureTime(@Nullable Input<String> signatureTime) {
             this.signatureTime = signatureTime;
             return this;
         }
 
-        public Builder setSignatureTime(@Nullable String signatureTime) {
+        public Builder signatureTime(@Nullable String signatureTime) {
             this.signatureTime = Input.ofNullable(signatureTime);
             return this;
         }
 
-        public Builder setUserId(Input<String> userId) {
+        public Builder userId(Input<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }

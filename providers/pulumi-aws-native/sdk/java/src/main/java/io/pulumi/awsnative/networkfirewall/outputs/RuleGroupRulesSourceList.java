@@ -60,17 +60,17 @@ public final class RuleGroupRulesSourceList {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setGeneratedRulesType(RuleGroupGeneratedRulesType generatedRulesType) {
+        public Builder generatedRulesType(RuleGroupGeneratedRulesType generatedRulesType) {
             this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
             return this;
         }
 
-        public Builder setTargetTypes(List<RuleGroupTargetType> targetTypes) {
+        public Builder targetTypes(List<RuleGroupTargetType> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
 
-        public Builder setTargets(List<String> targets) {
+        public Builder targets(List<String> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }

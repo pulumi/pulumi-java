@@ -222,92 +222,92 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     	      this.signedRequestMode = defaults.signedRequestMode;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable Input<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy) {
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs cacheKeyPolicy) {
             this.cacheKeyPolicy = Input.ofNullable(cacheKeyPolicy);
             return this;
         }
 
-        public Builder setCacheMode(@Nullable Input<String> cacheMode) {
+        public Builder cacheMode(@Nullable Input<String> cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
 
-        public Builder setCacheMode(@Nullable String cacheMode) {
+        public Builder cacheMode(@Nullable String cacheMode) {
             this.cacheMode = Input.ofNullable(cacheMode);
             return this;
         }
 
-        public Builder setClientTtl(@Nullable Input<String> clientTtl) {
+        public Builder clientTtl(@Nullable Input<String> clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
 
-        public Builder setClientTtl(@Nullable String clientTtl) {
+        public Builder clientTtl(@Nullable String clientTtl) {
             this.clientTtl = Input.ofNullable(clientTtl);
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Input<String> defaultTtl) {
+        public Builder defaultTtl(@Nullable Input<String> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable String defaultTtl) {
+        public Builder defaultTtl(@Nullable String defaultTtl) {
             this.defaultTtl = Input.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Input<String> maxTtl) {
+        public Builder maxTtl(@Nullable Input<String> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable String maxTtl) {
+        public Builder maxTtl(@Nullable String maxTtl) {
             this.maxTtl = Input.ofNullable(maxTtl);
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Input<Boolean> negativeCaching) {
+        public Builder negativeCaching(@Nullable Input<Boolean> negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Boolean negativeCaching) {
+        public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = Input.ofNullable(negativeCaching);
             return this;
         }
 
-        public Builder setNegativeCachingPolicy(@Nullable Input<Map<String,String>> negativeCachingPolicy) {
+        public Builder negativeCachingPolicy(@Nullable Input<Map<String,String>> negativeCachingPolicy) {
             this.negativeCachingPolicy = negativeCachingPolicy;
             return this;
         }
 
-        public Builder setNegativeCachingPolicy(@Nullable Map<String,String> negativeCachingPolicy) {
+        public Builder negativeCachingPolicy(@Nullable Map<String,String> negativeCachingPolicy) {
             this.negativeCachingPolicy = Input.ofNullable(negativeCachingPolicy);
             return this;
         }
 
-        public Builder setSignedRequestKeyset(@Nullable Input<String> signedRequestKeyset) {
+        public Builder signedRequestKeyset(@Nullable Input<String> signedRequestKeyset) {
             this.signedRequestKeyset = signedRequestKeyset;
             return this;
         }
 
-        public Builder setSignedRequestKeyset(@Nullable String signedRequestKeyset) {
+        public Builder signedRequestKeyset(@Nullable String signedRequestKeyset) {
             this.signedRequestKeyset = Input.ofNullable(signedRequestKeyset);
             return this;
         }
 
-        public Builder setSignedRequestMode(@Nullable Input<String> signedRequestMode) {
+        public Builder signedRequestMode(@Nullable Input<String> signedRequestMode) {
             this.signedRequestMode = signedRequestMode;
             return this;
         }
 
-        public Builder setSignedRequestMode(@Nullable String signedRequestMode) {
+        public Builder signedRequestMode(@Nullable String signedRequestMode) {
             this.signedRequestMode = Input.ofNullable(signedRequestMode);
             return this;
         }

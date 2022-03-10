@@ -89,42 +89,42 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOverrides(@Nullable Input<List<ThemeValuesArgs>> overrides) {
+        public Builder overrides(@Nullable Input<List<ThemeValuesArgs>> overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<ThemeValuesArgs> overrides) {
+        public Builder overrides(@Nullable List<ThemeValuesArgs> overrides) {
             this.overrides = Input.ofNullable(overrides);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<ThemeTagsArgs> tags) {
+        public Builder tags(@Nullable Input<ThemeTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable ThemeTagsArgs tags) {
+        public Builder tags(@Nullable ThemeTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValues(Input<List<ThemeValuesArgs>> values) {
+        public Builder values(Input<List<ThemeValuesArgs>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setValues(List<ThemeValuesArgs> values) {
+        public Builder values(List<ThemeValuesArgs> values) {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }

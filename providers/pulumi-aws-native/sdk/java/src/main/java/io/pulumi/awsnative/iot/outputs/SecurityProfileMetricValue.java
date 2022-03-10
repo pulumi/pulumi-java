@@ -134,32 +134,32 @@ public final class SecurityProfileMetricValue {
     	      this.strings = defaults.strings;
         }
 
-        public Builder setCidrs(@Nullable List<String> cidrs) {
+        public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
-        public Builder setCount(@Nullable String count) {
+        public Builder count(@Nullable String count) {
             this.count = count;
             return this;
         }
 
-        public Builder setNumber(@Nullable Double number) {
+        public Builder number(@Nullable Double number) {
             this.number = number;
             return this;
         }
 
-        public Builder setNumbers(@Nullable List<Double> numbers) {
+        public Builder numbers(@Nullable List<Double> numbers) {
             this.numbers = numbers;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<Integer> ports) {
+        public Builder ports(@Nullable List<Integer> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setStrings(@Nullable List<String> strings) {
+        public Builder strings(@Nullable List<String> strings) {
             this.strings = strings;
             return this;
         }

@@ -88,32 +88,32 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
     	      this.ssmActionDefinition = defaults.ssmActionDefinition;
         }
 
-        public Builder setIamActionDefinition(@Nullable Input<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition) {
+        public Builder iamActionDefinition(@Nullable Input<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition) {
             this.iamActionDefinition = iamActionDefinition;
             return this;
         }
 
-        public Builder setIamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinitionArgs iamActionDefinition) {
+        public Builder iamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinitionArgs iamActionDefinition) {
             this.iamActionDefinition = Input.ofNullable(iamActionDefinition);
             return this;
         }
 
-        public Builder setScpActionDefinition(@Nullable Input<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition) {
+        public Builder scpActionDefinition(@Nullable Input<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition) {
             this.scpActionDefinition = scpActionDefinition;
             return this;
         }
 
-        public Builder setScpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinitionArgs scpActionDefinition) {
+        public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinitionArgs scpActionDefinition) {
             this.scpActionDefinition = Input.ofNullable(scpActionDefinition);
             return this;
         }
 
-        public Builder setSsmActionDefinition(@Nullable Input<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition) {
+        public Builder ssmActionDefinition(@Nullable Input<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition) {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }
 
-        public Builder setSsmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinitionArgs ssmActionDefinition) {
+        public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinitionArgs ssmActionDefinition) {
             this.ssmActionDefinition = Input.ofNullable(ssmActionDefinition);
             return this;
         }

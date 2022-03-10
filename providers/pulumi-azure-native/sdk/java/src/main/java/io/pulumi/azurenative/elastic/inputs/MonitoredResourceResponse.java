@@ -90,17 +90,17 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
     	      this.sendingLogs = defaults.sendingLogs;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setReasonForLogsStatus(@Nullable String reasonForLogsStatus) {
+        public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
             this.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
 
-        public Builder setSendingLogs(@Nullable String sendingLogs) {
+        public Builder sendingLogs(@Nullable String sendingLogs) {
             this.sendingLogs = sendingLogs;
             return this;
         }

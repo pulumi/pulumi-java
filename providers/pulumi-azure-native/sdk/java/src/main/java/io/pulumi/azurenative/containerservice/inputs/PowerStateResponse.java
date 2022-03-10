@@ -57,7 +57,7 @@ public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
     	      this.code = defaults.code;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }

@@ -78,12 +78,12 @@ public final class ServicePerimeterSpecEgressPolicyEgressFrom {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentities(@Nullable List<String> identities) {
+        public Builder identities(@Nullable List<String> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = identityType;
             return this;
         }

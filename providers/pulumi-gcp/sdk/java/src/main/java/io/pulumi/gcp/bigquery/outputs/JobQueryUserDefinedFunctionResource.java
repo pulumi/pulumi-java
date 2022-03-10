@@ -69,12 +69,12 @@ public final class JobQueryUserDefinedFunctionResource {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setInlineCode(@Nullable String inlineCode) {
+        public Builder inlineCode(@Nullable String inlineCode) {
             this.inlineCode = inlineCode;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }

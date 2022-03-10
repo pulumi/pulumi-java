@@ -248,67 +248,67 @@ public final class GetJitRequestResult {
     	      this.updatedBy = defaults.updatedBy;
         }
 
-        public Builder setApplicationResourceId(String applicationResourceId) {
+        public Builder applicationResourceId(String applicationResourceId) {
             this.applicationResourceId = Objects.requireNonNull(applicationResourceId);
             return this;
         }
 
-        public Builder setCreatedBy(ApplicationClientDetailsResponse createdBy) {
+        public Builder createdBy(ApplicationClientDetailsResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setJitAuthorizationPolicies(List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies) {
+        public Builder jitAuthorizationPolicies(List<JitAuthorizationPoliciesResponse> jitAuthorizationPolicies) {
             this.jitAuthorizationPolicies = Objects.requireNonNull(jitAuthorizationPolicies);
             return this;
         }
 
-        public Builder setJitRequestState(String jitRequestState) {
+        public Builder jitRequestState(String jitRequestState) {
             this.jitRequestState = Objects.requireNonNull(jitRequestState);
             return this;
         }
 
-        public Builder setJitSchedulingPolicy(JitSchedulingPolicyResponse jitSchedulingPolicy) {
+        public Builder jitSchedulingPolicy(JitSchedulingPolicyResponse jitSchedulingPolicy) {
             this.jitSchedulingPolicy = Objects.requireNonNull(jitSchedulingPolicy);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublisherTenantId(String publisherTenantId) {
+        public Builder publisherTenantId(String publisherTenantId) {
             this.publisherTenantId = Objects.requireNonNull(publisherTenantId);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedBy(ApplicationClientDetailsResponse updatedBy) {
+        public Builder updatedBy(ApplicationClientDetailsResponse updatedBy) {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }

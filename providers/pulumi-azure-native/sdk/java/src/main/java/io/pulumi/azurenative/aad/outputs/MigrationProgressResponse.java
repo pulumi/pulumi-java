@@ -68,12 +68,12 @@ public final class MigrationProgressResponse {
     	      this.progressMessage = defaults.progressMessage;
         }
 
-        public Builder setCompletionPercentage(@Nullable Double completionPercentage) {
+        public Builder completionPercentage(@Nullable Double completionPercentage) {
             this.completionPercentage = completionPercentage;
             return this;
         }
 
-        public Builder setProgressMessage(@Nullable String progressMessage) {
+        public Builder progressMessage(@Nullable String progressMessage) {
             this.progressMessage = progressMessage;
             return this;
         }

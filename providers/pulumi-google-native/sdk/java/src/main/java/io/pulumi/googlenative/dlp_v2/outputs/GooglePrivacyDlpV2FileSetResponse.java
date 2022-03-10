@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2FileSetResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setRegexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet) {
+        public Builder regexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet) {
             this.regexFileSet = Objects.requireNonNull(regexFileSet);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

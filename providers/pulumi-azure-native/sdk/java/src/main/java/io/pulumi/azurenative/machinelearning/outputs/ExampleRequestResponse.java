@@ -69,12 +69,12 @@ public final class ExampleRequestResponse {
     	      this.inputs = defaults.inputs;
         }
 
-        public Builder setGlobalParameters(@Nullable Map<String,Object> globalParameters) {
+        public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
 
-        public Builder setInputs(@Nullable Map<String,List<List<Object>>> inputs) {
+        public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
             this.inputs = inputs;
             return this;
         }

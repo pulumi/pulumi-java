@@ -55,7 +55,7 @@ public final class NodeConfigDefaultsResponse extends io.pulumi.resources.Invoke
     	      this.gcfsConfig = defaults.gcfsConfig;
         }
 
-        public Builder setGcfsConfig(GcfsConfigResponse gcfsConfig) {
+        public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
         }

@@ -85,17 +85,17 @@ public final class GraphParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLinks(List<GraphParameterLinkResponse> links) {
+        public Builder links(List<GraphParameterLinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

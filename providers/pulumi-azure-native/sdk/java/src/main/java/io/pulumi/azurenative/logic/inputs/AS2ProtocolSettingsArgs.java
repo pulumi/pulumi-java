@@ -159,72 +159,72 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.validationSettings = defaults.validationSettings;
         }
 
-        public Builder setAcknowledgementConnectionSettings(Input<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings) {
+        public Builder acknowledgementConnectionSettings(Input<AS2AcknowledgementConnectionSettingsArgs> acknowledgementConnectionSettings) {
             this.acknowledgementConnectionSettings = Objects.requireNonNull(acknowledgementConnectionSettings);
             return this;
         }
 
-        public Builder setAcknowledgementConnectionSettings(AS2AcknowledgementConnectionSettingsArgs acknowledgementConnectionSettings) {
+        public Builder acknowledgementConnectionSettings(AS2AcknowledgementConnectionSettingsArgs acknowledgementConnectionSettings) {
             this.acknowledgementConnectionSettings = Input.of(Objects.requireNonNull(acknowledgementConnectionSettings));
             return this;
         }
 
-        public Builder setEnvelopeSettings(Input<AS2EnvelopeSettingsArgs> envelopeSettings) {
+        public Builder envelopeSettings(Input<AS2EnvelopeSettingsArgs> envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
 
-        public Builder setEnvelopeSettings(AS2EnvelopeSettingsArgs envelopeSettings) {
+        public Builder envelopeSettings(AS2EnvelopeSettingsArgs envelopeSettings) {
             this.envelopeSettings = Input.of(Objects.requireNonNull(envelopeSettings));
             return this;
         }
 
-        public Builder setErrorSettings(Input<AS2ErrorSettingsArgs> errorSettings) {
+        public Builder errorSettings(Input<AS2ErrorSettingsArgs> errorSettings) {
             this.errorSettings = Objects.requireNonNull(errorSettings);
             return this;
         }
 
-        public Builder setErrorSettings(AS2ErrorSettingsArgs errorSettings) {
+        public Builder errorSettings(AS2ErrorSettingsArgs errorSettings) {
             this.errorSettings = Input.of(Objects.requireNonNull(errorSettings));
             return this;
         }
 
-        public Builder setMdnSettings(Input<AS2MdnSettingsArgs> mdnSettings) {
+        public Builder mdnSettings(Input<AS2MdnSettingsArgs> mdnSettings) {
             this.mdnSettings = Objects.requireNonNull(mdnSettings);
             return this;
         }
 
-        public Builder setMdnSettings(AS2MdnSettingsArgs mdnSettings) {
+        public Builder mdnSettings(AS2MdnSettingsArgs mdnSettings) {
             this.mdnSettings = Input.of(Objects.requireNonNull(mdnSettings));
             return this;
         }
 
-        public Builder setMessageConnectionSettings(Input<AS2MessageConnectionSettingsArgs> messageConnectionSettings) {
+        public Builder messageConnectionSettings(Input<AS2MessageConnectionSettingsArgs> messageConnectionSettings) {
             this.messageConnectionSettings = Objects.requireNonNull(messageConnectionSettings);
             return this;
         }
 
-        public Builder setMessageConnectionSettings(AS2MessageConnectionSettingsArgs messageConnectionSettings) {
+        public Builder messageConnectionSettings(AS2MessageConnectionSettingsArgs messageConnectionSettings) {
             this.messageConnectionSettings = Input.of(Objects.requireNonNull(messageConnectionSettings));
             return this;
         }
 
-        public Builder setSecuritySettings(Input<AS2SecuritySettingsArgs> securitySettings) {
+        public Builder securitySettings(Input<AS2SecuritySettingsArgs> securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSecuritySettings(AS2SecuritySettingsArgs securitySettings) {
+        public Builder securitySettings(AS2SecuritySettingsArgs securitySettings) {
             this.securitySettings = Input.of(Objects.requireNonNull(securitySettings));
             return this;
         }
 
-        public Builder setValidationSettings(Input<AS2ValidationSettingsArgs> validationSettings) {
+        public Builder validationSettings(Input<AS2ValidationSettingsArgs> validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
 
-        public Builder setValidationSettings(AS2ValidationSettingsArgs validationSettings) {
+        public Builder validationSettings(AS2ValidationSettingsArgs validationSettings) {
             this.validationSettings = Input.of(Objects.requireNonNull(validationSettings));
             return this;
         }

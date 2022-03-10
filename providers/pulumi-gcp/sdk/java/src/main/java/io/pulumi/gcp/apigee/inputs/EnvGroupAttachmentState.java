@@ -87,32 +87,32 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder setEnvgroupId(@Nullable Input<String> envgroupId) {
+        public Builder envgroupId(@Nullable Input<String> envgroupId) {
             this.envgroupId = envgroupId;
             return this;
         }
 
-        public Builder setEnvgroupId(@Nullable String envgroupId) {
+        public Builder envgroupId(@Nullable String envgroupId) {
             this.envgroupId = Input.ofNullable(envgroupId);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Input<String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

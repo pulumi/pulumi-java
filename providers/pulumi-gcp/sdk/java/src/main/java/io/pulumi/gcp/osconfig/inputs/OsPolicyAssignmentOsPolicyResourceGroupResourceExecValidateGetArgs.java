@@ -120,52 +120,52 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateGe
     	      this.script = defaults.script;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file) {
+        public Builder file(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs file) {
+        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGetArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setInterpreter(Input<String> interpreter) {
+        public Builder interpreter(Input<String> interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Input.of(Objects.requireNonNull(interpreter));
             return this;
         }
 
-        public Builder setOutputFilePath(@Nullable Input<String> outputFilePath) {
+        public Builder outputFilePath(@Nullable Input<String> outputFilePath) {
             this.outputFilePath = outputFilePath;
             return this;
         }
 
-        public Builder setOutputFilePath(@Nullable String outputFilePath) {
+        public Builder outputFilePath(@Nullable String outputFilePath) {
             this.outputFilePath = Input.ofNullable(outputFilePath);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }

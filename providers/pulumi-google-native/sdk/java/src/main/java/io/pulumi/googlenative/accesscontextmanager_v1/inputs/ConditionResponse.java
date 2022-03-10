@@ -139,32 +139,32 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.requiredAccessLevels = defaults.requiredAccessLevels;
         }
 
-        public Builder setDevicePolicy(DevicePolicyResponse devicePolicy) {
+        public Builder devicePolicy(DevicePolicyResponse devicePolicy) {
             this.devicePolicy = Objects.requireNonNull(devicePolicy);
             return this;
         }
 
-        public Builder setIpSubnetworks(List<String> ipSubnetworks) {
+        public Builder ipSubnetworks(List<String> ipSubnetworks) {
             this.ipSubnetworks = Objects.requireNonNull(ipSubnetworks);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setNegate(Boolean negate) {
+        public Builder negate(Boolean negate) {
             this.negate = Objects.requireNonNull(negate);
             return this;
         }
 
-        public Builder setRegions(List<String> regions) {
+        public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
-        public Builder setRequiredAccessLevels(List<String> requiredAccessLevels) {
+        public Builder requiredAccessLevels(List<String> requiredAccessLevels) {
             this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels);
             return this;
         }

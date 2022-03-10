@@ -247,67 +247,67 @@ public final class GetZoneResult {
     	      this.zoneType = defaults.zoneType;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaxNumberOfRecordSets(Double maxNumberOfRecordSets) {
+        public Builder maxNumberOfRecordSets(Double maxNumberOfRecordSets) {
             this.maxNumberOfRecordSets = Objects.requireNonNull(maxNumberOfRecordSets);
             return this;
         }
 
-        public Builder setMaxNumberOfRecordsPerRecordSet(Double maxNumberOfRecordsPerRecordSet) {
+        public Builder maxNumberOfRecordsPerRecordSet(Double maxNumberOfRecordsPerRecordSet) {
             this.maxNumberOfRecordsPerRecordSet = Objects.requireNonNull(maxNumberOfRecordsPerRecordSet);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setNumberOfRecordSets(Double numberOfRecordSets) {
+        public Builder numberOfRecordSets(Double numberOfRecordSets) {
             this.numberOfRecordSets = Objects.requireNonNull(numberOfRecordSets);
             return this;
         }
 
-        public Builder setRegistrationVirtualNetworks(@Nullable List<SubResourceResponse> registrationVirtualNetworks) {
+        public Builder registrationVirtualNetworks(@Nullable List<SubResourceResponse> registrationVirtualNetworks) {
             this.registrationVirtualNetworks = registrationVirtualNetworks;
             return this;
         }
 
-        public Builder setResolutionVirtualNetworks(@Nullable List<SubResourceResponse> resolutionVirtualNetworks) {
+        public Builder resolutionVirtualNetworks(@Nullable List<SubResourceResponse> resolutionVirtualNetworks) {
             this.resolutionVirtualNetworks = resolutionVirtualNetworks;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZoneType(@Nullable String zoneType) {
+        public Builder zoneType(@Nullable String zoneType) {
             this.zoneType = zoneType;
             return this;
         }

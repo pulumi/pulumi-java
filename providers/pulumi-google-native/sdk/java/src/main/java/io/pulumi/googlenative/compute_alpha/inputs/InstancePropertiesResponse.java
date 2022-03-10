@@ -453,127 +453,127 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdvancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
 
-        public Builder setCanIpForward(Boolean canIpForward) {
+        public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
 
-        public Builder setConfidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisks(List<AttachedDiskResponse> disks) {
+        public Builder disks(List<AttachedDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setDisplayDevice(DisplayDeviceResponse displayDevice) {
+        public Builder displayDevice(DisplayDeviceResponse displayDevice) {
             this.displayDevice = Objects.requireNonNull(displayDevice);
             return this;
         }
 
-        public Builder setGuestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
+        public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
 
-        public Builder setKeyRevocationActionType(String keyRevocationActionType) {
+        public Builder keyRevocationActionType(String keyRevocationActionType) {
             this.keyRevocationActionType = Objects.requireNonNull(keyRevocationActionType);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(MetadataResponse metadata) {
+        public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkPerformanceConfig(NetworkPerformanceConfigResponse networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(NetworkPerformanceConfigResponse networkPerformanceConfig) {
             this.networkPerformanceConfig = Objects.requireNonNull(networkPerformanceConfig);
             return this;
         }
 
-        public Builder setPostKeyRevocationActionType(String postKeyRevocationActionType) {
+        public Builder postKeyRevocationActionType(String postKeyRevocationActionType) {
             this.postKeyRevocationActionType = Objects.requireNonNull(postKeyRevocationActionType);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setReservationAffinity(ReservationAffinityResponse reservationAffinity) {
+        public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
 
-        public Builder setResourceManagerTags(Map<String,String> resourceManagerTags) {
+        public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }
 
-        public Builder setResourcePolicies(List<String> resourcePolicies) {
+        public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
 
-        public Builder setScheduling(SchedulingResponse scheduling) {
+        public Builder scheduling(SchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setSecureTags(List<String> secureTags) {
+        public Builder secureTags(List<String> secureTags) {
             this.secureTags = Objects.requireNonNull(secureTags);
             return this;
         }
 
-        public Builder setServiceAccounts(List<ServiceAccountResponse> serviceAccounts) {
+        public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setShieldedVmConfig(ShieldedVmConfigResponse shieldedVmConfig) {
+        public Builder shieldedVmConfig(ShieldedVmConfigResponse shieldedVmConfig) {
             this.shieldedVmConfig = Objects.requireNonNull(shieldedVmConfig);
             return this;
         }
 
-        public Builder setTags(TagsResponse tags) {
+        public Builder tags(TagsResponse tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

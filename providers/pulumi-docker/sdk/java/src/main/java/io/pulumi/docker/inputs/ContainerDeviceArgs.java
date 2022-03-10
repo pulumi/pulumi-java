@@ -74,32 +74,32 @@ public final class ContainerDeviceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setContainerPath(@Nullable Input<String> containerPath) {
+        public Builder containerPath(@Nullable Input<String> containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
-        public Builder setContainerPath(@Nullable String containerPath) {
+        public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = Input.ofNullable(containerPath);
             return this;
         }
 
-        public Builder setHostPath(Input<String> hostPath) {
+        public Builder hostPath(Input<String> hostPath) {
             this.hostPath = Objects.requireNonNull(hostPath);
             return this;
         }
 
-        public Builder setHostPath(String hostPath) {
+        public Builder hostPath(String hostPath) {
             this.hostPath = Input.of(Objects.requireNonNull(hostPath));
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Input<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }

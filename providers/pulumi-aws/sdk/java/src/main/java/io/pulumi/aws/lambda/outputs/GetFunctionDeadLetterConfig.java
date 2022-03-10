@@ -40,7 +40,7 @@ public final class GetFunctionDeadLetterConfig {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }

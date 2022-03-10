@@ -73,12 +73,12 @@ public final class MitigationActionEnableIoTLoggingParams extends io.pulumi.reso
     	      this.roleArnForLogging = defaults.roleArnForLogging;
         }
 
-        public Builder setLogLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
+        public Builder logLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
 
-        public Builder setRoleArnForLogging(String roleArnForLogging) {
+        public Builder roleArnForLogging(String roleArnForLogging) {
             this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
             return this;
         }

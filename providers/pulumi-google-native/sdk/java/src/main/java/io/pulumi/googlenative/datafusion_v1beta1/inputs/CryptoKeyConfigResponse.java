@@ -55,7 +55,7 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
     	      this.keyReference = defaults.keyReference;
         }
 
-        public Builder setKeyReference(String keyReference) {
+        public Builder keyReference(String keyReference) {
             this.keyReference = Objects.requireNonNull(keyReference);
             return this;
         }

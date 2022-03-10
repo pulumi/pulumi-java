@@ -57,12 +57,12 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
+        public Builder type(@Nullable Input<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
+        public Builder type(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

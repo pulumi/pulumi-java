@@ -56,12 +56,12 @@ public final class GoogleCloudDialogflowCxV3beta1TextInputArgs extends io.pulumi
     	      this.text = defaults.text;
         }
 
-        public Builder setText(Input<String> text) {
+        public Builder text(Input<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }

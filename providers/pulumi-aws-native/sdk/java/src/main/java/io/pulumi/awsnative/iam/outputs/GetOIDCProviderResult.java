@@ -77,22 +77,22 @@ public final class GetOIDCProviderResult {
     	      this.thumbprintList = defaults.thumbprintList;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setClientIdList(@Nullable List<String> clientIdList) {
+        public Builder clientIdList(@Nullable List<String> clientIdList) {
             this.clientIdList = clientIdList;
             return this;
         }
 
-        public Builder setTags(@Nullable List<OIDCProviderTag> tags) {
+        public Builder tags(@Nullable List<OIDCProviderTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThumbprintList(@Nullable List<String> thumbprintList) {
+        public Builder thumbprintList(@Nullable List<String> thumbprintList) {
             this.thumbprintList = thumbprintList;
             return this;
         }

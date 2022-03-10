@@ -87,17 +87,17 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
     	      this.exclusivePatches = defaults.exclusivePatches;
         }
 
-        public Builder setClassifications(@Nullable List<String> classifications) {
+        public Builder classifications(@Nullable List<String> classifications) {
             this.classifications = classifications;
             return this;
         }
 
-        public Builder setExcludes(@Nullable List<String> excludes) {
+        public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExclusivePatches(@Nullable List<String> exclusivePatches) {
+        public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
             this.exclusivePatches = exclusivePatches;
             return this;
         }

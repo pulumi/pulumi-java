@@ -386,212 +386,212 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder setBackupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
+        public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
             this.backupManagementType = Input.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder setBackupSetName(@Nullable Input<String> backupSetName) {
+        public Builder backupSetName(@Nullable Input<String> backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
 
-        public Builder setBackupSetName(@Nullable String backupSetName) {
+        public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = Input.ofNullable(backupSetName);
             return this;
         }
 
-        public Builder setComputerName(@Nullable Input<String> computerName) {
+        public Builder computerName(@Nullable Input<String> computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = Input.ofNullable(computerName);
             return this;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Input<Either<String,CreateMode>> createMode) {
+        public Builder createMode(@Nullable Input<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable Either<String,CreateMode> createMode) {
+        public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
             this.createMode = Input.ofNullable(createMode);
             return this;
         }
 
-        public Builder setDeferredDeleteSyncTimeInUTC(@Nullable Input<Double> deferredDeleteSyncTimeInUTC) {
+        public Builder deferredDeleteSyncTimeInUTC(@Nullable Input<Double> deferredDeleteSyncTimeInUTC) {
             this.deferredDeleteSyncTimeInUTC = deferredDeleteSyncTimeInUTC;
             return this;
         }
 
-        public Builder setDeferredDeleteSyncTimeInUTC(@Nullable Double deferredDeleteSyncTimeInUTC) {
+        public Builder deferredDeleteSyncTimeInUTC(@Nullable Double deferredDeleteSyncTimeInUTC) {
             this.deferredDeleteSyncTimeInUTC = Input.ofNullable(deferredDeleteSyncTimeInUTC);
             return this;
         }
 
-        public Builder setDeferredDeleteTimeInUTC(@Nullable Input<String> deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable Input<String> deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = Input.ofNullable(deferredDeleteTimeInUTC);
             return this;
         }
 
-        public Builder setDeferredDeleteTimeRemaining(@Nullable Input<String> deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable Input<String> deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = Input.ofNullable(deferredDeleteTimeRemaining);
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable Input<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo) {
+        public Builder extendedInfo(@Nullable Input<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable MabFileFolderProtectedItemExtendedInfoArgs extendedInfo) {
+        public Builder extendedInfo(@Nullable MabFileFolderProtectedItemExtendedInfoArgs extendedInfo) {
             this.extendedInfo = Input.ofNullable(extendedInfo);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setIsDeferredDeleteScheduleUpcoming(@Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
-        public Builder setIsDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = Input.ofNullable(isDeferredDeleteScheduleUpcoming);
             return this;
         }
 
-        public Builder setIsRehydrate(@Nullable Input<Boolean> isRehydrate) {
+        public Builder isRehydrate(@Nullable Input<Boolean> isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
 
-        public Builder setIsRehydrate(@Nullable Boolean isRehydrate) {
+        public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = Input.ofNullable(isRehydrate);
             return this;
         }
 
-        public Builder setIsScheduledForDeferredDelete(@Nullable Input<Boolean> isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Input<Boolean> isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
-        public Builder setIsScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = Input.ofNullable(isScheduledForDeferredDelete);
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable Input<String> lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable Input<String> lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable String lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = Input.ofNullable(lastBackupStatus);
             return this;
         }
 
-        public Builder setLastBackupTime(@Nullable Input<String> lastBackupTime) {
+        public Builder lastBackupTime(@Nullable Input<String> lastBackupTime) {
             this.lastBackupTime = lastBackupTime;
             return this;
         }
 
-        public Builder setLastBackupTime(@Nullable String lastBackupTime) {
+        public Builder lastBackupTime(@Nullable String lastBackupTime) {
             this.lastBackupTime = Input.ofNullable(lastBackupTime);
             return this;
         }
 
-        public Builder setLastRecoveryPoint(@Nullable Input<String> lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable Input<String> lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
-        public Builder setLastRecoveryPoint(@Nullable String lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = Input.ofNullable(lastRecoveryPoint);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }
 
-        public Builder setProtectedItemType(Input<String> protectedItemType) {
+        public Builder protectedItemType(Input<String> protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
 
-        public Builder setProtectedItemType(String protectedItemType) {
+        public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Input.of(Objects.requireNonNull(protectedItemType));
             return this;
         }
 
-        public Builder setProtectionState(@Nullable Input<String> protectionState) {
+        public Builder protectionState(@Nullable Input<String> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = Input.ofNullable(protectionState);
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = Input.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable Input<Either<String,DataSourceType>> workloadType) {
+        public Builder workloadType(@Nullable Input<Either<String,DataSourceType>> workloadType) {
             this.workloadType = workloadType;
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable Either<String,DataSourceType> workloadType) {
+        public Builder workloadType(@Nullable Either<String,DataSourceType> workloadType) {
             this.workloadType = Input.ofNullable(workloadType);
             return this;
         }

@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2InfoTypeLimitArgs extends io.pulumi.resourc
     	      this.maxFindings = defaults.maxFindings;
         }
 
-        public Builder setInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
+        public Builder infoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
             this.infoType = infoType;
             return this;
         }
 
-        public Builder setInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
+        public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
             this.infoType = Input.ofNullable(infoType);
             return this;
         }
 
-        public Builder setMaxFindings(@Nullable Input<Integer> maxFindings) {
+        public Builder maxFindings(@Nullable Input<Integer> maxFindings) {
             this.maxFindings = maxFindings;
             return this;
         }
 
-        public Builder setMaxFindings(@Nullable Integer maxFindings) {
+        public Builder maxFindings(@Nullable Integer maxFindings) {
             this.maxFindings = Input.ofNullable(maxFindings);
             return this;
         }

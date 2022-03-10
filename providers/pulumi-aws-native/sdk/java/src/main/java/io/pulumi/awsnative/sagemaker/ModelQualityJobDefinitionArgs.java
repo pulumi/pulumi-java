@@ -175,102 +175,102 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder setJobDefinitionName(@Nullable Input<String> jobDefinitionName) {
+        public Builder jobDefinitionName(@Nullable Input<String> jobDefinitionName) {
             this.jobDefinitionName = jobDefinitionName;
             return this;
         }
 
-        public Builder setJobDefinitionName(@Nullable String jobDefinitionName) {
+        public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
             this.jobDefinitionName = Input.ofNullable(jobDefinitionName);
             return this;
         }
 
-        public Builder setJobResources(Input<ModelQualityJobDefinitionMonitoringResourcesArgs> jobResources) {
+        public Builder jobResources(Input<ModelQualityJobDefinitionMonitoringResourcesArgs> jobResources) {
             this.jobResources = Objects.requireNonNull(jobResources);
             return this;
         }
 
-        public Builder setJobResources(ModelQualityJobDefinitionMonitoringResourcesArgs jobResources) {
+        public Builder jobResources(ModelQualityJobDefinitionMonitoringResourcesArgs jobResources) {
             this.jobResources = Input.of(Objects.requireNonNull(jobResources));
             return this;
         }
 
-        public Builder setModelQualityAppSpecification(Input<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> modelQualityAppSpecification) {
+        public Builder modelQualityAppSpecification(Input<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> modelQualityAppSpecification) {
             this.modelQualityAppSpecification = Objects.requireNonNull(modelQualityAppSpecification);
             return this;
         }
 
-        public Builder setModelQualityAppSpecification(ModelQualityJobDefinitionModelQualityAppSpecificationArgs modelQualityAppSpecification) {
+        public Builder modelQualityAppSpecification(ModelQualityJobDefinitionModelQualityAppSpecificationArgs modelQualityAppSpecification) {
             this.modelQualityAppSpecification = Input.of(Objects.requireNonNull(modelQualityAppSpecification));
             return this;
         }
 
-        public Builder setModelQualityBaselineConfig(@Nullable Input<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> modelQualityBaselineConfig) {
+        public Builder modelQualityBaselineConfig(@Nullable Input<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> modelQualityBaselineConfig) {
             this.modelQualityBaselineConfig = modelQualityBaselineConfig;
             return this;
         }
 
-        public Builder setModelQualityBaselineConfig(@Nullable ModelQualityJobDefinitionModelQualityBaselineConfigArgs modelQualityBaselineConfig) {
+        public Builder modelQualityBaselineConfig(@Nullable ModelQualityJobDefinitionModelQualityBaselineConfigArgs modelQualityBaselineConfig) {
             this.modelQualityBaselineConfig = Input.ofNullable(modelQualityBaselineConfig);
             return this;
         }
 
-        public Builder setModelQualityJobInput(Input<ModelQualityJobDefinitionModelQualityJobInputArgs> modelQualityJobInput) {
+        public Builder modelQualityJobInput(Input<ModelQualityJobDefinitionModelQualityJobInputArgs> modelQualityJobInput) {
             this.modelQualityJobInput = Objects.requireNonNull(modelQualityJobInput);
             return this;
         }
 
-        public Builder setModelQualityJobInput(ModelQualityJobDefinitionModelQualityJobInputArgs modelQualityJobInput) {
+        public Builder modelQualityJobInput(ModelQualityJobDefinitionModelQualityJobInputArgs modelQualityJobInput) {
             this.modelQualityJobInput = Input.of(Objects.requireNonNull(modelQualityJobInput));
             return this;
         }
 
-        public Builder setModelQualityJobOutputConfig(Input<ModelQualityJobDefinitionMonitoringOutputConfigArgs> modelQualityJobOutputConfig) {
+        public Builder modelQualityJobOutputConfig(Input<ModelQualityJobDefinitionMonitoringOutputConfigArgs> modelQualityJobOutputConfig) {
             this.modelQualityJobOutputConfig = Objects.requireNonNull(modelQualityJobOutputConfig);
             return this;
         }
 
-        public Builder setModelQualityJobOutputConfig(ModelQualityJobDefinitionMonitoringOutputConfigArgs modelQualityJobOutputConfig) {
+        public Builder modelQualityJobOutputConfig(ModelQualityJobDefinitionMonitoringOutputConfigArgs modelQualityJobOutputConfig) {
             this.modelQualityJobOutputConfig = Input.of(Objects.requireNonNull(modelQualityJobOutputConfig));
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<ModelQualityJobDefinitionNetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<ModelQualityJobDefinitionNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable ModelQualityJobDefinitionNetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable ModelQualityJobDefinitionNetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStoppingCondition(@Nullable Input<ModelQualityJobDefinitionStoppingConditionArgs> stoppingCondition) {
+        public Builder stoppingCondition(@Nullable Input<ModelQualityJobDefinitionStoppingConditionArgs> stoppingCondition) {
             this.stoppingCondition = stoppingCondition;
             return this;
         }
 
-        public Builder setStoppingCondition(@Nullable ModelQualityJobDefinitionStoppingConditionArgs stoppingCondition) {
+        public Builder stoppingCondition(@Nullable ModelQualityJobDefinitionStoppingConditionArgs stoppingCondition) {
             this.stoppingCondition = Input.ofNullable(stoppingCondition);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ModelQualityJobDefinitionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ModelQualityJobDefinitionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ModelQualityJobDefinitionTagArgs> tags) {
+        public Builder tags(@Nullable List<ModelQualityJobDefinitionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

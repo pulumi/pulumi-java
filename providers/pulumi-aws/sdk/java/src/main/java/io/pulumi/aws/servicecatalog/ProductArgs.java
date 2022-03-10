@@ -216,112 +216,112 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDistributor(@Nullable Input<String> distributor) {
+        public Builder distributor(@Nullable Input<String> distributor) {
             this.distributor = distributor;
             return this;
         }
 
-        public Builder setDistributor(@Nullable String distributor) {
+        public Builder distributor(@Nullable String distributor) {
             this.distributor = Input.ofNullable(distributor);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(Input<String> owner) {
+        public Builder owner(Input<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Input.of(Objects.requireNonNull(owner));
             return this;
         }
 
-        public Builder setProvisioningArtifactParameters(Input<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters) {
+        public Builder provisioningArtifactParameters(Input<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters) {
             this.provisioningArtifactParameters = Objects.requireNonNull(provisioningArtifactParameters);
             return this;
         }
 
-        public Builder setProvisioningArtifactParameters(ProductProvisioningArtifactParametersArgs provisioningArtifactParameters) {
+        public Builder provisioningArtifactParameters(ProductProvisioningArtifactParametersArgs provisioningArtifactParameters) {
             this.provisioningArtifactParameters = Input.of(Objects.requireNonNull(provisioningArtifactParameters));
             return this;
         }
 
-        public Builder setSupportDescription(@Nullable Input<String> supportDescription) {
+        public Builder supportDescription(@Nullable Input<String> supportDescription) {
             this.supportDescription = supportDescription;
             return this;
         }
 
-        public Builder setSupportDescription(@Nullable String supportDescription) {
+        public Builder supportDescription(@Nullable String supportDescription) {
             this.supportDescription = Input.ofNullable(supportDescription);
             return this;
         }
 
-        public Builder setSupportEmail(@Nullable Input<String> supportEmail) {
+        public Builder supportEmail(@Nullable Input<String> supportEmail) {
             this.supportEmail = supportEmail;
             return this;
         }
 
-        public Builder setSupportEmail(@Nullable String supportEmail) {
+        public Builder supportEmail(@Nullable String supportEmail) {
             this.supportEmail = Input.ofNullable(supportEmail);
             return this;
         }
 
-        public Builder setSupportUrl(@Nullable Input<String> supportUrl) {
+        public Builder supportUrl(@Nullable Input<String> supportUrl) {
             this.supportUrl = supportUrl;
             return this;
         }
 
-        public Builder setSupportUrl(@Nullable String supportUrl) {
+        public Builder supportUrl(@Nullable String supportUrl) {
             this.supportUrl = Input.ofNullable(supportUrl);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

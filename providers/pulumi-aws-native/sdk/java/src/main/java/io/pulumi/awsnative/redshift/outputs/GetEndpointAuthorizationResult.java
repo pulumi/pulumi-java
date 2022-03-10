@@ -182,47 +182,47 @@ public final class GetEndpointAuthorizationResult {
     	      this.vpcIds = defaults.vpcIds;
         }
 
-        public Builder setAllowedAllVPCs(@Nullable Boolean allowedAllVPCs) {
+        public Builder allowedAllVPCs(@Nullable Boolean allowedAllVPCs) {
             this.allowedAllVPCs = allowedAllVPCs;
             return this;
         }
 
-        public Builder setAllowedVPCs(@Nullable List<String> allowedVPCs) {
+        public Builder allowedVPCs(@Nullable List<String> allowedVPCs) {
             this.allowedVPCs = allowedVPCs;
             return this;
         }
 
-        public Builder setAuthorizeTime(@Nullable String authorizeTime) {
+        public Builder authorizeTime(@Nullable String authorizeTime) {
             this.authorizeTime = authorizeTime;
             return this;
         }
 
-        public Builder setClusterStatus(@Nullable String clusterStatus) {
+        public Builder clusterStatus(@Nullable String clusterStatus) {
             this.clusterStatus = clusterStatus;
             return this;
         }
 
-        public Builder setEndpointCount(@Nullable Integer endpointCount) {
+        public Builder endpointCount(@Nullable Integer endpointCount) {
             this.endpointCount = endpointCount;
             return this;
         }
 
-        public Builder setGrantee(@Nullable String grantee) {
+        public Builder grantee(@Nullable String grantee) {
             this.grantee = grantee;
             return this;
         }
 
-        public Builder setGrantor(@Nullable String grantor) {
+        public Builder grantor(@Nullable String grantor) {
             this.grantor = grantor;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVpcIds(@Nullable List<String> vpcIds) {
+        public Builder vpcIds(@Nullable List<String> vpcIds) {
             this.vpcIds = vpcIds;
             return this;
         }

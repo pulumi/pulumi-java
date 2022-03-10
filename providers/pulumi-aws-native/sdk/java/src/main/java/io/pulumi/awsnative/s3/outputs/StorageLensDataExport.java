@@ -52,12 +52,12 @@ public final class StorageLensDataExport {
     	      this.s3BucketDestination = defaults.s3BucketDestination;
         }
 
-        public Builder setCloudWatchMetrics(@Nullable StorageLensCloudWatchMetrics cloudWatchMetrics) {
+        public Builder cloudWatchMetrics(@Nullable StorageLensCloudWatchMetrics cloudWatchMetrics) {
             this.cloudWatchMetrics = cloudWatchMetrics;
             return this;
         }
 
-        public Builder setS3BucketDestination(@Nullable StorageLensS3BucketDestination s3BucketDestination) {
+        public Builder s3BucketDestination(@Nullable StorageLensS3BucketDestination s3BucketDestination) {
             this.s3BucketDestination = s3BucketDestination;
             return this;
         }

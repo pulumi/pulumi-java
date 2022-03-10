@@ -51,12 +51,12 @@ public final class DistributionLegacyS3Origin {
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder setDNSName(String dNSName) {
+        public Builder dNSName(String dNSName) {
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable String originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }

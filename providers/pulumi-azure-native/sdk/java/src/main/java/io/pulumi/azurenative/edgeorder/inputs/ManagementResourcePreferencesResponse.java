@@ -57,7 +57,7 @@ public final class ManagementResourcePreferencesResponse extends io.pulumi.resou
     	      this.preferredManagementResourceId = defaults.preferredManagementResourceId;
         }
 
-        public Builder setPreferredManagementResourceId(@Nullable String preferredManagementResourceId) {
+        public Builder preferredManagementResourceId(@Nullable String preferredManagementResourceId) {
             this.preferredManagementResourceId = preferredManagementResourceId;
             return this;
         }

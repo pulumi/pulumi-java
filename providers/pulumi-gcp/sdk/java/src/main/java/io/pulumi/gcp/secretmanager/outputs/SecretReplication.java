@@ -70,12 +70,12 @@ public final class SecretReplication {
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setAutomatic(@Nullable Boolean automatic) {
+        public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = automatic;
             return this;
         }
 
-        public Builder setUserManaged(@Nullable SecretReplicationUserManaged userManaged) {
+        public Builder userManaged(@Nullable SecretReplicationUserManaged userManaged) {
             this.userManaged = userManaged;
             return this;
         }

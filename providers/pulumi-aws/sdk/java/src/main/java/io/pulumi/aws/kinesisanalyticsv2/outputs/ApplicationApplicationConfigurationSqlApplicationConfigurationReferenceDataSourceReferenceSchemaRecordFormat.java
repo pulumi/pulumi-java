@@ -66,12 +66,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters mappingParameters) {
+        public Builder mappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters mappingParameters) {
             this.mappingParameters = Objects.requireNonNull(mappingParameters);
             return this;
         }
 
-        public Builder setRecordFormatType(String recordFormatType) {
+        public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }

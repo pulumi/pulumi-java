@@ -67,12 +67,12 @@ public final class CopyActivityLogSettingsResponse {
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setEnableReliableLogging(@Nullable Object enableReliableLogging) {
+        public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
             this.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Object logLevel) {
+        public Builder logLevel(@Nullable Object logLevel) {
             this.logLevel = logLevel;
             return this;
         }

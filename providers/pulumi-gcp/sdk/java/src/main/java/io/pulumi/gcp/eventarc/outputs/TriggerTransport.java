@@ -50,7 +50,7 @@ public final class TriggerTransport {
     	      this.pubsubs = defaults.pubsubs;
         }
 
-        public Builder setPubsubs(@Nullable List<TriggerTransportPubsub> pubsubs) {
+        public Builder pubsubs(@Nullable List<TriggerTransportPubsub> pubsubs) {
             this.pubsubs = pubsubs;
             return this;
         }

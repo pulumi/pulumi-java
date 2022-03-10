@@ -168,42 +168,42 @@ public final class JobConfigurationTableCopyResponse extends io.pulumi.resources
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setCreateDisposition(String createDisposition) {
+        public Builder createDisposition(String createDisposition) {
             this.createDisposition = Objects.requireNonNull(createDisposition);
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDestinationExpirationTime(Object destinationExpirationTime) {
+        public Builder destinationExpirationTime(Object destinationExpirationTime) {
             this.destinationExpirationTime = Objects.requireNonNull(destinationExpirationTime);
             return this;
         }
 
-        public Builder setDestinationTable(TableReferenceResponse destinationTable) {
+        public Builder destinationTable(TableReferenceResponse destinationTable) {
             this.destinationTable = Objects.requireNonNull(destinationTable);
             return this;
         }
 
-        public Builder setOperationType(String operationType) {
+        public Builder operationType(String operationType) {
             this.operationType = Objects.requireNonNull(operationType);
             return this;
         }
 
-        public Builder setSourceTable(TableReferenceResponse sourceTable) {
+        public Builder sourceTable(TableReferenceResponse sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setSourceTables(List<TableReferenceResponse> sourceTables) {
+        public Builder sourceTables(List<TableReferenceResponse> sourceTables) {
             this.sourceTables = Objects.requireNonNull(sourceTables);
             return this;
         }
 
-        public Builder setWriteDisposition(String writeDisposition) {
+        public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }

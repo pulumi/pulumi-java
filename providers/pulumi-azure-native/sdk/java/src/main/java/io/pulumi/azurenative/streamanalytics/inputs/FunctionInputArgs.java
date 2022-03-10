@@ -75,22 +75,22 @@ public final class FunctionInputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.isConfigurationParameter = defaults.isConfigurationParameter;
         }
 
-        public Builder setDataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Input<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setIsConfigurationParameter(@Nullable Input<Boolean> isConfigurationParameter) {
+        public Builder isConfigurationParameter(@Nullable Input<Boolean> isConfigurationParameter) {
             this.isConfigurationParameter = isConfigurationParameter;
             return this;
         }
 
-        public Builder setIsConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
+        public Builder isConfigurationParameter(@Nullable Boolean isConfigurationParameter) {
             this.isConfigurationParameter = Input.ofNullable(isConfigurationParameter);
             return this;
         }

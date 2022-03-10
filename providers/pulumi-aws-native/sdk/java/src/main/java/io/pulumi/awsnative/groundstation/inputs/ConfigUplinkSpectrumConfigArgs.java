@@ -63,22 +63,22 @@ public final class ConfigUplinkSpectrumConfigArgs extends io.pulumi.resources.Re
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setCenterFrequency(@Nullable Input<ConfigFrequencyArgs> centerFrequency) {
+        public Builder centerFrequency(@Nullable Input<ConfigFrequencyArgs> centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
 
-        public Builder setCenterFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
+        public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
             this.centerFrequency = Input.ofNullable(centerFrequency);
             return this;
         }
 
-        public Builder setPolarization(@Nullable Input<ConfigPolarization> polarization) {
+        public Builder polarization(@Nullable Input<ConfigPolarization> polarization) {
             this.polarization = polarization;
             return this;
         }
 
-        public Builder setPolarization(@Nullable ConfigPolarization polarization) {
+        public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = Input.ofNullable(polarization);
             return this;
         }

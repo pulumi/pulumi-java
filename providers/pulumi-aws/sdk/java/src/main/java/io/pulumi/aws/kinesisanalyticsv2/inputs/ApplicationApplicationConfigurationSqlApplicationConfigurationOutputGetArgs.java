@@ -134,62 +134,62 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.outputId = defaults.outputId;
         }
 
-        public Builder setDestinationSchema(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema) {
+        public Builder destinationSchema(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema) {
             this.destinationSchema = Objects.requireNonNull(destinationSchema);
             return this;
         }
 
-        public Builder setDestinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs destinationSchema) {
+        public Builder destinationSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs destinationSchema) {
             this.destinationSchema = Input.of(Objects.requireNonNull(destinationSchema));
             return this;
         }
 
-        public Builder setKinesisFirehoseOutput(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput) {
+        public Builder kinesisFirehoseOutput(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput) {
             this.kinesisFirehoseOutput = kinesisFirehoseOutput;
             return this;
         }
 
-        public Builder setKinesisFirehoseOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs kinesisFirehoseOutput) {
+        public Builder kinesisFirehoseOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs kinesisFirehoseOutput) {
             this.kinesisFirehoseOutput = Input.ofNullable(kinesisFirehoseOutput);
             return this;
         }
 
-        public Builder setKinesisStreamsOutput(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput) {
+        public Builder kinesisStreamsOutput(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput) {
             this.kinesisStreamsOutput = kinesisStreamsOutput;
             return this;
         }
 
-        public Builder setKinesisStreamsOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs kinesisStreamsOutput) {
+        public Builder kinesisStreamsOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs kinesisStreamsOutput) {
             this.kinesisStreamsOutput = Input.ofNullable(kinesisStreamsOutput);
             return this;
         }
 
-        public Builder setLambdaOutput(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput) {
+        public Builder lambdaOutput(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput) {
             this.lambdaOutput = lambdaOutput;
             return this;
         }
 
-        public Builder setLambdaOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs lambdaOutput) {
+        public Builder lambdaOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs lambdaOutput) {
             this.lambdaOutput = Input.ofNullable(lambdaOutput);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOutputId(@Nullable Input<String> outputId) {
+        public Builder outputId(@Nullable Input<String> outputId) {
             this.outputId = outputId;
             return this;
         }
 
-        public Builder setOutputId(@Nullable String outputId) {
+        public Builder outputId(@Nullable String outputId) {
             this.outputId = Input.ofNullable(outputId);
             return this;
         }

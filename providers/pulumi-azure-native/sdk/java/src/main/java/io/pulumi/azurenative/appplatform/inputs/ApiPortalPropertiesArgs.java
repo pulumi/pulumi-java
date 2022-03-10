@@ -125,52 +125,52 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.ssoProperties = defaults.ssoProperties;
         }
 
-        public Builder setGatewayIds(@Nullable Input<List<String>> gatewayIds) {
+        public Builder gatewayIds(@Nullable Input<List<String>> gatewayIds) {
             this.gatewayIds = gatewayIds;
             return this;
         }
 
-        public Builder setGatewayIds(@Nullable List<String> gatewayIds) {
+        public Builder gatewayIds(@Nullable List<String> gatewayIds) {
             this.gatewayIds = Input.ofNullable(gatewayIds);
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Input<Boolean> httpsOnly) {
+        public Builder httpsOnly(@Nullable Input<Boolean> httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = Input.ofNullable(httpsOnly);
             return this;
         }
 
-        public Builder set$public(@Nullable Input<Boolean> $public) {
+        public Builder $public(@Nullable Input<Boolean> $public) {
             this.$public = $public;
             return this;
         }
 
-        public Builder set$public(@Nullable Boolean $public) {
+        public Builder $public(@Nullable Boolean $public) {
             this.$public = Input.ofNullable($public);
             return this;
         }
 
-        public Builder setSourceUrls(@Nullable Input<List<String>> sourceUrls) {
+        public Builder sourceUrls(@Nullable Input<List<String>> sourceUrls) {
             this.sourceUrls = sourceUrls;
             return this;
         }
 
-        public Builder setSourceUrls(@Nullable List<String> sourceUrls) {
+        public Builder sourceUrls(@Nullable List<String> sourceUrls) {
             this.sourceUrls = Input.ofNullable(sourceUrls);
             return this;
         }
 
-        public Builder setSsoProperties(@Nullable Input<SsoPropertiesArgs> ssoProperties) {
+        public Builder ssoProperties(@Nullable Input<SsoPropertiesArgs> ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
 
-        public Builder setSsoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
+        public Builder ssoProperties(@Nullable SsoPropertiesArgs ssoProperties) {
             this.ssoProperties = Input.ofNullable(ssoProperties);
             return this;
         }

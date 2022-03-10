@@ -216,112 +216,112 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
     	      this.type = defaults.type;
         }
 
-        public Builder setCategoricalValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> categoricalValueSpec) {
+        public Builder categoricalValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> categoricalValueSpec) {
             this.categoricalValueSpec = categoricalValueSpec;
             return this;
         }
 
-        public Builder setCategoricalValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs categoricalValueSpec) {
+        public Builder categoricalValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs categoricalValueSpec) {
             this.categoricalValueSpec = Input.ofNullable(categoricalValueSpec);
             return this;
         }
 
-        public Builder setChildParameterSpecs(@Nullable Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> childParameterSpecs) {
+        public Builder childParameterSpecs(@Nullable Input<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> childParameterSpecs) {
             this.childParameterSpecs = childParameterSpecs;
             return this;
         }
 
-        public Builder setChildParameterSpecs(@Nullable List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs> childParameterSpecs) {
+        public Builder childParameterSpecs(@Nullable List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs> childParameterSpecs) {
             this.childParameterSpecs = Input.ofNullable(childParameterSpecs);
             return this;
         }
 
-        public Builder setDiscreteValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> discreteValueSpec) {
+        public Builder discreteValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> discreteValueSpec) {
             this.discreteValueSpec = discreteValueSpec;
             return this;
         }
 
-        public Builder setDiscreteValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs discreteValueSpec) {
+        public Builder discreteValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs discreteValueSpec) {
             this.discreteValueSpec = Input.ofNullable(discreteValueSpec);
             return this;
         }
 
-        public Builder setDoubleValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> doubleValueSpec) {
+        public Builder doubleValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> doubleValueSpec) {
             this.doubleValueSpec = doubleValueSpec;
             return this;
         }
 
-        public Builder setDoubleValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs doubleValueSpec) {
+        public Builder doubleValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs doubleValueSpec) {
             this.doubleValueSpec = Input.ofNullable(doubleValueSpec);
             return this;
         }
 
-        public Builder setIntegerValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> integerValueSpec) {
+        public Builder integerValueSpec(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> integerValueSpec) {
             this.integerValueSpec = integerValueSpec;
             return this;
         }
 
-        public Builder setIntegerValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs integerValueSpec) {
+        public Builder integerValueSpec(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs integerValueSpec) {
             this.integerValueSpec = Input.ofNullable(integerValueSpec);
             return this;
         }
 
-        public Builder setParameter(Input<String> parameter) {
+        public Builder parameter(Input<String> parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
 
-        public Builder setParameter(String parameter) {
+        public Builder parameter(String parameter) {
             this.parameter = Input.of(Objects.requireNonNull(parameter));
             return this;
         }
 
-        public Builder setParentCategoricalValues(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs> parentCategoricalValues) {
+        public Builder parentCategoricalValues(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs> parentCategoricalValues) {
             this.parentCategoricalValues = parentCategoricalValues;
             return this;
         }
 
-        public Builder setParentCategoricalValues(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs parentCategoricalValues) {
+        public Builder parentCategoricalValues(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs parentCategoricalValues) {
             this.parentCategoricalValues = Input.ofNullable(parentCategoricalValues);
             return this;
         }
 
-        public Builder setParentDiscreteValues(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs> parentDiscreteValues) {
+        public Builder parentDiscreteValues(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs> parentDiscreteValues) {
             this.parentDiscreteValues = parentDiscreteValues;
             return this;
         }
 
-        public Builder setParentDiscreteValues(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs parentDiscreteValues) {
+        public Builder parentDiscreteValues(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs parentDiscreteValues) {
             this.parentDiscreteValues = Input.ofNullable(parentDiscreteValues);
             return this;
         }
 
-        public Builder setParentIntValues(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs> parentIntValues) {
+        public Builder parentIntValues(@Nullable Input<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs> parentIntValues) {
             this.parentIntValues = parentIntValues;
             return this;
         }
 
-        public Builder setParentIntValues(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs parentIntValues) {
+        public Builder parentIntValues(@Nullable GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs parentIntValues) {
             this.parentIntValues = Input.ofNullable(parentIntValues);
             return this;
         }
 
-        public Builder setScaleType(@Nullable Input<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> scaleType) {
+        public Builder scaleType(@Nullable Input<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
-        public Builder setScaleType(@Nullable GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType scaleType) {
+        public Builder scaleType(@Nullable GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType scaleType) {
             this.scaleType = Input.ofNullable(scaleType);
             return this;
         }
 
-        public Builder setType(Input<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type) {
+        public Builder type(Input<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(GoogleCloudMlV1_StudyConfig_ParameterSpecType type) {
+        public Builder type(GoogleCloudMlV1_StudyConfig_ParameterSpecType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

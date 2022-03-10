@@ -86,42 +86,42 @@ public final class TopicRuleAssetPropertyVariantArgs extends io.pulumi.resources
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setBooleanValue(@Nullable Input<String> booleanValue) {
+        public Builder booleanValue(@Nullable Input<String> booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
-        public Builder setBooleanValue(@Nullable String booleanValue) {
+        public Builder booleanValue(@Nullable String booleanValue) {
             this.booleanValue = Input.ofNullable(booleanValue);
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Input<String> doubleValue) {
+        public Builder doubleValue(@Nullable Input<String> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable String doubleValue) {
+        public Builder doubleValue(@Nullable String doubleValue) {
             this.doubleValue = Input.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable Input<String> integerValue) {
+        public Builder integerValue(@Nullable Input<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable String integerValue) {
+        public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = Input.ofNullable(integerValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }

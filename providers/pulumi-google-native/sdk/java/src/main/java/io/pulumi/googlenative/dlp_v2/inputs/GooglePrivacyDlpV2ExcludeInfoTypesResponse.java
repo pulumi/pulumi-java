@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse extends io.pulumi.
     	      this.infoTypes = defaults.infoTypes;
         }
 
-        public Builder setInfoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }

@@ -93,32 +93,32 @@ public final class ResponseBasedOriginErrorDetectionParametersArgs extends io.pu
     	      this.responseBasedFailoverThresholdPercentage = defaults.responseBasedFailoverThresholdPercentage;
         }
 
-        public Builder setHttpErrorRanges(@Nullable Input<List<HttpErrorRangeParametersArgs>> httpErrorRanges) {
+        public Builder httpErrorRanges(@Nullable Input<List<HttpErrorRangeParametersArgs>> httpErrorRanges) {
             this.httpErrorRanges = httpErrorRanges;
             return this;
         }
 
-        public Builder setHttpErrorRanges(@Nullable List<HttpErrorRangeParametersArgs> httpErrorRanges) {
+        public Builder httpErrorRanges(@Nullable List<HttpErrorRangeParametersArgs> httpErrorRanges) {
             this.httpErrorRanges = Input.ofNullable(httpErrorRanges);
             return this;
         }
 
-        public Builder setResponseBasedDetectedErrorTypes(@Nullable Input<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes) {
+        public Builder responseBasedDetectedErrorTypes(@Nullable Input<ResponseBasedDetectedErrorTypes> responseBasedDetectedErrorTypes) {
             this.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
             return this;
         }
 
-        public Builder setResponseBasedDetectedErrorTypes(@Nullable ResponseBasedDetectedErrorTypes responseBasedDetectedErrorTypes) {
+        public Builder responseBasedDetectedErrorTypes(@Nullable ResponseBasedDetectedErrorTypes responseBasedDetectedErrorTypes) {
             this.responseBasedDetectedErrorTypes = Input.ofNullable(responseBasedDetectedErrorTypes);
             return this;
         }
 
-        public Builder setResponseBasedFailoverThresholdPercentage(@Nullable Input<Integer> responseBasedFailoverThresholdPercentage) {
+        public Builder responseBasedFailoverThresholdPercentage(@Nullable Input<Integer> responseBasedFailoverThresholdPercentage) {
             this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
             return this;
         }
 
-        public Builder setResponseBasedFailoverThresholdPercentage(@Nullable Integer responseBasedFailoverThresholdPercentage) {
+        public Builder responseBasedFailoverThresholdPercentage(@Nullable Integer responseBasedFailoverThresholdPercentage) {
             this.responseBasedFailoverThresholdPercentage = Input.ofNullable(responseBasedFailoverThresholdPercentage);
             return this;
         }

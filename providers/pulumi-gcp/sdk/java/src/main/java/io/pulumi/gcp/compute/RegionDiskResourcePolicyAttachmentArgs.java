@@ -104,42 +104,42 @@ public final class RegionDiskResourcePolicyAttachmentArgs extends io.pulumi.reso
     	      this.region = defaults.region;
         }
 
-        public Builder setDisk(Input<String> disk) {
+        public Builder disk(Input<String> disk) {
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
 
-        public Builder setDisk(String disk) {
+        public Builder disk(String disk) {
             this.disk = Input.of(Objects.requireNonNull(disk));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }

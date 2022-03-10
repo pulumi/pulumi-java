@@ -106,42 +106,42 @@ public final class ServiceTaskSpec {
     	      this.runtime = defaults.runtime;
         }
 
-        public Builder setContainerSpec(ServiceTaskSpecContainerSpec containerSpec) {
+        public Builder containerSpec(ServiceTaskSpecContainerSpec containerSpec) {
             this.containerSpec = Objects.requireNonNull(containerSpec);
             return this;
         }
 
-        public Builder setForceUpdate(@Nullable Integer forceUpdate) {
+        public Builder forceUpdate(@Nullable Integer forceUpdate) {
             this.forceUpdate = forceUpdate;
             return this;
         }
 
-        public Builder setLogDriver(@Nullable ServiceTaskSpecLogDriver logDriver) {
+        public Builder logDriver(@Nullable ServiceTaskSpecLogDriver logDriver) {
             this.logDriver = logDriver;
             return this;
         }
 
-        public Builder setNetworks(@Nullable List<String> networks) {
+        public Builder networks(@Nullable List<String> networks) {
             this.networks = networks;
             return this;
         }
 
-        public Builder setPlacement(@Nullable ServiceTaskSpecPlacement placement) {
+        public Builder placement(@Nullable ServiceTaskSpecPlacement placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setResources(@Nullable ServiceTaskSpecResources resources) {
+        public Builder resources(@Nullable ServiceTaskSpecResources resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable ServiceTaskSpecRestartPolicy restartPolicy) {
+        public Builder restartPolicy(@Nullable ServiceTaskSpecRestartPolicy restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setRuntime(@Nullable String runtime) {
+        public Builder runtime(@Nullable String runtime) {
             this.runtime = runtime;
             return this;
         }

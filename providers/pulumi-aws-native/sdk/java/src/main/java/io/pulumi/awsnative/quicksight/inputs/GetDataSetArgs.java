@@ -60,12 +60,12 @@ public final class GetDataSetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.dataSetId = defaults.dataSetId;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setDataSetId(String dataSetId) {
+        public Builder dataSetId(String dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }

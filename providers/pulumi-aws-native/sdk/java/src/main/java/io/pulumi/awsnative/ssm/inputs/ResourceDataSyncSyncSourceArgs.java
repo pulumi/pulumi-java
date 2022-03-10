@@ -89,42 +89,42 @@ public final class ResourceDataSyncSyncSourceArgs extends io.pulumi.resources.Re
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setAwsOrganizationsSource(@Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource) {
+        public Builder awsOrganizationsSource(@Nullable Input<ResourceDataSyncAwsOrganizationsSourceArgs> awsOrganizationsSource) {
             this.awsOrganizationsSource = awsOrganizationsSource;
             return this;
         }
 
-        public Builder setAwsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSourceArgs awsOrganizationsSource) {
+        public Builder awsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSourceArgs awsOrganizationsSource) {
             this.awsOrganizationsSource = Input.ofNullable(awsOrganizationsSource);
             return this;
         }
 
-        public Builder setIncludeFutureRegions(@Nullable Input<Boolean> includeFutureRegions) {
+        public Builder includeFutureRegions(@Nullable Input<Boolean> includeFutureRegions) {
             this.includeFutureRegions = includeFutureRegions;
             return this;
         }
 
-        public Builder setIncludeFutureRegions(@Nullable Boolean includeFutureRegions) {
+        public Builder includeFutureRegions(@Nullable Boolean includeFutureRegions) {
             this.includeFutureRegions = Input.ofNullable(includeFutureRegions);
             return this;
         }
 
-        public Builder setSourceRegions(Input<List<String>> sourceRegions) {
+        public Builder sourceRegions(Input<List<String>> sourceRegions) {
             this.sourceRegions = Objects.requireNonNull(sourceRegions);
             return this;
         }
 
-        public Builder setSourceRegions(List<String> sourceRegions) {
+        public Builder sourceRegions(List<String> sourceRegions) {
             this.sourceRegions = Input.of(Objects.requireNonNull(sourceRegions));
             return this;
         }
 
-        public Builder setSourceType(Input<String> sourceType) {
+        public Builder sourceType(Input<String> sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
 
-        public Builder setSourceType(String sourceType) {
+        public Builder sourceType(String sourceType) {
             this.sourceType = Input.of(Objects.requireNonNull(sourceType));
             return this;
         }

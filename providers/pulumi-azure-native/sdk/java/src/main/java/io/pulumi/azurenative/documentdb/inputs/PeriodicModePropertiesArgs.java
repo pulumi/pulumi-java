@@ -74,22 +74,22 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
     	      this.backupRetentionIntervalInHours = defaults.backupRetentionIntervalInHours;
         }
 
-        public Builder setBackupIntervalInMinutes(@Nullable Input<Integer> backupIntervalInMinutes) {
+        public Builder backupIntervalInMinutes(@Nullable Input<Integer> backupIntervalInMinutes) {
             this.backupIntervalInMinutes = backupIntervalInMinutes;
             return this;
         }
 
-        public Builder setBackupIntervalInMinutes(@Nullable Integer backupIntervalInMinutes) {
+        public Builder backupIntervalInMinutes(@Nullable Integer backupIntervalInMinutes) {
             this.backupIntervalInMinutes = Input.ofNullable(backupIntervalInMinutes);
             return this;
         }
 
-        public Builder setBackupRetentionIntervalInHours(@Nullable Input<Integer> backupRetentionIntervalInHours) {
+        public Builder backupRetentionIntervalInHours(@Nullable Input<Integer> backupRetentionIntervalInHours) {
             this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
             return this;
         }
 
-        public Builder setBackupRetentionIntervalInHours(@Nullable Integer backupRetentionIntervalInHours) {
+        public Builder backupRetentionIntervalInHours(@Nullable Integer backupRetentionIntervalInHours) {
             this.backupRetentionIntervalInHours = Input.ofNullable(backupRetentionIntervalInHours);
             return this;
         }

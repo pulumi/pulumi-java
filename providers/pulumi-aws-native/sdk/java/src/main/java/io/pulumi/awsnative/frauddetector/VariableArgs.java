@@ -155,72 +155,72 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.variableType = defaults.variableType;
         }
 
-        public Builder setDataSource(Input<VariableDataSource> dataSource) {
+        public Builder dataSource(Input<VariableDataSource> dataSource) {
             this.dataSource = Objects.requireNonNull(dataSource);
             return this;
         }
 
-        public Builder setDataSource(VariableDataSource dataSource) {
+        public Builder dataSource(VariableDataSource dataSource) {
             this.dataSource = Input.of(Objects.requireNonNull(dataSource));
             return this;
         }
 
-        public Builder setDataType(Input<VariableDataType> dataType) {
+        public Builder dataType(Input<VariableDataType> dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setDataType(VariableDataType dataType) {
+        public Builder dataType(VariableDataType dataType) {
             this.dataType = Input.of(Objects.requireNonNull(dataType));
             return this;
         }
 
-        public Builder setDefaultValue(Input<String> defaultValue) {
+        public Builder defaultValue(Input<String> defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Input.of(Objects.requireNonNull(defaultValue));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<VariableTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<VariableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VariableTagArgs> tags) {
+        public Builder tags(@Nullable List<VariableTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVariableType(@Nullable Input<VariableType> variableType) {
+        public Builder variableType(@Nullable Input<VariableType> variableType) {
             this.variableType = variableType;
             return this;
         }
 
-        public Builder setVariableType(@Nullable VariableType variableType) {
+        public Builder variableType(@Nullable VariableType variableType) {
             this.variableType = Input.ofNullable(variableType);
             return this;
         }

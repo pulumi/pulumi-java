@@ -105,22 +105,22 @@ public final class DatabaseBackupSetting extends io.pulumi.resources.InvokeArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionStringName(@Nullable String connectionStringName) {
+        public Builder connectionStringName(@Nullable String connectionStringName) {
             this.connectionStringName = connectionStringName;
             return this;
         }
 
-        public Builder setDatabaseType(Either<String,DatabaseType> databaseType) {
+        public Builder databaseType(Either<String,DatabaseType> databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

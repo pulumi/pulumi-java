@@ -123,52 +123,52 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder setDestination(@Nullable Input<String> destination) {
+        public Builder destination(@Nullable Input<String> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable Input<String> sha256Checksum) {
+        public Builder sha256Checksum(@Nullable Input<String> sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable String sha256Checksum) {
+        public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = Input.ofNullable(sha256Checksum);
             return this;
         }
 
-        public Builder setSourceUri(@Nullable Input<String> sourceUri) {
+        public Builder sourceUri(@Nullable Input<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
-        public Builder setSourceUri(@Nullable String sourceUri) {
+        public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = Input.ofNullable(sourceUri);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

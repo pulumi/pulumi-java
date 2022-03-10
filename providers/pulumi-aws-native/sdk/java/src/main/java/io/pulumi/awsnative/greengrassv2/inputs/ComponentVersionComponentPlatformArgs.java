@@ -63,22 +63,22 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
     	      this.name = defaults.name;
         }
 
-        public Builder setAttributes(@Nullable Input<Object> attributes) {
+        public Builder attributes(@Nullable Input<Object> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Object attributes) {
+        public Builder attributes(@Nullable Object attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

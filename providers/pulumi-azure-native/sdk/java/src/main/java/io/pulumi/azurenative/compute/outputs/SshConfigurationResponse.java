@@ -50,7 +50,7 @@ public final class SshConfigurationResponse {
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setPublicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
+        public Builder publicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }

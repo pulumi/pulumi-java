@@ -75,12 +75,12 @@ public final class ConfigurationProfilePreferencePropertiesResponse extends io.p
     	      this.vmBackup = defaults.vmBackup;
         }
 
-        public Builder setAntiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware) {
+        public Builder antiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware) {
             this.antiMalware = antiMalware;
             return this;
         }
 
-        public Builder setVmBackup(@Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
+        public Builder vmBackup(@Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
             this.vmBackup = vmBackup;
             return this;
         }

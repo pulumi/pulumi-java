@@ -128,27 +128,27 @@ public final class JwtAuthenticationResponse extends io.pulumi.resources.InvokeA
     	      this.type = defaults.type;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setClaims(@Nullable List<TokenClaimResponse> claims) {
+        public Builder claims(@Nullable List<TokenClaimResponse> claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setIssuers(@Nullable List<String> issuers) {
+        public Builder issuers(@Nullable List<String> issuers) {
             this.issuers = issuers;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys) {
+        public Builder keys(@Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

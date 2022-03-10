@@ -137,62 +137,62 @@ public final class OptionGroupOptionGetArgs extends io.pulumi.resources.Resource
     	      this.vpcSecurityGroupMemberships = defaults.vpcSecurityGroupMemberships;
         }
 
-        public Builder setDbSecurityGroupMemberships(@Nullable Input<List<String>> dbSecurityGroupMemberships) {
+        public Builder dbSecurityGroupMemberships(@Nullable Input<List<String>> dbSecurityGroupMemberships) {
             this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
             return this;
         }
 
-        public Builder setDbSecurityGroupMemberships(@Nullable List<String> dbSecurityGroupMemberships) {
+        public Builder dbSecurityGroupMemberships(@Nullable List<String> dbSecurityGroupMemberships) {
             this.dbSecurityGroupMemberships = Input.ofNullable(dbSecurityGroupMemberships);
             return this;
         }
 
-        public Builder setOptionName(Input<String> optionName) {
+        public Builder optionName(Input<String> optionName) {
             this.optionName = Objects.requireNonNull(optionName);
             return this;
         }
 
-        public Builder setOptionName(String optionName) {
+        public Builder optionName(String optionName) {
             this.optionName = Input.of(Objects.requireNonNull(optionName));
             return this;
         }
 
-        public Builder setOptionSettings(@Nullable Input<List<OptionGroupOptionOptionSettingGetArgs>> optionSettings) {
+        public Builder optionSettings(@Nullable Input<List<OptionGroupOptionOptionSettingGetArgs>> optionSettings) {
             this.optionSettings = optionSettings;
             return this;
         }
 
-        public Builder setOptionSettings(@Nullable List<OptionGroupOptionOptionSettingGetArgs> optionSettings) {
+        public Builder optionSettings(@Nullable List<OptionGroupOptionOptionSettingGetArgs> optionSettings) {
             this.optionSettings = Input.ofNullable(optionSettings);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setVpcSecurityGroupMemberships(@Nullable Input<List<String>> vpcSecurityGroupMemberships) {
+        public Builder vpcSecurityGroupMemberships(@Nullable Input<List<String>> vpcSecurityGroupMemberships) {
             this.vpcSecurityGroupMemberships = vpcSecurityGroupMemberships;
             return this;
         }
 
-        public Builder setVpcSecurityGroupMemberships(@Nullable List<String> vpcSecurityGroupMemberships) {
+        public Builder vpcSecurityGroupMemberships(@Nullable List<String> vpcSecurityGroupMemberships) {
             this.vpcSecurityGroupMemberships = Input.ofNullable(vpcSecurityGroupMemberships);
             return this;
         }

@@ -76,22 +76,22 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setFilePattern(@Nullable Input<Object> filePattern) {
+        public Builder filePattern(@Nullable Input<Object> filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
-        public Builder setFilePattern(@Nullable Object filePattern) {
+        public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = Input.ofNullable(filePattern);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

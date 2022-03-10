@@ -107,42 +107,42 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setIssuerUri(@Nullable Input<String> issuerUri) {
+        public Builder issuerUri(@Nullable Input<String> issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
 
-        public Builder setIssuerUri(@Nullable String issuerUri) {
+        public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = Input.ofNullable(issuerUri);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<List<String>> scope) {
+        public Builder scope(@Nullable Input<List<String>> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable List<String> scope) {
+        public Builder scope(@Nullable List<String> scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }

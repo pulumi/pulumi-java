@@ -89,17 +89,17 @@ public final class GoogleCloudMlV1__SchedulingResponse extends io.pulumi.resourc
     	      this.priority = defaults.priority;
         }
 
-        public Builder setMaxRunningTime(String maxRunningTime) {
+        public Builder maxRunningTime(String maxRunningTime) {
             this.maxRunningTime = Objects.requireNonNull(maxRunningTime);
             return this;
         }
 
-        public Builder setMaxWaitTime(String maxWaitTime) {
+        public Builder maxWaitTime(String maxWaitTime) {
             this.maxWaitTime = Objects.requireNonNull(maxWaitTime);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }

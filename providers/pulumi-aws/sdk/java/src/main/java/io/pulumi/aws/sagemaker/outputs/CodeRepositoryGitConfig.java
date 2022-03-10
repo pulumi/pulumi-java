@@ -83,17 +83,17 @@ public final class CodeRepositoryGitConfig {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }

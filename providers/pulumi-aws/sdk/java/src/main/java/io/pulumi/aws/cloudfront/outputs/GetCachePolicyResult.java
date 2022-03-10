@@ -150,42 +150,42 @@ public final class GetCachePolicyResult {
     	      this.parametersInCacheKeyAndForwardedToOrigins = defaults.parametersInCacheKeyAndForwardedToOrigins;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setDefaultTtl(Integer defaultTtl) {
+        public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMaxTtl(Integer maxTtl) {
+        public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
 
-        public Builder setMinTtl(Integer minTtl) {
+        public Builder minTtl(Integer minTtl) {
             this.minTtl = Objects.requireNonNull(minTtl);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParametersInCacheKeyAndForwardedToOrigins(List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
+        public Builder parametersInCacheKeyAndForwardedToOrigins(List<GetCachePolicyParametersInCacheKeyAndForwardedToOrigin> parametersInCacheKeyAndForwardedToOrigins) {
             this.parametersInCacheKeyAndForwardedToOrigins = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigins);
             return this;
         }

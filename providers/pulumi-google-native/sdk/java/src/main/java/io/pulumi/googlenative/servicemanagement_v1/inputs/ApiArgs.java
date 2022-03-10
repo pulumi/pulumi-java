@@ -160,72 +160,72 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setMethods(@Nullable Input<List<MethodArgs>> methods) {
+        public Builder methods(@Nullable Input<List<MethodArgs>> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<MethodArgs> methods) {
+        public Builder methods(@Nullable List<MethodArgs> methods) {
             this.methods = Input.ofNullable(methods);
             return this;
         }
 
-        public Builder setMixins(@Nullable Input<List<MixinArgs>> mixins) {
+        public Builder mixins(@Nullable Input<List<MixinArgs>> mixins) {
             this.mixins = mixins;
             return this;
         }
 
-        public Builder setMixins(@Nullable List<MixinArgs> mixins) {
+        public Builder mixins(@Nullable List<MixinArgs> mixins) {
             this.mixins = Input.ofNullable(mixins);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Input<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<OptionArgs> options) {
+        public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
+        public Builder sourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
 
-        public Builder setSourceContext(@Nullable SourceContextArgs sourceContext) {
+        public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
             this.sourceContext = Input.ofNullable(sourceContext);
             return this;
         }
 
-        public Builder setSyntax(@Nullable Input<ApiSyntax> syntax) {
+        public Builder syntax(@Nullable Input<ApiSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setSyntax(@Nullable ApiSyntax syntax) {
+        public Builder syntax(@Nullable ApiSyntax syntax) {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

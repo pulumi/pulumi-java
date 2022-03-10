@@ -40,7 +40,7 @@ public final class BotAliasCodeHookSpecification {
     	      this.lambdaCodeHook = defaults.lambdaCodeHook;
         }
 
-        public Builder setLambdaCodeHook(BotAliasLambdaCodeHook lambdaCodeHook) {
+        public Builder lambdaCodeHook(BotAliasLambdaCodeHook lambdaCodeHook) {
             this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
             return this;
         }

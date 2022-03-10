@@ -66,12 +66,12 @@ public final class DataSourceParametersTwitter {
     	      this.query = defaults.query;
         }
 
-        public Builder setMaxRows(Integer maxRows) {
+        public Builder maxRows(Integer maxRows) {
             this.maxRows = Objects.requireNonNull(maxRows);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }

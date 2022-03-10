@@ -77,12 +77,12 @@ public final class NamespaceStatus {
     	      this.phase = defaults.phase;
         }
 
-        public Builder setConditions(@Nullable List<NamespaceCondition> conditions) {
+        public Builder conditions(@Nullable List<NamespaceCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }

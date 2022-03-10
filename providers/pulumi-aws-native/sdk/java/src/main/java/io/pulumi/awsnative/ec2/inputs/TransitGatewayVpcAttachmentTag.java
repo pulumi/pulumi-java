@@ -60,12 +60,12 @@ public final class TransitGatewayVpcAttachmentTag extends io.pulumi.resources.In
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

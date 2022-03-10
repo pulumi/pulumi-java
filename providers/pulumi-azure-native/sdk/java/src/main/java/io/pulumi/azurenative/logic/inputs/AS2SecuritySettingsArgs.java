@@ -203,102 +203,102 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     	      this.signingCertificateName = defaults.signingCertificateName;
         }
 
-        public Builder setEnableNRRForInboundDecodedMessages(Input<Boolean> enableNRRForInboundDecodedMessages) {
+        public Builder enableNRRForInboundDecodedMessages(Input<Boolean> enableNRRForInboundDecodedMessages) {
             this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
+        public Builder enableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
             this.enableNRRForInboundDecodedMessages = Input.of(Objects.requireNonNull(enableNRRForInboundDecodedMessages));
             return this;
         }
 
-        public Builder setEnableNRRForInboundEncodedMessages(Input<Boolean> enableNRRForInboundEncodedMessages) {
+        public Builder enableNRRForInboundEncodedMessages(Input<Boolean> enableNRRForInboundEncodedMessages) {
             this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
+        public Builder enableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
             this.enableNRRForInboundEncodedMessages = Input.of(Objects.requireNonNull(enableNRRForInboundEncodedMessages));
             return this;
         }
 
-        public Builder setEnableNRRForInboundMDN(Input<Boolean> enableNRRForInboundMDN) {
+        public Builder enableNRRForInboundMDN(Input<Boolean> enableNRRForInboundMDN) {
             this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN);
             return this;
         }
 
-        public Builder setEnableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
+        public Builder enableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
             this.enableNRRForInboundMDN = Input.of(Objects.requireNonNull(enableNRRForInboundMDN));
             return this;
         }
 
-        public Builder setEnableNRRForOutboundDecodedMessages(Input<Boolean> enableNRRForOutboundDecodedMessages) {
+        public Builder enableNRRForOutboundDecodedMessages(Input<Boolean> enableNRRForOutboundDecodedMessages) {
             this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
+        public Builder enableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
             this.enableNRRForOutboundDecodedMessages = Input.of(Objects.requireNonNull(enableNRRForOutboundDecodedMessages));
             return this;
         }
 
-        public Builder setEnableNRRForOutboundEncodedMessages(Input<Boolean> enableNRRForOutboundEncodedMessages) {
+        public Builder enableNRRForOutboundEncodedMessages(Input<Boolean> enableNRRForOutboundEncodedMessages) {
             this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
+        public Builder enableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
             this.enableNRRForOutboundEncodedMessages = Input.of(Objects.requireNonNull(enableNRRForOutboundEncodedMessages));
             return this;
         }
 
-        public Builder setEnableNRRForOutboundMDN(Input<Boolean> enableNRRForOutboundMDN) {
+        public Builder enableNRRForOutboundMDN(Input<Boolean> enableNRRForOutboundMDN) {
             this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN);
             return this;
         }
 
-        public Builder setEnableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
+        public Builder enableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
             this.enableNRRForOutboundMDN = Input.of(Objects.requireNonNull(enableNRRForOutboundMDN));
             return this;
         }
 
-        public Builder setEncryptionCertificateName(@Nullable Input<String> encryptionCertificateName) {
+        public Builder encryptionCertificateName(@Nullable Input<String> encryptionCertificateName) {
             this.encryptionCertificateName = encryptionCertificateName;
             return this;
         }
 
-        public Builder setEncryptionCertificateName(@Nullable String encryptionCertificateName) {
+        public Builder encryptionCertificateName(@Nullable String encryptionCertificateName) {
             this.encryptionCertificateName = Input.ofNullable(encryptionCertificateName);
             return this;
         }
 
-        public Builder setOverrideGroupSigningCertificate(Input<Boolean> overrideGroupSigningCertificate) {
+        public Builder overrideGroupSigningCertificate(Input<Boolean> overrideGroupSigningCertificate) {
             this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate);
             return this;
         }
 
-        public Builder setOverrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
+        public Builder overrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
             this.overrideGroupSigningCertificate = Input.of(Objects.requireNonNull(overrideGroupSigningCertificate));
             return this;
         }
 
-        public Builder setSha2AlgorithmFormat(@Nullable Input<String> sha2AlgorithmFormat) {
+        public Builder sha2AlgorithmFormat(@Nullable Input<String> sha2AlgorithmFormat) {
             this.sha2AlgorithmFormat = sha2AlgorithmFormat;
             return this;
         }
 
-        public Builder setSha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
+        public Builder sha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
             this.sha2AlgorithmFormat = Input.ofNullable(sha2AlgorithmFormat);
             return this;
         }
 
-        public Builder setSigningCertificateName(@Nullable Input<String> signingCertificateName) {
+        public Builder signingCertificateName(@Nullable Input<String> signingCertificateName) {
             this.signingCertificateName = signingCertificateName;
             return this;
         }
 
-        public Builder setSigningCertificateName(@Nullable String signingCertificateName) {
+        public Builder signingCertificateName(@Nullable String signingCertificateName) {
             this.signingCertificateName = Input.ofNullable(signingCertificateName);
             return this;
         }

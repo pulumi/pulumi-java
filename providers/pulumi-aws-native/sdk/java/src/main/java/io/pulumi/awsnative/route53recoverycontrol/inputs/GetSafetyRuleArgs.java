@@ -51,7 +51,7 @@ public final class GetSafetyRuleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.safetyRuleArn = defaults.safetyRuleArn;
         }
 
-        public Builder setSafetyRuleArn(String safetyRuleArn) {
+        public Builder safetyRuleArn(String safetyRuleArn) {
             this.safetyRuleArn = Objects.requireNonNull(safetyRuleArn);
             return this;
         }

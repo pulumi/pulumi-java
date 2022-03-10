@@ -49,7 +49,7 @@ public final class SpotFleetIamInstanceProfileSpecification extends io.pulumi.re
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

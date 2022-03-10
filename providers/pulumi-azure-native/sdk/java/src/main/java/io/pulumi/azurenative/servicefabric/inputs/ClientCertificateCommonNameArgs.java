@@ -90,32 +90,32 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
     	      this.isAdmin = defaults.isAdmin;
         }
 
-        public Builder setCertificateCommonName(Input<String> certificateCommonName) {
+        public Builder certificateCommonName(Input<String> certificateCommonName) {
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
 
-        public Builder setCertificateCommonName(String certificateCommonName) {
+        public Builder certificateCommonName(String certificateCommonName) {
             this.certificateCommonName = Input.of(Objects.requireNonNull(certificateCommonName));
             return this;
         }
 
-        public Builder setCertificateIssuerThumbprint(Input<String> certificateIssuerThumbprint) {
+        public Builder certificateIssuerThumbprint(Input<String> certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
 
-        public Builder setCertificateIssuerThumbprint(String certificateIssuerThumbprint) {
+        public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Input.of(Objects.requireNonNull(certificateIssuerThumbprint));
             return this;
         }
 
-        public Builder setIsAdmin(Input<Boolean> isAdmin) {
+        public Builder isAdmin(Input<Boolean> isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Input.of(Objects.requireNonNull(isAdmin));
             return this;
         }

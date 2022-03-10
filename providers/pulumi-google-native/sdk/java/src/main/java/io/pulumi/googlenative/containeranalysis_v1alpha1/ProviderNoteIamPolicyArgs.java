@@ -113,52 +113,52 @@ public final class ProviderNoteIamPolicyArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder setBindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
-        public Builder setBindings(@Nullable List<BindingArgs> bindings) {
+        public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Input.ofNullable(bindings);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setNoteId(Input<String> noteId) {
+        public Builder noteId(Input<String> noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
 
-        public Builder setNoteId(String noteId) {
+        public Builder noteId(String noteId) {
             this.noteId = Input.of(Objects.requireNonNull(noteId));
             return this;
         }
 
-        public Builder setProviderId(Input<String> providerId) {
+        public Builder providerId(Input<String> providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
 
-        public Builder setProviderId(String providerId) {
+        public Builder providerId(String providerId) {
             this.providerId = Input.of(Objects.requireNonNull(providerId));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

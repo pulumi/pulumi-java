@@ -134,32 +134,32 @@ public final class DataCenterResourceResponseProperties {
     	      this.seedNodes = defaults.seedNodes;
         }
 
-        public Builder setBase64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
+        public Builder base64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
             this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
             return this;
         }
 
-        public Builder setDataCenterLocation(@Nullable String dataCenterLocation) {
+        public Builder dataCenterLocation(@Nullable String dataCenterLocation) {
             this.dataCenterLocation = dataCenterLocation;
             return this;
         }
 
-        public Builder setDelegatedSubnetId(@Nullable String delegatedSubnetId) {
+        public Builder delegatedSubnetId(@Nullable String delegatedSubnetId) {
             this.delegatedSubnetId = delegatedSubnetId;
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSeedNodes(List<SeedNodeResponse> seedNodes) {
+        public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }

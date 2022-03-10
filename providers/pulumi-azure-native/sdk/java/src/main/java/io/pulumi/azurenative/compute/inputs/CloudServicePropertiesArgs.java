@@ -215,102 +215,102 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
     	      this.upgradeMode = defaults.upgradeMode;
         }
 
-        public Builder setAllowModelOverride(@Nullable Input<Boolean> allowModelOverride) {
+        public Builder allowModelOverride(@Nullable Input<Boolean> allowModelOverride) {
             this.allowModelOverride = allowModelOverride;
             return this;
         }
 
-        public Builder setAllowModelOverride(@Nullable Boolean allowModelOverride) {
+        public Builder allowModelOverride(@Nullable Boolean allowModelOverride) {
             this.allowModelOverride = Input.ofNullable(allowModelOverride);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Input<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable String configuration) {
+        public Builder configuration(@Nullable String configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setConfigurationUrl(@Nullable Input<String> configurationUrl) {
+        public Builder configurationUrl(@Nullable Input<String> configurationUrl) {
             this.configurationUrl = configurationUrl;
             return this;
         }
 
-        public Builder setConfigurationUrl(@Nullable String configurationUrl) {
+        public Builder configurationUrl(@Nullable String configurationUrl) {
             this.configurationUrl = Input.ofNullable(configurationUrl);
             return this;
         }
 
-        public Builder setExtensionProfile(@Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile) {
+        public Builder extensionProfile(@Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
 
-        public Builder setExtensionProfile(@Nullable CloudServiceExtensionProfileArgs extensionProfile) {
+        public Builder extensionProfile(@Nullable CloudServiceExtensionProfileArgs extensionProfile) {
             this.extensionProfile = Input.ofNullable(extensionProfile);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<CloudServiceNetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<CloudServiceNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable CloudServiceNetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable CloudServiceNetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<CloudServiceOsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<CloudServiceOsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable CloudServiceOsProfileArgs osProfile) {
+        public Builder osProfile(@Nullable CloudServiceOsProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setPackageUrl(@Nullable Input<String> packageUrl) {
+        public Builder packageUrl(@Nullable Input<String> packageUrl) {
             this.packageUrl = packageUrl;
             return this;
         }
 
-        public Builder setPackageUrl(@Nullable String packageUrl) {
+        public Builder packageUrl(@Nullable String packageUrl) {
             this.packageUrl = Input.ofNullable(packageUrl);
             return this;
         }
 
-        public Builder setRoleProfile(@Nullable Input<CloudServiceRoleProfileArgs> roleProfile) {
+        public Builder roleProfile(@Nullable Input<CloudServiceRoleProfileArgs> roleProfile) {
             this.roleProfile = roleProfile;
             return this;
         }
 
-        public Builder setRoleProfile(@Nullable CloudServiceRoleProfileArgs roleProfile) {
+        public Builder roleProfile(@Nullable CloudServiceRoleProfileArgs roleProfile) {
             this.roleProfile = Input.ofNullable(roleProfile);
             return this;
         }
 
-        public Builder setStartCloudService(@Nullable Input<Boolean> startCloudService) {
+        public Builder startCloudService(@Nullable Input<Boolean> startCloudService) {
             this.startCloudService = startCloudService;
             return this;
         }
 
-        public Builder setStartCloudService(@Nullable Boolean startCloudService) {
+        public Builder startCloudService(@Nullable Boolean startCloudService) {
             this.startCloudService = Input.ofNullable(startCloudService);
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode) {
+        public Builder upgradeMode(@Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable Either<String,CloudServiceUpgradeMode> upgradeMode) {
+        public Builder upgradeMode(@Nullable Either<String,CloudServiceUpgradeMode> upgradeMode) {
             this.upgradeMode = Input.ofNullable(upgradeMode);
             return this;
         }

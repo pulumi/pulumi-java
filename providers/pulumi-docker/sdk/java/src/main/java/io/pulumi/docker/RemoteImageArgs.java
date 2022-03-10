@@ -145,62 +145,62 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pullTriggers = defaults.pullTriggers;
         }
 
-        public Builder setBuild(@Nullable Input<RemoteImageBuildArgs> build) {
+        public Builder build(@Nullable Input<RemoteImageBuildArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable RemoteImageBuildArgs build) {
+        public Builder build(@Nullable RemoteImageBuildArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Input<Boolean> forceRemove) {
+        public Builder forceRemove(@Nullable Input<Boolean> forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Boolean forceRemove) {
+        public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = Input.ofNullable(forceRemove);
             return this;
         }
 
-        public Builder setKeepLocally(@Nullable Input<Boolean> keepLocally) {
+        public Builder keepLocally(@Nullable Input<Boolean> keepLocally) {
             this.keepLocally = keepLocally;
             return this;
         }
 
-        public Builder setKeepLocally(@Nullable Boolean keepLocally) {
+        public Builder keepLocally(@Nullable Boolean keepLocally) {
             this.keepLocally = Input.ofNullable(keepLocally);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPullTrigger(@Nullable Input<String> pullTrigger) {
+        public Builder pullTrigger(@Nullable Input<String> pullTrigger) {
             this.pullTrigger = pullTrigger;
             return this;
         }
 
-        public Builder setPullTrigger(@Nullable String pullTrigger) {
+        public Builder pullTrigger(@Nullable String pullTrigger) {
             this.pullTrigger = Input.ofNullable(pullTrigger);
             return this;
         }
 
-        public Builder setPullTriggers(@Nullable Input<List<String>> pullTriggers) {
+        public Builder pullTriggers(@Nullable Input<List<String>> pullTriggers) {
             this.pullTriggers = pullTriggers;
             return this;
         }
 
-        public Builder setPullTriggers(@Nullable List<String> pullTriggers) {
+        public Builder pullTriggers(@Nullable List<String> pullTriggers) {
             this.pullTriggers = Input.ofNullable(pullTriggers);
             return this;
         }

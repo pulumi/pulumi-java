@@ -67,22 +67,22 @@ public final class AppPhysicalResourceId {
     	      this.type = defaults.type;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setIdentifier(String identifier) {
+        public Builder identifier(String identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

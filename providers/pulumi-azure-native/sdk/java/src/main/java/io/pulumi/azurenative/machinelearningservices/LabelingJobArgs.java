@@ -103,42 +103,42 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setLabelingJobId(@Nullable Input<String> labelingJobId) {
+        public Builder labelingJobId(@Nullable Input<String> labelingJobId) {
             this.labelingJobId = labelingJobId;
             return this;
         }
 
-        public Builder setLabelingJobId(@Nullable String labelingJobId) {
+        public Builder labelingJobId(@Nullable String labelingJobId) {
             this.labelingJobId = Input.ofNullable(labelingJobId);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<LabelingJobPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<LabelingJobPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable LabelingJobPropertiesArgs properties) {
+        public Builder properties(@Nullable LabelingJobPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

@@ -88,17 +88,17 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setIdentityNamespace(String identityNamespace) {
+        public Builder identityNamespace(String identityNamespace) {
             this.identityNamespace = Objects.requireNonNull(identityNamespace);
             return this;
         }
 
-        public Builder setIdentityProvider(String identityProvider) {
+        public Builder identityProvider(String identityProvider) {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
 
-        public Builder setWorkloadPool(String workloadPool) {
+        public Builder workloadPool(String workloadPool) {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }

@@ -173,82 +173,82 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
     	      this.trustType = defaults.trustType;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelectiveAuthentication(@Nullable Input<Boolean> selectiveAuthentication) {
+        public Builder selectiveAuthentication(@Nullable Input<Boolean> selectiveAuthentication) {
             this.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
 
-        public Builder setSelectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
+        public Builder selectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
             this.selectiveAuthentication = Input.ofNullable(selectiveAuthentication);
             return this;
         }
 
-        public Builder setTargetDnsIpAddresses(@Nullable Input<List<String>> targetDnsIpAddresses) {
+        public Builder targetDnsIpAddresses(@Nullable Input<List<String>> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = targetDnsIpAddresses;
             return this;
         }
 
-        public Builder setTargetDnsIpAddresses(@Nullable List<String> targetDnsIpAddresses) {
+        public Builder targetDnsIpAddresses(@Nullable List<String> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Input.ofNullable(targetDnsIpAddresses);
             return this;
         }
 
-        public Builder setTargetDomainName(@Nullable Input<String> targetDomainName) {
+        public Builder targetDomainName(@Nullable Input<String> targetDomainName) {
             this.targetDomainName = targetDomainName;
             return this;
         }
 
-        public Builder setTargetDomainName(@Nullable String targetDomainName) {
+        public Builder targetDomainName(@Nullable String targetDomainName) {
             this.targetDomainName = Input.ofNullable(targetDomainName);
             return this;
         }
 
-        public Builder setTrustDirection(@Nullable Input<String> trustDirection) {
+        public Builder trustDirection(@Nullable Input<String> trustDirection) {
             this.trustDirection = trustDirection;
             return this;
         }
 
-        public Builder setTrustDirection(@Nullable String trustDirection) {
+        public Builder trustDirection(@Nullable String trustDirection) {
             this.trustDirection = Input.ofNullable(trustDirection);
             return this;
         }
 
-        public Builder setTrustHandshakeSecret(@Nullable Input<String> trustHandshakeSecret) {
+        public Builder trustHandshakeSecret(@Nullable Input<String> trustHandshakeSecret) {
             this.trustHandshakeSecret = trustHandshakeSecret;
             return this;
         }
 
-        public Builder setTrustHandshakeSecret(@Nullable String trustHandshakeSecret) {
+        public Builder trustHandshakeSecret(@Nullable String trustHandshakeSecret) {
             this.trustHandshakeSecret = Input.ofNullable(trustHandshakeSecret);
             return this;
         }
 
-        public Builder setTrustType(@Nullable Input<String> trustType) {
+        public Builder trustType(@Nullable Input<String> trustType) {
             this.trustType = trustType;
             return this;
         }
 
-        public Builder setTrustType(@Nullable String trustType) {
+        public Builder trustType(@Nullable String trustType) {
             this.trustType = Input.ofNullable(trustType);
             return this;
         }

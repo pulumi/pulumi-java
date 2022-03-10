@@ -99,22 +99,22 @@ public final class CanaryTimeline {
     	      this.lastStopped = defaults.lastStopped;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-        public Builder setLastModified(@Nullable String lastModified) {
+        public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
-        public Builder setLastStarted(@Nullable String lastStarted) {
+        public Builder lastStarted(@Nullable String lastStarted) {
             this.lastStarted = lastStarted;
             return this;
         }
 
-        public Builder setLastStopped(@Nullable String lastStopped) {
+        public Builder lastStopped(@Nullable String lastStopped) {
             this.lastStopped = lastStopped;
             return this;
         }

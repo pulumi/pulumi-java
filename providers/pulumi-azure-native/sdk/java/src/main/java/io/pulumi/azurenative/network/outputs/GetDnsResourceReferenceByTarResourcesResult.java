@@ -50,7 +50,7 @@ public final class GetDnsResourceReferenceByTarResourcesResult {
     	      this.dnsResourceReferences = defaults.dnsResourceReferences;
         }
 
-        public Builder setDnsResourceReferences(@Nullable List<DnsResourceReferenceResponse> dnsResourceReferences) {
+        public Builder dnsResourceReferences(@Nullable List<DnsResourceReferenceResponse> dnsResourceReferences) {
             this.dnsResourceReferences = dnsResourceReferences;
             return this;
         }

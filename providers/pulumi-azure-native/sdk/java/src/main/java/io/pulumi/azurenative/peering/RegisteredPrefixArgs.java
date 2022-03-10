@@ -102,42 +102,42 @@ public final class RegisteredPrefixArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setPeeringName(Input<String> peeringName) {
+        public Builder peeringName(Input<String> peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Input.of(Objects.requireNonNull(peeringName));
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setRegisteredPrefixName(@Nullable Input<String> registeredPrefixName) {
+        public Builder registeredPrefixName(@Nullable Input<String> registeredPrefixName) {
             this.registeredPrefixName = registeredPrefixName;
             return this;
         }
 
-        public Builder setRegisteredPrefixName(@Nullable String registeredPrefixName) {
+        public Builder registeredPrefixName(@Nullable String registeredPrefixName) {
             this.registeredPrefixName = Input.ofNullable(registeredPrefixName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

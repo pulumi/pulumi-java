@@ -89,17 +89,17 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
     	      this.status = defaults.status;
         }
 
-        public Builder setConsoleScreenshotBlobUri(String consoleScreenshotBlobUri) {
+        public Builder consoleScreenshotBlobUri(String consoleScreenshotBlobUri) {
             this.consoleScreenshotBlobUri = Objects.requireNonNull(consoleScreenshotBlobUri);
             return this;
         }
 
-        public Builder setSerialConsoleLogBlobUri(String serialConsoleLogBlobUri) {
+        public Builder serialConsoleLogBlobUri(String serialConsoleLogBlobUri) {
             this.serialConsoleLogBlobUri = Objects.requireNonNull(serialConsoleLogBlobUri);
             return this;
         }
 
-        public Builder setStatus(InstanceViewStatusResponse status) {
+        public Builder status(InstanceViewStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -324,172 +324,172 @@ public final class GoogleBigQueryLinkedServiceArgs extends io.pulumi.resources.R
     	      this.useSystemTrustStore = defaults.useSystemTrustStore;
         }
 
-        public Builder setAdditionalProjects(@Nullable Input<Object> additionalProjects) {
+        public Builder additionalProjects(@Nullable Input<Object> additionalProjects) {
             this.additionalProjects = additionalProjects;
             return this;
         }
 
-        public Builder setAdditionalProjects(@Nullable Object additionalProjects) {
+        public Builder additionalProjects(@Nullable Object additionalProjects) {
             this.additionalProjects = Input.ofNullable(additionalProjects);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthenticationType(Input<Either<String,GoogleBigQueryAuthenticationType>> authenticationType) {
+        public Builder authenticationType(Input<Either<String,GoogleBigQueryAuthenticationType>> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(Either<String,GoogleBigQueryAuthenticationType> authenticationType) {
+        public Builder authenticationType(Either<String,GoogleBigQueryAuthenticationType> authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<Object> clientId) {
+        public Builder clientId(@Nullable Input<Object> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable Object clientId) {
+        public Builder clientId(@Nullable Object clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
+        public Builder clientSecret(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
+        public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<Object> email) {
+        public Builder email(@Nullable Input<Object> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable Object email) {
+        public Builder email(@Nullable Object email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setKeyFilePath(@Nullable Input<Object> keyFilePath) {
+        public Builder keyFilePath(@Nullable Input<Object> keyFilePath) {
             this.keyFilePath = keyFilePath;
             return this;
         }
 
-        public Builder setKeyFilePath(@Nullable Object keyFilePath) {
+        public Builder keyFilePath(@Nullable Object keyFilePath) {
             this.keyFilePath = Input.ofNullable(keyFilePath);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProject(Input<Object> project) {
+        public Builder project(Input<Object> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(Object project) {
+        public Builder project(Object project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken) {
+        public Builder refreshToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
+        public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
             this.refreshToken = Input.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder setRequestGoogleDriveScope(@Nullable Input<Object> requestGoogleDriveScope) {
+        public Builder requestGoogleDriveScope(@Nullable Input<Object> requestGoogleDriveScope) {
             this.requestGoogleDriveScope = requestGoogleDriveScope;
             return this;
         }
 
-        public Builder setRequestGoogleDriveScope(@Nullable Object requestGoogleDriveScope) {
+        public Builder requestGoogleDriveScope(@Nullable Object requestGoogleDriveScope) {
             this.requestGoogleDriveScope = Input.ofNullable(requestGoogleDriveScope);
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Input<Object> trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Input<Object> trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Object trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = Input.ofNullable(trustedCertPath);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Input<Object> useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Input<Object> useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Object useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = Input.ofNullable(useSystemTrustStore);
             return this;
         }

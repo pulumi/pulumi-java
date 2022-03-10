@@ -87,32 +87,32 @@ public final class QueryParameterTypeStructTypesItemArgs extends io.pulumi.resou
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Input<QueryParameterTypeArgs> type) {
+        public Builder type(@Nullable Input<QueryParameterTypeArgs> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable QueryParameterTypeArgs type) {
+        public Builder type(@Nullable QueryParameterTypeArgs type) {
             this.type = Input.ofNullable(type);
             return this;
         }

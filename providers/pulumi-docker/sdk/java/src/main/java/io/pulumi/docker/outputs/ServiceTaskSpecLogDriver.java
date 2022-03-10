@@ -51,12 +51,12 @@ public final class ServiceTaskSpecLogDriver {
     	      this.options = defaults.options;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,String> options) {
+        public Builder options(@Nullable Map<String,String> options) {
             this.options = options;
             return this;
         }

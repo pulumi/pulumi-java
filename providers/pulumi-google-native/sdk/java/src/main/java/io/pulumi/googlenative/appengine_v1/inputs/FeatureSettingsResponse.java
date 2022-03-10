@@ -72,12 +72,12 @@ public final class FeatureSettingsResponse extends io.pulumi.resources.InvokeArg
     	      this.useContainerOptimizedOs = defaults.useContainerOptimizedOs;
         }
 
-        public Builder setSplitHealthChecks(Boolean splitHealthChecks) {
+        public Builder splitHealthChecks(Boolean splitHealthChecks) {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }
 
-        public Builder setUseContainerOptimizedOs(Boolean useContainerOptimizedOs) {
+        public Builder useContainerOptimizedOs(Boolean useContainerOptimizedOs) {
             this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
             return this;
         }

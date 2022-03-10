@@ -315,87 +315,87 @@ public final class GetEventSourceMappingResult {
     	      this.tumblingWindowInSeconds = defaults.tumblingWindowInSeconds;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBisectBatchOnFunctionError(@Nullable Boolean bisectBatchOnFunctionError) {
+        public Builder bisectBatchOnFunctionError(@Nullable Boolean bisectBatchOnFunctionError) {
             this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
             return this;
         }
 
-        public Builder setDestinationConfig(@Nullable EventSourceMappingDestinationConfig destinationConfig) {
+        public Builder destinationConfig(@Nullable EventSourceMappingDestinationConfig destinationConfig) {
             this.destinationConfig = destinationConfig;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setFilterCriteria(@Nullable FilterCriteriaProperties filterCriteria) {
+        public Builder filterCriteria(@Nullable FilterCriteriaProperties filterCriteria) {
             this.filterCriteria = filterCriteria;
             return this;
         }
 
-        public Builder setFunctionName(@Nullable String functionName) {
+        public Builder functionName(@Nullable String functionName) {
             this.functionName = functionName;
             return this;
         }
 
-        public Builder setFunctionResponseTypes(@Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes) {
+        public Builder functionResponseTypes(@Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes) {
             this.functionResponseTypes = functionResponseTypes;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMaximumBatchingWindowInSeconds(@Nullable Integer maximumBatchingWindowInSeconds) {
+        public Builder maximumBatchingWindowInSeconds(@Nullable Integer maximumBatchingWindowInSeconds) {
             this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
             return this;
         }
 
-        public Builder setMaximumRecordAgeInSeconds(@Nullable Integer maximumRecordAgeInSeconds) {
+        public Builder maximumRecordAgeInSeconds(@Nullable Integer maximumRecordAgeInSeconds) {
             this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
             return this;
         }
 
-        public Builder setMaximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
+        public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
 
-        public Builder setParallelizationFactor(@Nullable Integer parallelizationFactor) {
+        public Builder parallelizationFactor(@Nullable Integer parallelizationFactor) {
             this.parallelizationFactor = parallelizationFactor;
             return this;
         }
 
-        public Builder setQueues(@Nullable List<String> queues) {
+        public Builder queues(@Nullable List<String> queues) {
             this.queues = queues;
             return this;
         }
 
-        public Builder setSourceAccessConfigurations(@Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations) {
+        public Builder sourceAccessConfigurations(@Nullable List<EventSourceMappingSourceAccessConfiguration> sourceAccessConfigurations) {
             this.sourceAccessConfigurations = sourceAccessConfigurations;
             return this;
         }
 
-        public Builder setStartingPositionTimestamp(@Nullable Double startingPositionTimestamp) {
+        public Builder startingPositionTimestamp(@Nullable Double startingPositionTimestamp) {
             this.startingPositionTimestamp = startingPositionTimestamp;
             return this;
         }
 
-        public Builder setTopics(@Nullable List<String> topics) {
+        public Builder topics(@Nullable List<String> topics) {
             this.topics = topics;
             return this;
         }
 
-        public Builder setTumblingWindowInSeconds(@Nullable Integer tumblingWindowInSeconds) {
+        public Builder tumblingWindowInSeconds(@Nullable Integer tumblingWindowInSeconds) {
             this.tumblingWindowInSeconds = tumblingWindowInSeconds;
             return this;
         }

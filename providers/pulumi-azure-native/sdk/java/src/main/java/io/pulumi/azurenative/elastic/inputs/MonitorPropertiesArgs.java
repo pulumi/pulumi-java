@@ -94,32 +94,32 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder setMonitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Input<Either<String,MonitoringStatus>> monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
+        public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Input.ofNullable(monitoringStatus);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
+        public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setUserInfo(@Nullable Input<UserInfoArgs> userInfo) {
+        public Builder userInfo(@Nullable Input<UserInfoArgs> userInfo) {
             this.userInfo = userInfo;
             return this;
         }
 
-        public Builder setUserInfo(@Nullable UserInfoArgs userInfo) {
+        public Builder userInfo(@Nullable UserInfoArgs userInfo) {
             this.userInfo = Input.ofNullable(userInfo);
             return this;
         }

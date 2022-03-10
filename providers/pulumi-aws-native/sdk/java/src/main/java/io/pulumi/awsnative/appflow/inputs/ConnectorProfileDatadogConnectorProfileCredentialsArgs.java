@@ -69,22 +69,22 @@ public final class ConnectorProfileDatadogConnectorProfileCredentialsArgs extend
     	      this.applicationKey = defaults.applicationKey;
         }
 
-        public Builder setApiKey(Input<String> apiKey) {
+        public Builder apiKey(Input<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Input.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder setApplicationKey(Input<String> applicationKey) {
+        public Builder applicationKey(Input<String> applicationKey) {
             this.applicationKey = Objects.requireNonNull(applicationKey);
             return this;
         }
 
-        public Builder setApplicationKey(String applicationKey) {
+        public Builder applicationKey(String applicationKey) {
             this.applicationKey = Input.of(Objects.requireNonNull(applicationKey));
             return this;
         }

@@ -71,12 +71,12 @@ public final class DatabaseInstanceSettingsLocationPreference {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setFollowGaeApplication(@Nullable String followGaeApplication) {
+        public Builder followGaeApplication(@Nullable String followGaeApplication) {
             this.followGaeApplication = followGaeApplication;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

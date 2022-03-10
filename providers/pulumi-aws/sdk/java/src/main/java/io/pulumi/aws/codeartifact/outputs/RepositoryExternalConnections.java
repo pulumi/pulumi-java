@@ -67,17 +67,17 @@ public final class RepositoryExternalConnections {
     	      this.status = defaults.status;
         }
 
-        public Builder setExternalConnectionName(String externalConnectionName) {
+        public Builder externalConnectionName(String externalConnectionName) {
             this.externalConnectionName = Objects.requireNonNull(externalConnectionName);
             return this;
         }
 
-        public Builder setPackageFormat(@Nullable String packageFormat) {
+        public Builder packageFormat(@Nullable String packageFormat) {
             this.packageFormat = packageFormat;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

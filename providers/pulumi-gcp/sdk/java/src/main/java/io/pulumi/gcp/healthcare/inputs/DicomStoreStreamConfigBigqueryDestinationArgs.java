@@ -52,12 +52,12 @@ public final class DicomStoreStreamConfigBigqueryDestinationArgs extends io.pulu
     	      this.tableUri = defaults.tableUri;
         }
 
-        public Builder setTableUri(Input<String> tableUri) {
+        public Builder tableUri(Input<String> tableUri) {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
 
-        public Builder setTableUri(String tableUri) {
+        public Builder tableUri(String tableUri) {
             this.tableUri = Input.of(Objects.requireNonNull(tableUri));
             return this;
         }

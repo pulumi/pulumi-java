@@ -53,12 +53,12 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     	      this.accessControlAttributes = defaults.accessControlAttributes;
         }
 
-        public Builder setAccessControlAttributes(Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
+        public Builder accessControlAttributes(Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
             this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
             return this;
         }
 
-        public Builder setAccessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
+        public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
             this.accessControlAttributes = Input.of(Objects.requireNonNull(accessControlAttributes));
             return this;
         }

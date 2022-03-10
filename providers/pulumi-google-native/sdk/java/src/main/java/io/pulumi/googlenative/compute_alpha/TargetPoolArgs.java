@@ -189,102 +189,102 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sessionAffinity = defaults.sessionAffinity;
         }
 
-        public Builder setBackupPool(@Nullable Input<String> backupPool) {
+        public Builder backupPool(@Nullable Input<String> backupPool) {
             this.backupPool = backupPool;
             return this;
         }
 
-        public Builder setBackupPool(@Nullable String backupPool) {
+        public Builder backupPool(@Nullable String backupPool) {
             this.backupPool = Input.ofNullable(backupPool);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFailoverRatio(@Nullable Input<Double> failoverRatio) {
+        public Builder failoverRatio(@Nullable Input<Double> failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
         }
 
-        public Builder setFailoverRatio(@Nullable Double failoverRatio) {
+        public Builder failoverRatio(@Nullable Double failoverRatio) {
             this.failoverRatio = Input.ofNullable(failoverRatio);
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable Input<List<String>> healthChecks) {
+        public Builder healthChecks(@Nullable Input<List<String>> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable List<String> healthChecks) {
+        public Builder healthChecks(@Nullable List<String> healthChecks) {
             this.healthChecks = Input.ofNullable(healthChecks);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Input<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<String> instances) {
+        public Builder instances(@Nullable List<String> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable Input<TargetPoolSessionAffinity> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Input<TargetPoolSessionAffinity> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable TargetPoolSessionAffinity sessionAffinity) {
+        public Builder sessionAffinity(@Nullable TargetPoolSessionAffinity sessionAffinity) {
             this.sessionAffinity = Input.ofNullable(sessionAffinity);
             return this;
         }

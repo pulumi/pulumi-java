@@ -98,22 +98,22 @@ public final class ActorResponse {
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setGoogleSupport(Boolean googleSupport) {
+        public Builder googleSupport(Boolean googleSupport) {
             this.googleSupport = Objects.requireNonNull(googleSupport);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }

@@ -106,42 +106,42 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setAuthType(Input<String> authType) {
+        public Builder authType(Input<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Input.of(Objects.requireNonNull(authType));
             return this;
         }
 
-        public Builder setCertificate(Input<String> certificate) {
+        public Builder certificate(Input<String> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Input.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }

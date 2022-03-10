@@ -171,82 +171,82 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
     	      this.networkThroughputMaxKbps = defaults.networkThroughputMaxKbps;
         }
 
-        public Builder setCpuAveragePercent(@Nullable Input<Integer> cpuAveragePercent) {
+        public Builder cpuAveragePercent(@Nullable Input<Integer> cpuAveragePercent) {
             this.cpuAveragePercent = cpuAveragePercent;
             return this;
         }
 
-        public Builder setCpuAveragePercent(@Nullable Integer cpuAveragePercent) {
+        public Builder cpuAveragePercent(@Nullable Integer cpuAveragePercent) {
             this.cpuAveragePercent = Input.ofNullable(cpuAveragePercent);
             return this;
         }
 
-        public Builder setCpuMaxPercent(@Nullable Input<Integer> cpuMaxPercent) {
+        public Builder cpuMaxPercent(@Nullable Input<Integer> cpuMaxPercent) {
             this.cpuMaxPercent = cpuMaxPercent;
             return this;
         }
 
-        public Builder setCpuMaxPercent(@Nullable Integer cpuMaxPercent) {
+        public Builder cpuMaxPercent(@Nullable Integer cpuMaxPercent) {
             this.cpuMaxPercent = Input.ofNullable(cpuMaxPercent);
             return this;
         }
 
-        public Builder setDiskIoRateAverageKbps(@Nullable Input<String> diskIoRateAverageKbps) {
+        public Builder diskIoRateAverageKbps(@Nullable Input<String> diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = diskIoRateAverageKbps;
             return this;
         }
 
-        public Builder setDiskIoRateAverageKbps(@Nullable String diskIoRateAverageKbps) {
+        public Builder diskIoRateAverageKbps(@Nullable String diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = Input.ofNullable(diskIoRateAverageKbps);
             return this;
         }
 
-        public Builder setDiskIoRateMaxKbps(@Nullable Input<String> diskIoRateMaxKbps) {
+        public Builder diskIoRateMaxKbps(@Nullable Input<String> diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = diskIoRateMaxKbps;
             return this;
         }
 
-        public Builder setDiskIoRateMaxKbps(@Nullable String diskIoRateMaxKbps) {
+        public Builder diskIoRateMaxKbps(@Nullable String diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = Input.ofNullable(diskIoRateMaxKbps);
             return this;
         }
 
-        public Builder setMemoryAveragePercent(@Nullable Input<Integer> memoryAveragePercent) {
+        public Builder memoryAveragePercent(@Nullable Input<Integer> memoryAveragePercent) {
             this.memoryAveragePercent = memoryAveragePercent;
             return this;
         }
 
-        public Builder setMemoryAveragePercent(@Nullable Integer memoryAveragePercent) {
+        public Builder memoryAveragePercent(@Nullable Integer memoryAveragePercent) {
             this.memoryAveragePercent = Input.ofNullable(memoryAveragePercent);
             return this;
         }
 
-        public Builder setMemoryMaxPercent(@Nullable Input<Integer> memoryMaxPercent) {
+        public Builder memoryMaxPercent(@Nullable Input<Integer> memoryMaxPercent) {
             this.memoryMaxPercent = memoryMaxPercent;
             return this;
         }
 
-        public Builder setMemoryMaxPercent(@Nullable Integer memoryMaxPercent) {
+        public Builder memoryMaxPercent(@Nullable Integer memoryMaxPercent) {
             this.memoryMaxPercent = Input.ofNullable(memoryMaxPercent);
             return this;
         }
 
-        public Builder setNetworkThroughputAverageKbps(@Nullable Input<String> networkThroughputAverageKbps) {
+        public Builder networkThroughputAverageKbps(@Nullable Input<String> networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = networkThroughputAverageKbps;
             return this;
         }
 
-        public Builder setNetworkThroughputAverageKbps(@Nullable String networkThroughputAverageKbps) {
+        public Builder networkThroughputAverageKbps(@Nullable String networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = Input.ofNullable(networkThroughputAverageKbps);
             return this;
         }
 
-        public Builder setNetworkThroughputMaxKbps(@Nullable Input<String> networkThroughputMaxKbps) {
+        public Builder networkThroughputMaxKbps(@Nullable Input<String> networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = networkThroughputMaxKbps;
             return this;
         }
 
-        public Builder setNetworkThroughputMaxKbps(@Nullable String networkThroughputMaxKbps) {
+        public Builder networkThroughputMaxKbps(@Nullable String networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = Input.ofNullable(networkThroughputMaxKbps);
             return this;
         }

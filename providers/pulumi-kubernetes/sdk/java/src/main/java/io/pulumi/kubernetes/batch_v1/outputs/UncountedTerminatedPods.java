@@ -67,12 +67,12 @@ public final class UncountedTerminatedPods {
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder setFailed(@Nullable List<String> failed) {
+        public Builder failed(@Nullable List<String> failed) {
             this.failed = failed;
             return this;
         }
 
-        public Builder setSucceeded(@Nullable List<String> succeeded) {
+        public Builder succeeded(@Nullable List<String> succeeded) {
             this.succeeded = succeeded;
             return this;
         }

@@ -83,17 +83,17 @@ public final class AnimationResponse {
     	      this.animationStatic = defaults.animationStatic;
         }
 
-        public Builder setAnimationEnd(AnimationEndResponse animationEnd) {
+        public Builder animationEnd(AnimationEndResponse animationEnd) {
             this.animationEnd = Objects.requireNonNull(animationEnd);
             return this;
         }
 
-        public Builder setAnimationFade(AnimationFadeResponse animationFade) {
+        public Builder animationFade(AnimationFadeResponse animationFade) {
             this.animationFade = Objects.requireNonNull(animationFade);
             return this;
         }
 
-        public Builder setAnimationStatic(AnimationStaticResponse animationStatic) {
+        public Builder animationStatic(AnimationStaticResponse animationStatic) {
             this.animationStatic = Objects.requireNonNull(animationStatic);
             return this;
         }

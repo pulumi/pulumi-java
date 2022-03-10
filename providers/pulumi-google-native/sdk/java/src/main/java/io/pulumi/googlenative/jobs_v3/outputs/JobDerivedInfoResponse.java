@@ -67,12 +67,12 @@ public final class JobDerivedInfoResponse {
     	      this.locations = defaults.locations;
         }
 
-        public Builder setJobCategories(List<String> jobCategories) {
+        public Builder jobCategories(List<String> jobCategories) {
             this.jobCategories = Objects.requireNonNull(jobCategories);
             return this;
         }
 
-        public Builder setLocations(List<LocationResponse> locations) {
+        public Builder locations(List<LocationResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }

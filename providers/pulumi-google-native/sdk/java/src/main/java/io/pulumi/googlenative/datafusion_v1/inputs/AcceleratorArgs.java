@@ -75,22 +75,22 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setAcceleratorType(@Nullable Input<AcceleratorAcceleratorType> acceleratorType) {
+        public Builder acceleratorType(@Nullable Input<AcceleratorAcceleratorType> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable AcceleratorAcceleratorType acceleratorType) {
+        public Builder acceleratorType(@Nullable AcceleratorAcceleratorType acceleratorType) {
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder setState(@Nullable Input<AcceleratorState> state) {
+        public Builder state(@Nullable Input<AcceleratorState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable AcceleratorState state) {
+        public Builder state(@Nullable AcceleratorState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

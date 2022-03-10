@@ -124,52 +124,52 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setArchiveType(@Nullable Input<AptRepositoryArchiveType> archiveType) {
+        public Builder archiveType(@Nullable Input<AptRepositoryArchiveType> archiveType) {
             this.archiveType = archiveType;
             return this;
         }
 
-        public Builder setArchiveType(@Nullable AptRepositoryArchiveType archiveType) {
+        public Builder archiveType(@Nullable AptRepositoryArchiveType archiveType) {
             this.archiveType = Input.ofNullable(archiveType);
             return this;
         }
 
-        public Builder setComponents(Input<List<String>> components) {
+        public Builder components(Input<List<String>> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
-        public Builder setComponents(List<String> components) {
+        public Builder components(List<String> components) {
             this.components = Input.of(Objects.requireNonNull(components));
             return this;
         }
 
-        public Builder setDistribution(Input<String> distribution) {
+        public Builder distribution(Input<String> distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
 
-        public Builder setDistribution(String distribution) {
+        public Builder distribution(String distribution) {
             this.distribution = Input.of(Objects.requireNonNull(distribution));
             return this;
         }
 
-        public Builder setGpgKey(@Nullable Input<String> gpgKey) {
+        public Builder gpgKey(@Nullable Input<String> gpgKey) {
             this.gpgKey = gpgKey;
             return this;
         }
 
-        public Builder setGpgKey(@Nullable String gpgKey) {
+        public Builder gpgKey(@Nullable String gpgKey) {
             this.gpgKey = Input.ofNullable(gpgKey);
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }

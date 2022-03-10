@@ -111,52 +111,52 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.splitChargeRules = defaults.splitChargeRules;
         }
 
-        public Builder setDefaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Input<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleVersion(Input<CostCategoryRuleVersion> ruleVersion) {
+        public Builder ruleVersion(Input<CostCategoryRuleVersion> ruleVersion) {
             this.ruleVersion = Objects.requireNonNull(ruleVersion);
             return this;
         }
 
-        public Builder setRuleVersion(CostCategoryRuleVersion ruleVersion) {
+        public Builder ruleVersion(CostCategoryRuleVersion ruleVersion) {
             this.ruleVersion = Input.of(Objects.requireNonNull(ruleVersion));
             return this;
         }
 
-        public Builder setRules(Input<String> rules) {
+        public Builder rules(Input<String> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(String rules) {
+        public Builder rules(String rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder setSplitChargeRules(@Nullable Input<String> splitChargeRules) {
+        public Builder splitChargeRules(@Nullable Input<String> splitChargeRules) {
             this.splitChargeRules = splitChargeRules;
             return this;
         }
 
-        public Builder setSplitChargeRules(@Nullable String splitChargeRules) {
+        public Builder splitChargeRules(@Nullable String splitChargeRules) {
             this.splitChargeRules = Input.ofNullable(splitChargeRules);
             return this;
         }

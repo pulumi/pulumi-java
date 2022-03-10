@@ -57,12 +57,12 @@ public final class IapCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iapTestServiceAccountInfo = defaults.iapTestServiceAccountInfo;
         }
 
-        public Builder setIapTestServiceAccountInfo(@Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
+        public Builder iapTestServiceAccountInfo(@Nullable Input<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
             this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
             return this;
         }
 
-        public Builder setIapTestServiceAccountInfo(@Nullable IapTestServiceAccountInfoArgs iapTestServiceAccountInfo) {
+        public Builder iapTestServiceAccountInfo(@Nullable IapTestServiceAccountInfoArgs iapTestServiceAccountInfo) {
             this.iapTestServiceAccountInfo = Input.ofNullable(iapTestServiceAccountInfo);
             return this;
         }

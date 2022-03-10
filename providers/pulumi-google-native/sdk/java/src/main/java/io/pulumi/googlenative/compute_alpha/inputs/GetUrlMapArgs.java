@@ -62,12 +62,12 @@ public final class GetUrlMapArgs extends io.pulumi.resources.InvokeArgs {
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setUrlMap(String urlMap) {
+        public Builder urlMap(String urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }

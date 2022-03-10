@@ -119,52 +119,52 @@ public final class FeatureMembershipState extends io.pulumi.resources.ResourceAr
     	      this.project = defaults.project;
         }
 
-        public Builder setConfigmanagement(@Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement) {
+        public Builder configmanagement(@Nullable Input<FeatureMembershipConfigmanagementGetArgs> configmanagement) {
             this.configmanagement = configmanagement;
             return this;
         }
 
-        public Builder setConfigmanagement(@Nullable FeatureMembershipConfigmanagementGetArgs configmanagement) {
+        public Builder configmanagement(@Nullable FeatureMembershipConfigmanagementGetArgs configmanagement) {
             this.configmanagement = Input.ofNullable(configmanagement);
             return this;
         }
 
-        public Builder setFeature(@Nullable Input<String> feature) {
+        public Builder feature(@Nullable Input<String> feature) {
             this.feature = feature;
             return this;
         }
 
-        public Builder setFeature(@Nullable String feature) {
+        public Builder feature(@Nullable String feature) {
             this.feature = Input.ofNullable(feature);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMembership(@Nullable Input<String> membership) {
+        public Builder membership(@Nullable Input<String> membership) {
             this.membership = membership;
             return this;
         }
 
-        public Builder setMembership(@Nullable String membership) {
+        public Builder membership(@Nullable String membership) {
             this.membership = Input.ofNullable(membership);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

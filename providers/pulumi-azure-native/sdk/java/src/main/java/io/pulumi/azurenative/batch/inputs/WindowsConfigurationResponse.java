@@ -53,7 +53,7 @@ public final class WindowsConfigurationResponse extends io.pulumi.resources.Invo
     	      this.enableAutomaticUpdates = defaults.enableAutomaticUpdates;
         }
 
-        public Builder setEnableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
+        public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }

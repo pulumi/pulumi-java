@@ -84,17 +84,17 @@ public final class OnlineRequestSettingsResponse {
     	      this.requestTimeout = defaults.requestTimeout;
         }
 
-        public Builder setMaxConcurrentRequestsPerInstance(@Nullable Integer maxConcurrentRequestsPerInstance) {
+        public Builder maxConcurrentRequestsPerInstance(@Nullable Integer maxConcurrentRequestsPerInstance) {
             this.maxConcurrentRequestsPerInstance = maxConcurrentRequestsPerInstance;
             return this;
         }
 
-        public Builder setMaxQueueWait(@Nullable String maxQueueWait) {
+        public Builder maxQueueWait(@Nullable String maxQueueWait) {
             this.maxQueueWait = maxQueueWait;
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable String requestTimeout) {
+        public Builder requestTimeout(@Nullable String requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }

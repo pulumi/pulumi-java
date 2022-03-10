@@ -54,12 +54,12 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs exten
     	      this.target = defaults.target;
         }
 
-        public Builder setTarget(Input<Double> target) {
+        public Builder target(Input<Double> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(Double target) {
+        public Builder target(Double target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

@@ -170,82 +170,82 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceUid = defaults.workspaceUid;
         }
 
-        public Builder setEngineType(@Nullable Input<Either<String,EngineType>> engineType) {
+        public Builder engineType(@Nullable Input<Either<String,EngineType>> engineType) {
             this.engineType = engineType;
             return this;
         }
 
-        public Builder setEngineType(@Nullable Either<String,EngineType> engineType) {
+        public Builder engineType(@Nullable Either<String,EngineType> engineType) {
             this.engineType = Input.ofNullable(engineType);
             return this;
         }
 
-        public Builder setKustoPoolName(@Nullable Input<String> kustoPoolName) {
+        public Builder kustoPoolName(@Nullable Input<String> kustoPoolName) {
             this.kustoPoolName = kustoPoolName;
             return this;
         }
 
-        public Builder setKustoPoolName(@Nullable String kustoPoolName) {
+        public Builder kustoPoolName(@Nullable String kustoPoolName) {
             this.kustoPoolName = Input.ofNullable(kustoPoolName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<AzureSkuArgs> sku) {
+        public Builder sku(Input<AzureSkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(AzureSkuArgs sku) {
+        public Builder sku(AzureSkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
 
-        public Builder setWorkspaceUid(@Nullable Input<String> workspaceUid) {
+        public Builder workspaceUid(@Nullable Input<String> workspaceUid) {
             this.workspaceUid = workspaceUid;
             return this;
         }
 
-        public Builder setWorkspaceUid(@Nullable String workspaceUid) {
+        public Builder workspaceUid(@Nullable String workspaceUid) {
             this.workspaceUid = Input.ofNullable(workspaceUid);
             return this;
         }

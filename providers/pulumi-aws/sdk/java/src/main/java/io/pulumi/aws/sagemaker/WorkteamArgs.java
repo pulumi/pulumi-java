@@ -138,62 +138,62 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workteamName = defaults.workteamName;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setMemberDefinitions(Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions) {
+        public Builder memberDefinitions(Input<List<WorkteamMemberDefinitionArgs>> memberDefinitions) {
             this.memberDefinitions = Objects.requireNonNull(memberDefinitions);
             return this;
         }
 
-        public Builder setMemberDefinitions(List<WorkteamMemberDefinitionArgs> memberDefinitions) {
+        public Builder memberDefinitions(List<WorkteamMemberDefinitionArgs> memberDefinitions) {
             this.memberDefinitions = Input.of(Objects.requireNonNull(memberDefinitions));
             return this;
         }
 
-        public Builder setNotificationConfiguration(@Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable Input<WorkteamNotificationConfigurationArgs> notificationConfiguration) {
             this.notificationConfiguration = notificationConfiguration;
             return this;
         }
 
-        public Builder setNotificationConfiguration(@Nullable WorkteamNotificationConfigurationArgs notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable WorkteamNotificationConfigurationArgs notificationConfiguration) {
             this.notificationConfiguration = Input.ofNullable(notificationConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkforceName(Input<String> workforceName) {
+        public Builder workforceName(Input<String> workforceName) {
             this.workforceName = Objects.requireNonNull(workforceName);
             return this;
         }
 
-        public Builder setWorkforceName(String workforceName) {
+        public Builder workforceName(String workforceName) {
             this.workforceName = Input.of(Objects.requireNonNull(workforceName));
             return this;
         }
 
-        public Builder setWorkteamName(Input<String> workteamName) {
+        public Builder workteamName(Input<String> workteamName) {
             this.workteamName = Objects.requireNonNull(workteamName);
             return this;
         }
 
-        public Builder setWorkteamName(String workteamName) {
+        public Builder workteamName(String workteamName) {
             this.workteamName = Input.of(Objects.requireNonNull(workteamName));
             return this;
         }

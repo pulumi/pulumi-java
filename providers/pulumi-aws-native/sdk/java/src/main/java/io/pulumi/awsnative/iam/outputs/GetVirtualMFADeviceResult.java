@@ -61,17 +61,17 @@ public final class GetVirtualMFADeviceResult {
     	      this.users = defaults.users;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VirtualMFADeviceTag> tags) {
+        public Builder tags(@Nullable List<VirtualMFADeviceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<String> users) {
+        public Builder users(@Nullable List<String> users) {
             this.users = users;
             return this;
         }

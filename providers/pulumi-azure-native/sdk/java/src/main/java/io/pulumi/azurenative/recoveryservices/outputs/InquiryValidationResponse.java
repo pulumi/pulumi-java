@@ -84,17 +84,17 @@ public final class InquiryValidationResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setAdditionalDetail(String additionalDetail) {
+        public Builder additionalDetail(String additionalDetail) {
             this.additionalDetail = Objects.requireNonNull(additionalDetail);
             return this;
         }
 
-        public Builder setErrorDetail(@Nullable ErrorDetailResponse errorDetail) {
+        public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

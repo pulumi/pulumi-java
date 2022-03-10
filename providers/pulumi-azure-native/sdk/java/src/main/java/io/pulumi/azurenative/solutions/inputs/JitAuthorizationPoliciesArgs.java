@@ -73,22 +73,22 @@ public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.Reso
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setPrincipalId(Input<String> principalId) {
+        public Builder principalId(Input<String> principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
 
-        public Builder setRoleDefinitionId(Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(Input<String> roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }

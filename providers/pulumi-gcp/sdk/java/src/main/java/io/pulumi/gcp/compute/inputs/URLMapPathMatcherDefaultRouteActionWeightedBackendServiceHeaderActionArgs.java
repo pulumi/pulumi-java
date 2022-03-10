@@ -109,42 +109,42 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
     	      this.responseHeadersToRemoves = defaults.responseHeadersToRemoves;
         }
 
-        public Builder setRequestHeadersToAdds(@Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds) {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
-        public Builder setRequestHeadersToAdds(@Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs> requestHeadersToAdds) {
             this.requestHeadersToAdds = Input.ofNullable(requestHeadersToAdds);
             return this;
         }
 
-        public Builder setRequestHeadersToRemoves(@Nullable Input<List<String>> requestHeadersToRemoves) {
+        public Builder requestHeadersToRemoves(@Nullable Input<List<String>> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
 
-        public Builder setRequestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
+        public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = Input.ofNullable(requestHeadersToRemoves);
             return this;
         }
 
-        public Builder setResponseHeadersToAdds(@Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds) {
+        public Builder responseHeadersToAdds(@Nullable Input<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
 
-        public Builder setResponseHeadersToAdds(@Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs> responseHeadersToAdds) {
+        public Builder responseHeadersToAdds(@Nullable List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs> responseHeadersToAdds) {
             this.responseHeadersToAdds = Input.ofNullable(responseHeadersToAdds);
             return this;
         }
 
-        public Builder setResponseHeadersToRemoves(@Nullable Input<List<String>> responseHeadersToRemoves) {
+        public Builder responseHeadersToRemoves(@Nullable Input<List<String>> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
 
-        public Builder setResponseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
+        public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = Input.ofNullable(responseHeadersToRemoves);
             return this;
         }

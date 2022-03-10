@@ -50,12 +50,12 @@ public final class RegistryCredentialGetArgs extends io.pulumi.resources.Resourc
     	      this.publicKeyCertificate = defaults.publicKeyCertificate;
         }
 
-        public Builder setPublicKeyCertificate(Input<Map<String,Object>> publicKeyCertificate) {
+        public Builder publicKeyCertificate(Input<Map<String,Object>> publicKeyCertificate) {
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }
 
-        public Builder setPublicKeyCertificate(Map<String,Object> publicKeyCertificate) {
+        public Builder publicKeyCertificate(Map<String,Object> publicKeyCertificate) {
             this.publicKeyCertificate = Input.of(Objects.requireNonNull(publicKeyCertificate));
             return this;
         }

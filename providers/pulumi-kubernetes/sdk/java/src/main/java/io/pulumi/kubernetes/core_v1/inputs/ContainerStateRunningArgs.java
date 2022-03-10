@@ -57,12 +57,12 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
     	      this.startedAt = defaults.startedAt;
         }
 
-        public Builder setStartedAt(@Nullable Input<String> startedAt) {
+        public Builder startedAt(@Nullable Input<String> startedAt) {
             this.startedAt = startedAt;
             return this;
         }
 
-        public Builder setStartedAt(@Nullable String startedAt) {
+        public Builder startedAt(@Nullable String startedAt) {
             this.startedAt = Input.ofNullable(startedAt);
             return this;
         }

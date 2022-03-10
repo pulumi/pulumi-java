@@ -187,92 +187,92 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoReplaceOnFailure(@Nullable Input<Boolean> autoReplaceOnFailure) {
+        public Builder autoReplaceOnFailure(@Nullable Input<Boolean> autoReplaceOnFailure) {
             this.autoReplaceOnFailure = autoReplaceOnFailure;
             return this;
         }
 
-        public Builder setAutoReplaceOnFailure(@Nullable Boolean autoReplaceOnFailure) {
+        public Builder autoReplaceOnFailure(@Nullable Boolean autoReplaceOnFailure) {
             this.autoReplaceOnFailure = Input.ofNullable(autoReplaceOnFailure);
             return this;
         }
 
-        public Builder setHostGroupName(Input<String> hostGroupName) {
+        public Builder hostGroupName(Input<String> hostGroupName) {
             this.hostGroupName = Objects.requireNonNull(hostGroupName);
             return this;
         }
 
-        public Builder setHostGroupName(String hostGroupName) {
+        public Builder hostGroupName(String hostGroupName) {
             this.hostGroupName = Input.of(Objects.requireNonNull(hostGroupName));
             return this;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<DedicatedHostLicenseTypes> licenseType) {
+        public Builder licenseType(@Nullable Input<DedicatedHostLicenseTypes> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable DedicatedHostLicenseTypes licenseType) {
+        public Builder licenseType(@Nullable DedicatedHostLicenseTypes licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPlatformFaultDomain(@Nullable Input<Integer> platformFaultDomain) {
+        public Builder platformFaultDomain(@Nullable Input<Integer> platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
 
-        public Builder setPlatformFaultDomain(@Nullable Integer platformFaultDomain) {
+        public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = Input.ofNullable(platformFaultDomain);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

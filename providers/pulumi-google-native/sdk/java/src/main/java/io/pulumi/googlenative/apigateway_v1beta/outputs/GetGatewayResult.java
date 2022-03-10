@@ -162,42 +162,42 @@ public final class GetGatewayResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setApiConfig(String apiConfig) {
+        public Builder apiConfig(String apiConfig) {
             this.apiConfig = Objects.requireNonNull(apiConfig);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDefaultHostname(String defaultHostname) {
+        public Builder defaultHostname(String defaultHostname) {
             this.defaultHostname = Objects.requireNonNull(defaultHostname);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

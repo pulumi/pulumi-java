@@ -75,12 +75,12 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setInfo(@Nullable Object info) {
+        public Builder info(@Nullable Object info) {
             this.info = info;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

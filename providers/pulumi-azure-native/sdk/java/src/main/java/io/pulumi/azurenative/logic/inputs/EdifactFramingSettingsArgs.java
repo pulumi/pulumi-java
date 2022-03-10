@@ -223,112 +223,112 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     	      this.serviceCodeListDirectoryVersion = defaults.serviceCodeListDirectoryVersion;
         }
 
-        public Builder setCharacterEncoding(@Nullable Input<String> characterEncoding) {
+        public Builder characterEncoding(@Nullable Input<String> characterEncoding) {
             this.characterEncoding = characterEncoding;
             return this;
         }
 
-        public Builder setCharacterEncoding(@Nullable String characterEncoding) {
+        public Builder characterEncoding(@Nullable String characterEncoding) {
             this.characterEncoding = Input.ofNullable(characterEncoding);
             return this;
         }
 
-        public Builder setCharacterSet(Input<Either<String,EdifactCharacterSet>> characterSet) {
+        public Builder characterSet(Input<Either<String,EdifactCharacterSet>> characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
 
-        public Builder setCharacterSet(Either<String,EdifactCharacterSet> characterSet) {
+        public Builder characterSet(Either<String,EdifactCharacterSet> characterSet) {
             this.characterSet = Input.of(Objects.requireNonNull(characterSet));
             return this;
         }
 
-        public Builder setComponentSeparator(Input<Integer> componentSeparator) {
+        public Builder componentSeparator(Input<Integer> componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Input.of(Objects.requireNonNull(componentSeparator));
             return this;
         }
 
-        public Builder setDataElementSeparator(Input<Integer> dataElementSeparator) {
+        public Builder dataElementSeparator(Input<Integer> dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Input.of(Objects.requireNonNull(dataElementSeparator));
             return this;
         }
 
-        public Builder setDecimalPointIndicator(Input<EdifactDecimalIndicator> decimalPointIndicator) {
+        public Builder decimalPointIndicator(Input<EdifactDecimalIndicator> decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
 
-        public Builder setDecimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
+        public Builder decimalPointIndicator(EdifactDecimalIndicator decimalPointIndicator) {
             this.decimalPointIndicator = Input.of(Objects.requireNonNull(decimalPointIndicator));
             return this;
         }
 
-        public Builder setProtocolVersion(Input<Integer> protocolVersion) {
+        public Builder protocolVersion(Input<Integer> protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
 
-        public Builder setProtocolVersion(Integer protocolVersion) {
+        public Builder protocolVersion(Integer protocolVersion) {
             this.protocolVersion = Input.of(Objects.requireNonNull(protocolVersion));
             return this;
         }
 
-        public Builder setReleaseIndicator(Input<Integer> releaseIndicator) {
+        public Builder releaseIndicator(Input<Integer> releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
 
-        public Builder setReleaseIndicator(Integer releaseIndicator) {
+        public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Input.of(Objects.requireNonNull(releaseIndicator));
             return this;
         }
 
-        public Builder setRepetitionSeparator(Input<Integer> repetitionSeparator) {
+        public Builder repetitionSeparator(Input<Integer> repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
 
-        public Builder setRepetitionSeparator(Integer repetitionSeparator) {
+        public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Input.of(Objects.requireNonNull(repetitionSeparator));
             return this;
         }
 
-        public Builder setSegmentTerminator(Input<Integer> segmentTerminator) {
+        public Builder segmentTerminator(Input<Integer> segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Input.of(Objects.requireNonNull(segmentTerminator));
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(Input<SegmentTerminatorSuffix> segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(SegmentTerminatorSuffix segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Input.of(Objects.requireNonNull(segmentTerminatorSuffix));
             return this;
         }
 
-        public Builder setServiceCodeListDirectoryVersion(@Nullable Input<String> serviceCodeListDirectoryVersion) {
+        public Builder serviceCodeListDirectoryVersion(@Nullable Input<String> serviceCodeListDirectoryVersion) {
             this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }
 
-        public Builder setServiceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
+        public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
             this.serviceCodeListDirectoryVersion = Input.ofNullable(serviceCodeListDirectoryVersion);
             return this;
         }

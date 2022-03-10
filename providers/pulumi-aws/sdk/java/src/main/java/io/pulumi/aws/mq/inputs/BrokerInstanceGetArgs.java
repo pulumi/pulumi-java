@@ -75,32 +75,32 @@ public final class BrokerInstanceGetArgs extends io.pulumi.resources.ResourceArg
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setConsoleUrl(@Nullable Input<String> consoleUrl) {
+        public Builder consoleUrl(@Nullable Input<String> consoleUrl) {
             this.consoleUrl = consoleUrl;
             return this;
         }
 
-        public Builder setConsoleUrl(@Nullable String consoleUrl) {
+        public Builder consoleUrl(@Nullable String consoleUrl) {
             this.consoleUrl = Input.ofNullable(consoleUrl);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<String>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<String>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<String> endpoints) {
+        public Builder endpoints(@Nullable List<String> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }

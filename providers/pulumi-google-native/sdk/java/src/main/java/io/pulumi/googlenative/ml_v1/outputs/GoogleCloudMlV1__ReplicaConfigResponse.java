@@ -132,32 +132,32 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse {
     	      this.tpuTfVersion = defaults.tpuTfVersion;
         }
 
-        public Builder setAcceleratorConfig(GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig) {
+        public Builder acceleratorConfig(GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig) {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
 
-        public Builder setContainerArgs(List<String> containerArgs) {
+        public Builder containerArgs(List<String> containerArgs) {
             this.containerArgs = Objects.requireNonNull(containerArgs);
             return this;
         }
 
-        public Builder setContainerCommand(List<String> containerCommand) {
+        public Builder containerCommand(List<String> containerCommand) {
             this.containerCommand = Objects.requireNonNull(containerCommand);
             return this;
         }
 
-        public Builder setDiskConfig(GoogleCloudMlV1__DiskConfigResponse diskConfig) {
+        public Builder diskConfig(GoogleCloudMlV1__DiskConfigResponse diskConfig) {
             this.diskConfig = Objects.requireNonNull(diskConfig);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setTpuTfVersion(String tpuTfVersion) {
+        public Builder tpuTfVersion(String tpuTfVersion) {
             this.tpuTfVersion = Objects.requireNonNull(tpuTfVersion);
             return this;
         }

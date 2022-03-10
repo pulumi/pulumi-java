@@ -67,12 +67,12 @@ public final class GetTestResultFileResult {
     	      this.nextLink = defaults.nextLink;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }

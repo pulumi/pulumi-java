@@ -62,12 +62,12 @@ public final class GetScanConfigArgs extends io.pulumi.resources.InvokeArgs {
     	      this.scanConfigId = defaults.scanConfigId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setScanConfigId(String scanConfigId) {
+        public Builder scanConfigId(String scanConfigId) {
             this.scanConfigId = Objects.requireNonNull(scanConfigId);
             return this;
         }

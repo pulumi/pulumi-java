@@ -71,22 +71,22 @@ public final class EndpointConfigurationAsyncInferenceConfigGetArgs extends io.p
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder setClientConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig) {
+        public Builder clientConfig(@Nullable Input<EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs> clientConfig) {
             this.clientConfig = clientConfig;
             return this;
         }
 
-        public Builder setClientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs clientConfig) {
+        public Builder clientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfigGetArgs clientConfig) {
             this.clientConfig = Input.ofNullable(clientConfig);
             return this;
         }
 
-        public Builder setOutputConfig(Input<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig) {
+        public Builder outputConfig(Input<EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
-        public Builder setOutputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs outputConfig) {
+        public Builder outputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfigGetArgs outputConfig) {
             this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
             return this;
         }

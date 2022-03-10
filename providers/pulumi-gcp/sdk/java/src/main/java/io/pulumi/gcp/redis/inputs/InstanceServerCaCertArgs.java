@@ -105,52 +105,52 @@ public final class InstanceServerCaCertArgs extends io.pulumi.resources.Resource
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setCert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Input<String> cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = Input.ofNullable(cert);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable Input<String> serialNumber) {
+        public Builder serialNumber(@Nullable Input<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = Input.ofNullable(serialNumber);
             return this;
         }
 
-        public Builder setSha1Fingerprint(@Nullable Input<String> sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable Input<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
 
-        public Builder setSha1Fingerprint(@Nullable String sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
             return this;
         }

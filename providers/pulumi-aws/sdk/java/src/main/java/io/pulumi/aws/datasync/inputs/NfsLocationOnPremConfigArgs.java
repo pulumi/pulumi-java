@@ -53,12 +53,12 @@ public final class NfsLocationOnPremConfigArgs extends io.pulumi.resources.Resou
     	      this.agentArns = defaults.agentArns;
         }
 
-        public Builder setAgentArns(Input<List<String>> agentArns) {
+        public Builder agentArns(Input<List<String>> agentArns) {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
 
-        public Builder setAgentArns(List<String> agentArns) {
+        public Builder agentArns(List<String> agentArns) {
             this.agentArns = Input.of(Objects.requireNonNull(agentArns));
             return this;
         }

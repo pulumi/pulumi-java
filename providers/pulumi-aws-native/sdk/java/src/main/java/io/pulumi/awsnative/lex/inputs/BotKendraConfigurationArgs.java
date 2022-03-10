@@ -83,32 +83,32 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
     	      this.queryFilterStringEnabled = defaults.queryFilterStringEnabled;
         }
 
-        public Builder setKendraIndex(Input<String> kendraIndex) {
+        public Builder kendraIndex(Input<String> kendraIndex) {
             this.kendraIndex = Objects.requireNonNull(kendraIndex);
             return this;
         }
 
-        public Builder setKendraIndex(String kendraIndex) {
+        public Builder kendraIndex(String kendraIndex) {
             this.kendraIndex = Input.of(Objects.requireNonNull(kendraIndex));
             return this;
         }
 
-        public Builder setQueryFilterString(@Nullable Input<String> queryFilterString) {
+        public Builder queryFilterString(@Nullable Input<String> queryFilterString) {
             this.queryFilterString = queryFilterString;
             return this;
         }
 
-        public Builder setQueryFilterString(@Nullable String queryFilterString) {
+        public Builder queryFilterString(@Nullable String queryFilterString) {
             this.queryFilterString = Input.ofNullable(queryFilterString);
             return this;
         }
 
-        public Builder setQueryFilterStringEnabled(@Nullable Input<Boolean> queryFilterStringEnabled) {
+        public Builder queryFilterStringEnabled(@Nullable Input<Boolean> queryFilterStringEnabled) {
             this.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
         }
 
-        public Builder setQueryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
+        public Builder queryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
             this.queryFilterStringEnabled = Input.ofNullable(queryFilterStringEnabled);
             return this;
         }

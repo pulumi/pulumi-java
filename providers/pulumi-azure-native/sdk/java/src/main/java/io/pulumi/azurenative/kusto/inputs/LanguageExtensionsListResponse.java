@@ -58,7 +58,7 @@ public final class LanguageExtensionsListResponse extends io.pulumi.resources.In
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<LanguageExtensionResponse> value) {
+        public Builder value(@Nullable List<LanguageExtensionResponse> value) {
             this.value = value;
             return this;
         }

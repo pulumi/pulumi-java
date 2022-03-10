@@ -108,42 +108,42 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setAssetId(@Nullable Input<String> assetId) {
+        public Builder assetId(@Nullable Input<String> assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = Input.ofNullable(assetId);
             return this;
         }
 
-        public Builder setInputId(@Nullable Input<String> inputId) {
+        public Builder inputId(@Nullable Input<String> inputId) {
             this.inputId = inputId;
             return this;
         }
 
-        public Builder setInputId(@Nullable String inputId) {
+        public Builder inputId(@Nullable String inputId) {
             this.inputId = Input.ofNullable(inputId);
             return this;
         }
 
-        public Builder setOutputId(@Nullable Input<String> outputId) {
+        public Builder outputId(@Nullable Input<String> outputId) {
             this.outputId = outputId;
             return this;
         }
 
-        public Builder setOutputId(@Nullable String outputId) {
+        public Builder outputId(@Nullable String outputId) {
             this.outputId = Input.ofNullable(outputId);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,WebServiceParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,WebServiceParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

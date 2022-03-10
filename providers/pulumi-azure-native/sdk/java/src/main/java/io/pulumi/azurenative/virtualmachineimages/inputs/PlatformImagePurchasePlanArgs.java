@@ -89,32 +89,32 @@ public final class PlatformImagePurchasePlanArgs extends io.pulumi.resources.Res
     	      this.planPublisher = defaults.planPublisher;
         }
 
-        public Builder setPlanName(Input<String> planName) {
+        public Builder planName(Input<String> planName) {
             this.planName = Objects.requireNonNull(planName);
             return this;
         }
 
-        public Builder setPlanName(String planName) {
+        public Builder planName(String planName) {
             this.planName = Input.of(Objects.requireNonNull(planName));
             return this;
         }
 
-        public Builder setPlanProduct(Input<String> planProduct) {
+        public Builder planProduct(Input<String> planProduct) {
             this.planProduct = Objects.requireNonNull(planProduct);
             return this;
         }
 
-        public Builder setPlanProduct(String planProduct) {
+        public Builder planProduct(String planProduct) {
             this.planProduct = Input.of(Objects.requireNonNull(planProduct));
             return this;
         }
 
-        public Builder setPlanPublisher(Input<String> planPublisher) {
+        public Builder planPublisher(Input<String> planPublisher) {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
         }
 
-        public Builder setPlanPublisher(String planPublisher) {
+        public Builder planPublisher(String planPublisher) {
             this.planPublisher = Input.of(Objects.requireNonNull(planPublisher));
             return this;
         }

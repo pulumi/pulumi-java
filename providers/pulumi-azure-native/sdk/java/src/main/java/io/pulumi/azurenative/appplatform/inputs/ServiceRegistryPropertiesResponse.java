@@ -91,17 +91,17 @@ public final class ServiceRegistryPropertiesResponse extends io.pulumi.resources
     	      this.resourceRequests = defaults.resourceRequests;
         }
 
-        public Builder setInstances(List<ServiceRegistryInstanceResponse> instances) {
+        public Builder instances(List<ServiceRegistryInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceRequests(ServiceRegistryResourceRequestsResponse resourceRequests) {
+        public Builder resourceRequests(ServiceRegistryResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }

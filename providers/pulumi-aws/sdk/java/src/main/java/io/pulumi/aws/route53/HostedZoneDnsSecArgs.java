@@ -70,22 +70,22 @@ public final class HostedZoneDnsSecArgs extends io.pulumi.resources.ResourceArgs
     	      this.signingStatus = defaults.signingStatus;
         }
 
-        public Builder setHostedZoneId(Input<String> hostedZoneId) {
+        public Builder hostedZoneId(Input<String> hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Input.of(Objects.requireNonNull(hostedZoneId));
             return this;
         }
 
-        public Builder setSigningStatus(@Nullable Input<String> signingStatus) {
+        public Builder signingStatus(@Nullable Input<String> signingStatus) {
             this.signingStatus = signingStatus;
             return this;
         }
 
-        public Builder setSigningStatus(@Nullable String signingStatus) {
+        public Builder signingStatus(@Nullable String signingStatus) {
             this.signingStatus = Input.ofNullable(signingStatus);
             return this;
         }

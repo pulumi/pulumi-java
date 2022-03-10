@@ -52,12 +52,12 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

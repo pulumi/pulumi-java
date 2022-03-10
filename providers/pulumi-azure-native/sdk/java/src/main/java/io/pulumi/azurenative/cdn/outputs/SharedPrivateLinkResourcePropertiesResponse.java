@@ -116,27 +116,27 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setPrivateLink(@Nullable ResourceReferenceResponse privateLink) {
+        public Builder privateLink(@Nullable ResourceReferenceResponse privateLink) {
             this.privateLink = privateLink;
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable String privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

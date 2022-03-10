@@ -104,42 +104,42 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.projectName = defaults.projectName;
         }
 
-        public Builder setBranchFilter(@Nullable Input<String> branchFilter) {
+        public Builder branchFilter(@Nullable Input<String> branchFilter) {
             this.branchFilter = branchFilter;
             return this;
         }
 
-        public Builder setBranchFilter(@Nullable String branchFilter) {
+        public Builder branchFilter(@Nullable String branchFilter) {
             this.branchFilter = Input.ofNullable(branchFilter);
             return this;
         }
 
-        public Builder setBuildType(@Nullable Input<String> buildType) {
+        public Builder buildType(@Nullable Input<String> buildType) {
             this.buildType = buildType;
             return this;
         }
 
-        public Builder setBuildType(@Nullable String buildType) {
+        public Builder buildType(@Nullable String buildType) {
             this.buildType = Input.ofNullable(buildType);
             return this;
         }
 
-        public Builder setFilterGroups(@Nullable Input<List<WebhookFilterGroupArgs>> filterGroups) {
+        public Builder filterGroups(@Nullable Input<List<WebhookFilterGroupArgs>> filterGroups) {
             this.filterGroups = filterGroups;
             return this;
         }
 
-        public Builder setFilterGroups(@Nullable List<WebhookFilterGroupArgs> filterGroups) {
+        public Builder filterGroups(@Nullable List<WebhookFilterGroupArgs> filterGroups) {
             this.filterGroups = Input.ofNullable(filterGroups);
             return this;
         }
 
-        public Builder setProjectName(Input<String> projectName) {
+        public Builder projectName(Input<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Input.of(Objects.requireNonNull(projectName));
             return this;
         }

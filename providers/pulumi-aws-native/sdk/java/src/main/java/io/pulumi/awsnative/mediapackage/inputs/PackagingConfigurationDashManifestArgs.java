@@ -118,52 +118,52 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setManifestLayout(@Nullable Input<PackagingConfigurationDashManifestManifestLayout> manifestLayout) {
+        public Builder manifestLayout(@Nullable Input<PackagingConfigurationDashManifestManifestLayout> manifestLayout) {
             this.manifestLayout = manifestLayout;
             return this;
         }
 
-        public Builder setManifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
+        public Builder manifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
             this.manifestLayout = Input.ofNullable(manifestLayout);
             return this;
         }
 
-        public Builder setManifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Input<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Input.ofNullable(manifestName);
             return this;
         }
 
-        public Builder setMinBufferTimeSeconds(@Nullable Input<Integer> minBufferTimeSeconds) {
+        public Builder minBufferTimeSeconds(@Nullable Input<Integer> minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
 
-        public Builder setMinBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
+        public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = Input.ofNullable(minBufferTimeSeconds);
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<PackagingConfigurationDashManifestProfile> profile) {
+        public Builder profile(@Nullable Input<PackagingConfigurationDashManifestProfile> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable PackagingConfigurationDashManifestProfile profile) {
+        public Builder profile(@Nullable PackagingConfigurationDashManifestProfile profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
+        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }

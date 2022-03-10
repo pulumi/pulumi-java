@@ -102,42 +102,42 @@ public final class OrganizationPolicyListPolicyArgs extends io.pulumi.resources.
     	      this.suggestedValue = defaults.suggestedValue;
         }
 
-        public Builder setAllow(@Nullable Input<OrganizationPolicyListPolicyAllowArgs> allow) {
+        public Builder allow(@Nullable Input<OrganizationPolicyListPolicyAllowArgs> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable OrganizationPolicyListPolicyAllowArgs allow) {
+        public Builder allow(@Nullable OrganizationPolicyListPolicyAllowArgs allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }
 
-        public Builder setDeny(@Nullable Input<OrganizationPolicyListPolicyDenyArgs> deny) {
+        public Builder deny(@Nullable Input<OrganizationPolicyListPolicyDenyArgs> deny) {
             this.deny = deny;
             return this;
         }
 
-        public Builder setDeny(@Nullable OrganizationPolicyListPolicyDenyArgs deny) {
+        public Builder deny(@Nullable OrganizationPolicyListPolicyDenyArgs deny) {
             this.deny = Input.ofNullable(deny);
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Input<Boolean> inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Boolean inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = Input.ofNullable(inheritFromParent);
             return this;
         }
 
-        public Builder setSuggestedValue(@Nullable Input<String> suggestedValue) {
+        public Builder suggestedValue(@Nullable Input<String> suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
         }
 
-        public Builder setSuggestedValue(@Nullable String suggestedValue) {
+        public Builder suggestedValue(@Nullable String suggestedValue) {
             this.suggestedValue = Input.ofNullable(suggestedValue);
             return this;
         }

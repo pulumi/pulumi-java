@@ -106,42 +106,42 @@ public final class QuickConnectQuickConnectConfigGetArgs extends io.pulumi.resou
     	      this.userConfigs = defaults.userConfigs;
         }
 
-        public Builder setPhoneConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs) {
+        public Builder phoneConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigPhoneConfigGetArgs>> phoneConfigs) {
             this.phoneConfigs = phoneConfigs;
             return this;
         }
 
-        public Builder setPhoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfigGetArgs> phoneConfigs) {
+        public Builder phoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfigGetArgs> phoneConfigs) {
             this.phoneConfigs = Input.ofNullable(phoneConfigs);
             return this;
         }
 
-        public Builder setQueueConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs) {
+        public Builder queueConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigQueueConfigGetArgs>> queueConfigs) {
             this.queueConfigs = queueConfigs;
             return this;
         }
 
-        public Builder setQueueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfigGetArgs> queueConfigs) {
+        public Builder queueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfigGetArgs> queueConfigs) {
             this.queueConfigs = Input.ofNullable(queueConfigs);
             return this;
         }
 
-        public Builder setQuickConnectType(Input<String> quickConnectType) {
+        public Builder quickConnectType(Input<String> quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
 
-        public Builder setQuickConnectType(String quickConnectType) {
+        public Builder quickConnectType(String quickConnectType) {
             this.quickConnectType = Input.of(Objects.requireNonNull(quickConnectType));
             return this;
         }
 
-        public Builder setUserConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
+        public Builder userConfigs(@Nullable Input<List<QuickConnectQuickConnectConfigUserConfigGetArgs>> userConfigs) {
             this.userConfigs = userConfigs;
             return this;
         }
 
-        public Builder setUserConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfigGetArgs> userConfigs) {
+        public Builder userConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfigGetArgs> userConfigs) {
             this.userConfigs = Input.ofNullable(userConfigs);
             return this;
         }

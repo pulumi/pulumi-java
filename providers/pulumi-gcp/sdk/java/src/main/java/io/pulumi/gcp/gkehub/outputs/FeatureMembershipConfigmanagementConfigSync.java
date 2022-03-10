@@ -70,12 +70,12 @@ public final class FeatureMembershipConfigmanagementConfigSync {
     	      this.sourceFormat = defaults.sourceFormat;
         }
 
-        public Builder setGit(@Nullable FeatureMembershipConfigmanagementConfigSyncGit git) {
+        public Builder git(@Nullable FeatureMembershipConfigmanagementConfigSyncGit git) {
             this.git = git;
             return this;
         }
 
-        public Builder setSourceFormat(@Nullable String sourceFormat) {
+        public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }

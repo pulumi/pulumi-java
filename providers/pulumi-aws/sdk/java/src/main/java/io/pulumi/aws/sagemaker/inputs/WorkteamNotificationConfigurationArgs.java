@@ -53,12 +53,12 @@ public final class WorkteamNotificationConfigurationArgs extends io.pulumi.resou
     	      this.notificationTopicArn = defaults.notificationTopicArn;
         }
 
-        public Builder setNotificationTopicArn(@Nullable Input<String> notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable Input<String> notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }
 
-        public Builder setNotificationTopicArn(@Nullable String notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
             this.notificationTopicArn = Input.ofNullable(notificationTopicArn);
             return this;
         }

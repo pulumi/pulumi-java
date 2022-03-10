@@ -127,62 +127,62 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setIsCluster(@Nullable Input<Boolean> isCluster) {
+        public Builder isCluster(@Nullable Input<Boolean> isCluster) {
             this.isCluster = isCluster;
             return this;
         }
 
-        public Builder setIsCluster(@Nullable Boolean isCluster) {
+        public Builder isCluster(@Nullable Boolean isCluster) {
             this.isCluster = Input.ofNullable(isCluster);
             return this;
         }
 
-        public Builder setParentName(@Nullable Input<String> parentName) {
+        public Builder parentName(@Nullable Input<String> parentName) {
             this.parentName = parentName;
             return this;
         }
 
-        public Builder setParentName(@Nullable String parentName) {
+        public Builder parentName(@Nullable String parentName) {
             this.parentName = Input.ofNullable(parentName);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

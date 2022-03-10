@@ -126,52 +126,52 @@ public final class AndroidTestLoopArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder setAppApk(@Nullable Input<FileReferenceArgs> appApk) {
+        public Builder appApk(@Nullable Input<FileReferenceArgs> appApk) {
             this.appApk = appApk;
             return this;
         }
 
-        public Builder setAppApk(@Nullable FileReferenceArgs appApk) {
+        public Builder appApk(@Nullable FileReferenceArgs appApk) {
             this.appApk = Input.ofNullable(appApk);
             return this;
         }
 
-        public Builder setAppBundle(@Nullable Input<AppBundleArgs> appBundle) {
+        public Builder appBundle(@Nullable Input<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
 
-        public Builder setAppBundle(@Nullable AppBundleArgs appBundle) {
+        public Builder appBundle(@Nullable AppBundleArgs appBundle) {
             this.appBundle = Input.ofNullable(appBundle);
             return this;
         }
 
-        public Builder setAppPackageId(@Nullable Input<String> appPackageId) {
+        public Builder appPackageId(@Nullable Input<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
 
-        public Builder setAppPackageId(@Nullable String appPackageId) {
+        public Builder appPackageId(@Nullable String appPackageId) {
             this.appPackageId = Input.ofNullable(appPackageId);
             return this;
         }
 
-        public Builder setScenarioLabels(@Nullable Input<List<String>> scenarioLabels) {
+        public Builder scenarioLabels(@Nullable Input<List<String>> scenarioLabels) {
             this.scenarioLabels = scenarioLabels;
             return this;
         }
 
-        public Builder setScenarioLabels(@Nullable List<String> scenarioLabels) {
+        public Builder scenarioLabels(@Nullable List<String> scenarioLabels) {
             this.scenarioLabels = Input.ofNullable(scenarioLabels);
             return this;
         }
 
-        public Builder setScenarios(@Nullable Input<List<Integer>> scenarios) {
+        public Builder scenarios(@Nullable Input<List<Integer>> scenarios) {
             this.scenarios = scenarios;
             return this;
         }
 
-        public Builder setScenarios(@Nullable List<Integer> scenarios) {
+        public Builder scenarios(@Nullable List<Integer> scenarios) {
             this.scenarios = Input.ofNullable(scenarios);
             return this;
         }

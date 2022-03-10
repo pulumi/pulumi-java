@@ -178,47 +178,47 @@ public final class GetGithubEnterpriseConfigResult {
     	      this.webhookKey = defaults.webhookKey;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHostUrl(String hostUrl) {
+        public Builder hostUrl(String hostUrl) {
             this.hostUrl = Objects.requireNonNull(hostUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
-        public Builder setSecrets(GitHubEnterpriseSecretsResponse secrets) {
+        public Builder secrets(GitHubEnterpriseSecretsResponse secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
 
-        public Builder setSslCa(String sslCa) {
+        public Builder sslCa(String sslCa) {
             this.sslCa = Objects.requireNonNull(sslCa);
             return this;
         }
 
-        public Builder setWebhookKey(String webhookKey) {
+        public Builder webhookKey(String webhookKey) {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }

@@ -53,12 +53,12 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder setAccessLog(@Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog) {
+        public Builder accessLog(@Nullable Input<VirtualGatewaySpecLoggingAccessLogArgs> accessLog) {
             this.accessLog = accessLog;
             return this;
         }
 
-        public Builder setAccessLog(@Nullable VirtualGatewaySpecLoggingAccessLogArgs accessLog) {
+        public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLogArgs accessLog) {
             this.accessLog = Input.ofNullable(accessLog);
             return this;
         }

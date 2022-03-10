@@ -139,72 +139,72 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceInstance = defaults.sourceInstance;
         }
 
-        public Builder setBackupId(Input<String> backupId) {
+        public Builder backupId(Input<String> backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
-        public Builder setBackupId(String backupId) {
+        public Builder backupId(String backupId) {
             this.backupId = Input.of(Objects.requireNonNull(backupId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSourceFileShare(@Nullable Input<String> sourceFileShare) {
+        public Builder sourceFileShare(@Nullable Input<String> sourceFileShare) {
             this.sourceFileShare = sourceFileShare;
             return this;
         }
 
-        public Builder setSourceFileShare(@Nullable String sourceFileShare) {
+        public Builder sourceFileShare(@Nullable String sourceFileShare) {
             this.sourceFileShare = Input.ofNullable(sourceFileShare);
             return this;
         }
 
-        public Builder setSourceInstance(@Nullable Input<String> sourceInstance) {
+        public Builder sourceInstance(@Nullable Input<String> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
 
-        public Builder setSourceInstance(@Nullable String sourceInstance) {
+        public Builder sourceInstance(@Nullable String sourceInstance) {
             this.sourceInstance = Input.ofNullable(sourceInstance);
             return this;
         }

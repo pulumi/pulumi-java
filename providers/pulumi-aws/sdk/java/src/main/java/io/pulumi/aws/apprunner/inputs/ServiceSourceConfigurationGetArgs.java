@@ -105,42 +105,42 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
     	      this.imageRepository = defaults.imageRepository;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable Input<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Input<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable ServiceSourceConfigurationAuthenticationConfigurationGetArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable ServiceSourceConfigurationAuthenticationConfigurationGetArgs authenticationConfiguration) {
             this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder setAutoDeploymentsEnabled(@Nullable Input<Boolean> autoDeploymentsEnabled) {
+        public Builder autoDeploymentsEnabled(@Nullable Input<Boolean> autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
 
-        public Builder setAutoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
+        public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = Input.ofNullable(autoDeploymentsEnabled);
             return this;
         }
 
-        public Builder setCodeRepository(@Nullable Input<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository) {
+        public Builder codeRepository(@Nullable Input<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
 
-        public Builder setCodeRepository(@Nullable ServiceSourceConfigurationCodeRepositoryGetArgs codeRepository) {
+        public Builder codeRepository(@Nullable ServiceSourceConfigurationCodeRepositoryGetArgs codeRepository) {
             this.codeRepository = Input.ofNullable(codeRepository);
             return this;
         }
 
-        public Builder setImageRepository(@Nullable Input<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
+        public Builder imageRepository(@Nullable Input<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
 
-        public Builder setImageRepository(@Nullable ServiceSourceConfigurationImageRepositoryGetArgs imageRepository) {
+        public Builder imageRepository(@Nullable ServiceSourceConfigurationImageRepositoryGetArgs imageRepository) {
             this.imageRepository = Input.ofNullable(imageRepository);
             return this;
         }

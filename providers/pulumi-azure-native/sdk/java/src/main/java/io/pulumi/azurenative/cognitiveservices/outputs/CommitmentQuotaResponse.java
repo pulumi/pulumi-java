@@ -68,12 +68,12 @@ public final class CommitmentQuotaResponse {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setQuantity(@Nullable Double quantity) {
+        public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }

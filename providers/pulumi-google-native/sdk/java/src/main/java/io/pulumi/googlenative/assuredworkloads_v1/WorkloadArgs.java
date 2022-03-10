@@ -240,132 +240,132 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceSettings = defaults.resourceSettings;
         }
 
-        public Builder setBillingAccount(@Nullable Input<String> billingAccount) {
+        public Builder billingAccount(@Nullable Input<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Input.ofNullable(billingAccount);
             return this;
         }
 
-        public Builder setComplianceRegime(Input<WorkloadComplianceRegime> complianceRegime) {
+        public Builder complianceRegime(Input<WorkloadComplianceRegime> complianceRegime) {
             this.complianceRegime = Objects.requireNonNull(complianceRegime);
             return this;
         }
 
-        public Builder setComplianceRegime(WorkloadComplianceRegime complianceRegime) {
+        public Builder complianceRegime(WorkloadComplianceRegime complianceRegime) {
             this.complianceRegime = Input.of(Objects.requireNonNull(complianceRegime));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnableSovereignControls(@Nullable Input<Boolean> enableSovereignControls) {
+        public Builder enableSovereignControls(@Nullable Input<Boolean> enableSovereignControls) {
             this.enableSovereignControls = enableSovereignControls;
             return this;
         }
 
-        public Builder setEnableSovereignControls(@Nullable Boolean enableSovereignControls) {
+        public Builder enableSovereignControls(@Nullable Boolean enableSovereignControls) {
             this.enableSovereignControls = Input.ofNullable(enableSovereignControls);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setKmsSettings(@Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings) {
+        public Builder kmsSettings(@Nullable Input<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings) {
             this.kmsSettings = kmsSettings;
             return this;
         }
 
-        public Builder setKmsSettings(@Nullable GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs kmsSettings) {
+        public Builder kmsSettings(@Nullable GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs kmsSettings) {
             this.kmsSettings = Input.ofNullable(kmsSettings);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setProvisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable Input<String> provisionedResourcesParent) {
             this.provisionedResourcesParent = provisionedResourcesParent;
             return this;
         }
 
-        public Builder setProvisionedResourcesParent(@Nullable String provisionedResourcesParent) {
+        public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
             this.provisionedResourcesParent = Input.ofNullable(provisionedResourcesParent);
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
+        public Builder resourceSettings(@Nullable Input<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings) {
             this.resourceSettings = resourceSettings;
             return this;
         }
 
-        public Builder setResourceSettings(@Nullable List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs> resourceSettings) {
+        public Builder resourceSettings(@Nullable List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs> resourceSettings) {
             this.resourceSettings = Input.ofNullable(resourceSettings);
             return this;
         }

@@ -58,7 +58,7 @@ public final class UserObjectReceiverValueResponse extends io.pulumi.resources.I
     	      this.userObjectIds = defaults.userObjectIds;
         }
 
-        public Builder setUserObjectIds(@Nullable List<String> userObjectIds) {
+        public Builder userObjectIds(@Nullable List<String> userObjectIds) {
             this.userObjectIds = userObjectIds;
             return this;
         }

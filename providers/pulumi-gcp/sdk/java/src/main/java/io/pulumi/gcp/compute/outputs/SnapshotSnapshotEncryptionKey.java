@@ -109,22 +109,22 @@ public final class SnapshotSnapshotEncryptionKey {
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setSha256(@Nullable String sha256) {
+        public Builder sha256(@Nullable String sha256) {
             this.sha256 = sha256;
             return this;
         }

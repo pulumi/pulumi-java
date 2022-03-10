@@ -78,17 +78,17 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
     	      this.status = defaults.status;
         }
 
-        public Builder setActionRequired(String actionRequired) {
+        public Builder actionRequired(String actionRequired) {
             this.actionRequired = Objects.requireNonNull(actionRequired);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

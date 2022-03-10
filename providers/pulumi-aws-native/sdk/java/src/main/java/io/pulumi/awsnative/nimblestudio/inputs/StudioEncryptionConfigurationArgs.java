@@ -71,22 +71,22 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setKeyArn(@Nullable Input<String> keyArn) {
+        public Builder keyArn(@Nullable Input<String> keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = Input.ofNullable(keyArn);
             return this;
         }
 
-        public Builder setKeyType(Input<StudioEncryptionConfigurationKeyType> keyType) {
+        public Builder keyType(Input<StudioEncryptionConfigurationKeyType> keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
-        public Builder setKeyType(StudioEncryptionConfigurationKeyType keyType) {
+        public Builder keyType(StudioEncryptionConfigurationKeyType keyType) {
             this.keyType = Input.of(Objects.requireNonNull(keyType));
             return this;
         }

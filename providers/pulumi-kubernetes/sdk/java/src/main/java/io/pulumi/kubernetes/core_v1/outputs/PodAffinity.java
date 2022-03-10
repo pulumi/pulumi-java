@@ -68,12 +68,12 @@ public final class PodAffinity {
     	      this.requiredDuringSchedulingIgnoredDuringExecution = defaults.requiredDuringSchedulingIgnoredDuringExecution;
         }
 
-        public Builder setPreferredDuringSchedulingIgnoredDuringExecution(@Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution) {
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
 
-        public Builder setRequiredDuringSchedulingIgnoredDuringExecution(@Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }

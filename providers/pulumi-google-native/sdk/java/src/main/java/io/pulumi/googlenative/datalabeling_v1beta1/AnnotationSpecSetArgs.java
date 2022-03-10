@@ -100,42 +100,42 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
     	      this.project = defaults.project;
         }
 
-        public Builder setAnnotationSpecs(Input<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs) {
+        public Builder annotationSpecs(Input<List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs>> annotationSpecs) {
             this.annotationSpecs = Objects.requireNonNull(annotationSpecs);
             return this;
         }
 
-        public Builder setAnnotationSpecs(List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs> annotationSpecs) {
+        public Builder annotationSpecs(List<GoogleCloudDatalabelingV1beta1AnnotationSpecArgs> annotationSpecs) {
             this.annotationSpecs = Input.of(Objects.requireNonNull(annotationSpecs));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

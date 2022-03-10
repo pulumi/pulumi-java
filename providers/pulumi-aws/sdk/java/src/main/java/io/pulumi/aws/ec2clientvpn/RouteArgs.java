@@ -102,42 +102,42 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetVpcSubnetId = defaults.targetVpcSubnetId;
         }
 
-        public Builder setClientVpnEndpointId(Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(Input<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
 
-        public Builder setClientVpnEndpointId(String clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(String clientVpnEndpointId) {
             this.clientVpnEndpointId = Input.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(String destinationCidrBlock) {
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Input.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
 
-        public Builder setTargetVpcSubnetId(Input<String> targetVpcSubnetId) {
+        public Builder targetVpcSubnetId(Input<String> targetVpcSubnetId) {
             this.targetVpcSubnetId = Objects.requireNonNull(targetVpcSubnetId);
             return this;
         }
 
-        public Builder setTargetVpcSubnetId(String targetVpcSubnetId) {
+        public Builder targetVpcSubnetId(String targetVpcSubnetId) {
             this.targetVpcSubnetId = Input.of(Objects.requireNonNull(targetVpcSubnetId));
             return this;
         }

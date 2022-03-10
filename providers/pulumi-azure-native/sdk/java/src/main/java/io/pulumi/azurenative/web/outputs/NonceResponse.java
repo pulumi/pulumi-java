@@ -68,12 +68,12 @@ public final class NonceResponse {
     	      this.validateNonce = defaults.validateNonce;
         }
 
-        public Builder setNonceExpirationInterval(@Nullable String nonceExpirationInterval) {
+        public Builder nonceExpirationInterval(@Nullable String nonceExpirationInterval) {
             this.nonceExpirationInterval = nonceExpirationInterval;
             return this;
         }
 
-        public Builder setValidateNonce(@Nullable Boolean validateNonce) {
+        public Builder validateNonce(@Nullable Boolean validateNonce) {
             this.validateNonce = validateNonce;
             return this;
         }

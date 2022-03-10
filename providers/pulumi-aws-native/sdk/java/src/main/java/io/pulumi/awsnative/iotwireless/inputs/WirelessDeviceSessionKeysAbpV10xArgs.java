@@ -61,22 +61,22 @@ public final class WirelessDeviceSessionKeysAbpV10xArgs extends io.pulumi.resour
     	      this.nwkSKey = defaults.nwkSKey;
         }
 
-        public Builder setAppSKey(Input<String> appSKey) {
+        public Builder appSKey(Input<String> appSKey) {
             this.appSKey = Objects.requireNonNull(appSKey);
             return this;
         }
 
-        public Builder setAppSKey(String appSKey) {
+        public Builder appSKey(String appSKey) {
             this.appSKey = Input.of(Objects.requireNonNull(appSKey));
             return this;
         }
 
-        public Builder setNwkSKey(Input<String> nwkSKey) {
+        public Builder nwkSKey(Input<String> nwkSKey) {
             this.nwkSKey = Objects.requireNonNull(nwkSKey);
             return this;
         }
 
-        public Builder setNwkSKey(String nwkSKey) {
+        public Builder nwkSKey(String nwkSKey) {
             this.nwkSKey = Input.of(Objects.requireNonNull(nwkSKey));
             return this;
         }

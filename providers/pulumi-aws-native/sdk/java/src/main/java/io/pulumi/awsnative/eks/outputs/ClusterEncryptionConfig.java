@@ -69,12 +69,12 @@ public final class ClusterEncryptionConfig {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setProvider(@Nullable ClusterEncryptionConfigProviderProperties provider) {
+        public Builder provider(@Nullable ClusterEncryptionConfigProviderProperties provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }

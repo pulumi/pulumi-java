@@ -101,22 +101,22 @@ public final class BrokerUser {
     	      this.username = defaults.username;
         }
 
-        public Builder setConsoleAccess(@Nullable Boolean consoleAccess) {
+        public Builder consoleAccess(@Nullable Boolean consoleAccess) {
             this.consoleAccess = consoleAccess;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

@@ -75,17 +75,17 @@ public final class KeyGroupConfig extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

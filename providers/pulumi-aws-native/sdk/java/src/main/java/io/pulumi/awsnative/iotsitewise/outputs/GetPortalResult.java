@@ -196,52 +196,52 @@ public final class GetPortalResult {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAlarms(@Nullable AlarmsProperties alarms) {
+        public Builder alarms(@Nullable AlarmsProperties alarms) {
             this.alarms = alarms;
             return this;
         }
 
-        public Builder setNotificationSenderEmail(@Nullable String notificationSenderEmail) {
+        public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
 
-        public Builder setPortalArn(@Nullable String portalArn) {
+        public Builder portalArn(@Nullable String portalArn) {
             this.portalArn = portalArn;
             return this;
         }
 
-        public Builder setPortalClientId(@Nullable String portalClientId) {
+        public Builder portalClientId(@Nullable String portalClientId) {
             this.portalClientId = portalClientId;
             return this;
         }
 
-        public Builder setPortalContactEmail(@Nullable String portalContactEmail) {
+        public Builder portalContactEmail(@Nullable String portalContactEmail) {
             this.portalContactEmail = portalContactEmail;
             return this;
         }
 
-        public Builder setPortalDescription(@Nullable String portalDescription) {
+        public Builder portalDescription(@Nullable String portalDescription) {
             this.portalDescription = portalDescription;
             return this;
         }
 
-        public Builder setPortalId(@Nullable String portalId) {
+        public Builder portalId(@Nullable String portalId) {
             this.portalId = portalId;
             return this;
         }
 
-        public Builder setPortalName(@Nullable String portalName) {
+        public Builder portalName(@Nullable String portalName) {
             this.portalName = portalName;
             return this;
         }
 
-        public Builder setPortalStartUrl(@Nullable String portalStartUrl) {
+        public Builder portalStartUrl(@Nullable String portalStartUrl) {
             this.portalStartUrl = portalStartUrl;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

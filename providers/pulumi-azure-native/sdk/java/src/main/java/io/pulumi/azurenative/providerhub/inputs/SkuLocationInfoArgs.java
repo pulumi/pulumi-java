@@ -100,52 +100,52 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zones = defaults.zones;
         }
 
-        public Builder setExtendedLocations(@Nullable Input<List<String>> extendedLocations) {
+        public Builder extendedLocations(@Nullable Input<List<String>> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
-        public Builder setExtendedLocations(@Nullable List<String> extendedLocations) {
+        public Builder extendedLocations(@Nullable List<String> extendedLocations) {
             this.extendedLocations = Input.ofNullable(extendedLocations);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setZoneDetails(@Nullable Input<List<SkuZoneDetailArgs>> zoneDetails) {
+        public Builder zoneDetails(@Nullable Input<List<SkuZoneDetailArgs>> zoneDetails) {
             this.zoneDetails = zoneDetails;
             return this;
         }
 
-        public Builder setZoneDetails(@Nullable List<SkuZoneDetailArgs> zoneDetails) {
+        public Builder zoneDetails(@Nullable List<SkuZoneDetailArgs> zoneDetails) {
             this.zoneDetails = Input.ofNullable(zoneDetails);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

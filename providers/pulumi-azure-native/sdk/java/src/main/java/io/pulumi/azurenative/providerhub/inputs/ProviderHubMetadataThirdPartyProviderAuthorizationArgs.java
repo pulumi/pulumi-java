@@ -64,22 +64,22 @@ public final class ProviderHubMetadataThirdPartyProviderAuthorizationArgs extend
     	      this.managedByTenantId = defaults.managedByTenantId;
         }
 
-        public Builder setAuthorizations(@Nullable Input<List<LightHouseAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Input<List<LightHouseAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable List<LightHouseAuthorizationArgs> authorizations) {
+        public Builder authorizations(@Nullable List<LightHouseAuthorizationArgs> authorizations) {
             this.authorizations = Input.ofNullable(authorizations);
             return this;
         }
 
-        public Builder setManagedByTenantId(@Nullable Input<String> managedByTenantId) {
+        public Builder managedByTenantId(@Nullable Input<String> managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
         }
 
-        public Builder setManagedByTenantId(@Nullable String managedByTenantId) {
+        public Builder managedByTenantId(@Nullable String managedByTenantId) {
             this.managedByTenantId = Input.ofNullable(managedByTenantId);
             return this;
         }

@@ -102,42 +102,42 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setAutoPlacement(@Nullable Input<String> autoPlacement) {
+        public Builder autoPlacement(@Nullable Input<String> autoPlacement) {
             this.autoPlacement = autoPlacement;
             return this;
         }
 
-        public Builder setAutoPlacement(@Nullable String autoPlacement) {
+        public Builder autoPlacement(@Nullable String autoPlacement) {
             this.autoPlacement = Input.ofNullable(autoPlacement);
             return this;
         }
 
-        public Builder setAvailabilityZone(Input<String> availabilityZone) {
+        public Builder availabilityZone(Input<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Input.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
 
-        public Builder setHostRecovery(@Nullable Input<String> hostRecovery) {
+        public Builder hostRecovery(@Nullable Input<String> hostRecovery) {
             this.hostRecovery = hostRecovery;
             return this;
         }
 
-        public Builder setHostRecovery(@Nullable String hostRecovery) {
+        public Builder hostRecovery(@Nullable String hostRecovery) {
             this.hostRecovery = Input.ofNullable(hostRecovery);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }

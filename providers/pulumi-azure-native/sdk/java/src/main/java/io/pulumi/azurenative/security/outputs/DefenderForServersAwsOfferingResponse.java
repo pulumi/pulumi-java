@@ -103,22 +103,22 @@ public final class DefenderForServersAwsOfferingResponse {
     	      this.offeringType = defaults.offeringType;
         }
 
-        public Builder setArcAutoProvisioning(@Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning) {
+        public Builder arcAutoProvisioning(@Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning) {
             this.arcAutoProvisioning = arcAutoProvisioning;
             return this;
         }
 
-        public Builder setDefenderForServers(@Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers) {
+        public Builder defenderForServers(@Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers) {
             this.defenderForServers = defenderForServers;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setOfferingType(String offeringType) {
+        public Builder offeringType(String offeringType) {
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }

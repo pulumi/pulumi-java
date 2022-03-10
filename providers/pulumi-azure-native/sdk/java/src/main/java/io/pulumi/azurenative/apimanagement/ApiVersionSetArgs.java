@@ -168,82 +168,82 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versioningScheme = defaults.versioningScheme;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setVersionHeaderName(@Nullable Input<String> versionHeaderName) {
+        public Builder versionHeaderName(@Nullable Input<String> versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
 
-        public Builder setVersionHeaderName(@Nullable String versionHeaderName) {
+        public Builder versionHeaderName(@Nullable String versionHeaderName) {
             this.versionHeaderName = Input.ofNullable(versionHeaderName);
             return this;
         }
 
-        public Builder setVersionQueryName(@Nullable Input<String> versionQueryName) {
+        public Builder versionQueryName(@Nullable Input<String> versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
 
-        public Builder setVersionQueryName(@Nullable String versionQueryName) {
+        public Builder versionQueryName(@Nullable String versionQueryName) {
             this.versionQueryName = Input.ofNullable(versionQueryName);
             return this;
         }
 
-        public Builder setVersionSetId(@Nullable Input<String> versionSetId) {
+        public Builder versionSetId(@Nullable Input<String> versionSetId) {
             this.versionSetId = versionSetId;
             return this;
         }
 
-        public Builder setVersionSetId(@Nullable String versionSetId) {
+        public Builder versionSetId(@Nullable String versionSetId) {
             this.versionSetId = Input.ofNullable(versionSetId);
             return this;
         }
 
-        public Builder setVersioningScheme(Input<Either<String,VersioningScheme>> versioningScheme) {
+        public Builder versioningScheme(Input<Either<String,VersioningScheme>> versioningScheme) {
             this.versioningScheme = Objects.requireNonNull(versioningScheme);
             return this;
         }
 
-        public Builder setVersioningScheme(Either<String,VersioningScheme> versioningScheme) {
+        public Builder versioningScheme(Either<String,VersioningScheme> versioningScheme) {
             this.versioningScheme = Input.of(Objects.requireNonNull(versioningScheme));
             return this;
         }

@@ -56,12 +56,12 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
     	      this.accountNumber = defaults.accountNumber;
         }
 
-        public Builder setAccountNumber(Input<String> accountNumber) {
+        public Builder accountNumber(Input<String> accountNumber) {
             this.accountNumber = Objects.requireNonNull(accountNumber);
             return this;
         }
 
-        public Builder setAccountNumber(String accountNumber) {
+        public Builder accountNumber(String accountNumber) {
             this.accountNumber = Input.of(Objects.requireNonNull(accountNumber));
             return this;
         }

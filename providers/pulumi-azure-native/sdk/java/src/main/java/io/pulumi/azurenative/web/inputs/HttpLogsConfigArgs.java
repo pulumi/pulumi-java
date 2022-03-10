@@ -75,22 +75,22 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileSystem = defaults.fileSystem;
         }
 
-        public Builder setAzureBlobStorage(@Nullable Input<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable Input<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
-        public Builder setAzureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigArgs azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigArgs azureBlobStorage) {
             this.azureBlobStorage = Input.ofNullable(azureBlobStorage);
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Input<FileSystemHttpLogsConfigArgs> fileSystem) {
+        public Builder fileSystem(@Nullable Input<FileSystemHttpLogsConfigArgs> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable FileSystemHttpLogsConfigArgs fileSystem) {
+        public Builder fileSystem(@Nullable FileSystemHttpLogsConfigArgs fileSystem) {
             this.fileSystem = Input.ofNullable(fileSystem);
             return this;
         }

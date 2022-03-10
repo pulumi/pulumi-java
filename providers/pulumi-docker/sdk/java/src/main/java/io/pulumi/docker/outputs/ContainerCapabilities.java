@@ -51,12 +51,12 @@ public final class ContainerCapabilities {
     	      this.drops = defaults.drops;
         }
 
-        public Builder setAdds(@Nullable List<String> adds) {
+        public Builder adds(@Nullable List<String> adds) {
             this.adds = adds;
             return this;
         }
 
-        public Builder setDrops(@Nullable List<String> drops) {
+        public Builder drops(@Nullable List<String> drops) {
             this.drops = drops;
             return this;
         }

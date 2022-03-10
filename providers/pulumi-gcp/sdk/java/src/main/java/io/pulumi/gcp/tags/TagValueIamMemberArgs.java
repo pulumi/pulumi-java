@@ -97,42 +97,42 @@ public final class TagValueIamMemberArgs extends io.pulumi.resources.ResourceArg
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setCondition(@Nullable Input<TagValueIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<TagValueIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable TagValueIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable TagValueIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setTagValue(Input<String> tagValue) {
+        public Builder tagValue(Input<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
-        public Builder setTagValue(String tagValue) {
+        public Builder tagValue(String tagValue) {
             this.tagValue = Input.of(Objects.requireNonNull(tagValue));
             return this;
         }

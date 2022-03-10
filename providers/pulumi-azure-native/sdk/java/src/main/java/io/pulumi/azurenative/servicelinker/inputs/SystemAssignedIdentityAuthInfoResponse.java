@@ -56,7 +56,7 @@ public final class SystemAssignedIdentityAuthInfoResponse extends io.pulumi.reso
     	      this.authType = defaults.authType;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }

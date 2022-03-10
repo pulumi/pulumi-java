@@ -187,92 +187,92 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Input.ofNullable(publicIpAddress);
             return this;
         }
 
-        public Builder setPublicIpAddressId(@Nullable Input<String> publicIpAddressId) {
+        public Builder publicIpAddressId(@Nullable Input<String> publicIpAddressId) {
             this.publicIpAddressId = publicIpAddressId;
             return this;
         }
 
-        public Builder setPublicIpAddressId(@Nullable String publicIpAddressId) {
+        public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             this.publicIpAddressId = Input.ofNullable(publicIpAddressId);
             return this;
         }
 
-        public Builder setRdpAuthority(@Nullable Input<String> rdpAuthority) {
+        public Builder rdpAuthority(@Nullable Input<String> rdpAuthority) {
             this.rdpAuthority = rdpAuthority;
             return this;
         }
 
-        public Builder setRdpAuthority(@Nullable String rdpAuthority) {
+        public Builder rdpAuthority(@Nullable String rdpAuthority) {
             this.rdpAuthority = Input.ofNullable(rdpAuthority);
             return this;
         }
 
-        public Builder setSharedPublicIpAddressConfiguration(@Nullable Input<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
+        public Builder sharedPublicIpAddressConfiguration(@Nullable Input<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
-        public Builder setSharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
+        public Builder sharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = Input.ofNullable(sharedPublicIpAddressConfiguration);
             return this;
         }
 
-        public Builder setSshAuthority(@Nullable Input<String> sshAuthority) {
+        public Builder sshAuthority(@Nullable Input<String> sshAuthority) {
             this.sshAuthority = sshAuthority;
             return this;
         }
 
-        public Builder setSshAuthority(@Nullable String sshAuthority) {
+        public Builder sshAuthority(@Nullable String sshAuthority) {
             this.sshAuthority = Input.ofNullable(sshAuthority);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Input<String> virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Input<String> virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable String virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable String virtualNetworkId) {
             this.virtualNetworkId = Input.ofNullable(virtualNetworkId);
             return this;
         }

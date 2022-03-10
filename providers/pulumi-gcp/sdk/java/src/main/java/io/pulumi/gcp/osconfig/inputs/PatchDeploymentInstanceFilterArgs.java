@@ -125,52 +125,52 @@ public final class PatchDeploymentInstanceFilterArgs extends io.pulumi.resources
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAll(@Nullable Input<Boolean> all) {
+        public Builder all(@Nullable Input<Boolean> all) {
             this.all = all;
             return this;
         }
 
-        public Builder setAll(@Nullable Boolean all) {
+        public Builder all(@Nullable Boolean all) {
             this.all = Input.ofNullable(all);
             return this;
         }
 
-        public Builder setGroupLabels(@Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelArgs>> groupLabels) {
+        public Builder groupLabels(@Nullable Input<List<PatchDeploymentInstanceFilterGroupLabelArgs>> groupLabels) {
             this.groupLabels = groupLabels;
             return this;
         }
 
-        public Builder setGroupLabels(@Nullable List<PatchDeploymentInstanceFilterGroupLabelArgs> groupLabels) {
+        public Builder groupLabels(@Nullable List<PatchDeploymentInstanceFilterGroupLabelArgs> groupLabels) {
             this.groupLabels = Input.ofNullable(groupLabels);
             return this;
         }
 
-        public Builder setInstanceNamePrefixes(@Nullable Input<List<String>> instanceNamePrefixes) {
+        public Builder instanceNamePrefixes(@Nullable Input<List<String>> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
 
-        public Builder setInstanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
+        public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = Input.ofNullable(instanceNamePrefixes);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Input<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<String> instances) {
+        public Builder instances(@Nullable List<String> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

@@ -67,12 +67,12 @@ public final class ListSqlMigrationServiceMonitoringDataResult {
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodes(List<NodeMonitoringDataResponse> nodes) {
+        public Builder nodes(List<NodeMonitoringDataResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }

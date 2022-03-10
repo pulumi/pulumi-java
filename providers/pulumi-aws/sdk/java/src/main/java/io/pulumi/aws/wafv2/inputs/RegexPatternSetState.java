@@ -165,82 +165,82 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLockToken(@Nullable Input<String> lockToken) {
+        public Builder lockToken(@Nullable Input<String> lockToken) {
             this.lockToken = lockToken;
             return this;
         }
 
-        public Builder setLockToken(@Nullable String lockToken) {
+        public Builder lockToken(@Nullable String lockToken) {
             this.lockToken = Input.ofNullable(lockToken);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegularExpressions(@Nullable Input<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions) {
+        public Builder regularExpressions(@Nullable Input<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions) {
             this.regularExpressions = regularExpressions;
             return this;
         }
 
-        public Builder setRegularExpressions(@Nullable List<RegexPatternSetRegularExpressionGetArgs> regularExpressions) {
+        public Builder regularExpressions(@Nullable List<RegexPatternSetRegularExpressionGetArgs> regularExpressions) {
             this.regularExpressions = Input.ofNullable(regularExpressions);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

@@ -98,22 +98,22 @@ public final class IdentityAwareProxyResponse {
     	      this.oauth2ClientSecretSha256 = defaults.oauth2ClientSecretSha256;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setOauth2ClientId(String oauth2ClientId) {
+        public Builder oauth2ClientId(String oauth2ClientId) {
             this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
             return this;
         }
 
-        public Builder setOauth2ClientSecret(String oauth2ClientSecret) {
+        public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
             return this;
         }
 
-        public Builder setOauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
+        public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
         }

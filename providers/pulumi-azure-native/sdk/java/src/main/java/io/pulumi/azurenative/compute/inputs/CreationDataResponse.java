@@ -189,47 +189,47 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
     	      this.uploadSizeBytes = defaults.uploadSizeBytes;
         }
 
-        public Builder setCreateOption(String createOption) {
+        public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setGalleryImageReference(@Nullable ImageDiskReferenceResponse galleryImageReference) {
+        public Builder galleryImageReference(@Nullable ImageDiskReferenceResponse galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
 
-        public Builder setImageReference(@Nullable ImageDiskReferenceResponse imageReference) {
+        public Builder imageReference(@Nullable ImageDiskReferenceResponse imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
-        public Builder setLogicalSectorSize(@Nullable Integer logicalSectorSize) {
+        public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
             this.logicalSectorSize = logicalSectorSize;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setSourceUniqueId(String sourceUniqueId) {
+        public Builder sourceUniqueId(String sourceUniqueId) {
             this.sourceUniqueId = Objects.requireNonNull(sourceUniqueId);
             return this;
         }
 
-        public Builder setSourceUri(@Nullable String sourceUri) {
+        public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setUploadSizeBytes(@Nullable Double uploadSizeBytes) {
+        public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
     	      this.privateStoreId = defaults.privateStoreId;
         }
 
-        public Builder setCollectionId(String collectionId) {
+        public Builder collectionId(String collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
 
-        public Builder setOfferId(String offerId) {
+        public Builder offerId(String offerId) {
             this.offerId = Objects.requireNonNull(offerId);
             return this;
         }
 
-        public Builder setPrivateStoreId(String privateStoreId) {
+        public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }

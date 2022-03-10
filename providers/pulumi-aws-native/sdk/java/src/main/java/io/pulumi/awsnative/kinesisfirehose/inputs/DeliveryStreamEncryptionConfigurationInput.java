@@ -63,12 +63,12 @@ public final class DeliveryStreamEncryptionConfigurationInput extends io.pulumi.
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setKeyARN(@Nullable String keyARN) {
+        public Builder keyARN(@Nullable String keyARN) {
             this.keyARN = keyARN;
             return this;
         }
 
-        public Builder setKeyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
+        public Builder keyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }

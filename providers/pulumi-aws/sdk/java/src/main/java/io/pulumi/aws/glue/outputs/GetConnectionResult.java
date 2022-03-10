@@ -180,52 +180,52 @@ public final class GetConnectionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setConnectionProperties(Map<String,String> connectionProperties) {
+        public Builder connectionProperties(Map<String,String> connectionProperties) {
             this.connectionProperties = Objects.requireNonNull(connectionProperties);
             return this;
         }
 
-        public Builder setConnectionType(String connectionType) {
+        public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMatchCriterias(List<String> matchCriterias) {
+        public Builder matchCriterias(List<String> matchCriterias) {
             this.matchCriterias = Objects.requireNonNull(matchCriterias);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhysicalConnectionRequirements(List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements) {
+        public Builder physicalConnectionRequirements(List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements) {
             this.physicalConnectionRequirements = Objects.requireNonNull(physicalConnectionRequirements);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

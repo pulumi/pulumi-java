@@ -97,22 +97,22 @@ public final class GetHistoryResult {
     	      this.testPlatform = defaults.testPlatform;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTestPlatform(String testPlatform) {
+        public Builder testPlatform(String testPlatform) {
             this.testPlatform = Objects.requireNonNull(testPlatform);
             return this;
         }

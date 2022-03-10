@@ -76,32 +76,32 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
     	      this.tags = defaults.tags;
         }
 
-        public Builder setExcludePaths(@Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths) {
+        public Builder excludePaths(@Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths) {
             this.excludePaths = excludePaths;
             return this;
         }
 
-        public Builder setExcludePaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> excludePaths) {
+        public Builder excludePaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> excludePaths) {
             this.excludePaths = Input.ofNullable(excludePaths);
             return this;
         }
 
-        public Builder setMatchPaths(@Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths) {
+        public Builder matchPaths(@Nullable Input<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths) {
             this.matchPaths = matchPaths;
             return this;
         }
 
-        public Builder setMatchPaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> matchPaths) {
+        public Builder matchPaths(@Nullable List<NetworkInsightsAccessScopeAccessScopePathRequestArgs> matchPaths) {
             this.matchPaths = Input.ofNullable(matchPaths);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<NetworkInsightsAccessScopeTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsAccessScopeTagArgs> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsAccessScopeTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

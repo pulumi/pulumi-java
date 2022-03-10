@@ -59,17 +59,17 @@ public final class GetAssistantAssociationResult {
     	      this.assistantAssociationId = defaults.assistantAssociationId;
         }
 
-        public Builder setAssistantArn(@Nullable String assistantArn) {
+        public Builder assistantArn(@Nullable String assistantArn) {
             this.assistantArn = assistantArn;
             return this;
         }
 
-        public Builder setAssistantAssociationArn(@Nullable String assistantAssociationArn) {
+        public Builder assistantAssociationArn(@Nullable String assistantAssociationArn) {
             this.assistantAssociationArn = assistantAssociationArn;
             return this;
         }
 
-        public Builder setAssistantAssociationId(@Nullable String assistantAssociationId) {
+        public Builder assistantAssociationId(@Nullable String assistantAssociationId) {
             this.assistantAssociationId = assistantAssociationId;
             return this;
         }

@@ -134,32 +134,32 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEndpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
+        public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
+        public Builder networkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -115,27 +115,27 @@ public final class ClusterKerberosAttributes {
     	      this.realm = defaults.realm;
         }
 
-        public Builder setAdDomainJoinPassword(@Nullable String adDomainJoinPassword) {
+        public Builder adDomainJoinPassword(@Nullable String adDomainJoinPassword) {
             this.adDomainJoinPassword = adDomainJoinPassword;
             return this;
         }
 
-        public Builder setAdDomainJoinUser(@Nullable String adDomainJoinUser) {
+        public Builder adDomainJoinUser(@Nullable String adDomainJoinUser) {
             this.adDomainJoinUser = adDomainJoinUser;
             return this;
         }
 
-        public Builder setCrossRealmTrustPrincipalPassword(@Nullable String crossRealmTrustPrincipalPassword) {
+        public Builder crossRealmTrustPrincipalPassword(@Nullable String crossRealmTrustPrincipalPassword) {
             this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;
             return this;
         }
 
-        public Builder setKdcAdminPassword(String kdcAdminPassword) {
+        public Builder kdcAdminPassword(String kdcAdminPassword) {
             this.kdcAdminPassword = Objects.requireNonNull(kdcAdminPassword);
             return this;
         }
 
-        public Builder setRealm(String realm) {
+        public Builder realm(String realm) {
             this.realm = Objects.requireNonNull(realm);
             return this;
         }

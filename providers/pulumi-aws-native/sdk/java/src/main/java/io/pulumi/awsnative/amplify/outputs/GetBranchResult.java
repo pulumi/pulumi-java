@@ -120,52 +120,52 @@ public final class GetBranchResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Boolean enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<BranchEnvironmentVariable> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<BranchEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
-        public Builder setStage(@Nullable BranchStage stage) {
+        public Builder stage(@Nullable BranchStage stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BranchTag> tags) {
+        public Builder tags(@Nullable List<BranchTag> tags) {
             this.tags = tags;
             return this;
         }

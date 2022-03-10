@@ -72,12 +72,12 @@ public final class BuildArtifactResponse extends io.pulumi.resources.InvokeArgs 
     	      this.tag = defaults.tag;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

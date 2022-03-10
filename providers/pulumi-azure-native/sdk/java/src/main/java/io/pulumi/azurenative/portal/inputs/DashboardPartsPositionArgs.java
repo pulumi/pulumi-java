@@ -125,52 +125,52 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     	      this.y = defaults.y;
         }
 
-        public Builder setColSpan(Input<Integer> colSpan) {
+        public Builder colSpan(Input<Integer> colSpan) {
             this.colSpan = Objects.requireNonNull(colSpan);
             return this;
         }
 
-        public Builder setColSpan(Integer colSpan) {
+        public Builder colSpan(Integer colSpan) {
             this.colSpan = Input.of(Objects.requireNonNull(colSpan));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,Object>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,Object> metadata) {
+        public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setRowSpan(Input<Integer> rowSpan) {
+        public Builder rowSpan(Input<Integer> rowSpan) {
             this.rowSpan = Objects.requireNonNull(rowSpan);
             return this;
         }
 
-        public Builder setRowSpan(Integer rowSpan) {
+        public Builder rowSpan(Integer rowSpan) {
             this.rowSpan = Input.of(Objects.requireNonNull(rowSpan));
             return this;
         }
 
-        public Builder setX(Input<Integer> x) {
+        public Builder x(Input<Integer> x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
-        public Builder setX(Integer x) {
+        public Builder x(Integer x) {
             this.x = Input.of(Objects.requireNonNull(x));
             return this;
         }
 
-        public Builder setY(Input<Integer> y) {
+        public Builder y(Input<Integer> y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }
 
-        public Builder setY(Integer y) {
+        public Builder y(Integer y) {
             this.y = Input.of(Objects.requireNonNull(y));
             return this;
         }

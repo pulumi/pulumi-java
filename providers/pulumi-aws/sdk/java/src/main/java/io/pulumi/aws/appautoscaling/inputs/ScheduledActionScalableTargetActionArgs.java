@@ -70,22 +70,22 @@ public final class ScheduledActionScalableTargetActionArgs extends io.pulumi.res
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder setMaxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = Input.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Input<Integer> minCapacity) {
+        public Builder minCapacity(@Nullable Input<Integer> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Integer minCapacity) {
+        public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = Input.ofNullable(minCapacity);
             return this;
         }

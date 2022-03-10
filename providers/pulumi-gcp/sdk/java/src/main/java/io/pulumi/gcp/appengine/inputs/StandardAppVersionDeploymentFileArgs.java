@@ -86,32 +86,32 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
     	      this.sourceUrl = defaults.sourceUrl;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSha1Sum(@Nullable Input<String> sha1Sum) {
+        public Builder sha1Sum(@Nullable Input<String> sha1Sum) {
             this.sha1Sum = sha1Sum;
             return this;
         }
 
-        public Builder setSha1Sum(@Nullable String sha1Sum) {
+        public Builder sha1Sum(@Nullable String sha1Sum) {
             this.sha1Sum = Input.ofNullable(sha1Sum);
             return this;
         }
 
-        public Builder setSourceUrl(Input<String> sourceUrl) {
+        public Builder sourceUrl(Input<String> sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
 
-        public Builder setSourceUrl(String sourceUrl) {
+        public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Input.of(Objects.requireNonNull(sourceUrl));
             return this;
         }

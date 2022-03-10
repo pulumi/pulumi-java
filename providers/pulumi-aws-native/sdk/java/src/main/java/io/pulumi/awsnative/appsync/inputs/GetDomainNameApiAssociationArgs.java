@@ -47,7 +47,7 @@ public final class GetDomainNameApiAssociationArgs extends io.pulumi.resources.I
     	      this.apiAssociationIdentifier = defaults.apiAssociationIdentifier;
         }
 
-        public Builder setApiAssociationIdentifier(String apiAssociationIdentifier) {
+        public Builder apiAssociationIdentifier(String apiAssociationIdentifier) {
             this.apiAssociationIdentifier = Objects.requireNonNull(apiAssociationIdentifier);
             return this;
         }

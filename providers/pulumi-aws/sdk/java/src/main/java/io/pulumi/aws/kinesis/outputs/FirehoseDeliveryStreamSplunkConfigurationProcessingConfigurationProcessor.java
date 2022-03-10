@@ -68,12 +68,12 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter> parameters) {
+        public Builder parameters(@Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessorParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

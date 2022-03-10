@@ -76,22 +76,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowArgs ext
     	      this.dividerAfter = defaults.dividerAfter;
         }
 
-        public Builder setCells(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells) {
+        public Builder cells(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs>> cells) {
             this.cells = cells;
             return this;
         }
 
-        public Builder setCells(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs> cells) {
+        public Builder cells(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellArgs> cells) {
             this.cells = Input.ofNullable(cells);
             return this;
         }
 
-        public Builder setDividerAfter(@Nullable Input<Boolean> dividerAfter) {
+        public Builder dividerAfter(@Nullable Input<Boolean> dividerAfter) {
             this.dividerAfter = dividerAfter;
             return this;
         }
 
-        public Builder setDividerAfter(@Nullable Boolean dividerAfter) {
+        public Builder dividerAfter(@Nullable Boolean dividerAfter) {
             this.dividerAfter = Input.ofNullable(dividerAfter);
             return this;
         }

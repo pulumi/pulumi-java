@@ -50,7 +50,7 @@ public final class GetBuildLogLinkResult {
     	      this.logLink = defaults.logLink;
         }
 
-        public Builder setLogLink(@Nullable String logLink) {
+        public Builder logLink(@Nullable String logLink) {
             this.logLink = logLink;
             return this;
         }

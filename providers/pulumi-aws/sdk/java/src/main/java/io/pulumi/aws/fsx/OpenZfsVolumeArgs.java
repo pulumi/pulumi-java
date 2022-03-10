@@ -249,132 +249,132 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setCopyTagsToSnapshots(@Nullable Input<Boolean> copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Input<Boolean> copyTagsToSnapshots) {
             this.copyTagsToSnapshots = copyTagsToSnapshots;
             return this;
         }
 
-        public Builder setCopyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
             this.copyTagsToSnapshots = Input.ofNullable(copyTagsToSnapshots);
             return this;
         }
 
-        public Builder setDataCompressionType(@Nullable Input<String> dataCompressionType) {
+        public Builder dataCompressionType(@Nullable Input<String> dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
 
-        public Builder setDataCompressionType(@Nullable String dataCompressionType) {
+        public Builder dataCompressionType(@Nullable String dataCompressionType) {
             this.dataCompressionType = Input.ofNullable(dataCompressionType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNfsExports(@Nullable Input<OpenZfsVolumeNfsExportsArgs> nfsExports) {
+        public Builder nfsExports(@Nullable Input<OpenZfsVolumeNfsExportsArgs> nfsExports) {
             this.nfsExports = nfsExports;
             return this;
         }
 
-        public Builder setNfsExports(@Nullable OpenZfsVolumeNfsExportsArgs nfsExports) {
+        public Builder nfsExports(@Nullable OpenZfsVolumeNfsExportsArgs nfsExports) {
             this.nfsExports = Input.ofNullable(nfsExports);
             return this;
         }
 
-        public Builder setOriginSnapshot(@Nullable Input<OpenZfsVolumeOriginSnapshotArgs> originSnapshot) {
+        public Builder originSnapshot(@Nullable Input<OpenZfsVolumeOriginSnapshotArgs> originSnapshot) {
             this.originSnapshot = originSnapshot;
             return this;
         }
 
-        public Builder setOriginSnapshot(@Nullable OpenZfsVolumeOriginSnapshotArgs originSnapshot) {
+        public Builder originSnapshot(@Nullable OpenZfsVolumeOriginSnapshotArgs originSnapshot) {
             this.originSnapshot = Input.ofNullable(originSnapshot);
             return this;
         }
 
-        public Builder setParentVolumeId(Input<String> parentVolumeId) {
+        public Builder parentVolumeId(Input<String> parentVolumeId) {
             this.parentVolumeId = Objects.requireNonNull(parentVolumeId);
             return this;
         }
 
-        public Builder setParentVolumeId(String parentVolumeId) {
+        public Builder parentVolumeId(String parentVolumeId) {
             this.parentVolumeId = Input.of(Objects.requireNonNull(parentVolumeId));
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(@Nullable Input<Integer> storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(@Nullable Input<Integer> storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = storageCapacityQuotaGib;
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(@Nullable Integer storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(@Nullable Integer storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Input.ofNullable(storageCapacityQuotaGib);
             return this;
         }
 
-        public Builder setStorageCapacityReservationGib(@Nullable Input<Integer> storageCapacityReservationGib) {
+        public Builder storageCapacityReservationGib(@Nullable Input<Integer> storageCapacityReservationGib) {
             this.storageCapacityReservationGib = storageCapacityReservationGib;
             return this;
         }
 
-        public Builder setStorageCapacityReservationGib(@Nullable Integer storageCapacityReservationGib) {
+        public Builder storageCapacityReservationGib(@Nullable Integer storageCapacityReservationGib) {
             this.storageCapacityReservationGib = Input.ofNullable(storageCapacityReservationGib);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserAndGroupQuotas(@Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable Input<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas) {
             this.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }
 
-        public Builder setUserAndGroupQuotas(@Nullable List<OpenZfsVolumeUserAndGroupQuotaArgs> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable List<OpenZfsVolumeUserAndGroupQuotaArgs> userAndGroupQuotas) {
             this.userAndGroupQuotas = Input.ofNullable(userAndGroupQuotas);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

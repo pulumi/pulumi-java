@@ -251,132 +251,132 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedBy(@Nullable Input<String> managedBy) {
+        public Builder managedBy(@Nullable Input<String> managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = Input.ofNullable(managedBy);
             return this;
         }
 
-        public Builder setParentResourcePath(Input<String> parentResourcePath) {
+        public Builder parentResourcePath(Input<String> parentResourcePath) {
             this.parentResourcePath = Objects.requireNonNull(parentResourcePath);
             return this;
         }
 
-        public Builder setParentResourcePath(String parentResourcePath) {
+        public Builder parentResourcePath(String parentResourcePath) {
             this.parentResourcePath = Input.of(Objects.requireNonNull(parentResourcePath));
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<PlanArgs> plan) {
+        public Builder plan(@Nullable Input<PlanArgs> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanArgs plan) {
+        public Builder plan(@Nullable PlanArgs plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Input<Object> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Object properties) {
+        public Builder properties(@Nullable Object properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setResourceProviderNamespace(Input<String> resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(Input<String> resourceProviderNamespace) {
             this.resourceProviderNamespace = Objects.requireNonNull(resourceProviderNamespace);
             return this;
         }
 
-        public Builder setResourceProviderNamespace(String resourceProviderNamespace) {
+        public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             this.resourceProviderNamespace = Input.of(Objects.requireNonNull(resourceProviderNamespace));
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

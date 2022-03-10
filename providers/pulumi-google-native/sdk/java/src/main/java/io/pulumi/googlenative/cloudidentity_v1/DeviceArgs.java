@@ -115,52 +115,52 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.wifiMacAddresses = defaults.wifiMacAddresses;
         }
 
-        public Builder setAssetTag(@Nullable Input<String> assetTag) {
+        public Builder assetTag(@Nullable Input<String> assetTag) {
             this.assetTag = assetTag;
             return this;
         }
 
-        public Builder setAssetTag(@Nullable String assetTag) {
+        public Builder assetTag(@Nullable String assetTag) {
             this.assetTag = Input.ofNullable(assetTag);
             return this;
         }
 
-        public Builder setCustomer(@Nullable Input<String> customer) {
+        public Builder customer(@Nullable Input<String> customer) {
             this.customer = customer;
             return this;
         }
 
-        public Builder setCustomer(@Nullable String customer) {
+        public Builder customer(@Nullable String customer) {
             this.customer = Input.ofNullable(customer);
             return this;
         }
 
-        public Builder setLastSyncTime(@Nullable Input<String> lastSyncTime) {
+        public Builder lastSyncTime(@Nullable Input<String> lastSyncTime) {
             this.lastSyncTime = lastSyncTime;
             return this;
         }
 
-        public Builder setLastSyncTime(@Nullable String lastSyncTime) {
+        public Builder lastSyncTime(@Nullable String lastSyncTime) {
             this.lastSyncTime = Input.ofNullable(lastSyncTime);
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable Input<String> serialNumber) {
+        public Builder serialNumber(@Nullable Input<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = Input.ofNullable(serialNumber);
             return this;
         }
 
-        public Builder setWifiMacAddresses(@Nullable Input<List<String>> wifiMacAddresses) {
+        public Builder wifiMacAddresses(@Nullable Input<List<String>> wifiMacAddresses) {
             this.wifiMacAddresses = wifiMacAddresses;
             return this;
         }
 
-        public Builder setWifiMacAddresses(@Nullable List<String> wifiMacAddresses) {
+        public Builder wifiMacAddresses(@Nullable List<String> wifiMacAddresses) {
             this.wifiMacAddresses = Input.ofNullable(wifiMacAddresses);
             return this;
         }

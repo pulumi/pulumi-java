@@ -194,47 +194,47 @@ public final class GetVPCResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setCidrBlockAssociations(@Nullable List<String> cidrBlockAssociations) {
+        public Builder cidrBlockAssociations(@Nullable List<String> cidrBlockAssociations) {
             this.cidrBlockAssociations = cidrBlockAssociations;
             return this;
         }
 
-        public Builder setDefaultNetworkAcl(@Nullable String defaultNetworkAcl) {
+        public Builder defaultNetworkAcl(@Nullable String defaultNetworkAcl) {
             this.defaultNetworkAcl = defaultNetworkAcl;
             return this;
         }
 
-        public Builder setDefaultSecurityGroup(@Nullable String defaultSecurityGroup) {
+        public Builder defaultSecurityGroup(@Nullable String defaultSecurityGroup) {
             this.defaultSecurityGroup = defaultSecurityGroup;
             return this;
         }
 
-        public Builder setEnableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
+        public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
             this.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
 
-        public Builder setEnableDnsSupport(@Nullable Boolean enableDnsSupport) {
+        public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
             this.enableDnsSupport = enableDnsSupport;
             return this;
         }
 
-        public Builder setInstanceTenancy(@Nullable String instanceTenancy) {
+        public Builder instanceTenancy(@Nullable String instanceTenancy) {
             this.instanceTenancy = instanceTenancy;
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VPCTag> tags) {
+        public Builder tags(@Nullable List<VPCTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

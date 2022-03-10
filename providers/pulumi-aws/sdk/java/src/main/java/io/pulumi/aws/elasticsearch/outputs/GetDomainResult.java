@@ -400,117 +400,117 @@ public final class GetDomainResult {
     	      this.vpcOptions = defaults.vpcOptions;
         }
 
-        public Builder setAccessPolicies(String accessPolicies) {
+        public Builder accessPolicies(String accessPolicies) {
             this.accessPolicies = Objects.requireNonNull(accessPolicies);
             return this;
         }
 
-        public Builder setAdvancedOptions(Map<String,String> advancedOptions) {
+        public Builder advancedOptions(Map<String,String> advancedOptions) {
             this.advancedOptions = Objects.requireNonNull(advancedOptions);
             return this;
         }
 
-        public Builder setAdvancedSecurityOptions(List<GetDomainAdvancedSecurityOption> advancedSecurityOptions) {
+        public Builder advancedSecurityOptions(List<GetDomainAdvancedSecurityOption> advancedSecurityOptions) {
             this.advancedSecurityOptions = Objects.requireNonNull(advancedSecurityOptions);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAutoTuneOptions(List<GetDomainAutoTuneOption> autoTuneOptions) {
+        public Builder autoTuneOptions(List<GetDomainAutoTuneOption> autoTuneOptions) {
             this.autoTuneOptions = Objects.requireNonNull(autoTuneOptions);
             return this;
         }
 
-        public Builder setClusterConfigs(List<GetDomainClusterConfig> clusterConfigs) {
+        public Builder clusterConfigs(List<GetDomainClusterConfig> clusterConfigs) {
             this.clusterConfigs = Objects.requireNonNull(clusterConfigs);
             return this;
         }
 
-        public Builder setCognitoOptions(List<GetDomainCognitoOption> cognitoOptions) {
+        public Builder cognitoOptions(List<GetDomainCognitoOption> cognitoOptions) {
             this.cognitoOptions = Objects.requireNonNull(cognitoOptions);
             return this;
         }
 
-        public Builder setCreated(Boolean created) {
+        public Builder created(Boolean created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDeleted(Boolean deleted) {
+        public Builder deleted(Boolean deleted) {
             this.deleted = Objects.requireNonNull(deleted);
             return this;
         }
 
-        public Builder setDomainId(String domainId) {
+        public Builder domainId(String domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setEbsOptions(List<GetDomainEbsOption> ebsOptions) {
+        public Builder ebsOptions(List<GetDomainEbsOption> ebsOptions) {
             this.ebsOptions = Objects.requireNonNull(ebsOptions);
             return this;
         }
 
-        public Builder setElasticsearchVersion(String elasticsearchVersion) {
+        public Builder elasticsearchVersion(String elasticsearchVersion) {
             this.elasticsearchVersion = Objects.requireNonNull(elasticsearchVersion);
             return this;
         }
 
-        public Builder setEncryptionAtRests(List<GetDomainEncryptionAtRest> encryptionAtRests) {
+        public Builder encryptionAtRests(List<GetDomainEncryptionAtRest> encryptionAtRests) {
             this.encryptionAtRests = Objects.requireNonNull(encryptionAtRests);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKibanaEndpoint(String kibanaEndpoint) {
+        public Builder kibanaEndpoint(String kibanaEndpoint) {
             this.kibanaEndpoint = Objects.requireNonNull(kibanaEndpoint);
             return this;
         }
 
-        public Builder setLogPublishingOptions(List<GetDomainLogPublishingOption> logPublishingOptions) {
+        public Builder logPublishingOptions(List<GetDomainLogPublishingOption> logPublishingOptions) {
             this.logPublishingOptions = Objects.requireNonNull(logPublishingOptions);
             return this;
         }
 
-        public Builder setNodeToNodeEncryptions(List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions) {
+        public Builder nodeToNodeEncryptions(List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions) {
             this.nodeToNodeEncryptions = Objects.requireNonNull(nodeToNodeEncryptions);
             return this;
         }
 
-        public Builder setProcessing(Boolean processing) {
+        public Builder processing(Boolean processing) {
             this.processing = Objects.requireNonNull(processing);
             return this;
         }
 
-        public Builder setSnapshotOptions(List<GetDomainSnapshotOption> snapshotOptions) {
+        public Builder snapshotOptions(List<GetDomainSnapshotOption> snapshotOptions) {
             this.snapshotOptions = Objects.requireNonNull(snapshotOptions);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcOptions(List<GetDomainVpcOption> vpcOptions) {
+        public Builder vpcOptions(List<GetDomainVpcOption> vpcOptions) {
             this.vpcOptions = Objects.requireNonNull(vpcOptions);
             return this;
         }

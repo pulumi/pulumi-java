@@ -82,17 +82,17 @@ public final class RecordAlias {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setEvaluateTargetHealth(Boolean evaluateTargetHealth) {
+        public Builder evaluateTargetHealth(Boolean evaluateTargetHealth) {
             this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }

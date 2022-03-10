@@ -60,12 +60,12 @@ public final class ConnectorProfileSalesforceConnectorProfileProperties {
     	      this.isSandboxEnvironment = defaults.isSandboxEnvironment;
         }
 
-        public Builder setInstanceUrl(@Nullable String instanceUrl) {
+        public Builder instanceUrl(@Nullable String instanceUrl) {
             this.instanceUrl = instanceUrl;
             return this;
         }
 
-        public Builder setIsSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
+        public Builder isSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
             this.isSandboxEnvironment = isSandboxEnvironment;
             return this;
         }

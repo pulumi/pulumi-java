@@ -751,412 +751,412 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.validateIssuer = defaults.validateIssuer;
         }
 
-        public Builder setAadClaimsAuthorization(@Nullable Input<String> aadClaimsAuthorization) {
+        public Builder aadClaimsAuthorization(@Nullable Input<String> aadClaimsAuthorization) {
             this.aadClaimsAuthorization = aadClaimsAuthorization;
             return this;
         }
 
-        public Builder setAadClaimsAuthorization(@Nullable String aadClaimsAuthorization) {
+        public Builder aadClaimsAuthorization(@Nullable String aadClaimsAuthorization) {
             this.aadClaimsAuthorization = Input.ofNullable(aadClaimsAuthorization);
             return this;
         }
 
-        public Builder setAdditionalLoginParams(@Nullable Input<List<String>> additionalLoginParams) {
+        public Builder additionalLoginParams(@Nullable Input<List<String>> additionalLoginParams) {
             this.additionalLoginParams = additionalLoginParams;
             return this;
         }
 
-        public Builder setAdditionalLoginParams(@Nullable List<String> additionalLoginParams) {
+        public Builder additionalLoginParams(@Nullable List<String> additionalLoginParams) {
             this.additionalLoginParams = Input.ofNullable(additionalLoginParams);
             return this;
         }
 
-        public Builder setAllowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = Input.ofNullable(allowedAudiences);
             return this;
         }
 
-        public Builder setAllowedExternalRedirectUrls(@Nullable Input<List<String>> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable Input<List<String>> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
-        public Builder setAllowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = Input.ofNullable(allowedExternalRedirectUrls);
             return this;
         }
 
-        public Builder setAuthFilePath(@Nullable Input<String> authFilePath) {
+        public Builder authFilePath(@Nullable Input<String> authFilePath) {
             this.authFilePath = authFilePath;
             return this;
         }
 
-        public Builder setAuthFilePath(@Nullable String authFilePath) {
+        public Builder authFilePath(@Nullable String authFilePath) {
             this.authFilePath = Input.ofNullable(authFilePath);
             return this;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setClientSecretCertificateThumbprint(@Nullable Input<String> clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable Input<String> clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
 
-        public Builder setClientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = Input.ofNullable(clientSecretCertificateThumbprint);
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable String clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = Input.ofNullable(clientSecretSettingName);
             return this;
         }
 
-        public Builder setConfigVersion(@Nullable Input<String> configVersion) {
+        public Builder configVersion(@Nullable Input<String> configVersion) {
             this.configVersion = configVersion;
             return this;
         }
 
-        public Builder setConfigVersion(@Nullable String configVersion) {
+        public Builder configVersion(@Nullable String configVersion) {
             this.configVersion = Input.ofNullable(configVersion);
             return this;
         }
 
-        public Builder setDefaultProvider(@Nullable Input<BuiltInAuthenticationProvider> defaultProvider) {
+        public Builder defaultProvider(@Nullable Input<BuiltInAuthenticationProvider> defaultProvider) {
             this.defaultProvider = defaultProvider;
             return this;
         }
 
-        public Builder setDefaultProvider(@Nullable BuiltInAuthenticationProvider defaultProvider) {
+        public Builder defaultProvider(@Nullable BuiltInAuthenticationProvider defaultProvider) {
             this.defaultProvider = Input.ofNullable(defaultProvider);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFacebookAppId(@Nullable Input<String> facebookAppId) {
+        public Builder facebookAppId(@Nullable Input<String> facebookAppId) {
             this.facebookAppId = facebookAppId;
             return this;
         }
 
-        public Builder setFacebookAppId(@Nullable String facebookAppId) {
+        public Builder facebookAppId(@Nullable String facebookAppId) {
             this.facebookAppId = Input.ofNullable(facebookAppId);
             return this;
         }
 
-        public Builder setFacebookAppSecret(@Nullable Input<String> facebookAppSecret) {
+        public Builder facebookAppSecret(@Nullable Input<String> facebookAppSecret) {
             this.facebookAppSecret = facebookAppSecret;
             return this;
         }
 
-        public Builder setFacebookAppSecret(@Nullable String facebookAppSecret) {
+        public Builder facebookAppSecret(@Nullable String facebookAppSecret) {
             this.facebookAppSecret = Input.ofNullable(facebookAppSecret);
             return this;
         }
 
-        public Builder setFacebookAppSecretSettingName(@Nullable Input<String> facebookAppSecretSettingName) {
+        public Builder facebookAppSecretSettingName(@Nullable Input<String> facebookAppSecretSettingName) {
             this.facebookAppSecretSettingName = facebookAppSecretSettingName;
             return this;
         }
 
-        public Builder setFacebookAppSecretSettingName(@Nullable String facebookAppSecretSettingName) {
+        public Builder facebookAppSecretSettingName(@Nullable String facebookAppSecretSettingName) {
             this.facebookAppSecretSettingName = Input.ofNullable(facebookAppSecretSettingName);
             return this;
         }
 
-        public Builder setFacebookOAuthScopes(@Nullable Input<List<String>> facebookOAuthScopes) {
+        public Builder facebookOAuthScopes(@Nullable Input<List<String>> facebookOAuthScopes) {
             this.facebookOAuthScopes = facebookOAuthScopes;
             return this;
         }
 
-        public Builder setFacebookOAuthScopes(@Nullable List<String> facebookOAuthScopes) {
+        public Builder facebookOAuthScopes(@Nullable List<String> facebookOAuthScopes) {
             this.facebookOAuthScopes = Input.ofNullable(facebookOAuthScopes);
             return this;
         }
 
-        public Builder setGitHubClientId(@Nullable Input<String> gitHubClientId) {
+        public Builder gitHubClientId(@Nullable Input<String> gitHubClientId) {
             this.gitHubClientId = gitHubClientId;
             return this;
         }
 
-        public Builder setGitHubClientId(@Nullable String gitHubClientId) {
+        public Builder gitHubClientId(@Nullable String gitHubClientId) {
             this.gitHubClientId = Input.ofNullable(gitHubClientId);
             return this;
         }
 
-        public Builder setGitHubClientSecret(@Nullable Input<String> gitHubClientSecret) {
+        public Builder gitHubClientSecret(@Nullable Input<String> gitHubClientSecret) {
             this.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
 
-        public Builder setGitHubClientSecret(@Nullable String gitHubClientSecret) {
+        public Builder gitHubClientSecret(@Nullable String gitHubClientSecret) {
             this.gitHubClientSecret = Input.ofNullable(gitHubClientSecret);
             return this;
         }
 
-        public Builder setGitHubClientSecretSettingName(@Nullable Input<String> gitHubClientSecretSettingName) {
+        public Builder gitHubClientSecretSettingName(@Nullable Input<String> gitHubClientSecretSettingName) {
             this.gitHubClientSecretSettingName = gitHubClientSecretSettingName;
             return this;
         }
 
-        public Builder setGitHubClientSecretSettingName(@Nullable String gitHubClientSecretSettingName) {
+        public Builder gitHubClientSecretSettingName(@Nullable String gitHubClientSecretSettingName) {
             this.gitHubClientSecretSettingName = Input.ofNullable(gitHubClientSecretSettingName);
             return this;
         }
 
-        public Builder setGitHubOAuthScopes(@Nullable Input<List<String>> gitHubOAuthScopes) {
+        public Builder gitHubOAuthScopes(@Nullable Input<List<String>> gitHubOAuthScopes) {
             this.gitHubOAuthScopes = gitHubOAuthScopes;
             return this;
         }
 
-        public Builder setGitHubOAuthScopes(@Nullable List<String> gitHubOAuthScopes) {
+        public Builder gitHubOAuthScopes(@Nullable List<String> gitHubOAuthScopes) {
             this.gitHubOAuthScopes = Input.ofNullable(gitHubOAuthScopes);
             return this;
         }
 
-        public Builder setGoogleClientId(@Nullable Input<String> googleClientId) {
+        public Builder googleClientId(@Nullable Input<String> googleClientId) {
             this.googleClientId = googleClientId;
             return this;
         }
 
-        public Builder setGoogleClientId(@Nullable String googleClientId) {
+        public Builder googleClientId(@Nullable String googleClientId) {
             this.googleClientId = Input.ofNullable(googleClientId);
             return this;
         }
 
-        public Builder setGoogleClientSecret(@Nullable Input<String> googleClientSecret) {
+        public Builder googleClientSecret(@Nullable Input<String> googleClientSecret) {
             this.googleClientSecret = googleClientSecret;
             return this;
         }
 
-        public Builder setGoogleClientSecret(@Nullable String googleClientSecret) {
+        public Builder googleClientSecret(@Nullable String googleClientSecret) {
             this.googleClientSecret = Input.ofNullable(googleClientSecret);
             return this;
         }
 
-        public Builder setGoogleClientSecretSettingName(@Nullable Input<String> googleClientSecretSettingName) {
+        public Builder googleClientSecretSettingName(@Nullable Input<String> googleClientSecretSettingName) {
             this.googleClientSecretSettingName = googleClientSecretSettingName;
             return this;
         }
 
-        public Builder setGoogleClientSecretSettingName(@Nullable String googleClientSecretSettingName) {
+        public Builder googleClientSecretSettingName(@Nullable String googleClientSecretSettingName) {
             this.googleClientSecretSettingName = Input.ofNullable(googleClientSecretSettingName);
             return this;
         }
 
-        public Builder setGoogleOAuthScopes(@Nullable Input<List<String>> googleOAuthScopes) {
+        public Builder googleOAuthScopes(@Nullable Input<List<String>> googleOAuthScopes) {
             this.googleOAuthScopes = googleOAuthScopes;
             return this;
         }
 
-        public Builder setGoogleOAuthScopes(@Nullable List<String> googleOAuthScopes) {
+        public Builder googleOAuthScopes(@Nullable List<String> googleOAuthScopes) {
             this.googleOAuthScopes = Input.ofNullable(googleOAuthScopes);
             return this;
         }
 
-        public Builder setIsAuthFromFile(@Nullable Input<String> isAuthFromFile) {
+        public Builder isAuthFromFile(@Nullable Input<String> isAuthFromFile) {
             this.isAuthFromFile = isAuthFromFile;
             return this;
         }
 
-        public Builder setIsAuthFromFile(@Nullable String isAuthFromFile) {
+        public Builder isAuthFromFile(@Nullable String isAuthFromFile) {
             this.isAuthFromFile = Input.ofNullable(isAuthFromFile);
             return this;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMicrosoftAccountClientId(@Nullable Input<String> microsoftAccountClientId) {
+        public Builder microsoftAccountClientId(@Nullable Input<String> microsoftAccountClientId) {
             this.microsoftAccountClientId = microsoftAccountClientId;
             return this;
         }
 
-        public Builder setMicrosoftAccountClientId(@Nullable String microsoftAccountClientId) {
+        public Builder microsoftAccountClientId(@Nullable String microsoftAccountClientId) {
             this.microsoftAccountClientId = Input.ofNullable(microsoftAccountClientId);
             return this;
         }
 
-        public Builder setMicrosoftAccountClientSecret(@Nullable Input<String> microsoftAccountClientSecret) {
+        public Builder microsoftAccountClientSecret(@Nullable Input<String> microsoftAccountClientSecret) {
             this.microsoftAccountClientSecret = microsoftAccountClientSecret;
             return this;
         }
 
-        public Builder setMicrosoftAccountClientSecret(@Nullable String microsoftAccountClientSecret) {
+        public Builder microsoftAccountClientSecret(@Nullable String microsoftAccountClientSecret) {
             this.microsoftAccountClientSecret = Input.ofNullable(microsoftAccountClientSecret);
             return this;
         }
 
-        public Builder setMicrosoftAccountClientSecretSettingName(@Nullable Input<String> microsoftAccountClientSecretSettingName) {
+        public Builder microsoftAccountClientSecretSettingName(@Nullable Input<String> microsoftAccountClientSecretSettingName) {
             this.microsoftAccountClientSecretSettingName = microsoftAccountClientSecretSettingName;
             return this;
         }
 
-        public Builder setMicrosoftAccountClientSecretSettingName(@Nullable String microsoftAccountClientSecretSettingName) {
+        public Builder microsoftAccountClientSecretSettingName(@Nullable String microsoftAccountClientSecretSettingName) {
             this.microsoftAccountClientSecretSettingName = Input.ofNullable(microsoftAccountClientSecretSettingName);
             return this;
         }
 
-        public Builder setMicrosoftAccountOAuthScopes(@Nullable Input<List<String>> microsoftAccountOAuthScopes) {
+        public Builder microsoftAccountOAuthScopes(@Nullable Input<List<String>> microsoftAccountOAuthScopes) {
             this.microsoftAccountOAuthScopes = microsoftAccountOAuthScopes;
             return this;
         }
 
-        public Builder setMicrosoftAccountOAuthScopes(@Nullable List<String> microsoftAccountOAuthScopes) {
+        public Builder microsoftAccountOAuthScopes(@Nullable List<String> microsoftAccountOAuthScopes) {
             this.microsoftAccountOAuthScopes = Input.ofNullable(microsoftAccountOAuthScopes);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = Input.ofNullable(runtimeVersion);
             return this;
         }
 
-        public Builder setTokenRefreshExtensionHours(@Nullable Input<Double> tokenRefreshExtensionHours) {
+        public Builder tokenRefreshExtensionHours(@Nullable Input<Double> tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
 
-        public Builder setTokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
+        public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = Input.ofNullable(tokenRefreshExtensionHours);
             return this;
         }
 
-        public Builder setTokenStoreEnabled(@Nullable Input<Boolean> tokenStoreEnabled) {
+        public Builder tokenStoreEnabled(@Nullable Input<Boolean> tokenStoreEnabled) {
             this.tokenStoreEnabled = tokenStoreEnabled;
             return this;
         }
 
-        public Builder setTokenStoreEnabled(@Nullable Boolean tokenStoreEnabled) {
+        public Builder tokenStoreEnabled(@Nullable Boolean tokenStoreEnabled) {
             this.tokenStoreEnabled = Input.ofNullable(tokenStoreEnabled);
             return this;
         }
 
-        public Builder setTwitterConsumerKey(@Nullable Input<String> twitterConsumerKey) {
+        public Builder twitterConsumerKey(@Nullable Input<String> twitterConsumerKey) {
             this.twitterConsumerKey = twitterConsumerKey;
             return this;
         }
 
-        public Builder setTwitterConsumerKey(@Nullable String twitterConsumerKey) {
+        public Builder twitterConsumerKey(@Nullable String twitterConsumerKey) {
             this.twitterConsumerKey = Input.ofNullable(twitterConsumerKey);
             return this;
         }
 
-        public Builder setTwitterConsumerSecret(@Nullable Input<String> twitterConsumerSecret) {
+        public Builder twitterConsumerSecret(@Nullable Input<String> twitterConsumerSecret) {
             this.twitterConsumerSecret = twitterConsumerSecret;
             return this;
         }
 
-        public Builder setTwitterConsumerSecret(@Nullable String twitterConsumerSecret) {
+        public Builder twitterConsumerSecret(@Nullable String twitterConsumerSecret) {
             this.twitterConsumerSecret = Input.ofNullable(twitterConsumerSecret);
             return this;
         }
 
-        public Builder setTwitterConsumerSecretSettingName(@Nullable Input<String> twitterConsumerSecretSettingName) {
+        public Builder twitterConsumerSecretSettingName(@Nullable Input<String> twitterConsumerSecretSettingName) {
             this.twitterConsumerSecretSettingName = twitterConsumerSecretSettingName;
             return this;
         }
 
-        public Builder setTwitterConsumerSecretSettingName(@Nullable String twitterConsumerSecretSettingName) {
+        public Builder twitterConsumerSecretSettingName(@Nullable String twitterConsumerSecretSettingName) {
             this.twitterConsumerSecretSettingName = Input.ofNullable(twitterConsumerSecretSettingName);
             return this;
         }
 
-        public Builder setUnauthenticatedClientAction(@Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
 
-        public Builder setUnauthenticatedClientAction(@Nullable UnauthenticatedClientAction unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable UnauthenticatedClientAction unauthenticatedClientAction) {
             this.unauthenticatedClientAction = Input.ofNullable(unauthenticatedClientAction);
             return this;
         }
 
-        public Builder setValidateIssuer(@Nullable Input<Boolean> validateIssuer) {
+        public Builder validateIssuer(@Nullable Input<Boolean> validateIssuer) {
             this.validateIssuer = validateIssuer;
             return this;
         }
 
-        public Builder setValidateIssuer(@Nullable Boolean validateIssuer) {
+        public Builder validateIssuer(@Nullable Boolean validateIssuer) {
             this.validateIssuer = Input.ofNullable(validateIssuer);
             return this;
         }

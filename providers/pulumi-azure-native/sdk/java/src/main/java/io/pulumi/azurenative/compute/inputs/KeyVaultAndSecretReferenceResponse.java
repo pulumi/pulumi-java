@@ -73,12 +73,12 @@ public final class KeyVaultAndSecretReferenceResponse extends io.pulumi.resource
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder setSecretUrl(String secretUrl) {
+        public Builder secretUrl(String secretUrl) {
             this.secretUrl = Objects.requireNonNull(secretUrl);
             return this;
         }
 
-        public Builder setSourceVault(SourceVaultResponse sourceVault) {
+        public Builder sourceVault(SourceVaultResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }

@@ -83,17 +83,17 @@ public final class PubSubResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setFilter(FilterResponse filter) {
+        public Builder filter(FilterResponse filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

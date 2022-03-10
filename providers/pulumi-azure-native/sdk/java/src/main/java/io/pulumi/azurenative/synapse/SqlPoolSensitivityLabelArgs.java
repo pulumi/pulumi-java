@@ -227,122 +227,122 @@ public final class SqlPoolSensitivityLabelArgs extends io.pulumi.resources.Resou
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setColumnName(Input<String> columnName) {
+        public Builder columnName(Input<String> columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
-        public Builder setColumnName(String columnName) {
+        public Builder columnName(String columnName) {
             this.columnName = Input.of(Objects.requireNonNull(columnName));
             return this;
         }
 
-        public Builder setInformationType(@Nullable Input<String> informationType) {
+        public Builder informationType(@Nullable Input<String> informationType) {
             this.informationType = informationType;
             return this;
         }
 
-        public Builder setInformationType(@Nullable String informationType) {
+        public Builder informationType(@Nullable String informationType) {
             this.informationType = Input.ofNullable(informationType);
             return this;
         }
 
-        public Builder setInformationTypeId(@Nullable Input<String> informationTypeId) {
+        public Builder informationTypeId(@Nullable Input<String> informationTypeId) {
             this.informationTypeId = informationTypeId;
             return this;
         }
 
-        public Builder setInformationTypeId(@Nullable String informationTypeId) {
+        public Builder informationTypeId(@Nullable String informationTypeId) {
             this.informationTypeId = Input.ofNullable(informationTypeId);
             return this;
         }
 
-        public Builder setLabelId(@Nullable Input<String> labelId) {
+        public Builder labelId(@Nullable Input<String> labelId) {
             this.labelId = labelId;
             return this;
         }
 
-        public Builder setLabelId(@Nullable String labelId) {
+        public Builder labelId(@Nullable String labelId) {
             this.labelId = Input.ofNullable(labelId);
             return this;
         }
 
-        public Builder setLabelName(@Nullable Input<String> labelName) {
+        public Builder labelName(@Nullable Input<String> labelName) {
             this.labelName = labelName;
             return this;
         }
 
-        public Builder setLabelName(@Nullable String labelName) {
+        public Builder labelName(@Nullable String labelName) {
             this.labelName = Input.ofNullable(labelName);
             return this;
         }
 
-        public Builder setRank(@Nullable Input<SensitivityLabelRank> rank) {
+        public Builder rank(@Nullable Input<SensitivityLabelRank> rank) {
             this.rank = rank;
             return this;
         }
 
-        public Builder setRank(@Nullable SensitivityLabelRank rank) {
+        public Builder rank(@Nullable SensitivityLabelRank rank) {
             this.rank = Input.ofNullable(rank);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchemaName(Input<String> schemaName) {
+        public Builder schemaName(Input<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Input.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder setSensitivityLabelSource(@Nullable Input<String> sensitivityLabelSource) {
+        public Builder sensitivityLabelSource(@Nullable Input<String> sensitivityLabelSource) {
             this.sensitivityLabelSource = sensitivityLabelSource;
             return this;
         }
 
-        public Builder setSensitivityLabelSource(@Nullable String sensitivityLabelSource) {
+        public Builder sensitivityLabelSource(@Nullable String sensitivityLabelSource) {
             this.sensitivityLabelSource = Input.ofNullable(sensitivityLabelSource);
             return this;
         }
 
-        public Builder setSqlPoolName(Input<String> sqlPoolName) {
+        public Builder sqlPoolName(Input<String> sqlPoolName) {
             this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
             return this;
         }
 
-        public Builder setSqlPoolName(String sqlPoolName) {
+        public Builder sqlPoolName(String sqlPoolName) {
             this.sqlPoolName = Input.of(Objects.requireNonNull(sqlPoolName));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

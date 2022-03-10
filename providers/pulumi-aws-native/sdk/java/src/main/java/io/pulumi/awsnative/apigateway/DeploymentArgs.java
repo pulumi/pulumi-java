@@ -120,52 +120,52 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setDeploymentCanarySettings(@Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings) {
+        public Builder deploymentCanarySettings(@Nullable Input<DeploymentCanarySettingsArgs> deploymentCanarySettings) {
             this.deploymentCanarySettings = deploymentCanarySettings;
             return this;
         }
 
-        public Builder setDeploymentCanarySettings(@Nullable DeploymentCanarySettingsArgs deploymentCanarySettings) {
+        public Builder deploymentCanarySettings(@Nullable DeploymentCanarySettingsArgs deploymentCanarySettings) {
             this.deploymentCanarySettings = Input.ofNullable(deploymentCanarySettings);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRestApiId(Input<String> restApiId) {
+        public Builder restApiId(Input<String> restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }
 
-        public Builder setStageDescription(@Nullable Input<DeploymentStageDescriptionArgs> stageDescription) {
+        public Builder stageDescription(@Nullable Input<DeploymentStageDescriptionArgs> stageDescription) {
             this.stageDescription = stageDescription;
             return this;
         }
 
-        public Builder setStageDescription(@Nullable DeploymentStageDescriptionArgs stageDescription) {
+        public Builder stageDescription(@Nullable DeploymentStageDescriptionArgs stageDescription) {
             this.stageDescription = Input.ofNullable(stageDescription);
             return this;
         }
 
-        public Builder setStageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Input<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }

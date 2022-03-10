@@ -75,22 +75,22 @@ public final class Oauth2JwtBearerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.jwtClaims = defaults.jwtClaims;
         }
 
-        public Builder setClientKey(@Nullable Input<SecretArgs> clientKey) {
+        public Builder clientKey(@Nullable Input<SecretArgs> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
-        public Builder setClientKey(@Nullable SecretArgs clientKey) {
+        public Builder clientKey(@Nullable SecretArgs clientKey) {
             this.clientKey = Input.ofNullable(clientKey);
             return this;
         }
 
-        public Builder setJwtClaims(@Nullable Input<JwtClaimsArgs> jwtClaims) {
+        public Builder jwtClaims(@Nullable Input<JwtClaimsArgs> jwtClaims) {
             this.jwtClaims = jwtClaims;
             return this;
         }
 
-        public Builder setJwtClaims(@Nullable JwtClaimsArgs jwtClaims) {
+        public Builder jwtClaims(@Nullable JwtClaimsArgs jwtClaims) {
             this.jwtClaims = Input.ofNullable(jwtClaims);
             return this;
         }

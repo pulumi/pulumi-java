@@ -65,12 +65,12 @@ public final class FleetIdentityProvider {
     	      this.type = defaults.type;
         }
 
-        public Builder setSamlMetadata(String samlMetadata) {
+        public Builder samlMetadata(String samlMetadata) {
             this.samlMetadata = Objects.requireNonNull(samlMetadata);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
