@@ -60,17 +60,17 @@ public final class BrokerInstance {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setConsoleUrl(@Nullable String consoleUrl) {
+        public Builder consoleUrl(@Nullable String consoleUrl) {
             this.consoleUrl = consoleUrl;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<String> endpoints) {
+        public Builder endpoints(@Nullable List<String> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }

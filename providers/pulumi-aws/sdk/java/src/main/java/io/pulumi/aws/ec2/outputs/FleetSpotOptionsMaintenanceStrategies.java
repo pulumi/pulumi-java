@@ -50,7 +50,7 @@ public final class FleetSpotOptionsMaintenanceStrategies {
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder setCapacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalance capacityRebalance) {
+        public Builder capacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalance capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }

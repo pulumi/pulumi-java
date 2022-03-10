@@ -102,42 +102,42 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setUniqueId(@Nullable Input<String> uniqueId) {
+        public Builder uniqueId(@Nullable Input<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
 
-        public Builder setUniqueId(@Nullable String uniqueId) {
+        public Builder uniqueId(@Nullable String uniqueId) {
             this.uniqueId = Input.ofNullable(uniqueId);
             return this;
         }

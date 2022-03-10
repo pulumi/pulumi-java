@@ -70,22 +70,22 @@ public final class FeatureGroupFeatureDefinitionGetArgs extends io.pulumi.resour
     	      this.featureType = defaults.featureType;
         }
 
-        public Builder setFeatureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Input<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
-        public Builder setFeatureName(@Nullable String featureName) {
+        public Builder featureName(@Nullable String featureName) {
             this.featureName = Input.ofNullable(featureName);
             return this;
         }
 
-        public Builder setFeatureType(@Nullable Input<String> featureType) {
+        public Builder featureType(@Nullable Input<String> featureType) {
             this.featureType = featureType;
             return this;
         }
 
-        public Builder setFeatureType(@Nullable String featureType) {
+        public Builder featureType(@Nullable String featureType) {
             this.featureType = Input.ofNullable(featureType);
             return this;
         }

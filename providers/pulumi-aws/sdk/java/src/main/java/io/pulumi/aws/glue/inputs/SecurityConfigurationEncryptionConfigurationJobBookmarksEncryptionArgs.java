@@ -70,22 +70,22 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setJobBookmarksEncryptionMode(@Nullable Input<String> jobBookmarksEncryptionMode) {
+        public Builder jobBookmarksEncryptionMode(@Nullable Input<String> jobBookmarksEncryptionMode) {
             this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
             return this;
         }
 
-        public Builder setJobBookmarksEncryptionMode(@Nullable String jobBookmarksEncryptionMode) {
+        public Builder jobBookmarksEncryptionMode(@Nullable String jobBookmarksEncryptionMode) {
             this.jobBookmarksEncryptionMode = Input.ofNullable(jobBookmarksEncryptionMode);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }

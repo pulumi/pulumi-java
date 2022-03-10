@@ -87,32 +87,32 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverrideGetArgs extend
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setLaunchTemplateSpecification(@Nullable Input<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(@Nullable Input<GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs> launchTemplateSpecification) {
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
 
-        public Builder setLaunchTemplateSpecification(@Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(@Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecificationGetArgs launchTemplateSpecification) {
             this.launchTemplateSpecification = Input.ofNullable(launchTemplateSpecification);
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Input<String> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Input<String> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable String weightedCapacity) {
+        public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = Input.ofNullable(weightedCapacity);
             return this;
         }

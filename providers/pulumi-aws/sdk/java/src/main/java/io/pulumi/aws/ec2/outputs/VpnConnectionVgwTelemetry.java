@@ -132,32 +132,32 @@ public final class VpnConnectionVgwTelemetry {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setAcceptedRouteCount(@Nullable Integer acceptedRouteCount) {
+        public Builder acceptedRouteCount(@Nullable Integer acceptedRouteCount) {
             this.acceptedRouteCount = acceptedRouteCount;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setLastStatusChange(@Nullable String lastStatusChange) {
+        public Builder lastStatusChange(@Nullable String lastStatusChange) {
             this.lastStatusChange = lastStatusChange;
             return this;
         }
 
-        public Builder setOutsideIpAddress(@Nullable String outsideIpAddress) {
+        public Builder outsideIpAddress(@Nullable String outsideIpAddress) {
             this.outsideIpAddress = outsideIpAddress;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }

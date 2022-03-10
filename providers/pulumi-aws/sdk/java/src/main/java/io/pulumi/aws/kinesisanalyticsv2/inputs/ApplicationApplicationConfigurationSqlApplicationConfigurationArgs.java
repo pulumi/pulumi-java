@@ -89,32 +89,32 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.referenceDataSource = defaults.referenceDataSource;
         }
 
-        public Builder setInput(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> input) {
+        public Builder input(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs input) {
+        public Builder input(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs> outputs) {
+        public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setReferenceDataSource(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource) {
+        public Builder referenceDataSource(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource) {
             this.referenceDataSource = referenceDataSource;
             return this;
         }
 
-        public Builder setReferenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs referenceDataSource) {
+        public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs referenceDataSource) {
             this.referenceDataSource = Input.ofNullable(referenceDataSource);
             return this;
         }

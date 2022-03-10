@@ -48,7 +48,7 @@ public final class GatewayRouteSpecHttp2RouteMatch {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }

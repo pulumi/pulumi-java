@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustFile {
     	      this.certificateChain = defaults.certificateChain;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }

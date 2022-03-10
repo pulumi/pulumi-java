@@ -97,22 +97,22 @@ public final class GetGroupUser {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

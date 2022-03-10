@@ -69,12 +69,12 @@ public final class JobDefinitionRetryStrategy {
     	      this.evaluateOnExits = defaults.evaluateOnExits;
         }
 
-        public Builder setAttempts(@Nullable Integer attempts) {
+        public Builder attempts(@Nullable Integer attempts) {
             this.attempts = attempts;
             return this;
         }
 
-        public Builder setEvaluateOnExits(@Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits) {
+        public Builder evaluateOnExits(@Nullable List<JobDefinitionRetryStrategyEvaluateOnExit> evaluateOnExits) {
             this.evaluateOnExits = evaluateOnExits;
             return this;
         }

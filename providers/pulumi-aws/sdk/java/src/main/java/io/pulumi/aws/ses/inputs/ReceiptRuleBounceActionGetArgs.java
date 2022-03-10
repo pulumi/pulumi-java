@@ -135,62 +135,62 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setMessage(Input<String> message) {
+        public Builder message(Input<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Input.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder setPosition(Input<Integer> position) {
+        public Builder position(Input<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder setSender(Input<String> sender) {
+        public Builder sender(Input<String> sender) {
             this.sender = Objects.requireNonNull(sender);
             return this;
         }
 
-        public Builder setSender(String sender) {
+        public Builder sender(String sender) {
             this.sender = Input.of(Objects.requireNonNull(sender));
             return this;
         }
 
-        public Builder setSmtpReplyCode(Input<String> smtpReplyCode) {
+        public Builder smtpReplyCode(Input<String> smtpReplyCode) {
             this.smtpReplyCode = Objects.requireNonNull(smtpReplyCode);
             return this;
         }
 
-        public Builder setSmtpReplyCode(String smtpReplyCode) {
+        public Builder smtpReplyCode(String smtpReplyCode) {
             this.smtpReplyCode = Input.of(Objects.requireNonNull(smtpReplyCode));
             return this;
         }
 
-        public Builder setStatusCode(@Nullable Input<String> statusCode) {
+        public Builder statusCode(@Nullable Input<String> statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = Input.ofNullable(statusCode);
             return this;
         }
 
-        public Builder setTopicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Input<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Input.ofNullable(topicArn);
             return this;
         }

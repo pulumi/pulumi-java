@@ -367,212 +367,212 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.token = defaults.token;
         }
 
-        public Builder setAccessKey(@Nullable Input<String> accessKey) {
+        public Builder accessKey(@Nullable Input<String> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setAccessKey(@Nullable String accessKey) {
+        public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Input.ofNullable(accessKey);
             return this;
         }
 
-        public Builder setAllowedAccountIds(@Nullable Input<List<String>> allowedAccountIds) {
+        public Builder allowedAccountIds(@Nullable Input<List<String>> allowedAccountIds) {
             this.allowedAccountIds = allowedAccountIds;
             return this;
         }
 
-        public Builder setAllowedAccountIds(@Nullable List<String> allowedAccountIds) {
+        public Builder allowedAccountIds(@Nullable List<String> allowedAccountIds) {
             this.allowedAccountIds = Input.ofNullable(allowedAccountIds);
             return this;
         }
 
-        public Builder setAssumeRole(@Nullable Input<ProviderAssumeRoleArgs> assumeRole) {
+        public Builder assumeRole(@Nullable Input<ProviderAssumeRoleArgs> assumeRole) {
             this.assumeRole = assumeRole;
             return this;
         }
 
-        public Builder setAssumeRole(@Nullable ProviderAssumeRoleArgs assumeRole) {
+        public Builder assumeRole(@Nullable ProviderAssumeRoleArgs assumeRole) {
             this.assumeRole = Input.ofNullable(assumeRole);
             return this;
         }
 
-        public Builder setDefaultTags(@Nullable Input<ProviderDefaultTagsArgs> defaultTags) {
+        public Builder defaultTags(@Nullable Input<ProviderDefaultTagsArgs> defaultTags) {
             this.defaultTags = defaultTags;
             return this;
         }
 
-        public Builder setDefaultTags(@Nullable ProviderDefaultTagsArgs defaultTags) {
+        public Builder defaultTags(@Nullable ProviderDefaultTagsArgs defaultTags) {
             this.defaultTags = Input.ofNullable(defaultTags);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<List<ProviderEndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Input<List<ProviderEndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<ProviderEndpointArgs> endpoints) {
+        public Builder endpoints(@Nullable List<ProviderEndpointArgs> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setForbiddenAccountIds(@Nullable Input<List<String>> forbiddenAccountIds) {
+        public Builder forbiddenAccountIds(@Nullable Input<List<String>> forbiddenAccountIds) {
             this.forbiddenAccountIds = forbiddenAccountIds;
             return this;
         }
 
-        public Builder setForbiddenAccountIds(@Nullable List<String> forbiddenAccountIds) {
+        public Builder forbiddenAccountIds(@Nullable List<String> forbiddenAccountIds) {
             this.forbiddenAccountIds = Input.ofNullable(forbiddenAccountIds);
             return this;
         }
 
-        public Builder setHttpProxy(@Nullable Input<String> httpProxy) {
+        public Builder httpProxy(@Nullable Input<String> httpProxy) {
             this.httpProxy = httpProxy;
             return this;
         }
 
-        public Builder setHttpProxy(@Nullable String httpProxy) {
+        public Builder httpProxy(@Nullable String httpProxy) {
             this.httpProxy = Input.ofNullable(httpProxy);
             return this;
         }
 
-        public Builder setIgnoreTags(@Nullable Input<ProviderIgnoreTagsArgs> ignoreTags) {
+        public Builder ignoreTags(@Nullable Input<ProviderIgnoreTagsArgs> ignoreTags) {
             this.ignoreTags = ignoreTags;
             return this;
         }
 
-        public Builder setIgnoreTags(@Nullable ProviderIgnoreTagsArgs ignoreTags) {
+        public Builder ignoreTags(@Nullable ProviderIgnoreTagsArgs ignoreTags) {
             this.ignoreTags = Input.ofNullable(ignoreTags);
             return this;
         }
 
-        public Builder setInsecure(@Nullable Input<Boolean> insecure) {
+        public Builder insecure(@Nullable Input<Boolean> insecure) {
             this.insecure = insecure;
             return this;
         }
 
-        public Builder setInsecure(@Nullable Boolean insecure) {
+        public Builder insecure(@Nullable Boolean insecure) {
             this.insecure = Input.ofNullable(insecure);
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Input.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<String> profile) {
+        public Builder profile(@Nullable Input<String> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable String profile) {
+        public Builder profile(@Nullable String profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setS3ForcePathStyle(@Nullable Input<Boolean> s3ForcePathStyle) {
+        public Builder s3ForcePathStyle(@Nullable Input<Boolean> s3ForcePathStyle) {
             this.s3ForcePathStyle = s3ForcePathStyle;
             return this;
         }
 
-        public Builder setS3ForcePathStyle(@Nullable Boolean s3ForcePathStyle) {
+        public Builder s3ForcePathStyle(@Nullable Boolean s3ForcePathStyle) {
             this.s3ForcePathStyle = Input.ofNullable(s3ForcePathStyle);
             return this;
         }
 
-        public Builder setSecretKey(@Nullable Input<String> secretKey) {
+        public Builder secretKey(@Nullable Input<String> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
 
-        public Builder setSecretKey(@Nullable String secretKey) {
+        public Builder secretKey(@Nullable String secretKey) {
             this.secretKey = Input.ofNullable(secretKey);
             return this;
         }
 
-        public Builder setSharedCredentialsFile(@Nullable Input<String> sharedCredentialsFile) {
+        public Builder sharedCredentialsFile(@Nullable Input<String> sharedCredentialsFile) {
             this.sharedCredentialsFile = sharedCredentialsFile;
             return this;
         }
 
-        public Builder setSharedCredentialsFile(@Nullable String sharedCredentialsFile) {
+        public Builder sharedCredentialsFile(@Nullable String sharedCredentialsFile) {
             this.sharedCredentialsFile = Input.ofNullable(sharedCredentialsFile);
             return this;
         }
 
-        public Builder setSkipCredentialsValidation(@Nullable Input<Boolean> skipCredentialsValidation) {
+        public Builder skipCredentialsValidation(@Nullable Input<Boolean> skipCredentialsValidation) {
             this.skipCredentialsValidation = skipCredentialsValidation;
             return this;
         }
 
-        public Builder setSkipCredentialsValidation(@Nullable Boolean skipCredentialsValidation) {
+        public Builder skipCredentialsValidation(@Nullable Boolean skipCredentialsValidation) {
             this.skipCredentialsValidation = Input.ofNullable(skipCredentialsValidation);
             return this;
         }
 
-        public Builder setSkipGetEc2Platforms(@Nullable Input<Boolean> skipGetEc2Platforms) {
+        public Builder skipGetEc2Platforms(@Nullable Input<Boolean> skipGetEc2Platforms) {
             this.skipGetEc2Platforms = skipGetEc2Platforms;
             return this;
         }
 
-        public Builder setSkipGetEc2Platforms(@Nullable Boolean skipGetEc2Platforms) {
+        public Builder skipGetEc2Platforms(@Nullable Boolean skipGetEc2Platforms) {
             this.skipGetEc2Platforms = Input.ofNullable(skipGetEc2Platforms);
             return this;
         }
 
-        public Builder setSkipMetadataApiCheck(@Nullable Input<Boolean> skipMetadataApiCheck) {
+        public Builder skipMetadataApiCheck(@Nullable Input<Boolean> skipMetadataApiCheck) {
             this.skipMetadataApiCheck = skipMetadataApiCheck;
             return this;
         }
 
-        public Builder setSkipMetadataApiCheck(@Nullable Boolean skipMetadataApiCheck) {
+        public Builder skipMetadataApiCheck(@Nullable Boolean skipMetadataApiCheck) {
             this.skipMetadataApiCheck = Input.ofNullable(skipMetadataApiCheck);
             return this;
         }
 
-        public Builder setSkipRegionValidation(@Nullable Input<Boolean> skipRegionValidation) {
+        public Builder skipRegionValidation(@Nullable Input<Boolean> skipRegionValidation) {
             this.skipRegionValidation = skipRegionValidation;
             return this;
         }
 
-        public Builder setSkipRegionValidation(@Nullable Boolean skipRegionValidation) {
+        public Builder skipRegionValidation(@Nullable Boolean skipRegionValidation) {
             this.skipRegionValidation = Input.ofNullable(skipRegionValidation);
             return this;
         }
 
-        public Builder setSkipRequestingAccountId(@Nullable Input<Boolean> skipRequestingAccountId) {
+        public Builder skipRequestingAccountId(@Nullable Input<Boolean> skipRequestingAccountId) {
             this.skipRequestingAccountId = skipRequestingAccountId;
             return this;
         }
 
-        public Builder setSkipRequestingAccountId(@Nullable Boolean skipRequestingAccountId) {
+        public Builder skipRequestingAccountId(@Nullable Boolean skipRequestingAccountId) {
             this.skipRequestingAccountId = Input.ofNullable(skipRequestingAccountId);
             return this;
         }
 
-        public Builder setToken(@Nullable Input<String> token) {
+        public Builder token(@Nullable Input<String> token) {
             this.token = token;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = Input.ofNullable(token);
             return this;
         }

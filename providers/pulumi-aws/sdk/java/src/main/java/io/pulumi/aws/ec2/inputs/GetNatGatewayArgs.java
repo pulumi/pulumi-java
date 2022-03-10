@@ -138,32 +138,32 @@ public final class GetNatGatewayArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setFilters(@Nullable List<GetNatGatewayFilter> filters) {
+        public Builder filters(@Nullable List<GetNatGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

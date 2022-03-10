@@ -222,112 +222,112 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBrokerNodeGroupInfo(Input<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo) {
+        public Builder brokerNodeGroupInfo(Input<ClusterBrokerNodeGroupInfoArgs> brokerNodeGroupInfo) {
             this.brokerNodeGroupInfo = Objects.requireNonNull(brokerNodeGroupInfo);
             return this;
         }
 
-        public Builder setBrokerNodeGroupInfo(ClusterBrokerNodeGroupInfoArgs brokerNodeGroupInfo) {
+        public Builder brokerNodeGroupInfo(ClusterBrokerNodeGroupInfoArgs brokerNodeGroupInfo) {
             this.brokerNodeGroupInfo = Input.of(Objects.requireNonNull(brokerNodeGroupInfo));
             return this;
         }
 
-        public Builder setClientAuthentication(@Nullable Input<ClusterClientAuthenticationArgs> clientAuthentication) {
+        public Builder clientAuthentication(@Nullable Input<ClusterClientAuthenticationArgs> clientAuthentication) {
             this.clientAuthentication = clientAuthentication;
             return this;
         }
 
-        public Builder setClientAuthentication(@Nullable ClusterClientAuthenticationArgs clientAuthentication) {
+        public Builder clientAuthentication(@Nullable ClusterClientAuthenticationArgs clientAuthentication) {
             this.clientAuthentication = Input.ofNullable(clientAuthentication);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setConfigurationInfo(@Nullable Input<ClusterConfigurationInfoArgs> configurationInfo) {
+        public Builder configurationInfo(@Nullable Input<ClusterConfigurationInfoArgs> configurationInfo) {
             this.configurationInfo = configurationInfo;
             return this;
         }
 
-        public Builder setConfigurationInfo(@Nullable ClusterConfigurationInfoArgs configurationInfo) {
+        public Builder configurationInfo(@Nullable ClusterConfigurationInfoArgs configurationInfo) {
             this.configurationInfo = Input.ofNullable(configurationInfo);
             return this;
         }
 
-        public Builder setEncryptionInfo(@Nullable Input<ClusterEncryptionInfoArgs> encryptionInfo) {
+        public Builder encryptionInfo(@Nullable Input<ClusterEncryptionInfoArgs> encryptionInfo) {
             this.encryptionInfo = encryptionInfo;
             return this;
         }
 
-        public Builder setEncryptionInfo(@Nullable ClusterEncryptionInfoArgs encryptionInfo) {
+        public Builder encryptionInfo(@Nullable ClusterEncryptionInfoArgs encryptionInfo) {
             this.encryptionInfo = Input.ofNullable(encryptionInfo);
             return this;
         }
 
-        public Builder setEnhancedMonitoring(@Nullable Input<String> enhancedMonitoring) {
+        public Builder enhancedMonitoring(@Nullable Input<String> enhancedMonitoring) {
             this.enhancedMonitoring = enhancedMonitoring;
             return this;
         }
 
-        public Builder setEnhancedMonitoring(@Nullable String enhancedMonitoring) {
+        public Builder enhancedMonitoring(@Nullable String enhancedMonitoring) {
             this.enhancedMonitoring = Input.ofNullable(enhancedMonitoring);
             return this;
         }
 
-        public Builder setKafkaVersion(Input<String> kafkaVersion) {
+        public Builder kafkaVersion(Input<String> kafkaVersion) {
             this.kafkaVersion = Objects.requireNonNull(kafkaVersion);
             return this;
         }
 
-        public Builder setKafkaVersion(String kafkaVersion) {
+        public Builder kafkaVersion(String kafkaVersion) {
             this.kafkaVersion = Input.of(Objects.requireNonNull(kafkaVersion));
             return this;
         }
 
-        public Builder setLoggingInfo(@Nullable Input<ClusterLoggingInfoArgs> loggingInfo) {
+        public Builder loggingInfo(@Nullable Input<ClusterLoggingInfoArgs> loggingInfo) {
             this.loggingInfo = loggingInfo;
             return this;
         }
 
-        public Builder setLoggingInfo(@Nullable ClusterLoggingInfoArgs loggingInfo) {
+        public Builder loggingInfo(@Nullable ClusterLoggingInfoArgs loggingInfo) {
             this.loggingInfo = Input.ofNullable(loggingInfo);
             return this;
         }
 
-        public Builder setNumberOfBrokerNodes(Input<Integer> numberOfBrokerNodes) {
+        public Builder numberOfBrokerNodes(Input<Integer> numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Objects.requireNonNull(numberOfBrokerNodes);
             return this;
         }
 
-        public Builder setNumberOfBrokerNodes(Integer numberOfBrokerNodes) {
+        public Builder numberOfBrokerNodes(Integer numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Input.of(Objects.requireNonNull(numberOfBrokerNodes));
             return this;
         }
 
-        public Builder setOpenMonitoring(@Nullable Input<ClusterOpenMonitoringArgs> openMonitoring) {
+        public Builder openMonitoring(@Nullable Input<ClusterOpenMonitoringArgs> openMonitoring) {
             this.openMonitoring = openMonitoring;
             return this;
         }
 
-        public Builder setOpenMonitoring(@Nullable ClusterOpenMonitoringArgs openMonitoring) {
+        public Builder openMonitoring(@Nullable ClusterOpenMonitoringArgs openMonitoring) {
             this.openMonitoring = Input.ofNullable(openMonitoring);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

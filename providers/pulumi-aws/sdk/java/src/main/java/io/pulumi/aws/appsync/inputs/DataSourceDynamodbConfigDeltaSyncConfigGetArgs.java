@@ -75,32 +75,32 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
     	      this.deltaSyncTableTtl = defaults.deltaSyncTableTtl;
         }
 
-        public Builder setBaseTableTtl(@Nullable Input<Integer> baseTableTtl) {
+        public Builder baseTableTtl(@Nullable Input<Integer> baseTableTtl) {
             this.baseTableTtl = baseTableTtl;
             return this;
         }
 
-        public Builder setBaseTableTtl(@Nullable Integer baseTableTtl) {
+        public Builder baseTableTtl(@Nullable Integer baseTableTtl) {
             this.baseTableTtl = Input.ofNullable(baseTableTtl);
             return this;
         }
 
-        public Builder setDeltaSyncTableName(Input<String> deltaSyncTableName) {
+        public Builder deltaSyncTableName(Input<String> deltaSyncTableName) {
             this.deltaSyncTableName = Objects.requireNonNull(deltaSyncTableName);
             return this;
         }
 
-        public Builder setDeltaSyncTableName(String deltaSyncTableName) {
+        public Builder deltaSyncTableName(String deltaSyncTableName) {
             this.deltaSyncTableName = Input.of(Objects.requireNonNull(deltaSyncTableName));
             return this;
         }
 
-        public Builder setDeltaSyncTableTtl(@Nullable Input<Integer> deltaSyncTableTtl) {
+        public Builder deltaSyncTableTtl(@Nullable Input<Integer> deltaSyncTableTtl) {
             this.deltaSyncTableTtl = deltaSyncTableTtl;
             return this;
         }
 
-        public Builder setDeltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
+        public Builder deltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
             this.deltaSyncTableTtl = Input.ofNullable(deltaSyncTableTtl);
             return this;
         }

@@ -156,72 +156,72 @@ public final class RuleGroupRuleStatementNotStatementStatementSqliMatchStatement
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setAllQueryArguments(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
-        public Builder setAllQueryArguments(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
+        public Builder allQueryArguments(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs allQueryArguments) {
             this.allQueryArguments = Input.ofNullable(allQueryArguments);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body) {
+        public Builder body(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs body) {
+        public Builder body(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method) {
+        public Builder method(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs method) {
+        public Builder method(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString) {
+        public Builder queryString(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs queryString) {
+        public Builder queryString(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
+        public Builder singleHeader(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs singleHeader) {
             this.singleHeader = Input.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs singleQueryArgument) {
             this.singleQueryArgument = Input.ofNullable(singleQueryArgument);
             return this;
         }
 
-        public Builder setUriPath(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
+        public Builder uriPath(@Nullable Input<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
-        public Builder setUriPath(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs uriPath) {
+        public Builder uriPath(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs uriPath) {
             this.uriPath = Input.ofNullable(uriPath);
             return this;
         }

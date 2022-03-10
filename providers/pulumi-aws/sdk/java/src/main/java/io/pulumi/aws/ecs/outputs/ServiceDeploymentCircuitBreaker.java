@@ -65,12 +65,12 @@ public final class ServiceDeploymentCircuitBreaker {
     	      this.rollback = defaults.rollback;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setRollback(Boolean rollback) {
+        public Builder rollback(Boolean rollback) {
             this.rollback = Objects.requireNonNull(rollback);
             return this;
         }

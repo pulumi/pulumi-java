@@ -643,362 +643,362 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable Input<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Input<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<LaunchTemplateBlockDeviceMappingGetArgs> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<LaunchTemplateBlockDeviceMappingGetArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder setCapacityReservationSpecification(@Nullable Input<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(@Nullable Input<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification) {
             this.capacityReservationSpecification = capacityReservationSpecification;
             return this;
         }
 
-        public Builder setCapacityReservationSpecification(@Nullable LaunchTemplateCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
+        public Builder capacityReservationSpecification(@Nullable LaunchTemplateCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
             this.capacityReservationSpecification = Input.ofNullable(capacityReservationSpecification);
             return this;
         }
 
-        public Builder setCpuOptions(@Nullable Input<LaunchTemplateCpuOptionsGetArgs> cpuOptions) {
+        public Builder cpuOptions(@Nullable Input<LaunchTemplateCpuOptionsGetArgs> cpuOptions) {
             this.cpuOptions = cpuOptions;
             return this;
         }
 
-        public Builder setCpuOptions(@Nullable LaunchTemplateCpuOptionsGetArgs cpuOptions) {
+        public Builder cpuOptions(@Nullable LaunchTemplateCpuOptionsGetArgs cpuOptions) {
             this.cpuOptions = Input.ofNullable(cpuOptions);
             return this;
         }
 
-        public Builder setCreditSpecification(@Nullable Input<LaunchTemplateCreditSpecificationGetArgs> creditSpecification) {
+        public Builder creditSpecification(@Nullable Input<LaunchTemplateCreditSpecificationGetArgs> creditSpecification) {
             this.creditSpecification = creditSpecification;
             return this;
         }
 
-        public Builder setCreditSpecification(@Nullable LaunchTemplateCreditSpecificationGetArgs creditSpecification) {
+        public Builder creditSpecification(@Nullable LaunchTemplateCreditSpecificationGetArgs creditSpecification) {
             this.creditSpecification = Input.ofNullable(creditSpecification);
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable Input<Integer> defaultVersion) {
+        public Builder defaultVersion(@Nullable Input<Integer> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable Integer defaultVersion) {
+        public Builder defaultVersion(@Nullable Integer defaultVersion) {
             this.defaultVersion = Input.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisableApiTermination(@Nullable Input<Boolean> disableApiTermination) {
+        public Builder disableApiTermination(@Nullable Input<Boolean> disableApiTermination) {
             this.disableApiTermination = disableApiTermination;
             return this;
         }
 
-        public Builder setDisableApiTermination(@Nullable Boolean disableApiTermination) {
+        public Builder disableApiTermination(@Nullable Boolean disableApiTermination) {
             this.disableApiTermination = Input.ofNullable(disableApiTermination);
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Input<String> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Input<String> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable String ebsOptimized) {
+        public Builder ebsOptimized(@Nullable String ebsOptimized) {
             this.ebsOptimized = Input.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder setElasticGpuSpecifications(@Nullable Input<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications) {
+        public Builder elasticGpuSpecifications(@Nullable Input<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications) {
             this.elasticGpuSpecifications = elasticGpuSpecifications;
             return this;
         }
 
-        public Builder setElasticGpuSpecifications(@Nullable List<LaunchTemplateElasticGpuSpecificationGetArgs> elasticGpuSpecifications) {
+        public Builder elasticGpuSpecifications(@Nullable List<LaunchTemplateElasticGpuSpecificationGetArgs> elasticGpuSpecifications) {
             this.elasticGpuSpecifications = Input.ofNullable(elasticGpuSpecifications);
             return this;
         }
 
-        public Builder setElasticInferenceAccelerator(@Nullable Input<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator) {
+        public Builder elasticInferenceAccelerator(@Nullable Input<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator) {
             this.elasticInferenceAccelerator = elasticInferenceAccelerator;
             return this;
         }
 
-        public Builder setElasticInferenceAccelerator(@Nullable LaunchTemplateElasticInferenceAcceleratorGetArgs elasticInferenceAccelerator) {
+        public Builder elasticInferenceAccelerator(@Nullable LaunchTemplateElasticInferenceAcceleratorGetArgs elasticInferenceAccelerator) {
             this.elasticInferenceAccelerator = Input.ofNullable(elasticInferenceAccelerator);
             return this;
         }
 
-        public Builder setEnclaveOptions(@Nullable Input<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions) {
+        public Builder enclaveOptions(@Nullable Input<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions) {
             this.enclaveOptions = enclaveOptions;
             return this;
         }
 
-        public Builder setEnclaveOptions(@Nullable LaunchTemplateEnclaveOptionsGetArgs enclaveOptions) {
+        public Builder enclaveOptions(@Nullable LaunchTemplateEnclaveOptionsGetArgs enclaveOptions) {
             this.enclaveOptions = Input.ofNullable(enclaveOptions);
             return this;
         }
 
-        public Builder setHibernationOptions(@Nullable Input<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions) {
+        public Builder hibernationOptions(@Nullable Input<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions) {
             this.hibernationOptions = hibernationOptions;
             return this;
         }
 
-        public Builder setHibernationOptions(@Nullable LaunchTemplateHibernationOptionsGetArgs hibernationOptions) {
+        public Builder hibernationOptions(@Nullable LaunchTemplateHibernationOptionsGetArgs hibernationOptions) {
             this.hibernationOptions = Input.ofNullable(hibernationOptions);
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable Input<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Input<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable LaunchTemplateIamInstanceProfileGetArgs iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable LaunchTemplateIamInstanceProfileGetArgs iamInstanceProfile) {
             this.iamInstanceProfile = Input.ofNullable(iamInstanceProfile);
             return this;
         }
 
-        public Builder setImageId(@Nullable Input<String> imageId) {
+        public Builder imageId(@Nullable Input<String> imageId) {
             this.imageId = imageId;
             return this;
         }
 
-        public Builder setImageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable String imageId) {
             this.imageId = Input.ofNullable(imageId);
             return this;
         }
 
-        public Builder setInstanceInitiatedShutdownBehavior(@Nullable Input<String> instanceInitiatedShutdownBehavior) {
+        public Builder instanceInitiatedShutdownBehavior(@Nullable Input<String> instanceInitiatedShutdownBehavior) {
             this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
             return this;
         }
 
-        public Builder setInstanceInitiatedShutdownBehavior(@Nullable String instanceInitiatedShutdownBehavior) {
+        public Builder instanceInitiatedShutdownBehavior(@Nullable String instanceInitiatedShutdownBehavior) {
             this.instanceInitiatedShutdownBehavior = Input.ofNullable(instanceInitiatedShutdownBehavior);
             return this;
         }
 
-        public Builder setInstanceMarketOptions(@Nullable Input<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions) {
+        public Builder instanceMarketOptions(@Nullable Input<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions) {
             this.instanceMarketOptions = instanceMarketOptions;
             return this;
         }
 
-        public Builder setInstanceMarketOptions(@Nullable LaunchTemplateInstanceMarketOptionsGetArgs instanceMarketOptions) {
+        public Builder instanceMarketOptions(@Nullable LaunchTemplateInstanceMarketOptionsGetArgs instanceMarketOptions) {
             this.instanceMarketOptions = Input.ofNullable(instanceMarketOptions);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setKernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Input<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
-        public Builder setKernelId(@Nullable String kernelId) {
+        public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Input.ofNullable(kernelId);
             return this;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setLatestVersion(@Nullable Input<Integer> latestVersion) {
+        public Builder latestVersion(@Nullable Input<Integer> latestVersion) {
             this.latestVersion = latestVersion;
             return this;
         }
 
-        public Builder setLatestVersion(@Nullable Integer latestVersion) {
+        public Builder latestVersion(@Nullable Integer latestVersion) {
             this.latestVersion = Input.ofNullable(latestVersion);
             return this;
         }
 
-        public Builder setLicenseSpecifications(@Nullable Input<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications) {
+        public Builder licenseSpecifications(@Nullable Input<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications) {
             this.licenseSpecifications = licenseSpecifications;
             return this;
         }
 
-        public Builder setLicenseSpecifications(@Nullable List<LaunchTemplateLicenseSpecificationGetArgs> licenseSpecifications) {
+        public Builder licenseSpecifications(@Nullable List<LaunchTemplateLicenseSpecificationGetArgs> licenseSpecifications) {
             this.licenseSpecifications = Input.ofNullable(licenseSpecifications);
             return this;
         }
 
-        public Builder setMetadataOptions(@Nullable Input<LaunchTemplateMetadataOptionsGetArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Input<LaunchTemplateMetadataOptionsGetArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
 
-        public Builder setMetadataOptions(@Nullable LaunchTemplateMetadataOptionsGetArgs metadataOptions) {
+        public Builder metadataOptions(@Nullable LaunchTemplateMetadataOptionsGetArgs metadataOptions) {
             this.metadataOptions = Input.ofNullable(metadataOptions);
             return this;
         }
 
-        public Builder setMonitoring(@Nullable Input<LaunchTemplateMonitoringGetArgs> monitoring) {
+        public Builder monitoring(@Nullable Input<LaunchTemplateMonitoringGetArgs> monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
-        public Builder setMonitoring(@Nullable LaunchTemplateMonitoringGetArgs monitoring) {
+        public Builder monitoring(@Nullable LaunchTemplateMonitoringGetArgs monitoring) {
             this.monitoring = Input.ofNullable(monitoring);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<LaunchTemplateNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<LaunchTemplateNetworkInterfaceGetArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setPlacement(@Nullable Input<LaunchTemplatePlacementGetArgs> placement) {
+        public Builder placement(@Nullable Input<LaunchTemplatePlacementGetArgs> placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setPlacement(@Nullable LaunchTemplatePlacementGetArgs placement) {
+        public Builder placement(@Nullable LaunchTemplatePlacementGetArgs placement) {
             this.placement = Input.ofNullable(placement);
             return this;
         }
 
-        public Builder setRamDiskId(@Nullable Input<String> ramDiskId) {
+        public Builder ramDiskId(@Nullable Input<String> ramDiskId) {
             this.ramDiskId = ramDiskId;
             return this;
         }
 
-        public Builder setRamDiskId(@Nullable String ramDiskId) {
+        public Builder ramDiskId(@Nullable String ramDiskId) {
             this.ramDiskId = Input.ofNullable(ramDiskId);
             return this;
         }
 
-        public Builder setSecurityGroupNames(@Nullable Input<List<String>> securityGroupNames) {
+        public Builder securityGroupNames(@Nullable Input<List<String>> securityGroupNames) {
             this.securityGroupNames = securityGroupNames;
             return this;
         }
 
-        public Builder setSecurityGroupNames(@Nullable List<String> securityGroupNames) {
+        public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
             this.securityGroupNames = Input.ofNullable(securityGroupNames);
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable Input<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable Input<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable List<LaunchTemplateTagSpecificationGetArgs> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable List<LaunchTemplateTagSpecificationGetArgs> tagSpecifications) {
             this.tagSpecifications = Input.ofNullable(tagSpecifications);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUpdateDefaultVersion(@Nullable Input<Boolean> updateDefaultVersion) {
+        public Builder updateDefaultVersion(@Nullable Input<Boolean> updateDefaultVersion) {
             this.updateDefaultVersion = updateDefaultVersion;
             return this;
         }
 
-        public Builder setUpdateDefaultVersion(@Nullable Boolean updateDefaultVersion) {
+        public Builder updateDefaultVersion(@Nullable Boolean updateDefaultVersion) {
             this.updateDefaultVersion = Input.ofNullable(updateDefaultVersion);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
             return this;
         }

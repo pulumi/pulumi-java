@@ -69,22 +69,22 @@ public final class PipelineDefinitionParameterObjectAttributeArgs extends io.pul
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setStringValue(Input<String> stringValue) {
+        public Builder stringValue(Input<String> stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Input.of(Objects.requireNonNull(stringValue));
             return this;
         }

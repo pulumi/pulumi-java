@@ -86,32 +86,32 @@ public final class UserPoolClientTokenValidityUnitsGetArgs extends io.pulumi.res
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder setAccessToken(@Nullable Input<String> accessToken) {
+        public Builder accessToken(@Nullable Input<String> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = Input.ofNullable(accessToken);
             return this;
         }
 
-        public Builder setIdToken(@Nullable Input<String> idToken) {
+        public Builder idToken(@Nullable Input<String> idToken) {
             this.idToken = idToken;
             return this;
         }
 
-        public Builder setIdToken(@Nullable String idToken) {
+        public Builder idToken(@Nullable String idToken) {
             this.idToken = Input.ofNullable(idToken);
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Input<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Input.ofNullable(refreshToken);
             return this;
         }

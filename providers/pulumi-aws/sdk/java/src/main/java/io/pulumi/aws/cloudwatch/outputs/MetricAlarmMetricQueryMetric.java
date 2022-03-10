@@ -139,32 +139,32 @@ public final class MetricAlarmMetricQueryMetric {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setDimensions(@Nullable Map<String,String> dimensions) {
+        public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setPeriod(Integer period) {
+        public Builder period(Integer period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
 
-        public Builder setStat(String stat) {
+        public Builder stat(String stat) {
             this.stat = Objects.requireNonNull(stat);
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }

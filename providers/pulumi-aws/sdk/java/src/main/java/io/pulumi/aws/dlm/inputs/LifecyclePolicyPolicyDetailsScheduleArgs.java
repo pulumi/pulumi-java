@@ -140,62 +140,62 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
     	      this.tagsToAdd = defaults.tagsToAdd;
         }
 
-        public Builder setCopyTags(@Nullable Input<Boolean> copyTags) {
+        public Builder copyTags(@Nullable Input<Boolean> copyTags) {
             this.copyTags = copyTags;
             return this;
         }
 
-        public Builder setCopyTags(@Nullable Boolean copyTags) {
+        public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = Input.ofNullable(copyTags);
             return this;
         }
 
-        public Builder setCreateRule(Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule) {
+        public Builder createRule(Input<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule) {
             this.createRule = Objects.requireNonNull(createRule);
             return this;
         }
 
-        public Builder setCreateRule(LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs createRule) {
+        public Builder createRule(LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs createRule) {
             this.createRule = Input.of(Objects.requireNonNull(createRule));
             return this;
         }
 
-        public Builder setCrossRegionCopyRules(@Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules) {
+        public Builder crossRegionCopyRules(@Nullable Input<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules) {
             this.crossRegionCopyRules = crossRegionCopyRules;
             return this;
         }
 
-        public Builder setCrossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs> crossRegionCopyRules) {
+        public Builder crossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs> crossRegionCopyRules) {
             this.crossRegionCopyRules = Input.ofNullable(crossRegionCopyRules);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRetainRule(Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule) {
+        public Builder retainRule(Input<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule) {
             this.retainRule = Objects.requireNonNull(retainRule);
             return this;
         }
 
-        public Builder setRetainRule(LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs retainRule) {
+        public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs retainRule) {
             this.retainRule = Input.of(Objects.requireNonNull(retainRule));
             return this;
         }
 
-        public Builder setTagsToAdd(@Nullable Input<Map<String,String>> tagsToAdd) {
+        public Builder tagsToAdd(@Nullable Input<Map<String,String>> tagsToAdd) {
             this.tagsToAdd = tagsToAdd;
             return this;
         }
 
-        public Builder setTagsToAdd(@Nullable Map<String,String> tagsToAdd) {
+        public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
             this.tagsToAdd = Input.ofNullable(tagsToAdd);
             return this;
         }

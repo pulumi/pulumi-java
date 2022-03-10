@@ -52,12 +52,12 @@ public final class RepositoryUpstreamGetArgs extends io.pulumi.resources.Resourc
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder setRepositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Input<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
             return this;
         }

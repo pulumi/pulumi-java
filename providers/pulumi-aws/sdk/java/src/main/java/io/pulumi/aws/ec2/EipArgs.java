@@ -184,92 +184,92 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setAssociateWithPrivateIp(@Nullable Input<String> associateWithPrivateIp) {
+        public Builder associateWithPrivateIp(@Nullable Input<String> associateWithPrivateIp) {
             this.associateWithPrivateIp = associateWithPrivateIp;
             return this;
         }
 
-        public Builder setAssociateWithPrivateIp(@Nullable String associateWithPrivateIp) {
+        public Builder associateWithPrivateIp(@Nullable String associateWithPrivateIp) {
             this.associateWithPrivateIp = Input.ofNullable(associateWithPrivateIp);
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Input.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder setInstance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Input<String> instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = Input.ofNullable(instance);
             return this;
         }
 
-        public Builder setNetworkBorderGroup(@Nullable Input<String> networkBorderGroup) {
+        public Builder networkBorderGroup(@Nullable Input<String> networkBorderGroup) {
             this.networkBorderGroup = networkBorderGroup;
             return this;
         }
 
-        public Builder setNetworkBorderGroup(@Nullable String networkBorderGroup) {
+        public Builder networkBorderGroup(@Nullable String networkBorderGroup) {
             this.networkBorderGroup = Input.ofNullable(networkBorderGroup);
             return this;
         }
 
-        public Builder setNetworkInterface(@Nullable Input<String> networkInterface) {
+        public Builder networkInterface(@Nullable Input<String> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
 
-        public Builder setNetworkInterface(@Nullable String networkInterface) {
+        public Builder networkInterface(@Nullable String networkInterface) {
             this.networkInterface = Input.ofNullable(networkInterface);
             return this;
         }
 
-        public Builder setPublicIpv4Pool(@Nullable Input<String> publicIpv4Pool) {
+        public Builder publicIpv4Pool(@Nullable Input<String> publicIpv4Pool) {
             this.publicIpv4Pool = publicIpv4Pool;
             return this;
         }
 
-        public Builder setPublicIpv4Pool(@Nullable String publicIpv4Pool) {
+        public Builder publicIpv4Pool(@Nullable String publicIpv4Pool) {
             this.publicIpv4Pool = Input.ofNullable(publicIpv4Pool);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpc(@Nullable Input<Boolean> vpc) {
+        public Builder vpc(@Nullable Input<Boolean> vpc) {
             this.vpc = vpc;
             return this;
         }
 
-        public Builder setVpc(@Nullable Boolean vpc) {
+        public Builder vpc(@Nullable Boolean vpc) {
             this.vpc = Input.ofNullable(vpc);
             return this;
         }

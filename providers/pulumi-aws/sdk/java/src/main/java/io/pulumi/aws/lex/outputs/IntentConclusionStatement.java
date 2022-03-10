@@ -77,12 +77,12 @@ public final class IntentConclusionStatement {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMessages(List<IntentConclusionStatementMessage> messages) {
+        public Builder messages(List<IntentConclusionStatementMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

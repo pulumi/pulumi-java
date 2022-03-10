@@ -53,12 +53,12 @@ public final class DataSourceParametersAthenaGetArgs extends io.pulumi.resources
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder setWorkGroup(@Nullable Input<String> workGroup) {
+        public Builder workGroup(@Nullable Input<String> workGroup) {
             this.workGroup = workGroup;
             return this;
         }
 
-        public Builder setWorkGroup(@Nullable String workGroup) {
+        public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = Input.ofNullable(workGroup);
             return this;
         }

@@ -72,17 +72,17 @@ public final class GetBrokerMaintenanceWindowStartTime extends io.pulumi.resourc
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setTimeOfDay(String timeOfDay) {
+        public Builder timeOfDay(String timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

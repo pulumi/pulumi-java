@@ -120,52 +120,52 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigGetArgs extends io
     	      this.sessionPinningFilters = defaults.sessionPinningFilters;
         }
 
-        public Builder setConnectionBorrowTimeout(@Nullable Input<Integer> connectionBorrowTimeout) {
+        public Builder connectionBorrowTimeout(@Nullable Input<Integer> connectionBorrowTimeout) {
             this.connectionBorrowTimeout = connectionBorrowTimeout;
             return this;
         }
 
-        public Builder setConnectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
+        public Builder connectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
             this.connectionBorrowTimeout = Input.ofNullable(connectionBorrowTimeout);
             return this;
         }
 
-        public Builder setInitQuery(@Nullable Input<String> initQuery) {
+        public Builder initQuery(@Nullable Input<String> initQuery) {
             this.initQuery = initQuery;
             return this;
         }
 
-        public Builder setInitQuery(@Nullable String initQuery) {
+        public Builder initQuery(@Nullable String initQuery) {
             this.initQuery = Input.ofNullable(initQuery);
             return this;
         }
 
-        public Builder setMaxConnectionsPercent(@Nullable Input<Integer> maxConnectionsPercent) {
+        public Builder maxConnectionsPercent(@Nullable Input<Integer> maxConnectionsPercent) {
             this.maxConnectionsPercent = maxConnectionsPercent;
             return this;
         }
 
-        public Builder setMaxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
+        public Builder maxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
             this.maxConnectionsPercent = Input.ofNullable(maxConnectionsPercent);
             return this;
         }
 
-        public Builder setMaxIdleConnectionsPercent(@Nullable Input<Integer> maxIdleConnectionsPercent) {
+        public Builder maxIdleConnectionsPercent(@Nullable Input<Integer> maxIdleConnectionsPercent) {
             this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
             return this;
         }
 
-        public Builder setMaxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
+        public Builder maxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
             this.maxIdleConnectionsPercent = Input.ofNullable(maxIdleConnectionsPercent);
             return this;
         }
 
-        public Builder setSessionPinningFilters(@Nullable Input<List<String>> sessionPinningFilters) {
+        public Builder sessionPinningFilters(@Nullable Input<List<String>> sessionPinningFilters) {
             this.sessionPinningFilters = sessionPinningFilters;
             return this;
         }
 
-        public Builder setSessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
+        public Builder sessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
             this.sessionPinningFilters = Input.ofNullable(sessionPinningFilters);
             return this;
         }

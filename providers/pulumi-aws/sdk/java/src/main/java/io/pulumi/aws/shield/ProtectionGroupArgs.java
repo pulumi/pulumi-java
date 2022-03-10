@@ -136,62 +136,62 @@ public final class ProtectionGroupArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAggregation(Input<String> aggregation) {
+        public Builder aggregation(Input<String> aggregation) {
             this.aggregation = Objects.requireNonNull(aggregation);
             return this;
         }
 
-        public Builder setAggregation(String aggregation) {
+        public Builder aggregation(String aggregation) {
             this.aggregation = Input.of(Objects.requireNonNull(aggregation));
             return this;
         }
 
-        public Builder setMembers(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Input<List<String>> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = Input.ofNullable(members);
             return this;
         }
 
-        public Builder setPattern(Input<String> pattern) {
+        public Builder pattern(Input<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Input.of(Objects.requireNonNull(pattern));
             return this;
         }
 
-        public Builder setProtectionGroupId(Input<String> protectionGroupId) {
+        public Builder protectionGroupId(Input<String> protectionGroupId) {
             this.protectionGroupId = Objects.requireNonNull(protectionGroupId);
             return this;
         }
 
-        public Builder setProtectionGroupId(String protectionGroupId) {
+        public Builder protectionGroupId(String protectionGroupId) {
             this.protectionGroupId = Input.of(Objects.requireNonNull(protectionGroupId));
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

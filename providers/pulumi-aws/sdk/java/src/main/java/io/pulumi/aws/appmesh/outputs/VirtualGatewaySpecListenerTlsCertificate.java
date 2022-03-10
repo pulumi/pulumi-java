@@ -85,17 +85,17 @@ public final class VirtualGatewaySpecListenerTlsCertificate {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable VirtualGatewaySpecListenerTlsCertificateAcm acm) {
+        public Builder acm(@Nullable VirtualGatewaySpecListenerTlsCertificateAcm acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualGatewaySpecListenerTlsCertificateFile file) {
+        public Builder file(@Nullable VirtualGatewaySpecListenerTlsCertificateFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualGatewaySpecListenerTlsCertificateSds sds) {
+        public Builder sds(@Nullable VirtualGatewaySpecListenerTlsCertificateSds sds) {
             this.sds = sds;
             return this;
         }

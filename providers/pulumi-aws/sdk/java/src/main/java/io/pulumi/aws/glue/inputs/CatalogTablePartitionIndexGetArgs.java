@@ -83,32 +83,32 @@ public final class CatalogTablePartitionIndexGetArgs extends io.pulumi.resources
     	      this.keys = defaults.keys;
         }
 
-        public Builder setIndexName(Input<String> indexName) {
+        public Builder indexName(Input<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Input.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder setIndexStatus(@Nullable Input<String> indexStatus) {
+        public Builder indexStatus(@Nullable Input<String> indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
 
-        public Builder setIndexStatus(@Nullable String indexStatus) {
+        public Builder indexStatus(@Nullable String indexStatus) {
             this.indexStatus = Input.ofNullable(indexStatus);
             return this;
         }
 
-        public Builder setKeys(Input<List<String>> keys) {
+        public Builder keys(Input<List<String>> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
 
-        public Builder setKeys(List<String> keys) {
+        public Builder keys(List<String> keys) {
             this.keys = Input.of(Objects.requireNonNull(keys));
             return this;
         }

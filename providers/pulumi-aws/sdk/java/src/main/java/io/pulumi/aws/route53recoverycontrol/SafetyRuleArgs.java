@@ -153,72 +153,72 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder setAssertedControls(@Nullable Input<List<String>> assertedControls) {
+        public Builder assertedControls(@Nullable Input<List<String>> assertedControls) {
             this.assertedControls = assertedControls;
             return this;
         }
 
-        public Builder setAssertedControls(@Nullable List<String> assertedControls) {
+        public Builder assertedControls(@Nullable List<String> assertedControls) {
             this.assertedControls = Input.ofNullable(assertedControls);
             return this;
         }
 
-        public Builder setControlPanelArn(Input<String> controlPanelArn) {
+        public Builder controlPanelArn(Input<String> controlPanelArn) {
             this.controlPanelArn = Objects.requireNonNull(controlPanelArn);
             return this;
         }
 
-        public Builder setControlPanelArn(String controlPanelArn) {
+        public Builder controlPanelArn(String controlPanelArn) {
             this.controlPanelArn = Input.of(Objects.requireNonNull(controlPanelArn));
             return this;
         }
 
-        public Builder setGatingControls(@Nullable Input<List<String>> gatingControls) {
+        public Builder gatingControls(@Nullable Input<List<String>> gatingControls) {
             this.gatingControls = gatingControls;
             return this;
         }
 
-        public Builder setGatingControls(@Nullable List<String> gatingControls) {
+        public Builder gatingControls(@Nullable List<String> gatingControls) {
             this.gatingControls = Input.ofNullable(gatingControls);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleConfig(Input<SafetyRuleRuleConfigArgs> ruleConfig) {
+        public Builder ruleConfig(Input<SafetyRuleRuleConfigArgs> ruleConfig) {
             this.ruleConfig = Objects.requireNonNull(ruleConfig);
             return this;
         }
 
-        public Builder setRuleConfig(SafetyRuleRuleConfigArgs ruleConfig) {
+        public Builder ruleConfig(SafetyRuleRuleConfigArgs ruleConfig) {
             this.ruleConfig = Input.of(Objects.requireNonNull(ruleConfig));
             return this;
         }
 
-        public Builder setTargetControls(@Nullable Input<List<String>> targetControls) {
+        public Builder targetControls(@Nullable Input<List<String>> targetControls) {
             this.targetControls = targetControls;
             return this;
         }
 
-        public Builder setTargetControls(@Nullable List<String> targetControls) {
+        public Builder targetControls(@Nullable List<String> targetControls) {
             this.targetControls = Input.ofNullable(targetControls);
             return this;
         }
 
-        public Builder setWaitPeriodMs(Input<Integer> waitPeriodMs) {
+        public Builder waitPeriodMs(Input<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
 
-        public Builder setWaitPeriodMs(Integer waitPeriodMs) {
+        public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }

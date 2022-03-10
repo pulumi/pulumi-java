@@ -124,57 +124,57 @@ public final class MysqlLayerCloudwatchConfigurationLogStream {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setBatchCount(@Nullable Integer batchCount) {
+        public Builder batchCount(@Nullable Integer batchCount) {
             this.batchCount = batchCount;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBufferDuration(@Nullable Integer bufferDuration) {
+        public Builder bufferDuration(@Nullable Integer bufferDuration) {
             this.bufferDuration = bufferDuration;
             return this;
         }
 
-        public Builder setDatetimeFormat(@Nullable String datetimeFormat) {
+        public Builder datetimeFormat(@Nullable String datetimeFormat) {
             this.datetimeFormat = datetimeFormat;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setFileFingerprintLines(@Nullable String fileFingerprintLines) {
+        public Builder fileFingerprintLines(@Nullable String fileFingerprintLines) {
             this.fileFingerprintLines = fileFingerprintLines;
             return this;
         }
 
-        public Builder setInitialPosition(@Nullable String initialPosition) {
+        public Builder initialPosition(@Nullable String initialPosition) {
             this.initialPosition = initialPosition;
             return this;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setMultilineStartPattern(@Nullable String multilineStartPattern) {
+        public Builder multilineStartPattern(@Nullable String multilineStartPattern) {
             this.multilineStartPattern = multilineStartPattern;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

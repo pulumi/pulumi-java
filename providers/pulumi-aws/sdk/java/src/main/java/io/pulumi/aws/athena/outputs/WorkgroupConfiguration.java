@@ -134,32 +134,32 @@ public final class WorkgroupConfiguration {
     	      this.resultConfiguration = defaults.resultConfiguration;
         }
 
-        public Builder setBytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
 
-        public Builder setEnforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
+        public Builder enforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
             this.enforceWorkgroupConfiguration = enforceWorkgroupConfiguration;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable WorkgroupConfigurationEngineVersion engineVersion) {
+        public Builder engineVersion(@Nullable WorkgroupConfigurationEngineVersion engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setPublishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
+        public Builder publishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
             this.publishCloudwatchMetricsEnabled = publishCloudwatchMetricsEnabled;
             return this;
         }
 
-        public Builder setRequesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
 
-        public Builder setResultConfiguration(@Nullable WorkgroupConfigurationResultConfiguration resultConfiguration) {
+        public Builder resultConfiguration(@Nullable WorkgroupConfigurationResultConfiguration resultConfiguration) {
             this.resultConfiguration = resultConfiguration;
             return this;
         }

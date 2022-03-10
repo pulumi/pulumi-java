@@ -68,12 +68,12 @@ public final class VirtualNodeSpecListenerTlsValidationTrust {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecListenerTlsValidationTrustFile file) {
+        public Builder file(@Nullable VirtualNodeSpecListenerTlsValidationTrustFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
             this.sds = sds;
             return this;
         }

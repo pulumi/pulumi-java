@@ -53,12 +53,12 @@ public final class RuleGroupRuleStatementOrStatementStatementNotStatementArgs ex
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(Input<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs>> statements) {
+        public Builder statements(Input<List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
-        public Builder setStatements(List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs> statements) {
+        public Builder statements(List<RuleGroupRuleStatementOrStatementStatementNotStatementStatementArgs> statements) {
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }

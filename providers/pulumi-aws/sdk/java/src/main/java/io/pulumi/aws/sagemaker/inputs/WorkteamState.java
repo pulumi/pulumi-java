@@ -186,92 +186,92 @@ public final class WorkteamState extends io.pulumi.resources.ResourceArgs {
     	      this.workteamName = defaults.workteamName;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMemberDefinitions(@Nullable Input<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions) {
+        public Builder memberDefinitions(@Nullable Input<List<WorkteamMemberDefinitionGetArgs>> memberDefinitions) {
             this.memberDefinitions = memberDefinitions;
             return this;
         }
 
-        public Builder setMemberDefinitions(@Nullable List<WorkteamMemberDefinitionGetArgs> memberDefinitions) {
+        public Builder memberDefinitions(@Nullable List<WorkteamMemberDefinitionGetArgs> memberDefinitions) {
             this.memberDefinitions = Input.ofNullable(memberDefinitions);
             return this;
         }
 
-        public Builder setNotificationConfiguration(@Nullable Input<WorkteamNotificationConfigurationGetArgs> notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable Input<WorkteamNotificationConfigurationGetArgs> notificationConfiguration) {
             this.notificationConfiguration = notificationConfiguration;
             return this;
         }
 
-        public Builder setNotificationConfiguration(@Nullable WorkteamNotificationConfigurationGetArgs notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable WorkteamNotificationConfigurationGetArgs notificationConfiguration) {
             this.notificationConfiguration = Input.ofNullable(notificationConfiguration);
             return this;
         }
 
-        public Builder setSubdomain(@Nullable Input<String> subdomain) {
+        public Builder subdomain(@Nullable Input<String> subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
-        public Builder setSubdomain(@Nullable String subdomain) {
+        public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = Input.ofNullable(subdomain);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setWorkforceName(@Nullable Input<String> workforceName) {
+        public Builder workforceName(@Nullable Input<String> workforceName) {
             this.workforceName = workforceName;
             return this;
         }
 
-        public Builder setWorkforceName(@Nullable String workforceName) {
+        public Builder workforceName(@Nullable String workforceName) {
             this.workforceName = Input.ofNullable(workforceName);
             return this;
         }
 
-        public Builder setWorkteamName(@Nullable Input<String> workteamName) {
+        public Builder workteamName(@Nullable Input<String> workteamName) {
             this.workteamName = workteamName;
             return this;
         }
 
-        public Builder setWorkteamName(@Nullable String workteamName) {
+        public Builder workteamName(@Nullable String workteamName) {
             this.workteamName = Input.ofNullable(workteamName);
             return this;
         }

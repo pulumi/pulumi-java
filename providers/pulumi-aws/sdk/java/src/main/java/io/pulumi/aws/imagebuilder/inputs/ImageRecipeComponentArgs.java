@@ -52,12 +52,12 @@ public final class ImageRecipeComponentArgs extends io.pulumi.resources.Resource
     	      this.componentArn = defaults.componentArn;
         }
 
-        public Builder setComponentArn(Input<String> componentArn) {
+        public Builder componentArn(Input<String> componentArn) {
             this.componentArn = Objects.requireNonNull(componentArn);
             return this;
         }
 
-        public Builder setComponentArn(String componentArn) {
+        public Builder componentArn(String componentArn) {
             this.componentArn = Input.of(Objects.requireNonNull(componentArn));
             return this;
         }

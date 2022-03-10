@@ -50,12 +50,12 @@ public final class GetBrokerEncryptionOption {
     	      this.useAwsOwnedKey = defaults.useAwsOwnedKey;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setUseAwsOwnedKey(Boolean useAwsOwnedKey) {
+        public Builder useAwsOwnedKey(Boolean useAwsOwnedKey) {
             this.useAwsOwnedKey = Objects.requireNonNull(useAwsOwnedKey);
             return this;
         }

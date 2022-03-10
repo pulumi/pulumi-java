@@ -103,22 +103,22 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setMeshName(String meshName) {
+        public Builder meshName(String meshName) {
             this.meshName = Objects.requireNonNull(meshName);
             return this;
         }
 
-        public Builder setMeshOwner(@Nullable String meshOwner) {
+        public Builder meshOwner(@Nullable String meshOwner) {
             this.meshOwner = meshOwner;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

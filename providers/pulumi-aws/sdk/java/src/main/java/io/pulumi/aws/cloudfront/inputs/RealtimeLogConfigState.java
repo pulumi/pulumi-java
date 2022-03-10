@@ -121,52 +121,52 @@ public final class RealtimeLogConfigState extends io.pulumi.resources.ResourceAr
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<RealtimeLogConfigEndpointGetArgs> endpoint) {
+        public Builder endpoint(@Nullable Input<RealtimeLogConfigEndpointGetArgs> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable RealtimeLogConfigEndpointGetArgs endpoint) {
+        public Builder endpoint(@Nullable RealtimeLogConfigEndpointGetArgs endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<String>> fields) {
+        public Builder fields(@Nullable Input<List<String>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<String> fields) {
+        public Builder fields(@Nullable List<String> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Input<Integer> samplingRate) {
+        public Builder samplingRate(@Nullable Input<Integer> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Integer samplingRate) {
+        public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = Input.ofNullable(samplingRate);
             return this;
         }

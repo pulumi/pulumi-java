@@ -103,42 +103,42 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProviderEndpoint(Input<String> providerEndpoint) {
+        public Builder providerEndpoint(Input<String> providerEndpoint) {
             this.providerEndpoint = Objects.requireNonNull(providerEndpoint);
             return this;
         }
 
-        public Builder setProviderEndpoint(String providerEndpoint) {
+        public Builder providerEndpoint(String providerEndpoint) {
             this.providerEndpoint = Input.of(Objects.requireNonNull(providerEndpoint));
             return this;
         }
 
-        public Builder setProviderType(Input<String> providerType) {
+        public Builder providerType(Input<String> providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
 
-        public Builder setProviderType(String providerType) {
+        public Builder providerType(String providerType) {
             this.providerType = Input.of(Objects.requireNonNull(providerType));
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<HostVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<HostVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable HostVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable HostVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

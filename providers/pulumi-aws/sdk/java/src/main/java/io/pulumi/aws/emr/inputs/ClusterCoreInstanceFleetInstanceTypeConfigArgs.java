@@ -139,62 +139,62 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigArgs extends io.pul
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setBidPrice(@Nullable Input<String> bidPrice) {
+        public Builder bidPrice(@Nullable Input<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
-        public Builder setBidPrice(@Nullable String bidPrice) {
+        public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Input.ofNullable(bidPrice);
             return this;
         }
 
-        public Builder setBidPriceAsPercentageOfOnDemandPrice(@Nullable Input<Double> bidPriceAsPercentageOfOnDemandPrice) {
+        public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Input<Double> bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
 
-        public Builder setBidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
+        public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = Input.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
             return this;
         }
 
-        public Builder setConfigurations(@Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations) {
+        public Builder configurations(@Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs>> configurations) {
             this.configurations = configurations;
             return this;
         }
 
-        public Builder setConfigurations(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs> configurations) {
+        public Builder configurations(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs> configurations) {
             this.configurations = Input.ofNullable(configurations);
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable Input<List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfigArgs> ebsConfigs) {
             this.ebsConfigs = Input.ofNullable(ebsConfigs);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Input<Integer> weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Input<Integer> weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Integer weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
             this.weightedCapacity = Input.ofNullable(weightedCapacity);
             return this;
         }

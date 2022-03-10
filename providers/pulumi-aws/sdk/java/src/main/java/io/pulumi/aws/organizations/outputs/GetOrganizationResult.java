@@ -213,57 +213,57 @@ public final class GetOrganizationResult {
     	      this.roots = defaults.roots;
         }
 
-        public Builder setAccounts(List<GetOrganizationAccount> accounts) {
+        public Builder accounts(List<GetOrganizationAccount> accounts) {
             this.accounts = Objects.requireNonNull(accounts);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAwsServiceAccessPrincipals(List<String> awsServiceAccessPrincipals) {
+        public Builder awsServiceAccessPrincipals(List<String> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = Objects.requireNonNull(awsServiceAccessPrincipals);
             return this;
         }
 
-        public Builder setEnabledPolicyTypes(List<String> enabledPolicyTypes) {
+        public Builder enabledPolicyTypes(List<String> enabledPolicyTypes) {
             this.enabledPolicyTypes = Objects.requireNonNull(enabledPolicyTypes);
             return this;
         }
 
-        public Builder setFeatureSet(String featureSet) {
+        public Builder featureSet(String featureSet) {
             this.featureSet = Objects.requireNonNull(featureSet);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMasterAccountArn(String masterAccountArn) {
+        public Builder masterAccountArn(String masterAccountArn) {
             this.masterAccountArn = Objects.requireNonNull(masterAccountArn);
             return this;
         }
 
-        public Builder setMasterAccountEmail(String masterAccountEmail) {
+        public Builder masterAccountEmail(String masterAccountEmail) {
             this.masterAccountEmail = Objects.requireNonNull(masterAccountEmail);
             return this;
         }
 
-        public Builder setMasterAccountId(String masterAccountId) {
+        public Builder masterAccountId(String masterAccountId) {
             this.masterAccountId = Objects.requireNonNull(masterAccountId);
             return this;
         }
 
-        public Builder setNonMasterAccounts(List<GetOrganizationNonMasterAccount> nonMasterAccounts) {
+        public Builder nonMasterAccounts(List<GetOrganizationNonMasterAccount> nonMasterAccounts) {
             this.nonMasterAccounts = Objects.requireNonNull(nonMasterAccounts);
             return this;
         }
 
-        public Builder setRoots(List<GetOrganizationRoot> roots) {
+        public Builder roots(List<GetOrganizationRoot> roots) {
             this.roots = Objects.requireNonNull(roots);
             return this;
         }

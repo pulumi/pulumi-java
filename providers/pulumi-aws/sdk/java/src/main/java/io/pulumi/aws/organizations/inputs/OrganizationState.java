@@ -202,102 +202,102 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     	      this.roots = defaults.roots;
         }
 
-        public Builder setAccounts(@Nullable Input<List<OrganizationAccountGetArgs>> accounts) {
+        public Builder accounts(@Nullable Input<List<OrganizationAccountGetArgs>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setAccounts(@Nullable List<OrganizationAccountGetArgs> accounts) {
+        public Builder accounts(@Nullable List<OrganizationAccountGetArgs> accounts) {
             this.accounts = Input.ofNullable(accounts);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAwsServiceAccessPrincipals(@Nullable Input<List<String>> awsServiceAccessPrincipals) {
+        public Builder awsServiceAccessPrincipals(@Nullable Input<List<String>> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;
             return this;
         }
 
-        public Builder setAwsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
+        public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
             this.awsServiceAccessPrincipals = Input.ofNullable(awsServiceAccessPrincipals);
             return this;
         }
 
-        public Builder setEnabledPolicyTypes(@Nullable Input<List<String>> enabledPolicyTypes) {
+        public Builder enabledPolicyTypes(@Nullable Input<List<String>> enabledPolicyTypes) {
             this.enabledPolicyTypes = enabledPolicyTypes;
             return this;
         }
 
-        public Builder setEnabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
+        public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
             this.enabledPolicyTypes = Input.ofNullable(enabledPolicyTypes);
             return this;
         }
 
-        public Builder setFeatureSet(@Nullable Input<String> featureSet) {
+        public Builder featureSet(@Nullable Input<String> featureSet) {
             this.featureSet = featureSet;
             return this;
         }
 
-        public Builder setFeatureSet(@Nullable String featureSet) {
+        public Builder featureSet(@Nullable String featureSet) {
             this.featureSet = Input.ofNullable(featureSet);
             return this;
         }
 
-        public Builder setMasterAccountArn(@Nullable Input<String> masterAccountArn) {
+        public Builder masterAccountArn(@Nullable Input<String> masterAccountArn) {
             this.masterAccountArn = masterAccountArn;
             return this;
         }
 
-        public Builder setMasterAccountArn(@Nullable String masterAccountArn) {
+        public Builder masterAccountArn(@Nullable String masterAccountArn) {
             this.masterAccountArn = Input.ofNullable(masterAccountArn);
             return this;
         }
 
-        public Builder setMasterAccountEmail(@Nullable Input<String> masterAccountEmail) {
+        public Builder masterAccountEmail(@Nullable Input<String> masterAccountEmail) {
             this.masterAccountEmail = masterAccountEmail;
             return this;
         }
 
-        public Builder setMasterAccountEmail(@Nullable String masterAccountEmail) {
+        public Builder masterAccountEmail(@Nullable String masterAccountEmail) {
             this.masterAccountEmail = Input.ofNullable(masterAccountEmail);
             return this;
         }
 
-        public Builder setMasterAccountId(@Nullable Input<String> masterAccountId) {
+        public Builder masterAccountId(@Nullable Input<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
 
-        public Builder setMasterAccountId(@Nullable String masterAccountId) {
+        public Builder masterAccountId(@Nullable String masterAccountId) {
             this.masterAccountId = Input.ofNullable(masterAccountId);
             return this;
         }
 
-        public Builder setNonMasterAccounts(@Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts) {
+        public Builder nonMasterAccounts(@Nullable Input<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts) {
             this.nonMasterAccounts = nonMasterAccounts;
             return this;
         }
 
-        public Builder setNonMasterAccounts(@Nullable List<OrganizationNonMasterAccountGetArgs> nonMasterAccounts) {
+        public Builder nonMasterAccounts(@Nullable List<OrganizationNonMasterAccountGetArgs> nonMasterAccounts) {
             this.nonMasterAccounts = Input.ofNullable(nonMasterAccounts);
             return this;
         }
 
-        public Builder setRoots(@Nullable Input<List<OrganizationRootGetArgs>> roots) {
+        public Builder roots(@Nullable Input<List<OrganizationRootGetArgs>> roots) {
             this.roots = roots;
             return this;
         }
 
-        public Builder setRoots(@Nullable List<OrganizationRootGetArgs> roots) {
+        public Builder roots(@Nullable List<OrganizationRootGetArgs> roots) {
             this.roots = Input.ofNullable(roots);
             return this;
         }

@@ -104,42 +104,42 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setAutoDeployed(@Nullable Input<Boolean> autoDeployed) {
+        public Builder autoDeployed(@Nullable Input<Boolean> autoDeployed) {
             this.autoDeployed = autoDeployed;
             return this;
         }
 
-        public Builder setAutoDeployed(@Nullable Boolean autoDeployed) {
+        public Builder autoDeployed(@Nullable Boolean autoDeployed) {
             this.autoDeployed = Input.ofNullable(autoDeployed);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<Map<String,String>> triggers) {
+        public Builder triggers(@Nullable Input<Map<String,String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable Map<String,String> triggers) {
+        public Builder triggers(@Nullable Map<String,String> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }

@@ -71,22 +71,22 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaArgs extend
     	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
         }
 
-        public Builder setReplicaModifications(@Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications) {
+        public Builder replicaModifications(@Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs> replicaModifications) {
             this.replicaModifications = replicaModifications;
             return this;
         }
 
-        public Builder setReplicaModifications(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs replicaModifications) {
+        public Builder replicaModifications(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsArgs replicaModifications) {
             this.replicaModifications = Input.ofNullable(replicaModifications);
             return this;
         }
 
-        public Builder setSseKmsEncryptedObjects(@Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
+        public Builder sseKmsEncryptedObjects(@Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }
 
-        public Builder setSseKmsEncryptedObjects(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
+        public Builder sseKmsEncryptedObjects(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = Input.ofNullable(sseKmsEncryptedObjects);
             return this;
         }

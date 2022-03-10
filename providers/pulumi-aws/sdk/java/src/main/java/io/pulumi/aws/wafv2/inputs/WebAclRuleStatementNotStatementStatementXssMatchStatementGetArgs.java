@@ -72,22 +72,22 @@ public final class WebAclRuleStatementNotStatementStatementXssMatchStatementGetA
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(@Nullable Input<WebAclRuleStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch) {
+        public Builder fieldToMatch(@Nullable Input<WebAclRuleStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
-        public Builder setFieldToMatch(@Nullable WebAclRuleStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
+        public Builder fieldToMatch(@Nullable WebAclRuleStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
             this.fieldToMatch = Input.ofNullable(fieldToMatch);
             return this;
         }
 
-        public Builder setTextTransformations(Input<List<WebAclRuleStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {
+        public Builder textTransformations(Input<List<WebAclRuleStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
-        public Builder setTextTransformations(List<WebAclRuleStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs> textTransformations) {
+        public Builder textTransformations(List<WebAclRuleStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs> textTransformations) {
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }

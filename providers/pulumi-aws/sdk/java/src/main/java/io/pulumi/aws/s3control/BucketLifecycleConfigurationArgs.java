@@ -71,22 +71,22 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
     	      this.rules = defaults.rules;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setRules(Input<List<BucketLifecycleConfigurationRuleArgs>> rules) {
+        public Builder rules(Input<List<BucketLifecycleConfigurationRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<BucketLifecycleConfigurationRuleArgs> rules) {
+        public Builder rules(List<BucketLifecycleConfigurationRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }

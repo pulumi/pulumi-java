@@ -116,27 +116,27 @@ public final class BucketNotificationTopic {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setFilterPrefix(@Nullable String filterPrefix) {
+        public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
 
-        public Builder setFilterSuffix(@Nullable String filterSuffix) {
+        public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }

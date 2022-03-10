@@ -103,37 +103,37 @@ public final class MethodSettingsState extends io.pulumi.resources.ResourceArgs 
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setMethodPath(@Nullable Input<String> methodPath) {
+        public Builder methodPath(@Nullable Input<String> methodPath) {
             this.methodPath = methodPath;
             return this;
         }
 
-        public Builder setMethodPath(@Nullable String methodPath) {
+        public Builder methodPath(@Nullable String methodPath) {
             this.methodPath = Input.ofNullable(methodPath);
             return this;
         }
 
-        public Builder setRestApi(@Nullable Input<String> restApi) {
+        public Builder restApi(@Nullable Input<String> restApi) {
             this.restApi = restApi;
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<MethodSettingsSettingsGetArgs> settings) {
+        public Builder settings(@Nullable Input<MethodSettingsSettingsGetArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable MethodSettingsSettingsGetArgs settings) {
+        public Builder settings(@Nullable MethodSettingsSettingsGetArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setStageName(@Nullable Input<String> stageName) {
+        public Builder stageName(@Nullable Input<String> stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }

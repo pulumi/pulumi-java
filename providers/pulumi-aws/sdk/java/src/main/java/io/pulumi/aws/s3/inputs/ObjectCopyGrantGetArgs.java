@@ -119,52 +119,52 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
     	      this.uri = defaults.uri;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setPermissions(Input<List<String>> permissions) {
+        public Builder permissions(Input<List<String>> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Input.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

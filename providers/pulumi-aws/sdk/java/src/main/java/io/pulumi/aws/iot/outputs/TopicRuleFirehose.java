@@ -83,17 +83,17 @@ public final class TopicRuleFirehose {
     	      this.separator = defaults.separator;
         }
 
-        public Builder setDeliveryStreamName(String deliveryStreamName) {
+        public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSeparator(@Nullable String separator) {
+        public Builder separator(@Nullable String separator) {
             this.separator = separator;
             return this;
         }

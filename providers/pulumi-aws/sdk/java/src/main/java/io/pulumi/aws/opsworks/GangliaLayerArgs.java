@@ -420,252 +420,252 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setAutoAssignElasticIps(@Nullable Input<Boolean> autoAssignElasticIps) {
+        public Builder autoAssignElasticIps(@Nullable Input<Boolean> autoAssignElasticIps) {
             this.autoAssignElasticIps = autoAssignElasticIps;
             return this;
         }
 
-        public Builder setAutoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
+        public Builder autoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
             this.autoAssignElasticIps = Input.ofNullable(autoAssignElasticIps);
             return this;
         }
 
-        public Builder setAutoAssignPublicIps(@Nullable Input<Boolean> autoAssignPublicIps) {
+        public Builder autoAssignPublicIps(@Nullable Input<Boolean> autoAssignPublicIps) {
             this.autoAssignPublicIps = autoAssignPublicIps;
             return this;
         }
 
-        public Builder setAutoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
+        public Builder autoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
             this.autoAssignPublicIps = Input.ofNullable(autoAssignPublicIps);
             return this;
         }
 
-        public Builder setAutoHealing(@Nullable Input<Boolean> autoHealing) {
+        public Builder autoHealing(@Nullable Input<Boolean> autoHealing) {
             this.autoHealing = autoHealing;
             return this;
         }
 
-        public Builder setAutoHealing(@Nullable Boolean autoHealing) {
+        public Builder autoHealing(@Nullable Boolean autoHealing) {
             this.autoHealing = Input.ofNullable(autoHealing);
             return this;
         }
 
-        public Builder setCloudwatchConfiguration(@Nullable Input<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Input<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             this.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder setCloudwatchConfiguration(@Nullable GangliaLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable GangliaLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             this.cloudwatchConfiguration = Input.ofNullable(cloudwatchConfiguration);
             return this;
         }
 
-        public Builder setCustomConfigureRecipes(@Nullable Input<List<String>> customConfigureRecipes) {
+        public Builder customConfigureRecipes(@Nullable Input<List<String>> customConfigureRecipes) {
             this.customConfigureRecipes = customConfigureRecipes;
             return this;
         }
 
-        public Builder setCustomConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
+        public Builder customConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
             this.customConfigureRecipes = Input.ofNullable(customConfigureRecipes);
             return this;
         }
 
-        public Builder setCustomDeployRecipes(@Nullable Input<List<String>> customDeployRecipes) {
+        public Builder customDeployRecipes(@Nullable Input<List<String>> customDeployRecipes) {
             this.customDeployRecipes = customDeployRecipes;
             return this;
         }
 
-        public Builder setCustomDeployRecipes(@Nullable List<String> customDeployRecipes) {
+        public Builder customDeployRecipes(@Nullable List<String> customDeployRecipes) {
             this.customDeployRecipes = Input.ofNullable(customDeployRecipes);
             return this;
         }
 
-        public Builder setCustomInstanceProfileArn(@Nullable Input<String> customInstanceProfileArn) {
+        public Builder customInstanceProfileArn(@Nullable Input<String> customInstanceProfileArn) {
             this.customInstanceProfileArn = customInstanceProfileArn;
             return this;
         }
 
-        public Builder setCustomInstanceProfileArn(@Nullable String customInstanceProfileArn) {
+        public Builder customInstanceProfileArn(@Nullable String customInstanceProfileArn) {
             this.customInstanceProfileArn = Input.ofNullable(customInstanceProfileArn);
             return this;
         }
 
-        public Builder setCustomJson(@Nullable Input<String> customJson) {
+        public Builder customJson(@Nullable Input<String> customJson) {
             this.customJson = customJson;
             return this;
         }
 
-        public Builder setCustomJson(@Nullable String customJson) {
+        public Builder customJson(@Nullable String customJson) {
             this.customJson = Input.ofNullable(customJson);
             return this;
         }
 
-        public Builder setCustomSecurityGroupIds(@Nullable Input<List<String>> customSecurityGroupIds) {
+        public Builder customSecurityGroupIds(@Nullable Input<List<String>> customSecurityGroupIds) {
             this.customSecurityGroupIds = customSecurityGroupIds;
             return this;
         }
 
-        public Builder setCustomSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
+        public Builder customSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
             this.customSecurityGroupIds = Input.ofNullable(customSecurityGroupIds);
             return this;
         }
 
-        public Builder setCustomSetupRecipes(@Nullable Input<List<String>> customSetupRecipes) {
+        public Builder customSetupRecipes(@Nullable Input<List<String>> customSetupRecipes) {
             this.customSetupRecipes = customSetupRecipes;
             return this;
         }
 
-        public Builder setCustomSetupRecipes(@Nullable List<String> customSetupRecipes) {
+        public Builder customSetupRecipes(@Nullable List<String> customSetupRecipes) {
             this.customSetupRecipes = Input.ofNullable(customSetupRecipes);
             return this;
         }
 
-        public Builder setCustomShutdownRecipes(@Nullable Input<List<String>> customShutdownRecipes) {
+        public Builder customShutdownRecipes(@Nullable Input<List<String>> customShutdownRecipes) {
             this.customShutdownRecipes = customShutdownRecipes;
             return this;
         }
 
-        public Builder setCustomShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
+        public Builder customShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
             this.customShutdownRecipes = Input.ofNullable(customShutdownRecipes);
             return this;
         }
 
-        public Builder setCustomUndeployRecipes(@Nullable Input<List<String>> customUndeployRecipes) {
+        public Builder customUndeployRecipes(@Nullable Input<List<String>> customUndeployRecipes) {
             this.customUndeployRecipes = customUndeployRecipes;
             return this;
         }
 
-        public Builder setCustomUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
+        public Builder customUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
             this.customUndeployRecipes = Input.ofNullable(customUndeployRecipes);
             return this;
         }
 
-        public Builder setDrainElbOnShutdown(@Nullable Input<Boolean> drainElbOnShutdown) {
+        public Builder drainElbOnShutdown(@Nullable Input<Boolean> drainElbOnShutdown) {
             this.drainElbOnShutdown = drainElbOnShutdown;
             return this;
         }
 
-        public Builder setDrainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
+        public Builder drainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
             this.drainElbOnShutdown = Input.ofNullable(drainElbOnShutdown);
             return this;
         }
 
-        public Builder setEbsVolumes(@Nullable Input<List<GangliaLayerEbsVolumeArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Input<List<GangliaLayerEbsVolumeArgs>> ebsVolumes) {
             this.ebsVolumes = ebsVolumes;
             return this;
         }
 
-        public Builder setEbsVolumes(@Nullable List<GangliaLayerEbsVolumeArgs> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable List<GangliaLayerEbsVolumeArgs> ebsVolumes) {
             this.ebsVolumes = Input.ofNullable(ebsVolumes);
             return this;
         }
 
-        public Builder setElasticLoadBalancer(@Nullable Input<String> elasticLoadBalancer) {
+        public Builder elasticLoadBalancer(@Nullable Input<String> elasticLoadBalancer) {
             this.elasticLoadBalancer = elasticLoadBalancer;
             return this;
         }
 
-        public Builder setElasticLoadBalancer(@Nullable String elasticLoadBalancer) {
+        public Builder elasticLoadBalancer(@Nullable String elasticLoadBalancer) {
             this.elasticLoadBalancer = Input.ofNullable(elasticLoadBalancer);
             return this;
         }
 
-        public Builder setInstallUpdatesOnBoot(@Nullable Input<Boolean> installUpdatesOnBoot) {
+        public Builder installUpdatesOnBoot(@Nullable Input<Boolean> installUpdatesOnBoot) {
             this.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
 
-        public Builder setInstallUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
+        public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
             this.installUpdatesOnBoot = Input.ofNullable(installUpdatesOnBoot);
             return this;
         }
 
-        public Builder setInstanceShutdownTimeout(@Nullable Input<Integer> instanceShutdownTimeout) {
+        public Builder instanceShutdownTimeout(@Nullable Input<Integer> instanceShutdownTimeout) {
             this.instanceShutdownTimeout = instanceShutdownTimeout;
             return this;
         }
 
-        public Builder setInstanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
+        public Builder instanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
             this.instanceShutdownTimeout = Input.ofNullable(instanceShutdownTimeout);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setStackId(Input<String> stackId) {
+        public Builder stackId(Input<String> stackId) {
             this.stackId = Objects.requireNonNull(stackId);
             return this;
         }
 
-        public Builder setStackId(String stackId) {
+        public Builder stackId(String stackId) {
             this.stackId = Input.of(Objects.requireNonNull(stackId));
             return this;
         }
 
-        public Builder setSystemPackages(@Nullable Input<List<String>> systemPackages) {
+        public Builder systemPackages(@Nullable Input<List<String>> systemPackages) {
             this.systemPackages = systemPackages;
             return this;
         }
 
-        public Builder setSystemPackages(@Nullable List<String> systemPackages) {
+        public Builder systemPackages(@Nullable List<String> systemPackages) {
             this.systemPackages = Input.ofNullable(systemPackages);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }
 
-        public Builder setUseEbsOptimizedInstances(@Nullable Input<Boolean> useEbsOptimizedInstances) {
+        public Builder useEbsOptimizedInstances(@Nullable Input<Boolean> useEbsOptimizedInstances) {
             this.useEbsOptimizedInstances = useEbsOptimizedInstances;
             return this;
         }
 
-        public Builder setUseEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
+        public Builder useEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
             this.useEbsOptimizedInstances = Input.ofNullable(useEbsOptimizedInstances);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

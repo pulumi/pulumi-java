@@ -52,12 +52,12 @@ public final class AnalyticsConfigurationStorageClassAnalysisArgs extends io.pul
     	      this.dataExport = defaults.dataExport;
         }
 
-        public Builder setDataExport(Input<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> dataExport) {
+        public Builder dataExport(Input<AnalyticsConfigurationStorageClassAnalysisDataExportArgs> dataExport) {
             this.dataExport = Objects.requireNonNull(dataExport);
             return this;
         }
 
-        public Builder setDataExport(AnalyticsConfigurationStorageClassAnalysisDataExportArgs dataExport) {
+        public Builder dataExport(AnalyticsConfigurationStorageClassAnalysisDataExportArgs dataExport) {
             this.dataExport = Input.of(Objects.requireNonNull(dataExport));
             return this;
         }

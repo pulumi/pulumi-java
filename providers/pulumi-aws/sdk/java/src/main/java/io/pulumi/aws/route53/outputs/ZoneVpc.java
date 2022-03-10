@@ -67,12 +67,12 @@ public final class ZoneVpc {
     	      this.vpcRegion = defaults.vpcRegion;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcRegion(@Nullable String vpcRegion) {
+        public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }

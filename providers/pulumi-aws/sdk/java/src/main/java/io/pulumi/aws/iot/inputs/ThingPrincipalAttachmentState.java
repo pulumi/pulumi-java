@@ -70,22 +70,22 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
     	      this.thing = defaults.thing;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }
 
-        public Builder setThing(@Nullable Input<String> thing) {
+        public Builder thing(@Nullable Input<String> thing) {
             this.thing = thing;
             return this;
         }
 
-        public Builder setThing(@Nullable String thing) {
+        public Builder thing(@Nullable String thing) {
             this.thing = Input.ofNullable(thing);
             return this;
         }

@@ -181,92 +181,92 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccessString(@Nullable Input<String> accessString) {
+        public Builder accessString(@Nullable Input<String> accessString) {
             this.accessString = accessString;
             return this;
         }
 
-        public Builder setAccessString(@Nullable String accessString) {
+        public Builder accessString(@Nullable String accessString) {
             this.accessString = Input.ofNullable(accessString);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEngine(@Nullable Input<String> engine) {
+        public Builder engine(@Nullable Input<String> engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = Input.ofNullable(engine);
             return this;
         }
 
-        public Builder setNoPasswordRequired(@Nullable Input<Boolean> noPasswordRequired) {
+        public Builder noPasswordRequired(@Nullable Input<Boolean> noPasswordRequired) {
             this.noPasswordRequired = noPasswordRequired;
             return this;
         }
 
-        public Builder setNoPasswordRequired(@Nullable Boolean noPasswordRequired) {
+        public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
             this.noPasswordRequired = Input.ofNullable(noPasswordRequired);
             return this;
         }
 
-        public Builder setPasswords(@Nullable Input<List<String>> passwords) {
+        public Builder passwords(@Nullable Input<List<String>> passwords) {
             this.passwords = passwords;
             return this;
         }
 
-        public Builder setPasswords(@Nullable List<String> passwords) {
+        public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = Input.ofNullable(passwords);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Input<String> userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setUserId(@Nullable String userId) {
+        public Builder userId(@Nullable String userId) {
             this.userId = Input.ofNullable(userId);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

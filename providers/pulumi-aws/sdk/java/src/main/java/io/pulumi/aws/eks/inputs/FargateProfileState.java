@@ -185,92 +185,92 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setFargateProfileName(@Nullable Input<String> fargateProfileName) {
+        public Builder fargateProfileName(@Nullable Input<String> fargateProfileName) {
             this.fargateProfileName = fargateProfileName;
             return this;
         }
 
-        public Builder setFargateProfileName(@Nullable String fargateProfileName) {
+        public Builder fargateProfileName(@Nullable String fargateProfileName) {
             this.fargateProfileName = Input.ofNullable(fargateProfileName);
             return this;
         }
 
-        public Builder setPodExecutionRoleArn(@Nullable Input<String> podExecutionRoleArn) {
+        public Builder podExecutionRoleArn(@Nullable Input<String> podExecutionRoleArn) {
             this.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
 
-        public Builder setPodExecutionRoleArn(@Nullable String podExecutionRoleArn) {
+        public Builder podExecutionRoleArn(@Nullable String podExecutionRoleArn) {
             this.podExecutionRoleArn = Input.ofNullable(podExecutionRoleArn);
             return this;
         }
 
-        public Builder setSelectors(@Nullable Input<List<FargateProfileSelectorGetArgs>> selectors) {
+        public Builder selectors(@Nullable Input<List<FargateProfileSelectorGetArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
 
-        public Builder setSelectors(@Nullable List<FargateProfileSelectorGetArgs> selectors) {
+        public Builder selectors(@Nullable List<FargateProfileSelectorGetArgs> selectors) {
             this.selectors = Input.ofNullable(selectors);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

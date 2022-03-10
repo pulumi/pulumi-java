@@ -88,32 +88,32 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
     	      this.detectorId = defaults.detectorId;
         }
 
-        public Builder setAutoEnable(Input<Boolean> autoEnable) {
+        public Builder autoEnable(Input<Boolean> autoEnable) {
             this.autoEnable = Objects.requireNonNull(autoEnable);
             return this;
         }
 
-        public Builder setAutoEnable(Boolean autoEnable) {
+        public Builder autoEnable(Boolean autoEnable) {
             this.autoEnable = Input.of(Objects.requireNonNull(autoEnable));
             return this;
         }
 
-        public Builder setDatasources(@Nullable Input<OrganizationConfigurationDatasourcesArgs> datasources) {
+        public Builder datasources(@Nullable Input<OrganizationConfigurationDatasourcesArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
 
-        public Builder setDatasources(@Nullable OrganizationConfigurationDatasourcesArgs datasources) {
+        public Builder datasources(@Nullable OrganizationConfigurationDatasourcesArgs datasources) {
             this.datasources = Input.ofNullable(datasources);
             return this;
         }
 
-        public Builder setDetectorId(Input<String> detectorId) {
+        public Builder detectorId(Input<String> detectorId) {
             this.detectorId = Objects.requireNonNull(detectorId);
             return this;
         }
 
-        public Builder setDetectorId(String detectorId) {
+        public Builder detectorId(String detectorId) {
             this.detectorId = Input.of(Objects.requireNonNull(detectorId));
             return this;
         }

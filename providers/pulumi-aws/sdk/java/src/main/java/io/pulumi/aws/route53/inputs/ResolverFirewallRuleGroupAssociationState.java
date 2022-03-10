@@ -168,82 +168,82 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setFirewallRuleGroupId(@Nullable Input<String> firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(@Nullable Input<String> firewallRuleGroupId) {
             this.firewallRuleGroupId = firewallRuleGroupId;
             return this;
         }
 
-        public Builder setFirewallRuleGroupId(@Nullable String firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(@Nullable String firewallRuleGroupId) {
             this.firewallRuleGroupId = Input.ofNullable(firewallRuleGroupId);
             return this;
         }
 
-        public Builder setMutationProtection(@Nullable Input<String> mutationProtection) {
+        public Builder mutationProtection(@Nullable Input<String> mutationProtection) {
             this.mutationProtection = mutationProtection;
             return this;
         }
 
-        public Builder setMutationProtection(@Nullable String mutationProtection) {
+        public Builder mutationProtection(@Nullable String mutationProtection) {
             this.mutationProtection = Input.ofNullable(mutationProtection);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

@@ -133,37 +133,37 @@ public final class GetResponseHeadersPolicyResult {
     	      this.securityHeadersConfigs = defaults.securityHeadersConfigs;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setCorsConfigs(List<GetResponseHeadersPolicyCorsConfig> corsConfigs) {
+        public Builder corsConfigs(List<GetResponseHeadersPolicyCorsConfig> corsConfigs) {
             this.corsConfigs = Objects.requireNonNull(corsConfigs);
             return this;
         }
 
-        public Builder setCustomHeadersConfigs(List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs) {
+        public Builder customHeadersConfigs(List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs) {
             this.customHeadersConfigs = Objects.requireNonNull(customHeadersConfigs);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecurityHeadersConfigs(List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
+        public Builder securityHeadersConfigs(List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
             this.securityHeadersConfigs = Objects.requireNonNull(securityHeadersConfigs);
             return this;
         }

@@ -85,17 +85,17 @@ public final class GetEndpointResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setEndpointAddress(String endpointAddress) {
+        public Builder endpointAddress(String endpointAddress) {
             this.endpointAddress = Objects.requireNonNull(endpointAddress);
             return this;
         }
 
-        public Builder setEndpointType(@Nullable String endpointType) {
+        public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

@@ -68,12 +68,12 @@ public final class ThingTypeProperties {
     	      this.searchableAttributes = defaults.searchableAttributes;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSearchableAttributes(@Nullable List<String> searchableAttributes) {
+        public Builder searchableAttributes(@Nullable List<String> searchableAttributes) {
             this.searchableAttributes = searchableAttributes;
             return this;
         }

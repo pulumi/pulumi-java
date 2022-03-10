@@ -53,12 +53,12 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements) {
+        public Builder statements(Input<List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
-        public Builder setStatements(List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs> statements) {
+        public Builder statements(List<WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementArgs> statements) {
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }

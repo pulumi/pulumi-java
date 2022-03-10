@@ -48,7 +48,7 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
     	      this.owner = defaults.owner;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }

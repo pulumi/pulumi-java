@@ -134,62 +134,62 @@ public final class PublicKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder setCallerReference(@Nullable Input<String> callerReference) {
+        public Builder callerReference(@Nullable Input<String> callerReference) {
             this.callerReference = callerReference;
             return this;
         }
 
-        public Builder setCallerReference(@Nullable String callerReference) {
+        public Builder callerReference(@Nullable String callerReference) {
             this.callerReference = Input.ofNullable(callerReference);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setEncodedKey(@Nullable Input<String> encodedKey) {
+        public Builder encodedKey(@Nullable Input<String> encodedKey) {
             this.encodedKey = encodedKey;
             return this;
         }
 
-        public Builder setEncodedKey(@Nullable String encodedKey) {
+        public Builder encodedKey(@Nullable String encodedKey) {
             this.encodedKey = Input.ofNullable(encodedKey);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }

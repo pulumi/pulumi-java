@@ -53,12 +53,12 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(Input<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementArgs>> statements) {
+        public Builder statements(Input<List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
-        public Builder setStatements(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementArgs> statements) {
+        public Builder statements(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementArgs> statements) {
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }

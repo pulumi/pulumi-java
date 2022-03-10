@@ -249,132 +249,132 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setFixedRate(Input<Double> fixedRate) {
+        public Builder fixedRate(Input<Double> fixedRate) {
             this.fixedRate = Objects.requireNonNull(fixedRate);
             return this;
         }
 
-        public Builder setFixedRate(Double fixedRate) {
+        public Builder fixedRate(Double fixedRate) {
             this.fixedRate = Input.of(Objects.requireNonNull(fixedRate));
             return this;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setHttpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Input<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setReservoirSize(Input<Integer> reservoirSize) {
+        public Builder reservoirSize(Input<Integer> reservoirSize) {
             this.reservoirSize = Objects.requireNonNull(reservoirSize);
             return this;
         }
 
-        public Builder setReservoirSize(Integer reservoirSize) {
+        public Builder reservoirSize(Integer reservoirSize) {
             this.reservoirSize = Input.of(Objects.requireNonNull(reservoirSize));
             return this;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setServiceType(Input<String> serviceType) {
+        public Builder serviceType(Input<String> serviceType) {
             this.serviceType = Objects.requireNonNull(serviceType);
             return this;
         }
 
-        public Builder setServiceType(String serviceType) {
+        public Builder serviceType(String serviceType) {
             this.serviceType = Input.of(Objects.requireNonNull(serviceType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUrlPath(Input<String> urlPath) {
+        public Builder urlPath(Input<String> urlPath) {
             this.urlPath = Objects.requireNonNull(urlPath);
             return this;
         }
 
-        public Builder setUrlPath(String urlPath) {
+        public Builder urlPath(String urlPath) {
             this.urlPath = Input.of(Objects.requireNonNull(urlPath));
             return this;
         }
 
-        public Builder setVersion(Input<Integer> version) {
+        public Builder version(Input<Integer> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

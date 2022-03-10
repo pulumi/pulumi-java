@@ -104,42 +104,42 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(Input<RuleGroupActivatedRuleActionGetArgs> action) {
+        public Builder action(Input<RuleGroupActivatedRuleActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(RuleGroupActivatedRuleActionGetArgs action) {
+        public Builder action(RuleGroupActivatedRuleActionGetArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setRuleId(Input<String> ruleId) {
+        public Builder ruleId(Input<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Input.of(Objects.requireNonNull(ruleId));
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

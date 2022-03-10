@@ -53,12 +53,12 @@ public final class NodejsAppLayerCloudwatchConfiguration {
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<NodejsAppLayerCloudwatchConfigurationLogStream> logStreams) {
+        public Builder logStreams(@Nullable List<NodejsAppLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }

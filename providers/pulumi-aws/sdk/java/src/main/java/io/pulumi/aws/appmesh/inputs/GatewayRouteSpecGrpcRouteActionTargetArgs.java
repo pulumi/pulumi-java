@@ -52,12 +52,12 @@ public final class GatewayRouteSpecGrpcRouteActionTargetArgs extends io.pulumi.r
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder setVirtualService(Input<GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs> virtualService) {
+        public Builder virtualService(Input<GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs> virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }
 
-        public Builder setVirtualService(GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs virtualService) {
+        public Builder virtualService(GatewayRouteSpecGrpcRouteActionTargetVirtualServiceArgs virtualService) {
             this.virtualService = Input.of(Objects.requireNonNull(virtualService));
             return this;
         }

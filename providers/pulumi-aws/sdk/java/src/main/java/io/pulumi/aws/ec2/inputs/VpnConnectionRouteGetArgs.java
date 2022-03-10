@@ -86,32 +86,32 @@ public final class VpnConnectionRouteGetArgs extends io.pulumi.resources.Resourc
     	      this.state = defaults.state;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

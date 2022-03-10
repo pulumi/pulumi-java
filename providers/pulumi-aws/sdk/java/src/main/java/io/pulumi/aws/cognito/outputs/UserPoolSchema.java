@@ -150,37 +150,37 @@ public final class UserPoolSchema {
     	      this.stringAttributeConstraints = defaults.stringAttributeConstraints;
         }
 
-        public Builder setAttributeDataType(String attributeDataType) {
+        public Builder attributeDataType(String attributeDataType) {
             this.attributeDataType = Objects.requireNonNull(attributeDataType);
             return this;
         }
 
-        public Builder setDeveloperOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
+        public Builder developerOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
             this.developerOnlyAttribute = developerOnlyAttribute;
             return this;
         }
 
-        public Builder setMutable(@Nullable Boolean mutable) {
+        public Builder mutable(@Nullable Boolean mutable) {
             this.mutable = mutable;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints) {
+        public Builder numberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints) {
             this.numberAttributeConstraints = numberAttributeConstraints;
             return this;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
 
-        public Builder setStringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
+        public Builder stringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
             this.stringAttributeConstraints = stringAttributeConstraints;
             return this;
         }

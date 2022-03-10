@@ -134,62 +134,62 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setParameters(Input<String> parameters) {
+        public Builder parameters(Input<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(String parameters) {
+        public Builder parameters(String parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder setPortfolioId(Input<String> portfolioId) {
+        public Builder portfolioId(Input<String> portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
-        public Builder setPortfolioId(String portfolioId) {
+        public Builder portfolioId(String portfolioId) {
             this.portfolioId = Input.of(Objects.requireNonNull(portfolioId));
             return this;
         }
 
-        public Builder setProductId(Input<String> productId) {
+        public Builder productId(Input<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Input.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

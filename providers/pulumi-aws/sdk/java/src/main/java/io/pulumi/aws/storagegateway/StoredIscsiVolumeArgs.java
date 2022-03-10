@@ -184,92 +184,92 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     	      this.targetName = defaults.targetName;
         }
 
-        public Builder setDiskId(Input<String> diskId) {
+        public Builder diskId(Input<String> diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
 
-        public Builder setDiskId(String diskId) {
+        public Builder diskId(String diskId) {
             this.diskId = Input.of(Objects.requireNonNull(diskId));
             return this;
         }
 
-        public Builder setGatewayArn(Input<String> gatewayArn) {
+        public Builder gatewayArn(Input<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
 
-        public Builder setGatewayArn(String gatewayArn) {
+        public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Input.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Boolean kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Input.ofNullable(kmsEncrypted);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
 
-        public Builder setPreserveExistingData(Input<Boolean> preserveExistingData) {
+        public Builder preserveExistingData(Input<Boolean> preserveExistingData) {
             this.preserveExistingData = Objects.requireNonNull(preserveExistingData);
             return this;
         }
 
-        public Builder setPreserveExistingData(Boolean preserveExistingData) {
+        public Builder preserveExistingData(Boolean preserveExistingData) {
             this.preserveExistingData = Input.of(Objects.requireNonNull(preserveExistingData));
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Input<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Input.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetName(Input<String> targetName) {
+        public Builder targetName(Input<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
-        public Builder setTargetName(String targetName) {
+        public Builder targetName(String targetName) {
             this.targetName = Input.of(Objects.requireNonNull(targetName));
             return this;
         }

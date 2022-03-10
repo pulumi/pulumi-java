@@ -67,17 +67,17 @@ public final class GetBrokerNodesResult {
     	      this.nodeInfoLists = defaults.nodeInfoLists;
         }
 
-        public Builder setClusterArn(String clusterArn) {
+        public Builder clusterArn(String clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNodeInfoLists(List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
+        public Builder nodeInfoLists(List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
             this.nodeInfoLists = Objects.requireNonNull(nodeInfoLists);
             return this;
         }

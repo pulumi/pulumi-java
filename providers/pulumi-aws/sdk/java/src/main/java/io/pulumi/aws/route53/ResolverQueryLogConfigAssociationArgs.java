@@ -69,22 +69,22 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setResolverQueryLogConfigId(Input<String> resolverQueryLogConfigId) {
+        public Builder resolverQueryLogConfigId(Input<String> resolverQueryLogConfigId) {
             this.resolverQueryLogConfigId = Objects.requireNonNull(resolverQueryLogConfigId);
             return this;
         }
 
-        public Builder setResolverQueryLogConfigId(String resolverQueryLogConfigId) {
+        public Builder resolverQueryLogConfigId(String resolverQueryLogConfigId) {
             this.resolverQueryLogConfigId = Input.of(Objects.requireNonNull(resolverQueryLogConfigId));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }

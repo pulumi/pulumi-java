@@ -468,282 +468,282 @@ public final class RailsAppLayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useEbsOptimizedInstances = defaults.useEbsOptimizedInstances;
         }
 
-        public Builder setAppServer(@Nullable Input<String> appServer) {
+        public Builder appServer(@Nullable Input<String> appServer) {
             this.appServer = appServer;
             return this;
         }
 
-        public Builder setAppServer(@Nullable String appServer) {
+        public Builder appServer(@Nullable String appServer) {
             this.appServer = Input.ofNullable(appServer);
             return this;
         }
 
-        public Builder setAutoAssignElasticIps(@Nullable Input<Boolean> autoAssignElasticIps) {
+        public Builder autoAssignElasticIps(@Nullable Input<Boolean> autoAssignElasticIps) {
             this.autoAssignElasticIps = autoAssignElasticIps;
             return this;
         }
 
-        public Builder setAutoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
+        public Builder autoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
             this.autoAssignElasticIps = Input.ofNullable(autoAssignElasticIps);
             return this;
         }
 
-        public Builder setAutoAssignPublicIps(@Nullable Input<Boolean> autoAssignPublicIps) {
+        public Builder autoAssignPublicIps(@Nullable Input<Boolean> autoAssignPublicIps) {
             this.autoAssignPublicIps = autoAssignPublicIps;
             return this;
         }
 
-        public Builder setAutoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
+        public Builder autoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
             this.autoAssignPublicIps = Input.ofNullable(autoAssignPublicIps);
             return this;
         }
 
-        public Builder setAutoHealing(@Nullable Input<Boolean> autoHealing) {
+        public Builder autoHealing(@Nullable Input<Boolean> autoHealing) {
             this.autoHealing = autoHealing;
             return this;
         }
 
-        public Builder setAutoHealing(@Nullable Boolean autoHealing) {
+        public Builder autoHealing(@Nullable Boolean autoHealing) {
             this.autoHealing = Input.ofNullable(autoHealing);
             return this;
         }
 
-        public Builder setBundlerVersion(@Nullable Input<String> bundlerVersion) {
+        public Builder bundlerVersion(@Nullable Input<String> bundlerVersion) {
             this.bundlerVersion = bundlerVersion;
             return this;
         }
 
-        public Builder setBundlerVersion(@Nullable String bundlerVersion) {
+        public Builder bundlerVersion(@Nullable String bundlerVersion) {
             this.bundlerVersion = Input.ofNullable(bundlerVersion);
             return this;
         }
 
-        public Builder setCloudwatchConfiguration(@Nullable Input<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable Input<RailsAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
             this.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
 
-        public Builder setCloudwatchConfiguration(@Nullable RailsAppLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
+        public Builder cloudwatchConfiguration(@Nullable RailsAppLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
             this.cloudwatchConfiguration = Input.ofNullable(cloudwatchConfiguration);
             return this;
         }
 
-        public Builder setCustomConfigureRecipes(@Nullable Input<List<String>> customConfigureRecipes) {
+        public Builder customConfigureRecipes(@Nullable Input<List<String>> customConfigureRecipes) {
             this.customConfigureRecipes = customConfigureRecipes;
             return this;
         }
 
-        public Builder setCustomConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
+        public Builder customConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
             this.customConfigureRecipes = Input.ofNullable(customConfigureRecipes);
             return this;
         }
 
-        public Builder setCustomDeployRecipes(@Nullable Input<List<String>> customDeployRecipes) {
+        public Builder customDeployRecipes(@Nullable Input<List<String>> customDeployRecipes) {
             this.customDeployRecipes = customDeployRecipes;
             return this;
         }
 
-        public Builder setCustomDeployRecipes(@Nullable List<String> customDeployRecipes) {
+        public Builder customDeployRecipes(@Nullable List<String> customDeployRecipes) {
             this.customDeployRecipes = Input.ofNullable(customDeployRecipes);
             return this;
         }
 
-        public Builder setCustomInstanceProfileArn(@Nullable Input<String> customInstanceProfileArn) {
+        public Builder customInstanceProfileArn(@Nullable Input<String> customInstanceProfileArn) {
             this.customInstanceProfileArn = customInstanceProfileArn;
             return this;
         }
 
-        public Builder setCustomInstanceProfileArn(@Nullable String customInstanceProfileArn) {
+        public Builder customInstanceProfileArn(@Nullable String customInstanceProfileArn) {
             this.customInstanceProfileArn = Input.ofNullable(customInstanceProfileArn);
             return this;
         }
 
-        public Builder setCustomJson(@Nullable Input<String> customJson) {
+        public Builder customJson(@Nullable Input<String> customJson) {
             this.customJson = customJson;
             return this;
         }
 
-        public Builder setCustomJson(@Nullable String customJson) {
+        public Builder customJson(@Nullable String customJson) {
             this.customJson = Input.ofNullable(customJson);
             return this;
         }
 
-        public Builder setCustomSecurityGroupIds(@Nullable Input<List<String>> customSecurityGroupIds) {
+        public Builder customSecurityGroupIds(@Nullable Input<List<String>> customSecurityGroupIds) {
             this.customSecurityGroupIds = customSecurityGroupIds;
             return this;
         }
 
-        public Builder setCustomSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
+        public Builder customSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
             this.customSecurityGroupIds = Input.ofNullable(customSecurityGroupIds);
             return this;
         }
 
-        public Builder setCustomSetupRecipes(@Nullable Input<List<String>> customSetupRecipes) {
+        public Builder customSetupRecipes(@Nullable Input<List<String>> customSetupRecipes) {
             this.customSetupRecipes = customSetupRecipes;
             return this;
         }
 
-        public Builder setCustomSetupRecipes(@Nullable List<String> customSetupRecipes) {
+        public Builder customSetupRecipes(@Nullable List<String> customSetupRecipes) {
             this.customSetupRecipes = Input.ofNullable(customSetupRecipes);
             return this;
         }
 
-        public Builder setCustomShutdownRecipes(@Nullable Input<List<String>> customShutdownRecipes) {
+        public Builder customShutdownRecipes(@Nullable Input<List<String>> customShutdownRecipes) {
             this.customShutdownRecipes = customShutdownRecipes;
             return this;
         }
 
-        public Builder setCustomShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
+        public Builder customShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
             this.customShutdownRecipes = Input.ofNullable(customShutdownRecipes);
             return this;
         }
 
-        public Builder setCustomUndeployRecipes(@Nullable Input<List<String>> customUndeployRecipes) {
+        public Builder customUndeployRecipes(@Nullable Input<List<String>> customUndeployRecipes) {
             this.customUndeployRecipes = customUndeployRecipes;
             return this;
         }
 
-        public Builder setCustomUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
+        public Builder customUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
             this.customUndeployRecipes = Input.ofNullable(customUndeployRecipes);
             return this;
         }
 
-        public Builder setDrainElbOnShutdown(@Nullable Input<Boolean> drainElbOnShutdown) {
+        public Builder drainElbOnShutdown(@Nullable Input<Boolean> drainElbOnShutdown) {
             this.drainElbOnShutdown = drainElbOnShutdown;
             return this;
         }
 
-        public Builder setDrainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
+        public Builder drainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
             this.drainElbOnShutdown = Input.ofNullable(drainElbOnShutdown);
             return this;
         }
 
-        public Builder setEbsVolumes(@Nullable Input<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable Input<List<RailsAppLayerEbsVolumeArgs>> ebsVolumes) {
             this.ebsVolumes = ebsVolumes;
             return this;
         }
 
-        public Builder setEbsVolumes(@Nullable List<RailsAppLayerEbsVolumeArgs> ebsVolumes) {
+        public Builder ebsVolumes(@Nullable List<RailsAppLayerEbsVolumeArgs> ebsVolumes) {
             this.ebsVolumes = Input.ofNullable(ebsVolumes);
             return this;
         }
 
-        public Builder setElasticLoadBalancer(@Nullable Input<String> elasticLoadBalancer) {
+        public Builder elasticLoadBalancer(@Nullable Input<String> elasticLoadBalancer) {
             this.elasticLoadBalancer = elasticLoadBalancer;
             return this;
         }
 
-        public Builder setElasticLoadBalancer(@Nullable String elasticLoadBalancer) {
+        public Builder elasticLoadBalancer(@Nullable String elasticLoadBalancer) {
             this.elasticLoadBalancer = Input.ofNullable(elasticLoadBalancer);
             return this;
         }
 
-        public Builder setInstallUpdatesOnBoot(@Nullable Input<Boolean> installUpdatesOnBoot) {
+        public Builder installUpdatesOnBoot(@Nullable Input<Boolean> installUpdatesOnBoot) {
             this.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
 
-        public Builder setInstallUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
+        public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
             this.installUpdatesOnBoot = Input.ofNullable(installUpdatesOnBoot);
             return this;
         }
 
-        public Builder setInstanceShutdownTimeout(@Nullable Input<Integer> instanceShutdownTimeout) {
+        public Builder instanceShutdownTimeout(@Nullable Input<Integer> instanceShutdownTimeout) {
             this.instanceShutdownTimeout = instanceShutdownTimeout;
             return this;
         }
 
-        public Builder setInstanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
+        public Builder instanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
             this.instanceShutdownTimeout = Input.ofNullable(instanceShutdownTimeout);
             return this;
         }
 
-        public Builder setManageBundler(@Nullable Input<Boolean> manageBundler) {
+        public Builder manageBundler(@Nullable Input<Boolean> manageBundler) {
             this.manageBundler = manageBundler;
             return this;
         }
 
-        public Builder setManageBundler(@Nullable Boolean manageBundler) {
+        public Builder manageBundler(@Nullable Boolean manageBundler) {
             this.manageBundler = Input.ofNullable(manageBundler);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPassengerVersion(@Nullable Input<String> passengerVersion) {
+        public Builder passengerVersion(@Nullable Input<String> passengerVersion) {
             this.passengerVersion = passengerVersion;
             return this;
         }
 
-        public Builder setPassengerVersion(@Nullable String passengerVersion) {
+        public Builder passengerVersion(@Nullable String passengerVersion) {
             this.passengerVersion = Input.ofNullable(passengerVersion);
             return this;
         }
 
-        public Builder setRubyVersion(@Nullable Input<String> rubyVersion) {
+        public Builder rubyVersion(@Nullable Input<String> rubyVersion) {
             this.rubyVersion = rubyVersion;
             return this;
         }
 
-        public Builder setRubyVersion(@Nullable String rubyVersion) {
+        public Builder rubyVersion(@Nullable String rubyVersion) {
             this.rubyVersion = Input.ofNullable(rubyVersion);
             return this;
         }
 
-        public Builder setRubygemsVersion(@Nullable Input<String> rubygemsVersion) {
+        public Builder rubygemsVersion(@Nullable Input<String> rubygemsVersion) {
             this.rubygemsVersion = rubygemsVersion;
             return this;
         }
 
-        public Builder setRubygemsVersion(@Nullable String rubygemsVersion) {
+        public Builder rubygemsVersion(@Nullable String rubygemsVersion) {
             this.rubygemsVersion = Input.ofNullable(rubygemsVersion);
             return this;
         }
 
-        public Builder setStackId(Input<String> stackId) {
+        public Builder stackId(Input<String> stackId) {
             this.stackId = Objects.requireNonNull(stackId);
             return this;
         }
 
-        public Builder setStackId(String stackId) {
+        public Builder stackId(String stackId) {
             this.stackId = Input.of(Objects.requireNonNull(stackId));
             return this;
         }
 
-        public Builder setSystemPackages(@Nullable Input<List<String>> systemPackages) {
+        public Builder systemPackages(@Nullable Input<List<String>> systemPackages) {
             this.systemPackages = systemPackages;
             return this;
         }
 
-        public Builder setSystemPackages(@Nullable List<String> systemPackages) {
+        public Builder systemPackages(@Nullable List<String> systemPackages) {
             this.systemPackages = Input.ofNullable(systemPackages);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUseEbsOptimizedInstances(@Nullable Input<Boolean> useEbsOptimizedInstances) {
+        public Builder useEbsOptimizedInstances(@Nullable Input<Boolean> useEbsOptimizedInstances) {
             this.useEbsOptimizedInstances = useEbsOptimizedInstances;
             return this;
         }
 
-        public Builder setUseEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
+        public Builder useEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
             this.useEbsOptimizedInstances = Input.ofNullable(useEbsOptimizedInstances);
             return this;
         }

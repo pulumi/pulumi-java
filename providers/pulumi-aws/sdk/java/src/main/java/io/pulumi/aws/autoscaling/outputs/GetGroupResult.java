@@ -333,102 +333,102 @@ public final class GetGroupResult {
     	      this.vpcZoneIdentifier = defaults.vpcZoneIdentifier;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setDefaultCooldown(Integer defaultCooldown) {
+        public Builder defaultCooldown(Integer defaultCooldown) {
             this.defaultCooldown = Objects.requireNonNull(defaultCooldown);
             return this;
         }
 
-        public Builder setDesiredCapacity(Integer desiredCapacity) {
+        public Builder desiredCapacity(Integer desiredCapacity) {
             this.desiredCapacity = Objects.requireNonNull(desiredCapacity);
             return this;
         }
 
-        public Builder setHealthCheckGracePeriod(Integer healthCheckGracePeriod) {
+        public Builder healthCheckGracePeriod(Integer healthCheckGracePeriod) {
             this.healthCheckGracePeriod = Objects.requireNonNull(healthCheckGracePeriod);
             return this;
         }
 
-        public Builder setHealthCheckType(String healthCheckType) {
+        public Builder healthCheckType(String healthCheckType) {
             this.healthCheckType = Objects.requireNonNull(healthCheckType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLaunchConfiguration(String launchConfiguration) {
+        public Builder launchConfiguration(String launchConfiguration) {
             this.launchConfiguration = Objects.requireNonNull(launchConfiguration);
             return this;
         }
 
-        public Builder setLaunchTemplates(List<GetGroupLaunchTemplate> launchTemplates) {
+        public Builder launchTemplates(List<GetGroupLaunchTemplate> launchTemplates) {
             this.launchTemplates = Objects.requireNonNull(launchTemplates);
             return this;
         }
 
-        public Builder setLoadBalancers(List<String> loadBalancers) {
+        public Builder loadBalancers(List<String> loadBalancers) {
             this.loadBalancers = Objects.requireNonNull(loadBalancers);
             return this;
         }
 
-        public Builder setMaxSize(Integer maxSize) {
+        public Builder maxSize(Integer maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
-        public Builder setMinSize(Integer minSize) {
+        public Builder minSize(Integer minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNewInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
+        public Builder newInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
             this.newInstancesProtectedFromScaleIn = Objects.requireNonNull(newInstancesProtectedFromScaleIn);
             return this;
         }
 
-        public Builder setPlacementGroup(String placementGroup) {
+        public Builder placementGroup(String placementGroup) {
             this.placementGroup = Objects.requireNonNull(placementGroup);
             return this;
         }
 
-        public Builder setServiceLinkedRoleArn(String serviceLinkedRoleArn) {
+        public Builder serviceLinkedRoleArn(String serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = Objects.requireNonNull(serviceLinkedRoleArn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetGroupArns(List<String> targetGroupArns) {
+        public Builder targetGroupArns(List<String> targetGroupArns) {
             this.targetGroupArns = Objects.requireNonNull(targetGroupArns);
             return this;
         }
 
-        public Builder setTerminationPolicies(List<String> terminationPolicies) {
+        public Builder terminationPolicies(List<String> terminationPolicies) {
             this.terminationPolicies = Objects.requireNonNull(terminationPolicies);
             return this;
         }
 
-        public Builder setVpcZoneIdentifier(String vpcZoneIdentifier) {
+        public Builder vpcZoneIdentifier(String vpcZoneIdentifier) {
             this.vpcZoneIdentifier = Objects.requireNonNull(vpcZoneIdentifier);
             return this;
         }

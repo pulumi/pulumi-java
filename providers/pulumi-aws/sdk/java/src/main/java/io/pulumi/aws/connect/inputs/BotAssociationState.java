@@ -71,22 +71,22 @@ public final class BotAssociationState extends io.pulumi.resources.ResourceArgs 
     	      this.lexBot = defaults.lexBot;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setLexBot(@Nullable Input<BotAssociationLexBotGetArgs> lexBot) {
+        public Builder lexBot(@Nullable Input<BotAssociationLexBotGetArgs> lexBot) {
             this.lexBot = lexBot;
             return this;
         }
 
-        public Builder setLexBot(@Nullable BotAssociationLexBotGetArgs lexBot) {
+        public Builder lexBot(@Nullable BotAssociationLexBotGetArgs lexBot) {
             this.lexBot = Input.ofNullable(lexBot);
             return this;
         }

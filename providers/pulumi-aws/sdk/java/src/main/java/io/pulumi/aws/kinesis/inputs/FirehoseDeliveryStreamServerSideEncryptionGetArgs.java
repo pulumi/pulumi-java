@@ -87,32 +87,32 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setKeyArn(@Nullable Input<String> keyArn) {
+        public Builder keyArn(@Nullable Input<String> keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = Input.ofNullable(keyArn);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Input<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }

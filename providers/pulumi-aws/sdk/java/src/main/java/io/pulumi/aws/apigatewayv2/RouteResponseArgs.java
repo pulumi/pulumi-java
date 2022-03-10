@@ -119,52 +119,52 @@ public final class RouteResponseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routeResponseKey = defaults.routeResponseKey;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setModelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
             this.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
 
-        public Builder setModelSelectionExpression(@Nullable String modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
             this.modelSelectionExpression = Input.ofNullable(modelSelectionExpression);
             return this;
         }
 
-        public Builder setResponseModels(@Nullable Input<Map<String,String>> responseModels) {
+        public Builder responseModels(@Nullable Input<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
-        public Builder setResponseModels(@Nullable Map<String,String> responseModels) {
+        public Builder responseModels(@Nullable Map<String,String> responseModels) {
             this.responseModels = Input.ofNullable(responseModels);
             return this;
         }
 
-        public Builder setRouteId(Input<String> routeId) {
+        public Builder routeId(Input<String> routeId) {
             this.routeId = Objects.requireNonNull(routeId);
             return this;
         }
 
-        public Builder setRouteId(String routeId) {
+        public Builder routeId(String routeId) {
             this.routeId = Input.of(Objects.requireNonNull(routeId));
             return this;
         }
 
-        public Builder setRouteResponseKey(Input<String> routeResponseKey) {
+        public Builder routeResponseKey(Input<String> routeResponseKey) {
             this.routeResponseKey = Objects.requireNonNull(routeResponseKey);
             return this;
         }
 
-        public Builder setRouteResponseKey(String routeResponseKey) {
+        public Builder routeResponseKey(String routeResponseKey) {
             this.routeResponseKey = Input.of(Objects.requireNonNull(routeResponseKey));
             return this;
         }

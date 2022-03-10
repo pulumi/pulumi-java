@@ -85,17 +85,17 @@ public final class SpotInstanceRequestNetworkInterface {
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }

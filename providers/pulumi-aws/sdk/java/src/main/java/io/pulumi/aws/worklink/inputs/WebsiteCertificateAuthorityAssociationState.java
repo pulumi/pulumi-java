@@ -102,42 +102,42 @@ public final class WebsiteCertificateAuthorityAssociationState extends io.pulumi
     	      this.websiteCaId = defaults.websiteCaId;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFleetArn(@Nullable Input<String> fleetArn) {
+        public Builder fleetArn(@Nullable Input<String> fleetArn) {
             this.fleetArn = fleetArn;
             return this;
         }
 
-        public Builder setFleetArn(@Nullable String fleetArn) {
+        public Builder fleetArn(@Nullable String fleetArn) {
             this.fleetArn = Input.ofNullable(fleetArn);
             return this;
         }
 
-        public Builder setWebsiteCaId(@Nullable Input<String> websiteCaId) {
+        public Builder websiteCaId(@Nullable Input<String> websiteCaId) {
             this.websiteCaId = websiteCaId;
             return this;
         }
 
-        public Builder setWebsiteCaId(@Nullable String websiteCaId) {
+        public Builder websiteCaId(@Nullable String websiteCaId) {
             this.websiteCaId = Input.ofNullable(websiteCaId);
             return this;
         }

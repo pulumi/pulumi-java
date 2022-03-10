@@ -52,12 +52,12 @@ public final class EventSourceMappingDestinationConfigOnFailureArgs extends io.p
     	      this.destinationArn = defaults.destinationArn;
         }
 
-        public Builder setDestinationArn(Input<String> destinationArn) {
+        public Builder destinationArn(Input<String> destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Input.of(Objects.requireNonNull(destinationArn));
             return this;
         }

@@ -72,22 +72,22 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsArgs extends io
     	      this.spotSpecifications = defaults.spotSpecifications;
         }
 
-        public Builder setOnDemandSpecifications(@Nullable Input<List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications) {
+        public Builder onDemandSpecifications(@Nullable Input<List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications) {
             this.onDemandSpecifications = onDemandSpecifications;
             return this;
         }
 
-        public Builder setOnDemandSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
+        public Builder onDemandSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecificationArgs> onDemandSpecifications) {
             this.onDemandSpecifications = Input.ofNullable(onDemandSpecifications);
             return this;
         }
 
-        public Builder setSpotSpecifications(@Nullable Input<List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
+        public Builder spotSpecifications(@Nullable Input<List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications) {
             this.spotSpecifications = spotSpecifications;
             return this;
         }
 
-        public Builder setSpotSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
+        public Builder spotSpecifications(@Nullable List<ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs> spotSpecifications) {
             this.spotSpecifications = Input.ofNullable(spotSpecifications);
             return this;
         }

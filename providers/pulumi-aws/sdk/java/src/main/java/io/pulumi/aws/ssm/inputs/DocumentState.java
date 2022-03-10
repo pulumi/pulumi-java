@@ -406,232 +406,232 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAttachmentsSources(@Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
+        public Builder attachmentsSources(@Nullable Input<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
             this.attachmentsSources = attachmentsSources;
             return this;
         }
 
-        public Builder setAttachmentsSources(@Nullable List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
+        public Builder attachmentsSources(@Nullable List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
             this.attachmentsSources = Input.ofNullable(attachmentsSources);
             return this;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable Input<String> defaultVersion) {
+        public Builder defaultVersion(@Nullable Input<String> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable String defaultVersion) {
+        public Builder defaultVersion(@Nullable String defaultVersion) {
             this.defaultVersion = Input.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentFormat(@Nullable Input<String> documentFormat) {
+        public Builder documentFormat(@Nullable Input<String> documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
 
-        public Builder setDocumentFormat(@Nullable String documentFormat) {
+        public Builder documentFormat(@Nullable String documentFormat) {
             this.documentFormat = Input.ofNullable(documentFormat);
             return this;
         }
 
-        public Builder setDocumentType(@Nullable Input<String> documentType) {
+        public Builder documentType(@Nullable Input<String> documentType) {
             this.documentType = documentType;
             return this;
         }
 
-        public Builder setDocumentType(@Nullable String documentType) {
+        public Builder documentType(@Nullable String documentType) {
             this.documentType = Input.ofNullable(documentType);
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Input<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Input.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder setHash(@Nullable Input<String> hash) {
+        public Builder hash(@Nullable Input<String> hash) {
             this.hash = hash;
             return this;
         }
 
-        public Builder setHash(@Nullable String hash) {
+        public Builder hash(@Nullable String hash) {
             this.hash = Input.ofNullable(hash);
             return this;
         }
 
-        public Builder setHashType(@Nullable Input<String> hashType) {
+        public Builder hashType(@Nullable Input<String> hashType) {
             this.hashType = hashType;
             return this;
         }
 
-        public Builder setHashType(@Nullable String hashType) {
+        public Builder hashType(@Nullable String hashType) {
             this.hashType = Input.ofNullable(hashType);
             return this;
         }
 
-        public Builder setLatestVersion(@Nullable Input<String> latestVersion) {
+        public Builder latestVersion(@Nullable Input<String> latestVersion) {
             this.latestVersion = latestVersion;
             return this;
         }
 
-        public Builder setLatestVersion(@Nullable String latestVersion) {
+        public Builder latestVersion(@Nullable String latestVersion) {
             this.latestVersion = Input.ofNullable(latestVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<DocumentParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<DocumentParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<DocumentParameterGetArgs> parameters) {
+        public Builder parameters(@Nullable List<DocumentParameterGetArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<Map<String,String>> permissions) {
+        public Builder permissions(@Nullable Input<Map<String,String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable Map<String,String> permissions) {
+        public Builder permissions(@Nullable Map<String,String> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setPlatformTypes(@Nullable Input<List<String>> platformTypes) {
+        public Builder platformTypes(@Nullable Input<List<String>> platformTypes) {
             this.platformTypes = platformTypes;
             return this;
         }
 
-        public Builder setPlatformTypes(@Nullable List<String> platformTypes) {
+        public Builder platformTypes(@Nullable List<String> platformTypes) {
             this.platformTypes = Input.ofNullable(platformTypes);
             return this;
         }
 
-        public Builder setSchemaVersion(@Nullable Input<String> schemaVersion) {
+        public Builder schemaVersion(@Nullable Input<String> schemaVersion) {
             this.schemaVersion = schemaVersion;
             return this;
         }
 
-        public Builder setSchemaVersion(@Nullable String schemaVersion) {
+        public Builder schemaVersion(@Nullable String schemaVersion) {
             this.schemaVersion = Input.ofNullable(schemaVersion);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTargetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Input<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
-        public Builder setTargetType(@Nullable String targetType) {
+        public Builder targetType(@Nullable String targetType) {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }
 
-        public Builder setVersionName(@Nullable Input<String> versionName) {
+        public Builder versionName(@Nullable Input<String> versionName) {
             this.versionName = versionName;
             return this;
         }
 
-        public Builder setVersionName(@Nullable String versionName) {
+        public Builder versionName(@Nullable String versionName) {
             this.versionName = Input.ofNullable(versionName);
             return this;
         }

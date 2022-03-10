@@ -119,27 +119,27 @@ public final class EnvironmentLoggingConfiguration {
     	      this.workerLogs = defaults.workerLogs;
         }
 
-        public Builder setDagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs) {
+        public Builder dagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs) {
             this.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
 
-        public Builder setSchedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs) {
+        public Builder schedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs) {
             this.schedulerLogs = schedulerLogs;
             return this;
         }
 
-        public Builder setTaskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs) {
+        public Builder taskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs) {
             this.taskLogs = taskLogs;
             return this;
         }
 
-        public Builder setWebserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs) {
+        public Builder webserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs) {
             this.webserverLogs = webserverLogs;
             return this;
         }
 
-        public Builder setWorkerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
+        public Builder workerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
             this.workerLogs = workerLogs;
             return this;
         }

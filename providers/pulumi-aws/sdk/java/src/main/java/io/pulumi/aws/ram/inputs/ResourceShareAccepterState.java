@@ -167,82 +167,82 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
     	      this.status = defaults.status;
         }
 
-        public Builder setInvitationArn(@Nullable Input<String> invitationArn) {
+        public Builder invitationArn(@Nullable Input<String> invitationArn) {
             this.invitationArn = invitationArn;
             return this;
         }
 
-        public Builder setInvitationArn(@Nullable String invitationArn) {
+        public Builder invitationArn(@Nullable String invitationArn) {
             this.invitationArn = Input.ofNullable(invitationArn);
             return this;
         }
 
-        public Builder setReceiverAccountId(@Nullable Input<String> receiverAccountId) {
+        public Builder receiverAccountId(@Nullable Input<String> receiverAccountId) {
             this.receiverAccountId = receiverAccountId;
             return this;
         }
 
-        public Builder setReceiverAccountId(@Nullable String receiverAccountId) {
+        public Builder receiverAccountId(@Nullable String receiverAccountId) {
             this.receiverAccountId = Input.ofNullable(receiverAccountId);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setSenderAccountId(@Nullable Input<String> senderAccountId) {
+        public Builder senderAccountId(@Nullable Input<String> senderAccountId) {
             this.senderAccountId = senderAccountId;
             return this;
         }
 
-        public Builder setSenderAccountId(@Nullable String senderAccountId) {
+        public Builder senderAccountId(@Nullable String senderAccountId) {
             this.senderAccountId = Input.ofNullable(senderAccountId);
             return this;
         }
 
-        public Builder setShareArn(@Nullable Input<String> shareArn) {
+        public Builder shareArn(@Nullable Input<String> shareArn) {
             this.shareArn = shareArn;
             return this;
         }
 
-        public Builder setShareArn(@Nullable String shareArn) {
+        public Builder shareArn(@Nullable String shareArn) {
             this.shareArn = Input.ofNullable(shareArn);
             return this;
         }
 
-        public Builder setShareId(@Nullable Input<String> shareId) {
+        public Builder shareId(@Nullable Input<String> shareId) {
             this.shareId = shareId;
             return this;
         }
 
-        public Builder setShareId(@Nullable String shareId) {
+        public Builder shareId(@Nullable String shareId) {
             this.shareId = Input.ofNullable(shareId);
             return this;
         }
 
-        public Builder setShareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Input<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
-        public Builder setShareName(@Nullable String shareName) {
+        public Builder shareName(@Nullable String shareName) {
             this.shareName = Input.ofNullable(shareName);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

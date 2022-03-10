@@ -171,82 +171,82 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
     	      this.snsDestination = defaults.snsDestination;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCloudwatchDestinations(@Nullable Input<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations) {
+        public Builder cloudwatchDestinations(@Nullable Input<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations) {
             this.cloudwatchDestinations = cloudwatchDestinations;
             return this;
         }
 
-        public Builder setCloudwatchDestinations(@Nullable List<EventDestinationCloudwatchDestinationGetArgs> cloudwatchDestinations) {
+        public Builder cloudwatchDestinations(@Nullable List<EventDestinationCloudwatchDestinationGetArgs> cloudwatchDestinations) {
             this.cloudwatchDestinations = Input.ofNullable(cloudwatchDestinations);
             return this;
         }
 
-        public Builder setConfigurationSetName(@Nullable Input<String> configurationSetName) {
+        public Builder configurationSetName(@Nullable Input<String> configurationSetName) {
             this.configurationSetName = configurationSetName;
             return this;
         }
 
-        public Builder setConfigurationSetName(@Nullable String configurationSetName) {
+        public Builder configurationSetName(@Nullable String configurationSetName) {
             this.configurationSetName = Input.ofNullable(configurationSetName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setKinesisDestination(@Nullable Input<EventDestinationKinesisDestinationGetArgs> kinesisDestination) {
+        public Builder kinesisDestination(@Nullable Input<EventDestinationKinesisDestinationGetArgs> kinesisDestination) {
             this.kinesisDestination = kinesisDestination;
             return this;
         }
 
-        public Builder setKinesisDestination(@Nullable EventDestinationKinesisDestinationGetArgs kinesisDestination) {
+        public Builder kinesisDestination(@Nullable EventDestinationKinesisDestinationGetArgs kinesisDestination) {
             this.kinesisDestination = Input.ofNullable(kinesisDestination);
             return this;
         }
 
-        public Builder setMatchingTypes(@Nullable Input<List<String>> matchingTypes) {
+        public Builder matchingTypes(@Nullable Input<List<String>> matchingTypes) {
             this.matchingTypes = matchingTypes;
             return this;
         }
 
-        public Builder setMatchingTypes(@Nullable List<String> matchingTypes) {
+        public Builder matchingTypes(@Nullable List<String> matchingTypes) {
             this.matchingTypes = Input.ofNullable(matchingTypes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSnsDestination(@Nullable Input<EventDestinationSnsDestinationGetArgs> snsDestination) {
+        public Builder snsDestination(@Nullable Input<EventDestinationSnsDestinationGetArgs> snsDestination) {
             this.snsDestination = snsDestination;
             return this;
         }
 
-        public Builder setSnsDestination(@Nullable EventDestinationSnsDestinationGetArgs snsDestination) {
+        public Builder snsDestination(@Nullable EventDestinationSnsDestinationGetArgs snsDestination) {
             this.snsDestination = Input.ofNullable(snsDestination);
             return this;
         }

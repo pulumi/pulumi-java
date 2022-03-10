@@ -120,52 +120,52 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationGetArgs extends io.
     	      this.transitEncryptionPort = defaults.transitEncryptionPort;
         }
 
-        public Builder setAuthorizationConfig(@Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig) {
+        public Builder authorizationConfig(@Nullable Input<TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
-        public Builder setAuthorizationConfig(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs authorizationConfig) {
+        public Builder authorizationConfig(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfigGetArgs authorizationConfig) {
             this.authorizationConfig = Input.ofNullable(authorizationConfig);
             return this;
         }
 
-        public Builder setFileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Input<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable Input<String> rootDirectory) {
+        public Builder rootDirectory(@Nullable Input<String> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable String rootDirectory) {
+        public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = Input.ofNullable(rootDirectory);
             return this;
         }
 
-        public Builder setTransitEncryption(@Nullable Input<String> transitEncryption) {
+        public Builder transitEncryption(@Nullable Input<String> transitEncryption) {
             this.transitEncryption = transitEncryption;
             return this;
         }
 
-        public Builder setTransitEncryption(@Nullable String transitEncryption) {
+        public Builder transitEncryption(@Nullable String transitEncryption) {
             this.transitEncryption = Input.ofNullable(transitEncryption);
             return this;
         }
 
-        public Builder setTransitEncryptionPort(@Nullable Input<Integer> transitEncryptionPort) {
+        public Builder transitEncryptionPort(@Nullable Input<Integer> transitEncryptionPort) {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }
 
-        public Builder setTransitEncryptionPort(@Nullable Integer transitEncryptionPort) {
+        public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
             this.transitEncryptionPort = Input.ofNullable(transitEncryptionPort);
             return this;
         }

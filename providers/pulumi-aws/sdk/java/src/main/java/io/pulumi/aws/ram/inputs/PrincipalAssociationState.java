@@ -70,22 +70,22 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }
 
-        public Builder setResourceShareArn(@Nullable Input<String> resourceShareArn) {
+        public Builder resourceShareArn(@Nullable Input<String> resourceShareArn) {
             this.resourceShareArn = resourceShareArn;
             return this;
         }
 
-        public Builder setResourceShareArn(@Nullable String resourceShareArn) {
+        public Builder resourceShareArn(@Nullable String resourceShareArn) {
             this.resourceShareArn = Input.ofNullable(resourceShareArn);
             return this;
         }

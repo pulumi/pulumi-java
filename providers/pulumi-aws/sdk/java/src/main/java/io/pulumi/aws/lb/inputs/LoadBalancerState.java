@@ -431,242 +431,242 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setAccessLogs(@Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs) {
+        public Builder accessLogs(@Nullable Input<LoadBalancerAccessLogsGetArgs> accessLogs) {
             this.accessLogs = accessLogs;
             return this;
         }
 
-        public Builder setAccessLogs(@Nullable LoadBalancerAccessLogsGetArgs accessLogs) {
+        public Builder accessLogs(@Nullable LoadBalancerAccessLogsGetArgs accessLogs) {
             this.accessLogs = Input.ofNullable(accessLogs);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setArnSuffix(@Nullable Input<String> arnSuffix) {
+        public Builder arnSuffix(@Nullable Input<String> arnSuffix) {
             this.arnSuffix = arnSuffix;
             return this;
         }
 
-        public Builder setArnSuffix(@Nullable String arnSuffix) {
+        public Builder arnSuffix(@Nullable String arnSuffix) {
             this.arnSuffix = Input.ofNullable(arnSuffix);
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable Input<String> customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(@Nullable String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Input.ofNullable(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder setDesyncMitigationMode(@Nullable Input<String> desyncMitigationMode) {
+        public Builder desyncMitigationMode(@Nullable Input<String> desyncMitigationMode) {
             this.desyncMitigationMode = desyncMitigationMode;
             return this;
         }
 
-        public Builder setDesyncMitigationMode(@Nullable String desyncMitigationMode) {
+        public Builder desyncMitigationMode(@Nullable String desyncMitigationMode) {
             this.desyncMitigationMode = Input.ofNullable(desyncMitigationMode);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setDropInvalidHeaderFields(@Nullable Input<Boolean> dropInvalidHeaderFields) {
+        public Builder dropInvalidHeaderFields(@Nullable Input<Boolean> dropInvalidHeaderFields) {
             this.dropInvalidHeaderFields = dropInvalidHeaderFields;
             return this;
         }
 
-        public Builder setDropInvalidHeaderFields(@Nullable Boolean dropInvalidHeaderFields) {
+        public Builder dropInvalidHeaderFields(@Nullable Boolean dropInvalidHeaderFields) {
             this.dropInvalidHeaderFields = Input.ofNullable(dropInvalidHeaderFields);
             return this;
         }
 
-        public Builder setEnableCrossZoneLoadBalancing(@Nullable Input<Boolean> enableCrossZoneLoadBalancing) {
+        public Builder enableCrossZoneLoadBalancing(@Nullable Input<Boolean> enableCrossZoneLoadBalancing) {
             this.enableCrossZoneLoadBalancing = enableCrossZoneLoadBalancing;
             return this;
         }
 
-        public Builder setEnableCrossZoneLoadBalancing(@Nullable Boolean enableCrossZoneLoadBalancing) {
+        public Builder enableCrossZoneLoadBalancing(@Nullable Boolean enableCrossZoneLoadBalancing) {
             this.enableCrossZoneLoadBalancing = Input.ofNullable(enableCrossZoneLoadBalancing);
             return this;
         }
 
-        public Builder setEnableDeletionProtection(@Nullable Input<Boolean> enableDeletionProtection) {
+        public Builder enableDeletionProtection(@Nullable Input<Boolean> enableDeletionProtection) {
             this.enableDeletionProtection = enableDeletionProtection;
             return this;
         }
 
-        public Builder setEnableDeletionProtection(@Nullable Boolean enableDeletionProtection) {
+        public Builder enableDeletionProtection(@Nullable Boolean enableDeletionProtection) {
             this.enableDeletionProtection = Input.ofNullable(enableDeletionProtection);
             return this;
         }
 
-        public Builder setEnableHttp2(@Nullable Input<Boolean> enableHttp2) {
+        public Builder enableHttp2(@Nullable Input<Boolean> enableHttp2) {
             this.enableHttp2 = enableHttp2;
             return this;
         }
 
-        public Builder setEnableHttp2(@Nullable Boolean enableHttp2) {
+        public Builder enableHttp2(@Nullable Boolean enableHttp2) {
             this.enableHttp2 = Input.ofNullable(enableHttp2);
             return this;
         }
 
-        public Builder setEnableWafFailOpen(@Nullable Input<Boolean> enableWafFailOpen) {
+        public Builder enableWafFailOpen(@Nullable Input<Boolean> enableWafFailOpen) {
             this.enableWafFailOpen = enableWafFailOpen;
             return this;
         }
 
-        public Builder setEnableWafFailOpen(@Nullable Boolean enableWafFailOpen) {
+        public Builder enableWafFailOpen(@Nullable Boolean enableWafFailOpen) {
             this.enableWafFailOpen = Input.ofNullable(enableWafFailOpen);
             return this;
         }
 
-        public Builder setIdleTimeout(@Nullable Input<Integer> idleTimeout) {
+        public Builder idleTimeout(@Nullable Input<Integer> idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
-        public Builder setIdleTimeout(@Nullable Integer idleTimeout) {
+        public Builder idleTimeout(@Nullable Integer idleTimeout) {
             this.idleTimeout = Input.ofNullable(idleTimeout);
             return this;
         }
 
-        public Builder setInternal(@Nullable Input<Boolean> internal) {
+        public Builder internal(@Nullable Input<Boolean> internal) {
             this.internal = internal;
             return this;
         }
 
-        public Builder setInternal(@Nullable Boolean internal) {
+        public Builder internal(@Nullable Boolean internal) {
             this.internal = Input.ofNullable(internal);
             return this;
         }
 
-        public Builder setIpAddressType(@Nullable Input<String> ipAddressType) {
+        public Builder ipAddressType(@Nullable Input<String> ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
 
-        public Builder setIpAddressType(@Nullable String ipAddressType) {
+        public Builder ipAddressType(@Nullable String ipAddressType) {
             this.ipAddressType = Input.ofNullable(ipAddressType);
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable Input<String> loadBalancerType) {
+        public Builder loadBalancerType(@Nullable Input<String> loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable String loadBalancerType) {
+        public Builder loadBalancerType(@Nullable String loadBalancerType) {
             this.loadBalancerType = Input.ofNullable(loadBalancerType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnetMappings(@Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings) {
+        public Builder subnetMappings(@Nullable Input<List<LoadBalancerSubnetMappingGetArgs>> subnetMappings) {
             this.subnetMappings = subnetMappings;
             return this;
         }
 
-        public Builder setSubnetMappings(@Nullable List<LoadBalancerSubnetMappingGetArgs> subnetMappings) {
+        public Builder subnetMappings(@Nullable List<LoadBalancerSubnetMappingGetArgs> subnetMappings) {
             this.subnetMappings = Input.ofNullable(subnetMappings);
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<String>> subnets) {
+        public Builder subnets(@Nullable Input<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<String> subnets) {
+        public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
 
-        public Builder setZoneId(@Nullable Input<String> zoneId) {
+        public Builder zoneId(@Nullable Input<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
 
-        public Builder setZoneId(@Nullable String zoneId) {
+        public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Input.ofNullable(zoneId);
             return this;
         }

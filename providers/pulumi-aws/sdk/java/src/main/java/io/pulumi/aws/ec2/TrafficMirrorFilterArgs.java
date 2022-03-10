@@ -88,32 +88,32 @@ public final class TrafficMirrorFilterArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setNetworkServices(@Nullable Input<List<String>> networkServices) {
+        public Builder networkServices(@Nullable Input<List<String>> networkServices) {
             this.networkServices = networkServices;
             return this;
         }
 
-        public Builder setNetworkServices(@Nullable List<String> networkServices) {
+        public Builder networkServices(@Nullable List<String> networkServices) {
             this.networkServices = Input.ofNullable(networkServices);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

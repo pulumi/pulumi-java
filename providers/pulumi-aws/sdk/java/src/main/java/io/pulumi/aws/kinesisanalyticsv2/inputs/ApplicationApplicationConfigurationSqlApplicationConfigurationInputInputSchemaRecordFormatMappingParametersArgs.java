@@ -71,22 +71,22 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.jsonMappingParameters = defaults.jsonMappingParameters;
         }
 
-        public Builder setCsvMappingParameters(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersArgs> csvMappingParameters) {
+        public Builder csvMappingParameters(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersArgs> csvMappingParameters) {
             this.csvMappingParameters = csvMappingParameters;
             return this;
         }
 
-        public Builder setCsvMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersArgs csvMappingParameters) {
+        public Builder csvMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersArgs csvMappingParameters) {
             this.csvMappingParameters = Input.ofNullable(csvMappingParameters);
             return this;
         }
 
-        public Builder setJsonMappingParameters(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs> jsonMappingParameters) {
+        public Builder jsonMappingParameters(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs> jsonMappingParameters) {
             this.jsonMappingParameters = jsonMappingParameters;
             return this;
         }
 
-        public Builder setJsonMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs jsonMappingParameters) {
+        public Builder jsonMappingParameters(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs jsonMappingParameters) {
             this.jsonMappingParameters = Input.ofNullable(jsonMappingParameters);
             return this;
         }

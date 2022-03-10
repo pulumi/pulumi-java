@@ -116,27 +116,27 @@ public final class ReceiptRuleS3Action {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable String objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
         }

@@ -102,42 +102,42 @@ public final class PresetAudioCodecOptionsGetArgs extends io.pulumi.resources.Re
     	      this.signed = defaults.signed;
         }
 
-        public Builder setBitDepth(@Nullable Input<String> bitDepth) {
+        public Builder bitDepth(@Nullable Input<String> bitDepth) {
             this.bitDepth = bitDepth;
             return this;
         }
 
-        public Builder setBitDepth(@Nullable String bitDepth) {
+        public Builder bitDepth(@Nullable String bitDepth) {
             this.bitDepth = Input.ofNullable(bitDepth);
             return this;
         }
 
-        public Builder setBitOrder(@Nullable Input<String> bitOrder) {
+        public Builder bitOrder(@Nullable Input<String> bitOrder) {
             this.bitOrder = bitOrder;
             return this;
         }
 
-        public Builder setBitOrder(@Nullable String bitOrder) {
+        public Builder bitOrder(@Nullable String bitOrder) {
             this.bitOrder = Input.ofNullable(bitOrder);
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<String> profile) {
+        public Builder profile(@Nullable Input<String> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable String profile) {
+        public Builder profile(@Nullable String profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setSigned(@Nullable Input<String> signed) {
+        public Builder signed(@Nullable Input<String> signed) {
             this.signed = signed;
             return this;
         }
 
-        public Builder setSigned(@Nullable String signed) {
+        public Builder signed(@Nullable String signed) {
             this.signed = Input.ofNullable(signed);
             return this;
         }

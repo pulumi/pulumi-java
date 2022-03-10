@@ -50,7 +50,7 @@ public final class OrganizationConfigurationDatasources {
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder setS3Logs(@Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
+        public Builder s3Logs(@Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }

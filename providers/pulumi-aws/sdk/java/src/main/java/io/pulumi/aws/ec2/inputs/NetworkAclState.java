@@ -170,82 +170,82 @@ public final class NetworkAclState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setEgress(@Nullable Input<List<NetworkAclEgressGetArgs>> egress) {
+        public Builder egress(@Nullable Input<List<NetworkAclEgressGetArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable List<NetworkAclEgressGetArgs> egress) {
+        public Builder egress(@Nullable List<NetworkAclEgressGetArgs> egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<List<NetworkAclIngressGetArgs>> ingress) {
+        public Builder ingress(@Nullable Input<List<NetworkAclIngressGetArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<NetworkAclIngressGetArgs> ingress) {
+        public Builder ingress(@Nullable List<NetworkAclIngressGetArgs> ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

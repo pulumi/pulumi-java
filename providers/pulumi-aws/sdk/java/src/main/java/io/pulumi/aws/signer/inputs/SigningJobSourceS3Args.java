@@ -85,32 +85,32 @@ public final class SigningJobSourceS3Args extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

@@ -72,22 +72,22 @@ public final class ReplicationConfigurationReplicationConfigurationRuleGetArgs e
     	      this.repositoryFilters = defaults.repositoryFilters;
         }
 
-        public Builder setDestinations(Input<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations) {
+        public Builder destinations(Input<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setDestinations(List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs> destinations) {
+        public Builder destinations(List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs> destinations) {
             this.destinations = Input.of(Objects.requireNonNull(destinations));
             return this;
         }
 
-        public Builder setRepositoryFilters(@Nullable Input<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters) {
+        public Builder repositoryFilters(@Nullable Input<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters) {
             this.repositoryFilters = repositoryFilters;
             return this;
         }
 
-        public Builder setRepositoryFilters(@Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs> repositoryFilters) {
+        public Builder repositoryFilters(@Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs> repositoryFilters) {
             this.repositoryFilters = Input.ofNullable(repositoryFilters);
             return this;
         }

@@ -41,7 +41,7 @@ public final class GetFunctionEnvironment {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setVariables(Map<String,String> variables) {
+        public Builder variables(Map<String,String> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }

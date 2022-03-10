@@ -174,92 +174,92 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     	      this.user = defaults.user;
         }
 
-        public Builder setCreateDate(@Nullable Input<String> createDate) {
+        public Builder createDate(@Nullable Input<String> createDate) {
             this.createDate = createDate;
             return this;
         }
 
-        public Builder setCreateDate(@Nullable String createDate) {
+        public Builder createDate(@Nullable String createDate) {
             this.createDate = Input.ofNullable(createDate);
             return this;
         }
 
-        public Builder setEncryptedSecret(@Nullable Input<String> encryptedSecret) {
+        public Builder encryptedSecret(@Nullable Input<String> encryptedSecret) {
             this.encryptedSecret = encryptedSecret;
             return this;
         }
 
-        public Builder setEncryptedSecret(@Nullable String encryptedSecret) {
+        public Builder encryptedSecret(@Nullable String encryptedSecret) {
             this.encryptedSecret = Input.ofNullable(encryptedSecret);
             return this;
         }
 
-        public Builder setEncryptedSesSmtpPasswordV4(@Nullable Input<String> encryptedSesSmtpPasswordV4) {
+        public Builder encryptedSesSmtpPasswordV4(@Nullable Input<String> encryptedSesSmtpPasswordV4) {
             this.encryptedSesSmtpPasswordV4 = encryptedSesSmtpPasswordV4;
             return this;
         }
 
-        public Builder setEncryptedSesSmtpPasswordV4(@Nullable String encryptedSesSmtpPasswordV4) {
+        public Builder encryptedSesSmtpPasswordV4(@Nullable String encryptedSesSmtpPasswordV4) {
             this.encryptedSesSmtpPasswordV4 = Input.ofNullable(encryptedSesSmtpPasswordV4);
             return this;
         }
 
-        public Builder setKeyFingerprint(@Nullable Input<String> keyFingerprint) {
+        public Builder keyFingerprint(@Nullable Input<String> keyFingerprint) {
             this.keyFingerprint = keyFingerprint;
             return this;
         }
 
-        public Builder setKeyFingerprint(@Nullable String keyFingerprint) {
+        public Builder keyFingerprint(@Nullable String keyFingerprint) {
             this.keyFingerprint = Input.ofNullable(keyFingerprint);
             return this;
         }
 
-        public Builder setPgpKey(@Nullable Input<String> pgpKey) {
+        public Builder pgpKey(@Nullable Input<String> pgpKey) {
             this.pgpKey = pgpKey;
             return this;
         }
 
-        public Builder setPgpKey(@Nullable String pgpKey) {
+        public Builder pgpKey(@Nullable String pgpKey) {
             this.pgpKey = Input.ofNullable(pgpKey);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setSesSmtpPasswordV4(@Nullable Input<String> sesSmtpPasswordV4) {
+        public Builder sesSmtpPasswordV4(@Nullable Input<String> sesSmtpPasswordV4) {
             this.sesSmtpPasswordV4 = sesSmtpPasswordV4;
             return this;
         }
 
-        public Builder setSesSmtpPasswordV4(@Nullable String sesSmtpPasswordV4) {
+        public Builder sesSmtpPasswordV4(@Nullable String sesSmtpPasswordV4) {
             this.sesSmtpPasswordV4 = Input.ofNullable(sesSmtpPasswordV4);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = Input.ofNullable(user);
             return this;
         }

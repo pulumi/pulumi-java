@@ -151,42 +151,42 @@ public final class ClusterMasterInstanceFleet {
     	      this.targetSpotCapacity = defaults.targetSpotCapacity;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInstanceTypeConfigs(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs) {
+        public Builder instanceTypeConfigs(@Nullable List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs) {
             this.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
 
-        public Builder setLaunchSpecifications(@Nullable ClusterMasterInstanceFleetLaunchSpecifications launchSpecifications) {
+        public Builder launchSpecifications(@Nullable ClusterMasterInstanceFleetLaunchSpecifications launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisionedOnDemandCapacity(@Nullable Integer provisionedOnDemandCapacity) {
+        public Builder provisionedOnDemandCapacity(@Nullable Integer provisionedOnDemandCapacity) {
             this.provisionedOnDemandCapacity = provisionedOnDemandCapacity;
             return this;
         }
 
-        public Builder setProvisionedSpotCapacity(@Nullable Integer provisionedSpotCapacity) {
+        public Builder provisionedSpotCapacity(@Nullable Integer provisionedSpotCapacity) {
             this.provisionedSpotCapacity = provisionedSpotCapacity;
             return this;
         }
 
-        public Builder setTargetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
+        public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
             this.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
 
-        public Builder setTargetSpotCapacity(@Nullable Integer targetSpotCapacity) {
+        public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
             this.targetSpotCapacity = targetSpotCapacity;
             return this;
         }

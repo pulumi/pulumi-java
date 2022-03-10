@@ -76,22 +76,22 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs ex
     	      this.whitelistedNames = defaults.whitelistedNames;
         }
 
-        public Builder setForward(Input<String> forward) {
+        public Builder forward(Input<String> forward) {
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
 
-        public Builder setForward(String forward) {
+        public Builder forward(String forward) {
             this.forward = Input.of(Objects.requireNonNull(forward));
             return this;
         }
 
-        public Builder setWhitelistedNames(@Nullable Input<List<String>> whitelistedNames) {
+        public Builder whitelistedNames(@Nullable Input<List<String>> whitelistedNames) {
             this.whitelistedNames = whitelistedNames;
             return this;
         }
 
-        public Builder setWhitelistedNames(@Nullable List<String> whitelistedNames) {
+        public Builder whitelistedNames(@Nullable List<String> whitelistedNames) {
             this.whitelistedNames = Input.ofNullable(whitelistedNames);
             return this;
         }

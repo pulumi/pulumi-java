@@ -138,62 +138,62 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetSpotCapacity = defaults.targetSpotCapacity;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setInstanceTypeConfigs(@Nullable Input<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs) {
+        public Builder instanceTypeConfigs(@Nullable Input<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs) {
             this.instanceTypeConfigs = instanceTypeConfigs;
             return this;
         }
 
-        public Builder setInstanceTypeConfigs(@Nullable List<InstanceFleetInstanceTypeConfigArgs> instanceTypeConfigs) {
+        public Builder instanceTypeConfigs(@Nullable List<InstanceFleetInstanceTypeConfigArgs> instanceTypeConfigs) {
             this.instanceTypeConfigs = Input.ofNullable(instanceTypeConfigs);
             return this;
         }
 
-        public Builder setLaunchSpecifications(@Nullable Input<InstanceFleetLaunchSpecificationsArgs> launchSpecifications) {
+        public Builder launchSpecifications(@Nullable Input<InstanceFleetLaunchSpecificationsArgs> launchSpecifications) {
             this.launchSpecifications = launchSpecifications;
             return this;
         }
 
-        public Builder setLaunchSpecifications(@Nullable InstanceFleetLaunchSpecificationsArgs launchSpecifications) {
+        public Builder launchSpecifications(@Nullable InstanceFleetLaunchSpecificationsArgs launchSpecifications) {
             this.launchSpecifications = Input.ofNullable(launchSpecifications);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTargetOnDemandCapacity(@Nullable Input<Integer> targetOnDemandCapacity) {
+        public Builder targetOnDemandCapacity(@Nullable Input<Integer> targetOnDemandCapacity) {
             this.targetOnDemandCapacity = targetOnDemandCapacity;
             return this;
         }
 
-        public Builder setTargetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
+        public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
             this.targetOnDemandCapacity = Input.ofNullable(targetOnDemandCapacity);
             return this;
         }
 
-        public Builder setTargetSpotCapacity(@Nullable Input<Integer> targetSpotCapacity) {
+        public Builder targetSpotCapacity(@Nullable Input<Integer> targetSpotCapacity) {
             this.targetSpotCapacity = targetSpotCapacity;
             return this;
         }
 
-        public Builder setTargetSpotCapacity(@Nullable Integer targetSpotCapacity) {
+        public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
             this.targetSpotCapacity = Input.ofNullable(targetSpotCapacity);
             return this;
         }

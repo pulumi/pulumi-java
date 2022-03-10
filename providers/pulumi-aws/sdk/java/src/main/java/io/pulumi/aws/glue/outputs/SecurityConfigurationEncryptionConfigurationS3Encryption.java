@@ -67,12 +67,12 @@ public final class SecurityConfigurationEncryptionConfigurationS3Encryption {
     	      this.s3EncryptionMode = defaults.s3EncryptionMode;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setS3EncryptionMode(@Nullable String s3EncryptionMode) {
+        public Builder s3EncryptionMode(@Nullable String s3EncryptionMode) {
             this.s3EncryptionMode = s3EncryptionMode;
             return this;
         }

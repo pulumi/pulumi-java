@@ -219,112 +219,112 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDynamodbConfig(@Nullable Input<DataSourceDynamodbConfigGetArgs> dynamodbConfig) {
+        public Builder dynamodbConfig(@Nullable Input<DataSourceDynamodbConfigGetArgs> dynamodbConfig) {
             this.dynamodbConfig = dynamodbConfig;
             return this;
         }
 
-        public Builder setDynamodbConfig(@Nullable DataSourceDynamodbConfigGetArgs dynamodbConfig) {
+        public Builder dynamodbConfig(@Nullable DataSourceDynamodbConfigGetArgs dynamodbConfig) {
             this.dynamodbConfig = Input.ofNullable(dynamodbConfig);
             return this;
         }
 
-        public Builder setElasticsearchConfig(@Nullable Input<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig) {
+        public Builder elasticsearchConfig(@Nullable Input<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig) {
             this.elasticsearchConfig = elasticsearchConfig;
             return this;
         }
 
-        public Builder setElasticsearchConfig(@Nullable DataSourceElasticsearchConfigGetArgs elasticsearchConfig) {
+        public Builder elasticsearchConfig(@Nullable DataSourceElasticsearchConfigGetArgs elasticsearchConfig) {
             this.elasticsearchConfig = Input.ofNullable(elasticsearchConfig);
             return this;
         }
 
-        public Builder setHttpConfig(@Nullable Input<DataSourceHttpConfigGetArgs> httpConfig) {
+        public Builder httpConfig(@Nullable Input<DataSourceHttpConfigGetArgs> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
 
-        public Builder setHttpConfig(@Nullable DataSourceHttpConfigGetArgs httpConfig) {
+        public Builder httpConfig(@Nullable DataSourceHttpConfigGetArgs httpConfig) {
             this.httpConfig = Input.ofNullable(httpConfig);
             return this;
         }
 
-        public Builder setLambdaConfig(@Nullable Input<DataSourceLambdaConfigGetArgs> lambdaConfig) {
+        public Builder lambdaConfig(@Nullable Input<DataSourceLambdaConfigGetArgs> lambdaConfig) {
             this.lambdaConfig = lambdaConfig;
             return this;
         }
 
-        public Builder setLambdaConfig(@Nullable DataSourceLambdaConfigGetArgs lambdaConfig) {
+        public Builder lambdaConfig(@Nullable DataSourceLambdaConfigGetArgs lambdaConfig) {
             this.lambdaConfig = Input.ofNullable(lambdaConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRelationalDatabaseConfig(@Nullable Input<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig) {
+        public Builder relationalDatabaseConfig(@Nullable Input<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig) {
             this.relationalDatabaseConfig = relationalDatabaseConfig;
             return this;
         }
 
-        public Builder setRelationalDatabaseConfig(@Nullable DataSourceRelationalDatabaseConfigGetArgs relationalDatabaseConfig) {
+        public Builder relationalDatabaseConfig(@Nullable DataSourceRelationalDatabaseConfigGetArgs relationalDatabaseConfig) {
             this.relationalDatabaseConfig = Input.ofNullable(relationalDatabaseConfig);
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable Input<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable String serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Input.ofNullable(serviceRoleArn);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

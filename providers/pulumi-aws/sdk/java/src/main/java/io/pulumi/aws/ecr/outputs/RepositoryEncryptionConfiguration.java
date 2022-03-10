@@ -67,12 +67,12 @@ public final class RepositoryEncryptionConfiguration {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setEncryptionType(@Nullable String encryptionType) {
+        public Builder encryptionType(@Nullable String encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }

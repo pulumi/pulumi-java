@@ -52,12 +52,12 @@ public final class VirtualNodeSpecListenerConnectionPoolTcpArgs extends io.pulum
     	      this.maxConnections = defaults.maxConnections;
         }
 
-        public Builder setMaxConnections(Input<Integer> maxConnections) {
+        public Builder maxConnections(Input<Integer> maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Input.of(Objects.requireNonNull(maxConnections));
             return this;
         }

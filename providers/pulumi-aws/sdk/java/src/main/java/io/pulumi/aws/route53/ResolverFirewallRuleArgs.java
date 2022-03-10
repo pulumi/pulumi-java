@@ -183,92 +183,92 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setBlockOverrideDnsType(@Nullable Input<String> blockOverrideDnsType) {
+        public Builder blockOverrideDnsType(@Nullable Input<String> blockOverrideDnsType) {
             this.blockOverrideDnsType = blockOverrideDnsType;
             return this;
         }
 
-        public Builder setBlockOverrideDnsType(@Nullable String blockOverrideDnsType) {
+        public Builder blockOverrideDnsType(@Nullable String blockOverrideDnsType) {
             this.blockOverrideDnsType = Input.ofNullable(blockOverrideDnsType);
             return this;
         }
 
-        public Builder setBlockOverrideDomain(@Nullable Input<String> blockOverrideDomain) {
+        public Builder blockOverrideDomain(@Nullable Input<String> blockOverrideDomain) {
             this.blockOverrideDomain = blockOverrideDomain;
             return this;
         }
 
-        public Builder setBlockOverrideDomain(@Nullable String blockOverrideDomain) {
+        public Builder blockOverrideDomain(@Nullable String blockOverrideDomain) {
             this.blockOverrideDomain = Input.ofNullable(blockOverrideDomain);
             return this;
         }
 
-        public Builder setBlockOverrideTtl(@Nullable Input<Integer> blockOverrideTtl) {
+        public Builder blockOverrideTtl(@Nullable Input<Integer> blockOverrideTtl) {
             this.blockOverrideTtl = blockOverrideTtl;
             return this;
         }
 
-        public Builder setBlockOverrideTtl(@Nullable Integer blockOverrideTtl) {
+        public Builder blockOverrideTtl(@Nullable Integer blockOverrideTtl) {
             this.blockOverrideTtl = Input.ofNullable(blockOverrideTtl);
             return this;
         }
 
-        public Builder setBlockResponse(@Nullable Input<String> blockResponse) {
+        public Builder blockResponse(@Nullable Input<String> blockResponse) {
             this.blockResponse = blockResponse;
             return this;
         }
 
-        public Builder setBlockResponse(@Nullable String blockResponse) {
+        public Builder blockResponse(@Nullable String blockResponse) {
             this.blockResponse = Input.ofNullable(blockResponse);
             return this;
         }
 
-        public Builder setFirewallDomainListId(Input<String> firewallDomainListId) {
+        public Builder firewallDomainListId(Input<String> firewallDomainListId) {
             this.firewallDomainListId = Objects.requireNonNull(firewallDomainListId);
             return this;
         }
 
-        public Builder setFirewallDomainListId(String firewallDomainListId) {
+        public Builder firewallDomainListId(String firewallDomainListId) {
             this.firewallDomainListId = Input.of(Objects.requireNonNull(firewallDomainListId));
             return this;
         }
 
-        public Builder setFirewallRuleGroupId(Input<String> firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(Input<String> firewallRuleGroupId) {
             this.firewallRuleGroupId = Objects.requireNonNull(firewallRuleGroupId);
             return this;
         }
 
-        public Builder setFirewallRuleGroupId(String firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(String firewallRuleGroupId) {
             this.firewallRuleGroupId = Input.of(Objects.requireNonNull(firewallRuleGroupId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }

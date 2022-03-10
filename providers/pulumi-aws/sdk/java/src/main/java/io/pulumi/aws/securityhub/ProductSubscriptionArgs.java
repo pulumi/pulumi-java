@@ -52,12 +52,12 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
     	      this.productArn = defaults.productArn;
         }
 
-        public Builder setProductArn(Input<String> productArn) {
+        public Builder productArn(Input<String> productArn) {
             this.productArn = Objects.requireNonNull(productArn);
             return this;
         }
 
-        public Builder setProductArn(String productArn) {
+        public Builder productArn(String productArn) {
             this.productArn = Input.of(Objects.requireNonNull(productArn));
             return this;
         }

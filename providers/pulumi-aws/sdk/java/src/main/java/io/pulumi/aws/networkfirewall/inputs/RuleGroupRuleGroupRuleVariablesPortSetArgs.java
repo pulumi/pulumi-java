@@ -70,22 +70,22 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetArgs extends io.pulumi.
     	      this.portSet = defaults.portSet;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setPortSet(Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet) {
+        public Builder portSet(Input<RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs> portSet) {
             this.portSet = Objects.requireNonNull(portSet);
             return this;
         }
 
-        public Builder setPortSet(RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs portSet) {
+        public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs portSet) {
             this.portSet = Input.of(Objects.requireNonNull(portSet));
             return this;
         }

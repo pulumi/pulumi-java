@@ -119,52 +119,52 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routingConfig = defaults.routingConfig;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFunctionName(Input<String> functionName) {
+        public Builder functionName(Input<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Input.of(Objects.requireNonNull(functionName));
             return this;
         }
 
-        public Builder setFunctionVersion(Input<String> functionVersion) {
+        public Builder functionVersion(Input<String> functionVersion) {
             this.functionVersion = Objects.requireNonNull(functionVersion);
             return this;
         }
 
-        public Builder setFunctionVersion(String functionVersion) {
+        public Builder functionVersion(String functionVersion) {
             this.functionVersion = Input.of(Objects.requireNonNull(functionVersion));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoutingConfig(@Nullable Input<AliasRoutingConfigArgs> routingConfig) {
+        public Builder routingConfig(@Nullable Input<AliasRoutingConfigArgs> routingConfig) {
             this.routingConfig = routingConfig;
             return this;
         }
 
-        public Builder setRoutingConfig(@Nullable AliasRoutingConfigArgs routingConfig) {
+        public Builder routingConfig(@Nullable AliasRoutingConfigArgs routingConfig) {
             this.routingConfig = Input.ofNullable(routingConfig);
             return this;
         }

@@ -71,22 +71,22 @@ public final class DistributionTrustedKeyGroupItemArgs extends io.pulumi.resourc
     	      this.keyPairIds = defaults.keyPairIds;
         }
 
-        public Builder setKeyGroupId(@Nullable Input<String> keyGroupId) {
+        public Builder keyGroupId(@Nullable Input<String> keyGroupId) {
             this.keyGroupId = keyGroupId;
             return this;
         }
 
-        public Builder setKeyGroupId(@Nullable String keyGroupId) {
+        public Builder keyGroupId(@Nullable String keyGroupId) {
             this.keyGroupId = Input.ofNullable(keyGroupId);
             return this;
         }
 
-        public Builder setKeyPairIds(@Nullable Input<List<String>> keyPairIds) {
+        public Builder keyPairIds(@Nullable Input<List<String>> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }
 
-        public Builder setKeyPairIds(@Nullable List<String> keyPairIds) {
+        public Builder keyPairIds(@Nullable List<String> keyPairIds) {
             this.keyPairIds = Input.ofNullable(keyPairIds);
             return this;
         }

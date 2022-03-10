@@ -186,87 +186,87 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.statementIdPrefix = defaults.statementIdPrefix;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setEventSourceToken(@Nullable Input<String> eventSourceToken) {
+        public Builder eventSourceToken(@Nullable Input<String> eventSourceToken) {
             this.eventSourceToken = eventSourceToken;
             return this;
         }
 
-        public Builder setEventSourceToken(@Nullable String eventSourceToken) {
+        public Builder eventSourceToken(@Nullable String eventSourceToken) {
             this.eventSourceToken = Input.ofNullable(eventSourceToken);
             return this;
         }
 
-        public Builder setFunction(Input<String> function) {
+        public Builder function(Input<String> function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setPrincipal(Input<String> principal) {
+        public Builder principal(Input<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder setQualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Input<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
-        public Builder setQualifier(@Nullable String qualifier) {
+        public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Input.ofNullable(qualifier);
             return this;
         }
 
-        public Builder setSourceAccount(@Nullable Input<String> sourceAccount) {
+        public Builder sourceAccount(@Nullable Input<String> sourceAccount) {
             this.sourceAccount = sourceAccount;
             return this;
         }
 
-        public Builder setSourceAccount(@Nullable String sourceAccount) {
+        public Builder sourceAccount(@Nullable String sourceAccount) {
             this.sourceAccount = Input.ofNullable(sourceAccount);
             return this;
         }
 
-        public Builder setSourceArn(@Nullable Input<String> sourceArn) {
+        public Builder sourceArn(@Nullable Input<String> sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = Input.ofNullable(sourceArn);
             return this;
         }
 
-        public Builder setStatementId(@Nullable Input<String> statementId) {
+        public Builder statementId(@Nullable Input<String> statementId) {
             this.statementId = statementId;
             return this;
         }
 
-        public Builder setStatementId(@Nullable String statementId) {
+        public Builder statementId(@Nullable String statementId) {
             this.statementId = Input.ofNullable(statementId);
             return this;
         }
 
-        public Builder setStatementIdPrefix(@Nullable Input<String> statementIdPrefix) {
+        public Builder statementIdPrefix(@Nullable Input<String> statementIdPrefix) {
             this.statementIdPrefix = statementIdPrefix;
             return this;
         }
 
-        public Builder setStatementIdPrefix(@Nullable String statementIdPrefix) {
+        public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
             this.statementIdPrefix = Input.ofNullable(statementIdPrefix);
             return this;
         }

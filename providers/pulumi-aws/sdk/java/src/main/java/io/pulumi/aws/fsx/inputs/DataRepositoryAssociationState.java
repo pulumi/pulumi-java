@@ -215,112 +215,112 @@ public final class DataRepositoryAssociationState extends io.pulumi.resources.Re
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAssociationId(@Nullable Input<String> associationId) {
+        public Builder associationId(@Nullable Input<String> associationId) {
             this.associationId = associationId;
             return this;
         }
 
-        public Builder setAssociationId(@Nullable String associationId) {
+        public Builder associationId(@Nullable String associationId) {
             this.associationId = Input.ofNullable(associationId);
             return this;
         }
 
-        public Builder setBatchImportMetaDataOnCreate(@Nullable Input<Boolean> batchImportMetaDataOnCreate) {
+        public Builder batchImportMetaDataOnCreate(@Nullable Input<Boolean> batchImportMetaDataOnCreate) {
             this.batchImportMetaDataOnCreate = batchImportMetaDataOnCreate;
             return this;
         }
 
-        public Builder setBatchImportMetaDataOnCreate(@Nullable Boolean batchImportMetaDataOnCreate) {
+        public Builder batchImportMetaDataOnCreate(@Nullable Boolean batchImportMetaDataOnCreate) {
             this.batchImportMetaDataOnCreate = Input.ofNullable(batchImportMetaDataOnCreate);
             return this;
         }
 
-        public Builder setDataRepositoryPath(@Nullable Input<String> dataRepositoryPath) {
+        public Builder dataRepositoryPath(@Nullable Input<String> dataRepositoryPath) {
             this.dataRepositoryPath = dataRepositoryPath;
             return this;
         }
 
-        public Builder setDataRepositoryPath(@Nullable String dataRepositoryPath) {
+        public Builder dataRepositoryPath(@Nullable String dataRepositoryPath) {
             this.dataRepositoryPath = Input.ofNullable(dataRepositoryPath);
             return this;
         }
 
-        public Builder setDeleteDataInFilesystem(@Nullable Input<Boolean> deleteDataInFilesystem) {
+        public Builder deleteDataInFilesystem(@Nullable Input<Boolean> deleteDataInFilesystem) {
             this.deleteDataInFilesystem = deleteDataInFilesystem;
             return this;
         }
 
-        public Builder setDeleteDataInFilesystem(@Nullable Boolean deleteDataInFilesystem) {
+        public Builder deleteDataInFilesystem(@Nullable Boolean deleteDataInFilesystem) {
             this.deleteDataInFilesystem = Input.ofNullable(deleteDataInFilesystem);
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Input.ofNullable(fileSystemId);
             return this;
         }
 
-        public Builder setFileSystemPath(@Nullable Input<String> fileSystemPath) {
+        public Builder fileSystemPath(@Nullable Input<String> fileSystemPath) {
             this.fileSystemPath = fileSystemPath;
             return this;
         }
 
-        public Builder setFileSystemPath(@Nullable String fileSystemPath) {
+        public Builder fileSystemPath(@Nullable String fileSystemPath) {
             this.fileSystemPath = Input.ofNullable(fileSystemPath);
             return this;
         }
 
-        public Builder setImportedFileChunkSize(@Nullable Input<Integer> importedFileChunkSize) {
+        public Builder importedFileChunkSize(@Nullable Input<Integer> importedFileChunkSize) {
             this.importedFileChunkSize = importedFileChunkSize;
             return this;
         }
 
-        public Builder setImportedFileChunkSize(@Nullable Integer importedFileChunkSize) {
+        public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
             this.importedFileChunkSize = Input.ofNullable(importedFileChunkSize);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<DataRepositoryAssociationS3GetArgs> s3) {
+        public Builder s3(@Nullable Input<DataRepositoryAssociationS3GetArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable DataRepositoryAssociationS3GetArgs s3) {
+        public Builder s3(@Nullable DataRepositoryAssociationS3GetArgs s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

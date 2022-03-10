@@ -69,22 +69,22 @@ public final class FunctionFileSystemConfigGetArgs extends io.pulumi.resources.R
     	      this.localMountPath = defaults.localMountPath;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder setLocalMountPath(Input<String> localMountPath) {
+        public Builder localMountPath(Input<String> localMountPath) {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
         }
 
-        public Builder setLocalMountPath(String localMountPath) {
+        public Builder localMountPath(String localMountPath) {
             this.localMountPath = Input.of(Objects.requireNonNull(localMountPath));
             return this;
         }

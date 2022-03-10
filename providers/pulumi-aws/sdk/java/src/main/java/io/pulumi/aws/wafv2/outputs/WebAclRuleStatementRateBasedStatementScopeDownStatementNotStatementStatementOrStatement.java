@@ -49,7 +49,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatement> statements) {
+        public Builder statements(List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementOrStatementStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

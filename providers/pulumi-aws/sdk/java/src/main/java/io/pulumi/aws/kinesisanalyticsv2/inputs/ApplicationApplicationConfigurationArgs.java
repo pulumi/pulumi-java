@@ -156,72 +156,72 @@ public final class ApplicationApplicationConfigurationArgs extends io.pulumi.res
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setApplicationCodeConfiguration(Input<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration) {
+        public Builder applicationCodeConfiguration(Input<ApplicationApplicationConfigurationApplicationCodeConfigurationArgs> applicationCodeConfiguration) {
             this.applicationCodeConfiguration = Objects.requireNonNull(applicationCodeConfiguration);
             return this;
         }
 
-        public Builder setApplicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfigurationArgs applicationCodeConfiguration) {
+        public Builder applicationCodeConfiguration(ApplicationApplicationConfigurationApplicationCodeConfigurationArgs applicationCodeConfiguration) {
             this.applicationCodeConfiguration = Input.of(Objects.requireNonNull(applicationCodeConfiguration));
             return this;
         }
 
-        public Builder setApplicationSnapshotConfiguration(@Nullable Input<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration) {
+        public Builder applicationSnapshotConfiguration(@Nullable Input<ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs> applicationSnapshotConfiguration) {
             this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
             return this;
         }
 
-        public Builder setApplicationSnapshotConfiguration(@Nullable ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs applicationSnapshotConfiguration) {
+        public Builder applicationSnapshotConfiguration(@Nullable ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs applicationSnapshotConfiguration) {
             this.applicationSnapshotConfiguration = Input.ofNullable(applicationSnapshotConfiguration);
             return this;
         }
 
-        public Builder setEnvironmentProperties(@Nullable Input<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties) {
+        public Builder environmentProperties(@Nullable Input<ApplicationApplicationConfigurationEnvironmentPropertiesArgs> environmentProperties) {
             this.environmentProperties = environmentProperties;
             return this;
         }
 
-        public Builder setEnvironmentProperties(@Nullable ApplicationApplicationConfigurationEnvironmentPropertiesArgs environmentProperties) {
+        public Builder environmentProperties(@Nullable ApplicationApplicationConfigurationEnvironmentPropertiesArgs environmentProperties) {
             this.environmentProperties = Input.ofNullable(environmentProperties);
             return this;
         }
 
-        public Builder setFlinkApplicationConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration) {
+        public Builder flinkApplicationConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs> flinkApplicationConfiguration) {
             this.flinkApplicationConfiguration = flinkApplicationConfiguration;
             return this;
         }
 
-        public Builder setFlinkApplicationConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs flinkApplicationConfiguration) {
+        public Builder flinkApplicationConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs flinkApplicationConfiguration) {
             this.flinkApplicationConfiguration = Input.ofNullable(flinkApplicationConfiguration);
             return this;
         }
 
-        public Builder setRunConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration) {
+        public Builder runConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationArgs> runConfiguration) {
             this.runConfiguration = runConfiguration;
             return this;
         }
 
-        public Builder setRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationArgs runConfiguration) {
+        public Builder runConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationArgs runConfiguration) {
             this.runConfiguration = Input.ofNullable(runConfiguration);
             return this;
         }
 
-        public Builder setSqlApplicationConfiguration(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration) {
+        public Builder sqlApplicationConfiguration(@Nullable Input<ApplicationApplicationConfigurationSqlApplicationConfigurationArgs> sqlApplicationConfiguration) {
             this.sqlApplicationConfiguration = sqlApplicationConfiguration;
             return this;
         }
 
-        public Builder setSqlApplicationConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationArgs sqlApplicationConfiguration) {
+        public Builder sqlApplicationConfiguration(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationArgs sqlApplicationConfiguration) {
             this.sqlApplicationConfiguration = Input.ofNullable(sqlApplicationConfiguration);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<ApplicationApplicationConfigurationVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable ApplicationApplicationConfigurationVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable ApplicationApplicationConfigurationVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

@@ -72,22 +72,22 @@ public final class IntentFollowUpPromptGetArgs extends io.pulumi.resources.Resou
     	      this.rejectionStatement = defaults.rejectionStatement;
         }
 
-        public Builder setPrompt(Input<IntentFollowUpPromptPromptGetArgs> prompt) {
+        public Builder prompt(Input<IntentFollowUpPromptPromptGetArgs> prompt) {
             this.prompt = Objects.requireNonNull(prompt);
             return this;
         }
 
-        public Builder setPrompt(IntentFollowUpPromptPromptGetArgs prompt) {
+        public Builder prompt(IntentFollowUpPromptPromptGetArgs prompt) {
             this.prompt = Input.of(Objects.requireNonNull(prompt));
             return this;
         }
 
-        public Builder setRejectionStatement(Input<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
+        public Builder rejectionStatement(Input<IntentFollowUpPromptRejectionStatementGetArgs> rejectionStatement) {
             this.rejectionStatement = Objects.requireNonNull(rejectionStatement);
             return this;
         }
 
-        public Builder setRejectionStatement(IntentFollowUpPromptRejectionStatementGetArgs rejectionStatement) {
+        public Builder rejectionStatement(IntentFollowUpPromptRejectionStatementGetArgs rejectionStatement) {
             this.rejectionStatement = Input.of(Objects.requireNonNull(rejectionStatement));
             return this;
         }

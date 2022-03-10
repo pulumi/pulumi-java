@@ -139,32 +139,32 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
     	      this.types = defaults.types;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setKeyTypes(@Nullable List<String> keyTypes) {
+        public Builder keyTypes(@Nullable List<String> keyTypes) {
             this.keyTypes = keyTypes;
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<String> statuses) {
+        public Builder statuses(@Nullable List<String> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTypes(@Nullable List<String> types) {
+        public Builder types(@Nullable List<String> types) {
             this.types = types;
             return this;
         }

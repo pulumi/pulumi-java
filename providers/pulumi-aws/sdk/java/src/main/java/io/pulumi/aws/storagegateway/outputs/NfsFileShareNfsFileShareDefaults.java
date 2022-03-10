@@ -99,22 +99,22 @@ public final class NfsFileShareNfsFileShareDefaults {
     	      this.ownerId = defaults.ownerId;
         }
 
-        public Builder setDirectoryMode(@Nullable String directoryMode) {
+        public Builder directoryMode(@Nullable String directoryMode) {
             this.directoryMode = directoryMode;
             return this;
         }
 
-        public Builder setFileMode(@Nullable String fileMode) {
+        public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }

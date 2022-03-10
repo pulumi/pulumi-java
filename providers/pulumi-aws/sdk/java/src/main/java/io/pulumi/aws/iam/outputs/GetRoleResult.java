@@ -203,57 +203,57 @@ public final class GetRoleResult {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAssumeRolePolicy(String assumeRolePolicy) {
+        public Builder assumeRolePolicy(String assumeRolePolicy) {
             this.assumeRolePolicy = Objects.requireNonNull(assumeRolePolicy);
             return this;
         }
 
-        public Builder setCreateDate(String createDate) {
+        public Builder createDate(String createDate) {
             this.createDate = Objects.requireNonNull(createDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMaxSessionDuration(Integer maxSessionDuration) {
+        public Builder maxSessionDuration(Integer maxSessionDuration) {
             this.maxSessionDuration = Objects.requireNonNull(maxSessionDuration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPermissionsBoundary(String permissionsBoundary) {
+        public Builder permissionsBoundary(String permissionsBoundary) {
             this.permissionsBoundary = Objects.requireNonNull(permissionsBoundary);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }

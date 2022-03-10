@@ -347,192 +347,192 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAmiType(@Nullable Input<String> amiType) {
+        public Builder amiType(@Nullable Input<String> amiType) {
             this.amiType = amiType;
             return this;
         }
 
-        public Builder setAmiType(@Nullable String amiType) {
+        public Builder amiType(@Nullable String amiType) {
             this.amiType = Input.ofNullable(amiType);
             return this;
         }
 
-        public Builder setCapacityType(@Nullable Input<String> capacityType) {
+        public Builder capacityType(@Nullable Input<String> capacityType) {
             this.capacityType = capacityType;
             return this;
         }
 
-        public Builder setCapacityType(@Nullable String capacityType) {
+        public Builder capacityType(@Nullable String capacityType) {
             this.capacityType = Input.ofNullable(capacityType);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setDiskSize(@Nullable Input<Integer> diskSize) {
+        public Builder diskSize(@Nullable Input<Integer> diskSize) {
             this.diskSize = diskSize;
             return this;
         }
 
-        public Builder setDiskSize(@Nullable Integer diskSize) {
+        public Builder diskSize(@Nullable Integer diskSize) {
             this.diskSize = Input.ofNullable(diskSize);
             return this;
         }
 
-        public Builder setForceUpdateVersion(@Nullable Input<Boolean> forceUpdateVersion) {
+        public Builder forceUpdateVersion(@Nullable Input<Boolean> forceUpdateVersion) {
             this.forceUpdateVersion = forceUpdateVersion;
             return this;
         }
 
-        public Builder setForceUpdateVersion(@Nullable Boolean forceUpdateVersion) {
+        public Builder forceUpdateVersion(@Nullable Boolean forceUpdateVersion) {
             this.forceUpdateVersion = Input.ofNullable(forceUpdateVersion);
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable Input<List<String>> instanceTypes) {
+        public Builder instanceTypes(@Nullable Input<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable List<String> instanceTypes) {
+        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = Input.ofNullable(instanceTypes);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable Input<NodeGroupLaunchTemplateArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Input<NodeGroupLaunchTemplateArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable NodeGroupLaunchTemplateArgs launchTemplate) {
+        public Builder launchTemplate(@Nullable NodeGroupLaunchTemplateArgs launchTemplate) {
             this.launchTemplate = Input.ofNullable(launchTemplate);
             return this;
         }
 
-        public Builder setNodeGroupName(@Nullable Input<String> nodeGroupName) {
+        public Builder nodeGroupName(@Nullable Input<String> nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
             return this;
         }
 
-        public Builder setNodeGroupName(@Nullable String nodeGroupName) {
+        public Builder nodeGroupName(@Nullable String nodeGroupName) {
             this.nodeGroupName = Input.ofNullable(nodeGroupName);
             return this;
         }
 
-        public Builder setNodeGroupNamePrefix(@Nullable Input<String> nodeGroupNamePrefix) {
+        public Builder nodeGroupNamePrefix(@Nullable Input<String> nodeGroupNamePrefix) {
             this.nodeGroupNamePrefix = nodeGroupNamePrefix;
             return this;
         }
 
-        public Builder setNodeGroupNamePrefix(@Nullable String nodeGroupNamePrefix) {
+        public Builder nodeGroupNamePrefix(@Nullable String nodeGroupNamePrefix) {
             this.nodeGroupNamePrefix = Input.ofNullable(nodeGroupNamePrefix);
             return this;
         }
 
-        public Builder setNodeRoleArn(Input<String> nodeRoleArn) {
+        public Builder nodeRoleArn(Input<String> nodeRoleArn) {
             this.nodeRoleArn = Objects.requireNonNull(nodeRoleArn);
             return this;
         }
 
-        public Builder setNodeRoleArn(String nodeRoleArn) {
+        public Builder nodeRoleArn(String nodeRoleArn) {
             this.nodeRoleArn = Input.of(Objects.requireNonNull(nodeRoleArn));
             return this;
         }
 
-        public Builder setReleaseVersion(@Nullable Input<String> releaseVersion) {
+        public Builder releaseVersion(@Nullable Input<String> releaseVersion) {
             this.releaseVersion = releaseVersion;
             return this;
         }
 
-        public Builder setReleaseVersion(@Nullable String releaseVersion) {
+        public Builder releaseVersion(@Nullable String releaseVersion) {
             this.releaseVersion = Input.ofNullable(releaseVersion);
             return this;
         }
 
-        public Builder setRemoteAccess(@Nullable Input<NodeGroupRemoteAccessArgs> remoteAccess) {
+        public Builder remoteAccess(@Nullable Input<NodeGroupRemoteAccessArgs> remoteAccess) {
             this.remoteAccess = remoteAccess;
             return this;
         }
 
-        public Builder setRemoteAccess(@Nullable NodeGroupRemoteAccessArgs remoteAccess) {
+        public Builder remoteAccess(@Nullable NodeGroupRemoteAccessArgs remoteAccess) {
             this.remoteAccess = Input.ofNullable(remoteAccess);
             return this;
         }
 
-        public Builder setScalingConfig(Input<NodeGroupScalingConfigArgs> scalingConfig) {
+        public Builder scalingConfig(Input<NodeGroupScalingConfigArgs> scalingConfig) {
             this.scalingConfig = Objects.requireNonNull(scalingConfig);
             return this;
         }
 
-        public Builder setScalingConfig(NodeGroupScalingConfigArgs scalingConfig) {
+        public Builder scalingConfig(NodeGroupScalingConfigArgs scalingConfig) {
             this.scalingConfig = Input.of(Objects.requireNonNull(scalingConfig));
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTaints(@Nullable Input<List<NodeGroupTaintArgs>> taints) {
+        public Builder taints(@Nullable Input<List<NodeGroupTaintArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<NodeGroupTaintArgs> taints) {
+        public Builder taints(@Nullable List<NodeGroupTaintArgs> taints) {
             this.taints = Input.ofNullable(taints);
             return this;
         }
 
-        public Builder setUpdateConfig(@Nullable Input<NodeGroupUpdateConfigArgs> updateConfig) {
+        public Builder updateConfig(@Nullable Input<NodeGroupUpdateConfigArgs> updateConfig) {
             this.updateConfig = updateConfig;
             return this;
         }
 
-        public Builder setUpdateConfig(@Nullable NodeGroupUpdateConfigArgs updateConfig) {
+        public Builder updateConfig(@Nullable NodeGroupUpdateConfigArgs updateConfig) {
             this.updateConfig = Input.ofNullable(updateConfig);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

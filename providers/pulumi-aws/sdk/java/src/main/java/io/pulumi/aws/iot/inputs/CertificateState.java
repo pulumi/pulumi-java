@@ -139,62 +139,62 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setActive(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Input<Boolean> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = Input.ofNullable(active);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificatePem(@Nullable Input<String> certificatePem) {
+        public Builder certificatePem(@Nullable Input<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
 
-        public Builder setCertificatePem(@Nullable String certificatePem) {
+        public Builder certificatePem(@Nullable String certificatePem) {
             this.certificatePem = Input.ofNullable(certificatePem);
             return this;
         }
 
-        public Builder setCsr(@Nullable Input<String> csr) {
+        public Builder csr(@Nullable Input<String> csr) {
             this.csr = csr;
             return this;
         }
 
-        public Builder setCsr(@Nullable String csr) {
+        public Builder csr(@Nullable String csr) {
             this.csr = Input.ofNullable(csr);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }

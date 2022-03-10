@@ -86,32 +86,32 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     	      this.reservedSlots = defaults.reservedSlots;
         }
 
-        public Builder setCommitment(Input<String> commitment) {
+        public Builder commitment(Input<String> commitment) {
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
 
-        public Builder setCommitment(String commitment) {
+        public Builder commitment(String commitment) {
             this.commitment = Input.of(Objects.requireNonNull(commitment));
             return this;
         }
 
-        public Builder setRenewalType(Input<String> renewalType) {
+        public Builder renewalType(Input<String> renewalType) {
             this.renewalType = Objects.requireNonNull(renewalType);
             return this;
         }
 
-        public Builder setRenewalType(String renewalType) {
+        public Builder renewalType(String renewalType) {
             this.renewalType = Input.of(Objects.requireNonNull(renewalType));
             return this;
         }
 
-        public Builder setReservedSlots(Input<Integer> reservedSlots) {
+        public Builder reservedSlots(Input<Integer> reservedSlots) {
             this.reservedSlots = Objects.requireNonNull(reservedSlots);
             return this;
         }
 
-        public Builder setReservedSlots(Integer reservedSlots) {
+        public Builder reservedSlots(Integer reservedSlots) {
             this.reservedSlots = Input.of(Objects.requireNonNull(reservedSlots));
             return this;
         }

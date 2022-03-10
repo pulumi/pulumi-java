@@ -72,22 +72,22 @@ public final class BotAliasConversationLogsGetArgs extends io.pulumi.resources.R
     	      this.logSettings = defaults.logSettings;
         }
 
-        public Builder setIamRoleArn(Input<String> iamRoleArn) {
+        public Builder iamRoleArn(Input<String> iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
-        public Builder setIamRoleArn(String iamRoleArn) {
+        public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Input.of(Objects.requireNonNull(iamRoleArn));
             return this;
         }
 
-        public Builder setLogSettings(@Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings) {
+        public Builder logSettings(@Nullable Input<List<BotAliasConversationLogsLogSettingGetArgs>> logSettings) {
             this.logSettings = logSettings;
             return this;
         }
 
-        public Builder setLogSettings(@Nullable List<BotAliasConversationLogsLogSettingGetArgs> logSettings) {
+        public Builder logSettings(@Nullable List<BotAliasConversationLogsLogSettingGetArgs> logSettings) {
             this.logSettings = Input.ofNullable(logSettings);
             return this;
         }

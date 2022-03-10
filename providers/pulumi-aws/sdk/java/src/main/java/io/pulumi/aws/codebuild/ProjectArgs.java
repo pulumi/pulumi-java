@@ -421,232 +421,232 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setArtifacts(Input<ProjectArtifactsArgs> artifacts) {
+        public Builder artifacts(Input<ProjectArtifactsArgs> artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
 
-        public Builder setArtifacts(ProjectArtifactsArgs artifacts) {
+        public Builder artifacts(ProjectArtifactsArgs artifacts) {
             this.artifacts = Input.of(Objects.requireNonNull(artifacts));
             return this;
         }
 
-        public Builder setBadgeEnabled(@Nullable Input<Boolean> badgeEnabled) {
+        public Builder badgeEnabled(@Nullable Input<Boolean> badgeEnabled) {
             this.badgeEnabled = badgeEnabled;
             return this;
         }
 
-        public Builder setBadgeEnabled(@Nullable Boolean badgeEnabled) {
+        public Builder badgeEnabled(@Nullable Boolean badgeEnabled) {
             this.badgeEnabled = Input.ofNullable(badgeEnabled);
             return this;
         }
 
-        public Builder setBuildBatchConfig(@Nullable Input<ProjectBuildBatchConfigArgs> buildBatchConfig) {
+        public Builder buildBatchConfig(@Nullable Input<ProjectBuildBatchConfigArgs> buildBatchConfig) {
             this.buildBatchConfig = buildBatchConfig;
             return this;
         }
 
-        public Builder setBuildBatchConfig(@Nullable ProjectBuildBatchConfigArgs buildBatchConfig) {
+        public Builder buildBatchConfig(@Nullable ProjectBuildBatchConfigArgs buildBatchConfig) {
             this.buildBatchConfig = Input.ofNullable(buildBatchConfig);
             return this;
         }
 
-        public Builder setBuildTimeout(@Nullable Input<Integer> buildTimeout) {
+        public Builder buildTimeout(@Nullable Input<Integer> buildTimeout) {
             this.buildTimeout = buildTimeout;
             return this;
         }
 
-        public Builder setBuildTimeout(@Nullable Integer buildTimeout) {
+        public Builder buildTimeout(@Nullable Integer buildTimeout) {
             this.buildTimeout = Input.ofNullable(buildTimeout);
             return this;
         }
 
-        public Builder setCache(@Nullable Input<ProjectCacheArgs> cache) {
+        public Builder cache(@Nullable Input<ProjectCacheArgs> cache) {
             this.cache = cache;
             return this;
         }
 
-        public Builder setCache(@Nullable ProjectCacheArgs cache) {
+        public Builder cache(@Nullable ProjectCacheArgs cache) {
             this.cache = Input.ofNullable(cache);
             return this;
         }
 
-        public Builder setConcurrentBuildLimit(@Nullable Input<Integer> concurrentBuildLimit) {
+        public Builder concurrentBuildLimit(@Nullable Input<Integer> concurrentBuildLimit) {
             this.concurrentBuildLimit = concurrentBuildLimit;
             return this;
         }
 
-        public Builder setConcurrentBuildLimit(@Nullable Integer concurrentBuildLimit) {
+        public Builder concurrentBuildLimit(@Nullable Integer concurrentBuildLimit) {
             this.concurrentBuildLimit = Input.ofNullable(concurrentBuildLimit);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Input.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder setEnvironment(Input<ProjectEnvironmentArgs> environment) {
+        public Builder environment(Input<ProjectEnvironmentArgs> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setEnvironment(ProjectEnvironmentArgs environment) {
+        public Builder environment(ProjectEnvironmentArgs environment) {
             this.environment = Input.of(Objects.requireNonNull(environment));
             return this;
         }
 
-        public Builder setFileSystemLocations(@Nullable Input<List<ProjectFileSystemLocationArgs>> fileSystemLocations) {
+        public Builder fileSystemLocations(@Nullable Input<List<ProjectFileSystemLocationArgs>> fileSystemLocations) {
             this.fileSystemLocations = fileSystemLocations;
             return this;
         }
 
-        public Builder setFileSystemLocations(@Nullable List<ProjectFileSystemLocationArgs> fileSystemLocations) {
+        public Builder fileSystemLocations(@Nullable List<ProjectFileSystemLocationArgs> fileSystemLocations) {
             this.fileSystemLocations = Input.ofNullable(fileSystemLocations);
             return this;
         }
 
-        public Builder setLogsConfig(@Nullable Input<ProjectLogsConfigArgs> logsConfig) {
+        public Builder logsConfig(@Nullable Input<ProjectLogsConfigArgs> logsConfig) {
             this.logsConfig = logsConfig;
             return this;
         }
 
-        public Builder setLogsConfig(@Nullable ProjectLogsConfigArgs logsConfig) {
+        public Builder logsConfig(@Nullable ProjectLogsConfigArgs logsConfig) {
             this.logsConfig = Input.ofNullable(logsConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProjectVisibility(@Nullable Input<String> projectVisibility) {
+        public Builder projectVisibility(@Nullable Input<String> projectVisibility) {
             this.projectVisibility = projectVisibility;
             return this;
         }
 
-        public Builder setProjectVisibility(@Nullable String projectVisibility) {
+        public Builder projectVisibility(@Nullable String projectVisibility) {
             this.projectVisibility = Input.ofNullable(projectVisibility);
             return this;
         }
 
-        public Builder setQueuedTimeout(@Nullable Input<Integer> queuedTimeout) {
+        public Builder queuedTimeout(@Nullable Input<Integer> queuedTimeout) {
             this.queuedTimeout = queuedTimeout;
             return this;
         }
 
-        public Builder setQueuedTimeout(@Nullable Integer queuedTimeout) {
+        public Builder queuedTimeout(@Nullable Integer queuedTimeout) {
             this.queuedTimeout = Input.ofNullable(queuedTimeout);
             return this;
         }
 
-        public Builder setResourceAccessRole(@Nullable Input<String> resourceAccessRole) {
+        public Builder resourceAccessRole(@Nullable Input<String> resourceAccessRole) {
             this.resourceAccessRole = resourceAccessRole;
             return this;
         }
 
-        public Builder setResourceAccessRole(@Nullable String resourceAccessRole) {
+        public Builder resourceAccessRole(@Nullable String resourceAccessRole) {
             this.resourceAccessRole = Input.ofNullable(resourceAccessRole);
             return this;
         }
 
-        public Builder setSecondaryArtifacts(@Nullable Input<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
+        public Builder secondaryArtifacts(@Nullable Input<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
             this.secondaryArtifacts = secondaryArtifacts;
             return this;
         }
 
-        public Builder setSecondaryArtifacts(@Nullable List<ProjectSecondaryArtifactArgs> secondaryArtifacts) {
+        public Builder secondaryArtifacts(@Nullable List<ProjectSecondaryArtifactArgs> secondaryArtifacts) {
             this.secondaryArtifacts = Input.ofNullable(secondaryArtifacts);
             return this;
         }
 
-        public Builder setSecondarySourceVersions(@Nullable Input<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions) {
+        public Builder secondarySourceVersions(@Nullable Input<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions) {
             this.secondarySourceVersions = secondarySourceVersions;
             return this;
         }
 
-        public Builder setSecondarySourceVersions(@Nullable List<ProjectSecondarySourceVersionArgs> secondarySourceVersions) {
+        public Builder secondarySourceVersions(@Nullable List<ProjectSecondarySourceVersionArgs> secondarySourceVersions) {
             this.secondarySourceVersions = Input.ofNullable(secondarySourceVersions);
             return this;
         }
 
-        public Builder setSecondarySources(@Nullable Input<List<ProjectSecondarySourceArgs>> secondarySources) {
+        public Builder secondarySources(@Nullable Input<List<ProjectSecondarySourceArgs>> secondarySources) {
             this.secondarySources = secondarySources;
             return this;
         }
 
-        public Builder setSecondarySources(@Nullable List<ProjectSecondarySourceArgs> secondarySources) {
+        public Builder secondarySources(@Nullable List<ProjectSecondarySourceArgs> secondarySources) {
             this.secondarySources = Input.ofNullable(secondarySources);
             return this;
         }
 
-        public Builder setServiceRole(Input<String> serviceRole) {
+        public Builder serviceRole(Input<String> serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Input.of(Objects.requireNonNull(serviceRole));
             return this;
         }
 
-        public Builder setSource(Input<ProjectSourceArgs> source) {
+        public Builder source(Input<ProjectSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(ProjectSourceArgs source) {
+        public Builder source(ProjectSourceArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setSourceVersion(@Nullable Input<String> sourceVersion) {
+        public Builder sourceVersion(@Nullable Input<String> sourceVersion) {
             this.sourceVersion = sourceVersion;
             return this;
         }
 
-        public Builder setSourceVersion(@Nullable String sourceVersion) {
+        public Builder sourceVersion(@Nullable String sourceVersion) {
             this.sourceVersion = Input.ofNullable(sourceVersion);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<ProjectVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<ProjectVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable ProjectVpcConfigArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable ProjectVpcConfigArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }

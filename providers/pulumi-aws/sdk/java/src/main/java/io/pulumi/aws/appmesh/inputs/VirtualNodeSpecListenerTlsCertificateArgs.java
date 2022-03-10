@@ -88,32 +88,32 @@ public final class VirtualNodeSpecListenerTlsCertificateArgs extends io.pulumi.r
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable Input<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm) {
+        public Builder acm(@Nullable Input<VirtualNodeSpecListenerTlsCertificateAcmArgs> acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setAcm(@Nullable VirtualNodeSpecListenerTlsCertificateAcmArgs acm) {
+        public Builder acm(@Nullable VirtualNodeSpecListenerTlsCertificateAcmArgs acm) {
             this.acm = Input.ofNullable(acm);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<VirtualNodeSpecListenerTlsCertificateFileArgs> file) {
+        public Builder file(@Nullable Input<VirtualNodeSpecListenerTlsCertificateFileArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecListenerTlsCertificateFileArgs file) {
+        public Builder file(@Nullable VirtualNodeSpecListenerTlsCertificateFileArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setSds(@Nullable Input<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds) {
+        public Builder sds(@Nullable Input<VirtualNodeSpecListenerTlsCertificateSdsArgs> sds) {
             this.sds = sds;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecListenerTlsCertificateSdsArgs sds) {
+        public Builder sds(@Nullable VirtualNodeSpecListenerTlsCertificateSdsArgs sds) {
             this.sds = Input.ofNullable(sds);
             return this;
         }

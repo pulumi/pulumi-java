@@ -69,22 +69,22 @@ public final class AnalyticsApplicationInputsProcessingConfigurationLambdaArgs e
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

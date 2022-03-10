@@ -136,62 +136,62 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     	      this.transactionalMessagesPerSecond = defaults.transactionalMessagesPerSecond;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setPromotionalMessagesPerSecond(@Nullable Input<Integer> promotionalMessagesPerSecond) {
+        public Builder promotionalMessagesPerSecond(@Nullable Input<Integer> promotionalMessagesPerSecond) {
             this.promotionalMessagesPerSecond = promotionalMessagesPerSecond;
             return this;
         }
 
-        public Builder setPromotionalMessagesPerSecond(@Nullable Integer promotionalMessagesPerSecond) {
+        public Builder promotionalMessagesPerSecond(@Nullable Integer promotionalMessagesPerSecond) {
             this.promotionalMessagesPerSecond = Input.ofNullable(promotionalMessagesPerSecond);
             return this;
         }
 
-        public Builder setSenderId(@Nullable Input<String> senderId) {
+        public Builder senderId(@Nullable Input<String> senderId) {
             this.senderId = senderId;
             return this;
         }
 
-        public Builder setSenderId(@Nullable String senderId) {
+        public Builder senderId(@Nullable String senderId) {
             this.senderId = Input.ofNullable(senderId);
             return this;
         }
 
-        public Builder setShortCode(@Nullable Input<String> shortCode) {
+        public Builder shortCode(@Nullable Input<String> shortCode) {
             this.shortCode = shortCode;
             return this;
         }
 
-        public Builder setShortCode(@Nullable String shortCode) {
+        public Builder shortCode(@Nullable String shortCode) {
             this.shortCode = Input.ofNullable(shortCode);
             return this;
         }
 
-        public Builder setTransactionalMessagesPerSecond(@Nullable Input<Integer> transactionalMessagesPerSecond) {
+        public Builder transactionalMessagesPerSecond(@Nullable Input<Integer> transactionalMessagesPerSecond) {
             this.transactionalMessagesPerSecond = transactionalMessagesPerSecond;
             return this;
         }
 
-        public Builder setTransactionalMessagesPerSecond(@Nullable Integer transactionalMessagesPerSecond) {
+        public Builder transactionalMessagesPerSecond(@Nullable Integer transactionalMessagesPerSecond) {
             this.transactionalMessagesPerSecond = Input.ofNullable(transactionalMessagesPerSecond);
             return this;
         }

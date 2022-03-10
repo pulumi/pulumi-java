@@ -53,12 +53,12 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
+        public Builder dimensions(Input<List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setDimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs> dimensions) {
+        public Builder dimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs> dimensions) {
             this.dimensions = Input.of(Objects.requireNonNull(dimensions));
             return this;
         }

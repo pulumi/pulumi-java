@@ -70,22 +70,22 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     	      this.invitationId = defaults.invitationId;
         }
 
-        public Builder setAdministratorAccountId(@Nullable Input<String> administratorAccountId) {
+        public Builder administratorAccountId(@Nullable Input<String> administratorAccountId) {
             this.administratorAccountId = administratorAccountId;
             return this;
         }
 
-        public Builder setAdministratorAccountId(@Nullable String administratorAccountId) {
+        public Builder administratorAccountId(@Nullable String administratorAccountId) {
             this.administratorAccountId = Input.ofNullable(administratorAccountId);
             return this;
         }
 
-        public Builder setInvitationId(@Nullable Input<String> invitationId) {
+        public Builder invitationId(@Nullable Input<String> invitationId) {
             this.invitationId = invitationId;
             return this;
         }
 
-        public Builder setInvitationId(@Nullable String invitationId) {
+        public Builder invitationId(@Nullable String invitationId) {
             this.invitationId = Input.ofNullable(invitationId);
             return this;
         }

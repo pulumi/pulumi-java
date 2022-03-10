@@ -103,42 +103,42 @@ public final class HostVpcConfigurationArgs extends io.pulumi.resources.Resource
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setSecurityGroupIds(Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(Input<List<String>> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Input.of(Objects.requireNonNull(securityGroupIds));
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTlsCertificate(@Nullable Input<String> tlsCertificate) {
+        public Builder tlsCertificate(@Nullable Input<String> tlsCertificate) {
             this.tlsCertificate = tlsCertificate;
             return this;
         }
 
-        public Builder setTlsCertificate(@Nullable String tlsCertificate) {
+        public Builder tlsCertificate(@Nullable String tlsCertificate) {
             this.tlsCertificate = Input.ofNullable(tlsCertificate);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

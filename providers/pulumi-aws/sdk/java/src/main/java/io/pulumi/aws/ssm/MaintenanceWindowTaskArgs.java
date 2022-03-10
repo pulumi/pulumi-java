@@ -218,112 +218,112 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     	      this.windowId = defaults.windowId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMaxConcurrency(Input<String> maxConcurrency) {
+        public Builder maxConcurrency(Input<String> maxConcurrency) {
             this.maxConcurrency = Objects.requireNonNull(maxConcurrency);
             return this;
         }
 
-        public Builder setMaxConcurrency(String maxConcurrency) {
+        public Builder maxConcurrency(String maxConcurrency) {
             this.maxConcurrency = Input.of(Objects.requireNonNull(maxConcurrency));
             return this;
         }
 
-        public Builder setMaxErrors(Input<String> maxErrors) {
+        public Builder maxErrors(Input<String> maxErrors) {
             this.maxErrors = Objects.requireNonNull(maxErrors);
             return this;
         }
 
-        public Builder setMaxErrors(String maxErrors) {
+        public Builder maxErrors(String maxErrors) {
             this.maxErrors = Input.of(Objects.requireNonNull(maxErrors));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable Input<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable String serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Input.ofNullable(serviceRoleArn);
             return this;
         }
 
-        public Builder setTargets(@Nullable Input<List<MaintenanceWindowTaskTargetArgs>> targets) {
+        public Builder targets(@Nullable Input<List<MaintenanceWindowTaskTargetArgs>> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<MaintenanceWindowTaskTargetArgs> targets) {
+        public Builder targets(@Nullable List<MaintenanceWindowTaskTargetArgs> targets) {
             this.targets = Input.ofNullable(targets);
             return this;
         }
 
-        public Builder setTaskArn(Input<String> taskArn) {
+        public Builder taskArn(Input<String> taskArn) {
             this.taskArn = Objects.requireNonNull(taskArn);
             return this;
         }
 
-        public Builder setTaskArn(String taskArn) {
+        public Builder taskArn(String taskArn) {
             this.taskArn = Input.of(Objects.requireNonNull(taskArn));
             return this;
         }
 
-        public Builder setTaskInvocationParameters(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters) {
+        public Builder taskInvocationParameters(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters) {
             this.taskInvocationParameters = taskInvocationParameters;
             return this;
         }
 
-        public Builder setTaskInvocationParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersArgs taskInvocationParameters) {
+        public Builder taskInvocationParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersArgs taskInvocationParameters) {
             this.taskInvocationParameters = Input.ofNullable(taskInvocationParameters);
             return this;
         }
 
-        public Builder setTaskType(Input<String> taskType) {
+        public Builder taskType(Input<String> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
 
-        public Builder setWindowId(Input<String> windowId) {
+        public Builder windowId(Input<String> windowId) {
             this.windowId = Objects.requireNonNull(windowId);
             return this;
         }
 
-        public Builder setWindowId(String windowId) {
+        public Builder windowId(String windowId) {
             this.windowId = Input.of(Objects.requireNonNull(windowId));
             return this;
         }

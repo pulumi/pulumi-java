@@ -52,7 +52,7 @@ public final class GetInfrastructureConfigurationLogging extends io.pulumi.resou
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder setS3Logs(List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
+        public Builder s3Logs(List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
             this.s3Logs = Objects.requireNonNull(s3Logs);
             return this;
         }

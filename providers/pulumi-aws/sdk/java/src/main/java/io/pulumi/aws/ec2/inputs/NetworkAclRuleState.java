@@ -216,112 +216,112 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setEgress(@Nullable Input<Boolean> egress) {
+        public Builder egress(@Nullable Input<Boolean> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable Boolean egress) {
+        public Builder egress(@Nullable Boolean egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }
 
-        public Builder setFromPort(@Nullable Input<Integer> fromPort) {
+        public Builder fromPort(@Nullable Input<Integer> fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
-        public Builder setFromPort(@Nullable Integer fromPort) {
+        public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = Input.ofNullable(fromPort);
             return this;
         }
 
-        public Builder setIcmpCode(@Nullable Input<String> icmpCode) {
+        public Builder icmpCode(@Nullable Input<String> icmpCode) {
             this.icmpCode = icmpCode;
             return this;
         }
 
-        public Builder setIcmpCode(@Nullable String icmpCode) {
+        public Builder icmpCode(@Nullable String icmpCode) {
             this.icmpCode = Input.ofNullable(icmpCode);
             return this;
         }
 
-        public Builder setIcmpType(@Nullable Input<String> icmpType) {
+        public Builder icmpType(@Nullable Input<String> icmpType) {
             this.icmpType = icmpType;
             return this;
         }
 
-        public Builder setIcmpType(@Nullable String icmpType) {
+        public Builder icmpType(@Nullable String icmpType) {
             this.icmpType = Input.ofNullable(icmpType);
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder setNetworkAclId(@Nullable Input<String> networkAclId) {
+        public Builder networkAclId(@Nullable Input<String> networkAclId) {
             this.networkAclId = networkAclId;
             return this;
         }
 
-        public Builder setNetworkAclId(@Nullable String networkAclId) {
+        public Builder networkAclId(@Nullable String networkAclId) {
             this.networkAclId = Input.ofNullable(networkAclId);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRuleAction(@Nullable Input<String> ruleAction) {
+        public Builder ruleAction(@Nullable Input<String> ruleAction) {
             this.ruleAction = ruleAction;
             return this;
         }
 
-        public Builder setRuleAction(@Nullable String ruleAction) {
+        public Builder ruleAction(@Nullable String ruleAction) {
             this.ruleAction = Input.ofNullable(ruleAction);
             return this;
         }
 
-        public Builder setRuleNumber(@Nullable Input<Integer> ruleNumber) {
+        public Builder ruleNumber(@Nullable Input<Integer> ruleNumber) {
             this.ruleNumber = ruleNumber;
             return this;
         }
 
-        public Builder setRuleNumber(@Nullable Integer ruleNumber) {
+        public Builder ruleNumber(@Nullable Integer ruleNumber) {
             this.ruleNumber = Input.ofNullable(ruleNumber);
             return this;
         }
 
-        public Builder setToPort(@Nullable Input<Integer> toPort) {
+        public Builder toPort(@Nullable Input<Integer> toPort) {
             this.toPort = toPort;
             return this;
         }
 
-        public Builder setToPort(@Nullable Integer toPort) {
+        public Builder toPort(@Nullable Integer toPort) {
             this.toPort = Input.ofNullable(toPort);
             return this;
         }

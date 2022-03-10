@@ -137,62 +137,62 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDistributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable Input<String> distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
-        public Builder setDistributionConfigurationArn(@Nullable String distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
             this.distributionConfigurationArn = Input.ofNullable(distributionConfigurationArn);
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Input<Boolean> enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = Input.ofNullable(enhancedImageMetadataEnabled);
             return this;
         }
 
-        public Builder setImageRecipeArn(Input<String> imageRecipeArn) {
+        public Builder imageRecipeArn(Input<String> imageRecipeArn) {
             this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn);
             return this;
         }
 
-        public Builder setImageRecipeArn(String imageRecipeArn) {
+        public Builder imageRecipeArn(String imageRecipeArn) {
             this.imageRecipeArn = Input.of(Objects.requireNonNull(imageRecipeArn));
             return this;
         }
 
-        public Builder setImageTestsConfiguration(@Nullable Input<ImageImageTestsConfigurationArgs> imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable Input<ImageImageTestsConfigurationArgs> imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
-        public Builder setImageTestsConfiguration(@Nullable ImageImageTestsConfigurationArgs imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable ImageImageTestsConfigurationArgs imageTestsConfiguration) {
             this.imageTestsConfiguration = Input.ofNullable(imageTestsConfiguration);
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(Input<String> infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(Input<String> infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn);
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Input.of(Objects.requireNonNull(infrastructureConfigurationArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -99,22 +99,22 @@ public final class CertificateDomainValidationOption {
     	      this.resourceRecordValue = defaults.resourceRecordValue;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setResourceRecordName(@Nullable String resourceRecordName) {
+        public Builder resourceRecordName(@Nullable String resourceRecordName) {
             this.resourceRecordName = resourceRecordName;
             return this;
         }
 
-        public Builder setResourceRecordType(@Nullable String resourceRecordType) {
+        public Builder resourceRecordType(@Nullable String resourceRecordType) {
             this.resourceRecordType = resourceRecordType;
             return this;
         }
 
-        public Builder setResourceRecordValue(@Nullable String resourceRecordValue) {
+        public Builder resourceRecordValue(@Nullable String resourceRecordValue) {
             this.resourceRecordValue = resourceRecordValue;
             return this;
         }

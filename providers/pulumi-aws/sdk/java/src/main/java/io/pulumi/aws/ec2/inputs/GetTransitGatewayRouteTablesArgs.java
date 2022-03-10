@@ -74,12 +74,12 @@ public final class GetTransitGatewayRouteTablesArgs extends io.pulumi.resources.
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetTransitGatewayRouteTablesFilter> filters) {
+        public Builder filters(@Nullable List<GetTransitGatewayRouteTablesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

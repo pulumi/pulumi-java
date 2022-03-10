@@ -210,102 +210,102 @@ public final class AmiCopyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationOutpostArn(@Nullable Input<String> destinationOutpostArn) {
+        public Builder destinationOutpostArn(@Nullable Input<String> destinationOutpostArn) {
             this.destinationOutpostArn = destinationOutpostArn;
             return this;
         }
 
-        public Builder setDestinationOutpostArn(@Nullable String destinationOutpostArn) {
+        public Builder destinationOutpostArn(@Nullable String destinationOutpostArn) {
             this.destinationOutpostArn = Input.ofNullable(destinationOutpostArn);
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Input<List<AmiCopyEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable List<AmiCopyEbsBlockDeviceArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable List<AmiCopyEbsBlockDeviceArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Input<List<AmiCopyEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable List<AmiCopyEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable List<AmiCopyEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSourceAmiId(Input<String> sourceAmiId) {
+        public Builder sourceAmiId(Input<String> sourceAmiId) {
             this.sourceAmiId = Objects.requireNonNull(sourceAmiId);
             return this;
         }
 
-        public Builder setSourceAmiId(String sourceAmiId) {
+        public Builder sourceAmiId(String sourceAmiId) {
             this.sourceAmiId = Input.of(Objects.requireNonNull(sourceAmiId));
             return this;
         }
 
-        public Builder setSourceAmiRegion(Input<String> sourceAmiRegion) {
+        public Builder sourceAmiRegion(Input<String> sourceAmiRegion) {
             this.sourceAmiRegion = Objects.requireNonNull(sourceAmiRegion);
             return this;
         }
 
-        public Builder setSourceAmiRegion(String sourceAmiRegion) {
+        public Builder sourceAmiRegion(String sourceAmiRegion) {
             this.sourceAmiRegion = Input.of(Objects.requireNonNull(sourceAmiRegion));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

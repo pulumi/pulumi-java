@@ -69,22 +69,22 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationArgs extends 
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setKinesisStreamArn(Input<String> kinesisStreamArn) {
+        public Builder kinesisStreamArn(Input<String> kinesisStreamArn) {
             this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn);
             return this;
         }
 
-        public Builder setKinesisStreamArn(String kinesisStreamArn) {
+        public Builder kinesisStreamArn(String kinesisStreamArn) {
             this.kinesisStreamArn = Input.of(Objects.requireNonNull(kinesisStreamArn));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

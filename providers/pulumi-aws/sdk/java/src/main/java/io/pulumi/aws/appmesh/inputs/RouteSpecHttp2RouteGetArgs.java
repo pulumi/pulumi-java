@@ -105,42 +105,42 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setAction(Input<RouteSpecHttp2RouteActionGetArgs> action) {
+        public Builder action(Input<RouteSpecHttp2RouteActionGetArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(RouteSpecHttp2RouteActionGetArgs action) {
+        public Builder action(RouteSpecHttp2RouteActionGetArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setMatch(Input<RouteSpecHttp2RouteMatchGetArgs> match) {
+        public Builder match(Input<RouteSpecHttp2RouteMatchGetArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setMatch(RouteSpecHttp2RouteMatchGetArgs match) {
+        public Builder match(RouteSpecHttp2RouteMatchGetArgs match) {
             this.match = Input.of(Objects.requireNonNull(match));
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<RouteSpecHttp2RouteRetryPolicyGetArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<RouteSpecHttp2RouteRetryPolicyGetArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RouteSpecHttp2RouteRetryPolicyGetArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable RouteSpecHttp2RouteRetryPolicyGetArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<RouteSpecHttp2RouteTimeoutGetArgs> timeout) {
+        public Builder timeout(@Nullable Input<RouteSpecHttp2RouteTimeoutGetArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable RouteSpecHttp2RouteTimeoutGetArgs timeout) {
+        public Builder timeout(@Nullable RouteSpecHttp2RouteTimeoutGetArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

@@ -83,17 +83,17 @@ public final class ClusterBootstrapAction {
     	      this.path = defaults.path;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

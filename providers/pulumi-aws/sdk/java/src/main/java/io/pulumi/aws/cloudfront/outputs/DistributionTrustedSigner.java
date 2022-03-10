@@ -69,12 +69,12 @@ public final class DistributionTrustedSigner {
     	      this.items = defaults.items;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setItems(@Nullable List<DistributionTrustedSignerItem> items) {
+        public Builder items(@Nullable List<DistributionTrustedSignerItem> items) {
             this.items = items;
             return this;
         }

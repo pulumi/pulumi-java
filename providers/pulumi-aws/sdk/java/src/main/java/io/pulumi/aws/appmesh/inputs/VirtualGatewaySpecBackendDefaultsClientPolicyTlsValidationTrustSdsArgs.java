@@ -52,12 +52,12 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setSecretName(Input<String> secretName) {
+        public Builder secretName(Input<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Input.of(Objects.requireNonNull(secretName));
             return this;
         }

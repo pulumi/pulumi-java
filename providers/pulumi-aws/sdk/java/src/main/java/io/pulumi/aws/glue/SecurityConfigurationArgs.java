@@ -71,22 +71,22 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder setEncryptionConfiguration(Input<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(Input<SecurityConfigurationEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(SecurityConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(SecurityConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.of(Objects.requireNonNull(encryptionConfiguration));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -136,62 +136,62 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     	      this.regions = defaults.regions;
         }
 
-        public Builder setAccounts(@Nullable Input<List<String>> accounts) {
+        public Builder accounts(@Nullable Input<List<String>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = Input.ofNullable(accounts);
             return this;
         }
 
-        public Builder setFailureToleranceCount(@Nullable Input<Integer> failureToleranceCount) {
+        public Builder failureToleranceCount(@Nullable Input<Integer> failureToleranceCount) {
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
 
-        public Builder setFailureToleranceCount(@Nullable Integer failureToleranceCount) {
+        public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
             this.failureToleranceCount = Input.ofNullable(failureToleranceCount);
             return this;
         }
 
-        public Builder setFailureTolerancePercentage(@Nullable Input<Integer> failureTolerancePercentage) {
+        public Builder failureTolerancePercentage(@Nullable Input<Integer> failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
 
-        public Builder setFailureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
+        public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = Input.ofNullable(failureTolerancePercentage);
             return this;
         }
 
-        public Builder setMaxConcurrencyCount(@Nullable Input<Integer> maxConcurrencyCount) {
+        public Builder maxConcurrencyCount(@Nullable Input<Integer> maxConcurrencyCount) {
             this.maxConcurrencyCount = maxConcurrencyCount;
             return this;
         }
 
-        public Builder setMaxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
+        public Builder maxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
             this.maxConcurrencyCount = Input.ofNullable(maxConcurrencyCount);
             return this;
         }
 
-        public Builder setMaxConcurrencyPercentage(@Nullable Input<Integer> maxConcurrencyPercentage) {
+        public Builder maxConcurrencyPercentage(@Nullable Input<Integer> maxConcurrencyPercentage) {
             this.maxConcurrencyPercentage = maxConcurrencyPercentage;
             return this;
         }
 
-        public Builder setMaxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
+        public Builder maxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
             this.maxConcurrencyPercentage = Input.ofNullable(maxConcurrencyPercentage);
             return this;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }

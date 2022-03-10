@@ -49,7 +49,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatement> statements) {
+        public Builder statements(List<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

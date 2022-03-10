@@ -93,22 +93,22 @@ public final class ResourceSetResource {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setComponentId(@Nullable String componentId) {
+        public Builder componentId(@Nullable String componentId) {
             this.componentId = componentId;
             return this;
         }
 
-        public Builder setDnsTargetResource(@Nullable ResourceSetResourceDnsTargetResource dnsTargetResource) {
+        public Builder dnsTargetResource(@Nullable ResourceSetResourceDnsTargetResource dnsTargetResource) {
             this.dnsTargetResource = dnsTargetResource;
             return this;
         }
 
-        public Builder setReadinessScopes(@Nullable List<String> readinessScopes) {
+        public Builder readinessScopes(@Nullable List<String> readinessScopes) {
             this.readinessScopes = readinessScopes;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }

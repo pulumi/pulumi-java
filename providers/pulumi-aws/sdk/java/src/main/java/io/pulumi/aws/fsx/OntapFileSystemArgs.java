@@ -294,162 +294,162 @@ public final class OntapFileSystemArgs extends io.pulumi.resources.ResourceArgs 
     	      this.weeklyMaintenanceStartTime = defaults.weeklyMaintenanceStartTime;
         }
 
-        public Builder setAutomaticBackupRetentionDays(@Nullable Input<Integer> automaticBackupRetentionDays) {
+        public Builder automaticBackupRetentionDays(@Nullable Input<Integer> automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = automaticBackupRetentionDays;
             return this;
         }
 
-        public Builder setAutomaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
+        public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
             this.automaticBackupRetentionDays = Input.ofNullable(automaticBackupRetentionDays);
             return this;
         }
 
-        public Builder setDailyAutomaticBackupStartTime(@Nullable Input<String> dailyAutomaticBackupStartTime) {
+        public Builder dailyAutomaticBackupStartTime(@Nullable Input<String> dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = dailyAutomaticBackupStartTime;
             return this;
         }
 
-        public Builder setDailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
+        public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
             this.dailyAutomaticBackupStartTime = Input.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
 
-        public Builder setDeploymentType(Input<String> deploymentType) {
+        public Builder deploymentType(Input<String> deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
 
-        public Builder setDeploymentType(String deploymentType) {
+        public Builder deploymentType(String deploymentType) {
             this.deploymentType = Input.of(Objects.requireNonNull(deploymentType));
             return this;
         }
 
-        public Builder setDiskIopsConfiguration(@Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable Input<OntapFileSystemDiskIopsConfigurationArgs> diskIopsConfiguration) {
             this.diskIopsConfiguration = diskIopsConfiguration;
             return this;
         }
 
-        public Builder setDiskIopsConfiguration(@Nullable OntapFileSystemDiskIopsConfigurationArgs diskIopsConfiguration) {
+        public Builder diskIopsConfiguration(@Nullable OntapFileSystemDiskIopsConfigurationArgs diskIopsConfiguration) {
             this.diskIopsConfiguration = Input.ofNullable(diskIopsConfiguration);
             return this;
         }
 
-        public Builder setEndpointIpAddressRange(@Nullable Input<String> endpointIpAddressRange) {
+        public Builder endpointIpAddressRange(@Nullable Input<String> endpointIpAddressRange) {
             this.endpointIpAddressRange = endpointIpAddressRange;
             return this;
         }
 
-        public Builder setEndpointIpAddressRange(@Nullable String endpointIpAddressRange) {
+        public Builder endpointIpAddressRange(@Nullable String endpointIpAddressRange) {
             this.endpointIpAddressRange = Input.ofNullable(endpointIpAddressRange);
             return this;
         }
 
-        public Builder setFsxAdminPassword(@Nullable Input<String> fsxAdminPassword) {
+        public Builder fsxAdminPassword(@Nullable Input<String> fsxAdminPassword) {
             this.fsxAdminPassword = fsxAdminPassword;
             return this;
         }
 
-        public Builder setFsxAdminPassword(@Nullable String fsxAdminPassword) {
+        public Builder fsxAdminPassword(@Nullable String fsxAdminPassword) {
             this.fsxAdminPassword = Input.ofNullable(fsxAdminPassword);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setPreferredSubnetId(Input<String> preferredSubnetId) {
+        public Builder preferredSubnetId(Input<String> preferredSubnetId) {
             this.preferredSubnetId = Objects.requireNonNull(preferredSubnetId);
             return this;
         }
 
-        public Builder setPreferredSubnetId(String preferredSubnetId) {
+        public Builder preferredSubnetId(String preferredSubnetId) {
             this.preferredSubnetId = Input.of(Objects.requireNonNull(preferredSubnetId));
             return this;
         }
 
-        public Builder setRouteTableIds(@Nullable Input<List<String>> routeTableIds) {
+        public Builder routeTableIds(@Nullable Input<List<String>> routeTableIds) {
             this.routeTableIds = routeTableIds;
             return this;
         }
 
-        public Builder setRouteTableIds(@Nullable List<String> routeTableIds) {
+        public Builder routeTableIds(@Nullable List<String> routeTableIds) {
             this.routeTableIds = Input.ofNullable(routeTableIds);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setStorageCapacity(@Nullable Input<Integer> storageCapacity) {
+        public Builder storageCapacity(@Nullable Input<Integer> storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
 
-        public Builder setStorageCapacity(@Nullable Integer storageCapacity) {
+        public Builder storageCapacity(@Nullable Integer storageCapacity) {
             this.storageCapacity = Input.ofNullable(storageCapacity);
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThroughputCapacity(Input<Integer> throughputCapacity) {
+        public Builder throughputCapacity(Input<Integer> throughputCapacity) {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }
 
-        public Builder setThroughputCapacity(Integer throughputCapacity) {
+        public Builder throughputCapacity(Integer throughputCapacity) {
             this.throughputCapacity = Input.of(Objects.requireNonNull(throughputCapacity));
             return this;
         }
 
-        public Builder setWeeklyMaintenanceStartTime(@Nullable Input<String> weeklyMaintenanceStartTime) {
+        public Builder weeklyMaintenanceStartTime(@Nullable Input<String> weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = weeklyMaintenanceStartTime;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
+        public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
             this.weeklyMaintenanceStartTime = Input.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }

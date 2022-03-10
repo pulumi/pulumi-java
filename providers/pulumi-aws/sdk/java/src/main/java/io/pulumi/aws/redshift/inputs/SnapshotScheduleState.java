@@ -170,82 +170,82 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDefinitions(@Nullable Input<List<String>> definitions) {
+        public Builder definitions(@Nullable Input<List<String>> definitions) {
             this.definitions = definitions;
             return this;
         }
 
-        public Builder setDefinitions(@Nullable List<String> definitions) {
+        public Builder definitions(@Nullable List<String> definitions) {
             this.definitions = Input.ofNullable(definitions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setIdentifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Input<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = Input.ofNullable(identifier);
             return this;
         }
 
-        public Builder setIdentifierPrefix(@Nullable Input<String> identifierPrefix) {
+        public Builder identifierPrefix(@Nullable Input<String> identifierPrefix) {
             this.identifierPrefix = identifierPrefix;
             return this;
         }
 
-        public Builder setIdentifierPrefix(@Nullable String identifierPrefix) {
+        public Builder identifierPrefix(@Nullable String identifierPrefix) {
             this.identifierPrefix = Input.ofNullable(identifierPrefix);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

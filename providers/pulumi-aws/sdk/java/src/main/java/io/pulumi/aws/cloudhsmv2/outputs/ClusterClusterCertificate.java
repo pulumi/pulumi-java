@@ -75,27 +75,27 @@ public final class ClusterClusterCertificate {
     	      this.manufacturerHardwareCertificate = defaults.manufacturerHardwareCertificate;
         }
 
-        public Builder setAwsHardwareCertificate(@Nullable String awsHardwareCertificate) {
+        public Builder awsHardwareCertificate(@Nullable String awsHardwareCertificate) {
             this.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
 
-        public Builder setClusterCertificate(@Nullable String clusterCertificate) {
+        public Builder clusterCertificate(@Nullable String clusterCertificate) {
             this.clusterCertificate = clusterCertificate;
             return this;
         }
 
-        public Builder setClusterCsr(@Nullable String clusterCsr) {
+        public Builder clusterCsr(@Nullable String clusterCsr) {
             this.clusterCsr = clusterCsr;
             return this;
         }
 
-        public Builder setHsmCertificate(@Nullable String hsmCertificate) {
+        public Builder hsmCertificate(@Nullable String hsmCertificate) {
             this.hsmCertificate = hsmCertificate;
             return this;
         }
 
-        public Builder setManufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
+        public Builder manufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
         }

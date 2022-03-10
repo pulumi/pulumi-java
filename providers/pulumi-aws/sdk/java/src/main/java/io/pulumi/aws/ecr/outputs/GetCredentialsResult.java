@@ -81,27 +81,27 @@ public final class GetCredentialsResult {
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setAuthorizationToken(String authorizationToken) {
+        public Builder authorizationToken(String authorizationToken) {
             this.authorizationToken = Objects.requireNonNull(authorizationToken);
             return this;
         }
 
-        public Builder setExpiresAt(String expiresAt) {
+        public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProxyEndpoint(String proxyEndpoint) {
+        public Builder proxyEndpoint(String proxyEndpoint) {
             this.proxyEndpoint = Objects.requireNonNull(proxyEndpoint);
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }

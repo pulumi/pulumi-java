@@ -52,12 +52,12 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
     	      this.owner = defaults.owner;
         }
 
-        public Builder setOwner(Input<String> owner) {
+        public Builder owner(Input<String> owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Input.of(Objects.requireNonNull(owner));
             return this;
         }

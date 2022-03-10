@@ -182,92 +182,92 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userRole = defaults.userRole;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setIamArn(@Nullable Input<String> iamArn) {
+        public Builder iamArn(@Nullable Input<String> iamArn) {
             this.iamArn = iamArn;
             return this;
         }
 
-        public Builder setIamArn(@Nullable String iamArn) {
+        public Builder iamArn(@Nullable String iamArn) {
             this.iamArn = Input.ofNullable(iamArn);
             return this;
         }
 
-        public Builder setIdentityType(@Nullable Input<String> identityType) {
+        public Builder identityType(@Nullable Input<String> identityType) {
             this.identityType = identityType;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = Input.ofNullable(identityType);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setSessionName(@Nullable Input<String> sessionName) {
+        public Builder sessionName(@Nullable Input<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
 
-        public Builder setSessionName(@Nullable String sessionName) {
+        public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = Input.ofNullable(sessionName);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }
 
-        public Builder setUserRole(@Nullable Input<String> userRole) {
+        public Builder userRole(@Nullable Input<String> userRole) {
             this.userRole = userRole;
             return this;
         }
 
-        public Builder setUserRole(@Nullable String userRole) {
+        public Builder userRole(@Nullable String userRole) {
             this.userRole = Input.ofNullable(userRole);
             return this;
         }

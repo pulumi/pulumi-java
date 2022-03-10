@@ -78,32 +78,32 @@ public final class RepositoryExternalConnectionsArgs extends io.pulumi.resources
     	      this.status = defaults.status;
         }
 
-        public Builder setExternalConnectionName(Input<String> externalConnectionName) {
+        public Builder externalConnectionName(Input<String> externalConnectionName) {
             this.externalConnectionName = Objects.requireNonNull(externalConnectionName);
             return this;
         }
 
-        public Builder setExternalConnectionName(String externalConnectionName) {
+        public Builder externalConnectionName(String externalConnectionName) {
             this.externalConnectionName = Input.of(Objects.requireNonNull(externalConnectionName));
             return this;
         }
 
-        public Builder setPackageFormat(@Nullable Input<String> packageFormat) {
+        public Builder packageFormat(@Nullable Input<String> packageFormat) {
             this.packageFormat = packageFormat;
             return this;
         }
 
-        public Builder setPackageFormat(@Nullable String packageFormat) {
+        public Builder packageFormat(@Nullable String packageFormat) {
             this.packageFormat = Input.ofNullable(packageFormat);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

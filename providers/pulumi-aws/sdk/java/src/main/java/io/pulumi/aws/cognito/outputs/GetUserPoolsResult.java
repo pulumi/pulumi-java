@@ -90,22 +90,22 @@ public final class GetUserPoolsResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

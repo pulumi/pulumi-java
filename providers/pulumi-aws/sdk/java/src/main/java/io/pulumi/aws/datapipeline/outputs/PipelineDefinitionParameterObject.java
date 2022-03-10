@@ -60,12 +60,12 @@ public final class PipelineDefinitionParameterObject {
     	      this.id = defaults.id;
         }
 
-        public Builder setAttributes(@Nullable List<PipelineDefinitionParameterObjectAttribute> attributes) {
+        public Builder attributes(@Nullable List<PipelineDefinitionParameterObjectAttribute> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

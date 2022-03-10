@@ -70,22 +70,22 @@ public final class TrailEventSelectorDataResourceGetArgs extends io.pulumi.resou
     	      this.values = defaults.values;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValues(Input<List<String>> values) {
+        public Builder values(Input<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }

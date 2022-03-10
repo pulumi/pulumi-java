@@ -168,82 +168,82 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     	      this.uri = defaults.uri;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Input<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setFsxFilesystemArn(@Nullable Input<String> fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(@Nullable Input<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = fsxFilesystemArn;
             return this;
         }
 
-        public Builder setFsxFilesystemArn(@Nullable String fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(@Nullable String fsxFilesystemArn) {
             this.fsxFilesystemArn = Input.ofNullable(fsxFilesystemArn);
             return this;
         }
 
-        public Builder setSecurityGroupArns(@Nullable Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(@Nullable Input<List<String>> securityGroupArns) {
             this.securityGroupArns = securityGroupArns;
             return this;
         }
 
-        public Builder setSecurityGroupArns(@Nullable List<String> securityGroupArns) {
+        public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
             this.securityGroupArns = Input.ofNullable(securityGroupArns);
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

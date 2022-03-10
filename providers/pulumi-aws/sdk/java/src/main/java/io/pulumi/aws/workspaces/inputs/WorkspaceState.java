@@ -233,122 +233,122 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceProperties = defaults.workspaceProperties;
         }
 
-        public Builder setBundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Input<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Input.ofNullable(bundleId);
             return this;
         }
 
-        public Builder setComputerName(@Nullable Input<String> computerName) {
+        public Builder computerName(@Nullable Input<String> computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = Input.ofNullable(computerName);
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setRootVolumeEncryptionEnabled(@Nullable Input<Boolean> rootVolumeEncryptionEnabled) {
+        public Builder rootVolumeEncryptionEnabled(@Nullable Input<Boolean> rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = rootVolumeEncryptionEnabled;
             return this;
         }
 
-        public Builder setRootVolumeEncryptionEnabled(@Nullable Boolean rootVolumeEncryptionEnabled) {
+        public Builder rootVolumeEncryptionEnabled(@Nullable Boolean rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = Input.ofNullable(rootVolumeEncryptionEnabled);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }
 
-        public Builder setUserVolumeEncryptionEnabled(@Nullable Input<Boolean> userVolumeEncryptionEnabled) {
+        public Builder userVolumeEncryptionEnabled(@Nullable Input<Boolean> userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = userVolumeEncryptionEnabled;
             return this;
         }
 
-        public Builder setUserVolumeEncryptionEnabled(@Nullable Boolean userVolumeEncryptionEnabled) {
+        public Builder userVolumeEncryptionEnabled(@Nullable Boolean userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = Input.ofNullable(userVolumeEncryptionEnabled);
             return this;
         }
 
-        public Builder setVolumeEncryptionKey(@Nullable Input<String> volumeEncryptionKey) {
+        public Builder volumeEncryptionKey(@Nullable Input<String> volumeEncryptionKey) {
             this.volumeEncryptionKey = volumeEncryptionKey;
             return this;
         }
 
-        public Builder setVolumeEncryptionKey(@Nullable String volumeEncryptionKey) {
+        public Builder volumeEncryptionKey(@Nullable String volumeEncryptionKey) {
             this.volumeEncryptionKey = Input.ofNullable(volumeEncryptionKey);
             return this;
         }
 
-        public Builder setWorkspaceProperties(@Nullable Input<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties) {
+        public Builder workspaceProperties(@Nullable Input<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties) {
             this.workspaceProperties = workspaceProperties;
             return this;
         }
 
-        public Builder setWorkspaceProperties(@Nullable WorkspaceWorkspacePropertiesGetArgs workspaceProperties) {
+        public Builder workspaceProperties(@Nullable WorkspaceWorkspacePropertiesGetArgs workspaceProperties) {
             this.workspaceProperties = Input.ofNullable(workspaceProperties);
             return this;
         }

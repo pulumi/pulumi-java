@@ -74,32 +74,32 @@ public final class SigningJobRevocationRecordArgs extends io.pulumi.resources.Re
     	      this.revokedBy = defaults.revokedBy;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }
 
-        public Builder setRevokedAt(@Nullable Input<String> revokedAt) {
+        public Builder revokedAt(@Nullable Input<String> revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
 
-        public Builder setRevokedAt(@Nullable String revokedAt) {
+        public Builder revokedAt(@Nullable String revokedAt) {
             this.revokedAt = Input.ofNullable(revokedAt);
             return this;
         }
 
-        public Builder setRevokedBy(@Nullable Input<String> revokedBy) {
+        public Builder revokedBy(@Nullable Input<String> revokedBy) {
             this.revokedBy = revokedBy;
             return this;
         }
 
-        public Builder setRevokedBy(@Nullable String revokedBy) {
+        public Builder revokedBy(@Nullable String revokedBy) {
             this.revokedBy = Input.ofNullable(revokedBy);
             return this;
         }

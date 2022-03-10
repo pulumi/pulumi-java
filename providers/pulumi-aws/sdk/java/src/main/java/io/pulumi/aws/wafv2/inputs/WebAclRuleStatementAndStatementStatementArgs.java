@@ -224,112 +224,112 @@ public final class WebAclRuleStatementAndStatementStatementArgs extends io.pulum
     	      this.xssMatchStatement = defaults.xssMatchStatement;
         }
 
-        public Builder setAndStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementAndStatementArgs> andStatement) {
+        public Builder andStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementAndStatementArgs> andStatement) {
             this.andStatement = andStatement;
             return this;
         }
 
-        public Builder setAndStatement(@Nullable WebAclRuleStatementAndStatementStatementAndStatementArgs andStatement) {
+        public Builder andStatement(@Nullable WebAclRuleStatementAndStatementStatementAndStatementArgs andStatement) {
             this.andStatement = Input.ofNullable(andStatement);
             return this;
         }
 
-        public Builder setByteMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementByteMatchStatementArgs> byteMatchStatement) {
+        public Builder byteMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementByteMatchStatementArgs> byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
 
-        public Builder setByteMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementArgs byteMatchStatement) {
+        public Builder byteMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementByteMatchStatementArgs byteMatchStatement) {
             this.byteMatchStatement = Input.ofNullable(byteMatchStatement);
             return this;
         }
 
-        public Builder setGeoMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementArgs> geoMatchStatement) {
+        public Builder geoMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementArgs> geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
 
-        public Builder setGeoMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementGeoMatchStatementArgs geoMatchStatement) {
+        public Builder geoMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementGeoMatchStatementArgs geoMatchStatement) {
             this.geoMatchStatement = Input.ofNullable(geoMatchStatement);
             return this;
         }
 
-        public Builder setIpSetReferenceStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement) {
+        public Builder ipSetReferenceStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement) {
             this.ipSetReferenceStatement = ipSetReferenceStatement;
             return this;
         }
 
-        public Builder setIpSetReferenceStatement(@Nullable WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs ipSetReferenceStatement) {
+        public Builder ipSetReferenceStatement(@Nullable WebAclRuleStatementAndStatementStatementIpSetReferenceStatementArgs ipSetReferenceStatement) {
             this.ipSetReferenceStatement = Input.ofNullable(ipSetReferenceStatement);
             return this;
         }
 
-        public Builder setLabelMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementLabelMatchStatementArgs> labelMatchStatement) {
+        public Builder labelMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementLabelMatchStatementArgs> labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
 
-        public Builder setLabelMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementLabelMatchStatementArgs labelMatchStatement) {
+        public Builder labelMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementLabelMatchStatementArgs labelMatchStatement) {
             this.labelMatchStatement = Input.ofNullable(labelMatchStatement);
             return this;
         }
 
-        public Builder setNotStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementNotStatementArgs> notStatement) {
+        public Builder notStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementNotStatementArgs> notStatement) {
             this.notStatement = notStatement;
             return this;
         }
 
-        public Builder setNotStatement(@Nullable WebAclRuleStatementAndStatementStatementNotStatementArgs notStatement) {
+        public Builder notStatement(@Nullable WebAclRuleStatementAndStatementStatementNotStatementArgs notStatement) {
             this.notStatement = Input.ofNullable(notStatement);
             return this;
         }
 
-        public Builder setOrStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementOrStatementArgs> orStatement) {
+        public Builder orStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementOrStatementArgs> orStatement) {
             this.orStatement = orStatement;
             return this;
         }
 
-        public Builder setOrStatement(@Nullable WebAclRuleStatementAndStatementStatementOrStatementArgs orStatement) {
+        public Builder orStatement(@Nullable WebAclRuleStatementAndStatementStatementOrStatementArgs orStatement) {
             this.orStatement = Input.ofNullable(orStatement);
             return this;
         }
 
-        public Builder setRegexPatternSetReferenceStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement) {
+        public Builder regexPatternSetReferenceStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
 
-        public Builder setRegexPatternSetReferenceStatement(@Nullable WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
+        public Builder regexPatternSetReferenceStatement(@Nullable WebAclRuleStatementAndStatementStatementRegexPatternSetReferenceStatementArgs regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = Input.ofNullable(regexPatternSetReferenceStatement);
             return this;
         }
 
-        public Builder setSizeConstraintStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement) {
+        public Builder sizeConstraintStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
 
-        public Builder setSizeConstraintStatement(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementArgs sizeConstraintStatement) {
+        public Builder sizeConstraintStatement(@Nullable WebAclRuleStatementAndStatementStatementSizeConstraintStatementArgs sizeConstraintStatement) {
             this.sizeConstraintStatement = Input.ofNullable(sizeConstraintStatement);
             return this;
         }
 
-        public Builder setSqliMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementArgs> sqliMatchStatement) {
+        public Builder sqliMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementSqliMatchStatementArgs> sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
 
-        public Builder setSqliMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementArgs sqliMatchStatement) {
+        public Builder sqliMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementSqliMatchStatementArgs sqliMatchStatement) {
             this.sqliMatchStatement = Input.ofNullable(sqliMatchStatement);
             return this;
         }
 
-        public Builder setXssMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementXssMatchStatementArgs> xssMatchStatement) {
+        public Builder xssMatchStatement(@Nullable Input<WebAclRuleStatementAndStatementStatementXssMatchStatementArgs> xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }
 
-        public Builder setXssMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementXssMatchStatementArgs xssMatchStatement) {
+        public Builder xssMatchStatement(@Nullable WebAclRuleStatementAndStatementStatementXssMatchStatementArgs xssMatchStatement) {
             this.xssMatchStatement = Input.ofNullable(xssMatchStatement);
             return this;
         }

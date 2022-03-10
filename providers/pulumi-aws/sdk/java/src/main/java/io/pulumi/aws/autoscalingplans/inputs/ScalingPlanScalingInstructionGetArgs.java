@@ -272,142 +272,142 @@ public final class ScalingPlanScalingInstructionGetArgs extends io.pulumi.resour
     	      this.targetTrackingConfigurations = defaults.targetTrackingConfigurations;
         }
 
-        public Builder setCustomizedLoadMetricSpecification(@Nullable Input<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification) {
+        public Builder customizedLoadMetricSpecification(@Nullable Input<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs> customizedLoadMetricSpecification) {
             this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
             return this;
         }
 
-        public Builder setCustomizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs customizedLoadMetricSpecification) {
+        public Builder customizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationGetArgs customizedLoadMetricSpecification) {
             this.customizedLoadMetricSpecification = Input.ofNullable(customizedLoadMetricSpecification);
             return this;
         }
 
-        public Builder setDisableDynamicScaling(@Nullable Input<Boolean> disableDynamicScaling) {
+        public Builder disableDynamicScaling(@Nullable Input<Boolean> disableDynamicScaling) {
             this.disableDynamicScaling = disableDynamicScaling;
             return this;
         }
 
-        public Builder setDisableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
+        public Builder disableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
             this.disableDynamicScaling = Input.ofNullable(disableDynamicScaling);
             return this;
         }
 
-        public Builder setMaxCapacity(Input<Integer> maxCapacity) {
+        public Builder maxCapacity(Input<Integer> maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
 
-        public Builder setMaxCapacity(Integer maxCapacity) {
+        public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Input.of(Objects.requireNonNull(maxCapacity));
             return this;
         }
 
-        public Builder setMinCapacity(Input<Integer> minCapacity) {
+        public Builder minCapacity(Input<Integer> minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(Integer minCapacity) {
+        public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Input.of(Objects.requireNonNull(minCapacity));
             return this;
         }
 
-        public Builder setPredefinedLoadMetricSpecification(@Nullable Input<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification) {
+        public Builder predefinedLoadMetricSpecification(@Nullable Input<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs> predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
 
-        public Builder setPredefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs predefinedLoadMetricSpecification) {
+        public Builder predefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationGetArgs predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = Input.ofNullable(predefinedLoadMetricSpecification);
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBehavior(@Nullable Input<String> predictiveScalingMaxCapacityBehavior) {
+        public Builder predictiveScalingMaxCapacityBehavior(@Nullable Input<String> predictiveScalingMaxCapacityBehavior) {
             this.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
+        public Builder predictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
             this.predictiveScalingMaxCapacityBehavior = Input.ofNullable(predictiveScalingMaxCapacityBehavior);
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBuffer(@Nullable Input<Integer> predictiveScalingMaxCapacityBuffer) {
+        public Builder predictiveScalingMaxCapacityBuffer(@Nullable Input<Integer> predictiveScalingMaxCapacityBuffer) {
             this.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
+        public Builder predictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
             this.predictiveScalingMaxCapacityBuffer = Input.ofNullable(predictiveScalingMaxCapacityBuffer);
             return this;
         }
 
-        public Builder setPredictiveScalingMode(@Nullable Input<String> predictiveScalingMode) {
+        public Builder predictiveScalingMode(@Nullable Input<String> predictiveScalingMode) {
             this.predictiveScalingMode = predictiveScalingMode;
             return this;
         }
 
-        public Builder setPredictiveScalingMode(@Nullable String predictiveScalingMode) {
+        public Builder predictiveScalingMode(@Nullable String predictiveScalingMode) {
             this.predictiveScalingMode = Input.ofNullable(predictiveScalingMode);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setScalableDimension(Input<String> scalableDimension) {
+        public Builder scalableDimension(Input<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
-        public Builder setScalableDimension(String scalableDimension) {
+        public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Input.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
 
-        public Builder setScalingPolicyUpdateBehavior(@Nullable Input<String> scalingPolicyUpdateBehavior) {
+        public Builder scalingPolicyUpdateBehavior(@Nullable Input<String> scalingPolicyUpdateBehavior) {
             this.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
             return this;
         }
 
-        public Builder setScalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
+        public Builder scalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
             this.scalingPolicyUpdateBehavior = Input.ofNullable(scalingPolicyUpdateBehavior);
             return this;
         }
 
-        public Builder setScheduledActionBufferTime(@Nullable Input<Integer> scheduledActionBufferTime) {
+        public Builder scheduledActionBufferTime(@Nullable Input<Integer> scheduledActionBufferTime) {
             this.scheduledActionBufferTime = scheduledActionBufferTime;
             return this;
         }
 
-        public Builder setScheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
+        public Builder scheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
             this.scheduledActionBufferTime = Input.ofNullable(scheduledActionBufferTime);
             return this;
         }
 
-        public Builder setServiceNamespace(Input<String> serviceNamespace) {
+        public Builder serviceNamespace(Input<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Input.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }
 
-        public Builder setTargetTrackingConfigurations(Input<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations) {
+        public Builder targetTrackingConfigurations(Input<List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs>> targetTrackingConfigurations) {
             this.targetTrackingConfigurations = Objects.requireNonNull(targetTrackingConfigurations);
             return this;
         }
 
-        public Builder setTargetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs> targetTrackingConfigurations) {
+        public Builder targetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfigurationGetArgs> targetTrackingConfigurations) {
             this.targetTrackingConfigurations = Input.of(Objects.requireNonNull(targetTrackingConfigurations));
             return this;
         }

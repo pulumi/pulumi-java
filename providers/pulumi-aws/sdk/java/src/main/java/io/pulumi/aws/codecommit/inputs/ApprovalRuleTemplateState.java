@@ -166,82 +166,82 @@ public final class ApprovalRuleTemplateState extends io.pulumi.resources.Resourc
     	      this.ruleContentSha256 = defaults.ruleContentSha256;
         }
 
-        public Builder setApprovalRuleTemplateId(@Nullable Input<String> approvalRuleTemplateId) {
+        public Builder approvalRuleTemplateId(@Nullable Input<String> approvalRuleTemplateId) {
             this.approvalRuleTemplateId = approvalRuleTemplateId;
             return this;
         }
 
-        public Builder setApprovalRuleTemplateId(@Nullable String approvalRuleTemplateId) {
+        public Builder approvalRuleTemplateId(@Nullable String approvalRuleTemplateId) {
             this.approvalRuleTemplateId = Input.ofNullable(approvalRuleTemplateId);
             return this;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable Input<String> lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Input<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable String lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = Input.ofNullable(lastModifiedDate);
             return this;
         }
 
-        public Builder setLastModifiedUser(@Nullable Input<String> lastModifiedUser) {
+        public Builder lastModifiedUser(@Nullable Input<String> lastModifiedUser) {
             this.lastModifiedUser = lastModifiedUser;
             return this;
         }
 
-        public Builder setLastModifiedUser(@Nullable String lastModifiedUser) {
+        public Builder lastModifiedUser(@Nullable String lastModifiedUser) {
             this.lastModifiedUser = Input.ofNullable(lastModifiedUser);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleContentSha256(@Nullable Input<String> ruleContentSha256) {
+        public Builder ruleContentSha256(@Nullable Input<String> ruleContentSha256) {
             this.ruleContentSha256 = ruleContentSha256;
             return this;
         }
 
-        public Builder setRuleContentSha256(@Nullable String ruleContentSha256) {
+        public Builder ruleContentSha256(@Nullable String ruleContentSha256) {
             this.ruleContentSha256 = Input.ofNullable(ruleContentSha256);
             return this;
         }

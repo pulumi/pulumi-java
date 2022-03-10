@@ -200,102 +200,102 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setChangeDescription(@Nullable Input<String> changeDescription) {
+        public Builder changeDescription(@Nullable Input<String> changeDescription) {
             this.changeDescription = changeDescription;
             return this;
         }
 
-        public Builder setChangeDescription(@Nullable String changeDescription) {
+        public Builder changeDescription(@Nullable String changeDescription) {
             this.changeDescription = Input.ofNullable(changeDescription);
             return this;
         }
 
-        public Builder setData(@Nullable Input<String> data) {
+        public Builder data(@Nullable Input<String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = Input.ofNullable(data);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlatform(Input<String> platform) {
+        public Builder platform(Input<String> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setPlatform(String platform) {
+        public Builder platform(String platform) {
             this.platform = Input.of(Objects.requireNonNull(platform));
             return this;
         }
 
-        public Builder setSupportedOsVersions(@Nullable Input<List<String>> supportedOsVersions) {
+        public Builder supportedOsVersions(@Nullable Input<List<String>> supportedOsVersions) {
             this.supportedOsVersions = supportedOsVersions;
             return this;
         }
 
-        public Builder setSupportedOsVersions(@Nullable List<String> supportedOsVersions) {
+        public Builder supportedOsVersions(@Nullable List<String> supportedOsVersions) {
             this.supportedOsVersions = Input.ofNullable(supportedOsVersions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

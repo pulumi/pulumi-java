@@ -53,7 +53,7 @@ public final class GetDataLakeSettingsArgs extends io.pulumi.resources.InvokeArg
     	      this.catalogId = defaults.catalogId;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }

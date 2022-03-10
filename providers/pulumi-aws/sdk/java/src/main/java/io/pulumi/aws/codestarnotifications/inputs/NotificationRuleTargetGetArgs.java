@@ -86,32 +86,32 @@ public final class NotificationRuleTargetGetArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(Input<String> address) {
+        public Builder address(Input<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Input.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

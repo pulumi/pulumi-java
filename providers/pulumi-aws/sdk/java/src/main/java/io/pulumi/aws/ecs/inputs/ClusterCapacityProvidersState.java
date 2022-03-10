@@ -88,32 +88,32 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
     	      this.defaultCapacityProviderStrategies = defaults.defaultCapacityProviderStrategies;
         }
 
-        public Builder setCapacityProviders(@Nullable Input<List<String>> capacityProviders) {
+        public Builder capacityProviders(@Nullable Input<List<String>> capacityProviders) {
             this.capacityProviders = capacityProviders;
             return this;
         }
 
-        public Builder setCapacityProviders(@Nullable List<String> capacityProviders) {
+        public Builder capacityProviders(@Nullable List<String> capacityProviders) {
             this.capacityProviders = Input.ofNullable(capacityProviders);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setDefaultCapacityProviderStrategies(@Nullable Input<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(@Nullable Input<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies) {
             this.defaultCapacityProviderStrategies = defaultCapacityProviderStrategies;
             return this;
         }
 
-        public Builder setDefaultCapacityProviderStrategies(@Nullable List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs> defaultCapacityProviderStrategies) {
+        public Builder defaultCapacityProviderStrategies(@Nullable List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs> defaultCapacityProviderStrategies) {
             this.defaultCapacityProviderStrategies = Input.ofNullable(defaultCapacityProviderStrategies);
             return this;
         }

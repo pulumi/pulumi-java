@@ -133,32 +133,32 @@ public final class MetricAlarmMetricQuery {
     	      this.returnData = defaults.returnData;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setMetric(@Nullable MetricAlarmMetricQueryMetric metric) {
+        public Builder metric(@Nullable MetricAlarmMetricQueryMetric metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setReturnData(@Nullable Boolean returnData) {
+        public Builder returnData(@Nullable Boolean returnData) {
             this.returnData = returnData;
             return this;
         }

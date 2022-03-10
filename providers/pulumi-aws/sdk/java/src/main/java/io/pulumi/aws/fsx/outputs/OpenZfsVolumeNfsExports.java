@@ -49,7 +49,7 @@ public final class OpenZfsVolumeNfsExports {
     	      this.clientConfigurations = defaults.clientConfigurations;
         }
 
-        public Builder setClientConfigurations(List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
+        public Builder clientConfigurations(List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }

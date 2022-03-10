@@ -104,42 +104,42 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
     	      this.minHealthyPercentage = defaults.minHealthyPercentage;
         }
 
-        public Builder setCheckpointDelay(@Nullable Input<String> checkpointDelay) {
+        public Builder checkpointDelay(@Nullable Input<String> checkpointDelay) {
             this.checkpointDelay = checkpointDelay;
             return this;
         }
 
-        public Builder setCheckpointDelay(@Nullable String checkpointDelay) {
+        public Builder checkpointDelay(@Nullable String checkpointDelay) {
             this.checkpointDelay = Input.ofNullable(checkpointDelay);
             return this;
         }
 
-        public Builder setCheckpointPercentages(@Nullable Input<List<Integer>> checkpointPercentages) {
+        public Builder checkpointPercentages(@Nullable Input<List<Integer>> checkpointPercentages) {
             this.checkpointPercentages = checkpointPercentages;
             return this;
         }
 
-        public Builder setCheckpointPercentages(@Nullable List<Integer> checkpointPercentages) {
+        public Builder checkpointPercentages(@Nullable List<Integer> checkpointPercentages) {
             this.checkpointPercentages = Input.ofNullable(checkpointPercentages);
             return this;
         }
 
-        public Builder setInstanceWarmup(@Nullable Input<String> instanceWarmup) {
+        public Builder instanceWarmup(@Nullable Input<String> instanceWarmup) {
             this.instanceWarmup = instanceWarmup;
             return this;
         }
 
-        public Builder setInstanceWarmup(@Nullable String instanceWarmup) {
+        public Builder instanceWarmup(@Nullable String instanceWarmup) {
             this.instanceWarmup = Input.ofNullable(instanceWarmup);
             return this;
         }
 
-        public Builder setMinHealthyPercentage(@Nullable Input<Integer> minHealthyPercentage) {
+        public Builder minHealthyPercentage(@Nullable Input<Integer> minHealthyPercentage) {
             this.minHealthyPercentage = minHealthyPercentage;
             return this;
         }
 
-        public Builder setMinHealthyPercentage(@Nullable Integer minHealthyPercentage) {
+        public Builder minHealthyPercentage(@Nullable Integer minHealthyPercentage) {
             this.minHealthyPercentage = Input.ofNullable(minHealthyPercentage);
             return this;
         }

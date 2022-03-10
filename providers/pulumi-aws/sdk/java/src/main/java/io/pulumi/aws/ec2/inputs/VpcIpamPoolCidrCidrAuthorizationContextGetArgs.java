@@ -70,22 +70,22 @@ public final class VpcIpamPoolCidrCidrAuthorizationContextGetArgs extends io.pul
     	      this.signature = defaults.signature;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setSignature(@Nullable Input<String> signature) {
+        public Builder signature(@Nullable Input<String> signature) {
             this.signature = signature;
             return this;
         }
 
-        public Builder setSignature(@Nullable String signature) {
+        public Builder signature(@Nullable String signature) {
             this.signature = Input.ofNullable(signature);
             return this;
         }

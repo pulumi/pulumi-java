@@ -120,52 +120,52 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoScalingConfigurationName(Input<String> autoScalingConfigurationName) {
+        public Builder autoScalingConfigurationName(Input<String> autoScalingConfigurationName) {
             this.autoScalingConfigurationName = Objects.requireNonNull(autoScalingConfigurationName);
             return this;
         }
 
-        public Builder setAutoScalingConfigurationName(String autoScalingConfigurationName) {
+        public Builder autoScalingConfigurationName(String autoScalingConfigurationName) {
             this.autoScalingConfigurationName = Input.of(Objects.requireNonNull(autoScalingConfigurationName));
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable Input<Integer> maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Input<Integer> maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable Integer maxConcurrency) {
+        public Builder maxConcurrency(@Nullable Integer maxConcurrency) {
             this.maxConcurrency = Input.ofNullable(maxConcurrency);
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Input<Integer> maxSize) {
+        public Builder maxSize(@Nullable Input<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Integer maxSize) {
+        public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Input.ofNullable(maxSize);
             return this;
         }
 
-        public Builder setMinSize(@Nullable Input<Integer> minSize) {
+        public Builder minSize(@Nullable Input<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Input.ofNullable(minSize);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

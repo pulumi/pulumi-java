@@ -70,22 +70,22 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setMappingParameters(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs> mappingParameters) {
+        public Builder mappingParameters(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs> mappingParameters) {
             this.mappingParameters = Objects.requireNonNull(mappingParameters);
             return this;
         }
 
-        public Builder setMappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs mappingParameters) {
+        public Builder mappingParameters(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersGetArgs mappingParameters) {
             this.mappingParameters = Input.of(Objects.requireNonNull(mappingParameters));
             return this;
         }
 
-        public Builder setRecordFormatType(Input<String> recordFormatType) {
+        public Builder recordFormatType(Input<String> recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }
 
-        public Builder setRecordFormatType(String recordFormatType) {
+        public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Input.of(Objects.requireNonNull(recordFormatType));
             return this;
         }

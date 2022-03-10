@@ -82,17 +82,17 @@ public final class GetPolicyDocumentStatementCondition {
     	      this.variable = defaults.variable;
         }
 
-        public Builder setTest(String test) {
+        public Builder test(String test) {
             this.test = Objects.requireNonNull(test);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setVariable(String variable) {
+        public Builder variable(String variable) {
             this.variable = Objects.requireNonNull(variable);
             return this;
         }

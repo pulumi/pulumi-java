@@ -135,62 +135,62 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder setMaxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = Input.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Input<Integer> minCapacity) {
+        public Builder minCapacity(@Nullable Input<Integer> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Integer minCapacity) {
+        public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = Input.ofNullable(minCapacity);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setScalableDimension(@Nullable Input<String> scalableDimension) {
+        public Builder scalableDimension(@Nullable Input<String> scalableDimension) {
             this.scalableDimension = scalableDimension;
             return this;
         }
 
-        public Builder setScalableDimension(@Nullable String scalableDimension) {
+        public Builder scalableDimension(@Nullable String scalableDimension) {
             this.scalableDimension = Input.ofNullable(scalableDimension);
             return this;
         }
 
-        public Builder setServiceNamespace(@Nullable Input<String> serviceNamespace) {
+        public Builder serviceNamespace(@Nullable Input<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
 
-        public Builder setServiceNamespace(@Nullable String serviceNamespace) {
+        public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Input.ofNullable(serviceNamespace);
             return this;
         }

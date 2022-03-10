@@ -104,42 +104,42 @@ public final class IdentityPoolRoleAttachmentRoleMappingGetArgs extends io.pulum
     	      this.type = defaults.type;
         }
 
-        public Builder setAmbiguousRoleResolution(@Nullable Input<String> ambiguousRoleResolution) {
+        public Builder ambiguousRoleResolution(@Nullable Input<String> ambiguousRoleResolution) {
             this.ambiguousRoleResolution = ambiguousRoleResolution;
             return this;
         }
 
-        public Builder setAmbiguousRoleResolution(@Nullable String ambiguousRoleResolution) {
+        public Builder ambiguousRoleResolution(@Nullable String ambiguousRoleResolution) {
             this.ambiguousRoleResolution = Input.ofNullable(ambiguousRoleResolution);
             return this;
         }
 
-        public Builder setIdentityProvider(Input<String> identityProvider) {
+        public Builder identityProvider(Input<String> identityProvider) {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
 
-        public Builder setIdentityProvider(String identityProvider) {
+        public Builder identityProvider(String identityProvider) {
             this.identityProvider = Input.of(Objects.requireNonNull(identityProvider));
             return this;
         }
 
-        public Builder setMappingRules(@Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs>> mappingRules) {
+        public Builder mappingRules(@Nullable Input<List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs>> mappingRules) {
             this.mappingRules = mappingRules;
             return this;
         }
 
-        public Builder setMappingRules(@Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs> mappingRules) {
+        public Builder mappingRules(@Nullable List<IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs> mappingRules) {
             this.mappingRules = Input.ofNullable(mappingRules);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

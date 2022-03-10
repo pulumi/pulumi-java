@@ -102,37 +102,37 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setMethodPath(Input<String> methodPath) {
+        public Builder methodPath(Input<String> methodPath) {
             this.methodPath = Objects.requireNonNull(methodPath);
             return this;
         }
 
-        public Builder setMethodPath(String methodPath) {
+        public Builder methodPath(String methodPath) {
             this.methodPath = Input.of(Objects.requireNonNull(methodPath));
             return this;
         }
 
-        public Builder setRestApi(Input<String> restApi) {
+        public Builder restApi(Input<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder setSettings(Input<MethodSettingsSettingsArgs> settings) {
+        public Builder settings(Input<MethodSettingsSettingsArgs> settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
 
-        public Builder setSettings(MethodSettingsSettingsArgs settings) {
+        public Builder settings(MethodSettingsSettingsArgs settings) {
             this.settings = Input.of(Objects.requireNonNull(settings));
             return this;
         }
 
-        public Builder setStageName(Input<String> stageName) {
+        public Builder stageName(Input<String> stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Input.of(Objects.requireNonNull(stageName));
             return this;
         }

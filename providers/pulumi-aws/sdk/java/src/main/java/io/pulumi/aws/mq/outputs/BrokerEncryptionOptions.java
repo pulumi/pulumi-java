@@ -68,12 +68,12 @@ public final class BrokerEncryptionOptions {
     	      this.useAwsOwnedKey = defaults.useAwsOwnedKey;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setUseAwsOwnedKey(@Nullable Boolean useAwsOwnedKey) {
+        public Builder useAwsOwnedKey(@Nullable Boolean useAwsOwnedKey) {
             this.useAwsOwnedKey = useAwsOwnedKey;
             return this;
         }

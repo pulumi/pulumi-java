@@ -70,12 +70,12 @@ public final class AnalyticsApplicationInputsSchemaRecordFormat {
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setMappingParameters(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters) {
+        public Builder mappingParameters(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters) {
             this.mappingParameters = mappingParameters;
             return this;
         }
 
-        public Builder setRecordFormatType(@Nullable String recordFormatType) {
+        public Builder recordFormatType(@Nullable String recordFormatType) {
             this.recordFormatType = recordFormatType;
             return this;
         }

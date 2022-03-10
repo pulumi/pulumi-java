@@ -69,12 +69,12 @@ public final class RuleGroupRuleStatementNotStatementStatementSqliMatchStatement
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(@Nullable RuleGroupRuleStatementNotStatementStatementSqliMatchStatementFieldToMatch fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
+        public Builder textTransformations(List<RuleGroupRuleStatementNotStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

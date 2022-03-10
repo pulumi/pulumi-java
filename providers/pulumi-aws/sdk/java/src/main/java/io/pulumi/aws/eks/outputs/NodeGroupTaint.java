@@ -83,17 +83,17 @@ public final class NodeGroupTaint {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(String effect) {
+        public Builder effect(String effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

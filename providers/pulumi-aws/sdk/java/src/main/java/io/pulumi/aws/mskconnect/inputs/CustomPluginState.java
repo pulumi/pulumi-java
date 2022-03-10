@@ -152,72 +152,72 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLatestRevision(@Nullable Input<Integer> latestRevision) {
+        public Builder latestRevision(@Nullable Input<Integer> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
-        public Builder setLatestRevision(@Nullable Integer latestRevision) {
+        public Builder latestRevision(@Nullable Integer latestRevision) {
             this.latestRevision = Input.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<CustomPluginLocationGetArgs> location) {
+        public Builder location(@Nullable Input<CustomPluginLocationGetArgs> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable CustomPluginLocationGetArgs location) {
+        public Builder location(@Nullable CustomPluginLocationGetArgs location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

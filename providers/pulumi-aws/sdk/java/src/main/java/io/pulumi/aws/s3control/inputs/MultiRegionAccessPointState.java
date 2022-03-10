@@ -135,62 +135,62 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
     	      this.status = defaults.status;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDetails(@Nullable Input<MultiRegionAccessPointDetailsGetArgs> details) {
+        public Builder details(@Nullable Input<MultiRegionAccessPointDetailsGetArgs> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable MultiRegionAccessPointDetailsGetArgs details) {
+        public Builder details(@Nullable MultiRegionAccessPointDetailsGetArgs details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

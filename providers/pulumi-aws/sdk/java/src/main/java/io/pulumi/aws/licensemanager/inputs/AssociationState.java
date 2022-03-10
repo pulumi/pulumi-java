@@ -70,22 +70,22 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setLicenseConfigurationArn(@Nullable Input<String> licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(@Nullable Input<String> licenseConfigurationArn) {
             this.licenseConfigurationArn = licenseConfigurationArn;
             return this;
         }
 
-        public Builder setLicenseConfigurationArn(@Nullable String licenseConfigurationArn) {
+        public Builder licenseConfigurationArn(@Nullable String licenseConfigurationArn) {
             this.licenseConfigurationArn = Input.ofNullable(licenseConfigurationArn);
             return this;
         }
 
-        public Builder setResourceArn(@Nullable Input<String> resourceArn) {
+        public Builder resourceArn(@Nullable Input<String> resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = Input.ofNullable(resourceArn);
             return this;
         }

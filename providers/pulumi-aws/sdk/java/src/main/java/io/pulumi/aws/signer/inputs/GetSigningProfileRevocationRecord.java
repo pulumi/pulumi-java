@@ -72,17 +72,17 @@ public final class GetSigningProfileRevocationRecord extends io.pulumi.resources
     	      this.revokedBy = defaults.revokedBy;
         }
 
-        public Builder setRevocationEffectiveFrom(String revocationEffectiveFrom) {
+        public Builder revocationEffectiveFrom(String revocationEffectiveFrom) {
             this.revocationEffectiveFrom = Objects.requireNonNull(revocationEffectiveFrom);
             return this;
         }
 
-        public Builder setRevokedAt(String revokedAt) {
+        public Builder revokedAt(String revokedAt) {
             this.revokedAt = Objects.requireNonNull(revokedAt);
             return this;
         }
 
-        public Builder setRevokedBy(String revokedBy) {
+        public Builder revokedBy(String revokedBy) {
             this.revokedBy = Objects.requireNonNull(revokedBy);
             return this;
         }

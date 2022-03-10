@@ -105,42 +105,42 @@ public final class ObjectLambdaAccessPointConfigurationGetArgs extends io.pulumi
     	      this.transformationConfigurations = defaults.transformationConfigurations;
         }
 
-        public Builder setAllowedFeatures(@Nullable Input<List<String>> allowedFeatures) {
+        public Builder allowedFeatures(@Nullable Input<List<String>> allowedFeatures) {
             this.allowedFeatures = allowedFeatures;
             return this;
         }
 
-        public Builder setAllowedFeatures(@Nullable List<String> allowedFeatures) {
+        public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
             this.allowedFeatures = Input.ofNullable(allowedFeatures);
             return this;
         }
 
-        public Builder setCloudWatchMetricsEnabled(@Nullable Input<Boolean> cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(@Nullable Input<Boolean> cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
 
-        public Builder setCloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = Input.ofNullable(cloudWatchMetricsEnabled);
             return this;
         }
 
-        public Builder setSupportingAccessPoint(Input<String> supportingAccessPoint) {
+        public Builder supportingAccessPoint(Input<String> supportingAccessPoint) {
             this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
             return this;
         }
 
-        public Builder setSupportingAccessPoint(String supportingAccessPoint) {
+        public Builder supportingAccessPoint(String supportingAccessPoint) {
             this.supportingAccessPoint = Input.of(Objects.requireNonNull(supportingAccessPoint));
             return this;
         }
 
-        public Builder setTransformationConfigurations(Input<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations) {
+        public Builder transformationConfigurations(Input<List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs>> transformationConfigurations) {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }
 
-        public Builder setTransformationConfigurations(List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs> transformationConfigurations) {
+        public Builder transformationConfigurations(List<ObjectLambdaAccessPointConfigurationTransformationConfigurationGetArgs> transformationConfigurations) {
             this.transformationConfigurations = Input.of(Objects.requireNonNull(transformationConfigurations));
             return this;
         }

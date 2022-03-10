@@ -103,42 +103,42 @@ public final class VpcEndpointConnectionNotificationArgs extends io.pulumi.resou
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder setConnectionEvents(Input<List<String>> connectionEvents) {
+        public Builder connectionEvents(Input<List<String>> connectionEvents) {
             this.connectionEvents = Objects.requireNonNull(connectionEvents);
             return this;
         }
 
-        public Builder setConnectionEvents(List<String> connectionEvents) {
+        public Builder connectionEvents(List<String> connectionEvents) {
             this.connectionEvents = Input.of(Objects.requireNonNull(connectionEvents));
             return this;
         }
 
-        public Builder setConnectionNotificationArn(Input<String> connectionNotificationArn) {
+        public Builder connectionNotificationArn(Input<String> connectionNotificationArn) {
             this.connectionNotificationArn = Objects.requireNonNull(connectionNotificationArn);
             return this;
         }
 
-        public Builder setConnectionNotificationArn(String connectionNotificationArn) {
+        public Builder connectionNotificationArn(String connectionNotificationArn) {
             this.connectionNotificationArn = Input.of(Objects.requireNonNull(connectionNotificationArn));
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable Input<String> vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable Input<String> vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = Input.ofNullable(vpcEndpointId);
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Input.ofNullable(vpcEndpointServiceId);
             return this;
         }

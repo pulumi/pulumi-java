@@ -192,102 +192,102 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setAdjustable(@Nullable Input<Boolean> adjustable) {
+        public Builder adjustable(@Nullable Input<Boolean> adjustable) {
             this.adjustable = adjustable;
             return this;
         }
 
-        public Builder setAdjustable(@Nullable Boolean adjustable) {
+        public Builder adjustable(@Nullable Boolean adjustable) {
             this.adjustable = Input.ofNullable(adjustable);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Input<Double> defaultValue) {
+        public Builder defaultValue(@Nullable Input<Double> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Double defaultValue) {
+        public Builder defaultValue(@Nullable Double defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setQuotaCode(@Nullable Input<String> quotaCode) {
+        public Builder quotaCode(@Nullable Input<String> quotaCode) {
             this.quotaCode = quotaCode;
             return this;
         }
 
-        public Builder setQuotaCode(@Nullable String quotaCode) {
+        public Builder quotaCode(@Nullable String quotaCode) {
             this.quotaCode = Input.ofNullable(quotaCode);
             return this;
         }
 
-        public Builder setQuotaName(@Nullable Input<String> quotaName) {
+        public Builder quotaName(@Nullable Input<String> quotaName) {
             this.quotaName = quotaName;
             return this;
         }
 
-        public Builder setQuotaName(@Nullable String quotaName) {
+        public Builder quotaName(@Nullable String quotaName) {
             this.quotaName = Input.ofNullable(quotaName);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRequestStatus(@Nullable Input<String> requestStatus) {
+        public Builder requestStatus(@Nullable Input<String> requestStatus) {
             this.requestStatus = requestStatus;
             return this;
         }
 
-        public Builder setRequestStatus(@Nullable String requestStatus) {
+        public Builder requestStatus(@Nullable String requestStatus) {
             this.requestStatus = Input.ofNullable(requestStatus);
             return this;
         }
 
-        public Builder setServiceCode(@Nullable Input<String> serviceCode) {
+        public Builder serviceCode(@Nullable Input<String> serviceCode) {
             this.serviceCode = serviceCode;
             return this;
         }
 
-        public Builder setServiceCode(@Nullable String serviceCode) {
+        public Builder serviceCode(@Nullable String serviceCode) {
             this.serviceCode = Input.ofNullable(serviceCode);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Double> value) {
+        public Builder value(@Nullable Input<Double> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = Input.ofNullable(value);
             return this;
         }

@@ -50,12 +50,12 @@ public final class GetAcceleratorIpSet {
     	      this.ipFamily = defaults.ipFamily;
         }
 
-        public Builder setIpAddresses(List<String> ipAddresses) {
+        public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setIpFamily(String ipFamily) {
+        public Builder ipFamily(String ipFamily) {
             this.ipFamily = Objects.requireNonNull(ipFamily);
             return this;
         }

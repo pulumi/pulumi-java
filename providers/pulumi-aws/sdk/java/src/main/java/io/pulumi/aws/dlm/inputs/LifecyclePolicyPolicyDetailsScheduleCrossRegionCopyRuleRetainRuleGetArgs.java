@@ -70,22 +70,22 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
     	      this.intervalUnit = defaults.intervalUnit;
         }
 
-        public Builder setInterval(Input<Integer> interval) {
+        public Builder interval(Input<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Input.of(Objects.requireNonNull(interval));
             return this;
         }
 
-        public Builder setIntervalUnit(Input<String> intervalUnit) {
+        public Builder intervalUnit(Input<String> intervalUnit) {
             this.intervalUnit = Objects.requireNonNull(intervalUnit);
             return this;
         }
 
-        public Builder setIntervalUnit(String intervalUnit) {
+        public Builder intervalUnit(String intervalUnit) {
             this.intervalUnit = Input.of(Objects.requireNonNull(intervalUnit));
             return this;
         }

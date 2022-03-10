@@ -234,62 +234,62 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcPeeringConnectionFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcPeeringConnectionFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setPeerCidrBlock(@Nullable String peerCidrBlock) {
+        public Builder peerCidrBlock(@Nullable String peerCidrBlock) {
             this.peerCidrBlock = peerCidrBlock;
             return this;
         }
 
-        public Builder setPeerOwnerId(@Nullable String peerOwnerId) {
+        public Builder peerOwnerId(@Nullable String peerOwnerId) {
             this.peerOwnerId = peerOwnerId;
             return this;
         }
 
-        public Builder setPeerRegion(@Nullable String peerRegion) {
+        public Builder peerRegion(@Nullable String peerRegion) {
             this.peerRegion = peerRegion;
             return this;
         }
 
-        public Builder setPeerVpcId(@Nullable String peerVpcId) {
+        public Builder peerVpcId(@Nullable String peerVpcId) {
             this.peerVpcId = peerVpcId;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

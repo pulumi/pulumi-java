@@ -48,7 +48,7 @@ public final class TopicRuleDynamodbv2PutItem {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

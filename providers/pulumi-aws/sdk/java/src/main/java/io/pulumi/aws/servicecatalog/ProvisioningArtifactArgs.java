@@ -199,102 +199,102 @@ public final class ProvisioningArtifactArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setActive(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Input<Boolean> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = Input.ofNullable(active);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisableTemplateValidation(@Nullable Input<Boolean> disableTemplateValidation) {
+        public Builder disableTemplateValidation(@Nullable Input<Boolean> disableTemplateValidation) {
             this.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
 
-        public Builder setDisableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
+        public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
             this.disableTemplateValidation = Input.ofNullable(disableTemplateValidation);
             return this;
         }
 
-        public Builder setGuidance(@Nullable Input<String> guidance) {
+        public Builder guidance(@Nullable Input<String> guidance) {
             this.guidance = guidance;
             return this;
         }
 
-        public Builder setGuidance(@Nullable String guidance) {
+        public Builder guidance(@Nullable String guidance) {
             this.guidance = Input.ofNullable(guidance);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProductId(Input<String> productId) {
+        public Builder productId(Input<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Input.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder setTemplatePhysicalId(@Nullable Input<String> templatePhysicalId) {
+        public Builder templatePhysicalId(@Nullable Input<String> templatePhysicalId) {
             this.templatePhysicalId = templatePhysicalId;
             return this;
         }
 
-        public Builder setTemplatePhysicalId(@Nullable String templatePhysicalId) {
+        public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
             this.templatePhysicalId = Input.ofNullable(templatePhysicalId);
             return this;
         }
 
-        public Builder setTemplateUrl(@Nullable Input<String> templateUrl) {
+        public Builder templateUrl(@Nullable Input<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
 
-        public Builder setTemplateUrl(@Nullable String templateUrl) {
+        public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = Input.ofNullable(templateUrl);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -48,7 +48,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.awsLambda = defaults.awsLambda;
         }
 
-        public Builder setAwsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
+        public Builder awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
             this.awsLambda = Objects.requireNonNull(awsLambda);
             return this;
         }

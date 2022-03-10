@@ -185,92 +185,92 @@ public final class BgpPeerState extends io.pulumi.resources.ResourceArgs {
     	      this.virtualInterfaceId = defaults.virtualInterfaceId;
         }
 
-        public Builder setAddressFamily(@Nullable Input<String> addressFamily) {
+        public Builder addressFamily(@Nullable Input<String> addressFamily) {
             this.addressFamily = addressFamily;
             return this;
         }
 
-        public Builder setAddressFamily(@Nullable String addressFamily) {
+        public Builder addressFamily(@Nullable String addressFamily) {
             this.addressFamily = Input.ofNullable(addressFamily);
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable Input<String> amazonAddress) {
+        public Builder amazonAddress(@Nullable Input<String> amazonAddress) {
             this.amazonAddress = amazonAddress;
             return this;
         }
 
-        public Builder setAmazonAddress(@Nullable String amazonAddress) {
+        public Builder amazonAddress(@Nullable String amazonAddress) {
             this.amazonAddress = Input.ofNullable(amazonAddress);
             return this;
         }
 
-        public Builder setAwsDevice(@Nullable Input<String> awsDevice) {
+        public Builder awsDevice(@Nullable Input<String> awsDevice) {
             this.awsDevice = awsDevice;
             return this;
         }
 
-        public Builder setAwsDevice(@Nullable String awsDevice) {
+        public Builder awsDevice(@Nullable String awsDevice) {
             this.awsDevice = Input.ofNullable(awsDevice);
             return this;
         }
 
-        public Builder setBgpAsn(@Nullable Input<Integer> bgpAsn) {
+        public Builder bgpAsn(@Nullable Input<Integer> bgpAsn) {
             this.bgpAsn = bgpAsn;
             return this;
         }
 
-        public Builder setBgpAsn(@Nullable Integer bgpAsn) {
+        public Builder bgpAsn(@Nullable Integer bgpAsn) {
             this.bgpAsn = Input.ofNullable(bgpAsn);
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable Input<String> bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable Input<String> bgpAuthKey) {
             this.bgpAuthKey = bgpAuthKey;
             return this;
         }
 
-        public Builder setBgpAuthKey(@Nullable String bgpAuthKey) {
+        public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
             this.bgpAuthKey = Input.ofNullable(bgpAuthKey);
             return this;
         }
 
-        public Builder setBgpPeerId(@Nullable Input<String> bgpPeerId) {
+        public Builder bgpPeerId(@Nullable Input<String> bgpPeerId) {
             this.bgpPeerId = bgpPeerId;
             return this;
         }
 
-        public Builder setBgpPeerId(@Nullable String bgpPeerId) {
+        public Builder bgpPeerId(@Nullable String bgpPeerId) {
             this.bgpPeerId = Input.ofNullable(bgpPeerId);
             return this;
         }
 
-        public Builder setBgpStatus(@Nullable Input<String> bgpStatus) {
+        public Builder bgpStatus(@Nullable Input<String> bgpStatus) {
             this.bgpStatus = bgpStatus;
             return this;
         }
 
-        public Builder setBgpStatus(@Nullable String bgpStatus) {
+        public Builder bgpStatus(@Nullable String bgpStatus) {
             this.bgpStatus = Input.ofNullable(bgpStatus);
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable Input<String> customerAddress) {
+        public Builder customerAddress(@Nullable Input<String> customerAddress) {
             this.customerAddress = customerAddress;
             return this;
         }
 
-        public Builder setCustomerAddress(@Nullable String customerAddress) {
+        public Builder customerAddress(@Nullable String customerAddress) {
             this.customerAddress = Input.ofNullable(customerAddress);
             return this;
         }
 
-        public Builder setVirtualInterfaceId(@Nullable Input<String> virtualInterfaceId) {
+        public Builder virtualInterfaceId(@Nullable Input<String> virtualInterfaceId) {
             this.virtualInterfaceId = virtualInterfaceId;
             return this;
         }
 
-        public Builder setVirtualInterfaceId(@Nullable String virtualInterfaceId) {
+        public Builder virtualInterfaceId(@Nullable String virtualInterfaceId) {
             this.virtualInterfaceId = Input.ofNullable(virtualInterfaceId);
             return this;
         }

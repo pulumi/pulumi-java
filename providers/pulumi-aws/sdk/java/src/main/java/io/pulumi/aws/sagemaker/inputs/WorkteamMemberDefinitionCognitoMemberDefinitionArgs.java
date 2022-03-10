@@ -85,32 +85,32 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends i
     	      this.userPool = defaults.userPool;
         }
 
-        public Builder setClientId(Input<String> clientId) {
+        public Builder clientId(Input<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Input.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder setUserGroup(Input<String> userGroup) {
+        public Builder userGroup(Input<String> userGroup) {
             this.userGroup = Objects.requireNonNull(userGroup);
             return this;
         }
 
-        public Builder setUserGroup(String userGroup) {
+        public Builder userGroup(String userGroup) {
             this.userGroup = Input.of(Objects.requireNonNull(userGroup));
             return this;
         }
 
-        public Builder setUserPool(Input<String> userPool) {
+        public Builder userPool(Input<String> userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }
 
-        public Builder setUserPool(String userPool) {
+        public Builder userPool(String userPool) {
             this.userPool = Input.of(Objects.requireNonNull(userPool));
             return this;
         }

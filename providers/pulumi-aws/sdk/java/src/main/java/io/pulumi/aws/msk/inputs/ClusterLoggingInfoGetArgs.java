@@ -52,12 +52,12 @@ public final class ClusterLoggingInfoGetArgs extends io.pulumi.resources.Resourc
     	      this.brokerLogs = defaults.brokerLogs;
         }
 
-        public Builder setBrokerLogs(Input<ClusterLoggingInfoBrokerLogsGetArgs> brokerLogs) {
+        public Builder brokerLogs(Input<ClusterLoggingInfoBrokerLogsGetArgs> brokerLogs) {
             this.brokerLogs = Objects.requireNonNull(brokerLogs);
             return this;
         }
 
-        public Builder setBrokerLogs(ClusterLoggingInfoBrokerLogsGetArgs brokerLogs) {
+        public Builder brokerLogs(ClusterLoggingInfoBrokerLogsGetArgs brokerLogs) {
             this.brokerLogs = Input.of(Objects.requireNonNull(brokerLogs));
             return this;
         }

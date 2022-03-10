@@ -70,22 +70,22 @@ public final class ServiceDnsConfigDnsRecordGetArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder setTtl(Input<Integer> ttl) {
+        public Builder ttl(Input<Integer> ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setTtl(Integer ttl) {
+        public Builder ttl(Integer ttl) {
             this.ttl = Input.of(Objects.requireNonNull(ttl));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

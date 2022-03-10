@@ -50,7 +50,7 @@ public final class InventoryFilter {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

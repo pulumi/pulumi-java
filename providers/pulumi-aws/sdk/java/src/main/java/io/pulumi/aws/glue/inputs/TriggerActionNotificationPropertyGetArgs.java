@@ -53,12 +53,12 @@ public final class TriggerActionNotificationPropertyGetArgs extends io.pulumi.re
     	      this.notifyDelayAfter = defaults.notifyDelayAfter;
         }
 
-        public Builder setNotifyDelayAfter(@Nullable Input<Integer> notifyDelayAfter) {
+        public Builder notifyDelayAfter(@Nullable Input<Integer> notifyDelayAfter) {
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
         }
 
-        public Builder setNotifyDelayAfter(@Nullable Integer notifyDelayAfter) {
+        public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = Input.ofNullable(notifyDelayAfter);
             return this;
         }

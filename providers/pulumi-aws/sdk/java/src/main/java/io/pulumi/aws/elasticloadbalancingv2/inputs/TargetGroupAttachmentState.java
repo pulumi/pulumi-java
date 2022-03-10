@@ -103,42 +103,42 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Input.ofNullable(targetGroupArn);
             return this;
         }
 
-        public Builder setTargetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Input<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }

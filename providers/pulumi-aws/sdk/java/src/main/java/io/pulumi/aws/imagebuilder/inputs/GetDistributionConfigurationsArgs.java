@@ -54,7 +54,7 @@ public final class GetDistributionConfigurationsArgs extends io.pulumi.resources
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
+        public Builder filters(@Nullable List<GetDistributionConfigurationsFilter> filters) {
             this.filters = filters;
             return this;
         }

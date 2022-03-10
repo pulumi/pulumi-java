@@ -68,12 +68,12 @@ public final class OntapFileSystemEndpointManagement {
     	      this.ipAddresses = defaults.ipAddresses;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }

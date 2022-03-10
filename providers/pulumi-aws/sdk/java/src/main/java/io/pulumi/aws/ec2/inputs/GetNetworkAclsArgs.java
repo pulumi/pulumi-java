@@ -90,17 +90,17 @@ public final class GetNetworkAclsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setFilters(@Nullable List<GetNetworkAclsFilter> filters) {
+        public Builder filters(@Nullable List<GetNetworkAclsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

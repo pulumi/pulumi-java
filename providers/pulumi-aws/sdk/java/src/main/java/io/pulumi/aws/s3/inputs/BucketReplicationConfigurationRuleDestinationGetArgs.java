@@ -154,72 +154,72 @@ public final class BucketReplicationConfigurationRuleDestinationGetArgs extends 
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setAccessControlTranslation(@Nullable Input<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation) {
+        public Builder accessControlTranslation(@Nullable Input<BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation) {
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
 
-        public Builder setAccessControlTranslation(@Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs accessControlTranslation) {
+        public Builder accessControlTranslation(@Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslationGetArgs accessControlTranslation) {
             this.accessControlTranslation = Input.ofNullable(accessControlTranslation);
             return this;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics) {
+        public Builder metrics(@Nullable Input<BucketReplicationConfigurationRuleDestinationMetricsGetArgs> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable BucketReplicationConfigurationRuleDestinationMetricsGetArgs metrics) {
+        public Builder metrics(@Nullable BucketReplicationConfigurationRuleDestinationMetricsGetArgs metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setReplicaKmsKeyId(@Nullable Input<String> replicaKmsKeyId) {
+        public Builder replicaKmsKeyId(@Nullable Input<String> replicaKmsKeyId) {
             this.replicaKmsKeyId = replicaKmsKeyId;
             return this;
         }
 
-        public Builder setReplicaKmsKeyId(@Nullable String replicaKmsKeyId) {
+        public Builder replicaKmsKeyId(@Nullable String replicaKmsKeyId) {
             this.replicaKmsKeyId = Input.ofNullable(replicaKmsKeyId);
             return this;
         }
 
-        public Builder setReplicationTime(@Nullable Input<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime) {
+        public Builder replicationTime(@Nullable Input<BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs> replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
 
-        public Builder setReplicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs replicationTime) {
+        public Builder replicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTimeGetArgs replicationTime) {
             this.replicationTime = Input.ofNullable(replicationTime);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Input<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }

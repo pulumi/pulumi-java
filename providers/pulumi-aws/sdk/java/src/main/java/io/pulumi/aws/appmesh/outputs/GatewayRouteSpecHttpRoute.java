@@ -66,12 +66,12 @@ public final class GatewayRouteSpecHttpRoute {
     	      this.match = defaults.match;
         }
 
-        public Builder setAction(GatewayRouteSpecHttpRouteAction action) {
+        public Builder action(GatewayRouteSpecHttpRouteAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setMatch(GatewayRouteSpecHttpRouteMatch match) {
+        public Builder match(GatewayRouteSpecHttpRouteMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }

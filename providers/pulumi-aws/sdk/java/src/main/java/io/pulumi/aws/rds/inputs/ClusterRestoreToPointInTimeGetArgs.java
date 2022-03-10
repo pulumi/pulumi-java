@@ -104,42 +104,42 @@ public final class ClusterRestoreToPointInTimeGetArgs extends io.pulumi.resource
     	      this.useLatestRestorableTime = defaults.useLatestRestorableTime;
         }
 
-        public Builder setRestoreToTime(@Nullable Input<String> restoreToTime) {
+        public Builder restoreToTime(@Nullable Input<String> restoreToTime) {
             this.restoreToTime = restoreToTime;
             return this;
         }
 
-        public Builder setRestoreToTime(@Nullable String restoreToTime) {
+        public Builder restoreToTime(@Nullable String restoreToTime) {
             this.restoreToTime = Input.ofNullable(restoreToTime);
             return this;
         }
 
-        public Builder setRestoreType(@Nullable Input<String> restoreType) {
+        public Builder restoreType(@Nullable Input<String> restoreType) {
             this.restoreType = restoreType;
             return this;
         }
 
-        public Builder setRestoreType(@Nullable String restoreType) {
+        public Builder restoreType(@Nullable String restoreType) {
             this.restoreType = Input.ofNullable(restoreType);
             return this;
         }
 
-        public Builder setSourceClusterIdentifier(Input<String> sourceClusterIdentifier) {
+        public Builder sourceClusterIdentifier(Input<String> sourceClusterIdentifier) {
             this.sourceClusterIdentifier = Objects.requireNonNull(sourceClusterIdentifier);
             return this;
         }
 
-        public Builder setSourceClusterIdentifier(String sourceClusterIdentifier) {
+        public Builder sourceClusterIdentifier(String sourceClusterIdentifier) {
             this.sourceClusterIdentifier = Input.of(Objects.requireNonNull(sourceClusterIdentifier));
             return this;
         }
 
-        public Builder setUseLatestRestorableTime(@Nullable Input<Boolean> useLatestRestorableTime) {
+        public Builder useLatestRestorableTime(@Nullable Input<Boolean> useLatestRestorableTime) {
             this.useLatestRestorableTime = useLatestRestorableTime;
             return this;
         }
 
-        public Builder setUseLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
+        public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
             this.useLatestRestorableTime = Input.ofNullable(useLatestRestorableTime);
             return this;
         }

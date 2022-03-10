@@ -212,82 +212,82 @@ public final class GetVpcPeeringConnectionResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAccepter(Map<String,Boolean> accepter) {
+        public Builder accepter(Map<String,Boolean> accepter) {
             this.accepter = Objects.requireNonNull(accepter);
             return this;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setCidrBlockSets(List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets) {
+        public Builder cidrBlockSets(List<GetVpcPeeringConnectionCidrBlockSet> cidrBlockSets) {
             this.cidrBlockSets = Objects.requireNonNull(cidrBlockSets);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcPeeringConnectionFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcPeeringConnectionFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setPeerCidrBlock(String peerCidrBlock) {
+        public Builder peerCidrBlock(String peerCidrBlock) {
             this.peerCidrBlock = Objects.requireNonNull(peerCidrBlock);
             return this;
         }
 
-        public Builder setPeerCidrBlockSets(List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets) {
+        public Builder peerCidrBlockSets(List<GetVpcPeeringConnectionPeerCidrBlockSet> peerCidrBlockSets) {
             this.peerCidrBlockSets = Objects.requireNonNull(peerCidrBlockSets);
             return this;
         }
 
-        public Builder setPeerOwnerId(String peerOwnerId) {
+        public Builder peerOwnerId(String peerOwnerId) {
             this.peerOwnerId = Objects.requireNonNull(peerOwnerId);
             return this;
         }
 
-        public Builder setPeerRegion(String peerRegion) {
+        public Builder peerRegion(String peerRegion) {
             this.peerRegion = Objects.requireNonNull(peerRegion);
             return this;
         }
 
-        public Builder setPeerVpcId(String peerVpcId) {
+        public Builder peerVpcId(String peerVpcId) {
             this.peerVpcId = Objects.requireNonNull(peerVpcId);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRequester(Map<String,Boolean> requester) {
+        public Builder requester(Map<String,Boolean> requester) {
             this.requester = Objects.requireNonNull(requester);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

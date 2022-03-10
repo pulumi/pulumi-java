@@ -100,22 +100,22 @@ public final class InstancePublicPortsPortInfo {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setCidrs(@Nullable List<String> cidrs) {
+        public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

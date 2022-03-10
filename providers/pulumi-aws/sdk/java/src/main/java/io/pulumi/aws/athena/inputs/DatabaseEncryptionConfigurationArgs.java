@@ -70,22 +70,22 @@ public final class DatabaseEncryptionConfigurationArgs extends io.pulumi.resourc
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setEncryptionOption(Input<String> encryptionOption) {
+        public Builder encryptionOption(Input<String> encryptionOption) {
             this.encryptionOption = Objects.requireNonNull(encryptionOption);
             return this;
         }
 
-        public Builder setEncryptionOption(String encryptionOption) {
+        public Builder encryptionOption(String encryptionOption) {
             this.encryptionOption = Input.of(Objects.requireNonNull(encryptionOption));
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }

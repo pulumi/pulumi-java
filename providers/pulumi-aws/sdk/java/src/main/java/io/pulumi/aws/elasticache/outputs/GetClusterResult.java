@@ -385,112 +385,112 @@ public final class GetClusterResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setCacheNodes(List<GetClusterCacheNode> cacheNodes) {
+        public Builder cacheNodes(List<GetClusterCacheNode> cacheNodes) {
             this.cacheNodes = Objects.requireNonNull(cacheNodes);
             return this;
         }
 
-        public Builder setClusterAddress(String clusterAddress) {
+        public Builder clusterAddress(String clusterAddress) {
             this.clusterAddress = Objects.requireNonNull(clusterAddress);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setConfigurationEndpoint(String configurationEndpoint) {
+        public Builder configurationEndpoint(String configurationEndpoint) {
             this.configurationEndpoint = Objects.requireNonNull(configurationEndpoint);
             return this;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setEngineVersion(String engineVersion) {
+        public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMaintenanceWindow(String maintenanceWindow) {
+        public Builder maintenanceWindow(String maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
 
-        public Builder setNotificationTopicArn(String notificationTopicArn) {
+        public Builder notificationTopicArn(String notificationTopicArn) {
             this.notificationTopicArn = Objects.requireNonNull(notificationTopicArn);
             return this;
         }
 
-        public Builder setNumCacheNodes(Integer numCacheNodes) {
+        public Builder numCacheNodes(Integer numCacheNodes) {
             this.numCacheNodes = Objects.requireNonNull(numCacheNodes);
             return this;
         }
 
-        public Builder setParameterGroupName(String parameterGroupName) {
+        public Builder parameterGroupName(String parameterGroupName) {
             this.parameterGroupName = Objects.requireNonNull(parameterGroupName);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setReplicationGroupId(String replicationGroupId) {
+        public Builder replicationGroupId(String replicationGroupId) {
             this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSecurityGroupNames(List<String> securityGroupNames) {
+        public Builder securityGroupNames(List<String> securityGroupNames) {
             this.securityGroupNames = Objects.requireNonNull(securityGroupNames);
             return this;
         }
 
-        public Builder setSnapshotRetentionLimit(Integer snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = Objects.requireNonNull(snapshotRetentionLimit);
             return this;
         }
 
-        public Builder setSnapshotWindow(String snapshotWindow) {
+        public Builder snapshotWindow(String snapshotWindow) {
             this.snapshotWindow = Objects.requireNonNull(snapshotWindow);
             return this;
         }
 
-        public Builder setSubnetGroupName(String subnetGroupName) {
+        public Builder subnetGroupName(String subnetGroupName) {
             this.subnetGroupName = Objects.requireNonNull(subnetGroupName);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

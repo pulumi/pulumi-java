@@ -51,7 +51,7 @@ public final class GetDomainSnapshotOption extends io.pulumi.resources.InvokeArg
     	      this.automatedSnapshotStartHour = defaults.automatedSnapshotStartHour;
         }
 
-        public Builder setAutomatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
+        public Builder automatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour);
             return this;
         }

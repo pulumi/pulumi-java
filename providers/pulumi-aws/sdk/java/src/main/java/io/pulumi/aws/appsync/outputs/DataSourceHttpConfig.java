@@ -68,12 +68,12 @@ public final class DataSourceHttpConfig {
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setAuthorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig) {
+        public Builder authorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }

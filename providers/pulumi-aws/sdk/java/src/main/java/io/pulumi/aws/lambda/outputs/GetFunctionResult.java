@@ -499,152 +499,152 @@ public final class GetFunctionResult {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setArchitectures(List<String> architectures) {
+        public Builder architectures(List<String> architectures) {
             this.architectures = Objects.requireNonNull(architectures);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCodeSigningConfigArn(String codeSigningConfigArn) {
+        public Builder codeSigningConfigArn(String codeSigningConfigArn) {
             this.codeSigningConfigArn = Objects.requireNonNull(codeSigningConfigArn);
             return this;
         }
 
-        public Builder setDeadLetterConfig(GetFunctionDeadLetterConfig deadLetterConfig) {
+        public Builder deadLetterConfig(GetFunctionDeadLetterConfig deadLetterConfig) {
             this.deadLetterConfig = Objects.requireNonNull(deadLetterConfig);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnvironment(GetFunctionEnvironment environment) {
+        public Builder environment(GetFunctionEnvironment environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setFileSystemConfigs(List<GetFunctionFileSystemConfig> fileSystemConfigs) {
+        public Builder fileSystemConfigs(List<GetFunctionFileSystemConfig> fileSystemConfigs) {
             this.fileSystemConfigs = Objects.requireNonNull(fileSystemConfigs);
             return this;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setHandler(String handler) {
+        public Builder handler(String handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setInvokeArn(String invokeArn) {
+        public Builder invokeArn(String invokeArn) {
             this.invokeArn = Objects.requireNonNull(invokeArn);
             return this;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setLayers(List<String> layers) {
+        public Builder layers(List<String> layers) {
             this.layers = Objects.requireNonNull(layers);
             return this;
         }
 
-        public Builder setMemorySize(Integer memorySize) {
+        public Builder memorySize(Integer memorySize) {
             this.memorySize = Objects.requireNonNull(memorySize);
             return this;
         }
 
-        public Builder setQualifiedArn(String qualifiedArn) {
+        public Builder qualifiedArn(String qualifiedArn) {
             this.qualifiedArn = Objects.requireNonNull(qualifiedArn);
             return this;
         }
 
-        public Builder setQualifier(@Nullable String qualifier) {
+        public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
-        public Builder setReservedConcurrentExecutions(Integer reservedConcurrentExecutions) {
+        public Builder reservedConcurrentExecutions(Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = Objects.requireNonNull(reservedConcurrentExecutions);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRuntime(String runtime) {
+        public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
-        public Builder setSigningJobArn(String signingJobArn) {
+        public Builder signingJobArn(String signingJobArn) {
             this.signingJobArn = Objects.requireNonNull(signingJobArn);
             return this;
         }
 
-        public Builder setSigningProfileVersionArn(String signingProfileVersionArn) {
+        public Builder signingProfileVersionArn(String signingProfileVersionArn) {
             this.signingProfileVersionArn = Objects.requireNonNull(signingProfileVersionArn);
             return this;
         }
 
-        public Builder setSourceCodeHash(String sourceCodeHash) {
+        public Builder sourceCodeHash(String sourceCodeHash) {
             this.sourceCodeHash = Objects.requireNonNull(sourceCodeHash);
             return this;
         }
 
-        public Builder setSourceCodeSize(Integer sourceCodeSize) {
+        public Builder sourceCodeSize(Integer sourceCodeSize) {
             this.sourceCodeSize = Objects.requireNonNull(sourceCodeSize);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTimeout(Integer timeout) {
+        public Builder timeout(Integer timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTracingConfig(GetFunctionTracingConfig tracingConfig) {
+        public Builder tracingConfig(GetFunctionTracingConfig tracingConfig) {
             this.tracingConfig = Objects.requireNonNull(tracingConfig);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVpcConfig(GetFunctionVpcConfig vpcConfig) {
+        public Builder vpcConfig(GetFunctionVpcConfig vpcConfig) {
             this.vpcConfig = Objects.requireNonNull(vpcConfig);
             return this;
         }

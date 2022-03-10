@@ -105,42 +105,42 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder setDestination(Input<SigningJobDestinationArgs> destination) {
+        public Builder destination(Input<SigningJobDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(SigningJobDestinationArgs destination) {
+        public Builder destination(SigningJobDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setIgnoreSigningJobFailure(@Nullable Input<Boolean> ignoreSigningJobFailure) {
+        public Builder ignoreSigningJobFailure(@Nullable Input<Boolean> ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
 
-        public Builder setIgnoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
+        public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = Input.ofNullable(ignoreSigningJobFailure);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setSource(Input<SigningJobSourceArgs> source) {
+        public Builder source(Input<SigningJobSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(SigningJobSourceArgs source) {
+        public Builder source(SigningJobSourceArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

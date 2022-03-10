@@ -103,42 +103,42 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
     	      this.namePrefix = defaults.namePrefix;
         }
 
-        public Builder setConfiguration(@Nullable Input<String> configuration) {
+        public Builder configuration(@Nullable Input<String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable String configuration) {
+        public Builder configuration(@Nullable String configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }

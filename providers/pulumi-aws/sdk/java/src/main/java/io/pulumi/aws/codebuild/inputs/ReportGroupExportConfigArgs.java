@@ -71,22 +71,22 @@ public final class ReportGroupExportConfigArgs extends io.pulumi.resources.Resou
     	      this.type = defaults.type;
         }
 
-        public Builder setS3Destination(@Nullable Input<ReportGroupExportConfigS3DestinationArgs> s3Destination) {
+        public Builder s3Destination(@Nullable Input<ReportGroupExportConfigS3DestinationArgs> s3Destination) {
             this.s3Destination = s3Destination;
             return this;
         }
 
-        public Builder setS3Destination(@Nullable ReportGroupExportConfigS3DestinationArgs s3Destination) {
+        public Builder s3Destination(@Nullable ReportGroupExportConfigS3DestinationArgs s3Destination) {
             this.s3Destination = Input.ofNullable(s3Destination);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

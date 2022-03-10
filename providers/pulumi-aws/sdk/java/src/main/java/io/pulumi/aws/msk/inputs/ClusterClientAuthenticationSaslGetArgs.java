@@ -70,22 +70,22 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
     	      this.scram = defaults.scram;
         }
 
-        public Builder setIam(@Nullable Input<Boolean> iam) {
+        public Builder iam(@Nullable Input<Boolean> iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder setIam(@Nullable Boolean iam) {
+        public Builder iam(@Nullable Boolean iam) {
             this.iam = Input.ofNullable(iam);
             return this;
         }
 
-        public Builder setScram(@Nullable Input<Boolean> scram) {
+        public Builder scram(@Nullable Input<Boolean> scram) {
             this.scram = scram;
             return this;
         }
 
-        public Builder setScram(@Nullable Boolean scram) {
+        public Builder scram(@Nullable Boolean scram) {
             this.scram = Input.ofNullable(scram);
             return this;
         }

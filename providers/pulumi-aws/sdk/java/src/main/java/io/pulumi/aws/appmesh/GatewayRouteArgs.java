@@ -136,62 +136,62 @@ public final class GatewayRouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualGatewayName = defaults.virtualGatewayName;
         }
 
-        public Builder setMeshName(Input<String> meshName) {
+        public Builder meshName(Input<String> meshName) {
             this.meshName = Objects.requireNonNull(meshName);
             return this;
         }
 
-        public Builder setMeshName(String meshName) {
+        public Builder meshName(String meshName) {
             this.meshName = Input.of(Objects.requireNonNull(meshName));
             return this;
         }
 
-        public Builder setMeshOwner(@Nullable Input<String> meshOwner) {
+        public Builder meshOwner(@Nullable Input<String> meshOwner) {
             this.meshOwner = meshOwner;
             return this;
         }
 
-        public Builder setMeshOwner(@Nullable String meshOwner) {
+        public Builder meshOwner(@Nullable String meshOwner) {
             this.meshOwner = Input.ofNullable(meshOwner);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSpec(Input<GatewayRouteSpecArgs> spec) {
+        public Builder spec(Input<GatewayRouteSpecArgs> spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setSpec(GatewayRouteSpecArgs spec) {
+        public Builder spec(GatewayRouteSpecArgs spec) {
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualGatewayName(Input<String> virtualGatewayName) {
+        public Builder virtualGatewayName(Input<String> virtualGatewayName) {
             this.virtualGatewayName = Objects.requireNonNull(virtualGatewayName);
             return this;
         }
 
-        public Builder setVirtualGatewayName(String virtualGatewayName) {
+        public Builder virtualGatewayName(String virtualGatewayName) {
             this.virtualGatewayName = Input.of(Objects.requireNonNull(virtualGatewayName));
             return this;
         }

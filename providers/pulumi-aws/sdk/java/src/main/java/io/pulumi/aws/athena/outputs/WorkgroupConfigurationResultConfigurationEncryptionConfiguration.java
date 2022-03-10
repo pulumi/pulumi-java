@@ -67,12 +67,12 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEncryptionOption(@Nullable String encryptionOption) {
+        public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }

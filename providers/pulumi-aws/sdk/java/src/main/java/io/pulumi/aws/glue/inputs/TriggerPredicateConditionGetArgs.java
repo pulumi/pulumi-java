@@ -118,52 +118,52 @@ public final class TriggerPredicateConditionGetArgs extends io.pulumi.resources.
     	      this.state = defaults.state;
         }
 
-        public Builder setCrawlState(@Nullable Input<String> crawlState) {
+        public Builder crawlState(@Nullable Input<String> crawlState) {
             this.crawlState = crawlState;
             return this;
         }
 
-        public Builder setCrawlState(@Nullable String crawlState) {
+        public Builder crawlState(@Nullable String crawlState) {
             this.crawlState = Input.ofNullable(crawlState);
             return this;
         }
 
-        public Builder setCrawlerName(@Nullable Input<String> crawlerName) {
+        public Builder crawlerName(@Nullable Input<String> crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
 
-        public Builder setCrawlerName(@Nullable String crawlerName) {
+        public Builder crawlerName(@Nullable String crawlerName) {
             this.crawlerName = Input.ofNullable(crawlerName);
             return this;
         }
 
-        public Builder setJobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Input<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = Input.ofNullable(jobName);
             return this;
         }
 
-        public Builder setLogicalOperator(@Nullable Input<String> logicalOperator) {
+        public Builder logicalOperator(@Nullable Input<String> logicalOperator) {
             this.logicalOperator = logicalOperator;
             return this;
         }
 
-        public Builder setLogicalOperator(@Nullable String logicalOperator) {
+        public Builder logicalOperator(@Nullable String logicalOperator) {
             this.logicalOperator = Input.ofNullable(logicalOperator);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

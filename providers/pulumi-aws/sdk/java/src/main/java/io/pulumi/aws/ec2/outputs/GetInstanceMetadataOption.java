@@ -98,22 +98,22 @@ public final class GetInstanceMetadataOption {
     	      this.instanceMetadataTags = defaults.instanceMetadataTags;
         }
 
-        public Builder setHttpEndpoint(String httpEndpoint) {
+        public Builder httpEndpoint(String httpEndpoint) {
             this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
             return this;
         }
 
-        public Builder setHttpTokens(String httpTokens) {
+        public Builder httpTokens(String httpTokens) {
             this.httpTokens = Objects.requireNonNull(httpTokens);
             return this;
         }
 
-        public Builder setInstanceMetadataTags(String instanceMetadataTags) {
+        public Builder instanceMetadataTags(String instanceMetadataTags) {
             this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags);
             return this;
         }

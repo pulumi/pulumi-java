@@ -84,17 +84,17 @@ public final class PipelineThumbnailConfigPermission {
     	      this.granteeType = defaults.granteeType;
         }
 
-        public Builder setAccesses(@Nullable List<String> accesses) {
+        public Builder accesses(@Nullable List<String> accesses) {
             this.accesses = accesses;
             return this;
         }
 
-        public Builder setGrantee(@Nullable String grantee) {
+        public Builder grantee(@Nullable String grantee) {
             this.grantee = grantee;
             return this;
         }
 
-        public Builder setGranteeType(@Nullable String granteeType) {
+        public Builder granteeType(@Nullable String granteeType) {
             this.granteeType = granteeType;
             return this;
         }

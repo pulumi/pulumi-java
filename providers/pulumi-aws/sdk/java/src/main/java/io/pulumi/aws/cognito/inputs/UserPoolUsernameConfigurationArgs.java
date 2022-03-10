@@ -52,12 +52,12 @@ public final class UserPoolUsernameConfigurationArgs extends io.pulumi.resources
     	      this.caseSensitive = defaults.caseSensitive;
         }
 
-        public Builder setCaseSensitive(Input<Boolean> caseSensitive) {
+        public Builder caseSensitive(Input<Boolean> caseSensitive) {
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
         }
 
-        public Builder setCaseSensitive(Boolean caseSensitive) {
+        public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = Input.of(Objects.requireNonNull(caseSensitive));
             return this;
         }

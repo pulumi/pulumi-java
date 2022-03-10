@@ -289,152 +289,152 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Input<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder setCode(@Nullable Input<String> code) {
+        public Builder code(@Nullable Input<String> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setCreateTimestamp(@Nullable Input<String> createTimestamp) {
+        public Builder createTimestamp(@Nullable Input<String> createTimestamp) {
             this.createTimestamp = createTimestamp;
             return this;
         }
 
-        public Builder setCreateTimestamp(@Nullable String createTimestamp) {
+        public Builder createTimestamp(@Nullable String createTimestamp) {
             this.createTimestamp = Input.ofNullable(createTimestamp);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<AnalyticsApplicationInputsGetArgs> inputs) {
+        public Builder inputs(@Nullable Input<AnalyticsApplicationInputsGetArgs> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable AnalyticsApplicationInputsGetArgs inputs) {
+        public Builder inputs(@Nullable AnalyticsApplicationInputsGetArgs inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setLastUpdateTimestamp(@Nullable Input<String> lastUpdateTimestamp) {
+        public Builder lastUpdateTimestamp(@Nullable Input<String> lastUpdateTimestamp) {
             this.lastUpdateTimestamp = lastUpdateTimestamp;
             return this;
         }
 
-        public Builder setLastUpdateTimestamp(@Nullable String lastUpdateTimestamp) {
+        public Builder lastUpdateTimestamp(@Nullable String lastUpdateTimestamp) {
             this.lastUpdateTimestamp = Input.ofNullable(lastUpdateTimestamp);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<AnalyticsApplicationOutputGetArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<AnalyticsApplicationOutputGetArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<AnalyticsApplicationOutputGetArgs> outputs) {
+        public Builder outputs(@Nullable List<AnalyticsApplicationOutputGetArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setReferenceDataSources(@Nullable Input<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources) {
+        public Builder referenceDataSources(@Nullable Input<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources) {
             this.referenceDataSources = referenceDataSources;
             return this;
         }
 
-        public Builder setReferenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesGetArgs referenceDataSources) {
+        public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesGetArgs referenceDataSources) {
             this.referenceDataSources = Input.ofNullable(referenceDataSources);
             return this;
         }
 
-        public Builder setStartApplication(@Nullable Input<Boolean> startApplication) {
+        public Builder startApplication(@Nullable Input<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
 
-        public Builder setStartApplication(@Nullable Boolean startApplication) {
+        public Builder startApplication(@Nullable Boolean startApplication) {
             this.startApplication = Input.ofNullable(startApplication);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

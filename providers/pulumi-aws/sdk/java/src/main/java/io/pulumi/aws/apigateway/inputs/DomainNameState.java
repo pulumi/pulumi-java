@@ -356,192 +356,192 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setCertificateBody(@Nullable Input<String> certificateBody) {
+        public Builder certificateBody(@Nullable Input<String> certificateBody) {
             this.certificateBody = certificateBody;
             return this;
         }
 
-        public Builder setCertificateBody(@Nullable String certificateBody) {
+        public Builder certificateBody(@Nullable String certificateBody) {
             this.certificateBody = Input.ofNullable(certificateBody);
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Input<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable String certificateChain) {
+        public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Input.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder setCertificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Input<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
-        public Builder setCertificateName(@Nullable String certificateName) {
+        public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = Input.ofNullable(certificateName);
             return this;
         }
 
-        public Builder setCertificatePrivateKey(@Nullable Input<String> certificatePrivateKey) {
+        public Builder certificatePrivateKey(@Nullable Input<String> certificatePrivateKey) {
             this.certificatePrivateKey = certificatePrivateKey;
             return this;
         }
 
-        public Builder setCertificatePrivateKey(@Nullable String certificatePrivateKey) {
+        public Builder certificatePrivateKey(@Nullable String certificatePrivateKey) {
             this.certificatePrivateKey = Input.ofNullable(certificatePrivateKey);
             return this;
         }
 
-        public Builder setCertificateUploadDate(@Nullable Input<String> certificateUploadDate) {
+        public Builder certificateUploadDate(@Nullable Input<String> certificateUploadDate) {
             this.certificateUploadDate = certificateUploadDate;
             return this;
         }
 
-        public Builder setCertificateUploadDate(@Nullable String certificateUploadDate) {
+        public Builder certificateUploadDate(@Nullable String certificateUploadDate) {
             this.certificateUploadDate = Input.ofNullable(certificateUploadDate);
             return this;
         }
 
-        public Builder setCloudfrontDomainName(@Nullable Input<String> cloudfrontDomainName) {
+        public Builder cloudfrontDomainName(@Nullable Input<String> cloudfrontDomainName) {
             this.cloudfrontDomainName = cloudfrontDomainName;
             return this;
         }
 
-        public Builder setCloudfrontDomainName(@Nullable String cloudfrontDomainName) {
+        public Builder cloudfrontDomainName(@Nullable String cloudfrontDomainName) {
             this.cloudfrontDomainName = Input.ofNullable(cloudfrontDomainName);
             return this;
         }
 
-        public Builder setCloudfrontZoneId(@Nullable Input<String> cloudfrontZoneId) {
+        public Builder cloudfrontZoneId(@Nullable Input<String> cloudfrontZoneId) {
             this.cloudfrontZoneId = cloudfrontZoneId;
             return this;
         }
 
-        public Builder setCloudfrontZoneId(@Nullable String cloudfrontZoneId) {
+        public Builder cloudfrontZoneId(@Nullable String cloudfrontZoneId) {
             this.cloudfrontZoneId = Input.ofNullable(cloudfrontZoneId);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable Input<DomainNameEndpointConfigurationGetArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Input<DomainNameEndpointConfigurationGetArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable DomainNameEndpointConfigurationGetArgs endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable DomainNameEndpointConfigurationGetArgs endpointConfiguration) {
             this.endpointConfiguration = Input.ofNullable(endpointConfiguration);
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Input.ofNullable(mutualTlsAuthentication);
             return this;
         }
 
-        public Builder setRegionalCertificateArn(@Nullable Input<String> regionalCertificateArn) {
+        public Builder regionalCertificateArn(@Nullable Input<String> regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
 
-        public Builder setRegionalCertificateArn(@Nullable String regionalCertificateArn) {
+        public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = Input.ofNullable(regionalCertificateArn);
             return this;
         }
 
-        public Builder setRegionalCertificateName(@Nullable Input<String> regionalCertificateName) {
+        public Builder regionalCertificateName(@Nullable Input<String> regionalCertificateName) {
             this.regionalCertificateName = regionalCertificateName;
             return this;
         }
 
-        public Builder setRegionalCertificateName(@Nullable String regionalCertificateName) {
+        public Builder regionalCertificateName(@Nullable String regionalCertificateName) {
             this.regionalCertificateName = Input.ofNullable(regionalCertificateName);
             return this;
         }
 
-        public Builder setRegionalDomainName(@Nullable Input<String> regionalDomainName) {
+        public Builder regionalDomainName(@Nullable Input<String> regionalDomainName) {
             this.regionalDomainName = regionalDomainName;
             return this;
         }
 
-        public Builder setRegionalDomainName(@Nullable String regionalDomainName) {
+        public Builder regionalDomainName(@Nullable String regionalDomainName) {
             this.regionalDomainName = Input.ofNullable(regionalDomainName);
             return this;
         }
 
-        public Builder setRegionalZoneId(@Nullable Input<String> regionalZoneId) {
+        public Builder regionalZoneId(@Nullable Input<String> regionalZoneId) {
             this.regionalZoneId = regionalZoneId;
             return this;
         }
 
-        public Builder setRegionalZoneId(@Nullable String regionalZoneId) {
+        public Builder regionalZoneId(@Nullable String regionalZoneId) {
             this.regionalZoneId = Input.ofNullable(regionalZoneId);
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable Input<String> securityPolicy) {
+        public Builder securityPolicy(@Nullable Input<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable String securityPolicy) {
+        public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = Input.ofNullable(securityPolicy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

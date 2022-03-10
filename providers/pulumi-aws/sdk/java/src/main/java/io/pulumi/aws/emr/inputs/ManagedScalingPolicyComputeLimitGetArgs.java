@@ -119,52 +119,52 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends io.pulumi.res
     	      this.unitType = defaults.unitType;
         }
 
-        public Builder setMaximumCapacityUnits(Input<Integer> maximumCapacityUnits) {
+        public Builder maximumCapacityUnits(Input<Integer> maximumCapacityUnits) {
             this.maximumCapacityUnits = Objects.requireNonNull(maximumCapacityUnits);
             return this;
         }
 
-        public Builder setMaximumCapacityUnits(Integer maximumCapacityUnits) {
+        public Builder maximumCapacityUnits(Integer maximumCapacityUnits) {
             this.maximumCapacityUnits = Input.of(Objects.requireNonNull(maximumCapacityUnits));
             return this;
         }
 
-        public Builder setMaximumCoreCapacityUnits(@Nullable Input<Integer> maximumCoreCapacityUnits) {
+        public Builder maximumCoreCapacityUnits(@Nullable Input<Integer> maximumCoreCapacityUnits) {
             this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
             return this;
         }
 
-        public Builder setMaximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
+        public Builder maximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
             this.maximumCoreCapacityUnits = Input.ofNullable(maximumCoreCapacityUnits);
             return this;
         }
 
-        public Builder setMaximumOndemandCapacityUnits(@Nullable Input<Integer> maximumOndemandCapacityUnits) {
+        public Builder maximumOndemandCapacityUnits(@Nullable Input<Integer> maximumOndemandCapacityUnits) {
             this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
             return this;
         }
 
-        public Builder setMaximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
+        public Builder maximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
             this.maximumOndemandCapacityUnits = Input.ofNullable(maximumOndemandCapacityUnits);
             return this;
         }
 
-        public Builder setMinimumCapacityUnits(Input<Integer> minimumCapacityUnits) {
+        public Builder minimumCapacityUnits(Input<Integer> minimumCapacityUnits) {
             this.minimumCapacityUnits = Objects.requireNonNull(minimumCapacityUnits);
             return this;
         }
 
-        public Builder setMinimumCapacityUnits(Integer minimumCapacityUnits) {
+        public Builder minimumCapacityUnits(Integer minimumCapacityUnits) {
             this.minimumCapacityUnits = Input.of(Objects.requireNonNull(minimumCapacityUnits));
             return this;
         }
 
-        public Builder setUnitType(Input<String> unitType) {
+        public Builder unitType(Input<String> unitType) {
             this.unitType = Objects.requireNonNull(unitType);
             return this;
         }
 
-        public Builder setUnitType(String unitType) {
+        public Builder unitType(String unitType) {
             this.unitType = Input.of(Objects.requireNonNull(unitType));
             return this;
         }

@@ -139,62 +139,62 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
     	      this.throttlingRateLimit = defaults.throttlingRateLimit;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Input.ofNullable(dataTraceEnabled);
             return this;
         }
 
-        public Builder setDetailedMetricsEnabled(@Nullable Input<Boolean> detailedMetricsEnabled) {
+        public Builder detailedMetricsEnabled(@Nullable Input<Boolean> detailedMetricsEnabled) {
             this.detailedMetricsEnabled = detailedMetricsEnabled;
             return this;
         }
 
-        public Builder setDetailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
+        public Builder detailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
             this.detailedMetricsEnabled = Input.ofNullable(detailedMetricsEnabled);
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Input<String> loggingLevel) {
+        public Builder loggingLevel(@Nullable Input<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Input.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder setRouteKey(Input<String> routeKey) {
+        public Builder routeKey(Input<String> routeKey) {
             this.routeKey = Objects.requireNonNull(routeKey);
             return this;
         }
 
-        public Builder setRouteKey(String routeKey) {
+        public Builder routeKey(String routeKey) {
             this.routeKey = Input.of(Objects.requireNonNull(routeKey));
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Input.ofNullable(throttlingBurstLimit);
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Double throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Input.ofNullable(throttlingRateLimit);
             return this;
         }

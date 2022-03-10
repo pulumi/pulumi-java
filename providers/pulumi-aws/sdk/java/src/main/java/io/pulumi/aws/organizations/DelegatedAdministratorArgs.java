@@ -69,22 +69,22 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setServicePrincipal(Input<String> servicePrincipal) {
+        public Builder servicePrincipal(Input<String> servicePrincipal) {
             this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
             return this;
         }
 
-        public Builder setServicePrincipal(String servicePrincipal) {
+        public Builder servicePrincipal(String servicePrincipal) {
             this.servicePrincipal = Input.of(Objects.requireNonNull(servicePrincipal));
             return this;
         }

@@ -69,22 +69,22 @@ public final class BotIntentGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.intentVersion = defaults.intentVersion;
         }
 
-        public Builder setIntentName(Input<String> intentName) {
+        public Builder intentName(Input<String> intentName) {
             this.intentName = Objects.requireNonNull(intentName);
             return this;
         }
 
-        public Builder setIntentName(String intentName) {
+        public Builder intentName(String intentName) {
             this.intentName = Input.of(Objects.requireNonNull(intentName));
             return this;
         }
 
-        public Builder setIntentVersion(Input<String> intentVersion) {
+        public Builder intentVersion(Input<String> intentVersion) {
             this.intentVersion = Objects.requireNonNull(intentVersion);
             return this;
         }
 
-        public Builder setIntentVersion(String intentVersion) {
+        public Builder intentVersion(String intentVersion) {
             this.intentVersion = Input.of(Objects.requireNonNull(intentVersion));
             return this;
         }

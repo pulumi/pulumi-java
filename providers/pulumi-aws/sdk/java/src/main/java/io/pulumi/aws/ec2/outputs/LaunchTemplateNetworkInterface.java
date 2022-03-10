@@ -277,77 +277,77 @@ public final class LaunchTemplateNetworkInterface {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAssociateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
+        public Builder associateCarrierIpAddress(@Nullable String associateCarrierIpAddress) {
             this.associateCarrierIpAddress = associateCarrierIpAddress;
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable String associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable String associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable String deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Integer deviceIndex) {
+        public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
 
-        public Builder setInterfaceType(@Nullable String interfaceType) {
+        public Builder interfaceType(@Nullable String interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
 
-        public Builder setIpv4AddressCount(@Nullable Integer ipv4AddressCount) {
+        public Builder ipv4AddressCount(@Nullable Integer ipv4AddressCount) {
             this.ipv4AddressCount = ipv4AddressCount;
             return this;
         }
 
-        public Builder setIpv4Addresses(@Nullable List<String> ipv4Addresses) {
+        public Builder ipv4Addresses(@Nullable List<String> ipv4Addresses) {
             this.ipv4Addresses = ipv4Addresses;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setNetworkCardIndex(@Nullable Integer networkCardIndex) {
+        public Builder networkCardIndex(@Nullable Integer networkCardIndex) {
             this.networkCardIndex = networkCardIndex;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

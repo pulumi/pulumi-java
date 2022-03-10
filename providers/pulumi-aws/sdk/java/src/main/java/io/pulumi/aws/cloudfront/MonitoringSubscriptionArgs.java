@@ -70,22 +70,22 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
     	      this.monitoringSubscription = defaults.monitoringSubscription;
         }
 
-        public Builder setDistributionId(Input<String> distributionId) {
+        public Builder distributionId(Input<String> distributionId) {
             this.distributionId = Objects.requireNonNull(distributionId);
             return this;
         }
 
-        public Builder setDistributionId(String distributionId) {
+        public Builder distributionId(String distributionId) {
             this.distributionId = Input.of(Objects.requireNonNull(distributionId));
             return this;
         }
 
-        public Builder setMonitoringSubscription(Input<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
+        public Builder monitoringSubscription(Input<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription) {
             this.monitoringSubscription = Objects.requireNonNull(monitoringSubscription);
             return this;
         }
 
-        public Builder setMonitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionArgs monitoringSubscription) {
+        public Builder monitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionArgs monitoringSubscription) {
             this.monitoringSubscription = Input.of(Objects.requireNonNull(monitoringSubscription));
             return this;
         }

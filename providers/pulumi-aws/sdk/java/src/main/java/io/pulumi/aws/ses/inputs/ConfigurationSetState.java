@@ -136,62 +136,62 @@ public final class ConfigurationSetState extends io.pulumi.resources.ResourceArg
     	      this.sendingEnabled = defaults.sendingEnabled;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDeliveryOptions(@Nullable Input<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions) {
+        public Builder deliveryOptions(@Nullable Input<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions) {
             this.deliveryOptions = deliveryOptions;
             return this;
         }
 
-        public Builder setDeliveryOptions(@Nullable ConfigurationSetDeliveryOptionsGetArgs deliveryOptions) {
+        public Builder deliveryOptions(@Nullable ConfigurationSetDeliveryOptionsGetArgs deliveryOptions) {
             this.deliveryOptions = Input.ofNullable(deliveryOptions);
             return this;
         }
 
-        public Builder setLastFreshStart(@Nullable Input<String> lastFreshStart) {
+        public Builder lastFreshStart(@Nullable Input<String> lastFreshStart) {
             this.lastFreshStart = lastFreshStart;
             return this;
         }
 
-        public Builder setLastFreshStart(@Nullable String lastFreshStart) {
+        public Builder lastFreshStart(@Nullable String lastFreshStart) {
             this.lastFreshStart = Input.ofNullable(lastFreshStart);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setReputationMetricsEnabled(@Nullable Input<Boolean> reputationMetricsEnabled) {
+        public Builder reputationMetricsEnabled(@Nullable Input<Boolean> reputationMetricsEnabled) {
             this.reputationMetricsEnabled = reputationMetricsEnabled;
             return this;
         }
 
-        public Builder setReputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
+        public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
             this.reputationMetricsEnabled = Input.ofNullable(reputationMetricsEnabled);
             return this;
         }
 
-        public Builder setSendingEnabled(@Nullable Input<Boolean> sendingEnabled) {
+        public Builder sendingEnabled(@Nullable Input<Boolean> sendingEnabled) {
             this.sendingEnabled = sendingEnabled;
             return this;
         }
 
-        public Builder setSendingEnabled(@Nullable Boolean sendingEnabled) {
+        public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
             this.sendingEnabled = Input.ofNullable(sendingEnabled);
             return this;
         }

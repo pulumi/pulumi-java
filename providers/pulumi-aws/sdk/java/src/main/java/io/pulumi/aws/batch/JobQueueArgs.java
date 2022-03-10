@@ -140,62 +140,62 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setComputeEnvironments(Input<List<String>> computeEnvironments) {
+        public Builder computeEnvironments(Input<List<String>> computeEnvironments) {
             this.computeEnvironments = Objects.requireNonNull(computeEnvironments);
             return this;
         }
 
-        public Builder setComputeEnvironments(List<String> computeEnvironments) {
+        public Builder computeEnvironments(List<String> computeEnvironments) {
             this.computeEnvironments = Input.of(Objects.requireNonNull(computeEnvironments));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setSchedulingPolicyArn(@Nullable Input<String> schedulingPolicyArn) {
+        public Builder schedulingPolicyArn(@Nullable Input<String> schedulingPolicyArn) {
             this.schedulingPolicyArn = schedulingPolicyArn;
             return this;
         }
 
-        public Builder setSchedulingPolicyArn(@Nullable String schedulingPolicyArn) {
+        public Builder schedulingPolicyArn(@Nullable String schedulingPolicyArn) {
             this.schedulingPolicyArn = Input.ofNullable(schedulingPolicyArn);
             return this;
         }
 
-        public Builder setState(Input<String> state) {
+        public Builder state(Input<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -102,42 +102,42 @@ public final class GraphQLApiUserPoolConfigArgs extends io.pulumi.resources.Reso
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setAppIdClientRegex(@Nullable Input<String> appIdClientRegex) {
+        public Builder appIdClientRegex(@Nullable Input<String> appIdClientRegex) {
             this.appIdClientRegex = appIdClientRegex;
             return this;
         }
 
-        public Builder setAppIdClientRegex(@Nullable String appIdClientRegex) {
+        public Builder appIdClientRegex(@Nullable String appIdClientRegex) {
             this.appIdClientRegex = Input.ofNullable(appIdClientRegex);
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Input<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Input.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder setDefaultAction(Input<String> defaultAction) {
+        public Builder defaultAction(Input<String> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setDefaultAction(String defaultAction) {
+        public Builder defaultAction(String defaultAction) {
             this.defaultAction = Input.of(Objects.requireNonNull(defaultAction));
             return this;
         }
 
-        public Builder setUserPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Input<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
             return this;
         }

@@ -70,22 +70,22 @@ public final class KinesisStreamingDestinationArgs extends io.pulumi.resources.R
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setStreamArn(Input<String> streamArn) {
+        public Builder streamArn(Input<String> streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
 
-        public Builder setStreamArn(String streamArn) {
+        public Builder streamArn(String streamArn) {
             this.streamArn = Input.of(Objects.requireNonNull(streamArn));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

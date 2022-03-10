@@ -105,42 +105,42 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     	      this.waitForVerification = defaults.waitForVerification;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setSubDomains(Input<List<DomainAssociationSubDomainArgs>> subDomains) {
+        public Builder subDomains(Input<List<DomainAssociationSubDomainArgs>> subDomains) {
             this.subDomains = Objects.requireNonNull(subDomains);
             return this;
         }
 
-        public Builder setSubDomains(List<DomainAssociationSubDomainArgs> subDomains) {
+        public Builder subDomains(List<DomainAssociationSubDomainArgs> subDomains) {
             this.subDomains = Input.of(Objects.requireNonNull(subDomains));
             return this;
         }
 
-        public Builder setWaitForVerification(@Nullable Input<Boolean> waitForVerification) {
+        public Builder waitForVerification(@Nullable Input<Boolean> waitForVerification) {
             this.waitForVerification = waitForVerification;
             return this;
         }
 
-        public Builder setWaitForVerification(@Nullable Boolean waitForVerification) {
+        public Builder waitForVerification(@Nullable Boolean waitForVerification) {
             this.waitForVerification = Input.ofNullable(waitForVerification);
             return this;
         }

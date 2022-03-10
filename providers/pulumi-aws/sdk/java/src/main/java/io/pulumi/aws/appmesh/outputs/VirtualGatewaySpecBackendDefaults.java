@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecBackendDefaults {
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder setClientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
+        public Builder clientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }

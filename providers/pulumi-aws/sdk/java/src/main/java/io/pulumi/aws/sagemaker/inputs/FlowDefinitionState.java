@@ -187,92 +187,92 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setFlowDefinitionName(@Nullable Input<String> flowDefinitionName) {
+        public Builder flowDefinitionName(@Nullable Input<String> flowDefinitionName) {
             this.flowDefinitionName = flowDefinitionName;
             return this;
         }
 
-        public Builder setFlowDefinitionName(@Nullable String flowDefinitionName) {
+        public Builder flowDefinitionName(@Nullable String flowDefinitionName) {
             this.flowDefinitionName = Input.ofNullable(flowDefinitionName);
             return this;
         }
 
-        public Builder setHumanLoopActivationConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig) {
+        public Builder humanLoopActivationConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig) {
             this.humanLoopActivationConfig = humanLoopActivationConfig;
             return this;
         }
 
-        public Builder setHumanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigGetArgs humanLoopActivationConfig) {
+        public Builder humanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigGetArgs humanLoopActivationConfig) {
             this.humanLoopActivationConfig = Input.ofNullable(humanLoopActivationConfig);
             return this;
         }
 
-        public Builder setHumanLoopConfig(@Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig) {
+        public Builder humanLoopConfig(@Nullable Input<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig) {
             this.humanLoopConfig = humanLoopConfig;
             return this;
         }
 
-        public Builder setHumanLoopConfig(@Nullable FlowDefinitionHumanLoopConfigGetArgs humanLoopConfig) {
+        public Builder humanLoopConfig(@Nullable FlowDefinitionHumanLoopConfigGetArgs humanLoopConfig) {
             this.humanLoopConfig = Input.ofNullable(humanLoopConfig);
             return this;
         }
 
-        public Builder setHumanLoopRequestSource(@Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource) {
+        public Builder humanLoopRequestSource(@Nullable Input<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource) {
             this.humanLoopRequestSource = humanLoopRequestSource;
             return this;
         }
 
-        public Builder setHumanLoopRequestSource(@Nullable FlowDefinitionHumanLoopRequestSourceGetArgs humanLoopRequestSource) {
+        public Builder humanLoopRequestSource(@Nullable FlowDefinitionHumanLoopRequestSourceGetArgs humanLoopRequestSource) {
             this.humanLoopRequestSource = Input.ofNullable(humanLoopRequestSource);
             return this;
         }
 
-        public Builder setOutputConfig(@Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig) {
+        public Builder outputConfig(@Nullable Input<FlowDefinitionOutputConfigGetArgs> outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
 
-        public Builder setOutputConfig(@Nullable FlowDefinitionOutputConfigGetArgs outputConfig) {
+        public Builder outputConfig(@Nullable FlowDefinitionOutputConfigGetArgs outputConfig) {
             this.outputConfig = Input.ofNullable(outputConfig);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

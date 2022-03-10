@@ -103,42 +103,42 @@ public final class InstanceFleetInstanceTypeConfigEbsConfigArgs extends io.pulum
     	      this.volumesPerInstance = defaults.volumesPerInstance;
         }
 
-        public Builder setIops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Input<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = Input.ofNullable(iops);
             return this;
         }
 
-        public Builder setSize(Input<Integer> size) {
+        public Builder size(Input<Integer> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVolumesPerInstance(@Nullable Input<Integer> volumesPerInstance) {
+        public Builder volumesPerInstance(@Nullable Input<Integer> volumesPerInstance) {
             this.volumesPerInstance = volumesPerInstance;
             return this;
         }
 
-        public Builder setVolumesPerInstance(@Nullable Integer volumesPerInstance) {
+        public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
             this.volumesPerInstance = Input.ofNullable(volumesPerInstance);
             return this;
         }

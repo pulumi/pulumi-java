@@ -67,12 +67,12 @@ public final class InfrastructureConfigurationLoggingS3Logs {
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }

@@ -197,62 +197,62 @@ public final class GetEngineVersionResult {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngineDescription(String engineDescription) {
+        public Builder engineDescription(String engineDescription) {
             this.engineDescription = Objects.requireNonNull(engineDescription);
             return this;
         }
 
-        public Builder setExportableLogTypes(List<String> exportableLogTypes) {
+        public Builder exportableLogTypes(List<String> exportableLogTypes) {
             this.exportableLogTypes = Objects.requireNonNull(exportableLogTypes);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParameterGroupFamily(String parameterGroupFamily) {
+        public Builder parameterGroupFamily(String parameterGroupFamily) {
             this.parameterGroupFamily = Objects.requireNonNull(parameterGroupFamily);
             return this;
         }
 
-        public Builder setPreferredVersions(@Nullable List<String> preferredVersions) {
+        public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             this.preferredVersions = preferredVersions;
             return this;
         }
 
-        public Builder setSupportedTimezones(List<String> supportedTimezones) {
+        public Builder supportedTimezones(List<String> supportedTimezones) {
             this.supportedTimezones = Objects.requireNonNull(supportedTimezones);
             return this;
         }
 
-        public Builder setSupportsLogExportsToCloudwatch(Boolean supportsLogExportsToCloudwatch) {
+        public Builder supportsLogExportsToCloudwatch(Boolean supportsLogExportsToCloudwatch) {
             this.supportsLogExportsToCloudwatch = Objects.requireNonNull(supportsLogExportsToCloudwatch);
             return this;
         }
 
-        public Builder setSupportsReadReplica(Boolean supportsReadReplica) {
+        public Builder supportsReadReplica(Boolean supportsReadReplica) {
             this.supportsReadReplica = Objects.requireNonNull(supportsReadReplica);
             return this;
         }
 
-        public Builder setValidUpgradeTargets(List<String> validUpgradeTargets) {
+        public Builder validUpgradeTargets(List<String> validUpgradeTargets) {
             this.validUpgradeTargets = Objects.requireNonNull(validUpgradeTargets);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionDescription(String versionDescription) {
+        public Builder versionDescription(String versionDescription) {
             this.versionDescription = Objects.requireNonNull(versionDescription);
             return this;
         }

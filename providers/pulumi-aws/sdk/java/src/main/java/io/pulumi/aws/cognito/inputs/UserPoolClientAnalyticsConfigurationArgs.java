@@ -119,52 +119,52 @@ public final class UserPoolClientAnalyticsConfigurationArgs extends io.pulumi.re
     	      this.userDataShared = defaults.userDataShared;
         }
 
-        public Builder setApplicationArn(@Nullable Input<String> applicationArn) {
+        public Builder applicationArn(@Nullable Input<String> applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder setApplicationArn(@Nullable String applicationArn) {
+        public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = Input.ofNullable(applicationArn);
             return this;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setUserDataShared(@Nullable Input<Boolean> userDataShared) {
+        public Builder userDataShared(@Nullable Input<Boolean> userDataShared) {
             this.userDataShared = userDataShared;
             return this;
         }
 
-        public Builder setUserDataShared(@Nullable Boolean userDataShared) {
+        public Builder userDataShared(@Nullable Boolean userDataShared) {
             this.userDataShared = Input.ofNullable(userDataShared);
             return this;
         }

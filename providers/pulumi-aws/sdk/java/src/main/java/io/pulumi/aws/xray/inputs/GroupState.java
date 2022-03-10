@@ -119,52 +119,52 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setFilterExpression(@Nullable Input<String> filterExpression) {
+        public Builder filterExpression(@Nullable Input<String> filterExpression) {
             this.filterExpression = filterExpression;
             return this;
         }
 
-        public Builder setFilterExpression(@Nullable String filterExpression) {
+        public Builder filterExpression(@Nullable String filterExpression) {
             this.filterExpression = Input.ofNullable(filterExpression);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

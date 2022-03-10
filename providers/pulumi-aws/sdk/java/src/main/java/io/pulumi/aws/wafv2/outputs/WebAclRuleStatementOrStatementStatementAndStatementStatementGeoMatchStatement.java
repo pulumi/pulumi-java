@@ -69,12 +69,12 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementG
     	      this.forwardedIpConfig = defaults.forwardedIpConfig;
         }
 
-        public Builder setCountryCodes(List<String> countryCodes) {
+        public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable WebAclRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable WebAclRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfig forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }

@@ -119,52 +119,52 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
     	      this.lambdaFunctionArn = defaults.lambdaFunctionArn;
         }
 
-        public Builder setEvents(Input<List<String>> events) {
+        public Builder events(Input<List<String>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Input.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder setFilterPrefix(@Nullable Input<String> filterPrefix) {
+        public Builder filterPrefix(@Nullable Input<String> filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
 
-        public Builder setFilterPrefix(@Nullable String filterPrefix) {
+        public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = Input.ofNullable(filterPrefix);
             return this;
         }
 
-        public Builder setFilterSuffix(@Nullable Input<String> filterSuffix) {
+        public Builder filterSuffix(@Nullable Input<String> filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
 
-        public Builder setFilterSuffix(@Nullable String filterSuffix) {
+        public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = Input.ofNullable(filterSuffix);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLambdaFunctionArn(@Nullable Input<String> lambdaFunctionArn) {
+        public Builder lambdaFunctionArn(@Nullable Input<String> lambdaFunctionArn) {
             this.lambdaFunctionArn = lambdaFunctionArn;
             return this;
         }
 
-        public Builder setLambdaFunctionArn(@Nullable String lambdaFunctionArn) {
+        public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
             this.lambdaFunctionArn = Input.ofNullable(lambdaFunctionArn);
             return this;
         }

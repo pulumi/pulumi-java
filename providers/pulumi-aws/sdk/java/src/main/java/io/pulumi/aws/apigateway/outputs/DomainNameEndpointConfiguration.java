@@ -48,7 +48,7 @@ public final class DomainNameEndpointConfiguration {
     	      this.types = defaults.types;
         }
 
-        public Builder setTypes(String types) {
+        public Builder types(String types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }

@@ -67,12 +67,12 @@ public final class EnvironmentMonitor {
     	      this.alarmRoleArn = defaults.alarmRoleArn;
         }
 
-        public Builder setAlarmArn(String alarmArn) {
+        public Builder alarmArn(String alarmArn) {
             this.alarmArn = Objects.requireNonNull(alarmArn);
             return this;
         }
 
-        public Builder setAlarmRoleArn(@Nullable String alarmRoleArn) {
+        public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
             this.alarmRoleArn = alarmRoleArn;
             return this;
         }

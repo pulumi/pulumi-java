@@ -53,12 +53,12 @@ public final class ResolverSyncConfigLambdaConflictHandlerConfigArgs extends io.
     	      this.lambdaConflictHandlerArn = defaults.lambdaConflictHandlerArn;
         }
 
-        public Builder setLambdaConflictHandlerArn(@Nullable Input<String> lambdaConflictHandlerArn) {
+        public Builder lambdaConflictHandlerArn(@Nullable Input<String> lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
             return this;
         }
 
-        public Builder setLambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
+        public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = Input.ofNullable(lambdaConflictHandlerArn);
             return this;
         }

@@ -68,12 +68,12 @@ public final class EndpointConfigurationAsyncInferenceConfig {
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder setClientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig) {
+        public Builder clientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig) {
             this.clientConfig = clientConfig;
             return this;
         }
 
-        public Builder setOutputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
+        public Builder outputConfig(EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }

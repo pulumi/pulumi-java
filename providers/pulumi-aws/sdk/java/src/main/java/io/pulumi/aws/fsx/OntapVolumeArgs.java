@@ -182,92 +182,92 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setJunctionPath(Input<String> junctionPath) {
+        public Builder junctionPath(Input<String> junctionPath) {
             this.junctionPath = Objects.requireNonNull(junctionPath);
             return this;
         }
 
-        public Builder setJunctionPath(String junctionPath) {
+        public Builder junctionPath(String junctionPath) {
             this.junctionPath = Input.of(Objects.requireNonNull(junctionPath));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSecurityStyle(@Nullable Input<String> securityStyle) {
+        public Builder securityStyle(@Nullable Input<String> securityStyle) {
             this.securityStyle = securityStyle;
             return this;
         }
 
-        public Builder setSecurityStyle(@Nullable String securityStyle) {
+        public Builder securityStyle(@Nullable String securityStyle) {
             this.securityStyle = Input.ofNullable(securityStyle);
             return this;
         }
 
-        public Builder setSizeInMegabytes(Input<Integer> sizeInMegabytes) {
+        public Builder sizeInMegabytes(Input<Integer> sizeInMegabytes) {
             this.sizeInMegabytes = Objects.requireNonNull(sizeInMegabytes);
             return this;
         }
 
-        public Builder setSizeInMegabytes(Integer sizeInMegabytes) {
+        public Builder sizeInMegabytes(Integer sizeInMegabytes) {
             this.sizeInMegabytes = Input.of(Objects.requireNonNull(sizeInMegabytes));
             return this;
         }
 
-        public Builder setStorageEfficiencyEnabled(Input<Boolean> storageEfficiencyEnabled) {
+        public Builder storageEfficiencyEnabled(Input<Boolean> storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = Objects.requireNonNull(storageEfficiencyEnabled);
             return this;
         }
 
-        public Builder setStorageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
+        public Builder storageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
             this.storageEfficiencyEnabled = Input.of(Objects.requireNonNull(storageEfficiencyEnabled));
             return this;
         }
 
-        public Builder setStorageVirtualMachineId(Input<String> storageVirtualMachineId) {
+        public Builder storageVirtualMachineId(Input<String> storageVirtualMachineId) {
             this.storageVirtualMachineId = Objects.requireNonNull(storageVirtualMachineId);
             return this;
         }
 
-        public Builder setStorageVirtualMachineId(String storageVirtualMachineId) {
+        public Builder storageVirtualMachineId(String storageVirtualMachineId) {
             this.storageVirtualMachineId = Input.of(Objects.requireNonNull(storageVirtualMachineId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTieringPolicy(@Nullable Input<OntapVolumeTieringPolicyArgs> tieringPolicy) {
+        public Builder tieringPolicy(@Nullable Input<OntapVolumeTieringPolicyArgs> tieringPolicy) {
             this.tieringPolicy = tieringPolicy;
             return this;
         }
 
-        public Builder setTieringPolicy(@Nullable OntapVolumeTieringPolicyArgs tieringPolicy) {
+        public Builder tieringPolicy(@Nullable OntapVolumeTieringPolicyArgs tieringPolicy) {
             this.tieringPolicy = Input.ofNullable(tieringPolicy);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

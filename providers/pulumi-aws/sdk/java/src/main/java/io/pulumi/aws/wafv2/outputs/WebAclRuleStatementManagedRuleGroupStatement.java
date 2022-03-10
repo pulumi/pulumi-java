@@ -102,22 +102,22 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }

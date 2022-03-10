@@ -148,72 +148,72 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setReplicationSubnetGroupArn(@Nullable Input<String> replicationSubnetGroupArn) {
+        public Builder replicationSubnetGroupArn(@Nullable Input<String> replicationSubnetGroupArn) {
             this.replicationSubnetGroupArn = replicationSubnetGroupArn;
             return this;
         }
 
-        public Builder setReplicationSubnetGroupArn(@Nullable String replicationSubnetGroupArn) {
+        public Builder replicationSubnetGroupArn(@Nullable String replicationSubnetGroupArn) {
             this.replicationSubnetGroupArn = Input.ofNullable(replicationSubnetGroupArn);
             return this;
         }
 
-        public Builder setReplicationSubnetGroupDescription(@Nullable Input<String> replicationSubnetGroupDescription) {
+        public Builder replicationSubnetGroupDescription(@Nullable Input<String> replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = replicationSubnetGroupDescription;
             return this;
         }
 
-        public Builder setReplicationSubnetGroupDescription(@Nullable String replicationSubnetGroupDescription) {
+        public Builder replicationSubnetGroupDescription(@Nullable String replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = Input.ofNullable(replicationSubnetGroupDescription);
             return this;
         }
 
-        public Builder setReplicationSubnetGroupId(@Nullable Input<String> replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(@Nullable Input<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = replicationSubnetGroupId;
             return this;
         }
 
-        public Builder setReplicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Input.ofNullable(replicationSubnetGroupId);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

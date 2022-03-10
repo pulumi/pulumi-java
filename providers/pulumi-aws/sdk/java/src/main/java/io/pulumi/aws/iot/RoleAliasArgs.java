@@ -87,32 +87,32 @@ public final class RoleAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAlias(Input<String> alias) {
+        public Builder alias(Input<String> alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Input.of(Objects.requireNonNull(alias));
             return this;
         }
 
-        public Builder setCredentialDuration(@Nullable Input<Integer> credentialDuration) {
+        public Builder credentialDuration(@Nullable Input<Integer> credentialDuration) {
             this.credentialDuration = credentialDuration;
             return this;
         }
 
-        public Builder setCredentialDuration(@Nullable Integer credentialDuration) {
+        public Builder credentialDuration(@Nullable Integer credentialDuration) {
             this.credentialDuration = Input.ofNullable(credentialDuration);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

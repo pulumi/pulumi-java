@@ -68,12 +68,12 @@ public final class AuthorizerJwtConfiguration {
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }

@@ -89,32 +89,32 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder setRecordColumns(Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs>> recordColumns) {
+        public Builder recordColumns(Input<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs>> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
-        public Builder setRecordColumns(List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs> recordColumns) {
+        public Builder recordColumns(List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs> recordColumns) {
             this.recordColumns = Input.of(Objects.requireNonNull(recordColumns));
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable Input<String> recordEncoding) {
+        public Builder recordEncoding(@Nullable Input<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable String recordEncoding) {
+        public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = Input.ofNullable(recordEncoding);
             return this;
         }
 
-        public Builder setRecordFormat(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs> recordFormat) {
+        public Builder recordFormat(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
 
-        public Builder setRecordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs recordFormat) {
+        public Builder recordFormat(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs recordFormat) {
             this.recordFormat = Input.of(Objects.requireNonNull(recordFormat));
             return this;
         }

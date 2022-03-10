@@ -86,32 +86,32 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.policy = defaults.policy;
         }
 
-        public Builder setIdentity(@Nullable Input<String> identity) {
+        public Builder identity(@Nullable Input<String> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable String identity) {
+        public Builder identity(@Nullable String identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }

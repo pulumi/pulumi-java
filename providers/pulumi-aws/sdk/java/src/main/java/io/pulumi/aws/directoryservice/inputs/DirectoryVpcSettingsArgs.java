@@ -83,32 +83,32 @@ public final class DirectoryVpcSettingsArgs extends io.pulumi.resources.Resource
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAvailabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Input.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

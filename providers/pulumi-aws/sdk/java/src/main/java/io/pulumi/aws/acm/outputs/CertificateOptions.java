@@ -50,7 +50,7 @@ public final class CertificateOptions {
     	      this.certificateTransparencyLoggingPreference = defaults.certificateTransparencyLoggingPreference;
         }
 
-        public Builder setCertificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
+        public Builder certificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
             this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
             return this;
         }

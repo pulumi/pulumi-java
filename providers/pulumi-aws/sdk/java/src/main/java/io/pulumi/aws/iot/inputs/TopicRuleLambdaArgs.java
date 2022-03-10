@@ -52,12 +52,12 @@ public final class TopicRuleLambdaArgs extends io.pulumi.resources.ResourceArgs 
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder setFunctionArn(Input<String> functionArn) {
+        public Builder functionArn(Input<String> functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Input.of(Objects.requireNonNull(functionArn));
             return this;
         }

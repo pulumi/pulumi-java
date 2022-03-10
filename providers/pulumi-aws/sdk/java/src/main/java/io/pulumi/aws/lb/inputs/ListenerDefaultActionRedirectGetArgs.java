@@ -134,62 +134,62 @@ public final class ListenerDefaultActionRedirectGetArgs extends io.pulumi.resour
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setStatusCode(Input<String> statusCode) {
+        public Builder statusCode(Input<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Input.of(Objects.requireNonNull(statusCode));
             return this;
         }

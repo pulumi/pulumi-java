@@ -280,82 +280,82 @@ public final class GetVolumeResult {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVolumeFilter> filters) {
+        public Builder filters(@Nullable List<GetVolumeFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIops(Integer iops) {
+        public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setMultiAttachEnabled(Boolean multiAttachEnabled) {
+        public Builder multiAttachEnabled(Boolean multiAttachEnabled) {
             this.multiAttachEnabled = Objects.requireNonNull(multiAttachEnabled);
             return this;
         }
 
-        public Builder setOutpostArn(String outpostArn) {
+        public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSnapshotId(String snapshotId) {
+        public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setThroughput(Integer throughput) {
+        public Builder throughput(Integer throughput) {
             this.throughput = Objects.requireNonNull(throughput);
             return this;
         }
 
-        public Builder setVolumeId(String volumeId) {
+        public Builder volumeId(String volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }

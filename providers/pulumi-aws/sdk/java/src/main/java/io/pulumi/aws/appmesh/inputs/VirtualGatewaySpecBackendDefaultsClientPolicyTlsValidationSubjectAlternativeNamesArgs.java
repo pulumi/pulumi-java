@@ -52,12 +52,12 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
     	      this.match = defaults.match;
         }
 
-        public Builder setMatch(Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs> match) {
+        public Builder match(Input<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs> match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setMatch(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs match) {
+        public Builder match(VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatchArgs match) {
             this.match = Input.of(Objects.requireNonNull(match));
             return this;
         }

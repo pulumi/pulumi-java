@@ -91,27 +91,27 @@ public final class GetUserResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setFilters(List<GetUserFilter> filters) {
+        public Builder filters(List<GetUserFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentityStoreId(String identityStoreId) {
+        public Builder identityStoreId(String identityStoreId) {
             this.identityStoreId = Objects.requireNonNull(identityStoreId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

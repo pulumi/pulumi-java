@@ -62,22 +62,22 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
     	      this.errorMessage = defaults.errorMessage;
         }
 
-        public Builder setErrorCode(@Nullable Input<String> errorCode) {
+        public Builder errorCode(@Nullable Input<String> errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorCode(@Nullable String errorCode) {
+        public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = Input.ofNullable(errorCode);
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable Input<String> errorMessage) {
+        public Builder errorMessage(@Nullable Input<String> errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = Input.ofNullable(errorMessage);
             return this;
         }

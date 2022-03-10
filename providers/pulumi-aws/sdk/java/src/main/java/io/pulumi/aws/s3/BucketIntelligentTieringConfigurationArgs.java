@@ -121,52 +121,52 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
     	      this.tierings = defaults.tierings;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketIntelligentTieringConfigurationFilterArgs> filter) {
+        public Builder filter(@Nullable Input<BucketIntelligentTieringConfigurationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketIntelligentTieringConfigurationFilterArgs filter) {
+        public Builder filter(@Nullable BucketIntelligentTieringConfigurationFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTierings(Input<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings) {
+        public Builder tierings(Input<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings) {
             this.tierings = Objects.requireNonNull(tierings);
             return this;
         }
 
-        public Builder setTierings(List<BucketIntelligentTieringConfigurationTieringArgs> tierings) {
+        public Builder tierings(List<BucketIntelligentTieringConfigurationTieringArgs> tierings) {
             this.tierings = Input.of(Objects.requireNonNull(tierings));
             return this;
         }

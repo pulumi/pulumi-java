@@ -295,162 +295,162 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBuildId(@Nullable Input<String> buildId) {
+        public Builder buildId(@Nullable Input<String> buildId) {
             this.buildId = buildId;
             return this;
         }
 
-        public Builder setBuildId(@Nullable String buildId) {
+        public Builder buildId(@Nullable String buildId) {
             this.buildId = Input.ofNullable(buildId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEc2InboundPermissions(@Nullable Input<List<FleetEc2InboundPermissionGetArgs>> ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(@Nullable Input<List<FleetEc2InboundPermissionGetArgs>> ec2InboundPermissions) {
             this.ec2InboundPermissions = ec2InboundPermissions;
             return this;
         }
 
-        public Builder setEc2InboundPermissions(@Nullable List<FleetEc2InboundPermissionGetArgs> ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(@Nullable List<FleetEc2InboundPermissionGetArgs> ec2InboundPermissions) {
             this.ec2InboundPermissions = Input.ofNullable(ec2InboundPermissions);
             return this;
         }
 
-        public Builder setEc2InstanceType(@Nullable Input<String> ec2InstanceType) {
+        public Builder ec2InstanceType(@Nullable Input<String> ec2InstanceType) {
             this.ec2InstanceType = ec2InstanceType;
             return this;
         }
 
-        public Builder setEc2InstanceType(@Nullable String ec2InstanceType) {
+        public Builder ec2InstanceType(@Nullable String ec2InstanceType) {
             this.ec2InstanceType = Input.ofNullable(ec2InstanceType);
             return this;
         }
 
-        public Builder setFleetType(@Nullable Input<String> fleetType) {
+        public Builder fleetType(@Nullable Input<String> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
 
-        public Builder setFleetType(@Nullable String fleetType) {
+        public Builder fleetType(@Nullable String fleetType) {
             this.fleetType = Input.ofNullable(fleetType);
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable Input<String> instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable Input<String> instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable String instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = Input.ofNullable(instanceRoleArn);
             return this;
         }
 
-        public Builder setLogPaths(@Nullable Input<List<String>> logPaths) {
+        public Builder logPaths(@Nullable Input<List<String>> logPaths) {
             this.logPaths = logPaths;
             return this;
         }
 
-        public Builder setLogPaths(@Nullable List<String> logPaths) {
+        public Builder logPaths(@Nullable List<String> logPaths) {
             this.logPaths = Input.ofNullable(logPaths);
             return this;
         }
 
-        public Builder setMetricGroups(@Nullable Input<List<String>> metricGroups) {
+        public Builder metricGroups(@Nullable Input<List<String>> metricGroups) {
             this.metricGroups = metricGroups;
             return this;
         }
 
-        public Builder setMetricGroups(@Nullable List<String> metricGroups) {
+        public Builder metricGroups(@Nullable List<String> metricGroups) {
             this.metricGroups = Input.ofNullable(metricGroups);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNewGameSessionProtectionPolicy(@Nullable Input<String> newGameSessionProtectionPolicy) {
+        public Builder newGameSessionProtectionPolicy(@Nullable Input<String> newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
 
-        public Builder setNewGameSessionProtectionPolicy(@Nullable String newGameSessionProtectionPolicy) {
+        public Builder newGameSessionProtectionPolicy(@Nullable String newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = Input.ofNullable(newGameSessionProtectionPolicy);
             return this;
         }
 
-        public Builder setOperatingSystem(@Nullable Input<String> operatingSystem) {
+        public Builder operatingSystem(@Nullable Input<String> operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
 
-        public Builder setOperatingSystem(@Nullable String operatingSystem) {
+        public Builder operatingSystem(@Nullable String operatingSystem) {
             this.operatingSystem = Input.ofNullable(operatingSystem);
             return this;
         }
 
-        public Builder setResourceCreationLimitPolicy(@Nullable Input<FleetResourceCreationLimitPolicyGetArgs> resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(@Nullable Input<FleetResourceCreationLimitPolicyGetArgs> resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
 
-        public Builder setResourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyGetArgs resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyGetArgs resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = Input.ofNullable(resourceCreationLimitPolicy);
             return this;
         }
 
-        public Builder setRuntimeConfiguration(@Nullable Input<FleetRuntimeConfigurationGetArgs> runtimeConfiguration) {
+        public Builder runtimeConfiguration(@Nullable Input<FleetRuntimeConfigurationGetArgs> runtimeConfiguration) {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
 
-        public Builder setRuntimeConfiguration(@Nullable FleetRuntimeConfigurationGetArgs runtimeConfiguration) {
+        public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationGetArgs runtimeConfiguration) {
             this.runtimeConfiguration = Input.ofNullable(runtimeConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

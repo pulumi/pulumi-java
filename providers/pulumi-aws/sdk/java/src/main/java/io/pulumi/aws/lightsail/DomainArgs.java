@@ -52,12 +52,12 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }

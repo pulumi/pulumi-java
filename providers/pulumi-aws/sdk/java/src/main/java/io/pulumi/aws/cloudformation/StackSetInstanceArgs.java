@@ -137,62 +137,62 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.stackSetName = defaults.stackSetName;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setDeploymentTargets(@Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets) {
+        public Builder deploymentTargets(@Nullable Input<StackSetInstanceDeploymentTargetsArgs> deploymentTargets) {
             this.deploymentTargets = deploymentTargets;
             return this;
         }
 
-        public Builder setDeploymentTargets(@Nullable StackSetInstanceDeploymentTargetsArgs deploymentTargets) {
+        public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsArgs deploymentTargets) {
             this.deploymentTargets = Input.ofNullable(deploymentTargets);
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable Input<Map<String,String>> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Input<Map<String,String>> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable Map<String,String> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
             this.parameterOverrides = Input.ofNullable(parameterOverrides);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRetainStack(@Nullable Input<Boolean> retainStack) {
+        public Builder retainStack(@Nullable Input<Boolean> retainStack) {
             this.retainStack = retainStack;
             return this;
         }
 
-        public Builder setRetainStack(@Nullable Boolean retainStack) {
+        public Builder retainStack(@Nullable Boolean retainStack) {
             this.retainStack = Input.ofNullable(retainStack);
             return this;
         }
 
-        public Builder setStackSetName(Input<String> stackSetName) {
+        public Builder stackSetName(Input<String> stackSetName) {
             this.stackSetName = Objects.requireNonNull(stackSetName);
             return this;
         }
 
-        public Builder setStackSetName(String stackSetName) {
+        public Builder stackSetName(String stackSetName) {
             this.stackSetName = Input.of(Objects.requireNonNull(stackSetName));
             return this;
         }

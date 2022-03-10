@@ -122,52 +122,52 @@ public final class PatchBaselineApprovalRuleGetArgs extends io.pulumi.resources.
     	      this.patchFilters = defaults.patchFilters;
         }
 
-        public Builder setApproveAfterDays(@Nullable Input<Integer> approveAfterDays) {
+        public Builder approveAfterDays(@Nullable Input<Integer> approveAfterDays) {
             this.approveAfterDays = approveAfterDays;
             return this;
         }
 
-        public Builder setApproveAfterDays(@Nullable Integer approveAfterDays) {
+        public Builder approveAfterDays(@Nullable Integer approveAfterDays) {
             this.approveAfterDays = Input.ofNullable(approveAfterDays);
             return this;
         }
 
-        public Builder setApproveUntilDate(@Nullable Input<String> approveUntilDate) {
+        public Builder approveUntilDate(@Nullable Input<String> approveUntilDate) {
             this.approveUntilDate = approveUntilDate;
             return this;
         }
 
-        public Builder setApproveUntilDate(@Nullable String approveUntilDate) {
+        public Builder approveUntilDate(@Nullable String approveUntilDate) {
             this.approveUntilDate = Input.ofNullable(approveUntilDate);
             return this;
         }
 
-        public Builder setComplianceLevel(@Nullable Input<String> complianceLevel) {
+        public Builder complianceLevel(@Nullable Input<String> complianceLevel) {
             this.complianceLevel = complianceLevel;
             return this;
         }
 
-        public Builder setComplianceLevel(@Nullable String complianceLevel) {
+        public Builder complianceLevel(@Nullable String complianceLevel) {
             this.complianceLevel = Input.ofNullable(complianceLevel);
             return this;
         }
 
-        public Builder setEnableNonSecurity(@Nullable Input<Boolean> enableNonSecurity) {
+        public Builder enableNonSecurity(@Nullable Input<Boolean> enableNonSecurity) {
             this.enableNonSecurity = enableNonSecurity;
             return this;
         }
 
-        public Builder setEnableNonSecurity(@Nullable Boolean enableNonSecurity) {
+        public Builder enableNonSecurity(@Nullable Boolean enableNonSecurity) {
             this.enableNonSecurity = Input.ofNullable(enableNonSecurity);
             return this;
         }
 
-        public Builder setPatchFilters(Input<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
+        public Builder patchFilters(Input<List<PatchBaselineApprovalRulePatchFilterGetArgs>> patchFilters) {
             this.patchFilters = Objects.requireNonNull(patchFilters);
             return this;
         }
 
-        public Builder setPatchFilters(List<PatchBaselineApprovalRulePatchFilterGetArgs> patchFilters) {
+        public Builder patchFilters(List<PatchBaselineApprovalRulePatchFilterGetArgs> patchFilters) {
             this.patchFilters = Input.of(Objects.requireNonNull(patchFilters));
             return this;
         }

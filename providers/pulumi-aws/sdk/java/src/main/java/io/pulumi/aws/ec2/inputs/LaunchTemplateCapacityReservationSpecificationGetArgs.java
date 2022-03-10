@@ -71,22 +71,22 @@ public final class LaunchTemplateCapacityReservationSpecificationGetArgs extends
     	      this.capacityReservationTarget = defaults.capacityReservationTarget;
         }
 
-        public Builder setCapacityReservationPreference(@Nullable Input<String> capacityReservationPreference) {
+        public Builder capacityReservationPreference(@Nullable Input<String> capacityReservationPreference) {
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
 
-        public Builder setCapacityReservationPreference(@Nullable String capacityReservationPreference) {
+        public Builder capacityReservationPreference(@Nullable String capacityReservationPreference) {
             this.capacityReservationPreference = Input.ofNullable(capacityReservationPreference);
             return this;
         }
 
-        public Builder setCapacityReservationTarget(@Nullable Input<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget) {
+        public Builder capacityReservationTarget(@Nullable Input<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget) {
             this.capacityReservationTarget = capacityReservationTarget;
             return this;
         }
 
-        public Builder setCapacityReservationTarget(@Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs capacityReservationTarget) {
+        public Builder capacityReservationTarget(@Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs capacityReservationTarget) {
             this.capacityReservationTarget = Input.ofNullable(capacityReservationTarget);
             return this;
         }

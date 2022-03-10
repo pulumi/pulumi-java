@@ -232,152 +232,152 @@ public final class TopicRuleErrorActionArgs extends io.pulumi.resources.Resource
     	      this.stepFunctions = defaults.stepFunctions;
         }
 
-        public Builder setCloudwatchAlarm(@Nullable Input<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm) {
+        public Builder cloudwatchAlarm(@Nullable Input<TopicRuleErrorActionCloudwatchAlarmArgs> cloudwatchAlarm) {
             this.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
 
-        public Builder setCloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarmArgs cloudwatchAlarm) {
+        public Builder cloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarmArgs cloudwatchAlarm) {
             this.cloudwatchAlarm = Input.ofNullable(cloudwatchAlarm);
             return this;
         }
 
-        public Builder setCloudwatchMetric(@Nullable Input<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric) {
+        public Builder cloudwatchMetric(@Nullable Input<TopicRuleErrorActionCloudwatchMetricArgs> cloudwatchMetric) {
             this.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
 
-        public Builder setCloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetricArgs cloudwatchMetric) {
+        public Builder cloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetricArgs cloudwatchMetric) {
             this.cloudwatchMetric = Input.ofNullable(cloudwatchMetric);
             return this;
         }
 
-        public Builder setDynamodb(@Nullable Input<TopicRuleErrorActionDynamodbArgs> dynamodb) {
+        public Builder dynamodb(@Nullable Input<TopicRuleErrorActionDynamodbArgs> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
-        public Builder setDynamodb(@Nullable TopicRuleErrorActionDynamodbArgs dynamodb) {
+        public Builder dynamodb(@Nullable TopicRuleErrorActionDynamodbArgs dynamodb) {
             this.dynamodb = Input.ofNullable(dynamodb);
             return this;
         }
 
-        public Builder setDynamodbv2(@Nullable Input<TopicRuleErrorActionDynamodbv2Args> dynamodbv2) {
+        public Builder dynamodbv2(@Nullable Input<TopicRuleErrorActionDynamodbv2Args> dynamodbv2) {
             this.dynamodbv2 = dynamodbv2;
             return this;
         }
 
-        public Builder setDynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2Args dynamodbv2) {
+        public Builder dynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2Args dynamodbv2) {
             this.dynamodbv2 = Input.ofNullable(dynamodbv2);
             return this;
         }
 
-        public Builder setElasticsearch(@Nullable Input<TopicRuleErrorActionElasticsearchArgs> elasticsearch) {
+        public Builder elasticsearch(@Nullable Input<TopicRuleErrorActionElasticsearchArgs> elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
 
-        public Builder setElasticsearch(@Nullable TopicRuleErrorActionElasticsearchArgs elasticsearch) {
+        public Builder elasticsearch(@Nullable TopicRuleErrorActionElasticsearchArgs elasticsearch) {
             this.elasticsearch = Input.ofNullable(elasticsearch);
             return this;
         }
 
-        public Builder setFirehose(@Nullable Input<TopicRuleErrorActionFirehoseArgs> firehose) {
+        public Builder firehose(@Nullable Input<TopicRuleErrorActionFirehoseArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setFirehose(@Nullable TopicRuleErrorActionFirehoseArgs firehose) {
+        public Builder firehose(@Nullable TopicRuleErrorActionFirehoseArgs firehose) {
             this.firehose = Input.ofNullable(firehose);
             return this;
         }
 
-        public Builder setIotAnalytics(@Nullable Input<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics) {
+        public Builder iotAnalytics(@Nullable Input<TopicRuleErrorActionIotAnalyticsArgs> iotAnalytics) {
             this.iotAnalytics = iotAnalytics;
             return this;
         }
 
-        public Builder setIotAnalytics(@Nullable TopicRuleErrorActionIotAnalyticsArgs iotAnalytics) {
+        public Builder iotAnalytics(@Nullable TopicRuleErrorActionIotAnalyticsArgs iotAnalytics) {
             this.iotAnalytics = Input.ofNullable(iotAnalytics);
             return this;
         }
 
-        public Builder setIotEvents(@Nullable Input<TopicRuleErrorActionIotEventsArgs> iotEvents) {
+        public Builder iotEvents(@Nullable Input<TopicRuleErrorActionIotEventsArgs> iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
 
-        public Builder setIotEvents(@Nullable TopicRuleErrorActionIotEventsArgs iotEvents) {
+        public Builder iotEvents(@Nullable TopicRuleErrorActionIotEventsArgs iotEvents) {
             this.iotEvents = Input.ofNullable(iotEvents);
             return this;
         }
 
-        public Builder setKinesis(@Nullable Input<TopicRuleErrorActionKinesisArgs> kinesis) {
+        public Builder kinesis(@Nullable Input<TopicRuleErrorActionKinesisArgs> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
-        public Builder setKinesis(@Nullable TopicRuleErrorActionKinesisArgs kinesis) {
+        public Builder kinesis(@Nullable TopicRuleErrorActionKinesisArgs kinesis) {
             this.kinesis = Input.ofNullable(kinesis);
             return this;
         }
 
-        public Builder setLambda(@Nullable Input<TopicRuleErrorActionLambdaArgs> lambda) {
+        public Builder lambda(@Nullable Input<TopicRuleErrorActionLambdaArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setLambda(@Nullable TopicRuleErrorActionLambdaArgs lambda) {
+        public Builder lambda(@Nullable TopicRuleErrorActionLambdaArgs lambda) {
             this.lambda = Input.ofNullable(lambda);
             return this;
         }
 
-        public Builder setRepublish(@Nullable Input<TopicRuleErrorActionRepublishArgs> republish) {
+        public Builder republish(@Nullable Input<TopicRuleErrorActionRepublishArgs> republish) {
             this.republish = republish;
             return this;
         }
 
-        public Builder setRepublish(@Nullable TopicRuleErrorActionRepublishArgs republish) {
+        public Builder republish(@Nullable TopicRuleErrorActionRepublishArgs republish) {
             this.republish = Input.ofNullable(republish);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<TopicRuleErrorActionS3Args> s3) {
+        public Builder s3(@Nullable Input<TopicRuleErrorActionS3Args> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable TopicRuleErrorActionS3Args s3) {
+        public Builder s3(@Nullable TopicRuleErrorActionS3Args s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }
 
-        public Builder setSns(@Nullable Input<TopicRuleErrorActionSnsArgs> sns) {
+        public Builder sns(@Nullable Input<TopicRuleErrorActionSnsArgs> sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSns(@Nullable TopicRuleErrorActionSnsArgs sns) {
+        public Builder sns(@Nullable TopicRuleErrorActionSnsArgs sns) {
             this.sns = Input.ofNullable(sns);
             return this;
         }
 
-        public Builder setSqs(@Nullable Input<TopicRuleErrorActionSqsArgs> sqs) {
+        public Builder sqs(@Nullable Input<TopicRuleErrorActionSqsArgs> sqs) {
             this.sqs = sqs;
             return this;
         }
 
-        public Builder setSqs(@Nullable TopicRuleErrorActionSqsArgs sqs) {
+        public Builder sqs(@Nullable TopicRuleErrorActionSqsArgs sqs) {
             this.sqs = Input.ofNullable(sqs);
             return this;
         }
 
-        public Builder setStepFunctions(@Nullable Input<TopicRuleErrorActionStepFunctionsArgs> stepFunctions) {
+        public Builder stepFunctions(@Nullable Input<TopicRuleErrorActionStepFunctionsArgs> stepFunctions) {
             this.stepFunctions = stepFunctions;
             return this;
         }
 
-        public Builder setStepFunctions(@Nullable TopicRuleErrorActionStepFunctionsArgs stepFunctions) {
+        public Builder stepFunctions(@Nullable TopicRuleErrorActionStepFunctionsArgs stepFunctions) {
             this.stepFunctions = Input.ofNullable(stepFunctions);
             return this;
         }

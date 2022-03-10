@@ -86,17 +86,17 @@ public final class RuleGroupRuleStatementRegexPatternSetReferenceStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setFieldToMatch(@Nullable RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(@Nullable RuleGroupRuleStatementRegexPatternSetReferenceStatementFieldToMatch fieldToMatch) {
             this.fieldToMatch = fieldToMatch;
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
+        public Builder textTransformations(List<RuleGroupRuleStatementRegexPatternSetReferenceStatementTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

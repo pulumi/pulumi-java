@@ -156,47 +156,47 @@ public final class GetAddonResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddonName(String addonName) {
+        public Builder addonName(String addonName) {
             this.addonName = Objects.requireNonNull(addonName);
             return this;
         }
 
-        public Builder setAddonVersion(String addonVersion) {
+        public Builder addonVersion(String addonVersion) {
             this.addonVersion = Objects.requireNonNull(addonVersion);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setModifiedAt(String modifiedAt) {
+        public Builder modifiedAt(String modifiedAt) {
             this.modifiedAt = Objects.requireNonNull(modifiedAt);
             return this;
         }
 
-        public Builder setServiceAccountRoleArn(String serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = Objects.requireNonNull(serviceAccountRoleArn);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

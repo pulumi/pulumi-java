@@ -88,32 +88,32 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.statefulRuleOptions = defaults.statefulRuleOptions;
         }
 
-        public Builder setRuleVariables(@Nullable Input<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables) {
+        public Builder ruleVariables(@Nullable Input<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables) {
             this.ruleVariables = ruleVariables;
             return this;
         }
 
-        public Builder setRuleVariables(@Nullable RuleGroupRuleGroupRuleVariablesArgs ruleVariables) {
+        public Builder ruleVariables(@Nullable RuleGroupRuleGroupRuleVariablesArgs ruleVariables) {
             this.ruleVariables = Input.ofNullable(ruleVariables);
             return this;
         }
 
-        public Builder setRulesSource(Input<RuleGroupRuleGroupRulesSourceArgs> rulesSource) {
+        public Builder rulesSource(Input<RuleGroupRuleGroupRulesSourceArgs> rulesSource) {
             this.rulesSource = Objects.requireNonNull(rulesSource);
             return this;
         }
 
-        public Builder setRulesSource(RuleGroupRuleGroupRulesSourceArgs rulesSource) {
+        public Builder rulesSource(RuleGroupRuleGroupRulesSourceArgs rulesSource) {
             this.rulesSource = Input.of(Objects.requireNonNull(rulesSource));
             return this;
         }
 
-        public Builder setStatefulRuleOptions(@Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions) {
+        public Builder statefulRuleOptions(@Nullable Input<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions) {
             this.statefulRuleOptions = statefulRuleOptions;
             return this;
         }
 
-        public Builder setStatefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsArgs statefulRuleOptions) {
+        public Builder statefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsArgs statefulRuleOptions) {
             this.statefulRuleOptions = Input.ofNullable(statefulRuleOptions);
             return this;
         }

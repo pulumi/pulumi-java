@@ -49,7 +49,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
     	      this.groups = defaults.groups;
         }
 
-        public Builder setGroups(List<String> groups) {
+        public Builder groups(List<String> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }

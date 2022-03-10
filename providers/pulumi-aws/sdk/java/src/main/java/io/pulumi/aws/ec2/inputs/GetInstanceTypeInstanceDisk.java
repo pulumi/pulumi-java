@@ -73,17 +73,17 @@ public final class GetInstanceTypeInstanceDisk extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

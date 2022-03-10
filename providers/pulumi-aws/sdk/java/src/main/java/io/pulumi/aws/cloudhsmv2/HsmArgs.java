@@ -102,42 +102,42 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

@@ -52,12 +52,12 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptionsGetArgs exte
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder setRuleOrder(Input<String> ruleOrder) {
+        public Builder ruleOrder(Input<String> ruleOrder) {
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
         }
 
-        public Builder setRuleOrder(String ruleOrder) {
+        public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Input.of(Objects.requireNonNull(ruleOrder));
             return this;
         }

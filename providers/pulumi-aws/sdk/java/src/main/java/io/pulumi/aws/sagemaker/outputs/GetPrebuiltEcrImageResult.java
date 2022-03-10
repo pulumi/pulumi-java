@@ -115,37 +115,37 @@ public final class GetPrebuiltEcrImageResult {
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder setDnsSuffix(@Nullable String dnsSuffix) {
+        public Builder dnsSuffix(@Nullable String dnsSuffix) {
             this.dnsSuffix = dnsSuffix;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageTag(@Nullable String imageTag) {
+        public Builder imageTag(@Nullable String imageTag) {
             this.imageTag = imageTag;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
 
-        public Builder setRegistryPath(String registryPath) {
+        public Builder registryPath(String registryPath) {
             this.registryPath = Objects.requireNonNull(registryPath);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }

@@ -65,12 +65,12 @@ public final class DomainSamlOptionsSamlOptionsIdp {
     	      this.metadataContent = defaults.metadataContent;
         }
 
-        public Builder setEntityId(String entityId) {
+        public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
 
-        public Builder setMetadataContent(String metadataContent) {
+        public Builder metadataContent(String metadataContent) {
             this.metadataContent = Objects.requireNonNull(metadataContent);
             return this;
         }

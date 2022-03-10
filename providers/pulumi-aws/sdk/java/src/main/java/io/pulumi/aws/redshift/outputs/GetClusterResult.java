@@ -526,157 +526,157 @@ public final class GetClusterResult {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setAllowVersionUpgrade(Boolean allowVersionUpgrade) {
+        public Builder allowVersionUpgrade(Boolean allowVersionUpgrade) {
             this.allowVersionUpgrade = Objects.requireNonNull(allowVersionUpgrade);
             return this;
         }
 
-        public Builder setAutomatedSnapshotRetentionPeriod(Integer automatedSnapshotRetentionPeriod) {
+        public Builder automatedSnapshotRetentionPeriod(Integer automatedSnapshotRetentionPeriod) {
             this.automatedSnapshotRetentionPeriod = Objects.requireNonNull(automatedSnapshotRetentionPeriod);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterParameterGroupName(String clusterParameterGroupName) {
+        public Builder clusterParameterGroupName(String clusterParameterGroupName) {
             this.clusterParameterGroupName = Objects.requireNonNull(clusterParameterGroupName);
             return this;
         }
 
-        public Builder setClusterPublicKey(String clusterPublicKey) {
+        public Builder clusterPublicKey(String clusterPublicKey) {
             this.clusterPublicKey = Objects.requireNonNull(clusterPublicKey);
             return this;
         }
 
-        public Builder setClusterRevisionNumber(String clusterRevisionNumber) {
+        public Builder clusterRevisionNumber(String clusterRevisionNumber) {
             this.clusterRevisionNumber = Objects.requireNonNull(clusterRevisionNumber);
             return this;
         }
 
-        public Builder setClusterSecurityGroups(List<String> clusterSecurityGroups) {
+        public Builder clusterSecurityGroups(List<String> clusterSecurityGroups) {
             this.clusterSecurityGroups = Objects.requireNonNull(clusterSecurityGroups);
             return this;
         }
 
-        public Builder setClusterSubnetGroupName(String clusterSubnetGroupName) {
+        public Builder clusterSubnetGroupName(String clusterSubnetGroupName) {
             this.clusterSubnetGroupName = Objects.requireNonNull(clusterSubnetGroupName);
             return this;
         }
 
-        public Builder setClusterType(String clusterType) {
+        public Builder clusterType(String clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
 
-        public Builder setClusterVersion(String clusterVersion) {
+        public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setElasticIp(String elasticIp) {
+        public Builder elasticIp(String elasticIp) {
             this.elasticIp = Objects.requireNonNull(elasticIp);
             return this;
         }
 
-        public Builder setEnableLogging(Boolean enableLogging) {
+        public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEnhancedVpcRouting(Boolean enhancedVpcRouting) {
+        public Builder enhancedVpcRouting(Boolean enhancedVpcRouting) {
             this.enhancedVpcRouting = Objects.requireNonNull(enhancedVpcRouting);
             return this;
         }
 
-        public Builder setIamRoles(List<String> iamRoles) {
+        public Builder iamRoles(List<String> iamRoles) {
             this.iamRoles = Objects.requireNonNull(iamRoles);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setMasterUsername(String masterUsername) {
+        public Builder masterUsername(String masterUsername) {
             this.masterUsername = Objects.requireNonNull(masterUsername);
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
 
-        public Builder setNumberOfNodes(Integer numberOfNodes) {
+        public Builder numberOfNodes(Integer numberOfNodes) {
             this.numberOfNodes = Objects.requireNonNull(numberOfNodes);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = Objects.requireNonNull(preferredMaintenanceWindow);
             return this;
         }
 
-        public Builder setPubliclyAccessible(Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(Boolean publiclyAccessible) {
             this.publiclyAccessible = Objects.requireNonNull(publiclyAccessible);
             return this;
         }
 
-        public Builder setS3KeyPrefix(String s3KeyPrefix) {
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
             this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Objects.requireNonNull(vpcSecurityGroupIds);
             return this;
         }

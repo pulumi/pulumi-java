@@ -98,22 +98,22 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection {
     	      this.reportUri = defaults.reportUri;
         }
 
-        public Builder setModeBlock(Boolean modeBlock) {
+        public Builder modeBlock(Boolean modeBlock) {
             this.modeBlock = Objects.requireNonNull(modeBlock);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setProtection(Boolean protection) {
+        public Builder protection(Boolean protection) {
             this.protection = Objects.requireNonNull(protection);
             return this;
         }
 
-        public Builder setReportUri(String reportUri) {
+        public Builder reportUri(String reportUri) {
             this.reportUri = Objects.requireNonNull(reportUri);
             return this;
         }

@@ -70,22 +70,22 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
     	      this.masterAccountId = defaults.masterAccountId;
         }
 
-        public Builder setDetectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Input<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
-        public Builder setDetectorId(@Nullable String detectorId) {
+        public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Input.ofNullable(detectorId);
             return this;
         }
 
-        public Builder setMasterAccountId(@Nullable Input<String> masterAccountId) {
+        public Builder masterAccountId(@Nullable Input<String> masterAccountId) {
             this.masterAccountId = masterAccountId;
             return this;
         }
 
-        public Builder setMasterAccountId(@Nullable String masterAccountId) {
+        public Builder masterAccountId(@Nullable String masterAccountId) {
             this.masterAccountId = Input.ofNullable(masterAccountId);
             return this;
         }

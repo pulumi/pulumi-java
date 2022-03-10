@@ -92,22 +92,22 @@ public final class PermissionsTable {
     	      this.wildcard = defaults.wildcard;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setWildcard(@Nullable Boolean wildcard) {
+        public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = wildcard;
             return this;
         }

@@ -202,102 +202,102 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<String> authentication) {
+        public Builder authentication(@Nullable Input<String> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable String authentication) {
+        public Builder authentication(@Nullable String authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable Input<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Input<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable WebhookAuthenticationConfigurationGetArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable WebhookAuthenticationConfigurationGetArgs authenticationConfiguration) {
             this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder setFilters(@Nullable Input<List<WebhookFilterGetArgs>> filters) {
+        public Builder filters(@Nullable Input<List<WebhookFilterGetArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<WebhookFilterGetArgs> filters) {
+        public Builder filters(@Nullable List<WebhookFilterGetArgs> filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTargetAction(@Nullable Input<String> targetAction) {
+        public Builder targetAction(@Nullable Input<String> targetAction) {
             this.targetAction = targetAction;
             return this;
         }
 
-        public Builder setTargetAction(@Nullable String targetAction) {
+        public Builder targetAction(@Nullable String targetAction) {
             this.targetAction = Input.ofNullable(targetAction);
             return this;
         }
 
-        public Builder setTargetPipeline(@Nullable Input<String> targetPipeline) {
+        public Builder targetPipeline(@Nullable Input<String> targetPipeline) {
             this.targetPipeline = targetPipeline;
             return this;
         }
 
-        public Builder setTargetPipeline(@Nullable String targetPipeline) {
+        public Builder targetPipeline(@Nullable String targetPipeline) {
             this.targetPipeline = Input.ofNullable(targetPipeline);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

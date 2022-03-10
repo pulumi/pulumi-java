@@ -93,17 +93,17 @@ public final class PeeringConnectionOptionsRequester {
     	      this.allowVpcToRemoteClassicLink = defaults.allowVpcToRemoteClassicLink;
         }
 
-        public Builder setAllowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
+        public Builder allowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
             this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
             return this;
         }
 
-        public Builder setAllowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
+        public Builder allowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
             this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
             return this;
         }
 
-        public Builder setAllowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
+        public Builder allowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
             this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
             return this;
         }

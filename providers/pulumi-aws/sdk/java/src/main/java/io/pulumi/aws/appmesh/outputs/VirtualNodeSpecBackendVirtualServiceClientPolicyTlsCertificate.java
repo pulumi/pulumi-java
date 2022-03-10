@@ -68,12 +68,12 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFile file) {
+        public Builder file(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds sds) {
             this.sds = sds;
             return this;
         }

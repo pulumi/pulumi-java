@@ -53,12 +53,12 @@ public final class FleetSpotOptionsMaintenanceStrategiesArgs extends io.pulumi.r
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder setCapacityRebalance(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Input<FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
-        public Builder setCapacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs capacityRebalance) {
+        public Builder capacityRebalance(@Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalanceArgs capacityRebalance) {
             this.capacityRebalance = Input.ofNullable(capacityRebalance);
             return this;
         }

@@ -101,27 +101,27 @@ public final class GetImageRecipesResult {
     	      this.owner = defaults.owner;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetImageRecipesFilter> filters) {
+        public Builder filters(@Nullable List<GetImageRecipesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }

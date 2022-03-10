@@ -103,42 +103,42 @@ public final class SecurityGroupIngressGetArgs extends io.pulumi.resources.Resou
     	      this.securityGroupOwnerId = defaults.securityGroupOwnerId;
         }
 
-        public Builder setCidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Input<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
-        public Builder setCidr(@Nullable String cidr) {
+        public Builder cidr(@Nullable String cidr) {
             this.cidr = Input.ofNullable(cidr);
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable String securityGroupId) {
+        public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Input.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder setSecurityGroupName(@Nullable Input<String> securityGroupName) {
+        public Builder securityGroupName(@Nullable Input<String> securityGroupName) {
             this.securityGroupName = securityGroupName;
             return this;
         }
 
-        public Builder setSecurityGroupName(@Nullable String securityGroupName) {
+        public Builder securityGroupName(@Nullable String securityGroupName) {
             this.securityGroupName = Input.ofNullable(securityGroupName);
             return this;
         }
 
-        public Builder setSecurityGroupOwnerId(@Nullable Input<String> securityGroupOwnerId) {
+        public Builder securityGroupOwnerId(@Nullable Input<String> securityGroupOwnerId) {
             this.securityGroupOwnerId = securityGroupOwnerId;
             return this;
         }
 
-        public Builder setSecurityGroupOwnerId(@Nullable String securityGroupOwnerId) {
+        public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
             this.securityGroupOwnerId = Input.ofNullable(securityGroupOwnerId);
             return this;
         }

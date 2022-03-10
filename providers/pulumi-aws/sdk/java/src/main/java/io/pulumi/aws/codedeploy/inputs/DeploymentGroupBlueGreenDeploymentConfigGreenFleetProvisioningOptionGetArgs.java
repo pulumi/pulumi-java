@@ -55,12 +55,12 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }

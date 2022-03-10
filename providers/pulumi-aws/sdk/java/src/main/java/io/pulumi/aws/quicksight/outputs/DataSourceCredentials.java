@@ -70,12 +70,12 @@ public final class DataSourceCredentials {
     	      this.credentialPair = defaults.credentialPair;
         }
 
-        public Builder setCopySourceArn(@Nullable String copySourceArn) {
+        public Builder copySourceArn(@Nullable String copySourceArn) {
             this.copySourceArn = copySourceArn;
             return this;
         }
 
-        public Builder setCredentialPair(@Nullable DataSourceCredentialsCredentialPair credentialPair) {
+        public Builder credentialPair(@Nullable DataSourceCredentialsCredentialPair credentialPair) {
             this.credentialPair = credentialPair;
             return this;
         }

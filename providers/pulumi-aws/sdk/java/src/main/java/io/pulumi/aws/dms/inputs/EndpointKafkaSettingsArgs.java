@@ -328,182 +328,182 @@ public final class EndpointKafkaSettingsArgs extends io.pulumi.resources.Resourc
     	      this.topic = defaults.topic;
         }
 
-        public Builder setBroker(Input<String> broker) {
+        public Builder broker(Input<String> broker) {
             this.broker = Objects.requireNonNull(broker);
             return this;
         }
 
-        public Builder setBroker(String broker) {
+        public Builder broker(String broker) {
             this.broker = Input.of(Objects.requireNonNull(broker));
             return this;
         }
 
-        public Builder setIncludeControlDetails(@Nullable Input<Boolean> includeControlDetails) {
+        public Builder includeControlDetails(@Nullable Input<Boolean> includeControlDetails) {
             this.includeControlDetails = includeControlDetails;
             return this;
         }
 
-        public Builder setIncludeControlDetails(@Nullable Boolean includeControlDetails) {
+        public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
             this.includeControlDetails = Input.ofNullable(includeControlDetails);
             return this;
         }
 
-        public Builder setIncludeNullAndEmpty(@Nullable Input<Boolean> includeNullAndEmpty) {
+        public Builder includeNullAndEmpty(@Nullable Input<Boolean> includeNullAndEmpty) {
             this.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
 
-        public Builder setIncludeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
+        public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
             this.includeNullAndEmpty = Input.ofNullable(includeNullAndEmpty);
             return this;
         }
 
-        public Builder setIncludePartitionValue(@Nullable Input<Boolean> includePartitionValue) {
+        public Builder includePartitionValue(@Nullable Input<Boolean> includePartitionValue) {
             this.includePartitionValue = includePartitionValue;
             return this;
         }
 
-        public Builder setIncludePartitionValue(@Nullable Boolean includePartitionValue) {
+        public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
             this.includePartitionValue = Input.ofNullable(includePartitionValue);
             return this;
         }
 
-        public Builder setIncludeTableAlterOperations(@Nullable Input<Boolean> includeTableAlterOperations) {
+        public Builder includeTableAlterOperations(@Nullable Input<Boolean> includeTableAlterOperations) {
             this.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
 
-        public Builder setIncludeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
+        public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
             this.includeTableAlterOperations = Input.ofNullable(includeTableAlterOperations);
             return this;
         }
 
-        public Builder setIncludeTransactionDetails(@Nullable Input<Boolean> includeTransactionDetails) {
+        public Builder includeTransactionDetails(@Nullable Input<Boolean> includeTransactionDetails) {
             this.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
 
-        public Builder setIncludeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
+        public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
             this.includeTransactionDetails = Input.ofNullable(includeTransactionDetails);
             return this;
         }
 
-        public Builder setMessageFormat(@Nullable Input<String> messageFormat) {
+        public Builder messageFormat(@Nullable Input<String> messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
-        public Builder setMessageFormat(@Nullable String messageFormat) {
+        public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = Input.ofNullable(messageFormat);
             return this;
         }
 
-        public Builder setMessageMaxBytes(@Nullable Input<Integer> messageMaxBytes) {
+        public Builder messageMaxBytes(@Nullable Input<Integer> messageMaxBytes) {
             this.messageMaxBytes = messageMaxBytes;
             return this;
         }
 
-        public Builder setMessageMaxBytes(@Nullable Integer messageMaxBytes) {
+        public Builder messageMaxBytes(@Nullable Integer messageMaxBytes) {
             this.messageMaxBytes = Input.ofNullable(messageMaxBytes);
             return this;
         }
 
-        public Builder setNoHexPrefix(@Nullable Input<Boolean> noHexPrefix) {
+        public Builder noHexPrefix(@Nullable Input<Boolean> noHexPrefix) {
             this.noHexPrefix = noHexPrefix;
             return this;
         }
 
-        public Builder setNoHexPrefix(@Nullable Boolean noHexPrefix) {
+        public Builder noHexPrefix(@Nullable Boolean noHexPrefix) {
             this.noHexPrefix = Input.ofNullable(noHexPrefix);
             return this;
         }
 
-        public Builder setPartitionIncludeSchemaTable(@Nullable Input<Boolean> partitionIncludeSchemaTable) {
+        public Builder partitionIncludeSchemaTable(@Nullable Input<Boolean> partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
 
-        public Builder setPartitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
+        public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = Input.ofNullable(partitionIncludeSchemaTable);
             return this;
         }
 
-        public Builder setSaslPassword(@Nullable Input<String> saslPassword) {
+        public Builder saslPassword(@Nullable Input<String> saslPassword) {
             this.saslPassword = saslPassword;
             return this;
         }
 
-        public Builder setSaslPassword(@Nullable String saslPassword) {
+        public Builder saslPassword(@Nullable String saslPassword) {
             this.saslPassword = Input.ofNullable(saslPassword);
             return this;
         }
 
-        public Builder setSaslUsername(@Nullable Input<String> saslUsername) {
+        public Builder saslUsername(@Nullable Input<String> saslUsername) {
             this.saslUsername = saslUsername;
             return this;
         }
 
-        public Builder setSaslUsername(@Nullable String saslUsername) {
+        public Builder saslUsername(@Nullable String saslUsername) {
             this.saslUsername = Input.ofNullable(saslUsername);
             return this;
         }
 
-        public Builder setSecurityProtocol(@Nullable Input<String> securityProtocol) {
+        public Builder securityProtocol(@Nullable Input<String> securityProtocol) {
             this.securityProtocol = securityProtocol;
             return this;
         }
 
-        public Builder setSecurityProtocol(@Nullable String securityProtocol) {
+        public Builder securityProtocol(@Nullable String securityProtocol) {
             this.securityProtocol = Input.ofNullable(securityProtocol);
             return this;
         }
 
-        public Builder setSslCaCertificateArn(@Nullable Input<String> sslCaCertificateArn) {
+        public Builder sslCaCertificateArn(@Nullable Input<String> sslCaCertificateArn) {
             this.sslCaCertificateArn = sslCaCertificateArn;
             return this;
         }
 
-        public Builder setSslCaCertificateArn(@Nullable String sslCaCertificateArn) {
+        public Builder sslCaCertificateArn(@Nullable String sslCaCertificateArn) {
             this.sslCaCertificateArn = Input.ofNullable(sslCaCertificateArn);
             return this;
         }
 
-        public Builder setSslClientCertificateArn(@Nullable Input<String> sslClientCertificateArn) {
+        public Builder sslClientCertificateArn(@Nullable Input<String> sslClientCertificateArn) {
             this.sslClientCertificateArn = sslClientCertificateArn;
             return this;
         }
 
-        public Builder setSslClientCertificateArn(@Nullable String sslClientCertificateArn) {
+        public Builder sslClientCertificateArn(@Nullable String sslClientCertificateArn) {
             this.sslClientCertificateArn = Input.ofNullable(sslClientCertificateArn);
             return this;
         }
 
-        public Builder setSslClientKeyArn(@Nullable Input<String> sslClientKeyArn) {
+        public Builder sslClientKeyArn(@Nullable Input<String> sslClientKeyArn) {
             this.sslClientKeyArn = sslClientKeyArn;
             return this;
         }
 
-        public Builder setSslClientKeyArn(@Nullable String sslClientKeyArn) {
+        public Builder sslClientKeyArn(@Nullable String sslClientKeyArn) {
             this.sslClientKeyArn = Input.ofNullable(sslClientKeyArn);
             return this;
         }
 
-        public Builder setSslClientKeyPassword(@Nullable Input<String> sslClientKeyPassword) {
+        public Builder sslClientKeyPassword(@Nullable Input<String> sslClientKeyPassword) {
             this.sslClientKeyPassword = sslClientKeyPassword;
             return this;
         }
 
-        public Builder setSslClientKeyPassword(@Nullable String sslClientKeyPassword) {
+        public Builder sslClientKeyPassword(@Nullable String sslClientKeyPassword) {
             this.sslClientKeyPassword = Input.ofNullable(sslClientKeyPassword);
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }

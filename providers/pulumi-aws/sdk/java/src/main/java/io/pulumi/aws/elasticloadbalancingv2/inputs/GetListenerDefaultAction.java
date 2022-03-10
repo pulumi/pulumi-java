@@ -139,42 +139,42 @@ public final class GetListenerDefaultAction extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticateCognitos(List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos) {
+        public Builder authenticateCognitos(List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos) {
             this.authenticateCognitos = Objects.requireNonNull(authenticateCognitos);
             return this;
         }
 
-        public Builder setAuthenticateOidcs(List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs) {
+        public Builder authenticateOidcs(List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs) {
             this.authenticateOidcs = Objects.requireNonNull(authenticateOidcs);
             return this;
         }
 
-        public Builder setFixedResponses(List<GetListenerDefaultActionFixedResponse> fixedResponses) {
+        public Builder fixedResponses(List<GetListenerDefaultActionFixedResponse> fixedResponses) {
             this.fixedResponses = Objects.requireNonNull(fixedResponses);
             return this;
         }
 
-        public Builder setForwards(List<GetListenerDefaultActionForward> forwards) {
+        public Builder forwards(List<GetListenerDefaultActionForward> forwards) {
             this.forwards = Objects.requireNonNull(forwards);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setRedirects(List<GetListenerDefaultActionRedirect> redirects) {
+        public Builder redirects(List<GetListenerDefaultActionRedirect> redirects) {
             this.redirects = Objects.requireNonNull(redirects);
             return this;
         }
 
-        public Builder setTargetGroupArn(String targetGroupArn) {
+        public Builder targetGroupArn(String targetGroupArn) {
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

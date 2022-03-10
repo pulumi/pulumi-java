@@ -69,12 +69,12 @@ public final class IntentDialogCodeHook {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setMessageVersion(String messageVersion) {
+        public Builder messageVersion(String messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

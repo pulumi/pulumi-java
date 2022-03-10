@@ -70,22 +70,22 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
     	      this.replicasPerNodeGroup = defaults.replicasPerNodeGroup;
         }
 
-        public Builder setNumNodeGroups(@Nullable Input<Integer> numNodeGroups) {
+        public Builder numNodeGroups(@Nullable Input<Integer> numNodeGroups) {
             this.numNodeGroups = numNodeGroups;
             return this;
         }
 
-        public Builder setNumNodeGroups(@Nullable Integer numNodeGroups) {
+        public Builder numNodeGroups(@Nullable Integer numNodeGroups) {
             this.numNodeGroups = Input.ofNullable(numNodeGroups);
             return this;
         }
 
-        public Builder setReplicasPerNodeGroup(Input<Integer> replicasPerNodeGroup) {
+        public Builder replicasPerNodeGroup(Input<Integer> replicasPerNodeGroup) {
             this.replicasPerNodeGroup = Objects.requireNonNull(replicasPerNodeGroup);
             return this;
         }
 
-        public Builder setReplicasPerNodeGroup(Integer replicasPerNodeGroup) {
+        public Builder replicasPerNodeGroup(Integer replicasPerNodeGroup) {
             this.replicasPerNodeGroup = Input.of(Objects.requireNonNull(replicasPerNodeGroup));
             return this;
         }

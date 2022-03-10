@@ -199,102 +199,102 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
     	      this.requireUppercaseCharacters = defaults.requireUppercaseCharacters;
         }
 
-        public Builder setAllowUsersToChangePassword(@Nullable Input<Boolean> allowUsersToChangePassword) {
+        public Builder allowUsersToChangePassword(@Nullable Input<Boolean> allowUsersToChangePassword) {
             this.allowUsersToChangePassword = allowUsersToChangePassword;
             return this;
         }
 
-        public Builder setAllowUsersToChangePassword(@Nullable Boolean allowUsersToChangePassword) {
+        public Builder allowUsersToChangePassword(@Nullable Boolean allowUsersToChangePassword) {
             this.allowUsersToChangePassword = Input.ofNullable(allowUsersToChangePassword);
             return this;
         }
 
-        public Builder setExpirePasswords(@Nullable Input<Boolean> expirePasswords) {
+        public Builder expirePasswords(@Nullable Input<Boolean> expirePasswords) {
             this.expirePasswords = expirePasswords;
             return this;
         }
 
-        public Builder setExpirePasswords(@Nullable Boolean expirePasswords) {
+        public Builder expirePasswords(@Nullable Boolean expirePasswords) {
             this.expirePasswords = Input.ofNullable(expirePasswords);
             return this;
         }
 
-        public Builder setHardExpiry(@Nullable Input<Boolean> hardExpiry) {
+        public Builder hardExpiry(@Nullable Input<Boolean> hardExpiry) {
             this.hardExpiry = hardExpiry;
             return this;
         }
 
-        public Builder setHardExpiry(@Nullable Boolean hardExpiry) {
+        public Builder hardExpiry(@Nullable Boolean hardExpiry) {
             this.hardExpiry = Input.ofNullable(hardExpiry);
             return this;
         }
 
-        public Builder setMaxPasswordAge(@Nullable Input<Integer> maxPasswordAge) {
+        public Builder maxPasswordAge(@Nullable Input<Integer> maxPasswordAge) {
             this.maxPasswordAge = maxPasswordAge;
             return this;
         }
 
-        public Builder setMaxPasswordAge(@Nullable Integer maxPasswordAge) {
+        public Builder maxPasswordAge(@Nullable Integer maxPasswordAge) {
             this.maxPasswordAge = Input.ofNullable(maxPasswordAge);
             return this;
         }
 
-        public Builder setMinimumPasswordLength(@Nullable Input<Integer> minimumPasswordLength) {
+        public Builder minimumPasswordLength(@Nullable Input<Integer> minimumPasswordLength) {
             this.minimumPasswordLength = minimumPasswordLength;
             return this;
         }
 
-        public Builder setMinimumPasswordLength(@Nullable Integer minimumPasswordLength) {
+        public Builder minimumPasswordLength(@Nullable Integer minimumPasswordLength) {
             this.minimumPasswordLength = Input.ofNullable(minimumPasswordLength);
             return this;
         }
 
-        public Builder setPasswordReusePrevention(@Nullable Input<Integer> passwordReusePrevention) {
+        public Builder passwordReusePrevention(@Nullable Input<Integer> passwordReusePrevention) {
             this.passwordReusePrevention = passwordReusePrevention;
             return this;
         }
 
-        public Builder setPasswordReusePrevention(@Nullable Integer passwordReusePrevention) {
+        public Builder passwordReusePrevention(@Nullable Integer passwordReusePrevention) {
             this.passwordReusePrevention = Input.ofNullable(passwordReusePrevention);
             return this;
         }
 
-        public Builder setRequireLowercaseCharacters(@Nullable Input<Boolean> requireLowercaseCharacters) {
+        public Builder requireLowercaseCharacters(@Nullable Input<Boolean> requireLowercaseCharacters) {
             this.requireLowercaseCharacters = requireLowercaseCharacters;
             return this;
         }
 
-        public Builder setRequireLowercaseCharacters(@Nullable Boolean requireLowercaseCharacters) {
+        public Builder requireLowercaseCharacters(@Nullable Boolean requireLowercaseCharacters) {
             this.requireLowercaseCharacters = Input.ofNullable(requireLowercaseCharacters);
             return this;
         }
 
-        public Builder setRequireNumbers(@Nullable Input<Boolean> requireNumbers) {
+        public Builder requireNumbers(@Nullable Input<Boolean> requireNumbers) {
             this.requireNumbers = requireNumbers;
             return this;
         }
 
-        public Builder setRequireNumbers(@Nullable Boolean requireNumbers) {
+        public Builder requireNumbers(@Nullable Boolean requireNumbers) {
             this.requireNumbers = Input.ofNullable(requireNumbers);
             return this;
         }
 
-        public Builder setRequireSymbols(@Nullable Input<Boolean> requireSymbols) {
+        public Builder requireSymbols(@Nullable Input<Boolean> requireSymbols) {
             this.requireSymbols = requireSymbols;
             return this;
         }
 
-        public Builder setRequireSymbols(@Nullable Boolean requireSymbols) {
+        public Builder requireSymbols(@Nullable Boolean requireSymbols) {
             this.requireSymbols = Input.ofNullable(requireSymbols);
             return this;
         }
 
-        public Builder setRequireUppercaseCharacters(@Nullable Input<Boolean> requireUppercaseCharacters) {
+        public Builder requireUppercaseCharacters(@Nullable Input<Boolean> requireUppercaseCharacters) {
             this.requireUppercaseCharacters = requireUppercaseCharacters;
             return this;
         }
 
-        public Builder setRequireUppercaseCharacters(@Nullable Boolean requireUppercaseCharacters) {
+        public Builder requireUppercaseCharacters(@Nullable Boolean requireUppercaseCharacters) {
             this.requireUppercaseCharacters = Input.ofNullable(requireUppercaseCharacters);
             return this;
         }

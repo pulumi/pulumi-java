@@ -87,32 +87,32 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setFilters(Input<InsightFiltersArgs> filters) {
+        public Builder filters(Input<InsightFiltersArgs> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setFilters(InsightFiltersArgs filters) {
+        public Builder filters(InsightFiltersArgs filters) {
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }
 
-        public Builder setGroupByAttribute(Input<String> groupByAttribute) {
+        public Builder groupByAttribute(Input<String> groupByAttribute) {
             this.groupByAttribute = Objects.requireNonNull(groupByAttribute);
             return this;
         }
 
-        public Builder setGroupByAttribute(String groupByAttribute) {
+        public Builder groupByAttribute(String groupByAttribute) {
             this.groupByAttribute = Input.of(Objects.requireNonNull(groupByAttribute));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

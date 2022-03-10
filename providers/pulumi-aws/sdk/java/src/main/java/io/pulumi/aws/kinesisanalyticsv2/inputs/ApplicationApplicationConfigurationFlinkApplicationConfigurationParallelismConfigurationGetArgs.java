@@ -104,42 +104,42 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.parallelismPerKpu = defaults.parallelismPerKpu;
         }
 
-        public Builder setAutoScalingEnabled(@Nullable Input<Boolean> autoScalingEnabled) {
+        public Builder autoScalingEnabled(@Nullable Input<Boolean> autoScalingEnabled) {
             this.autoScalingEnabled = autoScalingEnabled;
             return this;
         }
 
-        public Builder setAutoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
+        public Builder autoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
             this.autoScalingEnabled = Input.ofNullable(autoScalingEnabled);
             return this;
         }
 
-        public Builder setConfigurationType(Input<String> configurationType) {
+        public Builder configurationType(Input<String> configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
 
-        public Builder setConfigurationType(String configurationType) {
+        public Builder configurationType(String configurationType) {
             this.configurationType = Input.of(Objects.requireNonNull(configurationType));
             return this;
         }
 
-        public Builder setParallelism(@Nullable Input<Integer> parallelism) {
+        public Builder parallelism(@Nullable Input<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = Input.ofNullable(parallelism);
             return this;
         }
 
-        public Builder setParallelismPerKpu(@Nullable Input<Integer> parallelismPerKpu) {
+        public Builder parallelismPerKpu(@Nullable Input<Integer> parallelismPerKpu) {
             this.parallelismPerKpu = parallelismPerKpu;
             return this;
         }
 
-        public Builder setParallelismPerKpu(@Nullable Integer parallelismPerKpu) {
+        public Builder parallelismPerKpu(@Nullable Integer parallelismPerKpu) {
             this.parallelismPerKpu = Input.ofNullable(parallelismPerKpu);
             return this;
         }

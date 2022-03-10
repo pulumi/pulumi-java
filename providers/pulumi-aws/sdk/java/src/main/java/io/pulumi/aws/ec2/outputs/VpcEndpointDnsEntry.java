@@ -67,12 +67,12 @@ public final class VpcEndpointDnsEntry {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }

@@ -82,17 +82,17 @@ public final class DeploymentGroupTriggerConfiguration {
     	      this.triggerTargetArn = defaults.triggerTargetArn;
         }
 
-        public Builder setTriggerEvents(List<String> triggerEvents) {
+        public Builder triggerEvents(List<String> triggerEvents) {
             this.triggerEvents = Objects.requireNonNull(triggerEvents);
             return this;
         }
 
-        public Builder setTriggerName(String triggerName) {
+        public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }
 
-        public Builder setTriggerTargetArn(String triggerTargetArn) {
+        public Builder triggerTargetArn(String triggerTargetArn) {
             this.triggerTargetArn = Objects.requireNonNull(triggerTargetArn);
             return this;
         }

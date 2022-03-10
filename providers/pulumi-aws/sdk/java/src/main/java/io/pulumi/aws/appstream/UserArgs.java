@@ -135,62 +135,62 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFirstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Input<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = Input.ofNullable(firstName);
             return this;
         }
 
-        public Builder setLastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Input<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = Input.ofNullable(lastName);
             return this;
         }
 
-        public Builder setSendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Input<Boolean> sendEmailNotification) {
             this.sendEmailNotification = sendEmailNotification;
             return this;
         }
 
-        public Builder setSendEmailNotification(@Nullable Boolean sendEmailNotification) {
+        public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
             this.sendEmailNotification = Input.ofNullable(sendEmailNotification);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

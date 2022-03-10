@@ -48,7 +48,7 @@ public final class VirtualServiceSpecProviderVirtualRouter {
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder setVirtualRouterName(String virtualRouterName) {
+        public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }

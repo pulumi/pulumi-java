@@ -88,17 +88,17 @@ public final class GetIpamPreviewNextCidrArgs extends io.pulumi.resources.Invoke
     	      this.netmaskLength = defaults.netmaskLength;
         }
 
-        public Builder setDisallowedCidrs(@Nullable List<String> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
 
-        public Builder setIpamPoolId(String ipamPoolId) {
+        public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = Objects.requireNonNull(ipamPoolId);
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Integer netmaskLength) {
+        public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }

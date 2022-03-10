@@ -72,12 +72,12 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setAllRegions(@Nullable Boolean allRegions) {
+        public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetRegionsFilter> filters) {
+        public Builder filters(@Nullable List<GetRegionsFilter> filters) {
             this.filters = filters;
             return this;
         }

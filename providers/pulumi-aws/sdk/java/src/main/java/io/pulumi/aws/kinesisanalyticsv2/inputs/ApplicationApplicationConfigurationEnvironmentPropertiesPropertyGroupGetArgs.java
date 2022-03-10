@@ -70,22 +70,22 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
     	      this.propertyMap = defaults.propertyMap;
         }
 
-        public Builder setPropertyGroupId(Input<String> propertyGroupId) {
+        public Builder propertyGroupId(Input<String> propertyGroupId) {
             this.propertyGroupId = Objects.requireNonNull(propertyGroupId);
             return this;
         }
 
-        public Builder setPropertyGroupId(String propertyGroupId) {
+        public Builder propertyGroupId(String propertyGroupId) {
             this.propertyGroupId = Input.of(Objects.requireNonNull(propertyGroupId));
             return this;
         }
 
-        public Builder setPropertyMap(Input<Map<String,String>> propertyMap) {
+        public Builder propertyMap(Input<Map<String,String>> propertyMap) {
             this.propertyMap = Objects.requireNonNull(propertyMap);
             return this;
         }
 
-        public Builder setPropertyMap(Map<String,String> propertyMap) {
+        public Builder propertyMap(Map<String,String> propertyMap) {
             this.propertyMap = Input.of(Objects.requireNonNull(propertyMap));
             return this;
         }

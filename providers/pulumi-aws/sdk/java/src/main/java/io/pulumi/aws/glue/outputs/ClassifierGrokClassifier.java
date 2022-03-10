@@ -83,17 +83,17 @@ public final class ClassifierGrokClassifier {
     	      this.grokPattern = defaults.grokPattern;
         }
 
-        public Builder setClassification(String classification) {
+        public Builder classification(String classification) {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
 
-        public Builder setCustomPatterns(@Nullable String customPatterns) {
+        public Builder customPatterns(@Nullable String customPatterns) {
             this.customPatterns = customPatterns;
             return this;
         }
 
-        public Builder setGrokPattern(String grokPattern) {
+        public Builder grokPattern(String grokPattern) {
             this.grokPattern = Objects.requireNonNull(grokPattern);
             return this;
         }

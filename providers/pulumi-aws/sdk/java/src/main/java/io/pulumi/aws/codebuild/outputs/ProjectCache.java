@@ -84,17 +84,17 @@ public final class ProjectCache {
     	      this.type = defaults.type;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setModes(@Nullable List<String> modes) {
+        public Builder modes(@Nullable List<String> modes) {
             this.modes = modes;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

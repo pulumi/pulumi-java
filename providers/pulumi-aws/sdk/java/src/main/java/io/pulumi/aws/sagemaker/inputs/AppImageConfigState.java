@@ -120,52 +120,52 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAppImageConfigName(@Nullable Input<String> appImageConfigName) {
+        public Builder appImageConfigName(@Nullable Input<String> appImageConfigName) {
             this.appImageConfigName = appImageConfigName;
             return this;
         }
 
-        public Builder setAppImageConfigName(@Nullable String appImageConfigName) {
+        public Builder appImageConfigName(@Nullable String appImageConfigName) {
             this.appImageConfigName = Input.ofNullable(appImageConfigName);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setKernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
 
-        public Builder setKernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigGetArgs kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigGetArgs kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = Input.ofNullable(kernelGatewayImageConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

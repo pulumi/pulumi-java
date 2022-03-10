@@ -91,32 +91,32 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaGetArgs extends
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder setRecordColumns(Input<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns) {
+        public Builder recordColumns(Input<List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs>> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
-        public Builder setRecordColumns(List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs> recordColumns) {
+        public Builder recordColumns(List<AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnGetArgs> recordColumns) {
             this.recordColumns = Input.of(Objects.requireNonNull(recordColumns));
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable Input<String> recordEncoding) {
+        public Builder recordEncoding(@Nullable Input<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable String recordEncoding) {
+        public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = Input.ofNullable(recordEncoding);
             return this;
         }
 
-        public Builder setRecordFormat(Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
+        public Builder recordFormat(Input<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
 
-        public Builder setRecordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs recordFormat) {
+        public Builder recordFormat(AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGetArgs recordFormat) {
             this.recordFormat = Input.of(Objects.requireNonNull(recordFormat));
             return this;
         }

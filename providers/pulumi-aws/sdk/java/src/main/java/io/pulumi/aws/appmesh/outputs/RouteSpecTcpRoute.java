@@ -68,12 +68,12 @@ public final class RouteSpecTcpRoute {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setAction(RouteSpecTcpRouteAction action) {
+        public Builder action(RouteSpecTcpRouteAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setTimeout(@Nullable RouteSpecTcpRouteTimeout timeout) {
+        public Builder timeout(@Nullable RouteSpecTcpRouteTimeout timeout) {
             this.timeout = timeout;
             return this;
         }

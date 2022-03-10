@@ -135,62 +135,62 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAssociationId(@Nullable Input<String> associationId) {
+        public Builder associationId(@Nullable Input<String> associationId) {
             this.associationId = associationId;
             return this;
         }
 
-        public Builder setAssociationId(@Nullable String associationId) {
+        public Builder associationId(@Nullable String associationId) {
             this.associationId = Input.ofNullable(associationId);
             return this;
         }
 
-        public Builder setClientVpnEndpointId(@Nullable Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(@Nullable Input<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
 
-        public Builder setClientVpnEndpointId(@Nullable String clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
             this.clientVpnEndpointId = Input.ofNullable(clientVpnEndpointId);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

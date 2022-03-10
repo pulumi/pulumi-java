@@ -52,12 +52,12 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder setBucket(Input<InventoryDestinationBucketArgs> bucket) {
+        public Builder bucket(Input<InventoryDestinationBucketArgs> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(InventoryDestinationBucketArgs bucket) {
+        public Builder bucket(InventoryDestinationBucketArgs bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }

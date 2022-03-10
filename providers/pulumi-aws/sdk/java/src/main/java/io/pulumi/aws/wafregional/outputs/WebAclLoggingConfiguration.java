@@ -68,12 +68,12 @@ public final class WebAclLoggingConfiguration {
     	      this.redactedFields = defaults.redactedFields;
         }
 
-        public Builder setLogDestination(String logDestination) {
+        public Builder logDestination(String logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
+        public Builder redactedFields(@Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }

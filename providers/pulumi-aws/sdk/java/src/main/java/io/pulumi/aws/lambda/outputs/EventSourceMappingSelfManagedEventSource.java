@@ -49,7 +49,7 @@ public final class EventSourceMappingSelfManagedEventSource {
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder setEndpoints(Map<String,String> endpoints) {
+        public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }

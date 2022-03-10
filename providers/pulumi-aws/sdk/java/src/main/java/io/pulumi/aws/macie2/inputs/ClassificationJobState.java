@@ -285,162 +285,162 @@ public final class ClassificationJobState extends io.pulumi.resources.ResourceAr
     	      this.userPausedDetails = defaults.userPausedDetails;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setCustomDataIdentifierIds(@Nullable Input<List<String>> customDataIdentifierIds) {
+        public Builder customDataIdentifierIds(@Nullable Input<List<String>> customDataIdentifierIds) {
             this.customDataIdentifierIds = customDataIdentifierIds;
             return this;
         }
 
-        public Builder setCustomDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
+        public Builder customDataIdentifierIds(@Nullable List<String> customDataIdentifierIds) {
             this.customDataIdentifierIds = Input.ofNullable(customDataIdentifierIds);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInitialRun(@Nullable Input<Boolean> initialRun) {
+        public Builder initialRun(@Nullable Input<Boolean> initialRun) {
             this.initialRun = initialRun;
             return this;
         }
 
-        public Builder setInitialRun(@Nullable Boolean initialRun) {
+        public Builder initialRun(@Nullable Boolean initialRun) {
             this.initialRun = Input.ofNullable(initialRun);
             return this;
         }
 
-        public Builder setJobArn(@Nullable Input<String> jobArn) {
+        public Builder jobArn(@Nullable Input<String> jobArn) {
             this.jobArn = jobArn;
             return this;
         }
 
-        public Builder setJobArn(@Nullable String jobArn) {
+        public Builder jobArn(@Nullable String jobArn) {
             this.jobArn = Input.ofNullable(jobArn);
             return this;
         }
 
-        public Builder setJobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Input<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
 
-        public Builder setJobStatus(@Nullable Input<String> jobStatus) {
+        public Builder jobStatus(@Nullable Input<String> jobStatus) {
             this.jobStatus = jobStatus;
             return this;
         }
 
-        public Builder setJobStatus(@Nullable String jobStatus) {
+        public Builder jobStatus(@Nullable String jobStatus) {
             this.jobStatus = Input.ofNullable(jobStatus);
             return this;
         }
 
-        public Builder setJobType(@Nullable Input<String> jobType) {
+        public Builder jobType(@Nullable Input<String> jobType) {
             this.jobType = jobType;
             return this;
         }
 
-        public Builder setJobType(@Nullable String jobType) {
+        public Builder jobType(@Nullable String jobType) {
             this.jobType = Input.ofNullable(jobType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setS3JobDefinition(@Nullable Input<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition) {
+        public Builder s3JobDefinition(@Nullable Input<ClassificationJobS3JobDefinitionGetArgs> s3JobDefinition) {
             this.s3JobDefinition = s3JobDefinition;
             return this;
         }
 
-        public Builder setS3JobDefinition(@Nullable ClassificationJobS3JobDefinitionGetArgs s3JobDefinition) {
+        public Builder s3JobDefinition(@Nullable ClassificationJobS3JobDefinitionGetArgs s3JobDefinition) {
             this.s3JobDefinition = Input.ofNullable(s3JobDefinition);
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Input<Integer> samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Input<Integer> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Integer samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Integer samplingPercentage) {
             this.samplingPercentage = Input.ofNullable(samplingPercentage);
             return this;
         }
 
-        public Builder setScheduleFrequency(@Nullable Input<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency) {
+        public Builder scheduleFrequency(@Nullable Input<ClassificationJobScheduleFrequencyGetArgs> scheduleFrequency) {
             this.scheduleFrequency = scheduleFrequency;
             return this;
         }
 
-        public Builder setScheduleFrequency(@Nullable ClassificationJobScheduleFrequencyGetArgs scheduleFrequency) {
+        public Builder scheduleFrequency(@Nullable ClassificationJobScheduleFrequencyGetArgs scheduleFrequency) {
             this.scheduleFrequency = Input.ofNullable(scheduleFrequency);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserPausedDetails(@Nullable Input<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails) {
+        public Builder userPausedDetails(@Nullable Input<List<ClassificationJobUserPausedDetailGetArgs>> userPausedDetails) {
             this.userPausedDetails = userPausedDetails;
             return this;
         }
 
-        public Builder setUserPausedDetails(@Nullable List<ClassificationJobUserPausedDetailGetArgs> userPausedDetails) {
+        public Builder userPausedDetails(@Nullable List<ClassificationJobUserPausedDetailGetArgs> userPausedDetails) {
             this.userPausedDetails = Input.ofNullable(userPausedDetails);
             return this;
         }

@@ -255,132 +255,132 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
     	      this.storedAsSubDirectories = defaults.storedAsSubDirectories;
         }
 
-        public Builder setBucketColumns(@Nullable Input<List<String>> bucketColumns) {
+        public Builder bucketColumns(@Nullable Input<List<String>> bucketColumns) {
             this.bucketColumns = bucketColumns;
             return this;
         }
 
-        public Builder setBucketColumns(@Nullable List<String> bucketColumns) {
+        public Builder bucketColumns(@Nullable List<String> bucketColumns) {
             this.bucketColumns = Input.ofNullable(bucketColumns);
             return this;
         }
 
-        public Builder setColumns(@Nullable Input<List<CatalogTableStorageDescriptorColumnGetArgs>> columns) {
+        public Builder columns(@Nullable Input<List<CatalogTableStorageDescriptorColumnGetArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<CatalogTableStorageDescriptorColumnGetArgs> columns) {
+        public Builder columns(@Nullable List<CatalogTableStorageDescriptorColumnGetArgs> columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }
 
-        public Builder setCompressed(@Nullable Input<Boolean> compressed) {
+        public Builder compressed(@Nullable Input<Boolean> compressed) {
             this.compressed = compressed;
             return this;
         }
 
-        public Builder setCompressed(@Nullable Boolean compressed) {
+        public Builder compressed(@Nullable Boolean compressed) {
             this.compressed = Input.ofNullable(compressed);
             return this;
         }
 
-        public Builder setInputFormat(@Nullable Input<String> inputFormat) {
+        public Builder inputFormat(@Nullable Input<String> inputFormat) {
             this.inputFormat = inputFormat;
             return this;
         }
 
-        public Builder setInputFormat(@Nullable String inputFormat) {
+        public Builder inputFormat(@Nullable String inputFormat) {
             this.inputFormat = Input.ofNullable(inputFormat);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNumberOfBuckets(@Nullable Input<Integer> numberOfBuckets) {
+        public Builder numberOfBuckets(@Nullable Input<Integer> numberOfBuckets) {
             this.numberOfBuckets = numberOfBuckets;
             return this;
         }
 
-        public Builder setNumberOfBuckets(@Nullable Integer numberOfBuckets) {
+        public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
             this.numberOfBuckets = Input.ofNullable(numberOfBuckets);
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Input<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Input.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSchemaReference(@Nullable Input<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference) {
+        public Builder schemaReference(@Nullable Input<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference) {
             this.schemaReference = schemaReference;
             return this;
         }
 
-        public Builder setSchemaReference(@Nullable CatalogTableStorageDescriptorSchemaReferenceGetArgs schemaReference) {
+        public Builder schemaReference(@Nullable CatalogTableStorageDescriptorSchemaReferenceGetArgs schemaReference) {
             this.schemaReference = Input.ofNullable(schemaReference);
             return this;
         }
 
-        public Builder setSerDeInfo(@Nullable Input<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo) {
+        public Builder serDeInfo(@Nullable Input<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo) {
             this.serDeInfo = serDeInfo;
             return this;
         }
 
-        public Builder setSerDeInfo(@Nullable CatalogTableStorageDescriptorSerDeInfoGetArgs serDeInfo) {
+        public Builder serDeInfo(@Nullable CatalogTableStorageDescriptorSerDeInfoGetArgs serDeInfo) {
             this.serDeInfo = Input.ofNullable(serDeInfo);
             return this;
         }
 
-        public Builder setSkewedInfo(@Nullable Input<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo) {
+        public Builder skewedInfo(@Nullable Input<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo) {
             this.skewedInfo = skewedInfo;
             return this;
         }
 
-        public Builder setSkewedInfo(@Nullable CatalogTableStorageDescriptorSkewedInfoGetArgs skewedInfo) {
+        public Builder skewedInfo(@Nullable CatalogTableStorageDescriptorSkewedInfoGetArgs skewedInfo) {
             this.skewedInfo = Input.ofNullable(skewedInfo);
             return this;
         }
 
-        public Builder setSortColumns(@Nullable Input<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns) {
+        public Builder sortColumns(@Nullable Input<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns) {
             this.sortColumns = sortColumns;
             return this;
         }
 
-        public Builder setSortColumns(@Nullable List<CatalogTableStorageDescriptorSortColumnGetArgs> sortColumns) {
+        public Builder sortColumns(@Nullable List<CatalogTableStorageDescriptorSortColumnGetArgs> sortColumns) {
             this.sortColumns = Input.ofNullable(sortColumns);
             return this;
         }
 
-        public Builder setStoredAsSubDirectories(@Nullable Input<Boolean> storedAsSubDirectories) {
+        public Builder storedAsSubDirectories(@Nullable Input<Boolean> storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }
 
-        public Builder setStoredAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
+        public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
             this.storedAsSubDirectories = Input.ofNullable(storedAsSubDirectories);
             return this;
         }

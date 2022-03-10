@@ -53,12 +53,12 @@ public final class EventSourceMappingDestinationConfigArgs extends io.pulumi.res
     	      this.onFailure = defaults.onFailure;
         }
 
-        public Builder setOnFailure(@Nullable Input<EventSourceMappingDestinationConfigOnFailureArgs> onFailure) {
+        public Builder onFailure(@Nullable Input<EventSourceMappingDestinationConfigOnFailureArgs> onFailure) {
             this.onFailure = onFailure;
             return this;
         }
 
-        public Builder setOnFailure(@Nullable EventSourceMappingDestinationConfigOnFailureArgs onFailure) {
+        public Builder onFailure(@Nullable EventSourceMappingDestinationConfigOnFailureArgs onFailure) {
             this.onFailure = Input.ofNullable(onFailure);
             return this;
         }

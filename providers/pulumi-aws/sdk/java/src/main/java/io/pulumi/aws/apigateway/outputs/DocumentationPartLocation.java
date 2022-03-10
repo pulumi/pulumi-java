@@ -115,27 +115,27 @@ public final class DocumentationPartLocation {
     	      this.type = defaults.type;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

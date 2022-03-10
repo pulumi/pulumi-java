@@ -203,102 +203,102 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     	      this.temporaryRestoreDays = defaults.temporaryRestoreDays;
         }
 
-        public Builder setClientData(@Nullable Input<SnapshotImportClientDataArgs> clientData) {
+        public Builder clientData(@Nullable Input<SnapshotImportClientDataArgs> clientData) {
             this.clientData = clientData;
             return this;
         }
 
-        public Builder setClientData(@Nullable SnapshotImportClientDataArgs clientData) {
+        public Builder clientData(@Nullable SnapshotImportClientDataArgs clientData) {
             this.clientData = Input.ofNullable(clientData);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiskContainer(Input<SnapshotImportDiskContainerArgs> diskContainer) {
+        public Builder diskContainer(Input<SnapshotImportDiskContainerArgs> diskContainer) {
             this.diskContainer = Objects.requireNonNull(diskContainer);
             return this;
         }
 
-        public Builder setDiskContainer(SnapshotImportDiskContainerArgs diskContainer) {
+        public Builder diskContainer(SnapshotImportDiskContainerArgs diskContainer) {
             this.diskContainer = Input.of(Objects.requireNonNull(diskContainer));
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setPermanentRestore(@Nullable Input<Boolean> permanentRestore) {
+        public Builder permanentRestore(@Nullable Input<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
 
-        public Builder setPermanentRestore(@Nullable Boolean permanentRestore) {
+        public Builder permanentRestore(@Nullable Boolean permanentRestore) {
             this.permanentRestore = Input.ofNullable(permanentRestore);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setStorageTier(@Nullable Input<String> storageTier) {
+        public Builder storageTier(@Nullable Input<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
 
-        public Builder setStorageTier(@Nullable String storageTier) {
+        public Builder storageTier(@Nullable String storageTier) {
             this.storageTier = Input.ofNullable(storageTier);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
-        public Builder setTemporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
             this.temporaryRestoreDays = Input.ofNullable(temporaryRestoreDays);
             return this;
         }

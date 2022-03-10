@@ -52,12 +52,12 @@ public final class AnalyticsApplicationOutputSchemaArgs extends io.pulumi.resour
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setRecordFormatType(Input<String> recordFormatType) {
+        public Builder recordFormatType(Input<String> recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }
 
-        public Builder setRecordFormatType(String recordFormatType) {
+        public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Input.of(Objects.requireNonNull(recordFormatType));
             return this;
         }

@@ -315,172 +315,172 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setConnectionTermination(@Nullable Input<Boolean> connectionTermination) {
+        public Builder connectionTermination(@Nullable Input<Boolean> connectionTermination) {
             this.connectionTermination = connectionTermination;
             return this;
         }
 
-        public Builder setConnectionTermination(@Nullable Boolean connectionTermination) {
+        public Builder connectionTermination(@Nullable Boolean connectionTermination) {
             this.connectionTermination = Input.ofNullable(connectionTermination);
             return this;
         }
 
-        public Builder setDeregistrationDelay(@Nullable Input<Integer> deregistrationDelay) {
+        public Builder deregistrationDelay(@Nullable Input<Integer> deregistrationDelay) {
             this.deregistrationDelay = deregistrationDelay;
             return this;
         }
 
-        public Builder setDeregistrationDelay(@Nullable Integer deregistrationDelay) {
+        public Builder deregistrationDelay(@Nullable Integer deregistrationDelay) {
             this.deregistrationDelay = Input.ofNullable(deregistrationDelay);
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable Input<TargetGroupHealthCheckArgs> healthCheck) {
+        public Builder healthCheck(@Nullable Input<TargetGroupHealthCheckArgs> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable TargetGroupHealthCheckArgs healthCheck) {
+        public Builder healthCheck(@Nullable TargetGroupHealthCheckArgs healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setLambdaMultiValueHeadersEnabled(@Nullable Input<Boolean> lambdaMultiValueHeadersEnabled) {
+        public Builder lambdaMultiValueHeadersEnabled(@Nullable Input<Boolean> lambdaMultiValueHeadersEnabled) {
             this.lambdaMultiValueHeadersEnabled = lambdaMultiValueHeadersEnabled;
             return this;
         }
 
-        public Builder setLambdaMultiValueHeadersEnabled(@Nullable Boolean lambdaMultiValueHeadersEnabled) {
+        public Builder lambdaMultiValueHeadersEnabled(@Nullable Boolean lambdaMultiValueHeadersEnabled) {
             this.lambdaMultiValueHeadersEnabled = Input.ofNullable(lambdaMultiValueHeadersEnabled);
             return this;
         }
 
-        public Builder setLoadBalancingAlgorithmType(@Nullable Input<String> loadBalancingAlgorithmType) {
+        public Builder loadBalancingAlgorithmType(@Nullable Input<String> loadBalancingAlgorithmType) {
             this.loadBalancingAlgorithmType = loadBalancingAlgorithmType;
             return this;
         }
 
-        public Builder setLoadBalancingAlgorithmType(@Nullable String loadBalancingAlgorithmType) {
+        public Builder loadBalancingAlgorithmType(@Nullable String loadBalancingAlgorithmType) {
             this.loadBalancingAlgorithmType = Input.ofNullable(loadBalancingAlgorithmType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setPreserveClientIp(@Nullable Input<String> preserveClientIp) {
+        public Builder preserveClientIp(@Nullable Input<String> preserveClientIp) {
             this.preserveClientIp = preserveClientIp;
             return this;
         }
 
-        public Builder setPreserveClientIp(@Nullable String preserveClientIp) {
+        public Builder preserveClientIp(@Nullable String preserveClientIp) {
             this.preserveClientIp = Input.ofNullable(preserveClientIp);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setProtocolVersion(@Nullable Input<String> protocolVersion) {
+        public Builder protocolVersion(@Nullable Input<String> protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
 
-        public Builder setProtocolVersion(@Nullable String protocolVersion) {
+        public Builder protocolVersion(@Nullable String protocolVersion) {
             this.protocolVersion = Input.ofNullable(protocolVersion);
             return this;
         }
 
-        public Builder setProxyProtocolV2(@Nullable Input<Boolean> proxyProtocolV2) {
+        public Builder proxyProtocolV2(@Nullable Input<Boolean> proxyProtocolV2) {
             this.proxyProtocolV2 = proxyProtocolV2;
             return this;
         }
 
-        public Builder setProxyProtocolV2(@Nullable Boolean proxyProtocolV2) {
+        public Builder proxyProtocolV2(@Nullable Boolean proxyProtocolV2) {
             this.proxyProtocolV2 = Input.ofNullable(proxyProtocolV2);
             return this;
         }
 
-        public Builder setSlowStart(@Nullable Input<Integer> slowStart) {
+        public Builder slowStart(@Nullable Input<Integer> slowStart) {
             this.slowStart = slowStart;
             return this;
         }
 
-        public Builder setSlowStart(@Nullable Integer slowStart) {
+        public Builder slowStart(@Nullable Integer slowStart) {
             this.slowStart = Input.ofNullable(slowStart);
             return this;
         }
 
-        public Builder setStickiness(@Nullable Input<TargetGroupStickinessArgs> stickiness) {
+        public Builder stickiness(@Nullable Input<TargetGroupStickinessArgs> stickiness) {
             this.stickiness = stickiness;
             return this;
         }
 
-        public Builder setStickiness(@Nullable TargetGroupStickinessArgs stickiness) {
+        public Builder stickiness(@Nullable TargetGroupStickinessArgs stickiness) {
             this.stickiness = Input.ofNullable(stickiness);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetType(@Nullable Input<String> targetType) {
+        public Builder targetType(@Nullable Input<String> targetType) {
             this.targetType = targetType;
             return this;
         }
 
-        public Builder setTargetType(@Nullable String targetType) {
+        public Builder targetType(@Nullable String targetType) {
             this.targetType = Input.ofNullable(targetType);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

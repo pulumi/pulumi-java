@@ -50,7 +50,7 @@ public final class RemediationConfigurationExecutionControls {
     	      this.ssmControls = defaults.ssmControls;
         }
 
-        public Builder setSsmControls(@Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls) {
+        public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls) {
             this.ssmControls = ssmControls;
             return this;
         }

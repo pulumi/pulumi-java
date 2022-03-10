@@ -82,32 +82,32 @@ public final class AccountSettingDefaultState extends io.pulumi.resources.Resour
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrincipalArn(@Nullable Input<String> principalArn) {
+        public Builder principalArn(@Nullable Input<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
 
-        public Builder setPrincipalArn(@Nullable String principalArn) {
+        public Builder principalArn(@Nullable String principalArn) {
             this.principalArn = Input.ofNullable(principalArn);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

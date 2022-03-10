@@ -183,92 +183,92 @@ public final class DefaultNetworkAclEgressArgs extends io.pulumi.resources.Resou
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setFromPort(Input<Integer> fromPort) {
+        public Builder fromPort(Input<Integer> fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Input.of(Objects.requireNonNull(fromPort));
             return this;
         }
 
-        public Builder setIcmpCode(@Nullable Input<Integer> icmpCode) {
+        public Builder icmpCode(@Nullable Input<Integer> icmpCode) {
             this.icmpCode = icmpCode;
             return this;
         }
 
-        public Builder setIcmpCode(@Nullable Integer icmpCode) {
+        public Builder icmpCode(@Nullable Integer icmpCode) {
             this.icmpCode = Input.ofNullable(icmpCode);
             return this;
         }
 
-        public Builder setIcmpType(@Nullable Input<Integer> icmpType) {
+        public Builder icmpType(@Nullable Input<Integer> icmpType) {
             this.icmpType = icmpType;
             return this;
         }
 
-        public Builder setIcmpType(@Nullable Integer icmpType) {
+        public Builder icmpType(@Nullable Integer icmpType) {
             this.icmpType = Input.ofNullable(icmpType);
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setRuleNo(Input<Integer> ruleNo) {
+        public Builder ruleNo(Input<Integer> ruleNo) {
             this.ruleNo = Objects.requireNonNull(ruleNo);
             return this;
         }
 
-        public Builder setRuleNo(Integer ruleNo) {
+        public Builder ruleNo(Integer ruleNo) {
             this.ruleNo = Input.of(Objects.requireNonNull(ruleNo));
             return this;
         }
 
-        public Builder setToPort(Input<Integer> toPort) {
+        public Builder toPort(Input<Integer> toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Input.of(Objects.requireNonNull(toPort));
             return this;
         }

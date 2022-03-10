@@ -135,62 +135,62 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProviderEndpoint(@Nullable Input<String> providerEndpoint) {
+        public Builder providerEndpoint(@Nullable Input<String> providerEndpoint) {
             this.providerEndpoint = providerEndpoint;
             return this;
         }
 
-        public Builder setProviderEndpoint(@Nullable String providerEndpoint) {
+        public Builder providerEndpoint(@Nullable String providerEndpoint) {
             this.providerEndpoint = Input.ofNullable(providerEndpoint);
             return this;
         }
 
-        public Builder setProviderType(@Nullable Input<String> providerType) {
+        public Builder providerType(@Nullable Input<String> providerType) {
             this.providerType = providerType;
             return this;
         }
 
-        public Builder setProviderType(@Nullable String providerType) {
+        public Builder providerType(@Nullable String providerType) {
             this.providerType = Input.ofNullable(providerType);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<HostVpcConfigurationGetArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<HostVpcConfigurationGetArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable HostVpcConfigurationGetArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable HostVpcConfigurationGetArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

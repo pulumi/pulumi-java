@@ -83,17 +83,17 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfig {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setAppIdClientRegex(@Nullable String appIdClientRegex) {
+        public Builder appIdClientRegex(@Nullable String appIdClientRegex) {
             this.appIdClientRegex = appIdClientRegex;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }

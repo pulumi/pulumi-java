@@ -153,72 +153,72 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
     	      this.name = defaults.name;
         }
 
-        public Builder setAutoscalingPolicy(@Nullable Input<String> autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable Input<String> autoscalingPolicy) {
             this.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
-        public Builder setAutoscalingPolicy(@Nullable String autoscalingPolicy) {
+        public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
             this.autoscalingPolicy = Input.ofNullable(autoscalingPolicy);
             return this;
         }
 
-        public Builder setBidPrice(@Nullable Input<String> bidPrice) {
+        public Builder bidPrice(@Nullable Input<String> bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
-        public Builder setBidPrice(@Nullable String bidPrice) {
+        public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = Input.ofNullable(bidPrice);
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable Input<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable List<ClusterCoreInstanceGroupEbsConfigGetArgs> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceGroupEbsConfigGetArgs> ebsConfigs) {
             this.ebsConfigs = Input.ofNullable(ebsConfigs);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Input<Integer> instanceCount) {
+        public Builder instanceCount(@Nullable Input<Integer> instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = Input.ofNullable(instanceCount);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

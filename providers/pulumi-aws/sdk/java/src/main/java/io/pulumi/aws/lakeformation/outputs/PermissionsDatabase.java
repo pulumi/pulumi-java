@@ -67,12 +67,12 @@ public final class PermissionsDatabase {
     	      this.name = defaults.name;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -65,12 +65,12 @@ public final class GetPermissionsDataLocation {
     	      this.catalogId = defaults.catalogId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }

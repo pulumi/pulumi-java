@@ -72,22 +72,22 @@ public final class TriggerPredicateArgs extends io.pulumi.resources.ResourceArgs
     	      this.logical = defaults.logical;
         }
 
-        public Builder setConditions(Input<List<TriggerPredicateConditionArgs>> conditions) {
+        public Builder conditions(Input<List<TriggerPredicateConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConditions(List<TriggerPredicateConditionArgs> conditions) {
+        public Builder conditions(List<TriggerPredicateConditionArgs> conditions) {
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder setLogical(@Nullable Input<String> logical) {
+        public Builder logical(@Nullable Input<String> logical) {
             this.logical = logical;
             return this;
         }
 
-        public Builder setLogical(@Nullable String logical) {
+        public Builder logical(@Nullable String logical) {
             this.logical = Input.ofNullable(logical);
             return this;
         }

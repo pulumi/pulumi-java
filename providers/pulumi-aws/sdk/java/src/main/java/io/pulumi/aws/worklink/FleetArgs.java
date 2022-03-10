@@ -153,72 +153,72 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.optimizeForEndUserLocation = defaults.optimizeForEndUserLocation;
         }
 
-        public Builder setAuditStreamArn(@Nullable Input<String> auditStreamArn) {
+        public Builder auditStreamArn(@Nullable Input<String> auditStreamArn) {
             this.auditStreamArn = auditStreamArn;
             return this;
         }
 
-        public Builder setAuditStreamArn(@Nullable String auditStreamArn) {
+        public Builder auditStreamArn(@Nullable String auditStreamArn) {
             this.auditStreamArn = Input.ofNullable(auditStreamArn);
             return this;
         }
 
-        public Builder setDeviceCaCertificate(@Nullable Input<String> deviceCaCertificate) {
+        public Builder deviceCaCertificate(@Nullable Input<String> deviceCaCertificate) {
             this.deviceCaCertificate = deviceCaCertificate;
             return this;
         }
 
-        public Builder setDeviceCaCertificate(@Nullable String deviceCaCertificate) {
+        public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
             this.deviceCaCertificate = Input.ofNullable(deviceCaCertificate);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable Input<FleetIdentityProviderArgs> identityProvider) {
+        public Builder identityProvider(@Nullable Input<FleetIdentityProviderArgs> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable FleetIdentityProviderArgs identityProvider) {
+        public Builder identityProvider(@Nullable FleetIdentityProviderArgs identityProvider) {
             this.identityProvider = Input.ofNullable(identityProvider);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<FleetNetworkArgs> network) {
+        public Builder network(@Nullable Input<FleetNetworkArgs> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable FleetNetworkArgs network) {
+        public Builder network(@Nullable FleetNetworkArgs network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setOptimizeForEndUserLocation(@Nullable Input<Boolean> optimizeForEndUserLocation) {
+        public Builder optimizeForEndUserLocation(@Nullable Input<Boolean> optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = optimizeForEndUserLocation;
             return this;
         }
 
-        public Builder setOptimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
+        public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = Input.ofNullable(optimizeForEndUserLocation);
             return this;
         }

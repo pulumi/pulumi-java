@@ -71,22 +71,22 @@ public final class ApplicationApplicationConfigurationRunConfigurationArgs exten
     	      this.flinkRunConfiguration = defaults.flinkRunConfiguration;
         }
 
-        public Builder setApplicationRestoreConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration) {
+        public Builder applicationRestoreConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs> applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
 
-        public Builder setApplicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs applicationRestoreConfiguration) {
+        public Builder applicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationArgs applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = Input.ofNullable(applicationRestoreConfiguration);
             return this;
         }
 
-        public Builder setFlinkRunConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
+        public Builder flinkRunConfiguration(@Nullable Input<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs> flinkRunConfiguration) {
             this.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }
 
-        public Builder setFlinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs flinkRunConfiguration) {
+        public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs flinkRunConfiguration) {
             this.flinkRunConfiguration = Input.ofNullable(flinkRunConfiguration);
             return this;
         }

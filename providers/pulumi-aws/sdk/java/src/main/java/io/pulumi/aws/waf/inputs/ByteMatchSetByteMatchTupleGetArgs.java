@@ -113,42 +113,42 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(Input<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<ByteMatchSetByteMatchTupleFieldToMatchGetArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(ByteMatchSetByteMatchTupleFieldToMatchGetArgs fieldToMatch) {
+        public Builder fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatchGetArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setPositionalConstraint(Input<String> positionalConstraint) {
+        public Builder positionalConstraint(Input<String> positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
-        public Builder setPositionalConstraint(String positionalConstraint) {
+        public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Input.of(Objects.requireNonNull(positionalConstraint));
             return this;
         }
 
-        public Builder setTargetString(@Nullable Input<String> targetString) {
+        public Builder targetString(@Nullable Input<String> targetString) {
             this.targetString = targetString;
             return this;
         }
 
-        public Builder setTargetString(@Nullable String targetString) {
+        public Builder targetString(@Nullable String targetString) {
             this.targetString = Input.ofNullable(targetString);
             return this;
         }
 
-        public Builder setTextTransformation(Input<String> textTransformation) {
+        public Builder textTransformation(Input<String> textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Input.of(Objects.requireNonNull(textTransformation));
             return this;
         }

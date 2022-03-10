@@ -70,22 +70,22 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setRouteTableId(Input<String> routeTableId) {
+        public Builder routeTableId(Input<String> routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
-        public Builder setRouteTableId(String routeTableId) {
+        public Builder routeTableId(String routeTableId) {
             this.routeTableId = Input.of(Objects.requireNonNull(routeTableId));
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

@@ -85,22 +85,22 @@ public final class GetSubnetsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetSubnetsFilter> filters) {
+        public Builder filters(@Nullable List<GetSubnetsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

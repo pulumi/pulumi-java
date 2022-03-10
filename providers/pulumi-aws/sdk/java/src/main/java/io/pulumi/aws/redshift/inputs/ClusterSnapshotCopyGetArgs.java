@@ -87,32 +87,32 @@ public final class ClusterSnapshotCopyGetArgs extends io.pulumi.resources.Resour
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder setDestinationRegion(Input<String> destinationRegion) {
+        public Builder destinationRegion(Input<String> destinationRegion) {
             this.destinationRegion = Objects.requireNonNull(destinationRegion);
             return this;
         }
 
-        public Builder setDestinationRegion(String destinationRegion) {
+        public Builder destinationRegion(String destinationRegion) {
             this.destinationRegion = Input.of(Objects.requireNonNull(destinationRegion));
             return this;
         }
 
-        public Builder setGrantName(@Nullable Input<String> grantName) {
+        public Builder grantName(@Nullable Input<String> grantName) {
             this.grantName = grantName;
             return this;
         }
 
-        public Builder setGrantName(@Nullable String grantName) {
+        public Builder grantName(@Nullable String grantName) {
             this.grantName = Input.ofNullable(grantName);
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Input<Integer> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Input<Integer> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Integer retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
             this.retentionPeriod = Input.ofNullable(retentionPeriod);
             return this;
         }

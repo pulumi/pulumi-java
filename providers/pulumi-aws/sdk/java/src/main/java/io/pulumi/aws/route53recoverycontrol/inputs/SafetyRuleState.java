@@ -185,92 +185,92 @@ public final class SafetyRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAssertedControls(@Nullable Input<List<String>> assertedControls) {
+        public Builder assertedControls(@Nullable Input<List<String>> assertedControls) {
             this.assertedControls = assertedControls;
             return this;
         }
 
-        public Builder setAssertedControls(@Nullable List<String> assertedControls) {
+        public Builder assertedControls(@Nullable List<String> assertedControls) {
             this.assertedControls = Input.ofNullable(assertedControls);
             return this;
         }
 
-        public Builder setControlPanelArn(@Nullable Input<String> controlPanelArn) {
+        public Builder controlPanelArn(@Nullable Input<String> controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
 
-        public Builder setControlPanelArn(@Nullable String controlPanelArn) {
+        public Builder controlPanelArn(@Nullable String controlPanelArn) {
             this.controlPanelArn = Input.ofNullable(controlPanelArn);
             return this;
         }
 
-        public Builder setGatingControls(@Nullable Input<List<String>> gatingControls) {
+        public Builder gatingControls(@Nullable Input<List<String>> gatingControls) {
             this.gatingControls = gatingControls;
             return this;
         }
 
-        public Builder setGatingControls(@Nullable List<String> gatingControls) {
+        public Builder gatingControls(@Nullable List<String> gatingControls) {
             this.gatingControls = Input.ofNullable(gatingControls);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleConfig(@Nullable Input<SafetyRuleRuleConfigGetArgs> ruleConfig) {
+        public Builder ruleConfig(@Nullable Input<SafetyRuleRuleConfigGetArgs> ruleConfig) {
             this.ruleConfig = ruleConfig;
             return this;
         }
 
-        public Builder setRuleConfig(@Nullable SafetyRuleRuleConfigGetArgs ruleConfig) {
+        public Builder ruleConfig(@Nullable SafetyRuleRuleConfigGetArgs ruleConfig) {
             this.ruleConfig = Input.ofNullable(ruleConfig);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTargetControls(@Nullable Input<List<String>> targetControls) {
+        public Builder targetControls(@Nullable Input<List<String>> targetControls) {
             this.targetControls = targetControls;
             return this;
         }
 
-        public Builder setTargetControls(@Nullable List<String> targetControls) {
+        public Builder targetControls(@Nullable List<String> targetControls) {
             this.targetControls = Input.ofNullable(targetControls);
             return this;
         }
 
-        public Builder setWaitPeriodMs(@Nullable Input<Integer> waitPeriodMs) {
+        public Builder waitPeriodMs(@Nullable Input<Integer> waitPeriodMs) {
             this.waitPeriodMs = waitPeriodMs;
             return this;
         }
 
-        public Builder setWaitPeriodMs(@Nullable Integer waitPeriodMs) {
+        public Builder waitPeriodMs(@Nullable Integer waitPeriodMs) {
             this.waitPeriodMs = Input.ofNullable(waitPeriodMs);
             return this;
         }

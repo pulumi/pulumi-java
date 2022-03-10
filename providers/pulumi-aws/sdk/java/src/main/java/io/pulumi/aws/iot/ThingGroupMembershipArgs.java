@@ -87,32 +87,32 @@ public final class ThingGroupMembershipArgs extends io.pulumi.resources.Resource
     	      this.thingName = defaults.thingName;
         }
 
-        public Builder setOverrideDynamicGroup(@Nullable Input<Boolean> overrideDynamicGroup) {
+        public Builder overrideDynamicGroup(@Nullable Input<Boolean> overrideDynamicGroup) {
             this.overrideDynamicGroup = overrideDynamicGroup;
             return this;
         }
 
-        public Builder setOverrideDynamicGroup(@Nullable Boolean overrideDynamicGroup) {
+        public Builder overrideDynamicGroup(@Nullable Boolean overrideDynamicGroup) {
             this.overrideDynamicGroup = Input.ofNullable(overrideDynamicGroup);
             return this;
         }
 
-        public Builder setThingGroupName(Input<String> thingGroupName) {
+        public Builder thingGroupName(Input<String> thingGroupName) {
             this.thingGroupName = Objects.requireNonNull(thingGroupName);
             return this;
         }
 
-        public Builder setThingGroupName(String thingGroupName) {
+        public Builder thingGroupName(String thingGroupName) {
             this.thingGroupName = Input.of(Objects.requireNonNull(thingGroupName));
             return this;
         }
 
-        public Builder setThingName(Input<String> thingName) {
+        public Builder thingName(Input<String> thingName) {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }
 
-        public Builder setThingName(String thingName) {
+        public Builder thingName(String thingName) {
             this.thingName = Input.of(Objects.requireNonNull(thingName));
             return this;
         }

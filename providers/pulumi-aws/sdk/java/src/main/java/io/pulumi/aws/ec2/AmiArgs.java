@@ -259,132 +259,132 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualizationType = defaults.virtualizationType;
         }
 
-        public Builder setArchitecture(@Nullable Input<String> architecture) {
+        public Builder architecture(@Nullable Input<String> architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setArchitecture(@Nullable String architecture) {
+        public Builder architecture(@Nullable String architecture) {
             this.architecture = Input.ofNullable(architecture);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable Input<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Input<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable List<AmiEbsBlockDeviceArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable List<AmiEbsBlockDeviceArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder setEnaSupport(@Nullable Input<Boolean> enaSupport) {
+        public Builder enaSupport(@Nullable Input<Boolean> enaSupport) {
             this.enaSupport = enaSupport;
             return this;
         }
 
-        public Builder setEnaSupport(@Nullable Boolean enaSupport) {
+        public Builder enaSupport(@Nullable Boolean enaSupport) {
             this.enaSupport = Input.ofNullable(enaSupport);
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable Input<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Input<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable List<AmiEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable List<AmiEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder setImageLocation(@Nullable Input<String> imageLocation) {
+        public Builder imageLocation(@Nullable Input<String> imageLocation) {
             this.imageLocation = imageLocation;
             return this;
         }
 
-        public Builder setImageLocation(@Nullable String imageLocation) {
+        public Builder imageLocation(@Nullable String imageLocation) {
             this.imageLocation = Input.ofNullable(imageLocation);
             return this;
         }
 
-        public Builder setKernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Input<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
-        public Builder setKernelId(@Nullable String kernelId) {
+        public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Input.ofNullable(kernelId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable Input<String> ramdiskId) {
+        public Builder ramdiskId(@Nullable Input<String> ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable String ramdiskId) {
+        public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = Input.ofNullable(ramdiskId);
             return this;
         }
 
-        public Builder setRootDeviceName(@Nullable Input<String> rootDeviceName) {
+        public Builder rootDeviceName(@Nullable Input<String> rootDeviceName) {
             this.rootDeviceName = rootDeviceName;
             return this;
         }
 
-        public Builder setRootDeviceName(@Nullable String rootDeviceName) {
+        public Builder rootDeviceName(@Nullable String rootDeviceName) {
             this.rootDeviceName = Input.ofNullable(rootDeviceName);
             return this;
         }
 
-        public Builder setSriovNetSupport(@Nullable Input<String> sriovNetSupport) {
+        public Builder sriovNetSupport(@Nullable Input<String> sriovNetSupport) {
             this.sriovNetSupport = sriovNetSupport;
             return this;
         }
 
-        public Builder setSriovNetSupport(@Nullable String sriovNetSupport) {
+        public Builder sriovNetSupport(@Nullable String sriovNetSupport) {
             this.sriovNetSupport = Input.ofNullable(sriovNetSupport);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualizationType(@Nullable Input<String> virtualizationType) {
+        public Builder virtualizationType(@Nullable Input<String> virtualizationType) {
             this.virtualizationType = virtualizationType;
             return this;
         }
 
-        public Builder setVirtualizationType(@Nullable String virtualizationType) {
+        public Builder virtualizationType(@Nullable String virtualizationType) {
             this.virtualizationType = Input.ofNullable(virtualizationType);
             return this;
         }

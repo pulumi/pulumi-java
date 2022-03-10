@@ -119,52 +119,52 @@ public final class EventPermissionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.statementId = defaults.statementId;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<EventPermissionConditionArgs> condition) {
+        public Builder condition(@Nullable Input<EventPermissionConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable EventPermissionConditionArgs condition) {
+        public Builder condition(@Nullable EventPermissionConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setEventBusName(@Nullable Input<String> eventBusName) {
+        public Builder eventBusName(@Nullable Input<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
 
-        public Builder setEventBusName(@Nullable String eventBusName) {
+        public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Input.ofNullable(eventBusName);
             return this;
         }
 
-        public Builder setPrincipal(Input<String> principal) {
+        public Builder principal(Input<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder setStatementId(Input<String> statementId) {
+        public Builder statementId(Input<String> statementId) {
             this.statementId = Objects.requireNonNull(statementId);
             return this;
         }
 
-        public Builder setStatementId(String statementId) {
+        public Builder statementId(String statementId) {
             this.statementId = Input.of(Objects.requireNonNull(statementId));
             return this;
         }

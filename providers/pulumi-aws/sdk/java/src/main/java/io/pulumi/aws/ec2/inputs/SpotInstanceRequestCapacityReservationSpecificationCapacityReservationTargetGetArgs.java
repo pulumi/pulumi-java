@@ -53,12 +53,12 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
     	      this.capacityReservationId = defaults.capacityReservationId;
         }
 
-        public Builder setCapacityReservationId(@Nullable Input<String> capacityReservationId) {
+        public Builder capacityReservationId(@Nullable Input<String> capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
         }
 
-        public Builder setCapacityReservationId(@Nullable String capacityReservationId) {
+        public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = Input.ofNullable(capacityReservationId);
             return this;
         }

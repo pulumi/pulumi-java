@@ -118,52 +118,52 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setContentType(Input<String> contentType) {
+        public Builder contentType(Input<String> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Input.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSchema(Input<String> schema) {
+        public Builder schema(Input<String> schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSchema(String schema) {
+        public Builder schema(String schema) {
             this.schema = Input.of(Objects.requireNonNull(schema));
             return this;
         }

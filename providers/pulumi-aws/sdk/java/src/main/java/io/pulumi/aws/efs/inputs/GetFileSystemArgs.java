@@ -87,17 +87,17 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreationToken(@Nullable String creationToken) {
+        public Builder creationToken(@Nullable String creationToken) {
             this.creationToken = creationToken;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

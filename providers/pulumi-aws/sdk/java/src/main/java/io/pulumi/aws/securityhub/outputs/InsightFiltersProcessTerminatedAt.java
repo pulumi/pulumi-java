@@ -84,17 +84,17 @@ public final class InsightFiltersProcessTerminatedAt {
     	      this.start = defaults.start;
         }
 
-        public Builder setDateRange(@Nullable InsightFiltersProcessTerminatedAtDateRange dateRange) {
+        public Builder dateRange(@Nullable InsightFiltersProcessTerminatedAtDateRange dateRange) {
             this.dateRange = dateRange;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = start;
             return this;
         }

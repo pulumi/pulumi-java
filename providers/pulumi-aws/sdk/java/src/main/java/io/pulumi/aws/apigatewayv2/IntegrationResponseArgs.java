@@ -135,62 +135,62 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     	      this.templateSelectionExpression = defaults.templateSelectionExpression;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setContentHandlingStrategy(@Nullable Input<String> contentHandlingStrategy) {
+        public Builder contentHandlingStrategy(@Nullable Input<String> contentHandlingStrategy) {
             this.contentHandlingStrategy = contentHandlingStrategy;
             return this;
         }
 
-        public Builder setContentHandlingStrategy(@Nullable String contentHandlingStrategy) {
+        public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
             this.contentHandlingStrategy = Input.ofNullable(contentHandlingStrategy);
             return this;
         }
 
-        public Builder setIntegrationId(Input<String> integrationId) {
+        public Builder integrationId(Input<String> integrationId) {
             this.integrationId = Objects.requireNonNull(integrationId);
             return this;
         }
 
-        public Builder setIntegrationId(String integrationId) {
+        public Builder integrationId(String integrationId) {
             this.integrationId = Input.of(Objects.requireNonNull(integrationId));
             return this;
         }
 
-        public Builder setIntegrationResponseKey(Input<String> integrationResponseKey) {
+        public Builder integrationResponseKey(Input<String> integrationResponseKey) {
             this.integrationResponseKey = Objects.requireNonNull(integrationResponseKey);
             return this;
         }
 
-        public Builder setIntegrationResponseKey(String integrationResponseKey) {
+        public Builder integrationResponseKey(String integrationResponseKey) {
             this.integrationResponseKey = Input.of(Objects.requireNonNull(integrationResponseKey));
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
+        public Builder responseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Map<String,String> responseTemplates) {
+        public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
             this.responseTemplates = Input.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder setTemplateSelectionExpression(@Nullable Input<String> templateSelectionExpression) {
+        public Builder templateSelectionExpression(@Nullable Input<String> templateSelectionExpression) {
             this.templateSelectionExpression = templateSelectionExpression;
             return this;
         }
 
-        public Builder setTemplateSelectionExpression(@Nullable String templateSelectionExpression) {
+        public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
             this.templateSelectionExpression = Input.ofNullable(templateSelectionExpression);
             return this;
         }

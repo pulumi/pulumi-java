@@ -87,32 +87,32 @@ public final class AcceleratorAttributesArgs extends io.pulumi.resources.Resourc
     	      this.flowLogsS3Prefix = defaults.flowLogsS3Prefix;
         }
 
-        public Builder setFlowLogsEnabled(@Nullable Input<Boolean> flowLogsEnabled) {
+        public Builder flowLogsEnabled(@Nullable Input<Boolean> flowLogsEnabled) {
             this.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
 
-        public Builder setFlowLogsEnabled(@Nullable Boolean flowLogsEnabled) {
+        public Builder flowLogsEnabled(@Nullable Boolean flowLogsEnabled) {
             this.flowLogsEnabled = Input.ofNullable(flowLogsEnabled);
             return this;
         }
 
-        public Builder setFlowLogsS3Bucket(@Nullable Input<String> flowLogsS3Bucket) {
+        public Builder flowLogsS3Bucket(@Nullable Input<String> flowLogsS3Bucket) {
             this.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
 
-        public Builder setFlowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
+        public Builder flowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
             this.flowLogsS3Bucket = Input.ofNullable(flowLogsS3Bucket);
             return this;
         }
 
-        public Builder setFlowLogsS3Prefix(@Nullable Input<String> flowLogsS3Prefix) {
+        public Builder flowLogsS3Prefix(@Nullable Input<String> flowLogsS3Prefix) {
             this.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
         }
 
-        public Builder setFlowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
+        public Builder flowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
             this.flowLogsS3Prefix = Input.ofNullable(flowLogsS3Prefix);
             return this;
         }

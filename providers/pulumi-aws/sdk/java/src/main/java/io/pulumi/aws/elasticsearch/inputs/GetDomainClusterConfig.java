@@ -202,52 +202,52 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
     	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
         }
 
-        public Builder setDedicatedMasterCount(Integer dedicatedMasterCount) {
+        public Builder dedicatedMasterCount(Integer dedicatedMasterCount) {
             this.dedicatedMasterCount = Objects.requireNonNull(dedicatedMasterCount);
             return this;
         }
 
-        public Builder setDedicatedMasterEnabled(Boolean dedicatedMasterEnabled) {
+        public Builder dedicatedMasterEnabled(Boolean dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = Objects.requireNonNull(dedicatedMasterEnabled);
             return this;
         }
 
-        public Builder setDedicatedMasterType(String dedicatedMasterType) {
+        public Builder dedicatedMasterType(String dedicatedMasterType) {
             this.dedicatedMasterType = Objects.requireNonNull(dedicatedMasterType);
             return this;
         }
 
-        public Builder setInstanceCount(Integer instanceCount) {
+        public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setWarmCount(Integer warmCount) {
+        public Builder warmCount(Integer warmCount) {
             this.warmCount = Objects.requireNonNull(warmCount);
             return this;
         }
 
-        public Builder setWarmEnabled(@Nullable Boolean warmEnabled) {
+        public Builder warmEnabled(@Nullable Boolean warmEnabled) {
             this.warmEnabled = warmEnabled;
             return this;
         }
 
-        public Builder setWarmType(String warmType) {
+        public Builder warmType(String warmType) {
             this.warmType = Objects.requireNonNull(warmType);
             return this;
         }
 
-        public Builder setZoneAwarenessConfigs(List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs) {
+        public Builder zoneAwarenessConfigs(List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs) {
             this.zoneAwarenessConfigs = Objects.requireNonNull(zoneAwarenessConfigs);
             return this;
         }
 
-        public Builder setZoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
+        public Builder zoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = Objects.requireNonNull(zoneAwarenessEnabled);
             return this;
         }

@@ -270,77 +270,77 @@ public final class GetImageResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBuildVersionArn(String buildVersionArn) {
+        public Builder buildVersionArn(String buildVersionArn) {
             this.buildVersionArn = Objects.requireNonNull(buildVersionArn);
             return this;
         }
 
-        public Builder setDateCreated(String dateCreated) {
+        public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
 
-        public Builder setDistributionConfigurationArn(String distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(String distributionConfigurationArn) {
             this.distributionConfigurationArn = Objects.requireNonNull(distributionConfigurationArn);
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = Objects.requireNonNull(enhancedImageMetadataEnabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageRecipeArn(String imageRecipeArn) {
+        public Builder imageRecipeArn(String imageRecipeArn) {
             this.imageRecipeArn = Objects.requireNonNull(imageRecipeArn);
             return this;
         }
 
-        public Builder setImageTestsConfigurations(List<GetImageImageTestsConfiguration> imageTestsConfigurations) {
+        public Builder imageTestsConfigurations(List<GetImageImageTestsConfiguration> imageTestsConfigurations) {
             this.imageTestsConfigurations = Objects.requireNonNull(imageTestsConfigurations);
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = Objects.requireNonNull(infrastructureConfigurationArn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
 
-        public Builder setOutputResources(List<GetImageOutputResource> outputResources) {
+        public Builder outputResources(List<GetImageOutputResource> outputResources) {
             this.outputResources = Objects.requireNonNull(outputResources);
             return this;
         }
 
-        public Builder setPlatform(String platform) {
+        public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

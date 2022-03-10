@@ -48,7 +48,7 @@ public final class ClusterOpenMonitoring {
     	      this.prometheus = defaults.prometheus;
         }
 
-        public Builder setPrometheus(ClusterOpenMonitoringPrometheus prometheus) {
+        public Builder prometheus(ClusterOpenMonitoringPrometheus prometheus) {
             this.prometheus = Objects.requireNonNull(prometheus);
             return this;
         }

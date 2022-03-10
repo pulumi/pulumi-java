@@ -66,12 +66,12 @@ public final class GetPipelineDefinitionParameterObject extends io.pulumi.resour
     	      this.id = defaults.id;
         }
 
-        public Builder setAttributes(List<GetPipelineDefinitionParameterObjectAttribute> attributes) {
+        public Builder attributes(List<GetPipelineDefinitionParameterObjectAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

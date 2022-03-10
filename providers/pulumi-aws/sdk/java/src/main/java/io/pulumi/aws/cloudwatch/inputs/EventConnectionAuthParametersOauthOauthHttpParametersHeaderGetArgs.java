@@ -87,32 +87,32 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersHeaderGe
     	      this.value = defaults.value;
         }
 
-        public Builder setIsValueSecret(@Nullable Input<Boolean> isValueSecret) {
+        public Builder isValueSecret(@Nullable Input<Boolean> isValueSecret) {
             this.isValueSecret = isValueSecret;
             return this;
         }
 
-        public Builder setIsValueSecret(@Nullable Boolean isValueSecret) {
+        public Builder isValueSecret(@Nullable Boolean isValueSecret) {
             this.isValueSecret = Input.ofNullable(isValueSecret);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

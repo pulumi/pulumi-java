@@ -104,42 +104,42 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
     	      this.policyTypeName = defaults.policyTypeName;
         }
 
-        public Builder setLoadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
-        public Builder setLoadBalancerName(@Nullable String loadBalancerName) {
+        public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Input.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder setPolicyAttributes(@Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
+        public Builder policyAttributes(@Nullable Input<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes) {
             this.policyAttributes = policyAttributes;
             return this;
         }
 
-        public Builder setPolicyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
+        public Builder policyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeGetArgs> policyAttributes) {
             this.policyAttributes = Input.ofNullable(policyAttributes);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setPolicyTypeName(@Nullable Input<String> policyTypeName) {
+        public Builder policyTypeName(@Nullable Input<String> policyTypeName) {
             this.policyTypeName = policyTypeName;
             return this;
         }
 
-        public Builder setPolicyTypeName(@Nullable String policyTypeName) {
+        public Builder policyTypeName(@Nullable String policyTypeName) {
             this.policyTypeName = Input.ofNullable(policyTypeName);
             return this;
         }

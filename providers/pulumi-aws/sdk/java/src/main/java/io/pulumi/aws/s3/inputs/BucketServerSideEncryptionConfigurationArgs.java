@@ -52,12 +52,12 @@ public final class BucketServerSideEncryptionConfigurationArgs extends io.pulumi
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRule(Input<BucketServerSideEncryptionConfigurationRuleArgs> rule) {
+        public Builder rule(Input<BucketServerSideEncryptionConfigurationRuleArgs> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
-        public Builder setRule(BucketServerSideEncryptionConfigurationRuleArgs rule) {
+        public Builder rule(BucketServerSideEncryptionConfigurationRuleArgs rule) {
             this.rule = Input.of(Objects.requireNonNull(rule));
             return this;
         }

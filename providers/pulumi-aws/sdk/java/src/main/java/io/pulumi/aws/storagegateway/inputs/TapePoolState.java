@@ -152,72 +152,72 @@ public final class TapePoolState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setPoolName(@Nullable Input<String> poolName) {
+        public Builder poolName(@Nullable Input<String> poolName) {
             this.poolName = poolName;
             return this;
         }
 
-        public Builder setPoolName(@Nullable String poolName) {
+        public Builder poolName(@Nullable String poolName) {
             this.poolName = Input.ofNullable(poolName);
             return this;
         }
 
-        public Builder setRetentionLockTimeInDays(@Nullable Input<Integer> retentionLockTimeInDays) {
+        public Builder retentionLockTimeInDays(@Nullable Input<Integer> retentionLockTimeInDays) {
             this.retentionLockTimeInDays = retentionLockTimeInDays;
             return this;
         }
 
-        public Builder setRetentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
+        public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
             this.retentionLockTimeInDays = Input.ofNullable(retentionLockTimeInDays);
             return this;
         }
 
-        public Builder setRetentionLockType(@Nullable Input<String> retentionLockType) {
+        public Builder retentionLockType(@Nullable Input<String> retentionLockType) {
             this.retentionLockType = retentionLockType;
             return this;
         }
 
-        public Builder setRetentionLockType(@Nullable String retentionLockType) {
+        public Builder retentionLockType(@Nullable String retentionLockType) {
             this.retentionLockType = Input.ofNullable(retentionLockType);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Input<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

@@ -167,82 +167,82 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.validity = defaults.validity;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(@Nullable Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(@Nullable Input<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(@Nullable String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
             this.certificateAuthorityArn = Input.ofNullable(certificateAuthorityArn);
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable Input<String> certificateChain) {
+        public Builder certificateChain(@Nullable Input<String> certificateChain) {
             this.certificateChain = certificateChain;
             return this;
         }
 
-        public Builder setCertificateChain(@Nullable String certificateChain) {
+        public Builder certificateChain(@Nullable String certificateChain) {
             this.certificateChain = Input.ofNullable(certificateChain);
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable Input<String> certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable String certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = Input.ofNullable(certificateSigningRequest);
             return this;
         }
 
-        public Builder setSigningAlgorithm(@Nullable Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable Input<String> signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
-        public Builder setSigningAlgorithm(@Nullable String signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
             this.signingAlgorithm = Input.ofNullable(signingAlgorithm);
             return this;
         }
 
-        public Builder setTemplateArn(@Nullable Input<String> templateArn) {
+        public Builder templateArn(@Nullable Input<String> templateArn) {
             this.templateArn = templateArn;
             return this;
         }
 
-        public Builder setTemplateArn(@Nullable String templateArn) {
+        public Builder templateArn(@Nullable String templateArn) {
             this.templateArn = Input.ofNullable(templateArn);
             return this;
         }
 
-        public Builder setValidity(@Nullable Input<CertificateValidityGetArgs> validity) {
+        public Builder validity(@Nullable Input<CertificateValidityGetArgs> validity) {
             this.validity = validity;
             return this;
         }
 
-        public Builder setValidity(@Nullable CertificateValidityGetArgs validity) {
+        public Builder validity(@Nullable CertificateValidityGetArgs validity) {
             this.validity = Input.ofNullable(validity);
             return this;
         }

@@ -87,32 +87,32 @@ public final class CapacityProviderAutoScalingGroupProviderArgs extends io.pulum
     	      this.managedTerminationProtection = defaults.managedTerminationProtection;
         }
 
-        public Builder setAutoScalingGroupArn(Input<String> autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(Input<String> autoScalingGroupArn) {
             this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
             return this;
         }
 
-        public Builder setAutoScalingGroupArn(String autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(String autoScalingGroupArn) {
             this.autoScalingGroupArn = Input.of(Objects.requireNonNull(autoScalingGroupArn));
             return this;
         }
 
-        public Builder setManagedScaling(@Nullable Input<CapacityProviderAutoScalingGroupProviderManagedScalingArgs> managedScaling) {
+        public Builder managedScaling(@Nullable Input<CapacityProviderAutoScalingGroupProviderManagedScalingArgs> managedScaling) {
             this.managedScaling = managedScaling;
             return this;
         }
 
-        public Builder setManagedScaling(@Nullable CapacityProviderAutoScalingGroupProviderManagedScalingArgs managedScaling) {
+        public Builder managedScaling(@Nullable CapacityProviderAutoScalingGroupProviderManagedScalingArgs managedScaling) {
             this.managedScaling = Input.ofNullable(managedScaling);
             return this;
         }
 
-        public Builder setManagedTerminationProtection(@Nullable Input<String> managedTerminationProtection) {
+        public Builder managedTerminationProtection(@Nullable Input<String> managedTerminationProtection) {
             this.managedTerminationProtection = managedTerminationProtection;
             return this;
         }
 
-        public Builder setManagedTerminationProtection(@Nullable String managedTerminationProtection) {
+        public Builder managedTerminationProtection(@Nullable String managedTerminationProtection) {
             this.managedTerminationProtection = Input.ofNullable(managedTerminationProtection);
             return this;
         }

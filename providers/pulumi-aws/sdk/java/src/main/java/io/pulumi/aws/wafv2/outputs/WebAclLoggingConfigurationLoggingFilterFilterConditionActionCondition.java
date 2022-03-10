@@ -48,7 +48,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }

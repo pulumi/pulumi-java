@@ -152,72 +152,72 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Input<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<EndpointNetworkInterfaceGetArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setOutpostId(@Nullable Input<String> outpostId) {
+        public Builder outpostId(@Nullable Input<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
 
-        public Builder setOutpostId(@Nullable String outpostId) {
+        public Builder outpostId(@Nullable String outpostId) {
             this.outpostId = Input.ofNullable(outpostId);
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable Input<String> securityGroupId) {
+        public Builder securityGroupId(@Nullable Input<String> securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable String securityGroupId) {
+        public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = Input.ofNullable(securityGroupId);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }

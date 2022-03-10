@@ -49,7 +49,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExports {
     	      this.clientConfigurations = defaults.clientConfigurations;
         }
 
-        public Builder setClientConfigurations(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations) {
+        public Builder clientConfigurations(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations) {
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }

@@ -88,32 +88,32 @@ public final class VirtualGatewaySpecListenerConnectionPoolGetArgs extends io.pu
     	      this.http2 = defaults.http2;
         }
 
-        public Builder setGrpc(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolGrpcGetArgs> grpc) {
+        public Builder grpc(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolGrpcGetArgs> grpc) {
             this.grpc = grpc;
             return this;
         }
 
-        public Builder setGrpc(@Nullable VirtualGatewaySpecListenerConnectionPoolGrpcGetArgs grpc) {
+        public Builder grpc(@Nullable VirtualGatewaySpecListenerConnectionPoolGrpcGetArgs grpc) {
             this.grpc = Input.ofNullable(grpc);
             return this;
         }
 
-        public Builder setHttp(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolHttpGetArgs> http) {
+        public Builder http(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolHttpGetArgs> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp(@Nullable VirtualGatewaySpecListenerConnectionPoolHttpGetArgs http) {
+        public Builder http(@Nullable VirtualGatewaySpecListenerConnectionPoolHttpGetArgs http) {
             this.http = Input.ofNullable(http);
             return this;
         }
 
-        public Builder setHttp2(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs> http2) {
+        public Builder http2(@Nullable Input<VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs> http2) {
             this.http2 = http2;
             return this;
         }
 
-        public Builder setHttp2(@Nullable VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs http2) {
+        public Builder http2(@Nullable VirtualGatewaySpecListenerConnectionPoolHttp2GetArgs http2) {
             this.http2 = Input.ofNullable(http2);
             return this;
         }

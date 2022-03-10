@@ -137,62 +137,62 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.targetAccountIds = defaults.targetAccountIds;
         }
 
-        public Builder setAmiTags(@Nullable Input<Map<String,String>> amiTags) {
+        public Builder amiTags(@Nullable Input<Map<String,String>> amiTags) {
             this.amiTags = amiTags;
             return this;
         }
 
-        public Builder setAmiTags(@Nullable Map<String,String> amiTags) {
+        public Builder amiTags(@Nullable Map<String,String> amiTags) {
             this.amiTags = Input.ofNullable(amiTags);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLaunchPermission(@Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission) {
+        public Builder launchPermission(@Nullable Input<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission) {
             this.launchPermission = launchPermission;
             return this;
         }
 
-        public Builder setLaunchPermission(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs launchPermission) {
+        public Builder launchPermission(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs launchPermission) {
             this.launchPermission = Input.ofNullable(launchPermission);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTargetAccountIds(@Nullable Input<List<String>> targetAccountIds) {
+        public Builder targetAccountIds(@Nullable Input<List<String>> targetAccountIds) {
             this.targetAccountIds = targetAccountIds;
             return this;
         }
 
-        public Builder setTargetAccountIds(@Nullable List<String> targetAccountIds) {
+        public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
             this.targetAccountIds = Input.ofNullable(targetAccountIds);
             return this;
         }

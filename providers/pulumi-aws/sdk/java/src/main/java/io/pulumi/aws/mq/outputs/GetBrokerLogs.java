@@ -49,12 +49,12 @@ public final class GetBrokerLogs {
     	      this.general = defaults.general;
         }
 
-        public Builder setAudit(Boolean audit) {
+        public Builder audit(Boolean audit) {
             this.audit = Objects.requireNonNull(audit);
             return this;
         }
 
-        public Builder setGeneral(Boolean general) {
+        public Builder general(Boolean general) {
             this.general = Objects.requireNonNull(general);
             return this;
         }

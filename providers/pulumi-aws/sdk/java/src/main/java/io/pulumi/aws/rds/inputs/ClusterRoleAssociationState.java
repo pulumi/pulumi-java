@@ -86,32 +86,32 @@ public final class ClusterRoleAssociationState extends io.pulumi.resources.Resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable Input<String> dbClusterIdentifier) {
             this.dbClusterIdentifier = dbClusterIdentifier;
             return this;
         }
 
-        public Builder setDbClusterIdentifier(@Nullable String dbClusterIdentifier) {
+        public Builder dbClusterIdentifier(@Nullable String dbClusterIdentifier) {
             this.dbClusterIdentifier = Input.ofNullable(dbClusterIdentifier);
             return this;
         }
 
-        public Builder setFeatureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Input<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
-        public Builder setFeatureName(@Nullable String featureName) {
+        public Builder featureName(@Nullable String featureName) {
             this.featureName = Input.ofNullable(featureName);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

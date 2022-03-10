@@ -68,12 +68,12 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTime 
     	      this.status = defaults.status;
         }
 
-        public Builder setMinutes(@Nullable Integer minutes) {
+        public Builder minutes(@Nullable Integer minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

@@ -86,32 +86,32 @@ public final class RoleAssociationState extends io.pulumi.resources.ResourceArgs
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable Input<String> dbInstanceIdentifier) {
             this.dbInstanceIdentifier = dbInstanceIdentifier;
             return this;
         }
 
-        public Builder setDbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
+        public Builder dbInstanceIdentifier(@Nullable String dbInstanceIdentifier) {
             this.dbInstanceIdentifier = Input.ofNullable(dbInstanceIdentifier);
             return this;
         }
 
-        public Builder setFeatureName(@Nullable Input<String> featureName) {
+        public Builder featureName(@Nullable Input<String> featureName) {
             this.featureName = featureName;
             return this;
         }
 
-        public Builder setFeatureName(@Nullable String featureName) {
+        public Builder featureName(@Nullable String featureName) {
             this.featureName = Input.ofNullable(featureName);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

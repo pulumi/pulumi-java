@@ -199,52 +199,52 @@ public final class GetJobQueueResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setComputeEnvironmentOrders(List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders) {
+        public Builder computeEnvironmentOrders(List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders) {
             this.computeEnvironmentOrders = Objects.requireNonNull(computeEnvironmentOrders);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setSchedulingPolicyArn(String schedulingPolicyArn) {
+        public Builder schedulingPolicyArn(String schedulingPolicyArn) {
             this.schedulingPolicyArn = Objects.requireNonNull(schedulingPolicyArn);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusReason(String statusReason) {
+        public Builder statusReason(String statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

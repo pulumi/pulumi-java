@@ -72,22 +72,22 @@ public final class WebAclRuleStatementAndStatementStatementGeoMatchStatementGetA
     	      this.forwardedIpConfig = defaults.forwardedIpConfig;
         }
 
-        public Builder setCountryCodes(Input<List<String>> countryCodes) {
+        public Builder countryCodes(Input<List<String>> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
-        public Builder setCountryCodes(List<String> countryCodes) {
+        public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Input.of(Objects.requireNonNull(countryCodes));
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable Input<WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable WebAclRuleStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs forwardedIpConfig) {
             this.forwardedIpConfig = Input.ofNullable(forwardedIpConfig);
             return this;
         }

@@ -156,47 +156,47 @@ public final class GetPolicyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPathPrefix(@Nullable String pathPrefix) {
+        public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

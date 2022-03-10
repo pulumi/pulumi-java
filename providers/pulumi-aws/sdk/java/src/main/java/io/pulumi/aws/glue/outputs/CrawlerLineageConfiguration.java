@@ -50,7 +50,7 @@ public final class CrawlerLineageConfiguration {
     	      this.crawlerLineageSettings = defaults.crawlerLineageSettings;
         }
 
-        public Builder setCrawlerLineageSettings(@Nullable String crawlerLineageSettings) {
+        public Builder crawlerLineageSettings(@Nullable String crawlerLineageSettings) {
             this.crawlerLineageSettings = crawlerLineageSettings;
             return this;
         }

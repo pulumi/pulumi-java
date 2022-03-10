@@ -153,72 +153,72 @@ public final class DetectorState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDatasources(@Nullable Input<DetectorDatasourcesGetArgs> datasources) {
+        public Builder datasources(@Nullable Input<DetectorDatasourcesGetArgs> datasources) {
             this.datasources = datasources;
             return this;
         }
 
-        public Builder setDatasources(@Nullable DetectorDatasourcesGetArgs datasources) {
+        public Builder datasources(@Nullable DetectorDatasourcesGetArgs datasources) {
             this.datasources = Input.ofNullable(datasources);
             return this;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable Input<String> findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable String findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
             this.findingPublishingFrequency = Input.ofNullable(findingPublishingFrequency);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

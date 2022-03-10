@@ -53,12 +53,12 @@ public final class ClusterCertificateAuthorityGetArgs extends io.pulumi.resource
     	      this.data = defaults.data;
         }
 
-        public Builder setData(@Nullable Input<String> data) {
+        public Builder data(@Nullable Input<String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = Input.ofNullable(data);
             return this;
         }

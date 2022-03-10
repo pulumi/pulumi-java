@@ -102,22 +102,22 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.typeVersionId = defaults.typeVersionId;
         }
 
-        public Builder setIdentifier(String identifier) {
+        public Builder identifier(String identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTypeName(String typeName) {
+        public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
 
-        public Builder setTypeVersionId(@Nullable String typeVersionId) {
+        public Builder typeVersionId(@Nullable String typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
         }

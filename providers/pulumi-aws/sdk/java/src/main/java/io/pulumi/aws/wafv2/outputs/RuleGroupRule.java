@@ -136,32 +136,32 @@ public final class RuleGroupRule {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(RuleGroupRuleAction action) {
+        public Builder action(RuleGroupRuleAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<RuleGroupRuleRuleLabel> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<RuleGroupRuleRuleLabel> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setStatement(RuleGroupRuleStatement statement) {
+        public Builder statement(RuleGroupRuleStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setVisibilityConfig(RuleGroupRuleVisibilityConfig visibilityConfig) {
+        public Builder visibilityConfig(RuleGroupRuleVisibilityConfig visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }

@@ -88,32 +88,32 @@ public final class ServiceSourceConfigurationImageRepositoryArgs extends io.pulu
     	      this.imageRepositoryType = defaults.imageRepositoryType;
         }
 
-        public Builder setImageConfiguration(@Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationArgs> imageConfiguration) {
+        public Builder imageConfiguration(@Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationArgs> imageConfiguration) {
             this.imageConfiguration = imageConfiguration;
             return this;
         }
 
-        public Builder setImageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfigurationArgs imageConfiguration) {
+        public Builder imageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfigurationArgs imageConfiguration) {
             this.imageConfiguration = Input.ofNullable(imageConfiguration);
             return this;
         }
 
-        public Builder setImageIdentifier(Input<String> imageIdentifier) {
+        public Builder imageIdentifier(Input<String> imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
 
-        public Builder setImageIdentifier(String imageIdentifier) {
+        public Builder imageIdentifier(String imageIdentifier) {
             this.imageIdentifier = Input.of(Objects.requireNonNull(imageIdentifier));
             return this;
         }
 
-        public Builder setImageRepositoryType(Input<String> imageRepositoryType) {
+        public Builder imageRepositoryType(Input<String> imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }
 
-        public Builder setImageRepositoryType(String imageRepositoryType) {
+        public Builder imageRepositoryType(String imageRepositoryType) {
             this.imageRepositoryType = Input.of(Objects.requireNonNull(imageRepositoryType));
             return this;
         }

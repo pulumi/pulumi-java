@@ -85,32 +85,32 @@ public final class DataSourceParametersSnowflakeGetArgs extends io.pulumi.resour
     	      this.warehouse = defaults.warehouse;
         }
 
-        public Builder setDatabase(Input<String> database) {
+        public Builder database(Input<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Input.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setWarehouse(Input<String> warehouse) {
+        public Builder warehouse(Input<String> warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
 
-        public Builder setWarehouse(String warehouse) {
+        public Builder warehouse(String warehouse) {
             this.warehouse = Input.of(Objects.requireNonNull(warehouse));
             return this;
         }

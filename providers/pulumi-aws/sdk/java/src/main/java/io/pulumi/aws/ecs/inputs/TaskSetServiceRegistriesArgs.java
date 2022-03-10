@@ -103,42 +103,42 @@ public final class TaskSetServiceRegistriesArgs extends io.pulumi.resources.Reso
     	      this.registryArn = defaults.registryArn;
         }
 
-        public Builder setContainerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Input<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = Input.ofNullable(containerName);
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Input<Integer> containerPort) {
+        public Builder containerPort(@Nullable Input<Integer> containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = Input.ofNullable(containerPort);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRegistryArn(Input<String> registryArn) {
+        public Builder registryArn(Input<String> registryArn) {
             this.registryArn = Objects.requireNonNull(registryArn);
             return this;
         }
 
-        public Builder setRegistryArn(String registryArn) {
+        public Builder registryArn(String registryArn) {
             this.registryArn = Input.of(Objects.requireNonNull(registryArn));
             return this;
         }

@@ -74,22 +74,22 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Integer> value) {
+        public Builder value(@Nullable Input<Integer> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = Input.ofNullable(value);
             return this;
         }

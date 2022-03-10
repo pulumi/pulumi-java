@@ -70,22 +70,22 @@ public final class VirtualNodeSpecListenerConnectionPoolHttpArgs extends io.pulu
     	      this.maxPendingRequests = defaults.maxPendingRequests;
         }
 
-        public Builder setMaxConnections(Input<Integer> maxConnections) {
+        public Builder maxConnections(Input<Integer> maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Input.of(Objects.requireNonNull(maxConnections));
             return this;
         }
 
-        public Builder setMaxPendingRequests(@Nullable Input<Integer> maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Input<Integer> maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }
 
-        public Builder setMaxPendingRequests(@Nullable Integer maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = Input.ofNullable(maxPendingRequests);
             return this;
         }

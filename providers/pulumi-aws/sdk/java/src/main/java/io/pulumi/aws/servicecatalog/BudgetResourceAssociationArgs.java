@@ -69,22 +69,22 @@ public final class BudgetResourceAssociationArgs extends io.pulumi.resources.Res
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setBudgetName(Input<String> budgetName) {
+        public Builder budgetName(Input<String> budgetName) {
             this.budgetName = Objects.requireNonNull(budgetName);
             return this;
         }
 
-        public Builder setBudgetName(String budgetName) {
+        public Builder budgetName(String budgetName) {
             this.budgetName = Input.of(Objects.requireNonNull(budgetName));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }

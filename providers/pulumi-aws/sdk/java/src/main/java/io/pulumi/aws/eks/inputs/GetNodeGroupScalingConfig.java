@@ -84,17 +84,17 @@ public final class GetNodeGroupScalingConfig extends io.pulumi.resources.InvokeA
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder setDesiredSize(Integer desiredSize) {
+        public Builder desiredSize(Integer desiredSize) {
             this.desiredSize = Objects.requireNonNull(desiredSize);
             return this;
         }
 
-        public Builder setMaxSize(Integer maxSize) {
+        public Builder maxSize(Integer maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
-        public Builder setMinSize(Integer minSize) {
+        public Builder minSize(Integer minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }

@@ -121,52 +121,52 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDefaultRunProperties(@Nullable Input<Map<String,Object>> defaultRunProperties) {
+        public Builder defaultRunProperties(@Nullable Input<Map<String,Object>> defaultRunProperties) {
             this.defaultRunProperties = defaultRunProperties;
             return this;
         }
 
-        public Builder setDefaultRunProperties(@Nullable Map<String,Object> defaultRunProperties) {
+        public Builder defaultRunProperties(@Nullable Map<String,Object> defaultRunProperties) {
             this.defaultRunProperties = Input.ofNullable(defaultRunProperties);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMaxConcurrentRuns(@Nullable Input<Integer> maxConcurrentRuns) {
+        public Builder maxConcurrentRuns(@Nullable Input<Integer> maxConcurrentRuns) {
             this.maxConcurrentRuns = maxConcurrentRuns;
             return this;
         }
 
-        public Builder setMaxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
+        public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
             this.maxConcurrentRuns = Input.ofNullable(maxConcurrentRuns);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

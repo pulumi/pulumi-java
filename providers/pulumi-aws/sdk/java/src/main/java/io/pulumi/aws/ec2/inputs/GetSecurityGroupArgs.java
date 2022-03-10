@@ -123,27 +123,27 @@ public final class GetSecurityGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setFilters(@Nullable List<GetSecurityGroupFilter> filters) {
+        public Builder filters(@Nullable List<GetSecurityGroupFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

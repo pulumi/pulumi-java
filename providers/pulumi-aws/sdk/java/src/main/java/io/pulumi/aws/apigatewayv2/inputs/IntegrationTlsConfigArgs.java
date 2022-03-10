@@ -53,12 +53,12 @@ public final class IntegrationTlsConfigArgs extends io.pulumi.resources.Resource
     	      this.serverNameToVerify = defaults.serverNameToVerify;
         }
 
-        public Builder setServerNameToVerify(@Nullable Input<String> serverNameToVerify) {
+        public Builder serverNameToVerify(@Nullable Input<String> serverNameToVerify) {
             this.serverNameToVerify = serverNameToVerify;
             return this;
         }
 
-        public Builder setServerNameToVerify(@Nullable String serverNameToVerify) {
+        public Builder serverNameToVerify(@Nullable String serverNameToVerify) {
             this.serverNameToVerify = Input.ofNullable(serverNameToVerify);
             return this;
         }

@@ -87,32 +87,32 @@ public final class FileSystemPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.policy = defaults.policy;
         }
 
-        public Builder setBypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Input<Boolean> bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
-        public Builder setBypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
+        public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
             this.bypassPolicyLockoutSafetyCheck = Input.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
 
-        public Builder setFileSystemId(Input<String> fileSystemId) {
+        public Builder fileSystemId(Input<String> fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Input.of(Objects.requireNonNull(fileSystemId));
             return this;
         }
 
-        public Builder setPolicy(Input<String> policy) {
+        public Builder policy(Input<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }

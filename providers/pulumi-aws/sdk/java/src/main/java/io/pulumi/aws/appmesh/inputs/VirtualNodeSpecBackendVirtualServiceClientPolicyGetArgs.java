@@ -53,12 +53,12 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs exten
     	      this.tls = defaults.tls;
         }
 
-        public Builder setTls(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
+        public Builder tls(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setTls(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs tls) {
+        public Builder tls(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs tls) {
             this.tls = Input.ofNullable(tls);
             return this;
         }

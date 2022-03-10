@@ -84,17 +84,17 @@ public final class ResolverSyncConfig {
     	      this.lambdaConflictHandlerConfig = defaults.lambdaConflictHandlerConfig;
         }
 
-        public Builder setConflictDetection(@Nullable String conflictDetection) {
+        public Builder conflictDetection(@Nullable String conflictDetection) {
             this.conflictDetection = conflictDetection;
             return this;
         }
 
-        public Builder setConflictHandler(@Nullable String conflictHandler) {
+        public Builder conflictHandler(@Nullable String conflictHandler) {
             this.conflictHandler = conflictHandler;
             return this;
         }
 
-        public Builder setLambdaConflictHandlerConfig(@Nullable ResolverSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
+        public Builder lambdaConflictHandlerConfig(@Nullable ResolverSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
             this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;
             return this;
         }

@@ -66,17 +66,17 @@ public final class GetBotAssociationResult {
     	      this.lexBot = defaults.lexBot;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLexBot(GetBotAssociationLexBot lexBot) {
+        public Builder lexBot(GetBotAssociationLexBot lexBot) {
             this.lexBot = Objects.requireNonNull(lexBot);
             return this;
         }

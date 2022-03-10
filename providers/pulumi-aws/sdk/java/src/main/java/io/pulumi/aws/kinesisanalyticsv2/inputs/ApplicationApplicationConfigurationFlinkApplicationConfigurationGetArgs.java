@@ -88,32 +88,32 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.parallelismConfiguration = defaults.parallelismConfiguration;
         }
 
-        public Builder setCheckpointConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> checkpointConfiguration) {
+        public Builder checkpointConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs> checkpointConfiguration) {
             this.checkpointConfiguration = checkpointConfiguration;
             return this;
         }
 
-        public Builder setCheckpointConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs checkpointConfiguration) {
+        public Builder checkpointConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs checkpointConfiguration) {
             this.checkpointConfiguration = Input.ofNullable(checkpointConfiguration);
             return this;
         }
 
-        public Builder setMonitoringConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> monitoringConfiguration) {
+        public Builder monitoringConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs> monitoringConfiguration) {
             this.monitoringConfiguration = monitoringConfiguration;
             return this;
         }
 
-        public Builder setMonitoringConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs monitoringConfiguration) {
+        public Builder monitoringConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationGetArgs monitoringConfiguration) {
             this.monitoringConfiguration = Input.ofNullable(monitoringConfiguration);
             return this;
         }
 
-        public Builder setParallelismConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> parallelismConfiguration) {
+        public Builder parallelismConfiguration(@Nullable Input<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs> parallelismConfiguration) {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
 
-        public Builder setParallelismConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs parallelismConfiguration) {
+        public Builder parallelismConfiguration(@Nullable ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationGetArgs parallelismConfiguration) {
             this.parallelismConfiguration = Input.ofNullable(parallelismConfiguration);
             return this;
         }

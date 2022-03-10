@@ -82,17 +82,17 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder setAuthorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig) {
+        public Builder authorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig) {
             this.authorizationConfig = Objects.requireNonNull(authorizationConfig);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setRootDirectory(String rootDirectory) {
+        public Builder rootDirectory(String rootDirectory) {
             this.rootDirectory = Objects.requireNonNull(rootDirectory);
             return this;
         }

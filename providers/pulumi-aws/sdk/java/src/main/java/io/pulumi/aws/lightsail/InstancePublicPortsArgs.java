@@ -71,22 +71,22 @@ public final class InstancePublicPortsArgs extends io.pulumi.resources.ResourceA
     	      this.portInfos = defaults.portInfos;
         }
 
-        public Builder setInstanceName(Input<String> instanceName) {
+        public Builder instanceName(Input<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
-        public Builder setInstanceName(String instanceName) {
+        public Builder instanceName(String instanceName) {
             this.instanceName = Input.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder setPortInfos(Input<List<InstancePublicPortsPortInfoArgs>> portInfos) {
+        public Builder portInfos(Input<List<InstancePublicPortsPortInfoArgs>> portInfos) {
             this.portInfos = Objects.requireNonNull(portInfos);
             return this;
         }
 
-        public Builder setPortInfos(List<InstancePublicPortsPortInfoArgs> portInfos) {
+        public Builder portInfos(List<InstancePublicPortsPortInfoArgs> portInfos) {
             this.portInfos = Input.of(Objects.requireNonNull(portInfos));
             return this;
         }

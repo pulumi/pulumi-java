@@ -208,102 +208,102 @@ public final class AddonState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAddonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Input<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
-        public Builder setAddonName(@Nullable String addonName) {
+        public Builder addonName(@Nullable String addonName) {
             this.addonName = Input.ofNullable(addonName);
             return this;
         }
 
-        public Builder setAddonVersion(@Nullable Input<String> addonVersion) {
+        public Builder addonVersion(@Nullable Input<String> addonVersion) {
             this.addonVersion = addonVersion;
             return this;
         }
 
-        public Builder setAddonVersion(@Nullable String addonVersion) {
+        public Builder addonVersion(@Nullable String addonVersion) {
             this.addonVersion = Input.ofNullable(addonVersion);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setModifiedAt(@Nullable Input<String> modifiedAt) {
+        public Builder modifiedAt(@Nullable Input<String> modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
-        public Builder setModifiedAt(@Nullable String modifiedAt) {
+        public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = Input.ofNullable(modifiedAt);
             return this;
         }
 
-        public Builder setResolveConflicts(@Nullable Input<String> resolveConflicts) {
+        public Builder resolveConflicts(@Nullable Input<String> resolveConflicts) {
             this.resolveConflicts = resolveConflicts;
             return this;
         }
 
-        public Builder setResolveConflicts(@Nullable String resolveConflicts) {
+        public Builder resolveConflicts(@Nullable String resolveConflicts) {
             this.resolveConflicts = Input.ofNullable(resolveConflicts);
             return this;
         }
 
-        public Builder setServiceAccountRoleArn(@Nullable Input<String> serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(@Nullable Input<String> serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
 
-        public Builder setServiceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = Input.ofNullable(serviceAccountRoleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

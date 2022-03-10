@@ -48,7 +48,7 @@ public final class BucketServerSideEncryptionConfiguration {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRule(BucketServerSideEncryptionConfigurationRule rule) {
+        public Builder rule(BucketServerSideEncryptionConfigurationRule rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

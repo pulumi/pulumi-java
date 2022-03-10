@@ -66,22 +66,22 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setRegistryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Input<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = Input.ofNullable(registryId);
             return this;
         }

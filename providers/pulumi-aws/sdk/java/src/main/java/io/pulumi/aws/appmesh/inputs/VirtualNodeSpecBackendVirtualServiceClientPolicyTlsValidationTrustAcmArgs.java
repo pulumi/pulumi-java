@@ -53,12 +53,12 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
         }
 
-        public Builder setCertificateAuthorityArns(Input<List<String>> certificateAuthorityArns) {
+        public Builder certificateAuthorityArns(Input<List<String>> certificateAuthorityArns) {
             this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
             return this;
         }
 
-        public Builder setCertificateAuthorityArns(List<String> certificateAuthorityArns) {
+        public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
             this.certificateAuthorityArns = Input.of(Objects.requireNonNull(certificateAuthorityArns));
             return this;
         }

@@ -136,62 +136,62 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setClusterEndpointIdentifier(Input<String> clusterEndpointIdentifier) {
+        public Builder clusterEndpointIdentifier(Input<String> clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = Objects.requireNonNull(clusterEndpointIdentifier);
             return this;
         }
 
-        public Builder setClusterEndpointIdentifier(String clusterEndpointIdentifier) {
+        public Builder clusterEndpointIdentifier(String clusterEndpointIdentifier) {
             this.clusterEndpointIdentifier = Input.of(Objects.requireNonNull(clusterEndpointIdentifier));
             return this;
         }
 
-        public Builder setClusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder setCustomEndpointType(Input<String> customEndpointType) {
+        public Builder customEndpointType(Input<String> customEndpointType) {
             this.customEndpointType = Objects.requireNonNull(customEndpointType);
             return this;
         }
 
-        public Builder setCustomEndpointType(String customEndpointType) {
+        public Builder customEndpointType(String customEndpointType) {
             this.customEndpointType = Input.of(Objects.requireNonNull(customEndpointType));
             return this;
         }
 
-        public Builder setExcludedMembers(@Nullable Input<List<String>> excludedMembers) {
+        public Builder excludedMembers(@Nullable Input<List<String>> excludedMembers) {
             this.excludedMembers = excludedMembers;
             return this;
         }
 
-        public Builder setExcludedMembers(@Nullable List<String> excludedMembers) {
+        public Builder excludedMembers(@Nullable List<String> excludedMembers) {
             this.excludedMembers = Input.ofNullable(excludedMembers);
             return this;
         }
 
-        public Builder setStaticMembers(@Nullable Input<List<String>> staticMembers) {
+        public Builder staticMembers(@Nullable Input<List<String>> staticMembers) {
             this.staticMembers = staticMembers;
             return this;
         }
 
-        public Builder setStaticMembers(@Nullable List<String> staticMembers) {
+        public Builder staticMembers(@Nullable List<String> staticMembers) {
             this.staticMembers = Input.ofNullable(staticMembers);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

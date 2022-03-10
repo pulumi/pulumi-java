@@ -49,7 +49,7 @@ public final class WebAclLoggingConfigurationRedactedFields {
     	      this.fieldToMatches = defaults.fieldToMatches;
         }
 
-        public Builder setFieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
+        public Builder fieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
             this.fieldToMatches = Objects.requireNonNull(fieldToMatches);
             return this;
         }

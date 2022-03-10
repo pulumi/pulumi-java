@@ -74,17 +74,17 @@ public final class GetNodeGroupsResult {
     	      this.names = defaults.names;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

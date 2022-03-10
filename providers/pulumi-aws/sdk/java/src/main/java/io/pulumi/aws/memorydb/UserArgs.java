@@ -120,52 +120,52 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccessString(Input<String> accessString) {
+        public Builder accessString(Input<String> accessString) {
             this.accessString = Objects.requireNonNull(accessString);
             return this;
         }
 
-        public Builder setAccessString(String accessString) {
+        public Builder accessString(String accessString) {
             this.accessString = Input.of(Objects.requireNonNull(accessString));
             return this;
         }
 
-        public Builder setAuthenticationMode(Input<UserAuthenticationModeArgs> authenticationMode) {
+        public Builder authenticationMode(Input<UserAuthenticationModeArgs> authenticationMode) {
             this.authenticationMode = Objects.requireNonNull(authenticationMode);
             return this;
         }
 
-        public Builder setAuthenticationMode(UserAuthenticationModeArgs authenticationMode) {
+        public Builder authenticationMode(UserAuthenticationModeArgs authenticationMode) {
             this.authenticationMode = Input.of(Objects.requireNonNull(authenticationMode));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserName(Input<String> userName) {
+        public Builder userName(Input<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }

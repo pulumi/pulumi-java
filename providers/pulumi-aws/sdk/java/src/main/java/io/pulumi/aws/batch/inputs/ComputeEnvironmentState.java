@@ -232,122 +232,122 @@ public final class ComputeEnvironmentState extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setComputeEnvironmentName(@Nullable Input<String> computeEnvironmentName) {
+        public Builder computeEnvironmentName(@Nullable Input<String> computeEnvironmentName) {
             this.computeEnvironmentName = computeEnvironmentName;
             return this;
         }
 
-        public Builder setComputeEnvironmentName(@Nullable String computeEnvironmentName) {
+        public Builder computeEnvironmentName(@Nullable String computeEnvironmentName) {
             this.computeEnvironmentName = Input.ofNullable(computeEnvironmentName);
             return this;
         }
 
-        public Builder setComputeEnvironmentNamePrefix(@Nullable Input<String> computeEnvironmentNamePrefix) {
+        public Builder computeEnvironmentNamePrefix(@Nullable Input<String> computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
             return this;
         }
 
-        public Builder setComputeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
+        public Builder computeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = Input.ofNullable(computeEnvironmentNamePrefix);
             return this;
         }
 
-        public Builder setComputeResources(@Nullable Input<ComputeEnvironmentComputeResourcesGetArgs> computeResources) {
+        public Builder computeResources(@Nullable Input<ComputeEnvironmentComputeResourcesGetArgs> computeResources) {
             this.computeResources = computeResources;
             return this;
         }
 
-        public Builder setComputeResources(@Nullable ComputeEnvironmentComputeResourcesGetArgs computeResources) {
+        public Builder computeResources(@Nullable ComputeEnvironmentComputeResourcesGetArgs computeResources) {
             this.computeResources = Input.ofNullable(computeResources);
             return this;
         }
 
-        public Builder setEcsClusterArn(@Nullable Input<String> ecsClusterArn) {
+        public Builder ecsClusterArn(@Nullable Input<String> ecsClusterArn) {
             this.ecsClusterArn = ecsClusterArn;
             return this;
         }
 
-        public Builder setEcsClusterArn(@Nullable String ecsClusterArn) {
+        public Builder ecsClusterArn(@Nullable String ecsClusterArn) {
             this.ecsClusterArn = Input.ofNullable(ecsClusterArn);
             return this;
         }
 
-        public Builder setServiceRole(@Nullable Input<String> serviceRole) {
+        public Builder serviceRole(@Nullable Input<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
-        public Builder setServiceRole(@Nullable String serviceRole) {
+        public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Input.ofNullable(serviceRole);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setStatusReason(@Nullable Input<String> statusReason) {
+        public Builder statusReason(@Nullable Input<String> statusReason) {
             this.statusReason = statusReason;
             return this;
         }
 
-        public Builder setStatusReason(@Nullable String statusReason) {
+        public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = Input.ofNullable(statusReason);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -126,32 +126,32 @@ public final class GetDataLakeSettingsResult {
     	      this.trustedResourceOwners = defaults.trustedResourceOwners;
         }
 
-        public Builder setAdmins(List<String> admins) {
+        public Builder admins(List<String> admins) {
             this.admins = Objects.requireNonNull(admins);
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCreateDatabaseDefaultPermissions(List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions) {
+        public Builder createDatabaseDefaultPermissions(List<GetDataLakeSettingsCreateDatabaseDefaultPermission> createDatabaseDefaultPermissions) {
             this.createDatabaseDefaultPermissions = Objects.requireNonNull(createDatabaseDefaultPermissions);
             return this;
         }
 
-        public Builder setCreateTableDefaultPermissions(List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions) {
+        public Builder createTableDefaultPermissions(List<GetDataLakeSettingsCreateTableDefaultPermission> createTableDefaultPermissions) {
             this.createTableDefaultPermissions = Objects.requireNonNull(createTableDefaultPermissions);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTrustedResourceOwners(List<String> trustedResourceOwners) {
+        public Builder trustedResourceOwners(List<String> trustedResourceOwners) {
             this.trustedResourceOwners = Objects.requireNonNull(trustedResourceOwners);
             return this;
         }

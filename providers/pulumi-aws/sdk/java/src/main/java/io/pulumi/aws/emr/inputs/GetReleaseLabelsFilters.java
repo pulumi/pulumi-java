@@ -70,12 +70,12 @@ public final class GetReleaseLabelsFilters extends io.pulumi.resources.InvokeArg
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setApplication(@Nullable String application) {
+        public Builder application(@Nullable String application) {
             this.application = application;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

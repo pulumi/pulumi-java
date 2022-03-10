@@ -285,82 +285,82 @@ public final class GetElasticIpResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssociationId(String associationId) {
+        public Builder associationId(String associationId) {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
 
-        public Builder setCarrierIp(String carrierIp) {
+        public Builder carrierIp(String carrierIp) {
             this.carrierIp = Objects.requireNonNull(carrierIp);
             return this;
         }
 
-        public Builder setCustomerOwnedIp(String customerOwnedIp) {
+        public Builder customerOwnedIp(String customerOwnedIp) {
             this.customerOwnedIp = Objects.requireNonNull(customerOwnedIp);
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetElasticIpFilter> filters) {
+        public Builder filters(@Nullable List<GetElasticIpFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceOwnerId(String networkInterfaceOwnerId) {
+        public Builder networkInterfaceOwnerId(String networkInterfaceOwnerId) {
             this.networkInterfaceOwnerId = Objects.requireNonNull(networkInterfaceOwnerId);
             return this;
         }
 
-        public Builder setPrivateDns(String privateDns) {
+        public Builder privateDns(String privateDns) {
             this.privateDns = Objects.requireNonNull(privateDns);
             return this;
         }
 
-        public Builder setPrivateIp(String privateIp) {
+        public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
 
-        public Builder setPublicDns(String publicDns) {
+        public Builder publicDns(String publicDns) {
             this.publicDns = Objects.requireNonNull(publicDns);
             return this;
         }
 
-        public Builder setPublicIp(String publicIp) {
+        public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }
 
-        public Builder setPublicIpv4Pool(String publicIpv4Pool) {
+        public Builder publicIpv4Pool(String publicIpv4Pool) {
             this.publicIpv4Pool = Objects.requireNonNull(publicIpv4Pool);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

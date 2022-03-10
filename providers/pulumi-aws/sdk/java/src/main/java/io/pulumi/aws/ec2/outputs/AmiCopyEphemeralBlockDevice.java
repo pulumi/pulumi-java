@@ -69,12 +69,12 @@ public final class AmiCopyEphemeralBlockDevice {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
         }

@@ -67,12 +67,12 @@ public final class BucketReplicationConfiguration {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRules(List<BucketReplicationConfigurationRule> rules) {
+        public Builder rules(List<BucketReplicationConfigurationRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

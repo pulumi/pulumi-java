@@ -52,12 +52,12 @@ public final class AccountAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accountAlias = defaults.accountAlias;
         }
 
-        public Builder setAccountAlias(Input<String> accountAlias) {
+        public Builder accountAlias(Input<String> accountAlias) {
             this.accountAlias = Objects.requireNonNull(accountAlias);
             return this;
         }
 
-        public Builder setAccountAlias(String accountAlias) {
+        public Builder accountAlias(String accountAlias) {
             this.accountAlias = Input.of(Objects.requireNonNull(accountAlias));
             return this;
         }

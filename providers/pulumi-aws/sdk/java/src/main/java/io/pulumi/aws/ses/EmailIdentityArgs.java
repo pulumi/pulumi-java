@@ -52,12 +52,12 @@ public final class EmailIdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.email = defaults.email;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }

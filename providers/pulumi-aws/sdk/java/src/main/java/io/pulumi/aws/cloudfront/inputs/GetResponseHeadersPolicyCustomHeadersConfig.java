@@ -48,7 +48,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfig extends io.pulumi
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
+        public Builder items(List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

@@ -104,42 +104,42 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.policyTypeName = defaults.policyTypeName;
         }
 
-        public Builder setLoadBalancerName(Input<String> loadBalancerName) {
+        public Builder loadBalancerName(Input<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
 
-        public Builder setLoadBalancerName(String loadBalancerName) {
+        public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Input.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
 
-        public Builder setPolicyAttributes(@Nullable Input<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes) {
+        public Builder policyAttributes(@Nullable Input<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes) {
             this.policyAttributes = policyAttributes;
             return this;
         }
 
-        public Builder setPolicyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeArgs> policyAttributes) {
+        public Builder policyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeArgs> policyAttributes) {
             this.policyAttributes = Input.ofNullable(policyAttributes);
             return this;
         }
 
-        public Builder setPolicyName(Input<String> policyName) {
+        public Builder policyName(Input<String> policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
 
-        public Builder setPolicyName(String policyName) {
+        public Builder policyName(String policyName) {
             this.policyName = Input.of(Objects.requireNonNull(policyName));
             return this;
         }
 
-        public Builder setPolicyTypeName(Input<String> policyTypeName) {
+        public Builder policyTypeName(Input<String> policyTypeName) {
             this.policyTypeName = Objects.requireNonNull(policyTypeName);
             return this;
         }
 
-        public Builder setPolicyTypeName(String policyTypeName) {
+        public Builder policyTypeName(String policyTypeName) {
             this.policyTypeName = Input.of(Objects.requireNonNull(policyTypeName));
             return this;
         }

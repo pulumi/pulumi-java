@@ -88,32 +88,32 @@ public final class ServiceNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setAssignPublicIp(@Nullable Input<Boolean> assignPublicIp) {
+        public Builder assignPublicIp(@Nullable Input<Boolean> assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
-        public Builder setAssignPublicIp(@Nullable Boolean assignPublicIp) {
+        public Builder assignPublicIp(@Nullable Boolean assignPublicIp) {
             this.assignPublicIp = Input.ofNullable(assignPublicIp);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnets(Input<List<String>> subnets) {
+        public Builder subnets(Input<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }

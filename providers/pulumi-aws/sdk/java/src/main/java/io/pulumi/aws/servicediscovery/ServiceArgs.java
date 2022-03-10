@@ -171,82 +171,82 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable Input<ServiceDnsConfigArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Input<ServiceDnsConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable ServiceDnsConfigArgs dnsConfig) {
+        public Builder dnsConfig(@Nullable ServiceDnsConfigArgs dnsConfig) {
             this.dnsConfig = Input.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setHealthCheckConfig(@Nullable Input<ServiceHealthCheckConfigArgs> healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable Input<ServiceHealthCheckConfigArgs> healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
-        public Builder setHealthCheckConfig(@Nullable ServiceHealthCheckConfigArgs healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable ServiceHealthCheckConfigArgs healthCheckConfig) {
             this.healthCheckConfig = Input.ofNullable(healthCheckConfig);
             return this;
         }
 
-        public Builder setHealthCheckCustomConfig(@Nullable Input<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig) {
+        public Builder healthCheckCustomConfig(@Nullable Input<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig) {
             this.healthCheckCustomConfig = healthCheckCustomConfig;
             return this;
         }
 
-        public Builder setHealthCheckCustomConfig(@Nullable ServiceHealthCheckCustomConfigArgs healthCheckCustomConfig) {
+        public Builder healthCheckCustomConfig(@Nullable ServiceHealthCheckCustomConfigArgs healthCheckCustomConfig) {
             this.healthCheckCustomConfig = Input.ofNullable(healthCheckCustomConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespaceId(@Nullable Input<String> namespaceId) {
+        public Builder namespaceId(@Nullable Input<String> namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
 
-        public Builder setNamespaceId(@Nullable String namespaceId) {
+        public Builder namespaceId(@Nullable String namespaceId) {
             this.namespaceId = Input.ofNullable(namespaceId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

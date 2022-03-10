@@ -170,57 +170,57 @@ public final class GetListenerDefaultActionAuthenticateOidc extends io.pulumi.re
     	      this.userInfoEndpoint = defaults.userInfoEndpoint;
         }
 
-        public Builder setAuthenticationRequestExtraParams(Map<String,String> authenticationRequestExtraParams) {
+        public Builder authenticationRequestExtraParams(Map<String,String> authenticationRequestExtraParams) {
             this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams);
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setOnUnauthenticatedRequest(String onUnauthenticatedRequest) {
+        public Builder onUnauthenticatedRequest(String onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setSessionCookieName(String sessionCookieName) {
+        public Builder sessionCookieName(String sessionCookieName) {
             this.sessionCookieName = Objects.requireNonNull(sessionCookieName);
             return this;
         }
 
-        public Builder setSessionTimeout(Integer sessionTimeout) {
+        public Builder sessionTimeout(Integer sessionTimeout) {
             this.sessionTimeout = Objects.requireNonNull(sessionTimeout);
             return this;
         }
 
-        public Builder setTokenEndpoint(String tokenEndpoint) {
+        public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
 
-        public Builder setUserInfoEndpoint(String userInfoEndpoint) {
+        public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }

@@ -53,12 +53,12 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementOr
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(Input<List<WebAclRuleStatementOrStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements) {
+        public Builder statements(Input<List<WebAclRuleStatementOrStatementStatementOrStatementStatementOrStatementStatementGetArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
-        public Builder setStatements(List<WebAclRuleStatementOrStatementStatementOrStatementStatementOrStatementStatementGetArgs> statements) {
+        public Builder statements(List<WebAclRuleStatementOrStatementStatementOrStatementStatementOrStatementStatementGetArgs> statements) {
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }

@@ -52,7 +52,7 @@ public final class GetSecretsArgs extends io.pulumi.resources.InvokeArgs {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setSecrets(List<GetSecretsSecret> secrets) {
+        public Builder secrets(List<GetSecretsSecret> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }

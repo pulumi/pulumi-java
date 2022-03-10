@@ -153,72 +153,72 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userData = defaults.userData;
         }
 
-        public Builder setAvailabilityZone(Input<String> availabilityZone) {
+        public Builder availabilityZone(Input<String> availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Input.of(Objects.requireNonNull(availabilityZone));
             return this;
         }
 
-        public Builder setBlueprintId(Input<String> blueprintId) {
+        public Builder blueprintId(Input<String> blueprintId) {
             this.blueprintId = Objects.requireNonNull(blueprintId);
             return this;
         }
 
-        public Builder setBlueprintId(String blueprintId) {
+        public Builder blueprintId(String blueprintId) {
             this.blueprintId = Input.of(Objects.requireNonNull(blueprintId));
             return this;
         }
 
-        public Builder setBundleId(Input<String> bundleId) {
+        public Builder bundleId(Input<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Input.of(Objects.requireNonNull(bundleId));
             return this;
         }
 
-        public Builder setKeyPairName(@Nullable Input<String> keyPairName) {
+        public Builder keyPairName(@Nullable Input<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
 
-        public Builder setKeyPairName(@Nullable String keyPairName) {
+        public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = Input.ofNullable(keyPairName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }

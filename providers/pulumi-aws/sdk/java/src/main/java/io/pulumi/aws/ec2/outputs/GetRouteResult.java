@@ -153,72 +153,72 @@ public final class GetRouteResult {
     	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
         }
 
-        public Builder setCarrierGatewayId(String carrierGatewayId) {
+        public Builder carrierGatewayId(String carrierGatewayId) {
             this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(String destinationCidrBlock) {
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
-        public Builder setDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
+        public Builder destinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
             this.destinationIpv6CidrBlock = Objects.requireNonNull(destinationIpv6CidrBlock);
             return this;
         }
 
-        public Builder setDestinationPrefixListId(String destinationPrefixListId) {
+        public Builder destinationPrefixListId(String destinationPrefixListId) {
             this.destinationPrefixListId = Objects.requireNonNull(destinationPrefixListId);
             return this;
         }
 
-        public Builder setEgressOnlyGatewayId(String egressOnlyGatewayId) {
+        public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
             this.egressOnlyGatewayId = Objects.requireNonNull(egressOnlyGatewayId);
             return this;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLocalGatewayId(String localGatewayId) {
+        public Builder localGatewayId(String localGatewayId) {
             this.localGatewayId = Objects.requireNonNull(localGatewayId);
             return this;
         }
 
-        public Builder setNatGatewayId(String natGatewayId) {
+        public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = Objects.requireNonNull(natGatewayId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setRouteTableId(String routeTableId) {
+        public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(String vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
             return this;
         }

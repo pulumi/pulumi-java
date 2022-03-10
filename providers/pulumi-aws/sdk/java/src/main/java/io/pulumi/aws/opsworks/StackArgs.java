@@ -401,222 +401,222 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAgentVersion(@Nullable Input<String> agentVersion) {
+        public Builder agentVersion(@Nullable Input<String> agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = Input.ofNullable(agentVersion);
             return this;
         }
 
-        public Builder setBerkshelfVersion(@Nullable Input<String> berkshelfVersion) {
+        public Builder berkshelfVersion(@Nullable Input<String> berkshelfVersion) {
             this.berkshelfVersion = berkshelfVersion;
             return this;
         }
 
-        public Builder setBerkshelfVersion(@Nullable String berkshelfVersion) {
+        public Builder berkshelfVersion(@Nullable String berkshelfVersion) {
             this.berkshelfVersion = Input.ofNullable(berkshelfVersion);
             return this;
         }
 
-        public Builder setColor(@Nullable Input<String> color) {
+        public Builder color(@Nullable Input<String> color) {
             this.color = color;
             return this;
         }
 
-        public Builder setColor(@Nullable String color) {
+        public Builder color(@Nullable String color) {
             this.color = Input.ofNullable(color);
             return this;
         }
 
-        public Builder setConfigurationManagerName(@Nullable Input<String> configurationManagerName) {
+        public Builder configurationManagerName(@Nullable Input<String> configurationManagerName) {
             this.configurationManagerName = configurationManagerName;
             return this;
         }
 
-        public Builder setConfigurationManagerName(@Nullable String configurationManagerName) {
+        public Builder configurationManagerName(@Nullable String configurationManagerName) {
             this.configurationManagerName = Input.ofNullable(configurationManagerName);
             return this;
         }
 
-        public Builder setConfigurationManagerVersion(@Nullable Input<String> configurationManagerVersion) {
+        public Builder configurationManagerVersion(@Nullable Input<String> configurationManagerVersion) {
             this.configurationManagerVersion = configurationManagerVersion;
             return this;
         }
 
-        public Builder setConfigurationManagerVersion(@Nullable String configurationManagerVersion) {
+        public Builder configurationManagerVersion(@Nullable String configurationManagerVersion) {
             this.configurationManagerVersion = Input.ofNullable(configurationManagerVersion);
             return this;
         }
 
-        public Builder setCustomCookbooksSources(@Nullable Input<List<StackCustomCookbooksSourceArgs>> customCookbooksSources) {
+        public Builder customCookbooksSources(@Nullable Input<List<StackCustomCookbooksSourceArgs>> customCookbooksSources) {
             this.customCookbooksSources = customCookbooksSources;
             return this;
         }
 
-        public Builder setCustomCookbooksSources(@Nullable List<StackCustomCookbooksSourceArgs> customCookbooksSources) {
+        public Builder customCookbooksSources(@Nullable List<StackCustomCookbooksSourceArgs> customCookbooksSources) {
             this.customCookbooksSources = Input.ofNullable(customCookbooksSources);
             return this;
         }
 
-        public Builder setCustomJson(@Nullable Input<String> customJson) {
+        public Builder customJson(@Nullable Input<String> customJson) {
             this.customJson = customJson;
             return this;
         }
 
-        public Builder setCustomJson(@Nullable String customJson) {
+        public Builder customJson(@Nullable String customJson) {
             this.customJson = Input.ofNullable(customJson);
             return this;
         }
 
-        public Builder setDefaultAvailabilityZone(@Nullable Input<String> defaultAvailabilityZone) {
+        public Builder defaultAvailabilityZone(@Nullable Input<String> defaultAvailabilityZone) {
             this.defaultAvailabilityZone = defaultAvailabilityZone;
             return this;
         }
 
-        public Builder setDefaultAvailabilityZone(@Nullable String defaultAvailabilityZone) {
+        public Builder defaultAvailabilityZone(@Nullable String defaultAvailabilityZone) {
             this.defaultAvailabilityZone = Input.ofNullable(defaultAvailabilityZone);
             return this;
         }
 
-        public Builder setDefaultInstanceProfileArn(Input<String> defaultInstanceProfileArn) {
+        public Builder defaultInstanceProfileArn(Input<String> defaultInstanceProfileArn) {
             this.defaultInstanceProfileArn = Objects.requireNonNull(defaultInstanceProfileArn);
             return this;
         }
 
-        public Builder setDefaultInstanceProfileArn(String defaultInstanceProfileArn) {
+        public Builder defaultInstanceProfileArn(String defaultInstanceProfileArn) {
             this.defaultInstanceProfileArn = Input.of(Objects.requireNonNull(defaultInstanceProfileArn));
             return this;
         }
 
-        public Builder setDefaultOs(@Nullable Input<String> defaultOs) {
+        public Builder defaultOs(@Nullable Input<String> defaultOs) {
             this.defaultOs = defaultOs;
             return this;
         }
 
-        public Builder setDefaultOs(@Nullable String defaultOs) {
+        public Builder defaultOs(@Nullable String defaultOs) {
             this.defaultOs = Input.ofNullable(defaultOs);
             return this;
         }
 
-        public Builder setDefaultRootDeviceType(@Nullable Input<String> defaultRootDeviceType) {
+        public Builder defaultRootDeviceType(@Nullable Input<String> defaultRootDeviceType) {
             this.defaultRootDeviceType = defaultRootDeviceType;
             return this;
         }
 
-        public Builder setDefaultRootDeviceType(@Nullable String defaultRootDeviceType) {
+        public Builder defaultRootDeviceType(@Nullable String defaultRootDeviceType) {
             this.defaultRootDeviceType = Input.ofNullable(defaultRootDeviceType);
             return this;
         }
 
-        public Builder setDefaultSshKeyName(@Nullable Input<String> defaultSshKeyName) {
+        public Builder defaultSshKeyName(@Nullable Input<String> defaultSshKeyName) {
             this.defaultSshKeyName = defaultSshKeyName;
             return this;
         }
 
-        public Builder setDefaultSshKeyName(@Nullable String defaultSshKeyName) {
+        public Builder defaultSshKeyName(@Nullable String defaultSshKeyName) {
             this.defaultSshKeyName = Input.ofNullable(defaultSshKeyName);
             return this;
         }
 
-        public Builder setDefaultSubnetId(@Nullable Input<String> defaultSubnetId) {
+        public Builder defaultSubnetId(@Nullable Input<String> defaultSubnetId) {
             this.defaultSubnetId = defaultSubnetId;
             return this;
         }
 
-        public Builder setDefaultSubnetId(@Nullable String defaultSubnetId) {
+        public Builder defaultSubnetId(@Nullable String defaultSubnetId) {
             this.defaultSubnetId = Input.ofNullable(defaultSubnetId);
             return this;
         }
 
-        public Builder setHostnameTheme(@Nullable Input<String> hostnameTheme) {
+        public Builder hostnameTheme(@Nullable Input<String> hostnameTheme) {
             this.hostnameTheme = hostnameTheme;
             return this;
         }
 
-        public Builder setHostnameTheme(@Nullable String hostnameTheme) {
+        public Builder hostnameTheme(@Nullable String hostnameTheme) {
             this.hostnameTheme = Input.ofNullable(hostnameTheme);
             return this;
         }
 
-        public Builder setManageBerkshelf(@Nullable Input<Boolean> manageBerkshelf) {
+        public Builder manageBerkshelf(@Nullable Input<Boolean> manageBerkshelf) {
             this.manageBerkshelf = manageBerkshelf;
             return this;
         }
 
-        public Builder setManageBerkshelf(@Nullable Boolean manageBerkshelf) {
+        public Builder manageBerkshelf(@Nullable Boolean manageBerkshelf) {
             this.manageBerkshelf = Input.ofNullable(manageBerkshelf);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setServiceRoleArn(Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(Input<String> serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
 
-        public Builder setServiceRoleArn(String serviceRoleArn) {
+        public Builder serviceRoleArn(String serviceRoleArn) {
             this.serviceRoleArn = Input.of(Objects.requireNonNull(serviceRoleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUseCustomCookbooks(@Nullable Input<Boolean> useCustomCookbooks) {
+        public Builder useCustomCookbooks(@Nullable Input<Boolean> useCustomCookbooks) {
             this.useCustomCookbooks = useCustomCookbooks;
             return this;
         }
 
-        public Builder setUseCustomCookbooks(@Nullable Boolean useCustomCookbooks) {
+        public Builder useCustomCookbooks(@Nullable Boolean useCustomCookbooks) {
             this.useCustomCookbooks = Input.ofNullable(useCustomCookbooks);
             return this;
         }
 
-        public Builder setUseOpsworksSecurityGroups(@Nullable Input<Boolean> useOpsworksSecurityGroups) {
+        public Builder useOpsworksSecurityGroups(@Nullable Input<Boolean> useOpsworksSecurityGroups) {
             this.useOpsworksSecurityGroups = useOpsworksSecurityGroups;
             return this;
         }
 
-        public Builder setUseOpsworksSecurityGroups(@Nullable Boolean useOpsworksSecurityGroups) {
+        public Builder useOpsworksSecurityGroups(@Nullable Boolean useOpsworksSecurityGroups) {
             this.useOpsworksSecurityGroups = Input.ofNullable(useOpsworksSecurityGroups);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

@@ -69,22 +69,22 @@ public final class PrincipalAssociationArgs extends io.pulumi.resources.Resource
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder setPrincipal(Input<String> principal) {
+        public Builder principal(Input<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder setResourceShareArn(Input<String> resourceShareArn) {
+        public Builder resourceShareArn(Input<String> resourceShareArn) {
             this.resourceShareArn = Objects.requireNonNull(resourceShareArn);
             return this;
         }
 
-        public Builder setResourceShareArn(String resourceShareArn) {
+        public Builder resourceShareArn(String resourceShareArn) {
             this.resourceShareArn = Input.of(Objects.requireNonNull(resourceShareArn));
             return this;
         }

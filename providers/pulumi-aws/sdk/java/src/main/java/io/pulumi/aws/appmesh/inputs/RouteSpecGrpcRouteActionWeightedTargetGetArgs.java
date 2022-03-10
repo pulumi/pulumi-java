@@ -70,22 +70,22 @@ public final class RouteSpecGrpcRouteActionWeightedTargetGetArgs extends io.pulu
     	      this.weight = defaults.weight;
         }
 
-        public Builder setVirtualNode(Input<String> virtualNode) {
+        public Builder virtualNode(Input<String> virtualNode) {
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
 
-        public Builder setVirtualNode(String virtualNode) {
+        public Builder virtualNode(String virtualNode) {
             this.virtualNode = Input.of(Objects.requireNonNull(virtualNode));
             return this;
         }
 
-        public Builder setWeight(Input<Integer> weight) {
+        public Builder weight(Input<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }

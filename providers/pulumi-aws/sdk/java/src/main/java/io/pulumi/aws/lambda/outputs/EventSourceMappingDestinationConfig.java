@@ -50,7 +50,7 @@ public final class EventSourceMappingDestinationConfig {
     	      this.onFailure = defaults.onFailure;
         }
 
-        public Builder setOnFailure(@Nullable EventSourceMappingDestinationConfigOnFailure onFailure) {
+        public Builder onFailure(@Nullable EventSourceMappingDestinationConfigOnFailure onFailure) {
             this.onFailure = onFailure;
             return this;
         }

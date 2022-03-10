@@ -88,32 +88,32 @@ public final class ServiceSourceConfigurationCodeRepositoryGetArgs extends io.pu
     	      this.sourceCodeVersion = defaults.sourceCodeVersion;
         }
 
-        public Builder setCodeConfiguration(@Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration) {
+        public Builder codeConfiguration(@Nullable Input<ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs> codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setCodeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs codeConfiguration) {
+        public Builder codeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationGetArgs codeConfiguration) {
             this.codeConfiguration = Input.ofNullable(codeConfiguration);
             return this;
         }
 
-        public Builder setRepositoryUrl(Input<String> repositoryUrl) {
+        public Builder repositoryUrl(Input<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Input.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
 
-        public Builder setSourceCodeVersion(Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion) {
+        public Builder sourceCodeVersion(Input<ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs> sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }
 
-        public Builder setSourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs sourceCodeVersion) {
+        public Builder sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersionGetArgs sourceCodeVersion) {
             this.sourceCodeVersion = Input.of(Objects.requireNonNull(sourceCodeVersion));
             return this;
         }

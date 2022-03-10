@@ -106,42 +106,42 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdvancedBackupSettings(@Nullable Input<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable Input<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings) {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
 
-        public Builder setAdvancedBackupSettings(@Nullable List<PlanAdvancedBackupSettingArgs> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable List<PlanAdvancedBackupSettingArgs> advancedBackupSettings) {
             this.advancedBackupSettings = Input.ofNullable(advancedBackupSettings);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRules(Input<List<PlanRuleArgs>> rules) {
+        public Builder rules(Input<List<PlanRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<PlanRuleArgs> rules) {
+        public Builder rules(List<PlanRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

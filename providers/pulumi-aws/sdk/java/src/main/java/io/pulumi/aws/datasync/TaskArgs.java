@@ -170,82 +170,82 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCloudwatchLogGroupArn(@Nullable Input<String> cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(@Nullable Input<String> cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
 
-        public Builder setCloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Input.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
 
-        public Builder setDestinationLocationArn(Input<String> destinationLocationArn) {
+        public Builder destinationLocationArn(Input<String> destinationLocationArn) {
             this.destinationLocationArn = Objects.requireNonNull(destinationLocationArn);
             return this;
         }
 
-        public Builder setDestinationLocationArn(String destinationLocationArn) {
+        public Builder destinationLocationArn(String destinationLocationArn) {
             this.destinationLocationArn = Input.of(Objects.requireNonNull(destinationLocationArn));
             return this;
         }
 
-        public Builder setExcludes(@Nullable Input<TaskExcludesArgs> excludes) {
+        public Builder excludes(@Nullable Input<TaskExcludesArgs> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExcludes(@Nullable TaskExcludesArgs excludes) {
+        public Builder excludes(@Nullable TaskExcludesArgs excludes) {
             this.excludes = Input.ofNullable(excludes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<TaskOptionsArgs> options) {
+        public Builder options(@Nullable Input<TaskOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable TaskOptionsArgs options) {
+        public Builder options(@Nullable TaskOptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<TaskScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<TaskScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable TaskScheduleArgs schedule) {
+        public Builder schedule(@Nullable TaskScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setSourceLocationArn(Input<String> sourceLocationArn) {
+        public Builder sourceLocationArn(Input<String> sourceLocationArn) {
             this.sourceLocationArn = Objects.requireNonNull(sourceLocationArn);
             return this;
         }
 
-        public Builder setSourceLocationArn(String sourceLocationArn) {
+        public Builder sourceLocationArn(String sourceLocationArn) {
             this.sourceLocationArn = Input.of(Objects.requireNonNull(sourceLocationArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

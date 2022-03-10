@@ -71,22 +71,22 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermissionArgs extends i
     	      this.principal = defaults.principal;
         }
 
-        public Builder setPermissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Input<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<String> permissions) {
+        public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }

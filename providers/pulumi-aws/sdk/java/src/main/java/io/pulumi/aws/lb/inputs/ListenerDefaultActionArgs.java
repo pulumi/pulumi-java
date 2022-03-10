@@ -172,82 +172,82 @@ public final class ListenerDefaultActionArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticateCognito(@Nullable Input<ListenerDefaultActionAuthenticateCognitoArgs> authenticateCognito) {
+        public Builder authenticateCognito(@Nullable Input<ListenerDefaultActionAuthenticateCognitoArgs> authenticateCognito) {
             this.authenticateCognito = authenticateCognito;
             return this;
         }
 
-        public Builder setAuthenticateCognito(@Nullable ListenerDefaultActionAuthenticateCognitoArgs authenticateCognito) {
+        public Builder authenticateCognito(@Nullable ListenerDefaultActionAuthenticateCognitoArgs authenticateCognito) {
             this.authenticateCognito = Input.ofNullable(authenticateCognito);
             return this;
         }
 
-        public Builder setAuthenticateOidc(@Nullable Input<ListenerDefaultActionAuthenticateOidcArgs> authenticateOidc) {
+        public Builder authenticateOidc(@Nullable Input<ListenerDefaultActionAuthenticateOidcArgs> authenticateOidc) {
             this.authenticateOidc = authenticateOidc;
             return this;
         }
 
-        public Builder setAuthenticateOidc(@Nullable ListenerDefaultActionAuthenticateOidcArgs authenticateOidc) {
+        public Builder authenticateOidc(@Nullable ListenerDefaultActionAuthenticateOidcArgs authenticateOidc) {
             this.authenticateOidc = Input.ofNullable(authenticateOidc);
             return this;
         }
 
-        public Builder setFixedResponse(@Nullable Input<ListenerDefaultActionFixedResponseArgs> fixedResponse) {
+        public Builder fixedResponse(@Nullable Input<ListenerDefaultActionFixedResponseArgs> fixedResponse) {
             this.fixedResponse = fixedResponse;
             return this;
         }
 
-        public Builder setFixedResponse(@Nullable ListenerDefaultActionFixedResponseArgs fixedResponse) {
+        public Builder fixedResponse(@Nullable ListenerDefaultActionFixedResponseArgs fixedResponse) {
             this.fixedResponse = Input.ofNullable(fixedResponse);
             return this;
         }
 
-        public Builder setForward(@Nullable Input<ListenerDefaultActionForwardArgs> forward) {
+        public Builder forward(@Nullable Input<ListenerDefaultActionForwardArgs> forward) {
             this.forward = forward;
             return this;
         }
 
-        public Builder setForward(@Nullable ListenerDefaultActionForwardArgs forward) {
+        public Builder forward(@Nullable ListenerDefaultActionForwardArgs forward) {
             this.forward = Input.ofNullable(forward);
             return this;
         }
 
-        public Builder setOrder(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Input<Integer> order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = Input.ofNullable(order);
             return this;
         }
 
-        public Builder setRedirect(@Nullable Input<ListenerDefaultActionRedirectArgs> redirect) {
+        public Builder redirect(@Nullable Input<ListenerDefaultActionRedirectArgs> redirect) {
             this.redirect = redirect;
             return this;
         }
 
-        public Builder setRedirect(@Nullable ListenerDefaultActionRedirectArgs redirect) {
+        public Builder redirect(@Nullable ListenerDefaultActionRedirectArgs redirect) {
             this.redirect = Input.ofNullable(redirect);
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable Input<String> targetGroupArn) {
+        public Builder targetGroupArn(@Nullable Input<String> targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = Input.ofNullable(targetGroupArn);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -88,32 +88,32 @@ public final class CatalogTableStorageDescriptorSchemaReferenceGetArgs extends i
     	      this.schemaVersionNumber = defaults.schemaVersionNumber;
         }
 
-        public Builder setSchemaId(@Nullable Input<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId) {
+        public Builder schemaId(@Nullable Input<CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs> schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
-        public Builder setSchemaId(@Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs schemaId) {
+        public Builder schemaId(@Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaIdGetArgs schemaId) {
             this.schemaId = Input.ofNullable(schemaId);
             return this;
         }
 
-        public Builder setSchemaVersionId(@Nullable Input<String> schemaVersionId) {
+        public Builder schemaVersionId(@Nullable Input<String> schemaVersionId) {
             this.schemaVersionId = schemaVersionId;
             return this;
         }
 
-        public Builder setSchemaVersionId(@Nullable String schemaVersionId) {
+        public Builder schemaVersionId(@Nullable String schemaVersionId) {
             this.schemaVersionId = Input.ofNullable(schemaVersionId);
             return this;
         }
 
-        public Builder setSchemaVersionNumber(Input<Integer> schemaVersionNumber) {
+        public Builder schemaVersionNumber(Input<Integer> schemaVersionNumber) {
             this.schemaVersionNumber = Objects.requireNonNull(schemaVersionNumber);
             return this;
         }
 
-        public Builder setSchemaVersionNumber(Integer schemaVersionNumber) {
+        public Builder schemaVersionNumber(Integer schemaVersionNumber) {
             this.schemaVersionNumber = Input.of(Objects.requireNonNull(schemaVersionNumber));
             return this;
         }

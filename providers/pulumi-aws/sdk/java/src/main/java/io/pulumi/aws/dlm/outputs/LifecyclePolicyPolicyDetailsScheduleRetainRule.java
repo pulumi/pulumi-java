@@ -48,7 +48,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRule {
     	      this.count = defaults.count;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }

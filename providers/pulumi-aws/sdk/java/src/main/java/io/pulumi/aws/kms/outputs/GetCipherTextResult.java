@@ -91,27 +91,27 @@ public final class GetCipherTextResult {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setCiphertextBlob(String ciphertextBlob) {
+        public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = Objects.requireNonNull(ciphertextBlob);
             return this;
         }
 
-        public Builder setContext(@Nullable Map<String,String> context) {
+        public Builder context(@Nullable Map<String,String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setPlaintext(String plaintext) {
+        public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }

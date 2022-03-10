@@ -103,42 +103,42 @@ public final class StudioLifecycleConfigArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setStudioLifecycleConfigAppType(Input<String> studioLifecycleConfigAppType) {
+        public Builder studioLifecycleConfigAppType(Input<String> studioLifecycleConfigAppType) {
             this.studioLifecycleConfigAppType = Objects.requireNonNull(studioLifecycleConfigAppType);
             return this;
         }
 
-        public Builder setStudioLifecycleConfigAppType(String studioLifecycleConfigAppType) {
+        public Builder studioLifecycleConfigAppType(String studioLifecycleConfigAppType) {
             this.studioLifecycleConfigAppType = Input.of(Objects.requireNonNull(studioLifecycleConfigAppType));
             return this;
         }
 
-        public Builder setStudioLifecycleConfigContent(Input<String> studioLifecycleConfigContent) {
+        public Builder studioLifecycleConfigContent(Input<String> studioLifecycleConfigContent) {
             this.studioLifecycleConfigContent = Objects.requireNonNull(studioLifecycleConfigContent);
             return this;
         }
 
-        public Builder setStudioLifecycleConfigContent(String studioLifecycleConfigContent) {
+        public Builder studioLifecycleConfigContent(String studioLifecycleConfigContent) {
             this.studioLifecycleConfigContent = Input.of(Objects.requireNonNull(studioLifecycleConfigContent));
             return this;
         }
 
-        public Builder setStudioLifecycleConfigName(Input<String> studioLifecycleConfigName) {
+        public Builder studioLifecycleConfigName(Input<String> studioLifecycleConfigName) {
             this.studioLifecycleConfigName = Objects.requireNonNull(studioLifecycleConfigName);
             return this;
         }
 
-        public Builder setStudioLifecycleConfigName(String studioLifecycleConfigName) {
+        public Builder studioLifecycleConfigName(String studioLifecycleConfigName) {
             this.studioLifecycleConfigName = Input.of(Objects.requireNonNull(studioLifecycleConfigName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

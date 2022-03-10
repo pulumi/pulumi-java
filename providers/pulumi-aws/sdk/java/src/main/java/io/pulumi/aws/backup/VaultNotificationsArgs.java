@@ -86,32 +86,32 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setBackupVaultEvents(Input<List<String>> backupVaultEvents) {
+        public Builder backupVaultEvents(Input<List<String>> backupVaultEvents) {
             this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
             return this;
         }
 
-        public Builder setBackupVaultEvents(List<String> backupVaultEvents) {
+        public Builder backupVaultEvents(List<String> backupVaultEvents) {
             this.backupVaultEvents = Input.of(Objects.requireNonNull(backupVaultEvents));
             return this;
         }
 
-        public Builder setBackupVaultName(Input<String> backupVaultName) {
+        public Builder backupVaultName(Input<String> backupVaultName) {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
 
-        public Builder setBackupVaultName(String backupVaultName) {
+        public Builder backupVaultName(String backupVaultName) {
             this.backupVaultName = Input.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
 
-        public Builder setSnsTopicArn(Input<String> snsTopicArn) {
+        public Builder snsTopicArn(Input<String> snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
 
-        public Builder setSnsTopicArn(String snsTopicArn) {
+        public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Input.of(Objects.requireNonNull(snsTopicArn));
             return this;
         }

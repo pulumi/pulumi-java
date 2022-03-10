@@ -153,72 +153,72 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     	      this.selectionTags = defaults.selectionTags;
         }
 
-        public Builder setConditions(@Nullable Input<List<SelectionConditionGetArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<SelectionConditionGetArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<SelectionConditionGetArgs> conditions) {
+        public Builder conditions(@Nullable List<SelectionConditionGetArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable String iamRoleArn) {
+        public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Input.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotResources(@Nullable Input<List<String>> notResources) {
+        public Builder notResources(@Nullable Input<List<String>> notResources) {
             this.notResources = notResources;
             return this;
         }
 
-        public Builder setNotResources(@Nullable List<String> notResources) {
+        public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = Input.ofNullable(notResources);
             return this;
         }
 
-        public Builder setPlanId(@Nullable Input<String> planId) {
+        public Builder planId(@Nullable Input<String> planId) {
             this.planId = planId;
             return this;
         }
 
-        public Builder setPlanId(@Nullable String planId) {
+        public Builder planId(@Nullable String planId) {
             this.planId = Input.ofNullable(planId);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setSelectionTags(@Nullable Input<List<SelectionSelectionTagGetArgs>> selectionTags) {
+        public Builder selectionTags(@Nullable Input<List<SelectionSelectionTagGetArgs>> selectionTags) {
             this.selectionTags = selectionTags;
             return this;
         }
 
-        public Builder setSelectionTags(@Nullable List<SelectionSelectionTagGetArgs> selectionTags) {
+        public Builder selectionTags(@Nullable List<SelectionSelectionTagGetArgs> selectionTags) {
             this.selectionTags = Input.ofNullable(selectionTags);
             return this;
         }

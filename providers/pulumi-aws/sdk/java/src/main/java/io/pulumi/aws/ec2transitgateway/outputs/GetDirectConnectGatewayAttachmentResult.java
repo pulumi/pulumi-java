@@ -94,27 +94,27 @@ public final class GetDirectConnectGatewayAttachmentResult {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setDxGatewayId(@Nullable String dxGatewayId) {
+        public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetDirectConnectGatewayAttachmentFilter> filters) {
+        public Builder filters(@Nullable List<GetDirectConnectGatewayAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }

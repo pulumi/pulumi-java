@@ -48,7 +48,7 @@ public final class InventorySchedule {
     	      this.frequency = defaults.frequency;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }

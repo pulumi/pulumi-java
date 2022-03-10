@@ -87,32 +87,32 @@ public final class GraphQLApiLogConfigArgs extends io.pulumi.resources.ResourceA
     	      this.fieldLogLevel = defaults.fieldLogLevel;
         }
 
-        public Builder setCloudwatchLogsRoleArn(Input<String> cloudwatchLogsRoleArn) {
+        public Builder cloudwatchLogsRoleArn(Input<String> cloudwatchLogsRoleArn) {
             this.cloudwatchLogsRoleArn = Objects.requireNonNull(cloudwatchLogsRoleArn);
             return this;
         }
 
-        public Builder setCloudwatchLogsRoleArn(String cloudwatchLogsRoleArn) {
+        public Builder cloudwatchLogsRoleArn(String cloudwatchLogsRoleArn) {
             this.cloudwatchLogsRoleArn = Input.of(Objects.requireNonNull(cloudwatchLogsRoleArn));
             return this;
         }
 
-        public Builder setExcludeVerboseContent(@Nullable Input<Boolean> excludeVerboseContent) {
+        public Builder excludeVerboseContent(@Nullable Input<Boolean> excludeVerboseContent) {
             this.excludeVerboseContent = excludeVerboseContent;
             return this;
         }
 
-        public Builder setExcludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
+        public Builder excludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
             this.excludeVerboseContent = Input.ofNullable(excludeVerboseContent);
             return this;
         }
 
-        public Builder setFieldLogLevel(Input<String> fieldLogLevel) {
+        public Builder fieldLogLevel(Input<String> fieldLogLevel) {
             this.fieldLogLevel = Objects.requireNonNull(fieldLogLevel);
             return this;
         }
 
-        public Builder setFieldLogLevel(String fieldLogLevel) {
+        public Builder fieldLogLevel(String fieldLogLevel) {
             this.fieldLogLevel = Input.of(Objects.requireNonNull(fieldLogLevel));
             return this;
         }

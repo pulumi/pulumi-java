@@ -102,42 +102,42 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
     	      this.userId = defaults.userId;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Input<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setUserArn(@Nullable Input<String> userArn) {
+        public Builder userArn(@Nullable Input<String> userArn) {
             this.userArn = userArn;
             return this;
         }
 
-        public Builder setUserArn(@Nullable String userArn) {
+        public Builder userArn(@Nullable String userArn) {
             this.userArn = Input.ofNullable(userArn);
             return this;
         }
 
-        public Builder setUserId(@Nullable Input<String> userId) {
+        public Builder userId(@Nullable Input<String> userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setUserId(@Nullable String userId) {
+        public Builder userId(@Nullable String userId) {
             this.userId = Input.ofNullable(userId);
             return this;
         }

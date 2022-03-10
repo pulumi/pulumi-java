@@ -77,12 +77,12 @@ public final class IntentRejectionStatement {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMessages(List<IntentRejectionStatementMessage> messages) {
+        public Builder messages(List<IntentRejectionStatementMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

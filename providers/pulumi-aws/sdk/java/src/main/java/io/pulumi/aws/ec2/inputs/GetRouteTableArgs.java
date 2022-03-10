@@ -137,32 +137,32 @@ public final class GetRouteTableArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setFilters(@Nullable List<GetRouteTableFilter> filters) {
+        public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setRouteTableId(@Nullable String routeTableId) {
+        public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

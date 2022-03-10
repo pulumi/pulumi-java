@@ -68,12 +68,12 @@ public final class GetImagePipelineSchedule extends io.pulumi.resources.InvokeAr
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setPipelineExecutionStartCondition(String pipelineExecutionStartCondition) {
+        public Builder pipelineExecutionStartCondition(String pipelineExecutionStartCondition) {
             this.pipelineExecutionStartCondition = Objects.requireNonNull(pipelineExecutionStartCondition);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

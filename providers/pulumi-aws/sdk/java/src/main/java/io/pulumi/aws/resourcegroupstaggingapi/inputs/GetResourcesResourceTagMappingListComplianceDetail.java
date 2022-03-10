@@ -80,17 +80,17 @@ public final class GetResourcesResourceTagMappingListComplianceDetail extends io
     	      this.nonCompliantKeys = defaults.nonCompliantKeys;
         }
 
-        public Builder setComplianceStatus(Boolean complianceStatus) {
+        public Builder complianceStatus(Boolean complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setKeysWithNoncompliantValues(List<String> keysWithNoncompliantValues) {
+        public Builder keysWithNoncompliantValues(List<String> keysWithNoncompliantValues) {
             this.keysWithNoncompliantValues = Objects.requireNonNull(keysWithNoncompliantValues);
             return this;
         }
 
-        public Builder setNonCompliantKeys(List<String> nonCompliantKeys) {
+        public Builder nonCompliantKeys(List<String> nonCompliantKeys) {
             this.nonCompliantKeys = Objects.requireNonNull(nonCompliantKeys);
             return this;
         }

@@ -237,122 +237,122 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setApiKeyRequired(@Nullable Input<Boolean> apiKeyRequired) {
+        public Builder apiKeyRequired(@Nullable Input<Boolean> apiKeyRequired) {
             this.apiKeyRequired = apiKeyRequired;
             return this;
         }
 
-        public Builder setApiKeyRequired(@Nullable Boolean apiKeyRequired) {
+        public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
             this.apiKeyRequired = Input.ofNullable(apiKeyRequired);
             return this;
         }
 
-        public Builder setAuthorizationScopes(@Nullable Input<List<String>> authorizationScopes) {
+        public Builder authorizationScopes(@Nullable Input<List<String>> authorizationScopes) {
             this.authorizationScopes = authorizationScopes;
             return this;
         }
 
-        public Builder setAuthorizationScopes(@Nullable List<String> authorizationScopes) {
+        public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
             this.authorizationScopes = Input.ofNullable(authorizationScopes);
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable Input<String> authorizationType) {
+        public Builder authorizationType(@Nullable Input<String> authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable String authorizationType) {
+        public Builder authorizationType(@Nullable String authorizationType) {
             this.authorizationType = Input.ofNullable(authorizationType);
             return this;
         }
 
-        public Builder setAuthorizerId(@Nullable Input<String> authorizerId) {
+        public Builder authorizerId(@Nullable Input<String> authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
 
-        public Builder setAuthorizerId(@Nullable String authorizerId) {
+        public Builder authorizerId(@Nullable String authorizerId) {
             this.authorizerId = Input.ofNullable(authorizerId);
             return this;
         }
 
-        public Builder setModelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
             this.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
 
-        public Builder setModelSelectionExpression(@Nullable String modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
             this.modelSelectionExpression = Input.ofNullable(modelSelectionExpression);
             return this;
         }
 
-        public Builder setOperationName(@Nullable Input<String> operationName) {
+        public Builder operationName(@Nullable Input<String> operationName) {
             this.operationName = operationName;
             return this;
         }
 
-        public Builder setOperationName(@Nullable String operationName) {
+        public Builder operationName(@Nullable String operationName) {
             this.operationName = Input.ofNullable(operationName);
             return this;
         }
 
-        public Builder setRequestModels(@Nullable Input<Map<String,String>> requestModels) {
+        public Builder requestModels(@Nullable Input<Map<String,String>> requestModels) {
             this.requestModels = requestModels;
             return this;
         }
 
-        public Builder setRequestModels(@Nullable Map<String,String> requestModels) {
+        public Builder requestModels(@Nullable Map<String,String> requestModels) {
             this.requestModels = Input.ofNullable(requestModels);
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Input<List<RouteRequestParameterArgs>> requestParameters) {
+        public Builder requestParameters(@Nullable Input<List<RouteRequestParameterArgs>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable List<RouteRequestParameterArgs> requestParameters) {
+        public Builder requestParameters(@Nullable List<RouteRequestParameterArgs> requestParameters) {
             this.requestParameters = Input.ofNullable(requestParameters);
             return this;
         }
 
-        public Builder setRouteKey(Input<String> routeKey) {
+        public Builder routeKey(Input<String> routeKey) {
             this.routeKey = Objects.requireNonNull(routeKey);
             return this;
         }
 
-        public Builder setRouteKey(String routeKey) {
+        public Builder routeKey(String routeKey) {
             this.routeKey = Input.of(Objects.requireNonNull(routeKey));
             return this;
         }
 
-        public Builder setRouteResponseSelectionExpression(@Nullable Input<String> routeResponseSelectionExpression) {
+        public Builder routeResponseSelectionExpression(@Nullable Input<String> routeResponseSelectionExpression) {
             this.routeResponseSelectionExpression = routeResponseSelectionExpression;
             return this;
         }
 
-        public Builder setRouteResponseSelectionExpression(@Nullable String routeResponseSelectionExpression) {
+        public Builder routeResponseSelectionExpression(@Nullable String routeResponseSelectionExpression) {
             this.routeResponseSelectionExpression = Input.ofNullable(routeResponseSelectionExpression);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

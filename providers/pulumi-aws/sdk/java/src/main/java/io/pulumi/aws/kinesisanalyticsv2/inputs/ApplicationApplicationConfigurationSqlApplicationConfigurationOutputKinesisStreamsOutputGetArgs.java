@@ -52,12 +52,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }

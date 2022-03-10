@@ -106,42 +106,42 @@ public final class PipelineDefinitionArgs extends io.pulumi.resources.ResourceAr
     	      this.pipelineObjects = defaults.pipelineObjects;
         }
 
-        public Builder setParameterObjects(@Nullable Input<List<PipelineDefinitionParameterObjectArgs>> parameterObjects) {
+        public Builder parameterObjects(@Nullable Input<List<PipelineDefinitionParameterObjectArgs>> parameterObjects) {
             this.parameterObjects = parameterObjects;
             return this;
         }
 
-        public Builder setParameterObjects(@Nullable List<PipelineDefinitionParameterObjectArgs> parameterObjects) {
+        public Builder parameterObjects(@Nullable List<PipelineDefinitionParameterObjectArgs> parameterObjects) {
             this.parameterObjects = Input.ofNullable(parameterObjects);
             return this;
         }
 
-        public Builder setParameterValues(@Nullable Input<List<PipelineDefinitionParameterValueArgs>> parameterValues) {
+        public Builder parameterValues(@Nullable Input<List<PipelineDefinitionParameterValueArgs>> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
 
-        public Builder setParameterValues(@Nullable List<PipelineDefinitionParameterValueArgs> parameterValues) {
+        public Builder parameterValues(@Nullable List<PipelineDefinitionParameterValueArgs> parameterValues) {
             this.parameterValues = Input.ofNullable(parameterValues);
             return this;
         }
 
-        public Builder setPipelineId(Input<String> pipelineId) {
+        public Builder pipelineId(Input<String> pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
 
-        public Builder setPipelineId(String pipelineId) {
+        public Builder pipelineId(String pipelineId) {
             this.pipelineId = Input.of(Objects.requireNonNull(pipelineId));
             return this;
         }
 
-        public Builder setPipelineObjects(Input<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects) {
+        public Builder pipelineObjects(Input<List<PipelineDefinitionPipelineObjectArgs>> pipelineObjects) {
             this.pipelineObjects = Objects.requireNonNull(pipelineObjects);
             return this;
         }
 
-        public Builder setPipelineObjects(List<PipelineDefinitionPipelineObjectArgs> pipelineObjects) {
+        public Builder pipelineObjects(List<PipelineDefinitionPipelineObjectArgs> pipelineObjects) {
             this.pipelineObjects = Input.of(Objects.requireNonNull(pipelineObjects));
             return this;
         }

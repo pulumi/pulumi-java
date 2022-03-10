@@ -68,12 +68,12 @@ public final class ProjectLogsConfig {
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder setCloudwatchLogs(@Nullable ProjectLogsConfigCloudwatchLogs cloudwatchLogs) {
+        public Builder cloudwatchLogs(@Nullable ProjectLogsConfigCloudwatchLogs cloudwatchLogs) {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
 
-        public Builder setS3Logs(@Nullable ProjectLogsConfigS3Logs s3Logs) {
+        public Builder s3Logs(@Nullable ProjectLogsConfigS3Logs s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }

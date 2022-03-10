@@ -105,42 +105,42 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     	      this.waitIntervalInSeconds = defaults.waitIntervalInSeconds;
         }
 
-        public Builder setCanarySize(@Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize) {
+        public Builder canarySize(@Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize) {
             this.canarySize = canarySize;
             return this;
         }
 
-        public Builder setCanarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs canarySize) {
+        public Builder canarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs canarySize) {
             this.canarySize = Input.ofNullable(canarySize);
             return this;
         }
 
-        public Builder setLinearStepSize(@Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize) {
+        public Builder linearStepSize(@Nullable Input<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize) {
             this.linearStepSize = linearStepSize;
             return this;
         }
 
-        public Builder setLinearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs linearStepSize) {
+        public Builder linearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs linearStepSize) {
             this.linearStepSize = Input.ofNullable(linearStepSize);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWaitIntervalInSeconds(Input<Integer> waitIntervalInSeconds) {
+        public Builder waitIntervalInSeconds(Input<Integer> waitIntervalInSeconds) {
             this.waitIntervalInSeconds = Objects.requireNonNull(waitIntervalInSeconds);
             return this;
         }
 
-        public Builder setWaitIntervalInSeconds(Integer waitIntervalInSeconds) {
+        public Builder waitIntervalInSeconds(Integer waitIntervalInSeconds) {
             this.waitIntervalInSeconds = Input.of(Objects.requireNonNull(waitIntervalInSeconds));
             return this;
         }

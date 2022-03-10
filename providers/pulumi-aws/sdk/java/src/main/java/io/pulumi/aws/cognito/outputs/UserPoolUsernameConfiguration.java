@@ -48,7 +48,7 @@ public final class UserPoolUsernameConfiguration {
     	      this.caseSensitive = defaults.caseSensitive;
         }
 
-        public Builder setCaseSensitive(Boolean caseSensitive) {
+        public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
         }

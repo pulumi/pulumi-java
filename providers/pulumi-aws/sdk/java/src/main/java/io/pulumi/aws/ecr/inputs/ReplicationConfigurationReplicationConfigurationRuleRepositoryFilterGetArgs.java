@@ -69,22 +69,22 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
     	      this.filterType = defaults.filterType;
         }
 
-        public Builder setFilter(Input<String> filter) {
+        public Builder filter(Input<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder setFilterType(Input<String> filterType) {
+        public Builder filterType(Input<String> filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
         }
 
-        public Builder setFilterType(String filterType) {
+        public Builder filterType(String filterType) {
             this.filterType = Input.of(Objects.requireNonNull(filterType));
             return this;
         }

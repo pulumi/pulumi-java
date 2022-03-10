@@ -53,12 +53,12 @@ public final class ClusterIdentityOidcArgs extends io.pulumi.resources.ResourceA
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }

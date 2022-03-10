@@ -88,32 +88,32 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
     	      this.policyNames = defaults.policyNames;
         }
 
-        public Builder setInstancePort(@Nullable Input<Integer> instancePort) {
+        public Builder instancePort(@Nullable Input<Integer> instancePort) {
             this.instancePort = instancePort;
             return this;
         }
 
-        public Builder setInstancePort(@Nullable Integer instancePort) {
+        public Builder instancePort(@Nullable Integer instancePort) {
             this.instancePort = Input.ofNullable(instancePort);
             return this;
         }
 
-        public Builder setLoadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
-        public Builder setLoadBalancerName(@Nullable String loadBalancerName) {
+        public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Input.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder setPolicyNames(@Nullable Input<List<String>> policyNames) {
+        public Builder policyNames(@Nullable Input<List<String>> policyNames) {
             this.policyNames = policyNames;
             return this;
         }
 
-        public Builder setPolicyNames(@Nullable List<String> policyNames) {
+        public Builder policyNames(@Nullable List<String> policyNames) {
             this.policyNames = Input.ofNullable(policyNames);
             return this;
         }

@@ -160,72 +160,72 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Input<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable List<AmiFromInstanceEbsBlockDeviceArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable List<AmiFromInstanceEbsBlockDeviceArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Input<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable List<AmiFromInstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable List<AmiFromInstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSnapshotWithoutReboot(@Nullable Input<Boolean> snapshotWithoutReboot) {
+        public Builder snapshotWithoutReboot(@Nullable Input<Boolean> snapshotWithoutReboot) {
             this.snapshotWithoutReboot = snapshotWithoutReboot;
             return this;
         }
 
-        public Builder setSnapshotWithoutReboot(@Nullable Boolean snapshotWithoutReboot) {
+        public Builder snapshotWithoutReboot(@Nullable Boolean snapshotWithoutReboot) {
             this.snapshotWithoutReboot = Input.ofNullable(snapshotWithoutReboot);
             return this;
         }
 
-        public Builder setSourceInstanceId(Input<String> sourceInstanceId) {
+        public Builder sourceInstanceId(Input<String> sourceInstanceId) {
             this.sourceInstanceId = Objects.requireNonNull(sourceInstanceId);
             return this;
         }
 
-        public Builder setSourceInstanceId(String sourceInstanceId) {
+        public Builder sourceInstanceId(String sourceInstanceId) {
             this.sourceInstanceId = Input.of(Objects.requireNonNull(sourceInstanceId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

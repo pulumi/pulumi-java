@@ -118,52 +118,52 @@ public final class ProjectFileSystemLocationGetArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder setIdentifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Input<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = Input.ofNullable(identifier);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMountOptions(@Nullable Input<String> mountOptions) {
+        public Builder mountOptions(@Nullable Input<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = Input.ofNullable(mountOptions);
             return this;
         }
 
-        public Builder setMountPoint(@Nullable Input<String> mountPoint) {
+        public Builder mountPoint(@Nullable Input<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
 
-        public Builder setMountPoint(@Nullable String mountPoint) {
+        public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = Input.ofNullable(mountPoint);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

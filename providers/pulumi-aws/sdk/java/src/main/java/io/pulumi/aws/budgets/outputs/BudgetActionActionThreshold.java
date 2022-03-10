@@ -66,12 +66,12 @@ public final class BudgetActionActionThreshold {
     	      this.actionThresholdValue = defaults.actionThresholdValue;
         }
 
-        public Builder setActionThresholdType(String actionThresholdType) {
+        public Builder actionThresholdType(String actionThresholdType) {
             this.actionThresholdType = Objects.requireNonNull(actionThresholdType);
             return this;
         }
 
-        public Builder setActionThresholdValue(Double actionThresholdValue) {
+        public Builder actionThresholdValue(Double actionThresholdValue) {
             this.actionThresholdValue = Objects.requireNonNull(actionThresholdValue);
             return this;
         }

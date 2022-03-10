@@ -52,12 +52,12 @@ public final class DataSourceSslPropertiesGetArgs extends io.pulumi.resources.Re
     	      this.disableSsl = defaults.disableSsl;
         }
 
-        public Builder setDisableSsl(Input<Boolean> disableSsl) {
+        public Builder disableSsl(Input<Boolean> disableSsl) {
             this.disableSsl = Objects.requireNonNull(disableSsl);
             return this;
         }
 
-        public Builder setDisableSsl(Boolean disableSsl) {
+        public Builder disableSsl(Boolean disableSsl) {
             this.disableSsl = Input.of(Objects.requireNonNull(disableSsl));
             return this;
         }

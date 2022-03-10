@@ -71,22 +71,22 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
     	      this.tlsSecurityPolicy = defaults.tlsSecurityPolicy;
         }
 
-        public Builder setEnforceHttps(@Nullable Input<Boolean> enforceHttps) {
+        public Builder enforceHttps(@Nullable Input<Boolean> enforceHttps) {
             this.enforceHttps = enforceHttps;
             return this;
         }
 
-        public Builder setEnforceHttps(@Nullable Boolean enforceHttps) {
+        public Builder enforceHttps(@Nullable Boolean enforceHttps) {
             this.enforceHttps = Input.ofNullable(enforceHttps);
             return this;
         }
 
-        public Builder setTlsSecurityPolicy(@Nullable Input<String> tlsSecurityPolicy) {
+        public Builder tlsSecurityPolicy(@Nullable Input<String> tlsSecurityPolicy) {
             this.tlsSecurityPolicy = tlsSecurityPolicy;
             return this;
         }
 
-        public Builder setTlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
+        public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
             this.tlsSecurityPolicy = Input.ofNullable(tlsSecurityPolicy);
             return this;
         }

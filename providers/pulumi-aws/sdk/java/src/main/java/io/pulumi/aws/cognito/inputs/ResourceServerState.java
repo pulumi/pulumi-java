@@ -116,52 +116,52 @@ public final class ResourceServerState extends io.pulumi.resources.ResourceArgs 
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setIdentifier(@Nullable Input<String> identifier) {
+        public Builder identifier(@Nullable Input<String> identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = Input.ofNullable(identifier);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScopeIdentifiers(@Nullable Input<List<String>> scopeIdentifiers) {
+        public Builder scopeIdentifiers(@Nullable Input<List<String>> scopeIdentifiers) {
             this.scopeIdentifiers = scopeIdentifiers;
             return this;
         }
 
-        public Builder setScopeIdentifiers(@Nullable List<String> scopeIdentifiers) {
+        public Builder scopeIdentifiers(@Nullable List<String> scopeIdentifiers) {
             this.scopeIdentifiers = Input.ofNullable(scopeIdentifiers);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<ResourceServerScopeGetArgs>> scopes) {
+        public Builder scopes(@Nullable Input<List<ResourceServerScopeGetArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<ResourceServerScopeGetArgs> scopes) {
+        public Builder scopes(@Nullable List<ResourceServerScopeGetArgs> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Input<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable String userPoolId) {
+        public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Input.ofNullable(userPoolId);
             return this;
         }

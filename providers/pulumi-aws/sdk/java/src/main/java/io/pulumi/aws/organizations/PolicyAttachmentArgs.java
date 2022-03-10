@@ -69,22 +69,22 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setPolicyId(Input<String> policyId) {
+        public Builder policyId(Input<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Input.of(Objects.requireNonNull(policyId));
             return this;
         }
 
-        public Builder setTargetId(Input<String> targetId) {
+        public Builder targetId(Input<String> targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Input.of(Objects.requireNonNull(targetId));
             return this;
         }

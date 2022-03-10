@@ -134,62 +134,62 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     	      this.title = defaults.title;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAlternateContactType(Input<String> alternateContactType) {
+        public Builder alternateContactType(Input<String> alternateContactType) {
             this.alternateContactType = Objects.requireNonNull(alternateContactType);
             return this;
         }
 
-        public Builder setAlternateContactType(String alternateContactType) {
+        public Builder alternateContactType(String alternateContactType) {
             this.alternateContactType = Input.of(Objects.requireNonNull(alternateContactType));
             return this;
         }
 
-        public Builder setEmailAddress(Input<String> emailAddress) {
+        public Builder emailAddress(Input<String> emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
-        public Builder setEmailAddress(String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             this.emailAddress = Input.of(Objects.requireNonNull(emailAddress));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPhoneNumber(Input<String> phoneNumber) {
+        public Builder phoneNumber(Input<String> phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

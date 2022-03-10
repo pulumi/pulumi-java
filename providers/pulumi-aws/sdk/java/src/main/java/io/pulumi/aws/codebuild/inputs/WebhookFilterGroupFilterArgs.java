@@ -87,32 +87,32 @@ public final class WebhookFilterGroupFilterArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setExcludeMatchedPattern(@Nullable Input<Boolean> excludeMatchedPattern) {
+        public Builder excludeMatchedPattern(@Nullable Input<Boolean> excludeMatchedPattern) {
             this.excludeMatchedPattern = excludeMatchedPattern;
             return this;
         }
 
-        public Builder setExcludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
+        public Builder excludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
             this.excludeMatchedPattern = Input.ofNullable(excludeMatchedPattern);
             return this;
         }
 
-        public Builder setPattern(Input<String> pattern) {
+        public Builder pattern(Input<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Input.of(Objects.requireNonNull(pattern));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

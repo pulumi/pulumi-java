@@ -72,22 +72,22 @@ public final class TableServerSideEncryptionGetArgs extends io.pulumi.resources.
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }

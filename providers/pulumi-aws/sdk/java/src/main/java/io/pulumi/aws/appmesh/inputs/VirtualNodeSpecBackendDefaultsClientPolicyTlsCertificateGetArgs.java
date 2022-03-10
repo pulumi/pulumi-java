@@ -71,22 +71,22 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateGetAr
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs> file) {
+        public Builder file(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs file) {
+        public Builder file(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFileGetArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setSds(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs> sds) {
+        public Builder sds(@Nullable Input<VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs> sds) {
             this.sds = sds;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs sds) {
+        public Builder sds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSdsGetArgs sds) {
             this.sds = Input.ofNullable(sds);
             return this;
         }

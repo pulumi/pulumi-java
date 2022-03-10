@@ -74,32 +74,32 @@ public final class RulePredicateGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setDataId(Input<String> dataId) {
+        public Builder dataId(Input<String> dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
 
-        public Builder setDataId(String dataId) {
+        public Builder dataId(String dataId) {
             this.dataId = Input.of(Objects.requireNonNull(dataId));
             return this;
         }
 
-        public Builder setNegated(Input<Boolean> negated) {
+        public Builder negated(Input<Boolean> negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
 
-        public Builder setNegated(Boolean negated) {
+        public Builder negated(Boolean negated) {
             this.negated = Input.of(Objects.requireNonNull(negated));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

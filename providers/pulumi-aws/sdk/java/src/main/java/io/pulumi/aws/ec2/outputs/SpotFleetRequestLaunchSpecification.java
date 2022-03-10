@@ -249,102 +249,102 @@ public final class SpotFleetRequestLaunchSpecification {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setAmi(String ami) {
+        public Builder ami(String ami) {
             this.ami = Objects.requireNonNull(ami);
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable String iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder setIamInstanceProfileArn(@Nullable String iamInstanceProfileArn) {
+        public Builder iamInstanceProfileArn(@Nullable String iamInstanceProfileArn) {
             this.iamInstanceProfileArn = iamInstanceProfileArn;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setMonitoring(@Nullable Boolean monitoring) {
+        public Builder monitoring(@Nullable Boolean monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
-        public Builder setPlacementGroup(@Nullable String placementGroup) {
+        public Builder placementGroup(@Nullable String placementGroup) {
             this.placementGroup = placementGroup;
             return this;
         }
 
-        public Builder setPlacementTenancy(@Nullable String placementTenancy) {
+        public Builder placementTenancy(@Nullable String placementTenancy) {
             this.placementTenancy = placementTenancy;
             return this;
         }
 
-        public Builder setRootBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDevice> rootBlockDevices) {
+        public Builder rootBlockDevices(@Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDevice> rootBlockDevices) {
             this.rootBlockDevices = rootBlockDevices;
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable String spotPrice) {
+        public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable String weightedCapacity) {
+        public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

@@ -85,32 +85,32 @@ public final class LaunchConfigurationRootBlockDevice {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setThroughput(@Nullable Integer throughput) {
+        public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
         }

@@ -120,52 +120,52 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     	      this.unit = defaults.unit;
         }
 
-        public Builder setMetricDimensions(@Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions) {
+        public Builder metricDimensions(@Nullable Input<List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs>> metricDimensions) {
             this.metricDimensions = metricDimensions;
             return this;
         }
 
-        public Builder setMetricDimensions(@Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs> metricDimensions) {
+        public Builder metricDimensions(@Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimensionArgs> metricDimensions) {
             this.metricDimensions = Input.ofNullable(metricDimensions);
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setNamespace(Input<String> namespace) {
+        public Builder namespace(Input<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder setStatistic(Input<String> statistic) {
+        public Builder statistic(Input<String> statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Input.of(Objects.requireNonNull(statistic));
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }

@@ -234,72 +234,72 @@ public final class GetInstanceResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAutoResolveBestVoicesEnabled(Boolean autoResolveBestVoicesEnabled) {
+        public Builder autoResolveBestVoicesEnabled(Boolean autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = Objects.requireNonNull(autoResolveBestVoicesEnabled);
             return this;
         }
 
-        public Builder setContactFlowLogsEnabled(Boolean contactFlowLogsEnabled) {
+        public Builder contactFlowLogsEnabled(Boolean contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = Objects.requireNonNull(contactFlowLogsEnabled);
             return this;
         }
 
-        public Builder setContactLensEnabled(Boolean contactLensEnabled) {
+        public Builder contactLensEnabled(Boolean contactLensEnabled) {
             this.contactLensEnabled = Objects.requireNonNull(contactLensEnabled);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setEarlyMediaEnabled(Boolean earlyMediaEnabled) {
+        public Builder earlyMediaEnabled(Boolean earlyMediaEnabled) {
             this.earlyMediaEnabled = Objects.requireNonNull(earlyMediaEnabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentityManagementType(String identityManagementType) {
+        public Builder identityManagementType(String identityManagementType) {
             this.identityManagementType = Objects.requireNonNull(identityManagementType);
             return this;
         }
 
-        public Builder setInboundCallsEnabled(Boolean inboundCallsEnabled) {
+        public Builder inboundCallsEnabled(Boolean inboundCallsEnabled) {
             this.inboundCallsEnabled = Objects.requireNonNull(inboundCallsEnabled);
             return this;
         }
 
-        public Builder setInstanceAlias(String instanceAlias) {
+        public Builder instanceAlias(String instanceAlias) {
             this.instanceAlias = Objects.requireNonNull(instanceAlias);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setOutboundCallsEnabled(Boolean outboundCallsEnabled) {
+        public Builder outboundCallsEnabled(Boolean outboundCallsEnabled) {
             this.outboundCallsEnabled = Objects.requireNonNull(outboundCallsEnabled);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -69,12 +69,12 @@ public final class ClassificationJobS3JobDefinition {
     	      this.scoping = defaults.scoping;
         }
 
-        public Builder setBucketDefinitions(@Nullable List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions) {
+        public Builder bucketDefinitions(@Nullable List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions) {
             this.bucketDefinitions = bucketDefinitions;
             return this;
         }
 
-        public Builder setScoping(@Nullable ClassificationJobS3JobDefinitionScoping scoping) {
+        public Builder scoping(@Nullable ClassificationJobS3JobDefinitionScoping scoping) {
             this.scoping = scoping;
             return this;
         }

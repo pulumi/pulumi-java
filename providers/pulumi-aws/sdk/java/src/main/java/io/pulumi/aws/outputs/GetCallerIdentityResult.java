@@ -97,22 +97,22 @@ public final class GetCallerIdentityResult {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

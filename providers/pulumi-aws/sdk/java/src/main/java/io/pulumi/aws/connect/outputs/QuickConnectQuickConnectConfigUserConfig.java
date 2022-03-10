@@ -65,12 +65,12 @@ public final class QuickConnectQuickConnectConfigUserConfig {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setContactFlowId(String contactFlowId) {
+        public Builder contactFlowId(String contactFlowId) {
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

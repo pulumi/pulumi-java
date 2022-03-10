@@ -85,17 +85,17 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

@@ -85,22 +85,22 @@ public final class GetLaunchPathsResult {
     	      this.summaries = defaults.summaries;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setSummaries(List<GetLaunchPathsSummary> summaries) {
+        public Builder summaries(List<GetLaunchPathsSummary> summaries) {
             this.summaries = Objects.requireNonNull(summaries);
             return this;
         }

@@ -50,7 +50,7 @@ public final class DeploymentGroupEc2TagSet {
     	      this.ec2TagFilters = defaults.ec2TagFilters;
         }
 
-        public Builder setEc2TagFilters(@Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters) {
+        public Builder ec2TagFilters(@Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters) {
             this.ec2TagFilters = ec2TagFilters;
             return this;
         }

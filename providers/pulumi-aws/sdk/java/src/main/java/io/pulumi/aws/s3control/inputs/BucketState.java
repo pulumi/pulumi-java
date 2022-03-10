@@ -152,72 +152,72 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setOutpostId(@Nullable Input<String> outpostId) {
+        public Builder outpostId(@Nullable Input<String> outpostId) {
             this.outpostId = outpostId;
             return this;
         }
 
-        public Builder setOutpostId(@Nullable String outpostId) {
+        public Builder outpostId(@Nullable String outpostId) {
             this.outpostId = Input.ofNullable(outpostId);
             return this;
         }
 
-        public Builder setPublicAccessBlockEnabled(@Nullable Input<Boolean> publicAccessBlockEnabled) {
+        public Builder publicAccessBlockEnabled(@Nullable Input<Boolean> publicAccessBlockEnabled) {
             this.publicAccessBlockEnabled = publicAccessBlockEnabled;
             return this;
         }
 
-        public Builder setPublicAccessBlockEnabled(@Nullable Boolean publicAccessBlockEnabled) {
+        public Builder publicAccessBlockEnabled(@Nullable Boolean publicAccessBlockEnabled) {
             this.publicAccessBlockEnabled = Input.ofNullable(publicAccessBlockEnabled);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

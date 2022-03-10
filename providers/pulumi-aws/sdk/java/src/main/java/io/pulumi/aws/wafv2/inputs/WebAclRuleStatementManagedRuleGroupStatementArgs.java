@@ -105,42 +105,42 @@ public final class WebAclRuleStatementManagedRuleGroupStatementArgs extends io.p
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setExcludedRules(@Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules) {
+        public Builder excludedRules(@Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleArgs> excludedRules) {
             this.excludedRules = Input.ofNullable(excludedRules);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }
 
-        public Builder setVendorName(Input<String> vendorName) {
+        public Builder vendorName(Input<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Input.of(Objects.requireNonNull(vendorName));
             return this;
         }

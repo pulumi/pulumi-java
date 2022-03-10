@@ -87,32 +87,32 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetKeyId = defaults.targetKeyId;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setTargetKeyId(Input<String> targetKeyId) {
+        public Builder targetKeyId(Input<String> targetKeyId) {
             this.targetKeyId = Objects.requireNonNull(targetKeyId);
             return this;
         }
 
-        public Builder setTargetKeyId(String targetKeyId) {
+        public Builder targetKeyId(String targetKeyId) {
             this.targetKeyId = Input.of(Objects.requireNonNull(targetKeyId));
             return this;
         }

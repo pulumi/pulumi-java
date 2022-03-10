@@ -50,12 +50,12 @@ public final class GetRestApiEndpointConfiguration {
     	      this.vpcEndpointIds = defaults.vpcEndpointIds;
         }
 
-        public Builder setTypes(List<String> types) {
+        public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
-        public Builder setVpcEndpointIds(List<String> vpcEndpointIds) {
+        public Builder vpcEndpointIds(List<String> vpcEndpointIds) {
             this.vpcEndpointIds = Objects.requireNonNull(vpcEndpointIds);
             return this;
         }

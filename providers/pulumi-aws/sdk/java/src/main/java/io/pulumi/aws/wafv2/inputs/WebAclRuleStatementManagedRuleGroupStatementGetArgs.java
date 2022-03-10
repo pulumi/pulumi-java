@@ -105,42 +105,42 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setExcludedRules(@Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules) {
+        public Builder excludedRules(@Nullable Input<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs> excludedRules) {
             this.excludedRules = Input.ofNullable(excludedRules);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Input<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs scopeDownStatement) {
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }
 
-        public Builder setVendorName(Input<String> vendorName) {
+        public Builder vendorName(Input<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Input.of(Objects.requireNonNull(vendorName));
             return this;
         }

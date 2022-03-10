@@ -84,17 +84,17 @@ public final class UsagePlanApiStage {
     	      this.throttles = defaults.throttles;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setThrottles(@Nullable List<UsagePlanApiStageThrottle> throttles) {
+        public Builder throttles(@Nullable List<UsagePlanApiStageThrottle> throttles) {
             this.throttles = throttles;
             return this;
         }

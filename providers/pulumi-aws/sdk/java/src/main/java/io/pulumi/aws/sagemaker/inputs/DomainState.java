@@ -266,142 +266,142 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAppNetworkAccessType(@Nullable Input<String> appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable Input<String> appNetworkAccessType) {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
 
-        public Builder setAppNetworkAccessType(@Nullable String appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
             this.appNetworkAccessType = Input.ofNullable(appNetworkAccessType);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuthMode(@Nullable Input<String> authMode) {
+        public Builder authMode(@Nullable Input<String> authMode) {
             this.authMode = authMode;
             return this;
         }
 
-        public Builder setAuthMode(@Nullable String authMode) {
+        public Builder authMode(@Nullable String authMode) {
             this.authMode = Input.ofNullable(authMode);
             return this;
         }
 
-        public Builder setDefaultUserSettings(@Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings) {
+        public Builder defaultUserSettings(@Nullable Input<DomainDefaultUserSettingsGetArgs> defaultUserSettings) {
             this.defaultUserSettings = defaultUserSettings;
             return this;
         }
 
-        public Builder setDefaultUserSettings(@Nullable DomainDefaultUserSettingsGetArgs defaultUserSettings) {
+        public Builder defaultUserSettings(@Nullable DomainDefaultUserSettingsGetArgs defaultUserSettings) {
             this.defaultUserSettings = Input.ofNullable(defaultUserSettings);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setHomeEfsFileSystemId(@Nullable Input<String> homeEfsFileSystemId) {
+        public Builder homeEfsFileSystemId(@Nullable Input<String> homeEfsFileSystemId) {
             this.homeEfsFileSystemId = homeEfsFileSystemId;
             return this;
         }
 
-        public Builder setHomeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
+        public Builder homeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
             this.homeEfsFileSystemId = Input.ofNullable(homeEfsFileSystemId);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<DomainRetentionPolicyGetArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable DomainRetentionPolicyGetArgs retentionPolicy) {
+        public Builder retentionPolicy(@Nullable DomainRetentionPolicyGetArgs retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setSingleSignOnManagedApplicationInstanceId(@Nullable Input<String> singleSignOnManagedApplicationInstanceId) {
+        public Builder singleSignOnManagedApplicationInstanceId(@Nullable Input<String> singleSignOnManagedApplicationInstanceId) {
             this.singleSignOnManagedApplicationInstanceId = singleSignOnManagedApplicationInstanceId;
             return this;
         }
 
-        public Builder setSingleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
+        public Builder singleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
             this.singleSignOnManagedApplicationInstanceId = Input.ofNullable(singleSignOnManagedApplicationInstanceId);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

@@ -52,12 +52,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.inputLambdaProcessor = defaults.inputLambdaProcessor;
         }
 
-        public Builder setInputLambdaProcessor(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor) {
+        public Builder inputLambdaProcessor(Input<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs> inputLambdaProcessor) {
             this.inputLambdaProcessor = Objects.requireNonNull(inputLambdaProcessor);
             return this;
         }
 
-        public Builder setInputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs inputLambdaProcessor) {
+        public Builder inputLambdaProcessor(ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs inputLambdaProcessor) {
             this.inputLambdaProcessor = Input.of(Objects.requireNonNull(inputLambdaProcessor));
             return this;
         }

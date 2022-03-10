@@ -138,57 +138,57 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setHttpMethod(Input<String> httpMethod) {
+        public Builder httpMethod(Input<String> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setResponseModels(@Nullable Input<Map<String,String>> responseModels) {
+        public Builder responseModels(@Nullable Input<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
-        public Builder setResponseModels(@Nullable Map<String,String> responseModels) {
+        public Builder responseModels(@Nullable Map<String,String> responseModels) {
             this.responseModels = Input.ofNullable(responseModels);
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Input<Map<String,Boolean>> responseParameters) {
+        public Builder responseParameters(@Nullable Input<Map<String,Boolean>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Map<String,Boolean> responseParameters) {
+        public Builder responseParameters(@Nullable Map<String,Boolean> responseParameters) {
             this.responseParameters = Input.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder setRestApi(Input<String> restApi) {
+        public Builder restApi(Input<String> restApi) {
             this.restApi = Objects.requireNonNull(restApi);
             return this;
         }
 
-        public Builder setStatusCode(Input<String> statusCode) {
+        public Builder statusCode(Input<String> statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Input.of(Objects.requireNonNull(statusCode));
             return this;
         }

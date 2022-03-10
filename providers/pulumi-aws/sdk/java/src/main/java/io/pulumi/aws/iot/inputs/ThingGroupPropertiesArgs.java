@@ -71,22 +71,22 @@ public final class ThingGroupPropertiesArgs extends io.pulumi.resources.Resource
     	      this.description = defaults.description;
         }
 
-        public Builder setAttributePayload(@Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload) {
+        public Builder attributePayload(@Nullable Input<ThingGroupPropertiesAttributePayloadArgs> attributePayload) {
             this.attributePayload = attributePayload;
             return this;
         }
 
-        public Builder setAttributePayload(@Nullable ThingGroupPropertiesAttributePayloadArgs attributePayload) {
+        public Builder attributePayload(@Nullable ThingGroupPropertiesAttributePayloadArgs attributePayload) {
             this.attributePayload = Input.ofNullable(attributePayload);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }

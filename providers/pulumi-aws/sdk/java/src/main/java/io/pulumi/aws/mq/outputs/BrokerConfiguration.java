@@ -68,12 +68,12 @@ public final class BrokerConfiguration {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = revision;
             return this;
         }

@@ -171,72 +171,72 @@ public final class WebAclLoggingConfigurationRedactedFieldGetArgs extends io.pul
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setAllQueryArguments(@Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Input<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs> allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
-        public Builder setAllQueryArguments(@Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs allQueryArguments) {
+        public Builder allQueryArguments(@Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsGetArgs allQueryArguments) {
             this.allQueryArguments = Input.ofNullable(allQueryArguments);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> body) {
+        public Builder body(@Nullable Input<WebAclLoggingConfigurationRedactedFieldBodyGetArgs> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable WebAclLoggingConfigurationRedactedFieldBodyGetArgs body) {
+        public Builder body(@Nullable WebAclLoggingConfigurationRedactedFieldBodyGetArgs body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> method) {
+        public Builder method(@Nullable Input<WebAclLoggingConfigurationRedactedFieldMethodGetArgs> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable WebAclLoggingConfigurationRedactedFieldMethodGetArgs method) {
+        public Builder method(@Nullable WebAclLoggingConfigurationRedactedFieldMethodGetArgs method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setQueryString(@Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> queryString) {
+        public Builder queryString(@Nullable Input<WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs> queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setQueryString(@Nullable WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs queryString) {
+        public Builder queryString(@Nullable WebAclLoggingConfigurationRedactedFieldQueryStringGetArgs queryString) {
             this.queryString = Input.ofNullable(queryString);
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> singleHeader) {
+        public Builder singleHeader(@Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs> singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs singleHeader) {
+        public Builder singleHeader(@Nullable WebAclLoggingConfigurationRedactedFieldSingleHeaderGetArgs singleHeader) {
             this.singleHeader = Input.ofNullable(singleHeader);
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable Input<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs> singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentGetArgs singleQueryArgument) {
             this.singleQueryArgument = Input.ofNullable(singleQueryArgument);
             return this;
         }
 
-        public Builder setUriPath(@Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> uriPath) {
+        public Builder uriPath(@Nullable Input<WebAclLoggingConfigurationRedactedFieldUriPathGetArgs> uriPath) {
             this.uriPath = uriPath;
             return this;
         }
 
-        public Builder setUriPath(@Nullable WebAclLoggingConfigurationRedactedFieldUriPathGetArgs uriPath) {
+        public Builder uriPath(@Nullable WebAclLoggingConfigurationRedactedFieldUriPathGetArgs uriPath) {
             this.uriPath = Input.ofNullable(uriPath);
             return this;
         }

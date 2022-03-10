@@ -84,17 +84,17 @@ public final class ConnectionPhysicalConnectionRequirements {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setSecurityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
+        public Builder securityGroupIdLists(@Nullable List<String> securityGroupIdLists) {
             this.securityGroupIdLists = securityGroupIdLists;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

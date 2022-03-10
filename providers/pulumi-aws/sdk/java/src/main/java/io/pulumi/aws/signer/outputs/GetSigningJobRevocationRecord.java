@@ -57,17 +57,17 @@ public final class GetSigningJobRevocationRecord {
     	      this.revokedBy = defaults.revokedBy;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setRevokedAt(String revokedAt) {
+        public Builder revokedAt(String revokedAt) {
             this.revokedAt = Objects.requireNonNull(revokedAt);
             return this;
         }
 
-        public Builder setRevokedBy(String revokedBy) {
+        public Builder revokedBy(String revokedBy) {
             this.revokedBy = Objects.requireNonNull(revokedBy);
             return this;
         }

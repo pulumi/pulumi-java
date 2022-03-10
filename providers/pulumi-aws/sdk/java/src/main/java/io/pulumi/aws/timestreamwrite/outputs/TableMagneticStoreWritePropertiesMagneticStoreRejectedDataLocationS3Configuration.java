@@ -99,22 +99,22 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     	      this.objectKeyPrefix = defaults.objectKeyPrefix;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setEncryptionOption(@Nullable String encryptionOption) {
+        public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable String objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }

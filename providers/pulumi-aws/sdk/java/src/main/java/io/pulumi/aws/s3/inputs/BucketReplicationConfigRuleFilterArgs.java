@@ -88,32 +88,32 @@ public final class BucketReplicationConfigRuleFilterArgs extends io.pulumi.resou
     	      this.tag = defaults.tag;
         }
 
-        public Builder setAnd(@Nullable Input<BucketReplicationConfigRuleFilterAndArgs> and) {
+        public Builder and(@Nullable Input<BucketReplicationConfigRuleFilterAndArgs> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setAnd(@Nullable BucketReplicationConfigRuleFilterAndArgs and) {
+        public Builder and(@Nullable BucketReplicationConfigRuleFilterAndArgs and) {
             this.and = Input.ofNullable(and);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<BucketReplicationConfigRuleFilterTagArgs> tag) {
+        public Builder tag(@Nullable Input<BucketReplicationConfigRuleFilterTagArgs> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable BucketReplicationConfigRuleFilterTagArgs tag) {
+        public Builder tag(@Nullable BucketReplicationConfigRuleFilterTagArgs tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

@@ -86,32 +86,32 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setCidr(Input<String> cidr) {
+        public Builder cidr(Input<String> cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
-        public Builder setCidr(String cidr) {
+        public Builder cidr(String cidr) {
             this.cidr = Input.of(Objects.requireNonNull(cidr));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicy(Input<String> policy) {
+        public Builder policy(Input<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }

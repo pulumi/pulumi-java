@@ -86,32 +86,32 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setFleetId(@Nullable Input<String> fleetId) {
+        public Builder fleetId(@Nullable Input<String> fleetId) {
             this.fleetId = fleetId;
             return this;
         }
 
-        public Builder setFleetId(@Nullable String fleetId) {
+        public Builder fleetId(@Nullable String fleetId) {
             this.fleetId = Input.ofNullable(fleetId);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

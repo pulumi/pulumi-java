@@ -109,27 +109,27 @@ public final class GetPortfolioConstraintsResult {
     	      this.productId = defaults.productId;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setDetails(List<GetPortfolioConstraintsDetail> details) {
+        public Builder details(List<GetPortfolioConstraintsDetail> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPortfolioId(String portfolioId) {
+        public Builder portfolioId(String portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = productId;
             return this;
         }

@@ -53,7 +53,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
     	      this.endpointType = defaults.endpointType;
         }
 
-        public Builder setEndpointType(@Nullable String endpointType) {
+        public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = endpointType;
             return this;
         }

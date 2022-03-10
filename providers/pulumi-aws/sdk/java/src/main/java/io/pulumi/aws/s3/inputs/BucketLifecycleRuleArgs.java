@@ -190,92 +190,92 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
     	      this.transitions = defaults.transitions;
         }
 
-        public Builder setAbortIncompleteMultipartUploadDays(@Nullable Input<Integer> abortIncompleteMultipartUploadDays) {
+        public Builder abortIncompleteMultipartUploadDays(@Nullable Input<Integer> abortIncompleteMultipartUploadDays) {
             this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
             return this;
         }
 
-        public Builder setAbortIncompleteMultipartUploadDays(@Nullable Integer abortIncompleteMultipartUploadDays) {
+        public Builder abortIncompleteMultipartUploadDays(@Nullable Integer abortIncompleteMultipartUploadDays) {
             this.abortIncompleteMultipartUploadDays = Input.ofNullable(abortIncompleteMultipartUploadDays);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setExpiration(@Nullable Input<BucketLifecycleRuleExpirationArgs> expiration) {
+        public Builder expiration(@Nullable Input<BucketLifecycleRuleExpirationArgs> expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setExpiration(@Nullable BucketLifecycleRuleExpirationArgs expiration) {
+        public Builder expiration(@Nullable BucketLifecycleRuleExpirationArgs expiration) {
             this.expiration = Input.ofNullable(expiration);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setNoncurrentVersionExpiration(@Nullable Input<BucketLifecycleRuleNoncurrentVersionExpirationArgs> noncurrentVersionExpiration) {
+        public Builder noncurrentVersionExpiration(@Nullable Input<BucketLifecycleRuleNoncurrentVersionExpirationArgs> noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpiration(@Nullable BucketLifecycleRuleNoncurrentVersionExpirationArgs noncurrentVersionExpiration) {
+        public Builder noncurrentVersionExpiration(@Nullable BucketLifecycleRuleNoncurrentVersionExpirationArgs noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = Input.ofNullable(noncurrentVersionExpiration);
             return this;
         }
 
-        public Builder setNoncurrentVersionTransitions(@Nullable Input<List<BucketLifecycleRuleNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions) {
+        public Builder noncurrentVersionTransitions(@Nullable Input<List<BucketLifecycleRuleNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransitions(@Nullable List<BucketLifecycleRuleNoncurrentVersionTransitionArgs> noncurrentVersionTransitions) {
+        public Builder noncurrentVersionTransitions(@Nullable List<BucketLifecycleRuleNoncurrentVersionTransitionArgs> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = Input.ofNullable(noncurrentVersionTransitions);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitions(@Nullable Input<List<BucketLifecycleRuleTransitionArgs>> transitions) {
+        public Builder transitions(@Nullable Input<List<BucketLifecycleRuleTransitionArgs>> transitions) {
             this.transitions = transitions;
             return this;
         }
 
-        public Builder setTransitions(@Nullable List<BucketLifecycleRuleTransitionArgs> transitions) {
+        public Builder transitions(@Nullable List<BucketLifecycleRuleTransitionArgs> transitions) {
             this.transitions = Input.ofNullable(transitions);
             return this;
         }

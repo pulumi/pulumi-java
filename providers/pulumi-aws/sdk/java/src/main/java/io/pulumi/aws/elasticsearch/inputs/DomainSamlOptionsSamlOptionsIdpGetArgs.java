@@ -69,22 +69,22 @@ public final class DomainSamlOptionsSamlOptionsIdpGetArgs extends io.pulumi.reso
     	      this.metadataContent = defaults.metadataContent;
         }
 
-        public Builder setEntityId(Input<String> entityId) {
+        public Builder entityId(Input<String> entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
 
-        public Builder setEntityId(String entityId) {
+        public Builder entityId(String entityId) {
             this.entityId = Input.of(Objects.requireNonNull(entityId));
             return this;
         }
 
-        public Builder setMetadataContent(Input<String> metadataContent) {
+        public Builder metadataContent(Input<String> metadataContent) {
             this.metadataContent = Objects.requireNonNull(metadataContent);
             return this;
         }
 
-        public Builder setMetadataContent(String metadataContent) {
+        public Builder metadataContent(String metadataContent) {
             this.metadataContent = Input.of(Objects.requireNonNull(metadataContent));
             return this;
         }

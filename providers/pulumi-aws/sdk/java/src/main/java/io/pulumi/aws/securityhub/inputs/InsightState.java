@@ -103,42 +103,42 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setFilters(@Nullable Input<InsightFiltersGetArgs> filters) {
+        public Builder filters(@Nullable Input<InsightFiltersGetArgs> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable InsightFiltersGetArgs filters) {
+        public Builder filters(@Nullable InsightFiltersGetArgs filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setGroupByAttribute(@Nullable Input<String> groupByAttribute) {
+        public Builder groupByAttribute(@Nullable Input<String> groupByAttribute) {
             this.groupByAttribute = groupByAttribute;
             return this;
         }
 
-        public Builder setGroupByAttribute(@Nullable String groupByAttribute) {
+        public Builder groupByAttribute(@Nullable String groupByAttribute) {
             this.groupByAttribute = Input.ofNullable(groupByAttribute);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

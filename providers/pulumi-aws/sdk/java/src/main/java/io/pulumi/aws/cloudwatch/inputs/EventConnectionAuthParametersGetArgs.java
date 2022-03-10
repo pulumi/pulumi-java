@@ -105,42 +105,42 @@ public final class EventConnectionAuthParametersGetArgs extends io.pulumi.resour
     	      this.oauth = defaults.oauth;
         }
 
-        public Builder setApiKey(@Nullable Input<EventConnectionAuthParametersApiKeyGetArgs> apiKey) {
+        public Builder apiKey(@Nullable Input<EventConnectionAuthParametersApiKeyGetArgs> apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setApiKey(@Nullable EventConnectionAuthParametersApiKeyGetArgs apiKey) {
+        public Builder apiKey(@Nullable EventConnectionAuthParametersApiKeyGetArgs apiKey) {
             this.apiKey = Input.ofNullable(apiKey);
             return this;
         }
 
-        public Builder setBasic(@Nullable Input<EventConnectionAuthParametersBasicGetArgs> basic) {
+        public Builder basic(@Nullable Input<EventConnectionAuthParametersBasicGetArgs> basic) {
             this.basic = basic;
             return this;
         }
 
-        public Builder setBasic(@Nullable EventConnectionAuthParametersBasicGetArgs basic) {
+        public Builder basic(@Nullable EventConnectionAuthParametersBasicGetArgs basic) {
             this.basic = Input.ofNullable(basic);
             return this;
         }
 
-        public Builder setInvocationHttpParameters(@Nullable Input<EventConnectionAuthParametersInvocationHttpParametersGetArgs> invocationHttpParameters) {
+        public Builder invocationHttpParameters(@Nullable Input<EventConnectionAuthParametersInvocationHttpParametersGetArgs> invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
 
-        public Builder setInvocationHttpParameters(@Nullable EventConnectionAuthParametersInvocationHttpParametersGetArgs invocationHttpParameters) {
+        public Builder invocationHttpParameters(@Nullable EventConnectionAuthParametersInvocationHttpParametersGetArgs invocationHttpParameters) {
             this.invocationHttpParameters = Input.ofNullable(invocationHttpParameters);
             return this;
         }
 
-        public Builder setOauth(@Nullable Input<EventConnectionAuthParametersOauthGetArgs> oauth) {
+        public Builder oauth(@Nullable Input<EventConnectionAuthParametersOauthGetArgs> oauth) {
             this.oauth = oauth;
             return this;
         }
 
-        public Builder setOauth(@Nullable EventConnectionAuthParametersOauthGetArgs oauth) {
+        public Builder oauth(@Nullable EventConnectionAuthParametersOauthGetArgs oauth) {
             this.oauth = Input.ofNullable(oauth);
             return this;
         }

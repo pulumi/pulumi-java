@@ -68,12 +68,12 @@ public final class TopicRuleErrorActionDynamodbv2 {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutItem(@Nullable TopicRuleErrorActionDynamodbv2PutItem putItem) {
+        public Builder putItem(@Nullable TopicRuleErrorActionDynamodbv2PutItem putItem) {
             this.putItem = putItem;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

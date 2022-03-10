@@ -70,22 +70,22 @@ public final class MLTransformSchemaArgs extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder setDataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Input<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

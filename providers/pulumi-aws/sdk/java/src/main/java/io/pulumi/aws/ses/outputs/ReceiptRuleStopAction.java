@@ -84,17 +84,17 @@ public final class ReceiptRuleStopAction {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
         }

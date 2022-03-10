@@ -255,132 +255,132 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutInMinutes = defaults.timeoutInMinutes;
         }
 
-        public Builder setCapabilities(@Nullable Input<List<String>> capabilities) {
+        public Builder capabilities(@Nullable Input<List<String>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<String> capabilities) {
+        public Builder capabilities(@Nullable List<String> capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setDisableRollback(@Nullable Input<Boolean> disableRollback) {
+        public Builder disableRollback(@Nullable Input<Boolean> disableRollback) {
             this.disableRollback = disableRollback;
             return this;
         }
 
-        public Builder setDisableRollback(@Nullable Boolean disableRollback) {
+        public Builder disableRollback(@Nullable Boolean disableRollback) {
             this.disableRollback = Input.ofNullable(disableRollback);
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable Input<String> iamRoleArn) {
+        public Builder iamRoleArn(@Nullable Input<String> iamRoleArn) {
             this.iamRoleArn = iamRoleArn;
             return this;
         }
 
-        public Builder setIamRoleArn(@Nullable String iamRoleArn) {
+        public Builder iamRoleArn(@Nullable String iamRoleArn) {
             this.iamRoleArn = Input.ofNullable(iamRoleArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationArns(@Nullable Input<List<String>> notificationArns) {
+        public Builder notificationArns(@Nullable Input<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
 
-        public Builder setNotificationArns(@Nullable List<String> notificationArns) {
+        public Builder notificationArns(@Nullable List<String> notificationArns) {
             this.notificationArns = Input.ofNullable(notificationArns);
             return this;
         }
 
-        public Builder setOnFailure(@Nullable Input<String> onFailure) {
+        public Builder onFailure(@Nullable Input<String> onFailure) {
             this.onFailure = onFailure;
             return this;
         }
 
-        public Builder setOnFailure(@Nullable String onFailure) {
+        public Builder onFailure(@Nullable String onFailure) {
             this.onFailure = Input.ofNullable(onFailure);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPolicyBody(@Nullable Input<String> policyBody) {
+        public Builder policyBody(@Nullable Input<String> policyBody) {
             this.policyBody = policyBody;
             return this;
         }
 
-        public Builder setPolicyBody(@Nullable String policyBody) {
+        public Builder policyBody(@Nullable String policyBody) {
             this.policyBody = Input.ofNullable(policyBody);
             return this;
         }
 
-        public Builder setPolicyUrl(@Nullable Input<String> policyUrl) {
+        public Builder policyUrl(@Nullable Input<String> policyUrl) {
             this.policyUrl = policyUrl;
             return this;
         }
 
-        public Builder setPolicyUrl(@Nullable String policyUrl) {
+        public Builder policyUrl(@Nullable String policyUrl) {
             this.policyUrl = Input.ofNullable(policyUrl);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Input<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable String templateBody) {
+        public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Input.ofNullable(templateBody);
             return this;
         }
 
-        public Builder setTemplateUrl(@Nullable Input<String> templateUrl) {
+        public Builder templateUrl(@Nullable Input<String> templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
 
-        public Builder setTemplateUrl(@Nullable String templateUrl) {
+        public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = Input.ofNullable(templateUrl);
             return this;
         }
 
-        public Builder setTimeoutInMinutes(@Nullable Input<Integer> timeoutInMinutes) {
+        public Builder timeoutInMinutes(@Nullable Input<Integer> timeoutInMinutes) {
             this.timeoutInMinutes = timeoutInMinutes;
             return this;
         }
 
-        public Builder setTimeoutInMinutes(@Nullable Integer timeoutInMinutes) {
+        public Builder timeoutInMinutes(@Nullable Integer timeoutInMinutes) {
             this.timeoutInMinutes = Input.ofNullable(timeoutInMinutes);
             return this;
         }

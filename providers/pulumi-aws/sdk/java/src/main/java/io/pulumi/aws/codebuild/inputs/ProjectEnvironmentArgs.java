@@ -170,82 +170,82 @@ public final class ProjectEnvironmentArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setComputeType(Input<String> computeType) {
+        public Builder computeType(Input<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Input.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<ProjectEnvironmentEnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setImagePullCredentialsType(@Nullable Input<String> imagePullCredentialsType) {
+        public Builder imagePullCredentialsType(@Nullable Input<String> imagePullCredentialsType) {
             this.imagePullCredentialsType = imagePullCredentialsType;
             return this;
         }
 
-        public Builder setImagePullCredentialsType(@Nullable String imagePullCredentialsType) {
+        public Builder imagePullCredentialsType(@Nullable String imagePullCredentialsType) {
             this.imagePullCredentialsType = Input.ofNullable(imagePullCredentialsType);
             return this;
         }
 
-        public Builder setPrivilegedMode(@Nullable Input<Boolean> privilegedMode) {
+        public Builder privilegedMode(@Nullable Input<Boolean> privilegedMode) {
             this.privilegedMode = privilegedMode;
             return this;
         }
 
-        public Builder setPrivilegedMode(@Nullable Boolean privilegedMode) {
+        public Builder privilegedMode(@Nullable Boolean privilegedMode) {
             this.privilegedMode = Input.ofNullable(privilegedMode);
             return this;
         }
 
-        public Builder setRegistryCredential(@Nullable Input<ProjectEnvironmentRegistryCredentialArgs> registryCredential) {
+        public Builder registryCredential(@Nullable Input<ProjectEnvironmentRegistryCredentialArgs> registryCredential) {
             this.registryCredential = registryCredential;
             return this;
         }
 
-        public Builder setRegistryCredential(@Nullable ProjectEnvironmentRegistryCredentialArgs registryCredential) {
+        public Builder registryCredential(@Nullable ProjectEnvironmentRegistryCredentialArgs registryCredential) {
             this.registryCredential = Input.ofNullable(registryCredential);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -48,7 +48,7 @@ public final class GetDomainClusterConfigZoneAwarenessConfig {
     	      this.availabilityZoneCount = defaults.availabilityZoneCount;
         }
 
-        public Builder setAvailabilityZoneCount(Integer availabilityZoneCount) {
+        public Builder availabilityZoneCount(Integer availabilityZoneCount) {
             this.availabilityZoneCount = Objects.requireNonNull(availabilityZoneCount);
             return this;
         }

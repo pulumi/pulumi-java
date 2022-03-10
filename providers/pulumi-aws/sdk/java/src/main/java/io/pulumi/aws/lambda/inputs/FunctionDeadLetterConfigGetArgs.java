@@ -52,12 +52,12 @@ public final class FunctionDeadLetterConfigGetArgs extends io.pulumi.resources.R
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setTargetArn(Input<String> targetArn) {
+        public Builder targetArn(Input<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Input.of(Objects.requireNonNull(targetArn));
             return this;
         }

@@ -71,22 +71,22 @@ public final class RecorderStatusState extends io.pulumi.resources.ResourceArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

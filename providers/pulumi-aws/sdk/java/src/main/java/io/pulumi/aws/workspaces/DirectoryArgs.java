@@ -155,72 +155,72 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceCreationProperties = defaults.workspaceCreationProperties;
         }
 
-        public Builder setDirectoryId(Input<String> directoryId) {
+        public Builder directoryId(Input<String> directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
-        public Builder setDirectoryId(String directoryId) {
+        public Builder directoryId(String directoryId) {
             this.directoryId = Input.of(Objects.requireNonNull(directoryId));
             return this;
         }
 
-        public Builder setIpGroupIds(@Nullable Input<List<String>> ipGroupIds) {
+        public Builder ipGroupIds(@Nullable Input<List<String>> ipGroupIds) {
             this.ipGroupIds = ipGroupIds;
             return this;
         }
 
-        public Builder setIpGroupIds(@Nullable List<String> ipGroupIds) {
+        public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
             this.ipGroupIds = Input.ofNullable(ipGroupIds);
             return this;
         }
 
-        public Builder setSelfServicePermissions(@Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions) {
+        public Builder selfServicePermissions(@Nullable Input<DirectorySelfServicePermissionsArgs> selfServicePermissions) {
             this.selfServicePermissions = selfServicePermissions;
             return this;
         }
 
-        public Builder setSelfServicePermissions(@Nullable DirectorySelfServicePermissionsArgs selfServicePermissions) {
+        public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsArgs selfServicePermissions) {
             this.selfServicePermissions = Input.ofNullable(selfServicePermissions);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspaceAccessProperties(@Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(@Nullable Input<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties) {
             this.workspaceAccessProperties = workspaceAccessProperties;
             return this;
         }
 
-        public Builder setWorkspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesArgs workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesArgs workspaceAccessProperties) {
             this.workspaceAccessProperties = Input.ofNullable(workspaceAccessProperties);
             return this;
         }
 
-        public Builder setWorkspaceCreationProperties(@Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(@Nullable Input<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
             this.workspaceCreationProperties = workspaceCreationProperties;
             return this;
         }
 
-        public Builder setWorkspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesArgs workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesArgs workspaceCreationProperties) {
             this.workspaceCreationProperties = Input.ofNullable(workspaceCreationProperties);
             return this;
         }

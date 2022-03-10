@@ -86,17 +86,17 @@ public final class GetStreamConsumerArgs extends io.pulumi.resources.InvokeArgs 
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStreamArn(String streamArn) {
+        public Builder streamArn(String streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }

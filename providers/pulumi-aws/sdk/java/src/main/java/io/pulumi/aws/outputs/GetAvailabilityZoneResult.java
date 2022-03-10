@@ -226,72 +226,72 @@ public final class GetAvailabilityZoneResult {
     	      this.zoneType = defaults.zoneType;
         }
 
-        public Builder setAllAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
+        public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
             this.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetAvailabilityZoneFilter> filters) {
+        public Builder filters(@Nullable List<GetAvailabilityZoneFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameSuffix(String nameSuffix) {
+        public Builder nameSuffix(String nameSuffix) {
             this.nameSuffix = Objects.requireNonNull(nameSuffix);
             return this;
         }
 
-        public Builder setNetworkBorderGroup(String networkBorderGroup) {
+        public Builder networkBorderGroup(String networkBorderGroup) {
             this.networkBorderGroup = Objects.requireNonNull(networkBorderGroup);
             return this;
         }
 
-        public Builder setOptInStatus(String optInStatus) {
+        public Builder optInStatus(String optInStatus) {
             this.optInStatus = Objects.requireNonNull(optInStatus);
             return this;
         }
 
-        public Builder setParentZoneId(String parentZoneId) {
+        public Builder parentZoneId(String parentZoneId) {
             this.parentZoneId = Objects.requireNonNull(parentZoneId);
             return this;
         }
 
-        public Builder setParentZoneName(String parentZoneName) {
+        public Builder parentZoneName(String parentZoneName) {
             this.parentZoneName = Objects.requireNonNull(parentZoneName);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
 
-        public Builder setZoneType(String zoneType) {
+        public Builder zoneType(String zoneType) {
             this.zoneType = Objects.requireNonNull(zoneType);
             return this;
         }

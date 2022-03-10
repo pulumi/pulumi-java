@@ -120,52 +120,52 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
     	      this.validUntil = defaults.validUntil;
         }
 
-        public Builder setBlockDurationMinutes(@Nullable Input<Integer> blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Input<Integer> blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
 
-        public Builder setBlockDurationMinutes(@Nullable Integer blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = Input.ofNullable(blockDurationMinutes);
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable Input<String> instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable Input<String> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Input.ofNullable(instanceInterruptionBehavior);
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable Input<String> maxPrice) {
+        public Builder maxPrice(@Nullable Input<String> maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable String maxPrice) {
+        public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = Input.ofNullable(maxPrice);
             return this;
         }
 
-        public Builder setSpotInstanceType(@Nullable Input<String> spotInstanceType) {
+        public Builder spotInstanceType(@Nullable Input<String> spotInstanceType) {
             this.spotInstanceType = spotInstanceType;
             return this;
         }
 
-        public Builder setSpotInstanceType(@Nullable String spotInstanceType) {
+        public Builder spotInstanceType(@Nullable String spotInstanceType) {
             this.spotInstanceType = Input.ofNullable(spotInstanceType);
             return this;
         }
 
-        public Builder setValidUntil(@Nullable Input<String> validUntil) {
+        public Builder validUntil(@Nullable Input<String> validUntil) {
             this.validUntil = validUntil;
             return this;
         }
 
-        public Builder setValidUntil(@Nullable String validUntil) {
+        public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = Input.ofNullable(validUntil);
             return this;
         }

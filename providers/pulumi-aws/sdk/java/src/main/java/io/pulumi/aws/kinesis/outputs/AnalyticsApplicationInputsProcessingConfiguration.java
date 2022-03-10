@@ -48,7 +48,7 @@ public final class AnalyticsApplicationInputsProcessingConfiguration {
     	      this.lambda = defaults.lambda;
         }
 
-        public Builder setLambda(AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
+        public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
             this.lambda = Objects.requireNonNull(lambda);
             return this;
         }

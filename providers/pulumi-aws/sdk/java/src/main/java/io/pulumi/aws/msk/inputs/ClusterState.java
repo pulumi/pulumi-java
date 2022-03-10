@@ -367,202 +367,202 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.zookeeperConnectStringTls = defaults.zookeeperConnectStringTls;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBootstrapBrokers(@Nullable Input<String> bootstrapBrokers) {
+        public Builder bootstrapBrokers(@Nullable Input<String> bootstrapBrokers) {
             this.bootstrapBrokers = bootstrapBrokers;
             return this;
         }
 
-        public Builder setBootstrapBrokers(@Nullable String bootstrapBrokers) {
+        public Builder bootstrapBrokers(@Nullable String bootstrapBrokers) {
             this.bootstrapBrokers = Input.ofNullable(bootstrapBrokers);
             return this;
         }
 
-        public Builder setBootstrapBrokersSaslIam(@Nullable Input<String> bootstrapBrokersSaslIam) {
+        public Builder bootstrapBrokersSaslIam(@Nullable Input<String> bootstrapBrokersSaslIam) {
             this.bootstrapBrokersSaslIam = bootstrapBrokersSaslIam;
             return this;
         }
 
-        public Builder setBootstrapBrokersSaslIam(@Nullable String bootstrapBrokersSaslIam) {
+        public Builder bootstrapBrokersSaslIam(@Nullable String bootstrapBrokersSaslIam) {
             this.bootstrapBrokersSaslIam = Input.ofNullable(bootstrapBrokersSaslIam);
             return this;
         }
 
-        public Builder setBootstrapBrokersSaslScram(@Nullable Input<String> bootstrapBrokersSaslScram) {
+        public Builder bootstrapBrokersSaslScram(@Nullable Input<String> bootstrapBrokersSaslScram) {
             this.bootstrapBrokersSaslScram = bootstrapBrokersSaslScram;
             return this;
         }
 
-        public Builder setBootstrapBrokersSaslScram(@Nullable String bootstrapBrokersSaslScram) {
+        public Builder bootstrapBrokersSaslScram(@Nullable String bootstrapBrokersSaslScram) {
             this.bootstrapBrokersSaslScram = Input.ofNullable(bootstrapBrokersSaslScram);
             return this;
         }
 
-        public Builder setBootstrapBrokersTls(@Nullable Input<String> bootstrapBrokersTls) {
+        public Builder bootstrapBrokersTls(@Nullable Input<String> bootstrapBrokersTls) {
             this.bootstrapBrokersTls = bootstrapBrokersTls;
             return this;
         }
 
-        public Builder setBootstrapBrokersTls(@Nullable String bootstrapBrokersTls) {
+        public Builder bootstrapBrokersTls(@Nullable String bootstrapBrokersTls) {
             this.bootstrapBrokersTls = Input.ofNullable(bootstrapBrokersTls);
             return this;
         }
 
-        public Builder setBrokerNodeGroupInfo(@Nullable Input<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo) {
+        public Builder brokerNodeGroupInfo(@Nullable Input<ClusterBrokerNodeGroupInfoGetArgs> brokerNodeGroupInfo) {
             this.brokerNodeGroupInfo = brokerNodeGroupInfo;
             return this;
         }
 
-        public Builder setBrokerNodeGroupInfo(@Nullable ClusterBrokerNodeGroupInfoGetArgs brokerNodeGroupInfo) {
+        public Builder brokerNodeGroupInfo(@Nullable ClusterBrokerNodeGroupInfoGetArgs brokerNodeGroupInfo) {
             this.brokerNodeGroupInfo = Input.ofNullable(brokerNodeGroupInfo);
             return this;
         }
 
-        public Builder setClientAuthentication(@Nullable Input<ClusterClientAuthenticationGetArgs> clientAuthentication) {
+        public Builder clientAuthentication(@Nullable Input<ClusterClientAuthenticationGetArgs> clientAuthentication) {
             this.clientAuthentication = clientAuthentication;
             return this;
         }
 
-        public Builder setClientAuthentication(@Nullable ClusterClientAuthenticationGetArgs clientAuthentication) {
+        public Builder clientAuthentication(@Nullable ClusterClientAuthenticationGetArgs clientAuthentication) {
             this.clientAuthentication = Input.ofNullable(clientAuthentication);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setConfigurationInfo(@Nullable Input<ClusterConfigurationInfoGetArgs> configurationInfo) {
+        public Builder configurationInfo(@Nullable Input<ClusterConfigurationInfoGetArgs> configurationInfo) {
             this.configurationInfo = configurationInfo;
             return this;
         }
 
-        public Builder setConfigurationInfo(@Nullable ClusterConfigurationInfoGetArgs configurationInfo) {
+        public Builder configurationInfo(@Nullable ClusterConfigurationInfoGetArgs configurationInfo) {
             this.configurationInfo = Input.ofNullable(configurationInfo);
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable Input<String> currentVersion) {
+        public Builder currentVersion(@Nullable Input<String> currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable String currentVersion) {
+        public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = Input.ofNullable(currentVersion);
             return this;
         }
 
-        public Builder setEncryptionInfo(@Nullable Input<ClusterEncryptionInfoGetArgs> encryptionInfo) {
+        public Builder encryptionInfo(@Nullable Input<ClusterEncryptionInfoGetArgs> encryptionInfo) {
             this.encryptionInfo = encryptionInfo;
             return this;
         }
 
-        public Builder setEncryptionInfo(@Nullable ClusterEncryptionInfoGetArgs encryptionInfo) {
+        public Builder encryptionInfo(@Nullable ClusterEncryptionInfoGetArgs encryptionInfo) {
             this.encryptionInfo = Input.ofNullable(encryptionInfo);
             return this;
         }
 
-        public Builder setEnhancedMonitoring(@Nullable Input<String> enhancedMonitoring) {
+        public Builder enhancedMonitoring(@Nullable Input<String> enhancedMonitoring) {
             this.enhancedMonitoring = enhancedMonitoring;
             return this;
         }
 
-        public Builder setEnhancedMonitoring(@Nullable String enhancedMonitoring) {
+        public Builder enhancedMonitoring(@Nullable String enhancedMonitoring) {
             this.enhancedMonitoring = Input.ofNullable(enhancedMonitoring);
             return this;
         }
 
-        public Builder setKafkaVersion(@Nullable Input<String> kafkaVersion) {
+        public Builder kafkaVersion(@Nullable Input<String> kafkaVersion) {
             this.kafkaVersion = kafkaVersion;
             return this;
         }
 
-        public Builder setKafkaVersion(@Nullable String kafkaVersion) {
+        public Builder kafkaVersion(@Nullable String kafkaVersion) {
             this.kafkaVersion = Input.ofNullable(kafkaVersion);
             return this;
         }
 
-        public Builder setLoggingInfo(@Nullable Input<ClusterLoggingInfoGetArgs> loggingInfo) {
+        public Builder loggingInfo(@Nullable Input<ClusterLoggingInfoGetArgs> loggingInfo) {
             this.loggingInfo = loggingInfo;
             return this;
         }
 
-        public Builder setLoggingInfo(@Nullable ClusterLoggingInfoGetArgs loggingInfo) {
+        public Builder loggingInfo(@Nullable ClusterLoggingInfoGetArgs loggingInfo) {
             this.loggingInfo = Input.ofNullable(loggingInfo);
             return this;
         }
 
-        public Builder setNumberOfBrokerNodes(@Nullable Input<Integer> numberOfBrokerNodes) {
+        public Builder numberOfBrokerNodes(@Nullable Input<Integer> numberOfBrokerNodes) {
             this.numberOfBrokerNodes = numberOfBrokerNodes;
             return this;
         }
 
-        public Builder setNumberOfBrokerNodes(@Nullable Integer numberOfBrokerNodes) {
+        public Builder numberOfBrokerNodes(@Nullable Integer numberOfBrokerNodes) {
             this.numberOfBrokerNodes = Input.ofNullable(numberOfBrokerNodes);
             return this;
         }
 
-        public Builder setOpenMonitoring(@Nullable Input<ClusterOpenMonitoringGetArgs> openMonitoring) {
+        public Builder openMonitoring(@Nullable Input<ClusterOpenMonitoringGetArgs> openMonitoring) {
             this.openMonitoring = openMonitoring;
             return this;
         }
 
-        public Builder setOpenMonitoring(@Nullable ClusterOpenMonitoringGetArgs openMonitoring) {
+        public Builder openMonitoring(@Nullable ClusterOpenMonitoringGetArgs openMonitoring) {
             this.openMonitoring = Input.ofNullable(openMonitoring);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setZookeeperConnectString(@Nullable Input<String> zookeeperConnectString) {
+        public Builder zookeeperConnectString(@Nullable Input<String> zookeeperConnectString) {
             this.zookeeperConnectString = zookeeperConnectString;
             return this;
         }
 
-        public Builder setZookeeperConnectString(@Nullable String zookeeperConnectString) {
+        public Builder zookeeperConnectString(@Nullable String zookeeperConnectString) {
             this.zookeeperConnectString = Input.ofNullable(zookeeperConnectString);
             return this;
         }
 
-        public Builder setZookeeperConnectStringTls(@Nullable Input<String> zookeeperConnectStringTls) {
+        public Builder zookeeperConnectStringTls(@Nullable Input<String> zookeeperConnectStringTls) {
             this.zookeeperConnectStringTls = zookeeperConnectStringTls;
             return this;
         }
 
-        public Builder setZookeeperConnectStringTls(@Nullable String zookeeperConnectStringTls) {
+        public Builder zookeeperConnectStringTls(@Nullable String zookeeperConnectStringTls) {
             this.zookeeperConnectStringTls = Input.ofNullable(zookeeperConnectStringTls);
             return this;
         }

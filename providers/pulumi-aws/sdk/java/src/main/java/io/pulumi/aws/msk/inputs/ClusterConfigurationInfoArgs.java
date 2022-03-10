@@ -70,22 +70,22 @@ public final class ClusterConfigurationInfoArgs extends io.pulumi.resources.Reso
     	      this.revision = defaults.revision;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder setRevision(Input<Integer> revision) {
+        public Builder revision(Input<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Input.of(Objects.requireNonNull(revision));
             return this;
         }

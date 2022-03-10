@@ -71,22 +71,22 @@ public final class BucketServerSideEncryptionConfigurationRuleArgs extends io.pu
     	      this.bucketKeyEnabled = defaults.bucketKeyEnabled;
         }
 
-        public Builder setApplyServerSideEncryptionByDefault(Input<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs> applyServerSideEncryptionByDefault) {
+        public Builder applyServerSideEncryptionByDefault(Input<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs> applyServerSideEncryptionByDefault) {
             this.applyServerSideEncryptionByDefault = Objects.requireNonNull(applyServerSideEncryptionByDefault);
             return this;
         }
 
-        public Builder setApplyServerSideEncryptionByDefault(BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs applyServerSideEncryptionByDefault) {
+        public Builder applyServerSideEncryptionByDefault(BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs applyServerSideEncryptionByDefault) {
             this.applyServerSideEncryptionByDefault = Input.of(Objects.requireNonNull(applyServerSideEncryptionByDefault));
             return this;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = Input.ofNullable(bucketKeyEnabled);
             return this;
         }

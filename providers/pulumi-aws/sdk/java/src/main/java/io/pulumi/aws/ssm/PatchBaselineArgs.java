@@ -236,122 +236,122 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApprovalRules(@Nullable Input<List<PatchBaselineApprovalRuleArgs>> approvalRules) {
+        public Builder approvalRules(@Nullable Input<List<PatchBaselineApprovalRuleArgs>> approvalRules) {
             this.approvalRules = approvalRules;
             return this;
         }
 
-        public Builder setApprovalRules(@Nullable List<PatchBaselineApprovalRuleArgs> approvalRules) {
+        public Builder approvalRules(@Nullable List<PatchBaselineApprovalRuleArgs> approvalRules) {
             this.approvalRules = Input.ofNullable(approvalRules);
             return this;
         }
 
-        public Builder setApprovedPatches(@Nullable Input<List<String>> approvedPatches) {
+        public Builder approvedPatches(@Nullable Input<List<String>> approvedPatches) {
             this.approvedPatches = approvedPatches;
             return this;
         }
 
-        public Builder setApprovedPatches(@Nullable List<String> approvedPatches) {
+        public Builder approvedPatches(@Nullable List<String> approvedPatches) {
             this.approvedPatches = Input.ofNullable(approvedPatches);
             return this;
         }
 
-        public Builder setApprovedPatchesComplianceLevel(@Nullable Input<String> approvedPatchesComplianceLevel) {
+        public Builder approvedPatchesComplianceLevel(@Nullable Input<String> approvedPatchesComplianceLevel) {
             this.approvedPatchesComplianceLevel = approvedPatchesComplianceLevel;
             return this;
         }
 
-        public Builder setApprovedPatchesComplianceLevel(@Nullable String approvedPatchesComplianceLevel) {
+        public Builder approvedPatchesComplianceLevel(@Nullable String approvedPatchesComplianceLevel) {
             this.approvedPatchesComplianceLevel = Input.ofNullable(approvedPatchesComplianceLevel);
             return this;
         }
 
-        public Builder setApprovedPatchesEnableNonSecurity(@Nullable Input<Boolean> approvedPatchesEnableNonSecurity) {
+        public Builder approvedPatchesEnableNonSecurity(@Nullable Input<Boolean> approvedPatchesEnableNonSecurity) {
             this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
             return this;
         }
 
-        public Builder setApprovedPatchesEnableNonSecurity(@Nullable Boolean approvedPatchesEnableNonSecurity) {
+        public Builder approvedPatchesEnableNonSecurity(@Nullable Boolean approvedPatchesEnableNonSecurity) {
             this.approvedPatchesEnableNonSecurity = Input.ofNullable(approvedPatchesEnableNonSecurity);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalFilters(@Nullable Input<List<PatchBaselineGlobalFilterArgs>> globalFilters) {
+        public Builder globalFilters(@Nullable Input<List<PatchBaselineGlobalFilterArgs>> globalFilters) {
             this.globalFilters = globalFilters;
             return this;
         }
 
-        public Builder setGlobalFilters(@Nullable List<PatchBaselineGlobalFilterArgs> globalFilters) {
+        public Builder globalFilters(@Nullable List<PatchBaselineGlobalFilterArgs> globalFilters) {
             this.globalFilters = Input.ofNullable(globalFilters);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOperatingSystem(@Nullable Input<String> operatingSystem) {
+        public Builder operatingSystem(@Nullable Input<String> operatingSystem) {
             this.operatingSystem = operatingSystem;
             return this;
         }
 
-        public Builder setOperatingSystem(@Nullable String operatingSystem) {
+        public Builder operatingSystem(@Nullable String operatingSystem) {
             this.operatingSystem = Input.ofNullable(operatingSystem);
             return this;
         }
 
-        public Builder setRejectedPatches(@Nullable Input<List<String>> rejectedPatches) {
+        public Builder rejectedPatches(@Nullable Input<List<String>> rejectedPatches) {
             this.rejectedPatches = rejectedPatches;
             return this;
         }
 
-        public Builder setRejectedPatches(@Nullable List<String> rejectedPatches) {
+        public Builder rejectedPatches(@Nullable List<String> rejectedPatches) {
             this.rejectedPatches = Input.ofNullable(rejectedPatches);
             return this;
         }
 
-        public Builder setRejectedPatchesAction(@Nullable Input<String> rejectedPatchesAction) {
+        public Builder rejectedPatchesAction(@Nullable Input<String> rejectedPatchesAction) {
             this.rejectedPatchesAction = rejectedPatchesAction;
             return this;
         }
 
-        public Builder setRejectedPatchesAction(@Nullable String rejectedPatchesAction) {
+        public Builder rejectedPatchesAction(@Nullable String rejectedPatchesAction) {
             this.rejectedPatchesAction = Input.ofNullable(rejectedPatchesAction);
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<PatchBaselineSourceArgs>> sources) {
+        public Builder sources(@Nullable Input<List<PatchBaselineSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<PatchBaselineSourceArgs> sources) {
+        public Builder sources(@Nullable List<PatchBaselineSourceArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

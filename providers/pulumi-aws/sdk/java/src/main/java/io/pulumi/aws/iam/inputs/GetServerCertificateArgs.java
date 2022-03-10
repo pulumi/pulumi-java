@@ -103,22 +103,22 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
     	      this.pathPrefix = defaults.pathPrefix;
         }
 
-        public Builder setLatest(@Nullable Boolean latest) {
+        public Builder latest(@Nullable Boolean latest) {
             this.latest = latest;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setPathPrefix(@Nullable String pathPrefix) {
+        public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }

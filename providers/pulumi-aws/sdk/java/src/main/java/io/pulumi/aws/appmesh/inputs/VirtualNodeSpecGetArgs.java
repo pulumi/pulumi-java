@@ -123,52 +123,52 @@ public final class VirtualNodeSpecGetArgs extends io.pulumi.resources.ResourceAr
     	      this.serviceDiscovery = defaults.serviceDiscovery;
         }
 
-        public Builder setBackendDefaults(@Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults) {
+        public Builder backendDefaults(@Nullable Input<VirtualNodeSpecBackendDefaultsGetArgs> backendDefaults) {
             this.backendDefaults = backendDefaults;
             return this;
         }
 
-        public Builder setBackendDefaults(@Nullable VirtualNodeSpecBackendDefaultsGetArgs backendDefaults) {
+        public Builder backendDefaults(@Nullable VirtualNodeSpecBackendDefaultsGetArgs backendDefaults) {
             this.backendDefaults = Input.ofNullable(backendDefaults);
             return this;
         }
 
-        public Builder setBackends(@Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends) {
+        public Builder backends(@Nullable Input<List<VirtualNodeSpecBackendGetArgs>> backends) {
             this.backends = backends;
             return this;
         }
 
-        public Builder setBackends(@Nullable List<VirtualNodeSpecBackendGetArgs> backends) {
+        public Builder backends(@Nullable List<VirtualNodeSpecBackendGetArgs> backends) {
             this.backends = Input.ofNullable(backends);
             return this;
         }
 
-        public Builder setListener(@Nullable Input<VirtualNodeSpecListenerGetArgs> listener) {
+        public Builder listener(@Nullable Input<VirtualNodeSpecListenerGetArgs> listener) {
             this.listener = listener;
             return this;
         }
 
-        public Builder setListener(@Nullable VirtualNodeSpecListenerGetArgs listener) {
+        public Builder listener(@Nullable VirtualNodeSpecListenerGetArgs listener) {
             this.listener = Input.ofNullable(listener);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<VirtualNodeSpecLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Input<VirtualNodeSpecLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable VirtualNodeSpecLoggingGetArgs logging) {
+        public Builder logging(@Nullable VirtualNodeSpecLoggingGetArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setServiceDiscovery(@Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
+        public Builder serviceDiscovery(@Nullable Input<VirtualNodeSpecServiceDiscoveryGetArgs> serviceDiscovery) {
             this.serviceDiscovery = serviceDiscovery;
             return this;
         }
 
-        public Builder setServiceDiscovery(@Nullable VirtualNodeSpecServiceDiscoveryGetArgs serviceDiscovery) {
+        public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscoveryGetArgs serviceDiscovery) {
             this.serviceDiscovery = Input.ofNullable(serviceDiscovery);
             return this;
         }

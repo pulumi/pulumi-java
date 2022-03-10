@@ -83,17 +83,17 @@ public final class PipelineDefinitionPipelineObjectField {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setRefValue(@Nullable String refValue) {
+        public Builder refValue(@Nullable String refValue) {
             this.refValue = refValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }

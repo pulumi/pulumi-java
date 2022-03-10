@@ -132,32 +132,32 @@ public final class FleetLaunchTemplateConfigOverride {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable String maxPrice) {
+        public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
-        public Builder setPriority(@Nullable Double priority) {
+        public Builder priority(@Nullable Double priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Double weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

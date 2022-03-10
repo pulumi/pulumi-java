@@ -86,32 +86,32 @@ public final class RemediationConfigurationParameterGetArgs extends io.pulumi.re
     	      this.staticValue = defaults.staticValue;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceValue(@Nullable Input<String> resourceValue) {
+        public Builder resourceValue(@Nullable Input<String> resourceValue) {
             this.resourceValue = resourceValue;
             return this;
         }
 
-        public Builder setResourceValue(@Nullable String resourceValue) {
+        public Builder resourceValue(@Nullable String resourceValue) {
             this.resourceValue = Input.ofNullable(resourceValue);
             return this;
         }
 
-        public Builder setStaticValue(@Nullable Input<String> staticValue) {
+        public Builder staticValue(@Nullable Input<String> staticValue) {
             this.staticValue = staticValue;
             return this;
         }
 
-        public Builder setStaticValue(@Nullable String staticValue) {
+        public Builder staticValue(@Nullable String staticValue) {
             this.staticValue = Input.ofNullable(staticValue);
             return this;
         }

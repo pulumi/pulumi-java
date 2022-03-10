@@ -136,32 +136,32 @@ public final class EndpointConfigurationDataCaptureConfig {
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setCaptureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader captureContentTypeHeader) {
+        public Builder captureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader captureContentTypeHeader) {
             this.captureContentTypeHeader = captureContentTypeHeader;
             return this;
         }
 
-        public Builder setCaptureOptions(List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions) {
+        public Builder captureOptions(List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions) {
             this.captureOptions = Objects.requireNonNull(captureOptions);
             return this;
         }
 
-        public Builder setDestinationS3Uri(String destinationS3Uri) {
+        public Builder destinationS3Uri(String destinationS3Uri) {
             this.destinationS3Uri = Objects.requireNonNull(destinationS3Uri);
             return this;
         }
 
-        public Builder setEnableCapture(@Nullable Boolean enableCapture) {
+        public Builder enableCapture(@Nullable Boolean enableCapture) {
             this.enableCapture = enableCapture;
             return this;
         }
 
-        public Builder setInitialSamplingPercentage(Integer initialSamplingPercentage) {
+        public Builder initialSamplingPercentage(Integer initialSamplingPercentage) {
             this.initialSamplingPercentage = Objects.requireNonNull(initialSamplingPercentage);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }

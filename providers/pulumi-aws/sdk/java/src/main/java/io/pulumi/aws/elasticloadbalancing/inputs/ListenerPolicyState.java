@@ -88,32 +88,32 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
     	      this.policyNames = defaults.policyNames;
         }
 
-        public Builder setLoadBalancerName(@Nullable Input<String> loadBalancerName) {
+        public Builder loadBalancerName(@Nullable Input<String> loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
-        public Builder setLoadBalancerName(@Nullable String loadBalancerName) {
+        public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = Input.ofNullable(loadBalancerName);
             return this;
         }
 
-        public Builder setLoadBalancerPort(@Nullable Input<Integer> loadBalancerPort) {
+        public Builder loadBalancerPort(@Nullable Input<Integer> loadBalancerPort) {
             this.loadBalancerPort = loadBalancerPort;
             return this;
         }
 
-        public Builder setLoadBalancerPort(@Nullable Integer loadBalancerPort) {
+        public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
             this.loadBalancerPort = Input.ofNullable(loadBalancerPort);
             return this;
         }
 
-        public Builder setPolicyNames(@Nullable Input<List<String>> policyNames) {
+        public Builder policyNames(@Nullable Input<List<String>> policyNames) {
             this.policyNames = policyNames;
             return this;
         }
 
-        public Builder setPolicyNames(@Nullable List<String> policyNames) {
+        public Builder policyNames(@Nullable List<String> policyNames) {
             this.policyNames = Input.ofNullable(policyNames);
             return this;
         }

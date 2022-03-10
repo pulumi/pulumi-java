@@ -104,42 +104,42 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
     	      this.transitGatewayDefaultRouteTablePropagation = defaults.transitGatewayDefaultRouteTablePropagation;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(Input<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Objects.requireNonNull(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Input.of(Objects.requireNonNull(transitGatewayAttachmentId));
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTableAssociation(@Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation) {
+        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
+        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = Input.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTablePropagation(@Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation) {
+        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
+        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = Input.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
         }

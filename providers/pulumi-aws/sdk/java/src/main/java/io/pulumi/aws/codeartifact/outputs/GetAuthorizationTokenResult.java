@@ -108,32 +108,32 @@ public final class GetAuthorizationTokenResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setAuthorizationToken(String authorizationToken) {
+        public Builder authorizationToken(String authorizationToken) {
             this.authorizationToken = Objects.requireNonNull(authorizationToken);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomainOwner(String domainOwner) {
+        public Builder domainOwner(String domainOwner) {
             this.domainOwner = Objects.requireNonNull(domainOwner);
             return this;
         }
 
-        public Builder setDurationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder setExpiration(String expiration) {
+        public Builder expiration(String expiration) {
             this.expiration = Objects.requireNonNull(expiration);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

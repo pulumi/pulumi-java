@@ -52,12 +52,12 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
     	      this.hostname = defaults.hostname;
         }
 
-        public Builder setHostname(Input<String> hostname) {
+        public Builder hostname(Input<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Input.of(Objects.requireNonNull(hostname));
             return this;
         }

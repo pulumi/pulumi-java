@@ -103,22 +103,22 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCompatibleArchitecture(@Nullable String compatibleArchitecture) {
+        public Builder compatibleArchitecture(@Nullable String compatibleArchitecture) {
             this.compatibleArchitecture = compatibleArchitecture;
             return this;
         }
 
-        public Builder setCompatibleRuntime(@Nullable String compatibleRuntime) {
+        public Builder compatibleRuntime(@Nullable String compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
             return this;
         }
 
-        public Builder setLayerName(String layerName) {
+        public Builder layerName(String layerName) {
             this.layerName = Objects.requireNonNull(layerName);
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

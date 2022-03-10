@@ -53,12 +53,12 @@ public final class ConnectionConfirmationState extends io.pulumi.resources.Resou
     	      this.connectionId = defaults.connectionId;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }

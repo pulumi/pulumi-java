@@ -48,7 +48,7 @@ public final class GatewayRouteSpecGrpcRouteActionTargetVirtualService {
     	      this.virtualServiceName = defaults.virtualServiceName;
         }
 
-        public Builder setVirtualServiceName(String virtualServiceName) {
+        public Builder virtualServiceName(String virtualServiceName) {
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
         }

@@ -83,17 +83,17 @@ public final class JobCommand {
     	      this.scriptLocation = defaults.scriptLocation;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable String pythonVersion) {
+        public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
-        public Builder setScriptLocation(String scriptLocation) {
+        public Builder scriptLocation(String scriptLocation) {
             this.scriptLocation = Objects.requireNonNull(scriptLocation);
             return this;
         }

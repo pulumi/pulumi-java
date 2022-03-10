@@ -144,62 +144,62 @@ public final class VolumeAttachmentState extends io.pulumi.resources.ResourceArg
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setForceDetach(@Nullable Input<Boolean> forceDetach) {
+        public Builder forceDetach(@Nullable Input<Boolean> forceDetach) {
             this.forceDetach = forceDetach;
             return this;
         }
 
-        public Builder setForceDetach(@Nullable Boolean forceDetach) {
+        public Builder forceDetach(@Nullable Boolean forceDetach) {
             this.forceDetach = Input.ofNullable(forceDetach);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setSkipDestroy(@Nullable Input<Boolean> skipDestroy) {
+        public Builder skipDestroy(@Nullable Input<Boolean> skipDestroy) {
             this.skipDestroy = skipDestroy;
             return this;
         }
 
-        public Builder setSkipDestroy(@Nullable Boolean skipDestroy) {
+        public Builder skipDestroy(@Nullable Boolean skipDestroy) {
             this.skipDestroy = Input.ofNullable(skipDestroy);
             return this;
         }
 
-        public Builder setStopInstanceBeforeDetaching(@Nullable Input<Boolean> stopInstanceBeforeDetaching) {
+        public Builder stopInstanceBeforeDetaching(@Nullable Input<Boolean> stopInstanceBeforeDetaching) {
             this.stopInstanceBeforeDetaching = stopInstanceBeforeDetaching;
             return this;
         }
 
-        public Builder setStopInstanceBeforeDetaching(@Nullable Boolean stopInstanceBeforeDetaching) {
+        public Builder stopInstanceBeforeDetaching(@Nullable Boolean stopInstanceBeforeDetaching) {
             this.stopInstanceBeforeDetaching = Input.ofNullable(stopInstanceBeforeDetaching);
             return this;
         }
 
-        public Builder setVolumeId(@Nullable Input<String> volumeId) {
+        public Builder volumeId(@Nullable Input<String> volumeId) {
             this.volumeId = volumeId;
             return this;
         }
 
-        public Builder setVolumeId(@Nullable String volumeId) {
+        public Builder volumeId(@Nullable String volumeId) {
             this.volumeId = Input.ofNullable(volumeId);
             return this;
         }

@@ -68,12 +68,12 @@ public final class IntegrationResponseParameter {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setMappings(Map<String,String> mappings) {
+        public Builder mappings(Map<String,String> mappings) {
             this.mappings = Objects.requireNonNull(mappings);
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

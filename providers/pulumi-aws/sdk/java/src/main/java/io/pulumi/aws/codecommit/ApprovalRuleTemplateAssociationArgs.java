@@ -69,22 +69,22 @@ public final class ApprovalRuleTemplateAssociationArgs extends io.pulumi.resourc
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder setApprovalRuleTemplateName(Input<String> approvalRuleTemplateName) {
+        public Builder approvalRuleTemplateName(Input<String> approvalRuleTemplateName) {
             this.approvalRuleTemplateName = Objects.requireNonNull(approvalRuleTemplateName);
             return this;
         }
 
-        public Builder setApprovalRuleTemplateName(String approvalRuleTemplateName) {
+        public Builder approvalRuleTemplateName(String approvalRuleTemplateName) {
             this.approvalRuleTemplateName = Input.of(Objects.requireNonNull(approvalRuleTemplateName));
             return this;
         }
 
-        public Builder setRepositoryName(Input<String> repositoryName) {
+        public Builder repositoryName(Input<String> repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Input.of(Objects.requireNonNull(repositoryName));
             return this;
         }

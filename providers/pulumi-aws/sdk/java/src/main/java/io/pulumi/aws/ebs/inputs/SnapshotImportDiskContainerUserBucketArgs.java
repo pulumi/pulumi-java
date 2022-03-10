@@ -69,22 +69,22 @@ public final class SnapshotImportDiskContainerUserBucketArgs extends io.pulumi.r
     	      this.s3Key = defaults.s3Key;
         }
 
-        public Builder setS3Bucket(Input<String> s3Bucket) {
+        public Builder s3Bucket(Input<String> s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
-        public Builder setS3Bucket(String s3Bucket) {
+        public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Input.of(Objects.requireNonNull(s3Bucket));
             return this;
         }
 
-        public Builder setS3Key(Input<String> s3Key) {
+        public Builder s3Key(Input<String> s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
 
-        public Builder setS3Key(String s3Key) {
+        public Builder s3Key(String s3Key) {
             this.s3Key = Input.of(Objects.requireNonNull(s3Key));
             return this;
         }

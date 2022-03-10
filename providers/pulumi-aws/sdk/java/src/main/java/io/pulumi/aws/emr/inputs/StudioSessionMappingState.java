@@ -118,52 +118,52 @@ public final class StudioSessionMappingState extends io.pulumi.resources.Resourc
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setIdentityId(@Nullable Input<String> identityId) {
+        public Builder identityId(@Nullable Input<String> identityId) {
             this.identityId = identityId;
             return this;
         }
 
-        public Builder setIdentityId(@Nullable String identityId) {
+        public Builder identityId(@Nullable String identityId) {
             this.identityId = Input.ofNullable(identityId);
             return this;
         }
 
-        public Builder setIdentityName(@Nullable Input<String> identityName) {
+        public Builder identityName(@Nullable Input<String> identityName) {
             this.identityName = identityName;
             return this;
         }
 
-        public Builder setIdentityName(@Nullable String identityName) {
+        public Builder identityName(@Nullable String identityName) {
             this.identityName = Input.ofNullable(identityName);
             return this;
         }
 
-        public Builder setIdentityType(@Nullable Input<String> identityType) {
+        public Builder identityType(@Nullable Input<String> identityType) {
             this.identityType = identityType;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = Input.ofNullable(identityType);
             return this;
         }
 
-        public Builder setSessionPolicyArn(@Nullable Input<String> sessionPolicyArn) {
+        public Builder sessionPolicyArn(@Nullable Input<String> sessionPolicyArn) {
             this.sessionPolicyArn = sessionPolicyArn;
             return this;
         }
 
-        public Builder setSessionPolicyArn(@Nullable String sessionPolicyArn) {
+        public Builder sessionPolicyArn(@Nullable String sessionPolicyArn) {
             this.sessionPolicyArn = Input.ofNullable(sessionPolicyArn);
             return this;
         }
 
-        public Builder setStudioId(@Nullable Input<String> studioId) {
+        public Builder studioId(@Nullable Input<String> studioId) {
             this.studioId = studioId;
             return this;
         }
 
-        public Builder setStudioId(@Nullable String studioId) {
+        public Builder studioId(@Nullable String studioId) {
             this.studioId = Input.ofNullable(studioId);
             return this;
         }

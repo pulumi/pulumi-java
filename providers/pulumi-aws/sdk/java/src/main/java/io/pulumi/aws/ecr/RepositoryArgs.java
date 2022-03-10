@@ -122,52 +122,52 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEncryptionConfigurations(@Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations) {
+        public Builder encryptionConfigurations(@Nullable Input<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations) {
             this.encryptionConfigurations = encryptionConfigurations;
             return this;
         }
 
-        public Builder setEncryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationArgs> encryptionConfigurations) {
+        public Builder encryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationArgs> encryptionConfigurations) {
             this.encryptionConfigurations = Input.ofNullable(encryptionConfigurations);
             return this;
         }
 
-        public Builder setImageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration) {
             this.imageScanningConfiguration = imageScanningConfiguration;
             return this;
         }
 
-        public Builder setImageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
+        public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
             this.imageScanningConfiguration = Input.ofNullable(imageScanningConfiguration);
             return this;
         }
 
-        public Builder setImageTagMutability(@Nullable Input<String> imageTagMutability) {
+        public Builder imageTagMutability(@Nullable Input<String> imageTagMutability) {
             this.imageTagMutability = imageTagMutability;
             return this;
         }
 
-        public Builder setImageTagMutability(@Nullable String imageTagMutability) {
+        public Builder imageTagMutability(@Nullable String imageTagMutability) {
             this.imageTagMutability = Input.ofNullable(imageTagMutability);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

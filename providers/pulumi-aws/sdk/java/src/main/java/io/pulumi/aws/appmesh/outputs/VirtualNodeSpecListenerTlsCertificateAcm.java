@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerTlsCertificateAcm {
     	      this.certificateArn = defaults.certificateArn;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }

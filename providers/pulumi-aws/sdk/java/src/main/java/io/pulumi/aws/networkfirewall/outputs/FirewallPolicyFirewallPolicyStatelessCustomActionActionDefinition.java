@@ -48,7 +48,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder setPublishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
+        public Builder publishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
             this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
             return this;
         }

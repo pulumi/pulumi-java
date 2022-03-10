@@ -67,12 +67,12 @@ public final class VpcIpamPoolCidrCidrAuthorizationContext {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setSignature(@Nullable String signature) {
+        public Builder signature(@Nullable String signature) {
             this.signature = signature;
             return this;
         }

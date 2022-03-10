@@ -135,62 +135,62 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setIamUserAccessToBilling(@Nullable Input<String> iamUserAccessToBilling) {
+        public Builder iamUserAccessToBilling(@Nullable Input<String> iamUserAccessToBilling) {
             this.iamUserAccessToBilling = iamUserAccessToBilling;
             return this;
         }
 
-        public Builder setIamUserAccessToBilling(@Nullable String iamUserAccessToBilling) {
+        public Builder iamUserAccessToBilling(@Nullable String iamUserAccessToBilling) {
             this.iamUserAccessToBilling = Input.ofNullable(iamUserAccessToBilling);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentId(@Nullable Input<String> parentId) {
+        public Builder parentId(@Nullable Input<String> parentId) {
             this.parentId = parentId;
             return this;
         }
 
-        public Builder setParentId(@Nullable String parentId) {
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = Input.ofNullable(parentId);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -70,22 +70,22 @@ public final class StackSetAutoDeploymentGetArgs extends io.pulumi.resources.Res
     	      this.retainStacksOnAccountRemoval = defaults.retainStacksOnAccountRemoval;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setRetainStacksOnAccountRemoval(@Nullable Input<Boolean> retainStacksOnAccountRemoval) {
+        public Builder retainStacksOnAccountRemoval(@Nullable Input<Boolean> retainStacksOnAccountRemoval) {
             this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
             return this;
         }
 
-        public Builder setRetainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
+        public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
             this.retainStacksOnAccountRemoval = Input.ofNullable(retainStacksOnAccountRemoval);
             return this;
         }

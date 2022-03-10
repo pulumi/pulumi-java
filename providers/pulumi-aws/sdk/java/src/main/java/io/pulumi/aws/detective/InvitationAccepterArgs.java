@@ -52,12 +52,12 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     	      this.graphArn = defaults.graphArn;
         }
 
-        public Builder setGraphArn(Input<String> graphArn) {
+        public Builder graphArn(Input<String> graphArn) {
             this.graphArn = Objects.requireNonNull(graphArn);
             return this;
         }
 
-        public Builder setGraphArn(String graphArn) {
+        public Builder graphArn(String graphArn) {
             this.graphArn = Input.of(Objects.requireNonNull(graphArn));
             return this;
         }

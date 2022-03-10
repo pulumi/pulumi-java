@@ -53,12 +53,12 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
     	      this.exacts = defaults.exacts;
         }
 
-        public Builder setExacts(Input<List<String>> exacts) {
+        public Builder exacts(Input<List<String>> exacts) {
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }
 
-        public Builder setExacts(List<String> exacts) {
+        public Builder exacts(List<String> exacts) {
             this.exacts = Input.of(Objects.requireNonNull(exacts));
             return this;
         }

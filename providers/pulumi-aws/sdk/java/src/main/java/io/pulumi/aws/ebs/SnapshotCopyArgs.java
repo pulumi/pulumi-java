@@ -181,92 +181,92 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.temporaryRestoreDays = defaults.temporaryRestoreDays;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setPermanentRestore(@Nullable Input<Boolean> permanentRestore) {
+        public Builder permanentRestore(@Nullable Input<Boolean> permanentRestore) {
             this.permanentRestore = permanentRestore;
             return this;
         }
 
-        public Builder setPermanentRestore(@Nullable Boolean permanentRestore) {
+        public Builder permanentRestore(@Nullable Boolean permanentRestore) {
             this.permanentRestore = Input.ofNullable(permanentRestore);
             return this;
         }
 
-        public Builder setSourceRegion(Input<String> sourceRegion) {
+        public Builder sourceRegion(Input<String> sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
 
-        public Builder setSourceRegion(String sourceRegion) {
+        public Builder sourceRegion(String sourceRegion) {
             this.sourceRegion = Input.of(Objects.requireNonNull(sourceRegion));
             return this;
         }
 
-        public Builder setSourceSnapshotId(Input<String> sourceSnapshotId) {
+        public Builder sourceSnapshotId(Input<String> sourceSnapshotId) {
             this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
             return this;
         }
 
-        public Builder setSourceSnapshotId(String sourceSnapshotId) {
+        public Builder sourceSnapshotId(String sourceSnapshotId) {
             this.sourceSnapshotId = Input.of(Objects.requireNonNull(sourceSnapshotId));
             return this;
         }
 
-        public Builder setStorageTier(@Nullable Input<String> storageTier) {
+        public Builder storageTier(@Nullable Input<String> storageTier) {
             this.storageTier = storageTier;
             return this;
         }
 
-        public Builder setStorageTier(@Nullable String storageTier) {
+        public Builder storageTier(@Nullable String storageTier) {
             this.storageTier = Input.ofNullable(storageTier);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Input<Integer> temporaryRestoreDays) {
             this.temporaryRestoreDays = temporaryRestoreDays;
             return this;
         }
 
-        public Builder setTemporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
+        public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
             this.temporaryRestoreDays = Input.ofNullable(temporaryRestoreDays);
             return this;
         }

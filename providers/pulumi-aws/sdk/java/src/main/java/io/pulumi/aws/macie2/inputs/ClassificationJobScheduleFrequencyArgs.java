@@ -88,32 +88,32 @@ public final class ClassificationJobScheduleFrequencyArgs extends io.pulumi.reso
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable Input<Boolean> dailySchedule) {
+        public Builder dailySchedule(@Nullable Input<Boolean> dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setDailySchedule(@Nullable Boolean dailySchedule) {
+        public Builder dailySchedule(@Nullable Boolean dailySchedule) {
             this.dailySchedule = Input.ofNullable(dailySchedule);
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable Input<Integer> monthlySchedule) {
+        public Builder monthlySchedule(@Nullable Input<Integer> monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable Integer monthlySchedule) {
+        public Builder monthlySchedule(@Nullable Integer monthlySchedule) {
             this.monthlySchedule = Input.ofNullable(monthlySchedule);
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable Input<String> weeklySchedule) {
+        public Builder weeklySchedule(@Nullable Input<String> weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable String weeklySchedule) {
+        public Builder weeklySchedule(@Nullable String weeklySchedule) {
             this.weeklySchedule = Input.ofNullable(weeklySchedule);
             return this;
         }

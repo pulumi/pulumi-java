@@ -82,17 +82,17 @@ public final class ReceiptRuleAddHeaderAction {
     	      this.position = defaults.position;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

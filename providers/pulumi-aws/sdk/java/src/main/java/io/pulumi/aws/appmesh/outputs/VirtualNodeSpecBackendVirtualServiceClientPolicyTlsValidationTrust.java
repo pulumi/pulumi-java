@@ -85,17 +85,17 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm acm) {
+        public Builder acm(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile file) {
+        public Builder file(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds sds) {
             this.sds = sds;
             return this;
         }

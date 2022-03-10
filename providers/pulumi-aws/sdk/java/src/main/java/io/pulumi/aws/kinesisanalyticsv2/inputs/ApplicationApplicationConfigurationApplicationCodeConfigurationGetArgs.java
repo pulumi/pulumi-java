@@ -71,22 +71,22 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.codeContentType = defaults.codeContentType;
         }
 
-        public Builder setCodeContent(@Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs> codeContent) {
+        public Builder codeContent(@Nullable Input<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs> codeContent) {
             this.codeContent = codeContent;
             return this;
         }
 
-        public Builder setCodeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs codeContent) {
+        public Builder codeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentGetArgs codeContent) {
             this.codeContent = Input.ofNullable(codeContent);
             return this;
         }
 
-        public Builder setCodeContentType(Input<String> codeContentType) {
+        public Builder codeContentType(Input<String> codeContentType) {
             this.codeContentType = Objects.requireNonNull(codeContentType);
             return this;
         }
 
-        public Builder setCodeContentType(String codeContentType) {
+        public Builder codeContentType(String codeContentType) {
             this.codeContentType = Input.of(Objects.requireNonNull(codeContentType));
             return this;
         }

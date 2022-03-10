@@ -136,32 +136,32 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfig {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setBidPrice(@Nullable String bidPrice) {
+        public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
-        public Builder setBidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
+        public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
             this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
             return this;
         }
 
-        public Builder setConfigurations(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigConfiguration> configurations) {
+        public Builder configurations(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigConfiguration> configurations) {
             this.configurations = configurations;
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Integer weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

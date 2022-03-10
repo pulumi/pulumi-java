@@ -90,17 +90,17 @@ public final class AnalyticsApplicationInputsSchema {
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder setRecordColumns(List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns) {
+        public Builder recordColumns(List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable String recordEncoding) {
+        public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
-        public Builder setRecordFormat(AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
+        public Builder recordFormat(AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }

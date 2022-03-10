@@ -52,12 +52,12 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder setPublishMetricAction(Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction) {
+        public Builder publishMetricAction(Input<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs> publishMetricAction) {
             this.publishMetricAction = Objects.requireNonNull(publishMetricAction);
             return this;
         }
 
-        public Builder setPublishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs publishMetricAction) {
+        public Builder publishMetricAction(FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionGetArgs publishMetricAction) {
             this.publishMetricAction = Input.of(Objects.requireNonNull(publishMetricAction));
             return this;
         }

@@ -88,32 +88,32 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.policies = defaults.policies;
         }
 
-        public Builder setAllowedPublishers(Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
+        public Builder allowedPublishers(Input<CodeSigningConfigAllowedPublishersArgs> allowedPublishers) {
             this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
             return this;
         }
 
-        public Builder setAllowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
+        public Builder allowedPublishers(CodeSigningConfigAllowedPublishersArgs allowedPublishers) {
             this.allowedPublishers = Input.of(Objects.requireNonNull(allowedPublishers));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPolicies(@Nullable Input<CodeSigningConfigPoliciesArgs> policies) {
+        public Builder policies(@Nullable Input<CodeSigningConfigPoliciesArgs> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setPolicies(@Nullable CodeSigningConfigPoliciesArgs policies) {
+        public Builder policies(@Nullable CodeSigningConfigPoliciesArgs policies) {
             this.policies = Input.ofNullable(policies);
             return this;
         }
