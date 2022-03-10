@@ -53,12 +53,12 @@ public final class PreventionJobTriggerInspectJobActionArgs extends io.pulumi.re
     	      this.saveFindings = defaults.saveFindings;
         }
 
-        public Builder setSaveFindings(Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings) {
+        public Builder saveFindings(Input<PreventionJobTriggerInspectJobActionSaveFindingsArgs> saveFindings) {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
 
-        public Builder setSaveFindings(PreventionJobTriggerInspectJobActionSaveFindingsArgs saveFindings) {
+        public Builder saveFindings(PreventionJobTriggerInspectJobActionSaveFindingsArgs saveFindings) {
             this.saveFindings = Input.of(Objects.requireNonNull(saveFindings));
             return this;
         }

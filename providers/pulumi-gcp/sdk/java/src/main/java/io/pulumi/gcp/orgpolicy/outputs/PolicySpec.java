@@ -122,27 +122,27 @@ public final class PolicySpec {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Boolean inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
-        public Builder setReset(@Nullable Boolean reset) {
+        public Builder reset(@Nullable Boolean reset) {
             this.reset = reset;
             return this;
         }
 
-        public Builder setRules(@Nullable List<PolicySpecRule> rules) {
+        public Builder rules(@Nullable List<PolicySpecRule> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }

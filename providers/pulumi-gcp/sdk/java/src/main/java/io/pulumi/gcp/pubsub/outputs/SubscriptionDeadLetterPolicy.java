@@ -98,12 +98,12 @@ public final class SubscriptionDeadLetterPolicy {
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder setDeadLetterTopic(@Nullable String deadLetterTopic) {
+        public Builder deadLetterTopic(@Nullable String deadLetterTopic) {
             this.deadLetterTopic = deadLetterTopic;
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }

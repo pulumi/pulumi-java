@@ -122,52 +122,52 @@ public final class CustomServiceState extends io.pulumi.resources.ResourceArgs {
     	      this.telemetry = defaults.telemetry;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceId(@Nullable Input<String> serviceId) {
+        public Builder serviceId(@Nullable Input<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
-        public Builder setServiceId(@Nullable String serviceId) {
+        public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Input.ofNullable(serviceId);
             return this;
         }
 
-        public Builder setTelemetry(@Nullable Input<CustomServiceTelemetryGetArgs> telemetry) {
+        public Builder telemetry(@Nullable Input<CustomServiceTelemetryGetArgs> telemetry) {
             this.telemetry = telemetry;
             return this;
         }
 
-        public Builder setTelemetry(@Nullable CustomServiceTelemetryGetArgs telemetry) {
+        public Builder telemetry(@Nullable CustomServiceTelemetryGetArgs telemetry) {
             this.telemetry = Input.ofNullable(telemetry);
             return this;
         }

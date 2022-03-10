@@ -56,12 +56,12 @@ public final class SubscriptionExpirationPolicyArgs extends io.pulumi.resources.
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setTtl(Input<String> ttl) {
+        public Builder ttl(Input<String> ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Input.of(Objects.requireNonNull(ttl));
             return this;
         }

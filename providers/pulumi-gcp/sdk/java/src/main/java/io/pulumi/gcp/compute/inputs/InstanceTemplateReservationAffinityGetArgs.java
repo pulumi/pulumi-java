@@ -72,22 +72,22 @@ public final class InstanceTemplateReservationAffinityGetArgs extends io.pulumi.
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservation(@Nullable Input<InstanceTemplateReservationAffinitySpecificReservationGetArgs> specificReservation) {
+        public Builder specificReservation(@Nullable Input<InstanceTemplateReservationAffinitySpecificReservationGetArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
-        public Builder setSpecificReservation(@Nullable InstanceTemplateReservationAffinitySpecificReservationGetArgs specificReservation) {
+        public Builder specificReservation(@Nullable InstanceTemplateReservationAffinitySpecificReservationGetArgs specificReservation) {
             this.specificReservation = Input.ofNullable(specificReservation);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

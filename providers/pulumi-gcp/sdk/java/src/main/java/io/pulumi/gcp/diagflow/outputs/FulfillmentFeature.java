@@ -52,7 +52,7 @@ public final class FulfillmentFeature {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -88,17 +88,17 @@ public final class ReservationSpecificReservation {
     	      this.instanceProperties = defaults.instanceProperties;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setInUseCount(@Nullable Integer inUseCount) {
+        public Builder inUseCount(@Nullable Integer inUseCount) {
             this.inUseCount = inUseCount;
             return this;
         }
 
-        public Builder setInstanceProperties(ReservationSpecificReservationInstanceProperties instanceProperties) {
+        public Builder instanceProperties(ReservationSpecificReservationInstanceProperties instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }

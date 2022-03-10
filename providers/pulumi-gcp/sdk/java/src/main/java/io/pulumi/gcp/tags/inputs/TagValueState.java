@@ -153,72 +153,72 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespacedName(@Nullable Input<String> namespacedName) {
+        public Builder namespacedName(@Nullable Input<String> namespacedName) {
             this.namespacedName = namespacedName;
             return this;
         }
 
-        public Builder setNamespacedName(@Nullable String namespacedName) {
+        public Builder namespacedName(@Nullable String namespacedName) {
             this.namespacedName = Input.ofNullable(namespacedName);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

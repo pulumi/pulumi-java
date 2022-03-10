@@ -71,22 +71,22 @@ public final class RegionInstanceGroupManagerNamedPortGetArgs extends io.pulumi.
     	      this.port = defaults.port;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }

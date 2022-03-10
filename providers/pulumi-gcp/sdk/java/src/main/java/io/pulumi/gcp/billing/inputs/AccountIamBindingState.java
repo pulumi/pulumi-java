@@ -100,52 +100,52 @@ public final class AccountIamBindingState extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder setBillingAccountId(@Nullable Input<String> billingAccountId) {
+        public Builder billingAccountId(@Nullable Input<String> billingAccountId) {
             this.billingAccountId = billingAccountId;
             return this;
         }
 
-        public Builder setBillingAccountId(@Nullable String billingAccountId) {
+        public Builder billingAccountId(@Nullable String billingAccountId) {
             this.billingAccountId = Input.ofNullable(billingAccountId);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<AccountIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<AccountIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable AccountIamBindingConditionGetArgs condition) {
+        public Builder condition(@Nullable AccountIamBindingConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setMembers(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Input<List<String>> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = Input.ofNullable(members);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }

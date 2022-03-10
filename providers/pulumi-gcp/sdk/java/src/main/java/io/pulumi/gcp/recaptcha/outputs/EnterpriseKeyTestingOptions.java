@@ -68,12 +68,12 @@ public final class EnterpriseKeyTestingOptions {
     	      this.testingScore = defaults.testingScore;
         }
 
-        public Builder setTestingChallenge(@Nullable String testingChallenge) {
+        public Builder testingChallenge(@Nullable String testingChallenge) {
             this.testingChallenge = testingChallenge;
             return this;
         }
 
-        public Builder setTestingScore(@Nullable Double testingScore) {
+        public Builder testingScore(@Nullable Double testingScore) {
             this.testingScore = testingScore;
             return this;
         }

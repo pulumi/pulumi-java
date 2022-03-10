@@ -61,22 +61,22 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder setFolder(Input<String> folder) {
+        public Builder folder(Input<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Input.of(Objects.requireNonNull(folder));
             return this;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }

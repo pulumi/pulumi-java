@@ -73,22 +73,22 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs 
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs> abort) {
+        public Builder abort(@Nullable Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs> abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setAbort(@Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs abort) {
+        public Builder abort(@Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs abort) {
             this.abort = Input.ofNullable(abort);
             return this;
         }
 
-        public Builder setDelay(@Nullable Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs> delay) {
+        public Builder delay(@Nullable Input<URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs delay) {
+        public Builder delay(@Nullable URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }

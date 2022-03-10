@@ -66,22 +66,22 @@ public final class ServiceIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

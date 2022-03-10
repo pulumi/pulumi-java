@@ -80,12 +80,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     	      this.relativeLikelihood = defaults.relativeLikelihood;
         }
 
-        public Builder setFixedLikelihood(@Nullable String fixedLikelihood) {
+        public Builder fixedLikelihood(@Nullable String fixedLikelihood) {
             this.fixedLikelihood = fixedLikelihood;
             return this;
         }
 
-        public Builder setRelativeLikelihood(@Nullable Integer relativeLikelihood) {
+        public Builder relativeLikelihood(@Nullable Integer relativeLikelihood) {
             this.relativeLikelihood = relativeLikelihood;
             return this;
         }

@@ -86,17 +86,17 @@ public final class TriggerGithubPullRequest {
     	      this.invertRegex = defaults.invertRegex;
         }
 
-        public Builder setBranch(String branch) {
+        public Builder branch(String branch) {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
 
-        public Builder setCommentControl(@Nullable String commentControl) {
+        public Builder commentControl(@Nullable String commentControl) {
             this.commentControl = commentControl;
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Boolean invertRegex) {
+        public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }

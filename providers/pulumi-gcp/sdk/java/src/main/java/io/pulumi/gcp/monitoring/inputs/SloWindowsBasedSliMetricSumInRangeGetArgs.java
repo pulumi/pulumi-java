@@ -82,22 +82,22 @@ public final class SloWindowsBasedSliMetricSumInRangeGetArgs extends io.pulumi.r
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder setRange(Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range) {
+        public Builder range(Input<SloWindowsBasedSliMetricSumInRangeRangeGetArgs> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setRange(SloWindowsBasedSliMetricSumInRangeRangeGetArgs range) {
+        public Builder range(SloWindowsBasedSliMetricSumInRangeRangeGetArgs range) {
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }
 
-        public Builder setTimeSeries(Input<String> timeSeries) {
+        public Builder timeSeries(Input<String> timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
 
-        public Builder setTimeSeries(String timeSeries) {
+        public Builder timeSeries(String timeSeries) {
             this.timeSeries = Input.of(Objects.requireNonNull(timeSeries));
             return this;
         }

@@ -72,22 +72,22 @@ public final class DatabaseInstanceSettingsLocationPreferenceArgs extends io.pul
     	      this.zone = defaults.zone;
         }
 
-        public Builder setFollowGaeApplication(@Nullable Input<String> followGaeApplication) {
+        public Builder followGaeApplication(@Nullable Input<String> followGaeApplication) {
             this.followGaeApplication = followGaeApplication;
             return this;
         }
 
-        public Builder setFollowGaeApplication(@Nullable String followGaeApplication) {
+        public Builder followGaeApplication(@Nullable String followGaeApplication) {
             this.followGaeApplication = Input.ofNullable(followGaeApplication);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

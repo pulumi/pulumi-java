@@ -71,22 +71,22 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setAggregationWindowLength(@Nullable Input<String> aggregationWindowLength) {
+        public Builder aggregationWindowLength(@Nullable Input<String> aggregationWindowLength) {
             this.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
 
-        public Builder setAggregationWindowLength(@Nullable String aggregationWindowLength) {
+        public Builder aggregationWindowLength(@Nullable String aggregationWindowLength) {
             this.aggregationWindowLength = Input.ofNullable(aggregationWindowLength);
             return this;
         }
 
-        public Builder setTargetUtilization(Input<Double> targetUtilization) {
+        public Builder targetUtilization(Input<Double> targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
 
-        public Builder setTargetUtilization(Double targetUtilization) {
+        public Builder targetUtilization(Double targetUtilization) {
             this.targetUtilization = Input.of(Objects.requireNonNull(targetUtilization));
             return this;
         }

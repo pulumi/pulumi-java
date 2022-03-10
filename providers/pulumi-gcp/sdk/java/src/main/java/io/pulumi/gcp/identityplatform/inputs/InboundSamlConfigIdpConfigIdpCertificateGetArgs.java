@@ -54,12 +54,12 @@ public final class InboundSamlConfigIdpConfigIdpCertificateGetArgs extends io.pu
     	      this.x509Certificate = defaults.x509Certificate;
         }
 
-        public Builder setX509Certificate(@Nullable Input<String> x509Certificate) {
+        public Builder x509Certificate(@Nullable Input<String> x509Certificate) {
             this.x509Certificate = x509Certificate;
             return this;
         }
 
-        public Builder setX509Certificate(@Nullable String x509Certificate) {
+        public Builder x509Certificate(@Nullable String x509Certificate) {
             this.x509Certificate = Input.ofNullable(x509Certificate);
             return this;
         }

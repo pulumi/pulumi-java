@@ -111,22 +111,22 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
     	      this.responseHeadersToRemoves = defaults.responseHeadersToRemoves;
         }
 
-        public Builder setRequestHeadersToAdds(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd> requestHeadersToAdds) {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
-        public Builder setRequestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
+        public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
 
-        public Builder setResponseHeadersToAdds(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
+        public Builder responseHeadersToAdds(@Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
 
-        public Builder setResponseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
+        public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }

@@ -179,72 +179,72 @@ public final class URLMapDefaultRouteActionArgs extends io.pulumi.resources.Reso
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder setCorsPolicy(@Nullable Input<URLMapDefaultRouteActionCorsPolicyArgs> corsPolicy) {
+        public Builder corsPolicy(@Nullable Input<URLMapDefaultRouteActionCorsPolicyArgs> corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
 
-        public Builder setCorsPolicy(@Nullable URLMapDefaultRouteActionCorsPolicyArgs corsPolicy) {
+        public Builder corsPolicy(@Nullable URLMapDefaultRouteActionCorsPolicyArgs corsPolicy) {
             this.corsPolicy = Input.ofNullable(corsPolicy);
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyArgs faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyArgs faultInjectionPolicy) {
             this.faultInjectionPolicy = Input.ofNullable(faultInjectionPolicy);
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable Input<URLMapDefaultRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable Input<URLMapDefaultRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable URLMapDefaultRouteActionRequestMirrorPolicyArgs requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable URLMapDefaultRouteActionRequestMirrorPolicyArgs requestMirrorPolicy) {
             this.requestMirrorPolicy = Input.ofNullable(requestMirrorPolicy);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<URLMapDefaultRouteActionRetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<URLMapDefaultRouteActionRetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable URLMapDefaultRouteActionRetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable URLMapDefaultRouteActionRetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<URLMapDefaultRouteActionTimeoutArgs> timeout) {
+        public Builder timeout(@Nullable Input<URLMapDefaultRouteActionTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable URLMapDefaultRouteActionTimeoutArgs timeout) {
+        public Builder timeout(@Nullable URLMapDefaultRouteActionTimeoutArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable Input<URLMapDefaultRouteActionUrlRewriteArgs> urlRewrite) {
+        public Builder urlRewrite(@Nullable Input<URLMapDefaultRouteActionUrlRewriteArgs> urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable URLMapDefaultRouteActionUrlRewriteArgs urlRewrite) {
+        public Builder urlRewrite(@Nullable URLMapDefaultRouteActionUrlRewriteArgs urlRewrite) {
             this.urlRewrite = Input.ofNullable(urlRewrite);
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceArgs>> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable Input<List<URLMapDefaultRouteActionWeightedBackendServiceArgs>> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable List<URLMapDefaultRouteActionWeightedBackendServiceArgs> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable List<URLMapDefaultRouteActionWeightedBackendServiceArgs> weightedBackendServices) {
             this.weightedBackendServices = Input.ofNullable(weightedBackendServices);
             return this;
         }

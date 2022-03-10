@@ -102,22 +102,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setGcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs gcs) {
+        public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setRemote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemote remote) {
+        public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemote remote) {
             this.remote = remote;
             return this;
         }

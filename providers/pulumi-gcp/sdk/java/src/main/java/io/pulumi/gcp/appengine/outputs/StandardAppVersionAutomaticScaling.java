@@ -141,32 +141,32 @@ public final class StandardAppVersionAutomaticScaling {
     	      this.standardSchedulerSettings = defaults.standardSchedulerSettings;
         }
 
-        public Builder setMaxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
-        public Builder setMaxIdleInstances(@Nullable Integer maxIdleInstances) {
+        public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
             this.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
-        public Builder setMaxPendingLatency(@Nullable String maxPendingLatency) {
+        public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
             this.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
-        public Builder setMinIdleInstances(@Nullable Integer minIdleInstances) {
+        public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
             this.minIdleInstances = minIdleInstances;
             return this;
         }
 
-        public Builder setMinPendingLatency(@Nullable String minPendingLatency) {
+        public Builder minPendingLatency(@Nullable String minPendingLatency) {
             this.minPendingLatency = minPendingLatency;
             return this;
         }
 
-        public Builder setStandardSchedulerSettings(@Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings) {
+        public Builder standardSchedulerSettings(@Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings) {
             this.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }

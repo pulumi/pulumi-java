@@ -66,12 +66,12 @@ public final class BucketLifecycleRule {
     	      this.condition = defaults.condition;
         }
 
-        public Builder setAction(BucketLifecycleRuleAction action) {
+        public Builder action(BucketLifecycleRuleAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCondition(BucketLifecycleRuleCondition condition) {
+        public Builder condition(BucketLifecycleRuleCondition condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }

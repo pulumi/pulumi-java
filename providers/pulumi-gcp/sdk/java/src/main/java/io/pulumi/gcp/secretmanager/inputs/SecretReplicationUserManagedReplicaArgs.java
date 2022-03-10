@@ -72,22 +72,22 @@ public final class SecretReplicationUserManagedReplicaArgs extends io.pulumi.res
     	      this.location = defaults.location;
         }
 
-        public Builder setCustomerManagedEncryption(@Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable Input<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption) {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
-        public Builder setCustomerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs customerManagedEncryption) {
             this.customerManagedEncryption = Input.ofNullable(customerManagedEncryption);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }

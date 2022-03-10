@@ -105,42 +105,42 @@ public final class BackendServiceSignedUrlKeyState extends io.pulumi.resources.R
     	      this.project = defaults.project;
         }
 
-        public Builder setBackendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Input<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
-        public Builder setBackendService(@Nullable String backendService) {
+        public Builder backendService(@Nullable String backendService) {
             this.backendService = Input.ofNullable(backendService);
             return this;
         }
 
-        public Builder setKeyValue(@Nullable Input<String> keyValue) {
+        public Builder keyValue(@Nullable Input<String> keyValue) {
             this.keyValue = keyValue;
             return this;
         }
 
-        public Builder setKeyValue(@Nullable String keyValue) {
+        public Builder keyValue(@Nullable String keyValue) {
             this.keyValue = Input.ofNullable(keyValue);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

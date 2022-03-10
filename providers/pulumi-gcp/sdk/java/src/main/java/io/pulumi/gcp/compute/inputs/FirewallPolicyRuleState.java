@@ -234,122 +234,122 @@ public final class FirewallPolicyRuleState extends io.pulumi.resources.ResourceA
     	      this.targetServiceAccounts = defaults.targetServiceAccounts;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDirection(@Nullable Input<String> direction) {
+        public Builder direction(@Nullable Input<String> direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setDirection(@Nullable String direction) {
+        public Builder direction(@Nullable String direction) {
             this.direction = Input.ofNullable(direction);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Input<Boolean> enableLogging) {
+        public Builder enableLogging(@Nullable Input<Boolean> enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Boolean enableLogging) {
+        public Builder enableLogging(@Nullable Boolean enableLogging) {
             this.enableLogging = Input.ofNullable(enableLogging);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable Input<String> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Input<String> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable String firewallPolicy) {
+        public Builder firewallPolicy(@Nullable String firewallPolicy) {
             this.firewallPolicy = Input.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMatch(@Nullable Input<FirewallPolicyRuleMatchGetArgs> match) {
+        public Builder match(@Nullable Input<FirewallPolicyRuleMatchGetArgs> match) {
             this.match = match;
             return this;
         }
 
-        public Builder setMatch(@Nullable FirewallPolicyRuleMatchGetArgs match) {
+        public Builder match(@Nullable FirewallPolicyRuleMatchGetArgs match) {
             this.match = Input.ofNullable(match);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setRuleTupleCount(@Nullable Input<Integer> ruleTupleCount) {
+        public Builder ruleTupleCount(@Nullable Input<Integer> ruleTupleCount) {
             this.ruleTupleCount = ruleTupleCount;
             return this;
         }
 
-        public Builder setRuleTupleCount(@Nullable Integer ruleTupleCount) {
+        public Builder ruleTupleCount(@Nullable Integer ruleTupleCount) {
             this.ruleTupleCount = Input.ofNullable(ruleTupleCount);
             return this;
         }
 
-        public Builder setTargetResources(@Nullable Input<List<String>> targetResources) {
+        public Builder targetResources(@Nullable Input<List<String>> targetResources) {
             this.targetResources = targetResources;
             return this;
         }
 
-        public Builder setTargetResources(@Nullable List<String> targetResources) {
+        public Builder targetResources(@Nullable List<String> targetResources) {
             this.targetResources = Input.ofNullable(targetResources);
             return this;
         }
 
-        public Builder setTargetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable Input<List<String>> targetServiceAccounts) {
             this.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
 
-        public Builder setTargetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
+        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
             return this;
         }

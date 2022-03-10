@@ -87,32 +87,32 @@ public final class NamespaceIamPolicyState extends io.pulumi.resources.ResourceA
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Input<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
-        public Builder setPolicyData(@Nullable String policyData) {
+        public Builder policyData(@Nullable String policyData) {
             this.policyData = Input.ofNullable(policyData);
             return this;
         }

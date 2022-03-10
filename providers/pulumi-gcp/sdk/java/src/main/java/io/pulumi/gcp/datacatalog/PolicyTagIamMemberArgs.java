@@ -97,42 +97,42 @@ public final class PolicyTagIamMemberArgs extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<PolicyTagIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<PolicyTagIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable PolicyTagIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable PolicyTagIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setPolicyTag(Input<String> policyTag) {
+        public Builder policyTag(Input<String> policyTag) {
             this.policyTag = Objects.requireNonNull(policyTag);
             return this;
         }
 
-        public Builder setPolicyTag(String policyTag) {
+        public Builder policyTag(String policyTag) {
             this.policyTag = Input.of(Objects.requireNonNull(policyTag));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

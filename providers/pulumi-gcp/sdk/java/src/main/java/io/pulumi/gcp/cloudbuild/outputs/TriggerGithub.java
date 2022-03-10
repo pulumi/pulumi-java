@@ -111,22 +111,22 @@ public final class TriggerGithub {
     	      this.push = defaults.push;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setPullRequest(@Nullable TriggerGithubPullRequest pullRequest) {
+        public Builder pullRequest(@Nullable TriggerGithubPullRequest pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
 
-        public Builder setPush(@Nullable TriggerGithubPush push) {
+        public Builder push(@Nullable TriggerGithubPush push) {
             this.push = push;
             return this;
         }

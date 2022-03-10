@@ -60,17 +60,17 @@ public final class NodePoolNodeConfigKubeletConfig {
     	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
         }
 
-        public Builder setCpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
+        public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
-        public Builder setCpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
-        public Builder setCpuManagerPolicy(String cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(String cpuManagerPolicy) {
             this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
             return this;
         }

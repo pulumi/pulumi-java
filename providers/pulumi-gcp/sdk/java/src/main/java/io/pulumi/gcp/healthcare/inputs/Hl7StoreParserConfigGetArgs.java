@@ -107,42 +107,42 @@ public final class Hl7StoreParserConfigGetArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder setAllowNullHeader(@Nullable Input<Boolean> allowNullHeader) {
+        public Builder allowNullHeader(@Nullable Input<Boolean> allowNullHeader) {
             this.allowNullHeader = allowNullHeader;
             return this;
         }
 
-        public Builder setAllowNullHeader(@Nullable Boolean allowNullHeader) {
+        public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
             this.allowNullHeader = Input.ofNullable(allowNullHeader);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setSegmentTerminator(@Nullable Input<String> segmentTerminator) {
+        public Builder segmentTerminator(@Nullable Input<String> segmentTerminator) {
             this.segmentTerminator = segmentTerminator;
             return this;
         }
 
-        public Builder setSegmentTerminator(@Nullable String segmentTerminator) {
+        public Builder segmentTerminator(@Nullable String segmentTerminator) {
             this.segmentTerminator = Input.ofNullable(segmentTerminator);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

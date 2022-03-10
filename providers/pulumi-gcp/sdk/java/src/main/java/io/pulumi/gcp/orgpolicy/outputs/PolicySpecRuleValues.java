@@ -67,12 +67,12 @@ public final class PolicySpecRuleValues {
     	      this.deniedValues = defaults.deniedValues;
         }
 
-        public Builder setAllowedValues(@Nullable List<String> allowedValues) {
+        public Builder allowedValues(@Nullable List<String> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setDeniedValues(@Nullable List<String> deniedValues) {
+        public Builder deniedValues(@Nullable List<String> deniedValues) {
             this.deniedValues = deniedValues;
             return this;
         }

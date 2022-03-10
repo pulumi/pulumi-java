@@ -142,62 +142,62 @@ public final class PreventionJobTriggerArgs extends io.pulumi.resources.Resource
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setInspectJob(@Nullable Input<PreventionJobTriggerInspectJobArgs> inspectJob) {
+        public Builder inspectJob(@Nullable Input<PreventionJobTriggerInspectJobArgs> inspectJob) {
             this.inspectJob = inspectJob;
             return this;
         }
 
-        public Builder setInspectJob(@Nullable PreventionJobTriggerInspectJobArgs inspectJob) {
+        public Builder inspectJob(@Nullable PreventionJobTriggerInspectJobArgs inspectJob) {
             this.inspectJob = Input.ofNullable(inspectJob);
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTriggers(Input<List<PreventionJobTriggerTriggerArgs>> triggers) {
+        public Builder triggers(Input<List<PreventionJobTriggerTriggerArgs>> triggers) {
             this.triggers = Objects.requireNonNull(triggers);
             return this;
         }
 
-        public Builder setTriggers(List<PreventionJobTriggerTriggerArgs> triggers) {
+        public Builder triggers(List<PreventionJobTriggerTriggerArgs> triggers) {
             this.triggers = Input.of(Objects.requireNonNull(triggers));
             return this;
         }

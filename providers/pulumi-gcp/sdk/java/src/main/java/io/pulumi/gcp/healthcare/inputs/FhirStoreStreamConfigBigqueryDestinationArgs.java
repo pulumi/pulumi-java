@@ -71,22 +71,22 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     	      this.schemaConfig = defaults.schemaConfig;
         }
 
-        public Builder setDatasetUri(Input<String> datasetUri) {
+        public Builder datasetUri(Input<String> datasetUri) {
             this.datasetUri = Objects.requireNonNull(datasetUri);
             return this;
         }
 
-        public Builder setDatasetUri(String datasetUri) {
+        public Builder datasetUri(String datasetUri) {
             this.datasetUri = Input.of(Objects.requireNonNull(datasetUri));
             return this;
         }
 
-        public Builder setSchemaConfig(Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig) {
+        public Builder schemaConfig(Input<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig) {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }
 
-        public Builder setSchemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs schemaConfig) {
+        public Builder schemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs schemaConfig) {
             this.schemaConfig = Input.of(Objects.requireNonNull(schemaConfig));
             return this;
         }

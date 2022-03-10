@@ -122,27 +122,27 @@ public final class DatabaseInstanceSettingsIpConfiguration {
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder setAllocatedIpRange(@Nullable String allocatedIpRange) {
+        public Builder allocatedIpRange(@Nullable String allocatedIpRange) {
             this.allocatedIpRange = allocatedIpRange;
             return this;
         }
 
-        public Builder setAuthorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks) {
+        public Builder authorizedNetworks(@Nullable List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork> authorizedNetworks) {
             this.authorizedNetworks = authorizedNetworks;
             return this;
         }
 
-        public Builder setIpv4Enabled(@Nullable Boolean ipv4Enabled) {
+        public Builder ipv4Enabled(@Nullable Boolean ipv4Enabled) {
             this.ipv4Enabled = ipv4Enabled;
             return this;
         }
 
-        public Builder setPrivateNetwork(@Nullable String privateNetwork) {
+        public Builder privateNetwork(@Nullable String privateNetwork) {
             this.privateNetwork = privateNetwork;
             return this;
         }
 
-        public Builder setRequireSsl(@Nullable Boolean requireSsl) {
+        public Builder requireSsl(@Nullable Boolean requireSsl) {
             this.requireSsl = requireSsl;
             return this;
         }

@@ -108,22 +108,22 @@ public final class Hl7StoreParserConfig {
     	      this.version = defaults.version;
         }
 
-        public Builder setAllowNullHeader(@Nullable Boolean allowNullHeader) {
+        public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
             this.allowNullHeader = allowNullHeader;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSegmentTerminator(@Nullable String segmentTerminator) {
+        public Builder segmentTerminator(@Nullable String segmentTerminator) {
             this.segmentTerminator = segmentTerminator;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -70,22 +70,22 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setServiceAccountId(Input<String> serviceAccountId) {
+        public Builder serviceAccountId(Input<String> serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
 
-        public Builder setServiceAccountId(String serviceAccountId) {
+        public Builder serviceAccountId(String serviceAccountId) {
             this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }

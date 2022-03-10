@@ -101,17 +101,17 @@ public final class RegionNetworkEndpointGroupAppEngine {
     	      this.version = defaults.version;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setUrlMask(@Nullable String urlMask) {
+        public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

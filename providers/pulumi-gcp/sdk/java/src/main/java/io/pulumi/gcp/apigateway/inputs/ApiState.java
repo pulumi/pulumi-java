@@ -153,72 +153,72 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setManagedService(@Nullable Input<String> managedService) {
+        public Builder managedService(@Nullable Input<String> managedService) {
             this.managedService = managedService;
             return this;
         }
 
-        public Builder setManagedService(@Nullable String managedService) {
+        public Builder managedService(@Nullable String managedService) {
             this.managedService = Input.ofNullable(managedService);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

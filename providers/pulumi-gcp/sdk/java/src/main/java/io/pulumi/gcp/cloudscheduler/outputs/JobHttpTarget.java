@@ -150,32 +150,32 @@ public final class JobHttpTarget {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setOauthToken(@Nullable JobHttpTargetOauthToken oauthToken) {
+        public Builder oauthToken(@Nullable JobHttpTargetOauthToken oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
 
-        public Builder setOidcToken(@Nullable JobHttpTargetOidcToken oidcToken) {
+        public Builder oidcToken(@Nullable JobHttpTargetOidcToken oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

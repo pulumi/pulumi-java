@@ -139,62 +139,62 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setBooleanPolicy(@Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy) {
+        public Builder booleanPolicy(@Nullable Input<PolicyBooleanPolicyArgs> booleanPolicy) {
             this.booleanPolicy = booleanPolicy;
             return this;
         }
 
-        public Builder setBooleanPolicy(@Nullable PolicyBooleanPolicyArgs booleanPolicy) {
+        public Builder booleanPolicy(@Nullable PolicyBooleanPolicyArgs booleanPolicy) {
             this.booleanPolicy = Input.ofNullable(booleanPolicy);
             return this;
         }
 
-        public Builder setConstraint(Input<String> constraint) {
+        public Builder constraint(Input<String> constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
 
-        public Builder setConstraint(String constraint) {
+        public Builder constraint(String constraint) {
             this.constraint = Input.of(Objects.requireNonNull(constraint));
             return this;
         }
 
-        public Builder setListPolicy(@Nullable Input<PolicyListPolicyArgs> listPolicy) {
+        public Builder listPolicy(@Nullable Input<PolicyListPolicyArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
 
-        public Builder setListPolicy(@Nullable PolicyListPolicyArgs listPolicy) {
+        public Builder listPolicy(@Nullable PolicyListPolicyArgs listPolicy) {
             this.listPolicy = Input.ofNullable(listPolicy);
             return this;
         }
 
-        public Builder setOrgId(Input<String> orgId) {
+        public Builder orgId(Input<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable Input<PolicyRestorePolicyArgs> restorePolicy) {
+        public Builder restorePolicy(@Nullable Input<PolicyRestorePolicyArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable PolicyRestorePolicyArgs restorePolicy) {
+        public Builder restorePolicy(@Nullable PolicyRestorePolicyArgs restorePolicy) {
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

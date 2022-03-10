@@ -70,22 +70,22 @@ public final class DeviceCredentialPublicKeyGetArgs extends io.pulumi.resources.
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(Input<String> format) {
+        public Builder format(Input<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }

@@ -52,12 +52,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     	      this.nodeGroup = defaults.nodeGroup;
         }
 
-        public Builder setNodeGroup(Input<String> nodeGroup) {
+        public Builder nodeGroup(Input<String> nodeGroup) {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
 
-        public Builder setNodeGroup(String nodeGroup) {
+        public Builder nodeGroup(String nodeGroup) {
             this.nodeGroup = Input.of(Objects.requireNonNull(nodeGroup));
             return this;
         }

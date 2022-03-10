@@ -142,62 +142,62 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setBasic(@Nullable Input<AccessLevelBasicArgs> basic) {
+        public Builder basic(@Nullable Input<AccessLevelBasicArgs> basic) {
             this.basic = basic;
             return this;
         }
 
-        public Builder setBasic(@Nullable AccessLevelBasicArgs basic) {
+        public Builder basic(@Nullable AccessLevelBasicArgs basic) {
             this.basic = Input.ofNullable(basic);
             return this;
         }
 
-        public Builder setCustom(@Nullable Input<AccessLevelCustomArgs> custom) {
+        public Builder custom(@Nullable Input<AccessLevelCustomArgs> custom) {
             this.custom = custom;
             return this;
         }
 
-        public Builder setCustom(@Nullable AccessLevelCustomArgs custom) {
+        public Builder custom(@Nullable AccessLevelCustomArgs custom) {
             this.custom = Input.ofNullable(custom);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

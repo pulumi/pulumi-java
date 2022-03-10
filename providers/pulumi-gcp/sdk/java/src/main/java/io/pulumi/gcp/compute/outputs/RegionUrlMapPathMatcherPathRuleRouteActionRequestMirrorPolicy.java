@@ -52,7 +52,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicy
     	      this.backendService = defaults.backendService;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }

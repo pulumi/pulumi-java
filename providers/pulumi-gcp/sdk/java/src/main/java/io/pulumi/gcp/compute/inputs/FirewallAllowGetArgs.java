@@ -79,22 +79,22 @@ public final class FirewallAllowGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setPorts(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Input<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<String> ports) {
+        public Builder ports(@Nullable List<String> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

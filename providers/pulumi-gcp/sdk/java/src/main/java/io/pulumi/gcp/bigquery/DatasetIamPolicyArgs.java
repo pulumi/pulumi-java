@@ -88,32 +88,32 @@ public final class DatasetIamPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.project = defaults.project;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

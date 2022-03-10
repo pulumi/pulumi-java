@@ -69,22 +69,22 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs ext
     	      this.secretAccessKey = defaults.secretAccessKey;
         }
 
-        public Builder setAccessKeyId(Input<String> accessKeyId) {
+        public Builder accessKeyId(Input<String> accessKeyId) {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
 
-        public Builder setAccessKeyId(String accessKeyId) {
+        public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = Input.of(Objects.requireNonNull(accessKeyId));
             return this;
         }
 
-        public Builder setSecretAccessKey(Input<String> secretAccessKey) {
+        public Builder secretAccessKey(Input<String> secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
 
-        public Builder setSecretAccessKey(String secretAccessKey) {
+        public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Input.of(Objects.requireNonNull(secretAccessKey));
             return this;
         }

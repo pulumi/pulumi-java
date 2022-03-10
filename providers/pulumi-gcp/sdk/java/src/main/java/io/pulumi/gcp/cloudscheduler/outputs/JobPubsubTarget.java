@@ -96,17 +96,17 @@ public final class JobPubsubTarget {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }

@@ -72,22 +72,22 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder setAuth(@Nullable Input<String> auth) {
+        public Builder auth(@Nullable Input<String> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable String auth) {
+        public Builder auth(@Nullable String auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setDisabled(Input<Boolean> disabled) {
+        public Builder disabled(Input<Boolean> disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Input.of(Objects.requireNonNull(disabled));
             return this;
         }

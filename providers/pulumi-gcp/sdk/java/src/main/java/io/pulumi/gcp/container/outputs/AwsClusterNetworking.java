@@ -82,17 +82,17 @@ public final class AwsClusterNetworking {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setPodAddressCidrBlocks(List<String> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

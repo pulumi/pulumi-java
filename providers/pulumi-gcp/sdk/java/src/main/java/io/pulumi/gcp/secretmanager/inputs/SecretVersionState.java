@@ -136,62 +136,62 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
     	      this.secretData = defaults.secretData;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDestroyTime(@Nullable Input<String> destroyTime) {
+        public Builder destroyTime(@Nullable Input<String> destroyTime) {
             this.destroyTime = destroyTime;
             return this;
         }
 
-        public Builder setDestroyTime(@Nullable String destroyTime) {
+        public Builder destroyTime(@Nullable String destroyTime) {
             this.destroyTime = Input.ofNullable(destroyTime);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Input<String> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }
 
-        public Builder setSecretData(@Nullable Input<String> secretData) {
+        public Builder secretData(@Nullable Input<String> secretData) {
             this.secretData = secretData;
             return this;
         }
 
-        public Builder setSecretData(@Nullable String secretData) {
+        public Builder secretData(@Nullable String secretData) {
             this.secretData = Input.ofNullable(secretData);
             return this;
         }

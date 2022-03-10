@@ -125,57 +125,57 @@ public final class GetEnvironmentConfigNodeConfig {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setEnableIpMasqAgent(Boolean enableIpMasqAgent) {
+        public Builder enableIpMasqAgent(Boolean enableIpMasqAgent) {
             this.enableIpMasqAgent = Objects.requireNonNull(enableIpMasqAgent);
             return this;
         }
 
-        public Builder setIpAllocationPolicies(List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies) {
+        public Builder ipAllocationPolicies(List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies) {
             this.ipAllocationPolicies = Objects.requireNonNull(ipAllocationPolicies);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMaxPodsPerNode(Integer maxPodsPerNode) {
+        public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setOauthScopes(List<String> oauthScopes) {
+        public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

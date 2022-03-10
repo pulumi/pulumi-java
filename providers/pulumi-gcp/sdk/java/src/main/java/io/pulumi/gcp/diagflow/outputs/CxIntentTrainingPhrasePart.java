@@ -67,12 +67,12 @@ public final class CxIntentTrainingPhrasePart {
     	      this.text = defaults.text;
         }
 
-        public Builder setParameterId(@Nullable String parameterId) {
+        public Builder parameterId(@Nullable String parameterId) {
             this.parameterId = parameterId;
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

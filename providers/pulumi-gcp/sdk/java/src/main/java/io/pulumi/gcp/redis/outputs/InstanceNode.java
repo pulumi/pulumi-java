@@ -59,12 +59,12 @@ public final class InstanceNode {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

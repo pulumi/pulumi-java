@@ -72,22 +72,22 @@ public final class FeatureMembershipConfigmanagementConfigSyncArgs extends io.pu
     	      this.sourceFormat = defaults.sourceFormat;
         }
 
-        public Builder setGit(@Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git) {
+        public Builder git(@Nullable Input<FeatureMembershipConfigmanagementConfigSyncGitArgs> git) {
             this.git = git;
             return this;
         }
 
-        public Builder setGit(@Nullable FeatureMembershipConfigmanagementConfigSyncGitArgs git) {
+        public Builder git(@Nullable FeatureMembershipConfigmanagementConfigSyncGitArgs git) {
             this.git = Input.ofNullable(git);
             return this;
         }
 
-        public Builder setSourceFormat(@Nullable Input<String> sourceFormat) {
+        public Builder sourceFormat(@Nullable Input<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
 
-        public Builder setSourceFormat(@Nullable String sourceFormat) {
+        public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = Input.ofNullable(sourceFormat);
             return this;
         }

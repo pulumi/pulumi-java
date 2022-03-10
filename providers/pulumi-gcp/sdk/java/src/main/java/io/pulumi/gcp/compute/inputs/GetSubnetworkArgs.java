@@ -106,22 +106,22 @@ public final class GetSubnetworkArgs extends io.pulumi.resources.InvokeArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }

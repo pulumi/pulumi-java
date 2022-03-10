@@ -60,17 +60,17 @@ public final class GetEnvironmentConfigWorkloadsConfig {
     	      this.workers = defaults.workers;
         }
 
-        public Builder setSchedulers(List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers) {
+        public Builder schedulers(List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers) {
             this.schedulers = Objects.requireNonNull(schedulers);
             return this;
         }
 
-        public Builder setWebServers(List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers) {
+        public Builder webServers(List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers) {
             this.webServers = Objects.requireNonNull(webServers);
             return this;
         }
 
-        public Builder setWorkers(List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
+        public Builder workers(List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
             this.workers = Objects.requireNonNull(workers);
             return this;
         }

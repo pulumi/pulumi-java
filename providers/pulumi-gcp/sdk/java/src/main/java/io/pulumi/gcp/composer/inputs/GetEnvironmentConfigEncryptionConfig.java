@@ -47,7 +47,7 @@ public final class GetEnvironmentConfigEncryptionConfig extends io.pulumi.resour
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

@@ -203,82 +203,82 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
     	      this.useExplicitDryRunSpec = defaults.useExplicitDryRunSpec;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setPerimeterType(@Nullable Input<String> perimeterType) {
+        public Builder perimeterType(@Nullable Input<String> perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
 
-        public Builder setPerimeterType(@Nullable String perimeterType) {
+        public Builder perimeterType(@Nullable String perimeterType) {
             this.perimeterType = Input.ofNullable(perimeterType);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<ServicePerimeterSpecArgs> spec) {
+        public Builder spec(@Nullable Input<ServicePerimeterSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable ServicePerimeterSpecArgs spec) {
+        public Builder spec(@Nullable ServicePerimeterSpecArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<ServicePerimeterStatusArgs> status) {
+        public Builder status(@Nullable Input<ServicePerimeterStatusArgs> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable ServicePerimeterStatusArgs status) {
+        public Builder status(@Nullable ServicePerimeterStatusArgs status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
 
-        public Builder setUseExplicitDryRunSpec(@Nullable Input<Boolean> useExplicitDryRunSpec) {
+        public Builder useExplicitDryRunSpec(@Nullable Input<Boolean> useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
 
-        public Builder setUseExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
+        public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = Input.ofNullable(useExplicitDryRunSpec);
             return this;
         }

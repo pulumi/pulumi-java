@@ -140,62 +140,62 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     	      this.zone = defaults.zone;
         }
 
-        public Builder setInstance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Input<String> instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = Input.ofNullable(instance);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setNetworkEndpointGroup(@Nullable Input<String> networkEndpointGroup) {
+        public Builder networkEndpointGroup(@Nullable Input<String> networkEndpointGroup) {
             this.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
 
-        public Builder setNetworkEndpointGroup(@Nullable String networkEndpointGroup) {
+        public Builder networkEndpointGroup(@Nullable String networkEndpointGroup) {
             this.networkEndpointGroup = Input.ofNullable(networkEndpointGroup);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

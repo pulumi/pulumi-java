@@ -111,42 +111,42 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     	      this.minCpuPlatform = defaults.minCpuPlatform;
         }
 
-        public Builder setGuestAccelerators(@Nullable Input<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Input<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs> guestAccelerators) {
             this.guestAccelerators = Input.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder setLocalSsds(@Nullable Input<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds) {
+        public Builder localSsds(@Nullable Input<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds) {
             this.localSsds = localSsds;
             return this;
         }
 
-        public Builder setLocalSsds(@Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs> localSsds) {
+        public Builder localSsds(@Nullable List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs> localSsds) {
             this.localSsds = Input.ofNullable(localSsds);
             return this;
         }
 
-        public Builder setMachineType(Input<String> machineType) {
+        public Builder machineType(Input<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }

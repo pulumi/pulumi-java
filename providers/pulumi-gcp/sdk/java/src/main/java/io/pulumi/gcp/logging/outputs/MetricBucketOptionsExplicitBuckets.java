@@ -49,7 +49,7 @@ public final class MetricBucketOptionsExplicitBuckets {
     	      this.bounds = defaults.bounds;
         }
 
-        public Builder setBounds(List<Double> bounds) {
+        public Builder bounds(List<Double> bounds) {
             this.bounds = Objects.requireNonNull(bounds);
             return this;
         }

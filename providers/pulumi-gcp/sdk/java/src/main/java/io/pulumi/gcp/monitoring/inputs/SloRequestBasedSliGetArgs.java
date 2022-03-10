@@ -81,22 +81,22 @@ public final class SloRequestBasedSliGetArgs extends io.pulumi.resources.Resourc
     	      this.goodTotalRatio = defaults.goodTotalRatio;
         }
 
-        public Builder setDistributionCut(@Nullable Input<SloRequestBasedSliDistributionCutGetArgs> distributionCut) {
+        public Builder distributionCut(@Nullable Input<SloRequestBasedSliDistributionCutGetArgs> distributionCut) {
             this.distributionCut = distributionCut;
             return this;
         }
 
-        public Builder setDistributionCut(@Nullable SloRequestBasedSliDistributionCutGetArgs distributionCut) {
+        public Builder distributionCut(@Nullable SloRequestBasedSliDistributionCutGetArgs distributionCut) {
             this.distributionCut = Input.ofNullable(distributionCut);
             return this;
         }
 
-        public Builder setGoodTotalRatio(@Nullable Input<SloRequestBasedSliGoodTotalRatioGetArgs> goodTotalRatio) {
+        public Builder goodTotalRatio(@Nullable Input<SloRequestBasedSliGoodTotalRatioGetArgs> goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }
 
-        public Builder setGoodTotalRatio(@Nullable SloRequestBasedSliGoodTotalRatioGetArgs goodTotalRatio) {
+        public Builder goodTotalRatio(@Nullable SloRequestBasedSliGoodTotalRatioGetArgs goodTotalRatio) {
             this.goodTotalRatio = Input.ofNullable(goodTotalRatio);
             return this;
         }

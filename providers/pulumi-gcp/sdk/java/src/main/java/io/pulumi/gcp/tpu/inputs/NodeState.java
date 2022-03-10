@@ -268,132 +268,132 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAcceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable String acceleratorType) {
+        public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable Input<String> cidrBlock) {
+        public Builder cidrBlock(@Nullable Input<String> cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = Input.ofNullable(cidrBlock);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkEndpoints(@Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints) {
+        public Builder networkEndpoints(@Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints) {
             this.networkEndpoints = networkEndpoints;
             return this;
         }
 
-        public Builder setNetworkEndpoints(@Nullable List<NodeNetworkEndpointGetArgs> networkEndpoints) {
+        public Builder networkEndpoints(@Nullable List<NodeNetworkEndpointGetArgs> networkEndpoints) {
             this.networkEndpoints = Input.ofNullable(networkEndpoints);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedulingConfig(@Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig) {
+        public Builder schedulingConfig(@Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig) {
             this.schedulingConfig = schedulingConfig;
             return this;
         }
 
-        public Builder setSchedulingConfig(@Nullable NodeSchedulingConfigGetArgs schedulingConfig) {
+        public Builder schedulingConfig(@Nullable NodeSchedulingConfigGetArgs schedulingConfig) {
             this.schedulingConfig = Input.ofNullable(schedulingConfig);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setTensorflowVersion(@Nullable Input<String> tensorflowVersion) {
+        public Builder tensorflowVersion(@Nullable Input<String> tensorflowVersion) {
             this.tensorflowVersion = tensorflowVersion;
             return this;
         }
 
-        public Builder setTensorflowVersion(@Nullable String tensorflowVersion) {
+        public Builder tensorflowVersion(@Nullable String tensorflowVersion) {
             this.tensorflowVersion = Input.ofNullable(tensorflowVersion);
             return this;
         }
 
-        public Builder setUseServiceNetworking(@Nullable Input<Boolean> useServiceNetworking) {
+        public Builder useServiceNetworking(@Nullable Input<Boolean> useServiceNetworking) {
             this.useServiceNetworking = useServiceNetworking;
             return this;
         }
 
-        public Builder setUseServiceNetworking(@Nullable Boolean useServiceNetworking) {
+        public Builder useServiceNetworking(@Nullable Boolean useServiceNetworking) {
             this.useServiceNetworking = Input.ofNullable(useServiceNetworking);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

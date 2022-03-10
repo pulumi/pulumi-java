@@ -52,7 +52,7 @@ public final class CxPageFormParameterFillBehavior {
     	      this.initialPromptFulfillment = defaults.initialPromptFulfillment;
         }
 
-        public Builder setInitialPromptFulfillment(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment) {
+        public Builder initialPromptFulfillment(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment) {
             this.initialPromptFulfillment = initialPromptFulfillment;
             return this;
         }

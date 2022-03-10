@@ -54,12 +54,12 @@ public final class HealthCheckLogConfigGetArgs extends io.pulumi.resources.Resou
     	      this.enable = defaults.enable;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }

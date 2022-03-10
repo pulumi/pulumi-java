@@ -74,22 +74,22 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     	      this.project = defaults.project;
         }
 
-        public Builder setDispatchRules(Input<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules) {
+        public Builder dispatchRules(Input<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules) {
             this.dispatchRules = Objects.requireNonNull(dispatchRules);
             return this;
         }
 
-        public Builder setDispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleArgs> dispatchRules) {
+        public Builder dispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleArgs> dispatchRules) {
             this.dispatchRules = Input.of(Objects.requireNonNull(dispatchRules));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

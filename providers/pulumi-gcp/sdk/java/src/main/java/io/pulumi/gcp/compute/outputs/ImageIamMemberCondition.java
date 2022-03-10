@@ -83,17 +83,17 @@ public final class ImageIamMemberCondition {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

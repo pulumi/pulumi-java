@@ -87,17 +87,17 @@ public final class EdgeCacheServiceRoutingPathMatcher {
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRouteRules(List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
+        public Builder routeRules(List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }

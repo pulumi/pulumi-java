@@ -112,22 +112,22 @@ public final class GuestPoliciesRecipeArtifact {
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setGcs(@Nullable GuestPoliciesRecipeArtifactGcs gcs) {
+        public Builder gcs(@Nullable GuestPoliciesRecipeArtifactGcs gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRemote(@Nullable GuestPoliciesRecipeArtifactRemote remote) {
+        public Builder remote(@Nullable GuestPoliciesRecipeArtifactRemote remote) {
             this.remote = remote;
             return this;
         }

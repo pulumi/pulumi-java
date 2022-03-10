@@ -82,17 +82,17 @@ public final class AzureClusterNetworking {
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder setPodAddressCidrBlocks(List<String> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
-        public Builder setVirtualNetworkId(String virtualNetworkId) {
+        public Builder virtualNetworkId(String virtualNetworkId) {
             this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
             return this;
         }

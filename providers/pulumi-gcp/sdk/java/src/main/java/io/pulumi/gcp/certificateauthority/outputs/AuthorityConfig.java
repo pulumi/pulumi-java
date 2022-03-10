@@ -70,12 +70,12 @@ public final class AuthorityConfig {
     	      this.x509Config = defaults.x509Config;
         }
 
-        public Builder setSubjectConfig(AuthorityConfigSubjectConfig subjectConfig) {
+        public Builder subjectConfig(AuthorityConfigSubjectConfig subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
 
-        public Builder setX509Config(AuthorityConfigX509Config x509Config) {
+        public Builder x509Config(AuthorityConfigX509Config x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }

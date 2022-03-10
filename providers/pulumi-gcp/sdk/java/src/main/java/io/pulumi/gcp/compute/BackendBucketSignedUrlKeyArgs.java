@@ -105,42 +105,42 @@ public final class BackendBucketSignedUrlKeyArgs extends io.pulumi.resources.Res
     	      this.project = defaults.project;
         }
 
-        public Builder setBackendBucket(Input<String> backendBucket) {
+        public Builder backendBucket(Input<String> backendBucket) {
             this.backendBucket = Objects.requireNonNull(backendBucket);
             return this;
         }
 
-        public Builder setBackendBucket(String backendBucket) {
+        public Builder backendBucket(String backendBucket) {
             this.backendBucket = Input.of(Objects.requireNonNull(backendBucket));
             return this;
         }
 
-        public Builder setKeyValue(Input<String> keyValue) {
+        public Builder keyValue(Input<String> keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
 
-        public Builder setKeyValue(String keyValue) {
+        public Builder keyValue(String keyValue) {
             this.keyValue = Input.of(Objects.requireNonNull(keyValue));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

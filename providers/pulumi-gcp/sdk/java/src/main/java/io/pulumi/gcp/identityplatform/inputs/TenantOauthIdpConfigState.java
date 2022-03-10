@@ -168,82 +168,82 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     	      this.tenant = defaults.tenant;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTenant(@Nullable Input<String> tenant) {
+        public Builder tenant(@Nullable Input<String> tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setTenant(@Nullable String tenant) {
+        public Builder tenant(@Nullable String tenant) {
             this.tenant = Input.ofNullable(tenant);
             return this;
         }

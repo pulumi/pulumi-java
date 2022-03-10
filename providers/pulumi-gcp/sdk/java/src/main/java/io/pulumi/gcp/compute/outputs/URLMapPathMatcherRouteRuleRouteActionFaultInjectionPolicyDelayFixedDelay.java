@@ -72,12 +72,12 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(String seconds) {
+        public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

@@ -49,12 +49,12 @@ public final class GetBackendServiceCircuitBreakerConnectTimeout {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(Integer nanos) {
+        public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
 
-        public Builder setSeconds(Integer seconds) {
+        public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

@@ -52,7 +52,7 @@ public final class CxPageForm {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setParameters(@Nullable List<CxPageFormParameter> parameters) {
+        public Builder parameters(@Nullable List<CxPageFormParameter> parameters) {
             this.parameters = parameters;
             return this;
         }

@@ -74,22 +74,22 @@ public final class ServiceTemplateArgs extends io.pulumi.resources.ResourceArgs 
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(@Nullable Input<ServiceTemplateMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<ServiceTemplateMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ServiceTemplateMetadataArgs metadata) {
+        public Builder metadata(@Nullable ServiceTemplateMetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<ServiceTemplateSpecArgs> spec) {
+        public Builder spec(@Nullable Input<ServiceTemplateSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable ServiceTemplateSpecArgs spec) {
+        public Builder spec(@Nullable ServiceTemplateSpecArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }

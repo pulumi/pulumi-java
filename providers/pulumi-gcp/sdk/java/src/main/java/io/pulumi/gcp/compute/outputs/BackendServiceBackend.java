@@ -305,57 +305,57 @@ public final class BackendServiceBackend {
     	      this.maxUtilization = defaults.maxUtilization;
         }
 
-        public Builder setBalancingMode(@Nullable String balancingMode) {
+        public Builder balancingMode(@Nullable String balancingMode) {
             this.balancingMode = balancingMode;
             return this;
         }
 
-        public Builder setCapacityScaler(@Nullable Double capacityScaler) {
+        public Builder capacityScaler(@Nullable Double capacityScaler) {
             this.capacityScaler = capacityScaler;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setMaxConnections(@Nullable Integer maxConnections) {
+        public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
 
-        public Builder setMaxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
+        public Builder maxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
             return this;
         }
 
-        public Builder setMaxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
+        public Builder maxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = maxConnectionsPerInstance;
             return this;
         }
 
-        public Builder setMaxRate(@Nullable Integer maxRate) {
+        public Builder maxRate(@Nullable Integer maxRate) {
             this.maxRate = maxRate;
             return this;
         }
 
-        public Builder setMaxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
+        public Builder maxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
             this.maxRatePerEndpoint = maxRatePerEndpoint;
             return this;
         }
 
-        public Builder setMaxRatePerInstance(@Nullable Double maxRatePerInstance) {
+        public Builder maxRatePerInstance(@Nullable Double maxRatePerInstance) {
             this.maxRatePerInstance = maxRatePerInstance;
             return this;
         }
 
-        public Builder setMaxUtilization(@Nullable Double maxUtilization) {
+        public Builder maxUtilization(@Nullable Double maxUtilization) {
             this.maxUtilization = maxUtilization;
             return this;
         }

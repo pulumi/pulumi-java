@@ -89,32 +89,32 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
     	      this.storageLocations = defaults.storageLocations;
         }
 
-        public Builder setGuestFlush(@Nullable Input<Boolean> guestFlush) {
+        public Builder guestFlush(@Nullable Input<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Boolean guestFlush) {
+        public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Input.ofNullable(guestFlush);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable Input<String> storageLocations) {
+        public Builder storageLocations(@Nullable Input<String> storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable String storageLocations) {
+        public Builder storageLocations(@Nullable String storageLocations) {
             this.storageLocations = Input.ofNullable(storageLocations);
             return this;
         }

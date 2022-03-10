@@ -86,32 +86,32 @@ public final class UsageExportBucketArgs extends io.pulumi.resources.ResourceArg
     	      this.project = defaults.project;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

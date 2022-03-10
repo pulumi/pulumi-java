@@ -381,87 +381,87 @@ public final class JobQuery {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setAllowLargeResults(@Nullable Boolean allowLargeResults) {
+        public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
             this.allowLargeResults = allowLargeResults;
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable String createDisposition) {
+        public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
-        public Builder setDefaultDataset(@Nullable JobQueryDefaultDataset defaultDataset) {
+        public Builder defaultDataset(@Nullable JobQueryDefaultDataset defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable JobQueryDestinationTable destinationTable) {
+        public Builder destinationTable(@Nullable JobQueryDestinationTable destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
 
-        public Builder setFlattenResults(@Nullable Boolean flattenResults) {
+        public Builder flattenResults(@Nullable Boolean flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
 
-        public Builder setMaximumBillingTier(@Nullable Integer maximumBillingTier) {
+        public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
 
-        public Builder setMaximumBytesBilled(@Nullable String maximumBytesBilled) {
+        public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
 
-        public Builder setParameterMode(@Nullable String parameterMode) {
+        public Builder parameterMode(@Nullable String parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
 
-        public Builder setPriority(@Nullable String priority) {
+        public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
 
-        public Builder setScriptOptions(@Nullable JobQueryScriptOptions scriptOptions) {
+        public Builder scriptOptions(@Nullable JobQueryScriptOptions scriptOptions) {
             this.scriptOptions = scriptOptions;
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Boolean useLegacySql) {
+        public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
-        public Builder setUseQueryCache(@Nullable Boolean useQueryCache) {
+        public Builder useQueryCache(@Nullable Boolean useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable String writeDisposition) {
+        public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }

@@ -59,17 +59,17 @@ public final class DatabaseInstanceIpAddress {
     	      this.type = defaults.type;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setTimeToRetire(@Nullable String timeToRetire) {
+        public Builder timeToRetire(@Nullable String timeToRetire) {
             this.timeToRetire = timeToRetire;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

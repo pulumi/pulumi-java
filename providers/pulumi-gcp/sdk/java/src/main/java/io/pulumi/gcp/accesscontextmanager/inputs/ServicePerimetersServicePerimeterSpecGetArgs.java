@@ -164,62 +164,62 @@ public final class ServicePerimetersServicePerimeterSpecGetArgs extends io.pulum
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
-        public Builder setAccessLevels(@Nullable Input<List<String>> accessLevels) {
+        public Builder accessLevels(@Nullable Input<List<String>> accessLevels) {
             this.accessLevels = accessLevels;
             return this;
         }
 
-        public Builder setAccessLevels(@Nullable List<String> accessLevels) {
+        public Builder accessLevels(@Nullable List<String> accessLevels) {
             this.accessLevels = Input.ofNullable(accessLevels);
             return this;
         }
 
-        public Builder setEgressPolicies(@Nullable Input<List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies) {
+        public Builder egressPolicies(@Nullable Input<List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs>> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
 
-        public Builder setEgressPolicies(@Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs> egressPolicies) {
+        public Builder egressPolicies(@Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicyGetArgs> egressPolicies) {
             this.egressPolicies = Input.ofNullable(egressPolicies);
             return this;
         }
 
-        public Builder setIngressPolicies(@Nullable Input<List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies) {
+        public Builder ingressPolicies(@Nullable Input<List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs>> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
 
-        public Builder setIngressPolicies(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs> ingressPolicies) {
+        public Builder ingressPolicies(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs> ingressPolicies) {
             this.ingressPolicies = Input.ofNullable(ingressPolicies);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setRestrictedServices(@Nullable Input<List<String>> restrictedServices) {
+        public Builder restrictedServices(@Nullable Input<List<String>> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
 
-        public Builder setRestrictedServices(@Nullable List<String> restrictedServices) {
+        public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = Input.ofNullable(restrictedServices);
             return this;
         }
 
-        public Builder setVpcAccessibleServices(@Nullable Input<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(@Nullable Input<ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs> vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
 
-        public Builder setVpcAccessibleServices(@Nullable ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(@Nullable ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGetArgs vpcAccessibleServices) {
             this.vpcAccessibleServices = Input.ofNullable(vpcAccessibleServices);
             return this;
         }

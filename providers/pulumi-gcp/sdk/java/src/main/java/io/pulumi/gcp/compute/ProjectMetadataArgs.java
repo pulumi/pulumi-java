@@ -72,22 +72,22 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
     	      this.project = defaults.project;
         }
 
-        public Builder setMetadata(Input<Map<String,String>> metadata) {
+        public Builder metadata(Input<Map<String,String>> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Input.of(Objects.requireNonNull(metadata));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

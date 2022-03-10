@@ -98,52 +98,52 @@ public final class TagTemplateIamPolicyState extends io.pulumi.resources.Resourc
     	      this.tagTemplate = defaults.tagTemplate;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setPolicyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Input<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
-        public Builder setPolicyData(@Nullable String policyData) {
+        public Builder policyData(@Nullable String policyData) {
             this.policyData = Input.ofNullable(policyData);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setTagTemplate(@Nullable Input<String> tagTemplate) {
+        public Builder tagTemplate(@Nullable Input<String> tagTemplate) {
             this.tagTemplate = tagTemplate;
             return this;
         }
 
-        public Builder setTagTemplate(@Nullable String tagTemplate) {
+        public Builder tagTemplate(@Nullable String tagTemplate) {
             this.tagTemplate = Input.ofNullable(tagTemplate);
             return this;
         }

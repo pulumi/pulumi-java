@@ -89,32 +89,32 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationMs(@Nullable Input<String> expirationMs) {
+        public Builder expirationMs(@Nullable Input<String> expirationMs) {
             this.expirationMs = expirationMs;
             return this;
         }
 
-        public Builder setExpirationMs(@Nullable String expirationMs) {
+        public Builder expirationMs(@Nullable String expirationMs) {
             this.expirationMs = Input.ofNullable(expirationMs);
             return this;
         }
 
-        public Builder setField(@Nullable Input<String> field) {
+        public Builder field(@Nullable Input<String> field) {
             this.field = field;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = Input.ofNullable(field);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

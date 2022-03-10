@@ -59,17 +59,17 @@ public final class GetServiceTraffic {
     	      this.revisionName = defaults.revisionName;
         }
 
-        public Builder setLatestRevision(Boolean latestRevision) {
+        public Builder latestRevision(Boolean latestRevision) {
             this.latestRevision = Objects.requireNonNull(latestRevision);
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
 
-        public Builder setRevisionName(String revisionName) {
+        public Builder revisionName(String revisionName) {
             this.revisionName = Objects.requireNonNull(revisionName);
             return this;
         }

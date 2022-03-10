@@ -100,42 +100,42 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<DicomStoreIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<DicomStoreIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable DicomStoreIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable DicomStoreIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setDicomStoreId(Input<String> dicomStoreId) {
+        public Builder dicomStoreId(Input<String> dicomStoreId) {
             this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
             return this;
         }
 
-        public Builder setDicomStoreId(String dicomStoreId) {
+        public Builder dicomStoreId(String dicomStoreId) {
             this.dicomStoreId = Input.of(Objects.requireNonNull(dicomStoreId));
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

@@ -385,202 +385,202 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
     	      this.vpcAccessConnector = defaults.vpcAccessConnector;
         }
 
-        public Builder setAutomaticScaling(@Nullable Input<StandardAppVersionAutomaticScalingGetArgs> automaticScaling) {
+        public Builder automaticScaling(@Nullable Input<StandardAppVersionAutomaticScalingGetArgs> automaticScaling) {
             this.automaticScaling = automaticScaling;
             return this;
         }
 
-        public Builder setAutomaticScaling(@Nullable StandardAppVersionAutomaticScalingGetArgs automaticScaling) {
+        public Builder automaticScaling(@Nullable StandardAppVersionAutomaticScalingGetArgs automaticScaling) {
             this.automaticScaling = Input.ofNullable(automaticScaling);
             return this;
         }
 
-        public Builder setBasicScaling(@Nullable Input<StandardAppVersionBasicScalingGetArgs> basicScaling) {
+        public Builder basicScaling(@Nullable Input<StandardAppVersionBasicScalingGetArgs> basicScaling) {
             this.basicScaling = basicScaling;
             return this;
         }
 
-        public Builder setBasicScaling(@Nullable StandardAppVersionBasicScalingGetArgs basicScaling) {
+        public Builder basicScaling(@Nullable StandardAppVersionBasicScalingGetArgs basicScaling) {
             this.basicScaling = Input.ofNullable(basicScaling);
             return this;
         }
 
-        public Builder setDeleteServiceOnDestroy(@Nullable Input<Boolean> deleteServiceOnDestroy) {
+        public Builder deleteServiceOnDestroy(@Nullable Input<Boolean> deleteServiceOnDestroy) {
             this.deleteServiceOnDestroy = deleteServiceOnDestroy;
             return this;
         }
 
-        public Builder setDeleteServiceOnDestroy(@Nullable Boolean deleteServiceOnDestroy) {
+        public Builder deleteServiceOnDestroy(@Nullable Boolean deleteServiceOnDestroy) {
             this.deleteServiceOnDestroy = Input.ofNullable(deleteServiceOnDestroy);
             return this;
         }
 
-        public Builder setDeployment(@Nullable Input<StandardAppVersionDeploymentGetArgs> deployment) {
+        public Builder deployment(@Nullable Input<StandardAppVersionDeploymentGetArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
 
-        public Builder setDeployment(@Nullable StandardAppVersionDeploymentGetArgs deployment) {
+        public Builder deployment(@Nullable StandardAppVersionDeploymentGetArgs deployment) {
             this.deployment = Input.ofNullable(deployment);
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable Input<StandardAppVersionEntrypointGetArgs> entrypoint) {
+        public Builder entrypoint(@Nullable Input<StandardAppVersionEntrypointGetArgs> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable StandardAppVersionEntrypointGetArgs entrypoint) {
+        public Builder entrypoint(@Nullable StandardAppVersionEntrypointGetArgs entrypoint) {
             this.entrypoint = Input.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder setEnvVariables(@Nullable Input<Map<String,String>> envVariables) {
+        public Builder envVariables(@Nullable Input<Map<String,String>> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
 
-        public Builder setEnvVariables(@Nullable Map<String,String> envVariables) {
+        public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = Input.ofNullable(envVariables);
             return this;
         }
 
-        public Builder setHandlers(@Nullable Input<List<StandardAppVersionHandlerGetArgs>> handlers) {
+        public Builder handlers(@Nullable Input<List<StandardAppVersionHandlerGetArgs>> handlers) {
             this.handlers = handlers;
             return this;
         }
 
-        public Builder setHandlers(@Nullable List<StandardAppVersionHandlerGetArgs> handlers) {
+        public Builder handlers(@Nullable List<StandardAppVersionHandlerGetArgs> handlers) {
             this.handlers = Input.ofNullable(handlers);
             return this;
         }
 
-        public Builder setInboundServices(@Nullable Input<List<String>> inboundServices) {
+        public Builder inboundServices(@Nullable Input<List<String>> inboundServices) {
             this.inboundServices = inboundServices;
             return this;
         }
 
-        public Builder setInboundServices(@Nullable List<String> inboundServices) {
+        public Builder inboundServices(@Nullable List<String> inboundServices) {
             this.inboundServices = Input.ofNullable(inboundServices);
             return this;
         }
 
-        public Builder setInstanceClass(@Nullable Input<String> instanceClass) {
+        public Builder instanceClass(@Nullable Input<String> instanceClass) {
             this.instanceClass = instanceClass;
             return this;
         }
 
-        public Builder setInstanceClass(@Nullable String instanceClass) {
+        public Builder instanceClass(@Nullable String instanceClass) {
             this.instanceClass = Input.ofNullable(instanceClass);
             return this;
         }
 
-        public Builder setLibraries(@Nullable Input<List<StandardAppVersionLibraryGetArgs>> libraries) {
+        public Builder libraries(@Nullable Input<List<StandardAppVersionLibraryGetArgs>> libraries) {
             this.libraries = libraries;
             return this;
         }
 
-        public Builder setLibraries(@Nullable List<StandardAppVersionLibraryGetArgs> libraries) {
+        public Builder libraries(@Nullable List<StandardAppVersionLibraryGetArgs> libraries) {
             this.libraries = Input.ofNullable(libraries);
             return this;
         }
 
-        public Builder setManualScaling(@Nullable Input<StandardAppVersionManualScalingGetArgs> manualScaling) {
+        public Builder manualScaling(@Nullable Input<StandardAppVersionManualScalingGetArgs> manualScaling) {
             this.manualScaling = manualScaling;
             return this;
         }
 
-        public Builder setManualScaling(@Nullable StandardAppVersionManualScalingGetArgs manualScaling) {
+        public Builder manualScaling(@Nullable StandardAppVersionManualScalingGetArgs manualScaling) {
             this.manualScaling = Input.ofNullable(manualScaling);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNoopOnDestroy(@Nullable Input<Boolean> noopOnDestroy) {
+        public Builder noopOnDestroy(@Nullable Input<Boolean> noopOnDestroy) {
             this.noopOnDestroy = noopOnDestroy;
             return this;
         }
 
-        public Builder setNoopOnDestroy(@Nullable Boolean noopOnDestroy) {
+        public Builder noopOnDestroy(@Nullable Boolean noopOnDestroy) {
             this.noopOnDestroy = Input.ofNullable(noopOnDestroy);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRuntime(@Nullable Input<String> runtime) {
+        public Builder runtime(@Nullable Input<String> runtime) {
             this.runtime = runtime;
             return this;
         }
 
-        public Builder setRuntime(@Nullable String runtime) {
+        public Builder runtime(@Nullable String runtime) {
             this.runtime = Input.ofNullable(runtime);
             return this;
         }
 
-        public Builder setRuntimeApiVersion(@Nullable Input<String> runtimeApiVersion) {
+        public Builder runtimeApiVersion(@Nullable Input<String> runtimeApiVersion) {
             this.runtimeApiVersion = runtimeApiVersion;
             return this;
         }
 
-        public Builder setRuntimeApiVersion(@Nullable String runtimeApiVersion) {
+        public Builder runtimeApiVersion(@Nullable String runtimeApiVersion) {
             this.runtimeApiVersion = Input.ofNullable(runtimeApiVersion);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setThreadsafe(@Nullable Input<Boolean> threadsafe) {
+        public Builder threadsafe(@Nullable Input<Boolean> threadsafe) {
             this.threadsafe = threadsafe;
             return this;
         }
 
-        public Builder setThreadsafe(@Nullable Boolean threadsafe) {
+        public Builder threadsafe(@Nullable Boolean threadsafe) {
             this.threadsafe = Input.ofNullable(threadsafe);
             return this;
         }
 
-        public Builder setVersionId(@Nullable Input<String> versionId) {
+        public Builder versionId(@Nullable Input<String> versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = Input.ofNullable(versionId);
             return this;
         }
 
-        public Builder setVpcAccessConnector(@Nullable Input<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector) {
+        public Builder vpcAccessConnector(@Nullable Input<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector) {
             this.vpcAccessConnector = vpcAccessConnector;
             return this;
         }
 
-        public Builder setVpcAccessConnector(@Nullable StandardAppVersionVpcAccessConnectorGetArgs vpcAccessConnector) {
+        public Builder vpcAccessConnector(@Nullable StandardAppVersionVpcAccessConnectorGetArgs vpcAccessConnector) {
             this.vpcAccessConnector = Input.ofNullable(vpcAccessConnector);
             return this;
         }

@@ -287,57 +287,57 @@ public final class TriggerBuildStep {
     	      this.waitFors = defaults.waitFors;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setDir(@Nullable String dir) {
+        public Builder dir(@Nullable String dir) {
             this.dir = dir;
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable String entrypoint) {
+        public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
-        public Builder setEnvs(@Nullable List<String> envs) {
+        public Builder envs(@Nullable List<String> envs) {
             this.envs = envs;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecretEnvs(@Nullable List<String> secretEnvs) {
+        public Builder secretEnvs(@Nullable List<String> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTiming(@Nullable String timing) {
+        public Builder timing(@Nullable String timing) {
             this.timing = timing;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<TriggerBuildStepVolume> volumes) {
+        public Builder volumes(@Nullable List<TriggerBuildStepVolume> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setWaitFors(@Nullable List<String> waitFors) {
+        public Builder waitFors(@Nullable List<String> waitFors) {
             this.waitFors = waitFors;
             return this;
         }

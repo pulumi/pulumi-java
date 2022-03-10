@@ -70,12 +70,12 @@ public final class ClusterNetworkPolicy {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setProvider(@Nullable String provider) {
+        public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
         }

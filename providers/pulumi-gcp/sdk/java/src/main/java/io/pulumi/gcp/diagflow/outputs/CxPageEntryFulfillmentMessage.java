@@ -50,7 +50,7 @@ public final class CxPageEntryFulfillmentMessage {
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable CxPageEntryFulfillmentMessageText text) {
+        public Builder text(@Nullable CxPageEntryFulfillmentMessageText text) {
             this.text = text;
             return this;
         }

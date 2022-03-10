@@ -86,22 +86,22 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder setDeadLetterTopic(@Nullable Input<String> deadLetterTopic) {
+        public Builder deadLetterTopic(@Nullable Input<String> deadLetterTopic) {
             this.deadLetterTopic = deadLetterTopic;
             return this;
         }
 
-        public Builder setDeadLetterTopic(@Nullable String deadLetterTopic) {
+        public Builder deadLetterTopic(@Nullable String deadLetterTopic) {
             this.deadLetterTopic = Input.ofNullable(deadLetterTopic);
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(@Nullable Input<Integer> maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Input<Integer> maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = Input.ofNullable(maxDeliveryAttempts);
             return this;
         }

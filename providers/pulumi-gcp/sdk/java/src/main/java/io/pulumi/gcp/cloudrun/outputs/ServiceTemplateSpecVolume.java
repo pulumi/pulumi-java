@@ -72,12 +72,12 @@ public final class ServiceTemplateSpecVolume {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(ServiceTemplateSpecVolumeSecret secret) {
+        public Builder secret(ServiceTemplateSpecVolumeSecret secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

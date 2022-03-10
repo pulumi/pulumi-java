@@ -48,7 +48,7 @@ public final class AwsClusterControlPlaneDatabaseEncryption {
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }

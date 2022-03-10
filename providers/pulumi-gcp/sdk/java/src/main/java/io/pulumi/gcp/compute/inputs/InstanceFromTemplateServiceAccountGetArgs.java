@@ -63,22 +63,22 @@ public final class InstanceFromTemplateServiceAccountGetArgs extends io.pulumi.r
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setScopes(Input<List<String>> scopes) {
+        public Builder scopes(Input<List<String>> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Input.of(Objects.requireNonNull(scopes));
             return this;
         }

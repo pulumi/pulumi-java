@@ -166,42 +166,42 @@ public final class InstanceGroupManagerUpdatePolicy {
     	      this.type = defaults.type;
         }
 
-        public Builder setMaxSurgeFixed(@Nullable Integer maxSurgeFixed) {
+        public Builder maxSurgeFixed(@Nullable Integer maxSurgeFixed) {
             this.maxSurgeFixed = maxSurgeFixed;
             return this;
         }
 
-        public Builder setMaxSurgePercent(@Nullable Integer maxSurgePercent) {
+        public Builder maxSurgePercent(@Nullable Integer maxSurgePercent) {
             this.maxSurgePercent = maxSurgePercent;
             return this;
         }
 
-        public Builder setMaxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
+        public Builder maxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
             this.maxUnavailableFixed = maxUnavailableFixed;
             return this;
         }
 
-        public Builder setMaxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
+        public Builder maxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
             this.maxUnavailablePercent = maxUnavailablePercent;
             return this;
         }
 
-        public Builder setMinReadySec(@Nullable Integer minReadySec) {
+        public Builder minReadySec(@Nullable Integer minReadySec) {
             this.minReadySec = minReadySec;
             return this;
         }
 
-        public Builder setMinimalAction(String minimalAction) {
+        public Builder minimalAction(String minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
 
-        public Builder setReplacementMethod(@Nullable String replacementMethod) {
+        public Builder replacementMethod(@Nullable String replacementMethod) {
             this.replacementMethod = replacementMethod;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

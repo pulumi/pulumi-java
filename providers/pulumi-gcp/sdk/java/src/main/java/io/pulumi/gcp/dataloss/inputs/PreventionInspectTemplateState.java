@@ -125,52 +125,52 @@ public final class PreventionInspectTemplateState extends io.pulumi.resources.Re
     	      this.parent = defaults.parent;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setInspectConfig(@Nullable Input<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig) {
+        public Builder inspectConfig(@Nullable Input<PreventionInspectTemplateInspectConfigGetArgs> inspectConfig) {
             this.inspectConfig = inspectConfig;
             return this;
         }
 
-        public Builder setInspectConfig(@Nullable PreventionInspectTemplateInspectConfigGetArgs inspectConfig) {
+        public Builder inspectConfig(@Nullable PreventionInspectTemplateInspectConfigGetArgs inspectConfig) {
             this.inspectConfig = Input.ofNullable(inspectConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }

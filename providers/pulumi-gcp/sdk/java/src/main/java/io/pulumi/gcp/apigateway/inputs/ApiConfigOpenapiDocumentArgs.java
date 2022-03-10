@@ -53,12 +53,12 @@ public final class ApiConfigOpenapiDocumentArgs extends io.pulumi.resources.Reso
     	      this.document = defaults.document;
         }
 
-        public Builder setDocument(Input<ApiConfigOpenapiDocumentDocumentArgs> document) {
+        public Builder document(Input<ApiConfigOpenapiDocumentDocumentArgs> document) {
             this.document = Objects.requireNonNull(document);
             return this;
         }
 
-        public Builder setDocument(ApiConfigOpenapiDocumentDocumentArgs document) {
+        public Builder document(ApiConfigOpenapiDocumentDocumentArgs document) {
             this.document = Input.of(Objects.requireNonNull(document));
             return this;
         }

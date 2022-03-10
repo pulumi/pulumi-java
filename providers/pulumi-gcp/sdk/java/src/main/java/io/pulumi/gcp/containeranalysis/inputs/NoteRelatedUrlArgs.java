@@ -70,22 +70,22 @@ public final class NoteRelatedUrlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setUrl(Input<String> url) {
+        public Builder url(Input<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }

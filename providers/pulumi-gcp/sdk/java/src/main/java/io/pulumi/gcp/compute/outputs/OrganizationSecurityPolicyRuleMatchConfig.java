@@ -90,17 +90,17 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setDestIpRanges(@Nullable List<String> destIpRanges) {
+        public Builder destIpRanges(@Nullable List<String> destIpRanges) {
             this.destIpRanges = destIpRanges;
             return this;
         }
 
-        public Builder setLayer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs) {
+        public Builder layer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable List<String> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }

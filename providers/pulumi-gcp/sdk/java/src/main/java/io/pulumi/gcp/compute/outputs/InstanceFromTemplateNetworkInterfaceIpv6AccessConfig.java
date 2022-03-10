@@ -67,22 +67,22 @@ public final class InstanceFromTemplateNetworkInterfaceIpv6AccessConfig {
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder setExternalIpv6(@Nullable String externalIpv6) {
+        public Builder externalIpv6(@Nullable String externalIpv6) {
             this.externalIpv6 = externalIpv6;
             return this;
         }
 
-        public Builder setExternalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
 
-        public Builder setNetworkTier(String networkTier) {
+        public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable String publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }

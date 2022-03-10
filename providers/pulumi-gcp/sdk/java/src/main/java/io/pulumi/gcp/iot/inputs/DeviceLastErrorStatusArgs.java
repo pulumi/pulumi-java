@@ -78,32 +78,32 @@ public final class DeviceLastErrorStatusArgs extends io.pulumi.resources.Resourc
     	      this.number = defaults.number;
         }
 
-        public Builder setDetails(@Nullable Input<List<Map<String,Object>>> details) {
+        public Builder details(@Nullable Input<List<Map<String,Object>>> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable List<Map<String,Object>> details) {
+        public Builder details(@Nullable List<Map<String,Object>> details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setNumber(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Input<Integer> number) {
             this.number = number;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = Input.ofNullable(number);
             return this;
         }

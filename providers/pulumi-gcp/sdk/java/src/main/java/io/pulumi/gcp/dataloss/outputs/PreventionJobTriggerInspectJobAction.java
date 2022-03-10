@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobAction {
     	      this.saveFindings = defaults.saveFindings;
         }
 
-        public Builder setSaveFindings(PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
+        public Builder saveFindings(PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }

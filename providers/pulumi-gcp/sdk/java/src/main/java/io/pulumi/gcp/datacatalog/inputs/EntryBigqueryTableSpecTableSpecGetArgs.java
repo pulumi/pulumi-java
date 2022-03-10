@@ -49,12 +49,12 @@ public final class EntryBigqueryTableSpecTableSpecGetArgs extends io.pulumi.reso
     	      this.groupedEntry = defaults.groupedEntry;
         }
 
-        public Builder setGroupedEntry(@Nullable Input<String> groupedEntry) {
+        public Builder groupedEntry(@Nullable Input<String> groupedEntry) {
             this.groupedEntry = groupedEntry;
             return this;
         }
 
-        public Builder setGroupedEntry(@Nullable String groupedEntry) {
+        public Builder groupedEntry(@Nullable String groupedEntry) {
             this.groupedEntry = Input.ofNullable(groupedEntry);
             return this;
         }

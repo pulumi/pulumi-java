@@ -120,52 +120,52 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
     	      this.state = defaults.state;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> file) {
+        public Builder file(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs file) {
+        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<String> permissions) {
+        public Builder permissions(@Nullable Input<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setState(Input<String> state) {
+        public Builder state(Input<String> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }

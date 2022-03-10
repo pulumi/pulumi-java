@@ -51,12 +51,12 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
     	      this.type = defaults.type;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -88,32 +88,32 @@ public final class WebBackendServiceIamPolicyArgs extends io.pulumi.resources.Re
     	      this.webBackendService = defaults.webBackendService;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setWebBackendService(Input<String> webBackendService) {
+        public Builder webBackendService(Input<String> webBackendService) {
             this.webBackendService = Objects.requireNonNull(webBackendService);
             return this;
         }
 
-        public Builder setWebBackendService(String webBackendService) {
+        public Builder webBackendService(String webBackendService) {
             this.webBackendService = Input.of(Objects.requireNonNull(webBackendService));
             return this;
         }

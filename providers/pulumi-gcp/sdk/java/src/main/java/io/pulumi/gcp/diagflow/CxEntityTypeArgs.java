@@ -201,92 +201,92 @@ public final class CxEntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.redact = defaults.redact;
         }
 
-        public Builder setAutoExpansionMode(@Nullable Input<String> autoExpansionMode) {
+        public Builder autoExpansionMode(@Nullable Input<String> autoExpansionMode) {
             this.autoExpansionMode = autoExpansionMode;
             return this;
         }
 
-        public Builder setAutoExpansionMode(@Nullable String autoExpansionMode) {
+        public Builder autoExpansionMode(@Nullable String autoExpansionMode) {
             this.autoExpansionMode = Input.ofNullable(autoExpansionMode);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
-        public Builder setEnableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Input.ofNullable(enableFuzzyExtraction);
             return this;
         }
 
-        public Builder setEntities(Input<List<CxEntityTypeEntityArgs>> entities) {
+        public Builder entities(Input<List<CxEntityTypeEntityArgs>> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
 
-        public Builder setEntities(List<CxEntityTypeEntityArgs> entities) {
+        public Builder entities(List<CxEntityTypeEntityArgs> entities) {
             this.entities = Input.of(Objects.requireNonNull(entities));
             return this;
         }
 
-        public Builder setExcludedPhrases(@Nullable Input<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases) {
+        public Builder excludedPhrases(@Nullable Input<List<CxEntityTypeExcludedPhraseArgs>> excludedPhrases) {
             this.excludedPhrases = excludedPhrases;
             return this;
         }
 
-        public Builder setExcludedPhrases(@Nullable List<CxEntityTypeExcludedPhraseArgs> excludedPhrases) {
+        public Builder excludedPhrases(@Nullable List<CxEntityTypeExcludedPhraseArgs> excludedPhrases) {
             this.excludedPhrases = Input.ofNullable(excludedPhrases);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setRedact(@Nullable Input<Boolean> redact) {
+        public Builder redact(@Nullable Input<Boolean> redact) {
             this.redact = redact;
             return this;
         }
 
-        public Builder setRedact(@Nullable Boolean redact) {
+        public Builder redact(@Nullable Boolean redact) {
             this.redact = Input.ofNullable(redact);
             return this;
         }

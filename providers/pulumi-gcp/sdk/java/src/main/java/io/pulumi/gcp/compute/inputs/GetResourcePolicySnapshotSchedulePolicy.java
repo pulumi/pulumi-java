@@ -75,17 +75,17 @@ public final class GetResourcePolicySnapshotSchedulePolicy extends io.pulumi.res
     	      this.snapshotProperties = defaults.snapshotProperties;
         }
 
-        public Builder setRetentionPolicies(List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies) {
+        public Builder retentionPolicies(List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies) {
             this.retentionPolicies = Objects.requireNonNull(retentionPolicies);
             return this;
         }
 
-        public Builder setSchedules(List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules) {
+        public Builder schedules(List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
-        public Builder setSnapshotProperties(List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
+        public Builder snapshotProperties(List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }

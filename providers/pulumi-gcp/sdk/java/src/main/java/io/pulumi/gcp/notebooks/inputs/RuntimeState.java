@@ -192,92 +192,92 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setAccessConfig(@Nullable Input<RuntimeAccessConfigGetArgs> accessConfig) {
+        public Builder accessConfig(@Nullable Input<RuntimeAccessConfigGetArgs> accessConfig) {
             this.accessConfig = accessConfig;
             return this;
         }
 
-        public Builder setAccessConfig(@Nullable RuntimeAccessConfigGetArgs accessConfig) {
+        public Builder accessConfig(@Nullable RuntimeAccessConfigGetArgs accessConfig) {
             this.accessConfig = Input.ofNullable(accessConfig);
             return this;
         }
 
-        public Builder setHealthState(@Nullable Input<String> healthState) {
+        public Builder healthState(@Nullable Input<String> healthState) {
             this.healthState = healthState;
             return this;
         }
 
-        public Builder setHealthState(@Nullable String healthState) {
+        public Builder healthState(@Nullable String healthState) {
             this.healthState = Input.ofNullable(healthState);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<List<RuntimeMetricGetArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<RuntimeMetricGetArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<RuntimeMetricGetArgs> metrics) {
+        public Builder metrics(@Nullable List<RuntimeMetricGetArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable RuntimeSoftwareConfigGetArgs softwareConfig) {
+        public Builder softwareConfig(@Nullable RuntimeSoftwareConfigGetArgs softwareConfig) {
             this.softwareConfig = Input.ofNullable(softwareConfig);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine) {
+        public Builder virtualMachine(@Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable RuntimeVirtualMachineGetArgs virtualMachine) {
+        public Builder virtualMachine(@Nullable RuntimeVirtualMachineGetArgs virtualMachine) {
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }

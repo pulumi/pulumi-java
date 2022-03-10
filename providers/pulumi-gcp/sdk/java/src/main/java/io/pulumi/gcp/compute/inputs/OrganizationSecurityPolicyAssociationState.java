@@ -102,42 +102,42 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     	      this.policyId = defaults.policyId;
         }
 
-        public Builder setAttachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Input<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
-        public Builder setAttachmentId(@Nullable String attachmentId) {
+        public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Input.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Input<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = Input.ofNullable(policyId);
             return this;
         }

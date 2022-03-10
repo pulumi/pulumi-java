@@ -71,22 +71,22 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
     	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
         }
 
-        public Builder setInstances(Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances) {
+        public Builder instances(Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setInstances(List<SpokeLinkedRouterApplianceInstancesInstanceArgs> instances) {
+        public Builder instances(List<SpokeLinkedRouterApplianceInstancesInstanceArgs> instances) {
             this.instances = Input.of(Objects.requireNonNull(instances));
             return this;
         }
 
-        public Builder setSiteToSiteDataTransfer(Input<Boolean> siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Input<Boolean> siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
 
-        public Builder setSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Input.of(Objects.requireNonNull(siteToSiteDataTransfer));
             return this;
         }

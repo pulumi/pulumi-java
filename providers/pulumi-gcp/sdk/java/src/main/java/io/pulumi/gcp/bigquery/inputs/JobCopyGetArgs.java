@@ -137,52 +137,52 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setCreateDisposition(@Nullable Input<String> createDisposition) {
+        public Builder createDisposition(@Nullable Input<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable String createDisposition) {
+        public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Input.ofNullable(createDisposition);
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable Input<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable Input<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable JobCopyDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable JobCopyDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Input.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable Input<JobCopyDestinationTableGetArgs> destinationTable) {
+        public Builder destinationTable(@Nullable Input<JobCopyDestinationTableGetArgs> destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable JobCopyDestinationTableGetArgs destinationTable) {
+        public Builder destinationTable(@Nullable JobCopyDestinationTableGetArgs destinationTable) {
             this.destinationTable = Input.ofNullable(destinationTable);
             return this;
         }
 
-        public Builder setSourceTables(Input<List<JobCopySourceTableGetArgs>> sourceTables) {
+        public Builder sourceTables(Input<List<JobCopySourceTableGetArgs>> sourceTables) {
             this.sourceTables = Objects.requireNonNull(sourceTables);
             return this;
         }
 
-        public Builder setSourceTables(List<JobCopySourceTableGetArgs> sourceTables) {
+        public Builder sourceTables(List<JobCopySourceTableGetArgs> sourceTables) {
             this.sourceTables = Input.of(Objects.requireNonNull(sourceTables));
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable Input<String> writeDisposition) {
+        public Builder writeDisposition(@Nullable Input<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable String writeDisposition) {
+        public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }

@@ -50,7 +50,7 @@ public final class ApiConfigGatewayConfigBackendConfig {
     	      this.googleServiceAccount = defaults.googleServiceAccount;
         }
 
-        public Builder setGoogleServiceAccount(String googleServiceAccount) {
+        public Builder googleServiceAccount(String googleServiceAccount) {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }

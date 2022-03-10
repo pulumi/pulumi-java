@@ -187,32 +187,32 @@ public final class RegionUrlMapPathMatcherRouteRule {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setHeaderAction(@Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction) {
+        public Builder headerAction(@Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setMatchRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules) {
+        public Builder matchRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction) {
+        public Builder routeAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        public Builder urlRedirect(@Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }

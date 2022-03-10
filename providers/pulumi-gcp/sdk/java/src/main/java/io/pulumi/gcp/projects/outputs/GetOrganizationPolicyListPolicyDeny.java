@@ -51,12 +51,12 @@ public final class GetOrganizationPolicyListPolicyDeny {
     	      this.values = defaults.values;
         }
 
-        public Builder setAll(Boolean all) {
+        public Builder all(Boolean all) {
             this.all = Objects.requireNonNull(all);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

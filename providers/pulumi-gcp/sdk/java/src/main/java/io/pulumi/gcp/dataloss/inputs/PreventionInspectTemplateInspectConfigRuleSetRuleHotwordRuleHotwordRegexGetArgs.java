@@ -73,22 +73,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setGroupIndexes(@Nullable Input<List<Integer>> groupIndexes) {
+        public Builder groupIndexes(@Nullable Input<List<Integer>> groupIndexes) {
             this.groupIndexes = groupIndexes;
             return this;
         }
 
-        public Builder setGroupIndexes(@Nullable List<Integer> groupIndexes) {
+        public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
             this.groupIndexes = Input.ofNullable(groupIndexes);
             return this;
         }
 
-        public Builder setPattern(Input<String> pattern) {
+        public Builder pattern(Input<String> pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Input.of(Objects.requireNonNull(pattern));
             return this;
         }

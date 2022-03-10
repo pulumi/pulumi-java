@@ -51,12 +51,12 @@ public final class DefaultObjectAccessControlProjectTeam {
     	      this.team = defaults.team;
         }
 
-        public Builder setProjectNumber(@Nullable String projectNumber) {
+        public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
-        public Builder setTeam(@Nullable String team) {
+        public Builder team(@Nullable String team) {
             this.team = team;
             return this;
         }

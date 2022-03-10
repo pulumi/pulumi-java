@@ -137,62 +137,62 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setOrgId(Input<String> orgId) {
+        public Builder orgId(Input<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder setPermissions(Input<List<String>> permissions) {
+        public Builder permissions(Input<List<String>> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Input.of(Objects.requireNonNull(permissions));
             return this;
         }
 
-        public Builder setRoleId(Input<String> roleId) {
+        public Builder roleId(Input<String> roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Input.of(Objects.requireNonNull(roleId));
             return this;
         }
 
-        public Builder setStage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Input<String> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

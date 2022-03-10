@@ -70,12 +70,12 @@ public final class StandardAppVersionBasicScaling {
     	      this.maxInstances = defaults.maxInstances;
         }
 
-        public Builder setIdleTimeout(@Nullable String idleTimeout) {
+        public Builder idleTimeout(@Nullable String idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }

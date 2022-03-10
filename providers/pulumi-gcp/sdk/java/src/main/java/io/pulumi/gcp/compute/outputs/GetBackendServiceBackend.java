@@ -131,57 +131,57 @@ public final class GetBackendServiceBackend {
     	      this.maxUtilization = defaults.maxUtilization;
         }
 
-        public Builder setBalancingMode(String balancingMode) {
+        public Builder balancingMode(String balancingMode) {
             this.balancingMode = Objects.requireNonNull(balancingMode);
             return this;
         }
 
-        public Builder setCapacityScaler(Double capacityScaler) {
+        public Builder capacityScaler(Double capacityScaler) {
             this.capacityScaler = Objects.requireNonNull(capacityScaler);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
+        public Builder maxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = Objects.requireNonNull(maxConnectionsPerEndpoint);
             return this;
         }
 
-        public Builder setMaxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
+        public Builder maxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = Objects.requireNonNull(maxConnectionsPerInstance);
             return this;
         }
 
-        public Builder setMaxRate(Integer maxRate) {
+        public Builder maxRate(Integer maxRate) {
             this.maxRate = Objects.requireNonNull(maxRate);
             return this;
         }
 
-        public Builder setMaxRatePerEndpoint(Double maxRatePerEndpoint) {
+        public Builder maxRatePerEndpoint(Double maxRatePerEndpoint) {
             this.maxRatePerEndpoint = Objects.requireNonNull(maxRatePerEndpoint);
             return this;
         }
 
-        public Builder setMaxRatePerInstance(Double maxRatePerInstance) {
+        public Builder maxRatePerInstance(Double maxRatePerInstance) {
             this.maxRatePerInstance = Objects.requireNonNull(maxRatePerInstance);
             return this;
         }
 
-        public Builder setMaxUtilization(Double maxUtilization) {
+        public Builder maxUtilization(Double maxUtilization) {
             this.maxUtilization = Objects.requireNonNull(maxUtilization);
             return this;
         }

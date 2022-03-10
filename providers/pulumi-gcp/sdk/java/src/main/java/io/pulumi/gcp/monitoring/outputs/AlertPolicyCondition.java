@@ -169,32 +169,32 @@ public final class AlertPolicyCondition {
     	      this.name = defaults.name;
         }
 
-        public Builder setConditionAbsent(@Nullable AlertPolicyConditionConditionAbsent conditionAbsent) {
+        public Builder conditionAbsent(@Nullable AlertPolicyConditionConditionAbsent conditionAbsent) {
             this.conditionAbsent = conditionAbsent;
             return this;
         }
 
-        public Builder setConditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog) {
+        public Builder conditionMatchedLog(@Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog) {
             this.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
 
-        public Builder setConditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage) {
+        public Builder conditionMonitoringQueryLanguage(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
 
-        public Builder setConditionThreshold(@Nullable AlertPolicyConditionConditionThreshold conditionThreshold) {
+        public Builder conditionThreshold(@Nullable AlertPolicyConditionConditionThreshold conditionThreshold) {
             this.conditionThreshold = conditionThreshold;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

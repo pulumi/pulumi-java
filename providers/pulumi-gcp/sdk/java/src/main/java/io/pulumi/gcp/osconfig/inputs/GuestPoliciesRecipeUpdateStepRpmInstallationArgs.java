@@ -52,12 +52,12 @@ public final class GuestPoliciesRecipeUpdateStepRpmInstallationArgs extends io.p
     	      this.artifactId = defaults.artifactId;
         }
 
-        public Builder setArtifactId(Input<String> artifactId) {
+        public Builder artifactId(Input<String> artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Input.of(Objects.requireNonNull(artifactId));
             return this;
         }

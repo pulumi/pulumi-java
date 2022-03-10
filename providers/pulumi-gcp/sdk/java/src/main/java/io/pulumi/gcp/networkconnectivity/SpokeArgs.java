@@ -186,92 +186,92 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHub(Input<String> hub) {
+        public Builder hub(Input<String> hub) {
             this.hub = Objects.requireNonNull(hub);
             return this;
         }
 
-        public Builder setHub(String hub) {
+        public Builder hub(String hub) {
             this.hub = Input.of(Objects.requireNonNull(hub));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachments(@Nullable Input<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(@Nullable Input<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = linkedInterconnectAttachments;
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachments(@Nullable SpokeLinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
+        public Builder linkedInterconnectAttachments(@Nullable SpokeLinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
             this.linkedInterconnectAttachments = Input.ofNullable(linkedInterconnectAttachments);
             return this;
         }
 
-        public Builder setLinkedRouterApplianceInstances(@Nullable Input<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(@Nullable Input<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = linkedRouterApplianceInstances;
             return this;
         }
 
-        public Builder setLinkedRouterApplianceInstances(@Nullable SpokeLinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
+        public Builder linkedRouterApplianceInstances(@Nullable SpokeLinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
             this.linkedRouterApplianceInstances = Input.ofNullable(linkedRouterApplianceInstances);
             return this;
         }
 
-        public Builder setLinkedVpnTunnels(@Nullable Input<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(@Nullable Input<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels) {
             this.linkedVpnTunnels = linkedVpnTunnels;
             return this;
         }
 
-        public Builder setLinkedVpnTunnels(@Nullable SpokeLinkedVpnTunnelsArgs linkedVpnTunnels) {
+        public Builder linkedVpnTunnels(@Nullable SpokeLinkedVpnTunnelsArgs linkedVpnTunnels) {
             this.linkedVpnTunnels = Input.ofNullable(linkedVpnTunnels);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

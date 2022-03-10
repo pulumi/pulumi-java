@@ -337,122 +337,122 @@ public final class GetClusterNodePoolNodeConfig extends io.pulumi.resources.Invo
     	      this.workloadMetadataConfigs = defaults.workloadMetadataConfigs;
         }
 
-        public Builder setBootDiskKmsKey(String bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setEphemeralStorageConfigs(List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs) {
+        public Builder ephemeralStorageConfigs(List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs) {
             this.ephemeralStorageConfigs = Objects.requireNonNull(ephemeralStorageConfigs);
             return this;
         }
 
-        public Builder setGcfsConfigs(List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs) {
+        public Builder gcfsConfigs(List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs) {
             this.gcfsConfigs = Objects.requireNonNull(gcfsConfigs);
             return this;
         }
 
-        public Builder setGuestAccelerators(List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators) {
+        public Builder guestAccelerators(List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
 
-        public Builder setImageType(String imageType) {
+        public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
 
-        public Builder setKubeletConfigs(List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs) {
+        public Builder kubeletConfigs(List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs) {
             this.kubeletConfigs = Objects.requireNonNull(kubeletConfigs);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLinuxNodeConfigs(List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs) {
+        public Builder linuxNodeConfigs(List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs) {
             this.linuxNodeConfigs = Objects.requireNonNull(linuxNodeConfigs);
             return this;
         }
 
-        public Builder setLocalSsdCount(Integer localSsdCount) {
+        public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setNodeGroup(String nodeGroup) {
+        public Builder nodeGroup(String nodeGroup) {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
 
-        public Builder setOauthScopes(List<String> oauthScopes) {
+        public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setSandboxConfigs(List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs) {
+        public Builder sandboxConfigs(List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs) {
             this.sandboxConfigs = Objects.requireNonNull(sandboxConfigs);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setShieldedInstanceConfigs(List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs) {
+        public Builder shieldedInstanceConfigs(List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs) {
             this.shieldedInstanceConfigs = Objects.requireNonNull(shieldedInstanceConfigs);
             return this;
         }
 
-        public Builder setSpot(Boolean spot) {
+        public Builder spot(Boolean spot) {
             this.spot = Objects.requireNonNull(spot);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTaints(List<GetClusterNodePoolNodeConfigTaint> taints) {
+        public Builder taints(List<GetClusterNodePoolNodeConfigTaint> taints) {
             this.taints = Objects.requireNonNull(taints);
             return this;
         }
 
-        public Builder setWorkloadMetadataConfigs(List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs) {
+        public Builder workloadMetadataConfigs(List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs) {
             this.workloadMetadataConfigs = Objects.requireNonNull(workloadMetadataConfigs);
             return this;
         }

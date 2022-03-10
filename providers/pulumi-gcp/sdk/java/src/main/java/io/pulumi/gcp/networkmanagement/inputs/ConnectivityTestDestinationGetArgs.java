@@ -129,52 +129,52 @@ public final class ConnectivityTestDestinationGetArgs extends io.pulumi.resource
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setInstance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Input<String> instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = Input.ofNullable(instance);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }

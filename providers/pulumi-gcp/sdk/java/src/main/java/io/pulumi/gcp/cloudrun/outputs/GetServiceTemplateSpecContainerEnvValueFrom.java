@@ -41,7 +41,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom {
     	      this.secretKeyReves = defaults.secretKeyReves;
         }
 
-        public Builder setSecretKeyReves(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
+        public Builder secretKeyReves(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
             this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
             return this;
         }

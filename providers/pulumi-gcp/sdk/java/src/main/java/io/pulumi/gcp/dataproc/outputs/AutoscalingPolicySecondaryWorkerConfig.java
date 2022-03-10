@@ -109,17 +109,17 @@ public final class AutoscalingPolicySecondaryWorkerConfig {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setMaxInstances(@Nullable Integer maxInstances) {
+        public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Integer minInstances) {
+        public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

@@ -201,92 +201,92 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
     	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable Input<BackendServiceCdnPolicyCacheKeyPolicyGetArgs> cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable Input<BackendServiceCdnPolicyCacheKeyPolicyGetArgs> cacheKeyPolicy) {
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable BackendServiceCdnPolicyCacheKeyPolicyGetArgs cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable BackendServiceCdnPolicyCacheKeyPolicyGetArgs cacheKeyPolicy) {
             this.cacheKeyPolicy = Input.ofNullable(cacheKeyPolicy);
             return this;
         }
 
-        public Builder setCacheMode(@Nullable Input<String> cacheMode) {
+        public Builder cacheMode(@Nullable Input<String> cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
 
-        public Builder setCacheMode(@Nullable String cacheMode) {
+        public Builder cacheMode(@Nullable String cacheMode) {
             this.cacheMode = Input.ofNullable(cacheMode);
             return this;
         }
 
-        public Builder setClientTtl(@Nullable Input<Integer> clientTtl) {
+        public Builder clientTtl(@Nullable Input<Integer> clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
 
-        public Builder setClientTtl(@Nullable Integer clientTtl) {
+        public Builder clientTtl(@Nullable Integer clientTtl) {
             this.clientTtl = Input.ofNullable(clientTtl);
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Input<Integer> defaultTtl) {
+        public Builder defaultTtl(@Nullable Input<Integer> defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = Input.ofNullable(defaultTtl);
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Input<Integer> maxTtl) {
+        public Builder maxTtl(@Nullable Input<Integer> maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Integer maxTtl) {
+        public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = Input.ofNullable(maxTtl);
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Input<Boolean> negativeCaching) {
+        public Builder negativeCaching(@Nullable Input<Boolean> negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Boolean negativeCaching) {
+        public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = Input.ofNullable(negativeCaching);
             return this;
         }
 
-        public Builder setNegativeCachingPolicies(@Nullable Input<List<BackendServiceCdnPolicyNegativeCachingPolicyGetArgs>> negativeCachingPolicies) {
+        public Builder negativeCachingPolicies(@Nullable Input<List<BackendServiceCdnPolicyNegativeCachingPolicyGetArgs>> negativeCachingPolicies) {
             this.negativeCachingPolicies = negativeCachingPolicies;
             return this;
         }
 
-        public Builder setNegativeCachingPolicies(@Nullable List<BackendServiceCdnPolicyNegativeCachingPolicyGetArgs> negativeCachingPolicies) {
+        public Builder negativeCachingPolicies(@Nullable List<BackendServiceCdnPolicyNegativeCachingPolicyGetArgs> negativeCachingPolicies) {
             this.negativeCachingPolicies = Input.ofNullable(negativeCachingPolicies);
             return this;
         }
 
-        public Builder setServeWhileStale(@Nullable Input<Integer> serveWhileStale) {
+        public Builder serveWhileStale(@Nullable Input<Integer> serveWhileStale) {
             this.serveWhileStale = serveWhileStale;
             return this;
         }
 
-        public Builder setServeWhileStale(@Nullable Integer serveWhileStale) {
+        public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
             this.serveWhileStale = Input.ofNullable(serveWhileStale);
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(@Nullable Input<Integer> signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(@Nullable Input<Integer> signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Input.ofNullable(signedUrlCacheMaxAgeSec);
             return this;
         }

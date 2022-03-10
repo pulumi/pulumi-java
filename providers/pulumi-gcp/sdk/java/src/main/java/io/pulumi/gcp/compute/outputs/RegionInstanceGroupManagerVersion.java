@@ -84,17 +84,17 @@ public final class RegionInstanceGroupManagerVersion {
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder setInstanceTemplate(String instanceTemplate) {
+        public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
+        public Builder targetSize(@Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
             this.targetSize = targetSize;
             return this;
         }

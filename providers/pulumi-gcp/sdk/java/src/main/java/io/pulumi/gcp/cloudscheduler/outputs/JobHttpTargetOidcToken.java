@@ -71,12 +71,12 @@ public final class JobHttpTargetOidcToken {
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }

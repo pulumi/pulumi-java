@@ -90,32 +90,32 @@ public final class ServiceTemplateSpecContainerEnvFromGetArgs extends io.pulumi.
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder setConfigMapRef(@Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> configMapRef) {
+        public Builder configMapRef(@Nullable Input<ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs> configMapRef) {
             this.configMapRef = configMapRef;
             return this;
         }
 
-        public Builder setConfigMapRef(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs configMapRef) {
+        public Builder configMapRef(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefGetArgs configMapRef) {
             this.configMapRef = Input.ofNullable(configMapRef);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setSecretRef(@Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef) {
+        public Builder secretRef(@Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefGetArgs> secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefGetArgs secretRef) {
+        public Builder secretRef(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefGetArgs secretRef) {
             this.secretRef = Input.ofNullable(secretRef);
             return this;
         }

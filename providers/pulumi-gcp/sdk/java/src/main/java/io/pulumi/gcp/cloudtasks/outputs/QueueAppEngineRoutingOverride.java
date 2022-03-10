@@ -107,22 +107,22 @@ public final class QueueAppEngineRoutingOverride {
     	      this.version = defaults.version;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -115,52 +115,52 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder setCondition(@Nullable Input<SubscriptionIAMBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Input<SubscriptionIAMBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable SubscriptionIAMBindingConditionArgs condition) {
+        public Builder condition(@Nullable SubscriptionIAMBindingConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setMembers(Input<List<String>> members) {
+        public Builder members(Input<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setSubscription(Input<String> subscription) {
+        public Builder subscription(Input<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
-        public Builder setSubscription(String subscription) {
+        public Builder subscription(String subscription) {
             this.subscription = Input.of(Objects.requireNonNull(subscription));
             return this;
         }

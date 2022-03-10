@@ -54,12 +54,12 @@ public final class TriggerBuildAvailableSecretsArgs extends io.pulumi.resources.
     	      this.secretManagers = defaults.secretManagers;
         }
 
-        public Builder setSecretManagers(Input<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers) {
+        public Builder secretManagers(Input<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers) {
             this.secretManagers = Objects.requireNonNull(secretManagers);
             return this;
         }
 
-        public Builder setSecretManagers(List<TriggerBuildAvailableSecretsSecretManagerArgs> secretManagers) {
+        public Builder secretManagers(List<TriggerBuildAvailableSecretsSecretManagerArgs> secretManagers) {
             this.secretManagers = Input.of(Objects.requireNonNull(secretManagers));
             return this;
         }

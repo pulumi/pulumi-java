@@ -224,102 +224,102 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tests = defaults.tests;
         }
 
-        public Builder setDefaultRouteAction(@Nullable Input<URLMapDefaultRouteActionArgs> defaultRouteAction) {
+        public Builder defaultRouteAction(@Nullable Input<URLMapDefaultRouteActionArgs> defaultRouteAction) {
             this.defaultRouteAction = defaultRouteAction;
             return this;
         }
 
-        public Builder setDefaultRouteAction(@Nullable URLMapDefaultRouteActionArgs defaultRouteAction) {
+        public Builder defaultRouteAction(@Nullable URLMapDefaultRouteActionArgs defaultRouteAction) {
             this.defaultRouteAction = Input.ofNullable(defaultRouteAction);
             return this;
         }
 
-        public Builder setDefaultService(@Nullable Input<String> defaultService) {
+        public Builder defaultService(@Nullable Input<String> defaultService) {
             this.defaultService = defaultService;
             return this;
         }
 
-        public Builder setDefaultService(@Nullable String defaultService) {
+        public Builder defaultService(@Nullable String defaultService) {
             this.defaultService = Input.ofNullable(defaultService);
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(@Nullable Input<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable Input<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect) {
             this.defaultUrlRedirect = defaultUrlRedirect;
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(@Nullable URLMapDefaultUrlRedirectArgs defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(@Nullable URLMapDefaultUrlRedirectArgs defaultUrlRedirect) {
             this.defaultUrlRedirect = Input.ofNullable(defaultUrlRedirect);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable Input<URLMapHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Input<URLMapHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable URLMapHeaderActionArgs headerAction) {
+        public Builder headerAction(@Nullable URLMapHeaderActionArgs headerAction) {
             this.headerAction = Input.ofNullable(headerAction);
             return this;
         }
 
-        public Builder setHostRules(@Nullable Input<List<URLMapHostRuleArgs>> hostRules) {
+        public Builder hostRules(@Nullable Input<List<URLMapHostRuleArgs>> hostRules) {
             this.hostRules = hostRules;
             return this;
         }
 
-        public Builder setHostRules(@Nullable List<URLMapHostRuleArgs> hostRules) {
+        public Builder hostRules(@Nullable List<URLMapHostRuleArgs> hostRules) {
             this.hostRules = Input.ofNullable(hostRules);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPathMatchers(@Nullable Input<List<URLMapPathMatcherArgs>> pathMatchers) {
+        public Builder pathMatchers(@Nullable Input<List<URLMapPathMatcherArgs>> pathMatchers) {
             this.pathMatchers = pathMatchers;
             return this;
         }
 
-        public Builder setPathMatchers(@Nullable List<URLMapPathMatcherArgs> pathMatchers) {
+        public Builder pathMatchers(@Nullable List<URLMapPathMatcherArgs> pathMatchers) {
             this.pathMatchers = Input.ofNullable(pathMatchers);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTests(@Nullable Input<List<URLMapTestArgs>> tests) {
+        public Builder tests(@Nullable Input<List<URLMapTestArgs>> tests) {
             this.tests = tests;
             return this;
         }
 
-        public Builder setTests(@Nullable List<URLMapTestArgs> tests) {
+        public Builder tests(@Nullable List<URLMapTestArgs> tests) {
             this.tests = Input.ofNullable(tests);
             return this;
         }

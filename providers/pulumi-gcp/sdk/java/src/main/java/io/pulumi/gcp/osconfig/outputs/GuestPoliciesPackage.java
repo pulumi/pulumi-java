@@ -113,17 +113,17 @@ public final class GuestPoliciesPackage {
     	      this.name = defaults.name;
         }
 
-        public Builder setDesiredState(@Nullable String desiredState) {
+        public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setManager(@Nullable String manager) {
+        public Builder manager(@Nullable String manager) {
             this.manager = manager;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

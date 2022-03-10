@@ -72,22 +72,22 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
     	      this.resource = defaults.resource;
         }
 
-        public Builder setPerimeterName(@Nullable Input<String> perimeterName) {
+        public Builder perimeterName(@Nullable Input<String> perimeterName) {
             this.perimeterName = perimeterName;
             return this;
         }
 
-        public Builder setPerimeterName(@Nullable String perimeterName) {
+        public Builder perimeterName(@Nullable String perimeterName) {
             this.perimeterName = Input.ofNullable(perimeterName);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<String> resource) {
+        public Builder resource(@Nullable Input<String> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }

@@ -207,102 +207,102 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder setAccelerators(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs>> accelerators) {
+        public Builder accelerators(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs>> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setAccelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs> accelerators) {
+        public Builder accelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorArgs> accelerators) {
             this.accelerators = Input.ofNullable(accelerators);
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs diskConfig) {
+        public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigArgs diskConfig) {
             this.diskConfig = Input.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable Input<List<String>> instanceNames) {
+        public Builder instanceNames(@Nullable Input<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable List<String> instanceNames) {
+        public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = Input.ofNullable(instanceNames);
             return this;
         }
 
-        public Builder setIsPreemptible(@Nullable Input<Boolean> isPreemptible) {
+        public Builder isPreemptible(@Nullable Input<Boolean> isPreemptible) {
             this.isPreemptible = isPreemptible;
             return this;
         }
 
-        public Builder setIsPreemptible(@Nullable Boolean isPreemptible) {
+        public Builder isPreemptible(@Nullable Boolean isPreemptible) {
             this.isPreemptible = Input.ofNullable(isPreemptible);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setManagedGroupConfigs(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs>> managedGroupConfigs) {
+        public Builder managedGroupConfigs(@Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs>> managedGroupConfigs) {
             this.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
 
-        public Builder setManagedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs> managedGroupConfigs) {
+        public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs> managedGroupConfigs) {
             this.managedGroupConfigs = Input.ofNullable(managedGroupConfigs);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Input<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Input.ofNullable(numInstances);
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable Input<String> preemptibility) {
+        public Builder preemptibility(@Nullable Input<String> preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable String preemptibility) {
+        public Builder preemptibility(@Nullable String preemptibility) {
             this.preemptibility = Input.ofNullable(preemptibility);
             return this;
         }

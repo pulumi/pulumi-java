@@ -166,82 +166,82 @@ public final class AzureClientState extends io.pulumi.resources.ResourceArgs {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setApplicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Input<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = Input.ofNullable(applicationId);
             return this;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

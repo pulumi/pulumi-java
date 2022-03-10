@@ -136,32 +136,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     	      this.suffixMatch = defaults.suffixMatch;
         }
 
-        public Builder setExactMatch(@Nullable String exactMatch) {
+        public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setInvertMatch(@Nullable Boolean invertMatch) {
+        public Builder invertMatch(@Nullable Boolean invertMatch) {
             this.invertMatch = invertMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable String prefixMatch) {
+        public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Boolean presentMatch) {
+        public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
-        public Builder setSuffixMatch(@Nullable String suffixMatch) {
+        public Builder suffixMatch(@Nullable String suffixMatch) {
             this.suffixMatch = suffixMatch;
             return this;
         }

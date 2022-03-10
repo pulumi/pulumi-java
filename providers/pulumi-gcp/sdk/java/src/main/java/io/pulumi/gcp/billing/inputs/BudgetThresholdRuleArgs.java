@@ -75,22 +75,22 @@ public final class BudgetThresholdRuleArgs extends io.pulumi.resources.ResourceA
     	      this.thresholdPercent = defaults.thresholdPercent;
         }
 
-        public Builder setSpendBasis(@Nullable Input<String> spendBasis) {
+        public Builder spendBasis(@Nullable Input<String> spendBasis) {
             this.spendBasis = spendBasis;
             return this;
         }
 
-        public Builder setSpendBasis(@Nullable String spendBasis) {
+        public Builder spendBasis(@Nullable String spendBasis) {
             this.spendBasis = Input.ofNullable(spendBasis);
             return this;
         }
 
-        public Builder setThresholdPercent(Input<Double> thresholdPercent) {
+        public Builder thresholdPercent(Input<Double> thresholdPercent) {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }
 
-        public Builder setThresholdPercent(Double thresholdPercent) {
+        public Builder thresholdPercent(Double thresholdPercent) {
             this.thresholdPercent = Input.of(Objects.requireNonNull(thresholdPercent));
             return this;
         }

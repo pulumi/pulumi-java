@@ -179,72 +179,72 @@ public final class URLMapPathMatcherRouteRuleRouteActionArgs extends io.pulumi.r
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder setCorsPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy) {
+        public Builder corsPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
 
-        public Builder setCorsPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs corsPolicy) {
+        public Builder corsPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicyArgs corsPolicy) {
             this.corsPolicy = Input.ofNullable(corsPolicy);
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs faultInjectionPolicy) {
             this.faultInjectionPolicy = Input.ofNullable(faultInjectionPolicy);
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs requestMirrorPolicy) {
             this.requestMirrorPolicy = Input.ofNullable(requestMirrorPolicy);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionRetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionRetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionTimeoutArgs> timeout) {
+        public Builder timeout(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable URLMapPathMatcherRouteRuleRouteActionTimeoutArgs timeout) {
+        public Builder timeout(@Nullable URLMapPathMatcherRouteRuleRouteActionTimeoutArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite) {
+        public Builder urlRewrite(@Nullable Input<URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs urlRewrite) {
+        public Builder urlRewrite(@Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewriteArgs urlRewrite) {
             this.urlRewrite = Input.ofNullable(urlRewrite);
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs>> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable Input<List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs>> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs> weightedBackendServices) {
             this.weightedBackendServices = Input.ofNullable(weightedBackendServices);
             return this;
         }

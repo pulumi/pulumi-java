@@ -114,22 +114,22 @@ public final class FlexibleAppVersionEndpointsApiService {
     	      this.rolloutStrategy = defaults.rolloutStrategy;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setDisableTraceSampling(@Nullable Boolean disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRolloutStrategy(@Nullable String rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable String rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }

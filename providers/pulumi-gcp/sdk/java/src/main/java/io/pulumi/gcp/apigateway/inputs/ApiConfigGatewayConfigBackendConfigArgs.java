@@ -53,12 +53,12 @@ public final class ApiConfigGatewayConfigBackendConfigArgs extends io.pulumi.res
     	      this.googleServiceAccount = defaults.googleServiceAccount;
         }
 
-        public Builder setGoogleServiceAccount(Input<String> googleServiceAccount) {
+        public Builder googleServiceAccount(Input<String> googleServiceAccount) {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }
 
-        public Builder setGoogleServiceAccount(String googleServiceAccount) {
+        public Builder googleServiceAccount(String googleServiceAccount) {
             this.googleServiceAccount = Input.of(Objects.requireNonNull(googleServiceAccount));
             return this;
         }

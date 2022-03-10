@@ -55,7 +55,7 @@ public final class ManagedZoneForwardingConfig {
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setTargetNameServers(List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers) {
+        public Builder targetNameServers(List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }

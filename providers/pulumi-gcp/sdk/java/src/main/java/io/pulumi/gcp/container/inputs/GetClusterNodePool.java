@@ -215,72 +215,72 @@ public final class GetClusterNodePool extends io.pulumi.resources.InvokeArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoscalings(List<GetClusterNodePoolAutoscaling> autoscalings) {
+        public Builder autoscalings(List<GetClusterNodePoolAutoscaling> autoscalings) {
             this.autoscalings = Objects.requireNonNull(autoscalings);
             return this;
         }
 
-        public Builder setInitialNodeCount(Integer initialNodeCount) {
+        public Builder initialNodeCount(Integer initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
 
-        public Builder setInstanceGroupUrls(List<String> instanceGroupUrls) {
+        public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
             this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
             return this;
         }
 
-        public Builder setManagedInstanceGroupUrls(List<String> managedInstanceGroupUrls) {
+        public Builder managedInstanceGroupUrls(List<String> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = Objects.requireNonNull(managedInstanceGroupUrls);
             return this;
         }
 
-        public Builder setManagements(List<GetClusterNodePoolManagement> managements) {
+        public Builder managements(List<GetClusterNodePoolManagement> managements) {
             this.managements = Objects.requireNonNull(managements);
             return this;
         }
 
-        public Builder setMaxPodsPerNode(Integer maxPodsPerNode) {
+        public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamePrefix(String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
 
-        public Builder setNetworkConfigs(List<GetClusterNodePoolNetworkConfig> networkConfigs) {
+        public Builder networkConfigs(List<GetClusterNodePoolNetworkConfig> networkConfigs) {
             this.networkConfigs = Objects.requireNonNull(networkConfigs);
             return this;
         }
 
-        public Builder setNodeConfigs(List<GetClusterNodePoolNodeConfig> nodeConfigs) {
+        public Builder nodeConfigs(List<GetClusterNodePoolNodeConfig> nodeConfigs) {
             this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setNodeLocations(List<String> nodeLocations) {
+        public Builder nodeLocations(List<String> nodeLocations) {
             this.nodeLocations = Objects.requireNonNull(nodeLocations);
             return this;
         }
 
-        public Builder setUpgradeSettings(List<GetClusterNodePoolUpgradeSetting> upgradeSettings) {
+        public Builder upgradeSettings(List<GetClusterNodePoolUpgradeSetting> upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

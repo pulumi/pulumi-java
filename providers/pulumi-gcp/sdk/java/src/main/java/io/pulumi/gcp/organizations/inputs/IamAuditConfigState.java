@@ -104,42 +104,42 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder setAuditLogConfigs(@Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
-        public Builder setAuditLogConfigs(@Nullable List<IamAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable List<IamAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
             this.auditLogConfigs = Input.ofNullable(auditLogConfigs);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setOrgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Input<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
-        public Builder setOrgId(@Nullable String orgId) {
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

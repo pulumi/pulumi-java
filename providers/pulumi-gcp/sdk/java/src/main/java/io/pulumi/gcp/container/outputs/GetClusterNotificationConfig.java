@@ -41,7 +41,7 @@ public final class GetClusterNotificationConfig {
     	      this.pubsubs = defaults.pubsubs;
         }
 
-        public Builder setPubsubs(List<GetClusterNotificationConfigPubsub> pubsubs) {
+        public Builder pubsubs(List<GetClusterNotificationConfigPubsub> pubsubs) {
             this.pubsubs = Objects.requireNonNull(pubsubs);
             return this;
         }

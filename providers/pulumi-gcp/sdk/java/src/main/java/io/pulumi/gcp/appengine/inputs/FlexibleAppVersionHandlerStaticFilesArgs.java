@@ -159,72 +159,72 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     	      this.uploadPathRegex = defaults.uploadPathRegex;
         }
 
-        public Builder setApplicationReadable(@Nullable Input<Boolean> applicationReadable) {
+        public Builder applicationReadable(@Nullable Input<Boolean> applicationReadable) {
             this.applicationReadable = applicationReadable;
             return this;
         }
 
-        public Builder setApplicationReadable(@Nullable Boolean applicationReadable) {
+        public Builder applicationReadable(@Nullable Boolean applicationReadable) {
             this.applicationReadable = Input.ofNullable(applicationReadable);
             return this;
         }
 
-        public Builder setExpiration(@Nullable Input<String> expiration) {
+        public Builder expiration(@Nullable Input<String> expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setExpiration(@Nullable String expiration) {
+        public Builder expiration(@Nullable String expiration) {
             this.expiration = Input.ofNullable(expiration);
             return this;
         }
 
-        public Builder setHttpHeaders(@Nullable Input<Map<String,String>> httpHeaders) {
+        public Builder httpHeaders(@Nullable Input<Map<String,String>> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
 
-        public Builder setHttpHeaders(@Nullable Map<String,String> httpHeaders) {
+        public Builder httpHeaders(@Nullable Map<String,String> httpHeaders) {
             this.httpHeaders = Input.ofNullable(httpHeaders);
             return this;
         }
 
-        public Builder setMimeType(@Nullable Input<String> mimeType) {
+        public Builder mimeType(@Nullable Input<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
-        public Builder setMimeType(@Nullable String mimeType) {
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = Input.ofNullable(mimeType);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setRequireMatchingFile(@Nullable Input<Boolean> requireMatchingFile) {
+        public Builder requireMatchingFile(@Nullable Input<Boolean> requireMatchingFile) {
             this.requireMatchingFile = requireMatchingFile;
             return this;
         }
 
-        public Builder setRequireMatchingFile(@Nullable Boolean requireMatchingFile) {
+        public Builder requireMatchingFile(@Nullable Boolean requireMatchingFile) {
             this.requireMatchingFile = Input.ofNullable(requireMatchingFile);
             return this;
         }
 
-        public Builder setUploadPathRegex(@Nullable Input<String> uploadPathRegex) {
+        public Builder uploadPathRegex(@Nullable Input<String> uploadPathRegex) {
             this.uploadPathRegex = uploadPathRegex;
             return this;
         }
 
-        public Builder setUploadPathRegex(@Nullable String uploadPathRegex) {
+        public Builder uploadPathRegex(@Nullable String uploadPathRegex) {
             this.uploadPathRegex = Input.ofNullable(uploadPathRegex);
             return this;
         }

@@ -131,62 +131,62 @@ public final class RuntimeIamBindingArgs extends io.pulumi.resources.ResourceArg
     	      this.runtimeName = defaults.runtimeName;
         }
 
-        public Builder setCondition(@Nullable Input<RuntimeIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Input<RuntimeIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable RuntimeIamBindingConditionArgs condition) {
+        public Builder condition(@Nullable RuntimeIamBindingConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMembers(Input<List<String>> members) {
+        public Builder members(Input<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setRuntimeName(Input<String> runtimeName) {
+        public Builder runtimeName(Input<String> runtimeName) {
             this.runtimeName = Objects.requireNonNull(runtimeName);
             return this;
         }
 
-        public Builder setRuntimeName(String runtimeName) {
+        public Builder runtimeName(String runtimeName) {
             this.runtimeName = Input.of(Objects.requireNonNull(runtimeName));
             return this;
         }

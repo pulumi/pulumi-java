@@ -50,7 +50,7 @@ public final class LiteSubscriptionDeliveryConfig {
     	      this.deliveryRequirement = defaults.deliveryRequirement;
         }
 
-        public Builder setDeliveryRequirement(String deliveryRequirement) {
+        public Builder deliveryRequirement(String deliveryRequirement) {
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
         }

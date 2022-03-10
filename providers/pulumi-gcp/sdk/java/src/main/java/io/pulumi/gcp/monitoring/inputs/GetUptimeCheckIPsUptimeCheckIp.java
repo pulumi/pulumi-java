@@ -88,17 +88,17 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
     	      this.region = defaults.region;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

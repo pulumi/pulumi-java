@@ -75,22 +75,22 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTriggerAr
     	      this.percent = defaults.percent;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setPercent(@Nullable Input<Double> percent) {
+        public Builder percent(@Nullable Input<Double> percent) {
             this.percent = percent;
             return this;
         }
 
-        public Builder setPercent(@Nullable Double percent) {
+        public Builder percent(@Nullable Double percent) {
             this.percent = Input.ofNullable(percent);
             return this;
         }

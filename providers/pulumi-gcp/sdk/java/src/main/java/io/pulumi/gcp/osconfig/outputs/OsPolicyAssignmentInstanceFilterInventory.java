@@ -67,12 +67,12 @@ public final class OsPolicyAssignmentInstanceFilterInventory {
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsShortName(String osShortName) {
+        public Builder osShortName(String osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }

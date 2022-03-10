@@ -72,22 +72,22 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReference(@Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference) {
+        public Builder localObjectReference(@Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
-        public Builder setLocalObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs localObjectReference) {
+        public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs localObjectReference) {
             this.localObjectReference = Input.ofNullable(localObjectReference);
             return this;
         }
 
-        public Builder setOptional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Input<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = Input.ofNullable(optional);
             return this;
         }

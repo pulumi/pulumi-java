@@ -70,22 +70,22 @@ public final class DataStoreIndexPropertyGetArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder setDirection(Input<String> direction) {
+        public Builder direction(Input<String> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Input.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

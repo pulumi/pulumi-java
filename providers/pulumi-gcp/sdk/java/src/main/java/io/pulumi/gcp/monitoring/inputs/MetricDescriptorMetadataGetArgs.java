@@ -70,22 +70,22 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
     	      this.samplePeriod = defaults.samplePeriod;
         }
 
-        public Builder setIngestDelay(@Nullable Input<String> ingestDelay) {
+        public Builder ingestDelay(@Nullable Input<String> ingestDelay) {
             this.ingestDelay = ingestDelay;
             return this;
         }
 
-        public Builder setIngestDelay(@Nullable String ingestDelay) {
+        public Builder ingestDelay(@Nullable String ingestDelay) {
             this.ingestDelay = Input.ofNullable(ingestDelay);
             return this;
         }
 
-        public Builder setSamplePeriod(@Nullable Input<String> samplePeriod) {
+        public Builder samplePeriod(@Nullable Input<String> samplePeriod) {
             this.samplePeriod = samplePeriod;
             return this;
         }
 
-        public Builder setSamplePeriod(@Nullable String samplePeriod) {
+        public Builder samplePeriod(@Nullable String samplePeriod) {
             this.samplePeriod = Input.ofNullable(samplePeriod);
             return this;
         }

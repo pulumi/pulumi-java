@@ -309,77 +309,77 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfig {
     	      this.truststoreUri = defaults.truststoreUri;
         }
 
-        public Builder setCrossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
+        public Builder crossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
             this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
             return this;
         }
 
-        public Builder setCrossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
+        public Builder crossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
             this.crossRealmTrustKdc = crossRealmTrustKdc;
             return this;
         }
 
-        public Builder setCrossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
+        public Builder crossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
             this.crossRealmTrustRealm = crossRealmTrustRealm;
             return this;
         }
 
-        public Builder setCrossRealmTrustSharedPasswordUri(@Nullable String crossRealmTrustSharedPasswordUri) {
+        public Builder crossRealmTrustSharedPasswordUri(@Nullable String crossRealmTrustSharedPasswordUri) {
             this.crossRealmTrustSharedPasswordUri = crossRealmTrustSharedPasswordUri;
             return this;
         }
 
-        public Builder setEnableKerberos(@Nullable Boolean enableKerberos) {
+        public Builder enableKerberos(@Nullable Boolean enableKerberos) {
             this.enableKerberos = enableKerberos;
             return this;
         }
 
-        public Builder setKdcDbKeyUri(@Nullable String kdcDbKeyUri) {
+        public Builder kdcDbKeyUri(@Nullable String kdcDbKeyUri) {
             this.kdcDbKeyUri = kdcDbKeyUri;
             return this;
         }
 
-        public Builder setKeyPasswordUri(@Nullable String keyPasswordUri) {
+        public Builder keyPasswordUri(@Nullable String keyPasswordUri) {
             this.keyPasswordUri = keyPasswordUri;
             return this;
         }
 
-        public Builder setKeystorePasswordUri(@Nullable String keystorePasswordUri) {
+        public Builder keystorePasswordUri(@Nullable String keystorePasswordUri) {
             this.keystorePasswordUri = keystorePasswordUri;
             return this;
         }
 
-        public Builder setKeystoreUri(@Nullable String keystoreUri) {
+        public Builder keystoreUri(@Nullable String keystoreUri) {
             this.keystoreUri = keystoreUri;
             return this;
         }
 
-        public Builder setKmsKeyUri(String kmsKeyUri) {
+        public Builder kmsKeyUri(String kmsKeyUri) {
             this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri);
             return this;
         }
 
-        public Builder setRealm(@Nullable String realm) {
+        public Builder realm(@Nullable String realm) {
             this.realm = realm;
             return this;
         }
 
-        public Builder setRootPrincipalPasswordUri(String rootPrincipalPasswordUri) {
+        public Builder rootPrincipalPasswordUri(String rootPrincipalPasswordUri) {
             this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri);
             return this;
         }
 
-        public Builder setTgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
+        public Builder tgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
             this.tgtLifetimeHours = tgtLifetimeHours;
             return this;
         }
 
-        public Builder setTruststorePasswordUri(@Nullable String truststorePasswordUri) {
+        public Builder truststorePasswordUri(@Nullable String truststorePasswordUri) {
             this.truststorePasswordUri = truststorePasswordUri;
             return this;
         }
 
-        public Builder setTruststoreUri(@Nullable String truststoreUri) {
+        public Builder truststoreUri(@Nullable String truststoreUri) {
             this.truststoreUri = truststoreUri;
             return this;
         }

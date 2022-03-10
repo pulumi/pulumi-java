@@ -53,12 +53,12 @@ public final class CxEntityTypeExcludedPhraseArgs extends io.pulumi.resources.Re
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

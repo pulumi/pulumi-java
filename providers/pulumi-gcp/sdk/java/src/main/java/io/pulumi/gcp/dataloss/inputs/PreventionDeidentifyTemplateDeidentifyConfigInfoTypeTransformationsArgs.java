@@ -54,12 +54,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.transformations = defaults.transformations;
         }
 
-        public Builder setTransformations(Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations) {
+        public Builder transformations(Input<List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs>> transformations) {
             this.transformations = Objects.requireNonNull(transformations);
             return this;
         }
 
-        public Builder setTransformations(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs> transformations) {
+        public Builder transformations(List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationArgs> transformations) {
             this.transformations = Input.of(Objects.requireNonNull(transformations));
             return this;
         }

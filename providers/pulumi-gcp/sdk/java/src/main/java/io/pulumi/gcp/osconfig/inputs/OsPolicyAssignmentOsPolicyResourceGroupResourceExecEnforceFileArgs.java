@@ -105,42 +105,42 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Input<Boolean> allowInsecure) {
+        public Builder allowInsecure(@Nullable Input<Boolean> allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Input.ofNullable(allowInsecure);
             return this;
         }
 
-        public Builder setGcs(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsArgs> gcs) {
+        public Builder gcs(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setGcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsArgs gcs) {
+        public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsArgs gcs) {
             this.gcs = Input.ofNullable(gcs);
             return this;
         }
 
-        public Builder setLocalPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Input<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = Input.ofNullable(localPath);
             return this;
         }
 
-        public Builder setRemote(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs> remote) {
+        public Builder remote(@Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs> remote) {
             this.remote = remote;
             return this;
         }
 
-        public Builder setRemote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs remote) {
+        public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs remote) {
             this.remote = Input.ofNullable(remote);
             return this;
         }

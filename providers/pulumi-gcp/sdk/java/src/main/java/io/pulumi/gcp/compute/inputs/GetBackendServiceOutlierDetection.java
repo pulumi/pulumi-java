@@ -171,57 +171,57 @@ public final class GetBackendServiceOutlierDetection extends io.pulumi.resources
     	      this.successRateStdevFactor = defaults.successRateStdevFactor;
         }
 
-        public Builder setBaseEjectionTimes(List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes) {
+        public Builder baseEjectionTimes(List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes) {
             this.baseEjectionTimes = Objects.requireNonNull(baseEjectionTimes);
             return this;
         }
 
-        public Builder setConsecutiveErrors(Integer consecutiveErrors) {
+        public Builder consecutiveErrors(Integer consecutiveErrors) {
             this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
             return this;
         }
 
-        public Builder setConsecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
+        public Builder consecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
             this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
             return this;
         }
 
-        public Builder setEnforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
+        public Builder enforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
             this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
             return this;
         }
 
-        public Builder setEnforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
+        public Builder enforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
             this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
             return this;
         }
 
-        public Builder setEnforcingSuccessRate(Integer enforcingSuccessRate) {
+        public Builder enforcingSuccessRate(Integer enforcingSuccessRate) {
             this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
             return this;
         }
 
-        public Builder setIntervals(List<GetBackendServiceOutlierDetectionInterval> intervals) {
+        public Builder intervals(List<GetBackendServiceOutlierDetectionInterval> intervals) {
             this.intervals = Objects.requireNonNull(intervals);
             return this;
         }
 
-        public Builder setMaxEjectionPercent(Integer maxEjectionPercent) {
+        public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
             return this;
         }
 
-        public Builder setSuccessRateMinimumHosts(Integer successRateMinimumHosts) {
+        public Builder successRateMinimumHosts(Integer successRateMinimumHosts) {
             this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
             return this;
         }
 
-        public Builder setSuccessRateRequestVolume(Integer successRateRequestVolume) {
+        public Builder successRateRequestVolume(Integer successRateRequestVolume) {
             this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
             return this;
         }
 
-        public Builder setSuccessRateStdevFactor(Integer successRateStdevFactor) {
+        public Builder successRateStdevFactor(Integer successRateStdevFactor) {
             this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
             return this;
         }

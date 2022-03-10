@@ -54,12 +54,12 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigArgs extends io.pulum
     	      this.snapshotAnalysis = defaults.snapshotAnalysis;
         }
 
-        public Builder setSnapshotAnalysis(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis) {
+        public Builder snapshotAnalysis(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs> snapshotAnalysis) {
             this.snapshotAnalysis = snapshotAnalysis;
             return this;
         }
 
-        public Builder setSnapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs snapshotAnalysis) {
+        public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs snapshotAnalysis) {
             this.snapshotAnalysis = Input.ofNullable(snapshotAnalysis);
             return this;
         }

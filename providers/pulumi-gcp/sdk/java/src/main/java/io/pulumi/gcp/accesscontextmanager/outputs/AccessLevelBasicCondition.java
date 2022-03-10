@@ -186,32 +186,32 @@ public final class AccessLevelBasicCondition {
     	      this.requiredAccessLevels = defaults.requiredAccessLevels;
         }
 
-        public Builder setDevicePolicy(@Nullable AccessLevelBasicConditionDevicePolicy devicePolicy) {
+        public Builder devicePolicy(@Nullable AccessLevelBasicConditionDevicePolicy devicePolicy) {
             this.devicePolicy = devicePolicy;
             return this;
         }
 
-        public Builder setIpSubnetworks(@Nullable List<String> ipSubnetworks) {
+        public Builder ipSubnetworks(@Nullable List<String> ipSubnetworks) {
             this.ipSubnetworks = ipSubnetworks;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setNegate(@Nullable Boolean negate) {
+        public Builder negate(@Nullable Boolean negate) {
             this.negate = negate;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRequiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
+        public Builder requiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
             this.requiredAccessLevels = requiredAccessLevels;
             return this;
         }

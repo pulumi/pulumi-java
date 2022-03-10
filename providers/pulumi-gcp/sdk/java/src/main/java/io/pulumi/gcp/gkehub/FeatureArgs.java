@@ -120,52 +120,52 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<FeatureSpecArgs> spec) {
+        public Builder spec(@Nullable Input<FeatureSpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable FeatureSpecArgs spec) {
+        public Builder spec(@Nullable FeatureSpecArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }

@@ -69,12 +69,12 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
     	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
         }
 
-        public Builder setAppYamlPath(String appYamlPath) {
+        public Builder appYamlPath(String appYamlPath) {
             this.appYamlPath = Objects.requireNonNull(appYamlPath);
             return this;
         }
 
-        public Builder setCloudBuildTimeout(@Nullable String cloudBuildTimeout) {
+        public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
             this.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }

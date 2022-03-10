@@ -51,12 +51,12 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride {
     	      this.realmsSelectors = defaults.realmsSelectors;
         }
 
-        public Builder setConfigVersion(String configVersion) {
+        public Builder configVersion(String configVersion) {
             this.configVersion = Objects.requireNonNull(configVersion);
             return this;
         }
 
-        public Builder setRealmsSelectors(List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
+        public Builder realmsSelectors(List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
             this.realmsSelectors = Objects.requireNonNull(realmsSelectors);
             return this;
         }

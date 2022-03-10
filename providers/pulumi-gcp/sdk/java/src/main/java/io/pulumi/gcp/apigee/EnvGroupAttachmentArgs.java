@@ -70,22 +70,22 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
     	      this.environment = defaults.environment;
         }
 
-        public Builder setEnvgroupId(Input<String> envgroupId) {
+        public Builder envgroupId(Input<String> envgroupId) {
             this.envgroupId = Objects.requireNonNull(envgroupId);
             return this;
         }
 
-        public Builder setEnvgroupId(String envgroupId) {
+        public Builder envgroupId(String envgroupId) {
             this.envgroupId = Input.of(Objects.requireNonNull(envgroupId));
             return this;
         }
 
-        public Builder setEnvironment(Input<String> environment) {
+        public Builder environment(Input<String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setEnvironment(String environment) {
+        public Builder environment(String environment) {
             this.environment = Input.of(Objects.requireNonNull(environment));
             return this;
         }

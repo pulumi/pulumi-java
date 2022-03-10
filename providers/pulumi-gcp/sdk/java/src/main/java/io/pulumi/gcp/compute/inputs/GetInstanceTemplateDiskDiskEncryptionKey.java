@@ -51,7 +51,7 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey extends io.pulumi.re
     	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
         }
 
-        public Builder setKmsKeySelfLink(String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }

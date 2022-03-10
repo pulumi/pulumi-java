@@ -48,12 +48,12 @@ public final class EnvironmentConfigWebServerConfigGetArgs extends io.pulumi.res
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setMachineType(Input<String> machineType) {
+        public Builder machineType(Input<String> machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Input.of(Objects.requireNonNull(machineType));
             return this;
         }

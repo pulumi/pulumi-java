@@ -104,22 +104,22 @@ public final class InboundSamlConfigIdpConfig {
     	      this.ssoUrl = defaults.ssoUrl;
         }
 
-        public Builder setIdpCertificates(List<InboundSamlConfigIdpConfigIdpCertificate> idpCertificates) {
+        public Builder idpCertificates(List<InboundSamlConfigIdpConfigIdpCertificate> idpCertificates) {
             this.idpCertificates = Objects.requireNonNull(idpCertificates);
             return this;
         }
 
-        public Builder setIdpEntityId(String idpEntityId) {
+        public Builder idpEntityId(String idpEntityId) {
             this.idpEntityId = Objects.requireNonNull(idpEntityId);
             return this;
         }
 
-        public Builder setSignRequest(@Nullable Boolean signRequest) {
+        public Builder signRequest(@Nullable Boolean signRequest) {
             this.signRequest = signRequest;
             return this;
         }
 
-        public Builder setSsoUrl(String ssoUrl) {
+        public Builder ssoUrl(String ssoUrl) {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }

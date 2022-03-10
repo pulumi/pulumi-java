@@ -88,32 +88,32 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
     	      this.project = defaults.project;
         }
 
-        public Builder setBackupRunId(Input<Integer> backupRunId) {
+        public Builder backupRunId(Input<Integer> backupRunId) {
             this.backupRunId = Objects.requireNonNull(backupRunId);
             return this;
         }
 
-        public Builder setBackupRunId(Integer backupRunId) {
+        public Builder backupRunId(Integer backupRunId) {
             this.backupRunId = Input.of(Objects.requireNonNull(backupRunId));
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

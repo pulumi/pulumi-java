@@ -52,7 +52,7 @@ public final class AiDatasetEncryptionSpec {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }

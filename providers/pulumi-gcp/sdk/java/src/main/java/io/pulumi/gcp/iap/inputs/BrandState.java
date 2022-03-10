@@ -125,52 +125,52 @@ public final class BrandState extends io.pulumi.resources.ResourceArgs {
     	      this.supportEmail = defaults.supportEmail;
         }
 
-        public Builder setApplicationTitle(@Nullable Input<String> applicationTitle) {
+        public Builder applicationTitle(@Nullable Input<String> applicationTitle) {
             this.applicationTitle = applicationTitle;
             return this;
         }
 
-        public Builder setApplicationTitle(@Nullable String applicationTitle) {
+        public Builder applicationTitle(@Nullable String applicationTitle) {
             this.applicationTitle = Input.ofNullable(applicationTitle);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrgInternalOnly(@Nullable Input<Boolean> orgInternalOnly) {
+        public Builder orgInternalOnly(@Nullable Input<Boolean> orgInternalOnly) {
             this.orgInternalOnly = orgInternalOnly;
             return this;
         }
 
-        public Builder setOrgInternalOnly(@Nullable Boolean orgInternalOnly) {
+        public Builder orgInternalOnly(@Nullable Boolean orgInternalOnly) {
             this.orgInternalOnly = Input.ofNullable(orgInternalOnly);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSupportEmail(@Nullable Input<String> supportEmail) {
+        public Builder supportEmail(@Nullable Input<String> supportEmail) {
             this.supportEmail = supportEmail;
             return this;
         }
 
-        public Builder setSupportEmail(@Nullable String supportEmail) {
+        public Builder supportEmail(@Nullable String supportEmail) {
             this.supportEmail = Input.ofNullable(supportEmail);
             return this;
         }

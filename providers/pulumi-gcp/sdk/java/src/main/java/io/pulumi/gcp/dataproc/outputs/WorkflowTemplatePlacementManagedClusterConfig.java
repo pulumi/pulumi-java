@@ -289,77 +289,77 @@ public final class WorkflowTemplatePlacementManagedClusterConfig {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setAutoscalingConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig autoscalingConfig) {
+        public Builder autoscalingConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig autoscalingConfig) {
             this.autoscalingConfig = autoscalingConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig encryptionConfig) {
+        public Builder encryptionConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEndpointConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfig endpointConfig) {
+        public Builder endpointConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfig endpointConfig) {
             this.endpointConfig = endpointConfig;
             return this;
         }
 
-        public Builder setGceClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig gceClusterConfig) {
+        public Builder gceClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig gceClusterConfig) {
             this.gceClusterConfig = gceClusterConfig;
             return this;
         }
 
-        public Builder setGkeClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig gkeClusterConfig) {
+        public Builder gkeClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig gkeClusterConfig) {
             this.gkeClusterConfig = gkeClusterConfig;
             return this;
         }
 
-        public Builder setInitializationActions(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions) {
+        public Builder initializationActions(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions) {
             this.initializationActions = initializationActions;
             return this;
         }
 
-        public Builder setLifecycleConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig lifecycleConfig) {
+        public Builder lifecycleConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig lifecycleConfig) {
             this.lifecycleConfig = lifecycleConfig;
             return this;
         }
 
-        public Builder setMasterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfig masterConfig) {
+        public Builder masterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfig masterConfig) {
             this.masterConfig = masterConfig;
             return this;
         }
 
-        public Builder setMetastoreConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig metastoreConfig) {
+        public Builder metastoreConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig metastoreConfig) {
             this.metastoreConfig = metastoreConfig;
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
-        public Builder setSecurityConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfig securityConfig) {
+        public Builder securityConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfig securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig softwareConfig) {
+        public Builder softwareConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
-        public Builder setStagingBucket(@Nullable String stagingBucket) {
+        public Builder stagingBucket(@Nullable String stagingBucket) {
             this.stagingBucket = stagingBucket;
             return this;
         }
 
-        public Builder setTempBucket(@Nullable String tempBucket) {
+        public Builder tempBucket(@Nullable String tempBucket) {
             this.tempBucket = tempBucket;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig) {
+        public Builder workerConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }

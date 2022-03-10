@@ -103,42 +103,42 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
     	      this.targetThroughputUtilization = defaults.targetThroughputUtilization;
         }
 
-        public Builder setMaxInstances(@Nullable Input<Integer> maxInstances) {
+        public Builder maxInstances(@Nullable Input<Integer> maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
-        public Builder setMaxInstances(@Nullable Integer maxInstances) {
+        public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = Input.ofNullable(maxInstances);
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Input<Integer> minInstances) {
+        public Builder minInstances(@Nullable Input<Integer> minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Integer minInstances) {
+        public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = Input.ofNullable(minInstances);
             return this;
         }
 
-        public Builder setTargetCpuUtilization(@Nullable Input<Double> targetCpuUtilization) {
+        public Builder targetCpuUtilization(@Nullable Input<Double> targetCpuUtilization) {
             this.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
 
-        public Builder setTargetCpuUtilization(@Nullable Double targetCpuUtilization) {
+        public Builder targetCpuUtilization(@Nullable Double targetCpuUtilization) {
             this.targetCpuUtilization = Input.ofNullable(targetCpuUtilization);
             return this;
         }
 
-        public Builder setTargetThroughputUtilization(@Nullable Input<Double> targetThroughputUtilization) {
+        public Builder targetThroughputUtilization(@Nullable Input<Double> targetThroughputUtilization) {
             this.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
 
-        public Builder setTargetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
+        public Builder targetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
             this.targetThroughputUtilization = Input.ofNullable(targetThroughputUtilization);
             return this;
         }

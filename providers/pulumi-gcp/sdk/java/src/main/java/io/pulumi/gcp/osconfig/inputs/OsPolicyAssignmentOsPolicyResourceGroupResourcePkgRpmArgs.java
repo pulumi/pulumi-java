@@ -71,22 +71,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
     	      this.source = defaults.source;
         }
 
-        public Builder setPullDeps(@Nullable Input<Boolean> pullDeps) {
+        public Builder pullDeps(@Nullable Input<Boolean> pullDeps) {
             this.pullDeps = pullDeps;
             return this;
         }
 
-        public Builder setPullDeps(@Nullable Boolean pullDeps) {
+        public Builder pullDeps(@Nullable Boolean pullDeps) {
             this.pullDeps = Input.ofNullable(pullDeps);
             return this;
         }
 
-        public Builder setSource(Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source) {
+        public Builder source(Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs source) {
+        public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

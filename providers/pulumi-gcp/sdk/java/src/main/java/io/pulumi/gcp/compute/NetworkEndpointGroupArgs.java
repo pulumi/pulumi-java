@@ -179,82 +179,82 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDefaultPort(@Nullable Input<Integer> defaultPort) {
+        public Builder defaultPort(@Nullable Input<Integer> defaultPort) {
             this.defaultPort = defaultPort;
             return this;
         }
 
-        public Builder setDefaultPort(@Nullable Integer defaultPort) {
+        public Builder defaultPort(@Nullable Integer defaultPort) {
             this.defaultPort = Input.ofNullable(defaultPort);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(Input<String> network) {
+        public Builder network(Input<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable Input<String> networkEndpointType) {
+        public Builder networkEndpointType(@Nullable Input<String> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable String networkEndpointType) {
+        public Builder networkEndpointType(@Nullable String networkEndpointType) {
             this.networkEndpointType = Input.ofNullable(networkEndpointType);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

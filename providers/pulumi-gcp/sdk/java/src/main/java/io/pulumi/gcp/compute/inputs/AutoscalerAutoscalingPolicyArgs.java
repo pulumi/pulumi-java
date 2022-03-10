@@ -232,102 +232,102 @@ public final class AutoscalerAutoscalingPolicyArgs extends io.pulumi.resources.R
     	      this.scalingSchedules = defaults.scalingSchedules;
         }
 
-        public Builder setCooldownPeriod(@Nullable Input<Integer> cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Input<Integer> cooldownPeriod) {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
-        public Builder setCooldownPeriod(@Nullable Integer cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Integer cooldownPeriod) {
             this.cooldownPeriod = Input.ofNullable(cooldownPeriod);
             return this;
         }
 
-        public Builder setCpuUtilization(@Nullable Input<AutoscalerAutoscalingPolicyCpuUtilizationArgs> cpuUtilization) {
+        public Builder cpuUtilization(@Nullable Input<AutoscalerAutoscalingPolicyCpuUtilizationArgs> cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
 
-        public Builder setCpuUtilization(@Nullable AutoscalerAutoscalingPolicyCpuUtilizationArgs cpuUtilization) {
+        public Builder cpuUtilization(@Nullable AutoscalerAutoscalingPolicyCpuUtilizationArgs cpuUtilization) {
             this.cpuUtilization = Input.ofNullable(cpuUtilization);
             return this;
         }
 
-        public Builder setLoadBalancingUtilization(@Nullable Input<AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization) {
+        public Builder loadBalancingUtilization(@Nullable Input<AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs> loadBalancingUtilization) {
             this.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
 
-        public Builder setLoadBalancingUtilization(@Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs loadBalancingUtilization) {
+        public Builder loadBalancingUtilization(@Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs loadBalancingUtilization) {
             this.loadBalancingUtilization = Input.ofNullable(loadBalancingUtilization);
             return this;
         }
 
-        public Builder setMaxReplicas(Input<Integer> maxReplicas) {
+        public Builder maxReplicas(Input<Integer> maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
-        public Builder setMaxReplicas(Integer maxReplicas) {
+        public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Input.of(Objects.requireNonNull(maxReplicas));
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<List<AutoscalerAutoscalingPolicyMetricArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<AutoscalerAutoscalingPolicyMetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<AutoscalerAutoscalingPolicyMetricArgs> metrics) {
+        public Builder metrics(@Nullable List<AutoscalerAutoscalingPolicyMetricArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setMinReplicas(Input<Integer> minReplicas) {
+        public Builder minReplicas(Input<Integer> minReplicas) {
             this.minReplicas = Objects.requireNonNull(minReplicas);
             return this;
         }
 
-        public Builder setMinReplicas(Integer minReplicas) {
+        public Builder minReplicas(Integer minReplicas) {
             this.minReplicas = Input.of(Objects.requireNonNull(minReplicas));
             return this;
         }
 
-        public Builder setMode(@Nullable Input<String> mode) {
+        public Builder mode(@Nullable Input<String> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setScaleDownControl(@Nullable Input<AutoscalerAutoscalingPolicyScaleDownControlArgs> scaleDownControl) {
+        public Builder scaleDownControl(@Nullable Input<AutoscalerAutoscalingPolicyScaleDownControlArgs> scaleDownControl) {
             this.scaleDownControl = scaleDownControl;
             return this;
         }
 
-        public Builder setScaleDownControl(@Nullable AutoscalerAutoscalingPolicyScaleDownControlArgs scaleDownControl) {
+        public Builder scaleDownControl(@Nullable AutoscalerAutoscalingPolicyScaleDownControlArgs scaleDownControl) {
             this.scaleDownControl = Input.ofNullable(scaleDownControl);
             return this;
         }
 
-        public Builder setScaleInControl(@Nullable Input<AutoscalerAutoscalingPolicyScaleInControlArgs> scaleInControl) {
+        public Builder scaleInControl(@Nullable Input<AutoscalerAutoscalingPolicyScaleInControlArgs> scaleInControl) {
             this.scaleInControl = scaleInControl;
             return this;
         }
 
-        public Builder setScaleInControl(@Nullable AutoscalerAutoscalingPolicyScaleInControlArgs scaleInControl) {
+        public Builder scaleInControl(@Nullable AutoscalerAutoscalingPolicyScaleInControlArgs scaleInControl) {
             this.scaleInControl = Input.ofNullable(scaleInControl);
             return this;
         }
 
-        public Builder setScalingSchedules(@Nullable Input<List<AutoscalerAutoscalingPolicyScalingScheduleArgs>> scalingSchedules) {
+        public Builder scalingSchedules(@Nullable Input<List<AutoscalerAutoscalingPolicyScalingScheduleArgs>> scalingSchedules) {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
 
-        public Builder setScalingSchedules(@Nullable List<AutoscalerAutoscalingPolicyScalingScheduleArgs> scalingSchedules) {
+        public Builder scalingSchedules(@Nullable List<AutoscalerAutoscalingPolicyScalingScheduleArgs> scalingSchedules) {
             this.scalingSchedules = Input.ofNullable(scalingSchedules);
             return this;
         }

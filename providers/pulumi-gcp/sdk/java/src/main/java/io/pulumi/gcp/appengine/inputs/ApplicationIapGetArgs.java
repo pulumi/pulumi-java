@@ -105,42 +105,42 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
     	      this.oauth2ClientSecretSha256 = defaults.oauth2ClientSecretSha256;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setOauth2ClientId(Input<String> oauth2ClientId) {
+        public Builder oauth2ClientId(Input<String> oauth2ClientId) {
             this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
             return this;
         }
 
-        public Builder setOauth2ClientId(String oauth2ClientId) {
+        public Builder oauth2ClientId(String oauth2ClientId) {
             this.oauth2ClientId = Input.of(Objects.requireNonNull(oauth2ClientId));
             return this;
         }
 
-        public Builder setOauth2ClientSecret(Input<String> oauth2ClientSecret) {
+        public Builder oauth2ClientSecret(Input<String> oauth2ClientSecret) {
             this.oauth2ClientSecret = Objects.requireNonNull(oauth2ClientSecret);
             return this;
         }
 
-        public Builder setOauth2ClientSecret(String oauth2ClientSecret) {
+        public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             this.oauth2ClientSecret = Input.of(Objects.requireNonNull(oauth2ClientSecret));
             return this;
         }
 
-        public Builder setOauth2ClientSecretSha256(@Nullable Input<String> oauth2ClientSecretSha256) {
+        public Builder oauth2ClientSecretSha256(@Nullable Input<String> oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
 
-        public Builder setOauth2ClientSecretSha256(@Nullable String oauth2ClientSecretSha256) {
+        public Builder oauth2ClientSecretSha256(@Nullable String oauth2ClientSecretSha256) {
             this.oauth2ClientSecretSha256 = Input.ofNullable(oauth2ClientSecretSha256);
             return this;
         }

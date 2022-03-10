@@ -235,122 +235,122 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupId = defaults.resourceGroupId;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthorization(Input<AzureClusterAuthorizationArgs> authorization) {
+        public Builder authorization(Input<AzureClusterAuthorizationArgs> authorization) {
             this.authorization = Objects.requireNonNull(authorization);
             return this;
         }
 
-        public Builder setAuthorization(AzureClusterAuthorizationArgs authorization) {
+        public Builder authorization(AzureClusterAuthorizationArgs authorization) {
             this.authorization = Input.of(Objects.requireNonNull(authorization));
             return this;
         }
 
-        public Builder setAzureRegion(Input<String> azureRegion) {
+        public Builder azureRegion(Input<String> azureRegion) {
             this.azureRegion = Objects.requireNonNull(azureRegion);
             return this;
         }
 
-        public Builder setAzureRegion(String azureRegion) {
+        public Builder azureRegion(String azureRegion) {
             this.azureRegion = Input.of(Objects.requireNonNull(azureRegion));
             return this;
         }
 
-        public Builder setClient(Input<String> client) {
+        public Builder client(Input<String> client) {
             this.client = Objects.requireNonNull(client);
             return this;
         }
 
-        public Builder setClient(String client) {
+        public Builder client(String client) {
             this.client = Input.of(Objects.requireNonNull(client));
             return this;
         }
 
-        public Builder setControlPlane(Input<AzureClusterControlPlaneArgs> controlPlane) {
+        public Builder controlPlane(Input<AzureClusterControlPlaneArgs> controlPlane) {
             this.controlPlane = Objects.requireNonNull(controlPlane);
             return this;
         }
 
-        public Builder setControlPlane(AzureClusterControlPlaneArgs controlPlane) {
+        public Builder controlPlane(AzureClusterControlPlaneArgs controlPlane) {
             this.controlPlane = Input.of(Objects.requireNonNull(controlPlane));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFleet(Input<AzureClusterFleetArgs> fleet) {
+        public Builder fleet(Input<AzureClusterFleetArgs> fleet) {
             this.fleet = Objects.requireNonNull(fleet);
             return this;
         }
 
-        public Builder setFleet(AzureClusterFleetArgs fleet) {
+        public Builder fleet(AzureClusterFleetArgs fleet) {
             this.fleet = Input.of(Objects.requireNonNull(fleet));
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworking(Input<AzureClusterNetworkingArgs> networking) {
+        public Builder networking(Input<AzureClusterNetworkingArgs> networking) {
             this.networking = Objects.requireNonNull(networking);
             return this;
         }
 
-        public Builder setNetworking(AzureClusterNetworkingArgs networking) {
+        public Builder networking(AzureClusterNetworkingArgs networking) {
             this.networking = Input.of(Objects.requireNonNull(networking));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResourceGroupId(Input<String> resourceGroupId) {
+        public Builder resourceGroupId(Input<String> resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
 
-        public Builder setResourceGroupId(String resourceGroupId) {
+        public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Input.of(Objects.requireNonNull(resourceGroupId));
             return this;
         }

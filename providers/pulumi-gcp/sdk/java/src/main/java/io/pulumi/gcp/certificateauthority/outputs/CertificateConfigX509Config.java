@@ -130,27 +130,27 @@ public final class CertificateConfigX509Config {
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
-        public Builder setCaOptions(@Nullable CertificateConfigX509ConfigCaOptions caOptions) {
+        public Builder caOptions(@Nullable CertificateConfigX509ConfigCaOptions caOptions) {
             this.caOptions = caOptions;
             return this;
         }
 
-        public Builder setKeyUsage(CertificateConfigX509ConfigKeyUsage keyUsage) {
+        public Builder keyUsage(CertificateConfigX509ConfigKeyUsage keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable List<CertificateConfigX509ConfigPolicyId> policyIds) {
+        public Builder policyIds(@Nullable List<CertificateConfigX509ConfigPolicyId> policyIds) {
             this.policyIds = policyIds;
             return this;
         }

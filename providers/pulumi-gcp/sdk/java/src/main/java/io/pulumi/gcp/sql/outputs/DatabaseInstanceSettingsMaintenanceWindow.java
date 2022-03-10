@@ -86,17 +86,17 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
     	      this.updateTrack = defaults.updateTrack;
         }
 
-        public Builder setDay(@Nullable Integer day) {
+        public Builder day(@Nullable Integer day) {
             this.day = day;
             return this;
         }
 
-        public Builder setHour(@Nullable Integer hour) {
+        public Builder hour(@Nullable Integer hour) {
             this.hour = hour;
             return this;
         }
 
-        public Builder setUpdateTrack(@Nullable String updateTrack) {
+        public Builder updateTrack(@Nullable String updateTrack) {
             this.updateTrack = updateTrack;
             return this;
         }

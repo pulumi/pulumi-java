@@ -97,12 +97,12 @@ public final class OccurenceAttestationSignature {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setPublicKeyId(String publicKeyId) {
+        public Builder publicKeyId(String publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
 
-        public Builder setSignature(@Nullable String signature) {
+        public Builder signature(@Nullable String signature) {
             this.signature = signature;
             return this;
         }

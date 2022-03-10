@@ -52,12 +52,12 @@ public final class TableColumnFamilyArgs extends io.pulumi.resources.ResourceArg
     	      this.family = defaults.family;
         }
 
-        public Builder setFamily(Input<String> family) {
+        public Builder family(Input<String> family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Input.of(Objects.requireNonNull(family));
             return this;
         }

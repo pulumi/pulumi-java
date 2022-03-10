@@ -110,32 +110,32 @@ public final class RegionBackendServiceConnectionTrackingPolicyArgs extends io.p
     	      this.trackingMode = defaults.trackingMode;
         }
 
-        public Builder setConnectionPersistenceOnUnhealthyBackends(@Nullable Input<String> connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable Input<String> connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
 
-        public Builder setConnectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = Input.ofNullable(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
 
-        public Builder setIdleTimeoutSec(@Nullable Input<Integer> idleTimeoutSec) {
+        public Builder idleTimeoutSec(@Nullable Input<Integer> idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
 
-        public Builder setIdleTimeoutSec(@Nullable Integer idleTimeoutSec) {
+        public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
             this.idleTimeoutSec = Input.ofNullable(idleTimeoutSec);
             return this;
         }
 
-        public Builder setTrackingMode(@Nullable Input<String> trackingMode) {
+        public Builder trackingMode(@Nullable Input<String> trackingMode) {
             this.trackingMode = trackingMode;
             return this;
         }
 
-        public Builder setTrackingMode(@Nullable String trackingMode) {
+        public Builder trackingMode(@Nullable String trackingMode) {
             this.trackingMode = Input.ofNullable(trackingMode);
             return this;
         }

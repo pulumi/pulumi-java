@@ -69,22 +69,22 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setTagValue(Input<String> tagValue) {
+        public Builder tagValue(Input<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
-        public Builder setTagValue(String tagValue) {
+        public Builder tagValue(String tagValue) {
             this.tagValue = Input.of(Objects.requireNonNull(tagValue));
             return this;
         }

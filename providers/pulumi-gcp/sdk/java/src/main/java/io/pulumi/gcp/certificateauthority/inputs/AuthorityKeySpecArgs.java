@@ -73,22 +73,22 @@ public final class AuthorityKeySpecArgs extends io.pulumi.resources.ResourceArgs
     	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
         }
 
-        public Builder setAlgorithm(@Nullable Input<String> algorithm) {
+        public Builder algorithm(@Nullable Input<String> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = Input.ofNullable(algorithm);
             return this;
         }
 
-        public Builder setCloudKmsKeyVersion(@Nullable Input<String> cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(@Nullable Input<String> cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
 
-        public Builder setCloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = Input.ofNullable(cloudKmsKeyVersion);
             return this;
         }

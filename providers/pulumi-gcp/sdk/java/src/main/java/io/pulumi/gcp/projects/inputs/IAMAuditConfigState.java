@@ -105,42 +105,42 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder setAuditLogConfigs(@Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable Input<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs) {
             this.auditLogConfigs = auditLogConfigs;
             return this;
         }
 
-        public Builder setAuditLogConfigs(@Nullable List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
+        public Builder auditLogConfigs(@Nullable List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
             this.auditLogConfigs = Input.ofNullable(auditLogConfigs);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

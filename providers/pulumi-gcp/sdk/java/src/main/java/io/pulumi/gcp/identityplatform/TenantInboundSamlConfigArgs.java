@@ -159,72 +159,72 @@ public final class TenantInboundSamlConfigArgs extends io.pulumi.resources.Resou
     	      this.tenant = defaults.tenant;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setIdpConfig(Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig) {
+        public Builder idpConfig(Input<TenantInboundSamlConfigIdpConfigArgs> idpConfig) {
             this.idpConfig = Objects.requireNonNull(idpConfig);
             return this;
         }
 
-        public Builder setIdpConfig(TenantInboundSamlConfigIdpConfigArgs idpConfig) {
+        public Builder idpConfig(TenantInboundSamlConfigIdpConfigArgs idpConfig) {
             this.idpConfig = Input.of(Objects.requireNonNull(idpConfig));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSpConfig(Input<TenantInboundSamlConfigSpConfigArgs> spConfig) {
+        public Builder spConfig(Input<TenantInboundSamlConfigSpConfigArgs> spConfig) {
             this.spConfig = Objects.requireNonNull(spConfig);
             return this;
         }
 
-        public Builder setSpConfig(TenantInboundSamlConfigSpConfigArgs spConfig) {
+        public Builder spConfig(TenantInboundSamlConfigSpConfigArgs spConfig) {
             this.spConfig = Input.of(Objects.requireNonNull(spConfig));
             return this;
         }
 
-        public Builder setTenant(Input<String> tenant) {
+        public Builder tenant(Input<String> tenant) {
             this.tenant = Objects.requireNonNull(tenant);
             return this;
         }
 
-        public Builder setTenant(String tenant) {
+        public Builder tenant(String tenant) {
             this.tenant = Input.of(Objects.requireNonNull(tenant));
             return this;
         }

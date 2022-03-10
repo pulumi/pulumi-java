@@ -40,7 +40,7 @@ public final class GetClusterWorkloadIdentityConfig {
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setWorkloadPool(String workloadPool) {
+        public Builder workloadPool(String workloadPool) {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }

@@ -117,42 +117,42 @@ public final class URLMapPathMatcherPathRuleGetArgs extends io.pulumi.resources.
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setPaths(Input<List<String>> paths) {
+        public Builder paths(Input<List<String>> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Input.of(Objects.requireNonNull(paths));
             return this;
         }
 
-        public Builder setRouteAction(@Nullable Input<URLMapPathMatcherPathRuleRouteActionGetArgs> routeAction) {
+        public Builder routeAction(@Nullable Input<URLMapPathMatcherPathRuleRouteActionGetArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setRouteAction(@Nullable URLMapPathMatcherPathRuleRouteActionGetArgs routeAction) {
+        public Builder routeAction(@Nullable URLMapPathMatcherPathRuleRouteActionGetArgs routeAction) {
             this.routeAction = Input.ofNullable(routeAction);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable Input<URLMapPathMatcherPathRuleUrlRedirectGetArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Input<URLMapPathMatcherPathRuleUrlRedirectGetArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable URLMapPathMatcherPathRuleUrlRedirectGetArgs urlRedirect) {
+        public Builder urlRedirect(@Nullable URLMapPathMatcherPathRuleUrlRedirectGetArgs urlRedirect) {
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }

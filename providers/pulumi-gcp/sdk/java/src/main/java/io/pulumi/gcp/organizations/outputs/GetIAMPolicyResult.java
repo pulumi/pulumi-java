@@ -87,22 +87,22 @@ public final class GetIAMPolicyResult {
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder setAuditConfigs(@Nullable List<GetIAMPolicyAuditConfig> auditConfigs) {
+        public Builder auditConfigs(@Nullable List<GetIAMPolicyAuditConfig> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
-        public Builder setBindings(@Nullable List<GetIAMPolicyBinding> bindings) {
+        public Builder bindings(@Nullable List<GetIAMPolicyBinding> bindings) {
             this.bindings = bindings;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }

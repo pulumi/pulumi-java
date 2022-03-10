@@ -119,27 +119,27 @@ public final class FeatureMembershipConfigmanagement {
     	      this.version = defaults.version;
         }
 
-        public Builder setBinauthz(@Nullable FeatureMembershipConfigmanagementBinauthz binauthz) {
+        public Builder binauthz(@Nullable FeatureMembershipConfigmanagementBinauthz binauthz) {
             this.binauthz = binauthz;
             return this;
         }
 
-        public Builder setConfigSync(@Nullable FeatureMembershipConfigmanagementConfigSync configSync) {
+        public Builder configSync(@Nullable FeatureMembershipConfigmanagementConfigSync configSync) {
             this.configSync = configSync;
             return this;
         }
 
-        public Builder setHierarchyController(@Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController) {
+        public Builder hierarchyController(@Nullable FeatureMembershipConfigmanagementHierarchyController hierarchyController) {
             this.hierarchyController = hierarchyController;
             return this;
         }
 
-        public Builder setPolicyController(@Nullable FeatureMembershipConfigmanagementPolicyController policyController) {
+        public Builder policyController(@Nullable FeatureMembershipConfigmanagementPolicyController policyController) {
             this.policyController = policyController;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

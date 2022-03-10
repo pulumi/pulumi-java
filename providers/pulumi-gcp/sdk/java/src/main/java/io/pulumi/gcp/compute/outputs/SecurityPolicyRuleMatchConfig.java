@@ -53,7 +53,7 @@ public final class SecurityPolicyRuleMatchConfig {
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setSrcIpRanges(List<String> srcIpRanges) {
+        public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }

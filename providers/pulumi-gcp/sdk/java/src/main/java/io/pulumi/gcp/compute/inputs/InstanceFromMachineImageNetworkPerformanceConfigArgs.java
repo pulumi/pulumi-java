@@ -48,12 +48,12 @@ public final class InstanceFromMachineImageNetworkPerformanceConfigArgs extends 
     	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
         }
 
-        public Builder setTotalEgressBandwidthTier(Input<String> totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(Input<String> totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }
 
-        public Builder setTotalEgressBandwidthTier(String totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Input.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
         }

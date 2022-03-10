@@ -226,102 +226,102 @@ public final class ClusterAddonsConfigGetArgs extends io.pulumi.resources.Resour
     	      this.networkPolicyConfig = defaults.networkPolicyConfig;
         }
 
-        public Builder setCloudrunConfig(@Nullable Input<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig) {
+        public Builder cloudrunConfig(@Nullable Input<ClusterAddonsConfigCloudrunConfigGetArgs> cloudrunConfig) {
             this.cloudrunConfig = cloudrunConfig;
             return this;
         }
 
-        public Builder setCloudrunConfig(@Nullable ClusterAddonsConfigCloudrunConfigGetArgs cloudrunConfig) {
+        public Builder cloudrunConfig(@Nullable ClusterAddonsConfigCloudrunConfigGetArgs cloudrunConfig) {
             this.cloudrunConfig = Input.ofNullable(cloudrunConfig);
             return this;
         }
 
-        public Builder setConfigConnectorConfig(@Nullable Input<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig) {
+        public Builder configConnectorConfig(@Nullable Input<ClusterAddonsConfigConfigConnectorConfigGetArgs> configConnectorConfig) {
             this.configConnectorConfig = configConnectorConfig;
             return this;
         }
 
-        public Builder setConfigConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfigGetArgs configConnectorConfig) {
+        public Builder configConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfigGetArgs configConnectorConfig) {
             this.configConnectorConfig = Input.ofNullable(configConnectorConfig);
             return this;
         }
 
-        public Builder setDnsCacheConfig(@Nullable Input<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig) {
+        public Builder dnsCacheConfig(@Nullable Input<ClusterAddonsConfigDnsCacheConfigGetArgs> dnsCacheConfig) {
             this.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
 
-        public Builder setDnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfigGetArgs dnsCacheConfig) {
+        public Builder dnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfigGetArgs dnsCacheConfig) {
             this.dnsCacheConfig = Input.ofNullable(dnsCacheConfig);
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfig(@Nullable Input<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(@Nullable Input<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs> gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfigGetArgs gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = Input.ofNullable(gcePersistentDiskCsiDriverConfig);
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfig(@Nullable Input<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(@Nullable Input<ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs> gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfigGetArgs gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = Input.ofNullable(gcpFilestoreCsiDriverConfig);
             return this;
         }
 
-        public Builder setHorizontalPodAutoscaling(@Nullable Input<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(@Nullable Input<ClusterAddonsConfigHorizontalPodAutoscalingGetArgs> horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
 
-        public Builder setHorizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscalingGetArgs horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscalingGetArgs horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = Input.ofNullable(horizontalPodAutoscaling);
             return this;
         }
 
-        public Builder setHttpLoadBalancing(@Nullable Input<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing) {
+        public Builder httpLoadBalancing(@Nullable Input<ClusterAddonsConfigHttpLoadBalancingGetArgs> httpLoadBalancing) {
             this.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
 
-        public Builder setHttpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancingGetArgs httpLoadBalancing) {
+        public Builder httpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancingGetArgs httpLoadBalancing) {
             this.httpLoadBalancing = Input.ofNullable(httpLoadBalancing);
             return this;
         }
 
-        public Builder setIstioConfig(@Nullable Input<ClusterAddonsConfigIstioConfigGetArgs> istioConfig) {
+        public Builder istioConfig(@Nullable Input<ClusterAddonsConfigIstioConfigGetArgs> istioConfig) {
             this.istioConfig = istioConfig;
             return this;
         }
 
-        public Builder setIstioConfig(@Nullable ClusterAddonsConfigIstioConfigGetArgs istioConfig) {
+        public Builder istioConfig(@Nullable ClusterAddonsConfigIstioConfigGetArgs istioConfig) {
             this.istioConfig = Input.ofNullable(istioConfig);
             return this;
         }
 
-        public Builder setKalmConfig(@Nullable Input<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig) {
+        public Builder kalmConfig(@Nullable Input<ClusterAddonsConfigKalmConfigGetArgs> kalmConfig) {
             this.kalmConfig = kalmConfig;
             return this;
         }
 
-        public Builder setKalmConfig(@Nullable ClusterAddonsConfigKalmConfigGetArgs kalmConfig) {
+        public Builder kalmConfig(@Nullable ClusterAddonsConfigKalmConfigGetArgs kalmConfig) {
             this.kalmConfig = Input.ofNullable(kalmConfig);
             return this;
         }
 
-        public Builder setNetworkPolicyConfig(@Nullable Input<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig) {
+        public Builder networkPolicyConfig(@Nullable Input<ClusterAddonsConfigNetworkPolicyConfigGetArgs> networkPolicyConfig) {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
 
-        public Builder setNetworkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfigGetArgs networkPolicyConfig) {
+        public Builder networkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfigGetArgs networkPolicyConfig) {
             this.networkPolicyConfig = Input.ofNullable(networkPolicyConfig);
             return this;
         }

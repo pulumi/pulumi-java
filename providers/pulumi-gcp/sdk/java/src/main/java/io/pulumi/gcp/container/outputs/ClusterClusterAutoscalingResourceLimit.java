@@ -88,17 +88,17 @@ public final class ClusterClusterAutoscalingResourceLimit {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setMaximum(@Nullable Integer maximum) {
+        public Builder maximum(@Nullable Integer maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMinimum(@Nullable Integer minimum) {
+        public Builder minimum(@Nullable Integer minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

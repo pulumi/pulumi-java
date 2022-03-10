@@ -40,7 +40,7 @@ public final class GetBucketEncryption {
     	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
         }
 
-        public Builder setDefaultKmsKeyName(String defaultKmsKeyName) {
+        public Builder defaultKmsKeyName(String defaultKmsKeyName) {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }

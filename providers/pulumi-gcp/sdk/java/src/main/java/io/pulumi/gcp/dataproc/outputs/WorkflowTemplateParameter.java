@@ -101,22 +101,22 @@ public final class WorkflowTemplateParameter {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFields(List<String> fields) {
+        public Builder fields(List<String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValidation(@Nullable WorkflowTemplateParameterValidation validation) {
+        public Builder validation(@Nullable WorkflowTemplateParameterValidation validation) {
             this.validation = validation;
             return this;
         }

@@ -513,272 +513,272 @@ public final class InstanceTemplateState extends io.pulumi.resources.ResourceArg
     	      this.tagsFingerprint = defaults.tagsFingerprint;
         }
 
-        public Builder setAdvancedMachineFeatures(@Nullable Input<InstanceTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable Input<InstanceTemplateAdvancedMachineFeaturesGetArgs> advancedMachineFeatures) {
             this.advancedMachineFeatures = advancedMachineFeatures;
             return this;
         }
 
-        public Builder setAdvancedMachineFeatures(@Nullable InstanceTemplateAdvancedMachineFeaturesGetArgs advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(@Nullable InstanceTemplateAdvancedMachineFeaturesGetArgs advancedMachineFeatures) {
             this.advancedMachineFeatures = Input.ofNullable(advancedMachineFeatures);
             return this;
         }
 
-        public Builder setCanIpForward(@Nullable Input<Boolean> canIpForward) {
+        public Builder canIpForward(@Nullable Input<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
 
-        public Builder setCanIpForward(@Nullable Boolean canIpForward) {
+        public Builder canIpForward(@Nullable Boolean canIpForward) {
             this.canIpForward = Input.ofNullable(canIpForward);
             return this;
         }
 
-        public Builder setConfidentialInstanceConfig(@Nullable Input<InstanceTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable Input<InstanceTemplateConfidentialInstanceConfigGetArgs> confidentialInstanceConfig) {
             this.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
 
-        public Builder setConfidentialInstanceConfig(@Nullable InstanceTemplateConfidentialInstanceConfigGetArgs confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(@Nullable InstanceTemplateConfidentialInstanceConfigGetArgs confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Input.ofNullable(confidentialInstanceConfig);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisks(@Nullable Input<List<InstanceTemplateDiskGetArgs>> disks) {
+        public Builder disks(@Nullable Input<List<InstanceTemplateDiskGetArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<InstanceTemplateDiskGetArgs> disks) {
+        public Builder disks(@Nullable List<InstanceTemplateDiskGetArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setEnableDisplay(@Nullable Input<Boolean> enableDisplay) {
+        public Builder enableDisplay(@Nullable Input<Boolean> enableDisplay) {
             this.enableDisplay = enableDisplay;
             return this;
         }
 
-        public Builder setEnableDisplay(@Nullable Boolean enableDisplay) {
+        public Builder enableDisplay(@Nullable Boolean enableDisplay) {
             this.enableDisplay = Input.ofNullable(enableDisplay);
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable Input<List<InstanceTemplateGuestAcceleratorGetArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Input<List<InstanceTemplateGuestAcceleratorGetArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<InstanceTemplateGuestAcceleratorGetArgs> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<InstanceTemplateGuestAcceleratorGetArgs> guestAccelerators) {
             this.guestAccelerators = Input.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder setInstanceDescription(@Nullable Input<String> instanceDescription) {
+        public Builder instanceDescription(@Nullable Input<String> instanceDescription) {
             this.instanceDescription = instanceDescription;
             return this;
         }
 
-        public Builder setInstanceDescription(@Nullable String instanceDescription) {
+        public Builder instanceDescription(@Nullable String instanceDescription) {
             this.instanceDescription = Input.ofNullable(instanceDescription);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,Object>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,Object>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,Object> metadata) {
+        public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMetadataFingerprint(@Nullable Input<String> metadataFingerprint) {
+        public Builder metadataFingerprint(@Nullable Input<String> metadataFingerprint) {
             this.metadataFingerprint = metadataFingerprint;
             return this;
         }
 
-        public Builder setMetadataFingerprint(@Nullable String metadataFingerprint) {
+        public Builder metadataFingerprint(@Nullable String metadataFingerprint) {
             this.metadataFingerprint = Input.ofNullable(metadataFingerprint);
             return this;
         }
 
-        public Builder setMetadataStartupScript(@Nullable Input<String> metadataStartupScript) {
+        public Builder metadataStartupScript(@Nullable Input<String> metadataStartupScript) {
             this.metadataStartupScript = metadataStartupScript;
             return this;
         }
 
-        public Builder setMetadataStartupScript(@Nullable String metadataStartupScript) {
+        public Builder metadataStartupScript(@Nullable String metadataStartupScript) {
             this.metadataStartupScript = Input.ofNullable(metadataStartupScript);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<InstanceTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<InstanceTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<InstanceTemplateNetworkInterfaceGetArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<InstanceTemplateNetworkInterfaceGetArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkPerformanceConfig(@Nullable Input<InstanceTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable Input<InstanceTemplateNetworkPerformanceConfigGetArgs> networkPerformanceConfig) {
             this.networkPerformanceConfig = networkPerformanceConfig;
             return this;
         }
 
-        public Builder setNetworkPerformanceConfig(@Nullable InstanceTemplateNetworkPerformanceConfigGetArgs networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(@Nullable InstanceTemplateNetworkPerformanceConfigGetArgs networkPerformanceConfig) {
             this.networkPerformanceConfig = Input.ofNullable(networkPerformanceConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable Input<InstanceTemplateReservationAffinityGetArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Input<InstanceTemplateReservationAffinityGetArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable InstanceTemplateReservationAffinityGetArgs reservationAffinity) {
+        public Builder reservationAffinity(@Nullable InstanceTemplateReservationAffinityGetArgs reservationAffinity) {
             this.reservationAffinity = Input.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Input<InstanceTemplateSchedulingGetArgs> scheduling) {
+        public Builder scheduling(@Nullable Input<InstanceTemplateSchedulingGetArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
-        public Builder setScheduling(@Nullable InstanceTemplateSchedulingGetArgs scheduling) {
+        public Builder scheduling(@Nullable InstanceTemplateSchedulingGetArgs scheduling) {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<InstanceTemplateServiceAccountGetArgs> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<InstanceTemplateServiceAccountGetArgs> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable InstanceTemplateServiceAccountGetArgs serviceAccount) {
+        public Builder serviceAccount(@Nullable InstanceTemplateServiceAccountGetArgs serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable Input<InstanceTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Input<InstanceTemplateShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable InstanceTemplateShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable InstanceTemplateShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsFingerprint(@Nullable Input<String> tagsFingerprint) {
+        public Builder tagsFingerprint(@Nullable Input<String> tagsFingerprint) {
             this.tagsFingerprint = tagsFingerprint;
             return this;
         }
 
-        public Builder setTagsFingerprint(@Nullable String tagsFingerprint) {
+        public Builder tagsFingerprint(@Nullable String tagsFingerprint) {
             this.tagsFingerprint = Input.ofNullable(tagsFingerprint);
             return this;
         }

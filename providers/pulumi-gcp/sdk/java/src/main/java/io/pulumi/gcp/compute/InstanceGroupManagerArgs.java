@@ -289,142 +289,142 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable Input<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable Input<InstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable InstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable InstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
             this.autoHealingPolicies = Input.ofNullable(autoHealingPolicies);
             return this;
         }
 
-        public Builder setBaseInstanceName(Input<String> baseInstanceName) {
+        public Builder baseInstanceName(Input<String> baseInstanceName) {
             this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
             return this;
         }
 
-        public Builder setBaseInstanceName(String baseInstanceName) {
+        public Builder baseInstanceName(String baseInstanceName) {
             this.baseInstanceName = Input.of(Objects.requireNonNull(baseInstanceName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable Input<List<InstanceGroupManagerNamedPortArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Input<List<InstanceGroupManagerNamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable List<InstanceGroupManagerNamedPortArgs> namedPorts) {
+        public Builder namedPorts(@Nullable List<InstanceGroupManagerNamedPortArgs> namedPorts) {
             this.namedPorts = Input.ofNullable(namedPorts);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setStatefulDisks(@Nullable Input<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
+        public Builder statefulDisks(@Nullable Input<List<InstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
             this.statefulDisks = statefulDisks;
             return this;
         }
 
-        public Builder setStatefulDisks(@Nullable List<InstanceGroupManagerStatefulDiskArgs> statefulDisks) {
+        public Builder statefulDisks(@Nullable List<InstanceGroupManagerStatefulDiskArgs> statefulDisks) {
             this.statefulDisks = Input.ofNullable(statefulDisks);
             return this;
         }
 
-        public Builder setTargetPools(@Nullable Input<List<String>> targetPools) {
+        public Builder targetPools(@Nullable Input<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
 
-        public Builder setTargetPools(@Nullable List<String> targetPools) {
+        public Builder targetPools(@Nullable List<String> targetPools) {
             this.targetPools = Input.ofNullable(targetPools);
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Input<Integer> targetSize) {
+        public Builder targetSize(@Nullable Input<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Integer targetSize) {
+        public Builder targetSize(@Nullable Integer targetSize) {
             this.targetSize = Input.ofNullable(targetSize);
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
+        public Builder updatePolicy(@Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
+        public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             this.updatePolicy = Input.ofNullable(updatePolicy);
             return this;
         }
 
-        public Builder setVersions(Input<List<InstanceGroupManagerVersionArgs>> versions) {
+        public Builder versions(Input<List<InstanceGroupManagerVersionArgs>> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
-        public Builder setVersions(List<InstanceGroupManagerVersionArgs> versions) {
+        public Builder versions(List<InstanceGroupManagerVersionArgs> versions) {
             this.versions = Input.of(Objects.requireNonNull(versions));
             return this;
         }
 
-        public Builder setWaitForInstances(@Nullable Input<Boolean> waitForInstances) {
+        public Builder waitForInstances(@Nullable Input<Boolean> waitForInstances) {
             this.waitForInstances = waitForInstances;
             return this;
         }
 
-        public Builder setWaitForInstances(@Nullable Boolean waitForInstances) {
+        public Builder waitForInstances(@Nullable Boolean waitForInstances) {
             this.waitForInstances = Input.ofNullable(waitForInstances);
             return this;
         }
 
-        public Builder setWaitForInstancesStatus(@Nullable Input<String> waitForInstancesStatus) {
+        public Builder waitForInstancesStatus(@Nullable Input<String> waitForInstancesStatus) {
             this.waitForInstancesStatus = waitForInstancesStatus;
             return this;
         }
 
-        public Builder setWaitForInstancesStatus(@Nullable String waitForInstancesStatus) {
+        public Builder waitForInstancesStatus(@Nullable String waitForInstancesStatus) {
             this.waitForInstancesStatus = Input.ofNullable(waitForInstancesStatus);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

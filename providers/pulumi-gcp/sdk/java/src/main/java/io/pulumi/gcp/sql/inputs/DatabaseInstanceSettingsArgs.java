@@ -294,172 +294,172 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
     	      this.version = defaults.version;
         }
 
-        public Builder setActivationPolicy(@Nullable Input<String> activationPolicy) {
+        public Builder activationPolicy(@Nullable Input<String> activationPolicy) {
             this.activationPolicy = activationPolicy;
             return this;
         }
 
-        public Builder setActivationPolicy(@Nullable String activationPolicy) {
+        public Builder activationPolicy(@Nullable String activationPolicy) {
             this.activationPolicy = Input.ofNullable(activationPolicy);
             return this;
         }
 
-        public Builder setAvailabilityType(@Nullable Input<String> availabilityType) {
+        public Builder availabilityType(@Nullable Input<String> availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
 
-        public Builder setAvailabilityType(@Nullable String availabilityType) {
+        public Builder availabilityType(@Nullable String availabilityType) {
             this.availabilityType = Input.ofNullable(availabilityType);
             return this;
         }
 
-        public Builder setBackupConfiguration(@Nullable Input<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration) {
+        public Builder backupConfiguration(@Nullable Input<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
 
-        public Builder setBackupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfigurationArgs backupConfiguration) {
+        public Builder backupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfigurationArgs backupConfiguration) {
             this.backupConfiguration = Input.ofNullable(backupConfiguration);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable Input<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags) {
+        public Builder databaseFlags(@Nullable Input<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlagArgs> databaseFlags) {
+        public Builder databaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlagArgs> databaseFlags) {
             this.databaseFlags = Input.ofNullable(databaseFlags);
             return this;
         }
 
-        public Builder setDiskAutoresize(@Nullable Input<Boolean> diskAutoresize) {
+        public Builder diskAutoresize(@Nullable Input<Boolean> diskAutoresize) {
             this.diskAutoresize = diskAutoresize;
             return this;
         }
 
-        public Builder setDiskAutoresize(@Nullable Boolean diskAutoresize) {
+        public Builder diskAutoresize(@Nullable Boolean diskAutoresize) {
             this.diskAutoresize = Input.ofNullable(diskAutoresize);
             return this;
         }
 
-        public Builder setDiskAutoresizeLimit(@Nullable Input<Integer> diskAutoresizeLimit) {
+        public Builder diskAutoresizeLimit(@Nullable Input<Integer> diskAutoresizeLimit) {
             this.diskAutoresizeLimit = diskAutoresizeLimit;
             return this;
         }
 
-        public Builder setDiskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
+        public Builder diskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
             this.diskAutoresizeLimit = Input.ofNullable(diskAutoresizeLimit);
             return this;
         }
 
-        public Builder setDiskSize(@Nullable Input<Integer> diskSize) {
+        public Builder diskSize(@Nullable Input<Integer> diskSize) {
             this.diskSize = diskSize;
             return this;
         }
 
-        public Builder setDiskSize(@Nullable Integer diskSize) {
+        public Builder diskSize(@Nullable Integer diskSize) {
             this.diskSize = Input.ofNullable(diskSize);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Input<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setInsightsConfig(@Nullable Input<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig) {
+        public Builder insightsConfig(@Nullable Input<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
 
-        public Builder setInsightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfigArgs insightsConfig) {
+        public Builder insightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfigArgs insightsConfig) {
             this.insightsConfig = Input.ofNullable(insightsConfig);
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable Input<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Input<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable DatabaseInstanceSettingsIpConfigurationArgs ipConfiguration) {
+        public Builder ipConfiguration(@Nullable DatabaseInstanceSettingsIpConfigurationArgs ipConfiguration) {
             this.ipConfiguration = Input.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder setLocationPreference(@Nullable Input<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference) {
+        public Builder locationPreference(@Nullable Input<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
 
-        public Builder setLocationPreference(@Nullable DatabaseInstanceSettingsLocationPreferenceArgs locationPreference) {
+        public Builder locationPreference(@Nullable DatabaseInstanceSettingsLocationPreferenceArgs locationPreference) {
             this.locationPreference = Input.ofNullable(locationPreference);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindowArgs maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<String> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<String> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable String pricingPlan) {
+        public Builder pricingPlan(@Nullable String pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder setTier(Input<String> tier) {
+        public Builder tier(Input<String> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

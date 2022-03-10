@@ -74,22 +74,22 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
     	      this.mimeType = defaults.mimeType;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setMimeType(@Nullable Input<String> mimeType) {
+        public Builder mimeType(@Nullable Input<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
-        public Builder setMimeType(@Nullable String mimeType) {
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = Input.ofNullable(mimeType);
             return this;
         }

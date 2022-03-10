@@ -122,52 +122,52 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.streamingConfig = defaults.streamingConfig;
         }
 
-        public Builder setConfigId(Input<String> configId) {
+        public Builder configId(Input<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Input.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setOrganization(Input<String> organization) {
+        public Builder organization(Input<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
-        public Builder setOrganization(String organization) {
+        public Builder organization(String organization) {
             this.organization = Input.of(Objects.requireNonNull(organization));
             return this;
         }
 
-        public Builder setPubsubTopic(Input<String> pubsubTopic) {
+        public Builder pubsubTopic(Input<String> pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
 
-        public Builder setStreamingConfig(Input<NotificationConfigStreamingConfigArgs> streamingConfig) {
+        public Builder streamingConfig(Input<NotificationConfigStreamingConfigArgs> streamingConfig) {
             this.streamingConfig = Objects.requireNonNull(streamingConfig);
             return this;
         }
 
-        public Builder setStreamingConfig(NotificationConfigStreamingConfigArgs streamingConfig) {
+        public Builder streamingConfig(NotificationConfigStreamingConfigArgs streamingConfig) {
             this.streamingConfig = Input.of(Objects.requireNonNull(streamingConfig));
             return this;
         }

@@ -68,12 +68,12 @@ public final class TriggerDestination {
     	      this.cloudRunService = defaults.cloudRunService;
         }
 
-        public Builder setCloudFunction(@Nullable String cloudFunction) {
+        public Builder cloudFunction(@Nullable String cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
-        public Builder setCloudRunService(@Nullable TriggerDestinationCloudRunService cloudRunService) {
+        public Builder cloudRunService(@Nullable TriggerDestinationCloudRunService cloudRunService) {
             this.cloudRunService = cloudRunService;
             return this;
         }

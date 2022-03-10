@@ -141,32 +141,32 @@ public final class CxPageFormParameter {
     	      this.required = defaults.required;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEntityType(@Nullable String entityType) {
+        public Builder entityType(@Nullable String entityType) {
             this.entityType = entityType;
             return this;
         }
 
-        public Builder setFillBehavior(@Nullable CxPageFormParameterFillBehavior fillBehavior) {
+        public Builder fillBehavior(@Nullable CxPageFormParameterFillBehavior fillBehavior) {
             this.fillBehavior = fillBehavior;
             return this;
         }
 
-        public Builder setIsList(@Nullable Boolean isList) {
+        public Builder isList(@Nullable Boolean isList) {
             this.isList = isList;
             return this;
         }
 
-        public Builder setRedact(@Nullable Boolean redact) {
+        public Builder redact(@Nullable Boolean redact) {
             this.redact = redact;
             return this;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }

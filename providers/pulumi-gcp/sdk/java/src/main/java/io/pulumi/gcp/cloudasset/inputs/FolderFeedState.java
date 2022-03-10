@@ -217,102 +217,102 @@ public final class FolderFeedState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setAssetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
-        public Builder setAssetNames(@Nullable List<String> assetNames) {
+        public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Input.ofNullable(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable List<String> assetTypes) {
+        public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Input.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder setBillingProject(@Nullable Input<String> billingProject) {
+        public Builder billingProject(@Nullable Input<String> billingProject) {
             this.billingProject = billingProject;
             return this;
         }
 
-        public Builder setBillingProject(@Nullable String billingProject) {
+        public Builder billingProject(@Nullable String billingProject) {
             this.billingProject = Input.ofNullable(billingProject);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<FolderFeedConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<FolderFeedConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable FolderFeedConditionGetArgs condition) {
+        public Builder condition(@Nullable FolderFeedConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setFeedId(@Nullable Input<String> feedId) {
+        public Builder feedId(@Nullable Input<String> feedId) {
             this.feedId = feedId;
             return this;
         }
 
-        public Builder setFeedId(@Nullable String feedId) {
+        public Builder feedId(@Nullable String feedId) {
             this.feedId = Input.ofNullable(feedId);
             return this;
         }
 
-        public Builder setFeedOutputConfig(@Nullable Input<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(@Nullable Input<FolderFeedFeedOutputConfigGetArgs> feedOutputConfig) {
             this.feedOutputConfig = feedOutputConfig;
             return this;
         }
 
-        public Builder setFeedOutputConfig(@Nullable FolderFeedFeedOutputConfigGetArgs feedOutputConfig) {
+        public Builder feedOutputConfig(@Nullable FolderFeedFeedOutputConfigGetArgs feedOutputConfig) {
             this.feedOutputConfig = Input.ofNullable(feedOutputConfig);
             return this;
         }
 
-        public Builder setFolder(@Nullable Input<String> folder) {
+        public Builder folder(@Nullable Input<String> folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFolder(@Nullable String folder) {
+        public Builder folder(@Nullable String folder) {
             this.folder = Input.ofNullable(folder);
             return this;
         }
 
-        public Builder setFolderId(@Nullable Input<String> folderId) {
+        public Builder folderId(@Nullable Input<String> folderId) {
             this.folderId = folderId;
             return this;
         }
 
-        public Builder setFolderId(@Nullable String folderId) {
+        public Builder folderId(@Nullable String folderId) {
             this.folderId = Input.ofNullable(folderId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

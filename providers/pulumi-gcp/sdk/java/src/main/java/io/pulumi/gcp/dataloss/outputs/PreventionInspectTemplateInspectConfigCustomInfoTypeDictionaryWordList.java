@@ -51,7 +51,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     	      this.words = defaults.words;
         }
 
-        public Builder setWords(List<String> words) {
+        public Builder words(List<String> words) {
             this.words = Objects.requireNonNull(words);
             return this;
         }

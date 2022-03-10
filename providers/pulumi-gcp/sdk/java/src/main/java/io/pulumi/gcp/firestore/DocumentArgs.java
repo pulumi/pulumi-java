@@ -119,52 +119,52 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setCollection(Input<String> collection) {
+        public Builder collection(Input<String> collection) {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
 
-        public Builder setCollection(String collection) {
+        public Builder collection(String collection) {
             this.collection = Input.of(Objects.requireNonNull(collection));
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setDocumentId(Input<String> documentId) {
+        public Builder documentId(Input<String> documentId) {
             this.documentId = Objects.requireNonNull(documentId);
             return this;
         }
 
-        public Builder setDocumentId(String documentId) {
+        public Builder documentId(String documentId) {
             this.documentId = Input.of(Objects.requireNonNull(documentId));
             return this;
         }
 
-        public Builder setFields(Input<String> fields) {
+        public Builder fields(Input<String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(String fields) {
+        public Builder fields(String fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

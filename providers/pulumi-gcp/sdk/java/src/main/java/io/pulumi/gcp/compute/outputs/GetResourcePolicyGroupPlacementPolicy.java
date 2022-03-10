@@ -58,17 +58,17 @@ public final class GetResourcePolicyGroupPlacementPolicy {
     	      this.vmCount = defaults.vmCount;
         }
 
-        public Builder setAvailabilityDomainCount(Integer availabilityDomainCount) {
+        public Builder availabilityDomainCount(Integer availabilityDomainCount) {
             this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
             return this;
         }
 
-        public Builder setCollocation(String collocation) {
+        public Builder collocation(String collocation) {
             this.collocation = Objects.requireNonNull(collocation);
             return this;
         }
 
-        public Builder setVmCount(Integer vmCount) {
+        public Builder vmCount(Integer vmCount) {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }

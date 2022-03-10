@@ -85,17 +85,17 @@ public final class TransferJobTransferSpecTransferOptions {
     	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
         }
 
-        public Builder setDeleteObjectsFromSourceAfterTransfer(@Nullable Boolean deleteObjectsFromSourceAfterTransfer) {
+        public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Boolean deleteObjectsFromSourceAfterTransfer) {
             this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
 
-        public Builder setDeleteObjectsUniqueInSink(@Nullable Boolean deleteObjectsUniqueInSink) {
+        public Builder deleteObjectsUniqueInSink(@Nullable Boolean deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
 
-        public Builder setOverwriteObjectsAlreadyExistingInSink(@Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
+        public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }

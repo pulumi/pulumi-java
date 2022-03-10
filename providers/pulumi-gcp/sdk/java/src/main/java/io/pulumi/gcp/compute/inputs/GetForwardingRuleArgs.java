@@ -88,17 +88,17 @@ public final class GetForwardingRuleArgs extends io.pulumi.resources.InvokeArgs 
     	      this.region = defaults.region;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

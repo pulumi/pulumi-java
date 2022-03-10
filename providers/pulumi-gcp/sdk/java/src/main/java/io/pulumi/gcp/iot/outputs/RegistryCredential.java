@@ -50,7 +50,7 @@ public final class RegistryCredential {
     	      this.publicKeyCertificate = defaults.publicKeyCertificate;
         }
 
-        public Builder setPublicKeyCertificate(Map<String,Object> publicKeyCertificate) {
+        public Builder publicKeyCertificate(Map<String,Object> publicKeyCertificate) {
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }

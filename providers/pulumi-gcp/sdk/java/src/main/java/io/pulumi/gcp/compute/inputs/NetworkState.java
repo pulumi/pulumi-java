@@ -203,92 +203,92 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setAutoCreateSubnetworks(@Nullable Input<Boolean> autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(@Nullable Input<Boolean> autoCreateSubnetworks) {
             this.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
 
-        public Builder setAutoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
             this.autoCreateSubnetworks = Input.ofNullable(autoCreateSubnetworks);
             return this;
         }
 
-        public Builder setDeleteDefaultRoutesOnCreate(@Nullable Input<Boolean> deleteDefaultRoutesOnCreate) {
+        public Builder deleteDefaultRoutesOnCreate(@Nullable Input<Boolean> deleteDefaultRoutesOnCreate) {
             this.deleteDefaultRoutesOnCreate = deleteDefaultRoutesOnCreate;
             return this;
         }
 
-        public Builder setDeleteDefaultRoutesOnCreate(@Nullable Boolean deleteDefaultRoutesOnCreate) {
+        public Builder deleteDefaultRoutesOnCreate(@Nullable Boolean deleteDefaultRoutesOnCreate) {
             this.deleteDefaultRoutesOnCreate = Input.ofNullable(deleteDefaultRoutesOnCreate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGatewayIpv4(@Nullable Input<String> gatewayIpv4) {
+        public Builder gatewayIpv4(@Nullable Input<String> gatewayIpv4) {
             this.gatewayIpv4 = gatewayIpv4;
             return this;
         }
 
-        public Builder setGatewayIpv4(@Nullable String gatewayIpv4) {
+        public Builder gatewayIpv4(@Nullable String gatewayIpv4) {
             this.gatewayIpv4 = Input.ofNullable(gatewayIpv4);
             return this;
         }
 
-        public Builder setMtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Input<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Input.ofNullable(mtu);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRoutingMode(@Nullable Input<String> routingMode) {
+        public Builder routingMode(@Nullable Input<String> routingMode) {
             this.routingMode = routingMode;
             return this;
         }
 
-        public Builder setRoutingMode(@Nullable String routingMode) {
+        public Builder routingMode(@Nullable String routingMode) {
             this.routingMode = Input.ofNullable(routingMode);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }

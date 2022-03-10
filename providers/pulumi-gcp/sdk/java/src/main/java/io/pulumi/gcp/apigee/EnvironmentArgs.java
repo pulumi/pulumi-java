@@ -103,42 +103,42 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orgId = defaults.orgId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrgId(Input<String> orgId) {
+        public Builder orgId(Input<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }

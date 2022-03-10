@@ -87,32 +87,32 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
     	      this.tag = defaults.tag;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Input<Boolean> invertRegex) {
+        public Builder invertRegex(@Nullable Input<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Boolean invertRegex) {
+        public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Input.ofNullable(invertRegex);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

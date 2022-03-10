@@ -168,72 +168,72 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repositoryId = defaults.repositoryId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFormat(Input<String> format) {
+        public Builder format(Input<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRepositoryId(Input<String> repositoryId) {
+        public Builder repositoryId(Input<String> repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
 
-        public Builder setRepositoryId(String repositoryId) {
+        public Builder repositoryId(String repositoryId) {
             this.repositoryId = Input.of(Objects.requireNonNull(repositoryId));
             return this;
         }

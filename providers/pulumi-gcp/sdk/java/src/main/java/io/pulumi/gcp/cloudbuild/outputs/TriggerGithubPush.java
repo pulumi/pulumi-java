@@ -84,17 +84,17 @@ public final class TriggerGithubPush {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Boolean invertRegex) {
+        public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

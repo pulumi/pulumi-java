@@ -100,42 +100,42 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<Hl7StoreIamMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<Hl7StoreIamMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable Hl7StoreIamMemberConditionArgs condition) {
+        public Builder condition(@Nullable Hl7StoreIamMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setHl7V2StoreId(Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(Input<String> hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
 
-        public Builder setHl7V2StoreId(String hl7V2StoreId) {
+        public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Input.of(Objects.requireNonNull(hl7V2StoreId));
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

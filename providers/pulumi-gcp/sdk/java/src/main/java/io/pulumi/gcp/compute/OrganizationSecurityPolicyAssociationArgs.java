@@ -86,32 +86,32 @@ public final class OrganizationSecurityPolicyAssociationArgs extends io.pulumi.r
     	      this.policyId = defaults.policyId;
         }
 
-        public Builder setAttachmentId(Input<String> attachmentId) {
+        public Builder attachmentId(Input<String> attachmentId) {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
 
-        public Builder setAttachmentId(String attachmentId) {
+        public Builder attachmentId(String attachmentId) {
             this.attachmentId = Input.of(Objects.requireNonNull(attachmentId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyId(Input<String> policyId) {
+        public Builder policyId(Input<String> policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Input.of(Objects.requireNonNull(policyId));
             return this;
         }

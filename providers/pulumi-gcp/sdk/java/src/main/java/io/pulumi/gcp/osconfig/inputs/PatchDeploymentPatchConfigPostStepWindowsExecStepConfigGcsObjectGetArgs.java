@@ -85,32 +85,32 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setGenerationNumber(Input<String> generationNumber) {
+        public Builder generationNumber(Input<String> generationNumber) {
             this.generationNumber = Objects.requireNonNull(generationNumber);
             return this;
         }
 
-        public Builder setGenerationNumber(String generationNumber) {
+        public Builder generationNumber(String generationNumber) {
             this.generationNumber = Input.of(Objects.requireNonNull(generationNumber));
             return this;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }

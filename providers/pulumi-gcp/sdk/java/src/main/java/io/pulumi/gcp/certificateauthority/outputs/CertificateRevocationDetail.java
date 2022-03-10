@@ -51,12 +51,12 @@ public final class CertificateRevocationDetail {
     	      this.revocationTime = defaults.revocationTime;
         }
 
-        public Builder setRevocationState(@Nullable String revocationState) {
+        public Builder revocationState(@Nullable String revocationState) {
             this.revocationState = revocationState;
             return this;
         }
 
-        public Builder setRevocationTime(@Nullable String revocationTime) {
+        public Builder revocationTime(@Nullable String revocationTime) {
             this.revocationTime = revocationTime;
             return this;
         }

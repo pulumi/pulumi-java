@@ -69,12 +69,12 @@ public final class GetInstanceTemplateGuestAccelerator extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

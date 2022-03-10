@@ -72,22 +72,22 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends io.p
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setEnv(Input<String> env) {
+        public Builder env(Input<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setEnv(String env) {
+        public Builder env(String env) {
             this.env = Input.of(Objects.requireNonNull(env));
             return this;
         }
 
-        public Builder setVersionName(Input<String> versionName) {
+        public Builder versionName(Input<String> versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
 
-        public Builder setVersionName(String versionName) {
+        public Builder versionName(String versionName) {
             this.versionName = Input.of(Objects.requireNonNull(versionName));
             return this;
         }

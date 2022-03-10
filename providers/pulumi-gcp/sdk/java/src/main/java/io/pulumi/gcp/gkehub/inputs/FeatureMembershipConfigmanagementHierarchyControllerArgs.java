@@ -86,32 +86,32 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerArgs exte
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnableHierarchicalResourceQuota(@Nullable Input<Boolean> enableHierarchicalResourceQuota) {
+        public Builder enableHierarchicalResourceQuota(@Nullable Input<Boolean> enableHierarchicalResourceQuota) {
             this.enableHierarchicalResourceQuota = enableHierarchicalResourceQuota;
             return this;
         }
 
-        public Builder setEnableHierarchicalResourceQuota(@Nullable Boolean enableHierarchicalResourceQuota) {
+        public Builder enableHierarchicalResourceQuota(@Nullable Boolean enableHierarchicalResourceQuota) {
             this.enableHierarchicalResourceQuota = Input.ofNullable(enableHierarchicalResourceQuota);
             return this;
         }
 
-        public Builder setEnablePodTreeLabels(@Nullable Input<Boolean> enablePodTreeLabels) {
+        public Builder enablePodTreeLabels(@Nullable Input<Boolean> enablePodTreeLabels) {
             this.enablePodTreeLabels = enablePodTreeLabels;
             return this;
         }
 
-        public Builder setEnablePodTreeLabels(@Nullable Boolean enablePodTreeLabels) {
+        public Builder enablePodTreeLabels(@Nullable Boolean enablePodTreeLabels) {
             this.enablePodTreeLabels = Input.ofNullable(enablePodTreeLabels);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }

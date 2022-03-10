@@ -71,12 +71,12 @@ public final class GetGlobalForwardingRuleArgs extends io.pulumi.resources.Invok
     	      this.project = defaults.project;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

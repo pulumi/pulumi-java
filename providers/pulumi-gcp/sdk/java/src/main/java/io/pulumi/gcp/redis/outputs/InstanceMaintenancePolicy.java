@@ -123,22 +123,22 @@ public final class InstanceMaintenancePolicy {
     	      this.weeklyMaintenanceWindows = defaults.weeklyMaintenanceWindows;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
+        public Builder weeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
             this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }

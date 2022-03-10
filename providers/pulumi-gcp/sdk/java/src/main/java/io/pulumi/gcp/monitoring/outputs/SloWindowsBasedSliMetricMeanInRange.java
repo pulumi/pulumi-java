@@ -90,12 +90,12 @@ public final class SloWindowsBasedSliMetricMeanInRange {
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder setRange(SloWindowsBasedSliMetricMeanInRangeRange range) {
+        public Builder range(SloWindowsBasedSliMetricMeanInRangeRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setTimeSeries(String timeSeries) {
+        public Builder timeSeries(String timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }

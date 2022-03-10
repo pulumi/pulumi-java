@@ -228,112 +228,112 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAttestationAuthority(@Nullable Input<NoteAttestationAuthorityGetArgs> attestationAuthority) {
+        public Builder attestationAuthority(@Nullable Input<NoteAttestationAuthorityGetArgs> attestationAuthority) {
             this.attestationAuthority = attestationAuthority;
             return this;
         }
 
-        public Builder setAttestationAuthority(@Nullable NoteAttestationAuthorityGetArgs attestationAuthority) {
+        public Builder attestationAuthority(@Nullable NoteAttestationAuthorityGetArgs attestationAuthority) {
             this.attestationAuthority = Input.ofNullable(attestationAuthority);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Input<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Input.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLongDescription(@Nullable Input<String> longDescription) {
+        public Builder longDescription(@Nullable Input<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
 
-        public Builder setLongDescription(@Nullable String longDescription) {
+        public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Input.ofNullable(longDescription);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRelatedNoteNames(@Nullable Input<List<String>> relatedNoteNames) {
+        public Builder relatedNoteNames(@Nullable Input<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
 
-        public Builder setRelatedNoteNames(@Nullable List<String> relatedNoteNames) {
+        public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
             this.relatedNoteNames = Input.ofNullable(relatedNoteNames);
             return this;
         }
 
-        public Builder setRelatedUrls(@Nullable Input<List<NoteRelatedUrlGetArgs>> relatedUrls) {
+        public Builder relatedUrls(@Nullable Input<List<NoteRelatedUrlGetArgs>> relatedUrls) {
             this.relatedUrls = relatedUrls;
             return this;
         }
 
-        public Builder setRelatedUrls(@Nullable List<NoteRelatedUrlGetArgs> relatedUrls) {
+        public Builder relatedUrls(@Nullable List<NoteRelatedUrlGetArgs> relatedUrls) {
             this.relatedUrls = Input.ofNullable(relatedUrls);
             return this;
         }
 
-        public Builder setShortDescription(@Nullable Input<String> shortDescription) {
+        public Builder shortDescription(@Nullable Input<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
 
-        public Builder setShortDescription(@Nullable String shortDescription) {
+        public Builder shortDescription(@Nullable String shortDescription) {
             this.shortDescription = Input.ofNullable(shortDescription);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

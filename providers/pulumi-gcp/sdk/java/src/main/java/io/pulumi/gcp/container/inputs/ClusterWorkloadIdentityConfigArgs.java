@@ -53,12 +53,12 @@ public final class ClusterWorkloadIdentityConfigArgs extends io.pulumi.resources
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setWorkloadPool(@Nullable Input<String> workloadPool) {
+        public Builder workloadPool(@Nullable Input<String> workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }
 
-        public Builder setWorkloadPool(@Nullable String workloadPool) {
+        public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = Input.ofNullable(workloadPool);
             return this;
         }

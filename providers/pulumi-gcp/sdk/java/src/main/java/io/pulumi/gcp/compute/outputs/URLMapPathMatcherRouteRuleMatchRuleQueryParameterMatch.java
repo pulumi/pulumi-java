@@ -116,22 +116,22 @@ public final class URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
     	      this.regexMatch = defaults.regexMatch;
         }
 
-        public Builder setExactMatch(@Nullable String exactMatch) {
+        public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Boolean presentMatch) {
+        public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
-        public Builder setRegexMatch(@Nullable String regexMatch) {
+        public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }

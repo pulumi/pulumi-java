@@ -173,72 +173,72 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.traffics = defaults.traffics;
         }
 
-        public Builder setAutogenerateRevisionName(@Nullable Input<Boolean> autogenerateRevisionName) {
+        public Builder autogenerateRevisionName(@Nullable Input<Boolean> autogenerateRevisionName) {
             this.autogenerateRevisionName = autogenerateRevisionName;
             return this;
         }
 
-        public Builder setAutogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
+        public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
             this.autogenerateRevisionName = Input.ofNullable(autogenerateRevisionName);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ServiceMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<ServiceMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ServiceMetadataArgs metadata) {
+        public Builder metadata(@Nullable ServiceMetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<ServiceTemplateArgs> template) {
+        public Builder template(@Nullable Input<ServiceTemplateArgs> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable ServiceTemplateArgs template) {
+        public Builder template(@Nullable ServiceTemplateArgs template) {
             this.template = Input.ofNullable(template);
             return this;
         }
 
-        public Builder setTraffics(@Nullable Input<List<ServiceTrafficArgs>> traffics) {
+        public Builder traffics(@Nullable Input<List<ServiceTrafficArgs>> traffics) {
             this.traffics = traffics;
             return this;
         }
 
-        public Builder setTraffics(@Nullable List<ServiceTrafficArgs> traffics) {
+        public Builder traffics(@Nullable List<ServiceTrafficArgs> traffics) {
             this.traffics = Input.ofNullable(traffics);
             return this;
         }

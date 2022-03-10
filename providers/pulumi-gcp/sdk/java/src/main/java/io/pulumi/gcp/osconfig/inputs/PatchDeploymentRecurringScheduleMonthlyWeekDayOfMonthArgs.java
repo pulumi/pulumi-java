@@ -71,22 +71,22 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
     	      this.weekOrdinal = defaults.weekOrdinal;
         }
 
-        public Builder setDayOfWeek(Input<String> dayOfWeek) {
+        public Builder dayOfWeek(Input<String> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder setWeekOrdinal(Input<Integer> weekOrdinal) {
+        public Builder weekOrdinal(Input<Integer> weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
 
-        public Builder setWeekOrdinal(Integer weekOrdinal) {
+        public Builder weekOrdinal(Integer weekOrdinal) {
             this.weekOrdinal = Input.of(Objects.requireNonNull(weekOrdinal));
             return this;
         }

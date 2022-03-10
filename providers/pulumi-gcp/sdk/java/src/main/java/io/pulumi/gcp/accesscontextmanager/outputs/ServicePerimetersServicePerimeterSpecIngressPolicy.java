@@ -76,12 +76,12 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicy {
     	      this.ingressTo = defaults.ingressTo;
         }
 
-        public Builder setIngressFrom(@Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom ingressFrom) {
+        public Builder ingressFrom(@Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom ingressFrom) {
             this.ingressFrom = ingressFrom;
             return this;
         }
 
-        public Builder setIngressTo(@Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo ingressTo) {
+        public Builder ingressTo(@Nullable ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo ingressTo) {
             this.ingressTo = ingressTo;
             return this;
         }

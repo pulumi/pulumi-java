@@ -70,22 +70,22 @@ public final class PolicyTagIamPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.policyTag = defaults.policyTag;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setPolicyTag(Input<String> policyTag) {
+        public Builder policyTag(Input<String> policyTag) {
             this.policyTag = Objects.requireNonNull(policyTag);
             return this;
         }
 
-        public Builder setPolicyTag(String policyTag) {
+        public Builder policyTag(String policyTag) {
             this.policyTag = Input.of(Objects.requireNonNull(policyTag));
             return this;
         }

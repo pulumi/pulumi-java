@@ -143,62 +143,62 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.region = defaults.region;
         }
 
-        public Builder setClusterConfig(@Nullable Input<ClusterClusterConfigGetArgs> clusterConfig) {
+        public Builder clusterConfig(@Nullable Input<ClusterClusterConfigGetArgs> clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
 
-        public Builder setClusterConfig(@Nullable ClusterClusterConfigGetArgs clusterConfig) {
+        public Builder clusterConfig(@Nullable ClusterClusterConfigGetArgs clusterConfig) {
             this.clusterConfig = Input.ofNullable(clusterConfig);
             return this;
         }
 
-        public Builder setGracefulDecommissionTimeout(@Nullable Input<String> gracefulDecommissionTimeout) {
+        public Builder gracefulDecommissionTimeout(@Nullable Input<String> gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
             return this;
         }
 
-        public Builder setGracefulDecommissionTimeout(@Nullable String gracefulDecommissionTimeout) {
+        public Builder gracefulDecommissionTimeout(@Nullable String gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = Input.ofNullable(gracefulDecommissionTimeout);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }

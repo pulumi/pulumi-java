@@ -90,37 +90,37 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig {
     	      this.webServerIpv4CidrBlock = defaults.webServerIpv4CidrBlock;
         }
 
-        public Builder setCloudComposerConnectionSubnetwork(String cloudComposerConnectionSubnetwork) {
+        public Builder cloudComposerConnectionSubnetwork(String cloudComposerConnectionSubnetwork) {
             this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork);
             return this;
         }
 
-        public Builder setCloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
+        public Builder cloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
             return this;
         }
 
-        public Builder setCloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
+        public Builder cloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock);
             return this;
         }
 
-        public Builder setEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setEnablePrivatelyUsedPublicIps(Boolean enablePrivatelyUsedPublicIps) {
+        public Builder enablePrivatelyUsedPublicIps(Boolean enablePrivatelyUsedPublicIps) {
             this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps);
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setWebServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
+        public Builder webServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
             return this;
         }

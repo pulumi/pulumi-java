@@ -87,32 +87,32 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigArgs extends
     	      this.principal = defaults.principal;
         }
 
-        public Builder setKeytab(Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs> keytab) {
+        public Builder keytab(Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs> keytab) {
             this.keytab = Objects.requireNonNull(keytab);
             return this;
         }
 
-        public Builder setKeytab(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs keytab) {
+        public Builder keytab(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs keytab) {
             this.keytab = Input.of(Objects.requireNonNull(keytab));
             return this;
         }
 
-        public Builder setKrb5ConfigGcsUri(Input<String> krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(Input<String> krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
             return this;
         }
 
-        public Builder setKrb5ConfigGcsUri(String krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Input.of(Objects.requireNonNull(krb5ConfigGcsUri));
             return this;
         }
 
-        public Builder setPrincipal(Input<String> principal) {
+        public Builder principal(Input<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }

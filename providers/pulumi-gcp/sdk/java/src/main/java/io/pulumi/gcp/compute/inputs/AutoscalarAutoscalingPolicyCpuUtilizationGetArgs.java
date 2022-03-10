@@ -75,22 +75,22 @@ public final class AutoscalarAutoscalingPolicyCpuUtilizationGetArgs extends io.p
     	      this.target = defaults.target;
         }
 
-        public Builder setPredictiveMethod(@Nullable Input<String> predictiveMethod) {
+        public Builder predictiveMethod(@Nullable Input<String> predictiveMethod) {
             this.predictiveMethod = predictiveMethod;
             return this;
         }
 
-        public Builder setPredictiveMethod(@Nullable String predictiveMethod) {
+        public Builder predictiveMethod(@Nullable String predictiveMethod) {
             this.predictiveMethod = Input.ofNullable(predictiveMethod);
             return this;
         }
 
-        public Builder setTarget(Input<Double> target) {
+        public Builder target(Input<Double> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(Double target) {
+        public Builder target(Double target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

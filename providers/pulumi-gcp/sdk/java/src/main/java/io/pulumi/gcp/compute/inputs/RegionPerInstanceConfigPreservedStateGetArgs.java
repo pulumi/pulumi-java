@@ -74,22 +74,22 @@ public final class RegionPerInstanceConfigPreservedStateGetArgs extends io.pulum
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setDisks(@Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskGetArgs>> disks) {
+        public Builder disks(@Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskGetArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<RegionPerInstanceConfigPreservedStateDiskGetArgs> disks) {
+        public Builder disks(@Nullable List<RegionPerInstanceConfigPreservedStateDiskGetArgs> disks) {
             this.disks = Input.ofNullable(disks);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }

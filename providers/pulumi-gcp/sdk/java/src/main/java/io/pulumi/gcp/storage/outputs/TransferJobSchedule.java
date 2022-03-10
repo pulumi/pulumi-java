@@ -85,17 +85,17 @@ public final class TransferJobSchedule {
     	      this.startTimeOfDay = defaults.startTimeOfDay;
         }
 
-        public Builder setScheduleEndDate(@Nullable TransferJobScheduleScheduleEndDate scheduleEndDate) {
+        public Builder scheduleEndDate(@Nullable TransferJobScheduleScheduleEndDate scheduleEndDate) {
             this.scheduleEndDate = scheduleEndDate;
             return this;
         }
 
-        public Builder setScheduleStartDate(TransferJobScheduleScheduleStartDate scheduleStartDate) {
+        public Builder scheduleStartDate(TransferJobScheduleScheduleStartDate scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
 
-        public Builder setStartTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
+        public Builder startTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }

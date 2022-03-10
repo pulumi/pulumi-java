@@ -141,62 +141,62 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setAccessConfig(@Nullable Input<RuntimeAccessConfigArgs> accessConfig) {
+        public Builder accessConfig(@Nullable Input<RuntimeAccessConfigArgs> accessConfig) {
             this.accessConfig = accessConfig;
             return this;
         }
 
-        public Builder setAccessConfig(@Nullable RuntimeAccessConfigArgs accessConfig) {
+        public Builder accessConfig(@Nullable RuntimeAccessConfigArgs accessConfig) {
             this.accessConfig = Input.ofNullable(accessConfig);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig) {
+        public Builder softwareConfig(@Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable RuntimeSoftwareConfigArgs softwareConfig) {
+        public Builder softwareConfig(@Nullable RuntimeSoftwareConfigArgs softwareConfig) {
             this.softwareConfig = Input.ofNullable(softwareConfig);
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable Input<RuntimeVirtualMachineArgs> virtualMachine) {
+        public Builder virtualMachine(@Nullable Input<RuntimeVirtualMachineArgs> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable RuntimeVirtualMachineArgs virtualMachine) {
+        public Builder virtualMachine(@Nullable RuntimeVirtualMachineArgs virtualMachine) {
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }

@@ -115,42 +115,42 @@ public final class BudgetAllUpdatesRuleArgs extends io.pulumi.resources.Resource
     	      this.schemaVersion = defaults.schemaVersion;
         }
 
-        public Builder setDisableDefaultIamRecipients(@Nullable Input<Boolean> disableDefaultIamRecipients) {
+        public Builder disableDefaultIamRecipients(@Nullable Input<Boolean> disableDefaultIamRecipients) {
             this.disableDefaultIamRecipients = disableDefaultIamRecipients;
             return this;
         }
 
-        public Builder setDisableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
+        public Builder disableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
             this.disableDefaultIamRecipients = Input.ofNullable(disableDefaultIamRecipients);
             return this;
         }
 
-        public Builder setMonitoringNotificationChannels(@Nullable Input<List<String>> monitoringNotificationChannels) {
+        public Builder monitoringNotificationChannels(@Nullable Input<List<String>> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = monitoringNotificationChannels;
             return this;
         }
 
-        public Builder setMonitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
+        public Builder monitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = Input.ofNullable(monitoringNotificationChannels);
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable String pubsubTopic) {
+        public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Input.ofNullable(pubsubTopic);
             return this;
         }
 
-        public Builder setSchemaVersion(@Nullable Input<String> schemaVersion) {
+        public Builder schemaVersion(@Nullable Input<String> schemaVersion) {
             this.schemaVersion = schemaVersion;
             return this;
         }
 
-        public Builder setSchemaVersion(@Nullable String schemaVersion) {
+        public Builder schemaVersion(@Nullable String schemaVersion) {
             this.schemaVersion = Input.ofNullable(schemaVersion);
             return this;
         }

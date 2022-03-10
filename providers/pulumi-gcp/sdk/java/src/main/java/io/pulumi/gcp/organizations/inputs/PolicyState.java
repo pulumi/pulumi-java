@@ -171,82 +171,82 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setBooleanPolicy(@Nullable Input<PolicyBooleanPolicyGetArgs> booleanPolicy) {
+        public Builder booleanPolicy(@Nullable Input<PolicyBooleanPolicyGetArgs> booleanPolicy) {
             this.booleanPolicy = booleanPolicy;
             return this;
         }
 
-        public Builder setBooleanPolicy(@Nullable PolicyBooleanPolicyGetArgs booleanPolicy) {
+        public Builder booleanPolicy(@Nullable PolicyBooleanPolicyGetArgs booleanPolicy) {
             this.booleanPolicy = Input.ofNullable(booleanPolicy);
             return this;
         }
 
-        public Builder setConstraint(@Nullable Input<String> constraint) {
+        public Builder constraint(@Nullable Input<String> constraint) {
             this.constraint = constraint;
             return this;
         }
 
-        public Builder setConstraint(@Nullable String constraint) {
+        public Builder constraint(@Nullable String constraint) {
             this.constraint = Input.ofNullable(constraint);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setListPolicy(@Nullable Input<PolicyListPolicyGetArgs> listPolicy) {
+        public Builder listPolicy(@Nullable Input<PolicyListPolicyGetArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
 
-        public Builder setListPolicy(@Nullable PolicyListPolicyGetArgs listPolicy) {
+        public Builder listPolicy(@Nullable PolicyListPolicyGetArgs listPolicy) {
             this.listPolicy = Input.ofNullable(listPolicy);
             return this;
         }
 
-        public Builder setOrgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Input<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
-        public Builder setOrgId(@Nullable String orgId) {
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable Input<PolicyRestorePolicyGetArgs> restorePolicy) {
+        public Builder restorePolicy(@Nullable Input<PolicyRestorePolicyGetArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable PolicyRestorePolicyGetArgs restorePolicy) {
+        public Builder restorePolicy(@Nullable PolicyRestorePolicyGetArgs restorePolicy) {
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

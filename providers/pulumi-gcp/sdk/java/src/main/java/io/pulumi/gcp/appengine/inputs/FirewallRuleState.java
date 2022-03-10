@@ -125,52 +125,52 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.sourceRange = defaults.sourceRange;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSourceRange(@Nullable Input<String> sourceRange) {
+        public Builder sourceRange(@Nullable Input<String> sourceRange) {
             this.sourceRange = sourceRange;
             return this;
         }
 
-        public Builder setSourceRange(@Nullable String sourceRange) {
+        public Builder sourceRange(@Nullable String sourceRange) {
             this.sourceRange = Input.ofNullable(sourceRange);
             return this;
         }

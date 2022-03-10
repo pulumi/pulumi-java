@@ -71,12 +71,12 @@ public final class BucketWebsite {
     	      this.notFoundPage = defaults.notFoundPage;
         }
 
-        public Builder setMainPageSuffix(@Nullable String mainPageSuffix) {
+        public Builder mainPageSuffix(@Nullable String mainPageSuffix) {
             this.mainPageSuffix = mainPageSuffix;
             return this;
         }
 
-        public Builder setNotFoundPage(@Nullable String notFoundPage) {
+        public Builder notFoundPage(@Nullable String notFoundPage) {
             this.notFoundPage = notFoundPage;
             return this;
         }

@@ -60,17 +60,17 @@ public final class EntryBigqueryDateShardedSpec {
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setShardCount(@Nullable Integer shardCount) {
+        public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable String tablePrefix) {
+        public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }

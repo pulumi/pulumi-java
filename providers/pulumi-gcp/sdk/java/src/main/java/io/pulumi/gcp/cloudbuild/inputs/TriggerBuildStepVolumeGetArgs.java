@@ -73,22 +73,22 @@ public final class TriggerBuildStepVolumeGetArgs extends io.pulumi.resources.Res
     	      this.path = defaults.path;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }

@@ -125,37 +125,37 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLifecycleState(String lifecycleState) {
+        public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumber(String number) {
+        public Builder number(String number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setParent(Map<String,String> parent) {
+        public Builder parent(Map<String,String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }

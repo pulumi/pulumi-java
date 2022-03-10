@@ -53,12 +53,12 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
     	      this.targetNetwork = defaults.targetNetwork;
         }
 
-        public Builder setTargetNetwork(Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
+        public Builder targetNetwork(Input<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork) {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }
 
-        public Builder setTargetNetwork(ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
+        public Builder targetNetwork(ManagedZonePeeringConfigTargetNetworkArgs targetNetwork) {
             this.targetNetwork = Input.of(Objects.requireNonNull(targetNetwork));
             return this;
         }

@@ -158,72 +158,72 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
     	      this.postStartupScript = defaults.postStartupScript;
         }
 
-        public Builder setCustomGpuDriverPath(@Nullable Input<String> customGpuDriverPath) {
+        public Builder customGpuDriverPath(@Nullable Input<String> customGpuDriverPath) {
             this.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
 
-        public Builder setCustomGpuDriverPath(@Nullable String customGpuDriverPath) {
+        public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
             this.customGpuDriverPath = Input.ofNullable(customGpuDriverPath);
             return this;
         }
 
-        public Builder setEnableHealthMonitoring(@Nullable Input<Boolean> enableHealthMonitoring) {
+        public Builder enableHealthMonitoring(@Nullable Input<Boolean> enableHealthMonitoring) {
             this.enableHealthMonitoring = enableHealthMonitoring;
             return this;
         }
 
-        public Builder setEnableHealthMonitoring(@Nullable Boolean enableHealthMonitoring) {
+        public Builder enableHealthMonitoring(@Nullable Boolean enableHealthMonitoring) {
             this.enableHealthMonitoring = Input.ofNullable(enableHealthMonitoring);
             return this;
         }
 
-        public Builder setIdleShutdown(@Nullable Input<Boolean> idleShutdown) {
+        public Builder idleShutdown(@Nullable Input<Boolean> idleShutdown) {
             this.idleShutdown = idleShutdown;
             return this;
         }
 
-        public Builder setIdleShutdown(@Nullable Boolean idleShutdown) {
+        public Builder idleShutdown(@Nullable Boolean idleShutdown) {
             this.idleShutdown = Input.ofNullable(idleShutdown);
             return this;
         }
 
-        public Builder setIdleShutdownTimeout(@Nullable Input<Integer> idleShutdownTimeout) {
+        public Builder idleShutdownTimeout(@Nullable Input<Integer> idleShutdownTimeout) {
             this.idleShutdownTimeout = idleShutdownTimeout;
             return this;
         }
 
-        public Builder setIdleShutdownTimeout(@Nullable Integer idleShutdownTimeout) {
+        public Builder idleShutdownTimeout(@Nullable Integer idleShutdownTimeout) {
             this.idleShutdownTimeout = Input.ofNullable(idleShutdownTimeout);
             return this;
         }
 
-        public Builder setInstallGpuDriver(@Nullable Input<Boolean> installGpuDriver) {
+        public Builder installGpuDriver(@Nullable Input<Boolean> installGpuDriver) {
             this.installGpuDriver = installGpuDriver;
             return this;
         }
 
-        public Builder setInstallGpuDriver(@Nullable Boolean installGpuDriver) {
+        public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
             this.installGpuDriver = Input.ofNullable(installGpuDriver);
             return this;
         }
 
-        public Builder setNotebookUpgradeSchedule(@Nullable Input<String> notebookUpgradeSchedule) {
+        public Builder notebookUpgradeSchedule(@Nullable Input<String> notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = notebookUpgradeSchedule;
             return this;
         }
 
-        public Builder setNotebookUpgradeSchedule(@Nullable String notebookUpgradeSchedule) {
+        public Builder notebookUpgradeSchedule(@Nullable String notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = Input.ofNullable(notebookUpgradeSchedule);
             return this;
         }
 
-        public Builder setPostStartupScript(@Nullable Input<String> postStartupScript) {
+        public Builder postStartupScript(@Nullable Input<String> postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }
 
-        public Builder setPostStartupScript(@Nullable String postStartupScript) {
+        public Builder postStartupScript(@Nullable String postStartupScript) {
             this.postStartupScript = Input.ofNullable(postStartupScript);
             return this;
         }

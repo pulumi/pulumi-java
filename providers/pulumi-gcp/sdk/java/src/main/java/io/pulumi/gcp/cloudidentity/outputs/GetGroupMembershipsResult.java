@@ -75,17 +75,17 @@ public final class GetGroupMembershipsResult {
     	      this.memberships = defaults.memberships;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMemberships(List<GetGroupMembershipsMembership> memberships) {
+        public Builder memberships(List<GetGroupMembershipsMembership> memberships) {
             this.memberships = Objects.requireNonNull(memberships);
             return this;
         }

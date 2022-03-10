@@ -76,12 +76,12 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setPercent(@Nullable Double percent) {
+        public Builder percent(@Nullable Double percent) {
             this.percent = percent;
             return this;
         }

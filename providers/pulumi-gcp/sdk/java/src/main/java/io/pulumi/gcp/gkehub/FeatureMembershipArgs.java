@@ -119,52 +119,52 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     	      this.project = defaults.project;
         }
 
-        public Builder setConfigmanagement(Input<FeatureMembershipConfigmanagementArgs> configmanagement) {
+        public Builder configmanagement(Input<FeatureMembershipConfigmanagementArgs> configmanagement) {
             this.configmanagement = Objects.requireNonNull(configmanagement);
             return this;
         }
 
-        public Builder setConfigmanagement(FeatureMembershipConfigmanagementArgs configmanagement) {
+        public Builder configmanagement(FeatureMembershipConfigmanagementArgs configmanagement) {
             this.configmanagement = Input.of(Objects.requireNonNull(configmanagement));
             return this;
         }
 
-        public Builder setFeature(Input<String> feature) {
+        public Builder feature(Input<String> feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
-        public Builder setFeature(String feature) {
+        public Builder feature(String feature) {
             this.feature = Input.of(Objects.requireNonNull(feature));
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setMembership(Input<String> membership) {
+        public Builder membership(Input<String> membership) {
             this.membership = Objects.requireNonNull(membership);
             return this;
         }
 
-        public Builder setMembership(String membership) {
+        public Builder membership(String membership) {
             this.membership = Input.of(Objects.requireNonNull(membership));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

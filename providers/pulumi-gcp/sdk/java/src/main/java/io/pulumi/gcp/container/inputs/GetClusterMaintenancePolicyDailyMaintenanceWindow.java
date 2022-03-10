@@ -60,12 +60,12 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow extends io.
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

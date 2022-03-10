@@ -336,172 +336,172 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnGatewayInterface = defaults.vpnGatewayInterface;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIkeVersion(@Nullable Input<Integer> ikeVersion) {
+        public Builder ikeVersion(@Nullable Input<Integer> ikeVersion) {
             this.ikeVersion = ikeVersion;
             return this;
         }
 
-        public Builder setIkeVersion(@Nullable Integer ikeVersion) {
+        public Builder ikeVersion(@Nullable Integer ikeVersion) {
             this.ikeVersion = Input.ofNullable(ikeVersion);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocalTrafficSelectors(@Nullable Input<List<String>> localTrafficSelectors) {
+        public Builder localTrafficSelectors(@Nullable Input<List<String>> localTrafficSelectors) {
             this.localTrafficSelectors = localTrafficSelectors;
             return this;
         }
 
-        public Builder setLocalTrafficSelectors(@Nullable List<String> localTrafficSelectors) {
+        public Builder localTrafficSelectors(@Nullable List<String> localTrafficSelectors) {
             this.localTrafficSelectors = Input.ofNullable(localTrafficSelectors);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeerExternalGateway(@Nullable Input<String> peerExternalGateway) {
+        public Builder peerExternalGateway(@Nullable Input<String> peerExternalGateway) {
             this.peerExternalGateway = peerExternalGateway;
             return this;
         }
 
-        public Builder setPeerExternalGateway(@Nullable String peerExternalGateway) {
+        public Builder peerExternalGateway(@Nullable String peerExternalGateway) {
             this.peerExternalGateway = Input.ofNullable(peerExternalGateway);
             return this;
         }
 
-        public Builder setPeerExternalGatewayInterface(@Nullable Input<Integer> peerExternalGatewayInterface) {
+        public Builder peerExternalGatewayInterface(@Nullable Input<Integer> peerExternalGatewayInterface) {
             this.peerExternalGatewayInterface = peerExternalGatewayInterface;
             return this;
         }
 
-        public Builder setPeerExternalGatewayInterface(@Nullable Integer peerExternalGatewayInterface) {
+        public Builder peerExternalGatewayInterface(@Nullable Integer peerExternalGatewayInterface) {
             this.peerExternalGatewayInterface = Input.ofNullable(peerExternalGatewayInterface);
             return this;
         }
 
-        public Builder setPeerGcpGateway(@Nullable Input<String> peerGcpGateway) {
+        public Builder peerGcpGateway(@Nullable Input<String> peerGcpGateway) {
             this.peerGcpGateway = peerGcpGateway;
             return this;
         }
 
-        public Builder setPeerGcpGateway(@Nullable String peerGcpGateway) {
+        public Builder peerGcpGateway(@Nullable String peerGcpGateway) {
             this.peerGcpGateway = Input.ofNullable(peerGcpGateway);
             return this;
         }
 
-        public Builder setPeerIp(@Nullable Input<String> peerIp) {
+        public Builder peerIp(@Nullable Input<String> peerIp) {
             this.peerIp = peerIp;
             return this;
         }
 
-        public Builder setPeerIp(@Nullable String peerIp) {
+        public Builder peerIp(@Nullable String peerIp) {
             this.peerIp = Input.ofNullable(peerIp);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRemoteTrafficSelectors(@Nullable Input<List<String>> remoteTrafficSelectors) {
+        public Builder remoteTrafficSelectors(@Nullable Input<List<String>> remoteTrafficSelectors) {
             this.remoteTrafficSelectors = remoteTrafficSelectors;
             return this;
         }
 
-        public Builder setRemoteTrafficSelectors(@Nullable List<String> remoteTrafficSelectors) {
+        public Builder remoteTrafficSelectors(@Nullable List<String> remoteTrafficSelectors) {
             this.remoteTrafficSelectors = Input.ofNullable(remoteTrafficSelectors);
             return this;
         }
 
-        public Builder setRouter(@Nullable Input<String> router) {
+        public Builder router(@Nullable Input<String> router) {
             this.router = router;
             return this;
         }
 
-        public Builder setRouter(@Nullable String router) {
+        public Builder router(@Nullable String router) {
             this.router = Input.ofNullable(router);
             return this;
         }
 
-        public Builder setSharedSecret(Input<String> sharedSecret) {
+        public Builder sharedSecret(Input<String> sharedSecret) {
             this.sharedSecret = Objects.requireNonNull(sharedSecret);
             return this;
         }
 
-        public Builder setSharedSecret(String sharedSecret) {
+        public Builder sharedSecret(String sharedSecret) {
             this.sharedSecret = Input.of(Objects.requireNonNull(sharedSecret));
             return this;
         }
 
-        public Builder setTargetVpnGateway(@Nullable Input<String> targetVpnGateway) {
+        public Builder targetVpnGateway(@Nullable Input<String> targetVpnGateway) {
             this.targetVpnGateway = targetVpnGateway;
             return this;
         }
 
-        public Builder setTargetVpnGateway(@Nullable String targetVpnGateway) {
+        public Builder targetVpnGateway(@Nullable String targetVpnGateway) {
             this.targetVpnGateway = Input.ofNullable(targetVpnGateway);
             return this;
         }
 
-        public Builder setVpnGateway(@Nullable Input<String> vpnGateway) {
+        public Builder vpnGateway(@Nullable Input<String> vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
         }
 
-        public Builder setVpnGateway(@Nullable String vpnGateway) {
+        public Builder vpnGateway(@Nullable String vpnGateway) {
             this.vpnGateway = Input.ofNullable(vpnGateway);
             return this;
         }
 
-        public Builder setVpnGatewayInterface(@Nullable Input<Integer> vpnGatewayInterface) {
+        public Builder vpnGatewayInterface(@Nullable Input<Integer> vpnGatewayInterface) {
             this.vpnGatewayInterface = vpnGatewayInterface;
             return this;
         }
 
-        public Builder setVpnGatewayInterface(@Nullable Integer vpnGatewayInterface) {
+        public Builder vpnGatewayInterface(@Nullable Integer vpnGatewayInterface) {
             this.vpnGatewayInterface = Input.ofNullable(vpnGatewayInterface);
             return this;
         }

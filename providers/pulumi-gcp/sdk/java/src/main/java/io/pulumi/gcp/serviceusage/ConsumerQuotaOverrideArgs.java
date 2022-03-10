@@ -154,72 +154,72 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     	      this.service = defaults.service;
         }
 
-        public Builder setDimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable Map<String,String> dimensions) {
+        public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setForce(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Input<Boolean> force) {
             this.force = force;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = Input.ofNullable(force);
             return this;
         }
 
-        public Builder setLimit(Input<String> limit) {
+        public Builder limit(Input<String> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setLimit(String limit) {
+        public Builder limit(String limit) {
             this.limit = Input.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder setMetric(Input<String> metric) {
+        public Builder metric(Input<String> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Input.of(Objects.requireNonNull(metric));
             return this;
         }
 
-        public Builder setOverrideValue(Input<String> overrideValue) {
+        public Builder overrideValue(Input<String> overrideValue) {
             this.overrideValue = Objects.requireNonNull(overrideValue);
             return this;
         }
 
-        public Builder setOverrideValue(String overrideValue) {
+        public Builder overrideValue(String overrideValue) {
             this.overrideValue = Input.of(Objects.requireNonNull(overrideValue));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setService(Input<String> service) {
+        public Builder service(Input<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }

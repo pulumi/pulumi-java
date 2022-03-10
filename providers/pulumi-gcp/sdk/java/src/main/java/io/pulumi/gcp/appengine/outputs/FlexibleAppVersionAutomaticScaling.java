@@ -246,62 +246,62 @@ public final class FlexibleAppVersionAutomaticScaling {
     	      this.requestUtilization = defaults.requestUtilization;
         }
 
-        public Builder setCoolDownPeriod(@Nullable String coolDownPeriod) {
+        public Builder coolDownPeriod(@Nullable String coolDownPeriod) {
             this.coolDownPeriod = coolDownPeriod;
             return this;
         }
 
-        public Builder setCpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization) {
+        public Builder cpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
 
-        public Builder setDiskUtilization(@Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization) {
+        public Builder diskUtilization(@Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization) {
             this.diskUtilization = diskUtilization;
             return this;
         }
 
-        public Builder setMaxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
-        public Builder setMaxIdleInstances(@Nullable Integer maxIdleInstances) {
+        public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
             this.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
-        public Builder setMaxPendingLatency(@Nullable String maxPendingLatency) {
+        public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
             this.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
-        public Builder setMaxTotalInstances(@Nullable Integer maxTotalInstances) {
+        public Builder maxTotalInstances(@Nullable Integer maxTotalInstances) {
             this.maxTotalInstances = maxTotalInstances;
             return this;
         }
 
-        public Builder setMinIdleInstances(@Nullable Integer minIdleInstances) {
+        public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
             this.minIdleInstances = minIdleInstances;
             return this;
         }
 
-        public Builder setMinPendingLatency(@Nullable String minPendingLatency) {
+        public Builder minPendingLatency(@Nullable String minPendingLatency) {
             this.minPendingLatency = minPendingLatency;
             return this;
         }
 
-        public Builder setMinTotalInstances(@Nullable Integer minTotalInstances) {
+        public Builder minTotalInstances(@Nullable Integer minTotalInstances) {
             this.minTotalInstances = minTotalInstances;
             return this;
         }
 
-        public Builder setNetworkUtilization(@Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization) {
+        public Builder networkUtilization(@Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization) {
             this.networkUtilization = networkUtilization;
             return this;
         }
 
-        public Builder setRequestUtilization(@Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
+        public Builder requestUtilization(@Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
             this.requestUtilization = requestUtilization;
             return this;
         }

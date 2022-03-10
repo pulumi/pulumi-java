@@ -91,32 +91,32 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.organization = defaults.organization;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setOrganization(Input<String> organization) {
+        public Builder organization(Input<String> organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
-        public Builder setOrganization(String organization) {
+        public Builder organization(String organization) {
             this.organization = Input.of(Objects.requireNonNull(organization));
             return this;
         }

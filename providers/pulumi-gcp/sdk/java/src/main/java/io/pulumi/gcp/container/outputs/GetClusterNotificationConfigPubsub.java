@@ -50,12 +50,12 @@ public final class GetClusterNotificationConfigPubsub {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

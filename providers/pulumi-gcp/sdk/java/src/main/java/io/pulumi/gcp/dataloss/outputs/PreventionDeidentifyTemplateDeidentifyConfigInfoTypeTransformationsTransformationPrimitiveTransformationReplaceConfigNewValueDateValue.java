@@ -85,17 +85,17 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.year = defaults.year;
         }
 
-        public Builder setDay(@Nullable Integer day) {
+        public Builder day(@Nullable Integer day) {
             this.day = day;
             return this;
         }
 
-        public Builder setMonth(@Nullable Integer month) {
+        public Builder month(@Nullable Integer month) {
             this.month = month;
             return this;
         }
 
-        public Builder setYear(@Nullable Integer year) {
+        public Builder year(@Nullable Integer year) {
             this.year = year;
             return this;
         }

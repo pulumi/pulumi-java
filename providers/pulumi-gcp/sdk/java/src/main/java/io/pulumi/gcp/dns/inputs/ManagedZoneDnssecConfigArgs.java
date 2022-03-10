@@ -111,42 +111,42 @@ public final class ManagedZoneDnssecConfigArgs extends io.pulumi.resources.Resou
     	      this.state = defaults.state;
         }
 
-        public Builder setDefaultKeySpecs(@Nullable Input<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs) {
+        public Builder defaultKeySpecs(@Nullable Input<List<ManagedZoneDnssecConfigDefaultKeySpecArgs>> defaultKeySpecs) {
             this.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
 
-        public Builder setDefaultKeySpecs(@Nullable List<ManagedZoneDnssecConfigDefaultKeySpecArgs> defaultKeySpecs) {
+        public Builder defaultKeySpecs(@Nullable List<ManagedZoneDnssecConfigDefaultKeySpecArgs> defaultKeySpecs) {
             this.defaultKeySpecs = Input.ofNullable(defaultKeySpecs);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setNonExistence(@Nullable Input<String> nonExistence) {
+        public Builder nonExistence(@Nullable Input<String> nonExistence) {
             this.nonExistence = nonExistence;
             return this;
         }
 
-        public Builder setNonExistence(@Nullable String nonExistence) {
+        public Builder nonExistence(@Nullable String nonExistence) {
             this.nonExistence = Input.ofNullable(nonExistence);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

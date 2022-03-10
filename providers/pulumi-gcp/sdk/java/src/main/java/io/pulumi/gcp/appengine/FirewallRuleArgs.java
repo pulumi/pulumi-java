@@ -125,52 +125,52 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceRange = defaults.sourceRange;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSourceRange(Input<String> sourceRange) {
+        public Builder sourceRange(Input<String> sourceRange) {
             this.sourceRange = Objects.requireNonNull(sourceRange);
             return this;
         }
 
-        public Builder setSourceRange(String sourceRange) {
+        public Builder sourceRange(String sourceRange) {
             this.sourceRange = Input.of(Objects.requireNonNull(sourceRange));
             return this;
         }

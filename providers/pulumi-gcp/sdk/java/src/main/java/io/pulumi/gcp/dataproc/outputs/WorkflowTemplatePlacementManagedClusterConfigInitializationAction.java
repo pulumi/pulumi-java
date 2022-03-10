@@ -67,12 +67,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     	      this.executionTimeout = defaults.executionTimeout;
         }
 
-        public Builder setExecutableFile(@Nullable String executableFile) {
+        public Builder executableFile(@Nullable String executableFile) {
             this.executableFile = executableFile;
             return this;
         }
 
-        public Builder setExecutionTimeout(@Nullable String executionTimeout) {
+        public Builder executionTimeout(@Nullable String executionTimeout) {
             this.executionTimeout = executionTimeout;
             return this;
         }

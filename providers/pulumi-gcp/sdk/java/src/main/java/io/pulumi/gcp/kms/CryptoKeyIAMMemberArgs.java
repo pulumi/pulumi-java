@@ -104,42 +104,42 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<CryptoKeyIAMMemberConditionArgs> condition) {
+        public Builder condition(@Nullable Input<CryptoKeyIAMMemberConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable CryptoKeyIAMMemberConditionArgs condition) {
+        public Builder condition(@Nullable CryptoKeyIAMMemberConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setCryptoKeyId(Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(Input<String> cryptoKeyId) {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
 
-        public Builder setCryptoKeyId(String cryptoKeyId) {
+        public Builder cryptoKeyId(String cryptoKeyId) {
             this.cryptoKeyId = Input.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
 
-        public Builder setMember(Input<String> member) {
+        public Builder member(Input<String> member) {
             this.member = Objects.requireNonNull(member);
             return this;
         }
 
-        public Builder setMember(String member) {
+        public Builder member(String member) {
             this.member = Input.of(Objects.requireNonNull(member));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

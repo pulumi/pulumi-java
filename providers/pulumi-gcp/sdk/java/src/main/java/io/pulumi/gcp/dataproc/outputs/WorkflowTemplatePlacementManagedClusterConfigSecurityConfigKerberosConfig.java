@@ -277,77 +277,77 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
     	      this.truststorePassword = defaults.truststorePassword;
         }
 
-        public Builder setCrossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
+        public Builder crossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
             this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
             return this;
         }
 
-        public Builder setCrossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
+        public Builder crossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
             this.crossRealmTrustKdc = crossRealmTrustKdc;
             return this;
         }
 
-        public Builder setCrossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
+        public Builder crossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
             this.crossRealmTrustRealm = crossRealmTrustRealm;
             return this;
         }
 
-        public Builder setCrossRealmTrustSharedPassword(@Nullable String crossRealmTrustSharedPassword) {
+        public Builder crossRealmTrustSharedPassword(@Nullable String crossRealmTrustSharedPassword) {
             this.crossRealmTrustSharedPassword = crossRealmTrustSharedPassword;
             return this;
         }
 
-        public Builder setEnableKerberos(@Nullable Boolean enableKerberos) {
+        public Builder enableKerberos(@Nullable Boolean enableKerberos) {
             this.enableKerberos = enableKerberos;
             return this;
         }
 
-        public Builder setKdcDbKey(@Nullable String kdcDbKey) {
+        public Builder kdcDbKey(@Nullable String kdcDbKey) {
             this.kdcDbKey = kdcDbKey;
             return this;
         }
 
-        public Builder setKeyPassword(@Nullable String keyPassword) {
+        public Builder keyPassword(@Nullable String keyPassword) {
             this.keyPassword = keyPassword;
             return this;
         }
 
-        public Builder setKeystore(@Nullable String keystore) {
+        public Builder keystore(@Nullable String keystore) {
             this.keystore = keystore;
             return this;
         }
 
-        public Builder setKeystorePassword(@Nullable String keystorePassword) {
+        public Builder keystorePassword(@Nullable String keystorePassword) {
             this.keystorePassword = keystorePassword;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setRealm(@Nullable String realm) {
+        public Builder realm(@Nullable String realm) {
             this.realm = realm;
             return this;
         }
 
-        public Builder setRootPrincipalPassword(@Nullable String rootPrincipalPassword) {
+        public Builder rootPrincipalPassword(@Nullable String rootPrincipalPassword) {
             this.rootPrincipalPassword = rootPrincipalPassword;
             return this;
         }
 
-        public Builder setTgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
+        public Builder tgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
             this.tgtLifetimeHours = tgtLifetimeHours;
             return this;
         }
 
-        public Builder setTruststore(@Nullable String truststore) {
+        public Builder truststore(@Nullable String truststore) {
             this.truststore = truststore;
             return this;
         }
 
-        public Builder setTruststorePassword(@Nullable String truststorePassword) {
+        public Builder truststorePassword(@Nullable String truststorePassword) {
             this.truststorePassword = truststorePassword;
             return this;
         }

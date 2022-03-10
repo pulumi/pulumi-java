@@ -167,37 +167,37 @@ public final class GuestPoliciesRecipeInstallStep {
     	      this.scriptRun = defaults.scriptRun;
         }
 
-        public Builder setArchiveExtraction(@Nullable GuestPoliciesRecipeInstallStepArchiveExtraction archiveExtraction) {
+        public Builder archiveExtraction(@Nullable GuestPoliciesRecipeInstallStepArchiveExtraction archiveExtraction) {
             this.archiveExtraction = archiveExtraction;
             return this;
         }
 
-        public Builder setDpkgInstallation(@Nullable GuestPoliciesRecipeInstallStepDpkgInstallation dpkgInstallation) {
+        public Builder dpkgInstallation(@Nullable GuestPoliciesRecipeInstallStepDpkgInstallation dpkgInstallation) {
             this.dpkgInstallation = dpkgInstallation;
             return this;
         }
 
-        public Builder setFileCopy(@Nullable GuestPoliciesRecipeInstallStepFileCopy fileCopy) {
+        public Builder fileCopy(@Nullable GuestPoliciesRecipeInstallStepFileCopy fileCopy) {
             this.fileCopy = fileCopy;
             return this;
         }
 
-        public Builder setFileExec(@Nullable GuestPoliciesRecipeInstallStepFileExec fileExec) {
+        public Builder fileExec(@Nullable GuestPoliciesRecipeInstallStepFileExec fileExec) {
             this.fileExec = fileExec;
             return this;
         }
 
-        public Builder setMsiInstallation(@Nullable GuestPoliciesRecipeInstallStepMsiInstallation msiInstallation) {
+        public Builder msiInstallation(@Nullable GuestPoliciesRecipeInstallStepMsiInstallation msiInstallation) {
             this.msiInstallation = msiInstallation;
             return this;
         }
 
-        public Builder setRpmInstallation(@Nullable GuestPoliciesRecipeInstallStepRpmInstallation rpmInstallation) {
+        public Builder rpmInstallation(@Nullable GuestPoliciesRecipeInstallStepRpmInstallation rpmInstallation) {
             this.rpmInstallation = rpmInstallation;
             return this;
         }
 
-        public Builder setScriptRun(@Nullable GuestPoliciesRecipeInstallStepScriptRun scriptRun) {
+        public Builder scriptRun(@Nullable GuestPoliciesRecipeInstallStepScriptRun scriptRun) {
             this.scriptRun = scriptRun;
             return this;
         }

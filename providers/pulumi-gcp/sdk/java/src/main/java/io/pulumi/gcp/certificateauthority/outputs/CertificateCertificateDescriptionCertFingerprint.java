@@ -42,7 +42,7 @@ public final class CertificateCertificateDescriptionCertFingerprint {
     	      this.sha256Hash = defaults.sha256Hash;
         }
 
-        public Builder setSha256Hash(@Nullable String sha256Hash) {
+        public Builder sha256Hash(@Nullable String sha256Hash) {
             this.sha256Hash = sha256Hash;
             return this;
         }

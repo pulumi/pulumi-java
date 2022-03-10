@@ -52,7 +52,7 @@ public final class MembershipEndpoint {
     	      this.gkeCluster = defaults.gkeCluster;
         }
 
-        public Builder setGkeCluster(@Nullable MembershipEndpointGkeCluster gkeCluster) {
+        public Builder gkeCluster(@Nullable MembershipEndpointGkeCluster gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
         }

@@ -129,27 +129,27 @@ public final class CaPoolIssuancePolicyBaselineValues {
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
-        public Builder setCaOptions(CaPoolIssuancePolicyBaselineValuesCaOptions caOptions) {
+        public Builder caOptions(CaPoolIssuancePolicyBaselineValuesCaOptions caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
 
-        public Builder setKeyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage) {
+        public Builder keyUsage(CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
+        public Builder policyIds(@Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
             this.policyIds = policyIds;
             return this;
         }

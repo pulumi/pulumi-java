@@ -146,82 +146,82 @@ public final class CertificateCertificateDescriptionArgs extends io.pulumi.resou
     	      this.subjectKeyIds = defaults.subjectKeyIds;
         }
 
-        public Builder setAiaIssuingCertificateUrls(@Nullable Input<List<String>> aiaIssuingCertificateUrls) {
+        public Builder aiaIssuingCertificateUrls(@Nullable Input<List<String>> aiaIssuingCertificateUrls) {
             this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
             return this;
         }
 
-        public Builder setAiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
+        public Builder aiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
             this.aiaIssuingCertificateUrls = Input.ofNullable(aiaIssuingCertificateUrls);
             return this;
         }
 
-        public Builder setAuthorityKeyIds(@Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds) {
+        public Builder authorityKeyIds(@Nullable Input<List<CertificateCertificateDescriptionAuthorityKeyIdArgs>> authorityKeyIds) {
             this.authorityKeyIds = authorityKeyIds;
             return this;
         }
 
-        public Builder setAuthorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyIdArgs> authorityKeyIds) {
+        public Builder authorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyIdArgs> authorityKeyIds) {
             this.authorityKeyIds = Input.ofNullable(authorityKeyIds);
             return this;
         }
 
-        public Builder setCertFingerprints(@Nullable Input<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints) {
+        public Builder certFingerprints(@Nullable Input<List<CertificateCertificateDescriptionCertFingerprintArgs>> certFingerprints) {
             this.certFingerprints = certFingerprints;
             return this;
         }
 
-        public Builder setCertFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprintArgs> certFingerprints) {
+        public Builder certFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprintArgs> certFingerprints) {
             this.certFingerprints = Input.ofNullable(certFingerprints);
             return this;
         }
 
-        public Builder setConfigValues(@Nullable Input<List<CertificateCertificateDescriptionConfigValueArgs>> configValues) {
+        public Builder configValues(@Nullable Input<List<CertificateCertificateDescriptionConfigValueArgs>> configValues) {
             this.configValues = configValues;
             return this;
         }
 
-        public Builder setConfigValues(@Nullable List<CertificateCertificateDescriptionConfigValueArgs> configValues) {
+        public Builder configValues(@Nullable List<CertificateCertificateDescriptionConfigValueArgs> configValues) {
             this.configValues = Input.ofNullable(configValues);
             return this;
         }
 
-        public Builder setCrlDistributionPoints(@Nullable Input<List<String>> crlDistributionPoints) {
+        public Builder crlDistributionPoints(@Nullable Input<List<String>> crlDistributionPoints) {
             this.crlDistributionPoints = crlDistributionPoints;
             return this;
         }
 
-        public Builder setCrlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
+        public Builder crlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
             this.crlDistributionPoints = Input.ofNullable(crlDistributionPoints);
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable Input<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(@Nullable Input<List<CertificateCertificateDescriptionPublicKeyArgs>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<CertificateCertificateDescriptionPublicKeyArgs> publicKeys) {
+        public Builder publicKeys(@Nullable List<CertificateCertificateDescriptionPublicKeyArgs> publicKeys) {
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
 
-        public Builder setSubjectDescriptions(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions) {
+        public Builder subjectDescriptions(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionArgs>> subjectDescriptions) {
             this.subjectDescriptions = subjectDescriptions;
             return this;
         }
 
-        public Builder setSubjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionArgs> subjectDescriptions) {
+        public Builder subjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionArgs> subjectDescriptions) {
             this.subjectDescriptions = Input.ofNullable(subjectDescriptions);
             return this;
         }
 
-        public Builder setSubjectKeyIds(@Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds) {
+        public Builder subjectKeyIds(@Nullable Input<List<CertificateCertificateDescriptionSubjectKeyIdArgs>> subjectKeyIds) {
             this.subjectKeyIds = subjectKeyIds;
             return this;
         }
 
-        public Builder setSubjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyIdArgs> subjectKeyIds) {
+        public Builder subjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyIdArgs> subjectKeyIds) {
             this.subjectKeyIds = Input.ofNullable(subjectKeyIds);
             return this;
         }

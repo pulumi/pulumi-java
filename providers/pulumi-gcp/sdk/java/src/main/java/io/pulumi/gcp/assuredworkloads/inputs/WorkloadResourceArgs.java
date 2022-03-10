@@ -71,22 +71,22 @@ public final class WorkloadResourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setResourceId(@Nullable Input<Integer> resourceId) {
+        public Builder resourceId(@Nullable Input<Integer> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable Integer resourceId) {
+        public Builder resourceId(@Nullable Integer resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }

@@ -155,42 +155,42 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
     	      this.syncWaitSecs = defaults.syncWaitSecs;
         }
 
-        public Builder setGcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
+        public Builder gcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
             this.gcpServiceAccountEmail = gcpServiceAccountEmail;
             return this;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
 
-        public Builder setPolicyDir(@Nullable String policyDir) {
+        public Builder policyDir(@Nullable String policyDir) {
             this.policyDir = policyDir;
             return this;
         }
 
-        public Builder setSecretType(@Nullable String secretType) {
+        public Builder secretType(@Nullable String secretType) {
             this.secretType = secretType;
             return this;
         }
 
-        public Builder setSyncBranch(@Nullable String syncBranch) {
+        public Builder syncBranch(@Nullable String syncBranch) {
             this.syncBranch = syncBranch;
             return this;
         }
 
-        public Builder setSyncRepo(@Nullable String syncRepo) {
+        public Builder syncRepo(@Nullable String syncRepo) {
             this.syncRepo = syncRepo;
             return this;
         }
 
-        public Builder setSyncRev(@Nullable String syncRev) {
+        public Builder syncRev(@Nullable String syncRev) {
             this.syncRev = syncRev;
             return this;
         }
 
-        public Builder setSyncWaitSecs(@Nullable String syncWaitSecs) {
+        public Builder syncWaitSecs(@Nullable String syncWaitSecs) {
             this.syncWaitSecs = syncWaitSecs;
             return this;
         }

@@ -69,12 +69,12 @@ public final class InstanceGroupManagerStatusStateful {
     	      this.perInstanceConfigs = defaults.perInstanceConfigs;
         }
 
-        public Builder setHasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
+        public Builder hasStatefulConfig(@Nullable Boolean hasStatefulConfig) {
             this.hasStatefulConfig = hasStatefulConfig;
             return this;
         }
 
-        public Builder setPerInstanceConfigs(@Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
+        public Builder perInstanceConfigs(@Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
             this.perInstanceConfigs = perInstanceConfigs;
             return this;
         }

@@ -168,72 +168,72 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schemaSettings = defaults.schemaSettings;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMessageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
-        public Builder setMessageRetentionDuration(@Nullable String messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
             this.messageRetentionDuration = Input.ofNullable(messageRetentionDuration);
             return this;
         }
 
-        public Builder setMessageStoragePolicy(@Nullable Input<TopicMessageStoragePolicyArgs> messageStoragePolicy) {
+        public Builder messageStoragePolicy(@Nullable Input<TopicMessageStoragePolicyArgs> messageStoragePolicy) {
             this.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
 
-        public Builder setMessageStoragePolicy(@Nullable TopicMessageStoragePolicyArgs messageStoragePolicy) {
+        public Builder messageStoragePolicy(@Nullable TopicMessageStoragePolicyArgs messageStoragePolicy) {
             this.messageStoragePolicy = Input.ofNullable(messageStoragePolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchemaSettings(@Nullable Input<TopicSchemaSettingsArgs> schemaSettings) {
+        public Builder schemaSettings(@Nullable Input<TopicSchemaSettingsArgs> schemaSettings) {
             this.schemaSettings = schemaSettings;
             return this;
         }
 
-        public Builder setSchemaSettings(@Nullable TopicSchemaSettingsArgs schemaSettings) {
+        public Builder schemaSettings(@Nullable TopicSchemaSettingsArgs schemaSettings) {
             this.schemaSettings = Input.ofNullable(schemaSettings);
             return this;
         }

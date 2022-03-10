@@ -108,22 +108,22 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
 
-        public Builder setGcsObject(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject gcsObject) {
+        public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
 
-        public Builder setInterpreter(@Nullable String interpreter) {
+        public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }

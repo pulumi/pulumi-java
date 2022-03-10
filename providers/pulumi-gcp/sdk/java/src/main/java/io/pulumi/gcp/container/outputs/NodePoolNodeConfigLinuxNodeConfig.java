@@ -41,7 +41,7 @@ public final class NodePoolNodeConfigLinuxNodeConfig {
     	      this.sysctls = defaults.sysctls;
         }
 
-        public Builder setSysctls(Map<String,String> sysctls) {
+        public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }

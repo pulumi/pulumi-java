@@ -106,42 +106,42 @@ public final class InstanceIAMPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.zone = defaults.zone;
         }
 
-        public Builder setInstanceName(Input<String> instanceName) {
+        public Builder instanceName(Input<String> instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
-        public Builder setInstanceName(String instanceName) {
+        public Builder instanceName(String instanceName) {
             this.instanceName = Input.of(Objects.requireNonNull(instanceName));
             return this;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

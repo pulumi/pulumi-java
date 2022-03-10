@@ -176,42 +176,42 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder setBooleanValue(@Nullable Boolean booleanValue) {
+        public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
-        public Builder setDateValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue) {
+        public Builder dateValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue) {
             this.dateValue = dateValue;
             return this;
         }
 
-        public Builder setDayOfWeekValue(@Nullable String dayOfWeekValue) {
+        public Builder dayOfWeekValue(@Nullable String dayOfWeekValue) {
             this.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
 
-        public Builder setFloatValue(@Nullable Double floatValue) {
+        public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = floatValue;
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable Integer integerValue) {
+        public Builder integerValue(@Nullable Integer integerValue) {
             this.integerValue = integerValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setTimeValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue) {
+        public Builder timeValue(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue) {
             this.timeValue = timeValue;
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable String timestampValue) {
+        public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }

@@ -88,32 +88,32 @@ public final class TriggerGithubPullRequestArgs extends io.pulumi.resources.Reso
     	      this.invertRegex = defaults.invertRegex;
         }
 
-        public Builder setBranch(Input<String> branch) {
+        public Builder branch(Input<String> branch) {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
 
-        public Builder setBranch(String branch) {
+        public Builder branch(String branch) {
             this.branch = Input.of(Objects.requireNonNull(branch));
             return this;
         }
 
-        public Builder setCommentControl(@Nullable Input<String> commentControl) {
+        public Builder commentControl(@Nullable Input<String> commentControl) {
             this.commentControl = commentControl;
             return this;
         }
 
-        public Builder setCommentControl(@Nullable String commentControl) {
+        public Builder commentControl(@Nullable String commentControl) {
             this.commentControl = Input.ofNullable(commentControl);
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Input<Boolean> invertRegex) {
+        public Builder invertRegex(@Nullable Input<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Boolean invertRegex) {
+        public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Input.ofNullable(invertRegex);
             return this;
         }

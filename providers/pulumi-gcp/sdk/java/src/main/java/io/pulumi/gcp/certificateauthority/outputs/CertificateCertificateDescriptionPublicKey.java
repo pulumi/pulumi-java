@@ -69,12 +69,12 @@ public final class CertificateCertificateDescriptionPublicKey {
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

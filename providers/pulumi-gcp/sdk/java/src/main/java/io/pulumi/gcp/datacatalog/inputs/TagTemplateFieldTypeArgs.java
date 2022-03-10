@@ -75,22 +75,22 @@ public final class TagTemplateFieldTypeArgs extends io.pulumi.resources.Resource
     	      this.primitiveType = defaults.primitiveType;
         }
 
-        public Builder setEnumType(@Nullable Input<TagTemplateFieldTypeEnumTypeArgs> enumType) {
+        public Builder enumType(@Nullable Input<TagTemplateFieldTypeEnumTypeArgs> enumType) {
             this.enumType = enumType;
             return this;
         }
 
-        public Builder setEnumType(@Nullable TagTemplateFieldTypeEnumTypeArgs enumType) {
+        public Builder enumType(@Nullable TagTemplateFieldTypeEnumTypeArgs enumType) {
             this.enumType = Input.ofNullable(enumType);
             return this;
         }
 
-        public Builder setPrimitiveType(@Nullable Input<String> primitiveType) {
+        public Builder primitiveType(@Nullable Input<String> primitiveType) {
             this.primitiveType = primitiveType;
             return this;
         }
 
-        public Builder setPrimitiveType(@Nullable String primitiveType) {
+        public Builder primitiveType(@Nullable String primitiveType) {
             this.primitiveType = Input.ofNullable(primitiveType);
             return this;
         }

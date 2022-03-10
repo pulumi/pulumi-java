@@ -42,7 +42,7 @@ public final class CertificateCertificateDescriptionAuthorityKeyId {
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }

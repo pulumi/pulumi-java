@@ -170,82 +170,82 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
     	      this.service = defaults.service;
         }
 
-        public Builder setDimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable Map<String,String> dimensions) {
+        public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setForce(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Input<Boolean> force) {
             this.force = force;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = Input.ofNullable(force);
             return this;
         }
 
-        public Builder setLimit(@Nullable Input<String> limit) {
+        public Builder limit(@Nullable Input<String> limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLimit(@Nullable String limit) {
+        public Builder limit(@Nullable String limit) {
             this.limit = Input.ofNullable(limit);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Input<String> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOverrideValue(@Nullable Input<String> overrideValue) {
+        public Builder overrideValue(@Nullable Input<String> overrideValue) {
             this.overrideValue = overrideValue;
             return this;
         }
 
-        public Builder setOverrideValue(@Nullable String overrideValue) {
+        public Builder overrideValue(@Nullable String overrideValue) {
             this.overrideValue = Input.ofNullable(overrideValue);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

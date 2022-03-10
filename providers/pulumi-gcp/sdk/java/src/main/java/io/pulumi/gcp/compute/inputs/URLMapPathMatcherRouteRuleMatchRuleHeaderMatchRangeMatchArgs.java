@@ -69,22 +69,22 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs 
     	      this.rangeStart = defaults.rangeStart;
         }
 
-        public Builder setRangeEnd(Input<Integer> rangeEnd) {
+        public Builder rangeEnd(Input<Integer> rangeEnd) {
             this.rangeEnd = Objects.requireNonNull(rangeEnd);
             return this;
         }
 
-        public Builder setRangeEnd(Integer rangeEnd) {
+        public Builder rangeEnd(Integer rangeEnd) {
             this.rangeEnd = Input.of(Objects.requireNonNull(rangeEnd));
             return this;
         }
 
-        public Builder setRangeStart(Input<Integer> rangeStart) {
+        public Builder rangeStart(Input<Integer> rangeStart) {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }
 
-        public Builder setRangeStart(Integer rangeStart) {
+        public Builder rangeStart(Integer rangeStart) {
             this.rangeStart = Input.of(Objects.requireNonNull(rangeStart));
             return this;
         }

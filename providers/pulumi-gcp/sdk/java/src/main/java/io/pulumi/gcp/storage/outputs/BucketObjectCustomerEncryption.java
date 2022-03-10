@@ -67,12 +67,12 @@ public final class BucketObjectCustomerEncryption {
     	      this.encryptionKey = defaults.encryptionKey;
         }
 
-        public Builder setEncryptionAlgorithm(@Nullable String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
-        public Builder setEncryptionKey(String encryptionKey) {
+        public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }

@@ -176,82 +176,82 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUniqueId(@Nullable Input<String> uniqueId) {
+        public Builder uniqueId(@Nullable Input<String> uniqueId) {
             this.uniqueId = uniqueId;
             return this;
         }
 
-        public Builder setUniqueId(@Nullable String uniqueId) {
+        public Builder uniqueId(@Nullable String uniqueId) {
             this.uniqueId = Input.ofNullable(uniqueId);
             return this;
         }

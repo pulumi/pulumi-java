@@ -72,12 +72,12 @@ public final class PreventionStoredInfoTypeDictionary {
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setCloudStoragePath(@Nullable PreventionStoredInfoTypeDictionaryCloudStoragePath cloudStoragePath) {
+        public Builder cloudStoragePath(@Nullable PreventionStoredInfoTypeDictionaryCloudStoragePath cloudStoragePath) {
             this.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
-        public Builder setWordList(@Nullable PreventionStoredInfoTypeDictionaryWordList wordList) {
+        public Builder wordList(@Nullable PreventionStoredInfoTypeDictionaryWordList wordList) {
             this.wordList = wordList;
             return this;
         }

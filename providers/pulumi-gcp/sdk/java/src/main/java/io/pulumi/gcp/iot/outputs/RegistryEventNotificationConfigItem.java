@@ -75,12 +75,12 @@ public final class RegistryEventNotificationConfigItem {
     	      this.subfolderMatches = defaults.subfolderMatches;
         }
 
-        public Builder setPubsubTopicName(String pubsubTopicName) {
+        public Builder pubsubTopicName(String pubsubTopicName) {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
 
-        public Builder setSubfolderMatches(@Nullable String subfolderMatches) {
+        public Builder subfolderMatches(@Nullable String subfolderMatches) {
             this.subfolderMatches = subfolderMatches;
             return this;
         }

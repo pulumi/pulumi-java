@@ -72,22 +72,22 @@ public final class EngineSplitTrafficSplitGetArgs extends io.pulumi.resources.Re
     	      this.shardBy = defaults.shardBy;
         }
 
-        public Builder setAllocations(Input<Map<String,String>> allocations) {
+        public Builder allocations(Input<Map<String,String>> allocations) {
             this.allocations = Objects.requireNonNull(allocations);
             return this;
         }
 
-        public Builder setAllocations(Map<String,String> allocations) {
+        public Builder allocations(Map<String,String> allocations) {
             this.allocations = Input.of(Objects.requireNonNull(allocations));
             return this;
         }
 
-        public Builder setShardBy(@Nullable Input<String> shardBy) {
+        public Builder shardBy(@Nullable Input<String> shardBy) {
             this.shardBy = shardBy;
             return this;
         }
 
-        public Builder setShardBy(@Nullable String shardBy) {
+        public Builder shardBy(@Nullable String shardBy) {
             this.shardBy = Input.ofNullable(shardBy);
             return this;
         }

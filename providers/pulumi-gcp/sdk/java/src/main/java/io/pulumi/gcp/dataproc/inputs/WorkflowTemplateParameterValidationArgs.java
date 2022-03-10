@@ -71,22 +71,22 @@ public final class WorkflowTemplateParameterValidationArgs extends io.pulumi.res
     	      this.values = defaults.values;
         }
 
-        public Builder setRegex(@Nullable Input<WorkflowTemplateParameterValidationRegexArgs> regex) {
+        public Builder regex(@Nullable Input<WorkflowTemplateParameterValidationRegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable WorkflowTemplateParameterValidationRegexArgs regex) {
+        public Builder regex(@Nullable WorkflowTemplateParameterValidationRegexArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<WorkflowTemplateParameterValidationValuesArgs> values) {
+        public Builder values(@Nullable Input<WorkflowTemplateParameterValidationValuesArgs> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable WorkflowTemplateParameterValidationValuesArgs values) {
+        public Builder values(@Nullable WorkflowTemplateParameterValidationValuesArgs values) {
             this.values = Input.ofNullable(values);
             return this;
         }

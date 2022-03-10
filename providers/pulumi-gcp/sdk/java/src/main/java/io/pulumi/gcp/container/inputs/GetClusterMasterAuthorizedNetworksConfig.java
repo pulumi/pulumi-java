@@ -48,7 +48,7 @@ public final class GetClusterMasterAuthorizedNetworksConfig extends io.pulumi.re
     	      this.cidrBlocks = defaults.cidrBlocks;
         }
 
-        public Builder setCidrBlocks(List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+        public Builder cidrBlocks(List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }

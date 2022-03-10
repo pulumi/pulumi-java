@@ -95,17 +95,17 @@ public final class GetEngineVersionsArgs extends io.pulumi.resources.InvokeArgs 
     	      this.versionPrefix = defaults.versionPrefix;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setVersionPrefix(@Nullable String versionPrefix) {
+        public Builder versionPrefix(@Nullable String versionPrefix) {
             this.versionPrefix = versionPrefix;
             return this;
         }

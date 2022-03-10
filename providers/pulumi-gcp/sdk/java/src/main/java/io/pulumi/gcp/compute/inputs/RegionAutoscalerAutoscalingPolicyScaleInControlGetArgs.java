@@ -73,22 +73,22 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs extend
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder setMaxScaledInReplicas(@Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs> maxScaledInReplicas) {
+        public Builder maxScaledInReplicas(@Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs> maxScaledInReplicas) {
             this.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
 
-        public Builder setMaxScaledInReplicas(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs maxScaledInReplicas) {
+        public Builder maxScaledInReplicas(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs maxScaledInReplicas) {
             this.maxScaledInReplicas = Input.ofNullable(maxScaledInReplicas);
             return this;
         }
 
-        public Builder setTimeWindowSec(@Nullable Input<Integer> timeWindowSec) {
+        public Builder timeWindowSec(@Nullable Input<Integer> timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
 
-        public Builder setTimeWindowSec(@Nullable Integer timeWindowSec) {
+        public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = Input.ofNullable(timeWindowSec);
             return this;
         }

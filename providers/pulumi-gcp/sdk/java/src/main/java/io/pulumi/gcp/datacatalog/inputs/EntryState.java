@@ -287,142 +287,142 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     	      this.userSpecifiedType = defaults.userSpecifiedType;
         }
 
-        public Builder setBigqueryDateShardedSpecs(@Nullable Input<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs) {
+        public Builder bigqueryDateShardedSpecs(@Nullable Input<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs) {
             this.bigqueryDateShardedSpecs = bigqueryDateShardedSpecs;
             return this;
         }
 
-        public Builder setBigqueryDateShardedSpecs(@Nullable List<EntryBigqueryDateShardedSpecGetArgs> bigqueryDateShardedSpecs) {
+        public Builder bigqueryDateShardedSpecs(@Nullable List<EntryBigqueryDateShardedSpecGetArgs> bigqueryDateShardedSpecs) {
             this.bigqueryDateShardedSpecs = Input.ofNullable(bigqueryDateShardedSpecs);
             return this;
         }
 
-        public Builder setBigqueryTableSpecs(@Nullable Input<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs) {
+        public Builder bigqueryTableSpecs(@Nullable Input<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs) {
             this.bigqueryTableSpecs = bigqueryTableSpecs;
             return this;
         }
 
-        public Builder setBigqueryTableSpecs(@Nullable List<EntryBigqueryTableSpecGetArgs> bigqueryTableSpecs) {
+        public Builder bigqueryTableSpecs(@Nullable List<EntryBigqueryTableSpecGetArgs> bigqueryTableSpecs) {
             this.bigqueryTableSpecs = Input.ofNullable(bigqueryTableSpecs);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEntryGroup(@Nullable Input<String> entryGroup) {
+        public Builder entryGroup(@Nullable Input<String> entryGroup) {
             this.entryGroup = entryGroup;
             return this;
         }
 
-        public Builder setEntryGroup(@Nullable String entryGroup) {
+        public Builder entryGroup(@Nullable String entryGroup) {
             this.entryGroup = Input.ofNullable(entryGroup);
             return this;
         }
 
-        public Builder setEntryId(@Nullable Input<String> entryId) {
+        public Builder entryId(@Nullable Input<String> entryId) {
             this.entryId = entryId;
             return this;
         }
 
-        public Builder setEntryId(@Nullable String entryId) {
+        public Builder entryId(@Nullable String entryId) {
             this.entryId = Input.ofNullable(entryId);
             return this;
         }
 
-        public Builder setGcsFilesetSpec(@Nullable Input<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec) {
+        public Builder gcsFilesetSpec(@Nullable Input<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec) {
             this.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
 
-        public Builder setGcsFilesetSpec(@Nullable EntryGcsFilesetSpecGetArgs gcsFilesetSpec) {
+        public Builder gcsFilesetSpec(@Nullable EntryGcsFilesetSpecGetArgs gcsFilesetSpec) {
             this.gcsFilesetSpec = Input.ofNullable(gcsFilesetSpec);
             return this;
         }
 
-        public Builder setIntegratedSystem(@Nullable Input<String> integratedSystem) {
+        public Builder integratedSystem(@Nullable Input<String> integratedSystem) {
             this.integratedSystem = integratedSystem;
             return this;
         }
 
-        public Builder setIntegratedSystem(@Nullable String integratedSystem) {
+        public Builder integratedSystem(@Nullable String integratedSystem) {
             this.integratedSystem = Input.ofNullable(integratedSystem);
             return this;
         }
 
-        public Builder setLinkedResource(@Nullable Input<String> linkedResource) {
+        public Builder linkedResource(@Nullable Input<String> linkedResource) {
             this.linkedResource = linkedResource;
             return this;
         }
 
-        public Builder setLinkedResource(@Nullable String linkedResource) {
+        public Builder linkedResource(@Nullable String linkedResource) {
             this.linkedResource = Input.ofNullable(linkedResource);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserSpecifiedSystem(@Nullable Input<String> userSpecifiedSystem) {
+        public Builder userSpecifiedSystem(@Nullable Input<String> userSpecifiedSystem) {
             this.userSpecifiedSystem = userSpecifiedSystem;
             return this;
         }
 
-        public Builder setUserSpecifiedSystem(@Nullable String userSpecifiedSystem) {
+        public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
             this.userSpecifiedSystem = Input.ofNullable(userSpecifiedSystem);
             return this;
         }
 
-        public Builder setUserSpecifiedType(@Nullable Input<String> userSpecifiedType) {
+        public Builder userSpecifiedType(@Nullable Input<String> userSpecifiedType) {
             this.userSpecifiedType = userSpecifiedType;
             return this;
         }
 
-        public Builder setUserSpecifiedType(@Nullable String userSpecifiedType) {
+        public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
             this.userSpecifiedType = Input.ofNullable(userSpecifiedType);
             return this;
         }

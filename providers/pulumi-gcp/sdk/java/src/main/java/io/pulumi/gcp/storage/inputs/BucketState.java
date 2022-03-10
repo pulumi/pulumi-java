@@ -351,192 +351,192 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
     	      this.website = defaults.website;
         }
 
-        public Builder setCors(@Nullable Input<List<BucketCorGetArgs>> cors) {
+        public Builder cors(@Nullable Input<List<BucketCorGetArgs>> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable List<BucketCorGetArgs> cors) {
+        public Builder cors(@Nullable List<BucketCorGetArgs> cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setDefaultEventBasedHold(@Nullable Input<Boolean> defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(@Nullable Input<Boolean> defaultEventBasedHold) {
             this.defaultEventBasedHold = defaultEventBasedHold;
             return this;
         }
 
-        public Builder setDefaultEventBasedHold(@Nullable Boolean defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(@Nullable Boolean defaultEventBasedHold) {
             this.defaultEventBasedHold = Input.ofNullable(defaultEventBasedHold);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<BucketEncryptionGetArgs> encryption) {
+        public Builder encryption(@Nullable Input<BucketEncryptionGetArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable BucketEncryptionGetArgs encryption) {
+        public Builder encryption(@Nullable BucketEncryptionGetArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifecycleRules(@Nullable Input<List<BucketLifecycleRuleGetArgs>> lifecycleRules) {
+        public Builder lifecycleRules(@Nullable Input<List<BucketLifecycleRuleGetArgs>> lifecycleRules) {
             this.lifecycleRules = lifecycleRules;
             return this;
         }
 
-        public Builder setLifecycleRules(@Nullable List<BucketLifecycleRuleGetArgs> lifecycleRules) {
+        public Builder lifecycleRules(@Nullable List<BucketLifecycleRuleGetArgs> lifecycleRules) {
             this.lifecycleRules = Input.ofNullable(lifecycleRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<BucketLoggingGetArgs> logging) {
+        public Builder logging(@Nullable Input<BucketLoggingGetArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable BucketLoggingGetArgs logging) {
+        public Builder logging(@Nullable BucketLoggingGetArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPublicAccessPrevention(@Nullable Input<String> publicAccessPrevention) {
+        public Builder publicAccessPrevention(@Nullable Input<String> publicAccessPrevention) {
             this.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
 
-        public Builder setPublicAccessPrevention(@Nullable String publicAccessPrevention) {
+        public Builder publicAccessPrevention(@Nullable String publicAccessPrevention) {
             this.publicAccessPrevention = Input.ofNullable(publicAccessPrevention);
             return this;
         }
 
-        public Builder setRequesterPays(@Nullable Input<Boolean> requesterPays) {
+        public Builder requesterPays(@Nullable Input<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
 
-        public Builder setRequesterPays(@Nullable Boolean requesterPays) {
+        public Builder requesterPays(@Nullable Boolean requesterPays) {
             this.requesterPays = Input.ofNullable(requesterPays);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<BucketRetentionPolicyGetArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<BucketRetentionPolicyGetArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable BucketRetentionPolicyGetArgs retentionPolicy) {
+        public Builder retentionPolicy(@Nullable BucketRetentionPolicyGetArgs retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Input<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }
 
-        public Builder setUniformBucketLevelAccess(@Nullable Input<Boolean> uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(@Nullable Input<Boolean> uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
 
-        public Builder setUniformBucketLevelAccess(@Nullable Boolean uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(@Nullable Boolean uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Input.ofNullable(uniformBucketLevelAccess);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }
 
-        public Builder setVersioning(@Nullable Input<BucketVersioningGetArgs> versioning) {
+        public Builder versioning(@Nullable Input<BucketVersioningGetArgs> versioning) {
             this.versioning = versioning;
             return this;
         }
 
-        public Builder setVersioning(@Nullable BucketVersioningGetArgs versioning) {
+        public Builder versioning(@Nullable BucketVersioningGetArgs versioning) {
             this.versioning = Input.ofNullable(versioning);
             return this;
         }
 
-        public Builder setWebsite(@Nullable Input<BucketWebsiteGetArgs> website) {
+        public Builder website(@Nullable Input<BucketWebsiteGetArgs> website) {
             this.website = website;
             return this;
         }
 
-        public Builder setWebsite(@Nullable BucketWebsiteGetArgs website) {
+        public Builder website(@Nullable BucketWebsiteGetArgs website) {
             this.website = Input.ofNullable(website);
             return this;
         }

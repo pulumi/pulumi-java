@@ -52,7 +52,7 @@ public final class HealthCheckLogConfig {
     	      this.enable = defaults.enable;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }

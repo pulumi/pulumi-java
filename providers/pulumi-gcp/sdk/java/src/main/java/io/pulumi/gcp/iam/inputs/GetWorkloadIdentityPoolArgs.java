@@ -72,12 +72,12 @@ public final class GetWorkloadIdentityPoolArgs extends io.pulumi.resources.Invok
     	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setWorkloadIdentityPoolId(String workloadIdentityPoolId) {
+        public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
         }

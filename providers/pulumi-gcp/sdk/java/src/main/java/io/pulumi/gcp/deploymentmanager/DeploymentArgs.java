@@ -195,82 +195,82 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder setCreatePolicy(@Nullable Input<String> createPolicy) {
+        public Builder createPolicy(@Nullable Input<String> createPolicy) {
             this.createPolicy = createPolicy;
             return this;
         }
 
-        public Builder setCreatePolicy(@Nullable String createPolicy) {
+        public Builder createPolicy(@Nullable String createPolicy) {
             this.createPolicy = Input.ofNullable(createPolicy);
             return this;
         }
 
-        public Builder setDeletePolicy(@Nullable Input<String> deletePolicy) {
+        public Builder deletePolicy(@Nullable Input<String> deletePolicy) {
             this.deletePolicy = deletePolicy;
             return this;
         }
 
-        public Builder setDeletePolicy(@Nullable String deletePolicy) {
+        public Builder deletePolicy(@Nullable String deletePolicy) {
             this.deletePolicy = Input.ofNullable(deletePolicy);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<DeploymentLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<DeploymentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<DeploymentLabelArgs> labels) {
+        public Builder labels(@Nullable List<DeploymentLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPreview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Input<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = Input.ofNullable(preview);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTarget(Input<DeploymentTargetArgs> target) {
+        public Builder target(Input<DeploymentTargetArgs> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(DeploymentTargetArgs target) {
+        public Builder target(DeploymentTargetArgs target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }

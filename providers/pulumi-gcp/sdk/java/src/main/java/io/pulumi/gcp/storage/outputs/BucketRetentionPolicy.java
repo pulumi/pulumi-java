@@ -68,12 +68,12 @@ public final class BucketRetentionPolicy {
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder setIsLocked(@Nullable Boolean isLocked) {
+        public Builder isLocked(@Nullable Boolean isLocked) {
             this.isLocked = isLocked;
             return this;
         }
 
-        public Builder setRetentionPeriod(Integer retentionPeriod) {
+        public Builder retentionPeriod(Integer retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }

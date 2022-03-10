@@ -47,7 +47,7 @@ public final class GetClusterAddonsConfigConfigConnectorConfig extends io.pulumi
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

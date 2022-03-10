@@ -68,12 +68,12 @@ public final class WorkloadResource {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setResourceId(@Nullable Integer resourceId) {
+        public Builder resourceId(@Nullable Integer resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }

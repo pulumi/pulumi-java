@@ -91,17 +91,17 @@ public final class ServiceTraffic {
     	      this.revisionName = defaults.revisionName;
         }
 
-        public Builder setLatestRevision(@Nullable Boolean latestRevision) {
+        public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
 
-        public Builder setRevisionName(@Nullable String revisionName) {
+        public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = revisionName;
             return this;
         }

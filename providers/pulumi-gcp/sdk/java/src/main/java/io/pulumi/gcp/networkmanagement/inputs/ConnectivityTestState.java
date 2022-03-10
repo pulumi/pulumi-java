@@ -206,82 +206,82 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
     	      this.source = defaults.source;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<ConnectivityTestDestinationGetArgs> destination) {
+        public Builder destination(@Nullable Input<ConnectivityTestDestinationGetArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable ConnectivityTestDestinationGetArgs destination) {
+        public Builder destination(@Nullable ConnectivityTestDestinationGetArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRelatedProjects(@Nullable Input<List<String>> relatedProjects) {
+        public Builder relatedProjects(@Nullable Input<List<String>> relatedProjects) {
             this.relatedProjects = relatedProjects;
             return this;
         }
 
-        public Builder setRelatedProjects(@Nullable List<String> relatedProjects) {
+        public Builder relatedProjects(@Nullable List<String> relatedProjects) {
             this.relatedProjects = Input.ofNullable(relatedProjects);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<ConnectivityTestSourceGetArgs> source) {
+        public Builder source(@Nullable Input<ConnectivityTestSourceGetArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable ConnectivityTestSourceGetArgs source) {
+        public Builder source(@Nullable ConnectivityTestSourceGetArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }

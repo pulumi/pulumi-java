@@ -123,22 +123,22 @@ public final class BudgetAllUpdatesRule {
     	      this.schemaVersion = defaults.schemaVersion;
         }
 
-        public Builder setDisableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
+        public Builder disableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
             this.disableDefaultIamRecipients = disableDefaultIamRecipients;
             return this;
         }
 
-        public Builder setMonitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
+        public Builder monitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = monitoringNotificationChannels;
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable String pubsubTopic) {
+        public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
-        public Builder setSchemaVersion(@Nullable String schemaVersion) {
+        public Builder schemaVersion(@Nullable String schemaVersion) {
             this.schemaVersion = schemaVersion;
             return this;
         }

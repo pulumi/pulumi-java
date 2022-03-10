@@ -52,12 +52,12 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicyArgs extends io.pu
     	      this.backendService = defaults.backendService;
         }
 
-        public Builder setBackendService(Input<String> backendService) {
+        public Builder backendService(Input<String> backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Input.of(Objects.requireNonNull(backendService));
             return this;
         }

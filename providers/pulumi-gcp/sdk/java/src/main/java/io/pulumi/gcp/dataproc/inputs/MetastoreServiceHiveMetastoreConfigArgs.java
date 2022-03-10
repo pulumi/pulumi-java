@@ -90,32 +90,32 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends io.pulumi.res
     	      this.version = defaults.version;
         }
 
-        public Builder setConfigOverrides(@Nullable Input<Map<String,String>> configOverrides) {
+        public Builder configOverrides(@Nullable Input<Map<String,String>> configOverrides) {
             this.configOverrides = configOverrides;
             return this;
         }
 
-        public Builder setConfigOverrides(@Nullable Map<String,String> configOverrides) {
+        public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
             this.configOverrides = Input.ofNullable(configOverrides);
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable Input<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig) {
+        public Builder kerberosConfig(@Nullable Input<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfigArgs kerberosConfig) {
+        public Builder kerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Input.ofNullable(kerberosConfig);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

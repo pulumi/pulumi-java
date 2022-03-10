@@ -70,12 +70,12 @@ public final class AppProfileSingleClusterRouting {
     	      this.clusterId = defaults.clusterId;
         }
 
-        public Builder setAllowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
+        public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
             this.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }

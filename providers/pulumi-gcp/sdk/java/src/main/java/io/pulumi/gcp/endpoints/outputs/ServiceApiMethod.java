@@ -67,22 +67,22 @@ public final class ServiceApiMethod {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRequestType(@Nullable String requestType) {
+        public Builder requestType(@Nullable String requestType) {
             this.requestType = requestType;
             return this;
         }
 
-        public Builder setResponseType(@Nullable String responseType) {
+        public Builder responseType(@Nullable String responseType) {
             this.responseType = responseType;
             return this;
         }
 
-        public Builder setSyntax(@Nullable String syntax) {
+        public Builder syntax(@Nullable String syntax) {
             this.syntax = syntax;
             return this;
         }

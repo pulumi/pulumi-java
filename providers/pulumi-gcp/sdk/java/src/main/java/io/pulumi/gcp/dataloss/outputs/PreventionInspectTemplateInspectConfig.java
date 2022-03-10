@@ -187,42 +187,42 @@ public final class PreventionInspectTemplateInspectConfig {
     	      this.ruleSets = defaults.ruleSets;
         }
 
-        public Builder setContentOptions(@Nullable List<String> contentOptions) {
+        public Builder contentOptions(@Nullable List<String> contentOptions) {
             this.contentOptions = contentOptions;
             return this;
         }
 
-        public Builder setCustomInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes) {
+        public Builder customInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes) {
             this.customInfoTypes = customInfoTypes;
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
-        public Builder setIncludeQuote(@Nullable Boolean includeQuote) {
+        public Builder includeQuote(@Nullable Boolean includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes) {
+        public Builder infoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
-        public Builder setLimits(@Nullable PreventionInspectTemplateInspectConfigLimits limits) {
+        public Builder limits(@Nullable PreventionInspectTemplateInspectConfigLimits limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setMinLikelihood(@Nullable String minLikelihood) {
+        public Builder minLikelihood(@Nullable String minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
 
-        public Builder setRuleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets) {
+        public Builder ruleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }

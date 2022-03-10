@@ -138,62 +138,62 @@ public final class WorkflowTemplateJobHiveJobArgs extends io.pulumi.resources.Re
     	      this.scriptVariables = defaults.scriptVariables;
         }
 
-        public Builder setContinueOnFailure(@Nullable Input<Boolean> continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Input<Boolean> continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
 
-        public Builder setContinueOnFailure(@Nullable Boolean continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = Input.ofNullable(continueOnFailure);
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable Input<List<String>> jarFileUris) {
+        public Builder jarFileUris(@Nullable Input<List<String>> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = Input.ofNullable(jarFileUris);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable Input<String> queryFileUri) {
+        public Builder queryFileUri(@Nullable Input<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable String queryFileUri) {
+        public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Input.ofNullable(queryFileUri);
             return this;
         }
 
-        public Builder setQueryList(@Nullable Input<WorkflowTemplateJobHiveJobQueryListArgs> queryList) {
+        public Builder queryList(@Nullable Input<WorkflowTemplateJobHiveJobQueryListArgs> queryList) {
             this.queryList = queryList;
             return this;
         }
 
-        public Builder setQueryList(@Nullable WorkflowTemplateJobHiveJobQueryListArgs queryList) {
+        public Builder queryList(@Nullable WorkflowTemplateJobHiveJobQueryListArgs queryList) {
             this.queryList = Input.ofNullable(queryList);
             return this;
         }
 
-        public Builder setScriptVariables(@Nullable Input<Map<String,String>> scriptVariables) {
+        public Builder scriptVariables(@Nullable Input<Map<String,String>> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }
 
-        public Builder setScriptVariables(@Nullable Map<String,String> scriptVariables) {
+        public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = Input.ofNullable(scriptVariables);
             return this;
         }

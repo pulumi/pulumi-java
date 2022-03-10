@@ -70,12 +70,12 @@ public final class EngineSplitTrafficSplit {
     	      this.shardBy = defaults.shardBy;
         }
 
-        public Builder setAllocations(Map<String,String> allocations) {
+        public Builder allocations(Map<String,String> allocations) {
             this.allocations = Objects.requireNonNull(allocations);
             return this;
         }
 
-        public Builder setShardBy(@Nullable String shardBy) {
+        public Builder shardBy(@Nullable String shardBy) {
             this.shardBy = shardBy;
             return this;
         }

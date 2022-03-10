@@ -114,52 +114,52 @@ public final class TagKeyIamBindingState extends io.pulumi.resources.ResourceArg
     	      this.tagKey = defaults.tagKey;
         }
 
-        public Builder setCondition(@Nullable Input<TagKeyIamBindingConditionGetArgs> condition) {
+        public Builder condition(@Nullable Input<TagKeyIamBindingConditionGetArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable TagKeyIamBindingConditionGetArgs condition) {
+        public Builder condition(@Nullable TagKeyIamBindingConditionGetArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setMembers(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Input<List<String>> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = Input.ofNullable(members);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setTagKey(@Nullable Input<String> tagKey) {
+        public Builder tagKey(@Nullable Input<String> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
-        public Builder setTagKey(@Nullable String tagKey) {
+        public Builder tagKey(@Nullable String tagKey) {
             this.tagKey = Input.ofNullable(tagKey);
             return this;
         }

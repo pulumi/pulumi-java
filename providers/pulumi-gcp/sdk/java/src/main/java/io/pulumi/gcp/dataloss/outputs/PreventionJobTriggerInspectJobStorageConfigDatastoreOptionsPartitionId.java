@@ -67,12 +67,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setNamespaceId(@Nullable String namespaceId) {
+        public Builder namespaceId(@Nullable String namespaceId) {
             this.namespaceId = namespaceId;
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }

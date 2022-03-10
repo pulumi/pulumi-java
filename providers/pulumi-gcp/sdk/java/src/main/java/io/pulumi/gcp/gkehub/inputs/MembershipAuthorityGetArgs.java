@@ -48,12 +48,12 @@ public final class MembershipAuthorityGetArgs extends io.pulumi.resources.Resour
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setIssuer(Input<String> issuer) {
+        public Builder issuer(Input<String> issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Input.of(Objects.requireNonNull(issuer));
             return this;
         }

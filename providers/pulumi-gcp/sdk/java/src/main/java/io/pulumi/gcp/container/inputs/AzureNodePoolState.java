@@ -317,172 +317,172 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAutoscaling(@Nullable Input<AzureNodePoolAutoscalingGetArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Input<AzureNodePoolAutoscalingGetArgs> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
-        public Builder setAutoscaling(@Nullable AzureNodePoolAutoscalingGetArgs autoscaling) {
+        public Builder autoscaling(@Nullable AzureNodePoolAutoscalingGetArgs autoscaling) {
             this.autoscaling = Input.ofNullable(autoscaling);
             return this;
         }
 
-        public Builder setAzureAvailabilityZone(@Nullable Input<String> azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(@Nullable Input<String> azureAvailabilityZone) {
             this.azureAvailabilityZone = azureAvailabilityZone;
             return this;
         }
 
-        public Builder setAzureAvailabilityZone(@Nullable String azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(@Nullable String azureAvailabilityZone) {
             this.azureAvailabilityZone = Input.ofNullable(azureAvailabilityZone);
             return this;
         }
 
-        public Builder setCluster(@Nullable Input<String> cluster) {
+        public Builder cluster(@Nullable Input<String> cluster) {
             this.cluster = cluster;
             return this;
         }
 
-        public Builder setCluster(@Nullable String cluster) {
+        public Builder cluster(@Nullable String cluster) {
             this.cluster = Input.ofNullable(cluster);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<AzureNodePoolConfigGetArgs> config) {
+        public Builder config(@Nullable Input<AzureNodePoolConfigGetArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable AzureNodePoolConfigGetArgs config) {
+        public Builder config(@Nullable AzureNodePoolConfigGetArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaxPodsConstraint(@Nullable Input<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable Input<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint) {
             this.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
 
-        public Builder setMaxPodsConstraint(@Nullable AzureNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable AzureNodePoolMaxPodsConstraintGetArgs maxPodsConstraint) {
             this.maxPodsConstraint = Input.ofNullable(maxPodsConstraint);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReconciling(@Nullable Input<Boolean> reconciling) {
+        public Builder reconciling(@Nullable Input<Boolean> reconciling) {
             this.reconciling = reconciling;
             return this;
         }
 
-        public Builder setReconciling(@Nullable Boolean reconciling) {
+        public Builder reconciling(@Nullable Boolean reconciling) {
             this.reconciling = Input.ofNullable(reconciling);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

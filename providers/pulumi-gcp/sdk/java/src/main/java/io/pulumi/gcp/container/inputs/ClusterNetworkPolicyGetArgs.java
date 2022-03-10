@@ -72,22 +72,22 @@ public final class ClusterNetworkPolicyGetArgs extends io.pulumi.resources.Resou
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setProvider(@Nullable Input<String> provider) {
+        public Builder provider(@Nullable Input<String> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable String provider) {
+        public Builder provider(@Nullable String provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }

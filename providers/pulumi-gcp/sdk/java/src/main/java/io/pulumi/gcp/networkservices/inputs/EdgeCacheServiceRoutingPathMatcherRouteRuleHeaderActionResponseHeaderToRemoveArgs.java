@@ -53,12 +53,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setHeaderName(Input<String> headerName) {
+        public Builder headerName(Input<String> headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Input.of(Objects.requireNonNull(headerName));
             return this;
         }

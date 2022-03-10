@@ -89,32 +89,32 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setMaximum(@Nullable Input<Integer> maximum) {
+        public Builder maximum(@Nullable Input<Integer> maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMaximum(@Nullable Integer maximum) {
+        public Builder maximum(@Nullable Integer maximum) {
             this.maximum = Input.ofNullable(maximum);
             return this;
         }
 
-        public Builder setMinimum(@Nullable Input<Integer> minimum) {
+        public Builder minimum(@Nullable Input<Integer> minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setMinimum(@Nullable Integer minimum) {
+        public Builder minimum(@Nullable Integer minimum) {
             this.minimum = Input.ofNullable(minimum);
             return this;
         }
 
-        public Builder setResourceType(Input<String> resourceType) {
+        public Builder resourceType(Input<String> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }

@@ -116,22 +116,22 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
