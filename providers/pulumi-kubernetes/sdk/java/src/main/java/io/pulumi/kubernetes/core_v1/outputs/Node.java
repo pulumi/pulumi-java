@@ -40,13 +40,13 @@ public final class Node {
      */
     private final @Nullable NodeStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private Node(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable NodeSpec spec,
-        @Nullable NodeStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable NodeSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable NodeStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

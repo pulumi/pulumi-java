@@ -24,10 +24,10 @@ public final class NetworkPolicyPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"port","protocol"})
+    @OutputCustomType.Constructor
     private NetworkPolicyPort(
-        @Nullable Either<Integer,String> port,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("port") @Nullable Either<Integer,String> port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

@@ -35,12 +35,12 @@ public final class EnvVarSource {
      */
     private final @Nullable SecretKeySelector secretKeyRef;
 
-    @OutputCustomType.Constructor({"configMapKeyRef","fieldRef","resourceFieldRef","secretKeyRef"})
+    @OutputCustomType.Constructor
     private EnvVarSource(
-        @Nullable ConfigMapKeySelector configMapKeyRef,
-        @Nullable ObjectFieldSelector fieldRef,
-        @Nullable ResourceFieldSelector resourceFieldRef,
-        @Nullable SecretKeySelector secretKeyRef) {
+        @OutputCustomType.Parameter("configMapKeyRef") @Nullable ConfigMapKeySelector configMapKeyRef,
+        @OutputCustomType.Parameter("fieldRef") @Nullable ObjectFieldSelector fieldRef,
+        @OutputCustomType.Parameter("resourceFieldRef") @Nullable ResourceFieldSelector resourceFieldRef,
+        @OutputCustomType.Parameter("secretKeyRef") @Nullable SecretKeySelector secretKeyRef) {
         this.configMapKeyRef = configMapKeyRef;
         this.fieldRef = fieldRef;
         this.resourceFieldRef = resourceFieldRef;

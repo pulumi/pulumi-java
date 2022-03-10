@@ -33,12 +33,12 @@ public final class ContainerResourceMetricSource {
      */
     private final @Nullable String targetAverageValue;
 
-    @OutputCustomType.Constructor({"container","name","targetAverageUtilization","targetAverageValue"})
+    @OutputCustomType.Constructor
     private ContainerResourceMetricSource(
-        String container,
-        String name,
-        @Nullable Integer targetAverageUtilization,
-        @Nullable String targetAverageValue) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetAverageUtilization") @Nullable Integer targetAverageUtilization,
+        @OutputCustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue) {
         this.container = container;
         this.name = name;
         this.targetAverageUtilization = targetAverageUtilization;

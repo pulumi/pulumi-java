@@ -33,12 +33,12 @@ public final class ExternalMetricStatus {
      */
     private final @Nullable LabelSelector metricSelector;
 
-    @OutputCustomType.Constructor({"currentAverageValue","currentValue","metricName","metricSelector"})
+    @OutputCustomType.Constructor
     private ExternalMetricStatus(
-        @Nullable String currentAverageValue,
-        String currentValue,
-        String metricName,
-        @Nullable LabelSelector metricSelector) {
+        @OutputCustomType.Parameter("currentAverageValue") @Nullable String currentAverageValue,
+        @OutputCustomType.Parameter("currentValue") String currentValue,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector) {
         this.currentAverageValue = currentAverageValue;
         this.currentValue = currentValue;
         this.metricName = metricName;

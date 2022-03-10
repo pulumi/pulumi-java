@@ -22,10 +22,10 @@ public final class ContainerStateWaiting {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"message","reason"})
+    @OutputCustomType.Constructor
     private ContainerStateWaiting(
-        @Nullable String message,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.message = message;
         this.reason = reason;
     }

@@ -68,17 +68,17 @@ public final class JobStatus {
      */
     private final @Nullable UncountedTerminatedPods uncountedTerminatedPods;
 
-    @OutputCustomType.Constructor({"active","completedIndexes","completionTime","conditions","failed","ready","startTime","succeeded","uncountedTerminatedPods"})
+    @OutputCustomType.Constructor
     private JobStatus(
-        @Nullable Integer active,
-        @Nullable String completedIndexes,
-        @Nullable String completionTime,
-        @Nullable List<JobCondition> conditions,
-        @Nullable Integer failed,
-        @Nullable Integer ready,
-        @Nullable String startTime,
-        @Nullable Integer succeeded,
-        @Nullable UncountedTerminatedPods uncountedTerminatedPods) {
+        @OutputCustomType.Parameter("active") @Nullable Integer active,
+        @OutputCustomType.Parameter("completedIndexes") @Nullable String completedIndexes,
+        @OutputCustomType.Parameter("completionTime") @Nullable String completionTime,
+        @OutputCustomType.Parameter("conditions") @Nullable List<JobCondition> conditions,
+        @OutputCustomType.Parameter("failed") @Nullable Integer failed,
+        @OutputCustomType.Parameter("ready") @Nullable Integer ready,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("succeeded") @Nullable Integer succeeded,
+        @OutputCustomType.Parameter("uncountedTerminatedPods") @Nullable UncountedTerminatedPods uncountedTerminatedPods) {
         this.active = active;
         this.completedIndexes = completedIndexes;
         this.completionTime = completionTime;

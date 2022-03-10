@@ -28,11 +28,11 @@ public final class EventSeries {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"count","lastObservedTime","state"})
+    @OutputCustomType.Constructor
     private EventSeries(
-        @Nullable Integer count,
-        @Nullable String lastObservedTime,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("lastObservedTime") @Nullable String lastObservedTime,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.count = count;
         this.lastObservedTime = lastObservedTime;
         this.state = state;

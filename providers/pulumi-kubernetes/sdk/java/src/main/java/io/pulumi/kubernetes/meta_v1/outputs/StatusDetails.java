@@ -45,14 +45,14 @@ public final class StatusDetails {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"causes","group","kind","name","retryAfterSeconds","uid"})
+    @OutputCustomType.Constructor
     private StatusDetails(
-        @Nullable List<StatusCause> causes,
-        @Nullable String group,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable Integer retryAfterSeconds,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("causes") @Nullable List<StatusCause> causes,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("retryAfterSeconds") @Nullable Integer retryAfterSeconds,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.causes = causes;
         this.group = group;
         this.kind = kind;

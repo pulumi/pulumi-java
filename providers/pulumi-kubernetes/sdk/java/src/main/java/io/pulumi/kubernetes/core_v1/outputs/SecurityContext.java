@@ -73,19 +73,19 @@ public final class SecurityContext {
      */
     private final @Nullable WindowsSecurityContextOptions windowsOptions;
 
-    @OutputCustomType.Constructor({"allowPrivilegeEscalation","capabilities","privileged","procMount","readOnlyRootFilesystem","runAsGroup","runAsNonRoot","runAsUser","seLinuxOptions","seccompProfile","windowsOptions"})
+    @OutputCustomType.Constructor
     private SecurityContext(
-        @Nullable Boolean allowPrivilegeEscalation,
-        @Nullable Capabilities capabilities,
-        @Nullable Boolean privileged,
-        @Nullable String procMount,
-        @Nullable Boolean readOnlyRootFilesystem,
-        @Nullable Integer runAsGroup,
-        @Nullable Boolean runAsNonRoot,
-        @Nullable Integer runAsUser,
-        @Nullable SELinuxOptions seLinuxOptions,
-        @Nullable SeccompProfile seccompProfile,
-        @Nullable WindowsSecurityContextOptions windowsOptions) {
+        @OutputCustomType.Parameter("allowPrivilegeEscalation") @Nullable Boolean allowPrivilegeEscalation,
+        @OutputCustomType.Parameter("capabilities") @Nullable Capabilities capabilities,
+        @OutputCustomType.Parameter("privileged") @Nullable Boolean privileged,
+        @OutputCustomType.Parameter("procMount") @Nullable String procMount,
+        @OutputCustomType.Parameter("readOnlyRootFilesystem") @Nullable Boolean readOnlyRootFilesystem,
+        @OutputCustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
+        @OutputCustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
+        @OutputCustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
+        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
+        @OutputCustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
+        @OutputCustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
         this.allowPrivilegeEscalation = allowPrivilegeEscalation;
         this.capabilities = capabilities;
         this.privileged = privileged;

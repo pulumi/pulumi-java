@@ -27,11 +27,11 @@ public final class ObjectMetricStatus {
      */
     private final MetricIdentifier metric;
 
-    @OutputCustomType.Constructor({"current","describedObject","metric"})
+    @OutputCustomType.Constructor
     private ObjectMetricStatus(
-        MetricValueStatus current,
-        CrossVersionObjectReference describedObject,
-        MetricIdentifier metric) {
+        @OutputCustomType.Parameter("current") MetricValueStatus current,
+        @OutputCustomType.Parameter("describedObject") CrossVersionObjectReference describedObject,
+        @OutputCustomType.Parameter("metric") MetricIdentifier metric) {
         this.current = current;
         this.describedObject = describedObject;
         this.metric = metric;

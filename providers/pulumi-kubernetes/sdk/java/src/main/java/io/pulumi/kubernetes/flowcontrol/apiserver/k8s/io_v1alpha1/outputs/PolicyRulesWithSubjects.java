@@ -29,11 +29,11 @@ public final class PolicyRulesWithSubjects {
      */
     private final List<Subject> subjects;
 
-    @OutputCustomType.Constructor({"nonResourceRules","resourceRules","subjects"})
+    @OutputCustomType.Constructor
     private PolicyRulesWithSubjects(
-        @Nullable List<NonResourcePolicyRule> nonResourceRules,
-        @Nullable List<ResourcePolicyRule> resourceRules,
-        List<Subject> subjects) {
+        @OutputCustomType.Parameter("nonResourceRules") @Nullable List<NonResourcePolicyRule> nonResourceRules,
+        @OutputCustomType.Parameter("resourceRules") @Nullable List<ResourcePolicyRule> resourceRules,
+        @OutputCustomType.Parameter("subjects") List<Subject> subjects) {
         this.nonResourceRules = nonResourceRules;
         this.resourceRules = resourceRules;
         this.subjects = subjects;

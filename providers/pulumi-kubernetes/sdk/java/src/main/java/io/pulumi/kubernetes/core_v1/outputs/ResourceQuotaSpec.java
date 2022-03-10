@@ -30,11 +30,11 @@ public final class ResourceQuotaSpec {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor({"hard","scopeSelector","scopes"})
+    @OutputCustomType.Constructor
     private ResourceQuotaSpec(
-        @Nullable Map<String,String> hard,
-        @Nullable ScopeSelector scopeSelector,
-        @Nullable List<String> scopes) {
+        @OutputCustomType.Parameter("hard") @Nullable Map<String,String> hard,
+        @OutputCustomType.Parameter("scopeSelector") @Nullable ScopeSelector scopeSelector,
+        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.hard = hard;
         this.scopeSelector = scopeSelector;
         this.scopes = scopes;

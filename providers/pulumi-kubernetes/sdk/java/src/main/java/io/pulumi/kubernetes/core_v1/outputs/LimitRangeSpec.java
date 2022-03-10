@@ -16,8 +16,8 @@ public final class LimitRangeSpec {
      */
     private final List<LimitRangeItem> limits;
 
-    @OutputCustomType.Constructor({"limits"})
-    private LimitRangeSpec(List<LimitRangeItem> limits) {
+    @OutputCustomType.Constructor
+    private LimitRangeSpec(@OutputCustomType.Parameter("limits") List<LimitRangeItem> limits) {
         this.limits = limits;
     }
 

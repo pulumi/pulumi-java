@@ -141,29 +141,29 @@ public final class ServiceSpec {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"allocateLoadBalancerNodePorts","clusterIP","clusterIPs","externalIPs","externalName","externalTrafficPolicy","healthCheckNodePort","internalTrafficPolicy","ipFamilies","ipFamily","ipFamilyPolicy","loadBalancerClass","loadBalancerIP","loadBalancerSourceRanges","ports","publishNotReadyAddresses","selector","sessionAffinity","sessionAffinityConfig","topologyKeys","type"})
+    @OutputCustomType.Constructor
     private ServiceSpec(
-        @Nullable Boolean allocateLoadBalancerNodePorts,
-        @Nullable String clusterIP,
-        @Nullable List<String> clusterIPs,
-        @Nullable List<String> externalIPs,
-        @Nullable String externalName,
-        @Nullable String externalTrafficPolicy,
-        @Nullable Integer healthCheckNodePort,
-        @Nullable String internalTrafficPolicy,
-        @Nullable List<String> ipFamilies,
-        @Nullable String ipFamily,
-        @Nullable String ipFamilyPolicy,
-        @Nullable String loadBalancerClass,
-        @Nullable String loadBalancerIP,
-        @Nullable List<String> loadBalancerSourceRanges,
-        @Nullable List<ServicePort> ports,
-        @Nullable Boolean publishNotReadyAddresses,
-        @Nullable Map<String,String> selector,
-        @Nullable String sessionAffinity,
-        @Nullable SessionAffinityConfig sessionAffinityConfig,
-        @Nullable List<String> topologyKeys,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("allocateLoadBalancerNodePorts") @Nullable Boolean allocateLoadBalancerNodePorts,
+        @OutputCustomType.Parameter("clusterIP") @Nullable String clusterIP,
+        @OutputCustomType.Parameter("clusterIPs") @Nullable List<String> clusterIPs,
+        @OutputCustomType.Parameter("externalIPs") @Nullable List<String> externalIPs,
+        @OutputCustomType.Parameter("externalName") @Nullable String externalName,
+        @OutputCustomType.Parameter("externalTrafficPolicy") @Nullable String externalTrafficPolicy,
+        @OutputCustomType.Parameter("healthCheckNodePort") @Nullable Integer healthCheckNodePort,
+        @OutputCustomType.Parameter("internalTrafficPolicy") @Nullable String internalTrafficPolicy,
+        @OutputCustomType.Parameter("ipFamilies") @Nullable List<String> ipFamilies,
+        @OutputCustomType.Parameter("ipFamily") @Nullable String ipFamily,
+        @OutputCustomType.Parameter("ipFamilyPolicy") @Nullable String ipFamilyPolicy,
+        @OutputCustomType.Parameter("loadBalancerClass") @Nullable String loadBalancerClass,
+        @OutputCustomType.Parameter("loadBalancerIP") @Nullable String loadBalancerIP,
+        @OutputCustomType.Parameter("loadBalancerSourceRanges") @Nullable List<String> loadBalancerSourceRanges,
+        @OutputCustomType.Parameter("ports") @Nullable List<ServicePort> ports,
+        @OutputCustomType.Parameter("publishNotReadyAddresses") @Nullable Boolean publishNotReadyAddresses,
+        @OutputCustomType.Parameter("selector") @Nullable Map<String,String> selector,
+        @OutputCustomType.Parameter("sessionAffinity") @Nullable String sessionAffinity,
+        @OutputCustomType.Parameter("sessionAffinityConfig") @Nullable SessionAffinityConfig sessionAffinityConfig,
+        @OutputCustomType.Parameter("topologyKeys") @Nullable List<String> topologyKeys,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.allocateLoadBalancerNodePorts = allocateLoadBalancerNodePorts;
         this.clusterIP = clusterIP;
         this.clusterIPs = clusterIPs;

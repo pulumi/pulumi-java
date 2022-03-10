@@ -65,18 +65,18 @@ public final class StatefulSetStatus {
      */
     private final @Nullable Integer updatedReplicas;
 
-    @OutputCustomType.Constructor({"availableReplicas","collisionCount","conditions","currentReplicas","currentRevision","observedGeneration","readyReplicas","replicas","updateRevision","updatedReplicas"})
+    @OutputCustomType.Constructor
     private StatefulSetStatus(
-        Integer availableReplicas,
-        @Nullable Integer collisionCount,
-        @Nullable List<StatefulSetCondition> conditions,
-        @Nullable Integer currentReplicas,
-        @Nullable String currentRevision,
-        @Nullable Integer observedGeneration,
-        @Nullable Integer readyReplicas,
-        Integer replicas,
-        @Nullable String updateRevision,
-        @Nullable Integer updatedReplicas) {
+        @OutputCustomType.Parameter("availableReplicas") Integer availableReplicas,
+        @OutputCustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
+        @OutputCustomType.Parameter("conditions") @Nullable List<StatefulSetCondition> conditions,
+        @OutputCustomType.Parameter("currentReplicas") @Nullable Integer currentReplicas,
+        @OutputCustomType.Parameter("currentRevision") @Nullable String currentRevision,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
+        @OutputCustomType.Parameter("replicas") Integer replicas,
+        @OutputCustomType.Parameter("updateRevision") @Nullable String updateRevision,
+        @OutputCustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.collisionCount = collisionCount;
         this.conditions = conditions;

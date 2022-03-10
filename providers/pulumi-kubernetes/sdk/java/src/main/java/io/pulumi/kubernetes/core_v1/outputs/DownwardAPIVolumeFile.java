@@ -35,12 +35,12 @@ public final class DownwardAPIVolumeFile {
      */
     private final @Nullable ResourceFieldSelector resourceFieldRef;
 
-    @OutputCustomType.Constructor({"fieldRef","mode","path","resourceFieldRef"})
+    @OutputCustomType.Constructor
     private DownwardAPIVolumeFile(
-        @Nullable ObjectFieldSelector fieldRef,
-        @Nullable Integer mode,
-        String path,
-        @Nullable ResourceFieldSelector resourceFieldRef) {
+        @OutputCustomType.Parameter("fieldRef") @Nullable ObjectFieldSelector fieldRef,
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("resourceFieldRef") @Nullable ResourceFieldSelector resourceFieldRef) {
         this.fieldRef = fieldRef;
         this.mode = mode;
         this.path = path;

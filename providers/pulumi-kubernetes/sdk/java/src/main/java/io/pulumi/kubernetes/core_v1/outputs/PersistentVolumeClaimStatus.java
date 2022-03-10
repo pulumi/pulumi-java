@@ -50,14 +50,14 @@ public final class PersistentVolumeClaimStatus {
      */
     private final @Nullable String resizeStatus;
 
-    @OutputCustomType.Constructor({"accessModes","allocatedResources","capacity","conditions","phase","resizeStatus"})
+    @OutputCustomType.Constructor
     private PersistentVolumeClaimStatus(
-        @Nullable List<String> accessModes,
-        @Nullable Map<String,String> allocatedResources,
-        @Nullable Map<String,String> capacity,
-        @Nullable List<PersistentVolumeClaimCondition> conditions,
-        @Nullable String phase,
-        @Nullable String resizeStatus) {
+        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @OutputCustomType.Parameter("allocatedResources") @Nullable Map<String,String> allocatedResources,
+        @OutputCustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
+        @OutputCustomType.Parameter("conditions") @Nullable List<PersistentVolumeClaimCondition> conditions,
+        @OutputCustomType.Parameter("phase") @Nullable String phase,
+        @OutputCustomType.Parameter("resizeStatus") @Nullable String resizeStatus) {
         this.accessModes = accessModes;
         this.allocatedResources = allocatedResources;
         this.capacity = capacity;

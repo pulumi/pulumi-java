@@ -40,11 +40,11 @@ public final class WebhookClientConfig {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"caBundle","service","url"})
+    @OutputCustomType.Constructor
     private WebhookClientConfig(
-        @Nullable String caBundle,
-        @Nullable ServiceReference service,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("caBundle") @Nullable String caBundle,
+        @OutputCustomType.Parameter("service") @Nullable ServiceReference service,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.caBundle = caBundle;
         this.service = service;
         this.url = url;

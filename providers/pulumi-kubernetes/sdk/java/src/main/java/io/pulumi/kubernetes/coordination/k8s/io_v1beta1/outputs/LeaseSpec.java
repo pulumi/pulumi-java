@@ -38,13 +38,13 @@ public final class LeaseSpec {
      */
     private final @Nullable String renewTime;
 
-    @OutputCustomType.Constructor({"acquireTime","holderIdentity","leaseDurationSeconds","leaseTransitions","renewTime"})
+    @OutputCustomType.Constructor
     private LeaseSpec(
-        @Nullable String acquireTime,
-        @Nullable String holderIdentity,
-        @Nullable Integer leaseDurationSeconds,
-        @Nullable Integer leaseTransitions,
-        @Nullable String renewTime) {
+        @OutputCustomType.Parameter("acquireTime") @Nullable String acquireTime,
+        @OutputCustomType.Parameter("holderIdentity") @Nullable String holderIdentity,
+        @OutputCustomType.Parameter("leaseDurationSeconds") @Nullable Integer leaseDurationSeconds,
+        @OutputCustomType.Parameter("leaseTransitions") @Nullable Integer leaseTransitions,
+        @OutputCustomType.Parameter("renewTime") @Nullable String renewTime) {
         this.acquireTime = acquireTime;
         this.holderIdentity = holderIdentity;
         this.leaseDurationSeconds = leaseDurationSeconds;

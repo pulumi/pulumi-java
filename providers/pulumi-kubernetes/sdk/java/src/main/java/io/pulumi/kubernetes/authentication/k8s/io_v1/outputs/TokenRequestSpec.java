@@ -30,11 +30,11 @@ public final class TokenRequestSpec {
      */
     private final @Nullable Integer expirationSeconds;
 
-    @OutputCustomType.Constructor({"audiences","boundObjectRef","expirationSeconds"})
+    @OutputCustomType.Constructor
     private TokenRequestSpec(
-        List<String> audiences,
-        @Nullable BoundObjectReference boundObjectRef,
-        @Nullable Integer expirationSeconds) {
+        @OutputCustomType.Parameter("audiences") List<String> audiences,
+        @OutputCustomType.Parameter("boundObjectRef") @Nullable BoundObjectReference boundObjectRef,
+        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds) {
         this.audiences = audiences;
         this.boundObjectRef = boundObjectRef;
         this.expirationSeconds = expirationSeconds;

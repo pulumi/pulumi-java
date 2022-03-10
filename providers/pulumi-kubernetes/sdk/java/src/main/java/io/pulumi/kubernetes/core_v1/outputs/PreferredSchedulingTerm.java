@@ -21,10 +21,10 @@ public final class PreferredSchedulingTerm {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"preference","weight"})
+    @OutputCustomType.Constructor
     private PreferredSchedulingTerm(
-        NodeSelectorTerm preference,
-        Integer weight) {
+        @OutputCustomType.Parameter("preference") NodeSelectorTerm preference,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.preference = preference;
         this.weight = weight;
     }

@@ -20,10 +20,10 @@ public final class HostPortRange {
      */
     private final Integer min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private HostPortRange(
-        Integer max,
-        Integer min) {
+        @OutputCustomType.Parameter("max") Integer max,
+        @OutputCustomType.Parameter("min") Integer min) {
         this.max = max;
         this.min = min;
     }

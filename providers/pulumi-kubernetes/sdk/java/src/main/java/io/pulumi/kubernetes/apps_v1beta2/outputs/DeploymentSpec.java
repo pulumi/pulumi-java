@@ -56,16 +56,16 @@ public final class DeploymentSpec {
      */
     private final PodTemplateSpec template;
 
-    @OutputCustomType.Constructor({"minReadySeconds","paused","progressDeadlineSeconds","replicas","revisionHistoryLimit","selector","strategy","template"})
+    @OutputCustomType.Constructor
     private DeploymentSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable Boolean paused,
-        @Nullable Integer progressDeadlineSeconds,
-        @Nullable Integer replicas,
-        @Nullable Integer revisionHistoryLimit,
-        LabelSelector selector,
-        @Nullable DeploymentStrategy strategy,
-        PodTemplateSpec template) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("paused") @Nullable Boolean paused,
+        @OutputCustomType.Parameter("progressDeadlineSeconds") @Nullable Integer progressDeadlineSeconds,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @OutputCustomType.Parameter("selector") LabelSelector selector,
+        @OutputCustomType.Parameter("strategy") @Nullable DeploymentStrategy strategy,
+        @OutputCustomType.Parameter("template") PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.paused = paused;
         this.progressDeadlineSeconds = progressDeadlineSeconds;

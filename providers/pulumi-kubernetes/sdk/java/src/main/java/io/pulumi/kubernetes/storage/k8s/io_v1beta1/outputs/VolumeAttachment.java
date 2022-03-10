@@ -40,13 +40,13 @@ public final class VolumeAttachment {
      */
     private final @Nullable VolumeAttachmentStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private VolumeAttachment(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        VolumeAttachmentSpec spec,
-        @Nullable VolumeAttachmentStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") VolumeAttachmentSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable VolumeAttachmentStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

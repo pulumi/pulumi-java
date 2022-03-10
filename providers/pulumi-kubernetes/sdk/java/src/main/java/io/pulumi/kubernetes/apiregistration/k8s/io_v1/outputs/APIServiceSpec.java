@@ -50,15 +50,15 @@ public final class APIServiceSpec {
      */
     private final Integer versionPriority;
 
-    @OutputCustomType.Constructor({"caBundle","group","groupPriorityMinimum","insecureSkipTLSVerify","service","version","versionPriority"})
+    @OutputCustomType.Constructor
     private APIServiceSpec(
-        @Nullable String caBundle,
-        @Nullable String group,
-        Integer groupPriorityMinimum,
-        @Nullable Boolean insecureSkipTLSVerify,
-        @Nullable ServiceReference service,
-        @Nullable String version,
-        Integer versionPriority) {
+        @OutputCustomType.Parameter("caBundle") @Nullable String caBundle,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("groupPriorityMinimum") Integer groupPriorityMinimum,
+        @OutputCustomType.Parameter("insecureSkipTLSVerify") @Nullable Boolean insecureSkipTLSVerify,
+        @OutputCustomType.Parameter("service") @Nullable ServiceReference service,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("versionPriority") Integer versionPriority) {
         this.caBundle = caBundle;
         this.group = group;
         this.groupPriorityMinimum = groupPriorityMinimum;

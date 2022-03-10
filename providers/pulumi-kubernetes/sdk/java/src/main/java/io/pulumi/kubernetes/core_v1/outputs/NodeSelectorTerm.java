@@ -22,10 +22,10 @@ public final class NodeSelectorTerm {
      */
     private final @Nullable List<NodeSelectorRequirement> matchFields;
 
-    @OutputCustomType.Constructor({"matchExpressions","matchFields"})
+    @OutputCustomType.Constructor
     private NodeSelectorTerm(
-        @Nullable List<NodeSelectorRequirement> matchExpressions,
-        @Nullable List<NodeSelectorRequirement> matchFields) {
+        @OutputCustomType.Parameter("matchExpressions") @Nullable List<NodeSelectorRequirement> matchExpressions,
+        @OutputCustomType.Parameter("matchFields") @Nullable List<NodeSelectorRequirement> matchFields) {
         this.matchExpressions = matchExpressions;
         this.matchFields = matchFields;
     }

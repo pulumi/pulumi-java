@@ -16,8 +16,8 @@ public final class HTTPIngressRuleValue {
      */
     private final List<HTTPIngressPath> paths;
 
-    @OutputCustomType.Constructor({"paths"})
-    private HTTPIngressRuleValue(List<HTTPIngressPath> paths) {
+    @OutputCustomType.Constructor
+    private HTTPIngressRuleValue(@OutputCustomType.Parameter("paths") List<HTTPIngressPath> paths) {
         this.paths = paths;
     }
 

@@ -40,13 +40,13 @@ public final class FlexVolumeSource {
      */
     private final @Nullable LocalObjectReference secretRef;
 
-    @OutputCustomType.Constructor({"driver","fsType","options","readOnly","secretRef"})
+    @OutputCustomType.Constructor
     private FlexVolumeSource(
-        String driver,
-        @Nullable String fsType,
-        @Nullable Map<String,String> options,
-        @Nullable Boolean readOnly,
-        @Nullable LocalObjectReference secretRef) {
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("options") @Nullable Map<String,String> options,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef) {
         this.driver = driver;
         this.fsType = fsType;
         this.options = options;

@@ -17,8 +17,8 @@ public final class NodeConfigSource {
      */
     private final @Nullable ConfigMapNodeConfigSource configMap;
 
-    @OutputCustomType.Constructor({"configMap"})
-    private NodeConfigSource(@Nullable ConfigMapNodeConfigSource configMap) {
+    @OutputCustomType.Constructor
+    private NodeConfigSource(@OutputCustomType.Parameter("configMap") @Nullable ConfigMapNodeConfigSource configMap) {
         this.configMap = configMap;
     }
 

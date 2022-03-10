@@ -59,15 +59,15 @@ public final class Endpoint {
      */
     private final @Nullable Map<String,String> topology;
 
-    @OutputCustomType.Constructor({"addresses","conditions","hints","hostname","nodeName","targetRef","topology"})
+    @OutputCustomType.Constructor
     private Endpoint(
-        List<String> addresses,
-        @Nullable EndpointConditions conditions,
-        @Nullable EndpointHints hints,
-        @Nullable String hostname,
-        @Nullable String nodeName,
-        @Nullable ObjectReference targetRef,
-        @Nullable Map<String,String> topology) {
+        @OutputCustomType.Parameter("addresses") List<String> addresses,
+        @OutputCustomType.Parameter("conditions") @Nullable EndpointConditions conditions,
+        @OutputCustomType.Parameter("hints") @Nullable EndpointHints hints,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("targetRef") @Nullable ObjectReference targetRef,
+        @OutputCustomType.Parameter("topology") @Nullable Map<String,String> topology) {
         this.addresses = addresses;
         this.conditions = conditions;
         this.hints = hints;

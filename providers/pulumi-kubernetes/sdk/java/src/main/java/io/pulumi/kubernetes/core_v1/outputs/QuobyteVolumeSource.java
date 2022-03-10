@@ -43,14 +43,14 @@ public final class QuobyteVolumeSource {
      */
     private final String volume;
 
-    @OutputCustomType.Constructor({"group","readOnly","registry","tenant","user","volume"})
+    @OutputCustomType.Constructor
     private QuobyteVolumeSource(
-        @Nullable String group,
-        @Nullable Boolean readOnly,
-        String registry,
-        @Nullable String tenant,
-        @Nullable String user,
-        String volume) {
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("registry") String registry,
+        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
+        @OutputCustomType.Parameter("user") @Nullable String user,
+        @OutputCustomType.Parameter("volume") String volume) {
         this.group = group;
         this.readOnly = readOnly;
         this.registry = registry;

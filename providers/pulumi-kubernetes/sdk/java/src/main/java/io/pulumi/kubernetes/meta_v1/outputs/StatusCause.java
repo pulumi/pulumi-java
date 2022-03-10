@@ -31,11 +31,11 @@ public final class StatusCause {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"field","message","reason"})
+    @OutputCustomType.Constructor
     private StatusCause(
-        @Nullable String field,
-        @Nullable String message,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.field = field;
         this.message = message;
         this.reason = reason;

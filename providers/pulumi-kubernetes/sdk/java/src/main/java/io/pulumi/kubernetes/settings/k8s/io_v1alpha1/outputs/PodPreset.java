@@ -26,12 +26,12 @@ public final class PodPreset {
     private final @Nullable ObjectMeta metadata;
     private final @Nullable PodPresetSpec spec;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec"})
+    @OutputCustomType.Constructor
     private PodPreset(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable PodPresetSpec spec) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable PodPresetSpec spec) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

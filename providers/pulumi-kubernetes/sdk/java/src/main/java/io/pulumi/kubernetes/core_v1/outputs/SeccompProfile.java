@@ -29,10 +29,10 @@ public final class SeccompProfile {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"localhostProfile","type"})
+    @OutputCustomType.Constructor
     private SeccompProfile(
-        @Nullable String localhostProfile,
-        String type) {
+        @OutputCustomType.Parameter("localhostProfile") @Nullable String localhostProfile,
+        @OutputCustomType.Parameter("type") String type) {
         this.localhostProfile = localhostProfile;
         this.type = type;
     }

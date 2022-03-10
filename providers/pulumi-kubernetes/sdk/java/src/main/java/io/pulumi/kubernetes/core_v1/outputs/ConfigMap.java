@@ -45,14 +45,14 @@ public final class ConfigMap {
      */
     private final @Nullable ObjectMeta metadata;
 
-    @OutputCustomType.Constructor({"apiVersion","binaryData","data","immutable","kind","metadata"})
+    @OutputCustomType.Constructor
     private ConfigMap(
-        @Nullable String apiVersion,
-        @Nullable Map<String,String> binaryData,
-        @Nullable Map<String,String> data,
-        @Nullable Boolean immutable,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("binaryData") @Nullable Map<String,String> binaryData,
+        @OutputCustomType.Parameter("data") @Nullable Map<String,String> data,
+        @OutputCustomType.Parameter("immutable") @Nullable Boolean immutable,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata) {
         this.apiVersion = apiVersion;
         this.binaryData = binaryData;
         this.data = data;

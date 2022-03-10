@@ -40,13 +40,13 @@ public final class APIService {
      */
     private final @Nullable APIServiceStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private APIService(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable APIServiceSpec spec,
-        @Nullable APIServiceStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable APIServiceSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable APIServiceStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

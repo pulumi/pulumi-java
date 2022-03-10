@@ -35,12 +35,12 @@ public final class NetworkPolicySpec {
      */
     private final @Nullable List<String> policyTypes;
 
-    @OutputCustomType.Constructor({"egress","ingress","podSelector","policyTypes"})
+    @OutputCustomType.Constructor
     private NetworkPolicySpec(
-        @Nullable List<NetworkPolicyEgressRule> egress,
-        @Nullable List<NetworkPolicyIngressRule> ingress,
-        LabelSelector podSelector,
-        @Nullable List<String> policyTypes) {
+        @OutputCustomType.Parameter("egress") @Nullable List<NetworkPolicyEgressRule> egress,
+        @OutputCustomType.Parameter("ingress") @Nullable List<NetworkPolicyIngressRule> ingress,
+        @OutputCustomType.Parameter("podSelector") LabelSelector podSelector,
+        @OutputCustomType.Parameter("policyTypes") @Nullable List<String> policyTypes) {
         this.egress = egress;
         this.ingress = ingress;
         this.podSelector = podSelector;

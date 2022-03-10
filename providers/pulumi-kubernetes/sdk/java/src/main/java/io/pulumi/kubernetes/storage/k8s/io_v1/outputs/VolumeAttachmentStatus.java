@@ -35,12 +35,12 @@ public final class VolumeAttachmentStatus {
      */
     private final @Nullable VolumeError detachError;
 
-    @OutputCustomType.Constructor({"attachError","attached","attachmentMetadata","detachError"})
+    @OutputCustomType.Constructor
     private VolumeAttachmentStatus(
-        @Nullable VolumeError attachError,
-        Boolean attached,
-        @Nullable Map<String,String> attachmentMetadata,
-        @Nullable VolumeError detachError) {
+        @OutputCustomType.Parameter("attachError") @Nullable VolumeError attachError,
+        @OutputCustomType.Parameter("attached") Boolean attached,
+        @OutputCustomType.Parameter("attachmentMetadata") @Nullable Map<String,String> attachmentMetadata,
+        @OutputCustomType.Parameter("detachError") @Nullable VolumeError detachError) {
         this.attachError = attachError;
         this.attached = attached;
         this.attachmentMetadata = attachmentMetadata;

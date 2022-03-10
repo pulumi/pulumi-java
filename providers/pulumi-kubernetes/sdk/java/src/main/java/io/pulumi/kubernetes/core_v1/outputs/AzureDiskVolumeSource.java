@@ -43,14 +43,14 @@ public final class AzureDiskVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"cachingMode","diskName","diskURI","fsType","kind","readOnly"})
+    @OutputCustomType.Constructor
     private AzureDiskVolumeSource(
-        @Nullable String cachingMode,
-        String diskName,
-        String diskURI,
-        @Nullable String fsType,
-        @Nullable String kind,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("cachingMode") @Nullable String cachingMode,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskURI") String diskURI,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.cachingMode = cachingMode;
         this.diskName = diskName;
         this.diskURI = diskURI;

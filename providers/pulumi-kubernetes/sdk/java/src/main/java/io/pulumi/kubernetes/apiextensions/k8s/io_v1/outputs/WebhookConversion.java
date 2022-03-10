@@ -24,10 +24,10 @@ public final class WebhookConversion {
      */
     private final List<String> conversionReviewVersions;
 
-    @OutputCustomType.Constructor({"clientConfig","conversionReviewVersions"})
+    @OutputCustomType.Constructor
     private WebhookConversion(
-        @Nullable WebhookClientConfig clientConfig,
-        List<String> conversionReviewVersions) {
+        @OutputCustomType.Parameter("clientConfig") @Nullable WebhookClientConfig clientConfig,
+        @OutputCustomType.Parameter("conversionReviewVersions") List<String> conversionReviewVersions) {
         this.clientConfig = clientConfig;
         this.conversionReviewVersions = conversionReviewVersions;
     }

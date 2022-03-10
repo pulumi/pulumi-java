@@ -27,11 +27,11 @@ public final class TypedLocalObjectReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name"})
+    @OutputCustomType.Constructor
     private TypedLocalObjectReference(
-        @Nullable String apiGroup,
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;

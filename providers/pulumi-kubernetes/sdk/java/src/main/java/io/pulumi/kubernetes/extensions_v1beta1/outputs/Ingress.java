@@ -40,13 +40,13 @@ public final class Ingress {
      */
     private final @Nullable IngressStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private Ingress(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable IngressSpec spec,
-        @Nullable IngressStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable IngressSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable IngressStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

@@ -25,10 +25,10 @@ public final class GRPCAction {
      */
     private final @Nullable String service;
 
-    @OutputCustomType.Constructor({"port","service"})
+    @OutputCustomType.Constructor
     private GRPCAction(
-        Integer port,
-        @Nullable String service) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("service") @Nullable String service) {
         this.port = port;
         this.service = service;
     }

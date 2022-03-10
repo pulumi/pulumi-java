@@ -41,12 +41,12 @@ public final class TopologySpreadConstraint {
      */
     private final String whenUnsatisfiable;
 
-    @OutputCustomType.Constructor({"labelSelector","maxSkew","topologyKey","whenUnsatisfiable"})
+    @OutputCustomType.Constructor
     private TopologySpreadConstraint(
-        @Nullable LabelSelector labelSelector,
-        Integer maxSkew,
-        String topologyKey,
-        String whenUnsatisfiable) {
+        @OutputCustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
+        @OutputCustomType.Parameter("maxSkew") Integer maxSkew,
+        @OutputCustomType.Parameter("topologyKey") String topologyKey,
+        @OutputCustomType.Parameter("whenUnsatisfiable") String whenUnsatisfiable) {
         this.labelSelector = labelSelector;
         this.maxSkew = maxSkew;
         this.topologyKey = topologyKey;

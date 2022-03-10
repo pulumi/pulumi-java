@@ -36,12 +36,12 @@ public final class SubjectRulesReviewStatus {
      */
     private final List<ResourceRule> resourceRules;
 
-    @OutputCustomType.Constructor({"evaluationError","incomplete","nonResourceRules","resourceRules"})
+    @OutputCustomType.Constructor
     private SubjectRulesReviewStatus(
-        @Nullable String evaluationError,
-        Boolean incomplete,
-        List<NonResourceRule> nonResourceRules,
-        List<ResourceRule> resourceRules) {
+        @OutputCustomType.Parameter("evaluationError") @Nullable String evaluationError,
+        @OutputCustomType.Parameter("incomplete") Boolean incomplete,
+        @OutputCustomType.Parameter("nonResourceRules") List<NonResourceRule> nonResourceRules,
+        @OutputCustomType.Parameter("resourceRules") List<ResourceRule> resourceRules) {
         this.evaluationError = evaluationError;
         this.incomplete = incomplete;
         this.nonResourceRules = nonResourceRules;

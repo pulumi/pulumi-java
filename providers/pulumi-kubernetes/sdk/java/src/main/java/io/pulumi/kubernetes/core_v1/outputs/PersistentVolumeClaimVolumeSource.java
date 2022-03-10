@@ -23,10 +23,10 @@ public final class PersistentVolumeClaimVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"claimName","readOnly"})
+    @OutputCustomType.Constructor
     private PersistentVolumeClaimVolumeSource(
-        String claimName,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("claimName") String claimName,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.claimName = claimName;
         this.readOnly = readOnly;
     }

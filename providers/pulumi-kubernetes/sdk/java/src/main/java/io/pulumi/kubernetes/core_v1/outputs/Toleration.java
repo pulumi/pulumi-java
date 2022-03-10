@@ -47,13 +47,13 @@ public final class Toleration {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"effect","key","operator","tolerationSeconds","value"})
+    @OutputCustomType.Constructor
     private Toleration(
-        @Nullable String effect,
-        @Nullable String key,
-        @Nullable String operator,
-        @Nullable Integer tolerationSeconds,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("effect") @Nullable String effect,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("tolerationSeconds") @Nullable Integer tolerationSeconds,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.effect = effect;
         this.key = key;
         this.operator = operator;

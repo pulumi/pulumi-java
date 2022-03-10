@@ -36,12 +36,12 @@ public final class ConfigMapVolumeSource {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"defaultMode","items","name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapVolumeSource(
-        @Nullable Integer defaultMode,
-        @Nullable List<KeyToPath> items,
-        @Nullable String name,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @OutputCustomType.Parameter("items") @Nullable List<KeyToPath> items,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.name = name;

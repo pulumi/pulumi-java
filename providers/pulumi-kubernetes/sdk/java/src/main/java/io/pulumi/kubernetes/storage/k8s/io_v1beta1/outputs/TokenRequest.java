@@ -23,10 +23,10 @@ public final class TokenRequest {
      */
     private final @Nullable Integer expirationSeconds;
 
-    @OutputCustomType.Constructor({"audience","expirationSeconds"})
+    @OutputCustomType.Constructor
     private TokenRequest(
-        String audience,
-        @Nullable Integer expirationSeconds) {
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds) {
         this.audience = audience;
         this.expirationSeconds = expirationSeconds;
     }

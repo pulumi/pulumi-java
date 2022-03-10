@@ -22,10 +22,10 @@ public final class NonResourceRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor({"nonResourceURLs","verbs"})
+    @OutputCustomType.Constructor
     private NonResourceRule(
-        @Nullable List<String> nonResourceURLs,
-        List<String> verbs) {
+        @OutputCustomType.Parameter("nonResourceURLs") @Nullable List<String> nonResourceURLs,
+        @OutputCustomType.Parameter("verbs") List<String> verbs) {
         this.nonResourceURLs = nonResourceURLs;
         this.verbs = verbs;
     }

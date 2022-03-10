@@ -29,11 +29,11 @@ public final class CustomResourceDefinitionStatus {
      */
     private final List<String> storedVersions;
 
-    @OutputCustomType.Constructor({"acceptedNames","conditions","storedVersions"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionStatus(
-        CustomResourceDefinitionNames acceptedNames,
-        @Nullable List<CustomResourceDefinitionCondition> conditions,
-        List<String> storedVersions) {
+        @OutputCustomType.Parameter("acceptedNames") CustomResourceDefinitionNames acceptedNames,
+        @OutputCustomType.Parameter("conditions") @Nullable List<CustomResourceDefinitionCondition> conditions,
+        @OutputCustomType.Parameter("storedVersions") List<String> storedVersions) {
         this.acceptedNames = acceptedNames;
         this.conditions = conditions;
         this.storedVersions = storedVersions;

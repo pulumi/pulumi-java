@@ -46,10 +46,10 @@ public final class ValidationRule {
      */
     private final String rule;
 
-    @OutputCustomType.Constructor({"message","rule"})
+    @OutputCustomType.Constructor
     private ValidationRule(
-        @Nullable String message,
-        String rule) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("rule") String rule) {
         this.message = message;
         this.rule = rule;
     }

@@ -34,12 +34,12 @@ public final class NetworkPolicy {
      */
     private final @Nullable NetworkPolicySpec spec;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec"})
+    @OutputCustomType.Constructor
     private NetworkPolicy(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable NetworkPolicySpec spec) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable NetworkPolicySpec spec) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

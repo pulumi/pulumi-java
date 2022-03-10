@@ -34,12 +34,12 @@ public final class AWSElasticBlockStoreVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor({"fsType","partition","readOnly","volumeID"})
+    @OutputCustomType.Constructor
     private AWSElasticBlockStoreVolumeSource(
-        @Nullable String fsType,
-        @Nullable Integer partition,
-        @Nullable Boolean readOnly,
-        String volumeID) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("partition") @Nullable Integer partition,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.partition = partition;
         this.readOnly = readOnly;

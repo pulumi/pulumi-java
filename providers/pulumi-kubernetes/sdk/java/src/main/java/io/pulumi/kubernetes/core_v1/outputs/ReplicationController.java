@@ -40,13 +40,13 @@ public final class ReplicationController {
      */
     private final @Nullable ReplicationControllerStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private ReplicationController(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable ReplicationControllerSpec spec,
-        @Nullable ReplicationControllerStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable ReplicationControllerSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable ReplicationControllerStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

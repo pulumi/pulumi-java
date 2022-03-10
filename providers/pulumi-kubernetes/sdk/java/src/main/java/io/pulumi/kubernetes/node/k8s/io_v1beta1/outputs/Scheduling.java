@@ -24,10 +24,10 @@ public final class Scheduling {
      */
     private final @Nullable List<Toleration> tolerations;
 
-    @OutputCustomType.Constructor({"nodeSelector","tolerations"})
+    @OutputCustomType.Constructor
     private Scheduling(
-        @Nullable Map<String,String> nodeSelector,
-        @Nullable List<Toleration> tolerations) {
+        @OutputCustomType.Parameter("nodeSelector") @Nullable Map<String,String> nodeSelector,
+        @OutputCustomType.Parameter("tolerations") @Nullable List<Toleration> tolerations) {
         this.nodeSelector = nodeSelector;
         this.tolerations = tolerations;
     }

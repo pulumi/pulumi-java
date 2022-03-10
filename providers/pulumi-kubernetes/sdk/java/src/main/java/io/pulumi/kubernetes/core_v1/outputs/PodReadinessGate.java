@@ -21,8 +21,8 @@ public final class PodReadinessGate {
      */
     private final String conditionType;
 
-    @OutputCustomType.Constructor({"conditionType"})
-    private PodReadinessGate(String conditionType) {
+    @OutputCustomType.Constructor
+    private PodReadinessGate(@OutputCustomType.Parameter("conditionType") String conditionType) {
         this.conditionType = conditionType;
     }
 

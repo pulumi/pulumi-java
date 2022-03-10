@@ -15,8 +15,8 @@ public final class GroupSubject {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GroupSubject(String name) {
+    @OutputCustomType.Constructor
+    private GroupSubject(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

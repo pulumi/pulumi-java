@@ -26,11 +26,11 @@ public final class ContainerResourceMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor({"container","name","target"})
+    @OutputCustomType.Constructor
     private ContainerResourceMetricSource(
-        String container,
-        String name,
-        MetricTarget target) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") MetricTarget target) {
         this.container = container;
         this.name = name;
         this.target = target;

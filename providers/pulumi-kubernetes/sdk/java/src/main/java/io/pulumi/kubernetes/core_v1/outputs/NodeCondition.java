@@ -49,14 +49,14 @@ public final class NodeCondition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastHeartbeatTime","lastTransitionTime","message","reason","status","type"})
+    @OutputCustomType.Constructor
     private NodeCondition(
-        @Nullable String lastHeartbeatTime,
-        @Nullable String lastTransitionTime,
-        @Nullable String message,
-        @Nullable String reason,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastHeartbeatTime") @Nullable String lastHeartbeatTime,
+        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastHeartbeatTime = lastHeartbeatTime;
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;

@@ -23,10 +23,10 @@ public final class LimitResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"queuing","type"})
+    @OutputCustomType.Constructor
     private LimitResponse(
-        @Nullable QueuingConfiguration queuing,
-        String type) {
+        @OutputCustomType.Parameter("queuing") @Nullable QueuingConfiguration queuing,
+        @OutputCustomType.Parameter("type") String type) {
         this.queuing = queuing;
         this.type = type;
     }

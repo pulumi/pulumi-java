@@ -33,12 +33,12 @@ public final class HorizontalPodAutoscalerSpec {
      */
     private final @Nullable Integer targetCPUUtilizationPercentage;
 
-    @OutputCustomType.Constructor({"maxReplicas","minReplicas","scaleTargetRef","targetCPUUtilizationPercentage"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerSpec(
-        Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        CrossVersionObjectReference scaleTargetRef,
-        @Nullable Integer targetCPUUtilizationPercentage) {
+        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef,
+        @OutputCustomType.Parameter("targetCPUUtilizationPercentage") @Nullable Integer targetCPUUtilizationPercentage) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.scaleTargetRef = scaleTargetRef;

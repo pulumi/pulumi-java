@@ -22,10 +22,10 @@ public final class ObjectFieldSelector {
      */
     private final String fieldPath;
 
-    @OutputCustomType.Constructor({"apiVersion","fieldPath"})
+    @OutputCustomType.Constructor
     private ObjectFieldSelector(
-        @Nullable String apiVersion,
-        String fieldPath) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("fieldPath") String fieldPath) {
         this.apiVersion = apiVersion;
         this.fieldPath = fieldPath;
     }

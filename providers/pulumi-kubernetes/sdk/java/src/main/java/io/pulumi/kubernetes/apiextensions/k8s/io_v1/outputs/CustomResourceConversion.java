@@ -24,10 +24,10 @@ public final class CustomResourceConversion {
      */
     private final @Nullable WebhookConversion webhook;
 
-    @OutputCustomType.Constructor({"strategy","webhook"})
+    @OutputCustomType.Constructor
     private CustomResourceConversion(
-        String strategy,
-        @Nullable WebhookConversion webhook) {
+        @OutputCustomType.Parameter("strategy") String strategy,
+        @OutputCustomType.Parameter("webhook") @Nullable WebhookConversion webhook) {
         this.strategy = strategy;
         this.webhook = webhook;
     }

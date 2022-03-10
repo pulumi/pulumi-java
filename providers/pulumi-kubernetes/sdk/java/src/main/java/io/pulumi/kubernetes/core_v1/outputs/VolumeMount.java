@@ -43,14 +43,14 @@ public final class VolumeMount {
      */
     private final @Nullable String subPathExpr;
 
-    @OutputCustomType.Constructor({"mountPath","mountPropagation","name","readOnly","subPath","subPathExpr"})
+    @OutputCustomType.Constructor
     private VolumeMount(
-        String mountPath,
-        @Nullable String mountPropagation,
-        String name,
-        @Nullable Boolean readOnly,
-        @Nullable String subPath,
-        @Nullable String subPathExpr) {
+        @OutputCustomType.Parameter("mountPath") String mountPath,
+        @OutputCustomType.Parameter("mountPropagation") @Nullable String mountPropagation,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("subPath") @Nullable String subPath,
+        @OutputCustomType.Parameter("subPathExpr") @Nullable String subPathExpr) {
         this.mountPath = mountPath;
         this.mountPropagation = mountPropagation;
         this.name = name;

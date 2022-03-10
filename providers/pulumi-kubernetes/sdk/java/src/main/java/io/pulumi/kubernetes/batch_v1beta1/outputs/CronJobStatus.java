@@ -29,11 +29,11 @@ public final class CronJobStatus {
      */
     private final @Nullable String lastSuccessfulTime;
 
-    @OutputCustomType.Constructor({"active","lastScheduleTime","lastSuccessfulTime"})
+    @OutputCustomType.Constructor
     private CronJobStatus(
-        @Nullable List<ObjectReference> active,
-        @Nullable String lastScheduleTime,
-        @Nullable String lastSuccessfulTime) {
+        @OutputCustomType.Parameter("active") @Nullable List<ObjectReference> active,
+        @OutputCustomType.Parameter("lastScheduleTime") @Nullable String lastScheduleTime,
+        @OutputCustomType.Parameter("lastSuccessfulTime") @Nullable String lastSuccessfulTime) {
         this.active = active;
         this.lastScheduleTime = lastScheduleTime;
         this.lastSuccessfulTime = lastSuccessfulTime;

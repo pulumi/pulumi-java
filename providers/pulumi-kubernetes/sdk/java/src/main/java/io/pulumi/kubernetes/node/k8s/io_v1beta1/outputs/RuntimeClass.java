@@ -45,14 +45,14 @@ public final class RuntimeClass {
      */
     private final @Nullable Scheduling scheduling;
 
-    @OutputCustomType.Constructor({"apiVersion","handler","kind","metadata","overhead","scheduling"})
+    @OutputCustomType.Constructor
     private RuntimeClass(
-        @Nullable String apiVersion,
-        String handler,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable Overhead overhead,
-        @Nullable Scheduling scheduling) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("handler") String handler,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("overhead") @Nullable Overhead overhead,
+        @OutputCustomType.Parameter("scheduling") @Nullable Scheduling scheduling) {
         this.apiVersion = apiVersion;
         this.handler = handler;
         this.kind = kind;

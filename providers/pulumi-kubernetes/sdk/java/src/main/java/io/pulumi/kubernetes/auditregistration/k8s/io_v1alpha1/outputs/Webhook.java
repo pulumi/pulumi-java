@@ -23,10 +23,10 @@ public final class Webhook {
      */
     private final @Nullable WebhookThrottleConfig throttle;
 
-    @OutputCustomType.Constructor({"clientConfig","throttle"})
+    @OutputCustomType.Constructor
     private Webhook(
-        WebhookClientConfig clientConfig,
-        @Nullable WebhookThrottleConfig throttle) {
+        @OutputCustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
+        @OutputCustomType.Parameter("throttle") @Nullable WebhookThrottleConfig throttle) {
         this.clientConfig = clientConfig;
         this.throttle = throttle;
     }

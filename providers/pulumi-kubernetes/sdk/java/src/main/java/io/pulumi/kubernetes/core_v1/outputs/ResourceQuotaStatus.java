@@ -22,10 +22,10 @@ public final class ResourceQuotaStatus {
      */
     private final @Nullable Map<String,String> used;
 
-    @OutputCustomType.Constructor({"hard","used"})
+    @OutputCustomType.Constructor
     private ResourceQuotaStatus(
-        @Nullable Map<String,String> hard,
-        @Nullable Map<String,String> used) {
+        @OutputCustomType.Parameter("hard") @Nullable Map<String,String> hard,
+        @OutputCustomType.Parameter("used") @Nullable Map<String,String> used) {
         this.hard = hard;
         this.used = used;
     }

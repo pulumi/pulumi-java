@@ -22,10 +22,10 @@ public final class Lifecycle {
      */
     private final @Nullable LifecycleHandler preStop;
 
-    @OutputCustomType.Constructor({"postStart","preStop"})
+    @OutputCustomType.Constructor
     private Lifecycle(
-        @Nullable LifecycleHandler postStart,
-        @Nullable LifecycleHandler preStop) {
+        @OutputCustomType.Parameter("postStart") @Nullable LifecycleHandler postStart,
+        @OutputCustomType.Parameter("preStop") @Nullable LifecycleHandler preStop) {
         this.postStart = postStart;
         this.preStop = preStop;
     }

@@ -15,8 +15,8 @@ public final class UserSubject {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private UserSubject(String name) {
+    @OutputCustomType.Constructor
+    private UserSubject(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

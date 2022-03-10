@@ -27,11 +27,11 @@ public final class CustomResourceSubresourceScale {
      */
     private final String statusReplicasPath;
 
-    @OutputCustomType.Constructor({"labelSelectorPath","specReplicasPath","statusReplicasPath"})
+    @OutputCustomType.Constructor
     private CustomResourceSubresourceScale(
-        @Nullable String labelSelectorPath,
-        String specReplicasPath,
-        String statusReplicasPath) {
+        @OutputCustomType.Parameter("labelSelectorPath") @Nullable String labelSelectorPath,
+        @OutputCustomType.Parameter("specReplicasPath") String specReplicasPath,
+        @OutputCustomType.Parameter("statusReplicasPath") String statusReplicasPath) {
         this.labelSelectorPath = labelSelectorPath;
         this.specReplicasPath = specReplicasPath;
         this.statusReplicasPath = statusReplicasPath;

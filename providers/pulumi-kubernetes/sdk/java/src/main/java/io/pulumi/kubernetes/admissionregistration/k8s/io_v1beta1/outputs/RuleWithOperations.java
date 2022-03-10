@@ -44,13 +44,13 @@ public final class RuleWithOperations {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"apiGroups","apiVersions","operations","resources","scope"})
+    @OutputCustomType.Constructor
     private RuleWithOperations(
-        @Nullable List<String> apiGroups,
-        @Nullable List<String> apiVersions,
-        @Nullable List<String> operations,
-        @Nullable List<String> resources,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("operations") @Nullable List<String> operations,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.apiGroups = apiGroups;
         this.apiVersions = apiVersions;
         this.operations = operations;

@@ -28,11 +28,11 @@ public final class EnvVar {
      */
     private final @Nullable EnvVarSource valueFrom;
 
-    @OutputCustomType.Constructor({"name","value","valueFrom"})
+    @OutputCustomType.Constructor
     private EnvVar(
-        String name,
-        @Nullable String value,
-        @Nullable EnvVarSource valueFrom) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") @Nullable String value,
+        @OutputCustomType.Parameter("valueFrom") @Nullable EnvVarSource valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;

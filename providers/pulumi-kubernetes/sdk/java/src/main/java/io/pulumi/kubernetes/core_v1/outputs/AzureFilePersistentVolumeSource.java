@@ -33,12 +33,12 @@ public final class AzureFilePersistentVolumeSource {
      */
     private final String shareName;
 
-    @OutputCustomType.Constructor({"readOnly","secretName","secretNamespace","shareName"})
+    @OutputCustomType.Constructor
     private AzureFilePersistentVolumeSource(
-        @Nullable Boolean readOnly,
-        String secretName,
-        @Nullable String secretNamespace,
-        String shareName) {
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretName") String secretName,
+        @OutputCustomType.Parameter("secretNamespace") @Nullable String secretNamespace,
+        @OutputCustomType.Parameter("shareName") String shareName) {
         this.readOnly = readOnly;
         this.secretName = secretName;
         this.secretNamespace = secretNamespace;

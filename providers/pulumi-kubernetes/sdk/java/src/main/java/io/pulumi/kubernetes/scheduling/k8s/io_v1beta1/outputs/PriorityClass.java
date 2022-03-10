@@ -50,15 +50,15 @@ public final class PriorityClass {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor({"apiVersion","description","globalDefault","kind","metadata","preemptionPolicy","value"})
+    @OutputCustomType.Constructor
     private PriorityClass(
-        @Nullable String apiVersion,
-        @Nullable String description,
-        @Nullable Boolean globalDefault,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable String preemptionPolicy,
-        Integer value) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("globalDefault") @Nullable Boolean globalDefault,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("preemptionPolicy") @Nullable String preemptionPolicy,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.apiVersion = apiVersion;
         this.description = description;
         this.globalDefault = globalDefault;

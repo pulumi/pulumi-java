@@ -102,25 +102,25 @@ public final class Event {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"action","apiVersion","deprecatedCount","deprecatedFirstTimestamp","deprecatedLastTimestamp","deprecatedSource","eventTime","kind","metadata","note","reason","regarding","related","reportingController","reportingInstance","series","type"})
+    @OutputCustomType.Constructor
     private Event(
-        @Nullable String action,
-        @Nullable String apiVersion,
-        @Nullable Integer deprecatedCount,
-        @Nullable String deprecatedFirstTimestamp,
-        @Nullable String deprecatedLastTimestamp,
-        @Nullable EventSource deprecatedSource,
-        String eventTime,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable String note,
-        @Nullable String reason,
-        @Nullable ObjectReference regarding,
-        @Nullable ObjectReference related,
-        @Nullable String reportingController,
-        @Nullable String reportingInstance,
-        @Nullable EventSeries series,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("deprecatedCount") @Nullable Integer deprecatedCount,
+        @OutputCustomType.Parameter("deprecatedFirstTimestamp") @Nullable String deprecatedFirstTimestamp,
+        @OutputCustomType.Parameter("deprecatedLastTimestamp") @Nullable String deprecatedLastTimestamp,
+        @OutputCustomType.Parameter("deprecatedSource") @Nullable EventSource deprecatedSource,
+        @OutputCustomType.Parameter("eventTime") String eventTime,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("note") @Nullable String note,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("regarding") @Nullable ObjectReference regarding,
+        @OutputCustomType.Parameter("related") @Nullable ObjectReference related,
+        @OutputCustomType.Parameter("reportingController") @Nullable String reportingController,
+        @OutputCustomType.Parameter("reportingInstance") @Nullable String reportingInstance,
+        @OutputCustomType.Parameter("series") @Nullable EventSeries series,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.apiVersion = apiVersion;
         this.deprecatedCount = deprecatedCount;

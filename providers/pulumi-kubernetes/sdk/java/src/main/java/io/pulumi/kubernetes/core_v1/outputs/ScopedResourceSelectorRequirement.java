@@ -41,11 +41,11 @@ public final class ScopedResourceSelectorRequirement {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"operator","scopeName","values"})
+    @OutputCustomType.Constructor
     private ScopedResourceSelectorRequirement(
-        String operator,
-        String scopeName,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("scopeName") String scopeName,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.operator = operator;
         this.scopeName = scopeName;
         this.values = values;

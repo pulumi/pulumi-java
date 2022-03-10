@@ -20,10 +20,10 @@ public final class AttachedVolume {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"devicePath","name"})
+    @OutputCustomType.Constructor
     private AttachedVolume(
-        String devicePath,
-        String name) {
+        @OutputCustomType.Parameter("devicePath") String devicePath,
+        @OutputCustomType.Parameter("name") String name) {
         this.devicePath = devicePath;
         this.name = name;
     }

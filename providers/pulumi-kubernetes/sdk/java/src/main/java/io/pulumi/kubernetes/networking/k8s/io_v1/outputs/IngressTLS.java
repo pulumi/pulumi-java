@@ -23,10 +23,10 @@ public final class IngressTLS {
      */
     private final @Nullable String secretName;
 
-    @OutputCustomType.Constructor({"hosts","secretName"})
+    @OutputCustomType.Constructor
     private IngressTLS(
-        @Nullable List<String> hosts,
-        @Nullable String secretName) {
+        @OutputCustomType.Parameter("hosts") @Nullable List<String> hosts,
+        @OutputCustomType.Parameter("secretName") @Nullable String secretName) {
         this.hosts = hosts;
         this.secretName = secretName;
     }

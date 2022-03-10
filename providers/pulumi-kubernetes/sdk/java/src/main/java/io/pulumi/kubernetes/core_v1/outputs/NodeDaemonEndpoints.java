@@ -17,8 +17,8 @@ public final class NodeDaemonEndpoints {
      */
     private final @Nullable DaemonEndpoint kubeletEndpoint;
 
-    @OutputCustomType.Constructor({"kubeletEndpoint"})
-    private NodeDaemonEndpoints(@Nullable DaemonEndpoint kubeletEndpoint) {
+    @OutputCustomType.Constructor
+    private NodeDaemonEndpoints(@OutputCustomType.Parameter("kubeletEndpoint") @Nullable DaemonEndpoint kubeletEndpoint) {
         this.kubeletEndpoint = kubeletEndpoint;
     }
 

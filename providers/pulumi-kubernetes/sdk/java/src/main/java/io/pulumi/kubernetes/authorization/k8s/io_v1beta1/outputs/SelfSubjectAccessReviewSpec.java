@@ -23,10 +23,10 @@ public final class SelfSubjectAccessReviewSpec {
      */
     private final @Nullable ResourceAttributes resourceAttributes;
 
-    @OutputCustomType.Constructor({"nonResourceAttributes","resourceAttributes"})
+    @OutputCustomType.Constructor
     private SelfSubjectAccessReviewSpec(
-        @Nullable NonResourceAttributes nonResourceAttributes,
-        @Nullable ResourceAttributes resourceAttributes) {
+        @OutputCustomType.Parameter("nonResourceAttributes") @Nullable NonResourceAttributes nonResourceAttributes,
+        @OutputCustomType.Parameter("resourceAttributes") @Nullable ResourceAttributes resourceAttributes) {
         this.nonResourceAttributes = nonResourceAttributes;
         this.resourceAttributes = resourceAttributes;
     }

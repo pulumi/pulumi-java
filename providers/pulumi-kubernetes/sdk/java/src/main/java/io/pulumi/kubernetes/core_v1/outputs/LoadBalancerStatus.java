@@ -17,8 +17,8 @@ public final class LoadBalancerStatus {
      */
     private final @Nullable List<LoadBalancerIngress> ingress;
 
-    @OutputCustomType.Constructor({"ingress"})
-    private LoadBalancerStatus(@Nullable List<LoadBalancerIngress> ingress) {
+    @OutputCustomType.Constructor
+    private LoadBalancerStatus(@OutputCustomType.Parameter("ingress") @Nullable List<LoadBalancerIngress> ingress) {
         this.ingress = ingress;
     }
 

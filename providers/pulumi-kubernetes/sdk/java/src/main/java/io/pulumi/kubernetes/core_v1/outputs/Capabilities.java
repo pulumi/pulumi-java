@@ -22,10 +22,10 @@ public final class Capabilities {
      */
     private final @Nullable List<String> drop;
 
-    @OutputCustomType.Constructor({"add","drop"})
+    @OutputCustomType.Constructor
     private Capabilities(
-        @Nullable List<String> add,
-        @Nullable List<String> drop) {
+        @OutputCustomType.Parameter("add") @Nullable List<String> add,
+        @OutputCustomType.Parameter("drop") @Nullable List<String> drop) {
         this.add = add;
         this.drop = drop;
     }

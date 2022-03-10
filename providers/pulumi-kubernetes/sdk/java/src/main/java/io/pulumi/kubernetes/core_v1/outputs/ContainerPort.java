@@ -43,13 +43,13 @@ public final class ContainerPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"containerPort","hostIP","hostPort","name","protocol"})
+    @OutputCustomType.Constructor
     private ContainerPort(
-        Integer containerPort,
-        @Nullable String hostIP,
-        @Nullable Integer hostPort,
-        @Nullable String name,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("containerPort") Integer containerPort,
+        @OutputCustomType.Parameter("hostIP") @Nullable String hostIP,
+        @OutputCustomType.Parameter("hostPort") @Nullable Integer hostPort,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.containerPort = containerPort;
         this.hostIP = hostIP;
         this.hostPort = hostPort;

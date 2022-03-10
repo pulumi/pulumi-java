@@ -39,13 +39,13 @@ public final class ObjectMetricStatus {
      */
     private final CrossVersionObjectReference target;
 
-    @OutputCustomType.Constructor({"averageValue","currentValue","metricName","selector","target"})
+    @OutputCustomType.Constructor
     private ObjectMetricStatus(
-        @Nullable String averageValue,
-        String currentValue,
-        String metricName,
-        @Nullable LabelSelector selector,
-        CrossVersionObjectReference target) {
+        @OutputCustomType.Parameter("averageValue") @Nullable String averageValue,
+        @OutputCustomType.Parameter("currentValue") String currentValue,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("target") CrossVersionObjectReference target) {
         this.averageValue = averageValue;
         this.currentValue = currentValue;
         this.metricName = metricName;

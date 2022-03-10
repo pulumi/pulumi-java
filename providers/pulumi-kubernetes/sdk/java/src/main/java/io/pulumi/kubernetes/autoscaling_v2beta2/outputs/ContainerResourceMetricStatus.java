@@ -26,11 +26,11 @@ public final class ContainerResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"container","current","name"})
+    @OutputCustomType.Constructor
     private ContainerResourceMetricStatus(
-        String container,
-        MetricValueStatus current,
-        String name) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("current") MetricValueStatus current,
+        @OutputCustomType.Parameter("name") String name) {
         this.container = container;
         this.current = current;
         this.name = name;

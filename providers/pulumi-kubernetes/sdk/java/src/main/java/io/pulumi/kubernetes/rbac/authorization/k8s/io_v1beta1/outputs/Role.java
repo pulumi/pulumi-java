@@ -35,12 +35,12 @@ public final class Role {
      */
     private final @Nullable List<PolicyRule> rules;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","rules"})
+    @OutputCustomType.Constructor
     private Role(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<PolicyRule> rules) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("rules") @Nullable List<PolicyRule> rules) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

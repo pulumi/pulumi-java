@@ -34,12 +34,12 @@ public final class IngressClass {
      */
     private final @Nullable IngressClassSpec spec;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec"})
+    @OutputCustomType.Constructor
     private IngressClass(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable IngressClassSpec spec) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable IngressClassSpec spec) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

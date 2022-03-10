@@ -67,18 +67,18 @@ public final class StorageClass {
      */
     private final @Nullable String volumeBindingMode;
 
-    @OutputCustomType.Constructor({"allowVolumeExpansion","allowedTopologies","apiVersion","kind","metadata","mountOptions","parameters","provisioner","reclaimPolicy","volumeBindingMode"})
+    @OutputCustomType.Constructor
     private StorageClass(
-        @Nullable Boolean allowVolumeExpansion,
-        @Nullable List<TopologySelectorTerm> allowedTopologies,
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<String> mountOptions,
-        @Nullable Map<String,String> parameters,
-        String provisioner,
-        @Nullable String reclaimPolicy,
-        @Nullable String volumeBindingMode) {
+        @OutputCustomType.Parameter("allowVolumeExpansion") @Nullable Boolean allowVolumeExpansion,
+        @OutputCustomType.Parameter("allowedTopologies") @Nullable List<TopologySelectorTerm> allowedTopologies,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("provisioner") String provisioner,
+        @OutputCustomType.Parameter("reclaimPolicy") @Nullable String reclaimPolicy,
+        @OutputCustomType.Parameter("volumeBindingMode") @Nullable String volumeBindingMode) {
         this.allowVolumeExpansion = allowVolumeExpansion;
         this.allowedTopologies = allowedTopologies;
         this.apiVersion = apiVersion;

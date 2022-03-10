@@ -27,11 +27,11 @@ public final class GitRepoVolumeSource {
      */
     private final @Nullable String revision;
 
-    @OutputCustomType.Constructor({"directory","repository","revision"})
+    @OutputCustomType.Constructor
     private GitRepoVolumeSource(
-        @Nullable String directory,
-        String repository,
-        @Nullable String revision) {
+        @OutputCustomType.Parameter("directory") @Nullable String directory,
+        @OutputCustomType.Parameter("repository") String repository,
+        @OutputCustomType.Parameter("revision") @Nullable String revision) {
         this.directory = directory;
         this.repository = repository;
         this.revision = revision;

@@ -33,12 +33,12 @@ public final class ExternalMetricSource {
      */
     private final @Nullable String targetValue;
 
-    @OutputCustomType.Constructor({"metricName","metricSelector","targetAverageValue","targetValue"})
+    @OutputCustomType.Constructor
     private ExternalMetricSource(
-        String metricName,
-        @Nullable LabelSelector metricSelector,
-        @Nullable String targetAverageValue,
-        @Nullable String targetValue) {
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector,
+        @OutputCustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue,
+        @OutputCustomType.Parameter("targetValue") @Nullable String targetValue) {
         this.metricName = metricName;
         this.metricSelector = metricSelector;
         this.targetAverageValue = targetAverageValue;

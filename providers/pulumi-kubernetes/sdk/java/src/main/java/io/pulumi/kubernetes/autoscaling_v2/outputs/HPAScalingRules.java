@@ -30,11 +30,11 @@ public final class HPAScalingRules {
      */
     private final @Nullable Integer stabilizationWindowSeconds;
 
-    @OutputCustomType.Constructor({"policies","selectPolicy","stabilizationWindowSeconds"})
+    @OutputCustomType.Constructor
     private HPAScalingRules(
-        @Nullable List<HPAScalingPolicy> policies,
-        @Nullable String selectPolicy,
-        @Nullable Integer stabilizationWindowSeconds) {
+        @OutputCustomType.Parameter("policies") @Nullable List<HPAScalingPolicy> policies,
+        @OutputCustomType.Parameter("selectPolicy") @Nullable String selectPolicy,
+        @OutputCustomType.Parameter("stabilizationWindowSeconds") @Nullable Integer stabilizationWindowSeconds) {
         this.policies = policies;
         this.selectPolicy = selectPolicy;
         this.stabilizationWindowSeconds = stabilizationWindowSeconds;
