@@ -102,42 +102,42 @@ public final class BasePathMappingArgs extends io.pulumi.resources.ResourceArgs 
     	      this.stage = defaults.stage;
         }
 
-        public Builder setBasePath(@Nullable Input<String> basePath) {
+        public Builder basePath(@Nullable Input<String> basePath) {
             this.basePath = basePath;
             return this;
         }
 
-        public Builder setBasePath(@Nullable String basePath) {
+        public Builder basePath(@Nullable String basePath) {
             this.basePath = Input.ofNullable(basePath);
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setRestApiId(@Nullable Input<String> restApiId) {
+        public Builder restApiId(@Nullable Input<String> restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
-        public Builder setRestApiId(@Nullable String restApiId) {
+        public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = Input.ofNullable(restApiId);
             return this;
         }
 
-        public Builder setStage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Input<String> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }

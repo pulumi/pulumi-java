@@ -80,32 +80,32 @@ public final class RuleGroupJsonBodyArgs extends io.pulumi.resources.ResourceArg
     	      this.matchScope = defaults.matchScope;
         }
 
-        public Builder setInvalidFallbackBehavior(@Nullable Input<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable Input<RuleGroupBodyParsingFallbackBehavior> invalidFallbackBehavior) {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
-        public Builder setInvalidFallbackBehavior(@Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable RuleGroupBodyParsingFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = Input.ofNullable(invalidFallbackBehavior);
             return this;
         }
 
-        public Builder setMatchPattern(Input<RuleGroupJsonMatchPatternArgs> matchPattern) {
+        public Builder matchPattern(Input<RuleGroupJsonMatchPatternArgs> matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
 
-        public Builder setMatchPattern(RuleGroupJsonMatchPatternArgs matchPattern) {
+        public Builder matchPattern(RuleGroupJsonMatchPatternArgs matchPattern) {
             this.matchPattern = Input.of(Objects.requireNonNull(matchPattern));
             return this;
         }
 
-        public Builder setMatchScope(Input<RuleGroupJsonMatchScope> matchScope) {
+        public Builder matchScope(Input<RuleGroupJsonMatchScope> matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
 
-        public Builder setMatchScope(RuleGroupJsonMatchScope matchScope) {
+        public Builder matchScope(RuleGroupJsonMatchScope matchScope) {
             this.matchScope = Input.of(Objects.requireNonNull(matchScope));
             return this;
         }

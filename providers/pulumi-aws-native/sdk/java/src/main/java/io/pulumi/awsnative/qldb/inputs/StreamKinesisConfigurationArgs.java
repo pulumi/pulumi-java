@@ -63,22 +63,22 @@ public final class StreamKinesisConfigurationArgs extends io.pulumi.resources.Re
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setAggregationEnabled(@Nullable Input<Boolean> aggregationEnabled) {
+        public Builder aggregationEnabled(@Nullable Input<Boolean> aggregationEnabled) {
             this.aggregationEnabled = aggregationEnabled;
             return this;
         }
 
-        public Builder setAggregationEnabled(@Nullable Boolean aggregationEnabled) {
+        public Builder aggregationEnabled(@Nullable Boolean aggregationEnabled) {
             this.aggregationEnabled = Input.ofNullable(aggregationEnabled);
             return this;
         }
 
-        public Builder setStreamArn(@Nullable Input<String> streamArn) {
+        public Builder streamArn(@Nullable Input<String> streamArn) {
             this.streamArn = streamArn;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = Input.ofNullable(streamArn);
             return this;
         }

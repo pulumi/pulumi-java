@@ -50,7 +50,7 @@ public final class FunctionDeadLetterConfig {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
         }

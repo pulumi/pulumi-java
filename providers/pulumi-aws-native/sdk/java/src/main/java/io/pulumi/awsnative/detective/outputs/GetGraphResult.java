@@ -61,12 +61,12 @@ public final class GetGraphResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GraphTag> tags) {
+        public Builder tags(@Nullable List<GraphTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -142,37 +142,37 @@ public final class GetLocationSMBResult {
     	      this.user = defaults.user;
         }
 
-        public Builder setAgentArns(@Nullable List<String> agentArns) {
+        public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable LocationSMBMountOptions mountOptions) {
+        public Builder mountOptions(@Nullable LocationSMBMountOptions mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationSMBTag> tags) {
+        public Builder tags(@Nullable List<LocationSMBTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

@@ -88,17 +88,17 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
     	      this.imageRepositoryType = defaults.imageRepositoryType;
         }
 
-        public Builder setImageConfiguration(@Nullable ServiceImageConfiguration imageConfiguration) {
+        public Builder imageConfiguration(@Nullable ServiceImageConfiguration imageConfiguration) {
             this.imageConfiguration = imageConfiguration;
             return this;
         }
 
-        public Builder setImageIdentifier(String imageIdentifier) {
+        public Builder imageIdentifier(String imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
 
-        public Builder setImageRepositoryType(ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
+        public Builder imageRepositoryType(ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }

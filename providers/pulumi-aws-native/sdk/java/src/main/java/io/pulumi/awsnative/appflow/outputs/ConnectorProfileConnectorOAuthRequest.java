@@ -69,12 +69,12 @@ public final class ConnectorProfileConnectorOAuthRequest {
     	      this.redirectUri = defaults.redirectUri;
         }
 
-        public Builder setAuthCode(@Nullable String authCode) {
+        public Builder authCode(@Nullable String authCode) {
             this.authCode = authCode;
             return this;
         }
 
-        public Builder setRedirectUri(@Nullable String redirectUri) {
+        public Builder redirectUri(@Nullable String redirectUri) {
             this.redirectUri = redirectUri;
             return this;
         }

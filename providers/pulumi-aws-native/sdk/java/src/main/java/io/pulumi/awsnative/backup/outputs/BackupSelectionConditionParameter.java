@@ -51,12 +51,12 @@ public final class BackupSelectionConditionParameter {
     	      this.conditionValue = defaults.conditionValue;
         }
 
-        public Builder setConditionKey(@Nullable String conditionKey) {
+        public Builder conditionKey(@Nullable String conditionKey) {
             this.conditionKey = conditionKey;
             return this;
         }
 
-        public Builder setConditionValue(@Nullable String conditionValue) {
+        public Builder conditionValue(@Nullable String conditionValue) {
             this.conditionValue = conditionValue;
             return this;
         }

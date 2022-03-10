@@ -51,7 +51,7 @@ public final class GetRoleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.roleName = defaults.roleName;
         }
 
-        public Builder setRoleName(String roleName) {
+        public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }

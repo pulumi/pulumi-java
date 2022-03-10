@@ -51,12 +51,12 @@ public final class RepositoryLifecyclePolicy {
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setLifecyclePolicyText(@Nullable String lifecyclePolicyText) {
+        public Builder lifecyclePolicyText(@Nullable String lifecyclePolicyText) {
             this.lifecyclePolicyText = lifecyclePolicyText;
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
         }

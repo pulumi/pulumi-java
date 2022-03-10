@@ -75,22 +75,22 @@ public final class ApplicationAlarmArgs extends io.pulumi.resources.ResourceArgs
     	      this.severity = defaults.severity;
         }
 
-        public Builder setAlarmName(Input<String> alarmName) {
+        public Builder alarmName(Input<String> alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Input.of(Objects.requireNonNull(alarmName));
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<ApplicationAlarmSeverity> severity) {
+        public Builder severity(@Nullable Input<ApplicationAlarmSeverity> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable ApplicationAlarmSeverity severity) {
+        public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }

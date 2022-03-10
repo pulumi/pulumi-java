@@ -51,7 +51,7 @@ public final class GetAppImageConfigArgs extends io.pulumi.resources.InvokeArgs 
     	      this.appImageConfigName = defaults.appImageConfigName;
         }
 
-        public Builder setAppImageConfigName(String appImageConfigName) {
+        public Builder appImageConfigName(String appImageConfigName) {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }

@@ -67,22 +67,22 @@ public final class GetPlaceIndexResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setIndexArn(@Nullable String indexArn) {
+        public Builder indexArn(@Nullable String indexArn) {
             this.indexArn = indexArn;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }

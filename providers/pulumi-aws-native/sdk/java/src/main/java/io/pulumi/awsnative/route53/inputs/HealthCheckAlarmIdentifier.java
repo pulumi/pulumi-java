@@ -72,12 +72,12 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
     	      this.region = defaults.region;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

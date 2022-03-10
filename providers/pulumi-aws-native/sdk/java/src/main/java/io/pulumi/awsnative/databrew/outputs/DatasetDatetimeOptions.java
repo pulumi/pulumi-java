@@ -83,17 +83,17 @@ public final class DatasetDatetimeOptions {
     	      this.timezoneOffset = defaults.timezoneOffset;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setLocaleCode(@Nullable String localeCode) {
+        public Builder localeCode(@Nullable String localeCode) {
             this.localeCode = localeCode;
             return this;
         }
 
-        public Builder setTimezoneOffset(@Nullable String timezoneOffset) {
+        public Builder timezoneOffset(@Nullable String timezoneOffset) {
             this.timezoneOffset = timezoneOffset;
             return this;
         }

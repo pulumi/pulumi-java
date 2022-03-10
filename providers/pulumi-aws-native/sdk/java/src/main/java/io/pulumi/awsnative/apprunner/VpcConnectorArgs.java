@@ -104,42 +104,42 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConnectorName = defaults.vpcConnectorName;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnets(Input<List<String>> subnets) {
+        public Builder subnets(Input<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<VpcConnectorTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<VpcConnectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VpcConnectorTagArgs> tags) {
+        public Builder tags(@Nullable List<VpcConnectorTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcConnectorName(@Nullable Input<String> vpcConnectorName) {
+        public Builder vpcConnectorName(@Nullable Input<String> vpcConnectorName) {
             this.vpcConnectorName = vpcConnectorName;
             return this;
         }
 
-        public Builder setVpcConnectorName(@Nullable String vpcConnectorName) {
+        public Builder vpcConnectorName(@Nullable String vpcConnectorName) {
             this.vpcConnectorName = Input.ofNullable(vpcConnectorName);
             return this;
         }

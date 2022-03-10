@@ -199,52 +199,52 @@ public final class GetUserResult {
     	      this.username = defaults.username;
         }
 
-        public Builder setDirectoryUserId(@Nullable String directoryUserId) {
+        public Builder directoryUserId(@Nullable String directoryUserId) {
             this.directoryUserId = directoryUserId;
             return this;
         }
 
-        public Builder setHierarchyGroupArn(@Nullable String hierarchyGroupArn) {
+        public Builder hierarchyGroupArn(@Nullable String hierarchyGroupArn) {
             this.hierarchyGroupArn = hierarchyGroupArn;
             return this;
         }
 
-        public Builder setIdentityInfo(@Nullable UserIdentityInfo identityInfo) {
+        public Builder identityInfo(@Nullable UserIdentityInfo identityInfo) {
             this.identityInfo = identityInfo;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setPhoneConfig(@Nullable UserPhoneConfig phoneConfig) {
+        public Builder phoneConfig(@Nullable UserPhoneConfig phoneConfig) {
             this.phoneConfig = phoneConfig;
             return this;
         }
 
-        public Builder setRoutingProfileArn(@Nullable String routingProfileArn) {
+        public Builder routingProfileArn(@Nullable String routingProfileArn) {
             this.routingProfileArn = routingProfileArn;
             return this;
         }
 
-        public Builder setSecurityProfileArns(@Nullable List<String> securityProfileArns) {
+        public Builder securityProfileArns(@Nullable List<String> securityProfileArns) {
             this.securityProfileArns = securityProfileArns;
             return this;
         }
 
-        public Builder setTags(@Nullable List<UserTag> tags) {
+        public Builder tags(@Nullable List<UserTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUserArn(@Nullable String userArn) {
+        public Builder userArn(@Nullable String userArn) {
             this.userArn = userArn;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

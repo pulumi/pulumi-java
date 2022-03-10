@@ -42,7 +42,7 @@ public final class DeliveryStreamOutputFormatConfiguration {
     	      this.serializer = defaults.serializer;
         }
 
-        public Builder setSerializer(@Nullable DeliveryStreamSerializer serializer) {
+        public Builder serializer(@Nullable DeliveryStreamSerializer serializer) {
             this.serializer = serializer;
             return this;
         }

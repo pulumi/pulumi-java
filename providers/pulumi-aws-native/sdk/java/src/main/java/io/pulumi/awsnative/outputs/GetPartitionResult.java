@@ -40,7 +40,7 @@ public final class GetPartitionResult {
     	      this.partition = defaults.partition;
         }
 
-        public Builder setPartition(String partition) {
+        public Builder partition(String partition) {
             this.partition = Objects.requireNonNull(partition);
             return this;
         }

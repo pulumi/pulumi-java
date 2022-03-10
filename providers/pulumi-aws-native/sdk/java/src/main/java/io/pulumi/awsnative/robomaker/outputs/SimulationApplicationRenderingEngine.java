@@ -66,12 +66,12 @@ public final class SimulationApplicationRenderingEngine {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(SimulationApplicationRenderingEngineName name) {
+        public Builder name(SimulationApplicationRenderingEngineName name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

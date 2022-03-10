@@ -143,72 +143,72 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEndpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Input<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Input.ofNullable(endpointName);
             return this;
         }
 
-        public Builder setFailureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Input<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = Input.ofNullable(failureReason);
             return this;
         }
 
-        public Builder setLastMonitoringExecutionSummary(@Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary) {
+        public Builder lastMonitoringExecutionSummary(@Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary) {
             this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
             return this;
         }
 
-        public Builder setLastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummaryArgs lastMonitoringExecutionSummary) {
+        public Builder lastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummaryArgs lastMonitoringExecutionSummary) {
             this.lastMonitoringExecutionSummary = Input.ofNullable(lastMonitoringExecutionSummary);
             return this;
         }
 
-        public Builder setMonitoringScheduleConfig(Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig) {
+        public Builder monitoringScheduleConfig(Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig) {
             this.monitoringScheduleConfig = Objects.requireNonNull(monitoringScheduleConfig);
             return this;
         }
 
-        public Builder setMonitoringScheduleConfig(MonitoringScheduleConfigArgs monitoringScheduleConfig) {
+        public Builder monitoringScheduleConfig(MonitoringScheduleConfigArgs monitoringScheduleConfig) {
             this.monitoringScheduleConfig = Input.of(Objects.requireNonNull(monitoringScheduleConfig));
             return this;
         }
 
-        public Builder setMonitoringScheduleName(@Nullable Input<String> monitoringScheduleName) {
+        public Builder monitoringScheduleName(@Nullable Input<String> monitoringScheduleName) {
             this.monitoringScheduleName = monitoringScheduleName;
             return this;
         }
 
-        public Builder setMonitoringScheduleName(@Nullable String monitoringScheduleName) {
+        public Builder monitoringScheduleName(@Nullable String monitoringScheduleName) {
             this.monitoringScheduleName = Input.ofNullable(monitoringScheduleName);
             return this;
         }
 
-        public Builder setMonitoringScheduleStatus(@Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus) {
+        public Builder monitoringScheduleStatus(@Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus) {
             this.monitoringScheduleStatus = monitoringScheduleStatus;
             return this;
         }
 
-        public Builder setMonitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
+        public Builder monitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
             this.monitoringScheduleStatus = Input.ofNullable(monitoringScheduleStatus);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<MonitoringScheduleTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<MonitoringScheduleTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MonitoringScheduleTagArgs> tags) {
+        public Builder tags(@Nullable List<MonitoringScheduleTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

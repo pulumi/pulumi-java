@@ -69,22 +69,22 @@ public final class GetArchiveResult {
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEventPattern(@Nullable Object eventPattern) {
+        public Builder eventPattern(@Nullable Object eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }

@@ -119,52 +119,52 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vPCs = defaults.vPCs;
         }
 
-        public Builder setHostedZoneConfig(@Nullable Input<HostedZoneConfigArgs> hostedZoneConfig) {
+        public Builder hostedZoneConfig(@Nullable Input<HostedZoneConfigArgs> hostedZoneConfig) {
             this.hostedZoneConfig = hostedZoneConfig;
             return this;
         }
 
-        public Builder setHostedZoneConfig(@Nullable HostedZoneConfigArgs hostedZoneConfig) {
+        public Builder hostedZoneConfig(@Nullable HostedZoneConfigArgs hostedZoneConfig) {
             this.hostedZoneConfig = Input.ofNullable(hostedZoneConfig);
             return this;
         }
 
-        public Builder setHostedZoneTags(@Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags) {
+        public Builder hostedZoneTags(@Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags) {
             this.hostedZoneTags = hostedZoneTags;
             return this;
         }
 
-        public Builder setHostedZoneTags(@Nullable List<HostedZoneTagArgs> hostedZoneTags) {
+        public Builder hostedZoneTags(@Nullable List<HostedZoneTagArgs> hostedZoneTags) {
             this.hostedZoneTags = Input.ofNullable(hostedZoneTags);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQueryLoggingConfig(@Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig) {
+        public Builder queryLoggingConfig(@Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig) {
             this.queryLoggingConfig = queryLoggingConfig;
             return this;
         }
 
-        public Builder setQueryLoggingConfig(@Nullable HostedZoneQueryLoggingConfigArgs queryLoggingConfig) {
+        public Builder queryLoggingConfig(@Nullable HostedZoneQueryLoggingConfigArgs queryLoggingConfig) {
             this.queryLoggingConfig = Input.ofNullable(queryLoggingConfig);
             return this;
         }
 
-        public Builder setVPCs(@Nullable Input<List<HostedZoneVPCArgs>> vPCs) {
+        public Builder vPCs(@Nullable Input<List<HostedZoneVPCArgs>> vPCs) {
             this.vPCs = vPCs;
             return this;
         }
 
-        public Builder setVPCs(@Nullable List<HostedZoneVPCArgs> vPCs) {
+        public Builder vPCs(@Nullable List<HostedZoneVPCArgs> vPCs) {
             this.vPCs = Input.ofNullable(vPCs);
             return this;
         }

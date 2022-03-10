@@ -61,22 +61,22 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setSnsRoleName(Input<String> snsRoleName) {
+        public Builder snsRoleName(Input<String> snsRoleName) {
             this.snsRoleName = Objects.requireNonNull(snsRoleName);
             return this;
         }
 
-        public Builder setSnsRoleName(String snsRoleName) {
+        public Builder snsRoleName(String snsRoleName) {
             this.snsRoleName = Input.of(Objects.requireNonNull(snsRoleName));
             return this;
         }
 
-        public Builder setSnsTopicArn(Input<String> snsTopicArn) {
+        public Builder snsTopicArn(Input<String> snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
 
-        public Builder setSnsTopicArn(String snsTopicArn) {
+        public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Input.of(Objects.requireNonNull(snsTopicArn));
             return this;
         }

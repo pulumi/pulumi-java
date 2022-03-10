@@ -86,22 +86,22 @@ public final class PublicKeyConfig extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setCallerReference(String callerReference) {
+        public Builder callerReference(String callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setEncodedKey(String encodedKey) {
+        public Builder encodedKey(String encodedKey) {
             this.encodedKey = Objects.requireNonNull(encodedKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

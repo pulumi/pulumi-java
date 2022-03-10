@@ -74,32 +74,32 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     	      this.loggingConfiguration = defaults.loggingConfiguration;
         }
 
-        public Builder setFirewallArn(Input<String> firewallArn) {
+        public Builder firewallArn(Input<String> firewallArn) {
             this.firewallArn = Objects.requireNonNull(firewallArn);
             return this;
         }
 
-        public Builder setFirewallArn(String firewallArn) {
+        public Builder firewallArn(String firewallArn) {
             this.firewallArn = Input.of(Objects.requireNonNull(firewallArn));
             return this;
         }
 
-        public Builder setFirewallName(@Nullable Input<String> firewallName) {
+        public Builder firewallName(@Nullable Input<String> firewallName) {
             this.firewallName = firewallName;
             return this;
         }
 
-        public Builder setFirewallName(@Nullable String firewallName) {
+        public Builder firewallName(@Nullable String firewallName) {
             this.firewallName = Input.ofNullable(firewallName);
             return this;
         }
 
-        public Builder setLoggingConfiguration(Input<io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(Input<io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration);
             return this;
         }
 
-        public Builder setLoggingConfiguration(io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs loggingConfiguration) {
+        public Builder loggingConfiguration(io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Input.of(Objects.requireNonNull(loggingConfiguration));
             return this;
         }

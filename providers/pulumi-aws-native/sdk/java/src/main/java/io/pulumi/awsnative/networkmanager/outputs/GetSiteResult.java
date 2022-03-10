@@ -118,27 +118,27 @@ public final class GetSiteResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLocation(@Nullable SiteLocation location) {
+        public Builder location(@Nullable SiteLocation location) {
             this.location = location;
             return this;
         }
 
-        public Builder setSiteArn(@Nullable String siteArn) {
+        public Builder siteArn(@Nullable String siteArn) {
             this.siteArn = siteArn;
             return this;
         }
 
-        public Builder setSiteId(@Nullable String siteId) {
+        public Builder siteId(@Nullable String siteId) {
             this.siteId = siteId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SiteTag> tags) {
+        public Builder tags(@Nullable List<SiteTag> tags) {
             this.tags = tags;
             return this;
         }

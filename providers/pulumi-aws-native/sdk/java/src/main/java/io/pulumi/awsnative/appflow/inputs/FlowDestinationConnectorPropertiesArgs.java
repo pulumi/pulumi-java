@@ -145,82 +145,82 @@ public final class FlowDestinationConnectorPropertiesArgs extends io.pulumi.reso
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setEventBridge(@Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge) {
+        public Builder eventBridge(@Nullable Input<FlowEventBridgeDestinationPropertiesArgs> eventBridge) {
             this.eventBridge = eventBridge;
             return this;
         }
 
-        public Builder setEventBridge(@Nullable FlowEventBridgeDestinationPropertiesArgs eventBridge) {
+        public Builder eventBridge(@Nullable FlowEventBridgeDestinationPropertiesArgs eventBridge) {
             this.eventBridge = Input.ofNullable(eventBridge);
             return this;
         }
 
-        public Builder setLookoutMetrics(@Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics) {
+        public Builder lookoutMetrics(@Nullable Input<FlowLookoutMetricsDestinationPropertiesArgs> lookoutMetrics) {
             this.lookoutMetrics = lookoutMetrics;
             return this;
         }
 
-        public Builder setLookoutMetrics(@Nullable FlowLookoutMetricsDestinationPropertiesArgs lookoutMetrics) {
+        public Builder lookoutMetrics(@Nullable FlowLookoutMetricsDestinationPropertiesArgs lookoutMetrics) {
             this.lookoutMetrics = Input.ofNullable(lookoutMetrics);
             return this;
         }
 
-        public Builder setRedshift(@Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift) {
+        public Builder redshift(@Nullable Input<FlowRedshiftDestinationPropertiesArgs> redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setRedshift(@Nullable FlowRedshiftDestinationPropertiesArgs redshift) {
+        public Builder redshift(@Nullable FlowRedshiftDestinationPropertiesArgs redshift) {
             this.redshift = Input.ofNullable(redshift);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<FlowS3DestinationPropertiesArgs> s3) {
+        public Builder s3(@Nullable Input<FlowS3DestinationPropertiesArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable FlowS3DestinationPropertiesArgs s3) {
+        public Builder s3(@Nullable FlowS3DestinationPropertiesArgs s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }
 
-        public Builder setSalesforce(@Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce) {
+        public Builder salesforce(@Nullable Input<FlowSalesforceDestinationPropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable FlowSalesforceDestinationPropertiesArgs salesforce) {
+        public Builder salesforce(@Nullable FlowSalesforceDestinationPropertiesArgs salesforce) {
             this.salesforce = Input.ofNullable(salesforce);
             return this;
         }
 
-        public Builder setSnowflake(@Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake) {
+        public Builder snowflake(@Nullable Input<FlowSnowflakeDestinationPropertiesArgs> snowflake) {
             this.snowflake = snowflake;
             return this;
         }
 
-        public Builder setSnowflake(@Nullable FlowSnowflakeDestinationPropertiesArgs snowflake) {
+        public Builder snowflake(@Nullable FlowSnowflakeDestinationPropertiesArgs snowflake) {
             this.snowflake = Input.ofNullable(snowflake);
             return this;
         }
 
-        public Builder setUpsolver(@Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver) {
+        public Builder upsolver(@Nullable Input<FlowUpsolverDestinationPropertiesArgs> upsolver) {
             this.upsolver = upsolver;
             return this;
         }
 
-        public Builder setUpsolver(@Nullable FlowUpsolverDestinationPropertiesArgs upsolver) {
+        public Builder upsolver(@Nullable FlowUpsolverDestinationPropertiesArgs upsolver) {
             this.upsolver = Input.ofNullable(upsolver);
             return this;
         }
 
-        public Builder setZendesk(@Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk) {
+        public Builder zendesk(@Nullable Input<FlowZendeskDestinationPropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
-        public Builder setZendesk(@Nullable FlowZendeskDestinationPropertiesArgs zendesk) {
+        public Builder zendesk(@Nullable FlowZendeskDestinationPropertiesArgs zendesk) {
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }

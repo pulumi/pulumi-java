@@ -74,32 +74,32 @@ public final class DataSourceWebCrawlerBasicAuthenticationArgs extends io.pulumi
     	      this.port = defaults.port;
         }
 
-        public Builder setCredentials(Input<String> credentials) {
+        public Builder credentials(Input<String> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setCredentials(String credentials) {
+        public Builder credentials(String credentials) {
             this.credentials = Input.of(Objects.requireNonNull(credentials));
             return this;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }

@@ -67,22 +67,22 @@ public final class RuleGroupXssMatchStatementArgs extends io.pulumi.resources.Re
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setTextTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }

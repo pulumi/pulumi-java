@@ -244,77 +244,77 @@ public final class GetOriginEndpointResult {
     	      this.whitelist = defaults.whitelist;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable OriginEndpointAuthorization authorization) {
+        public Builder authorization(@Nullable OriginEndpointAuthorization authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setChannelId(@Nullable String channelId) {
+        public Builder channelId(@Nullable String channelId) {
             this.channelId = channelId;
             return this;
         }
 
-        public Builder setCmafPackage(@Nullable OriginEndpointCmafPackage cmafPackage) {
+        public Builder cmafPackage(@Nullable OriginEndpointCmafPackage cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
 
-        public Builder setDashPackage(@Nullable OriginEndpointDashPackage dashPackage) {
+        public Builder dashPackage(@Nullable OriginEndpointDashPackage dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHlsPackage(@Nullable OriginEndpointHlsPackage hlsPackage) {
+        public Builder hlsPackage(@Nullable OriginEndpointHlsPackage hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setMssPackage(@Nullable OriginEndpointMssPackage mssPackage) {
+        public Builder mssPackage(@Nullable OriginEndpointMssPackage mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
 
-        public Builder setOrigination(@Nullable OriginEndpointOrigination origination) {
+        public Builder origination(@Nullable OriginEndpointOrigination origination) {
             this.origination = origination;
             return this;
         }
 
-        public Builder setStartoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
+        public Builder startoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
             this.startoverWindowSeconds = startoverWindowSeconds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<OriginEndpointTag> tags) {
+        public Builder tags(@Nullable List<OriginEndpointTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeDelaySeconds(@Nullable Integer timeDelaySeconds) {
+        public Builder timeDelaySeconds(@Nullable Integer timeDelaySeconds) {
             this.timeDelaySeconds = timeDelaySeconds;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setWhitelist(@Nullable List<String> whitelist) {
+        public Builder whitelist(@Nullable List<String> whitelist) {
             this.whitelist = whitelist;
             return this;
         }

@@ -77,27 +77,27 @@ public final class TaskDefinitionDockerVolumeConfiguration {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAutoprovision(@Nullable Boolean autoprovision) {
+        public Builder autoprovision(@Nullable Boolean autoprovision) {
             this.autoprovision = autoprovision;
             return this;
         }
 
-        public Builder setDriver(@Nullable String driver) {
+        public Builder driver(@Nullable String driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setDriverOpts(@Nullable Object driverOpts) {
+        public Builder driverOpts(@Nullable Object driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
 
-        public Builder setLabels(@Nullable Object labels) {
+        public Builder labels(@Nullable Object labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }

@@ -50,12 +50,12 @@ public final class FirewallPolicyCustomAction {
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder setActionDefinition(FirewallPolicyActionDefinition actionDefinition) {
+        public Builder actionDefinition(FirewallPolicyActionDefinition actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }

@@ -53,12 +53,12 @@ public final class GetCapacityProviderResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoScalingGroupProvider(@Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider) {
+        public Builder autoScalingGroupProvider(@Nullable CapacityProviderAutoScalingGroupProvider autoScalingGroupProvider) {
             this.autoScalingGroupProvider = autoScalingGroupProvider;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CapacityProviderTag> tags) {
+        public Builder tags(@Nullable List<CapacityProviderTag> tags) {
             this.tags = tags;
             return this;
         }

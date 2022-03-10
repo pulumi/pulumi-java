@@ -77,32 +77,32 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
     	      this.backupPlanRule = defaults.backupPlanRule;
         }
 
-        public Builder setAdvancedBackupSettings(@Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable Input<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings) {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
 
-        public Builder setAdvancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceTypeArgs> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceTypeArgs> advancedBackupSettings) {
             this.advancedBackupSettings = Input.ofNullable(advancedBackupSettings);
             return this;
         }
 
-        public Builder setBackupPlanName(Input<String> backupPlanName) {
+        public Builder backupPlanName(Input<String> backupPlanName) {
             this.backupPlanName = Objects.requireNonNull(backupPlanName);
             return this;
         }
 
-        public Builder setBackupPlanName(String backupPlanName) {
+        public Builder backupPlanName(String backupPlanName) {
             this.backupPlanName = Input.of(Objects.requireNonNull(backupPlanName));
             return this;
         }
 
-        public Builder setBackupPlanRule(Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
+        public Builder backupPlanRule(Input<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule) {
             this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
             return this;
         }
 
-        public Builder setBackupPlanRule(List<BackupPlanBackupRuleResourceTypeArgs> backupPlanRule) {
+        public Builder backupPlanRule(List<BackupPlanBackupRuleResourceTypeArgs> backupPlanRule) {
             this.backupPlanRule = Input.of(Objects.requireNonNull(backupPlanRule));
             return this;
         }

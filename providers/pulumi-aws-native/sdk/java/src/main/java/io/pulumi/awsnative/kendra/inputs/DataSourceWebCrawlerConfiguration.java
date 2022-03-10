@@ -152,47 +152,47 @@ public final class DataSourceWebCrawlerConfiguration extends io.pulumi.resources
     	      this.urls = defaults.urls;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setCrawlDepth(@Nullable Integer crawlDepth) {
+        public Builder crawlDepth(@Nullable Integer crawlDepth) {
             this.crawlDepth = crawlDepth;
             return this;
         }
 
-        public Builder setMaxContentSizePerPageInMegaBytes(@Nullable Double maxContentSizePerPageInMegaBytes) {
+        public Builder maxContentSizePerPageInMegaBytes(@Nullable Double maxContentSizePerPageInMegaBytes) {
             this.maxContentSizePerPageInMegaBytes = maxContentSizePerPageInMegaBytes;
             return this;
         }
 
-        public Builder setMaxLinksPerPage(@Nullable Integer maxLinksPerPage) {
+        public Builder maxLinksPerPage(@Nullable Integer maxLinksPerPage) {
             this.maxLinksPerPage = maxLinksPerPage;
             return this;
         }
 
-        public Builder setMaxUrlsPerMinuteCrawlRate(@Nullable Integer maxUrlsPerMinuteCrawlRate) {
+        public Builder maxUrlsPerMinuteCrawlRate(@Nullable Integer maxUrlsPerMinuteCrawlRate) {
             this.maxUrlsPerMinuteCrawlRate = maxUrlsPerMinuteCrawlRate;
             return this;
         }
 
-        public Builder setProxyConfiguration(@Nullable DataSourceProxyConfiguration proxyConfiguration) {
+        public Builder proxyConfiguration(@Nullable DataSourceProxyConfiguration proxyConfiguration) {
             this.proxyConfiguration = proxyConfiguration;
             return this;
         }
 
-        public Builder setUrlExclusionPatterns(@Nullable List<String> urlExclusionPatterns) {
+        public Builder urlExclusionPatterns(@Nullable List<String> urlExclusionPatterns) {
             this.urlExclusionPatterns = urlExclusionPatterns;
             return this;
         }
 
-        public Builder setUrlInclusionPatterns(@Nullable List<String> urlInclusionPatterns) {
+        public Builder urlInclusionPatterns(@Nullable List<String> urlInclusionPatterns) {
             this.urlInclusionPatterns = urlInclusionPatterns;
             return this;
         }
 
-        public Builder setUrls(DataSourceWebCrawlerUrls urls) {
+        public Builder urls(DataSourceWebCrawlerUrls urls) {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }

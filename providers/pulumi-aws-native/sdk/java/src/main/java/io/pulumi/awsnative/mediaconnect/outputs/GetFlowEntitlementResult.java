@@ -134,32 +134,32 @@ public final class GetFlowEntitlementResult {
     	      this.subscribers = defaults.subscribers;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryption(@Nullable FlowEntitlementEncryption encryption) {
+        public Builder encryption(@Nullable FlowEntitlementEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEntitlementArn(@Nullable String entitlementArn) {
+        public Builder entitlementArn(@Nullable String entitlementArn) {
             this.entitlementArn = entitlementArn;
             return this;
         }
 
-        public Builder setEntitlementStatus(@Nullable FlowEntitlementEntitlementStatus entitlementStatus) {
+        public Builder entitlementStatus(@Nullable FlowEntitlementEntitlementStatus entitlementStatus) {
             this.entitlementStatus = entitlementStatus;
             return this;
         }
 
-        public Builder setFlowArn(@Nullable String flowArn) {
+        public Builder flowArn(@Nullable String flowArn) {
             this.flowArn = flowArn;
             return this;
         }
 
-        public Builder setSubscribers(@Nullable List<String> subscribers) {
+        public Builder subscribers(@Nullable List<String> subscribers) {
             this.subscribers = subscribers;
             return this;
         }

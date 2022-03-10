@@ -203,132 +203,132 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
     	      this.s3BackupMode = defaults.s3BackupMode;
         }
 
-        public Builder setBucketARN(Input<String> bucketARN) {
+        public Builder bucketARN(Input<String> bucketARN) {
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
 
-        public Builder setBucketARN(String bucketARN) {
+        public Builder bucketARN(String bucketARN) {
             this.bucketARN = Input.of(Objects.requireNonNull(bucketARN));
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable Input<DeliveryStreamBufferingHintsArgs> bufferingHints) {
+        public Builder bufferingHints(@Nullable Input<DeliveryStreamBufferingHintsArgs> bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
             this.bufferingHints = Input.ofNullable(bufferingHints);
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Input.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat) {
+        public Builder compressionFormat(@Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat) {
+        public Builder compressionFormat(@Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = Input.ofNullable(compressionFormat);
             return this;
         }
 
-        public Builder setDataFormatConversionConfiguration(@Nullable Input<DeliveryStreamDataFormatConversionConfigurationArgs> dataFormatConversionConfiguration) {
+        public Builder dataFormatConversionConfiguration(@Nullable Input<DeliveryStreamDataFormatConversionConfigurationArgs> dataFormatConversionConfiguration) {
             this.dataFormatConversionConfiguration = dataFormatConversionConfiguration;
             return this;
         }
 
-        public Builder setDataFormatConversionConfiguration(@Nullable DeliveryStreamDataFormatConversionConfigurationArgs dataFormatConversionConfiguration) {
+        public Builder dataFormatConversionConfiguration(@Nullable DeliveryStreamDataFormatConversionConfigurationArgs dataFormatConversionConfiguration) {
             this.dataFormatConversionConfiguration = Input.ofNullable(dataFormatConversionConfiguration);
             return this;
         }
 
-        public Builder setDynamicPartitioningConfiguration(@Nullable Input<DeliveryStreamDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration) {
+        public Builder dynamicPartitioningConfiguration(@Nullable Input<DeliveryStreamDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration) {
             this.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
             return this;
         }
 
-        public Builder setDynamicPartitioningConfiguration(@Nullable DeliveryStreamDynamicPartitioningConfigurationArgs dynamicPartitioningConfiguration) {
+        public Builder dynamicPartitioningConfiguration(@Nullable DeliveryStreamDynamicPartitioningConfigurationArgs dynamicPartitioningConfiguration) {
             this.dynamicPartitioningConfiguration = Input.ofNullable(dynamicPartitioningConfiguration);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable Input<String> errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = Input.ofNullable(errorOutputPrefix);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Input.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder setRoleARN(Input<String> roleARN) {
+        public Builder roleARN(Input<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Input.of(Objects.requireNonNull(roleARN));
             return this;
         }
 
-        public Builder setS3BackupConfiguration(@Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable Input<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
-        public Builder setS3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3BackupConfiguration) {
             this.s3BackupConfiguration = Input.ofNullable(s3BackupConfiguration);
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Input<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
+        public Builder s3BackupMode(@Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = Input.ofNullable(s3BackupMode);
             return this;
         }

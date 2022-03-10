@@ -151,82 +151,82 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     	      this.storageLensArn = defaults.storageLensArn;
         }
 
-        public Builder setAccountLevel(Input<StorageLensAccountLevelArgs> accountLevel) {
+        public Builder accountLevel(Input<StorageLensAccountLevelArgs> accountLevel) {
             this.accountLevel = Objects.requireNonNull(accountLevel);
             return this;
         }
 
-        public Builder setAccountLevel(StorageLensAccountLevelArgs accountLevel) {
+        public Builder accountLevel(StorageLensAccountLevelArgs accountLevel) {
             this.accountLevel = Input.of(Objects.requireNonNull(accountLevel));
             return this;
         }
 
-        public Builder setAwsOrg(@Nullable Input<StorageLensAwsOrgArgs> awsOrg) {
+        public Builder awsOrg(@Nullable Input<StorageLensAwsOrgArgs> awsOrg) {
             this.awsOrg = awsOrg;
             return this;
         }
 
-        public Builder setAwsOrg(@Nullable StorageLensAwsOrgArgs awsOrg) {
+        public Builder awsOrg(@Nullable StorageLensAwsOrgArgs awsOrg) {
             this.awsOrg = Input.ofNullable(awsOrg);
             return this;
         }
 
-        public Builder setDataExport(@Nullable Input<StorageLensDataExportArgs> dataExport) {
+        public Builder dataExport(@Nullable Input<StorageLensDataExportArgs> dataExport) {
             this.dataExport = dataExport;
             return this;
         }
 
-        public Builder setDataExport(@Nullable StorageLensDataExportArgs dataExport) {
+        public Builder dataExport(@Nullable StorageLensDataExportArgs dataExport) {
             this.dataExport = Input.ofNullable(dataExport);
             return this;
         }
 
-        public Builder setExclude(@Nullable Input<StorageLensBucketsAndRegionsArgs> exclude) {
+        public Builder exclude(@Nullable Input<StorageLensBucketsAndRegionsArgs> exclude) {
             this.exclude = exclude;
             return this;
         }
 
-        public Builder setExclude(@Nullable StorageLensBucketsAndRegionsArgs exclude) {
+        public Builder exclude(@Nullable StorageLensBucketsAndRegionsArgs exclude) {
             this.exclude = Input.ofNullable(exclude);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setInclude(@Nullable Input<StorageLensBucketsAndRegionsArgs> include) {
+        public Builder include(@Nullable Input<StorageLensBucketsAndRegionsArgs> include) {
             this.include = include;
             return this;
         }
 
-        public Builder setInclude(@Nullable StorageLensBucketsAndRegionsArgs include) {
+        public Builder include(@Nullable StorageLensBucketsAndRegionsArgs include) {
             this.include = Input.ofNullable(include);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setStorageLensArn(@Nullable Input<String> storageLensArn) {
+        public Builder storageLensArn(@Nullable Input<String> storageLensArn) {
             this.storageLensArn = storageLensArn;
             return this;
         }
 
-        public Builder setStorageLensArn(@Nullable String storageLensArn) {
+        public Builder storageLensArn(@Nullable String storageLensArn) {
             this.storageLensArn = Input.ofNullable(storageLensArn);
             return this;
         }

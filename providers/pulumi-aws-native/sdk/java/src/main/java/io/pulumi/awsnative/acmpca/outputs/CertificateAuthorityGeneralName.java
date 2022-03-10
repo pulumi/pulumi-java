@@ -102,42 +102,42 @@ public final class CertificateAuthorityGeneralName {
     	      this.uniformResourceIdentifier = defaults.uniformResourceIdentifier;
         }
 
-        public Builder setDirectoryName(@Nullable CertificateAuthoritySubject directoryName) {
+        public Builder directoryName(@Nullable CertificateAuthoritySubject directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setEdiPartyName(@Nullable CertificateAuthorityEdiPartyName ediPartyName) {
+        public Builder ediPartyName(@Nullable CertificateAuthorityEdiPartyName ediPartyName) {
             this.ediPartyName = ediPartyName;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setOtherName(@Nullable CertificateAuthorityOtherName otherName) {
+        public Builder otherName(@Nullable CertificateAuthorityOtherName otherName) {
             this.otherName = otherName;
             return this;
         }
 
-        public Builder setRegisteredId(@Nullable String registeredId) {
+        public Builder registeredId(@Nullable String registeredId) {
             this.registeredId = registeredId;
             return this;
         }
 
-        public Builder setRfc822Name(@Nullable String rfc822Name) {
+        public Builder rfc822Name(@Nullable String rfc822Name) {
             this.rfc822Name = rfc822Name;
             return this;
         }
 
-        public Builder setUniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
+        public Builder uniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
             this.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
         }

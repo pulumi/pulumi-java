@@ -121,37 +121,37 @@ public final class GetDatasetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDataFrequency(@Nullable String dataFrequency) {
+        public Builder dataFrequency(@Nullable String dataFrequency) {
             this.dataFrequency = dataFrequency;
             return this;
         }
 
-        public Builder setDatasetType(@Nullable DatasetType datasetType) {
+        public Builder datasetType(@Nullable DatasetType datasetType) {
             this.datasetType = datasetType;
             return this;
         }
 
-        public Builder setDomain(@Nullable DatasetDomain domain) {
+        public Builder domain(@Nullable DatasetDomain domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable EncryptionConfigProperties encryptionConfig) {
+        public Builder encryptionConfig(@Nullable EncryptionConfigProperties encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setSchema(@Nullable SchemaProperties schema) {
+        public Builder schema(@Nullable SchemaProperties schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagsItemProperties> tags) {
+        public Builder tags(@Nullable List<TagsItemProperties> tags) {
             this.tags = tags;
             return this;
         }

@@ -75,32 +75,32 @@ public final class ServiceDeploymentConfigurationArgs extends io.pulumi.resource
     	      this.minimumHealthyPercent = defaults.minimumHealthyPercent;
         }
 
-        public Builder setDeploymentCircuitBreaker(@Nullable Input<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(@Nullable Input<ServiceDeploymentCircuitBreakerArgs> deploymentCircuitBreaker) {
             this.deploymentCircuitBreaker = deploymentCircuitBreaker;
             return this;
         }
 
-        public Builder setDeploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerArgs deploymentCircuitBreaker) {
+        public Builder deploymentCircuitBreaker(@Nullable ServiceDeploymentCircuitBreakerArgs deploymentCircuitBreaker) {
             this.deploymentCircuitBreaker = Input.ofNullable(deploymentCircuitBreaker);
             return this;
         }
 
-        public Builder setMaximumPercent(@Nullable Input<Integer> maximumPercent) {
+        public Builder maximumPercent(@Nullable Input<Integer> maximumPercent) {
             this.maximumPercent = maximumPercent;
             return this;
         }
 
-        public Builder setMaximumPercent(@Nullable Integer maximumPercent) {
+        public Builder maximumPercent(@Nullable Integer maximumPercent) {
             this.maximumPercent = Input.ofNullable(maximumPercent);
             return this;
         }
 
-        public Builder setMinimumHealthyPercent(@Nullable Input<Integer> minimumHealthyPercent) {
+        public Builder minimumHealthyPercent(@Nullable Input<Integer> minimumHealthyPercent) {
             this.minimumHealthyPercent = minimumHealthyPercent;
             return this;
         }
 
-        public Builder setMinimumHealthyPercent(@Nullable Integer minimumHealthyPercent) {
+        public Builder minimumHealthyPercent(@Nullable Integer minimumHealthyPercent) {
             this.minimumHealthyPercent = Input.ofNullable(minimumHealthyPercent);
             return this;
         }

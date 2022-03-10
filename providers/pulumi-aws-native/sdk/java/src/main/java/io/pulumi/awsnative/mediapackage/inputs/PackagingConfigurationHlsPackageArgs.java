@@ -102,42 +102,42 @@ public final class PackagingConfigurationHlsPackageArgs extends io.pulumi.resour
     	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
         }
 
-        public Builder setEncryption(@Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<PackagingConfigurationHlsEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationHlsEncryptionArgs encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationHlsEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setHlsManifests(Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
+        public Builder hlsManifests(Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
 
-        public Builder setHlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
+        public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
             this.hlsManifests = Input.of(Objects.requireNonNull(hlsManifests));
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
 
-        public Builder setUseAudioRenditionGroup(@Nullable Input<Boolean> useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Input<Boolean> useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
 
-        public Builder setUseAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = Input.ofNullable(useAudioRenditionGroup);
             return this;
         }

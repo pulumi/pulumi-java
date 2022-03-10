@@ -87,42 +87,42 @@ public final class FlowRedshiftDestinationPropertiesArgs extends io.pulumi.resou
     	      this.object = defaults.object;
         }
 
-        public Builder setBucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Input.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable Input<FlowErrorHandlingConfigArgs> errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
             this.errorHandlingConfig = Input.ofNullable(errorHandlingConfig);
             return this;
         }
 
-        public Builder setIntermediateBucketName(Input<String> intermediateBucketName) {
+        public Builder intermediateBucketName(Input<String> intermediateBucketName) {
             this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
             return this;
         }
 
-        public Builder setIntermediateBucketName(String intermediateBucketName) {
+        public Builder intermediateBucketName(String intermediateBucketName) {
             this.intermediateBucketName = Input.of(Objects.requireNonNull(intermediateBucketName));
             return this;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }

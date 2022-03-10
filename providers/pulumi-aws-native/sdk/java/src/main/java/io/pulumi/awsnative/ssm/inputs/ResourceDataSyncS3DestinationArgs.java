@@ -98,52 +98,52 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
     	      this.syncFormat = defaults.syncFormat;
         }
 
-        public Builder setBucketName(Input<String> bucketName) {
+        public Builder bucketName(Input<String> bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Input.of(Objects.requireNonNull(bucketName));
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Input.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder setBucketRegion(Input<String> bucketRegion) {
+        public Builder bucketRegion(Input<String> bucketRegion) {
             this.bucketRegion = Objects.requireNonNull(bucketRegion);
             return this;
         }
 
-        public Builder setBucketRegion(String bucketRegion) {
+        public Builder bucketRegion(String bucketRegion) {
             this.bucketRegion = Input.of(Objects.requireNonNull(bucketRegion));
             return this;
         }
 
-        public Builder setKMSKeyArn(@Nullable Input<String> kMSKeyArn) {
+        public Builder kMSKeyArn(@Nullable Input<String> kMSKeyArn) {
             this.kMSKeyArn = kMSKeyArn;
             return this;
         }
 
-        public Builder setKMSKeyArn(@Nullable String kMSKeyArn) {
+        public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
             this.kMSKeyArn = Input.ofNullable(kMSKeyArn);
             return this;
         }
 
-        public Builder setSyncFormat(Input<String> syncFormat) {
+        public Builder syncFormat(Input<String> syncFormat) {
             this.syncFormat = Objects.requireNonNull(syncFormat);
             return this;
         }
 
-        public Builder setSyncFormat(String syncFormat) {
+        public Builder syncFormat(String syncFormat) {
             this.syncFormat = Input.of(Objects.requireNonNull(syncFormat));
             return this;
         }

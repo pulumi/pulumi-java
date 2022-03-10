@@ -49,12 +49,12 @@ public final class BucketCorsConfigurationArgs extends io.pulumi.resources.Resou
     	      this.corsRules = defaults.corsRules;
         }
 
-        public Builder setCorsRules(Input<List<BucketCorsRuleArgs>> corsRules) {
+        public Builder corsRules(Input<List<BucketCorsRuleArgs>> corsRules) {
             this.corsRules = Objects.requireNonNull(corsRules);
             return this;
         }
 
-        public Builder setCorsRules(List<BucketCorsRuleArgs> corsRules) {
+        public Builder corsRules(List<BucketCorsRuleArgs> corsRules) {
             this.corsRules = Input.of(Objects.requireNonNull(corsRules));
             return this;
         }

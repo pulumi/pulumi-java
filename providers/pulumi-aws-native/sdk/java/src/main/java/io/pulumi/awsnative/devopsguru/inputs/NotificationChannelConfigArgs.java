@@ -53,12 +53,12 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     	      this.sns = defaults.sns;
         }
 
-        public Builder setSns(@Nullable Input<NotificationChannelSnsChannelConfigArgs> sns) {
+        public Builder sns(@Nullable Input<NotificationChannelSnsChannelConfigArgs> sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSns(@Nullable NotificationChannelSnsChannelConfigArgs sns) {
+        public Builder sns(@Nullable NotificationChannelSnsChannelConfigArgs sns) {
             this.sns = Input.ofNullable(sns);
             return this;
         }

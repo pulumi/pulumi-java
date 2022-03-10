@@ -51,7 +51,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParams extends io.
     	      this.templateName = defaults.templateName;
         }
 
-        public Builder setTemplateName(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
+        public Builder templateName(MitigationActionReplaceDefaultPolicyVersionParamsTemplateName templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }

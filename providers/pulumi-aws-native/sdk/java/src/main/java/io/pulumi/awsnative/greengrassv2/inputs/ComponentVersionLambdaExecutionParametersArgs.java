@@ -177,112 +177,112 @@ public final class ComponentVersionLambdaExecutionParametersArgs extends io.pulu
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Object> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Object> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Object environmentVariables) {
+        public Builder environmentVariables(@Nullable Object environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setEventSources(@Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources) {
+        public Builder eventSources(@Nullable Input<List<ComponentVersionLambdaEventSourceArgs>> eventSources) {
             this.eventSources = eventSources;
             return this;
         }
 
-        public Builder setEventSources(@Nullable List<ComponentVersionLambdaEventSourceArgs> eventSources) {
+        public Builder eventSources(@Nullable List<ComponentVersionLambdaEventSourceArgs> eventSources) {
             this.eventSources = Input.ofNullable(eventSources);
             return this;
         }
 
-        public Builder setExecArgs(@Nullable Input<List<String>> execArgs) {
+        public Builder execArgs(@Nullable Input<List<String>> execArgs) {
             this.execArgs = execArgs;
             return this;
         }
 
-        public Builder setExecArgs(@Nullable List<String> execArgs) {
+        public Builder execArgs(@Nullable List<String> execArgs) {
             this.execArgs = Input.ofNullable(execArgs);
             return this;
         }
 
-        public Builder setInputPayloadEncodingType(@Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType) {
+        public Builder inputPayloadEncodingType(@Nullable Input<ComponentVersionLambdaExecutionParametersInputPayloadEncodingType> inputPayloadEncodingType) {
             this.inputPayloadEncodingType = inputPayloadEncodingType;
             return this;
         }
 
-        public Builder setInputPayloadEncodingType(@Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType) {
+        public Builder inputPayloadEncodingType(@Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType) {
             this.inputPayloadEncodingType = Input.ofNullable(inputPayloadEncodingType);
             return this;
         }
 
-        public Builder setLinuxProcessParams(@Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams) {
+        public Builder linuxProcessParams(@Nullable Input<ComponentVersionLambdaLinuxProcessParamsArgs> linuxProcessParams) {
             this.linuxProcessParams = linuxProcessParams;
             return this;
         }
 
-        public Builder setLinuxProcessParams(@Nullable ComponentVersionLambdaLinuxProcessParamsArgs linuxProcessParams) {
+        public Builder linuxProcessParams(@Nullable ComponentVersionLambdaLinuxProcessParamsArgs linuxProcessParams) {
             this.linuxProcessParams = Input.ofNullable(linuxProcessParams);
             return this;
         }
 
-        public Builder setMaxIdleTimeInSeconds(@Nullable Input<Integer> maxIdleTimeInSeconds) {
+        public Builder maxIdleTimeInSeconds(@Nullable Input<Integer> maxIdleTimeInSeconds) {
             this.maxIdleTimeInSeconds = maxIdleTimeInSeconds;
             return this;
         }
 
-        public Builder setMaxIdleTimeInSeconds(@Nullable Integer maxIdleTimeInSeconds) {
+        public Builder maxIdleTimeInSeconds(@Nullable Integer maxIdleTimeInSeconds) {
             this.maxIdleTimeInSeconds = Input.ofNullable(maxIdleTimeInSeconds);
             return this;
         }
 
-        public Builder setMaxInstancesCount(@Nullable Input<Integer> maxInstancesCount) {
+        public Builder maxInstancesCount(@Nullable Input<Integer> maxInstancesCount) {
             this.maxInstancesCount = maxInstancesCount;
             return this;
         }
 
-        public Builder setMaxInstancesCount(@Nullable Integer maxInstancesCount) {
+        public Builder maxInstancesCount(@Nullable Integer maxInstancesCount) {
             this.maxInstancesCount = Input.ofNullable(maxInstancesCount);
             return this;
         }
 
-        public Builder setMaxQueueSize(@Nullable Input<Integer> maxQueueSize) {
+        public Builder maxQueueSize(@Nullable Input<Integer> maxQueueSize) {
             this.maxQueueSize = maxQueueSize;
             return this;
         }
 
-        public Builder setMaxQueueSize(@Nullable Integer maxQueueSize) {
+        public Builder maxQueueSize(@Nullable Integer maxQueueSize) {
             this.maxQueueSize = Input.ofNullable(maxQueueSize);
             return this;
         }
 
-        public Builder setPinned(@Nullable Input<Boolean> pinned) {
+        public Builder pinned(@Nullable Input<Boolean> pinned) {
             this.pinned = pinned;
             return this;
         }
 
-        public Builder setPinned(@Nullable Boolean pinned) {
+        public Builder pinned(@Nullable Boolean pinned) {
             this.pinned = Input.ofNullable(pinned);
             return this;
         }
 
-        public Builder setStatusTimeoutInSeconds(@Nullable Input<Integer> statusTimeoutInSeconds) {
+        public Builder statusTimeoutInSeconds(@Nullable Input<Integer> statusTimeoutInSeconds) {
             this.statusTimeoutInSeconds = statusTimeoutInSeconds;
             return this;
         }
 
-        public Builder setStatusTimeoutInSeconds(@Nullable Integer statusTimeoutInSeconds) {
+        public Builder statusTimeoutInSeconds(@Nullable Integer statusTimeoutInSeconds) {
             this.statusTimeoutInSeconds = Input.ofNullable(statusTimeoutInSeconds);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }

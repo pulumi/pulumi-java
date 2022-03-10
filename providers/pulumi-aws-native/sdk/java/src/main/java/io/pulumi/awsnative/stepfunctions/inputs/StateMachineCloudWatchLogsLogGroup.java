@@ -49,7 +49,7 @@ public final class StateMachineCloudWatchLogsLogGroup extends io.pulumi.resource
     	      this.logGroupArn = defaults.logGroupArn;
         }
 
-        public Builder setLogGroupArn(@Nullable String logGroupArn) {
+        public Builder logGroupArn(@Nullable String logGroupArn) {
             this.logGroupArn = logGroupArn;
             return this;
         }

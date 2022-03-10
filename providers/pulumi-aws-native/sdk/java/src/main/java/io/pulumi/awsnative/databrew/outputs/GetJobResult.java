@@ -287,87 +287,87 @@ public final class GetJobResult {
     	      this.validationConfigurations = defaults.validationConfigurations;
         }
 
-        public Builder setDataCatalogOutputs(@Nullable List<JobDataCatalogOutput> dataCatalogOutputs) {
+        public Builder dataCatalogOutputs(@Nullable List<JobDataCatalogOutput> dataCatalogOutputs) {
             this.dataCatalogOutputs = dataCatalogOutputs;
             return this;
         }
 
-        public Builder setDatabaseOutputs(@Nullable List<JobDatabaseOutput> databaseOutputs) {
+        public Builder databaseOutputs(@Nullable List<JobDatabaseOutput> databaseOutputs) {
             this.databaseOutputs = databaseOutputs;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setEncryptionKeyArn(@Nullable String encryptionKeyArn) {
+        public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
 
-        public Builder setEncryptionMode(@Nullable JobEncryptionMode encryptionMode) {
+        public Builder encryptionMode(@Nullable JobEncryptionMode encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
 
-        public Builder setJobSample(@Nullable JobSample jobSample) {
+        public Builder jobSample(@Nullable JobSample jobSample) {
             this.jobSample = jobSample;
             return this;
         }
 
-        public Builder setLogSubscription(@Nullable JobLogSubscription logSubscription) {
+        public Builder logSubscription(@Nullable JobLogSubscription logSubscription) {
             this.logSubscription = logSubscription;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable JobOutputLocation outputLocation) {
+        public Builder outputLocation(@Nullable JobOutputLocation outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<JobOutput> outputs) {
+        public Builder outputs(@Nullable List<JobOutput> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setProfileConfiguration(@Nullable JobProfileConfiguration profileConfiguration) {
+        public Builder profileConfiguration(@Nullable JobProfileConfiguration profileConfiguration) {
             this.profileConfiguration = profileConfiguration;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setRecipe(@Nullable JobRecipe recipe) {
+        public Builder recipe(@Nullable JobRecipe recipe) {
             this.recipe = recipe;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setValidationConfigurations(@Nullable List<JobValidationConfiguration> validationConfigurations) {
+        public Builder validationConfigurations(@Nullable List<JobValidationConfiguration> validationConfigurations) {
             this.validationConfigurations = validationConfigurations;
             return this;
         }

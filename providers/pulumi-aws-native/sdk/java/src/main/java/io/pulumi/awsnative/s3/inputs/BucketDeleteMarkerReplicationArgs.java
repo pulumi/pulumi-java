@@ -49,12 +49,12 @@ public final class BucketDeleteMarkerReplicationArgs extends io.pulumi.resources
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable Input<BucketDeleteMarkerReplicationStatus> status) {
+        public Builder status(@Nullable Input<BucketDeleteMarkerReplicationStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable BucketDeleteMarkerReplicationStatus status) {
+        public Builder status(@Nullable BucketDeleteMarkerReplicationStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

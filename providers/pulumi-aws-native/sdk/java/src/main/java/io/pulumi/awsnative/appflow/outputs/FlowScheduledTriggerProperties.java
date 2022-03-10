@@ -85,32 +85,32 @@ public final class FlowScheduledTriggerProperties {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
+        public Builder dataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Double scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Double scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Double scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Double scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

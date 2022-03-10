@@ -42,7 +42,7 @@ public final class EC2FleetCapacityReservationOptionsRequest {
     	      this.usageStrategy = defaults.usageStrategy;
         }
 
-        public Builder setUsageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
+        public Builder usageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
             this.usageStrategy = usageStrategy;
             return this;
         }

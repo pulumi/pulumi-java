@@ -42,7 +42,7 @@ public final class PlaceIndexDataSourceConfiguration {
     	      this.intendedUse = defaults.intendedUse;
         }
 
-        public Builder setIntendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
+        public Builder intendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
             this.intendedUse = intendedUse;
             return this;
         }

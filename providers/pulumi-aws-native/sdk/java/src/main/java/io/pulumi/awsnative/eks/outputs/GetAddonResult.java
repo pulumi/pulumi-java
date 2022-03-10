@@ -101,22 +101,22 @@ public final class GetAddonResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddonVersion(@Nullable String addonVersion) {
+        public Builder addonVersion(@Nullable String addonVersion) {
             this.addonVersion = addonVersion;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setServiceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AddonTag> tags) {
+        public Builder tags(@Nullable List<AddonTag> tags) {
             this.tags = tags;
             return this;
         }

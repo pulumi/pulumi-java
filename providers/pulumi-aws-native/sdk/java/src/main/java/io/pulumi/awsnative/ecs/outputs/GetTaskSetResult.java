@@ -68,12 +68,12 @@ public final class GetTaskSetResult {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setScale(@Nullable TaskSetScale scale) {
+        public Builder scale(@Nullable TaskSetScale scale) {
             this.scale = scale;
             return this;
         }

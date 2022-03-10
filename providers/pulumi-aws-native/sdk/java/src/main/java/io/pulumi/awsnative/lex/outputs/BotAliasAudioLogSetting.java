@@ -50,12 +50,12 @@ public final class BotAliasAudioLogSetting {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDestination(BotAliasAudioLogDestination destination) {
+        public Builder destination(BotAliasAudioLogDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

@@ -90,32 +90,32 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
     	      this.lastName = defaults.lastName;
         }
 
-        public Builder setEmailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Input<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Input.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder setFirstName(@Nullable Input<String> firstName) {
+        public Builder firstName(@Nullable Input<String> firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = Input.ofNullable(firstName);
             return this;
         }
 
-        public Builder setLastName(@Nullable Input<String> lastName) {
+        public Builder lastName(@Nullable Input<String> lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = Input.ofNullable(lastName);
             return this;
         }

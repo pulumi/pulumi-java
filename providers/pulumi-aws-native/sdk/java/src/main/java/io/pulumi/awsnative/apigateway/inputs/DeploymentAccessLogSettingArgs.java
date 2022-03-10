@@ -70,22 +70,22 @@ public final class DeploymentAccessLogSettingArgs extends io.pulumi.resources.Re
     	      this.format = defaults.format;
         }
 
-        public Builder setDestinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Input<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
-        public Builder setDestinationArn(@Nullable String destinationArn) {
+        public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Input.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<String> format) {
+        public Builder format(@Nullable Input<String> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = Input.ofNullable(format);
             return this;
         }

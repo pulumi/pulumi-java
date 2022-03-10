@@ -42,7 +42,7 @@ public final class TaskDefinitionHostVolumeProperties {
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder setSourcePath(@Nullable String sourcePath) {
+        public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }

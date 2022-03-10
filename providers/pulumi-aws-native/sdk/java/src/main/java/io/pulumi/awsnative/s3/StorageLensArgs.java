@@ -68,22 +68,22 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setStorageLensConfiguration(Input<StorageLensConfigurationArgs> storageLensConfiguration) {
+        public Builder storageLensConfiguration(Input<StorageLensConfigurationArgs> storageLensConfiguration) {
             this.storageLensConfiguration = Objects.requireNonNull(storageLensConfiguration);
             return this;
         }
 
-        public Builder setStorageLensConfiguration(StorageLensConfigurationArgs storageLensConfiguration) {
+        public Builder storageLensConfiguration(StorageLensConfigurationArgs storageLensConfiguration) {
             this.storageLensConfiguration = Input.of(Objects.requireNonNull(storageLensConfiguration));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StorageLensTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StorageLensTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StorageLensTagArgs> tags) {
+        public Builder tags(@Nullable List<StorageLensTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

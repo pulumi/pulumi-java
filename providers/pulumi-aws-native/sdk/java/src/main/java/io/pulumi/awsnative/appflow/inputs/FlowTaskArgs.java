@@ -122,52 +122,52 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setConnectorOperator(@Nullable Input<FlowConnectorOperatorArgs> connectorOperator) {
+        public Builder connectorOperator(@Nullable Input<FlowConnectorOperatorArgs> connectorOperator) {
             this.connectorOperator = connectorOperator;
             return this;
         }
 
-        public Builder setConnectorOperator(@Nullable FlowConnectorOperatorArgs connectorOperator) {
+        public Builder connectorOperator(@Nullable FlowConnectorOperatorArgs connectorOperator) {
             this.connectorOperator = Input.ofNullable(connectorOperator);
             return this;
         }
 
-        public Builder setDestinationField(@Nullable Input<String> destinationField) {
+        public Builder destinationField(@Nullable Input<String> destinationField) {
             this.destinationField = destinationField;
             return this;
         }
 
-        public Builder setDestinationField(@Nullable String destinationField) {
+        public Builder destinationField(@Nullable String destinationField) {
             this.destinationField = Input.ofNullable(destinationField);
             return this;
         }
 
-        public Builder setSourceFields(Input<List<String>> sourceFields) {
+        public Builder sourceFields(Input<List<String>> sourceFields) {
             this.sourceFields = Objects.requireNonNull(sourceFields);
             return this;
         }
 
-        public Builder setSourceFields(List<String> sourceFields) {
+        public Builder sourceFields(List<String> sourceFields) {
             this.sourceFields = Input.of(Objects.requireNonNull(sourceFields));
             return this;
         }
 
-        public Builder setTaskProperties(@Nullable Input<List<FlowTaskPropertiesObjectArgs>> taskProperties) {
+        public Builder taskProperties(@Nullable Input<List<FlowTaskPropertiesObjectArgs>> taskProperties) {
             this.taskProperties = taskProperties;
             return this;
         }
 
-        public Builder setTaskProperties(@Nullable List<FlowTaskPropertiesObjectArgs> taskProperties) {
+        public Builder taskProperties(@Nullable List<FlowTaskPropertiesObjectArgs> taskProperties) {
             this.taskProperties = Input.ofNullable(taskProperties);
             return this;
         }
 
-        public Builder setTaskType(Input<FlowTaskType> taskType) {
+        public Builder taskType(Input<FlowTaskType> taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
 
-        public Builder setTaskType(FlowTaskType taskType) {
+        public Builder taskType(FlowTaskType taskType) {
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }

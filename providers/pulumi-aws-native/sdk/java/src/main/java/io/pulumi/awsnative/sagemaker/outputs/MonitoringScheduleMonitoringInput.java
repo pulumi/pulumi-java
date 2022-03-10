@@ -40,7 +40,7 @@ public final class MonitoringScheduleMonitoringInput {
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder setEndpointInput(MonitoringScheduleEndpointInput endpointInput) {
+        public Builder endpointInput(MonitoringScheduleEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }

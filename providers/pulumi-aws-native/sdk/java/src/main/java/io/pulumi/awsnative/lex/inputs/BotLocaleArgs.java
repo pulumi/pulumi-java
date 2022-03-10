@@ -127,62 +127,62 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.voiceSettings = defaults.voiceSettings;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIntents(@Nullable Input<List<BotIntentArgs>> intents) {
+        public Builder intents(@Nullable Input<List<BotIntentArgs>> intents) {
             this.intents = intents;
             return this;
         }
 
-        public Builder setIntents(@Nullable List<BotIntentArgs> intents) {
+        public Builder intents(@Nullable List<BotIntentArgs> intents) {
             this.intents = Input.ofNullable(intents);
             return this;
         }
 
-        public Builder setLocaleId(Input<String> localeId) {
+        public Builder localeId(Input<String> localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
 
-        public Builder setLocaleId(String localeId) {
+        public Builder localeId(String localeId) {
             this.localeId = Input.of(Objects.requireNonNull(localeId));
             return this;
         }
 
-        public Builder setNluConfidenceThreshold(Input<Double> nluConfidenceThreshold) {
+        public Builder nluConfidenceThreshold(Input<Double> nluConfidenceThreshold) {
             this.nluConfidenceThreshold = Objects.requireNonNull(nluConfidenceThreshold);
             return this;
         }
 
-        public Builder setNluConfidenceThreshold(Double nluConfidenceThreshold) {
+        public Builder nluConfidenceThreshold(Double nluConfidenceThreshold) {
             this.nluConfidenceThreshold = Input.of(Objects.requireNonNull(nluConfidenceThreshold));
             return this;
         }
 
-        public Builder setSlotTypes(@Nullable Input<List<BotSlotTypeArgs>> slotTypes) {
+        public Builder slotTypes(@Nullable Input<List<BotSlotTypeArgs>> slotTypes) {
             this.slotTypes = slotTypes;
             return this;
         }
 
-        public Builder setSlotTypes(@Nullable List<BotSlotTypeArgs> slotTypes) {
+        public Builder slotTypes(@Nullable List<BotSlotTypeArgs> slotTypes) {
             this.slotTypes = Input.ofNullable(slotTypes);
             return this;
         }
 
-        public Builder setVoiceSettings(@Nullable Input<BotVoiceSettingsArgs> voiceSettings) {
+        public Builder voiceSettings(@Nullable Input<BotVoiceSettingsArgs> voiceSettings) {
             this.voiceSettings = voiceSettings;
             return this;
         }
 
-        public Builder setVoiceSettings(@Nullable BotVoiceSettingsArgs voiceSettings) {
+        public Builder voiceSettings(@Nullable BotVoiceSettingsArgs voiceSettings) {
             this.voiceSettings = Input.ofNullable(voiceSettings);
             return this;
         }

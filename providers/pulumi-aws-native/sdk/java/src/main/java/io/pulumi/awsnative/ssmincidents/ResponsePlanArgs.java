@@ -147,72 +147,72 @@ public final class ResponsePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActions(@Nullable Input<List<ResponsePlanActionArgs>> actions) {
+        public Builder actions(@Nullable Input<List<ResponsePlanActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<ResponsePlanActionArgs> actions) {
+        public Builder actions(@Nullable List<ResponsePlanActionArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setChatChannel(@Nullable Input<ResponsePlanChatChannelArgs> chatChannel) {
+        public Builder chatChannel(@Nullable Input<ResponsePlanChatChannelArgs> chatChannel) {
             this.chatChannel = chatChannel;
             return this;
         }
 
-        public Builder setChatChannel(@Nullable ResponsePlanChatChannelArgs chatChannel) {
+        public Builder chatChannel(@Nullable ResponsePlanChatChannelArgs chatChannel) {
             this.chatChannel = Input.ofNullable(chatChannel);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEngagements(@Nullable Input<List<String>> engagements) {
+        public Builder engagements(@Nullable Input<List<String>> engagements) {
             this.engagements = engagements;
             return this;
         }
 
-        public Builder setEngagements(@Nullable List<String> engagements) {
+        public Builder engagements(@Nullable List<String> engagements) {
             this.engagements = Input.ofNullable(engagements);
             return this;
         }
 
-        public Builder setIncidentTemplate(Input<ResponsePlanIncidentTemplateArgs> incidentTemplate) {
+        public Builder incidentTemplate(Input<ResponsePlanIncidentTemplateArgs> incidentTemplate) {
             this.incidentTemplate = Objects.requireNonNull(incidentTemplate);
             return this;
         }
 
-        public Builder setIncidentTemplate(ResponsePlanIncidentTemplateArgs incidentTemplate) {
+        public Builder incidentTemplate(ResponsePlanIncidentTemplateArgs incidentTemplate) {
             this.incidentTemplate = Input.of(Objects.requireNonNull(incidentTemplate));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ResponsePlanTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ResponsePlanTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ResponsePlanTagArgs> tags) {
+        public Builder tags(@Nullable List<ResponsePlanTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

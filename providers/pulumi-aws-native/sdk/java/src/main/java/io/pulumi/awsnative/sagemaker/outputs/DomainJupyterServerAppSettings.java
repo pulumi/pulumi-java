@@ -42,7 +42,7 @@ public final class DomainJupyterServerAppSettings {
     	      this.defaultResourceSpec = defaults.defaultResourceSpec;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable DomainResourceSpec defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable DomainResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }

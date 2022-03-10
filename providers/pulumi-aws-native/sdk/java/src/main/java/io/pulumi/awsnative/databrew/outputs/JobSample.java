@@ -52,12 +52,12 @@ public final class JobSample {
     	      this.size = defaults.size;
         }
 
-        public Builder setMode(@Nullable JobSampleMode mode) {
+        public Builder mode(@Nullable JobSampleMode mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = size;
             return this;
         }

@@ -94,42 +94,42 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
     	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
         }
 
-        public Builder setCertificatePolicies(@Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies) {
+        public Builder certificatePolicies(@Nullable Input<List<CertificatePolicyInformationArgs>> certificatePolicies) {
             this.certificatePolicies = certificatePolicies;
             return this;
         }
 
-        public Builder setCertificatePolicies(@Nullable List<CertificatePolicyInformationArgs> certificatePolicies) {
+        public Builder certificatePolicies(@Nullable List<CertificatePolicyInformationArgs> certificatePolicies) {
             this.certificatePolicies = Input.ofNullable(certificatePolicies);
             return this;
         }
 
-        public Builder setExtendedKeyUsage(@Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable Input<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
-        public Builder setExtendedKeyUsage(@Nullable List<CertificateExtendedKeyUsageArgs> extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsageArgs> extendedKeyUsage) {
             this.extendedKeyUsage = Input.ofNullable(extendedKeyUsage);
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable Input<CertificateKeyUsageArgs> keyUsage) {
+        public Builder keyUsage(@Nullable Input<CertificateKeyUsageArgs> keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable CertificateKeyUsageArgs keyUsage) {
+        public Builder keyUsage(@Nullable CertificateKeyUsageArgs keyUsage) {
             this.keyUsage = Input.ofNullable(keyUsage);
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Input<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable List<CertificateGeneralNameArgs> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralNameArgs> subjectAlternativeNames) {
             this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
             return this;
         }

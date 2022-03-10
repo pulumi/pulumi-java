@@ -77,32 +77,32 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConfigData(Input<ConfigDataArgs> configData) {
+        public Builder configData(Input<ConfigDataArgs> configData) {
             this.configData = Objects.requireNonNull(configData);
             return this;
         }
 
-        public Builder setConfigData(ConfigDataArgs configData) {
+        public Builder configData(ConfigDataArgs configData) {
             this.configData = Input.of(Objects.requireNonNull(configData));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ConfigTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ConfigTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ConfigTagArgs> tags) {
+        public Builder tags(@Nullable List<ConfigTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
     	      this.environmentIdentifier = defaults.environmentIdentifier;
         }
 
-        public Builder setEnvironmentIdentifier(String environmentIdentifier) {
+        public Builder environmentIdentifier(String environmentIdentifier) {
             this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
             return this;
         }

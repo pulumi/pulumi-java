@@ -74,22 +74,22 @@ public final class ImageRecipeComponentParameterArgs extends io.pulumi.resources
     	      this.value = defaults.value;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setValue(Input<List<String>> value) {
+        public Builder value(Input<List<String>> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(List<String> value) {
+        public Builder value(List<String> value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

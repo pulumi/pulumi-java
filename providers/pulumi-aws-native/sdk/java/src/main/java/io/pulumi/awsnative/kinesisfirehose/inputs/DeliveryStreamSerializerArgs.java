@@ -63,22 +63,22 @@ public final class DeliveryStreamSerializerArgs extends io.pulumi.resources.Reso
     	      this.parquetSerDe = defaults.parquetSerDe;
         }
 
-        public Builder setOrcSerDe(@Nullable Input<DeliveryStreamOrcSerDeArgs> orcSerDe) {
+        public Builder orcSerDe(@Nullable Input<DeliveryStreamOrcSerDeArgs> orcSerDe) {
             this.orcSerDe = orcSerDe;
             return this;
         }
 
-        public Builder setOrcSerDe(@Nullable DeliveryStreamOrcSerDeArgs orcSerDe) {
+        public Builder orcSerDe(@Nullable DeliveryStreamOrcSerDeArgs orcSerDe) {
             this.orcSerDe = Input.ofNullable(orcSerDe);
             return this;
         }
 
-        public Builder setParquetSerDe(@Nullable Input<DeliveryStreamParquetSerDeArgs> parquetSerDe) {
+        public Builder parquetSerDe(@Nullable Input<DeliveryStreamParquetSerDeArgs> parquetSerDe) {
             this.parquetSerDe = parquetSerDe;
             return this;
         }
 
-        public Builder setParquetSerDe(@Nullable DeliveryStreamParquetSerDeArgs parquetSerDe) {
+        public Builder parquetSerDe(@Nullable DeliveryStreamParquetSerDeArgs parquetSerDe) {
             this.parquetSerDe = Input.ofNullable(parquetSerDe);
             return this;
         }

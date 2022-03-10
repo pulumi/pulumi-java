@@ -135,32 +135,32 @@ public final class GetApiKeyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAPIKeyId(@Nullable String aPIKeyId) {
+        public Builder aPIKeyId(@Nullable String aPIKeyId) {
             this.aPIKeyId = aPIKeyId;
             return this;
         }
 
-        public Builder setCustomerId(@Nullable String customerId) {
+        public Builder customerId(@Nullable String customerId) {
             this.customerId = customerId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setStageKeys(@Nullable List<ApiKeyStageKey> stageKeys) {
+        public Builder stageKeys(@Nullable List<ApiKeyStageKey> stageKeys) {
             this.stageKeys = stageKeys;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApiKeyTag> tags) {
+        public Builder tags(@Nullable List<ApiKeyTag> tags) {
             this.tags = tags;
             return this;
         }

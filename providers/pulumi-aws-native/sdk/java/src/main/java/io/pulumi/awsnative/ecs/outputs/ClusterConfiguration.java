@@ -42,7 +42,7 @@ public final class ClusterConfiguration {
     	      this.executeCommandConfiguration = defaults.executeCommandConfiguration;
         }
 
-        public Builder setExecuteCommandConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
+        public Builder executeCommandConfiguration(@Nullable ClusterExecuteCommandConfiguration executeCommandConfiguration) {
             this.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }

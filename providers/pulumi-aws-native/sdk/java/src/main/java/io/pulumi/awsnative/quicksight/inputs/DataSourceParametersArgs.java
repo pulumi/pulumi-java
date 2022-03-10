@@ -264,172 +264,172 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
     	      this.teradataParameters = defaults.teradataParameters;
         }
 
-        public Builder setAmazonElasticsearchParameters(@Nullable Input<DataSourceAmazonElasticsearchParametersArgs> amazonElasticsearchParameters) {
+        public Builder amazonElasticsearchParameters(@Nullable Input<DataSourceAmazonElasticsearchParametersArgs> amazonElasticsearchParameters) {
             this.amazonElasticsearchParameters = amazonElasticsearchParameters;
             return this;
         }
 
-        public Builder setAmazonElasticsearchParameters(@Nullable DataSourceAmazonElasticsearchParametersArgs amazonElasticsearchParameters) {
+        public Builder amazonElasticsearchParameters(@Nullable DataSourceAmazonElasticsearchParametersArgs amazonElasticsearchParameters) {
             this.amazonElasticsearchParameters = Input.ofNullable(amazonElasticsearchParameters);
             return this;
         }
 
-        public Builder setAmazonOpenSearchParameters(@Nullable Input<DataSourceAmazonOpenSearchParametersArgs> amazonOpenSearchParameters) {
+        public Builder amazonOpenSearchParameters(@Nullable Input<DataSourceAmazonOpenSearchParametersArgs> amazonOpenSearchParameters) {
             this.amazonOpenSearchParameters = amazonOpenSearchParameters;
             return this;
         }
 
-        public Builder setAmazonOpenSearchParameters(@Nullable DataSourceAmazonOpenSearchParametersArgs amazonOpenSearchParameters) {
+        public Builder amazonOpenSearchParameters(@Nullable DataSourceAmazonOpenSearchParametersArgs amazonOpenSearchParameters) {
             this.amazonOpenSearchParameters = Input.ofNullable(amazonOpenSearchParameters);
             return this;
         }
 
-        public Builder setAthenaParameters(@Nullable Input<DataSourceAthenaParametersArgs> athenaParameters) {
+        public Builder athenaParameters(@Nullable Input<DataSourceAthenaParametersArgs> athenaParameters) {
             this.athenaParameters = athenaParameters;
             return this;
         }
 
-        public Builder setAthenaParameters(@Nullable DataSourceAthenaParametersArgs athenaParameters) {
+        public Builder athenaParameters(@Nullable DataSourceAthenaParametersArgs athenaParameters) {
             this.athenaParameters = Input.ofNullable(athenaParameters);
             return this;
         }
 
-        public Builder setAuroraParameters(@Nullable Input<DataSourceAuroraParametersArgs> auroraParameters) {
+        public Builder auroraParameters(@Nullable Input<DataSourceAuroraParametersArgs> auroraParameters) {
             this.auroraParameters = auroraParameters;
             return this;
         }
 
-        public Builder setAuroraParameters(@Nullable DataSourceAuroraParametersArgs auroraParameters) {
+        public Builder auroraParameters(@Nullable DataSourceAuroraParametersArgs auroraParameters) {
             this.auroraParameters = Input.ofNullable(auroraParameters);
             return this;
         }
 
-        public Builder setAuroraPostgreSqlParameters(@Nullable Input<DataSourceAuroraPostgreSqlParametersArgs> auroraPostgreSqlParameters) {
+        public Builder auroraPostgreSqlParameters(@Nullable Input<DataSourceAuroraPostgreSqlParametersArgs> auroraPostgreSqlParameters) {
             this.auroraPostgreSqlParameters = auroraPostgreSqlParameters;
             return this;
         }
 
-        public Builder setAuroraPostgreSqlParameters(@Nullable DataSourceAuroraPostgreSqlParametersArgs auroraPostgreSqlParameters) {
+        public Builder auroraPostgreSqlParameters(@Nullable DataSourceAuroraPostgreSqlParametersArgs auroraPostgreSqlParameters) {
             this.auroraPostgreSqlParameters = Input.ofNullable(auroraPostgreSqlParameters);
             return this;
         }
 
-        public Builder setMariaDbParameters(@Nullable Input<DataSourceMariaDbParametersArgs> mariaDbParameters) {
+        public Builder mariaDbParameters(@Nullable Input<DataSourceMariaDbParametersArgs> mariaDbParameters) {
             this.mariaDbParameters = mariaDbParameters;
             return this;
         }
 
-        public Builder setMariaDbParameters(@Nullable DataSourceMariaDbParametersArgs mariaDbParameters) {
+        public Builder mariaDbParameters(@Nullable DataSourceMariaDbParametersArgs mariaDbParameters) {
             this.mariaDbParameters = Input.ofNullable(mariaDbParameters);
             return this;
         }
 
-        public Builder setMySqlParameters(@Nullable Input<DataSourceMySqlParametersArgs> mySqlParameters) {
+        public Builder mySqlParameters(@Nullable Input<DataSourceMySqlParametersArgs> mySqlParameters) {
             this.mySqlParameters = mySqlParameters;
             return this;
         }
 
-        public Builder setMySqlParameters(@Nullable DataSourceMySqlParametersArgs mySqlParameters) {
+        public Builder mySqlParameters(@Nullable DataSourceMySqlParametersArgs mySqlParameters) {
             this.mySqlParameters = Input.ofNullable(mySqlParameters);
             return this;
         }
 
-        public Builder setOracleParameters(@Nullable Input<DataSourceOracleParametersArgs> oracleParameters) {
+        public Builder oracleParameters(@Nullable Input<DataSourceOracleParametersArgs> oracleParameters) {
             this.oracleParameters = oracleParameters;
             return this;
         }
 
-        public Builder setOracleParameters(@Nullable DataSourceOracleParametersArgs oracleParameters) {
+        public Builder oracleParameters(@Nullable DataSourceOracleParametersArgs oracleParameters) {
             this.oracleParameters = Input.ofNullable(oracleParameters);
             return this;
         }
 
-        public Builder setPostgreSqlParameters(@Nullable Input<DataSourcePostgreSqlParametersArgs> postgreSqlParameters) {
+        public Builder postgreSqlParameters(@Nullable Input<DataSourcePostgreSqlParametersArgs> postgreSqlParameters) {
             this.postgreSqlParameters = postgreSqlParameters;
             return this;
         }
 
-        public Builder setPostgreSqlParameters(@Nullable DataSourcePostgreSqlParametersArgs postgreSqlParameters) {
+        public Builder postgreSqlParameters(@Nullable DataSourcePostgreSqlParametersArgs postgreSqlParameters) {
             this.postgreSqlParameters = Input.ofNullable(postgreSqlParameters);
             return this;
         }
 
-        public Builder setPrestoParameters(@Nullable Input<DataSourcePrestoParametersArgs> prestoParameters) {
+        public Builder prestoParameters(@Nullable Input<DataSourcePrestoParametersArgs> prestoParameters) {
             this.prestoParameters = prestoParameters;
             return this;
         }
 
-        public Builder setPrestoParameters(@Nullable DataSourcePrestoParametersArgs prestoParameters) {
+        public Builder prestoParameters(@Nullable DataSourcePrestoParametersArgs prestoParameters) {
             this.prestoParameters = Input.ofNullable(prestoParameters);
             return this;
         }
 
-        public Builder setRdsParameters(@Nullable Input<DataSourceRdsParametersArgs> rdsParameters) {
+        public Builder rdsParameters(@Nullable Input<DataSourceRdsParametersArgs> rdsParameters) {
             this.rdsParameters = rdsParameters;
             return this;
         }
 
-        public Builder setRdsParameters(@Nullable DataSourceRdsParametersArgs rdsParameters) {
+        public Builder rdsParameters(@Nullable DataSourceRdsParametersArgs rdsParameters) {
             this.rdsParameters = Input.ofNullable(rdsParameters);
             return this;
         }
 
-        public Builder setRedshiftParameters(@Nullable Input<DataSourceRedshiftParametersArgs> redshiftParameters) {
+        public Builder redshiftParameters(@Nullable Input<DataSourceRedshiftParametersArgs> redshiftParameters) {
             this.redshiftParameters = redshiftParameters;
             return this;
         }
 
-        public Builder setRedshiftParameters(@Nullable DataSourceRedshiftParametersArgs redshiftParameters) {
+        public Builder redshiftParameters(@Nullable DataSourceRedshiftParametersArgs redshiftParameters) {
             this.redshiftParameters = Input.ofNullable(redshiftParameters);
             return this;
         }
 
-        public Builder setS3Parameters(@Nullable Input<DataSourceS3ParametersArgs> s3Parameters) {
+        public Builder s3Parameters(@Nullable Input<DataSourceS3ParametersArgs> s3Parameters) {
             this.s3Parameters = s3Parameters;
             return this;
         }
 
-        public Builder setS3Parameters(@Nullable DataSourceS3ParametersArgs s3Parameters) {
+        public Builder s3Parameters(@Nullable DataSourceS3ParametersArgs s3Parameters) {
             this.s3Parameters = Input.ofNullable(s3Parameters);
             return this;
         }
 
-        public Builder setSnowflakeParameters(@Nullable Input<DataSourceSnowflakeParametersArgs> snowflakeParameters) {
+        public Builder snowflakeParameters(@Nullable Input<DataSourceSnowflakeParametersArgs> snowflakeParameters) {
             this.snowflakeParameters = snowflakeParameters;
             return this;
         }
 
-        public Builder setSnowflakeParameters(@Nullable DataSourceSnowflakeParametersArgs snowflakeParameters) {
+        public Builder snowflakeParameters(@Nullable DataSourceSnowflakeParametersArgs snowflakeParameters) {
             this.snowflakeParameters = Input.ofNullable(snowflakeParameters);
             return this;
         }
 
-        public Builder setSparkParameters(@Nullable Input<DataSourceSparkParametersArgs> sparkParameters) {
+        public Builder sparkParameters(@Nullable Input<DataSourceSparkParametersArgs> sparkParameters) {
             this.sparkParameters = sparkParameters;
             return this;
         }
 
-        public Builder setSparkParameters(@Nullable DataSourceSparkParametersArgs sparkParameters) {
+        public Builder sparkParameters(@Nullable DataSourceSparkParametersArgs sparkParameters) {
             this.sparkParameters = Input.ofNullable(sparkParameters);
             return this;
         }
 
-        public Builder setSqlServerParameters(@Nullable Input<DataSourceSqlServerParametersArgs> sqlServerParameters) {
+        public Builder sqlServerParameters(@Nullable Input<DataSourceSqlServerParametersArgs> sqlServerParameters) {
             this.sqlServerParameters = sqlServerParameters;
             return this;
         }
 
-        public Builder setSqlServerParameters(@Nullable DataSourceSqlServerParametersArgs sqlServerParameters) {
+        public Builder sqlServerParameters(@Nullable DataSourceSqlServerParametersArgs sqlServerParameters) {
             this.sqlServerParameters = Input.ofNullable(sqlServerParameters);
             return this;
         }
 
-        public Builder setTeradataParameters(@Nullable Input<DataSourceTeradataParametersArgs> teradataParameters) {
+        public Builder teradataParameters(@Nullable Input<DataSourceTeradataParametersArgs> teradataParameters) {
             this.teradataParameters = teradataParameters;
             return this;
         }
 
-        public Builder setTeradataParameters(@Nullable DataSourceTeradataParametersArgs teradataParameters) {
+        public Builder teradataParameters(@Nullable DataSourceTeradataParametersArgs teradataParameters) {
             this.teradataParameters = Input.ofNullable(teradataParameters);
             return this;
         }

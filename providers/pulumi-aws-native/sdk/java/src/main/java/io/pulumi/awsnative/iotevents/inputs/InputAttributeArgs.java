@@ -58,12 +58,12 @@ public final class InputAttributeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.jsonPath = defaults.jsonPath;
         }
 
-        public Builder setJsonPath(Input<String> jsonPath) {
+        public Builder jsonPath(Input<String> jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
 
-        public Builder setJsonPath(String jsonPath) {
+        public Builder jsonPath(String jsonPath) {
             this.jsonPath = Input.of(Objects.requireNonNull(jsonPath));
             return this;
         }

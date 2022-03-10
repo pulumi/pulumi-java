@@ -117,27 +117,27 @@ public final class GetAccessPolicyResult {
     	      this.accessPolicyResource = defaults.accessPolicyResource;
         }
 
-        public Builder setAccessPolicyArn(@Nullable String accessPolicyArn) {
+        public Builder accessPolicyArn(@Nullable String accessPolicyArn) {
             this.accessPolicyArn = accessPolicyArn;
             return this;
         }
 
-        public Builder setAccessPolicyId(@Nullable String accessPolicyId) {
+        public Builder accessPolicyId(@Nullable String accessPolicyId) {
             this.accessPolicyId = accessPolicyId;
             return this;
         }
 
-        public Builder setAccessPolicyIdentity(@Nullable AccessPolicyIdentity accessPolicyIdentity) {
+        public Builder accessPolicyIdentity(@Nullable AccessPolicyIdentity accessPolicyIdentity) {
             this.accessPolicyIdentity = accessPolicyIdentity;
             return this;
         }
 
-        public Builder setAccessPolicyPermission(@Nullable String accessPolicyPermission) {
+        public Builder accessPolicyPermission(@Nullable String accessPolicyPermission) {
             this.accessPolicyPermission = accessPolicyPermission;
             return this;
         }
 
-        public Builder setAccessPolicyResource(@Nullable AccessPolicyResource accessPolicyResource) {
+        public Builder accessPolicyResource(@Nullable AccessPolicyResource accessPolicyResource) {
             this.accessPolicyResource = accessPolicyResource;
             return this;
         }

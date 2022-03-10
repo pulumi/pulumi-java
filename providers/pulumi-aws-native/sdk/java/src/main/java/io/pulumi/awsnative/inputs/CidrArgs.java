@@ -73,17 +73,17 @@ public final class CidrArgs extends io.pulumi.resources.InvokeArgs {
     	      this.ipBlock = defaults.ipBlock;
         }
 
-        public Builder setCidrBits(Integer cidrBits) {
+        public Builder cidrBits(Integer cidrBits) {
             this.cidrBits = Objects.requireNonNull(cidrBits);
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setIpBlock(String ipBlock) {
+        public Builder ipBlock(String ipBlock) {
             this.ipBlock = Objects.requireNonNull(ipBlock);
             return this;
         }

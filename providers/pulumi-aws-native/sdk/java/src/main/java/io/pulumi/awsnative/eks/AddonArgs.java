@@ -137,62 +137,62 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Input<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
-        public Builder setAddonName(@Nullable String addonName) {
+        public Builder addonName(@Nullable String addonName) {
             this.addonName = Input.ofNullable(addonName);
             return this;
         }
 
-        public Builder setAddonVersion(@Nullable Input<String> addonVersion) {
+        public Builder addonVersion(@Nullable Input<String> addonVersion) {
             this.addonVersion = addonVersion;
             return this;
         }
 
-        public Builder setAddonVersion(@Nullable String addonVersion) {
+        public Builder addonVersion(@Nullable String addonVersion) {
             this.addonVersion = Input.ofNullable(addonVersion);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setResolveConflicts(@Nullable Input<AddonResolveConflicts> resolveConflicts) {
+        public Builder resolveConflicts(@Nullable Input<AddonResolveConflicts> resolveConflicts) {
             this.resolveConflicts = resolveConflicts;
             return this;
         }
 
-        public Builder setResolveConflicts(@Nullable AddonResolveConflicts resolveConflicts) {
+        public Builder resolveConflicts(@Nullable AddonResolveConflicts resolveConflicts) {
             this.resolveConflicts = Input.ofNullable(resolveConflicts);
             return this;
         }
 
-        public Builder setServiceAccountRoleArn(@Nullable Input<String> serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(@Nullable Input<String> serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
 
-        public Builder setServiceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = Input.ofNullable(serviceAccountRoleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AddonTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AddonTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AddonTagArgs> tags) {
+        public Builder tags(@Nullable List<AddonTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

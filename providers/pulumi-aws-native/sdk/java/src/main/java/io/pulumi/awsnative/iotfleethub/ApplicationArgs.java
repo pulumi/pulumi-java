@@ -104,42 +104,42 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationDescription(@Nullable Input<String> applicationDescription) {
+        public Builder applicationDescription(@Nullable Input<String> applicationDescription) {
             this.applicationDescription = applicationDescription;
             return this;
         }
 
-        public Builder setApplicationDescription(@Nullable String applicationDescription) {
+        public Builder applicationDescription(@Nullable String applicationDescription) {
             this.applicationDescription = Input.ofNullable(applicationDescription);
             return this;
         }
 
-        public Builder setApplicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Input<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Input.ofNullable(applicationName);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTagArgs> tags) {
+        public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

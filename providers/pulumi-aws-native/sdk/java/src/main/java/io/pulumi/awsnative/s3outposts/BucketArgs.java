@@ -105,42 +105,42 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setLifecycleConfiguration(@Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
+        public Builder lifecycleConfiguration(@Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
             this.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
 
-        public Builder setLifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
+        public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
             this.lifecycleConfiguration = Input.ofNullable(lifecycleConfiguration);
             return this;
         }
 
-        public Builder setOutpostId(Input<String> outpostId) {
+        public Builder outpostId(Input<String> outpostId) {
             this.outpostId = Objects.requireNonNull(outpostId);
             return this;
         }
 
-        public Builder setOutpostId(String outpostId) {
+        public Builder outpostId(String outpostId) {
             this.outpostId = Input.of(Objects.requireNonNull(outpostId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<BucketTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<BucketTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BucketTagArgs> tags) {
+        public Builder tags(@Nullable List<BucketTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -101,42 +101,42 @@ public final class GetThemeResult {
     	      this.values = defaults.values;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable String environmentName) {
+        public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setModifiedAt(@Nullable String modifiedAt) {
+        public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<ThemeValues> overrides) {
+        public Builder overrides(@Nullable List<ThemeValues> overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setValues(@Nullable List<ThemeValues> values) {
+        public Builder values(@Nullable List<ThemeValues> values) {
             this.values = values;
             return this;
         }

@@ -47,7 +47,7 @@ public final class FlowSlackSourceProperties extends io.pulumi.resources.InvokeA
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

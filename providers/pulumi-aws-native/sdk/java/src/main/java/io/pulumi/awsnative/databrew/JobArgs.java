@@ -352,202 +352,202 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationConfigurations = defaults.validationConfigurations;
         }
 
-        public Builder setDataCatalogOutputs(@Nullable Input<List<JobDataCatalogOutputArgs>> dataCatalogOutputs) {
+        public Builder dataCatalogOutputs(@Nullable Input<List<JobDataCatalogOutputArgs>> dataCatalogOutputs) {
             this.dataCatalogOutputs = dataCatalogOutputs;
             return this;
         }
 
-        public Builder setDataCatalogOutputs(@Nullable List<JobDataCatalogOutputArgs> dataCatalogOutputs) {
+        public Builder dataCatalogOutputs(@Nullable List<JobDataCatalogOutputArgs> dataCatalogOutputs) {
             this.dataCatalogOutputs = Input.ofNullable(dataCatalogOutputs);
             return this;
         }
 
-        public Builder setDatabaseOutputs(@Nullable Input<List<JobDatabaseOutputArgs>> databaseOutputs) {
+        public Builder databaseOutputs(@Nullable Input<List<JobDatabaseOutputArgs>> databaseOutputs) {
             this.databaseOutputs = databaseOutputs;
             return this;
         }
 
-        public Builder setDatabaseOutputs(@Nullable List<JobDatabaseOutputArgs> databaseOutputs) {
+        public Builder databaseOutputs(@Nullable List<JobDatabaseOutputArgs> databaseOutputs) {
             this.databaseOutputs = Input.ofNullable(databaseOutputs);
             return this;
         }
 
-        public Builder setDatasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Input<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = Input.ofNullable(datasetName);
             return this;
         }
 
-        public Builder setEncryptionKeyArn(@Nullable Input<String> encryptionKeyArn) {
+        public Builder encryptionKeyArn(@Nullable Input<String> encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
 
-        public Builder setEncryptionKeyArn(@Nullable String encryptionKeyArn) {
+        public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
             this.encryptionKeyArn = Input.ofNullable(encryptionKeyArn);
             return this;
         }
 
-        public Builder setEncryptionMode(@Nullable Input<JobEncryptionMode> encryptionMode) {
+        public Builder encryptionMode(@Nullable Input<JobEncryptionMode> encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
 
-        public Builder setEncryptionMode(@Nullable JobEncryptionMode encryptionMode) {
+        public Builder encryptionMode(@Nullable JobEncryptionMode encryptionMode) {
             this.encryptionMode = Input.ofNullable(encryptionMode);
             return this;
         }
 
-        public Builder setJobSample(@Nullable Input<JobSampleArgs> jobSample) {
+        public Builder jobSample(@Nullable Input<JobSampleArgs> jobSample) {
             this.jobSample = jobSample;
             return this;
         }
 
-        public Builder setJobSample(@Nullable JobSampleArgs jobSample) {
+        public Builder jobSample(@Nullable JobSampleArgs jobSample) {
             this.jobSample = Input.ofNullable(jobSample);
             return this;
         }
 
-        public Builder setLogSubscription(@Nullable Input<JobLogSubscription> logSubscription) {
+        public Builder logSubscription(@Nullable Input<JobLogSubscription> logSubscription) {
             this.logSubscription = logSubscription;
             return this;
         }
 
-        public Builder setLogSubscription(@Nullable JobLogSubscription logSubscription) {
+        public Builder logSubscription(@Nullable JobLogSubscription logSubscription) {
             this.logSubscription = Input.ofNullable(logSubscription);
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Input<Integer> maxCapacity) {
+        public Builder maxCapacity(@Nullable Input<Integer> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = Input.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Input<Integer> maxRetries) {
+        public Builder maxRetries(@Nullable Input<Integer> maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = Input.ofNullable(maxRetries);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable Input<JobOutputLocationArgs> outputLocation) {
+        public Builder outputLocation(@Nullable Input<JobOutputLocationArgs> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable JobOutputLocationArgs outputLocation) {
+        public Builder outputLocation(@Nullable JobOutputLocationArgs outputLocation) {
             this.outputLocation = Input.ofNullable(outputLocation);
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<JobOutputArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<JobOutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<JobOutputArgs> outputs) {
+        public Builder outputs(@Nullable List<JobOutputArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setProfileConfiguration(@Nullable Input<JobProfileConfigurationArgs> profileConfiguration) {
+        public Builder profileConfiguration(@Nullable Input<JobProfileConfigurationArgs> profileConfiguration) {
             this.profileConfiguration = profileConfiguration;
             return this;
         }
 
-        public Builder setProfileConfiguration(@Nullable JobProfileConfigurationArgs profileConfiguration) {
+        public Builder profileConfiguration(@Nullable JobProfileConfigurationArgs profileConfiguration) {
             this.profileConfiguration = Input.ofNullable(profileConfiguration);
             return this;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }
 
-        public Builder setRecipe(@Nullable Input<JobRecipeArgs> recipe) {
+        public Builder recipe(@Nullable Input<JobRecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
 
-        public Builder setRecipe(@Nullable JobRecipeArgs recipe) {
+        public Builder recipe(@Nullable JobRecipeArgs recipe) {
             this.recipe = Input.ofNullable(recipe);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<JobTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<JobTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<JobTagArgs> tags) {
+        public Builder tags(@Nullable List<JobTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Input<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setType(Input<JobType> type) {
+        public Builder type(Input<JobType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(JobType type) {
+        public Builder type(JobType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValidationConfigurations(@Nullable Input<List<JobValidationConfigurationArgs>> validationConfigurations) {
+        public Builder validationConfigurations(@Nullable Input<List<JobValidationConfigurationArgs>> validationConfigurations) {
             this.validationConfigurations = validationConfigurations;
             return this;
         }
 
-        public Builder setValidationConfigurations(@Nullable List<JobValidationConfigurationArgs> validationConfigurations) {
+        public Builder validationConfigurations(@Nullable List<JobValidationConfigurationArgs> validationConfigurations) {
             this.validationConfigurations = Input.ofNullable(validationConfigurations);
             return this;
         }

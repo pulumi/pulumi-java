@@ -205,102 +205,102 @@ public final class StageMethodSettingArgs extends io.pulumi.resources.ResourceAr
     	      this.throttlingRateLimit = defaults.throttlingRateLimit;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = Input.ofNullable(cacheDataEncrypted);
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = Input.ofNullable(cacheTtlInSeconds);
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Boolean cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = Input.ofNullable(cachingEnabled);
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Input.ofNullable(dataTraceEnabled);
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable Input<String> httpMethod) {
+        public Builder httpMethod(@Nullable Input<String> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = Input.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Input<String> loggingLevel) {
+        public Builder loggingLevel(@Nullable Input<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Input.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Boolean metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = Input.ofNullable(metricsEnabled);
             return this;
         }
 
-        public Builder setResourcePath(@Nullable Input<String> resourcePath) {
+        public Builder resourcePath(@Nullable Input<String> resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = Input.ofNullable(resourcePath);
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Input.ofNullable(throttlingBurstLimit);
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Double throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Input.ofNullable(throttlingRateLimit);
             return this;
         }

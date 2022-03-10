@@ -73,32 +73,32 @@ public final class FeatureGroupDataCatalogConfigArgs extends io.pulumi.resources
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalog(Input<String> catalog) {
+        public Builder catalog(Input<String> catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
-        public Builder setCatalog(String catalog) {
+        public Builder catalog(String catalog) {
             this.catalog = Input.of(Objects.requireNonNull(catalog));
             return this;
         }
 
-        public Builder setDatabase(Input<String> database) {
+        public Builder database(Input<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Input.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

@@ -76,32 +76,32 @@ public final class RuleGroupRegexMatchStatementArgs extends io.pulumi.resources.
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<RuleGroupFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setRegexString(Input<String> regexString) {
+        public Builder regexString(Input<String> regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
 
-        public Builder setRegexString(String regexString) {
+        public Builder regexString(String regexString) {
             this.regexString = Input.of(Objects.requireNonNull(regexString));
             return this;
         }
 
-        public Builder setTextTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Input<List<RuleGroupTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformationArgs> textTransformations) {
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }

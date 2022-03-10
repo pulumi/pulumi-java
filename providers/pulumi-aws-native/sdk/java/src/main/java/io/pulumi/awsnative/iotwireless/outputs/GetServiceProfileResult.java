@@ -118,27 +118,27 @@ public final class GetServiceProfileResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable ServiceProfileLoRaWANServiceProfile loRaWAN) {
+        public Builder loRaWAN(@Nullable ServiceProfileLoRaWANServiceProfile loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServiceProfileTag> tags) {
+        public Builder tags(@Nullable List<ServiceProfileTag> tags) {
             this.tags = tags;
             return this;
         }

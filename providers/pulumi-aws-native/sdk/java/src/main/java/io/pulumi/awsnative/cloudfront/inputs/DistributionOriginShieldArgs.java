@@ -63,22 +63,22 @@ public final class DistributionOriginShieldArgs extends io.pulumi.resources.Reso
     	      this.originShieldRegion = defaults.originShieldRegion;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setOriginShieldRegion(@Nullable Input<String> originShieldRegion) {
+        public Builder originShieldRegion(@Nullable Input<String> originShieldRegion) {
             this.originShieldRegion = originShieldRegion;
             return this;
         }
 
-        public Builder setOriginShieldRegion(@Nullable String originShieldRegion) {
+        public Builder originShieldRegion(@Nullable String originShieldRegion) {
             this.originShieldRegion = Input.ofNullable(originShieldRegion);
             return this;
         }

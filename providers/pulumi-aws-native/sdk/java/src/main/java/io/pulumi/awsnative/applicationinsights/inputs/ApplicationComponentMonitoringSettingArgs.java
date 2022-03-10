@@ -140,62 +140,62 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
     	      this.tier = defaults.tier;
         }
 
-        public Builder setComponentARN(@Nullable Input<String> componentARN) {
+        public Builder componentARN(@Nullable Input<String> componentARN) {
             this.componentARN = componentARN;
             return this;
         }
 
-        public Builder setComponentARN(@Nullable String componentARN) {
+        public Builder componentARN(@Nullable String componentARN) {
             this.componentARN = Input.ofNullable(componentARN);
             return this;
         }
 
-        public Builder setComponentConfigurationMode(Input<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode) {
+        public Builder componentConfigurationMode(Input<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode) {
             this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode);
             return this;
         }
 
-        public Builder setComponentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
+        public Builder componentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
             this.componentConfigurationMode = Input.of(Objects.requireNonNull(componentConfigurationMode));
             return this;
         }
 
-        public Builder setComponentName(@Nullable Input<String> componentName) {
+        public Builder componentName(@Nullable Input<String> componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = Input.ofNullable(componentName);
             return this;
         }
 
-        public Builder setCustomComponentConfiguration(@Nullable Input<ApplicationComponentConfigurationArgs> customComponentConfiguration) {
+        public Builder customComponentConfiguration(@Nullable Input<ApplicationComponentConfigurationArgs> customComponentConfiguration) {
             this.customComponentConfiguration = customComponentConfiguration;
             return this;
         }
 
-        public Builder setCustomComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs customComponentConfiguration) {
+        public Builder customComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs customComponentConfiguration) {
             this.customComponentConfiguration = Input.ofNullable(customComponentConfiguration);
             return this;
         }
 
-        public Builder setDefaultOverwriteComponentConfiguration(@Nullable Input<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration) {
+        public Builder defaultOverwriteComponentConfiguration(@Nullable Input<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration) {
             this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
             return this;
         }
 
-        public Builder setDefaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs defaultOverwriteComponentConfiguration) {
+        public Builder defaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs defaultOverwriteComponentConfiguration) {
             this.defaultOverwriteComponentConfiguration = Input.ofNullable(defaultOverwriteComponentConfiguration);
             return this;
         }
 
-        public Builder setTier(Input<String> tier) {
+        public Builder tier(Input<String> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }

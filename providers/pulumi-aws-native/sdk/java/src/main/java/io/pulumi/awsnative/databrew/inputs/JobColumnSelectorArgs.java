@@ -62,22 +62,22 @@ public final class JobColumnSelectorArgs extends io.pulumi.resources.ResourceArg
     	      this.regex = defaults.regex;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<String> regex) {
+        public Builder regex(@Nullable Input<String> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable String regex) {
+        public Builder regex(@Nullable String regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }

@@ -87,32 +87,32 @@ public final class GetInAppTemplateResult {
     	      this.templateDescription = defaults.templateDescription;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setContent(@Nullable List<InAppTemplateInAppMessageContent> content) {
+        public Builder content(@Nullable List<InAppTemplateInAppMessageContent> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setCustomConfig(@Nullable Object customConfig) {
+        public Builder customConfig(@Nullable Object customConfig) {
             this.customConfig = customConfig;
             return this;
         }
 
-        public Builder setLayout(@Nullable InAppTemplateLayout layout) {
+        public Builder layout(@Nullable InAppTemplateLayout layout) {
             this.layout = layout;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateDescription(@Nullable String templateDescription) {
+        public Builder templateDescription(@Nullable String templateDescription) {
             this.templateDescription = templateDescription;
             return this;
         }

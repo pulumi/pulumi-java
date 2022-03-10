@@ -181,47 +181,47 @@ public final class GetMetricStreamResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setExcludeFilters(@Nullable List<MetricStreamFilter> excludeFilters) {
+        public Builder excludeFilters(@Nullable List<MetricStreamFilter> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
 
-        public Builder setFirehoseArn(@Nullable String firehoseArn) {
+        public Builder firehoseArn(@Nullable String firehoseArn) {
             this.firehoseArn = firehoseArn;
             return this;
         }
 
-        public Builder setIncludeFilters(@Nullable List<MetricStreamFilter> includeFilters) {
+        public Builder includeFilters(@Nullable List<MetricStreamFilter> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
 
-        public Builder setLastUpdateDate(@Nullable String lastUpdateDate) {
+        public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
             this.lastUpdateDate = lastUpdateDate;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -102,22 +102,22 @@ public final class PackagingConfigurationHlsPackage extends io.pulumi.resources.
     	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationHlsEncryption encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationHlsEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setHlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
+        public Builder hlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setUseAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }

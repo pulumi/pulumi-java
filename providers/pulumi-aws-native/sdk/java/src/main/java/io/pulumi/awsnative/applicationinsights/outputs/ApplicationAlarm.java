@@ -68,12 +68,12 @@ public final class ApplicationAlarm {
     	      this.severity = defaults.severity;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setSeverity(@Nullable ApplicationAlarmSeverity severity) {
+        public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
             this.severity = severity;
             return this;
         }

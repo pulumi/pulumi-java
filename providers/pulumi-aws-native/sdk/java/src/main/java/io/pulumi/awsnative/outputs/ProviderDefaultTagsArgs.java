@@ -51,7 +51,7 @@ public final class ProviderDefaultTagsArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }

@@ -55,7 +55,7 @@ public final class BucketEncryptionConfiguration extends io.pulumi.resources.Inv
     	      this.replicaKmsKeyID = defaults.replicaKmsKeyID;
         }
 
-        public Builder setReplicaKmsKeyID(String replicaKmsKeyID) {
+        public Builder replicaKmsKeyID(String replicaKmsKeyID) {
             this.replicaKmsKeyID = Objects.requireNonNull(replicaKmsKeyID);
             return this;
         }

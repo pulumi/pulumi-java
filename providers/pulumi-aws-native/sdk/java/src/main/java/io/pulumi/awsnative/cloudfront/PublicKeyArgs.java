@@ -48,12 +48,12 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publicKeyConfig = defaults.publicKeyConfig;
         }
 
-        public Builder setPublicKeyConfig(Input<PublicKeyConfigArgs> publicKeyConfig) {
+        public Builder publicKeyConfig(Input<PublicKeyConfigArgs> publicKeyConfig) {
             this.publicKeyConfig = Objects.requireNonNull(publicKeyConfig);
             return this;
         }
 
-        public Builder setPublicKeyConfig(PublicKeyConfigArgs publicKeyConfig) {
+        public Builder publicKeyConfig(PublicKeyConfigArgs publicKeyConfig) {
             this.publicKeyConfig = Input.of(Objects.requireNonNull(publicKeyConfig));
             return this;
         }

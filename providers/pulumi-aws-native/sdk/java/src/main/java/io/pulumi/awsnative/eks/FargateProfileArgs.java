@@ -129,62 +129,62 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setFargateProfileName(@Nullable Input<String> fargateProfileName) {
+        public Builder fargateProfileName(@Nullable Input<String> fargateProfileName) {
             this.fargateProfileName = fargateProfileName;
             return this;
         }
 
-        public Builder setFargateProfileName(@Nullable String fargateProfileName) {
+        public Builder fargateProfileName(@Nullable String fargateProfileName) {
             this.fargateProfileName = Input.ofNullable(fargateProfileName);
             return this;
         }
 
-        public Builder setPodExecutionRoleArn(Input<String> podExecutionRoleArn) {
+        public Builder podExecutionRoleArn(Input<String> podExecutionRoleArn) {
             this.podExecutionRoleArn = Objects.requireNonNull(podExecutionRoleArn);
             return this;
         }
 
-        public Builder setPodExecutionRoleArn(String podExecutionRoleArn) {
+        public Builder podExecutionRoleArn(String podExecutionRoleArn) {
             this.podExecutionRoleArn = Input.of(Objects.requireNonNull(podExecutionRoleArn));
             return this;
         }
 
-        public Builder setSelectors(Input<List<FargateProfileSelectorArgs>> selectors) {
+        public Builder selectors(Input<List<FargateProfileSelectorArgs>> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
 
-        public Builder setSelectors(List<FargateProfileSelectorArgs> selectors) {
+        public Builder selectors(List<FargateProfileSelectorArgs> selectors) {
             this.selectors = Input.of(Objects.requireNonNull(selectors));
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<String>> subnets) {
+        public Builder subnets(@Nullable Input<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<String> subnets) {
+        public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FargateProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FargateProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FargateProfileTagArgs> tags) {
+        public Builder tags(@Nullable List<FargateProfileTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

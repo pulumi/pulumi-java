@@ -52,12 +52,12 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
     	      this.inProgressTimeoutInMinutes = defaults.inProgressTimeoutInMinutes;
         }
 
-        public Builder setInProgressTimeoutInMinutes(Input<Integer> inProgressTimeoutInMinutes) {
+        public Builder inProgressTimeoutInMinutes(Input<Integer> inProgressTimeoutInMinutes) {
             this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
             return this;
         }
 
-        public Builder setInProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
+        public Builder inProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
             this.inProgressTimeoutInMinutes = Input.of(Objects.requireNonNull(inProgressTimeoutInMinutes));
             return this;
         }

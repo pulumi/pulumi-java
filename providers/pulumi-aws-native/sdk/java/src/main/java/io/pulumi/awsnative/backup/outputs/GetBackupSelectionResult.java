@@ -51,12 +51,12 @@ public final class GetBackupSelectionResult {
     	      this.selectionId = defaults.selectionId;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setSelectionId(@Nullable String selectionId) {
+        public Builder selectionId(@Nullable String selectionId) {
             this.selectionId = selectionId;
             return this;
         }

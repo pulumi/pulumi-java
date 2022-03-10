@@ -52,12 +52,12 @@ public final class GetAccountResult {
     	      this.expiryEventsConfiguration = defaults.expiryEventsConfiguration;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setExpiryEventsConfiguration(@Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
+        public Builder expiryEventsConfiguration(@Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
             this.expiryEventsConfiguration = expiryEventsConfiguration;
             return this;
         }

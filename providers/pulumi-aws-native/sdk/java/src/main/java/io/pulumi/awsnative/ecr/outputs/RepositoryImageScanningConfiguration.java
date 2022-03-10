@@ -42,7 +42,7 @@ public final class RepositoryImageScanningConfiguration {
     	      this.scanOnPush = defaults.scanOnPush;
         }
 
-        public Builder setScanOnPush(@Nullable Boolean scanOnPush) {
+        public Builder scanOnPush(@Nullable Boolean scanOnPush) {
             this.scanOnPush = scanOnPush;
             return this;
         }

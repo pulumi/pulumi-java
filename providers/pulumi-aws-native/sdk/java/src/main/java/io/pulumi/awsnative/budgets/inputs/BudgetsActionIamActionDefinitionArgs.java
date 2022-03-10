@@ -87,42 +87,42 @@ public final class BudgetsActionIamActionDefinitionArgs extends io.pulumi.resour
     	      this.users = defaults.users;
         }
 
-        public Builder setGroups(@Nullable Input<List<String>> groups) {
+        public Builder groups(@Nullable Input<List<String>> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = Input.ofNullable(groups);
             return this;
         }
 
-        public Builder setPolicyArn(Input<String> policyArn) {
+        public Builder policyArn(Input<String> policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
 
-        public Builder setPolicyArn(String policyArn) {
+        public Builder policyArn(String policyArn) {
             this.policyArn = Input.of(Objects.requireNonNull(policyArn));
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<List<String>> roles) {
+        public Builder roles(@Nullable Input<List<String>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<String> roles) {
+        public Builder roles(@Nullable List<String> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }
 
-        public Builder setUsers(@Nullable Input<List<String>> users) {
+        public Builder users(@Nullable Input<List<String>> users) {
             this.users = users;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<String> users) {
+        public Builder users(@Nullable List<String> users) {
             this.users = Input.ofNullable(users);
             return this;
         }

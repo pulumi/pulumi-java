@@ -83,17 +83,17 @@ public final class AccessPointPosixUser {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setGid(String gid) {
+        public Builder gid(String gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setSecondaryGids(@Nullable List<String> secondaryGids) {
+        public Builder secondaryGids(@Nullable List<String> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

@@ -346,192 +346,192 @@ public final class LaunchConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.userData = defaults.userData;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Input<Boolean> associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = Input.ofNullable(associatePublicIpAddress);
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Input<List<LaunchConfigurationBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<LaunchConfigurationBlockDeviceMappingArgs> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<LaunchConfigurationBlockDeviceMappingArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder setClassicLinkVPCId(@Nullable Input<String> classicLinkVPCId) {
+        public Builder classicLinkVPCId(@Nullable Input<String> classicLinkVPCId) {
             this.classicLinkVPCId = classicLinkVPCId;
             return this;
         }
 
-        public Builder setClassicLinkVPCId(@Nullable String classicLinkVPCId) {
+        public Builder classicLinkVPCId(@Nullable String classicLinkVPCId) {
             this.classicLinkVPCId = Input.ofNullable(classicLinkVPCId);
             return this;
         }
 
-        public Builder setClassicLinkVPCSecurityGroups(@Nullable Input<List<String>> classicLinkVPCSecurityGroups) {
+        public Builder classicLinkVPCSecurityGroups(@Nullable Input<List<String>> classicLinkVPCSecurityGroups) {
             this.classicLinkVPCSecurityGroups = classicLinkVPCSecurityGroups;
             return this;
         }
 
-        public Builder setClassicLinkVPCSecurityGroups(@Nullable List<String> classicLinkVPCSecurityGroups) {
+        public Builder classicLinkVPCSecurityGroups(@Nullable List<String> classicLinkVPCSecurityGroups) {
             this.classicLinkVPCSecurityGroups = Input.ofNullable(classicLinkVPCSecurityGroups);
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Input<Boolean> ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Input<Boolean> ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = Input.ofNullable(ebsOptimized);
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable Input<String> iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable Input<String> iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable String iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
             this.iamInstanceProfile = Input.ofNullable(iamInstanceProfile);
             return this;
         }
 
-        public Builder setImageId(Input<String> imageId) {
+        public Builder imageId(Input<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Input.of(Objects.requireNonNull(imageId));
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setInstanceMonitoring(@Nullable Input<Boolean> instanceMonitoring) {
+        public Builder instanceMonitoring(@Nullable Input<Boolean> instanceMonitoring) {
             this.instanceMonitoring = instanceMonitoring;
             return this;
         }
 
-        public Builder setInstanceMonitoring(@Nullable Boolean instanceMonitoring) {
+        public Builder instanceMonitoring(@Nullable Boolean instanceMonitoring) {
             this.instanceMonitoring = Input.ofNullable(instanceMonitoring);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setKernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Input<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
-        public Builder setKernelId(@Nullable String kernelId) {
+        public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Input.ofNullable(kernelId);
             return this;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setLaunchConfigurationName(@Nullable Input<String> launchConfigurationName) {
+        public Builder launchConfigurationName(@Nullable Input<String> launchConfigurationName) {
             this.launchConfigurationName = launchConfigurationName;
             return this;
         }
 
-        public Builder setLaunchConfigurationName(@Nullable String launchConfigurationName) {
+        public Builder launchConfigurationName(@Nullable String launchConfigurationName) {
             this.launchConfigurationName = Input.ofNullable(launchConfigurationName);
             return this;
         }
 
-        public Builder setMetadataOptions(@Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
+        public Builder metadataOptions(@Nullable Input<LaunchConfigurationMetadataOptionsArgs> metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
 
-        public Builder setMetadataOptions(@Nullable LaunchConfigurationMetadataOptionsArgs metadataOptions) {
+        public Builder metadataOptions(@Nullable LaunchConfigurationMetadataOptionsArgs metadataOptions) {
             this.metadataOptions = Input.ofNullable(metadataOptions);
             return this;
         }
 
-        public Builder setPlacementTenancy(@Nullable Input<String> placementTenancy) {
+        public Builder placementTenancy(@Nullable Input<String> placementTenancy) {
             this.placementTenancy = placementTenancy;
             return this;
         }
 
-        public Builder setPlacementTenancy(@Nullable String placementTenancy) {
+        public Builder placementTenancy(@Nullable String placementTenancy) {
             this.placementTenancy = Input.ofNullable(placementTenancy);
             return this;
         }
 
-        public Builder setRamDiskId(@Nullable Input<String> ramDiskId) {
+        public Builder ramDiskId(@Nullable Input<String> ramDiskId) {
             this.ramDiskId = ramDiskId;
             return this;
         }
 
-        public Builder setRamDiskId(@Nullable String ramDiskId) {
+        public Builder ramDiskId(@Nullable String ramDiskId) {
             this.ramDiskId = Input.ofNullable(ramDiskId);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable Input<String> spotPrice) {
+        public Builder spotPrice(@Nullable Input<String> spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable String spotPrice) {
+        public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = Input.ofNullable(spotPrice);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }

@@ -76,32 +76,32 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends io.pulumi.r
     	      this.name = defaults.name;
         }
 
-        public Builder setAddress(@Nullable Input<DataflowEndpointGroupSocketAddressArgs> address) {
+        public Builder address(@Nullable Input<DataflowEndpointGroupSocketAddressArgs> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable DataflowEndpointGroupSocketAddressArgs address) {
+        public Builder address(@Nullable DataflowEndpointGroupSocketAddressArgs address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setMtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Input<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Input.ofNullable(mtu);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

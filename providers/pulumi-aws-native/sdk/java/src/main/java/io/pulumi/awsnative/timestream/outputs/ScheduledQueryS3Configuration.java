@@ -60,17 +60,17 @@ public final class ScheduledQueryS3Configuration {
     	      this.objectKeyPrefix = defaults.objectKeyPrefix;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setEncryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
+        public Builder encryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable String objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }

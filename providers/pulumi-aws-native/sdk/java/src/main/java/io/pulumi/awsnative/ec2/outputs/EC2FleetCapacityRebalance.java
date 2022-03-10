@@ -52,12 +52,12 @@ public final class EC2FleetCapacityRebalance {
     	      this.terminationDelay = defaults.terminationDelay;
         }
 
-        public Builder setReplacementStrategy(@Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy) {
+        public Builder replacementStrategy(@Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
-        public Builder setTerminationDelay(@Nullable Integer terminationDelay) {
+        public Builder terminationDelay(@Nullable Integer terminationDelay) {
             this.terminationDelay = terminationDelay;
             return this;
         }

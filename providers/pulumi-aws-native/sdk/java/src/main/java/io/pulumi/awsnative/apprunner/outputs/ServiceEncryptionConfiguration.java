@@ -48,7 +48,7 @@ public final class ServiceEncryptionConfiguration {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }

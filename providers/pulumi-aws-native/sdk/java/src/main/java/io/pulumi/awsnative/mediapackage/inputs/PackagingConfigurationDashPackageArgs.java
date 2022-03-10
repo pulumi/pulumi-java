@@ -136,62 +136,62 @@ public final class PackagingConfigurationDashPackageArgs extends io.pulumi.resou
     	      this.segmentTemplateFormat = defaults.segmentTemplateFormat;
         }
 
-        public Builder setDashManifests(Input<List<PackagingConfigurationDashManifestArgs>> dashManifests) {
+        public Builder dashManifests(Input<List<PackagingConfigurationDashManifestArgs>> dashManifests) {
             this.dashManifests = Objects.requireNonNull(dashManifests);
             return this;
         }
 
-        public Builder setDashManifests(List<PackagingConfigurationDashManifestArgs> dashManifests) {
+        public Builder dashManifests(List<PackagingConfigurationDashManifestArgs> dashManifests) {
             this.dashManifests = Input.of(Objects.requireNonNull(dashManifests));
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<PackagingConfigurationDashEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<PackagingConfigurationDashEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationDashEncryptionArgs encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationDashEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setIncludeEncoderConfigurationInSegments(@Nullable Input<Boolean> includeEncoderConfigurationInSegments) {
+        public Builder includeEncoderConfigurationInSegments(@Nullable Input<Boolean> includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
 
-        public Builder setIncludeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
+        public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = Input.ofNullable(includeEncoderConfigurationInSegments);
             return this;
         }
 
-        public Builder setPeriodTriggers(@Nullable Input<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers) {
+        public Builder periodTriggers(@Nullable Input<List<PackagingConfigurationDashPackagePeriodTriggersItem>> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
 
-        public Builder setPeriodTriggers(@Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
+        public Builder periodTriggers(@Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = Input.ofNullable(periodTriggers);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
 
-        public Builder setSegmentTemplateFormat(@Nullable Input<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
+        public Builder segmentTemplateFormat(@Nullable Input<PackagingConfigurationDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
 
-        public Builder setSegmentTemplateFormat(@Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
+        public Builder segmentTemplateFormat(@Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = Input.ofNullable(segmentTemplateFormat);
             return this;
         }

@@ -42,7 +42,7 @@ public final class AssetModelAttribute {
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }

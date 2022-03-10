@@ -47,7 +47,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
     	      this.serverCertificateName = defaults.serverCertificateName;
         }
 
-        public Builder setServerCertificateName(String serverCertificateName) {
+        public Builder serverCertificateName(String serverCertificateName) {
             this.serverCertificateName = Objects.requireNonNull(serverCertificateName);
             return this;
         }

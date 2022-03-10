@@ -150,92 +150,92 @@ public final class CertificateAuthorityKeyUsageArgs extends io.pulumi.resources.
     	      this.nonRepudiation = defaults.nonRepudiation;
         }
 
-        public Builder setCRLSign(@Nullable Input<Boolean> cRLSign) {
+        public Builder cRLSign(@Nullable Input<Boolean> cRLSign) {
             this.cRLSign = cRLSign;
             return this;
         }
 
-        public Builder setCRLSign(@Nullable Boolean cRLSign) {
+        public Builder cRLSign(@Nullable Boolean cRLSign) {
             this.cRLSign = Input.ofNullable(cRLSign);
             return this;
         }
 
-        public Builder setDataEncipherment(@Nullable Input<Boolean> dataEncipherment) {
+        public Builder dataEncipherment(@Nullable Input<Boolean> dataEncipherment) {
             this.dataEncipherment = dataEncipherment;
             return this;
         }
 
-        public Builder setDataEncipherment(@Nullable Boolean dataEncipherment) {
+        public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
             this.dataEncipherment = Input.ofNullable(dataEncipherment);
             return this;
         }
 
-        public Builder setDecipherOnly(@Nullable Input<Boolean> decipherOnly) {
+        public Builder decipherOnly(@Nullable Input<Boolean> decipherOnly) {
             this.decipherOnly = decipherOnly;
             return this;
         }
 
-        public Builder setDecipherOnly(@Nullable Boolean decipherOnly) {
+        public Builder decipherOnly(@Nullable Boolean decipherOnly) {
             this.decipherOnly = Input.ofNullable(decipherOnly);
             return this;
         }
 
-        public Builder setDigitalSignature(@Nullable Input<Boolean> digitalSignature) {
+        public Builder digitalSignature(@Nullable Input<Boolean> digitalSignature) {
             this.digitalSignature = digitalSignature;
             return this;
         }
 
-        public Builder setDigitalSignature(@Nullable Boolean digitalSignature) {
+        public Builder digitalSignature(@Nullable Boolean digitalSignature) {
             this.digitalSignature = Input.ofNullable(digitalSignature);
             return this;
         }
 
-        public Builder setEncipherOnly(@Nullable Input<Boolean> encipherOnly) {
+        public Builder encipherOnly(@Nullable Input<Boolean> encipherOnly) {
             this.encipherOnly = encipherOnly;
             return this;
         }
 
-        public Builder setEncipherOnly(@Nullable Boolean encipherOnly) {
+        public Builder encipherOnly(@Nullable Boolean encipherOnly) {
             this.encipherOnly = Input.ofNullable(encipherOnly);
             return this;
         }
 
-        public Builder setKeyAgreement(@Nullable Input<Boolean> keyAgreement) {
+        public Builder keyAgreement(@Nullable Input<Boolean> keyAgreement) {
             this.keyAgreement = keyAgreement;
             return this;
         }
 
-        public Builder setKeyAgreement(@Nullable Boolean keyAgreement) {
+        public Builder keyAgreement(@Nullable Boolean keyAgreement) {
             this.keyAgreement = Input.ofNullable(keyAgreement);
             return this;
         }
 
-        public Builder setKeyCertSign(@Nullable Input<Boolean> keyCertSign) {
+        public Builder keyCertSign(@Nullable Input<Boolean> keyCertSign) {
             this.keyCertSign = keyCertSign;
             return this;
         }
 
-        public Builder setKeyCertSign(@Nullable Boolean keyCertSign) {
+        public Builder keyCertSign(@Nullable Boolean keyCertSign) {
             this.keyCertSign = Input.ofNullable(keyCertSign);
             return this;
         }
 
-        public Builder setKeyEncipherment(@Nullable Input<Boolean> keyEncipherment) {
+        public Builder keyEncipherment(@Nullable Input<Boolean> keyEncipherment) {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
 
-        public Builder setKeyEncipherment(@Nullable Boolean keyEncipherment) {
+        public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
             this.keyEncipherment = Input.ofNullable(keyEncipherment);
             return this;
         }
 
-        public Builder setNonRepudiation(@Nullable Input<Boolean> nonRepudiation) {
+        public Builder nonRepudiation(@Nullable Input<Boolean> nonRepudiation) {
             this.nonRepudiation = nonRepudiation;
             return this;
         }
 
-        public Builder setNonRepudiation(@Nullable Boolean nonRepudiation) {
+        public Builder nonRepudiation(@Nullable Boolean nonRepudiation) {
             this.nonRepudiation = Input.ofNullable(nonRepudiation);
             return this;
         }

@@ -76,32 +76,32 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
     	      this.spectrumConfig = defaults.spectrumConfig;
         }
 
-        public Builder setDecodeConfig(@Nullable Input<ConfigDecodeConfigArgs> decodeConfig) {
+        public Builder decodeConfig(@Nullable Input<ConfigDecodeConfigArgs> decodeConfig) {
             this.decodeConfig = decodeConfig;
             return this;
         }
 
-        public Builder setDecodeConfig(@Nullable ConfigDecodeConfigArgs decodeConfig) {
+        public Builder decodeConfig(@Nullable ConfigDecodeConfigArgs decodeConfig) {
             this.decodeConfig = Input.ofNullable(decodeConfig);
             return this;
         }
 
-        public Builder setDemodulationConfig(@Nullable Input<ConfigDemodulationConfigArgs> demodulationConfig) {
+        public Builder demodulationConfig(@Nullable Input<ConfigDemodulationConfigArgs> demodulationConfig) {
             this.demodulationConfig = demodulationConfig;
             return this;
         }
 
-        public Builder setDemodulationConfig(@Nullable ConfigDemodulationConfigArgs demodulationConfig) {
+        public Builder demodulationConfig(@Nullable ConfigDemodulationConfigArgs demodulationConfig) {
             this.demodulationConfig = Input.ofNullable(demodulationConfig);
             return this;
         }
 
-        public Builder setSpectrumConfig(@Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig) {
+        public Builder spectrumConfig(@Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigSpectrumConfigArgs spectrumConfig) {
             this.spectrumConfig = Input.ofNullable(spectrumConfig);
             return this;
         }

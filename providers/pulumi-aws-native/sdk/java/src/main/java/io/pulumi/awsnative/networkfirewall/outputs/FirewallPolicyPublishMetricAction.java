@@ -41,7 +41,7 @@ public final class FirewallPolicyPublishMetricAction {
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(List<FirewallPolicyDimension> dimensions) {
+        public Builder dimensions(List<FirewallPolicyDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }

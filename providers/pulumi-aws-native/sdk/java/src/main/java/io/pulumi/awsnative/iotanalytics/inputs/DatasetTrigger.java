@@ -63,12 +63,12 @@ public final class DatasetTrigger extends io.pulumi.resources.InvokeArgs {
     	      this.triggeringDataset = defaults.triggeringDataset;
         }
 
-        public Builder setSchedule(@Nullable DatasetSchedule schedule) {
+        public Builder schedule(@Nullable DatasetSchedule schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setTriggeringDataset(@Nullable DatasetTriggeringDataset triggeringDataset) {
+        public Builder triggeringDataset(@Nullable DatasetTriggeringDataset triggeringDataset) {
             this.triggeringDataset = triggeringDataset;
             return this;
         }

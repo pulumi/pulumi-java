@@ -67,12 +67,12 @@ public final class ThemeTileLayoutStyle extends io.pulumi.resources.InvokeArgs {
     	      this.margin = defaults.margin;
         }
 
-        public Builder setGutter(@Nullable ThemeGutterStyle gutter) {
+        public Builder gutter(@Nullable ThemeGutterStyle gutter) {
             this.gutter = gutter;
             return this;
         }
 
-        public Builder setMargin(@Nullable ThemeMarginStyle margin) {
+        public Builder margin(@Nullable ThemeMarginStyle margin) {
             this.margin = margin;
             return this;
         }

@@ -76,17 +76,17 @@ public final class LicenseConsumptionConfiguration extends io.pulumi.resources.I
     	      this.renewType = defaults.renewType;
         }
 
-        public Builder setBorrowConfiguration(@Nullable LicenseBorrowConfiguration borrowConfiguration) {
+        public Builder borrowConfiguration(@Nullable LicenseBorrowConfiguration borrowConfiguration) {
             this.borrowConfiguration = borrowConfiguration;
             return this;
         }
 
-        public Builder setProvisionalConfiguration(@Nullable LicenseProvisionalConfiguration provisionalConfiguration) {
+        public Builder provisionalConfiguration(@Nullable LicenseProvisionalConfiguration provisionalConfiguration) {
             this.provisionalConfiguration = provisionalConfiguration;
             return this;
         }
 
-        public Builder setRenewType(@Nullable String renewType) {
+        public Builder renewType(@Nullable String renewType) {
             this.renewType = renewType;
             return this;
         }

@@ -57,12 +57,12 @@ public final class ContainerRecipeComponentConfigurationArgs extends io.pulumi.r
     	      this.componentArn = defaults.componentArn;
         }
 
-        public Builder setComponentArn(@Nullable Input<String> componentArn) {
+        public Builder componentArn(@Nullable Input<String> componentArn) {
             this.componentArn = componentArn;
             return this;
         }
 
-        public Builder setComponentArn(@Nullable String componentArn) {
+        public Builder componentArn(@Nullable String componentArn) {
             this.componentArn = Input.ofNullable(componentArn);
             return this;
         }

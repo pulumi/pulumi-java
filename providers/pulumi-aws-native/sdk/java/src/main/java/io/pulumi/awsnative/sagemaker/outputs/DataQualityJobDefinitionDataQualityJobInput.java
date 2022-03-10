@@ -40,7 +40,7 @@ public final class DataQualityJobDefinitionDataQualityJobInput {
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder setEndpointInput(DataQualityJobDefinitionEndpointInput endpointInput) {
+        public Builder endpointInput(DataQualityJobDefinitionEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }

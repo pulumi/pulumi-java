@@ -68,12 +68,12 @@ public final class GetModelArgs extends io.pulumi.resources.InvokeArgs {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }

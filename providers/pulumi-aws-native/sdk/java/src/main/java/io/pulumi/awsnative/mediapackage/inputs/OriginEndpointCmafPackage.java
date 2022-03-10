@@ -119,27 +119,27 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointCmafEncryption encryption) {
+        public Builder encryption(@Nullable OriginEndpointCmafEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setHlsManifests(@Nullable List<OriginEndpointHlsManifest> hlsManifests) {
+        public Builder hlsManifests(@Nullable List<OriginEndpointHlsManifest> hlsManifests) {
             this.hlsManifests = hlsManifests;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentPrefix(@Nullable String segmentPrefix) {
+        public Builder segmentPrefix(@Nullable String segmentPrefix) {
             this.segmentPrefix = segmentPrefix;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

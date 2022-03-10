@@ -152,47 +152,47 @@ public final class DeliveryStreamSplunkDestinationConfiguration extends io.pulum
     	      this.s3Configuration = defaults.s3Configuration;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setHECAcknowledgmentTimeoutInSeconds(@Nullable Integer hECAcknowledgmentTimeoutInSeconds) {
+        public Builder hECAcknowledgmentTimeoutInSeconds(@Nullable Integer hECAcknowledgmentTimeoutInSeconds) {
             this.hECAcknowledgmentTimeoutInSeconds = hECAcknowledgmentTimeoutInSeconds;
             return this;
         }
 
-        public Builder setHECEndpoint(String hECEndpoint) {
+        public Builder hECEndpoint(String hECEndpoint) {
             this.hECEndpoint = Objects.requireNonNull(hECEndpoint);
             return this;
         }
 
-        public Builder setHECEndpointType(DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType) {
+        public Builder hECEndpointType(DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType) {
             this.hECEndpointType = Objects.requireNonNull(hECEndpointType);
             return this;
         }
 
-        public Builder setHECToken(String hECToken) {
+        public Builder hECToken(String hECToken) {
             this.hECToken = Objects.requireNonNull(hECToken);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamSplunkRetryOptions retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamSplunkRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }

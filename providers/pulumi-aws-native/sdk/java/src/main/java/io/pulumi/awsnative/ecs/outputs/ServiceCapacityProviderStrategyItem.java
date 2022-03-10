@@ -60,17 +60,17 @@ public final class ServiceCapacityProviderStrategyItem {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBase(@Nullable Integer base) {
+        public Builder base(@Nullable Integer base) {
             this.base = base;
             return this;
         }
 
-        public Builder setCapacityProvider(@Nullable String capacityProvider) {
+        public Builder capacityProvider(@Nullable String capacityProvider) {
             this.capacityProvider = capacityProvider;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

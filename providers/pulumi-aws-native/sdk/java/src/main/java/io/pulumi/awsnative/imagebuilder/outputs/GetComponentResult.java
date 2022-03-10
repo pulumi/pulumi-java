@@ -85,17 +85,17 @@ public final class GetComponentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setType(@Nullable ComponentType type) {
+        public Builder type(@Nullable ComponentType type) {
             this.type = type;
             return this;
         }

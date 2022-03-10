@@ -58,12 +58,12 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
     	      this.kafkaBootstrapServers = defaults.kafkaBootstrapServers;
         }
 
-        public Builder setKafkaBootstrapServers(@Nullable Input<List<String>> kafkaBootstrapServers) {
+        public Builder kafkaBootstrapServers(@Nullable Input<List<String>> kafkaBootstrapServers) {
             this.kafkaBootstrapServers = kafkaBootstrapServers;
             return this;
         }
 
-        public Builder setKafkaBootstrapServers(@Nullable List<String> kafkaBootstrapServers) {
+        public Builder kafkaBootstrapServers(@Nullable List<String> kafkaBootstrapServers) {
             this.kafkaBootstrapServers = Input.ofNullable(kafkaBootstrapServers);
             return this;
         }

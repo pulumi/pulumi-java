@@ -100,52 +100,52 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     	      this.variationName = defaults.variationName;
         }
 
-        public Builder setBooleanValue(@Nullable Input<Boolean> booleanValue) {
+        public Builder booleanValue(@Nullable Input<Boolean> booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
-        public Builder setBooleanValue(@Nullable Boolean booleanValue) {
+        public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = Input.ofNullable(booleanValue);
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Input.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder setLongValue(@Nullable Input<Double> longValue) {
+        public Builder longValue(@Nullable Input<Double> longValue) {
             this.longValue = longValue;
             return this;
         }
 
-        public Builder setLongValue(@Nullable Double longValue) {
+        public Builder longValue(@Nullable Double longValue) {
             this.longValue = Input.ofNullable(longValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
 
-        public Builder setVariationName(@Nullable Input<String> variationName) {
+        public Builder variationName(@Nullable Input<String> variationName) {
             this.variationName = variationName;
             return this;
         }
 
-        public Builder setVariationName(@Nullable String variationName) {
+        public Builder variationName(@Nullable String variationName) {
             this.variationName = Input.ofNullable(variationName);
             return this;
         }

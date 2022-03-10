@@ -70,22 +70,22 @@ public final class ResourceDataSyncSyncSource {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setAwsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource) {
+        public Builder awsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource) {
             this.awsOrganizationsSource = awsOrganizationsSource;
             return this;
         }
 
-        public Builder setIncludeFutureRegions(@Nullable Boolean includeFutureRegions) {
+        public Builder includeFutureRegions(@Nullable Boolean includeFutureRegions) {
             this.includeFutureRegions = includeFutureRegions;
             return this;
         }
 
-        public Builder setSourceRegions(List<String> sourceRegions) {
+        public Builder sourceRegions(List<String> sourceRegions) {
             this.sourceRegions = Objects.requireNonNull(sourceRegions);
             return this;
         }
 
-        public Builder setSourceType(String sourceType) {
+        public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }

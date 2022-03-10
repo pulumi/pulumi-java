@@ -87,32 +87,32 @@ public final class GetAuthorizerResult {
     	      this.tokenSigningPublicKeys = defaults.tokenSigningPublicKeys;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorizerFunctionArn(@Nullable String authorizerFunctionArn) {
+        public Builder authorizerFunctionArn(@Nullable String authorizerFunctionArn) {
             this.authorizerFunctionArn = authorizerFunctionArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable AuthorizerStatus status) {
+        public Builder status(@Nullable AuthorizerStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AuthorizerTag> tags) {
+        public Builder tags(@Nullable List<AuthorizerTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTokenKeyName(@Nullable String tokenKeyName) {
+        public Builder tokenKeyName(@Nullable String tokenKeyName) {
             this.tokenKeyName = tokenKeyName;
             return this;
         }
 
-        public Builder setTokenSigningPublicKeys(@Nullable Object tokenSigningPublicKeys) {
+        public Builder tokenSigningPublicKeys(@Nullable Object tokenSigningPublicKeys) {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }

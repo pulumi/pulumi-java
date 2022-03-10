@@ -88,32 +88,32 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAuthorizedAccountId(Input<String> authorizedAccountId) {
+        public Builder authorizedAccountId(Input<String> authorizedAccountId) {
             this.authorizedAccountId = Objects.requireNonNull(authorizedAccountId);
             return this;
         }
 
-        public Builder setAuthorizedAccountId(String authorizedAccountId) {
+        public Builder authorizedAccountId(String authorizedAccountId) {
             this.authorizedAccountId = Input.of(Objects.requireNonNull(authorizedAccountId));
             return this;
         }
 
-        public Builder setAuthorizedAwsRegion(Input<String> authorizedAwsRegion) {
+        public Builder authorizedAwsRegion(Input<String> authorizedAwsRegion) {
             this.authorizedAwsRegion = Objects.requireNonNull(authorizedAwsRegion);
             return this;
         }
 
-        public Builder setAuthorizedAwsRegion(String authorizedAwsRegion) {
+        public Builder authorizedAwsRegion(String authorizedAwsRegion) {
             this.authorizedAwsRegion = Input.of(Objects.requireNonNull(authorizedAwsRegion));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AggregationAuthorizationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AggregationAuthorizationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AggregationAuthorizationTagArgs> tags) {
+        public Builder tags(@Nullable List<AggregationAuthorizationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

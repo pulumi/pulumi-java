@@ -56,12 +56,12 @@ public final class MitigationActionPublishFindingToSnsParamsArgs extends io.pulu
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setTopicArn(Input<String> topicArn) {
+        public Builder topicArn(Input<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Input.of(Objects.requireNonNull(topicArn));
             return this;
         }

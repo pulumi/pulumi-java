@@ -113,62 +113,62 @@ public final class JobDataCatalogOutputArgs extends io.pulumi.resources.Resource
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDatabaseOptions(@Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
+        public Builder databaseOptions(@Nullable Input<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
             this.databaseOptions = databaseOptions;
             return this;
         }
 
-        public Builder setDatabaseOptions(@Nullable JobDatabaseTableOutputOptionsArgs databaseOptions) {
+        public Builder databaseOptions(@Nullable JobDatabaseTableOutputOptionsArgs databaseOptions) {
             this.databaseOptions = Input.ofNullable(databaseOptions);
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Input<Boolean> overwrite) {
+        public Builder overwrite(@Nullable Input<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Input.ofNullable(overwrite);
             return this;
         }
 
-        public Builder setS3Options(@Nullable Input<JobS3TableOutputOptionsArgs> s3Options) {
+        public Builder s3Options(@Nullable Input<JobS3TableOutputOptionsArgs> s3Options) {
             this.s3Options = s3Options;
             return this;
         }
 
-        public Builder setS3Options(@Nullable JobS3TableOutputOptionsArgs s3Options) {
+        public Builder s3Options(@Nullable JobS3TableOutputOptionsArgs s3Options) {
             this.s3Options = Input.ofNullable(s3Options);
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

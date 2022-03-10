@@ -75,12 +75,12 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends io
     	      this.httpTokens = defaults.httpTokens;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
+        public Builder httpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }

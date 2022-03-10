@@ -167,102 +167,102 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
     	      this.selectAttributes = defaults.selectAttributes;
         }
 
-        public Builder setAddAttributes(@Nullable Input<PipelineAddAttributesArgs> addAttributes) {
+        public Builder addAttributes(@Nullable Input<PipelineAddAttributesArgs> addAttributes) {
             this.addAttributes = addAttributes;
             return this;
         }
 
-        public Builder setAddAttributes(@Nullable PipelineAddAttributesArgs addAttributes) {
+        public Builder addAttributes(@Nullable PipelineAddAttributesArgs addAttributes) {
             this.addAttributes = Input.ofNullable(addAttributes);
             return this;
         }
 
-        public Builder setChannel(@Nullable Input<PipelineChannelArgs> channel) {
+        public Builder channel(@Nullable Input<PipelineChannelArgs> channel) {
             this.channel = channel;
             return this;
         }
 
-        public Builder setChannel(@Nullable PipelineChannelArgs channel) {
+        public Builder channel(@Nullable PipelineChannelArgs channel) {
             this.channel = Input.ofNullable(channel);
             return this;
         }
 
-        public Builder setDatastore(@Nullable Input<PipelineDatastoreArgs> datastore) {
+        public Builder datastore(@Nullable Input<PipelineDatastoreArgs> datastore) {
             this.datastore = datastore;
             return this;
         }
 
-        public Builder setDatastore(@Nullable PipelineDatastoreArgs datastore) {
+        public Builder datastore(@Nullable PipelineDatastoreArgs datastore) {
             this.datastore = Input.ofNullable(datastore);
             return this;
         }
 
-        public Builder setDeviceRegistryEnrich(@Nullable Input<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich) {
+        public Builder deviceRegistryEnrich(@Nullable Input<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich) {
             this.deviceRegistryEnrich = deviceRegistryEnrich;
             return this;
         }
 
-        public Builder setDeviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrichArgs deviceRegistryEnrich) {
+        public Builder deviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrichArgs deviceRegistryEnrich) {
             this.deviceRegistryEnrich = Input.ofNullable(deviceRegistryEnrich);
             return this;
         }
 
-        public Builder setDeviceShadowEnrich(@Nullable Input<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich) {
+        public Builder deviceShadowEnrich(@Nullable Input<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich) {
             this.deviceShadowEnrich = deviceShadowEnrich;
             return this;
         }
 
-        public Builder setDeviceShadowEnrich(@Nullable PipelineDeviceShadowEnrichArgs deviceShadowEnrich) {
+        public Builder deviceShadowEnrich(@Nullable PipelineDeviceShadowEnrichArgs deviceShadowEnrich) {
             this.deviceShadowEnrich = Input.ofNullable(deviceShadowEnrich);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<PipelineFilterArgs> filter) {
+        public Builder filter(@Nullable Input<PipelineFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable PipelineFilterArgs filter) {
+        public Builder filter(@Nullable PipelineFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setLambda(@Nullable Input<PipelineLambdaArgs> lambda) {
+        public Builder lambda(@Nullable Input<PipelineLambdaArgs> lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setLambda(@Nullable PipelineLambdaArgs lambda) {
+        public Builder lambda(@Nullable PipelineLambdaArgs lambda) {
             this.lambda = Input.ofNullable(lambda);
             return this;
         }
 
-        public Builder setMath(@Nullable Input<PipelineMathArgs> math) {
+        public Builder math(@Nullable Input<PipelineMathArgs> math) {
             this.math = math;
             return this;
         }
 
-        public Builder setMath(@Nullable PipelineMathArgs math) {
+        public Builder math(@Nullable PipelineMathArgs math) {
             this.math = Input.ofNullable(math);
             return this;
         }
 
-        public Builder setRemoveAttributes(@Nullable Input<PipelineRemoveAttributesArgs> removeAttributes) {
+        public Builder removeAttributes(@Nullable Input<PipelineRemoveAttributesArgs> removeAttributes) {
             this.removeAttributes = removeAttributes;
             return this;
         }
 
-        public Builder setRemoveAttributes(@Nullable PipelineRemoveAttributesArgs removeAttributes) {
+        public Builder removeAttributes(@Nullable PipelineRemoveAttributesArgs removeAttributes) {
             this.removeAttributes = Input.ofNullable(removeAttributes);
             return this;
         }
 
-        public Builder setSelectAttributes(@Nullable Input<PipelineSelectAttributesArgs> selectAttributes) {
+        public Builder selectAttributes(@Nullable Input<PipelineSelectAttributesArgs> selectAttributes) {
             this.selectAttributes = selectAttributes;
             return this;
         }
 
-        public Builder setSelectAttributes(@Nullable PipelineSelectAttributesArgs selectAttributes) {
+        public Builder selectAttributes(@Nullable PipelineSelectAttributesArgs selectAttributes) {
             this.selectAttributes = Input.ofNullable(selectAttributes);
             return this;
         }

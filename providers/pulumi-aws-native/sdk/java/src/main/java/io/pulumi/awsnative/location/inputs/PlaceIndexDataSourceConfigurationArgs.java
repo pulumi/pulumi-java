@@ -49,12 +49,12 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     	      this.intendedUse = defaults.intendedUse;
         }
 
-        public Builder setIntendedUse(@Nullable Input<PlaceIndexIntendedUse> intendedUse) {
+        public Builder intendedUse(@Nullable Input<PlaceIndexIntendedUse> intendedUse) {
             this.intendedUse = intendedUse;
             return this;
         }
 
-        public Builder setIntendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
+        public Builder intendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
             this.intendedUse = Input.ofNullable(intendedUse);
             return this;
         }

@@ -72,12 +72,12 @@ public final class ConfigurationAggregatorTag extends io.pulumi.resources.Invoke
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -74,22 +74,22 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder setMcuCount(@Nullable Input<Integer> mcuCount) {
+        public Builder mcuCount(@Nullable Input<Integer> mcuCount) {
             this.mcuCount = mcuCount;
             return this;
         }
 
-        public Builder setMcuCount(@Nullable Integer mcuCount) {
+        public Builder mcuCount(@Nullable Integer mcuCount) {
             this.mcuCount = Input.ofNullable(mcuCount);
             return this;
         }
 
-        public Builder setWorkerCount(Input<Integer> workerCount) {
+        public Builder workerCount(Input<Integer> workerCount) {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }
 
-        public Builder setWorkerCount(Integer workerCount) {
+        public Builder workerCount(Integer workerCount) {
             this.workerCount = Input.of(Objects.requireNonNull(workerCount));
             return this;
         }

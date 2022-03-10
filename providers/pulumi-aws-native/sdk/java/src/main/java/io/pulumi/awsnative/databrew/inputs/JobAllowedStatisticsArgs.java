@@ -49,12 +49,12 @@ public final class JobAllowedStatisticsArgs extends io.pulumi.resources.Resource
     	      this.statistics = defaults.statistics;
         }
 
-        public Builder setStatistics(Input<List<String>> statistics) {
+        public Builder statistics(Input<List<String>> statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
 
-        public Builder setStatistics(List<String> statistics) {
+        public Builder statistics(List<String> statistics) {
             this.statistics = Input.of(Objects.requireNonNull(statistics));
             return this;
         }

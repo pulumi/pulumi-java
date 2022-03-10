@@ -68,12 +68,12 @@ public final class BotAliasConversationLogSettings extends io.pulumi.resources.I
     	      this.textLogSettings = defaults.textLogSettings;
         }
 
-        public Builder setAudioLogSettings(@Nullable List<BotAliasAudioLogSetting> audioLogSettings) {
+        public Builder audioLogSettings(@Nullable List<BotAliasAudioLogSetting> audioLogSettings) {
             this.audioLogSettings = audioLogSettings;
             return this;
         }
 
-        public Builder setTextLogSettings(@Nullable List<BotAliasTextLogSetting> textLogSettings) {
+        public Builder textLogSettings(@Nullable List<BotAliasTextLogSetting> textLogSettings) {
             this.textLogSettings = textLogSettings;
             return this;
         }

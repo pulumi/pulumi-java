@@ -52,12 +52,12 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     	      this.sseKmsKeyId = defaults.sseKmsKeyId;
         }
 
-        public Builder setSseKmsKeyId(Input<String> sseKmsKeyId) {
+        public Builder sseKmsKeyId(Input<String> sseKmsKeyId) {
             this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
             return this;
         }
 
-        public Builder setSseKmsKeyId(String sseKmsKeyId) {
+        public Builder sseKmsKeyId(String sseKmsKeyId) {
             this.sseKmsKeyId = Input.of(Objects.requireNonNull(sseKmsKeyId));
             return this;
         }

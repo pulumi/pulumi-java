@@ -265,92 +265,92 @@ public final class SpotFleetLaunchSpecification extends io.pulumi.resources.Invo
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setInstanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
+        public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setKernelId(@Nullable String kernelId) {
+        public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setMonitoring(@Nullable SpotFleetMonitoring monitoring) {
+        public Builder monitoring(@Nullable SpotFleetMonitoring monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setPlacement(@Nullable SpotFleetSpotPlacement placement) {
+        public Builder placement(@Nullable SpotFleetSpotPlacement placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable String ramdiskId) {
+        public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<SpotFleetGroupIdentifier> securityGroups) {
+        public Builder securityGroups(@Nullable List<SpotFleetGroupIdentifier> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable String spotPrice) {
+        public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable List<SpotFleetTagSpecification> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable List<SpotFleetTagSpecification> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Double weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

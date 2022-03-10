@@ -188,92 +188,92 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutoConfigurationEnabled(@Nullable Input<Boolean> autoConfigurationEnabled) {
+        public Builder autoConfigurationEnabled(@Nullable Input<Boolean> autoConfigurationEnabled) {
             this.autoConfigurationEnabled = autoConfigurationEnabled;
             return this;
         }
 
-        public Builder setAutoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
+        public Builder autoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
             this.autoConfigurationEnabled = Input.ofNullable(autoConfigurationEnabled);
             return this;
         }
 
-        public Builder setCWEMonitorEnabled(@Nullable Input<Boolean> cWEMonitorEnabled) {
+        public Builder cWEMonitorEnabled(@Nullable Input<Boolean> cWEMonitorEnabled) {
             this.cWEMonitorEnabled = cWEMonitorEnabled;
             return this;
         }
 
-        public Builder setCWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
+        public Builder cWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
             this.cWEMonitorEnabled = Input.ofNullable(cWEMonitorEnabled);
             return this;
         }
 
-        public Builder setComponentMonitoringSettings(@Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings) {
+        public Builder componentMonitoringSettings(@Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings) {
             this.componentMonitoringSettings = componentMonitoringSettings;
             return this;
         }
 
-        public Builder setComponentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSettingArgs> componentMonitoringSettings) {
+        public Builder componentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSettingArgs> componentMonitoringSettings) {
             this.componentMonitoringSettings = Input.ofNullable(componentMonitoringSettings);
             return this;
         }
 
-        public Builder setCustomComponents(@Nullable Input<List<ApplicationCustomComponentArgs>> customComponents) {
+        public Builder customComponents(@Nullable Input<List<ApplicationCustomComponentArgs>> customComponents) {
             this.customComponents = customComponents;
             return this;
         }
 
-        public Builder setCustomComponents(@Nullable List<ApplicationCustomComponentArgs> customComponents) {
+        public Builder customComponents(@Nullable List<ApplicationCustomComponentArgs> customComponents) {
             this.customComponents = Input.ofNullable(customComponents);
             return this;
         }
 
-        public Builder setLogPatternSets(@Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets) {
+        public Builder logPatternSets(@Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets) {
             this.logPatternSets = logPatternSets;
             return this;
         }
 
-        public Builder setLogPatternSets(@Nullable List<ApplicationLogPatternSetArgs> logPatternSets) {
+        public Builder logPatternSets(@Nullable List<ApplicationLogPatternSetArgs> logPatternSets) {
             this.logPatternSets = Input.ofNullable(logPatternSets);
             return this;
         }
 
-        public Builder setOpsCenterEnabled(@Nullable Input<Boolean> opsCenterEnabled) {
+        public Builder opsCenterEnabled(@Nullable Input<Boolean> opsCenterEnabled) {
             this.opsCenterEnabled = opsCenterEnabled;
             return this;
         }
 
-        public Builder setOpsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
+        public Builder opsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
             this.opsCenterEnabled = Input.ofNullable(opsCenterEnabled);
             return this;
         }
 
-        public Builder setOpsItemSNSTopicArn(@Nullable Input<String> opsItemSNSTopicArn) {
+        public Builder opsItemSNSTopicArn(@Nullable Input<String> opsItemSNSTopicArn) {
             this.opsItemSNSTopicArn = opsItemSNSTopicArn;
             return this;
         }
 
-        public Builder setOpsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
+        public Builder opsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
             this.opsItemSNSTopicArn = Input.ofNullable(opsItemSNSTopicArn);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTagArgs> tags) {
+        public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -127,32 +127,32 @@ public final class BucketRule {
     	      this.status = defaults.status;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketRuleFilterProperties filter) {
+        public Builder filter(@Nullable BucketRuleFilterProperties filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setStatus(@Nullable BucketRuleStatus status) {
+        public Builder status(@Nullable BucketRuleStatus status) {
             this.status = status;
             return this;
         }

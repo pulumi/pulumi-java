@@ -89,42 +89,42 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRelevance(@Nullable Input<IndexRelevanceArgs> relevance) {
+        public Builder relevance(@Nullable Input<IndexRelevanceArgs> relevance) {
             this.relevance = relevance;
             return this;
         }
 
-        public Builder setRelevance(@Nullable IndexRelevanceArgs relevance) {
+        public Builder relevance(@Nullable IndexRelevanceArgs relevance) {
             this.relevance = Input.ofNullable(relevance);
             return this;
         }
 
-        public Builder setSearch(@Nullable Input<IndexSearchArgs> search) {
+        public Builder search(@Nullable Input<IndexSearchArgs> search) {
             this.search = search;
             return this;
         }
 
-        public Builder setSearch(@Nullable IndexSearchArgs search) {
+        public Builder search(@Nullable IndexSearchArgs search) {
             this.search = Input.ofNullable(search);
             return this;
         }
 
-        public Builder setType(Input<IndexDocumentAttributeValueType> type) {
+        public Builder type(Input<IndexDocumentAttributeValueType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(IndexDocumentAttributeValueType type) {
+        public Builder type(IndexDocumentAttributeValueType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

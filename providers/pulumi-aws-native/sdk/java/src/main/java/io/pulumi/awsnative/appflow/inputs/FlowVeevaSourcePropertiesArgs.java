@@ -99,52 +99,52 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
     	      this.object = defaults.object;
         }
 
-        public Builder setDocumentType(@Nullable Input<String> documentType) {
+        public Builder documentType(@Nullable Input<String> documentType) {
             this.documentType = documentType;
             return this;
         }
 
-        public Builder setDocumentType(@Nullable String documentType) {
+        public Builder documentType(@Nullable String documentType) {
             this.documentType = Input.ofNullable(documentType);
             return this;
         }
 
-        public Builder setIncludeAllVersions(@Nullable Input<Boolean> includeAllVersions) {
+        public Builder includeAllVersions(@Nullable Input<Boolean> includeAllVersions) {
             this.includeAllVersions = includeAllVersions;
             return this;
         }
 
-        public Builder setIncludeAllVersions(@Nullable Boolean includeAllVersions) {
+        public Builder includeAllVersions(@Nullable Boolean includeAllVersions) {
             this.includeAllVersions = Input.ofNullable(includeAllVersions);
             return this;
         }
 
-        public Builder setIncludeRenditions(@Nullable Input<Boolean> includeRenditions) {
+        public Builder includeRenditions(@Nullable Input<Boolean> includeRenditions) {
             this.includeRenditions = includeRenditions;
             return this;
         }
 
-        public Builder setIncludeRenditions(@Nullable Boolean includeRenditions) {
+        public Builder includeRenditions(@Nullable Boolean includeRenditions) {
             this.includeRenditions = Input.ofNullable(includeRenditions);
             return this;
         }
 
-        public Builder setIncludeSourceFiles(@Nullable Input<Boolean> includeSourceFiles) {
+        public Builder includeSourceFiles(@Nullable Input<Boolean> includeSourceFiles) {
             this.includeSourceFiles = includeSourceFiles;
             return this;
         }
 
-        public Builder setIncludeSourceFiles(@Nullable Boolean includeSourceFiles) {
+        public Builder includeSourceFiles(@Nullable Boolean includeSourceFiles) {
             this.includeSourceFiles = Input.ofNullable(includeSourceFiles);
             return this;
         }
 
-        public Builder setObject(Input<String> object) {
+        public Builder object(Input<String> object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }

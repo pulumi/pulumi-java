@@ -92,32 +92,32 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
     	      this.tags = defaults.tags;
         }
 
-        public Builder setComplianceResourceIds(@Nullable Input<List<String>> complianceResourceIds) {
+        public Builder complianceResourceIds(@Nullable Input<List<String>> complianceResourceIds) {
             this.complianceResourceIds = complianceResourceIds;
             return this;
         }
 
-        public Builder setComplianceResourceIds(@Nullable List<String> complianceResourceIds) {
+        public Builder complianceResourceIds(@Nullable List<String> complianceResourceIds) {
             this.complianceResourceIds = Input.ofNullable(complianceResourceIds);
             return this;
         }
 
-        public Builder setComplianceResourceTypes(@Nullable Input<List<String>> complianceResourceTypes) {
+        public Builder complianceResourceTypes(@Nullable Input<List<String>> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
 
-        public Builder setComplianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
+        public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = Input.ofNullable(complianceResourceTypes);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FrameworkTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FrameworkTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FrameworkTagArgs> tags) {
+        public Builder tags(@Nullable List<FrameworkTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -137,62 +137,62 @@ public final class RepositoryAssociationArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable Input<String> connectionArn) {
+        public Builder connectionArn(@Nullable Input<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = Input.ofNullable(connectionArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RepositoryAssociationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RepositoryAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RepositoryAssociationTagArgs> tags) {
+        public Builder tags(@Nullable List<RepositoryAssociationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<RepositoryAssociationType> type) {
+        public Builder type(Input<RepositoryAssociationType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(RepositoryAssociationType type) {
+        public Builder type(RepositoryAssociationType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

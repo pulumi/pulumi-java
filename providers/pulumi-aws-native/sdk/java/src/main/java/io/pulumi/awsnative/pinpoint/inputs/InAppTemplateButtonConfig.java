@@ -87,22 +87,22 @@ public final class InAppTemplateButtonConfig extends io.pulumi.resources.InvokeA
     	      this.web = defaults.web;
         }
 
-        public Builder setAndroid(@Nullable InAppTemplateOverrideButtonConfiguration android) {
+        public Builder android(@Nullable InAppTemplateOverrideButtonConfiguration android) {
             this.android = android;
             return this;
         }
 
-        public Builder setDefaultConfig(@Nullable InAppTemplateDefaultButtonConfiguration defaultConfig) {
+        public Builder defaultConfig(@Nullable InAppTemplateDefaultButtonConfiguration defaultConfig) {
             this.defaultConfig = defaultConfig;
             return this;
         }
 
-        public Builder setIOS(@Nullable InAppTemplateOverrideButtonConfiguration iOS) {
+        public Builder iOS(@Nullable InAppTemplateOverrideButtonConfiguration iOS) {
             this.iOS = iOS;
             return this;
         }
 
-        public Builder setWeb(@Nullable InAppTemplateOverrideButtonConfiguration web) {
+        public Builder web(@Nullable InAppTemplateOverrideButtonConfiguration web) {
             this.web = web;
             return this;
         }

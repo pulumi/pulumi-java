@@ -70,22 +70,22 @@ public final class ResolverQueryLoggingConfigArgs extends io.pulumi.resources.Re
     	      this.name = defaults.name;
         }
 
-        public Builder setDestinationArn(@Nullable Input<String> destinationArn) {
+        public Builder destinationArn(@Nullable Input<String> destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
-        public Builder setDestinationArn(@Nullable String destinationArn) {
+        public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = Input.ofNullable(destinationArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

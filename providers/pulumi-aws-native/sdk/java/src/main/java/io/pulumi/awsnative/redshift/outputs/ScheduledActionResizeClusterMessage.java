@@ -77,27 +77,27 @@ public final class ScheduledActionResizeClusterMessage {
     	      this.numberOfNodes = defaults.numberOfNodes;
         }
 
-        public Builder setClassic(@Nullable Boolean classic) {
+        public Builder classic(@Nullable Boolean classic) {
             this.classic = classic;
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterType(@Nullable String clusterType) {
+        public Builder clusterType(@Nullable String clusterType) {
             this.clusterType = clusterType;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }

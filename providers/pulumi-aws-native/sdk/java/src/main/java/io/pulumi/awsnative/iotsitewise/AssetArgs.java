@@ -114,52 +114,52 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetHierarchies(@Nullable Input<List<AssetHierarchyArgs>> assetHierarchies) {
+        public Builder assetHierarchies(@Nullable Input<List<AssetHierarchyArgs>> assetHierarchies) {
             this.assetHierarchies = assetHierarchies;
             return this;
         }
 
-        public Builder setAssetHierarchies(@Nullable List<AssetHierarchyArgs> assetHierarchies) {
+        public Builder assetHierarchies(@Nullable List<AssetHierarchyArgs> assetHierarchies) {
             this.assetHierarchies = Input.ofNullable(assetHierarchies);
             return this;
         }
 
-        public Builder setAssetModelId(Input<String> assetModelId) {
+        public Builder assetModelId(Input<String> assetModelId) {
             this.assetModelId = Objects.requireNonNull(assetModelId);
             return this;
         }
 
-        public Builder setAssetModelId(String assetModelId) {
+        public Builder assetModelId(String assetModelId) {
             this.assetModelId = Input.of(Objects.requireNonNull(assetModelId));
             return this;
         }
 
-        public Builder setAssetName(@Nullable Input<String> assetName) {
+        public Builder assetName(@Nullable Input<String> assetName) {
             this.assetName = assetName;
             return this;
         }
 
-        public Builder setAssetName(@Nullable String assetName) {
+        public Builder assetName(@Nullable String assetName) {
             this.assetName = Input.ofNullable(assetName);
             return this;
         }
 
-        public Builder setAssetProperties(@Nullable Input<List<AssetPropertyArgs>> assetProperties) {
+        public Builder assetProperties(@Nullable Input<List<AssetPropertyArgs>> assetProperties) {
             this.assetProperties = assetProperties;
             return this;
         }
 
-        public Builder setAssetProperties(@Nullable List<AssetPropertyArgs> assetProperties) {
+        public Builder assetProperties(@Nullable List<AssetPropertyArgs> assetProperties) {
             this.assetProperties = Input.ofNullable(assetProperties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AssetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AssetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetTagArgs> tags) {
+        public Builder tags(@Nullable List<AssetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

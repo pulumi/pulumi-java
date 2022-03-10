@@ -51,7 +51,7 @@ public final class GetPublisherArgs extends io.pulumi.resources.InvokeArgs {
     	      this.publisherId = defaults.publisherId;
         }
 
-        public Builder setPublisherId(String publisherId) {
+        public Builder publisherId(String publisherId) {
             this.publisherId = Objects.requireNonNull(publisherId);
             return this;
         }

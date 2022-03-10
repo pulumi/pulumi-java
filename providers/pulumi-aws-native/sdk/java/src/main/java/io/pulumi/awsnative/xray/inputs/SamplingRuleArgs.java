@@ -241,132 +241,132 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAttributes(@Nullable Input<Object> attributes) {
+        public Builder attributes(@Nullable Input<Object> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Object attributes) {
+        public Builder attributes(@Nullable Object attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setFixedRate(@Nullable Input<Double> fixedRate) {
+        public Builder fixedRate(@Nullable Input<Double> fixedRate) {
             this.fixedRate = fixedRate;
             return this;
         }
 
-        public Builder setFixedRate(@Nullable Double fixedRate) {
+        public Builder fixedRate(@Nullable Double fixedRate) {
             this.fixedRate = Input.ofNullable(fixedRate);
             return this;
         }
 
-        public Builder setHTTPMethod(@Nullable Input<String> hTTPMethod) {
+        public Builder hTTPMethod(@Nullable Input<String> hTTPMethod) {
             this.hTTPMethod = hTTPMethod;
             return this;
         }
 
-        public Builder setHTTPMethod(@Nullable String hTTPMethod) {
+        public Builder hTTPMethod(@Nullable String hTTPMethod) {
             this.hTTPMethod = Input.ofNullable(hTTPMethod);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setReservoirSize(@Nullable Input<Integer> reservoirSize) {
+        public Builder reservoirSize(@Nullable Input<Integer> reservoirSize) {
             this.reservoirSize = reservoirSize;
             return this;
         }
 
-        public Builder setReservoirSize(@Nullable Integer reservoirSize) {
+        public Builder reservoirSize(@Nullable Integer reservoirSize) {
             this.reservoirSize = Input.ofNullable(reservoirSize);
             return this;
         }
 
-        public Builder setResourceARN(@Nullable Input<String> resourceARN) {
+        public Builder resourceARN(@Nullable Input<String> resourceARN) {
             this.resourceARN = resourceARN;
             return this;
         }
 
-        public Builder setResourceARN(@Nullable String resourceARN) {
+        public Builder resourceARN(@Nullable String resourceARN) {
             this.resourceARN = Input.ofNullable(resourceARN);
             return this;
         }
 
-        public Builder setRuleARN(@Nullable Input<String> ruleARN) {
+        public Builder ruleARN(@Nullable Input<String> ruleARN) {
             this.ruleARN = ruleARN;
             return this;
         }
 
-        public Builder setRuleARN(@Nullable String ruleARN) {
+        public Builder ruleARN(@Nullable String ruleARN) {
             this.ruleARN = Input.ofNullable(ruleARN);
             return this;
         }
 
-        public Builder setRuleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Input<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setServiceType(@Nullable Input<String> serviceType) {
+        public Builder serviceType(@Nullable Input<String> serviceType) {
             this.serviceType = serviceType;
             return this;
         }
 
-        public Builder setServiceType(@Nullable String serviceType) {
+        public Builder serviceType(@Nullable String serviceType) {
             this.serviceType = Input.ofNullable(serviceType);
             return this;
         }
 
-        public Builder setURLPath(@Nullable Input<String> uRLPath) {
+        public Builder uRLPath(@Nullable Input<String> uRLPath) {
             this.uRLPath = uRLPath;
             return this;
         }
 
-        public Builder setURLPath(@Nullable String uRLPath) {
+        public Builder uRLPath(@Nullable String uRLPath) {
             this.uRLPath = Input.ofNullable(uRLPath);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

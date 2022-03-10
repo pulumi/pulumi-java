@@ -121,52 +121,52 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceFleetName(@Nullable Input<String> deviceFleetName) {
+        public Builder deviceFleetName(@Nullable Input<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
 
-        public Builder setDeviceFleetName(@Nullable String deviceFleetName) {
+        public Builder deviceFleetName(@Nullable String deviceFleetName) {
             this.deviceFleetName = Input.ofNullable(deviceFleetName);
             return this;
         }
 
-        public Builder setOutputConfig(Input<DeviceFleetEdgeOutputConfigArgs> outputConfig) {
+        public Builder outputConfig(Input<DeviceFleetEdgeOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
-        public Builder setOutputConfig(DeviceFleetEdgeOutputConfigArgs outputConfig) {
+        public Builder outputConfig(DeviceFleetEdgeOutputConfigArgs outputConfig) {
             this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DeviceFleetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DeviceFleetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeviceFleetTagArgs> tags) {
+        public Builder tags(@Nullable List<DeviceFleetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

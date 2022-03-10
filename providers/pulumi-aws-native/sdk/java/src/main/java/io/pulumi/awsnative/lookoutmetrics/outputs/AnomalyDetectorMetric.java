@@ -68,17 +68,17 @@ public final class AnomalyDetectorMetric {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setAggregationFunction(AnomalyDetectorMetricAggregationFunction aggregationFunction) {
+        public Builder aggregationFunction(AnomalyDetectorMetricAggregationFunction aggregationFunction) {
             this.aggregationFunction = Objects.requireNonNull(aggregationFunction);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

@@ -120,52 +120,52 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDashboardDefinition(Input<String> dashboardDefinition) {
+        public Builder dashboardDefinition(Input<String> dashboardDefinition) {
             this.dashboardDefinition = Objects.requireNonNull(dashboardDefinition);
             return this;
         }
 
-        public Builder setDashboardDefinition(String dashboardDefinition) {
+        public Builder dashboardDefinition(String dashboardDefinition) {
             this.dashboardDefinition = Input.of(Objects.requireNonNull(dashboardDefinition));
             return this;
         }
 
-        public Builder setDashboardDescription(Input<String> dashboardDescription) {
+        public Builder dashboardDescription(Input<String> dashboardDescription) {
             this.dashboardDescription = Objects.requireNonNull(dashboardDescription);
             return this;
         }
 
-        public Builder setDashboardDescription(String dashboardDescription) {
+        public Builder dashboardDescription(String dashboardDescription) {
             this.dashboardDescription = Input.of(Objects.requireNonNull(dashboardDescription));
             return this;
         }
 
-        public Builder setDashboardName(@Nullable Input<String> dashboardName) {
+        public Builder dashboardName(@Nullable Input<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
 
-        public Builder setDashboardName(@Nullable String dashboardName) {
+        public Builder dashboardName(@Nullable String dashboardName) {
             this.dashboardName = Input.ofNullable(dashboardName);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DashboardTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DashboardTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DashboardTagArgs> tags) {
+        public Builder tags(@Nullable List<DashboardTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -52,12 +52,12 @@ public final class StorageLensAccountLevel {
     	      this.bucketLevel = defaults.bucketLevel;
         }
 
-        public Builder setActivityMetrics(@Nullable StorageLensActivityMetrics activityMetrics) {
+        public Builder activityMetrics(@Nullable StorageLensActivityMetrics activityMetrics) {
             this.activityMetrics = activityMetrics;
             return this;
         }
 
-        public Builder setBucketLevel(StorageLensBucketLevel bucketLevel) {
+        public Builder bucketLevel(StorageLensBucketLevel bucketLevel) {
             this.bucketLevel = Objects.requireNonNull(bucketLevel);
             return this;
         }

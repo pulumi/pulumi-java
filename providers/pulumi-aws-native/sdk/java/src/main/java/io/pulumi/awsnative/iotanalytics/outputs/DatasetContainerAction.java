@@ -69,22 +69,22 @@ public final class DatasetContainerAction {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setExecutionRoleArn(String executionRoleArn) {
+        public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setResourceConfiguration(DatasetResourceConfiguration resourceConfiguration) {
+        public Builder resourceConfiguration(DatasetResourceConfiguration resourceConfiguration) {
             this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration);
             return this;
         }
 
-        public Builder setVariables(@Nullable List<DatasetVariable> variables) {
+        public Builder variables(@Nullable List<DatasetVariable> variables) {
             this.variables = variables;
             return this;
         }

@@ -51,12 +51,12 @@ public final class ProvisioningTemplateProvisioningHook {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setPayloadVersion(@Nullable String payloadVersion) {
+        public Builder payloadVersion(@Nullable String payloadVersion) {
             this.payloadVersion = payloadVersion;
             return this;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
         }

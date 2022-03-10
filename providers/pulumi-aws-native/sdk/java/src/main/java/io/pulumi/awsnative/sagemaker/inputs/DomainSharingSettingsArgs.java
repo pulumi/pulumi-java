@@ -91,32 +91,32 @@ public final class DomainSharingSettingsArgs extends io.pulumi.resources.Resourc
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder setNotebookOutputOption(@Nullable Input<DomainSharingSettingsNotebookOutputOption> notebookOutputOption) {
+        public Builder notebookOutputOption(@Nullable Input<DomainSharingSettingsNotebookOutputOption> notebookOutputOption) {
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
 
-        public Builder setNotebookOutputOption(@Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
+        public Builder notebookOutputOption(@Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
             this.notebookOutputOption = Input.ofNullable(notebookOutputOption);
             return this;
         }
 
-        public Builder setS3KmsKeyId(@Nullable Input<String> s3KmsKeyId) {
+        public Builder s3KmsKeyId(@Nullable Input<String> s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
 
-        public Builder setS3KmsKeyId(@Nullable String s3KmsKeyId) {
+        public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = Input.ofNullable(s3KmsKeyId);
             return this;
         }
 
-        public Builder setS3OutputPath(@Nullable Input<String> s3OutputPath) {
+        public Builder s3OutputPath(@Nullable Input<String> s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
         }
 
-        public Builder setS3OutputPath(@Nullable String s3OutputPath) {
+        public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = Input.ofNullable(s3OutputPath);
             return this;
         }

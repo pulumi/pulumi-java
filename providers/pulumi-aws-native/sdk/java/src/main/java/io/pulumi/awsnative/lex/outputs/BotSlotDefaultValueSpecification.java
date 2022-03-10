@@ -49,7 +49,7 @@ public final class BotSlotDefaultValueSpecification {
     	      this.defaultValueList = defaults.defaultValueList;
         }
 
-        public Builder setDefaultValueList(List<BotSlotDefaultValue> defaultValueList) {
+        public Builder defaultValueList(List<BotSlotDefaultValue> defaultValueList) {
             this.defaultValueList = Objects.requireNonNull(defaultValueList);
             return this;
         }

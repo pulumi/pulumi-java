@@ -169,47 +169,47 @@ public final class GetEndpointGroupResult {
     	      this.trafficDialPercentage = defaults.trafficDialPercentage;
         }
 
-        public Builder setEndpointConfigurations(@Nullable List<EndpointGroupEndpointConfiguration> endpointConfigurations) {
+        public Builder endpointConfigurations(@Nullable List<EndpointGroupEndpointConfiguration> endpointConfigurations) {
             this.endpointConfigurations = endpointConfigurations;
             return this;
         }
 
-        public Builder setEndpointGroupArn(@Nullable String endpointGroupArn) {
+        public Builder endpointGroupArn(@Nullable String endpointGroupArn) {
             this.endpointGroupArn = endpointGroupArn;
             return this;
         }
 
-        public Builder setHealthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
+        public Builder healthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
             this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
             return this;
         }
 
-        public Builder setHealthCheckPath(@Nullable String healthCheckPath) {
+        public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
 
-        public Builder setHealthCheckPort(@Nullable Integer healthCheckPort) {
+        public Builder healthCheckPort(@Nullable Integer healthCheckPort) {
             this.healthCheckPort = healthCheckPort;
             return this;
         }
 
-        public Builder setHealthCheckProtocol(@Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol) {
+        public Builder healthCheckProtocol(@Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol) {
             this.healthCheckProtocol = healthCheckProtocol;
             return this;
         }
 
-        public Builder setPortOverrides(@Nullable List<EndpointGroupPortOverride> portOverrides) {
+        public Builder portOverrides(@Nullable List<EndpointGroupPortOverride> portOverrides) {
             this.portOverrides = portOverrides;
             return this;
         }
 
-        public Builder setThresholdCount(@Nullable Integer thresholdCount) {
+        public Builder thresholdCount(@Nullable Integer thresholdCount) {
             this.thresholdCount = thresholdCount;
             return this;
         }
 
-        public Builder setTrafficDialPercentage(@Nullable Double trafficDialPercentage) {
+        public Builder trafficDialPercentage(@Nullable Double trafficDialPercentage) {
             this.trafficDialPercentage = trafficDialPercentage;
             return this;
         }

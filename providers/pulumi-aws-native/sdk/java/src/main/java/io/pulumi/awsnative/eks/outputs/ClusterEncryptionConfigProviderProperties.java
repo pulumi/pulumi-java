@@ -50,7 +50,7 @@ public final class ClusterEncryptionConfigProviderProperties {
     	      this.keyArn = defaults.keyArn;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
         }

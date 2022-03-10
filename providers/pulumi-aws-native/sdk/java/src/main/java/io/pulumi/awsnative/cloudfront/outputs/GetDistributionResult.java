@@ -70,22 +70,22 @@ public final class GetDistributionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDistributionConfig(@Nullable DistributionConfig distributionConfig) {
+        public Builder distributionConfig(@Nullable DistributionConfig distributionConfig) {
             this.distributionConfig = distributionConfig;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DistributionTag> tags) {
+        public Builder tags(@Nullable List<DistributionTag> tags) {
             this.tags = tags;
             return this;
         }

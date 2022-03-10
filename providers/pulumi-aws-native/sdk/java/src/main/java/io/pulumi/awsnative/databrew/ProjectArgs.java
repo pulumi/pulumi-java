@@ -133,62 +133,62 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatasetName(Input<String> datasetName) {
+        public Builder datasetName(Input<String> datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Input.of(Objects.requireNonNull(datasetName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRecipeName(Input<String> recipeName) {
+        public Builder recipeName(Input<String> recipeName) {
             this.recipeName = Objects.requireNonNull(recipeName);
             return this;
         }
 
-        public Builder setRecipeName(String recipeName) {
+        public Builder recipeName(String recipeName) {
             this.recipeName = Input.of(Objects.requireNonNull(recipeName));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSample(@Nullable Input<ProjectSampleArgs> sample) {
+        public Builder sample(@Nullable Input<ProjectSampleArgs> sample) {
             this.sample = sample;
             return this;
         }
 
-        public Builder setSample(@Nullable ProjectSampleArgs sample) {
+        public Builder sample(@Nullable ProjectSampleArgs sample) {
             this.sample = Input.ofNullable(sample);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTagArgs> tags) {
+        public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

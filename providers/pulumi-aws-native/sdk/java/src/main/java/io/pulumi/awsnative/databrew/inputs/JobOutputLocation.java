@@ -78,17 +78,17 @@ public final class JobOutputLocation extends io.pulumi.resources.InvokeArgs {
     	      this.key = defaults.key;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucketOwner(@Nullable String bucketOwner) {
+        public Builder bucketOwner(@Nullable String bucketOwner) {
             this.bucketOwner = bucketOwner;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

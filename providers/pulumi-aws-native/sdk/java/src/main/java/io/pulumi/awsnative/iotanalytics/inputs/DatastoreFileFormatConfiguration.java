@@ -63,12 +63,12 @@ public final class DatastoreFileFormatConfiguration extends io.pulumi.resources.
     	      this.parquetConfiguration = defaults.parquetConfiguration;
         }
 
-        public Builder setJsonConfiguration(@Nullable DatastoreJsonConfiguration jsonConfiguration) {
+        public Builder jsonConfiguration(@Nullable DatastoreJsonConfiguration jsonConfiguration) {
             this.jsonConfiguration = jsonConfiguration;
             return this;
         }
 
-        public Builder setParquetConfiguration(@Nullable DatastoreParquetConfiguration parquetConfiguration) {
+        public Builder parquetConfiguration(@Nullable DatastoreParquetConfiguration parquetConfiguration) {
             this.parquetConfiguration = parquetConfiguration;
             return this;
         }

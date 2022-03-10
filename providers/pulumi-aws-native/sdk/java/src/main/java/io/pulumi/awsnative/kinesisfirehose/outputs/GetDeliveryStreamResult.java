@@ -125,52 +125,52 @@ public final class GetDeliveryStreamResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAmazonopensearchserviceDestinationConfiguration(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration) {
+        public Builder amazonopensearchserviceDestinationConfiguration(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfiguration amazonopensearchserviceDestinationConfiguration) {
             this.amazonopensearchserviceDestinationConfiguration = amazonopensearchserviceDestinationConfiguration;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDeliveryStreamEncryptionConfigurationInput(@Nullable DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput) {
+        public Builder deliveryStreamEncryptionConfigurationInput(@Nullable DeliveryStreamEncryptionConfigurationInput deliveryStreamEncryptionConfigurationInput) {
             this.deliveryStreamEncryptionConfigurationInput = deliveryStreamEncryptionConfigurationInput;
             return this;
         }
 
-        public Builder setElasticsearchDestinationConfiguration(@Nullable DeliveryStreamElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration) {
+        public Builder elasticsearchDestinationConfiguration(@Nullable DeliveryStreamElasticsearchDestinationConfiguration elasticsearchDestinationConfiguration) {
             this.elasticsearchDestinationConfiguration = elasticsearchDestinationConfiguration;
             return this;
         }
 
-        public Builder setExtendedS3DestinationConfiguration(@Nullable DeliveryStreamExtendedS3DestinationConfiguration extendedS3DestinationConfiguration) {
+        public Builder extendedS3DestinationConfiguration(@Nullable DeliveryStreamExtendedS3DestinationConfiguration extendedS3DestinationConfiguration) {
             this.extendedS3DestinationConfiguration = extendedS3DestinationConfiguration;
             return this;
         }
 
-        public Builder setHttpEndpointDestinationConfiguration(@Nullable DeliveryStreamHttpEndpointDestinationConfiguration httpEndpointDestinationConfiguration) {
+        public Builder httpEndpointDestinationConfiguration(@Nullable DeliveryStreamHttpEndpointDestinationConfiguration httpEndpointDestinationConfiguration) {
             this.httpEndpointDestinationConfiguration = httpEndpointDestinationConfiguration;
             return this;
         }
 
-        public Builder setRedshiftDestinationConfiguration(@Nullable DeliveryStreamRedshiftDestinationConfiguration redshiftDestinationConfiguration) {
+        public Builder redshiftDestinationConfiguration(@Nullable DeliveryStreamRedshiftDestinationConfiguration redshiftDestinationConfiguration) {
             this.redshiftDestinationConfiguration = redshiftDestinationConfiguration;
             return this;
         }
 
-        public Builder setS3DestinationConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3DestinationConfiguration) {
+        public Builder s3DestinationConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3DestinationConfiguration) {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
 
-        public Builder setSplunkDestinationConfiguration(@Nullable DeliveryStreamSplunkDestinationConfiguration splunkDestinationConfiguration) {
+        public Builder splunkDestinationConfiguration(@Nullable DeliveryStreamSplunkDestinationConfiguration splunkDestinationConfiguration) {
             this.splunkDestinationConfiguration = splunkDestinationConfiguration;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeliveryStreamTag> tags) {
+        public Builder tags(@Nullable List<DeliveryStreamTag> tags) {
             this.tags = tags;
             return this;
         }

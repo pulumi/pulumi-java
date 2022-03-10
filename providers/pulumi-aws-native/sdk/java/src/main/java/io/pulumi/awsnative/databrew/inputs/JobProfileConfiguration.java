@@ -90,22 +90,22 @@ public final class JobProfileConfiguration extends io.pulumi.resources.InvokeArg
     	      this.profileColumns = defaults.profileColumns;
         }
 
-        public Builder setColumnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations) {
+        public Builder columnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations) {
             this.columnStatisticsConfigurations = columnStatisticsConfigurations;
             return this;
         }
 
-        public Builder setDatasetStatisticsConfiguration(@Nullable JobStatisticsConfiguration datasetStatisticsConfiguration) {
+        public Builder datasetStatisticsConfiguration(@Nullable JobStatisticsConfiguration datasetStatisticsConfiguration) {
             this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
             return this;
         }
 
-        public Builder setEntityDetectorConfiguration(@Nullable JobEntityDetectorConfiguration entityDetectorConfiguration) {
+        public Builder entityDetectorConfiguration(@Nullable JobEntityDetectorConfiguration entityDetectorConfiguration) {
             this.entityDetectorConfiguration = entityDetectorConfiguration;
             return this;
         }
 
-        public Builder setProfileColumns(@Nullable List<JobColumnSelector> profileColumns) {
+        public Builder profileColumns(@Nullable List<JobColumnSelector> profileColumns) {
             this.profileColumns = profileColumns;
             return this;
         }

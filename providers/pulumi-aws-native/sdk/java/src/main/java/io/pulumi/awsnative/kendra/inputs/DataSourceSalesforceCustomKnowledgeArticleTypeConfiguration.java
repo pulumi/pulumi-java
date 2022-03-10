@@ -88,22 +88,22 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration e
     	      this.name = defaults.name;
         }
 
-        public Builder setDocumentDataFieldName(String documentDataFieldName) {
+        public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

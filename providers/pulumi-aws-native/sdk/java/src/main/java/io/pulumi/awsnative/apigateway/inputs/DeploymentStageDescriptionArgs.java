@@ -351,192 +351,192 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     	      this.variables = defaults.variables;
         }
 
-        public Builder setAccessLogSetting(@Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting) {
+        public Builder accessLogSetting(@Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting) {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
 
-        public Builder setAccessLogSetting(@Nullable DeploymentAccessLogSettingArgs accessLogSetting) {
+        public Builder accessLogSetting(@Nullable DeploymentAccessLogSettingArgs accessLogSetting) {
             this.accessLogSetting = Input.ofNullable(accessLogSetting);
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Input<Boolean> cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = Input.ofNullable(cacheClusterEnabled);
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable Input<String> cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable Input<String> cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable String cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = Input.ofNullable(cacheClusterSize);
             return this;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Input<Boolean> cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = Input.ofNullable(cacheDataEncrypted);
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Input<Integer> cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = Input.ofNullable(cacheTtlInSeconds);
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Input<Boolean> cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Boolean cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = Input.ofNullable(cachingEnabled);
             return this;
         }
 
-        public Builder setCanarySetting(@Nullable Input<DeploymentCanarySettingArgs> canarySetting) {
+        public Builder canarySetting(@Nullable Input<DeploymentCanarySettingArgs> canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
 
-        public Builder setCanarySetting(@Nullable DeploymentCanarySettingArgs canarySetting) {
+        public Builder canarySetting(@Nullable DeploymentCanarySettingArgs canarySetting) {
             this.canarySetting = Input.ofNullable(canarySetting);
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable Input<String> clientCertificateId) {
+        public Builder clientCertificateId(@Nullable Input<String> clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = Input.ofNullable(clientCertificateId);
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Input<Boolean> dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = Input.ofNullable(dataTraceEnabled);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable Input<String> documentationVersion) {
+        public Builder documentationVersion(@Nullable Input<String> documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable String documentationVersion) {
+        public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = Input.ofNullable(documentationVersion);
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Input<String> loggingLevel) {
+        public Builder loggingLevel(@Nullable Input<String> loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = Input.ofNullable(loggingLevel);
             return this;
         }
 
-        public Builder setMethodSettings(@Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings) {
+        public Builder methodSettings(@Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
 
-        public Builder setMethodSettings(@Nullable List<DeploymentMethodSettingArgs> methodSettings) {
+        public Builder methodSettings(@Nullable List<DeploymentMethodSettingArgs> methodSettings) {
             this.methodSettings = Input.ofNullable(methodSettings);
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Input<Boolean> metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Boolean metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = Input.ofNullable(metricsEnabled);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DeploymentTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DeploymentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeploymentTagArgs> tags) {
+        public Builder tags(@Nullable List<DeploymentTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Input<Integer> throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = Input.ofNullable(throttlingBurstLimit);
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Input<Double> throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Double throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = Input.ofNullable(throttlingRateLimit);
             return this;
         }
 
-        public Builder setTracingEnabled(@Nullable Input<Boolean> tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Input<Boolean> tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
 
-        public Builder setTracingEnabled(@Nullable Boolean tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = Input.ofNullable(tracingEnabled);
             return this;
         }
 
-        public Builder setVariables(@Nullable Input<Object> variables) {
+        public Builder variables(@Nullable Input<Object> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable Object variables) {
+        public Builder variables(@Nullable Object variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }

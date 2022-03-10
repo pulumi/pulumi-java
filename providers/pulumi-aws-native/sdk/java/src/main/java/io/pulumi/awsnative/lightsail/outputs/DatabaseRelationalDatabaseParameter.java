@@ -164,42 +164,42 @@ public final class DatabaseRelationalDatabaseParameter {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setAllowedValues(@Nullable String allowedValues) {
+        public Builder allowedValues(@Nullable String allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setApplyMethod(@Nullable String applyMethod) {
+        public Builder applyMethod(@Nullable String applyMethod) {
             this.applyMethod = applyMethod;
             return this;
         }
 
-        public Builder setApplyType(@Nullable String applyType) {
+        public Builder applyType(@Nullable String applyType) {
             this.applyType = applyType;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsModifiable(@Nullable Boolean isModifiable) {
+        public Builder isModifiable(@Nullable Boolean isModifiable) {
             this.isModifiable = isModifiable;
             return this;
         }
 
-        public Builder setParameterName(@Nullable String parameterName) {
+        public Builder parameterName(@Nullable String parameterName) {
             this.parameterName = parameterName;
             return this;
         }
 
-        public Builder setParameterValue(@Nullable String parameterValue) {
+        public Builder parameterValue(@Nullable String parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }

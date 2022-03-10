@@ -52,12 +52,12 @@ public final class MonitoringScheduleMonitoringInputArgs extends io.pulumi.resou
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder setEndpointInput(Input<MonitoringScheduleEndpointInputArgs> endpointInput) {
+        public Builder endpointInput(Input<MonitoringScheduleEndpointInputArgs> endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
 
-        public Builder setEndpointInput(MonitoringScheduleEndpointInputArgs endpointInput) {
+        public Builder endpointInput(MonitoringScheduleEndpointInputArgs endpointInput) {
             this.endpointInput = Input.of(Objects.requireNonNull(endpointInput));
             return this;
         }

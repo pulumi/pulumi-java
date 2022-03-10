@@ -105,42 +105,42 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topics = defaults.topics;
         }
 
-        public Builder setContactListName(@Nullable Input<String> contactListName) {
+        public Builder contactListName(@Nullable Input<String> contactListName) {
             this.contactListName = contactListName;
             return this;
         }
 
-        public Builder setContactListName(@Nullable String contactListName) {
+        public Builder contactListName(@Nullable String contactListName) {
             this.contactListName = Input.ofNullable(contactListName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ContactListTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ContactListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ContactListTagArgs> tags) {
+        public Builder tags(@Nullable List<ContactListTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTopics(@Nullable Input<List<ContactListTopicArgs>> topics) {
+        public Builder topics(@Nullable Input<List<ContactListTopicArgs>> topics) {
             this.topics = topics;
             return this;
         }
 
-        public Builder setTopics(@Nullable List<ContactListTopicArgs> topics) {
+        public Builder topics(@Nullable List<ContactListTopicArgs> topics) {
             this.topics = Input.ofNullable(topics);
             return this;
         }

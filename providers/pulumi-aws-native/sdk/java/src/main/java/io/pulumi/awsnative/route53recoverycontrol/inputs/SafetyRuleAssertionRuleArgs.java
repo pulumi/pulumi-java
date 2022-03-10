@@ -75,22 +75,22 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder setAssertedControls(Input<List<String>> assertedControls) {
+        public Builder assertedControls(Input<List<String>> assertedControls) {
             this.assertedControls = Objects.requireNonNull(assertedControls);
             return this;
         }
 
-        public Builder setAssertedControls(List<String> assertedControls) {
+        public Builder assertedControls(List<String> assertedControls) {
             this.assertedControls = Input.of(Objects.requireNonNull(assertedControls));
             return this;
         }
 
-        public Builder setWaitPeriodMs(Input<Integer> waitPeriodMs) {
+        public Builder waitPeriodMs(Input<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
 
-        public Builder setWaitPeriodMs(Integer waitPeriodMs) {
+        public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }

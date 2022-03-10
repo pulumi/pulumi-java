@@ -70,22 +70,22 @@ public final class GetProjectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDefaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
+        public Builder defaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
             this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTag> tags) {
+        public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }

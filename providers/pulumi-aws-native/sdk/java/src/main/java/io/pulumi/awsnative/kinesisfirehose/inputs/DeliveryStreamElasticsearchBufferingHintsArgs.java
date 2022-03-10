@@ -62,22 +62,22 @@ public final class DeliveryStreamElasticsearchBufferingHintsArgs extends io.pulu
     	      this.sizeInMBs = defaults.sizeInMBs;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder setSizeInMBs(@Nullable Input<Integer> sizeInMBs) {
+        public Builder sizeInMBs(@Nullable Input<Integer> sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
         }
 
-        public Builder setSizeInMBs(@Nullable Integer sizeInMBs) {
+        public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
             this.sizeInMBs = Input.ofNullable(sizeInMBs);
             return this;
         }

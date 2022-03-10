@@ -50,7 +50,7 @@ public final class DataSourceSslProperties {
     	      this.disableSsl = defaults.disableSsl;
         }
 
-        public Builder setDisableSsl(@Nullable Boolean disableSsl) {
+        public Builder disableSsl(@Nullable Boolean disableSsl) {
             this.disableSsl = disableSsl;
             return this;
         }

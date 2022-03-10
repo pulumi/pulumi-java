@@ -62,22 +62,22 @@ public final class TopicRuleAssetPropertyTimestampArgs extends io.pulumi.resourc
     	      this.timeInSeconds = defaults.timeInSeconds;
         }
 
-        public Builder setOffsetInNanos(@Nullable Input<String> offsetInNanos) {
+        public Builder offsetInNanos(@Nullable Input<String> offsetInNanos) {
             this.offsetInNanos = offsetInNanos;
             return this;
         }
 
-        public Builder setOffsetInNanos(@Nullable String offsetInNanos) {
+        public Builder offsetInNanos(@Nullable String offsetInNanos) {
             this.offsetInNanos = Input.ofNullable(offsetInNanos);
             return this;
         }
 
-        public Builder setTimeInSeconds(Input<String> timeInSeconds) {
+        public Builder timeInSeconds(Input<String> timeInSeconds) {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }
 
-        public Builder setTimeInSeconds(String timeInSeconds) {
+        public Builder timeInSeconds(String timeInSeconds) {
             this.timeInSeconds = Input.of(Objects.requireNonNull(timeInSeconds));
             return this;
         }

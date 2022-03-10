@@ -68,12 +68,12 @@ public final class GetLoggingResult {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDefaultLogLevel(@Nullable LoggingDefaultLogLevel defaultLogLevel) {
+        public Builder defaultLogLevel(@Nullable LoggingDefaultLogLevel defaultLogLevel) {
             this.defaultLogLevel = defaultLogLevel;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

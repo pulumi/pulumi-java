@@ -63,22 +63,22 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setOptions(@Nullable Input<Object> options) {
+        public Builder options(@Nullable Input<Object> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

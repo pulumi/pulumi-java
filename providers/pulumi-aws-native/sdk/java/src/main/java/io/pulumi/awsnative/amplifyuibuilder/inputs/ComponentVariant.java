@@ -63,12 +63,12 @@ public final class ComponentVariant extends io.pulumi.resources.InvokeArgs {
     	      this.variantValues = defaults.variantValues;
         }
 
-        public Builder setOverrides(@Nullable ComponentOverrides overrides) {
+        public Builder overrides(@Nullable ComponentOverrides overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setVariantValues(@Nullable ComponentVariantValues variantValues) {
+        public Builder variantValues(@Nullable ComponentVariantValues variantValues) {
             this.variantValues = variantValues;
             return this;
         }

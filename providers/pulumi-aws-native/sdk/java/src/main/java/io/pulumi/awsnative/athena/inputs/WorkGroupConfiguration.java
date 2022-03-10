@@ -113,32 +113,32 @@ public final class WorkGroupConfiguration extends io.pulumi.resources.InvokeArgs
     	      this.resultConfiguration = defaults.resultConfiguration;
         }
 
-        public Builder setBytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
 
-        public Builder setEnforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
+        public Builder enforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
             this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable WorkGroupEngineVersion engineVersion) {
+        public Builder engineVersion(@Nullable WorkGroupEngineVersion engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setPublishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
+        public Builder publishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
             this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
             return this;
         }
 
-        public Builder setRequesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
 
-        public Builder setResultConfiguration(@Nullable WorkGroupResultConfiguration resultConfiguration) {
+        public Builder resultConfiguration(@Nullable WorkGroupResultConfiguration resultConfiguration) {
             this.resultConfiguration = resultConfiguration;
             return this;
         }

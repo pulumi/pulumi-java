@@ -50,12 +50,12 @@ public final class CertificateAuthorityAccessDescription {
     	      this.accessMethod = defaults.accessMethod;
         }
 
-        public Builder setAccessLocation(CertificateAuthorityGeneralName accessLocation) {
+        public Builder accessLocation(CertificateAuthorityGeneralName accessLocation) {
             this.accessLocation = Objects.requireNonNull(accessLocation);
             return this;
         }
 
-        public Builder setAccessMethod(CertificateAuthorityAccessMethod accessMethod) {
+        public Builder accessMethod(CertificateAuthorityAccessMethod accessMethod) {
             this.accessMethod = Objects.requireNonNull(accessMethod);
             return this;
         }

@@ -202,132 +202,132 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setBufferingHints(@Nullable Input<DeliveryStreamElasticsearchBufferingHintsArgs> bufferingHints) {
+        public Builder bufferingHints(@Nullable Input<DeliveryStreamElasticsearchBufferingHintsArgs> bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamElasticsearchBufferingHintsArgs bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamElasticsearchBufferingHintsArgs bufferingHints) {
             this.bufferingHints = Input.ofNullable(bufferingHints);
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Input.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
 
-        public Builder setClusterEndpoint(@Nullable Input<String> clusterEndpoint) {
+        public Builder clusterEndpoint(@Nullable Input<String> clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
 
-        public Builder setClusterEndpoint(@Nullable String clusterEndpoint) {
+        public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
             this.clusterEndpoint = Input.ofNullable(clusterEndpoint);
             return this;
         }
 
-        public Builder setDomainARN(@Nullable Input<String> domainARN) {
+        public Builder domainARN(@Nullable Input<String> domainARN) {
             this.domainARN = domainARN;
             return this;
         }
 
-        public Builder setDomainARN(@Nullable String domainARN) {
+        public Builder domainARN(@Nullable String domainARN) {
             this.domainARN = Input.ofNullable(domainARN);
             return this;
         }
 
-        public Builder setIndexName(Input<String> indexName) {
+        public Builder indexName(Input<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Input.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder setIndexRotationPeriod(@Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod) {
+        public Builder indexRotationPeriod(@Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod) {
             this.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
 
-        public Builder setIndexRotationPeriod(@Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod) {
+        public Builder indexRotationPeriod(@Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod) {
             this.indexRotationPeriod = Input.ofNullable(indexRotationPeriod);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Input.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable Input<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions) {
+        public Builder retryOptions(@Nullable Input<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamElasticsearchRetryOptionsArgs retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamElasticsearchRetryOptionsArgs retryOptions) {
             this.retryOptions = Input.ofNullable(retryOptions);
             return this;
         }
 
-        public Builder setRoleARN(Input<String> roleARN) {
+        public Builder roleARN(Input<String> roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Input.of(Objects.requireNonNull(roleARN));
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Input<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode) {
+        public Builder s3BackupMode(@Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = Input.ofNullable(s3BackupMode);
             return this;
         }
 
-        public Builder setS3Configuration(Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
+        public Builder s3Configuration(Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
 
-        public Builder setS3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
+        public Builder s3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
             this.s3Configuration = Input.of(Objects.requireNonNull(s3Configuration));
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<DeliveryStreamVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<DeliveryStreamVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DeliveryStreamVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DeliveryStreamVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

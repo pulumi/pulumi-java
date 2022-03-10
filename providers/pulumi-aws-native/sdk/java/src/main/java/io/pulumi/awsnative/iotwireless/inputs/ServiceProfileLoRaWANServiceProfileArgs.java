@@ -268,192 +268,192 @@ public final class ServiceProfileLoRaWANServiceProfileArgs extends io.pulumi.res
     	      this.ulRatePolicy = defaults.ulRatePolicy;
         }
 
-        public Builder setAddGwMetadata(@Nullable Input<Boolean> addGwMetadata) {
+        public Builder addGwMetadata(@Nullable Input<Boolean> addGwMetadata) {
             this.addGwMetadata = addGwMetadata;
             return this;
         }
 
-        public Builder setAddGwMetadata(@Nullable Boolean addGwMetadata) {
+        public Builder addGwMetadata(@Nullable Boolean addGwMetadata) {
             this.addGwMetadata = Input.ofNullable(addGwMetadata);
             return this;
         }
 
-        public Builder setChannelMask(@Nullable Input<String> channelMask) {
+        public Builder channelMask(@Nullable Input<String> channelMask) {
             this.channelMask = channelMask;
             return this;
         }
 
-        public Builder setChannelMask(@Nullable String channelMask) {
+        public Builder channelMask(@Nullable String channelMask) {
             this.channelMask = Input.ofNullable(channelMask);
             return this;
         }
 
-        public Builder setDevStatusReqFreq(@Nullable Input<Integer> devStatusReqFreq) {
+        public Builder devStatusReqFreq(@Nullable Input<Integer> devStatusReqFreq) {
             this.devStatusReqFreq = devStatusReqFreq;
             return this;
         }
 
-        public Builder setDevStatusReqFreq(@Nullable Integer devStatusReqFreq) {
+        public Builder devStatusReqFreq(@Nullable Integer devStatusReqFreq) {
             this.devStatusReqFreq = Input.ofNullable(devStatusReqFreq);
             return this;
         }
 
-        public Builder setDlBucketSize(@Nullable Input<Integer> dlBucketSize) {
+        public Builder dlBucketSize(@Nullable Input<Integer> dlBucketSize) {
             this.dlBucketSize = dlBucketSize;
             return this;
         }
 
-        public Builder setDlBucketSize(@Nullable Integer dlBucketSize) {
+        public Builder dlBucketSize(@Nullable Integer dlBucketSize) {
             this.dlBucketSize = Input.ofNullable(dlBucketSize);
             return this;
         }
 
-        public Builder setDlRate(@Nullable Input<Integer> dlRate) {
+        public Builder dlRate(@Nullable Input<Integer> dlRate) {
             this.dlRate = dlRate;
             return this;
         }
 
-        public Builder setDlRate(@Nullable Integer dlRate) {
+        public Builder dlRate(@Nullable Integer dlRate) {
             this.dlRate = Input.ofNullable(dlRate);
             return this;
         }
 
-        public Builder setDlRatePolicy(@Nullable Input<String> dlRatePolicy) {
+        public Builder dlRatePolicy(@Nullable Input<String> dlRatePolicy) {
             this.dlRatePolicy = dlRatePolicy;
             return this;
         }
 
-        public Builder setDlRatePolicy(@Nullable String dlRatePolicy) {
+        public Builder dlRatePolicy(@Nullable String dlRatePolicy) {
             this.dlRatePolicy = Input.ofNullable(dlRatePolicy);
             return this;
         }
 
-        public Builder setDrMax(@Nullable Input<Integer> drMax) {
+        public Builder drMax(@Nullable Input<Integer> drMax) {
             this.drMax = drMax;
             return this;
         }
 
-        public Builder setDrMax(@Nullable Integer drMax) {
+        public Builder drMax(@Nullable Integer drMax) {
             this.drMax = Input.ofNullable(drMax);
             return this;
         }
 
-        public Builder setDrMin(@Nullable Input<Integer> drMin) {
+        public Builder drMin(@Nullable Input<Integer> drMin) {
             this.drMin = drMin;
             return this;
         }
 
-        public Builder setDrMin(@Nullable Integer drMin) {
+        public Builder drMin(@Nullable Integer drMin) {
             this.drMin = Input.ofNullable(drMin);
             return this;
         }
 
-        public Builder setHrAllowed(@Nullable Input<Boolean> hrAllowed) {
+        public Builder hrAllowed(@Nullable Input<Boolean> hrAllowed) {
             this.hrAllowed = hrAllowed;
             return this;
         }
 
-        public Builder setHrAllowed(@Nullable Boolean hrAllowed) {
+        public Builder hrAllowed(@Nullable Boolean hrAllowed) {
             this.hrAllowed = Input.ofNullable(hrAllowed);
             return this;
         }
 
-        public Builder setMinGwDiversity(@Nullable Input<Integer> minGwDiversity) {
+        public Builder minGwDiversity(@Nullable Input<Integer> minGwDiversity) {
             this.minGwDiversity = minGwDiversity;
             return this;
         }
 
-        public Builder setMinGwDiversity(@Nullable Integer minGwDiversity) {
+        public Builder minGwDiversity(@Nullable Integer minGwDiversity) {
             this.minGwDiversity = Input.ofNullable(minGwDiversity);
             return this;
         }
 
-        public Builder setNwkGeoLoc(@Nullable Input<Boolean> nwkGeoLoc) {
+        public Builder nwkGeoLoc(@Nullable Input<Boolean> nwkGeoLoc) {
             this.nwkGeoLoc = nwkGeoLoc;
             return this;
         }
 
-        public Builder setNwkGeoLoc(@Nullable Boolean nwkGeoLoc) {
+        public Builder nwkGeoLoc(@Nullable Boolean nwkGeoLoc) {
             this.nwkGeoLoc = Input.ofNullable(nwkGeoLoc);
             return this;
         }
 
-        public Builder setPrAllowed(@Nullable Input<Boolean> prAllowed) {
+        public Builder prAllowed(@Nullable Input<Boolean> prAllowed) {
             this.prAllowed = prAllowed;
             return this;
         }
 
-        public Builder setPrAllowed(@Nullable Boolean prAllowed) {
+        public Builder prAllowed(@Nullable Boolean prAllowed) {
             this.prAllowed = Input.ofNullable(prAllowed);
             return this;
         }
 
-        public Builder setRaAllowed(@Nullable Input<Boolean> raAllowed) {
+        public Builder raAllowed(@Nullable Input<Boolean> raAllowed) {
             this.raAllowed = raAllowed;
             return this;
         }
 
-        public Builder setRaAllowed(@Nullable Boolean raAllowed) {
+        public Builder raAllowed(@Nullable Boolean raAllowed) {
             this.raAllowed = Input.ofNullable(raAllowed);
             return this;
         }
 
-        public Builder setReportDevStatusBattery(@Nullable Input<Boolean> reportDevStatusBattery) {
+        public Builder reportDevStatusBattery(@Nullable Input<Boolean> reportDevStatusBattery) {
             this.reportDevStatusBattery = reportDevStatusBattery;
             return this;
         }
 
-        public Builder setReportDevStatusBattery(@Nullable Boolean reportDevStatusBattery) {
+        public Builder reportDevStatusBattery(@Nullable Boolean reportDevStatusBattery) {
             this.reportDevStatusBattery = Input.ofNullable(reportDevStatusBattery);
             return this;
         }
 
-        public Builder setReportDevStatusMargin(@Nullable Input<Boolean> reportDevStatusMargin) {
+        public Builder reportDevStatusMargin(@Nullable Input<Boolean> reportDevStatusMargin) {
             this.reportDevStatusMargin = reportDevStatusMargin;
             return this;
         }
 
-        public Builder setReportDevStatusMargin(@Nullable Boolean reportDevStatusMargin) {
+        public Builder reportDevStatusMargin(@Nullable Boolean reportDevStatusMargin) {
             this.reportDevStatusMargin = Input.ofNullable(reportDevStatusMargin);
             return this;
         }
 
-        public Builder setTargetPer(@Nullable Input<Integer> targetPer) {
+        public Builder targetPer(@Nullable Input<Integer> targetPer) {
             this.targetPer = targetPer;
             return this;
         }
 
-        public Builder setTargetPer(@Nullable Integer targetPer) {
+        public Builder targetPer(@Nullable Integer targetPer) {
             this.targetPer = Input.ofNullable(targetPer);
             return this;
         }
 
-        public Builder setUlBucketSize(@Nullable Input<Integer> ulBucketSize) {
+        public Builder ulBucketSize(@Nullable Input<Integer> ulBucketSize) {
             this.ulBucketSize = ulBucketSize;
             return this;
         }
 
-        public Builder setUlBucketSize(@Nullable Integer ulBucketSize) {
+        public Builder ulBucketSize(@Nullable Integer ulBucketSize) {
             this.ulBucketSize = Input.ofNullable(ulBucketSize);
             return this;
         }
 
-        public Builder setUlRate(@Nullable Input<Integer> ulRate) {
+        public Builder ulRate(@Nullable Input<Integer> ulRate) {
             this.ulRate = ulRate;
             return this;
         }
 
-        public Builder setUlRate(@Nullable Integer ulRate) {
+        public Builder ulRate(@Nullable Integer ulRate) {
             this.ulRate = Input.ofNullable(ulRate);
             return this;
         }
 
-        public Builder setUlRatePolicy(@Nullable Input<String> ulRatePolicy) {
+        public Builder ulRatePolicy(@Nullable Input<String> ulRatePolicy) {
             this.ulRatePolicy = ulRatePolicy;
             return this;
         }
 
-        public Builder setUlRatePolicy(@Nullable String ulRatePolicy) {
+        public Builder ulRatePolicy(@Nullable String ulRatePolicy) {
             this.ulRatePolicy = Input.ofNullable(ulRatePolicy);
             return this;
         }

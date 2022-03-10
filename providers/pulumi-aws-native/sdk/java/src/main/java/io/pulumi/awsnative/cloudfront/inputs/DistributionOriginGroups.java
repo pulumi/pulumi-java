@@ -64,12 +64,12 @@ public final class DistributionOriginGroups extends io.pulumi.resources.InvokeAr
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder setItems(@Nullable List<DistributionOriginGroup> items) {
+        public Builder items(@Nullable List<DistributionOriginGroup> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setQuantity(Integer quantity) {
+        public Builder quantity(Integer quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }

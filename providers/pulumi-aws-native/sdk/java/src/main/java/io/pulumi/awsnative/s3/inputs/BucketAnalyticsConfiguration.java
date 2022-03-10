@@ -101,22 +101,22 @@ public final class BucketAnalyticsConfiguration extends io.pulumi.resources.Invo
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setStorageClassAnalysis(BucketStorageClassAnalysis storageClassAnalysis) {
+        public Builder storageClassAnalysis(BucketStorageClassAnalysis storageClassAnalysis) {
             this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis);
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }

@@ -181,52 +181,52 @@ public final class GetScheduledQueryResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setSQErrorReportConfiguration(@Nullable String sQErrorReportConfiguration) {
+        public Builder sQErrorReportConfiguration(@Nullable String sQErrorReportConfiguration) {
             this.sQErrorReportConfiguration = sQErrorReportConfiguration;
             return this;
         }
 
-        public Builder setSQKmsKeyId(@Nullable String sQKmsKeyId) {
+        public Builder sQKmsKeyId(@Nullable String sQKmsKeyId) {
             this.sQKmsKeyId = sQKmsKeyId;
             return this;
         }
 
-        public Builder setSQName(@Nullable String sQName) {
+        public Builder sQName(@Nullable String sQName) {
             this.sQName = sQName;
             return this;
         }
 
-        public Builder setSQNotificationConfiguration(@Nullable String sQNotificationConfiguration) {
+        public Builder sQNotificationConfiguration(@Nullable String sQNotificationConfiguration) {
             this.sQNotificationConfiguration = sQNotificationConfiguration;
             return this;
         }
 
-        public Builder setSQQueryString(@Nullable String sQQueryString) {
+        public Builder sQQueryString(@Nullable String sQQueryString) {
             this.sQQueryString = sQQueryString;
             return this;
         }
 
-        public Builder setSQScheduleConfiguration(@Nullable String sQScheduleConfiguration) {
+        public Builder sQScheduleConfiguration(@Nullable String sQScheduleConfiguration) {
             this.sQScheduleConfiguration = sQScheduleConfiguration;
             return this;
         }
 
-        public Builder setSQScheduledQueryExecutionRoleArn(@Nullable String sQScheduledQueryExecutionRoleArn) {
+        public Builder sQScheduledQueryExecutionRoleArn(@Nullable String sQScheduledQueryExecutionRoleArn) {
             this.sQScheduledQueryExecutionRoleArn = sQScheduledQueryExecutionRoleArn;
             return this;
         }
 
-        public Builder setSQTargetConfiguration(@Nullable String sQTargetConfiguration) {
+        public Builder sQTargetConfiguration(@Nullable String sQTargetConfiguration) {
             this.sQTargetConfiguration = sQTargetConfiguration;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ScheduledQueryTag> tags) {
+        public Builder tags(@Nullable List<ScheduledQueryTag> tags) {
             this.tags = tags;
             return this;
         }

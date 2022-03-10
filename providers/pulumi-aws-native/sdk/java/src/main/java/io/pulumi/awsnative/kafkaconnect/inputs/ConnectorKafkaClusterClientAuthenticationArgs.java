@@ -52,12 +52,12 @@ public final class ConnectorKafkaClusterClientAuthenticationArgs extends io.pulu
     	      this.authenticationType = defaults.authenticationType;
         }
 
-        public Builder setAuthenticationType(Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
+        public Builder authenticationType(Input<ConnectorKafkaClusterClientAuthenticationType> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(ConnectorKafkaClusterClientAuthenticationType authenticationType) {
+        public Builder authenticationType(ConnectorKafkaClusterClientAuthenticationType authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }

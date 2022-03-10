@@ -84,32 +84,32 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
     	      this.shareDistribution = defaults.shareDistribution;
         }
 
-        public Builder setComputeReservation(@Nullable Input<Double> computeReservation) {
+        public Builder computeReservation(@Nullable Input<Double> computeReservation) {
             this.computeReservation = computeReservation;
             return this;
         }
 
-        public Builder setComputeReservation(@Nullable Double computeReservation) {
+        public Builder computeReservation(@Nullable Double computeReservation) {
             this.computeReservation = Input.ofNullable(computeReservation);
             return this;
         }
 
-        public Builder setShareDecaySeconds(@Nullable Input<Double> shareDecaySeconds) {
+        public Builder shareDecaySeconds(@Nullable Input<Double> shareDecaySeconds) {
             this.shareDecaySeconds = shareDecaySeconds;
             return this;
         }
 
-        public Builder setShareDecaySeconds(@Nullable Double shareDecaySeconds) {
+        public Builder shareDecaySeconds(@Nullable Double shareDecaySeconds) {
             this.shareDecaySeconds = Input.ofNullable(shareDecaySeconds);
             return this;
         }
 
-        public Builder setShareDistribution(@Nullable Input<List<SchedulingPolicyShareAttributesArgs>> shareDistribution) {
+        public Builder shareDistribution(@Nullable Input<List<SchedulingPolicyShareAttributesArgs>> shareDistribution) {
             this.shareDistribution = shareDistribution;
             return this;
         }
 
-        public Builder setShareDistribution(@Nullable List<SchedulingPolicyShareAttributesArgs> shareDistribution) {
+        public Builder shareDistribution(@Nullable List<SchedulingPolicyShareAttributesArgs> shareDistribution) {
             this.shareDistribution = Input.ofNullable(shareDistribution);
             return this;
         }

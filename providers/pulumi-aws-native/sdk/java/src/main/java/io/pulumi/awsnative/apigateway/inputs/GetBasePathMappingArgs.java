@@ -68,12 +68,12 @@ public final class GetBasePathMappingArgs extends io.pulumi.resources.InvokeArgs
     	      this.domainName = defaults.domainName;
         }
 
-        public Builder setBasePath(String basePath) {
+        public Builder basePath(String basePath) {
             this.basePath = Objects.requireNonNull(basePath);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }

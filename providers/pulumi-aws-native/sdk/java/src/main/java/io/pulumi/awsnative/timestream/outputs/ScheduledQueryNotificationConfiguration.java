@@ -40,7 +40,7 @@ public final class ScheduledQueryNotificationConfiguration {
     	      this.snsConfiguration = defaults.snsConfiguration;
         }
 
-        public Builder setSnsConfiguration(ScheduledQuerySnsConfiguration snsConfiguration) {
+        public Builder snsConfiguration(ScheduledQuerySnsConfiguration snsConfiguration) {
             this.snsConfiguration = Objects.requireNonNull(snsConfiguration);
             return this;
         }

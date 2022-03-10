@@ -132,47 +132,47 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     	      this.stoppingCondition = defaults.stoppingCondition;
         }
 
-        public Builder setBaselineConfig(@Nullable MonitoringScheduleBaselineConfig baselineConfig) {
+        public Builder baselineConfig(@Nullable MonitoringScheduleBaselineConfig baselineConfig) {
             this.baselineConfig = baselineConfig;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Object environment) {
+        public Builder environment(@Nullable Object environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setMonitoringAppSpecification(MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification) {
+        public Builder monitoringAppSpecification(MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification) {
             this.monitoringAppSpecification = Objects.requireNonNull(monitoringAppSpecification);
             return this;
         }
 
-        public Builder setMonitoringInputs(List<MonitoringScheduleMonitoringInput> monitoringInputs) {
+        public Builder monitoringInputs(List<MonitoringScheduleMonitoringInput> monitoringInputs) {
             this.monitoringInputs = Objects.requireNonNull(monitoringInputs);
             return this;
         }
 
-        public Builder setMonitoringOutputConfig(MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig) {
+        public Builder monitoringOutputConfig(MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig) {
             this.monitoringOutputConfig = Objects.requireNonNull(monitoringOutputConfig);
             return this;
         }
 
-        public Builder setMonitoringResources(MonitoringScheduleMonitoringResources monitoringResources) {
+        public Builder monitoringResources(MonitoringScheduleMonitoringResources monitoringResources) {
             this.monitoringResources = Objects.requireNonNull(monitoringResources);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable MonitoringScheduleNetworkConfig networkConfig) {
+        public Builder networkConfig(@Nullable MonitoringScheduleNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setStoppingCondition(@Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
+        public Builder stoppingCondition(@Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
             this.stoppingCondition = stoppingCondition;
             return this;
         }

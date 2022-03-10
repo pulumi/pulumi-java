@@ -250,67 +250,67 @@ public final class GetEventSubscriptionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCustSubscriptionId(@Nullable String custSubscriptionId) {
+        public Builder custSubscriptionId(@Nullable String custSubscriptionId) {
             this.custSubscriptionId = custSubscriptionId;
             return this;
         }
 
-        public Builder setCustomerAwsId(@Nullable String customerAwsId) {
+        public Builder customerAwsId(@Nullable String customerAwsId) {
             this.customerAwsId = customerAwsId;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
+        public Builder eventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
 
-        public Builder setEventCategoriesList(@Nullable List<String> eventCategoriesList) {
+        public Builder eventCategoriesList(@Nullable List<String> eventCategoriesList) {
             this.eventCategoriesList = eventCategoriesList;
             return this;
         }
 
-        public Builder setSeverity(@Nullable EventSubscriptionSeverity severity) {
+        public Builder severity(@Nullable EventSubscriptionSeverity severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSourceIds(@Nullable List<String> sourceIds) {
+        public Builder sourceIds(@Nullable List<String> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
 
-        public Builder setSourceIdsList(@Nullable List<String> sourceIdsList) {
+        public Builder sourceIdsList(@Nullable List<String> sourceIdsList) {
             this.sourceIdsList = sourceIdsList;
             return this;
         }
 
-        public Builder setSourceType(@Nullable EventSubscriptionSourceType sourceType) {
+        public Builder sourceType(@Nullable EventSubscriptionSourceType sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setStatus(@Nullable EventSubscriptionStatus status) {
+        public Builder status(@Nullable EventSubscriptionStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubscriptionCreationTime(@Nullable String subscriptionCreationTime) {
+        public Builder subscriptionCreationTime(@Nullable String subscriptionCreationTime) {
             this.subscriptionCreationTime = subscriptionCreationTime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventSubscriptionTag> tags) {
+        public Builder tags(@Nullable List<EventSubscriptionTag> tags) {
             this.tags = tags;
             return this;
         }

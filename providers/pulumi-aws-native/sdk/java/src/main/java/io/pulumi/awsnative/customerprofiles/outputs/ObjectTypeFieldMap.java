@@ -52,12 +52,12 @@ public final class ObjectTypeFieldMap {
     	      this.objectTypeField = defaults.objectTypeField;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setObjectTypeField(@Nullable ObjectTypeField objectTypeField) {
+        public Builder objectTypeField(@Nullable ObjectTypeField objectTypeField) {
             this.objectTypeField = objectTypeField;
             return this;
         }

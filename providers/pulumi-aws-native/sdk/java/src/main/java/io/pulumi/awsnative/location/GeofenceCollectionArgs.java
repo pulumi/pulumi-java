@@ -99,52 +99,52 @@ public final class GeofenceCollectionArgs extends io.pulumi.resources.ResourceAr
     	      this.pricingPlanDataSource = defaults.pricingPlanDataSource;
         }
 
-        public Builder setCollectionName(Input<String> collectionName) {
+        public Builder collectionName(Input<String> collectionName) {
             this.collectionName = Objects.requireNonNull(collectionName);
             return this;
         }
 
-        public Builder setCollectionName(String collectionName) {
+        public Builder collectionName(String collectionName) {
             this.collectionName = Input.of(Objects.requireNonNull(collectionName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<GeofenceCollectionPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<GeofenceCollectionPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable GeofenceCollectionPricingPlan pricingPlan) {
+        public Builder pricingPlan(@Nullable GeofenceCollectionPricingPlan pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder setPricingPlanDataSource(@Nullable Input<String> pricingPlanDataSource) {
+        public Builder pricingPlanDataSource(@Nullable Input<String> pricingPlanDataSource) {
             this.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
 
-        public Builder setPricingPlanDataSource(@Nullable String pricingPlanDataSource) {
+        public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
             this.pricingPlanDataSource = Input.ofNullable(pricingPlanDataSource);
             return this;
         }

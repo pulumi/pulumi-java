@@ -183,47 +183,47 @@ public final class GetScheduledActionResult {
     	      this.targetAction = defaults.targetAction;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setIamRole(@Nullable String iamRole) {
+        public Builder iamRole(@Nullable String iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
-        public Builder setNextInvocations(@Nullable List<String> nextInvocations) {
+        public Builder nextInvocations(@Nullable List<String> nextInvocations) {
             this.nextInvocations = nextInvocations;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setScheduledActionDescription(@Nullable String scheduledActionDescription) {
+        public Builder scheduledActionDescription(@Nullable String scheduledActionDescription) {
             this.scheduledActionDescription = scheduledActionDescription;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setState(@Nullable ScheduledActionState state) {
+        public Builder state(@Nullable ScheduledActionState state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTargetAction(@Nullable ScheduledActionType targetAction) {
+        public Builder targetAction(@Nullable ScheduledActionType targetAction) {
             this.targetAction = targetAction;
             return this;
         }

@@ -53,12 +53,12 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
     	      this.s3Bucket = defaults.s3Bucket;
         }
 
-        public Builder setS3Bucket(@Nullable Input<BotAliasS3BucketLogDestinationArgs> s3Bucket) {
+        public Builder s3Bucket(@Nullable Input<BotAliasS3BucketLogDestinationArgs> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable BotAliasS3BucketLogDestinationArgs s3Bucket) {
+        public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestinationArgs s3Bucket) {
             this.s3Bucket = Input.ofNullable(s3Bucket);
             return this;
         }

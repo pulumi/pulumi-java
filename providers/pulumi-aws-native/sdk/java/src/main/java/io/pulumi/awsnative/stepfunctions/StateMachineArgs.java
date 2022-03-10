@@ -166,102 +166,102 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tracingConfiguration = defaults.tracingConfiguration;
         }
 
-        public Builder setDefinition(@Nullable Input<StateMachineDefinitionArgs> definition) {
+        public Builder definition(@Nullable Input<StateMachineDefinitionArgs> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinition(@Nullable StateMachineDefinitionArgs definition) {
+        public Builder definition(@Nullable StateMachineDefinitionArgs definition) {
             this.definition = Input.ofNullable(definition);
             return this;
         }
 
-        public Builder setDefinitionS3Location(@Nullable Input<StateMachineS3LocationArgs> definitionS3Location) {
+        public Builder definitionS3Location(@Nullable Input<StateMachineS3LocationArgs> definitionS3Location) {
             this.definitionS3Location = definitionS3Location;
             return this;
         }
 
-        public Builder setDefinitionS3Location(@Nullable StateMachineS3LocationArgs definitionS3Location) {
+        public Builder definitionS3Location(@Nullable StateMachineS3LocationArgs definitionS3Location) {
             this.definitionS3Location = Input.ofNullable(definitionS3Location);
             return this;
         }
 
-        public Builder setDefinitionString(@Nullable Input<String> definitionString) {
+        public Builder definitionString(@Nullable Input<String> definitionString) {
             this.definitionString = definitionString;
             return this;
         }
 
-        public Builder setDefinitionString(@Nullable String definitionString) {
+        public Builder definitionString(@Nullable String definitionString) {
             this.definitionString = Input.ofNullable(definitionString);
             return this;
         }
 
-        public Builder setDefinitionSubstitutions(@Nullable Input<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions) {
+        public Builder definitionSubstitutions(@Nullable Input<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions) {
             this.definitionSubstitutions = definitionSubstitutions;
             return this;
         }
 
-        public Builder setDefinitionSubstitutions(@Nullable StateMachineDefinitionSubstitutionsArgs definitionSubstitutions) {
+        public Builder definitionSubstitutions(@Nullable StateMachineDefinitionSubstitutionsArgs definitionSubstitutions) {
             this.definitionSubstitutions = Input.ofNullable(definitionSubstitutions);
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Input<StateMachineLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable StateMachineLoggingConfigurationArgs loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable StateMachineLoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStateMachineName(@Nullable Input<String> stateMachineName) {
+        public Builder stateMachineName(@Nullable Input<String> stateMachineName) {
             this.stateMachineName = stateMachineName;
             return this;
         }
 
-        public Builder setStateMachineName(@Nullable String stateMachineName) {
+        public Builder stateMachineName(@Nullable String stateMachineName) {
             this.stateMachineName = Input.ofNullable(stateMachineName);
             return this;
         }
 
-        public Builder setStateMachineType(@Nullable Input<StateMachineType> stateMachineType) {
+        public Builder stateMachineType(@Nullable Input<StateMachineType> stateMachineType) {
             this.stateMachineType = stateMachineType;
             return this;
         }
 
-        public Builder setStateMachineType(@Nullable StateMachineType stateMachineType) {
+        public Builder stateMachineType(@Nullable StateMachineType stateMachineType) {
             this.stateMachineType = Input.ofNullable(stateMachineType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StateMachineTagsEntryArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StateMachineTagsEntryArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StateMachineTagsEntryArgs> tags) {
+        public Builder tags(@Nullable List<StateMachineTagsEntryArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTracingConfiguration(@Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable Input<StateMachineTracingConfigurationArgs> tracingConfiguration) {
             this.tracingConfiguration = tracingConfiguration;
             return this;
         }
 
-        public Builder setTracingConfiguration(@Nullable StateMachineTracingConfigurationArgs tracingConfiguration) {
+        public Builder tracingConfiguration(@Nullable StateMachineTracingConfigurationArgs tracingConfiguration) {
             this.tracingConfiguration = Input.ofNullable(tracingConfiguration);
             return this;
         }

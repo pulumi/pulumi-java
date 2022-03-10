@@ -62,22 +62,22 @@ public final class DatasetDeltaTimeArgs extends io.pulumi.resources.ResourceArgs
     	      this.timeExpression = defaults.timeExpression;
         }
 
-        public Builder setOffsetSeconds(Input<Integer> offsetSeconds) {
+        public Builder offsetSeconds(Input<Integer> offsetSeconds) {
             this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
             return this;
         }
 
-        public Builder setOffsetSeconds(Integer offsetSeconds) {
+        public Builder offsetSeconds(Integer offsetSeconds) {
             this.offsetSeconds = Input.of(Objects.requireNonNull(offsetSeconds));
             return this;
         }
 
-        public Builder setTimeExpression(Input<String> timeExpression) {
+        public Builder timeExpression(Input<String> timeExpression) {
             this.timeExpression = Objects.requireNonNull(timeExpression);
             return this;
         }
 
-        public Builder setTimeExpression(String timeExpression) {
+        public Builder timeExpression(String timeExpression) {
             this.timeExpression = Input.of(Objects.requireNonNull(timeExpression));
             return this;
         }

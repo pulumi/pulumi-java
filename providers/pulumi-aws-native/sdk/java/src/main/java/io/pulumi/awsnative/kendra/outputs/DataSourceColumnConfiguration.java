@@ -77,27 +77,27 @@ public final class DataSourceColumnConfiguration {
     	      this.fieldMappings = defaults.fieldMappings;
         }
 
-        public Builder setChangeDetectingColumns(List<String> changeDetectingColumns) {
+        public Builder changeDetectingColumns(List<String> changeDetectingColumns) {
             this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns);
             return this;
         }
 
-        public Builder setDocumentDataColumnName(String documentDataColumnName) {
+        public Builder documentDataColumnName(String documentDataColumnName) {
             this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName);
             return this;
         }
 
-        public Builder setDocumentIdColumnName(String documentIdColumnName) {
+        public Builder documentIdColumnName(String documentIdColumnName) {
             this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName);
             return this;
         }
 
-        public Builder setDocumentTitleColumnName(@Nullable String documentTitleColumnName) {
+        public Builder documentTitleColumnName(@Nullable String documentTitleColumnName) {
             this.documentTitleColumnName = documentTitleColumnName;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }

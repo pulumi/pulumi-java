@@ -76,22 +76,22 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
     	      this.awsServices = defaults.awsServices;
         }
 
-        public Builder setAwsAccounts(@Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts) {
+        public Builder awsAccounts(@Nullable Input<List<AssessmentAWSAccountArgs>> awsAccounts) {
             this.awsAccounts = awsAccounts;
             return this;
         }
 
-        public Builder setAwsAccounts(@Nullable List<AssessmentAWSAccountArgs> awsAccounts) {
+        public Builder awsAccounts(@Nullable List<AssessmentAWSAccountArgs> awsAccounts) {
             this.awsAccounts = Input.ofNullable(awsAccounts);
             return this;
         }
 
-        public Builder setAwsServices(@Nullable Input<List<AssessmentAWSServiceArgs>> awsServices) {
+        public Builder awsServices(@Nullable Input<List<AssessmentAWSServiceArgs>> awsServices) {
             this.awsServices = awsServices;
             return this;
         }
 
-        public Builder setAwsServices(@Nullable List<AssessmentAWSServiceArgs> awsServices) {
+        public Builder awsServices(@Nullable List<AssessmentAWSServiceArgs> awsServices) {
             this.awsServices = Input.ofNullable(awsServices);
             return this;
         }

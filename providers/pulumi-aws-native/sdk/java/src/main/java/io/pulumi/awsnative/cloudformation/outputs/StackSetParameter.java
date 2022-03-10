@@ -65,12 +65,12 @@ public final class StackSetParameter {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setParameterKey(String parameterKey) {
+        public Builder parameterKey(String parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
 
-        public Builder setParameterValue(String parameterValue) {
+        public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }

@@ -190,92 +190,92 @@ public final class AppMonitorConfigurationArgs extends io.pulumi.resources.Resou
     	      this.telemetries = defaults.telemetries;
         }
 
-        public Builder setAllowCookies(@Nullable Input<Boolean> allowCookies) {
+        public Builder allowCookies(@Nullable Input<Boolean> allowCookies) {
             this.allowCookies = allowCookies;
             return this;
         }
 
-        public Builder setAllowCookies(@Nullable Boolean allowCookies) {
+        public Builder allowCookies(@Nullable Boolean allowCookies) {
             this.allowCookies = Input.ofNullable(allowCookies);
             return this;
         }
 
-        public Builder setEnableXRay(@Nullable Input<Boolean> enableXRay) {
+        public Builder enableXRay(@Nullable Input<Boolean> enableXRay) {
             this.enableXRay = enableXRay;
             return this;
         }
 
-        public Builder setEnableXRay(@Nullable Boolean enableXRay) {
+        public Builder enableXRay(@Nullable Boolean enableXRay) {
             this.enableXRay = Input.ofNullable(enableXRay);
             return this;
         }
 
-        public Builder setExcludedPages(@Nullable Input<List<String>> excludedPages) {
+        public Builder excludedPages(@Nullable Input<List<String>> excludedPages) {
             this.excludedPages = excludedPages;
             return this;
         }
 
-        public Builder setExcludedPages(@Nullable List<String> excludedPages) {
+        public Builder excludedPages(@Nullable List<String> excludedPages) {
             this.excludedPages = Input.ofNullable(excludedPages);
             return this;
         }
 
-        public Builder setFavoritePages(@Nullable Input<List<String>> favoritePages) {
+        public Builder favoritePages(@Nullable Input<List<String>> favoritePages) {
             this.favoritePages = favoritePages;
             return this;
         }
 
-        public Builder setFavoritePages(@Nullable List<String> favoritePages) {
+        public Builder favoritePages(@Nullable List<String> favoritePages) {
             this.favoritePages = Input.ofNullable(favoritePages);
             return this;
         }
 
-        public Builder setGuestRoleArn(@Nullable Input<String> guestRoleArn) {
+        public Builder guestRoleArn(@Nullable Input<String> guestRoleArn) {
             this.guestRoleArn = guestRoleArn;
             return this;
         }
 
-        public Builder setGuestRoleArn(@Nullable String guestRoleArn) {
+        public Builder guestRoleArn(@Nullable String guestRoleArn) {
             this.guestRoleArn = Input.ofNullable(guestRoleArn);
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable Input<String> identityPoolId) {
+        public Builder identityPoolId(@Nullable Input<String> identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable String identityPoolId) {
+        public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = Input.ofNullable(identityPoolId);
             return this;
         }
 
-        public Builder setIncludedPages(@Nullable Input<List<String>> includedPages) {
+        public Builder includedPages(@Nullable Input<List<String>> includedPages) {
             this.includedPages = includedPages;
             return this;
         }
 
-        public Builder setIncludedPages(@Nullable List<String> includedPages) {
+        public Builder includedPages(@Nullable List<String> includedPages) {
             this.includedPages = Input.ofNullable(includedPages);
             return this;
         }
 
-        public Builder setSessionSampleRate(@Nullable Input<Double> sessionSampleRate) {
+        public Builder sessionSampleRate(@Nullable Input<Double> sessionSampleRate) {
             this.sessionSampleRate = sessionSampleRate;
             return this;
         }
 
-        public Builder setSessionSampleRate(@Nullable Double sessionSampleRate) {
+        public Builder sessionSampleRate(@Nullable Double sessionSampleRate) {
             this.sessionSampleRate = Input.ofNullable(sessionSampleRate);
             return this;
         }
 
-        public Builder setTelemetries(@Nullable Input<List<AppMonitorTelemetry>> telemetries) {
+        public Builder telemetries(@Nullable Input<List<AppMonitorTelemetry>> telemetries) {
             this.telemetries = telemetries;
             return this;
         }
 
-        public Builder setTelemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
+        public Builder telemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
             this.telemetries = Input.ofNullable(telemetries);
             return this;
         }

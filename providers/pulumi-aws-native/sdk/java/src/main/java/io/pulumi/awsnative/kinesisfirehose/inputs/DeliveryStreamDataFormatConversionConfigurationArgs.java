@@ -89,42 +89,42 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
     	      this.schemaConfiguration = defaults.schemaConfiguration;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setInputFormatConfiguration(@Nullable Input<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration) {
+        public Builder inputFormatConfiguration(@Nullable Input<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration) {
             this.inputFormatConfiguration = inputFormatConfiguration;
             return this;
         }
 
-        public Builder setInputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfigurationArgs inputFormatConfiguration) {
+        public Builder inputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfigurationArgs inputFormatConfiguration) {
             this.inputFormatConfiguration = Input.ofNullable(inputFormatConfiguration);
             return this;
         }
 
-        public Builder setOutputFormatConfiguration(@Nullable Input<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration) {
+        public Builder outputFormatConfiguration(@Nullable Input<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration) {
             this.outputFormatConfiguration = outputFormatConfiguration;
             return this;
         }
 
-        public Builder setOutputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfigurationArgs outputFormatConfiguration) {
+        public Builder outputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfigurationArgs outputFormatConfiguration) {
             this.outputFormatConfiguration = Input.ofNullable(outputFormatConfiguration);
             return this;
         }
 
-        public Builder setSchemaConfiguration(@Nullable Input<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration) {
+        public Builder schemaConfiguration(@Nullable Input<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration) {
             this.schemaConfiguration = schemaConfiguration;
             return this;
         }
 
-        public Builder setSchemaConfiguration(@Nullable DeliveryStreamSchemaConfigurationArgs schemaConfiguration) {
+        public Builder schemaConfiguration(@Nullable DeliveryStreamSchemaConfigurationArgs schemaConfiguration) {
             this.schemaConfiguration = Input.ofNullable(schemaConfiguration);
             return this;
         }

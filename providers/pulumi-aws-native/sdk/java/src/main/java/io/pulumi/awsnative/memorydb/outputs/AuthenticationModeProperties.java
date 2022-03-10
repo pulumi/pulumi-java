@@ -69,12 +69,12 @@ public final class AuthenticationModeProperties {
     	      this.type = defaults.type;
         }
 
-        public Builder setPasswords(@Nullable List<String> passwords) {
+        public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = passwords;
             return this;
         }
 
-        public Builder setType(@Nullable UserAuthenticationModePropertiesType type) {
+        public Builder type(@Nullable UserAuthenticationModePropertiesType type) {
             this.type = type;
             return this;
         }

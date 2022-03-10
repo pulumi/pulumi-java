@@ -117,27 +117,27 @@ public final class GetCodeSigningConfigResult {
     	      this.description = defaults.description;
         }
 
-        public Builder setAllowedPublishers(@Nullable CodeSigningConfigAllowedPublishers allowedPublishers) {
+        public Builder allowedPublishers(@Nullable CodeSigningConfigAllowedPublishers allowedPublishers) {
             this.allowedPublishers = allowedPublishers;
             return this;
         }
 
-        public Builder setCodeSigningConfigArn(@Nullable String codeSigningConfigArn) {
+        public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
 
-        public Builder setCodeSigningConfigId(@Nullable String codeSigningConfigId) {
+        public Builder codeSigningConfigId(@Nullable String codeSigningConfigId) {
             this.codeSigningConfigId = codeSigningConfigId;
             return this;
         }
 
-        public Builder setCodeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies) {
+        public Builder codeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies) {
             this.codeSigningPolicies = codeSigningPolicies;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

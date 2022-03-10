@@ -81,32 +81,32 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setFilesLimit(@Nullable Input<DatasetFilesLimitArgs> filesLimit) {
+        public Builder filesLimit(@Nullable Input<DatasetFilesLimitArgs> filesLimit) {
             this.filesLimit = filesLimit;
             return this;
         }
 
-        public Builder setFilesLimit(@Nullable DatasetFilesLimitArgs filesLimit) {
+        public Builder filesLimit(@Nullable DatasetFilesLimitArgs filesLimit) {
             this.filesLimit = Input.ofNullable(filesLimit);
             return this;
         }
 
-        public Builder setLastModifiedDateCondition(@Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition) {
+        public Builder lastModifiedDateCondition(@Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition) {
             this.lastModifiedDateCondition = lastModifiedDateCondition;
             return this;
         }
 
-        public Builder setLastModifiedDateCondition(@Nullable DatasetFilterExpressionArgs lastModifiedDateCondition) {
+        public Builder lastModifiedDateCondition(@Nullable DatasetFilterExpressionArgs lastModifiedDateCondition) {
             this.lastModifiedDateCondition = Input.ofNullable(lastModifiedDateCondition);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<DatasetPathParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<DatasetPathParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<DatasetPathParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<DatasetPathParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

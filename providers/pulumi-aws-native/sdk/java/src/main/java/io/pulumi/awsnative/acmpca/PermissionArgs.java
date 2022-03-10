@@ -103,42 +103,42 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceAccount = defaults.sourceAccount;
         }
 
-        public Builder setActions(Input<List<String>> actions) {
+        public Builder actions(Input<List<String>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(Input<String> certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(Input<String> certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Input.of(Objects.requireNonNull(certificateAuthorityArn));
             return this;
         }
 
-        public Builder setPrincipal(Input<String> principal) {
+        public Builder principal(Input<String> principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
 
-        public Builder setSourceAccount(@Nullable Input<String> sourceAccount) {
+        public Builder sourceAccount(@Nullable Input<String> sourceAccount) {
             this.sourceAccount = sourceAccount;
             return this;
         }
 
-        public Builder setSourceAccount(@Nullable String sourceAccount) {
+        public Builder sourceAccount(@Nullable String sourceAccount) {
             this.sourceAccount = Input.ofNullable(sourceAccount);
             return this;
         }

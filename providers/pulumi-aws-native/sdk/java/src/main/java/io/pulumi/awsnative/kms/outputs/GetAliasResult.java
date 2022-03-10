@@ -50,7 +50,7 @@ public final class GetAliasResult {
     	      this.targetKeyId = defaults.targetKeyId;
         }
 
-        public Builder setTargetKeyId(@Nullable String targetKeyId) {
+        public Builder targetKeyId(@Nullable String targetKeyId) {
             this.targetKeyId = targetKeyId;
             return this;
         }

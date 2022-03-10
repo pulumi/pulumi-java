@@ -52,12 +52,12 @@ public final class TableClusteringKeyColumn {
     	      this.orderBy = defaults.orderBy;
         }
 
-        public Builder setColumn(TableColumn column) {
+        public Builder column(TableColumn column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setOrderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
+        public Builder orderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
             this.orderBy = orderBy;
             return this;
         }

@@ -108,42 +108,42 @@ public final class JobTemplateAbortCriteriaArgs extends io.pulumi.resources.Reso
     	      this.thresholdPercentage = defaults.thresholdPercentage;
         }
 
-        public Builder setAction(Input<JobTemplateAction> action) {
+        public Builder action(Input<JobTemplateAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(JobTemplateAction action) {
+        public Builder action(JobTemplateAction action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setFailureType(Input<JobTemplateFailureType> failureType) {
+        public Builder failureType(Input<JobTemplateFailureType> failureType) {
             this.failureType = Objects.requireNonNull(failureType);
             return this;
         }
 
-        public Builder setFailureType(JobTemplateFailureType failureType) {
+        public Builder failureType(JobTemplateFailureType failureType) {
             this.failureType = Input.of(Objects.requireNonNull(failureType));
             return this;
         }
 
-        public Builder setMinNumberOfExecutedThings(Input<Integer> minNumberOfExecutedThings) {
+        public Builder minNumberOfExecutedThings(Input<Integer> minNumberOfExecutedThings) {
             this.minNumberOfExecutedThings = Objects.requireNonNull(minNumberOfExecutedThings);
             return this;
         }
 
-        public Builder setMinNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
+        public Builder minNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
             this.minNumberOfExecutedThings = Input.of(Objects.requireNonNull(minNumberOfExecutedThings));
             return this;
         }
 
-        public Builder setThresholdPercentage(Input<Double> thresholdPercentage) {
+        public Builder thresholdPercentage(Input<Double> thresholdPercentage) {
             this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
             return this;
         }
 
-        public Builder setThresholdPercentage(Double thresholdPercentage) {
+        public Builder thresholdPercentage(Double thresholdPercentage) {
             this.thresholdPercentage = Input.of(Objects.requireNonNull(thresholdPercentage));
             return this;
         }

@@ -167,47 +167,47 @@ public final class GetBucketResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setAbleToUpdateBundle(@Nullable Boolean ableToUpdateBundle) {
+        public Builder ableToUpdateBundle(@Nullable Boolean ableToUpdateBundle) {
             this.ableToUpdateBundle = ableToUpdateBundle;
             return this;
         }
 
-        public Builder setAccessRules(@Nullable BucketAccessRules accessRules) {
+        public Builder accessRules(@Nullable BucketAccessRules accessRules) {
             this.accessRules = accessRules;
             return this;
         }
 
-        public Builder setBucketArn(@Nullable String bucketArn) {
+        public Builder bucketArn(@Nullable String bucketArn) {
             this.bucketArn = bucketArn;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setObjectVersioning(@Nullable Boolean objectVersioning) {
+        public Builder objectVersioning(@Nullable Boolean objectVersioning) {
             this.objectVersioning = objectVersioning;
             return this;
         }
 
-        public Builder setReadOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
+        public Builder readOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
             this.readOnlyAccessAccounts = readOnlyAccessAccounts;
             return this;
         }
 
-        public Builder setResourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
+        public Builder resourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
             this.resourcesReceivingAccess = resourcesReceivingAccess;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BucketTag> tags) {
+        public Builder tags(@Nullable List<BucketTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

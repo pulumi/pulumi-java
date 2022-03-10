@@ -93,22 +93,22 @@ public final class AssetModelPropertyType extends io.pulumi.resources.InvokeArgs
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setAttribute(@Nullable AssetModelAttribute attribute) {
+        public Builder attribute(@Nullable AssetModelAttribute attribute) {
             this.attribute = attribute;
             return this;
         }
 
-        public Builder setMetric(@Nullable AssetModelMetric metric) {
+        public Builder metric(@Nullable AssetModelMetric metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setTransform(@Nullable AssetModelTransform transform) {
+        public Builder transform(@Nullable AssetModelTransform transform) {
             this.transform = transform;
             return this;
         }
 
-        public Builder setTypeName(AssetModelTypeName typeName) {
+        public Builder typeName(AssetModelTypeName typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }

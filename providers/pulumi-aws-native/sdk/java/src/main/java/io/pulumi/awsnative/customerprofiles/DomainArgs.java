@@ -121,52 +121,52 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDeadLetterQueueUrl(@Nullable Input<String> deadLetterQueueUrl) {
+        public Builder deadLetterQueueUrl(@Nullable Input<String> deadLetterQueueUrl) {
             this.deadLetterQueueUrl = deadLetterQueueUrl;
             return this;
         }
 
-        public Builder setDeadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
+        public Builder deadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
             this.deadLetterQueueUrl = Input.ofNullable(deadLetterQueueUrl);
             return this;
         }
 
-        public Builder setDefaultEncryptionKey(@Nullable Input<String> defaultEncryptionKey) {
+        public Builder defaultEncryptionKey(@Nullable Input<String> defaultEncryptionKey) {
             this.defaultEncryptionKey = defaultEncryptionKey;
             return this;
         }
 
-        public Builder setDefaultEncryptionKey(@Nullable String defaultEncryptionKey) {
+        public Builder defaultEncryptionKey(@Nullable String defaultEncryptionKey) {
             this.defaultEncryptionKey = Input.ofNullable(defaultEncryptionKey);
             return this;
         }
 
-        public Builder setDefaultExpirationDays(@Nullable Input<Integer> defaultExpirationDays) {
+        public Builder defaultExpirationDays(@Nullable Input<Integer> defaultExpirationDays) {
             this.defaultExpirationDays = defaultExpirationDays;
             return this;
         }
 
-        public Builder setDefaultExpirationDays(@Nullable Integer defaultExpirationDays) {
+        public Builder defaultExpirationDays(@Nullable Integer defaultExpirationDays) {
             this.defaultExpirationDays = Input.ofNullable(defaultExpirationDays);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DomainTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTagArgs> tags) {
+        public Builder tags(@Nullable List<DomainTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

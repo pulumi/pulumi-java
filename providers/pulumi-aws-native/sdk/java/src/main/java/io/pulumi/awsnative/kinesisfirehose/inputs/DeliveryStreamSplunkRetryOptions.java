@@ -49,7 +49,7 @@ public final class DeliveryStreamSplunkRetryOptions extends io.pulumi.resources.
     	      this.durationInSeconds = defaults.durationInSeconds;
         }
 
-        public Builder setDurationInSeconds(@Nullable Integer durationInSeconds) {
+        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
         }

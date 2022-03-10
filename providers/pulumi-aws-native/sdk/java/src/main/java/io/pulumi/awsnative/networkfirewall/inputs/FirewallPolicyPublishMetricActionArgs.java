@@ -49,12 +49,12 @@ public final class FirewallPolicyPublishMetricActionArgs extends io.pulumi.resou
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(Input<List<FirewallPolicyDimensionArgs>> dimensions) {
+        public Builder dimensions(Input<List<FirewallPolicyDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setDimensions(List<FirewallPolicyDimensionArgs> dimensions) {
+        public Builder dimensions(List<FirewallPolicyDimensionArgs> dimensions) {
             this.dimensions = Input.of(Objects.requireNonNull(dimensions));
             return this;
         }

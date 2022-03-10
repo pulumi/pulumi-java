@@ -48,7 +48,7 @@ public final class ConnectorProfileVeevaConnectorProfileProperties {
     	      this.instanceUrl = defaults.instanceUrl;
         }
 
-        public Builder setInstanceUrl(String instanceUrl) {
+        public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }

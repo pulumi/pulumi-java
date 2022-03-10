@@ -69,17 +69,17 @@ public final class GetSAMLProviderResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setSamlMetadataDocument(@Nullable String samlMetadataDocument) {
+        public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SAMLProviderTag> tags) {
+        public Builder tags(@Nullable List<SAMLProviderTag> tags) {
             this.tags = tags;
             return this;
         }

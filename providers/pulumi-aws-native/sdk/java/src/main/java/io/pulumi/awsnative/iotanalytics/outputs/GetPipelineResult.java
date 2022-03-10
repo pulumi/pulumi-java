@@ -62,17 +62,17 @@ public final class GetPipelineResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPipelineActivities(@Nullable List<PipelineActivity> pipelineActivities) {
+        public Builder pipelineActivities(@Nullable List<PipelineActivity> pipelineActivities) {
             this.pipelineActivities = pipelineActivities;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PipelineTag> tags) {
+        public Builder tags(@Nullable List<PipelineTag> tags) {
             this.tags = tags;
             return this;
         }

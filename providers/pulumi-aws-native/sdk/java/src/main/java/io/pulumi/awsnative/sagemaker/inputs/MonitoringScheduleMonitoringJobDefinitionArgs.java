@@ -167,92 +167,92 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     	      this.stoppingCondition = defaults.stoppingCondition;
         }
 
-        public Builder setBaselineConfig(@Nullable Input<MonitoringScheduleBaselineConfigArgs> baselineConfig) {
+        public Builder baselineConfig(@Nullable Input<MonitoringScheduleBaselineConfigArgs> baselineConfig) {
             this.baselineConfig = baselineConfig;
             return this;
         }
 
-        public Builder setBaselineConfig(@Nullable MonitoringScheduleBaselineConfigArgs baselineConfig) {
+        public Builder baselineConfig(@Nullable MonitoringScheduleBaselineConfigArgs baselineConfig) {
             this.baselineConfig = Input.ofNullable(baselineConfig);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<Object> environment) {
+        public Builder environment(@Nullable Input<Object> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Object environment) {
+        public Builder environment(@Nullable Object environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setMonitoringAppSpecification(Input<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification) {
+        public Builder monitoringAppSpecification(Input<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification) {
             this.monitoringAppSpecification = Objects.requireNonNull(monitoringAppSpecification);
             return this;
         }
 
-        public Builder setMonitoringAppSpecification(MonitoringScheduleMonitoringAppSpecificationArgs monitoringAppSpecification) {
+        public Builder monitoringAppSpecification(MonitoringScheduleMonitoringAppSpecificationArgs monitoringAppSpecification) {
             this.monitoringAppSpecification = Input.of(Objects.requireNonNull(monitoringAppSpecification));
             return this;
         }
 
-        public Builder setMonitoringInputs(Input<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs) {
+        public Builder monitoringInputs(Input<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs) {
             this.monitoringInputs = Objects.requireNonNull(monitoringInputs);
             return this;
         }
 
-        public Builder setMonitoringInputs(List<MonitoringScheduleMonitoringInputArgs> monitoringInputs) {
+        public Builder monitoringInputs(List<MonitoringScheduleMonitoringInputArgs> monitoringInputs) {
             this.monitoringInputs = Input.of(Objects.requireNonNull(monitoringInputs));
             return this;
         }
 
-        public Builder setMonitoringOutputConfig(Input<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig) {
+        public Builder monitoringOutputConfig(Input<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig) {
             this.monitoringOutputConfig = Objects.requireNonNull(monitoringOutputConfig);
             return this;
         }
 
-        public Builder setMonitoringOutputConfig(MonitoringScheduleMonitoringOutputConfigArgs monitoringOutputConfig) {
+        public Builder monitoringOutputConfig(MonitoringScheduleMonitoringOutputConfigArgs monitoringOutputConfig) {
             this.monitoringOutputConfig = Input.of(Objects.requireNonNull(monitoringOutputConfig));
             return this;
         }
 
-        public Builder setMonitoringResources(Input<MonitoringScheduleMonitoringResourcesArgs> monitoringResources) {
+        public Builder monitoringResources(Input<MonitoringScheduleMonitoringResourcesArgs> monitoringResources) {
             this.monitoringResources = Objects.requireNonNull(monitoringResources);
             return this;
         }
 
-        public Builder setMonitoringResources(MonitoringScheduleMonitoringResourcesArgs monitoringResources) {
+        public Builder monitoringResources(MonitoringScheduleMonitoringResourcesArgs monitoringResources) {
             this.monitoringResources = Input.of(Objects.requireNonNull(monitoringResources));
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<MonitoringScheduleNetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<MonitoringScheduleNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable MonitoringScheduleNetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable MonitoringScheduleNetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStoppingCondition(@Nullable Input<MonitoringScheduleStoppingConditionArgs> stoppingCondition) {
+        public Builder stoppingCondition(@Nullable Input<MonitoringScheduleStoppingConditionArgs> stoppingCondition) {
             this.stoppingCondition = stoppingCondition;
             return this;
         }
 
-        public Builder setStoppingCondition(@Nullable MonitoringScheduleStoppingConditionArgs stoppingCondition) {
+        public Builder stoppingCondition(@Nullable MonitoringScheduleStoppingConditionArgs stoppingCondition) {
             this.stoppingCondition = Input.ofNullable(stoppingCondition);
             return this;
         }

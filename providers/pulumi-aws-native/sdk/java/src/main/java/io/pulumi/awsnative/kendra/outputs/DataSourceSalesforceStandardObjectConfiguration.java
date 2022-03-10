@@ -70,22 +70,22 @@ public final class DataSourceSalesforceStandardObjectConfiguration {
     	      this.name = defaults.name;
         }
 
-        public Builder setDocumentDataFieldName(String documentDataFieldName) {
+        public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setName(DataSourceSalesforceStandardObjectName name) {
+        public Builder name(DataSourceSalesforceStandardObjectName name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

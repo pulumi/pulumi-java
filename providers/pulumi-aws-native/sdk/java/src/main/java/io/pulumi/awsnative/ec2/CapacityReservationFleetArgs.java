@@ -153,92 +153,92 @@ public final class CapacityReservationFleetArgs extends io.pulumi.resources.Reso
     	      this.totalTargetCapacity = defaults.totalTargetCapacity;
         }
 
-        public Builder setAllocationStrategy(@Nullable Input<String> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Input<String> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = Input.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder setEndDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Input<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = Input.ofNullable(endDate);
             return this;
         }
 
-        public Builder setInstanceMatchCriteria(@Nullable Input<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria) {
+        public Builder instanceMatchCriteria(@Nullable Input<CapacityReservationFleetInstanceMatchCriteria> instanceMatchCriteria) {
             this.instanceMatchCriteria = instanceMatchCriteria;
             return this;
         }
 
-        public Builder setInstanceMatchCriteria(@Nullable CapacityReservationFleetInstanceMatchCriteria instanceMatchCriteria) {
+        public Builder instanceMatchCriteria(@Nullable CapacityReservationFleetInstanceMatchCriteria instanceMatchCriteria) {
             this.instanceMatchCriteria = Input.ofNullable(instanceMatchCriteria);
             return this;
         }
 
-        public Builder setInstanceTypeSpecifications(@Nullable Input<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications) {
+        public Builder instanceTypeSpecifications(@Nullable Input<List<CapacityReservationFleetInstanceTypeSpecificationArgs>> instanceTypeSpecifications) {
             this.instanceTypeSpecifications = instanceTypeSpecifications;
             return this;
         }
 
-        public Builder setInstanceTypeSpecifications(@Nullable List<CapacityReservationFleetInstanceTypeSpecificationArgs> instanceTypeSpecifications) {
+        public Builder instanceTypeSpecifications(@Nullable List<CapacityReservationFleetInstanceTypeSpecificationArgs> instanceTypeSpecifications) {
             this.instanceTypeSpecifications = Input.ofNullable(instanceTypeSpecifications);
             return this;
         }
 
-        public Builder setNoRemoveEndDate(@Nullable Input<Boolean> noRemoveEndDate) {
+        public Builder noRemoveEndDate(@Nullable Input<Boolean> noRemoveEndDate) {
             this.noRemoveEndDate = noRemoveEndDate;
             return this;
         }
 
-        public Builder setNoRemoveEndDate(@Nullable Boolean noRemoveEndDate) {
+        public Builder noRemoveEndDate(@Nullable Boolean noRemoveEndDate) {
             this.noRemoveEndDate = Input.ofNullable(noRemoveEndDate);
             return this;
         }
 
-        public Builder setRemoveEndDate(@Nullable Input<Boolean> removeEndDate) {
+        public Builder removeEndDate(@Nullable Input<Boolean> removeEndDate) {
             this.removeEndDate = removeEndDate;
             return this;
         }
 
-        public Builder setRemoveEndDate(@Nullable Boolean removeEndDate) {
+        public Builder removeEndDate(@Nullable Boolean removeEndDate) {
             this.removeEndDate = Input.ofNullable(removeEndDate);
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable Input<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable Input<List<CapacityReservationFleetTagSpecificationArgs>> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable List<CapacityReservationFleetTagSpecificationArgs> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable List<CapacityReservationFleetTagSpecificationArgs> tagSpecifications) {
             this.tagSpecifications = Input.ofNullable(tagSpecifications);
             return this;
         }
 
-        public Builder setTenancy(@Nullable Input<CapacityReservationFleetTenancy> tenancy) {
+        public Builder tenancy(@Nullable Input<CapacityReservationFleetTenancy> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
-        public Builder setTenancy(@Nullable CapacityReservationFleetTenancy tenancy) {
+        public Builder tenancy(@Nullable CapacityReservationFleetTenancy tenancy) {
             this.tenancy = Input.ofNullable(tenancy);
             return this;
         }
 
-        public Builder setTotalTargetCapacity(@Nullable Input<Integer> totalTargetCapacity) {
+        public Builder totalTargetCapacity(@Nullable Input<Integer> totalTargetCapacity) {
             this.totalTargetCapacity = totalTargetCapacity;
             return this;
         }
 
-        public Builder setTotalTargetCapacity(@Nullable Integer totalTargetCapacity) {
+        public Builder totalTargetCapacity(@Nullable Integer totalTargetCapacity) {
             this.totalTargetCapacity = Input.ofNullable(totalTargetCapacity);
             return this;
         }

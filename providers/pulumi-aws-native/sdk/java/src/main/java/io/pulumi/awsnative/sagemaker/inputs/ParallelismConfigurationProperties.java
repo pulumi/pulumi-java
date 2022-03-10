@@ -51,7 +51,7 @@ public final class ParallelismConfigurationProperties extends io.pulumi.resource
     	      this.maxParallelExecutionSteps = defaults.maxParallelExecutionSteps;
         }
 
-        public Builder setMaxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
+        public Builder maxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
             this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
             return this;
         }

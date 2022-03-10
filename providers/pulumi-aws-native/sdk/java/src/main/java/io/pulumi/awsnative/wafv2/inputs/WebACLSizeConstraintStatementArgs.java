@@ -93,42 +93,42 @@ public final class WebACLSizeConstraintStatementArgs extends io.pulumi.resources
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setComparisonOperator(Input<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator) {
+        public Builder comparisonOperator(Input<WebACLSizeConstraintStatementComparisonOperator> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setComparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
+        public Builder comparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
             this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder setFieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
+        public Builder fieldToMatch(Input<WebACLFieldToMatchArgs> fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setFieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
+        public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
             this.fieldToMatch = Input.of(Objects.requireNonNull(fieldToMatch));
             return this;
         }
 
-        public Builder setSize(Input<Double> size) {
+        public Builder size(Input<Double> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder setTextTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
+        public Builder textTransformations(Input<List<WebACLTextTransformationArgs>> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
 
-        public Builder setTextTransformations(List<WebACLTextTransformationArgs> textTransformations) {
+        public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }

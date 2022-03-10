@@ -68,22 +68,22 @@ public final class TopicRuleIotEventsAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -86,32 +86,32 @@ public final class DataSourceS3DataSourceConfiguration {
     	      this.inclusionPrefixes = defaults.inclusionPrefixes;
         }
 
-        public Builder setAccessControlListConfiguration(@Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration) {
+        public Builder accessControlListConfiguration(@Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration) {
             this.accessControlListConfiguration = accessControlListConfiguration;
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setDocumentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration) {
+        public Builder documentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration) {
             this.documentsMetadataConfiguration = documentsMetadataConfiguration;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
+        public Builder inclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
             this.inclusionPrefixes = inclusionPrefixes;
             return this;
         }

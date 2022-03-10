@@ -102,22 +102,22 @@ public final class StageCanarySetting {
     	      this.useStageCache = defaults.useStageCache;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setPercentTraffic(@Nullable Double percentTraffic) {
+        public Builder percentTraffic(@Nullable Double percentTraffic) {
             this.percentTraffic = percentTraffic;
             return this;
         }
 
-        public Builder setStageVariableOverrides(@Nullable Object stageVariableOverrides) {
+        public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
             this.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
 
-        public Builder setUseStageCache(@Nullable Boolean useStageCache) {
+        public Builder useStageCache(@Nullable Boolean useStageCache) {
             this.useStageCache = useStageCache;
             return this;
         }

@@ -82,32 +82,32 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setInfo(Input<VirtualClusterContainerInfoArgs> info) {
+        public Builder info(Input<VirtualClusterContainerInfoArgs> info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
 
-        public Builder setInfo(VirtualClusterContainerInfoArgs info) {
+        public Builder info(VirtualClusterContainerInfoArgs info) {
             this.info = Input.of(Objects.requireNonNull(info));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

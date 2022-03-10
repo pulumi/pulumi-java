@@ -51,12 +51,12 @@ public final class ServiceUrlEndpointInput {
     	      this.url = defaults.url;
         }
 
-        public Builder setHealthUrl(@Nullable String healthUrl) {
+        public Builder healthUrl(@Nullable String healthUrl) {
             this.healthUrl = healthUrl;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

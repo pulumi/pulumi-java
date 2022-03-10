@@ -87,32 +87,32 @@ public final class FunctionImageConfigArgs extends io.pulumi.resources.ResourceA
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEntryPoint(@Nullable Input<List<String>> entryPoint) {
+        public Builder entryPoint(@Nullable Input<List<String>> entryPoint) {
             this.entryPoint = entryPoint;
             return this;
         }
 
-        public Builder setEntryPoint(@Nullable List<String> entryPoint) {
+        public Builder entryPoint(@Nullable List<String> entryPoint) {
             this.entryPoint = Input.ofNullable(entryPoint);
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }

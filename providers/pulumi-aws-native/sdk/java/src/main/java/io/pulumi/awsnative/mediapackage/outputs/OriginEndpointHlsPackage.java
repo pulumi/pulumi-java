@@ -195,57 +195,57 @@ public final class OriginEndpointHlsPackage {
     	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
         }
 
-        public Builder setAdMarkers(@Nullable OriginEndpointHlsPackageAdMarkers adMarkers) {
+        public Builder adMarkers(@Nullable OriginEndpointHlsPackageAdMarkers adMarkers) {
             this.adMarkers = adMarkers;
             return this;
         }
 
-        public Builder setAdTriggers(@Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers) {
+        public Builder adTriggers(@Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointHlsEncryption encryption) {
+        public Builder encryption(@Nullable OriginEndpointHlsEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
-        public Builder setPlaylistType(@Nullable OriginEndpointHlsPackagePlaylistType playlistType) {
+        public Builder playlistType(@Nullable OriginEndpointHlsPackagePlaylistType playlistType) {
             this.playlistType = playlistType;
             return this;
         }
 
-        public Builder setPlaylistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
+        public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setUseAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }

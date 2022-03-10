@@ -68,22 +68,22 @@ public final class GetComponentVersionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable String componentVersion) {
+        public Builder componentVersion(@Nullable String componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }

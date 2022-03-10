@@ -104,22 +104,22 @@ public final class MonitoringScheduleEndpointInput extends io.pulumi.resources.I
     	      this.s3InputMode = defaults.s3InputMode;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
+        public Builder s3InputMode(@Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }

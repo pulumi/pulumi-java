@@ -52,12 +52,12 @@ public final class ConfigFrequencyBandwidth {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnits(@Nullable ConfigBandwidthUnits units) {
+        public Builder units(@Nullable ConfigBandwidthUnits units) {
             this.units = units;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }

@@ -91,17 +91,17 @@ public final class SafetyRuleGatingRule extends io.pulumi.resources.InvokeArgs {
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder setGatingControls(List<String> gatingControls) {
+        public Builder gatingControls(List<String> gatingControls) {
             this.gatingControls = Objects.requireNonNull(gatingControls);
             return this;
         }
 
-        public Builder setTargetControls(List<String> targetControls) {
+        public Builder targetControls(List<String> targetControls) {
             this.targetControls = Objects.requireNonNull(targetControls);
             return this;
         }
 
-        public Builder setWaitPeriodMs(Integer waitPeriodMs) {
+        public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }

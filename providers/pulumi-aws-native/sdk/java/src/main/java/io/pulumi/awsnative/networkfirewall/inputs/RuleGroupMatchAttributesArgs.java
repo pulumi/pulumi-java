@@ -114,62 +114,62 @@ public final class RuleGroupMatchAttributesArgs extends io.pulumi.resources.Reso
     	      this.tCPFlags = defaults.tCPFlags;
         }
 
-        public Builder setDestinationPorts(@Nullable Input<List<RuleGroupPortRangeArgs>> destinationPorts) {
+        public Builder destinationPorts(@Nullable Input<List<RuleGroupPortRangeArgs>> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<RuleGroupPortRangeArgs> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<RuleGroupPortRangeArgs> destinationPorts) {
             this.destinationPorts = Input.ofNullable(destinationPorts);
             return this;
         }
 
-        public Builder setDestinations(@Nullable Input<List<RuleGroupAddressArgs>> destinations) {
+        public Builder destinations(@Nullable Input<List<RuleGroupAddressArgs>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<RuleGroupAddressArgs> destinations) {
+        public Builder destinations(@Nullable List<RuleGroupAddressArgs> destinations) {
             this.destinations = Input.ofNullable(destinations);
             return this;
         }
 
-        public Builder setProtocols(@Nullable Input<List<Integer>> protocols) {
+        public Builder protocols(@Nullable Input<List<Integer>> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<Integer> protocols) {
+        public Builder protocols(@Nullable List<Integer> protocols) {
             this.protocols = Input.ofNullable(protocols);
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable Input<List<RuleGroupPortRangeArgs>> sourcePorts) {
+        public Builder sourcePorts(@Nullable Input<List<RuleGroupPortRangeArgs>> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable List<RuleGroupPortRangeArgs> sourcePorts) {
+        public Builder sourcePorts(@Nullable List<RuleGroupPortRangeArgs> sourcePorts) {
             this.sourcePorts = Input.ofNullable(sourcePorts);
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<RuleGroupAddressArgs>> sources) {
+        public Builder sources(@Nullable Input<List<RuleGroupAddressArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<RuleGroupAddressArgs> sources) {
+        public Builder sources(@Nullable List<RuleGroupAddressArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }
 
-        public Builder setTCPFlags(@Nullable Input<List<RuleGroupTCPFlagFieldArgs>> tCPFlags) {
+        public Builder tCPFlags(@Nullable Input<List<RuleGroupTCPFlagFieldArgs>> tCPFlags) {
             this.tCPFlags = tCPFlags;
             return this;
         }
 
-        public Builder setTCPFlags(@Nullable List<RuleGroupTCPFlagFieldArgs> tCPFlags) {
+        public Builder tCPFlags(@Nullable List<RuleGroupTCPFlagFieldArgs> tCPFlags) {
             this.tCPFlags = Input.ofNullable(tCPFlags);
             return this;
         }

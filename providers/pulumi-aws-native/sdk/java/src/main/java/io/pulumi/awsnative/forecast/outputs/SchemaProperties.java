@@ -42,7 +42,7 @@ public final class SchemaProperties {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(@Nullable List<AttributesItemProperties> attributes) {
+        public Builder attributes(@Nullable List<AttributesItemProperties> attributes) {
             this.attributes = attributes;
             return this;
         }

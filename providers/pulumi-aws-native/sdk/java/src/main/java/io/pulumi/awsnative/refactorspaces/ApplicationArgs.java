@@ -118,62 +118,62 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setApiGatewayProxy(@Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy) {
+        public Builder apiGatewayProxy(@Nullable Input<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy) {
             this.apiGatewayProxy = apiGatewayProxy;
             return this;
         }
 
-        public Builder setApiGatewayProxy(@Nullable ApplicationApiGatewayProxyInputArgs apiGatewayProxy) {
+        public Builder apiGatewayProxy(@Nullable ApplicationApiGatewayProxyInputArgs apiGatewayProxy) {
             this.apiGatewayProxy = Input.ofNullable(apiGatewayProxy);
             return this;
         }
 
-        public Builder setEnvironmentIdentifier(@Nullable Input<String> environmentIdentifier) {
+        public Builder environmentIdentifier(@Nullable Input<String> environmentIdentifier) {
             this.environmentIdentifier = environmentIdentifier;
             return this;
         }
 
-        public Builder setEnvironmentIdentifier(@Nullable String environmentIdentifier) {
+        public Builder environmentIdentifier(@Nullable String environmentIdentifier) {
             this.environmentIdentifier = Input.ofNullable(environmentIdentifier);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProxyType(@Nullable Input<ApplicationProxyType> proxyType) {
+        public Builder proxyType(@Nullable Input<ApplicationProxyType> proxyType) {
             this.proxyType = proxyType;
             return this;
         }
 
-        public Builder setProxyType(@Nullable ApplicationProxyType proxyType) {
+        public Builder proxyType(@Nullable ApplicationProxyType proxyType) {
             this.proxyType = Input.ofNullable(proxyType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ApplicationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ApplicationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTagArgs> tags) {
+        public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

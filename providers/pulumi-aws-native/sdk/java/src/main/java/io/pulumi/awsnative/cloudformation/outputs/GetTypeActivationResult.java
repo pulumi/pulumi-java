@@ -101,22 +101,22 @@ public final class GetTypeActivationResult {
     	      this.versionBump = defaults.versionBump;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAutoUpdate(@Nullable Boolean autoUpdate) {
+        public Builder autoUpdate(@Nullable Boolean autoUpdate) {
             this.autoUpdate = autoUpdate;
             return this;
         }
 
-        public Builder setMajorVersion(@Nullable String majorVersion) {
+        public Builder majorVersion(@Nullable String majorVersion) {
             this.majorVersion = majorVersion;
             return this;
         }
 
-        public Builder setVersionBump(@Nullable TypeActivationVersionBump versionBump) {
+        public Builder versionBump(@Nullable TypeActivationVersionBump versionBump) {
             this.versionBump = versionBump;
             return this;
         }

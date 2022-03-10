@@ -93,22 +93,22 @@ public final class FlowZendeskDestinationProperties extends io.pulumi.resources.
     	      this.writeOperationType = defaults.writeOperationType;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
-        public Builder setIdFieldNames(@Nullable List<String> idFieldNames) {
+        public Builder idFieldNames(@Nullable List<String> idFieldNames) {
             this.idFieldNames = idFieldNames;
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setWriteOperationType(@Nullable FlowWriteOperationType writeOperationType) {
+        public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
             this.writeOperationType = writeOperationType;
             return this;
         }

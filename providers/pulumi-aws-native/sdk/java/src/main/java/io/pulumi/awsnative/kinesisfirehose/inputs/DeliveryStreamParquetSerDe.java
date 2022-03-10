@@ -112,32 +112,32 @@ public final class DeliveryStreamParquetSerDe extends io.pulumi.resources.Invoke
     	      this.writerVersion = defaults.writerVersion;
         }
 
-        public Builder setBlockSizeBytes(@Nullable Integer blockSizeBytes) {
+        public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setEnableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
+        public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
             this.enableDictionaryCompression = enableDictionaryCompression;
             return this;
         }
 
-        public Builder setMaxPaddingBytes(@Nullable Integer maxPaddingBytes) {
+        public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
             this.maxPaddingBytes = maxPaddingBytes;
             return this;
         }
 
-        public Builder setPageSizeBytes(@Nullable Integer pageSizeBytes) {
+        public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
             this.pageSizeBytes = pageSizeBytes;
             return this;
         }
 
-        public Builder setWriterVersion(@Nullable String writerVersion) {
+        public Builder writerVersion(@Nullable String writerVersion) {
             this.writerVersion = writerVersion;
             return this;
         }

@@ -60,12 +60,12 @@ public final class TemplateError {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setType(@Nullable TemplateErrorType type) {
+        public Builder type(@Nullable TemplateErrorType type) {
             this.type = type;
             return this;
         }

@@ -74,22 +74,22 @@ public final class LinkBandwidthArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uploadSpeed = defaults.uploadSpeed;
         }
 
-        public Builder setDownloadSpeed(@Nullable Input<Integer> downloadSpeed) {
+        public Builder downloadSpeed(@Nullable Input<Integer> downloadSpeed) {
             this.downloadSpeed = downloadSpeed;
             return this;
         }
 
-        public Builder setDownloadSpeed(@Nullable Integer downloadSpeed) {
+        public Builder downloadSpeed(@Nullable Integer downloadSpeed) {
             this.downloadSpeed = Input.ofNullable(downloadSpeed);
             return this;
         }
 
-        public Builder setUploadSpeed(@Nullable Input<Integer> uploadSpeed) {
+        public Builder uploadSpeed(@Nullable Input<Integer> uploadSpeed) {
             this.uploadSpeed = uploadSpeed;
             return this;
         }
 
-        public Builder setUploadSpeed(@Nullable Integer uploadSpeed) {
+        public Builder uploadSpeed(@Nullable Integer uploadSpeed) {
             this.uploadSpeed = Input.ofNullable(uploadSpeed);
             return this;
         }

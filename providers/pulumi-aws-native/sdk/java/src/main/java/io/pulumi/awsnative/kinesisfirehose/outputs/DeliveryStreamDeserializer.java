@@ -52,12 +52,12 @@ public final class DeliveryStreamDeserializer {
     	      this.openXJsonSerDe = defaults.openXJsonSerDe;
         }
 
-        public Builder setHiveJsonSerDe(@Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe) {
+        public Builder hiveJsonSerDe(@Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe) {
             this.hiveJsonSerDe = hiveJsonSerDe;
             return this;
         }
 
-        public Builder setOpenXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
+        public Builder openXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
             this.openXJsonSerDe = openXJsonSerDe;
             return this;
         }

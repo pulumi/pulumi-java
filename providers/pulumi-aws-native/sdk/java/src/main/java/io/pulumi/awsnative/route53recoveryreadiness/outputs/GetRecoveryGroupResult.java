@@ -85,17 +85,17 @@ public final class GetRecoveryGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCells(@Nullable List<String> cells) {
+        public Builder cells(@Nullable List<String> cells) {
             this.cells = cells;
             return this;
         }
 
-        public Builder setRecoveryGroupArn(@Nullable String recoveryGroupArn) {
+        public Builder recoveryGroupArn(@Nullable String recoveryGroupArn) {
             this.recoveryGroupArn = recoveryGroupArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RecoveryGroupTag> tags) {
+        public Builder tags(@Nullable List<RecoveryGroupTag> tags) {
             this.tags = tags;
             return this;
         }

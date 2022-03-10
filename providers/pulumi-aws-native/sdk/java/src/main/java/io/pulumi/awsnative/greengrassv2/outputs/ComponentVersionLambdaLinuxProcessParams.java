@@ -52,12 +52,12 @@ public final class ComponentVersionLambdaLinuxProcessParams {
     	      this.isolationMode = defaults.isolationMode;
         }
 
-        public Builder setContainerParams(@Nullable ComponentVersionLambdaContainerParams containerParams) {
+        public Builder containerParams(@Nullable ComponentVersionLambdaContainerParams containerParams) {
             this.containerParams = containerParams;
             return this;
         }
 
-        public Builder setIsolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
+        public Builder isolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
             this.isolationMode = isolationMode;
             return this;
         }

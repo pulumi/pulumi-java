@@ -104,42 +104,42 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setHostArn(@Nullable Input<String> hostArn) {
+        public Builder hostArn(@Nullable Input<String> hostArn) {
             this.hostArn = hostArn;
             return this;
         }
 
-        public Builder setHostArn(@Nullable String hostArn) {
+        public Builder hostArn(@Nullable String hostArn) {
             this.hostArn = Input.ofNullable(hostArn);
             return this;
         }
 
-        public Builder setProviderType(@Nullable Input<String> providerType) {
+        public Builder providerType(@Nullable Input<String> providerType) {
             this.providerType = providerType;
             return this;
         }
 
-        public Builder setProviderType(@Nullable String providerType) {
+        public Builder providerType(@Nullable String providerType) {
             this.providerType = Input.ofNullable(providerType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ConnectionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ConnectionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ConnectionTagArgs> tags) {
+        public Builder tags(@Nullable List<ConnectionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

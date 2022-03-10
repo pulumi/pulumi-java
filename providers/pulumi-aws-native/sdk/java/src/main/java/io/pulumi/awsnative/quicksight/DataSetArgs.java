@@ -221,132 +221,132 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setColumnGroups(@Nullable Input<List<DataSetColumnGroupArgs>> columnGroups) {
+        public Builder columnGroups(@Nullable Input<List<DataSetColumnGroupArgs>> columnGroups) {
             this.columnGroups = columnGroups;
             return this;
         }
 
-        public Builder setColumnGroups(@Nullable List<DataSetColumnGroupArgs> columnGroups) {
+        public Builder columnGroups(@Nullable List<DataSetColumnGroupArgs> columnGroups) {
             this.columnGroups = Input.ofNullable(columnGroups);
             return this;
         }
 
-        public Builder setColumnLevelPermissionRules(@Nullable Input<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules) {
+        public Builder columnLevelPermissionRules(@Nullable Input<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules) {
             this.columnLevelPermissionRules = columnLevelPermissionRules;
             return this;
         }
 
-        public Builder setColumnLevelPermissionRules(@Nullable List<DataSetColumnLevelPermissionRuleArgs> columnLevelPermissionRules) {
+        public Builder columnLevelPermissionRules(@Nullable List<DataSetColumnLevelPermissionRuleArgs> columnLevelPermissionRules) {
             this.columnLevelPermissionRules = Input.ofNullable(columnLevelPermissionRules);
             return this;
         }
 
-        public Builder setDataSetId(@Nullable Input<String> dataSetId) {
+        public Builder dataSetId(@Nullable Input<String> dataSetId) {
             this.dataSetId = dataSetId;
             return this;
         }
 
-        public Builder setDataSetId(@Nullable String dataSetId) {
+        public Builder dataSetId(@Nullable String dataSetId) {
             this.dataSetId = Input.ofNullable(dataSetId);
             return this;
         }
 
-        public Builder setFieldFolders(@Nullable Input<DataSetFieldFolderMapArgs> fieldFolders) {
+        public Builder fieldFolders(@Nullable Input<DataSetFieldFolderMapArgs> fieldFolders) {
             this.fieldFolders = fieldFolders;
             return this;
         }
 
-        public Builder setFieldFolders(@Nullable DataSetFieldFolderMapArgs fieldFolders) {
+        public Builder fieldFolders(@Nullable DataSetFieldFolderMapArgs fieldFolders) {
             this.fieldFolders = Input.ofNullable(fieldFolders);
             return this;
         }
 
-        public Builder setImportMode(@Nullable Input<DataSetImportMode> importMode) {
+        public Builder importMode(@Nullable Input<DataSetImportMode> importMode) {
             this.importMode = importMode;
             return this;
         }
 
-        public Builder setImportMode(@Nullable DataSetImportMode importMode) {
+        public Builder importMode(@Nullable DataSetImportMode importMode) {
             this.importMode = Input.ofNullable(importMode);
             return this;
         }
 
-        public Builder setIngestionWaitPolicy(@Nullable Input<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy) {
+        public Builder ingestionWaitPolicy(@Nullable Input<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy) {
             this.ingestionWaitPolicy = ingestionWaitPolicy;
             return this;
         }
 
-        public Builder setIngestionWaitPolicy(@Nullable DataSetIngestionWaitPolicyArgs ingestionWaitPolicy) {
+        public Builder ingestionWaitPolicy(@Nullable DataSetIngestionWaitPolicyArgs ingestionWaitPolicy) {
             this.ingestionWaitPolicy = Input.ofNullable(ingestionWaitPolicy);
             return this;
         }
 
-        public Builder setLogicalTableMap(@Nullable Input<DataSetLogicalTableMapArgs> logicalTableMap) {
+        public Builder logicalTableMap(@Nullable Input<DataSetLogicalTableMapArgs> logicalTableMap) {
             this.logicalTableMap = logicalTableMap;
             return this;
         }
 
-        public Builder setLogicalTableMap(@Nullable DataSetLogicalTableMapArgs logicalTableMap) {
+        public Builder logicalTableMap(@Nullable DataSetLogicalTableMapArgs logicalTableMap) {
             this.logicalTableMap = Input.ofNullable(logicalTableMap);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<DataSetResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<DataSetResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<DataSetResourcePermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<DataSetResourcePermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setPhysicalTableMap(@Nullable Input<DataSetPhysicalTableMapArgs> physicalTableMap) {
+        public Builder physicalTableMap(@Nullable Input<DataSetPhysicalTableMapArgs> physicalTableMap) {
             this.physicalTableMap = physicalTableMap;
             return this;
         }
 
-        public Builder setPhysicalTableMap(@Nullable DataSetPhysicalTableMapArgs physicalTableMap) {
+        public Builder physicalTableMap(@Nullable DataSetPhysicalTableMapArgs physicalTableMap) {
             this.physicalTableMap = Input.ofNullable(physicalTableMap);
             return this;
         }
 
-        public Builder setRowLevelPermissionDataSet(@Nullable Input<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet) {
+        public Builder rowLevelPermissionDataSet(@Nullable Input<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet) {
             this.rowLevelPermissionDataSet = rowLevelPermissionDataSet;
             return this;
         }
 
-        public Builder setRowLevelPermissionDataSet(@Nullable DataSetRowLevelPermissionDataSetArgs rowLevelPermissionDataSet) {
+        public Builder rowLevelPermissionDataSet(@Nullable DataSetRowLevelPermissionDataSetArgs rowLevelPermissionDataSet) {
             this.rowLevelPermissionDataSet = Input.ofNullable(rowLevelPermissionDataSet);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DataSetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DataSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataSetTagArgs> tags) {
+        public Builder tags(@Nullable List<DataSetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -312,82 +312,82 @@ public final class ThemeUIColorPalette extends io.pulumi.resources.InvokeArgs {
     	      this.warningForeground = defaults.warningForeground;
         }
 
-        public Builder setAccent(@Nullable String accent) {
+        public Builder accent(@Nullable String accent) {
             this.accent = accent;
             return this;
         }
 
-        public Builder setAccentForeground(@Nullable String accentForeground) {
+        public Builder accentForeground(@Nullable String accentForeground) {
             this.accentForeground = accentForeground;
             return this;
         }
 
-        public Builder setDanger(@Nullable String danger) {
+        public Builder danger(@Nullable String danger) {
             this.danger = danger;
             return this;
         }
 
-        public Builder setDangerForeground(@Nullable String dangerForeground) {
+        public Builder dangerForeground(@Nullable String dangerForeground) {
             this.dangerForeground = dangerForeground;
             return this;
         }
 
-        public Builder setDimension(@Nullable String dimension) {
+        public Builder dimension(@Nullable String dimension) {
             this.dimension = dimension;
             return this;
         }
 
-        public Builder setDimensionForeground(@Nullable String dimensionForeground) {
+        public Builder dimensionForeground(@Nullable String dimensionForeground) {
             this.dimensionForeground = dimensionForeground;
             return this;
         }
 
-        public Builder setMeasure(@Nullable String measure) {
+        public Builder measure(@Nullable String measure) {
             this.measure = measure;
             return this;
         }
 
-        public Builder setMeasureForeground(@Nullable String measureForeground) {
+        public Builder measureForeground(@Nullable String measureForeground) {
             this.measureForeground = measureForeground;
             return this;
         }
 
-        public Builder setPrimaryBackground(@Nullable String primaryBackground) {
+        public Builder primaryBackground(@Nullable String primaryBackground) {
             this.primaryBackground = primaryBackground;
             return this;
         }
 
-        public Builder setPrimaryForeground(@Nullable String primaryForeground) {
+        public Builder primaryForeground(@Nullable String primaryForeground) {
             this.primaryForeground = primaryForeground;
             return this;
         }
 
-        public Builder setSecondaryBackground(@Nullable String secondaryBackground) {
+        public Builder secondaryBackground(@Nullable String secondaryBackground) {
             this.secondaryBackground = secondaryBackground;
             return this;
         }
 
-        public Builder setSecondaryForeground(@Nullable String secondaryForeground) {
+        public Builder secondaryForeground(@Nullable String secondaryForeground) {
             this.secondaryForeground = secondaryForeground;
             return this;
         }
 
-        public Builder setSuccess(@Nullable String success) {
+        public Builder success(@Nullable String success) {
             this.success = success;
             return this;
         }
 
-        public Builder setSuccessForeground(@Nullable String successForeground) {
+        public Builder successForeground(@Nullable String successForeground) {
             this.successForeground = successForeground;
             return this;
         }
 
-        public Builder setWarning(@Nullable String warning) {
+        public Builder warning(@Nullable String warning) {
             this.warning = warning;
             return this;
         }
 
-        public Builder setWarningForeground(@Nullable String warningForeground) {
+        public Builder warningForeground(@Nullable String warningForeground) {
             this.warningForeground = warningForeground;
             return this;
         }

@@ -52,12 +52,12 @@ public final class GetSchedulingPolicyResult {
     	      this.fairsharePolicy = defaults.fairsharePolicy;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setFairsharePolicy(@Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
+        public Builder fairsharePolicy(@Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
             this.fairsharePolicy = fairsharePolicy;
             return this;
         }

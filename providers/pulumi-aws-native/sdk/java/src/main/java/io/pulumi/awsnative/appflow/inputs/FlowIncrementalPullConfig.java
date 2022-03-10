@@ -53,7 +53,7 @@ public final class FlowIncrementalPullConfig extends io.pulumi.resources.InvokeA
     	      this.datetimeTypeFieldName = defaults.datetimeTypeFieldName;
         }
 
-        public Builder setDatetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
+        public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }

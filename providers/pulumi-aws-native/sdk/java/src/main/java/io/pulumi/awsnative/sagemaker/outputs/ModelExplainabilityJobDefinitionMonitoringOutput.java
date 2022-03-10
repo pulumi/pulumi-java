@@ -40,7 +40,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringOutput {
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder setS3Output(ModelExplainabilityJobDefinitionS3Output s3Output) {
+        public Builder s3Output(ModelExplainabilityJobDefinitionS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }

@@ -56,12 +56,12 @@ public final class BotObfuscationSettingArgs extends io.pulumi.resources.Resourc
     	      this.obfuscationSettingType = defaults.obfuscationSettingType;
         }
 
-        public Builder setObfuscationSettingType(Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType) {
+        public Builder obfuscationSettingType(Input<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType) {
             this.obfuscationSettingType = Objects.requireNonNull(obfuscationSettingType);
             return this;
         }
 
-        public Builder setObfuscationSettingType(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
+        public Builder obfuscationSettingType(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
             this.obfuscationSettingType = Input.of(Objects.requireNonNull(obfuscationSettingType));
             return this;
         }

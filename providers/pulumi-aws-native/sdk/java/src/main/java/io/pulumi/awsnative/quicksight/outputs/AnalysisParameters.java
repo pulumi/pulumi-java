@@ -102,22 +102,22 @@ public final class AnalysisParameters {
     	      this.stringParameters = defaults.stringParameters;
         }
 
-        public Builder setDateTimeParameters(@Nullable List<AnalysisDateTimeParameter> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable List<AnalysisDateTimeParameter> dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
-        public Builder setDecimalParameters(@Nullable List<AnalysisDecimalParameter> decimalParameters) {
+        public Builder decimalParameters(@Nullable List<AnalysisDecimalParameter> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
 
-        public Builder setIntegerParameters(@Nullable List<AnalysisIntegerParameter> integerParameters) {
+        public Builder integerParameters(@Nullable List<AnalysisIntegerParameter> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
 
-        public Builder setStringParameters(@Nullable List<AnalysisStringParameter> stringParameters) {
+        public Builder stringParameters(@Nullable List<AnalysisStringParameter> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }

@@ -115,62 +115,62 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setAclConfiguration(@Nullable Input<DataSourceAclConfigurationArgs> aclConfiguration) {
+        public Builder aclConfiguration(@Nullable Input<DataSourceAclConfigurationArgs> aclConfiguration) {
             this.aclConfiguration = aclConfiguration;
             return this;
         }
 
-        public Builder setAclConfiguration(@Nullable DataSourceAclConfigurationArgs aclConfiguration) {
+        public Builder aclConfiguration(@Nullable DataSourceAclConfigurationArgs aclConfiguration) {
             this.aclConfiguration = Input.ofNullable(aclConfiguration);
             return this;
         }
 
-        public Builder setColumnConfiguration(Input<DataSourceColumnConfigurationArgs> columnConfiguration) {
+        public Builder columnConfiguration(Input<DataSourceColumnConfigurationArgs> columnConfiguration) {
             this.columnConfiguration = Objects.requireNonNull(columnConfiguration);
             return this;
         }
 
-        public Builder setColumnConfiguration(DataSourceColumnConfigurationArgs columnConfiguration) {
+        public Builder columnConfiguration(DataSourceColumnConfigurationArgs columnConfiguration) {
             this.columnConfiguration = Input.of(Objects.requireNonNull(columnConfiguration));
             return this;
         }
 
-        public Builder setConnectionConfiguration(Input<DataSourceConnectionConfigurationArgs> connectionConfiguration) {
+        public Builder connectionConfiguration(Input<DataSourceConnectionConfigurationArgs> connectionConfiguration) {
             this.connectionConfiguration = Objects.requireNonNull(connectionConfiguration);
             return this;
         }
 
-        public Builder setConnectionConfiguration(DataSourceConnectionConfigurationArgs connectionConfiguration) {
+        public Builder connectionConfiguration(DataSourceConnectionConfigurationArgs connectionConfiguration) {
             this.connectionConfiguration = Input.of(Objects.requireNonNull(connectionConfiguration));
             return this;
         }
 
-        public Builder setDatabaseEngineType(Input<DataSourceDatabaseEngineType> databaseEngineType) {
+        public Builder databaseEngineType(Input<DataSourceDatabaseEngineType> databaseEngineType) {
             this.databaseEngineType = Objects.requireNonNull(databaseEngineType);
             return this;
         }
 
-        public Builder setDatabaseEngineType(DataSourceDatabaseEngineType databaseEngineType) {
+        public Builder databaseEngineType(DataSourceDatabaseEngineType databaseEngineType) {
             this.databaseEngineType = Input.of(Objects.requireNonNull(databaseEngineType));
             return this;
         }
 
-        public Builder setSqlConfiguration(@Nullable Input<DataSourceSqlConfigurationArgs> sqlConfiguration) {
+        public Builder sqlConfiguration(@Nullable Input<DataSourceSqlConfigurationArgs> sqlConfiguration) {
             this.sqlConfiguration = sqlConfiguration;
             return this;
         }
 
-        public Builder setSqlConfiguration(@Nullable DataSourceSqlConfigurationArgs sqlConfiguration) {
+        public Builder sqlConfiguration(@Nullable DataSourceSqlConfigurationArgs sqlConfiguration) {
             this.sqlConfiguration = Input.ofNullable(sqlConfiguration);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<DataSourceVpcConfigurationArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

@@ -61,22 +61,22 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
     	      this.attributeValue = defaults.attributeValue;
         }
 
-        public Builder setAttributeName(Input<String> attributeName) {
+        public Builder attributeName(Input<String> attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Input.of(Objects.requireNonNull(attributeName));
             return this;
         }
 
-        public Builder setAttributeValue(Input<String> attributeValue) {
+        public Builder attributeValue(Input<String> attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }
 
-        public Builder setAttributeValue(String attributeValue) {
+        public Builder attributeValue(String attributeValue) {
             this.attributeValue = Input.of(Objects.requireNonNull(attributeValue));
             return this;
         }

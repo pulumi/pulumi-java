@@ -68,12 +68,12 @@ public final class GetPrimaryTaskSetArgs extends io.pulumi.resources.InvokeArgs 
     	      this.service = defaults.service;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

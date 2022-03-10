@@ -116,52 +116,52 @@ public final class RobotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArchitecture(Input<RobotArchitecture> architecture) {
+        public Builder architecture(Input<RobotArchitecture> architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setArchitecture(RobotArchitecture architecture) {
+        public Builder architecture(RobotArchitecture architecture) {
             this.architecture = Input.of(Objects.requireNonNull(architecture));
             return this;
         }
 
-        public Builder setFleet(@Nullable Input<String> fleet) {
+        public Builder fleet(@Nullable Input<String> fleet) {
             this.fleet = fleet;
             return this;
         }
 
-        public Builder setFleet(@Nullable String fleet) {
+        public Builder fleet(@Nullable String fleet) {
             this.fleet = Input.ofNullable(fleet);
             return this;
         }
 
-        public Builder setGreengrassGroupId(Input<String> greengrassGroupId) {
+        public Builder greengrassGroupId(Input<String> greengrassGroupId) {
             this.greengrassGroupId = Objects.requireNonNull(greengrassGroupId);
             return this;
         }
 
-        public Builder setGreengrassGroupId(String greengrassGroupId) {
+        public Builder greengrassGroupId(String greengrassGroupId) {
             this.greengrassGroupId = Input.of(Objects.requireNonNull(greengrassGroupId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<RobotTagsArgs> tags) {
+        public Builder tags(@Nullable Input<RobotTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable RobotTagsArgs tags) {
+        public Builder tags(@Nullable RobotTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

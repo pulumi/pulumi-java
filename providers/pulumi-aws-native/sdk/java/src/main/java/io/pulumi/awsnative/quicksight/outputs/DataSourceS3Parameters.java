@@ -40,7 +40,7 @@ public final class DataSourceS3Parameters {
     	      this.manifestFileLocation = defaults.manifestFileLocation;
         }
 
-        public Builder setManifestFileLocation(DataSourceManifestFileLocation manifestFileLocation) {
+        public Builder manifestFileLocation(DataSourceManifestFileLocation manifestFileLocation) {
             this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
             return this;
         }

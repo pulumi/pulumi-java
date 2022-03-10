@@ -47,7 +47,7 @@ public final class BucketReplicationTimeValue extends io.pulumi.resources.Invoke
     	      this.minutes = defaults.minutes;
         }
 
-        public Builder setMinutes(Integer minutes) {
+        public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }

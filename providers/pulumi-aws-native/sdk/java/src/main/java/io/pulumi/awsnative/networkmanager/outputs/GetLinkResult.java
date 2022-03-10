@@ -150,37 +150,37 @@ public final class GetLinkResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBandwidth(@Nullable LinkBandwidth bandwidth) {
+        public Builder bandwidth(@Nullable LinkBandwidth bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLinkArn(@Nullable String linkArn) {
+        public Builder linkArn(@Nullable String linkArn) {
             this.linkArn = linkArn;
             return this;
         }
 
-        public Builder setLinkId(@Nullable String linkId) {
+        public Builder linkId(@Nullable String linkId) {
             this.linkId = linkId;
             return this;
         }
 
-        public Builder setProvider(@Nullable String provider) {
+        public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LinkTag> tags) {
+        public Builder tags(@Nullable List<LinkTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

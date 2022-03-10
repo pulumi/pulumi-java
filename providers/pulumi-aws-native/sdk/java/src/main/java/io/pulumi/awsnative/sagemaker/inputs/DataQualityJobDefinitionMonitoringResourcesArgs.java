@@ -52,12 +52,12 @@ public final class DataQualityJobDefinitionMonitoringResourcesArgs extends io.pu
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(Input<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Input<DataQualityJobDefinitionClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
-        public Builder setClusterConfig(DataQualityJobDefinitionClusterConfigArgs clusterConfig) {
+        public Builder clusterConfig(DataQualityJobDefinitionClusterConfigArgs clusterConfig) {
             this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
             return this;
         }

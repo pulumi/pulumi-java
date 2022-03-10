@@ -60,17 +60,17 @@ public final class GetCertificateResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setStatus(@Nullable CertificateStatus status) {
+        public Builder status(@Nullable CertificateStatus status) {
             this.status = status;
             return this;
         }

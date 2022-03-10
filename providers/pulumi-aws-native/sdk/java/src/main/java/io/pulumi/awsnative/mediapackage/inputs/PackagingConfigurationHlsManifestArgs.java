@@ -134,62 +134,62 @@ public final class PackagingConfigurationHlsManifestArgs extends io.pulumi.resou
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setAdMarkers(@Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers) {
+        public Builder adMarkers(@Nullable Input<PackagingConfigurationHlsManifestAdMarkers> adMarkers) {
             this.adMarkers = adMarkers;
             return this;
         }
 
-        public Builder setAdMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
+        public Builder adMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
             this.adMarkers = Input.ofNullable(adMarkers);
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Input<Boolean> includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Input<Boolean> includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = Input.ofNullable(includeIframeOnlyStream);
             return this;
         }
 
-        public Builder setManifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Input<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Input.ofNullable(manifestName);
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Input<Integer> programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Input<Integer> programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = Input.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
 
-        public Builder setRepeatExtXKey(@Nullable Input<Boolean> repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Input<Boolean> repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
-        public Builder setRepeatExtXKey(@Nullable Boolean repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = Input.ofNullable(repeatExtXKey);
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
+        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelectionArgs streamSelection) {
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }

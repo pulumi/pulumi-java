@@ -76,17 +76,17 @@ public final class ModelExplainabilityJobDefinitionNetworkConfig {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setEnableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
+        public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
 
-        public Builder setEnableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig) {
+        public Builder vpcConfig(@Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }

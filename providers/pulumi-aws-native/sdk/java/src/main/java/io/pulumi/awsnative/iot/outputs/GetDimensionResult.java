@@ -85,17 +85,17 @@ public final class GetDimensionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStringValues(@Nullable List<String> stringValues) {
+        public Builder stringValues(@Nullable List<String> stringValues) {
             this.stringValues = stringValues;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DimensionTag> tags) {
+        public Builder tags(@Nullable List<DimensionTag> tags) {
             this.tags = tags;
             return this;
         }

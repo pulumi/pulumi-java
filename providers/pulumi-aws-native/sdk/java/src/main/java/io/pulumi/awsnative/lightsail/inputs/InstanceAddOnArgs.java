@@ -88,32 +88,32 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAddOnType(Input<String> addOnType) {
+        public Builder addOnType(Input<String> addOnType) {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
 
-        public Builder setAddOnType(String addOnType) {
+        public Builder addOnType(String addOnType) {
             this.addOnType = Input.of(Objects.requireNonNull(addOnType));
             return this;
         }
 
-        public Builder setAutoSnapshotAddOnRequest(@Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable Input<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
 
-        public Builder setAutoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = Input.ofNullable(autoSnapshotAddOnRequest);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<InstanceAddOnStatus> status) {
+        public Builder status(@Nullable Input<InstanceAddOnStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable InstanceAddOnStatus status) {
+        public Builder status(@Nullable InstanceAddOnStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

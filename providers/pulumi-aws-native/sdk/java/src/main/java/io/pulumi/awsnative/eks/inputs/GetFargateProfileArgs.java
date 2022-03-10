@@ -68,12 +68,12 @@ public final class GetFargateProfileArgs extends io.pulumi.resources.InvokeArgs 
     	      this.fargateProfileName = defaults.fargateProfileName;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setFargateProfileName(String fargateProfileName) {
+        public Builder fargateProfileName(String fargateProfileName) {
             this.fargateProfileName = Objects.requireNonNull(fargateProfileName);
             return this;
         }

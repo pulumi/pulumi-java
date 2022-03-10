@@ -123,27 +123,27 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
     	      this.replaceKeyWith = defaults.replaceKeyWith;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHttpRedirectCode(@Nullable String httpRedirectCode) {
+        public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
             this.httpRedirectCode = httpRedirectCode;
             return this;
         }
 
-        public Builder setProtocol(@Nullable BucketRedirectRuleProtocol protocol) {
+        public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setReplaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
+        public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
             this.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
 
-        public Builder setReplaceKeyWith(@Nullable String replaceKeyWith) {
+        public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
             this.replaceKeyWith = replaceKeyWith;
             return this;
         }

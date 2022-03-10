@@ -40,7 +40,7 @@ public final class BucketNotificationFilter {
     	      this.s3Key = defaults.s3Key;
         }
 
-        public Builder setS3Key(BucketS3KeyFilter s3Key) {
+        public Builder s3Key(BucketS3KeyFilter s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }

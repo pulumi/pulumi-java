@@ -76,32 +76,32 @@ public final class ServiceAwsVpcConfigurationArgs extends io.pulumi.resources.Re
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setAssignPublicIp(@Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp) {
+        public Builder assignPublicIp(@Nullable Input<ServiceAwsVpcConfigurationAssignPublicIp> assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
-        public Builder setAssignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
+        public Builder assignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
             this.assignPublicIp = Input.ofNullable(assignPublicIp);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnets(@Nullable Input<List<String>> subnets) {
+        public Builder subnets(@Nullable Input<List<String>> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<String> subnets) {
+        public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = Input.ofNullable(subnets);
             return this;
         }

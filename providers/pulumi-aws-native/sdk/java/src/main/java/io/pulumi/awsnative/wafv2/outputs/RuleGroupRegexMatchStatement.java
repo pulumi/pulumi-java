@@ -60,17 +60,17 @@ public final class RuleGroupRegexMatchStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setRegexString(String regexString) {
+        public Builder regexString(String regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformation> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

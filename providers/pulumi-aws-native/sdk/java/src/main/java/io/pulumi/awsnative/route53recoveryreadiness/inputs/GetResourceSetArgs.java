@@ -51,7 +51,7 @@ public final class GetResourceSetArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceSetName = defaults.resourceSetName;
         }
 
-        public Builder setResourceSetName(String resourceSetName) {
+        public Builder resourceSetName(String resourceSetName) {
             this.resourceSetName = Objects.requireNonNull(resourceSetName);
             return this;
         }

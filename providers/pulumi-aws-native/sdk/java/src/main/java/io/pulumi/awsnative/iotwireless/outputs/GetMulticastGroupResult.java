@@ -182,47 +182,47 @@ public final class GetMulticastGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAssociateWirelessDevice(@Nullable String associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable MulticastGroupLoRaWAN loRaWAN) {
+        public Builder loRaWAN(@Nullable MulticastGroupLoRaWAN loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MulticastGroupTag> tags) {
+        public Builder tags(@Nullable List<MulticastGroupTag> tags) {
             this.tags = tags;
             return this;
         }

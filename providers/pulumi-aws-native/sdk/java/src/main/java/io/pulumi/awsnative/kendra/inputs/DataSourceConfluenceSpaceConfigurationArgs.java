@@ -101,52 +101,52 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
     	      this.spaceFieldMappings = defaults.spaceFieldMappings;
         }
 
-        public Builder setCrawlArchivedSpaces(@Nullable Input<Boolean> crawlArchivedSpaces) {
+        public Builder crawlArchivedSpaces(@Nullable Input<Boolean> crawlArchivedSpaces) {
             this.crawlArchivedSpaces = crawlArchivedSpaces;
             return this;
         }
 
-        public Builder setCrawlArchivedSpaces(@Nullable Boolean crawlArchivedSpaces) {
+        public Builder crawlArchivedSpaces(@Nullable Boolean crawlArchivedSpaces) {
             this.crawlArchivedSpaces = Input.ofNullable(crawlArchivedSpaces);
             return this;
         }
 
-        public Builder setCrawlPersonalSpaces(@Nullable Input<Boolean> crawlPersonalSpaces) {
+        public Builder crawlPersonalSpaces(@Nullable Input<Boolean> crawlPersonalSpaces) {
             this.crawlPersonalSpaces = crawlPersonalSpaces;
             return this;
         }
 
-        public Builder setCrawlPersonalSpaces(@Nullable Boolean crawlPersonalSpaces) {
+        public Builder crawlPersonalSpaces(@Nullable Boolean crawlPersonalSpaces) {
             this.crawlPersonalSpaces = Input.ofNullable(crawlPersonalSpaces);
             return this;
         }
 
-        public Builder setExcludeSpaces(@Nullable Input<List<String>> excludeSpaces) {
+        public Builder excludeSpaces(@Nullable Input<List<String>> excludeSpaces) {
             this.excludeSpaces = excludeSpaces;
             return this;
         }
 
-        public Builder setExcludeSpaces(@Nullable List<String> excludeSpaces) {
+        public Builder excludeSpaces(@Nullable List<String> excludeSpaces) {
             this.excludeSpaces = Input.ofNullable(excludeSpaces);
             return this;
         }
 
-        public Builder setIncludeSpaces(@Nullable Input<List<String>> includeSpaces) {
+        public Builder includeSpaces(@Nullable Input<List<String>> includeSpaces) {
             this.includeSpaces = includeSpaces;
             return this;
         }
 
-        public Builder setIncludeSpaces(@Nullable List<String> includeSpaces) {
+        public Builder includeSpaces(@Nullable List<String> includeSpaces) {
             this.includeSpaces = Input.ofNullable(includeSpaces);
             return this;
         }
 
-        public Builder setSpaceFieldMappings(@Nullable Input<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings) {
+        public Builder spaceFieldMappings(@Nullable Input<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings) {
             this.spaceFieldMappings = spaceFieldMappings;
             return this;
         }
 
-        public Builder setSpaceFieldMappings(@Nullable List<DataSourceConfluenceSpaceToIndexFieldMappingArgs> spaceFieldMappings) {
+        public Builder spaceFieldMappings(@Nullable List<DataSourceConfluenceSpaceToIndexFieldMappingArgs> spaceFieldMappings) {
             this.spaceFieldMappings = Input.ofNullable(spaceFieldMappings);
             return this;
         }

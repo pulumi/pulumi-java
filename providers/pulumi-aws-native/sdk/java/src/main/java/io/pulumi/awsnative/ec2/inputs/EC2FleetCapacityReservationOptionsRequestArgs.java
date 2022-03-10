@@ -49,12 +49,12 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     	      this.usageStrategy = defaults.usageStrategy;
         }
 
-        public Builder setUsageStrategy(@Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
+        public Builder usageStrategy(@Nullable Input<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
             this.usageStrategy = usageStrategy;
             return this;
         }
 
-        public Builder setUsageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
+        public Builder usageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
             this.usageStrategy = Input.ofNullable(usageStrategy);
             return this;
         }

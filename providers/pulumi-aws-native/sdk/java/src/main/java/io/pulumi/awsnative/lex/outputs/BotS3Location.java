@@ -83,17 +83,17 @@ public final class BotS3Location {
     	      this.s3ObjectVersion = defaults.s3ObjectVersion;
         }
 
-        public Builder setS3Bucket(String s3Bucket) {
+        public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
-        public Builder setS3ObjectKey(String s3ObjectKey) {
+        public Builder s3ObjectKey(String s3ObjectKey) {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }
 
-        public Builder setS3ObjectVersion(@Nullable String s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }

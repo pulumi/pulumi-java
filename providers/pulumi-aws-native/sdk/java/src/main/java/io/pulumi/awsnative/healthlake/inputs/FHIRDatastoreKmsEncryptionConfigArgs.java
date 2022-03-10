@@ -75,22 +75,22 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setCmkType(Input<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType) {
+        public Builder cmkType(Input<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType) {
             this.cmkType = Objects.requireNonNull(cmkType);
             return this;
         }
 
-        public Builder setCmkType(FHIRDatastoreKmsEncryptionConfigCmkType cmkType) {
+        public Builder cmkType(FHIRDatastoreKmsEncryptionConfigCmkType cmkType) {
             this.cmkType = Input.of(Objects.requireNonNull(cmkType));
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }

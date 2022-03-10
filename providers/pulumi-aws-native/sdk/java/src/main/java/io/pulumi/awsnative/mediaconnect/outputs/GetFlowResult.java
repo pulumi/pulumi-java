@@ -101,22 +101,22 @@ public final class GetFlowResult {
     	      this.sourceFailoverConfig = defaults.sourceFailoverConfig;
         }
 
-        public Builder setFlowArn(@Nullable String flowArn) {
+        public Builder flowArn(@Nullable String flowArn) {
             this.flowArn = flowArn;
             return this;
         }
 
-        public Builder setFlowAvailabilityZone(@Nullable String flowAvailabilityZone) {
+        public Builder flowAvailabilityZone(@Nullable String flowAvailabilityZone) {
             this.flowAvailabilityZone = flowAvailabilityZone;
             return this;
         }
 
-        public Builder setSource(@Nullable FlowSource source) {
+        public Builder source(@Nullable FlowSource source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSourceFailoverConfig(@Nullable FlowFailoverConfig sourceFailoverConfig) {
+        public Builder sourceFailoverConfig(@Nullable FlowFailoverConfig sourceFailoverConfig) {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }

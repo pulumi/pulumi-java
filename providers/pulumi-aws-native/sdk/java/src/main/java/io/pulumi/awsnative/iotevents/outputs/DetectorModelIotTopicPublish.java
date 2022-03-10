@@ -60,12 +60,12 @@ public final class DetectorModelIotTopicPublish {
     	      this.payload = defaults.payload;
         }
 
-        public Builder setMqttTopic(String mqttTopic) {
+        public Builder mqttTopic(String mqttTopic) {
             this.mqttTopic = Objects.requireNonNull(mqttTopic);
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }

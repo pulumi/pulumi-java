@@ -85,32 +85,32 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.linkId = defaults.linkId;
         }
 
-        public Builder setDeviceId(Input<String> deviceId) {
+        public Builder deviceId(Input<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Input.of(Objects.requireNonNull(deviceId));
             return this;
         }
 
-        public Builder setGlobalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Input<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder setLinkId(Input<String> linkId) {
+        public Builder linkId(Input<String> linkId) {
             this.linkId = Objects.requireNonNull(linkId);
             return this;
         }
 
-        public Builder setLinkId(String linkId) {
+        public Builder linkId(String linkId) {
             this.linkId = Input.of(Objects.requireNonNull(linkId));
             return this;
         }

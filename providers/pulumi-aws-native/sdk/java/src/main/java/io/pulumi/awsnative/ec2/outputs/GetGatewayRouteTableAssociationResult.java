@@ -67,12 +67,12 @@ public final class GetGatewayRouteTableAssociationResult {
     	      this.routeTableId = defaults.routeTableId;
         }
 
-        public Builder setAssociationId(@Nullable String associationId) {
+        public Builder associationId(@Nullable String associationId) {
             this.associationId = associationId;
             return this;
         }
 
-        public Builder setRouteTableId(@Nullable String routeTableId) {
+        public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }

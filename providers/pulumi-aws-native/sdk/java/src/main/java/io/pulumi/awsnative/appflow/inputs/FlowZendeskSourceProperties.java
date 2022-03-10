@@ -47,7 +47,7 @@ public final class FlowZendeskSourceProperties extends io.pulumi.resources.Invok
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

@@ -71,22 +71,22 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
     	      this.attributeType = defaults.attributeType;
         }
 
-        public Builder setAttributeName(@Nullable Input<String> attributeName) {
+        public Builder attributeName(@Nullable Input<String> attributeName) {
             this.attributeName = attributeName;
             return this;
         }
 
-        public Builder setAttributeName(@Nullable String attributeName) {
+        public Builder attributeName(@Nullable String attributeName) {
             this.attributeName = Input.ofNullable(attributeName);
             return this;
         }
 
-        public Builder setAttributeType(@Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType) {
+        public Builder attributeType(@Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType) {
             this.attributeType = attributeType;
             return this;
         }
 
-        public Builder setAttributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
+        public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
             this.attributeType = Input.ofNullable(attributeType);
             return this;
         }

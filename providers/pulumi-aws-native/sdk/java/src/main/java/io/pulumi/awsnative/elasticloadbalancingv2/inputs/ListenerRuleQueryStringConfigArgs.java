@@ -50,12 +50,12 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable Input<List<ListenerRuleQueryStringKeyValueArgs>> values) {
+        public Builder values(@Nullable Input<List<ListenerRuleQueryStringKeyValueArgs>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<ListenerRuleQueryStringKeyValueArgs> values) {
+        public Builder values(@Nullable List<ListenerRuleQueryStringKeyValueArgs> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

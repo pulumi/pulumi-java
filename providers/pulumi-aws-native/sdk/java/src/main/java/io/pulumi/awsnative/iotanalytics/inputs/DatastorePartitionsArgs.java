@@ -50,12 +50,12 @@ public final class DatastorePartitionsArgs extends io.pulumi.resources.ResourceA
     	      this.partitions = defaults.partitions;
         }
 
-        public Builder setPartitions(@Nullable Input<List<DatastorePartitionArgs>> partitions) {
+        public Builder partitions(@Nullable Input<List<DatastorePartitionArgs>> partitions) {
             this.partitions = partitions;
             return this;
         }
 
-        public Builder setPartitions(@Nullable List<DatastorePartitionArgs> partitions) {
+        public Builder partitions(@Nullable List<DatastorePartitionArgs> partitions) {
             this.partitions = Input.ofNullable(partitions);
             return this;
         }

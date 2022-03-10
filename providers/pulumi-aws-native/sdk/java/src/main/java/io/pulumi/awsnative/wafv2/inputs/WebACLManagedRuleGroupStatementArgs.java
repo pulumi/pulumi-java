@@ -101,52 +101,52 @@ public final class WebACLManagedRuleGroupStatementArgs extends io.pulumi.resourc
     	      this.version = defaults.version;
         }
 
-        public Builder setExcludedRules(@Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules) {
+        public Builder excludedRules(@Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebACLExcludedRuleArgs> excludedRules) {
             this.excludedRules = Input.ofNullable(excludedRules);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable Input<WebACLStatementArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Input<WebACLStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebACLStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }
 
-        public Builder setVendorName(Input<String> vendorName) {
+        public Builder vendorName(Input<String> vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Input.of(Objects.requireNonNull(vendorName));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

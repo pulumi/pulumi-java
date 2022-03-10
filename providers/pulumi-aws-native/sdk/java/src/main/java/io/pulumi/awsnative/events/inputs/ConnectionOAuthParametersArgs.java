@@ -89,42 +89,42 @@ public final class ConnectionOAuthParametersArgs extends io.pulumi.resources.Res
     	      this.oAuthHttpParameters = defaults.oAuthHttpParameters;
         }
 
-        public Builder setAuthorizationEndpoint(Input<String> authorizationEndpoint) {
+        public Builder authorizationEndpoint(Input<String> authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Input.of(Objects.requireNonNull(authorizationEndpoint));
             return this;
         }
 
-        public Builder setClientParameters(Input<ConnectionClientParametersArgs> clientParameters) {
+        public Builder clientParameters(Input<ConnectionClientParametersArgs> clientParameters) {
             this.clientParameters = Objects.requireNonNull(clientParameters);
             return this;
         }
 
-        public Builder setClientParameters(ConnectionClientParametersArgs clientParameters) {
+        public Builder clientParameters(ConnectionClientParametersArgs clientParameters) {
             this.clientParameters = Input.of(Objects.requireNonNull(clientParameters));
             return this;
         }
 
-        public Builder setHttpMethod(Input<ConnectionOAuthParametersHttpMethod> httpMethod) {
+        public Builder httpMethod(Input<ConnectionOAuthParametersHttpMethod> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setHttpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
+        public Builder httpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
             this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder setOAuthHttpParameters(@Nullable Input<ConnectionHttpParametersArgs> oAuthHttpParameters) {
+        public Builder oAuthHttpParameters(@Nullable Input<ConnectionHttpParametersArgs> oAuthHttpParameters) {
             this.oAuthHttpParameters = oAuthHttpParameters;
             return this;
         }
 
-        public Builder setOAuthHttpParameters(@Nullable ConnectionHttpParametersArgs oAuthHttpParameters) {
+        public Builder oAuthHttpParameters(@Nullable ConnectionHttpParametersArgs oAuthHttpParameters) {
             this.oAuthHttpParameters = Input.ofNullable(oAuthHttpParameters);
             return this;
         }

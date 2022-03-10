@@ -64,22 +64,22 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable Input<List<GroupConfigurationParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<GroupConfigurationParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<GroupConfigurationParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<GroupConfigurationParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

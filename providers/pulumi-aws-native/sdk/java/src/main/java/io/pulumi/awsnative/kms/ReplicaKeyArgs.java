@@ -139,62 +139,62 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setKeyPolicy(Input<Object> keyPolicy) {
+        public Builder keyPolicy(Input<Object> keyPolicy) {
             this.keyPolicy = Objects.requireNonNull(keyPolicy);
             return this;
         }
 
-        public Builder setKeyPolicy(Object keyPolicy) {
+        public Builder keyPolicy(Object keyPolicy) {
             this.keyPolicy = Input.of(Objects.requireNonNull(keyPolicy));
             return this;
         }
 
-        public Builder setPendingWindowInDays(@Nullable Input<Integer> pendingWindowInDays) {
+        public Builder pendingWindowInDays(@Nullable Input<Integer> pendingWindowInDays) {
             this.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
 
-        public Builder setPendingWindowInDays(@Nullable Integer pendingWindowInDays) {
+        public Builder pendingWindowInDays(@Nullable Integer pendingWindowInDays) {
             this.pendingWindowInDays = Input.ofNullable(pendingWindowInDays);
             return this;
         }
 
-        public Builder setPrimaryKeyArn(Input<String> primaryKeyArn) {
+        public Builder primaryKeyArn(Input<String> primaryKeyArn) {
             this.primaryKeyArn = Objects.requireNonNull(primaryKeyArn);
             return this;
         }
 
-        public Builder setPrimaryKeyArn(String primaryKeyArn) {
+        public Builder primaryKeyArn(String primaryKeyArn) {
             this.primaryKeyArn = Input.of(Objects.requireNonNull(primaryKeyArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ReplicaKeyTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ReplicaKeyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ReplicaKeyTagArgs> tags) {
+        public Builder tags(@Nullable List<ReplicaKeyTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

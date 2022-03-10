@@ -47,7 +47,7 @@ public final class GetBackupPlanArgs extends io.pulumi.resources.InvokeArgs {
     	      this.backupPlanId = defaults.backupPlanId;
         }
 
-        public Builder setBackupPlanId(String backupPlanId) {
+        public Builder backupPlanId(String backupPlanId) {
             this.backupPlanId = Objects.requireNonNull(backupPlanId);
             return this;
         }

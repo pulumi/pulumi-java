@@ -40,7 +40,7 @@ public final class DistributionRestrictions {
     	      this.geoRestriction = defaults.geoRestriction;
         }
 
-        public Builder setGeoRestriction(DistributionGeoRestriction geoRestriction) {
+        public Builder geoRestriction(DistributionGeoRestriction geoRestriction) {
             this.geoRestriction = Objects.requireNonNull(geoRestriction);
             return this;
         }

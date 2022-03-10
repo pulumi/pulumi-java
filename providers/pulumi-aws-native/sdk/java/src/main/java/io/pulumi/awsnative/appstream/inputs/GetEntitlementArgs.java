@@ -60,12 +60,12 @@ public final class GetEntitlementArgs extends io.pulumi.resources.InvokeArgs {
     	      this.stackName = defaults.stackName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStackName(String stackName) {
+        public Builder stackName(String stackName) {
             this.stackName = Objects.requireNonNull(stackName);
             return this;
         }

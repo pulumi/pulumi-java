@@ -61,12 +61,12 @@ public final class DatasetResourceConfiguration extends io.pulumi.resources.Invo
     	      this.volumeSizeInGB = defaults.volumeSizeInGB;
         }
 
-        public Builder setComputeType(DatasetResourceConfigurationComputeType computeType) {
+        public Builder computeType(DatasetResourceConfigurationComputeType computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setVolumeSizeInGB(Integer volumeSizeInGB) {
+        public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }

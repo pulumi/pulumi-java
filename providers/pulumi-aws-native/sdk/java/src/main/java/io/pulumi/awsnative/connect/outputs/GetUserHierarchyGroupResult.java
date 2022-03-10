@@ -83,17 +83,17 @@ public final class GetUserHierarchyGroupResult {
     	      this.userHierarchyGroupArn = defaults.userHierarchyGroupArn;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setUserHierarchyGroupArn(@Nullable String userHierarchyGroupArn) {
+        public Builder userHierarchyGroupArn(@Nullable String userHierarchyGroupArn) {
             this.userHierarchyGroupArn = userHierarchyGroupArn;
             return this;
         }

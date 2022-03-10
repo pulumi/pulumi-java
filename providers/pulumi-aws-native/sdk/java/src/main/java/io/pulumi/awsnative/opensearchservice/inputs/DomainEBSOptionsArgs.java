@@ -88,42 +88,42 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setEBSEnabled(@Nullable Input<Boolean> eBSEnabled) {
+        public Builder eBSEnabled(@Nullable Input<Boolean> eBSEnabled) {
             this.eBSEnabled = eBSEnabled;
             return this;
         }
 
-        public Builder setEBSEnabled(@Nullable Boolean eBSEnabled) {
+        public Builder eBSEnabled(@Nullable Boolean eBSEnabled) {
             this.eBSEnabled = Input.ofNullable(eBSEnabled);
             return this;
         }
 
-        public Builder setIops(@Nullable Input<Integer> iops) {
+        public Builder iops(@Nullable Input<Integer> iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = Input.ofNullable(iops);
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = Input.ofNullable(volumeSize);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

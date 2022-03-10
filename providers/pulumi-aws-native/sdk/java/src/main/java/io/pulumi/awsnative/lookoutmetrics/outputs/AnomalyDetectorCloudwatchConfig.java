@@ -40,7 +40,7 @@ public final class AnomalyDetectorCloudwatchConfig {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -86,27 +86,27 @@ public final class GetTransitGatewayVpcAttachmentResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddSubnetIds(@Nullable List<String> addSubnetIds) {
+        public Builder addSubnetIds(@Nullable List<String> addSubnetIds) {
             this.addSubnetIds = addSubnetIds;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsProperties options) {
+        public Builder options(@Nullable OptionsProperties options) {
             this.options = options;
             return this;
         }
 
-        public Builder setRemoveSubnetIds(@Nullable List<String> removeSubnetIds) {
+        public Builder removeSubnetIds(@Nullable List<String> removeSubnetIds) {
             this.removeSubnetIds = removeSubnetIds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayVpcAttachmentTag> tags) {
+        public Builder tags(@Nullable List<TransitGatewayVpcAttachmentTag> tags) {
             this.tags = tags;
             return this;
         }

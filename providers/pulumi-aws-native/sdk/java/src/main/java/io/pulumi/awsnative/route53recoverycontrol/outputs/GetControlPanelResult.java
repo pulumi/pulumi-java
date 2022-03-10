@@ -118,27 +118,27 @@ public final class GetControlPanelResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setControlPanelArn(@Nullable String controlPanelArn) {
+        public Builder controlPanelArn(@Nullable String controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
 
-        public Builder setDefaultControlPanel(@Nullable Boolean defaultControlPanel) {
+        public Builder defaultControlPanel(@Nullable Boolean defaultControlPanel) {
             this.defaultControlPanel = defaultControlPanel;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoutingControlCount(@Nullable Integer routingControlCount) {
+        public Builder routingControlCount(@Nullable Integer routingControlCount) {
             this.routingControlCount = routingControlCount;
             return this;
         }
 
-        public Builder setStatus(@Nullable ControlPanelStatus status) {
+        public Builder status(@Nullable ControlPanelStatus status) {
             this.status = status;
             return this;
         }

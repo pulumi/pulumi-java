@@ -76,32 +76,32 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
     	      this.readProvisionedThroughputSettings = defaults.readProvisionedThroughputSettings;
         }
 
-        public Builder setContributorInsightsSpecification(@Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification) {
+        public Builder contributorInsightsSpecification(@Nullable Input<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification) {
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
 
-        public Builder setContributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
+        public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
             this.contributorInsightsSpecification = Input.ofNullable(contributorInsightsSpecification);
             return this;
         }
 
-        public Builder setIndexName(Input<String> indexName) {
+        public Builder indexName(Input<String> indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Input.of(Objects.requireNonNull(indexName));
             return this;
         }
 
-        public Builder setReadProvisionedThroughputSettings(@Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
+        public Builder readProvisionedThroughputSettings(@Nullable Input<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
 
-        public Builder setReadProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
+        public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = Input.ofNullable(readProvisionedThroughputSettings);
             return this;
         }

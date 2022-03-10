@@ -49,12 +49,12 @@ public final class WirelessDeviceOtaaV10x {
     	      this.appKey = defaults.appKey;
         }
 
-        public Builder setAppEui(String appEui) {
+        public Builder appEui(String appEui) {
             this.appEui = Objects.requireNonNull(appEui);
             return this;
         }
 
-        public Builder setAppKey(String appKey) {
+        public Builder appKey(String appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }

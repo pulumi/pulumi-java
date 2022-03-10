@@ -59,17 +59,17 @@ public final class ConnectionHttpParameters {
     	      this.queryStringParameters = defaults.queryStringParameters;
         }
 
-        public Builder setBodyParameters(@Nullable List<ConnectionParameter> bodyParameters) {
+        public Builder bodyParameters(@Nullable List<ConnectionParameter> bodyParameters) {
             this.bodyParameters = bodyParameters;
             return this;
         }
 
-        public Builder setHeaderParameters(@Nullable List<ConnectionParameter> headerParameters) {
+        public Builder headerParameters(@Nullable List<ConnectionParameter> headerParameters) {
             this.headerParameters = headerParameters;
             return this;
         }
 
-        public Builder setQueryStringParameters(@Nullable List<ConnectionParameter> queryStringParameters) {
+        public Builder queryStringParameters(@Nullable List<ConnectionParameter> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
         }

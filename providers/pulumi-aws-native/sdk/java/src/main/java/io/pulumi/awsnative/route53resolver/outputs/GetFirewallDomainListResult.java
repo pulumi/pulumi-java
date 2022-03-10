@@ -199,52 +199,52 @@ public final class GetFirewallDomainListResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreatorRequestId(@Nullable String creatorRequestId) {
+        public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
 
-        public Builder setDomainCount(@Nullable Integer domainCount) {
+        public Builder domainCount(@Nullable Integer domainCount) {
             this.domainCount = domainCount;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setManagedOwnerName(@Nullable String managedOwnerName) {
+        public Builder managedOwnerName(@Nullable String managedOwnerName) {
             this.managedOwnerName = managedOwnerName;
             return this;
         }
 
-        public Builder setModificationTime(@Nullable String modificationTime) {
+        public Builder modificationTime(@Nullable String modificationTime) {
             this.modificationTime = modificationTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable FirewallDomainListStatus status) {
+        public Builder status(@Nullable FirewallDomainListStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallDomainListTag> tags) {
+        public Builder tags(@Nullable List<FirewallDomainListTag> tags) {
             this.tags = tags;
             return this;
         }

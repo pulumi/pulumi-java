@@ -100,42 +100,42 @@ public final class DomainServiceSoftwareOptions {
     	      this.updateStatus = defaults.updateStatus;
         }
 
-        public Builder setAutomatedUpdateDate(@Nullable String automatedUpdateDate) {
+        public Builder automatedUpdateDate(@Nullable String automatedUpdateDate) {
             this.automatedUpdateDate = automatedUpdateDate;
             return this;
         }
 
-        public Builder setCancellable(@Nullable Boolean cancellable) {
+        public Builder cancellable(@Nullable Boolean cancellable) {
             this.cancellable = cancellable;
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable String currentVersion) {
+        public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setNewVersion(@Nullable String newVersion) {
+        public Builder newVersion(@Nullable String newVersion) {
             this.newVersion = newVersion;
             return this;
         }
 
-        public Builder setOptionalDeployment(@Nullable Boolean optionalDeployment) {
+        public Builder optionalDeployment(@Nullable Boolean optionalDeployment) {
             this.optionalDeployment = optionalDeployment;
             return this;
         }
 
-        public Builder setUpdateAvailable(@Nullable Boolean updateAvailable) {
+        public Builder updateAvailable(@Nullable Boolean updateAvailable) {
             this.updateAvailable = updateAvailable;
             return this;
         }
 
-        public Builder setUpdateStatus(@Nullable String updateStatus) {
+        public Builder updateStatus(@Nullable String updateStatus) {
             this.updateStatus = updateStatus;
             return this;
         }

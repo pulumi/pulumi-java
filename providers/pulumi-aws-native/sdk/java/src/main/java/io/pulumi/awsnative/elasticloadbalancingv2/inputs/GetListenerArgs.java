@@ -47,7 +47,7 @@ public final class GetListenerArgs extends io.pulumi.resources.InvokeArgs {
     	      this.listenerArn = defaults.listenerArn;
         }
 
-        public Builder setListenerArn(String listenerArn) {
+        public Builder listenerArn(String listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }

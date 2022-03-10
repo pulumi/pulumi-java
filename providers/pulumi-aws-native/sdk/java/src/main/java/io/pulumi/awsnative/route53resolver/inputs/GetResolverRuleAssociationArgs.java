@@ -51,7 +51,7 @@ public final class GetResolverRuleAssociationArgs extends io.pulumi.resources.In
     	      this.resolverRuleAssociationId = defaults.resolverRuleAssociationId;
         }
 
-        public Builder setResolverRuleAssociationId(String resolverRuleAssociationId) {
+        public Builder resolverRuleAssociationId(String resolverRuleAssociationId) {
             this.resolverRuleAssociationId = Objects.requireNonNull(resolverRuleAssociationId);
             return this;
         }

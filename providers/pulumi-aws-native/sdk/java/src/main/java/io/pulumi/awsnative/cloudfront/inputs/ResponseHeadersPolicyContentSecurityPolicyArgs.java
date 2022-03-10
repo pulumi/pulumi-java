@@ -62,22 +62,22 @@ public final class ResponseHeadersPolicyContentSecurityPolicyArgs extends io.pul
     	      this.override = defaults.override;
         }
 
-        public Builder setContentSecurityPolicy(Input<String> contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(Input<String> contentSecurityPolicy) {
             this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
             return this;
         }
 
-        public Builder setContentSecurityPolicy(String contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(String contentSecurityPolicy) {
             this.contentSecurityPolicy = Input.of(Objects.requireNonNull(contentSecurityPolicy));
             return this;
         }
 
-        public Builder setOverride(Input<Boolean> override) {
+        public Builder override(Input<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }

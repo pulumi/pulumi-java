@@ -105,52 +105,52 @@ public final class ScheduledQueryMixedMeasureMappingArgs extends io.pulumi.resou
     	      this.targetMeasureName = defaults.targetMeasureName;
         }
 
-        public Builder setMeasureName(@Nullable Input<String> measureName) {
+        public Builder measureName(@Nullable Input<String> measureName) {
             this.measureName = measureName;
             return this;
         }
 
-        public Builder setMeasureName(@Nullable String measureName) {
+        public Builder measureName(@Nullable String measureName) {
             this.measureName = Input.ofNullable(measureName);
             return this;
         }
 
-        public Builder setMeasureValueType(Input<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType) {
+        public Builder measureValueType(Input<ScheduledQueryMixedMeasureMappingMeasureValueType> measureValueType) {
             this.measureValueType = Objects.requireNonNull(measureValueType);
             return this;
         }
 
-        public Builder setMeasureValueType(ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType) {
+        public Builder measureValueType(ScheduledQueryMixedMeasureMappingMeasureValueType measureValueType) {
             this.measureValueType = Input.of(Objects.requireNonNull(measureValueType));
             return this;
         }
 
-        public Builder setMultiMeasureAttributeMappings(@Nullable Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
+        public Builder multiMeasureAttributeMappings(@Nullable Input<List<ScheduledQueryMultiMeasureAttributeMappingArgs>> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
             return this;
         }
 
-        public Builder setMultiMeasureAttributeMappings(@Nullable List<ScheduledQueryMultiMeasureAttributeMappingArgs> multiMeasureAttributeMappings) {
+        public Builder multiMeasureAttributeMappings(@Nullable List<ScheduledQueryMultiMeasureAttributeMappingArgs> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = Input.ofNullable(multiMeasureAttributeMappings);
             return this;
         }
 
-        public Builder setSourceColumn(@Nullable Input<String> sourceColumn) {
+        public Builder sourceColumn(@Nullable Input<String> sourceColumn) {
             this.sourceColumn = sourceColumn;
             return this;
         }
 
-        public Builder setSourceColumn(@Nullable String sourceColumn) {
+        public Builder sourceColumn(@Nullable String sourceColumn) {
             this.sourceColumn = Input.ofNullable(sourceColumn);
             return this;
         }
 
-        public Builder setTargetMeasureName(@Nullable Input<String> targetMeasureName) {
+        public Builder targetMeasureName(@Nullable Input<String> targetMeasureName) {
             this.targetMeasureName = targetMeasureName;
             return this;
         }
 
-        public Builder setTargetMeasureName(@Nullable String targetMeasureName) {
+        public Builder targetMeasureName(@Nullable String targetMeasureName) {
             this.targetMeasureName = Input.ofNullable(targetMeasureName);
             return this;
         }

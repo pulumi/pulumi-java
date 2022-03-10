@@ -69,22 +69,22 @@ public final class BucketMetricsConfiguration {
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setAccessPointArn(@Nullable String accessPointArn) {
+        public Builder accessPointArn(@Nullable String accessPointArn) {
             this.accessPointArn = accessPointArn;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }

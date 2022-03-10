@@ -42,7 +42,7 @@ public final class AssociationInstanceAssociationOutputLocation {
     	      this.s3Location = defaults.s3Location;
         }
 
-        public Builder setS3Location(@Nullable AssociationS3OutputLocation s3Location) {
+        public Builder s3Location(@Nullable AssociationS3OutputLocation s3Location) {
             this.s3Location = s3Location;
             return this;
         }

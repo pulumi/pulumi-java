@@ -87,42 +87,42 @@ public final class InAppTemplateButtonConfigArgs extends io.pulumi.resources.Res
     	      this.web = defaults.web;
         }
 
-        public Builder setAndroid(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android) {
+        public Builder android(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> android) {
             this.android = android;
             return this;
         }
 
-        public Builder setAndroid(@Nullable InAppTemplateOverrideButtonConfigurationArgs android) {
+        public Builder android(@Nullable InAppTemplateOverrideButtonConfigurationArgs android) {
             this.android = Input.ofNullable(android);
             return this;
         }
 
-        public Builder setDefaultConfig(@Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig) {
+        public Builder defaultConfig(@Nullable Input<InAppTemplateDefaultButtonConfigurationArgs> defaultConfig) {
             this.defaultConfig = defaultConfig;
             return this;
         }
 
-        public Builder setDefaultConfig(@Nullable InAppTemplateDefaultButtonConfigurationArgs defaultConfig) {
+        public Builder defaultConfig(@Nullable InAppTemplateDefaultButtonConfigurationArgs defaultConfig) {
             this.defaultConfig = Input.ofNullable(defaultConfig);
             return this;
         }
 
-        public Builder setIOS(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS) {
+        public Builder iOS(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> iOS) {
             this.iOS = iOS;
             return this;
         }
 
-        public Builder setIOS(@Nullable InAppTemplateOverrideButtonConfigurationArgs iOS) {
+        public Builder iOS(@Nullable InAppTemplateOverrideButtonConfigurationArgs iOS) {
             this.iOS = Input.ofNullable(iOS);
             return this;
         }
 
-        public Builder setWeb(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web) {
+        public Builder web(@Nullable Input<InAppTemplateOverrideButtonConfigurationArgs> web) {
             this.web = web;
             return this;
         }
 
-        public Builder setWeb(@Nullable InAppTemplateOverrideButtonConfigurationArgs web) {
+        public Builder web(@Nullable InAppTemplateOverrideButtonConfigurationArgs web) {
             this.web = Input.ofNullable(web);
             return this;
         }

@@ -68,12 +68,12 @@ public final class DistributionConfigurationTargetContainerRepository {
     	      this.service = defaults.service;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setService(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
+        public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
             this.service = service;
             return this;
         }

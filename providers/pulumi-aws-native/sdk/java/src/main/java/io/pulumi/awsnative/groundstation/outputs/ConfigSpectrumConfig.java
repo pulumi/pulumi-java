@@ -61,17 +61,17 @@ public final class ConfigSpectrumConfig {
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setBandwidth(@Nullable ConfigFrequencyBandwidth bandwidth) {
+        public Builder bandwidth(@Nullable ConfigFrequencyBandwidth bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
-        public Builder setCenterFrequency(@Nullable ConfigFrequency centerFrequency) {
+        public Builder centerFrequency(@Nullable ConfigFrequency centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
 
-        public Builder setPolarization(@Nullable ConfigPolarization polarization) {
+        public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = polarization;
             return this;
         }

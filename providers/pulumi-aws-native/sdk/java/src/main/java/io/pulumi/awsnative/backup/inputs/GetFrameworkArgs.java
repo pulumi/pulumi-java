@@ -51,7 +51,7 @@ public final class GetFrameworkArgs extends io.pulumi.resources.InvokeArgs {
     	      this.frameworkArn = defaults.frameworkArn;
         }
 
-        public Builder setFrameworkArn(String frameworkArn) {
+        public Builder frameworkArn(String frameworkArn) {
             this.frameworkArn = Objects.requireNonNull(frameworkArn);
             return this;
         }

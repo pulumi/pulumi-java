@@ -59,17 +59,17 @@ public final class DeliveryStreamCopyCommand {
     	      this.dataTableName = defaults.dataTableName;
         }
 
-        public Builder setCopyOptions(@Nullable String copyOptions) {
+        public Builder copyOptions(@Nullable String copyOptions) {
             this.copyOptions = copyOptions;
             return this;
         }
 
-        public Builder setDataTableColumns(@Nullable String dataTableColumns) {
+        public Builder dataTableColumns(@Nullable String dataTableColumns) {
             this.dataTableColumns = dataTableColumns;
             return this;
         }
 
-        public Builder setDataTableName(String dataTableName) {
+        public Builder dataTableName(String dataTableName) {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
         }

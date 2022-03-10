@@ -50,7 +50,7 @@ public final class ListenerRulePathPatternConfig extends io.pulumi.resources.Inv
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

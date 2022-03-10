@@ -88,22 +88,22 @@ public final class DomainEBSOptions extends io.pulumi.resources.InvokeArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setEBSEnabled(@Nullable Boolean eBSEnabled) {
+        public Builder eBSEnabled(@Nullable Boolean eBSEnabled) {
             this.eBSEnabled = eBSEnabled;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
         }

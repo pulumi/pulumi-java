@@ -101,42 +101,42 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEc2Config(Input<LocationEFSEc2ConfigArgs> ec2Config) {
+        public Builder ec2Config(Input<LocationEFSEc2ConfigArgs> ec2Config) {
             this.ec2Config = Objects.requireNonNull(ec2Config);
             return this;
         }
 
-        public Builder setEc2Config(LocationEFSEc2ConfigArgs ec2Config) {
+        public Builder ec2Config(LocationEFSEc2ConfigArgs ec2Config) {
             this.ec2Config = Input.of(Objects.requireNonNull(ec2Config));
             return this;
         }
 
-        public Builder setEfsFilesystemArn(Input<String> efsFilesystemArn) {
+        public Builder efsFilesystemArn(Input<String> efsFilesystemArn) {
             this.efsFilesystemArn = Objects.requireNonNull(efsFilesystemArn);
             return this;
         }
 
-        public Builder setEfsFilesystemArn(String efsFilesystemArn) {
+        public Builder efsFilesystemArn(String efsFilesystemArn) {
             this.efsFilesystemArn = Input.of(Objects.requireNonNull(efsFilesystemArn));
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<LocationEFSTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<LocationEFSTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationEFSTagArgs> tags) {
+        public Builder tags(@Nullable List<LocationEFSTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

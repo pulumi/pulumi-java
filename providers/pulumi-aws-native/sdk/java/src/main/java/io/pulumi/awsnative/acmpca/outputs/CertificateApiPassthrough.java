@@ -52,12 +52,12 @@ public final class CertificateApiPassthrough {
     	      this.subject = defaults.subject;
         }
 
-        public Builder setExtensions(@Nullable CertificateExtensions extensions) {
+        public Builder extensions(@Nullable CertificateExtensions extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setSubject(@Nullable CertificateSubject subject) {
+        public Builder subject(@Nullable CertificateSubject subject) {
             this.subject = subject;
             return this;
         }

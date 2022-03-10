@@ -140,62 +140,62 @@ public final class PackagingConfigurationArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCmafPackage(@Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage) {
+        public Builder cmafPackage(@Nullable Input<PackagingConfigurationCmafPackageArgs> cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
 
-        public Builder setCmafPackage(@Nullable PackagingConfigurationCmafPackageArgs cmafPackage) {
+        public Builder cmafPackage(@Nullable PackagingConfigurationCmafPackageArgs cmafPackage) {
             this.cmafPackage = Input.ofNullable(cmafPackage);
             return this;
         }
 
-        public Builder setDashPackage(@Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage) {
+        public Builder dashPackage(@Nullable Input<PackagingConfigurationDashPackageArgs> dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
 
-        public Builder setDashPackage(@Nullable PackagingConfigurationDashPackageArgs dashPackage) {
+        public Builder dashPackage(@Nullable PackagingConfigurationDashPackageArgs dashPackage) {
             this.dashPackage = Input.ofNullable(dashPackage);
             return this;
         }
 
-        public Builder setHlsPackage(@Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage) {
+        public Builder hlsPackage(@Nullable Input<PackagingConfigurationHlsPackageArgs> hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
 
-        public Builder setHlsPackage(@Nullable PackagingConfigurationHlsPackageArgs hlsPackage) {
+        public Builder hlsPackage(@Nullable PackagingConfigurationHlsPackageArgs hlsPackage) {
             this.hlsPackage = Input.ofNullable(hlsPackage);
             return this;
         }
 
-        public Builder setMssPackage(@Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage) {
+        public Builder mssPackage(@Nullable Input<PackagingConfigurationMssPackageArgs> mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
 
-        public Builder setMssPackage(@Nullable PackagingConfigurationMssPackageArgs mssPackage) {
+        public Builder mssPackage(@Nullable PackagingConfigurationMssPackageArgs mssPackage) {
             this.mssPackage = Input.ofNullable(mssPackage);
             return this;
         }
 
-        public Builder setPackagingGroupId(Input<String> packagingGroupId) {
+        public Builder packagingGroupId(Input<String> packagingGroupId) {
             this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
             return this;
         }
 
-        public Builder setPackagingGroupId(String packagingGroupId) {
+        public Builder packagingGroupId(String packagingGroupId) {
             this.packagingGroupId = Input.of(Objects.requireNonNull(packagingGroupId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PackagingConfigurationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PackagingConfigurationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PackagingConfigurationTagArgs> tags) {
+        public Builder tags(@Nullable List<PackagingConfigurationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

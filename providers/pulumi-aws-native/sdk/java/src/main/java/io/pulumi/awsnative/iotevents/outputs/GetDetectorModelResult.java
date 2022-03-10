@@ -115,27 +115,27 @@ public final class GetDetectorModelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDetectorModelDefinition(@Nullable DetectorModelDefinition detectorModelDefinition) {
+        public Builder detectorModelDefinition(@Nullable DetectorModelDefinition detectorModelDefinition) {
             this.detectorModelDefinition = detectorModelDefinition;
             return this;
         }
 
-        public Builder setDetectorModelDescription(@Nullable String detectorModelDescription) {
+        public Builder detectorModelDescription(@Nullable String detectorModelDescription) {
             this.detectorModelDescription = detectorModelDescription;
             return this;
         }
 
-        public Builder setEvaluationMethod(@Nullable DetectorModelEvaluationMethod evaluationMethod) {
+        public Builder evaluationMethod(@Nullable DetectorModelEvaluationMethod evaluationMethod) {
             this.evaluationMethod = evaluationMethod;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorModelTag> tags) {
+        public Builder tags(@Nullable List<DetectorModelTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -57,7 +57,7 @@ public final class ApplicationHAClusterPrometheusExporter extends io.pulumi.reso
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder setPrometheusPort(@Nullable String prometheusPort) {
+        public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }

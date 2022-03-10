@@ -89,22 +89,22 @@ public final class WebACLRateBasedStatement extends io.pulumi.resources.InvokeAr
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
+        public Builder aggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }

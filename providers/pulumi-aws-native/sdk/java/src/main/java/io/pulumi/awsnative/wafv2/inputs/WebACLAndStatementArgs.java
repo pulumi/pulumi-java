@@ -49,12 +49,12 @@ public final class WebACLAndStatementArgs extends io.pulumi.resources.ResourceAr
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(Input<List<WebACLStatementArgs>> statements) {
+        public Builder statements(Input<List<WebACLStatementArgs>> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
 
-        public Builder setStatements(List<WebACLStatementArgs> statements) {
+        public Builder statements(List<WebACLStatementArgs> statements) {
             this.statements = Input.of(Objects.requireNonNull(statements));
             return this;
         }

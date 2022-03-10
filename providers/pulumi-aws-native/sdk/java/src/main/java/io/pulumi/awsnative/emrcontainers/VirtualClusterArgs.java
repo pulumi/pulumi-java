@@ -89,32 +89,32 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContainerProvider(Input<VirtualClusterContainerProviderArgs> containerProvider) {
+        public Builder containerProvider(Input<VirtualClusterContainerProviderArgs> containerProvider) {
             this.containerProvider = Objects.requireNonNull(containerProvider);
             return this;
         }
 
-        public Builder setContainerProvider(VirtualClusterContainerProviderArgs containerProvider) {
+        public Builder containerProvider(VirtualClusterContainerProviderArgs containerProvider) {
             this.containerProvider = Input.of(Objects.requireNonNull(containerProvider));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<VirtualClusterTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<VirtualClusterTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VirtualClusterTagArgs> tags) {
+        public Builder tags(@Nullable List<VirtualClusterTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -126,72 +126,72 @@ public final class ProvisioningTemplateArgs extends io.pulumi.resources.Resource
     	      this.templateName = defaults.templateName;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setPreProvisioningHook(@Nullable Input<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook) {
+        public Builder preProvisioningHook(@Nullable Input<ProvisioningTemplateProvisioningHookArgs> preProvisioningHook) {
             this.preProvisioningHook = preProvisioningHook;
             return this;
         }
 
-        public Builder setPreProvisioningHook(@Nullable ProvisioningTemplateProvisioningHookArgs preProvisioningHook) {
+        public Builder preProvisioningHook(@Nullable ProvisioningTemplateProvisioningHookArgs preProvisioningHook) {
             this.preProvisioningHook = Input.ofNullable(preProvisioningHook);
             return this;
         }
 
-        public Builder setProvisioningRoleArn(Input<String> provisioningRoleArn) {
+        public Builder provisioningRoleArn(Input<String> provisioningRoleArn) {
             this.provisioningRoleArn = Objects.requireNonNull(provisioningRoleArn);
             return this;
         }
 
-        public Builder setProvisioningRoleArn(String provisioningRoleArn) {
+        public Builder provisioningRoleArn(String provisioningRoleArn) {
             this.provisioningRoleArn = Input.of(Objects.requireNonNull(provisioningRoleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ProvisioningTemplateTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ProvisioningTemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProvisioningTemplateTagArgs> tags) {
+        public Builder tags(@Nullable List<ProvisioningTemplateTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateBody(Input<String> templateBody) {
+        public Builder templateBody(Input<String> templateBody) {
             this.templateBody = Objects.requireNonNull(templateBody);
             return this;
         }
 
-        public Builder setTemplateBody(String templateBody) {
+        public Builder templateBody(String templateBody) {
             this.templateBody = Input.of(Objects.requireNonNull(templateBody));
             return this;
         }
 
-        public Builder setTemplateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Input<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = Input.ofNullable(templateName);
             return this;
         }

@@ -104,42 +104,42 @@ public final class CanaryRunConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setActiveTracing(@Nullable Input<Boolean> activeTracing) {
+        public Builder activeTracing(@Nullable Input<Boolean> activeTracing) {
             this.activeTracing = activeTracing;
             return this;
         }
 
-        public Builder setActiveTracing(@Nullable Boolean activeTracing) {
+        public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = Input.ofNullable(activeTracing);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Object> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Object> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Object environmentVariables) {
+        public Builder environmentVariables(@Nullable Object environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setMemoryInMB(@Nullable Input<Integer> memoryInMB) {
+        public Builder memoryInMB(@Nullable Input<Integer> memoryInMB) {
             this.memoryInMB = memoryInMB;
             return this;
         }
 
-        public Builder setMemoryInMB(@Nullable Integer memoryInMB) {
+        public Builder memoryInMB(@Nullable Integer memoryInMB) {
             this.memoryInMB = Input.ofNullable(memoryInMB);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }

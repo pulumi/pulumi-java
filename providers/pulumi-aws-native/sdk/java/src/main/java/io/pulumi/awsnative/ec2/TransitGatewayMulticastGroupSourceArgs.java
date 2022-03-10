@@ -85,32 +85,32 @@ public final class TransitGatewayMulticastGroupSourceArgs extends io.pulumi.reso
     	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
         }
 
-        public Builder setGroupIpAddress(Input<String> groupIpAddress) {
+        public Builder groupIpAddress(Input<String> groupIpAddress) {
             this.groupIpAddress = Objects.requireNonNull(groupIpAddress);
             return this;
         }
 
-        public Builder setGroupIpAddress(String groupIpAddress) {
+        public Builder groupIpAddress(String groupIpAddress) {
             this.groupIpAddress = Input.of(Objects.requireNonNull(groupIpAddress));
             return this;
         }
 
-        public Builder setNetworkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(Input<String> transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(Input<String> transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = Input.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
             return this;
         }

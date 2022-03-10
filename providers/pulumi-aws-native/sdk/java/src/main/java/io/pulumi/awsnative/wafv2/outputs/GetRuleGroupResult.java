@@ -154,57 +154,57 @@ public final class GetRuleGroupResult {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAvailableLabels(@Nullable List<RuleGroupLabelSummary> availableLabels) {
+        public Builder availableLabels(@Nullable List<RuleGroupLabelSummary> availableLabels) {
             this.availableLabels = availableLabels;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setConsumedLabels(@Nullable List<RuleGroupLabelSummary> consumedLabels) {
+        public Builder consumedLabels(@Nullable List<RuleGroupLabelSummary> consumedLabels) {
             this.consumedLabels = consumedLabels;
             return this;
         }
 
-        public Builder setCustomResponseBodies(@Nullable RuleGroupCustomResponseBodies customResponseBodies) {
+        public Builder customResponseBodies(@Nullable RuleGroupCustomResponseBodies customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLabelNamespace(@Nullable String labelNamespace) {
+        public Builder labelNamespace(@Nullable String labelNamespace) {
             this.labelNamespace = labelNamespace;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RuleGroupRule> rules) {
+        public Builder rules(@Nullable List<RuleGroupRule> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RuleGroupTag> tags) {
+        public Builder tags(@Nullable List<RuleGroupTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVisibilityConfig(@Nullable RuleGroupVisibilityConfig visibilityConfig) {
+        public Builder visibilityConfig(@Nullable RuleGroupVisibilityConfig visibilityConfig) {
             this.visibilityConfig = visibilityConfig;
             return this;
         }

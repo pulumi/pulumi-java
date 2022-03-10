@@ -41,7 +41,7 @@ public final class RuleGroupPublishMetricAction {
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(List<RuleGroupDimension> dimensions) {
+        public Builder dimensions(List<RuleGroupDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }

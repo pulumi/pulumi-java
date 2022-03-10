@@ -48,12 +48,12 @@ public final class FlowSAPODataSourcePropertiesArgs extends io.pulumi.resources.
     	      this.objectPath = defaults.objectPath;
         }
 
-        public Builder setObjectPath(Input<String> objectPath) {
+        public Builder objectPath(Input<String> objectPath) {
             this.objectPath = Objects.requireNonNull(objectPath);
             return this;
         }
 
-        public Builder setObjectPath(String objectPath) {
+        public Builder objectPath(String objectPath) {
             this.objectPath = Input.of(Objects.requireNonNull(objectPath));
             return this;
         }

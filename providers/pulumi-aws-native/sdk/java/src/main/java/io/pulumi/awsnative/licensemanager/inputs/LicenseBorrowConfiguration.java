@@ -61,12 +61,12 @@ public final class LicenseBorrowConfiguration extends io.pulumi.resources.Invoke
     	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
         }
 
-        public Builder setAllowEarlyCheckIn(Boolean allowEarlyCheckIn) {
+        public Builder allowEarlyCheckIn(Boolean allowEarlyCheckIn) {
             this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn);
             return this;
         }
 
-        public Builder setMaxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
+        public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }

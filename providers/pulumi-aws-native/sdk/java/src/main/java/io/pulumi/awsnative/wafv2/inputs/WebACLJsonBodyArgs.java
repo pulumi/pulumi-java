@@ -80,32 +80,32 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.matchScope = defaults.matchScope;
         }
 
-        public Builder setInvalidFallbackBehavior(@Nullable Input<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable Input<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior) {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
-        public Builder setInvalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = Input.ofNullable(invalidFallbackBehavior);
             return this;
         }
 
-        public Builder setMatchPattern(Input<WebACLJsonMatchPatternArgs> matchPattern) {
+        public Builder matchPattern(Input<WebACLJsonMatchPatternArgs> matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
 
-        public Builder setMatchPattern(WebACLJsonMatchPatternArgs matchPattern) {
+        public Builder matchPattern(WebACLJsonMatchPatternArgs matchPattern) {
             this.matchPattern = Input.of(Objects.requireNonNull(matchPattern));
             return this;
         }
 
-        public Builder setMatchScope(Input<WebACLJsonMatchScope> matchScope) {
+        public Builder matchScope(Input<WebACLJsonMatchScope> matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
 
-        public Builder setMatchScope(WebACLJsonMatchScope matchScope) {
+        public Builder matchScope(WebACLJsonMatchScope matchScope) {
             this.matchScope = Input.of(Objects.requireNonNull(matchScope));
             return this;
         }

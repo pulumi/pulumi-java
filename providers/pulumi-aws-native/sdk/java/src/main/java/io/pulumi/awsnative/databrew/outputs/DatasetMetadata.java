@@ -50,7 +50,7 @@ public final class DatasetMetadata {
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }

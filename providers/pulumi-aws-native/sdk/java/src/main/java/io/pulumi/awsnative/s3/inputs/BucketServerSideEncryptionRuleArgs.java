@@ -71,22 +71,22 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
     	      this.serverSideEncryptionByDefault = defaults.serverSideEncryptionByDefault;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Input<Boolean> bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = Input.ofNullable(bucketKeyEnabled);
             return this;
         }
 
-        public Builder setServerSideEncryptionByDefault(@Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault) {
+        public Builder serverSideEncryptionByDefault(@Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault) {
             this.serverSideEncryptionByDefault = serverSideEncryptionByDefault;
             return this;
         }
 
-        public Builder setServerSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefaultArgs serverSideEncryptionByDefault) {
+        public Builder serverSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefaultArgs serverSideEncryptionByDefault) {
             this.serverSideEncryptionByDefault = Input.ofNullable(serverSideEncryptionByDefault);
             return this;
         }

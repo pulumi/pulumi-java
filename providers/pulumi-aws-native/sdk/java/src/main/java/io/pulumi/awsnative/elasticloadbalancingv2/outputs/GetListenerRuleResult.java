@@ -80,27 +80,27 @@ public final class GetListenerRuleResult {
     	      this.ruleArn = defaults.ruleArn;
         }
 
-        public Builder setActions(@Nullable List<ListenerRuleAction> actions) {
+        public Builder actions(@Nullable List<ListenerRuleAction> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ListenerRuleRuleCondition> conditions) {
+        public Builder conditions(@Nullable List<ListenerRuleRuleCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setRuleArn(@Nullable String ruleArn) {
+        public Builder ruleArn(@Nullable String ruleArn) {
             this.ruleArn = ruleArn;
             return this;
         }

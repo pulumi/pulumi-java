@@ -74,22 +74,22 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     	      this.resourceList = defaults.resourceList;
         }
 
-        public Builder setComponentName(Input<String> componentName) {
+        public Builder componentName(Input<String> componentName) {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
 
-        public Builder setComponentName(String componentName) {
+        public Builder componentName(String componentName) {
             this.componentName = Input.of(Objects.requireNonNull(componentName));
             return this;
         }
 
-        public Builder setResourceList(Input<List<String>> resourceList) {
+        public Builder resourceList(Input<List<String>> resourceList) {
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }
 
-        public Builder setResourceList(List<String> resourceList) {
+        public Builder resourceList(List<String> resourceList) {
             this.resourceList = Input.of(Objects.requireNonNull(resourceList));
             return this;
         }

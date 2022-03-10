@@ -115,52 +115,52 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     	      this.scaleOutPolicy = defaults.scaleOutPolicy;
         }
 
-        public Builder setMaxWorkerCount(Input<Integer> maxWorkerCount) {
+        public Builder maxWorkerCount(Input<Integer> maxWorkerCount) {
             this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
             return this;
         }
 
-        public Builder setMaxWorkerCount(Integer maxWorkerCount) {
+        public Builder maxWorkerCount(Integer maxWorkerCount) {
             this.maxWorkerCount = Input.of(Objects.requireNonNull(maxWorkerCount));
             return this;
         }
 
-        public Builder setMcuCount(Input<Integer> mcuCount) {
+        public Builder mcuCount(Input<Integer> mcuCount) {
             this.mcuCount = Objects.requireNonNull(mcuCount);
             return this;
         }
 
-        public Builder setMcuCount(Integer mcuCount) {
+        public Builder mcuCount(Integer mcuCount) {
             this.mcuCount = Input.of(Objects.requireNonNull(mcuCount));
             return this;
         }
 
-        public Builder setMinWorkerCount(Input<Integer> minWorkerCount) {
+        public Builder minWorkerCount(Input<Integer> minWorkerCount) {
             this.minWorkerCount = Objects.requireNonNull(minWorkerCount);
             return this;
         }
 
-        public Builder setMinWorkerCount(Integer minWorkerCount) {
+        public Builder minWorkerCount(Integer minWorkerCount) {
             this.minWorkerCount = Input.of(Objects.requireNonNull(minWorkerCount));
             return this;
         }
 
-        public Builder setScaleInPolicy(Input<ConnectorScaleInPolicyArgs> scaleInPolicy) {
+        public Builder scaleInPolicy(Input<ConnectorScaleInPolicyArgs> scaleInPolicy) {
             this.scaleInPolicy = Objects.requireNonNull(scaleInPolicy);
             return this;
         }
 
-        public Builder setScaleInPolicy(ConnectorScaleInPolicyArgs scaleInPolicy) {
+        public Builder scaleInPolicy(ConnectorScaleInPolicyArgs scaleInPolicy) {
             this.scaleInPolicy = Input.of(Objects.requireNonNull(scaleInPolicy));
             return this;
         }
 
-        public Builder setScaleOutPolicy(Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy) {
+        public Builder scaleOutPolicy(Input<ConnectorScaleOutPolicyArgs> scaleOutPolicy) {
             this.scaleOutPolicy = Objects.requireNonNull(scaleOutPolicy);
             return this;
         }
 
-        public Builder setScaleOutPolicy(ConnectorScaleOutPolicyArgs scaleOutPolicy) {
+        public Builder scaleOutPolicy(ConnectorScaleOutPolicyArgs scaleOutPolicy) {
             this.scaleOutPolicy = Input.of(Objects.requireNonNull(scaleOutPolicy));
             return this;
         }

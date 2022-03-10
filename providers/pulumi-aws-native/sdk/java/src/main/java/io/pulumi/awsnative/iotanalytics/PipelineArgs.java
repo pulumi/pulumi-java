@@ -77,32 +77,32 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setPipelineActivities(Input<List<PipelineActivityArgs>> pipelineActivities) {
+        public Builder pipelineActivities(Input<List<PipelineActivityArgs>> pipelineActivities) {
             this.pipelineActivities = Objects.requireNonNull(pipelineActivities);
             return this;
         }
 
-        public Builder setPipelineActivities(List<PipelineActivityArgs> pipelineActivities) {
+        public Builder pipelineActivities(List<PipelineActivityArgs> pipelineActivities) {
             this.pipelineActivities = Input.of(Objects.requireNonNull(pipelineActivities));
             return this;
         }
 
-        public Builder setPipelineName(@Nullable Input<String> pipelineName) {
+        public Builder pipelineName(@Nullable Input<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
 
-        public Builder setPipelineName(@Nullable String pipelineName) {
+        public Builder pipelineName(@Nullable String pipelineName) {
             this.pipelineName = Input.ofNullable(pipelineName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PipelineTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PipelineTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PipelineTagArgs> tags) {
+        public Builder tags(@Nullable List<PipelineTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

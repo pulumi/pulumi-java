@@ -84,17 +84,17 @@ public final class GetLinkAssociationArgs extends io.pulumi.resources.InvokeArgs
     	      this.linkId = defaults.linkId;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
-        public Builder setLinkId(String linkId) {
+        public Builder linkId(String linkId) {
             this.linkId = Objects.requireNonNull(linkId);
             return this;
         }

@@ -132,32 +132,32 @@ public final class EnvironmentFederationParameters {
     	      this.samlMetadataURL = defaults.samlMetadataURL;
         }
 
-        public Builder setApplicationCallBackURL(@Nullable String applicationCallBackURL) {
+        public Builder applicationCallBackURL(@Nullable String applicationCallBackURL) {
             this.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
 
-        public Builder setAttributeMap(@Nullable Object attributeMap) {
+        public Builder attributeMap(@Nullable Object attributeMap) {
             this.attributeMap = attributeMap;
             return this;
         }
 
-        public Builder setFederationProviderName(@Nullable String federationProviderName) {
+        public Builder federationProviderName(@Nullable String federationProviderName) {
             this.federationProviderName = federationProviderName;
             return this;
         }
 
-        public Builder setFederationURN(@Nullable String federationURN) {
+        public Builder federationURN(@Nullable String federationURN) {
             this.federationURN = federationURN;
             return this;
         }
 
-        public Builder setSamlMetadataDocument(@Nullable String samlMetadataDocument) {
+        public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
 
-        public Builder setSamlMetadataURL(@Nullable String samlMetadataURL) {
+        public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
             this.samlMetadataURL = samlMetadataURL;
             return this;
         }

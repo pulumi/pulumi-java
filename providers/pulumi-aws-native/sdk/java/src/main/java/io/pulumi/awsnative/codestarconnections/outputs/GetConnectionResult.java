@@ -101,22 +101,22 @@ public final class GetConnectionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
-        public Builder setConnectionStatus(@Nullable String connectionStatus) {
+        public Builder connectionStatus(@Nullable String connectionStatus) {
             this.connectionStatus = connectionStatus;
             return this;
         }
 
-        public Builder setOwnerAccountId(@Nullable String ownerAccountId) {
+        public Builder ownerAccountId(@Nullable String ownerAccountId) {
             this.ownerAccountId = ownerAccountId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ConnectionTag> tags) {
+        public Builder tags(@Nullable List<ConnectionTag> tags) {
             this.tags = tags;
             return this;
         }

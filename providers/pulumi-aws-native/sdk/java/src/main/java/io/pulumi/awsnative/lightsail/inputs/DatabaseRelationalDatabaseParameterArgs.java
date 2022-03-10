@@ -171,82 +171,82 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setAllowedValues(@Nullable Input<String> allowedValues) {
+        public Builder allowedValues(@Nullable Input<String> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setAllowedValues(@Nullable String allowedValues) {
+        public Builder allowedValues(@Nullable String allowedValues) {
             this.allowedValues = Input.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder setApplyMethod(@Nullable Input<String> applyMethod) {
+        public Builder applyMethod(@Nullable Input<String> applyMethod) {
             this.applyMethod = applyMethod;
             return this;
         }
 
-        public Builder setApplyMethod(@Nullable String applyMethod) {
+        public Builder applyMethod(@Nullable String applyMethod) {
             this.applyMethod = Input.ofNullable(applyMethod);
             return this;
         }
 
-        public Builder setApplyType(@Nullable Input<String> applyType) {
+        public Builder applyType(@Nullable Input<String> applyType) {
             this.applyType = applyType;
             return this;
         }
 
-        public Builder setApplyType(@Nullable String applyType) {
+        public Builder applyType(@Nullable String applyType) {
             this.applyType = Input.ofNullable(applyType);
             return this;
         }
 
-        public Builder setDataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Input<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIsModifiable(@Nullable Input<Boolean> isModifiable) {
+        public Builder isModifiable(@Nullable Input<Boolean> isModifiable) {
             this.isModifiable = isModifiable;
             return this;
         }
 
-        public Builder setIsModifiable(@Nullable Boolean isModifiable) {
+        public Builder isModifiable(@Nullable Boolean isModifiable) {
             this.isModifiable = Input.ofNullable(isModifiable);
             return this;
         }
 
-        public Builder setParameterName(@Nullable Input<String> parameterName) {
+        public Builder parameterName(@Nullable Input<String> parameterName) {
             this.parameterName = parameterName;
             return this;
         }
 
-        public Builder setParameterName(@Nullable String parameterName) {
+        public Builder parameterName(@Nullable String parameterName) {
             this.parameterName = Input.ofNullable(parameterName);
             return this;
         }
 
-        public Builder setParameterValue(@Nullable Input<String> parameterValue) {
+        public Builder parameterValue(@Nullable Input<String> parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }
 
-        public Builder setParameterValue(@Nullable String parameterValue) {
+        public Builder parameterValue(@Nullable String parameterValue) {
             this.parameterValue = Input.ofNullable(parameterValue);
             return this;
         }

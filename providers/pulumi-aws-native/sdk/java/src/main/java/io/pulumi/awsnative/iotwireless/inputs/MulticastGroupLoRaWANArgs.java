@@ -103,42 +103,42 @@ public final class MulticastGroupLoRaWANArgs extends io.pulumi.resources.Resourc
     	      this.rfRegion = defaults.rfRegion;
         }
 
-        public Builder setDlClass(Input<String> dlClass) {
+        public Builder dlClass(Input<String> dlClass) {
             this.dlClass = Objects.requireNonNull(dlClass);
             return this;
         }
 
-        public Builder setDlClass(String dlClass) {
+        public Builder dlClass(String dlClass) {
             this.dlClass = Input.of(Objects.requireNonNull(dlClass));
             return this;
         }
 
-        public Builder setNumberOfDevicesInGroup(@Nullable Input<Integer> numberOfDevicesInGroup) {
+        public Builder numberOfDevicesInGroup(@Nullable Input<Integer> numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
 
-        public Builder setNumberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
+        public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = Input.ofNullable(numberOfDevicesInGroup);
             return this;
         }
 
-        public Builder setNumberOfDevicesRequested(@Nullable Input<Integer> numberOfDevicesRequested) {
+        public Builder numberOfDevicesRequested(@Nullable Input<Integer> numberOfDevicesRequested) {
             this.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
 
-        public Builder setNumberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
+        public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
             this.numberOfDevicesRequested = Input.ofNullable(numberOfDevicesRequested);
             return this;
         }
 
-        public Builder setRfRegion(Input<String> rfRegion) {
+        public Builder rfRegion(Input<String> rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
 
-        public Builder setRfRegion(String rfRegion) {
+        public Builder rfRegion(String rfRegion) {
             this.rfRegion = Input.of(Objects.requireNonNull(rfRegion));
             return this;
         }

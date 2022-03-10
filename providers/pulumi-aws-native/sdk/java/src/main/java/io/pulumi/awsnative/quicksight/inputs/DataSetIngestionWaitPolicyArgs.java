@@ -77,22 +77,22 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
     	      this.waitForSpiceIngestion = defaults.waitForSpiceIngestion;
         }
 
-        public Builder setIngestionWaitTimeInHours(@Nullable Input<Double> ingestionWaitTimeInHours) {
+        public Builder ingestionWaitTimeInHours(@Nullable Input<Double> ingestionWaitTimeInHours) {
             this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
             return this;
         }
 
-        public Builder setIngestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
+        public Builder ingestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
             this.ingestionWaitTimeInHours = Input.ofNullable(ingestionWaitTimeInHours);
             return this;
         }
 
-        public Builder setWaitForSpiceIngestion(@Nullable Input<Boolean> waitForSpiceIngestion) {
+        public Builder waitForSpiceIngestion(@Nullable Input<Boolean> waitForSpiceIngestion) {
             this.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }
 
-        public Builder setWaitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
+        public Builder waitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
             this.waitForSpiceIngestion = Input.ofNullable(waitForSpiceIngestion);
             return this;
         }

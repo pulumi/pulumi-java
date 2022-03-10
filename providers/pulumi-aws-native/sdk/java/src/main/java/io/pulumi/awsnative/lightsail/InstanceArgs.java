@@ -221,122 +221,122 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userData = defaults.userData;
         }
 
-        public Builder setAddOns(@Nullable Input<List<InstanceAddOnArgs>> addOns) {
+        public Builder addOns(@Nullable Input<List<InstanceAddOnArgs>> addOns) {
             this.addOns = addOns;
             return this;
         }
 
-        public Builder setAddOns(@Nullable List<InstanceAddOnArgs> addOns) {
+        public Builder addOns(@Nullable List<InstanceAddOnArgs> addOns) {
             this.addOns = Input.ofNullable(addOns);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setBlueprintId(Input<String> blueprintId) {
+        public Builder blueprintId(Input<String> blueprintId) {
             this.blueprintId = Objects.requireNonNull(blueprintId);
             return this;
         }
 
-        public Builder setBlueprintId(String blueprintId) {
+        public Builder blueprintId(String blueprintId) {
             this.blueprintId = Input.of(Objects.requireNonNull(blueprintId));
             return this;
         }
 
-        public Builder setBundleId(Input<String> bundleId) {
+        public Builder bundleId(Input<String> bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Input.of(Objects.requireNonNull(bundleId));
             return this;
         }
 
-        public Builder setHardware(@Nullable Input<InstanceHardwareArgs> hardware) {
+        public Builder hardware(@Nullable Input<InstanceHardwareArgs> hardware) {
             this.hardware = hardware;
             return this;
         }
 
-        public Builder setHardware(@Nullable InstanceHardwareArgs hardware) {
+        public Builder hardware(@Nullable InstanceHardwareArgs hardware) {
             this.hardware = Input.ofNullable(hardware);
             return this;
         }
 
-        public Builder setInstanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Input<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Input.ofNullable(instanceName);
             return this;
         }
 
-        public Builder setKeyPairName(@Nullable Input<String> keyPairName) {
+        public Builder keyPairName(@Nullable Input<String> keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
 
-        public Builder setKeyPairName(@Nullable String keyPairName) {
+        public Builder keyPairName(@Nullable String keyPairName) {
             this.keyPairName = Input.ofNullable(keyPairName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<InstanceLocationArgs> location) {
+        public Builder location(@Nullable Input<InstanceLocationArgs> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable InstanceLocationArgs location) {
+        public Builder location(@Nullable InstanceLocationArgs location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworking(@Nullable Input<InstanceNetworkingArgs> networking) {
+        public Builder networking(@Nullable Input<InstanceNetworkingArgs> networking) {
             this.networking = networking;
             return this;
         }
 
-        public Builder setNetworking(@Nullable InstanceNetworkingArgs networking) {
+        public Builder networking(@Nullable InstanceNetworkingArgs networking) {
             this.networking = Input.ofNullable(networking);
             return this;
         }
 
-        public Builder setState(@Nullable Input<InstanceStateArgs> state) {
+        public Builder state(@Nullable Input<InstanceStateArgs> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable InstanceStateArgs state) {
+        public Builder state(@Nullable InstanceStateArgs state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<InstanceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<InstanceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InstanceTagArgs> tags) {
+        public Builder tags(@Nullable List<InstanceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Input<String> userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = Input.ofNullable(userData);
             return this;
         }

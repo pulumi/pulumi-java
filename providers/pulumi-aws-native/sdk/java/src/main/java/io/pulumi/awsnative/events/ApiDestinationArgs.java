@@ -124,62 +124,62 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setConnectionArn(Input<String> connectionArn) {
+        public Builder connectionArn(Input<String> connectionArn) {
             this.connectionArn = Objects.requireNonNull(connectionArn);
             return this;
         }
 
-        public Builder setConnectionArn(String connectionArn) {
+        public Builder connectionArn(String connectionArn) {
             this.connectionArn = Input.of(Objects.requireNonNull(connectionArn));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHttpMethod(Input<ApiDestinationHttpMethod> httpMethod) {
+        public Builder httpMethod(Input<ApiDestinationHttpMethod> httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setHttpMethod(ApiDestinationHttpMethod httpMethod) {
+        public Builder httpMethod(ApiDestinationHttpMethod httpMethod) {
             this.httpMethod = Input.of(Objects.requireNonNull(httpMethod));
             return this;
         }
 
-        public Builder setInvocationEndpoint(Input<String> invocationEndpoint) {
+        public Builder invocationEndpoint(Input<String> invocationEndpoint) {
             this.invocationEndpoint = Objects.requireNonNull(invocationEndpoint);
             return this;
         }
 
-        public Builder setInvocationEndpoint(String invocationEndpoint) {
+        public Builder invocationEndpoint(String invocationEndpoint) {
             this.invocationEndpoint = Input.of(Objects.requireNonNull(invocationEndpoint));
             return this;
         }
 
-        public Builder setInvocationRateLimitPerSecond(@Nullable Input<Integer> invocationRateLimitPerSecond) {
+        public Builder invocationRateLimitPerSecond(@Nullable Input<Integer> invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
 
-        public Builder setInvocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
+        public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = Input.ofNullable(invocationRateLimitPerSecond);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

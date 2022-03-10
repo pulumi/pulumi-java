@@ -70,22 +70,22 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.slotName = defaults.slotName;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setSlotName(Input<String> slotName) {
+        public Builder slotName(Input<String> slotName) {
             this.slotName = Objects.requireNonNull(slotName);
             return this;
         }
 
-        public Builder setSlotName(String slotName) {
+        public Builder slotName(String slotName) {
             this.slotName = Input.of(Objects.requireNonNull(slotName));
             return this;
         }

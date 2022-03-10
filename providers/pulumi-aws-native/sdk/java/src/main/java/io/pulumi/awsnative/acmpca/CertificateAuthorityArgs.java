@@ -167,82 +167,82 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setCsrExtensions(@Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions) {
+        public Builder csrExtensions(@Nullable Input<CertificateAuthorityCsrExtensionsArgs> csrExtensions) {
             this.csrExtensions = csrExtensions;
             return this;
         }
 
-        public Builder setCsrExtensions(@Nullable CertificateAuthorityCsrExtensionsArgs csrExtensions) {
+        public Builder csrExtensions(@Nullable CertificateAuthorityCsrExtensionsArgs csrExtensions) {
             this.csrExtensions = Input.ofNullable(csrExtensions);
             return this;
         }
 
-        public Builder setKeyAlgorithm(Input<String> keyAlgorithm) {
+        public Builder keyAlgorithm(Input<String> keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
 
-        public Builder setKeyAlgorithm(String keyAlgorithm) {
+        public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Input.of(Objects.requireNonNull(keyAlgorithm));
             return this;
         }
 
-        public Builder setKeyStorageSecurityStandard(@Nullable Input<String> keyStorageSecurityStandard) {
+        public Builder keyStorageSecurityStandard(@Nullable Input<String> keyStorageSecurityStandard) {
             this.keyStorageSecurityStandard = keyStorageSecurityStandard;
             return this;
         }
 
-        public Builder setKeyStorageSecurityStandard(@Nullable String keyStorageSecurityStandard) {
+        public Builder keyStorageSecurityStandard(@Nullable String keyStorageSecurityStandard) {
             this.keyStorageSecurityStandard = Input.ofNullable(keyStorageSecurityStandard);
             return this;
         }
 
-        public Builder setRevocationConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable Input<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
-        public Builder setRevocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
             this.revocationConfiguration = Input.ofNullable(revocationConfiguration);
             return this;
         }
 
-        public Builder setSigningAlgorithm(Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(Input<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
 
-        public Builder setSigningAlgorithm(String signingAlgorithm) {
+        public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Input.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
 
-        public Builder setSubject(Input<CertificateAuthoritySubjectArgs> subject) {
+        public Builder subject(Input<CertificateAuthoritySubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubject(CertificateAuthoritySubjectArgs subject) {
+        public Builder subject(CertificateAuthoritySubjectArgs subject) {
             this.subject = Input.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<CertificateAuthorityTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<CertificateAuthorityTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CertificateAuthorityTagArgs> tags) {
+        public Builder tags(@Nullable List<CertificateAuthorityTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

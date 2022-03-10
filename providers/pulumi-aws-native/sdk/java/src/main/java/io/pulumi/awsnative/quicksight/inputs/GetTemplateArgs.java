@@ -60,12 +60,12 @@ public final class GetTemplateArgs extends io.pulumi.resources.InvokeArgs {
     	      this.templateId = defaults.templateId;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setTemplateId(String templateId) {
+        public Builder templateId(String templateId) {
             this.templateId = Objects.requireNonNull(templateId);
             return this;
         }

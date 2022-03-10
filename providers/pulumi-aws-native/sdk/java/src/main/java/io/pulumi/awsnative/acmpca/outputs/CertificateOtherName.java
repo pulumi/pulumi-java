@@ -49,12 +49,12 @@ public final class CertificateOtherName {
     	      this.value = defaults.value;
         }
 
-        public Builder setTypeId(String typeId) {
+        public Builder typeId(String typeId) {
             this.typeId = Objects.requireNonNull(typeId);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

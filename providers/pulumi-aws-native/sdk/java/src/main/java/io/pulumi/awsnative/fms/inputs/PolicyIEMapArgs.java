@@ -67,22 +67,22 @@ public final class PolicyIEMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.oRGUNIT = defaults.oRGUNIT;
         }
 
-        public Builder setACCOUNT(@Nullable Input<List<String>> aCCOUNT) {
+        public Builder aCCOUNT(@Nullable Input<List<String>> aCCOUNT) {
             this.aCCOUNT = aCCOUNT;
             return this;
         }
 
-        public Builder setACCOUNT(@Nullable List<String> aCCOUNT) {
+        public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
             this.aCCOUNT = Input.ofNullable(aCCOUNT);
             return this;
         }
 
-        public Builder setORGUNIT(@Nullable Input<List<String>> oRGUNIT) {
+        public Builder oRGUNIT(@Nullable Input<List<String>> oRGUNIT) {
             this.oRGUNIT = oRGUNIT;
             return this;
         }
 
-        public Builder setORGUNIT(@Nullable List<String> oRGUNIT) {
+        public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
             this.oRGUNIT = Input.ofNullable(oRGUNIT);
             return this;
         }

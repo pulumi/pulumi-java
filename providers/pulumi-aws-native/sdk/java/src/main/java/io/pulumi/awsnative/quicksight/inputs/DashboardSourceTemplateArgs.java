@@ -75,22 +75,22 @@ public final class DashboardSourceTemplateArgs extends io.pulumi.resources.Resou
     	      this.dataSetReferences = defaults.dataSetReferences;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder setDataSetReferences(Input<List<DashboardDataSetReferenceArgs>> dataSetReferences) {
+        public Builder dataSetReferences(Input<List<DashboardDataSetReferenceArgs>> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
 
-        public Builder setDataSetReferences(List<DashboardDataSetReferenceArgs> dataSetReferences) {
+        public Builder dataSetReferences(List<DashboardDataSetReferenceArgs> dataSetReferences) {
             this.dataSetReferences = Input.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }

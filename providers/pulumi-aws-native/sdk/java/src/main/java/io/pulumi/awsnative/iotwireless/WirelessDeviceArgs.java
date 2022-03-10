@@ -170,82 +170,82 @@ public final class WirelessDeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationName(Input<String> destinationName) {
+        public Builder destinationName(Input<String> destinationName) {
             this.destinationName = Objects.requireNonNull(destinationName);
             return this;
         }
 
-        public Builder setDestinationName(String destinationName) {
+        public Builder destinationName(String destinationName) {
             this.destinationName = Input.of(Objects.requireNonNull(destinationName));
             return this;
         }
 
-        public Builder setLastUplinkReceivedAt(@Nullable Input<String> lastUplinkReceivedAt) {
+        public Builder lastUplinkReceivedAt(@Nullable Input<String> lastUplinkReceivedAt) {
             this.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
 
-        public Builder setLastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
+        public Builder lastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
             this.lastUplinkReceivedAt = Input.ofNullable(lastUplinkReceivedAt);
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable Input<WirelessDeviceLoRaWANDeviceArgs> loRaWAN) {
+        public Builder loRaWAN(@Nullable Input<WirelessDeviceLoRaWANDeviceArgs> loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable WirelessDeviceLoRaWANDeviceArgs loRaWAN) {
+        public Builder loRaWAN(@Nullable WirelessDeviceLoRaWANDeviceArgs loRaWAN) {
             this.loRaWAN = Input.ofNullable(loRaWAN);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<WirelessDeviceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<WirelessDeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WirelessDeviceTagArgs> tags) {
+        public Builder tags(@Nullable List<WirelessDeviceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThingArn(@Nullable Input<String> thingArn) {
+        public Builder thingArn(@Nullable Input<String> thingArn) {
             this.thingArn = thingArn;
             return this;
         }
 
-        public Builder setThingArn(@Nullable String thingArn) {
+        public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = Input.ofNullable(thingArn);
             return this;
         }
 
-        public Builder setType(Input<WirelessDeviceType> type) {
+        public Builder type(Input<WirelessDeviceType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(WirelessDeviceType type) {
+        public Builder type(WirelessDeviceType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

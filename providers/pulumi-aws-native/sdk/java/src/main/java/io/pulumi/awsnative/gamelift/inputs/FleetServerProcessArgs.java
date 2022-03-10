@@ -95,32 +95,32 @@ public final class FleetServerProcessArgs extends io.pulumi.resources.ResourceAr
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setConcurrentExecutions(Input<Integer> concurrentExecutions) {
+        public Builder concurrentExecutions(Input<Integer> concurrentExecutions) {
             this.concurrentExecutions = Objects.requireNonNull(concurrentExecutions);
             return this;
         }
 
-        public Builder setConcurrentExecutions(Integer concurrentExecutions) {
+        public Builder concurrentExecutions(Integer concurrentExecutions) {
             this.concurrentExecutions = Input.of(Objects.requireNonNull(concurrentExecutions));
             return this;
         }
 
-        public Builder setLaunchPath(Input<String> launchPath) {
+        public Builder launchPath(Input<String> launchPath) {
             this.launchPath = Objects.requireNonNull(launchPath);
             return this;
         }
 
-        public Builder setLaunchPath(String launchPath) {
+        public Builder launchPath(String launchPath) {
             this.launchPath = Input.of(Objects.requireNonNull(launchPath));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Input<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

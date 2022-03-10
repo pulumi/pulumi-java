@@ -80,17 +80,17 @@ public final class WebACLJsonBody extends io.pulumi.resources.InvokeArgs {
     	      this.matchScope = defaults.matchScope;
         }
 
-        public Builder setInvalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
-        public Builder setMatchPattern(WebACLJsonMatchPattern matchPattern) {
+        public Builder matchPattern(WebACLJsonMatchPattern matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
 
-        public Builder setMatchScope(WebACLJsonMatchScope matchScope) {
+        public Builder matchScope(WebACLJsonMatchScope matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }

@@ -48,12 +48,12 @@ public final class JobS3TableOutputOptionsArgs extends io.pulumi.resources.Resou
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(Input<JobS3LocationArgs> location) {
+        public Builder location(Input<JobS3LocationArgs> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(JobS3LocationArgs location) {
+        public Builder location(JobS3LocationArgs location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }

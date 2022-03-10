@@ -117,52 +117,52 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRules(Input<List<RulesetRuleArgs>> rules) {
+        public Builder rules(Input<List<RulesetRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<RulesetRuleArgs> rules) {
+        public Builder rules(List<RulesetRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RulesetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RulesetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RulesetTagArgs> tags) {
+        public Builder tags(@Nullable List<RulesetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetArn(Input<String> targetArn) {
+        public Builder targetArn(Input<String> targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Input.of(Objects.requireNonNull(targetArn));
             return this;
         }

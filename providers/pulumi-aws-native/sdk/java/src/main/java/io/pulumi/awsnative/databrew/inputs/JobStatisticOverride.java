@@ -61,12 +61,12 @@ public final class JobStatisticOverride extends io.pulumi.resources.InvokeArgs {
     	      this.statistic = defaults.statistic;
         }
 
-        public Builder setParameters(JobParameterMap parameters) {
+        public Builder parameters(JobParameterMap parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }

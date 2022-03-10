@@ -123,52 +123,52 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddressFamily(Input<PrefixListAddressFamily> addressFamily) {
+        public Builder addressFamily(Input<PrefixListAddressFamily> addressFamily) {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
 
-        public Builder setAddressFamily(PrefixListAddressFamily addressFamily) {
+        public Builder addressFamily(PrefixListAddressFamily addressFamily) {
             this.addressFamily = Input.of(Objects.requireNonNull(addressFamily));
             return this;
         }
 
-        public Builder setEntries(@Nullable Input<List<PrefixListEntryArgs>> entries) {
+        public Builder entries(@Nullable Input<List<PrefixListEntryArgs>> entries) {
             this.entries = entries;
             return this;
         }
 
-        public Builder setEntries(@Nullable List<PrefixListEntryArgs> entries) {
+        public Builder entries(@Nullable List<PrefixListEntryArgs> entries) {
             this.entries = Input.ofNullable(entries);
             return this;
         }
 
-        public Builder setMaxEntries(Input<Integer> maxEntries) {
+        public Builder maxEntries(Input<Integer> maxEntries) {
             this.maxEntries = Objects.requireNonNull(maxEntries);
             return this;
         }
 
-        public Builder setMaxEntries(Integer maxEntries) {
+        public Builder maxEntries(Integer maxEntries) {
             this.maxEntries = Input.of(Objects.requireNonNull(maxEntries));
             return this;
         }
 
-        public Builder setPrefixListName(@Nullable Input<String> prefixListName) {
+        public Builder prefixListName(@Nullable Input<String> prefixListName) {
             this.prefixListName = prefixListName;
             return this;
         }
 
-        public Builder setPrefixListName(@Nullable String prefixListName) {
+        public Builder prefixListName(@Nullable String prefixListName) {
             this.prefixListName = Input.ofNullable(prefixListName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PrefixListTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PrefixListTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PrefixListTagArgs> tags) {
+        public Builder tags(@Nullable List<PrefixListTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

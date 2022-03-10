@@ -75,32 +75,32 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreateArgs extends io.
     	      this.updateDataSource = defaults.updateDataSource;
         }
 
-        public Builder setLoRaWAN(@Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN) {
+        public Builder loRaWAN(@Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs> loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs loRaWAN) {
+        public Builder loRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreateArgs loRaWAN) {
             this.loRaWAN = Input.ofNullable(loRaWAN);
             return this;
         }
 
-        public Builder setUpdateDataRole(@Nullable Input<String> updateDataRole) {
+        public Builder updateDataRole(@Nullable Input<String> updateDataRole) {
             this.updateDataRole = updateDataRole;
             return this;
         }
 
-        public Builder setUpdateDataRole(@Nullable String updateDataRole) {
+        public Builder updateDataRole(@Nullable String updateDataRole) {
             this.updateDataRole = Input.ofNullable(updateDataRole);
             return this;
         }
 
-        public Builder setUpdateDataSource(@Nullable Input<String> updateDataSource) {
+        public Builder updateDataSource(@Nullable Input<String> updateDataSource) {
             this.updateDataSource = updateDataSource;
             return this;
         }
 
-        public Builder setUpdateDataSource(@Nullable String updateDataSource) {
+        public Builder updateDataSource(@Nullable String updateDataSource) {
             this.updateDataSource = Input.ofNullable(updateDataSource);
             return this;
         }

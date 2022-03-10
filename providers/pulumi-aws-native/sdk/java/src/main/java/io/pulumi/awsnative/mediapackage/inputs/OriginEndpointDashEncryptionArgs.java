@@ -71,22 +71,22 @@ public final class OriginEndpointDashEncryptionArgs extends io.pulumi.resources.
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Input<Integer> keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Input<Integer> keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = Input.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }

@@ -75,22 +75,22 @@ public final class SimulationApplicationSimulationSoftwareSuiteArgs extends io.p
     	      this.version = defaults.version;
         }
 
-        public Builder setName(Input<SimulationApplicationSimulationSoftwareSuiteName> name) {
+        public Builder name(Input<SimulationApplicationSimulationSoftwareSuiteName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(SimulationApplicationSimulationSoftwareSuiteName name) {
+        public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
+        public Builder version(@Nullable Input<SimulationApplicationSimulationSoftwareSuiteVersion> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
+        public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
             this.version = Input.ofNullable(version);
             return this;
         }

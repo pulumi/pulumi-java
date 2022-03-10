@@ -67,12 +67,12 @@ public final class GetModelExplainabilityJobDefinitionResult {
     	      this.jobDefinitionArn = defaults.jobDefinitionArn;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setJobDefinitionArn(@Nullable String jobDefinitionArn) {
+        public Builder jobDefinitionArn(@Nullable String jobDefinitionArn) {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
         }

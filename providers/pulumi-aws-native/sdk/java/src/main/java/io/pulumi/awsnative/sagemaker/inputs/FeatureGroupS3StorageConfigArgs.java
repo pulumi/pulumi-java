@@ -62,22 +62,22 @@ public final class FeatureGroupS3StorageConfigArgs extends io.pulumi.resources.R
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setS3Uri(Input<String> s3Uri) {
+        public Builder s3Uri(Input<String> s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
 
-        public Builder setS3Uri(String s3Uri) {
+        public Builder s3Uri(String s3Uri) {
             this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
             return this;
         }

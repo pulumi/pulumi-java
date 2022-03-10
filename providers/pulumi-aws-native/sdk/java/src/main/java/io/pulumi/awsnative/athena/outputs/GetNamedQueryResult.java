@@ -50,7 +50,7 @@ public final class GetNamedQueryResult {
     	      this.namedQueryId = defaults.namedQueryId;
         }
 
-        public Builder setNamedQueryId(@Nullable String namedQueryId) {
+        public Builder namedQueryId(@Nullable String namedQueryId) {
             this.namedQueryId = namedQueryId;
             return this;
         }

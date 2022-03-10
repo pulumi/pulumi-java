@@ -134,32 +134,32 @@ public final class GetDBProxyEndpointResult {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setDBProxyEndpointArn(@Nullable String dBProxyEndpointArn) {
+        public Builder dBProxyEndpointArn(@Nullable String dBProxyEndpointArn) {
             this.dBProxyEndpointArn = dBProxyEndpointArn;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DBProxyEndpointTagFormat> tags) {
+        public Builder tags(@Nullable List<DBProxyEndpointTagFormat> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }

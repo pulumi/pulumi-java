@@ -62,22 +62,22 @@ public final class DatastoreCustomerManagedS3StorageArgs extends io.pulumi.resou
     	      this.keyPrefix = defaults.keyPrefix;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setKeyPrefix(@Nullable Input<String> keyPrefix) {
+        public Builder keyPrefix(@Nullable Input<String> keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
         }
 
-        public Builder setKeyPrefix(@Nullable String keyPrefix) {
+        public Builder keyPrefix(@Nullable String keyPrefix) {
             this.keyPrefix = Input.ofNullable(keyPrefix);
             return this;
         }

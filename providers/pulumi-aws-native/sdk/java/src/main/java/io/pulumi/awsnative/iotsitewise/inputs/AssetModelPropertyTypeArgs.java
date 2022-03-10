@@ -93,42 +93,42 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setAttribute(@Nullable Input<AssetModelAttributeArgs> attribute) {
+        public Builder attribute(@Nullable Input<AssetModelAttributeArgs> attribute) {
             this.attribute = attribute;
             return this;
         }
 
-        public Builder setAttribute(@Nullable AssetModelAttributeArgs attribute) {
+        public Builder attribute(@Nullable AssetModelAttributeArgs attribute) {
             this.attribute = Input.ofNullable(attribute);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<AssetModelMetricArgs> metric) {
+        public Builder metric(@Nullable Input<AssetModelMetricArgs> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable AssetModelMetricArgs metric) {
+        public Builder metric(@Nullable AssetModelMetricArgs metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }
 
-        public Builder setTransform(@Nullable Input<AssetModelTransformArgs> transform) {
+        public Builder transform(@Nullable Input<AssetModelTransformArgs> transform) {
             this.transform = transform;
             return this;
         }
 
-        public Builder setTransform(@Nullable AssetModelTransformArgs transform) {
+        public Builder transform(@Nullable AssetModelTransformArgs transform) {
             this.transform = Input.ofNullable(transform);
             return this;
         }
 
-        public Builder setTypeName(Input<AssetModelTypeName> typeName) {
+        public Builder typeName(Input<AssetModelTypeName> typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
 
-        public Builder setTypeName(AssetModelTypeName typeName) {
+        public Builder typeName(AssetModelTypeName typeName) {
             this.typeName = Input.of(Objects.requireNonNull(typeName));
             return this;
         }

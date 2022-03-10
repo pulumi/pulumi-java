@@ -171,82 +171,82 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAppNetworkAccessType(@Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType) {
             this.appNetworkAccessType = appNetworkAccessType;
             return this;
         }
 
-        public Builder setAppNetworkAccessType(@Nullable DomainAppNetworkAccessType appNetworkAccessType) {
+        public Builder appNetworkAccessType(@Nullable DomainAppNetworkAccessType appNetworkAccessType) {
             this.appNetworkAccessType = Input.ofNullable(appNetworkAccessType);
             return this;
         }
 
-        public Builder setAuthMode(Input<DomainAuthMode> authMode) {
+        public Builder authMode(Input<DomainAuthMode> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
-        public Builder setAuthMode(DomainAuthMode authMode) {
+        public Builder authMode(DomainAuthMode authMode) {
             this.authMode = Input.of(Objects.requireNonNull(authMode));
             return this;
         }
 
-        public Builder setDefaultUserSettings(Input<DomainUserSettingsArgs> defaultUserSettings) {
+        public Builder defaultUserSettings(Input<DomainUserSettingsArgs> defaultUserSettings) {
             this.defaultUserSettings = Objects.requireNonNull(defaultUserSettings);
             return this;
         }
 
-        public Builder setDefaultUserSettings(DomainUserSettingsArgs defaultUserSettings) {
+        public Builder defaultUserSettings(DomainUserSettingsArgs defaultUserSettings) {
             this.defaultUserSettings = Input.of(Objects.requireNonNull(defaultUserSettings));
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DomainTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTagArgs> tags) {
+        public Builder tags(@Nullable List<DomainTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

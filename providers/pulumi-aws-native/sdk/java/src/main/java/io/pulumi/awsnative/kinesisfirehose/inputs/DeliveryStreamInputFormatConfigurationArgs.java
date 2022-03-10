@@ -49,12 +49,12 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends io.pulumi.
     	      this.deserializer = defaults.deserializer;
         }
 
-        public Builder setDeserializer(@Nullable Input<DeliveryStreamDeserializerArgs> deserializer) {
+        public Builder deserializer(@Nullable Input<DeliveryStreamDeserializerArgs> deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setDeserializer(@Nullable DeliveryStreamDeserializerArgs deserializer) {
+        public Builder deserializer(@Nullable DeliveryStreamDeserializerArgs deserializer) {
             this.deserializer = Input.ofNullable(deserializer);
             return this;
         }

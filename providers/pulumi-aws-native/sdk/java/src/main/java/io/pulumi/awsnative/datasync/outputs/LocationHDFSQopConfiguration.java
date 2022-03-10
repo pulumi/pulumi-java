@@ -68,12 +68,12 @@ public final class LocationHDFSQopConfiguration {
     	      this.rpcProtection = defaults.rpcProtection;
         }
 
-        public Builder setDataTransferProtection(@Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection) {
+        public Builder dataTransferProtection(@Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection) {
             this.dataTransferProtection = dataTransferProtection;
             return this;
         }
 
-        public Builder setRpcProtection(@Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection) {
+        public Builder rpcProtection(@Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection) {
             this.rpcProtection = rpcProtection;
             return this;
         }

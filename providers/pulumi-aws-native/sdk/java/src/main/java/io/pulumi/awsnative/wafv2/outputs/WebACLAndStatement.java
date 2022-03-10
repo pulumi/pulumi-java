@@ -41,7 +41,7 @@ public final class WebACLAndStatement {
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<WebACLStatement> statements) {
+        public Builder statements(List<WebACLStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

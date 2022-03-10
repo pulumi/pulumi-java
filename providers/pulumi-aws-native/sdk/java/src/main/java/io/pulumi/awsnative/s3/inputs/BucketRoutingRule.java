@@ -71,12 +71,12 @@ public final class BucketRoutingRule extends io.pulumi.resources.InvokeArgs {
     	      this.routingRuleCondition = defaults.routingRuleCondition;
         }
 
-        public Builder setRedirectRule(BucketRedirectRule redirectRule) {
+        public Builder redirectRule(BucketRedirectRule redirectRule) {
             this.redirectRule = Objects.requireNonNull(redirectRule);
             return this;
         }
 
-        public Builder setRoutingRuleCondition(@Nullable BucketRoutingRuleCondition routingRuleCondition) {
+        public Builder routingRuleCondition(@Nullable BucketRoutingRuleCondition routingRuleCondition) {
             this.routingRuleCondition = routingRuleCondition;
             return this;
         }

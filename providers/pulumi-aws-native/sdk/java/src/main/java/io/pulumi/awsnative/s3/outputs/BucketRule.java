@@ -172,82 +172,82 @@ public final class BucketRule {
     	      this.transitions = defaults.transitions;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setExpiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration) {
+        public Builder noncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
+        public Builder noncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
             this.noncurrentVersionExpirationInDays = noncurrentVersionExpirationInDays;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition) {
+        public Builder noncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition) {
             this.noncurrentVersionTransition = noncurrentVersionTransition;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions) {
+        public Builder noncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
 
-        public Builder setObjectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
+        public Builder objectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
             this.objectSizeGreaterThan = objectSizeGreaterThan;
             return this;
         }
 
-        public Builder setObjectSizeLessThan(@Nullable String objectSizeLessThan) {
+        public Builder objectSizeLessThan(@Nullable String objectSizeLessThan) {
             this.objectSizeLessThan = objectSizeLessThan;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setStatus(BucketRuleStatus status) {
+        public Builder status(BucketRuleStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
-        public Builder setTransition(@Nullable BucketTransition transition) {
+        public Builder transition(@Nullable BucketTransition transition) {
             this.transition = transition;
             return this;
         }
 
-        public Builder setTransitions(@Nullable List<BucketTransition> transitions) {
+        public Builder transitions(@Nullable List<BucketTransition> transitions) {
             this.transitions = transitions;
             return this;
         }

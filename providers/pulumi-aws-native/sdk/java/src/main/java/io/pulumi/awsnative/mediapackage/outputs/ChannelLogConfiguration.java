@@ -50,7 +50,7 @@ public final class ChannelLogConfiguration {
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }

@@ -93,42 +93,42 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable Input<WebACLAllowActionArgs> allow) {
+        public Builder allow(@Nullable Input<WebACLAllowActionArgs> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable WebACLAllowActionArgs allow) {
+        public Builder allow(@Nullable WebACLAllowActionArgs allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }
 
-        public Builder setBlock(@Nullable Input<WebACLBlockActionArgs> block) {
+        public Builder block(@Nullable Input<WebACLBlockActionArgs> block) {
             this.block = block;
             return this;
         }
 
-        public Builder setBlock(@Nullable WebACLBlockActionArgs block) {
+        public Builder block(@Nullable WebACLBlockActionArgs block) {
             this.block = Input.ofNullable(block);
             return this;
         }
 
-        public Builder setCaptcha(@Nullable Input<WebACLCaptchaActionArgs> captcha) {
+        public Builder captcha(@Nullable Input<WebACLCaptchaActionArgs> captcha) {
             this.captcha = captcha;
             return this;
         }
 
-        public Builder setCaptcha(@Nullable WebACLCaptchaActionArgs captcha) {
+        public Builder captcha(@Nullable WebACLCaptchaActionArgs captcha) {
             this.captcha = Input.ofNullable(captcha);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<WebACLCountActionArgs> count) {
+        public Builder count(@Nullable Input<WebACLCountActionArgs> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable WebACLCountActionArgs count) {
+        public Builder count(@Nullable WebACLCountActionArgs count) {
             this.count = Input.ofNullable(count);
             return this;
         }

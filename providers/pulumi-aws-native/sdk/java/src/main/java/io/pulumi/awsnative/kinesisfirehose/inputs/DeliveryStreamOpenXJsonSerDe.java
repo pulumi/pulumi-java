@@ -75,17 +75,17 @@ public final class DeliveryStreamOpenXJsonSerDe extends io.pulumi.resources.Invo
     	      this.convertDotsInJsonKeysToUnderscores = defaults.convertDotsInJsonKeysToUnderscores;
         }
 
-        public Builder setCaseInsensitive(@Nullable Boolean caseInsensitive) {
+        public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
             this.caseInsensitive = caseInsensitive;
             return this;
         }
 
-        public Builder setColumnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
+        public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
 
-        public Builder setConvertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }

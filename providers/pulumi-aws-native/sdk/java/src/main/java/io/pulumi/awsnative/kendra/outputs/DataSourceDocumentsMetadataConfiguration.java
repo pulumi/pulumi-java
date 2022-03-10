@@ -42,7 +42,7 @@ public final class DataSourceDocumentsMetadataConfiguration {
     	      this.s3Prefix = defaults.s3Prefix;
         }
 
-        public Builder setS3Prefix(@Nullable String s3Prefix) {
+        public Builder s3Prefix(@Nullable String s3Prefix) {
             this.s3Prefix = s3Prefix;
             return this;
         }

@@ -47,7 +47,7 @@ public final class DistributionOriginGroupFailoverCriteria extends io.pulumi.res
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder setStatusCodes(DistributionStatusCodes statusCodes) {
+        public Builder statusCodes(DistributionStatusCodes statusCodes) {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }

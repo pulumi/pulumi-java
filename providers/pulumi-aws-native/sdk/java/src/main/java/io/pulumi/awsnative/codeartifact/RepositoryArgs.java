@@ -137,62 +137,62 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upstreams = defaults.upstreams;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExternalConnections(@Nullable Input<List<String>> externalConnections) {
+        public Builder externalConnections(@Nullable Input<List<String>> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
 
-        public Builder setExternalConnections(@Nullable List<String> externalConnections) {
+        public Builder externalConnections(@Nullable List<String> externalConnections) {
             this.externalConnections = Input.ofNullable(externalConnections);
             return this;
         }
 
-        public Builder setPermissionsPolicyDocument(@Nullable Input<Object> permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Input<Object> permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
-        public Builder setPermissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
             this.permissionsPolicyDocument = Input.ofNullable(permissionsPolicyDocument);
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Input<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Input.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RepositoryTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RepositoryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RepositoryTagArgs> tags) {
+        public Builder tags(@Nullable List<RepositoryTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUpstreams(@Nullable Input<List<String>> upstreams) {
+        public Builder upstreams(@Nullable Input<List<String>> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
 
-        public Builder setUpstreams(@Nullable List<String> upstreams) {
+        public Builder upstreams(@Nullable List<String> upstreams) {
             this.upstreams = Input.ofNullable(upstreams);
             return this;
         }

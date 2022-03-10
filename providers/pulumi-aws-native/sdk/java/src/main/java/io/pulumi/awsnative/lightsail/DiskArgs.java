@@ -122,52 +122,52 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddOns(@Nullable Input<List<DiskAddOnArgs>> addOns) {
+        public Builder addOns(@Nullable Input<List<DiskAddOnArgs>> addOns) {
             this.addOns = addOns;
             return this;
         }
 
-        public Builder setAddOns(@Nullable List<DiskAddOnArgs> addOns) {
+        public Builder addOns(@Nullable List<DiskAddOnArgs> addOns) {
             this.addOns = Input.ofNullable(addOns);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setDiskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Input<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = Input.ofNullable(diskName);
             return this;
         }
 
-        public Builder setSizeInGb(Input<Integer> sizeInGb) {
+        public Builder sizeInGb(Input<Integer> sizeInGb) {
             this.sizeInGb = Objects.requireNonNull(sizeInGb);
             return this;
         }
 
-        public Builder setSizeInGb(Integer sizeInGb) {
+        public Builder sizeInGb(Integer sizeInGb) {
             this.sizeInGb = Input.of(Objects.requireNonNull(sizeInGb));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DiskTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DiskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DiskTagArgs> tags) {
+        public Builder tags(@Nullable List<DiskTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

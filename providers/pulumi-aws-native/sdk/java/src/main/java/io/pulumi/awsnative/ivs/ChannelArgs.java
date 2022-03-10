@@ -139,62 +139,62 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthorized(@Nullable Input<Boolean> authorized) {
+        public Builder authorized(@Nullable Input<Boolean> authorized) {
             this.authorized = authorized;
             return this;
         }
 
-        public Builder setAuthorized(@Nullable Boolean authorized) {
+        public Builder authorized(@Nullable Boolean authorized) {
             this.authorized = Input.ofNullable(authorized);
             return this;
         }
 
-        public Builder setLatencyMode(@Nullable Input<ChannelLatencyMode> latencyMode) {
+        public Builder latencyMode(@Nullable Input<ChannelLatencyMode> latencyMode) {
             this.latencyMode = latencyMode;
             return this;
         }
 
-        public Builder setLatencyMode(@Nullable ChannelLatencyMode latencyMode) {
+        public Builder latencyMode(@Nullable ChannelLatencyMode latencyMode) {
             this.latencyMode = Input.ofNullable(latencyMode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRecordingConfigurationArn(@Nullable Input<String> recordingConfigurationArn) {
+        public Builder recordingConfigurationArn(@Nullable Input<String> recordingConfigurationArn) {
             this.recordingConfigurationArn = recordingConfigurationArn;
             return this;
         }
 
-        public Builder setRecordingConfigurationArn(@Nullable String recordingConfigurationArn) {
+        public Builder recordingConfigurationArn(@Nullable String recordingConfigurationArn) {
             this.recordingConfigurationArn = Input.ofNullable(recordingConfigurationArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ChannelTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ChannelTagArgs> tags) {
+        public Builder tags(@Nullable List<ChannelTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<ChannelType> type) {
+        public Builder type(@Nullable Input<ChannelType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ChannelType type) {
+        public Builder type(@Nullable ChannelType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -139,82 +139,82 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
     	      this.singleInstanceType = defaults.singleInstanceType;
         }
 
-        public Builder setAllocationStrategy(@Nullable Input<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy) {
+        public Builder allocationStrategy(@Nullable Input<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setAllocationStrategy(@Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy) {
+        public Builder allocationStrategy(@Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy) {
             this.allocationStrategy = Input.ofNullable(allocationStrategy);
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable Input<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable Input<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Input.ofNullable(instanceInterruptionBehavior);
             return this;
         }
 
-        public Builder setInstancePoolsToUseCount(@Nullable Input<Integer> instancePoolsToUseCount) {
+        public Builder instancePoolsToUseCount(@Nullable Input<Integer> instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
 
-        public Builder setInstancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
+        public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = Input.ofNullable(instancePoolsToUseCount);
             return this;
         }
 
-        public Builder setMaintenanceStrategies(@Nullable Input<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies) {
+        public Builder maintenanceStrategies(@Nullable Input<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
 
-        public Builder setMaintenanceStrategies(@Nullable EC2FleetMaintenanceStrategiesArgs maintenanceStrategies) {
+        public Builder maintenanceStrategies(@Nullable EC2FleetMaintenanceStrategiesArgs maintenanceStrategies) {
             this.maintenanceStrategies = Input.ofNullable(maintenanceStrategies);
             return this;
         }
 
-        public Builder setMaxTotalPrice(@Nullable Input<String> maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable Input<String> maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
 
-        public Builder setMaxTotalPrice(@Nullable String maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = Input.ofNullable(maxTotalPrice);
             return this;
         }
 
-        public Builder setMinTargetCapacity(@Nullable Input<Integer> minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Input<Integer> minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
 
-        public Builder setMinTargetCapacity(@Nullable Integer minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = Input.ofNullable(minTargetCapacity);
             return this;
         }
 
-        public Builder setSingleAvailabilityZone(@Nullable Input<Boolean> singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Input<Boolean> singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
 
-        public Builder setSingleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = Input.ofNullable(singleAvailabilityZone);
             return this;
         }
 
-        public Builder setSingleInstanceType(@Nullable Input<Boolean> singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Input<Boolean> singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }
 
-        public Builder setSingleInstanceType(@Nullable Boolean singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = Input.ofNullable(singleInstanceType);
             return this;
         }

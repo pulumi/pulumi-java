@@ -146,72 +146,72 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
     	      this.value = defaults.value;
         }
 
-        public Builder setComparisonOperator(@Nullable Input<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator) {
+        public Builder comparisonOperator(@Nullable Input<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
             return this;
         }
 
-        public Builder setComparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
+        public Builder comparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
             this.comparisonOperator = Input.ofNullable(comparisonOperator);
             return this;
         }
 
-        public Builder setConsecutiveDatapointsToAlarm(@Nullable Input<Integer> consecutiveDatapointsToAlarm) {
+        public Builder consecutiveDatapointsToAlarm(@Nullable Input<Integer> consecutiveDatapointsToAlarm) {
             this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
             return this;
         }
 
-        public Builder setConsecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
+        public Builder consecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
             this.consecutiveDatapointsToAlarm = Input.ofNullable(consecutiveDatapointsToAlarm);
             return this;
         }
 
-        public Builder setConsecutiveDatapointsToClear(@Nullable Input<Integer> consecutiveDatapointsToClear) {
+        public Builder consecutiveDatapointsToClear(@Nullable Input<Integer> consecutiveDatapointsToClear) {
             this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
             return this;
         }
 
-        public Builder setConsecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
+        public Builder consecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
             this.consecutiveDatapointsToClear = Input.ofNullable(consecutiveDatapointsToClear);
             return this;
         }
 
-        public Builder setDurationSeconds(@Nullable Input<Integer> durationSeconds) {
+        public Builder durationSeconds(@Nullable Input<Integer> durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder setDurationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = Input.ofNullable(durationSeconds);
             return this;
         }
 
-        public Builder setMlDetectionConfig(@Nullable Input<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig) {
+        public Builder mlDetectionConfig(@Nullable Input<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig) {
             this.mlDetectionConfig = mlDetectionConfig;
             return this;
         }
 
-        public Builder setMlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfigArgs mlDetectionConfig) {
+        public Builder mlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfigArgs mlDetectionConfig) {
             this.mlDetectionConfig = Input.ofNullable(mlDetectionConfig);
             return this;
         }
 
-        public Builder setStatisticalThreshold(@Nullable Input<SecurityProfileStatisticalThresholdArgs> statisticalThreshold) {
+        public Builder statisticalThreshold(@Nullable Input<SecurityProfileStatisticalThresholdArgs> statisticalThreshold) {
             this.statisticalThreshold = statisticalThreshold;
             return this;
         }
 
-        public Builder setStatisticalThreshold(@Nullable SecurityProfileStatisticalThresholdArgs statisticalThreshold) {
+        public Builder statisticalThreshold(@Nullable SecurityProfileStatisticalThresholdArgs statisticalThreshold) {
             this.statisticalThreshold = Input.ofNullable(statisticalThreshold);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<SecurityProfileMetricValueArgs> value) {
+        public Builder value(@Nullable Input<SecurityProfileMetricValueArgs> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable SecurityProfileMetricValueArgs value) {
+        public Builder value(@Nullable SecurityProfileMetricValueArgs value) {
             this.value = Input.ofNullable(value);
             return this;
         }

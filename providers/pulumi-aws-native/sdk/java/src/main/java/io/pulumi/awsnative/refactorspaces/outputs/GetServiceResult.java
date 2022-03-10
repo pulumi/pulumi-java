@@ -69,17 +69,17 @@ public final class GetServiceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setServiceIdentifier(@Nullable String serviceIdentifier) {
+        public Builder serviceIdentifier(@Nullable String serviceIdentifier) {
             this.serviceIdentifier = serviceIdentifier;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServiceTag> tags) {
+        public Builder tags(@Nullable List<ServiceTag> tags) {
             this.tags = tags;
             return this;
         }

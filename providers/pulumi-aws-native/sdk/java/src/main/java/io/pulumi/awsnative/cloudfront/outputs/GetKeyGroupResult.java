@@ -60,17 +60,17 @@ public final class GetKeyGroupResult {
     	      this.lastModifiedTime = defaults.lastModifiedTime;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKeyGroupConfig(@Nullable KeyGroupConfig keyGroupConfig) {
+        public Builder keyGroupConfig(@Nullable KeyGroupConfig keyGroupConfig) {
             this.keyGroupConfig = keyGroupConfig;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }

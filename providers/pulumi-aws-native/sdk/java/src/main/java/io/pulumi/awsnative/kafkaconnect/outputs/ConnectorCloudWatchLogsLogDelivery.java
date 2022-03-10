@@ -68,12 +68,12 @@ public final class ConnectorCloudWatchLogsLogDelivery {
     	      this.logGroup = defaults.logGroup;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLogGroup(@Nullable String logGroup) {
+        public Builder logGroup(@Nullable String logGroup) {
             this.logGroup = logGroup;
             return this;
         }

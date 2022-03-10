@@ -75,32 +75,32 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
     	      this.failOnFirstError = defaults.failOnFirstError;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable Input<String> bucketPrefix) {
+        public Builder bucketPrefix(@Nullable Input<String> bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = Input.ofNullable(bucketPrefix);
             return this;
         }
 
-        public Builder setFailOnFirstError(@Nullable Input<Boolean> failOnFirstError) {
+        public Builder failOnFirstError(@Nullable Input<Boolean> failOnFirstError) {
             this.failOnFirstError = failOnFirstError;
             return this;
         }
 
-        public Builder setFailOnFirstError(@Nullable Boolean failOnFirstError) {
+        public Builder failOnFirstError(@Nullable Boolean failOnFirstError) {
             this.failOnFirstError = Input.ofNullable(failOnFirstError);
             return this;
         }

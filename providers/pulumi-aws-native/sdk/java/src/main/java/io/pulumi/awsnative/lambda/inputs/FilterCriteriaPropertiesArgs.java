@@ -58,12 +58,12 @@ public final class FilterCriteriaPropertiesArgs extends io.pulumi.resources.Reso
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable Input<List<EventSourceMappingFilterArgs>> filters) {
+        public Builder filters(@Nullable Input<List<EventSourceMappingFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<EventSourceMappingFilterArgs> filters) {
+        public Builder filters(@Nullable List<EventSourceMappingFilterArgs> filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }

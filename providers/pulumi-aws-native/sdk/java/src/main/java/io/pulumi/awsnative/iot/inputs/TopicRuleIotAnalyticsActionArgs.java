@@ -75,32 +75,32 @@ public final class TopicRuleIotAnalyticsActionArgs extends io.pulumi.resources.R
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBatchMode(@Nullable Input<Boolean> batchMode) {
+        public Builder batchMode(@Nullable Input<Boolean> batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = Input.ofNullable(batchMode);
             return this;
         }
 
-        public Builder setChannelName(Input<String> channelName) {
+        public Builder channelName(Input<String> channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Input.of(Objects.requireNonNull(channelName));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetTableArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setKeyspaceName(String keyspaceName) {
+        public Builder keyspaceName(String keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

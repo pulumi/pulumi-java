@@ -78,22 +78,22 @@ public final class GetProjectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDataDelivery(@Nullable ProjectDataDeliveryObject dataDelivery) {
+        public Builder dataDelivery(@Nullable ProjectDataDeliveryObject dataDelivery) {
             this.dataDelivery = dataDelivery;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTag> tags) {
+        public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }

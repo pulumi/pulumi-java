@@ -100,22 +100,22 @@ public final class ImageRecipeInstanceBlockDeviceMapping {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setEbs(@Nullable ImageRecipeEbsInstanceBlockDeviceSpecification ebs) {
+        public Builder ebs(@Nullable ImageRecipeEbsInstanceBlockDeviceSpecification ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable String noDevice) {
+        public Builder noDevice(@Nullable String noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
         }

@@ -42,7 +42,7 @@ public final class ApplicationInstanceManifestPayload {
     	      this.payloadData = defaults.payloadData;
         }
 
-        public Builder setPayloadData(@Nullable String payloadData) {
+        public Builder payloadData(@Nullable String payloadData) {
             this.payloadData = payloadData;
             return this;
         }

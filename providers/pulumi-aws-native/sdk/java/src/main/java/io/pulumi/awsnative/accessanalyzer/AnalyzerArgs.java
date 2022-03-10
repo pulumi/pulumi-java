@@ -101,42 +101,42 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnalyzerName(@Nullable Input<String> analyzerName) {
+        public Builder analyzerName(@Nullable Input<String> analyzerName) {
             this.analyzerName = analyzerName;
             return this;
         }
 
-        public Builder setAnalyzerName(@Nullable String analyzerName) {
+        public Builder analyzerName(@Nullable String analyzerName) {
             this.analyzerName = Input.ofNullable(analyzerName);
             return this;
         }
 
-        public Builder setArchiveRules(@Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules) {
+        public Builder archiveRules(@Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules) {
             this.archiveRules = archiveRules;
             return this;
         }
 
-        public Builder setArchiveRules(@Nullable List<AnalyzerArchiveRuleArgs> archiveRules) {
+        public Builder archiveRules(@Nullable List<AnalyzerArchiveRuleArgs> archiveRules) {
             this.archiveRules = Input.ofNullable(archiveRules);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AnalyzerTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AnalyzerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AnalyzerTagArgs> tags) {
+        public Builder tags(@Nullable List<AnalyzerTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

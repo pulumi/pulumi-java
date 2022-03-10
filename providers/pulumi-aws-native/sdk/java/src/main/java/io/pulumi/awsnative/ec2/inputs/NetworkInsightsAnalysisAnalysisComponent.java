@@ -62,12 +62,12 @@ public final class NetworkInsightsAnalysisAnalysisComponent extends io.pulumi.re
     	      this.id = defaults.id;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

@@ -234,62 +234,62 @@ public final class GetStageResult {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setAccessLogSetting(@Nullable StageAccessLogSetting accessLogSetting) {
+        public Builder accessLogSetting(@Nullable StageAccessLogSetting accessLogSetting) {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable String cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
-        public Builder setCanarySetting(@Nullable StageCanarySetting canarySetting) {
+        public Builder canarySetting(@Nullable StageCanarySetting canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable String documentationVersion) {
+        public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
-        public Builder setMethodSettings(@Nullable List<StageMethodSetting> methodSettings) {
+        public Builder methodSettings(@Nullable List<StageMethodSetting> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StageTag> tags) {
+        public Builder tags(@Nullable List<StageTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTracingEnabled(@Nullable Boolean tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
 
-        public Builder setVariables(@Nullable Object variables) {
+        public Builder variables(@Nullable Object variables) {
             this.variables = variables;
             return this;
         }

@@ -145,82 +145,82 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setCapacity(Input<Integer> capacity) {
+        public Builder capacity(Input<Integer> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setCapacity(Integer capacity) {
+        public Builder capacity(Integer capacity) {
             this.capacity = Input.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder setCustomResponseBodies(@Nullable Input<RuleGroupCustomResponseBodiesArgs> customResponseBodies) {
+        public Builder customResponseBodies(@Nullable Input<RuleGroupCustomResponseBodiesArgs> customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
 
-        public Builder setCustomResponseBodies(@Nullable RuleGroupCustomResponseBodiesArgs customResponseBodies) {
+        public Builder customResponseBodies(@Nullable RuleGroupCustomResponseBodiesArgs customResponseBodies) {
             this.customResponseBodies = Input.ofNullable(customResponseBodies);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<RuleGroupRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<RuleGroupRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RuleGroupRuleArgs> rules) {
+        public Builder rules(@Nullable List<RuleGroupRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setScope(Input<RuleGroupScope> scope) {
+        public Builder scope(Input<RuleGroupScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(RuleGroupScope scope) {
+        public Builder scope(RuleGroupScope scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RuleGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RuleGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RuleGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<RuleGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVisibilityConfig(Input<RuleGroupVisibilityConfigArgs> visibilityConfig) {
+        public Builder visibilityConfig(Input<RuleGroupVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
-        public Builder setVisibilityConfig(RuleGroupVisibilityConfigArgs visibilityConfig) {
+        public Builder visibilityConfig(RuleGroupVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }

@@ -61,12 +61,12 @@ public final class RuleGroupCustomAction extends io.pulumi.resources.InvokeArgs 
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder setActionDefinition(RuleGroupActionDefinition actionDefinition) {
+        public Builder actionDefinition(RuleGroupActionDefinition actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }

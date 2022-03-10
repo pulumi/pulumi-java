@@ -52,12 +52,12 @@ public final class BucketNotificationFilterArgs extends io.pulumi.resources.Reso
     	      this.s3Key = defaults.s3Key;
         }
 
-        public Builder setS3Key(Input<BucketS3KeyFilterArgs> s3Key) {
+        public Builder s3Key(Input<BucketS3KeyFilterArgs> s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
 
-        public Builder setS3Key(BucketS3KeyFilterArgs s3Key) {
+        public Builder s3Key(BucketS3KeyFilterArgs s3Key) {
             this.s3Key = Input.of(Objects.requireNonNull(s3Key));
             return this;
         }

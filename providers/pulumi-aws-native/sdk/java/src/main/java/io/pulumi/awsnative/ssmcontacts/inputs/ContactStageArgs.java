@@ -76,22 +76,22 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setDurationInMinutes(Input<Integer> durationInMinutes) {
+        public Builder durationInMinutes(Input<Integer> durationInMinutes) {
             this.durationInMinutes = Objects.requireNonNull(durationInMinutes);
             return this;
         }
 
-        public Builder setDurationInMinutes(Integer durationInMinutes) {
+        public Builder durationInMinutes(Integer durationInMinutes) {
             this.durationInMinutes = Input.of(Objects.requireNonNull(durationInMinutes));
             return this;
         }
 
-        public Builder setTargets(@Nullable Input<List<ContactTargetsArgs>> targets) {
+        public Builder targets(@Nullable Input<List<ContactTargetsArgs>> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<ContactTargetsArgs> targets) {
+        public Builder targets(@Nullable List<ContactTargetsArgs> targets) {
             this.targets = Input.ofNullable(targets);
             return this;
         }

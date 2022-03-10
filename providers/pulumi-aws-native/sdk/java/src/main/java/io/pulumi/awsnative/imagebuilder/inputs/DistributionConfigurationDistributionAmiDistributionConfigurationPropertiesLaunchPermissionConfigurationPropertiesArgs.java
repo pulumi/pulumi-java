@@ -107,42 +107,42 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setOrganizationArns(@Nullable Input<List<String>> organizationArns) {
+        public Builder organizationArns(@Nullable Input<List<String>> organizationArns) {
             this.organizationArns = organizationArns;
             return this;
         }
 
-        public Builder setOrganizationArns(@Nullable List<String> organizationArns) {
+        public Builder organizationArns(@Nullable List<String> organizationArns) {
             this.organizationArns = Input.ofNullable(organizationArns);
             return this;
         }
 
-        public Builder setOrganizationalUnitArns(@Nullable Input<List<String>> organizationalUnitArns) {
+        public Builder organizationalUnitArns(@Nullable Input<List<String>> organizationalUnitArns) {
             this.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
 
-        public Builder setOrganizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
+        public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
             this.organizationalUnitArns = Input.ofNullable(organizationalUnitArns);
             return this;
         }
 
-        public Builder setUserGroups(@Nullable Input<List<String>> userGroups) {
+        public Builder userGroups(@Nullable Input<List<String>> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
 
-        public Builder setUserGroups(@Nullable List<String> userGroups) {
+        public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = Input.ofNullable(userGroups);
             return this;
         }
 
-        public Builder setUserIds(@Nullable Input<List<String>> userIds) {
+        public Builder userIds(@Nullable Input<List<String>> userIds) {
             this.userIds = userIds;
             return this;
         }
 
-        public Builder setUserIds(@Nullable List<String> userIds) {
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = Input.ofNullable(userIds);
             return this;
         }

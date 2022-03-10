@@ -101,22 +101,22 @@ public final class GetAppArgs extends io.pulumi.resources.InvokeArgs {
     	      this.userProfileName = defaults.userProfileName;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setAppType(AppType appType) {
+        public Builder appType(AppType appType) {
             this.appType = Objects.requireNonNull(appType);
             return this;
         }
 
-        public Builder setDomainId(String domainId) {
+        public Builder domainId(String domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
-        public Builder setUserProfileName(String userProfileName) {
+        public Builder userProfileName(String userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
         }

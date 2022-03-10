@@ -121,52 +121,52 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     	      this.metricSetList = defaults.metricSetList;
         }
 
-        public Builder setAnomalyDetectorConfig(Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig) {
+        public Builder anomalyDetectorConfig(Input<AnomalyDetectorConfigArgs> anomalyDetectorConfig) {
             this.anomalyDetectorConfig = Objects.requireNonNull(anomalyDetectorConfig);
             return this;
         }
 
-        public Builder setAnomalyDetectorConfig(AnomalyDetectorConfigArgs anomalyDetectorConfig) {
+        public Builder anomalyDetectorConfig(AnomalyDetectorConfigArgs anomalyDetectorConfig) {
             this.anomalyDetectorConfig = Input.of(Objects.requireNonNull(anomalyDetectorConfig));
             return this;
         }
 
-        public Builder setAnomalyDetectorDescription(@Nullable Input<String> anomalyDetectorDescription) {
+        public Builder anomalyDetectorDescription(@Nullable Input<String> anomalyDetectorDescription) {
             this.anomalyDetectorDescription = anomalyDetectorDescription;
             return this;
         }
 
-        public Builder setAnomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
+        public Builder anomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
             this.anomalyDetectorDescription = Input.ofNullable(anomalyDetectorDescription);
             return this;
         }
 
-        public Builder setAnomalyDetectorName(@Nullable Input<String> anomalyDetectorName) {
+        public Builder anomalyDetectorName(@Nullable Input<String> anomalyDetectorName) {
             this.anomalyDetectorName = anomalyDetectorName;
             return this;
         }
 
-        public Builder setAnomalyDetectorName(@Nullable String anomalyDetectorName) {
+        public Builder anomalyDetectorName(@Nullable String anomalyDetectorName) {
             this.anomalyDetectorName = Input.ofNullable(anomalyDetectorName);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setMetricSetList(Input<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
+        public Builder metricSetList(Input<List<AnomalyDetectorMetricSetArgs>> metricSetList) {
             this.metricSetList = Objects.requireNonNull(metricSetList);
             return this;
         }
 
-        public Builder setMetricSetList(List<AnomalyDetectorMetricSetArgs> metricSetList) {
+        public Builder metricSetList(List<AnomalyDetectorMetricSetArgs> metricSetList) {
             this.metricSetList = Input.of(Objects.requireNonNull(metricSetList));
             return this;
         }

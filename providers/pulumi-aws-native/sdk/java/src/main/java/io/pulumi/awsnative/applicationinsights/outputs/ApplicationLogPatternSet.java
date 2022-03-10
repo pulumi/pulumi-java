@@ -67,12 +67,12 @@ public final class ApplicationLogPatternSet {
     	      this.patternSetName = defaults.patternSetName;
         }
 
-        public Builder setLogPatterns(List<ApplicationLogPattern> logPatterns) {
+        public Builder logPatterns(List<ApplicationLogPattern> logPatterns) {
             this.logPatterns = Objects.requireNonNull(logPatterns);
             return this;
         }
 
-        public Builder setPatternSetName(String patternSetName) {
+        public Builder patternSetName(String patternSetName) {
             this.patternSetName = Objects.requireNonNull(patternSetName);
             return this;
         }

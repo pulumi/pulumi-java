@@ -65,12 +65,12 @@ public final class DatasetPathParameter extends io.pulumi.resources.InvokeArgs {
     	      this.pathParameterName = defaults.pathParameterName;
         }
 
-        public Builder setDatasetParameter(DatasetParameter datasetParameter) {
+        public Builder datasetParameter(DatasetParameter datasetParameter) {
             this.datasetParameter = Objects.requireNonNull(datasetParameter);
             return this;
         }
 
-        public Builder setPathParameterName(String pathParameterName) {
+        public Builder pathParameterName(String pathParameterName) {
             this.pathParameterName = Objects.requireNonNull(pathParameterName);
             return this;
         }

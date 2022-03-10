@@ -175,102 +175,102 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setJobDefinitionName(@Nullable Input<String> jobDefinitionName) {
+        public Builder jobDefinitionName(@Nullable Input<String> jobDefinitionName) {
             this.jobDefinitionName = jobDefinitionName;
             return this;
         }
 
-        public Builder setJobDefinitionName(@Nullable String jobDefinitionName) {
+        public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
             this.jobDefinitionName = Input.ofNullable(jobDefinitionName);
             return this;
         }
 
-        public Builder setJobResources(Input<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources) {
+        public Builder jobResources(Input<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources) {
             this.jobResources = Objects.requireNonNull(jobResources);
             return this;
         }
 
-        public Builder setJobResources(ModelBiasJobDefinitionMonitoringResourcesArgs jobResources) {
+        public Builder jobResources(ModelBiasJobDefinitionMonitoringResourcesArgs jobResources) {
             this.jobResources = Input.of(Objects.requireNonNull(jobResources));
             return this;
         }
 
-        public Builder setModelBiasAppSpecification(Input<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> modelBiasAppSpecification) {
+        public Builder modelBiasAppSpecification(Input<ModelBiasJobDefinitionModelBiasAppSpecificationArgs> modelBiasAppSpecification) {
             this.modelBiasAppSpecification = Objects.requireNonNull(modelBiasAppSpecification);
             return this;
         }
 
-        public Builder setModelBiasAppSpecification(ModelBiasJobDefinitionModelBiasAppSpecificationArgs modelBiasAppSpecification) {
+        public Builder modelBiasAppSpecification(ModelBiasJobDefinitionModelBiasAppSpecificationArgs modelBiasAppSpecification) {
             this.modelBiasAppSpecification = Input.of(Objects.requireNonNull(modelBiasAppSpecification));
             return this;
         }
 
-        public Builder setModelBiasBaselineConfig(@Nullable Input<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig) {
+        public Builder modelBiasBaselineConfig(@Nullable Input<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig) {
             this.modelBiasBaselineConfig = modelBiasBaselineConfig;
             return this;
         }
 
-        public Builder setModelBiasBaselineConfig(@Nullable ModelBiasJobDefinitionModelBiasBaselineConfigArgs modelBiasBaselineConfig) {
+        public Builder modelBiasBaselineConfig(@Nullable ModelBiasJobDefinitionModelBiasBaselineConfigArgs modelBiasBaselineConfig) {
             this.modelBiasBaselineConfig = Input.ofNullable(modelBiasBaselineConfig);
             return this;
         }
 
-        public Builder setModelBiasJobInput(Input<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput) {
+        public Builder modelBiasJobInput(Input<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput) {
             this.modelBiasJobInput = Objects.requireNonNull(modelBiasJobInput);
             return this;
         }
 
-        public Builder setModelBiasJobInput(ModelBiasJobDefinitionModelBiasJobInputArgs modelBiasJobInput) {
+        public Builder modelBiasJobInput(ModelBiasJobDefinitionModelBiasJobInputArgs modelBiasJobInput) {
             this.modelBiasJobInput = Input.of(Objects.requireNonNull(modelBiasJobInput));
             return this;
         }
 
-        public Builder setModelBiasJobOutputConfig(Input<ModelBiasJobDefinitionMonitoringOutputConfigArgs> modelBiasJobOutputConfig) {
+        public Builder modelBiasJobOutputConfig(Input<ModelBiasJobDefinitionMonitoringOutputConfigArgs> modelBiasJobOutputConfig) {
             this.modelBiasJobOutputConfig = Objects.requireNonNull(modelBiasJobOutputConfig);
             return this;
         }
 
-        public Builder setModelBiasJobOutputConfig(ModelBiasJobDefinitionMonitoringOutputConfigArgs modelBiasJobOutputConfig) {
+        public Builder modelBiasJobOutputConfig(ModelBiasJobDefinitionMonitoringOutputConfigArgs modelBiasJobOutputConfig) {
             this.modelBiasJobOutputConfig = Input.of(Objects.requireNonNull(modelBiasJobOutputConfig));
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable ModelBiasJobDefinitionNetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable ModelBiasJobDefinitionNetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStoppingCondition(@Nullable Input<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition) {
+        public Builder stoppingCondition(@Nullable Input<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition) {
             this.stoppingCondition = stoppingCondition;
             return this;
         }
 
-        public Builder setStoppingCondition(@Nullable ModelBiasJobDefinitionStoppingConditionArgs stoppingCondition) {
+        public Builder stoppingCondition(@Nullable ModelBiasJobDefinitionStoppingConditionArgs stoppingCondition) {
             this.stoppingCondition = Input.ofNullable(stoppingCondition);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ModelBiasJobDefinitionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ModelBiasJobDefinitionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ModelBiasJobDefinitionTagArgs> tags) {
+        public Builder tags(@Nullable List<ModelBiasJobDefinitionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

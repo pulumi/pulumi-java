@@ -56,7 +56,7 @@ public final class InputDefinition extends io.pulumi.resources.InvokeArgs {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(List<InputAttribute> attributes) {
+        public Builder attributes(List<InputAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }

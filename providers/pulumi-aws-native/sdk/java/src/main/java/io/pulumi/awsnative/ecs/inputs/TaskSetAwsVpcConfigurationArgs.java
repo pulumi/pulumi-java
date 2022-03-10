@@ -92,32 +92,32 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setAssignPublicIp(@Nullable Input<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp) {
+        public Builder assignPublicIp(@Nullable Input<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
-        public Builder setAssignPublicIp(@Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp) {
+        public Builder assignPublicIp(@Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp) {
             this.assignPublicIp = Input.ofNullable(assignPublicIp);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnets(Input<List<String>> subnets) {
+        public Builder subnets(Input<List<String>> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }

@@ -358,102 +358,102 @@ public final class GetFunctionResult {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setArchitectures(@Nullable List<FunctionArchitecturesItem> architectures) {
+        public Builder architectures(@Nullable List<FunctionArchitecturesItem> architectures) {
             this.architectures = architectures;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCodeSigningConfigArn(@Nullable String codeSigningConfigArn) {
+        public Builder codeSigningConfigArn(@Nullable String codeSigningConfigArn) {
             this.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
 
-        public Builder setDeadLetterConfig(@Nullable FunctionDeadLetterConfig deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable FunctionDeadLetterConfig deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable FunctionEnvironment environment) {
+        public Builder environment(@Nullable FunctionEnvironment environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setFileSystemConfigs(@Nullable List<FunctionFileSystemConfig> fileSystemConfigs) {
+        public Builder fileSystemConfigs(@Nullable List<FunctionFileSystemConfig> fileSystemConfigs) {
             this.fileSystemConfigs = fileSystemConfigs;
             return this;
         }
 
-        public Builder setHandler(@Nullable String handler) {
+        public Builder handler(@Nullable String handler) {
             this.handler = handler;
             return this;
         }
 
-        public Builder setImageConfig(@Nullable FunctionImageConfig imageConfig) {
+        public Builder imageConfig(@Nullable FunctionImageConfig imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setLayers(@Nullable List<String> layers) {
+        public Builder layers(@Nullable List<String> layers) {
             this.layers = layers;
             return this;
         }
 
-        public Builder setMemorySize(@Nullable Integer memorySize) {
+        public Builder memorySize(@Nullable Integer memorySize) {
             this.memorySize = memorySize;
             return this;
         }
 
-        public Builder setPackageType(@Nullable FunctionPackageType packageType) {
+        public Builder packageType(@Nullable FunctionPackageType packageType) {
             this.packageType = packageType;
             return this;
         }
 
-        public Builder setReservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
+        public Builder reservedConcurrentExecutions(@Nullable Integer reservedConcurrentExecutions) {
             this.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRuntime(@Nullable String runtime) {
+        public Builder runtime(@Nullable String runtime) {
             this.runtime = runtime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FunctionTag> tags) {
+        public Builder tags(@Nullable List<FunctionTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTracingConfig(@Nullable FunctionTracingConfig tracingConfig) {
+        public Builder tracingConfig(@Nullable FunctionTracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable FunctionVpcConfig vpcConfig) {
+        public Builder vpcConfig(@Nullable FunctionVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }

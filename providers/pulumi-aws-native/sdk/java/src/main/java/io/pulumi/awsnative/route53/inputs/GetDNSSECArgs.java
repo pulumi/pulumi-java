@@ -51,7 +51,7 @@ public final class GetDNSSECArgs extends io.pulumi.resources.InvokeArgs {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }

@@ -120,52 +120,52 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetIds(@Nullable Input<List<String>> assetIds) {
+        public Builder assetIds(@Nullable Input<List<String>> assetIds) {
             this.assetIds = assetIds;
             return this;
         }
 
-        public Builder setAssetIds(@Nullable List<String> assetIds) {
+        public Builder assetIds(@Nullable List<String> assetIds) {
             this.assetIds = Input.ofNullable(assetIds);
             return this;
         }
 
-        public Builder setPortalId(Input<String> portalId) {
+        public Builder portalId(Input<String> portalId) {
             this.portalId = Objects.requireNonNull(portalId);
             return this;
         }
 
-        public Builder setPortalId(String portalId) {
+        public Builder portalId(String portalId) {
             this.portalId = Input.of(Objects.requireNonNull(portalId));
             return this;
         }
 
-        public Builder setProjectDescription(@Nullable Input<String> projectDescription) {
+        public Builder projectDescription(@Nullable Input<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
-        public Builder setProjectDescription(@Nullable String projectDescription) {
+        public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = Input.ofNullable(projectDescription);
             return this;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ProjectTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ProjectTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTagArgs> tags) {
+        public Builder tags(@Nullable List<ProjectTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

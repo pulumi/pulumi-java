@@ -149,62 +149,62 @@ public final class LaunchProfileStreamConfigurationArgs extends io.pulumi.resour
     	      this.streamingImageIds = defaults.streamingImageIds;
         }
 
-        public Builder setClipboardMode(Input<LaunchProfileStreamingClipboardMode> clipboardMode) {
+        public Builder clipboardMode(Input<LaunchProfileStreamingClipboardMode> clipboardMode) {
             this.clipboardMode = Objects.requireNonNull(clipboardMode);
             return this;
         }
 
-        public Builder setClipboardMode(LaunchProfileStreamingClipboardMode clipboardMode) {
+        public Builder clipboardMode(LaunchProfileStreamingClipboardMode clipboardMode) {
             this.clipboardMode = Input.of(Objects.requireNonNull(clipboardMode));
             return this;
         }
 
-        public Builder setEc2InstanceTypes(Input<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes) {
+        public Builder ec2InstanceTypes(Input<List<LaunchProfileStreamingInstanceType>> ec2InstanceTypes) {
             this.ec2InstanceTypes = Objects.requireNonNull(ec2InstanceTypes);
             return this;
         }
 
-        public Builder setEc2InstanceTypes(List<LaunchProfileStreamingInstanceType> ec2InstanceTypes) {
+        public Builder ec2InstanceTypes(List<LaunchProfileStreamingInstanceType> ec2InstanceTypes) {
             this.ec2InstanceTypes = Input.of(Objects.requireNonNull(ec2InstanceTypes));
             return this;
         }
 
-        public Builder setMaxSessionLengthInMinutes(@Nullable Input<Double> maxSessionLengthInMinutes) {
+        public Builder maxSessionLengthInMinutes(@Nullable Input<Double> maxSessionLengthInMinutes) {
             this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
             return this;
         }
 
-        public Builder setMaxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
+        public Builder maxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
             this.maxSessionLengthInMinutes = Input.ofNullable(maxSessionLengthInMinutes);
             return this;
         }
 
-        public Builder setMaxStoppedSessionLengthInMinutes(@Nullable Input<Double> maxStoppedSessionLengthInMinutes) {
+        public Builder maxStoppedSessionLengthInMinutes(@Nullable Input<Double> maxStoppedSessionLengthInMinutes) {
             this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
             return this;
         }
 
-        public Builder setMaxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
+        public Builder maxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
             this.maxStoppedSessionLengthInMinutes = Input.ofNullable(maxStoppedSessionLengthInMinutes);
             return this;
         }
 
-        public Builder setSessionStorage(@Nullable Input<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage) {
+        public Builder sessionStorage(@Nullable Input<LaunchProfileStreamConfigurationSessionStorageArgs> sessionStorage) {
             this.sessionStorage = sessionStorage;
             return this;
         }
 
-        public Builder setSessionStorage(@Nullable LaunchProfileStreamConfigurationSessionStorageArgs sessionStorage) {
+        public Builder sessionStorage(@Nullable LaunchProfileStreamConfigurationSessionStorageArgs sessionStorage) {
             this.sessionStorage = Input.ofNullable(sessionStorage);
             return this;
         }
 
-        public Builder setStreamingImageIds(Input<List<String>> streamingImageIds) {
+        public Builder streamingImageIds(Input<List<String>> streamingImageIds) {
             this.streamingImageIds = Objects.requireNonNull(streamingImageIds);
             return this;
         }
 
-        public Builder setStreamingImageIds(List<String> streamingImageIds) {
+        public Builder streamingImageIds(List<String> streamingImageIds) {
             this.streamingImageIds = Input.of(Objects.requireNonNull(streamingImageIds));
             return this;
         }

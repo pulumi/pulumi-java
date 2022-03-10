@@ -60,17 +60,17 @@ public final class GlobalTableLocalSecondaryIndex {
     	      this.projection = defaults.projection;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setKeySchema(List<GlobalTableKeySchema> keySchema) {
+        public Builder keySchema(List<GlobalTableKeySchema> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
 
-        public Builder setProjection(GlobalTableProjection projection) {
+        public Builder projection(GlobalTableProjection projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }

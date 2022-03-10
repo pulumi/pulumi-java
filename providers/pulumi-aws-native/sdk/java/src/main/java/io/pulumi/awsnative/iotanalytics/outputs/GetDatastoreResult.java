@@ -89,32 +89,32 @@ public final class GetDatastoreResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatastorePartitions(@Nullable DatastorePartitions datastorePartitions) {
+        public Builder datastorePartitions(@Nullable DatastorePartitions datastorePartitions) {
             this.datastorePartitions = datastorePartitions;
             return this;
         }
 
-        public Builder setDatastoreStorage(@Nullable DatastoreStorage datastoreStorage) {
+        public Builder datastoreStorage(@Nullable DatastoreStorage datastoreStorage) {
             this.datastoreStorage = datastoreStorage;
             return this;
         }
 
-        public Builder setFileFormatConfiguration(@Nullable DatastoreFileFormatConfiguration fileFormatConfiguration) {
+        public Builder fileFormatConfiguration(@Nullable DatastoreFileFormatConfiguration fileFormatConfiguration) {
             this.fileFormatConfiguration = fileFormatConfiguration;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable DatastoreRetentionPeriod retentionPeriod) {
+        public Builder retentionPeriod(@Nullable DatastoreRetentionPeriod retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatastoreTag> tags) {
+        public Builder tags(@Nullable List<DatastoreTag> tags) {
             this.tags = tags;
             return this;
         }

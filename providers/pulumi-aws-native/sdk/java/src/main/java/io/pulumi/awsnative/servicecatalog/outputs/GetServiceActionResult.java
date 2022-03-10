@@ -87,32 +87,32 @@ public final class GetServiceActionResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAcceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
+        public Builder acceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setDefinition(@Nullable List<ServiceActionDefinitionParameter> definition) {
+        public Builder definition(@Nullable List<ServiceActionDefinitionParameter> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinitionType(@Nullable ServiceActionDefinitionType definitionType) {
+        public Builder definitionType(@Nullable ServiceActionDefinitionType definitionType) {
             this.definitionType = definitionType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

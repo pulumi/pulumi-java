@@ -72,12 +72,12 @@ public final class DetectorModelSetVariable extends io.pulumi.resources.InvokeAr
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }

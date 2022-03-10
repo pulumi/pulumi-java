@@ -42,7 +42,7 @@ public final class BotAliasAudioLogDestination {
     	      this.s3Bucket = defaults.s3Bucket;
         }
 
-        public Builder setS3Bucket(@Nullable BotAliasS3BucketLogDestination s3Bucket) {
+        public Builder s3Bucket(@Nullable BotAliasS3BucketLogDestination s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }

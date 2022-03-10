@@ -75,32 +75,32 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setTenancy(@Nullable Input<SpotFleetSpotPlacementTenancy> tenancy) {
+        public Builder tenancy(@Nullable Input<SpotFleetSpotPlacementTenancy> tenancy) {
             this.tenancy = tenancy;
             return this;
         }
 
-        public Builder setTenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
+        public Builder tenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
             this.tenancy = Input.ofNullable(tenancy);
             return this;
         }

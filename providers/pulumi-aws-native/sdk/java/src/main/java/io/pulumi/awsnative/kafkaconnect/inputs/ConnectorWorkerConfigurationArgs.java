@@ -74,22 +74,22 @@ public final class ConnectorWorkerConfigurationArgs extends io.pulumi.resources.
     	      this.workerConfigurationArn = defaults.workerConfigurationArn;
         }
 
-        public Builder setRevision(Input<Integer> revision) {
+        public Builder revision(Input<Integer> revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Input.of(Objects.requireNonNull(revision));
             return this;
         }
 
-        public Builder setWorkerConfigurationArn(Input<String> workerConfigurationArn) {
+        public Builder workerConfigurationArn(Input<String> workerConfigurationArn) {
             this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
             return this;
         }
 
-        public Builder setWorkerConfigurationArn(String workerConfigurationArn) {
+        public Builder workerConfigurationArn(String workerConfigurationArn) {
             this.workerConfigurationArn = Input.of(Objects.requireNonNull(workerConfigurationArn));
             return this;
         }

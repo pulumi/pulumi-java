@@ -67,22 +67,22 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
     	      this.isActive = defaults.isActive;
         }
 
-        public Builder setClosingResponse(Input<BotResponseSpecificationArgs> closingResponse) {
+        public Builder closingResponse(Input<BotResponseSpecificationArgs> closingResponse) {
             this.closingResponse = Objects.requireNonNull(closingResponse);
             return this;
         }
 
-        public Builder setClosingResponse(BotResponseSpecificationArgs closingResponse) {
+        public Builder closingResponse(BotResponseSpecificationArgs closingResponse) {
             this.closingResponse = Input.of(Objects.requireNonNull(closingResponse));
             return this;
         }
 
-        public Builder setIsActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Input<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Input.ofNullable(isActive);
             return this;
         }

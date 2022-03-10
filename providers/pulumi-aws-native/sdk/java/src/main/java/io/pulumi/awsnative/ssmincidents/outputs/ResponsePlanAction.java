@@ -42,7 +42,7 @@ public final class ResponsePlanAction {
     	      this.ssmAutomation = defaults.ssmAutomation;
         }
 
-        public Builder setSsmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
+        public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
             this.ssmAutomation = ssmAutomation;
             return this;
         }

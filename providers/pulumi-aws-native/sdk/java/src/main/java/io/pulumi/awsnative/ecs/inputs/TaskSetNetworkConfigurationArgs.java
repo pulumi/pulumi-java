@@ -53,12 +53,12 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     	      this.awsVpcConfiguration = defaults.awsVpcConfiguration;
         }
 
-        public Builder setAwsVpcConfiguration(@Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
+        public Builder awsVpcConfiguration(@Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
             this.awsVpcConfiguration = awsVpcConfiguration;
             return this;
         }
 
-        public Builder setAwsVpcConfiguration(@Nullable TaskSetAwsVpcConfigurationArgs awsVpcConfiguration) {
+        public Builder awsVpcConfiguration(@Nullable TaskSetAwsVpcConfigurationArgs awsVpcConfiguration) {
             this.awsVpcConfiguration = Input.ofNullable(awsVpcConfiguration);
             return this;
         }

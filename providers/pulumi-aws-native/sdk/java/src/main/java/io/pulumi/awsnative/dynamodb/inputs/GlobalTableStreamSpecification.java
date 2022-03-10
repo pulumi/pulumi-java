@@ -47,7 +47,7 @@ public final class GlobalTableStreamSpecification extends io.pulumi.resources.In
     	      this.streamViewType = defaults.streamViewType;
         }
 
-        public Builder setStreamViewType(String streamViewType) {
+        public Builder streamViewType(String streamViewType) {
             this.streamViewType = Objects.requireNonNull(streamViewType);
             return this;
         }

@@ -67,12 +67,12 @@ public final class DeviceFleetEdgeOutputConfig {
     	      this.s3OutputLocation = defaults.s3OutputLocation;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setS3OutputLocation(String s3OutputLocation) {
+        public Builder s3OutputLocation(String s3OutputLocation) {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
         }

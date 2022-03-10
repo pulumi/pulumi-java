@@ -144,42 +144,42 @@ public final class GetEventTypeResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEntityTypes(@Nullable List<EventTypeEntityType> entityTypes) {
+        public Builder entityTypes(@Nullable List<EventTypeEntityType> entityTypes) {
             this.entityTypes = entityTypes;
             return this;
         }
 
-        public Builder setEventVariables(@Nullable List<EventTypeEventVariable> eventVariables) {
+        public Builder eventVariables(@Nullable List<EventTypeEventVariable> eventVariables) {
             this.eventVariables = eventVariables;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<EventTypeLabel> labels) {
+        public Builder labels(@Nullable List<EventTypeLabel> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventTypeTag> tags) {
+        public Builder tags(@Nullable List<EventTypeTag> tags) {
             this.tags = tags;
             return this;
         }

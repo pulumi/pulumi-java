@@ -97,27 +97,27 @@ public final class DataSourceConnectionConfiguration extends io.pulumi.resources
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setDatabaseHost(String databaseHost) {
+        public Builder databaseHost(String databaseHost) {
             this.databaseHost = Objects.requireNonNull(databaseHost);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabasePort(Integer databasePort) {
+        public Builder databasePort(Integer databasePort) {
             this.databasePort = Objects.requireNonNull(databasePort);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

@@ -49,12 +49,12 @@ public final class FirewallPolicyActionDefinitionArgs extends io.pulumi.resource
     	      this.publishMetricAction = defaults.publishMetricAction;
         }
 
-        public Builder setPublishMetricAction(@Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
+        public Builder publishMetricAction(@Nullable Input<FirewallPolicyPublishMetricActionArgs> publishMetricAction) {
             this.publishMetricAction = publishMetricAction;
             return this;
         }
 
-        public Builder setPublishMetricAction(@Nullable FirewallPolicyPublishMetricActionArgs publishMetricAction) {
+        public Builder publishMetricAction(@Nullable FirewallPolicyPublishMetricActionArgs publishMetricAction) {
             this.publishMetricAction = Input.ofNullable(publishMetricAction);
             return this;
         }

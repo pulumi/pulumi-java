@@ -87,32 +87,32 @@ public final class UserProfileResourceSpecArgs extends io.pulumi.resources.Resou
     	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
         }
 
-        public Builder setInstanceType(@Nullable Input<UserProfileResourceSpecInstanceType> instanceType) {
+        public Builder instanceType(@Nullable Input<UserProfileResourceSpecInstanceType> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable UserProfileResourceSpecInstanceType instanceType) {
+        public Builder instanceType(@Nullable UserProfileResourceSpecInstanceType instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setSageMakerImageArn(@Nullable Input<String> sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable Input<String> sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
-        public Builder setSageMakerImageArn(@Nullable String sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = Input.ofNullable(sageMakerImageArn);
             return this;
         }
 
-        public Builder setSageMakerImageVersionArn(@Nullable Input<String> sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable Input<String> sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
 
-        public Builder setSageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = Input.ofNullable(sageMakerImageVersionArn);
             return this;
         }

@@ -63,12 +63,12 @@ public final class DatasetContentDeliveryRuleDestination extends io.pulumi.resou
     	      this.s3DestinationConfiguration = defaults.s3DestinationConfiguration;
         }
 
-        public Builder setIotEventsDestinationConfiguration(@Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration) {
+        public Builder iotEventsDestinationConfiguration(@Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration) {
             this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
             return this;
         }
 
-        public Builder setS3DestinationConfiguration(@Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
+        public Builder s3DestinationConfiguration(@Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }

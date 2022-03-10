@@ -122,52 +122,52 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setMagneticStoreWriteProperties(@Nullable Input<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties) {
+        public Builder magneticStoreWriteProperties(@Nullable Input<MagneticStoreWritePropertiesPropertiesArgs> magneticStoreWriteProperties) {
             this.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
 
-        public Builder setMagneticStoreWriteProperties(@Nullable MagneticStoreWritePropertiesPropertiesArgs magneticStoreWriteProperties) {
+        public Builder magneticStoreWriteProperties(@Nullable MagneticStoreWritePropertiesPropertiesArgs magneticStoreWriteProperties) {
             this.magneticStoreWriteProperties = Input.ofNullable(magneticStoreWriteProperties);
             return this;
         }
 
-        public Builder setRetentionProperties(@Nullable Input<RetentionPropertiesPropertiesArgs> retentionProperties) {
+        public Builder retentionProperties(@Nullable Input<RetentionPropertiesPropertiesArgs> retentionProperties) {
             this.retentionProperties = retentionProperties;
             return this;
         }
 
-        public Builder setRetentionProperties(@Nullable RetentionPropertiesPropertiesArgs retentionProperties) {
+        public Builder retentionProperties(@Nullable RetentionPropertiesPropertiesArgs retentionProperties) {
             this.retentionProperties = Input.ofNullable(retentionProperties);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TableTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TableTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TableTagArgs> tags) {
+        public Builder tags(@Nullable List<TableTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

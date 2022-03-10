@@ -115,32 +115,32 @@ public final class ResponseHeadersPolicySecurityHeadersConfig extends io.pulumi.
     	      this.xSSProtection = defaults.xSSProtection;
         }
 
-        public Builder setContentSecurityPolicy(@Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(@Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy) {
             this.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
 
-        public Builder setContentTypeOptions(@Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions) {
+        public Builder contentTypeOptions(@Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions) {
             this.contentTypeOptions = contentTypeOptions;
             return this;
         }
 
-        public Builder setFrameOptions(@Nullable ResponseHeadersPolicyFrameOptions frameOptions) {
+        public Builder frameOptions(@Nullable ResponseHeadersPolicyFrameOptions frameOptions) {
             this.frameOptions = frameOptions;
             return this;
         }
 
-        public Builder setReferrerPolicy(@Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy) {
+        public Builder referrerPolicy(@Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy) {
             this.referrerPolicy = referrerPolicy;
             return this;
         }
 
-        public Builder setStrictTransportSecurity(@Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity) {
+        public Builder strictTransportSecurity(@Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity) {
             this.strictTransportSecurity = strictTransportSecurity;
             return this;
         }
 
-        public Builder setXSSProtection(@Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
+        public Builder xSSProtection(@Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
             this.xSSProtection = xSSProtection;
             return this;
         }

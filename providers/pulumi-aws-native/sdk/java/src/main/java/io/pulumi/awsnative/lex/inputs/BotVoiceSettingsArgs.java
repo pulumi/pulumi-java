@@ -56,12 +56,12 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.voiceId = defaults.voiceId;
         }
 
-        public Builder setVoiceId(Input<String> voiceId) {
+        public Builder voiceId(Input<String> voiceId) {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
         }
 
-        public Builder setVoiceId(String voiceId) {
+        public Builder voiceId(String voiceId) {
             this.voiceId = Input.of(Objects.requireNonNull(voiceId));
             return this;
         }

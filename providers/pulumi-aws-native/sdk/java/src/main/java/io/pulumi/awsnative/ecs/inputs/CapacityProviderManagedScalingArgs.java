@@ -103,52 +103,52 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
     	      this.targetCapacity = defaults.targetCapacity;
         }
 
-        public Builder setInstanceWarmupPeriod(@Nullable Input<Integer> instanceWarmupPeriod) {
+        public Builder instanceWarmupPeriod(@Nullable Input<Integer> instanceWarmupPeriod) {
             this.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
 
-        public Builder setInstanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
+        public Builder instanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
             this.instanceWarmupPeriod = Input.ofNullable(instanceWarmupPeriod);
             return this;
         }
 
-        public Builder setMaximumScalingStepSize(@Nullable Input<Integer> maximumScalingStepSize) {
+        public Builder maximumScalingStepSize(@Nullable Input<Integer> maximumScalingStepSize) {
             this.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
 
-        public Builder setMaximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
+        public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
             this.maximumScalingStepSize = Input.ofNullable(maximumScalingStepSize);
             return this;
         }
 
-        public Builder setMinimumScalingStepSize(@Nullable Input<Integer> minimumScalingStepSize) {
+        public Builder minimumScalingStepSize(@Nullable Input<Integer> minimumScalingStepSize) {
             this.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
 
-        public Builder setMinimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
+        public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
             this.minimumScalingStepSize = Input.ofNullable(minimumScalingStepSize);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<CapacityProviderManagedScalingStatus> status) {
+        public Builder status(@Nullable Input<CapacityProviderManagedScalingStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable CapacityProviderManagedScalingStatus status) {
+        public Builder status(@Nullable CapacityProviderManagedScalingStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTargetCapacity(@Nullable Input<Integer> targetCapacity) {
+        public Builder targetCapacity(@Nullable Input<Integer> targetCapacity) {
             this.targetCapacity = targetCapacity;
             return this;
         }
 
-        public Builder setTargetCapacity(@Nullable Integer targetCapacity) {
+        public Builder targetCapacity(@Nullable Integer targetCapacity) {
             this.targetCapacity = Input.ofNullable(targetCapacity);
             return this;
         }

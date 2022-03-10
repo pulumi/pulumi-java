@@ -68,12 +68,12 @@ public final class ProjectSample {
     	      this.type = defaults.type;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = size;
             return this;
         }
 
-        public Builder setType(ProjectSampleType type) {
+        public Builder type(ProjectSampleType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

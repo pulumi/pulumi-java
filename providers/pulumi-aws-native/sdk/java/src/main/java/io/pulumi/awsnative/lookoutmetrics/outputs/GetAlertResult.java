@@ -50,7 +50,7 @@ public final class GetAlertResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

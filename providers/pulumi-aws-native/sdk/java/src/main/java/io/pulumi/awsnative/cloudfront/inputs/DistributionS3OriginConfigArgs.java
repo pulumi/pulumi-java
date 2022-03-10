@@ -49,12 +49,12 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable Input<String> originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable Input<String> originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable String originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = Input.ofNullable(originAccessIdentity);
             return this;
         }

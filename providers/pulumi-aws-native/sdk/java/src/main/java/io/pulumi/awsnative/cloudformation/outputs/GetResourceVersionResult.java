@@ -146,32 +146,32 @@ public final class GetResourceVersionResult {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setIsDefaultVersion(@Nullable Boolean isDefaultVersion) {
+        public Builder isDefaultVersion(@Nullable Boolean isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
 
-        public Builder setProvisioningType(@Nullable ResourceVersionProvisioningType provisioningType) {
+        public Builder provisioningType(@Nullable ResourceVersionProvisioningType provisioningType) {
             this.provisioningType = provisioningType;
             return this;
         }
 
-        public Builder setTypeArn(@Nullable String typeArn) {
+        public Builder typeArn(@Nullable String typeArn) {
             this.typeArn = typeArn;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }
 
-        public Builder setVisibility(@Nullable ResourceVersionVisibility visibility) {
+        public Builder visibility(@Nullable ResourceVersionVisibility visibility) {
             this.visibility = visibility;
             return this;
         }

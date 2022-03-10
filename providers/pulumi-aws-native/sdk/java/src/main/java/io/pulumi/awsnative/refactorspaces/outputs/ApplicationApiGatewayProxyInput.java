@@ -52,12 +52,12 @@ public final class ApplicationApiGatewayProxyInput {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setEndpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
+        public Builder endpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
         }

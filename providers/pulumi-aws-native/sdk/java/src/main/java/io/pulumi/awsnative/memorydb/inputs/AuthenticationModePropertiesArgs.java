@@ -72,22 +72,22 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder setPasswords(@Nullable Input<List<String>> passwords) {
+        public Builder passwords(@Nullable Input<List<String>> passwords) {
             this.passwords = passwords;
             return this;
         }
 
-        public Builder setPasswords(@Nullable List<String> passwords) {
+        public Builder passwords(@Nullable List<String> passwords) {
             this.passwords = Input.ofNullable(passwords);
             return this;
         }
 
-        public Builder setType(@Nullable Input<UserAuthenticationModePropertiesType> type) {
+        public Builder type(@Nullable Input<UserAuthenticationModePropertiesType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable UserAuthenticationModePropertiesType type) {
+        public Builder type(@Nullable UserAuthenticationModePropertiesType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

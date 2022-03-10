@@ -100,22 +100,22 @@ public final class JobTemplateAbortCriteria {
     	      this.thresholdPercentage = defaults.thresholdPercentage;
         }
 
-        public Builder setAction(JobTemplateAction action) {
+        public Builder action(JobTemplateAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setFailureType(JobTemplateFailureType failureType) {
+        public Builder failureType(JobTemplateFailureType failureType) {
             this.failureType = Objects.requireNonNull(failureType);
             return this;
         }
 
-        public Builder setMinNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
+        public Builder minNumberOfExecutedThings(Integer minNumberOfExecutedThings) {
             this.minNumberOfExecutedThings = Objects.requireNonNull(minNumberOfExecutedThings);
             return this;
         }
 
-        public Builder setThresholdPercentage(Double thresholdPercentage) {
+        public Builder thresholdPercentage(Double thresholdPercentage) {
             this.thresholdPercentage = Objects.requireNonNull(thresholdPercentage);
             return this;
         }

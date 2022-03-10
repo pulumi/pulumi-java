@@ -48,12 +48,12 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.style = defaults.style;
         }
 
-        public Builder setStyle(Input<String> style) {
+        public Builder style(Input<String> style) {
             this.style = Objects.requireNonNull(style);
             return this;
         }
 
-        public Builder setStyle(String style) {
+        public Builder style(String style) {
             this.style = Input.of(Objects.requireNonNull(style));
             return this;
         }

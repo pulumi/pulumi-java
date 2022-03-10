@@ -120,52 +120,52 @@ public final class ContactChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.deferActivation = defaults.deferActivation;
         }
 
-        public Builder setChannelAddress(@Nullable Input<String> channelAddress) {
+        public Builder channelAddress(@Nullable Input<String> channelAddress) {
             this.channelAddress = channelAddress;
             return this;
         }
 
-        public Builder setChannelAddress(@Nullable String channelAddress) {
+        public Builder channelAddress(@Nullable String channelAddress) {
             this.channelAddress = Input.ofNullable(channelAddress);
             return this;
         }
 
-        public Builder setChannelName(@Nullable Input<String> channelName) {
+        public Builder channelName(@Nullable Input<String> channelName) {
             this.channelName = channelName;
             return this;
         }
 
-        public Builder setChannelName(@Nullable String channelName) {
+        public Builder channelName(@Nullable String channelName) {
             this.channelName = Input.ofNullable(channelName);
             return this;
         }
 
-        public Builder setChannelType(@Nullable Input<ContactChannelChannelType> channelType) {
+        public Builder channelType(@Nullable Input<ContactChannelChannelType> channelType) {
             this.channelType = channelType;
             return this;
         }
 
-        public Builder setChannelType(@Nullable ContactChannelChannelType channelType) {
+        public Builder channelType(@Nullable ContactChannelChannelType channelType) {
             this.channelType = Input.ofNullable(channelType);
             return this;
         }
 
-        public Builder setContactId(@Nullable Input<String> contactId) {
+        public Builder contactId(@Nullable Input<String> contactId) {
             this.contactId = contactId;
             return this;
         }
 
-        public Builder setContactId(@Nullable String contactId) {
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = Input.ofNullable(contactId);
             return this;
         }
 
-        public Builder setDeferActivation(@Nullable Input<Boolean> deferActivation) {
+        public Builder deferActivation(@Nullable Input<Boolean> deferActivation) {
             this.deferActivation = deferActivation;
             return this;
         }
 
-        public Builder setDeferActivation(@Nullable Boolean deferActivation) {
+        public Builder deferActivation(@Nullable Boolean deferActivation) {
             this.deferActivation = Input.ofNullable(deferActivation);
             return this;
         }

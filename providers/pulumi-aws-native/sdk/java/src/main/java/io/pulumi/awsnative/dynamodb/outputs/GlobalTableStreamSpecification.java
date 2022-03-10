@@ -40,7 +40,7 @@ public final class GlobalTableStreamSpecification {
     	      this.streamViewType = defaults.streamViewType;
         }
 
-        public Builder setStreamViewType(String streamViewType) {
+        public Builder streamViewType(String streamViewType) {
             this.streamViewType = Objects.requireNonNull(streamViewType);
             return this;
         }

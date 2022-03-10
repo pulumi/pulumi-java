@@ -42,7 +42,7 @@ public final class AccountExpiryEventsConfiguration {
     	      this.daysBeforeExpiry = defaults.daysBeforeExpiry;
         }
 
-        public Builder setDaysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
+        public Builder daysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
             this.daysBeforeExpiry = daysBeforeExpiry;
             return this;
         }

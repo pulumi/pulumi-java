@@ -47,7 +47,7 @@ public final class GetNetworkInsightsAccessScopeAnalysisArgs extends io.pulumi.r
     	      this.networkInsightsAccessScopeAnalysisId = defaults.networkInsightsAccessScopeAnalysisId;
         }
 
-        public Builder setNetworkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
+        public Builder networkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
             this.networkInsightsAccessScopeAnalysisId = Objects.requireNonNull(networkInsightsAccessScopeAnalysisId);
             return this;
         }

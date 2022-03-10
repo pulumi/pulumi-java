@@ -64,22 +64,22 @@ public final class DataflowEndpointGroupArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEndpointDetails(Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails) {
+        public Builder endpointDetails(Input<List<DataflowEndpointGroupEndpointDetailsArgs>> endpointDetails) {
             this.endpointDetails = Objects.requireNonNull(endpointDetails);
             return this;
         }
 
-        public Builder setEndpointDetails(List<DataflowEndpointGroupEndpointDetailsArgs> endpointDetails) {
+        public Builder endpointDetails(List<DataflowEndpointGroupEndpointDetailsArgs> endpointDetails) {
             this.endpointDetails = Input.of(Objects.requireNonNull(endpointDetails));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DataflowEndpointGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DataflowEndpointGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataflowEndpointGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<DataflowEndpointGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

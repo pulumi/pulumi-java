@@ -63,22 +63,22 @@ public final class SigningProfileSignatureValidityPeriodArgs extends io.pulumi.r
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable Input<SigningProfileSignatureValidityPeriodType> type) {
+        public Builder type(@Nullable Input<SigningProfileSignatureValidityPeriodType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable SigningProfileSignatureValidityPeriodType type) {
+        public Builder type(@Nullable SigningProfileSignatureValidityPeriodType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Integer> value) {
+        public Builder value(@Nullable Input<Integer> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = Input.ofNullable(value);
             return this;
         }

@@ -71,22 +71,22 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.connectionArn = defaults.connectionArn;
         }
 
-        public Builder setAcceptTermsAndConditions(Input<Boolean> acceptTermsAndConditions) {
+        public Builder acceptTermsAndConditions(Input<Boolean> acceptTermsAndConditions) {
             this.acceptTermsAndConditions = Objects.requireNonNull(acceptTermsAndConditions);
             return this;
         }
 
-        public Builder setAcceptTermsAndConditions(Boolean acceptTermsAndConditions) {
+        public Builder acceptTermsAndConditions(Boolean acceptTermsAndConditions) {
             this.acceptTermsAndConditions = Input.of(Objects.requireNonNull(acceptTermsAndConditions));
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable Input<String> connectionArn) {
+        public Builder connectionArn(@Nullable Input<String> connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = Input.ofNullable(connectionArn);
             return this;
         }

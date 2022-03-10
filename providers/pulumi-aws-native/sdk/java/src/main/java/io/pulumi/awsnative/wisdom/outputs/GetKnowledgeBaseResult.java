@@ -60,17 +60,17 @@ public final class GetKnowledgeBaseResult {
     	      this.renderingConfiguration = defaults.renderingConfiguration;
         }
 
-        public Builder setKnowledgeBaseArn(@Nullable String knowledgeBaseArn) {
+        public Builder knowledgeBaseArn(@Nullable String knowledgeBaseArn) {
             this.knowledgeBaseArn = knowledgeBaseArn;
             return this;
         }
 
-        public Builder setKnowledgeBaseId(@Nullable String knowledgeBaseId) {
+        public Builder knowledgeBaseId(@Nullable String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
             return this;
         }
 
-        public Builder setRenderingConfiguration(@Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
+        public Builder renderingConfiguration(@Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
             this.renderingConfiguration = renderingConfiguration;
             return this;
         }

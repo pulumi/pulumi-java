@@ -156,92 +156,92 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.treatments = defaults.treatments;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMetricGoals(Input<List<ExperimentMetricGoalObjectArgs>> metricGoals) {
+        public Builder metricGoals(Input<List<ExperimentMetricGoalObjectArgs>> metricGoals) {
             this.metricGoals = Objects.requireNonNull(metricGoals);
             return this;
         }
 
-        public Builder setMetricGoals(List<ExperimentMetricGoalObjectArgs> metricGoals) {
+        public Builder metricGoals(List<ExperimentMetricGoalObjectArgs> metricGoals) {
             this.metricGoals = Input.of(Objects.requireNonNull(metricGoals));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOnlineAbConfig(Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig) {
+        public Builder onlineAbConfig(Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig) {
             this.onlineAbConfig = Objects.requireNonNull(onlineAbConfig);
             return this;
         }
 
-        public Builder setOnlineAbConfig(ExperimentOnlineAbConfigObjectArgs onlineAbConfig) {
+        public Builder onlineAbConfig(ExperimentOnlineAbConfigObjectArgs onlineAbConfig) {
             this.onlineAbConfig = Input.of(Objects.requireNonNull(onlineAbConfig));
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setRandomizationSalt(@Nullable Input<String> randomizationSalt) {
+        public Builder randomizationSalt(@Nullable Input<String> randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
 
-        public Builder setRandomizationSalt(@Nullable String randomizationSalt) {
+        public Builder randomizationSalt(@Nullable String randomizationSalt) {
             this.randomizationSalt = Input.ofNullable(randomizationSalt);
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Input<Integer> samplingRate) {
+        public Builder samplingRate(@Nullable Input<Integer> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Integer samplingRate) {
+        public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = Input.ofNullable(samplingRate);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ExperimentTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ExperimentTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ExperimentTagArgs> tags) {
+        public Builder tags(@Nullable List<ExperimentTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTreatments(Input<List<ExperimentTreatmentObjectArgs>> treatments) {
+        public Builder treatments(Input<List<ExperimentTreatmentObjectArgs>> treatments) {
             this.treatments = Objects.requireNonNull(treatments);
             return this;
         }
 
-        public Builder setTreatments(List<ExperimentTreatmentObjectArgs> treatments) {
+        public Builder treatments(List<ExperimentTreatmentObjectArgs> treatments) {
             this.treatments = Input.of(Objects.requireNonNull(treatments));
             return this;
         }

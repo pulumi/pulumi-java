@@ -63,12 +63,12 @@ public final class DataflowEndpointGroupEndpointDetails extends io.pulumi.resour
     	      this.securityDetails = defaults.securityDetails;
         }
 
-        public Builder setEndpoint(@Nullable DataflowEndpointGroupDataflowEndpoint endpoint) {
+        public Builder endpoint(@Nullable DataflowEndpointGroupDataflowEndpoint endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setSecurityDetails(@Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
+        public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
             this.securityDetails = securityDetails;
             return this;
         }

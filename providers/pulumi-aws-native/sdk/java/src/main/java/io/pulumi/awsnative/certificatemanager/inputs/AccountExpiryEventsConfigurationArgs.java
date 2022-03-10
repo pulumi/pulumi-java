@@ -49,12 +49,12 @@ public final class AccountExpiryEventsConfigurationArgs extends io.pulumi.resour
     	      this.daysBeforeExpiry = defaults.daysBeforeExpiry;
         }
 
-        public Builder setDaysBeforeExpiry(@Nullable Input<Integer> daysBeforeExpiry) {
+        public Builder daysBeforeExpiry(@Nullable Input<Integer> daysBeforeExpiry) {
             this.daysBeforeExpiry = daysBeforeExpiry;
             return this;
         }
 
-        public Builder setDaysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
+        public Builder daysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
             this.daysBeforeExpiry = Input.ofNullable(daysBeforeExpiry);
             return this;
         }

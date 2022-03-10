@@ -234,72 +234,72 @@ public final class GetDataSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setColumnGroups(@Nullable List<DataSetColumnGroup> columnGroups) {
+        public Builder columnGroups(@Nullable List<DataSetColumnGroup> columnGroups) {
             this.columnGroups = columnGroups;
             return this;
         }
 
-        public Builder setColumnLevelPermissionRules(@Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules) {
+        public Builder columnLevelPermissionRules(@Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules) {
             this.columnLevelPermissionRules = columnLevelPermissionRules;
             return this;
         }
 
-        public Builder setConsumedSpiceCapacityInBytes(@Nullable Double consumedSpiceCapacityInBytes) {
+        public Builder consumedSpiceCapacityInBytes(@Nullable Double consumedSpiceCapacityInBytes) {
             this.consumedSpiceCapacityInBytes = consumedSpiceCapacityInBytes;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setImportMode(@Nullable DataSetImportMode importMode) {
+        public Builder importMode(@Nullable DataSetImportMode importMode) {
             this.importMode = importMode;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setLogicalTableMap(@Nullable DataSetLogicalTableMap logicalTableMap) {
+        public Builder logicalTableMap(@Nullable DataSetLogicalTableMap logicalTableMap) {
             this.logicalTableMap = logicalTableMap;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOutputColumns(@Nullable List<DataSetOutputColumn> outputColumns) {
+        public Builder outputColumns(@Nullable List<DataSetOutputColumn> outputColumns) {
             this.outputColumns = outputColumns;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<DataSetResourcePermission> permissions) {
+        public Builder permissions(@Nullable List<DataSetResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPhysicalTableMap(@Nullable DataSetPhysicalTableMap physicalTableMap) {
+        public Builder physicalTableMap(@Nullable DataSetPhysicalTableMap physicalTableMap) {
             this.physicalTableMap = physicalTableMap;
             return this;
         }
 
-        public Builder setRowLevelPermissionDataSet(@Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet) {
+        public Builder rowLevelPermissionDataSet(@Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet) {
             this.rowLevelPermissionDataSet = rowLevelPermissionDataSet;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataSetTag> tags) {
+        public Builder tags(@Nullable List<DataSetTag> tags) {
             this.tags = tags;
             return this;
         }

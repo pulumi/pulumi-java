@@ -168,42 +168,42 @@ public final class GetAssetModelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetModelArn(@Nullable String assetModelArn) {
+        public Builder assetModelArn(@Nullable String assetModelArn) {
             this.assetModelArn = assetModelArn;
             return this;
         }
 
-        public Builder setAssetModelCompositeModels(@Nullable List<AssetModelCompositeModel> assetModelCompositeModels) {
+        public Builder assetModelCompositeModels(@Nullable List<AssetModelCompositeModel> assetModelCompositeModels) {
             this.assetModelCompositeModels = assetModelCompositeModels;
             return this;
         }
 
-        public Builder setAssetModelDescription(@Nullable String assetModelDescription) {
+        public Builder assetModelDescription(@Nullable String assetModelDescription) {
             this.assetModelDescription = assetModelDescription;
             return this;
         }
 
-        public Builder setAssetModelHierarchies(@Nullable List<AssetModelHierarchy> assetModelHierarchies) {
+        public Builder assetModelHierarchies(@Nullable List<AssetModelHierarchy> assetModelHierarchies) {
             this.assetModelHierarchies = assetModelHierarchies;
             return this;
         }
 
-        public Builder setAssetModelId(@Nullable String assetModelId) {
+        public Builder assetModelId(@Nullable String assetModelId) {
             this.assetModelId = assetModelId;
             return this;
         }
 
-        public Builder setAssetModelName(@Nullable String assetModelName) {
+        public Builder assetModelName(@Nullable String assetModelName) {
             this.assetModelName = assetModelName;
             return this;
         }
 
-        public Builder setAssetModelProperties(@Nullable List<AssetModelProperty> assetModelProperties) {
+        public Builder assetModelProperties(@Nullable List<AssetModelProperty> assetModelProperties) {
             this.assetModelProperties = assetModelProperties;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetModelTag> tags) {
+        public Builder tags(@Nullable List<AssetModelTag> tags) {
             this.tags = tags;
             return this;
         }

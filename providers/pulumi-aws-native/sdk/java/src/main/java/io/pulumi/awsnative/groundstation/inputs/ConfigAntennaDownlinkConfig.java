@@ -49,7 +49,7 @@ public final class ConfigAntennaDownlinkConfig extends io.pulumi.resources.Invok
     	      this.spectrumConfig = defaults.spectrumConfig;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }

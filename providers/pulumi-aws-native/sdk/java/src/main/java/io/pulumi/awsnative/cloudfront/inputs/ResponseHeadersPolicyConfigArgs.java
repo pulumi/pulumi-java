@@ -101,52 +101,52 @@ public final class ResponseHeadersPolicyConfigArgs extends io.pulumi.resources.R
     	      this.securityHeadersConfig = defaults.securityHeadersConfig;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setCorsConfig(@Nullable Input<ResponseHeadersPolicyCorsConfigArgs> corsConfig) {
+        public Builder corsConfig(@Nullable Input<ResponseHeadersPolicyCorsConfigArgs> corsConfig) {
             this.corsConfig = corsConfig;
             return this;
         }
 
-        public Builder setCorsConfig(@Nullable ResponseHeadersPolicyCorsConfigArgs corsConfig) {
+        public Builder corsConfig(@Nullable ResponseHeadersPolicyCorsConfigArgs corsConfig) {
             this.corsConfig = Input.ofNullable(corsConfig);
             return this;
         }
 
-        public Builder setCustomHeadersConfig(@Nullable Input<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig) {
+        public Builder customHeadersConfig(@Nullable Input<ResponseHeadersPolicyCustomHeadersConfigArgs> customHeadersConfig) {
             this.customHeadersConfig = customHeadersConfig;
             return this;
         }
 
-        public Builder setCustomHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfigArgs customHeadersConfig) {
+        public Builder customHeadersConfig(@Nullable ResponseHeadersPolicyCustomHeadersConfigArgs customHeadersConfig) {
             this.customHeadersConfig = Input.ofNullable(customHeadersConfig);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSecurityHeadersConfig(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig) {
+        public Builder securityHeadersConfig(@Nullable Input<ResponseHeadersPolicySecurityHeadersConfigArgs> securityHeadersConfig) {
             this.securityHeadersConfig = securityHeadersConfig;
             return this;
         }
 
-        public Builder setSecurityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfigArgs securityHeadersConfig) {
+        public Builder securityHeadersConfig(@Nullable ResponseHeadersPolicySecurityHeadersConfigArgs securityHeadersConfig) {
             this.securityHeadersConfig = Input.ofNullable(securityHeadersConfig);
             return this;
         }

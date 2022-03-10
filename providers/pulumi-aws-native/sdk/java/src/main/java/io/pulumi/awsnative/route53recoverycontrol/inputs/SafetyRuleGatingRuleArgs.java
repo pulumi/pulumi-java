@@ -92,32 +92,32 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder setGatingControls(Input<List<String>> gatingControls) {
+        public Builder gatingControls(Input<List<String>> gatingControls) {
             this.gatingControls = Objects.requireNonNull(gatingControls);
             return this;
         }
 
-        public Builder setGatingControls(List<String> gatingControls) {
+        public Builder gatingControls(List<String> gatingControls) {
             this.gatingControls = Input.of(Objects.requireNonNull(gatingControls));
             return this;
         }
 
-        public Builder setTargetControls(Input<List<String>> targetControls) {
+        public Builder targetControls(Input<List<String>> targetControls) {
             this.targetControls = Objects.requireNonNull(targetControls);
             return this;
         }
 
-        public Builder setTargetControls(List<String> targetControls) {
+        public Builder targetControls(List<String> targetControls) {
             this.targetControls = Input.of(Objects.requireNonNull(targetControls));
             return this;
         }
 
-        public Builder setWaitPeriodMs(Input<Integer> waitPeriodMs) {
+        public Builder waitPeriodMs(Input<Integer> waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
 
-        public Builder setWaitPeriodMs(Integer waitPeriodMs) {
+        public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }

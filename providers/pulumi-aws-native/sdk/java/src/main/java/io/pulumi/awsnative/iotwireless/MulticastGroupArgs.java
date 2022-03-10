@@ -137,62 +137,62 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssociateWirelessDevice(@Nullable Input<String> associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable Input<String> associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
-        public Builder setAssociateWirelessDevice(@Nullable String associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = Input.ofNullable(associateWirelessDevice);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisassociateWirelessDevice(@Nullable Input<String> disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable Input<String> disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
-        public Builder setDisassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = Input.ofNullable(disassociateWirelessDevice);
             return this;
         }
 
-        public Builder setLoRaWAN(Input<MulticastGroupLoRaWANArgs> loRaWAN) {
+        public Builder loRaWAN(Input<MulticastGroupLoRaWANArgs> loRaWAN) {
             this.loRaWAN = Objects.requireNonNull(loRaWAN);
             return this;
         }
 
-        public Builder setLoRaWAN(MulticastGroupLoRaWANArgs loRaWAN) {
+        public Builder loRaWAN(MulticastGroupLoRaWANArgs loRaWAN) {
             this.loRaWAN = Input.of(Objects.requireNonNull(loRaWAN));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<MulticastGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<MulticastGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MulticastGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<MulticastGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

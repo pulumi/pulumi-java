@@ -50,7 +50,7 @@ public final class EventSourceMappingOnFailure {
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }

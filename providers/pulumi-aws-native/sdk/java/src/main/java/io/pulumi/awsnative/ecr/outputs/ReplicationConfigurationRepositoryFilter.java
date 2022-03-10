@@ -50,12 +50,12 @@ public final class ReplicationConfigurationRepositoryFilter {
     	      this.filterType = defaults.filterType;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilterType(ReplicationConfigurationFilterType filterType) {
+        public Builder filterType(ReplicationConfigurationFilterType filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
         }

@@ -48,7 +48,7 @@ public final class BucketSseKmsEncryptedObjects {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(BucketSseKmsEncryptedObjectsStatus status) {
+        public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

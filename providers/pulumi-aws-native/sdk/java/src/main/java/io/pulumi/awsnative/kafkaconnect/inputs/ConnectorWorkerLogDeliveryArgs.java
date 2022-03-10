@@ -80,32 +80,32 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setCloudWatchLogs(@Nullable Input<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs) {
+        public Builder cloudWatchLogs(@Nullable Input<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs) {
             this.cloudWatchLogs = cloudWatchLogs;
             return this;
         }
 
-        public Builder setCloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDeliveryArgs cloudWatchLogs) {
+        public Builder cloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDeliveryArgs cloudWatchLogs) {
             this.cloudWatchLogs = Input.ofNullable(cloudWatchLogs);
             return this;
         }
 
-        public Builder setFirehose(@Nullable Input<ConnectorFirehoseLogDeliveryArgs> firehose) {
+        public Builder firehose(@Nullable Input<ConnectorFirehoseLogDeliveryArgs> firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setFirehose(@Nullable ConnectorFirehoseLogDeliveryArgs firehose) {
+        public Builder firehose(@Nullable ConnectorFirehoseLogDeliveryArgs firehose) {
             this.firehose = Input.ofNullable(firehose);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<ConnectorS3LogDeliveryArgs> s3) {
+        public Builder s3(@Nullable Input<ConnectorS3LogDeliveryArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable ConnectorS3LogDeliveryArgs s3) {
+        public Builder s3(@Nullable ConnectorS3LogDeliveryArgs s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }

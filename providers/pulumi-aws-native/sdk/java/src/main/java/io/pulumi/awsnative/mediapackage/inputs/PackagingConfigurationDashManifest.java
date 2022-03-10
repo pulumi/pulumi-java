@@ -118,27 +118,27 @@ public final class PackagingConfigurationDashManifest extends io.pulumi.resource
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setManifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
+        public Builder manifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
             this.manifestLayout = manifestLayout;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setMinBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
+        public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
 
-        public Builder setProfile(@Nullable PackagingConfigurationDashManifestProfile profile) {
+        public Builder profile(@Nullable PackagingConfigurationDashManifestProfile profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

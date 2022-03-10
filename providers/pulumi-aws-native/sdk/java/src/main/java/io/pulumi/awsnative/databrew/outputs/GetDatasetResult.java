@@ -102,22 +102,22 @@ public final class GetDatasetResult {
     	      this.pathOptions = defaults.pathOptions;
         }
 
-        public Builder setFormat(@Nullable DatasetFormat format) {
+        public Builder format(@Nullable DatasetFormat format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormatOptions(@Nullable DatasetFormatOptions formatOptions) {
+        public Builder formatOptions(@Nullable DatasetFormatOptions formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
 
-        public Builder setInput(@Nullable DatasetInput input) {
+        public Builder input(@Nullable DatasetInput input) {
             this.input = input;
             return this;
         }
 
-        public Builder setPathOptions(@Nullable DatasetPathOptions pathOptions) {
+        public Builder pathOptions(@Nullable DatasetPathOptions pathOptions) {
             this.pathOptions = pathOptions;
             return this;
         }

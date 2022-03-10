@@ -102,52 +102,52 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setMarketo(@Nullable Input<IntegrationMarketoSourcePropertiesArgs> marketo) {
+        public Builder marketo(@Nullable Input<IntegrationMarketoSourcePropertiesArgs> marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setMarketo(@Nullable IntegrationMarketoSourcePropertiesArgs marketo) {
+        public Builder marketo(@Nullable IntegrationMarketoSourcePropertiesArgs marketo) {
             this.marketo = Input.ofNullable(marketo);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<IntegrationS3SourcePropertiesArgs> s3) {
+        public Builder s3(@Nullable Input<IntegrationS3SourcePropertiesArgs> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable IntegrationS3SourcePropertiesArgs s3) {
+        public Builder s3(@Nullable IntegrationS3SourcePropertiesArgs s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }
 
-        public Builder setSalesforce(@Nullable Input<IntegrationSalesforceSourcePropertiesArgs> salesforce) {
+        public Builder salesforce(@Nullable Input<IntegrationSalesforceSourcePropertiesArgs> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable IntegrationSalesforceSourcePropertiesArgs salesforce) {
+        public Builder salesforce(@Nullable IntegrationSalesforceSourcePropertiesArgs salesforce) {
             this.salesforce = Input.ofNullable(salesforce);
             return this;
         }
 
-        public Builder setServiceNow(@Nullable Input<IntegrationServiceNowSourcePropertiesArgs> serviceNow) {
+        public Builder serviceNow(@Nullable Input<IntegrationServiceNowSourcePropertiesArgs> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable IntegrationServiceNowSourcePropertiesArgs serviceNow) {
+        public Builder serviceNow(@Nullable IntegrationServiceNowSourcePropertiesArgs serviceNow) {
             this.serviceNow = Input.ofNullable(serviceNow);
             return this;
         }
 
-        public Builder setZendesk(@Nullable Input<IntegrationZendeskSourcePropertiesArgs> zendesk) {
+        public Builder zendesk(@Nullable Input<IntegrationZendeskSourcePropertiesArgs> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
-        public Builder setZendesk(@Nullable IntegrationZendeskSourcePropertiesArgs zendesk) {
+        public Builder zendesk(@Nullable IntegrationZendeskSourcePropertiesArgs zendesk) {
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }

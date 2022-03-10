@@ -87,17 +87,17 @@ public final class DetectorModelFirehose extends io.pulumi.resources.InvokeArgs 
     	      this.separator = defaults.separator;
         }
 
-        public Builder setDeliveryStreamName(String deliveryStreamName) {
+        public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setSeparator(@Nullable String separator) {
+        public Builder separator(@Nullable String separator) {
             this.separator = separator;
             return this;
         }

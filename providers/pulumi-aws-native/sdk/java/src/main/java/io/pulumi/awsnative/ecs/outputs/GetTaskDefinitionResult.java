@@ -61,12 +61,12 @@ public final class GetTaskDefinitionResult {
     	      this.taskDefinitionArn = defaults.taskDefinitionArn;
         }
 
-        public Builder setTags(@Nullable List<TaskDefinitionTag> tags) {
+        public Builder tags(@Nullable List<TaskDefinitionTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaskDefinitionArn(@Nullable String taskDefinitionArn) {
+        public Builder taskDefinitionArn(@Nullable String taskDefinitionArn) {
             this.taskDefinitionArn = taskDefinitionArn;
             return this;
         }

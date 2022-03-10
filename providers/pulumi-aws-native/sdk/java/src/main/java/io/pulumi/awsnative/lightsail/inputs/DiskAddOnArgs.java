@@ -88,32 +88,32 @@ public final class DiskAddOnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAddOnType(Input<String> addOnType) {
+        public Builder addOnType(Input<String> addOnType) {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
 
-        public Builder setAddOnType(String addOnType) {
+        public Builder addOnType(String addOnType) {
             this.addOnType = Input.of(Objects.requireNonNull(addOnType));
             return this;
         }
 
-        public Builder setAutoSnapshotAddOnRequest(@Nullable Input<DiskAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable Input<DiskAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
 
-        public Builder setAutoSnapshotAddOnRequest(@Nullable DiskAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable DiskAutoSnapshotAddOnArgs autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = Input.ofNullable(autoSnapshotAddOnRequest);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<DiskAddOnStatus> status) {
+        public Builder status(@Nullable Input<DiskAddOnStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable DiskAddOnStatus status) {
+        public Builder status(@Nullable DiskAddOnStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

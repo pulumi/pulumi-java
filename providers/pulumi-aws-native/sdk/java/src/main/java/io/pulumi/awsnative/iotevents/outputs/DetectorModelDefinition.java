@@ -67,12 +67,12 @@ public final class DetectorModelDefinition {
     	      this.states = defaults.states;
         }
 
-        public Builder setInitialStateName(String initialStateName) {
+        public Builder initialStateName(String initialStateName) {
             this.initialStateName = Objects.requireNonNull(initialStateName);
             return this;
         }
 
-        public Builder setStates(List<DetectorModelState> states) {
+        public Builder states(List<DetectorModelState> states) {
             this.states = Objects.requireNonNull(states);
             return this;
         }

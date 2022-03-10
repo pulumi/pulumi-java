@@ -69,12 +69,12 @@ public final class GetFlowLogResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FlowLogTag> tags) {
+        public Builder tags(@Nullable List<FlowLogTag> tags) {
             this.tags = tags;
             return this;
         }

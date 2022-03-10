@@ -124,37 +124,37 @@ public final class DataSourceGoogleDriveConfiguration extends io.pulumi.resource
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setExcludeMimeTypes(@Nullable List<String> excludeMimeTypes) {
+        public Builder excludeMimeTypes(@Nullable List<String> excludeMimeTypes) {
             this.excludeMimeTypes = excludeMimeTypes;
             return this;
         }
 
-        public Builder setExcludeSharedDrives(@Nullable List<String> excludeSharedDrives) {
+        public Builder excludeSharedDrives(@Nullable List<String> excludeSharedDrives) {
             this.excludeSharedDrives = excludeSharedDrives;
             return this;
         }
 
-        public Builder setExcludeUserAccounts(@Nullable List<String> excludeUserAccounts) {
+        public Builder excludeUserAccounts(@Nullable List<String> excludeUserAccounts) {
             this.excludeUserAccounts = excludeUserAccounts;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }

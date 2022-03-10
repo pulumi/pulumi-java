@@ -64,12 +64,12 @@ public final class TableProvisionedThroughput extends io.pulumi.resources.Invoke
     	      this.writeCapacityUnits = defaults.writeCapacityUnits;
         }
 
-        public Builder setReadCapacityUnits(Integer readCapacityUnits) {
+        public Builder readCapacityUnits(Integer readCapacityUnits) {
             this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits);
             return this;
         }
 
-        public Builder setWriteCapacityUnits(Integer writeCapacityUnits) {
+        public Builder writeCapacityUnits(Integer writeCapacityUnits) {
             this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
             return this;
         }

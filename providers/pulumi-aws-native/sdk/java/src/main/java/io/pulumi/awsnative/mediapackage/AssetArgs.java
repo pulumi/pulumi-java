@@ -120,52 +120,52 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setPackagingGroupId(Input<String> packagingGroupId) {
+        public Builder packagingGroupId(Input<String> packagingGroupId) {
             this.packagingGroupId = Objects.requireNonNull(packagingGroupId);
             return this;
         }
 
-        public Builder setPackagingGroupId(String packagingGroupId) {
+        public Builder packagingGroupId(String packagingGroupId) {
             this.packagingGroupId = Input.of(Objects.requireNonNull(packagingGroupId));
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setSourceArn(Input<String> sourceArn) {
+        public Builder sourceArn(Input<String> sourceArn) {
             this.sourceArn = Objects.requireNonNull(sourceArn);
             return this;
         }
 
-        public Builder setSourceArn(String sourceArn) {
+        public Builder sourceArn(String sourceArn) {
             this.sourceArn = Input.of(Objects.requireNonNull(sourceArn));
             return this;
         }
 
-        public Builder setSourceRoleArn(Input<String> sourceRoleArn) {
+        public Builder sourceRoleArn(Input<String> sourceRoleArn) {
             this.sourceRoleArn = Objects.requireNonNull(sourceRoleArn);
             return this;
         }
 
-        public Builder setSourceRoleArn(String sourceRoleArn) {
+        public Builder sourceRoleArn(String sourceRoleArn) {
             this.sourceRoleArn = Input.of(Objects.requireNonNull(sourceRoleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AssetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AssetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetTagArgs> tags) {
+        public Builder tags(@Nullable List<AssetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

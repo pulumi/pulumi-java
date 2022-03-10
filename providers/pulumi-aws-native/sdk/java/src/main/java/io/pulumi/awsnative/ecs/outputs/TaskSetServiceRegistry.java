@@ -100,22 +100,22 @@ public final class TaskSetServiceRegistry {
     	      this.registryArn = defaults.registryArn;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRegistryArn(@Nullable String registryArn) {
+        public Builder registryArn(@Nullable String registryArn) {
             this.registryArn = registryArn;
             return this;
         }

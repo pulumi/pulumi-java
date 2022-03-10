@@ -91,32 +91,32 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
     	      this.queue = defaults.queue;
         }
 
-        public Builder setEvent(Input<String> event) {
+        public Builder event(Input<String> event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Input.of(Objects.requireNonNull(event));
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketNotificationFilterArgs> filter) {
+        public Builder filter(@Nullable Input<BucketNotificationFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketNotificationFilterArgs filter) {
+        public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setQueue(Input<String> queue) {
+        public Builder queue(Input<String> queue) {
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
 
-        public Builder setQueue(String queue) {
+        public Builder queue(String queue) {
             this.queue = Input.of(Objects.requireNonNull(queue));
             return this;
         }

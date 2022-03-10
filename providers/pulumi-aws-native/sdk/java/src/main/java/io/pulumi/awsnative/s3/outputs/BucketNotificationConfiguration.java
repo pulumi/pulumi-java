@@ -71,22 +71,22 @@ public final class BucketNotificationConfiguration {
     	      this.topicConfigurations = defaults.topicConfigurations;
         }
 
-        public Builder setEventBridgeConfiguration(@Nullable BucketEventBridgeConfiguration eventBridgeConfiguration) {
+        public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfiguration eventBridgeConfiguration) {
             this.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
 
-        public Builder setLambdaConfigurations(@Nullable List<BucketLambdaConfiguration> lambdaConfigurations) {
+        public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfiguration> lambdaConfigurations) {
             this.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
 
-        public Builder setQueueConfigurations(@Nullable List<BucketQueueConfiguration> queueConfigurations) {
+        public Builder queueConfigurations(@Nullable List<BucketQueueConfiguration> queueConfigurations) {
             this.queueConfigurations = queueConfigurations;
             return this;
         }
 
-        public Builder setTopicConfigurations(@Nullable List<BucketTopicConfiguration> topicConfigurations) {
+        public Builder topicConfigurations(@Nullable List<BucketTopicConfiguration> topicConfigurations) {
             this.topicConfigurations = topicConfigurations;
             return this;
         }

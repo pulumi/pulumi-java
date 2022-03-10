@@ -138,62 +138,62 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetCheckNames = defaults.targetCheckNames;
         }
 
-        public Builder setDayOfMonth(@Nullable Input<String> dayOfMonth) {
+        public Builder dayOfMonth(@Nullable Input<String> dayOfMonth) {
             this.dayOfMonth = dayOfMonth;
             return this;
         }
 
-        public Builder setDayOfMonth(@Nullable String dayOfMonth) {
+        public Builder dayOfMonth(@Nullable String dayOfMonth) {
             this.dayOfMonth = Input.ofNullable(dayOfMonth);
             return this;
         }
 
-        public Builder setDayOfWeek(@Nullable Input<ScheduledAuditDayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(@Nullable Input<ScheduledAuditDayOfWeek> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-        public Builder setDayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
+        public Builder dayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
             this.dayOfWeek = Input.ofNullable(dayOfWeek);
             return this;
         }
 
-        public Builder setFrequency(Input<ScheduledAuditFrequency> frequency) {
+        public Builder frequency(Input<ScheduledAuditFrequency> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setFrequency(ScheduledAuditFrequency frequency) {
+        public Builder frequency(ScheduledAuditFrequency frequency) {
             this.frequency = Input.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder setScheduledAuditName(@Nullable Input<String> scheduledAuditName) {
+        public Builder scheduledAuditName(@Nullable Input<String> scheduledAuditName) {
             this.scheduledAuditName = scheduledAuditName;
             return this;
         }
 
-        public Builder setScheduledAuditName(@Nullable String scheduledAuditName) {
+        public Builder scheduledAuditName(@Nullable String scheduledAuditName) {
             this.scheduledAuditName = Input.ofNullable(scheduledAuditName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ScheduledAuditTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ScheduledAuditTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ScheduledAuditTagArgs> tags) {
+        public Builder tags(@Nullable List<ScheduledAuditTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetCheckNames(Input<List<String>> targetCheckNames) {
+        public Builder targetCheckNames(Input<List<String>> targetCheckNames) {
             this.targetCheckNames = Objects.requireNonNull(targetCheckNames);
             return this;
         }
 
-        public Builder setTargetCheckNames(List<String> targetCheckNames) {
+        public Builder targetCheckNames(List<String> targetCheckNames) {
             this.targetCheckNames = Input.of(Objects.requireNonNull(targetCheckNames));
             return this;
         }

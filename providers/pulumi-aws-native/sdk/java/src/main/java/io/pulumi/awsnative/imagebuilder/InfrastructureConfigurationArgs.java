@@ -251,132 +251,132 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
     	      this.terminateInstanceOnFailure = defaults.terminateInstanceOnFailure;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInstanceMetadataOptions(@Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions) {
+        public Builder instanceMetadataOptions(@Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions) {
             this.instanceMetadataOptions = instanceMetadataOptions;
             return this;
         }
 
-        public Builder setInstanceMetadataOptions(@Nullable InfrastructureConfigurationInstanceMetadataOptionsArgs instanceMetadataOptions) {
+        public Builder instanceMetadataOptions(@Nullable InfrastructureConfigurationInstanceMetadataOptionsArgs instanceMetadataOptions) {
             this.instanceMetadataOptions = Input.ofNullable(instanceMetadataOptions);
             return this;
         }
 
-        public Builder setInstanceProfileName(Input<String> instanceProfileName) {
+        public Builder instanceProfileName(Input<String> instanceProfileName) {
             this.instanceProfileName = Objects.requireNonNull(instanceProfileName);
             return this;
         }
 
-        public Builder setInstanceProfileName(String instanceProfileName) {
+        public Builder instanceProfileName(String instanceProfileName) {
             this.instanceProfileName = Input.of(Objects.requireNonNull(instanceProfileName));
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable Input<List<String>> instanceTypes) {
+        public Builder instanceTypes(@Nullable Input<List<String>> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable List<String> instanceTypes) {
+        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = Input.ofNullable(instanceTypes);
             return this;
         }
 
-        public Builder setKeyPair(@Nullable Input<String> keyPair) {
+        public Builder keyPair(@Nullable Input<String> keyPair) {
             this.keyPair = keyPair;
             return this;
         }
 
-        public Builder setKeyPair(@Nullable String keyPair) {
+        public Builder keyPair(@Nullable String keyPair) {
             this.keyPair = Input.ofNullable(keyPair);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<InfrastructureConfigurationLoggingArgs> logging) {
+        public Builder logging(@Nullable Input<InfrastructureConfigurationLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable InfrastructureConfigurationLoggingArgs logging) {
+        public Builder logging(@Nullable InfrastructureConfigurationLoggingArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceTags(@Nullable Input<Object> resourceTags) {
+        public Builder resourceTags(@Nullable Input<Object> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable Object resourceTags) {
+        public Builder resourceTags(@Nullable Object resourceTags) {
             this.resourceTags = Input.ofNullable(resourceTags);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Input.ofNullable(snsTopicArn);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Input<Object> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTerminateInstanceOnFailure(@Nullable Input<Boolean> terminateInstanceOnFailure) {
+        public Builder terminateInstanceOnFailure(@Nullable Input<Boolean> terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
 
-        public Builder setTerminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
+        public Builder terminateInstanceOnFailure(@Nullable Boolean terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = Input.ofNullable(terminateInstanceOnFailure);
             return this;
         }

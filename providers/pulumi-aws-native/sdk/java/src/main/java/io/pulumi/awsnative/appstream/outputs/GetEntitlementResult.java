@@ -77,27 +77,27 @@ public final class GetEntitlementResult {
     	      this.lastModifiedTime = defaults.lastModifiedTime;
         }
 
-        public Builder setAppVisibility(@Nullable String appVisibility) {
+        public Builder appVisibility(@Nullable String appVisibility) {
             this.appVisibility = appVisibility;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<EntitlementAttribute> attributes) {
+        public Builder attributes(@Nullable List<EntitlementAttribute> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }

@@ -90,42 +90,42 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder setActivationState(Input<RouteActivationState> activationState) {
+        public Builder activationState(Input<RouteActivationState> activationState) {
             this.activationState = Objects.requireNonNull(activationState);
             return this;
         }
 
-        public Builder setActivationState(RouteActivationState activationState) {
+        public Builder activationState(RouteActivationState activationState) {
             this.activationState = Input.of(Objects.requireNonNull(activationState));
             return this;
         }
 
-        public Builder setIncludeChildPaths(@Nullable Input<Boolean> includeChildPaths) {
+        public Builder includeChildPaths(@Nullable Input<Boolean> includeChildPaths) {
             this.includeChildPaths = includeChildPaths;
             return this;
         }
 
-        public Builder setIncludeChildPaths(@Nullable Boolean includeChildPaths) {
+        public Builder includeChildPaths(@Nullable Boolean includeChildPaths) {
             this.includeChildPaths = Input.ofNullable(includeChildPaths);
             return this;
         }
 
-        public Builder setMethods(@Nullable Input<List<RouteMethod>> methods) {
+        public Builder methods(@Nullable Input<List<RouteMethod>> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<RouteMethod> methods) {
+        public Builder methods(@Nullable List<RouteMethod> methods) {
             this.methods = Input.ofNullable(methods);
             return this;
         }
 
-        public Builder setSourcePath(@Nullable Input<String> sourcePath) {
+        public Builder sourcePath(@Nullable Input<String> sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }
 
-        public Builder setSourcePath(@Nullable String sourcePath) {
+        public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = Input.ofNullable(sourcePath);
             return this;
         }

@@ -134,32 +134,32 @@ public final class GetStreamResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDataRetentionInHours(@Nullable Integer dataRetentionInHours) {
+        public Builder dataRetentionInHours(@Nullable Integer dataRetentionInHours) {
             this.dataRetentionInHours = dataRetentionInHours;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setMediaType(@Nullable String mediaType) {
+        public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StreamTag> tags) {
+        public Builder tags(@Nullable List<StreamTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -71,22 +71,22 @@ public final class GetChannelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setChannelStorage(@Nullable ChannelStorage channelStorage) {
+        public Builder channelStorage(@Nullable ChannelStorage channelStorage) {
             this.channelStorage = channelStorage;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable ChannelRetentionPeriod retentionPeriod) {
+        public Builder retentionPeriod(@Nullable ChannelRetentionPeriod retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ChannelTag> tags) {
+        public Builder tags(@Nullable List<ChannelTag> tags) {
             this.tags = tags;
             return this;
         }

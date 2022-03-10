@@ -94,12 +94,12 @@ public final class ThemeResourcePermission {
     	      this.principal = defaults.principal;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }

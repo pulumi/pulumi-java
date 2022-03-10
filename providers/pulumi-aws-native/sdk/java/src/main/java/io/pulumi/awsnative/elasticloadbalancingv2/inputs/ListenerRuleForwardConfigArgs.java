@@ -64,22 +64,22 @@ public final class ListenerRuleForwardConfigArgs extends io.pulumi.resources.Res
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setTargetGroupStickinessConfig(@Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig) {
+        public Builder targetGroupStickinessConfig(@Nullable Input<ListenerRuleTargetGroupStickinessConfigArgs> targetGroupStickinessConfig) {
             this.targetGroupStickinessConfig = targetGroupStickinessConfig;
             return this;
         }
 
-        public Builder setTargetGroupStickinessConfig(@Nullable ListenerRuleTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
+        public Builder targetGroupStickinessConfig(@Nullable ListenerRuleTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
             this.targetGroupStickinessConfig = Input.ofNullable(targetGroupStickinessConfig);
             return this;
         }
 
-        public Builder setTargetGroups(@Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups) {
+        public Builder targetGroups(@Nullable Input<List<ListenerRuleTargetGroupTupleArgs>> targetGroups) {
             this.targetGroups = targetGroups;
             return this;
         }
 
-        public Builder setTargetGroups(@Nullable List<ListenerRuleTargetGroupTupleArgs> targetGroups) {
+        public Builder targetGroups(@Nullable List<ListenerRuleTargetGroupTupleArgs> targetGroups) {
             this.targetGroups = Input.ofNullable(targetGroups);
             return this;
         }

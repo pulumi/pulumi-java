@@ -135,32 +135,32 @@ public final class GetScheduledAuditResult {
     	      this.targetCheckNames = defaults.targetCheckNames;
         }
 
-        public Builder setDayOfMonth(@Nullable String dayOfMonth) {
+        public Builder dayOfMonth(@Nullable String dayOfMonth) {
             this.dayOfMonth = dayOfMonth;
             return this;
         }
 
-        public Builder setDayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
+        public Builder dayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-        public Builder setFrequency(@Nullable ScheduledAuditFrequency frequency) {
+        public Builder frequency(@Nullable ScheduledAuditFrequency frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setScheduledAuditArn(@Nullable String scheduledAuditArn) {
+        public Builder scheduledAuditArn(@Nullable String scheduledAuditArn) {
             this.scheduledAuditArn = scheduledAuditArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ScheduledAuditTag> tags) {
+        public Builder tags(@Nullable List<ScheduledAuditTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetCheckNames(@Nullable List<String> targetCheckNames) {
+        public Builder targetCheckNames(@Nullable List<String> targetCheckNames) {
             this.targetCheckNames = targetCheckNames;
             return this;
         }

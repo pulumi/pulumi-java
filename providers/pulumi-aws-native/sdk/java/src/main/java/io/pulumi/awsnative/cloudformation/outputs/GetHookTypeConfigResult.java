@@ -87,17 +87,17 @@ public final class GetHookTypeConfigResult {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setConfiguration(@Nullable String configuration) {
+        public Builder configuration(@Nullable String configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfigurationArn(@Nullable String configurationArn) {
+        public Builder configurationArn(@Nullable String configurationArn) {
             this.configurationArn = configurationArn;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }

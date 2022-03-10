@@ -70,22 +70,22 @@ public final class GetRealtimeLogConfigResult {
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEndPoints(@Nullable List<RealtimeLogConfigEndPoint> endPoints) {
+        public Builder endPoints(@Nullable List<RealtimeLogConfigEndPoint> endPoints) {
             this.endPoints = endPoints;
             return this;
         }
 
-        public Builder setFields(@Nullable List<String> fields) {
+        public Builder fields(@Nullable List<String> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Double samplingRate) {
+        public Builder samplingRate(@Nullable Double samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }

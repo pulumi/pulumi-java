@@ -41,7 +41,7 @@ public final class CidrResult {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }

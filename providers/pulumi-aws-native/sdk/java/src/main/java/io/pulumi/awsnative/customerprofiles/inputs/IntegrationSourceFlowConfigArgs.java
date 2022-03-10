@@ -89,42 +89,42 @@ public final class IntegrationSourceFlowConfigArgs extends io.pulumi.resources.R
     	      this.sourceConnectorProperties = defaults.sourceConnectorProperties;
         }
 
-        public Builder setConnectorProfileName(@Nullable Input<String> connectorProfileName) {
+        public Builder connectorProfileName(@Nullable Input<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Input.ofNullable(connectorProfileName);
             return this;
         }
 
-        public Builder setConnectorType(Input<IntegrationConnectorType> connectorType) {
+        public Builder connectorType(Input<IntegrationConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setConnectorType(IntegrationConnectorType connectorType) {
+        public Builder connectorType(IntegrationConnectorType connectorType) {
             this.connectorType = Input.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder setIncrementalPullConfig(@Nullable Input<IntegrationIncrementalPullConfigArgs> incrementalPullConfig) {
+        public Builder incrementalPullConfig(@Nullable Input<IntegrationIncrementalPullConfigArgs> incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
 
-        public Builder setIncrementalPullConfig(@Nullable IntegrationIncrementalPullConfigArgs incrementalPullConfig) {
+        public Builder incrementalPullConfig(@Nullable IntegrationIncrementalPullConfigArgs incrementalPullConfig) {
             this.incrementalPullConfig = Input.ofNullable(incrementalPullConfig);
             return this;
         }
 
-        public Builder setSourceConnectorProperties(Input<IntegrationSourceConnectorPropertiesArgs> sourceConnectorProperties) {
+        public Builder sourceConnectorProperties(Input<IntegrationSourceConnectorPropertiesArgs> sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
 
-        public Builder setSourceConnectorProperties(IntegrationSourceConnectorPropertiesArgs sourceConnectorProperties) {
+        public Builder sourceConnectorProperties(IntegrationSourceConnectorPropertiesArgs sourceConnectorProperties) {
             this.sourceConnectorProperties = Input.of(Objects.requireNonNull(sourceConnectorProperties));
             return this;
         }

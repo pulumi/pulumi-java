@@ -74,22 +74,22 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
     	      this.keyPrefixEquals = defaults.keyPrefixEquals;
         }
 
-        public Builder setHttpErrorCodeReturnedEquals(@Nullable Input<String> httpErrorCodeReturnedEquals) {
+        public Builder httpErrorCodeReturnedEquals(@Nullable Input<String> httpErrorCodeReturnedEquals) {
             this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
 
-        public Builder setHttpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
+        public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
             this.httpErrorCodeReturnedEquals = Input.ofNullable(httpErrorCodeReturnedEquals);
             return this;
         }
 
-        public Builder setKeyPrefixEquals(@Nullable Input<String> keyPrefixEquals) {
+        public Builder keyPrefixEquals(@Nullable Input<String> keyPrefixEquals) {
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
 
-        public Builder setKeyPrefixEquals(@Nullable String keyPrefixEquals) {
+        public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
             this.keyPrefixEquals = Input.ofNullable(keyPrefixEquals);
             return this;
         }

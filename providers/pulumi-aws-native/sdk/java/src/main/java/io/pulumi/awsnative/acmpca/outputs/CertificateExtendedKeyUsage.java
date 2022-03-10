@@ -51,12 +51,12 @@ public final class CertificateExtendedKeyUsage {
     	      this.extendedKeyUsageType = defaults.extendedKeyUsageType;
         }
 
-        public Builder setExtendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
+        public Builder extendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
             this.extendedKeyUsageObjectIdentifier = extendedKeyUsageObjectIdentifier;
             return this;
         }
 
-        public Builder setExtendedKeyUsageType(@Nullable String extendedKeyUsageType) {
+        public Builder extendedKeyUsageType(@Nullable String extendedKeyUsageType) {
             this.extendedKeyUsageType = extendedKeyUsageType;
             return this;
         }

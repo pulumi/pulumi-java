@@ -124,52 +124,52 @@ public final class PipelineActivity {
     	      this.selectAttributes = defaults.selectAttributes;
         }
 
-        public Builder setAddAttributes(@Nullable PipelineAddAttributes addAttributes) {
+        public Builder addAttributes(@Nullable PipelineAddAttributes addAttributes) {
             this.addAttributes = addAttributes;
             return this;
         }
 
-        public Builder setChannel(@Nullable PipelineChannel channel) {
+        public Builder channel(@Nullable PipelineChannel channel) {
             this.channel = channel;
             return this;
         }
 
-        public Builder setDatastore(@Nullable PipelineDatastore datastore) {
+        public Builder datastore(@Nullable PipelineDatastore datastore) {
             this.datastore = datastore;
             return this;
         }
 
-        public Builder setDeviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich) {
+        public Builder deviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich) {
             this.deviceRegistryEnrich = deviceRegistryEnrich;
             return this;
         }
 
-        public Builder setDeviceShadowEnrich(@Nullable PipelineDeviceShadowEnrich deviceShadowEnrich) {
+        public Builder deviceShadowEnrich(@Nullable PipelineDeviceShadowEnrich deviceShadowEnrich) {
             this.deviceShadowEnrich = deviceShadowEnrich;
             return this;
         }
 
-        public Builder setFilter(@Nullable PipelineFilter filter) {
+        public Builder filter(@Nullable PipelineFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setLambda(@Nullable PipelineLambda lambda) {
+        public Builder lambda(@Nullable PipelineLambda lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setMath(@Nullable PipelineMath math) {
+        public Builder math(@Nullable PipelineMath math) {
             this.math = math;
             return this;
         }
 
-        public Builder setRemoveAttributes(@Nullable PipelineRemoveAttributes removeAttributes) {
+        public Builder removeAttributes(@Nullable PipelineRemoveAttributes removeAttributes) {
             this.removeAttributes = removeAttributes;
             return this;
         }
 
-        public Builder setSelectAttributes(@Nullable PipelineSelectAttributes selectAttributes) {
+        public Builder selectAttributes(@Nullable PipelineSelectAttributes selectAttributes) {
             this.selectAttributes = selectAttributes;
             return this;
         }

@@ -72,22 +72,22 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     	      this.healthCheckTags = defaults.healthCheckTags;
         }
 
-        public Builder setHealthCheckConfig(Input<HealthCheckConfigPropertiesArgs> healthCheckConfig) {
+        public Builder healthCheckConfig(Input<HealthCheckConfigPropertiesArgs> healthCheckConfig) {
             this.healthCheckConfig = Objects.requireNonNull(healthCheckConfig);
             return this;
         }
 
-        public Builder setHealthCheckConfig(HealthCheckConfigPropertiesArgs healthCheckConfig) {
+        public Builder healthCheckConfig(HealthCheckConfigPropertiesArgs healthCheckConfig) {
             this.healthCheckConfig = Input.of(Objects.requireNonNull(healthCheckConfig));
             return this;
         }
 
-        public Builder setHealthCheckTags(@Nullable Input<List<HealthCheckTagArgs>> healthCheckTags) {
+        public Builder healthCheckTags(@Nullable Input<List<HealthCheckTagArgs>> healthCheckTags) {
             this.healthCheckTags = healthCheckTags;
             return this;
         }
 
-        public Builder setHealthCheckTags(@Nullable List<HealthCheckTagArgs> healthCheckTags) {
+        public Builder healthCheckTags(@Nullable List<HealthCheckTagArgs> healthCheckTags) {
             this.healthCheckTags = Input.ofNullable(healthCheckTags);
             return this;
         }

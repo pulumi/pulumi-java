@@ -50,7 +50,7 @@ public final class GetResourcePolicyResult {
     	      this.policyDocument = defaults.policyDocument;
         }
 
-        public Builder setPolicyDocument(@Nullable String policyDocument) {
+        public Builder policyDocument(@Nullable String policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
     	      this.localGatewayRouteTableId = defaults.localGatewayRouteTableId;
         }
 
-        public Builder setDestinationCidrBlock(String destinationCidrBlock) {
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }

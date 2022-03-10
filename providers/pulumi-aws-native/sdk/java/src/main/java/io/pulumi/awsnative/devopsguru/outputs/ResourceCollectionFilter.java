@@ -42,7 +42,7 @@ public final class ResourceCollectionFilter {
     	      this.cloudFormation = defaults.cloudFormation;
         }
 
-        public Builder setCloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
+        public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
             this.cloudFormation = cloudFormation;
             return this;
         }

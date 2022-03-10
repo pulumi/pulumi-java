@@ -99,27 +99,27 @@ public final class DistributionViewerCertificate extends io.pulumi.resources.Inv
     	      this.sslSupportMethod = defaults.sslSupportMethod;
         }
 
-        public Builder setAcmCertificateArn(@Nullable String acmCertificateArn) {
+        public Builder acmCertificateArn(@Nullable String acmCertificateArn) {
             this.acmCertificateArn = acmCertificateArn;
             return this;
         }
 
-        public Builder setCloudFrontDefaultCertificate(@Nullable Boolean cloudFrontDefaultCertificate) {
+        public Builder cloudFrontDefaultCertificate(@Nullable Boolean cloudFrontDefaultCertificate) {
             this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
             return this;
         }
 
-        public Builder setIamCertificateId(@Nullable String iamCertificateId) {
+        public Builder iamCertificateId(@Nullable String iamCertificateId) {
             this.iamCertificateId = iamCertificateId;
             return this;
         }
 
-        public Builder setMinimumProtocolVersion(@Nullable String minimumProtocolVersion) {
+        public Builder minimumProtocolVersion(@Nullable String minimumProtocolVersion) {
             this.minimumProtocolVersion = minimumProtocolVersion;
             return this;
         }
 
-        public Builder setSslSupportMethod(@Nullable String sslSupportMethod) {
+        public Builder sslSupportMethod(@Nullable String sslSupportMethod) {
             this.sslSupportMethod = sslSupportMethod;
             return this;
         }

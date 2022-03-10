@@ -87,32 +87,32 @@ public final class DomainResourceSpecArgs extends io.pulumi.resources.ResourceAr
     	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
         }
 
-        public Builder setInstanceType(@Nullable Input<DomainResourceSpecInstanceType> instanceType) {
+        public Builder instanceType(@Nullable Input<DomainResourceSpecInstanceType> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
+        public Builder instanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setSageMakerImageArn(@Nullable Input<String> sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable Input<String> sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
-        public Builder setSageMakerImageArn(@Nullable String sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = Input.ofNullable(sageMakerImageArn);
             return this;
         }
 
-        public Builder setSageMakerImageVersionArn(@Nullable Input<String> sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable Input<String> sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
 
-        public Builder setSageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = Input.ofNullable(sageMakerImageVersionArn);
             return this;
         }

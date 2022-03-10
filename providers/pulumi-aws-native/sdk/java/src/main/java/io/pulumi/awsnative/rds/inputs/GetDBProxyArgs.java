@@ -51,7 +51,7 @@ public final class GetDBProxyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.dBProxyName = defaults.dBProxyName;
         }
 
-        public Builder setDBProxyName(String dBProxyName) {
+        public Builder dBProxyName(String dBProxyName) {
             this.dBProxyName = Objects.requireNonNull(dBProxyName);
             return this;
         }

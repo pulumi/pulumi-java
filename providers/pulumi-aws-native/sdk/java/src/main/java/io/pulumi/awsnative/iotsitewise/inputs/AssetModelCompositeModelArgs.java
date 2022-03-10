@@ -108,42 +108,42 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setCompositeModelProperties(@Nullable Input<List<AssetModelPropertyArgs>> compositeModelProperties) {
+        public Builder compositeModelProperties(@Nullable Input<List<AssetModelPropertyArgs>> compositeModelProperties) {
             this.compositeModelProperties = compositeModelProperties;
             return this;
         }
 
-        public Builder setCompositeModelProperties(@Nullable List<AssetModelPropertyArgs> compositeModelProperties) {
+        public Builder compositeModelProperties(@Nullable List<AssetModelPropertyArgs> compositeModelProperties) {
             this.compositeModelProperties = Input.ofNullable(compositeModelProperties);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

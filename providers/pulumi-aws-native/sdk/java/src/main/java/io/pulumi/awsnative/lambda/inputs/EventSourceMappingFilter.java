@@ -57,7 +57,7 @@ public final class EventSourceMappingFilter extends io.pulumi.resources.InvokeAr
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }

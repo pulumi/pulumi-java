@@ -123,72 +123,72 @@ public final class IndexJwtTokenTypeConfigurationArgs extends io.pulumi.resource
     	      this.userNameAttributeField = defaults.userNameAttributeField;
         }
 
-        public Builder setClaimRegex(@Nullable Input<String> claimRegex) {
+        public Builder claimRegex(@Nullable Input<String> claimRegex) {
             this.claimRegex = claimRegex;
             return this;
         }
 
-        public Builder setClaimRegex(@Nullable String claimRegex) {
+        public Builder claimRegex(@Nullable String claimRegex) {
             this.claimRegex = Input.ofNullable(claimRegex);
             return this;
         }
 
-        public Builder setGroupAttributeField(@Nullable Input<String> groupAttributeField) {
+        public Builder groupAttributeField(@Nullable Input<String> groupAttributeField) {
             this.groupAttributeField = groupAttributeField;
             return this;
         }
 
-        public Builder setGroupAttributeField(@Nullable String groupAttributeField) {
+        public Builder groupAttributeField(@Nullable String groupAttributeField) {
             this.groupAttributeField = Input.ofNullable(groupAttributeField);
             return this;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }
 
-        public Builder setKeyLocation(Input<IndexKeyLocation> keyLocation) {
+        public Builder keyLocation(Input<IndexKeyLocation> keyLocation) {
             this.keyLocation = Objects.requireNonNull(keyLocation);
             return this;
         }
 
-        public Builder setKeyLocation(IndexKeyLocation keyLocation) {
+        public Builder keyLocation(IndexKeyLocation keyLocation) {
             this.keyLocation = Input.of(Objects.requireNonNull(keyLocation));
             return this;
         }
 
-        public Builder setSecretManagerArn(@Nullable Input<String> secretManagerArn) {
+        public Builder secretManagerArn(@Nullable Input<String> secretManagerArn) {
             this.secretManagerArn = secretManagerArn;
             return this;
         }
 
-        public Builder setSecretManagerArn(@Nullable String secretManagerArn) {
+        public Builder secretManagerArn(@Nullable String secretManagerArn) {
             this.secretManagerArn = Input.ofNullable(secretManagerArn);
             return this;
         }
 
-        public Builder setURL(@Nullable Input<String> uRL) {
+        public Builder uRL(@Nullable Input<String> uRL) {
             this.uRL = uRL;
             return this;
         }
 
-        public Builder setURL(@Nullable String uRL) {
+        public Builder uRL(@Nullable String uRL) {
             this.uRL = Input.ofNullable(uRL);
             return this;
         }
 
-        public Builder setUserNameAttributeField(@Nullable Input<String> userNameAttributeField) {
+        public Builder userNameAttributeField(@Nullable Input<String> userNameAttributeField) {
             this.userNameAttributeField = userNameAttributeField;
             return this;
         }
 
-        public Builder setUserNameAttributeField(@Nullable String userNameAttributeField) {
+        public Builder userNameAttributeField(@Nullable String userNameAttributeField) {
             this.userNameAttributeField = Input.ofNullable(userNameAttributeField);
             return this;
         }

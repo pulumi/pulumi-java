@@ -101,42 +101,42 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccessString(Input<String> accessString) {
+        public Builder accessString(Input<String> accessString) {
             this.accessString = Objects.requireNonNull(accessString);
             return this;
         }
 
-        public Builder setAccessString(String accessString) {
+        public Builder accessString(String accessString) {
             this.accessString = Input.of(Objects.requireNonNull(accessString));
             return this;
         }
 
-        public Builder setAuthenticationMode(Input<AuthenticationModePropertiesArgs> authenticationMode) {
+        public Builder authenticationMode(Input<AuthenticationModePropertiesArgs> authenticationMode) {
             this.authenticationMode = Objects.requireNonNull(authenticationMode);
             return this;
         }
 
-        public Builder setAuthenticationMode(AuthenticationModePropertiesArgs authenticationMode) {
+        public Builder authenticationMode(AuthenticationModePropertiesArgs authenticationMode) {
             this.authenticationMode = Input.of(Objects.requireNonNull(authenticationMode));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<UserTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<UserTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<UserTagArgs> tags) {
+        public Builder tags(@Nullable List<UserTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

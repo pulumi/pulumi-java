@@ -42,7 +42,7 @@ public final class WebACLBlockAction {
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable WebACLCustomResponse customResponse) {
+        public Builder customResponse(@Nullable WebACLCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
         }

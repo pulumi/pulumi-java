@@ -42,7 +42,7 @@ public final class DataSourceConfluencePageConfiguration {
     	      this.pageFieldMappings = defaults.pageFieldMappings;
         }
 
-        public Builder setPageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
+        public Builder pageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
             this.pageFieldMappings = pageFieldMappings;
             return this;
         }

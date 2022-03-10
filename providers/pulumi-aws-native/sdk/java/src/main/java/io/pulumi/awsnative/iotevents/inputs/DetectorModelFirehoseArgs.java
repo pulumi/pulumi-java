@@ -87,32 +87,32 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
     	      this.separator = defaults.separator;
         }
 
-        public Builder setDeliveryStreamName(Input<String> deliveryStreamName) {
+        public Builder deliveryStreamName(Input<String> deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
-        public Builder setDeliveryStreamName(String deliveryStreamName) {
+        public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Input.of(Objects.requireNonNull(deliveryStreamName));
             return this;
         }
 
-        public Builder setPayload(@Nullable Input<DetectorModelPayloadArgs> payload) {
+        public Builder payload(@Nullable Input<DetectorModelPayloadArgs> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayloadArgs payload) {
+        public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }
 
-        public Builder setSeparator(@Nullable Input<String> separator) {
+        public Builder separator(@Nullable Input<String> separator) {
             this.separator = separator;
             return this;
         }
 
-        public Builder setSeparator(@Nullable String separator) {
+        public Builder separator(@Nullable String separator) {
             this.separator = Input.ofNullable(separator);
             return this;
         }

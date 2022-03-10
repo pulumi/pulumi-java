@@ -84,17 +84,17 @@ public final class GetMemberInvitationResult {
     	      this.message = defaults.message;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Boolean disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
-        public Builder setMemberEmailAddress(@Nullable String memberEmailAddress) {
+        public Builder memberEmailAddress(@Nullable String memberEmailAddress) {
             this.memberEmailAddress = memberEmailAddress;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }

@@ -133,32 +133,32 @@ public final class ApplicationComponentMonitoringSetting {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setComponentARN(@Nullable String componentARN) {
+        public Builder componentARN(@Nullable String componentARN) {
             this.componentARN = componentARN;
             return this;
         }
 
-        public Builder setComponentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
+        public Builder componentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
             this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode);
             return this;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setCustomComponentConfiguration(@Nullable ApplicationComponentConfiguration customComponentConfiguration) {
+        public Builder customComponentConfiguration(@Nullable ApplicationComponentConfiguration customComponentConfiguration) {
             this.customComponentConfiguration = customComponentConfiguration;
             return this;
         }
 
-        public Builder setDefaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration) {
+        public Builder defaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration) {
             this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

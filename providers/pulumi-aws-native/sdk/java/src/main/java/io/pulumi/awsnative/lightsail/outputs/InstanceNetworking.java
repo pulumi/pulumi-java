@@ -61,12 +61,12 @@ public final class InstanceNetworking {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setMonthlyTransfer(@Nullable InstanceMonthlyTransfer monthlyTransfer) {
+        public Builder monthlyTransfer(@Nullable InstanceMonthlyTransfer monthlyTransfer) {
             this.monthlyTransfer = monthlyTransfer;
             return this;
         }
 
-        public Builder setPorts(List<InstancePort> ports) {
+        public Builder ports(List<InstancePort> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

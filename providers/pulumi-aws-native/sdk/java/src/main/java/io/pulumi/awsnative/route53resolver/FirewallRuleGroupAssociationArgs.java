@@ -138,62 +138,62 @@ public final class FirewallRuleGroupAssociationArgs extends io.pulumi.resources.
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setFirewallRuleGroupId(Input<String> firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(Input<String> firewallRuleGroupId) {
             this.firewallRuleGroupId = Objects.requireNonNull(firewallRuleGroupId);
             return this;
         }
 
-        public Builder setFirewallRuleGroupId(String firewallRuleGroupId) {
+        public Builder firewallRuleGroupId(String firewallRuleGroupId) {
             this.firewallRuleGroupId = Input.of(Objects.requireNonNull(firewallRuleGroupId));
             return this;
         }
 
-        public Builder setMutationProtection(@Nullable Input<FirewallRuleGroupAssociationMutationProtection> mutationProtection) {
+        public Builder mutationProtection(@Nullable Input<FirewallRuleGroupAssociationMutationProtection> mutationProtection) {
             this.mutationProtection = mutationProtection;
             return this;
         }
 
-        public Builder setMutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
+        public Builder mutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
             this.mutationProtection = Input.ofNullable(mutationProtection);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FirewallRuleGroupAssociationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FirewallRuleGroupAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallRuleGroupAssociationTagArgs> tags) {
+        public Builder tags(@Nullable List<FirewallRuleGroupAssociationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

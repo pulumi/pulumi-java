@@ -48,12 +48,12 @@ public final class VirtualClusterEksInfoArgs extends io.pulumi.resources.Resourc
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setNamespace(Input<String> namespace) {
+        public Builder namespace(Input<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }

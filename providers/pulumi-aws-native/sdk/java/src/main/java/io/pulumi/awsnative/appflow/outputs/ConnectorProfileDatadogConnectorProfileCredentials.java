@@ -65,12 +65,12 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
     	      this.applicationKey = defaults.applicationKey;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setApplicationKey(String applicationKey) {
+        public Builder applicationKey(String applicationKey) {
             this.applicationKey = Objects.requireNonNull(applicationKey);
             return this;
         }

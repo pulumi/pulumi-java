@@ -60,12 +60,12 @@ public final class GetThemeArgs extends io.pulumi.resources.InvokeArgs {
     	      this.themeId = defaults.themeId;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setThemeId(String themeId) {
+        public Builder themeId(String themeId) {
             this.themeId = Objects.requireNonNull(themeId);
             return this;
         }
